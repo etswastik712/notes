@@ -1,0 +1,67 @@
+\contentsline {section}{\numberline {1}Introduction to Biology: Philosophy, Framework, and the Wildebeest Case Study}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Why does Biology feel so different from Physics?}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}The Framework of Biology: levels of organization}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Peculiarities/features of biological systems to keep watching for}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}The course's approach given this trade-off}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Reading-material classification used throughout the course}{5}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Case study: the Serengeti Wildebeest Migration}{5}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Course logistics/tips (from the slides)}{7}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Structured Population Models: From Cohort Life Tables to Age/Stage-Structured Dynamics}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Setting the stage: what is population ecology?}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Cohort life tables and survivorship curves: \textit {Phlox drummondii}}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Age-structured dynamics: the Leslie Matrix}{10}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Applying stage-structured models: conservation of the loggerhead sea turtle}{11}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}A comparison: age-structured vs.\ stage-structured models}{14}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Coda: back to humans -- age pyramids}{14}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Pedagogical note (from the slides)}{15}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Population Dynamics: Simple Models, Limit Cycles and Chaos}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Motivation: predicting population numbers is an old human problem}{16}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Models and the modelling relationship}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Exponential growth: ``the first law of population dynamics''}{16}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Refining the model: density dependence and the continuous logistic (Verhulst--Pearl) model}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Problems with the logistic model, and the discrete Ricker model}{18}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Behaviour of the Ricker map across increasing $r$: the road to chaos}{19}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Checking this against the real world: the Hassell model and a puzzling empirical result}{20}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Making the models more realistic: taming (or explaining away) chaos}{22}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Summary comparison: the models of this section}{24}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Competition: Exclusion, Coexistence, and the Special Case of Invasive Species}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Defining competition}{25}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Early experimental and theoretical results on interspecific competition}{25}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Lotka--Volterra competition model}{26}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The case of the super-competitors: invasive species}{28}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}The other paper: Sakai et al. (2001) on the population biology of invasive species}{29}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}The case of the competition-avoiders: how coexistence actually happens}{30}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Summary: reconciling exclusion and coexistence}{33}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Predation: Population Dynamics, Lab Tests of Lotka--Volterra, and Anti-Predator Strategies}{34}{section.5}%
+\contentsline {subsection}{\numberline {5.1}What is predation, and why study it?}{34}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Population cycles: the empirical starting point}{34}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}The Lotka--Volterra predator-prey model}{34}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Laboratory tests: Gause's \textit {Paramecium}--\textit {Didinium} experiments}{36}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Huffaker's experiments: adding spatial heterogeneity}{38}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}What's actually happening in nature?}{39}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Prey strategies for predator avoidance}{39}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Eutrophication: Trophic Classification, Alternative Stable States, and Lake Restoration}{41}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Classical and modern views of lake trophic status}{41}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}What determines a lake's trophic status?}{41}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}The mechanism: how a lake goes from oligotrophic to eutrophic}{41}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}The classic recovery story: Lake Washington, Seattle}{42}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Why isn't ``just reduce phosphate'' enough? Alternative stable states}{43}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Reversing the trophic state: biomanipulation}{46}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Scale of the global phosphorus pollution problem}{47}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Restoration methods (Mandatory reading: S\o {}ndergaard et al.\ 2012)}{47}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Elaborating the theory further: Scheffer \& van Nes (2007)}{48}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Summary}{49}{subsection.6.10}%
+\contentsline {section}{\numberline {7}Conservation Biology: Ethics, Vulnerability, and the Passenger Pigeon \& Project Tiger Case Studies}{51}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Motivation}{51}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Three historical conservation ethics}{51}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}What determines a species' vulnerability to extinction? Rabinowitz's rarity classification}{52}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Case study 1: The Passenger Pigeon -- ``the complicated story''}{52}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Why small populations are inherently more vulnerable: three stochasticities and MVP}{54}{subsubsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.5}What does a conservation effort actually require?}{55}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Case study 2: Project Tiger}{56}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}Background and the reasons for decline}{56}{subsubsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.2}Launch, aims, and site-selection criteria}{56}{subsubsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.3}Early success, then reversal}{56}{subsubsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.4}Post-Project Tiger: institutional reform and the numbers since}{56}{subsubsection.7.6.4}%
+\contentsline {subsubsection}{\numberline {7.6.5}Taking a global view}{57}{subsubsection.7.6.5}%
+\contentsline {subsection}{\numberline {7.7}Summary}{59}{subsection.7.7}%

@@ -1,0 +1,179 @@
+% =====================================================================
+\section{Eutrophication: Trophic Classification, Alternative Stable States, and Lake Restoration}
+
+\subsection{Classical and modern views of lake trophic status}
+\textbf{Classical view (Naumann \& Thienemann):} lakes were classified into discrete types based on productivity and water character:
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{Type} & \textbf{Character} \\
+\midrule
+Oligotrophy & Little productivity, clear water. \\
+Eutrophy & High productivity, greenish water due to phytoplankton. \\
+Dystrophy & Low conductivity, water colored brown by dissolved humic substances. \\
+Extinction & (The lake's terminal/senescent state -- filled in, no longer a lake.) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{keybox}[title={Modern view: a continuum, not discrete boxes}]
+``Oligotrophic'' and ``eutrophic'' are now understood as regions of a \textbf{trophic continuum}, separated only by operationally established limits -- e.g.\ total phosphorus concentration ($P_{\text{tot}}$) measured during spring circulation (the seasonal mixing event when the water column overturns). Since trophic condition is fundamentally a \emph{biological} phenomenon (not just a chemistry number), several criteria (nutrient levels, algal biomass, water clarity, species composition) need to be considered together to describe it properly, not $P_{\text{tot}}$ alone. (Source: Lampert \& Sommer, \textit{Limnoecology}.)
+\end{keybox}
+
+\subsection{What determines a lake's trophic status?}
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{Factor} & \textbf{Details} \\
+\midrule
+1. Original basin shape & Mean depth of the basin. \\
+2. Nature of the drainage basin & Erosion rates; soil composition $\to$ determines nutrient inputs from the catchment. \\
+3. Climate & Rain and snowfall; mean temperature. \\
+4. Human activity (\textbf{cultural eutrophication}) & Fertilizers; human waste products (domestic, industrial). \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{The mechanism: how a lake goes from oligotrophic to eutrophic}
+\begin{enumerate}[leftmargin=1.5em]
+\item \textbf{Nutrient enrichment}, particularly of \textbf{phosphorus} -- from natural sources, or anthropogenic ones (urban, industrial, agricultural runoff).
+\item \textbf{Increased organic matter production} (eutrophication proper): increased algal blooms, often dominated by blue-green algae/cyanobacteria (e.g.\ \textit{Anabaena}, \textit{Microcystis}); this reduces light availability to submerged plants, and reduces dissolved oxygen -- particularly in the \textbf{hypolimnion} (the cold, stagnant bottom layer of a stratified lake, cut off from atmospheric re-oxygenation). Low-oxygen conditions there trigger a series of \textbf{anoxic (reducing) chemical reactions that release phosphorus} back from the sediment into the water column (internal P loading) and \textbf{increase the pH} of the water.
+\item \textbf{Death of fish and other aquatic life} (fish-kill), as oxygen is depleted and toxic byproducts accumulate.
+\end{enumerate}
+
+\begin{exambox}
+Note the \textbf{positive feedback loop} embedded in step 2: hypoxia in the hypolimnion releases \emph{more} phosphorus from the sediment, which fuels \emph{more} algal growth, which further depletes oxygen -- eutrophication is self-reinforcing once it gets going, not a simple one-shot response to nutrient input. Also note: this is emphatically \textbf{not a problem confined to small lakes} -- the slides cite the large-scale eutrophication-linked fish-kill events in the Caspian Sea (2003) as a reminder of scale.
+\end{exambox}
+
+\subsection{The classic recovery story: Lake Washington, Seattle}
+\begin{keybox}[title=Timeline]
+\begin{itemize}[leftmargin=*]
+\item \textbf{1940s}: Lake Washington was oligotrophic.
+\item \textbf{1950s--60s}: Sewage was discharged directly into the lake $\to$ oligotrophic state collapsed into a foul, algae-choked state nicknamed \textbf{``Lake Stinko.''}
+\item Research by \textbf{W.T. Edmondson (1970)} implicated sewage-borne phosphorus as the cause.
+\item Sewage was diverted away from the lake (to Puget Sound instead).
+\item With reduced phosphorus levels, the lake's condition improved; \textbf{further} improvement followed when \textbf{\textit{Daphnia}} (a phytoplankton-grazing zooplankton) recovered once the cyanobacteria that had been fouling its feeding apparatus disappeared.
+\item Over time, detergent manufacturers also reduced phosphate levels in their products, reducing a major ongoing P source.
+\end{itemize}
+\end{keybox}
+
+\begin{papbox}[title={Paper Summary: ``Rescue of Lake Stinko'' -- the story of the Lake Washington restoration (University of Washington, based on W.T.\ Edmondson's research)}]
+\textbf{What kind of source this is:} a narrative science-history account (not a primary research paper), but listed on the course's own reading list as a ``Paper''-tier item, so it is summarized here for the fuller detail it adds beyond the slide bullet points above.
+
+\textbf{The story, in more detail:} In 1955, a researcher in Edmondson's lab noticed Lake Washington's water had turned cloudy; lab analysis found \textit{Oscillatoria rubescens}, a cyanobacterium recognized (from prior experience with European lakes) as a classic tell-tale early-warning sign of lake deterioration. Seattle had been discharging raw sewage into the lake since $\sim$1900; by 1941 the city's own sewage was diverted away, but \textbf{suburban} sewage treatment plants proliferated around the lake through the 1940s--50s (ten plants by 1953, jointly discharging $\sim$80 million litres/day), reintroducing the same phosphorus-loading problem from a different, more diffuse source.
+
+Edmondson's key public-communication move was preparing a clear, jargon-free, question-and-answer style report for the chair of Seattle's Metropolitan Problems Advisory Committee, laying out a phosphorus-vs-algae ``budget'' in terms policymakers could act on. This informed the creation of \textbf{``Metro,'' a new metropolitan government body} (approved by referendum in 1958) tasked with diverting sewage away from the lake via a major trunk sewer to Puget Sound.
+
+\textbf{Key conclusions/lessons:}
+\begin{itemize}[leftmargin=1.3em,nosep]
+\item There was a \textbf{multi-year lag} between the political decision (1958) and the infrastructure actually being operational ($\sim$1963), during which the lake's condition continued to worsen exactly as Edmondson had predicted (giving rise to the ``Lake Stinko'' nickname in the press) -- a caution that ecological remediation often has a long, painful lag before results show.
+\item Recovery, once effluent diversion took hold ($\sim$1964 onward), was \textbf{faster and more complete than even Edmondson had predicted}: by 1971 the lake was clearer than in 1950, and it is now roughly twice as clear as in 1950.
+\item The extra improvement beyond what phosphorus reduction alone would predict is attributed to a \textbf{trophic cascade}: as pollutant-tolerant \textit{Oscillatoria} declined, it stopped fouling \textit{Daphnia}'s feeding apparatus, so \textit{Daphnia} numbers rebounded from around 1976 and their grazing further suppressed algae -- i.e.\ the biological recovery mechanism (Daphnia grazing pressure) compounded the chemical one (reduced P input).
+\item Edmondson's own reflection, worth remembering as a general point about the science-policy relationship: his original research was pursued as pure \textbf{basic research} into lake productivity/community structure with no explicit pollution-control mandate, yet it turned out to supply exactly the predictive understanding that the practical clean-up effort needed -- \emph{``applied research cannot be done effectively without a background of information developed by basic research.''}
+\end{itemize}
+\end{papbox}
+
+A more modern parallel case flagged on the slides (not covered in the same depth): \textbf{Lake Erie}, where nutrient loading and eutrophication remain an active, ongoing management problem.
+
+\subsection{Why isn't ``just reduce phosphate'' enough? Alternative stable states}
+The naive expectation -- eutrophication is caused by excess phosphate, so simply reducing phosphate input should reverse it -- turns out to be \textbf{not so simple}, as demonstrated dramatically by many real restoration attempts that failed to produce recovery even after substantial nutrient reduction. The slides use \textbf{Scheffer et al.\ (2001, \textit{Nature})} to explain why.
+
+\begin{papbox}[title={Paper Summary: Scheffer, Carpenter, Foley, Folke \& Walker (2001), \textit{Nature} 413:591--596 -- ``Catastrophic Shifts in Ecosystems''}]
+\textbf{Scope:} A synthesis/review paper arguing that many ecosystems -- lakes, coral reefs, oceans, forests, arid lands -- do \emph{not} respond smoothly and reversibly to gradual environmental change, but can instead undergo sudden, drastic switches between \textbf{alternative stable states}, and that understanding \emph{resilience} (not just the current state) is key to managing this.
+
+\textbf{The core theoretical framework:}
+\begin{itemize}[leftmargin=1.3em,nosep]
+\item If an ecosystem's equilibrium response curve, plotted against a slowly changing external condition, is ``folded back'' on itself, the system has \textbf{two alternative stable states for the same external conditions}, separated by an unstable equilibrium (the boundary between their ``basins of attraction'').
+\item Once on the upper branch, gradually worsening conditions produce \emph{little visible change} until a critical threshold (a \textbf{fold/saddle-node bifurcation}, labelled $F_2$) is crossed, at which point a sudden, ``catastrophic'' jump to the lower branch occurs -- often catching managers by surprise because there was no gradual warning.
+\item Critically, simply reversing the external condition back to its pre-collapse level is \textbf{not enough} to flip the system back -- one must push conditions back further, past a \emph{different} threshold $F_1$, before the system snaps back up to the upper branch. This asymmetry between the forward and backward switching points is called \textbf{hysteresis}.
+\item \textbf{Resilience} is defined (following Holling 1973) as the size of a state's ``basin of attraction'' -- how large a perturbation the system can absorb without being tipped into the alternative state. Gradual environmental change can silently \textbf{shrink resilience} (make the basin smaller) long before the state itself visibly changes, making the system increasingly fragile to ordinary stochastic disturbances even while it still looks fine.
+\end{itemize}
+
+\begin{keybox}[title={The minimal ``Box 1'' mathematical model (lakes/desertification)}]
+A simple model showing hysteresis takes the general form of a rate of increase (nutrient recycling, in the lake interpretation) that is an accelerating (Hill-function-shaped) function of the state variable $x$, competing against a constant linear decay/loss term. Steeper (more switch-like) Hill functions produce \textbf{stronger hysteresis}. Interpreted for eutrophication, $x$ = internal nutrient recycling/phytoplankton biomass; interpreted for desertification, $x$ = barren land, with the loss term representing erosion by wind/runoff. The same simple mathematical skeleton underlies both phenomena -- the point being that a wide range of superficially unrelated ecosystem collapses share a common mathematical structure.
+\end{keybox}
+
+\textbf{Applied to shallow lakes specifically:} the pristine state is clear water with abundant submerged vegetation. Nutrient loading pushes the system toward turbidity, but water clarity is often \textbf{surprisingly unresponsive to nutrient increases up to a threshold}, after which the lake abruptly flips from clear to turbid. Once flipped, \textbf{vegetation itself was suppressing turbidity} via several mechanisms (removing nutrients from the water column, providing refuge for \textit{Daphnia} against fish predation, preventing sediment resuspension) -- so once vegetation is lost, those stabilizing mechanisms disappear too, and the turbid state becomes \emph{self-reinforcing} (fish, now unconstrained by plant refuges, control \textit{Daphnia} and resuspend sediment while foraging, both of which maintain turbidity). This is precisely why reducing nutrients back to pre-collapse levels alone typically fails to restore clarity -- the system needs to be pushed past the (lower) $F_1$ threshold, which is very demanding.
+
+\textbf{Broader context (catastrophe theory):} the paper frames this as one instance of a general phenomenon studied under \textbf{catastrophe theory}, with other cited examples including Sahara desertification, coral reef collapse, and (analogously, outside ecology) poverty traps and stock market crashes. \textbf{Management implication (the paper's central policy message):} because gradual loss of resilience precedes and enables catastrophic shifts, sustainable management should focus on \textbf{maintaining/building resilience} (the size of the safe operating basin), not merely on controlling the current state or preventing individual disturbance events.
+\end{papbox}
+
+\begin{exambox}
+\textbf{Likely conceptual question:} ``Why did reducing phosphorus loading fail to restore lake clarity in many shallow-lake restoration attempts, and what does this imply for management?'' Expected answer: alternative stable states with hysteresis mean the nutrient level required to \emph{cause} the turbid-state collapse is higher than the (much lower) nutrient level required to \emph{reverse} it back to clear -- so restoring pre-collapse nutrient levels lands you in the middle of the hysteresis loop, still within the turbid state's basin of attraction. Effective restoration must either push nutrients further down than the original collapse threshold, or directly intervene in the state variable itself (e.g.\ removing fish/adding vegetation) to help the system escape the turbid basin -- which is exactly the logic behind biomanipulation, below.
+\end{exambox}
+
+\subsection{Reversing the trophic state: biomanipulation}
+Given that nutrient reduction alone is often insufficient, the slides pose the direct question: \textbf{how do you reverse the trophic state of a shallow lake?} One answer, following directly from the mechanism above (fish suppress \textit{Daphnia}, which otherwise grazes down phytoplankton and helps clear the water): \textbf{reduce the number of fish.}
+
+\begin{keybox}[title={Biomanipulation: Meijer et al.\ (1999)}]
+A study of \textbf{18 lakes of varying shape and size in the Netherlands}, monitored over a \textbf{ten-year period} following biomanipulation (fish removal, sometimes combined with predatory-fish stocking). \textbf{Water transparency increased} following biomanipulation across these lakes -- empirical confirmation that directly intervening on the fish/\textit{Daphnia}/turbidity feedback loop (rather than nutrients alone) can help nudge a lake out of the turbid-state basin of attraction, consistent with the alternative-stable-states framework above.
+\end{keybox}
+
+\subsection{Scale of the global phosphorus pollution problem}
+Per a \textbf{2018 review} (Mekonnen \& Hoekstra, \textit{Water Resources Research}) cited on the slides: globally, human activities dump roughly \textbf{1.5 teragrams} (1.5 billion kg) of phosphorus into freshwater systems \textbf{per year}. By country share of global anthropogenic phosphorus pollution: \textbf{China contributes the most (30\%)}, followed by \textbf{India (8\%)}, the \textbf{USA (7\%)}, and \textbf{Spain and Brazil (6\% each)}. In many regions, either there is not enough water to dilute/assimilate this phosphorus load, or the pollution load is simply too large for the water system to handle -- motivating active restoration methods.
+
+\subsection{Restoration methods (Mandatory reading: S\o{}ndergaard et al.\ 2012)}
+S\o{}ndergaard, Jeppesen \& Jensen (2012, \textit{Lake Restoration}, in \textit{Encyclopedia of Lakes and Reservoirs}, pp.\ 455--458) is explicitly listed as \textbf{Mandatory} reading on the slides (unusually, since it is an encyclopedia-chapter source rather than a primary paper -- but the instructor's own classification makes it fully examinable, and its content is directly reproduced as tables on the slides). Restoration methods are grouped into three categories:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{Physical method} & \textbf{Principle \& possible problems} \\
+\midrule
+Sediment dredging & Phosphorus-rich sediment is physically removed to reduce \emph{internal} P loading. Relatively expensive; needs disposal sites for the dredged material. \\
+Dilution/flushing & The lake is flushed with nutrient-poor water to dilute phosphorus concentration. Depends on having access to large volumes of nutrient-poor water. \\
+Water level manipulation & \emph{Increased} water level decreases sediment resuspension risk in shallow lakes; \emph{decreased} water level increases the growth potential of submerged macrophytes (by improving light reach to the bottom). Often difficult to manipulate water level, or to get regulatory permission to do so. \\
+Hypolimnetic withdrawal & Lake outflow is redirected through a pipe drawing from the hypolimnion (where P accumulates during summer stratification), increasing P outflow from the lake. The nutrient-rich, possibly anoxic outflow water can create problems for downstream water bodies. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{Chemical method} & \textbf{Principle \& possible problems} \\
+\midrule
+Hypolimnetic oxygenation & Oxygen (or air) is delivered to the hypolimnion of deep lakes to raise redox conditions and increase phosphorus sorption (binding) to sediment, reducing internal loading. Long-term treatment ($>$10 years) is often needed, and even then permanent effects can be hard to achieve. \\
+Phosphorus inactivation & Salts of aluminium, iron, calcium, or other P-binding agents are added to water/sediment to reduce internal P loading by binding it in an unavailable form. Aluminium is toxic at both low and high pH, limiting its use in soft-water or high-pH lakes. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{Biological method} & \textbf{Principle \& possible problems} \\
+\midrule
+Removal of zooplankton-eating fish & Removing zooplankton-/benthic-invertebrate-eating fish increases the number of large zooplankton (e.g.\ \textit{Daphnia}) and hence their grazing pressure on phytoplankton -- the direct biomanipulation mechanism discussed above (Meijer et al.\ 1999). Permanent effects can be difficult to sustain. \\
+Stocking of predatory fish & Adding fish-eating (piscivorous) fish reduces the number of zooplankton-eating fish, indirectly boosting zooplankton numbers and their grazing on phytoplankton. Correct \emph{timing} of stocking is crucial for the intervention to take hold. \\
+Introduction of mussels & Filter-feeding mussels (often zebra mussels, \textit{Dreissena polymorpha}) are introduced to increase water filtration and clarity. \textbf{Caveat}: zebra mussels are themselves a notorious invasive species (cf.\ the Competition topic) and can reach very high densities with negative biological and physical side-effects of their own. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{exambox}
+A recurring structural point worth noting across all three tables: essentially every restoration method has a \textbf{trade-off or limitation}, not just a mechanism -- expense, need for regulatory permission, toxicity at certain pH, difficulty of achieving \emph{permanent} (rather than temporary) effects, or introducing a new invasive-species risk. A good exam answer comparing methods should always pair the mechanism with its practical limitation, not just state how each method works.
+\end{exambox}
+
+\subsection{Elaborating the theory further: Scheffer \& van Nes (2007)}
+The slides flag \textbf{Scheffer \& van Nes (2007, \textit{Hydrobiologia})} as a somewhat more advanced ``Paper''-tier reading, updating the simple two-state (clear/turbid) picture from Scheffer et al.\ (2001) above with more recent research.
+
+\begin{papbox}[title={Paper Summary: Scheffer \& van Nes (2007), \textit{Hydrobiologia} 584:455--466 -- ``Shallow Lakes Theory Revisited: Various Alternative Regimes Driven by Climate, Nutrients, Depth and Lake Size''}]
+\textbf{Scope:} A review updating the original 1993 alternative-stable-states theory for shallow lakes (clear-vegetated vs.\ turbid-phytoplankton states) with subsequent research showing the picture is considerably richer than just two contrasting states.
+
+\textbf{Key elaborations/conclusions:}
+\begin{itemize}[leftmargin=1.3em,nosep]
+\item \textbf{No single universal critical nutrient threshold exists.} The nutrient level at which a lake flips from clear to turbid (and back) depends on lake-specific factors -- notably \textbf{lake size} and \textbf{depth} -- not a fixed number applicable to all shallow lakes.
+\item \textbf{Lake size effect:} smaller lakes have a substantially \textbf{higher chance of remaining in the clear, vegetated state} even at comparatively high nutrient levels, largely because small/isolated lakes are more prone to fish kills and have poor fish-recolonization ability -- so they tend to have naturally suppressed fish populations, which (per the fish-\textit{Daphnia}-turbidity mechanism above) favours the clear state. Empirical support: a study of 215 Dutch floodplain lakes (Van Geest et al.\ 2003) with similar nutrient loading found smaller lakes far more likely to be vegetated/clear than larger ones.
+\item \textbf{Climate change is also implicated} as a factor shifting the critical nutrient threshold, adding another axis of complexity beyond nutrients and depth/size alone.
+\item \textbf{The ``two states'' picture itself is an oversimplification.} Besides the clear-macrophyte/turbid-phytoplankton contrast, several \emph{other} alternative-stable-state contrasts have since been documented among primary producers: \textbf{free-floating plants} (e.g.\ water hyacinth-type mats) can form their own alternative stable state in tropical/stagnant temperate waters; among submerged plants, \textbf{charophytes} (stoneworts) and vascular pondweeds can represent alternative stable states via a bicarbonate-depletion competitive mechanism; and even within phytoplankton, \textbf{cyanobacteria dominance} vs.\ green-algae dominance can itself be a self-reinforcing alternative state (cyanobacteria tolerate/promote turbidity better once established, but have lower maximum growth rates than green algae in clearer conditions).
+\item \textbf{Overall conclusion:} the original alternative-stable-states framework remains valid for explaining the major qualitative pattern, but the eutrophication gradient is better understood as a \textbf{continuum punctuated by multiple possible critical transitions} (not just one clear-vs-turbid switch), with spatial heterogeneity and fluctuating climate/hydrology adding further real-world complexity on top of the core theory.
+\end{itemize}
+\end{papbox}
+
+\subsection{Summary}
+\begin{keybox}
+Freshwater is among the most important resources on Earth, and eutrophication (alongside other threats such as poor water-management policy, e.g.\ the Aral Sea) is a major threat to it. The core conceptual arc of this topic: eutrophication is driven by nutrient (especially phosphorus) enrichment $\to$ algal blooms $\to$ oxygen depletion/anoxic P release $\to$ fish kills; but the relationship between nutrient level and lake state is \textbf{not smoothly reversible} -- shallow lakes in particular exhibit \textbf{alternative stable states with hysteresis} (Scheffer et al.\ 2001), so simple nutrient reduction is often insufficient and direct biological intervention (biomanipulation -- fish removal) is frequently also needed. The theory has since been substantially elaborated (Scheffer \& van Nes 2007) to account for lake size, depth, climate, and multiple possible alternative producer-dominated states, not just a single clear/turbid dichotomy. Restoration in practice draws on a toolkit of physical, chemical, and biological methods (S\o{}ndergaard et al.\ 2012), each with its own mechanism and practical trade-offs. As the slides' own summary states: tackling eutrophication is a complex activity requiring inputs from scientists, politicians, and, above all, the local people.
+\end{keybox}
+
+\newpage
