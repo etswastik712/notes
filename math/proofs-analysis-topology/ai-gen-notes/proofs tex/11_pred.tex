@@ -1,0 +1,159 @@
+\chapter{Predicates and Quantifiers}\label{ch:pred}
+
+Propositional logic cannot express statements such as ``every integer has an additive inverse''. We now add variables and quantifiers.
+
+\section{Predicates, domains, truth sets}
+
+\begin{definition}[Predicate]
+	A \emph{predicate} in the variables $x_1,\dots,x_n$ is an expression $P(x_1,\dots,x_n)$ which becomes a statement once each variable is replaced by a specific element of its \emph{domain of discourse} (the collection of values the variable is allowed to take). For a one-variable predicate on a domain $D$ its \emph{truth set} is
+	\[
+	\{x\in D: P(x)\}=\text{the set of elements of $D$ for which $P(x)$ is true.}
+	\]
+\end{definition}
+
+\begin{example}
+	On $D=\Z$, $P(n)$: ``$6\mid n$'' has truth set $\{\dots,-12,-6,0,6,12,\dots\}$; $Q(x,y)$: ``$x+y=0$'' is a two-variable predicate on $\Z\times\Z$.
+\end{example}
+
+\section{Quantifiers}
+
+\begin{definition}[Quantified statements]
+	Let $P(x)$ be a predicate on a domain $D$.
+	\begin{itemize}
+		\item $\forall x\,P(x)$ is \emph{true} iff $P(d)$ is true for \emph{every} $d\in D$ (the truth set is all of $D$).
+		\item $\exists x\,P(x)$ is \emph{true} iff $P(d)$ is true for \emph{at least one} $d\in D$ (the truth set is non-empty).
+		\item $\exists!x\,P(x)$ abbreviates $\exists x\,\bigl(P(x)\wedge\forall y\,(P(y)\Rightarrow y=x)\bigr)$: ``exactly one''.
+	\end{itemize}
+	In $\forall x\,P(x)$ the variable $x$ is \emph{bound}; a variable that is not bound by a quantifier is \emph{free}. A formula with no free variables is a statement. Bound variable names are dummies: $\forall x\,P(x)$ and $\forall t\,P(t)$ are the same statement.
+\end{definition}
+
+\begin{definition}[Restricted quantifiers]\label{def:restricted}
+	For a set $A$,
+	\[
+	\forall x\in A\;P(x)\ :\iff\ \forall x\,(x\in A\Rightarrow P(x)),\qquad
+	\exists x\in A\;P(x)\ :\iff\ \exists x\,(x\in A\wedge P(x)).
+	\]
+	Similarly ``$\forall\varepsilon>0\;P(\varepsilon)$'' means $\forall\varepsilon\,(\varepsilon>0\Rightarrow P(\varepsilon))$ and ``$\exists\delta>0\;P(\delta)$'' means $\exists\delta\,(\delta>0\wedge P(\delta))$.
+\end{definition}
+
+The connective used inside is dictated by the quantifier: $\forall$ pairs with $\Rightarrow$ and $\exists$ pairs with $\wedge$. Pairing them the other way round changes the meaning.
+
+\begin{warning}
+	$\forall x\,(x\in A\wedge P(x))$ says every object is in $A$ and has property $P$; $\exists x\,(x\in A\Rightarrow P(x))$ is true as soon as \emph{some} object is outside $A$. Neither is what one means by the restricted quantifiers.
+\end{warning}
+
+\begin{center}
+	\begin{tabular}{@{}p{7.2cm}p{7.6cm}@{}}
+		\toprule
+		\textbf{English} & \textbf{Symbols (domain indicated)}\\
+		\midrule
+		Every integer has an additive inverse in $\Z$ & $\forall x\in\Z\;\exists y\in\Z\;(x+y=0)$\\
+		Some rational number has square $2$ & $\exists q\in\Q\;(q^2=2)$\\
+		No real number has square $-1$ & $\neg\exists x\in\R\;(x^2=-1)$, i.e.\ $\forall x\in\R\;(x^2\ne-1)$\\
+		Not every real number exceeds its square & $\neg\forall x\in\R\;(x>x^2)$, i.e.\ $\exists x\in\R\;(x\le x^2)$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\section{Negating quantified statements}
+
+\begin{theorem}[Quantifier negation]\label{thm:qneg}
+	For every predicate $P$:
+	\[
+	\neg\forall x\,P(x)\ \sim\ \exists x\,\neg P(x),\qquad \neg\exists x\,P(x)\ \sim\ \forall x\,\neg P(x).
+	\]
+	For restricted quantifiers,
+	\[
+	\neg\bigl(\forall x\in A\;P(x)\bigr)\sim\exists x\in A\;\neg P(x),\qquad
+	\neg\bigl(\exists x\in A\;P(x)\bigr)\sim\forall x\in A\;\neg P(x).
+	\]
+	Also, $\neg\exists!x\,P(x)\ \sim\ \forall x\,\neg P(x)\ \vee\ \exists x\,\exists y\,(P(x)\wedge P(y)\wedge x\neq y)$.
+\end{theorem}
+\begin{proof}
+	$\forall x\,P(x)$ is true iff the truth set of $P$ is the whole domain. So $\neg\forall x\,P(x)$ is true iff some $d\in D$ is not in the truth set, i.e.\ iff $P(d)$ is false for some $d$, i.e.\ iff $\exists x\,\neg P(x)$. Likewise $\exists x\,P(x)$ is false iff the truth set is empty iff $\neg P(d)$ holds for every $d$.
+	
+	For the restricted forms, unfold Definition~\ref{def:restricted} and use the laws of Chapter~\ref{ch:prop}:
+	\begin{align*}
+		\neg\forall x\,(x\in A\Rightarrow P(x))&\sim\exists x\,\neg(x\in A\Rightarrow P(x))\sim\exists x\,(x\in A\wedge\neg P(x)),\\
+		\neg\exists x\,(x\in A\wedge P(x))&\sim\forall x\,\neg(x\in A\wedge P(x))\sim\forall x\,(x\notin A\vee\neg P(x))\sim\forall x\,(x\in A\Rightarrow\neg P(x)).
+	\end{align*}
+	For $\exists!$: ``$\exists!x\,P(x)$'' fails iff either no $x$ satisfies $P$, or some $x$ satisfies it but there is another $y\ne x$ satisfying it as well; the latter is the second disjunct.
+\end{proof}
+
+\begin{remark}[Vacuous truth and the empty set]
+	If $A=\varnothing$ then $\forall x\in A\,P(x)$ is true for every $P$ (there is no $x\in A$ at which it could fail; equivalently its negation $\exists x\in A\,\neg P(x)$ is false, since no $x$ lies in $\varnothing$) and $\exists x\in A\,P(x)$ is false. Thus ``every element of $\varnothing$ is a real number greater than every real number'' is true. This convention is what makes $\varnothing\subseteq A$ hold for every $A$ (Theorem~\ref{thm:empty}).
+\end{remark}
+
+\section{Several quantifiers: order matters}
+
+\begin{theorem}\label{thm:order}
+	Let $P(x,y)$ be a two-variable predicate.
+	\begin{enumerate}[label=(\alph*)]
+		\item $\forall x\,\forall y\,P(x,y)\sim\forall y\,\forall x\,P(x,y)$ and $\exists x\,\exists y\,P(x,y)\sim\exists y\,\exists x\,P(x,y)$.
+		\item $\exists y\,\forall x\,P(x,y)\ \Rightarrow\ \forall x\,\exists y\,P(x,y)$ is always true.
+		\item The converse of (b) can fail.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+	(a) Both sides of the first say $P(a,b)$ holds for all pairs $(a,b)$, of the second that it holds for at least one pair.
+	
+	(b) Suppose $y_0$ satisfies $\forall x\,P(x,y_0)$. Given an arbitrary $x$, the choice $y:=y_0$ gives $P(x,y)$; hence $\forall x\,\exists y\,P(x,y)$.
+	
+	(c) Take the domain $\R$ and $P(x,y):\ y>x$. Then $\forall x\,\exists y\,(y>x)$ is true (take $y=x+1$) but $\exists y\,\forall x\,(y>x)$ is false (for any $y$, $x:=y$ violates $y>x$).
+\end{proof}
+
+\begin{intuition}[Quantifiers as a game]
+	$\forall x\,\exists y\,P(x,y)$: an opponent chooses $x$ first, \emph{then you} choose $y$, so $y$ may depend on $x$; you win if $P(x,y)$. $\exists y\,\forall x\,P(x,y)$: you must commit to a single $y$ first, and it must survive \emph{every} $x$ the opponent can throw at you. The first is much easier to win. In symbols, the first says $y$ can be written $y=f(x)$, the second says $y$ is a constant. Whoever is quantified later can see (depend on) the earlier variables.
+\end{intuition}
+
+\begin{example}[Likes]
+	Let $L(x,y)$: ``student $x$ likes book $y$''.
+	\begin{center}
+		\begin{tabular}{@{}p{5.3cm}p{4.2cm}p{5cm}@{}}
+			\toprule
+			\textbf{Statement} & \textbf{Symbols} & \textbf{Negation}\\
+			\midrule
+			Every student likes at least one book & $\forall x\,\exists y\,L(x,y)$ & $\exists x\,\forall y\,\neg L(x,y)$ (some student likes no book)\\
+			Some book is liked by every student & $\exists y\,\forall x\,L(x,y)$ & $\forall y\,\exists x\,\neg L(x,y)$\\
+			No student likes every book & $\forall x\,\exists y\,\neg L(x,y)$ & $\exists x\,\forall y\,L(x,y)$\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{example}
+
+\subsection*{Negating long statements: the recipe}
+
+To negate a statement with a string of quantifiers: \emph{flip every quantifier ($\forall\leftrightarrow\exists$), keep the order, and negate the final quantifier-free part}, using Chapter~\ref{ch:prop} for that last step. This is Theorem~\ref{thm:qneg} applied repeatedly from the outside in.
+
+\begin{example}[$\varepsilon$--$\delta$ continuity]\label{ex:eps-delta-neg}
+	A function $f:\R\to\R$ is \emph{continuous at $a$} if
+	\[
+	\forall\varepsilon>0\ \exists\delta>0\ \forall x\ \bigl(|x-a|<\delta\Rightarrow|f(x)-f(a)|<\varepsilon\bigr).
+	\]
+	Flipping quantifiers and negating the implication ($\neg(P\Rightarrow Q)\sim P\wedge\neg Q$) shows that $f$ is \emph{not} continuous at $a$ iff
+	\[
+	\exists\varepsilon>0\ \forall\delta>0\ \exists x\ \bigl(|x-a|<\delta\ \wedge\ |f(x)-f(a)|\ge\varepsilon\bigr).
+	\]
+	Compare \emph{uniform} continuity: $\forall\varepsilon>0\ \exists\delta>0\ \forall a\ \forall x\,(\cdots)$. Here $\delta$ is chosen \emph{before} $a$, so it cannot depend on $a$. This is exactly the difference of quantifier order in Theorem~\ref{thm:order}.
+\end{example}
+
+\section{Quantifiers and connectives}
+
+\begin{theorem}\label{thm:qconn}
+	For predicates $P,Q$ on a common domain:
+	\begin{center}
+		\begin{tabular}{@{}p{6cm}cp{5.6cm}@{}}
+			\toprule
+			\textbf{Statement} & \textbf{Relation} & \textbf{Comment}\\
+			\midrule
+			$\forall x\,(P\wedge Q)$ \ vs \ $\forall x\,P\wedge\forall x\,Q$ & $\sim$ & $\forall$ distributes over $\wedge$\\
+			$\exists x\,(P\vee Q)$ \ vs \ $\exists x\,P\vee\exists x\,Q$ & $\sim$ & $\exists$ distributes over $\vee$\\
+			$\forall x\,P\vee\forall x\,Q$ \ vs \ $\forall x\,(P\vee Q)$ & $\Rightarrow$ only & converse false\\
+			$\exists x\,(P\wedge Q)$ \ vs \ $\exists x\,P\wedge\exists x\,Q$ & $\Rightarrow$ only & converse false\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{theorem}
+\begin{proof}
+	The first two follow at once from the definitions (a conjunction holds at every $d$ iff each conjunct does; a disjunction holds at some $d$ iff one disjunct does). If $\forall x\,P$ holds then $P(d)$ holds for every $d$, so $P(d)\vee Q(d)$ does; similarly for $Q$. If $\exists x\,(P\wedge Q)$, a witness $d$ satisfies both $P(d)$ and $Q(d)$, witnessing each separately. Counterexamples to the converses: on $\Z$ with $P(x)$: ``$x$ is even'' and $Q(x)$: ``$x$ is odd'', $\forall x\,(P\vee Q)$ is true but $\forall x\,P\vee\forall x\,Q$ is false; $\exists x\,P\wedge\exists x\,Q$ is true but $\exists x\,(P\wedge Q)$ is false.
+\end{proof}

@@ -1,0 +1,66 @@
+\chapter{The Integers and the Rationals}\label{ch:zq}
+
+\section{Ordered fields: what we are aiming for}
+
+\begin{definition}[Ordered field]\label{def:orderedfield}
+	A \emph{field} is a set $F$ with $0\neq1$ and operations $+,\cdot$ such that $(F,+,0)$ is an abelian group, $(F\setminus\{0\},\cdot,1)$ is an abelian group, and $x(y+z)=xy+xz$. An \emph{ordered field} is a field with a total order $<$ (strict, trichotomous, transitive) such that (O1) $x<y\Rightarrow x+z<y+z$ and (O2) $0<x\wedge0<y\Rightarrow0<xy$.
+\end{definition}
+
+\section{Construction of $\Z$}
+
+Intuitively an integer is a difference $a-b$ of natural numbers; different pairs can represent the same integer ($3-1=5-3$).
+
+\begin{definition}[Integers]
+	On $\omega\times\omega$ define $(a,b)\approx(c,d):\iff a+d=c+b$. Put $\Z:=(\omega\times\omega)/{\approx}$ and $[a,b]$ for the class of $(a,b)$.
+\end{definition}
+
+\begin{proposition}\label{prop:Zequiv}
+	$\approx$ is an equivalence relation.
+\end{proposition}
+\begin{proof}
+	Reflexivity: $a+b=a+b$. Symmetry: clear. Transitivity: from $a+d=c+b$ and $c+f=e+d$ we get $a+d+c+f=c+b+e+d$, so $(a+f)+(c+d)=(b+e)+(c+d)$ and $a+f=e+b$ by cancellation (Theorem~\ref{thm:add}(e)).
+\end{proof}
+
+\begin{definition}[Operations]
+	$[a,b]+[c,d]:=[a+c,b+d]$, $\ [a,b]\cdot[c,d]:=[ac+bd,\ ad+bc]$, $\ -[a,b]:=[b,a]$.
+\end{definition}
+
+\begin{proposition}[Well-defined]\label{prop:Zwd}
+	These do not depend on the chosen representatives.
+\end{proposition}
+\begin{proof}
+	Suppose $(a,b)\approx(a',b')$, i.e.\ $a+b'=a'+b$, and take any $(c,d)$. \emph{Sum:} $(a+c)+(b'+d)=(a+b')+(c+d)=(a'+b)+(c+d)=(a'+c)+(b+d)$, so $(a+c,b+d)\approx(a'+c,b'+d)$. \emph{Negative:} $b+a'=a'+b=a+b'=b'+a$ shows $(b,a)\approx(b',a')$. \emph{Product:} multiplying $a+b'=a'+b$ by $c$ and $a'+b=a+b'$ by $d$ gives $ac+b'c=a'c+bc$ and $a'd+bd=ad+b'd$. Adding, $(ac+bd)+(a'd+b'c)=(a'c+b'd)+(ad+bc)$, i.e.\ $(ac+bd,ad+bc)\approx(a'c+b'd,a'd+b'c)$. The second argument is symmetric by commutativity.
+\end{proof}
+
+\begin{theorem}[Structure of $\Z$]\label{thm:Z}
+	(a) Every class contains an element $(n,0)$ or $(0,n)$ with $n\in\omega$; write $n$ for $[n,0]$ and $-n$ for $[0,n]$. The map $n\mapsto[n,0]$ is injective and preserves $+$ and $\cdot$, so $\omega\subseteq\Z$.
+	(b) $(\Z,+,\cdot,0,1)$ is a commutative ring with unit, $-x$ is the additive inverse of $x$, and it has no zero divisors ($xy=0\Rightarrow x=0\vee y=0$).
+	(c) $[a,b]<[c,d]:\iff a+d<b+c$ is a well-defined strict total order making $\Z$ an ordered ring, i.e.\ (O1), (O2) hold.
+\end{theorem}
+\begin{proof}
+	(a) Given $(a,b)$, trichotomy gives $b\le a$ or $a\le b$. If $b\le a$ there is $n$ with $a=b+n$ (Theorem~\ref{thm:wellorder} and induction), so $a+0=n+b$ and $(a,b)\approx(n,0)$; the other case gives $(a,b)\approx(0,n)$. Also $[m,0]=[n,0]\Rightarrow m+0=n+0$, and $[m,0]+[n,0]=[m+n,0]$, $[m,0][n,0]=[mn,0]$.
+	
+	(b) Each ring axiom for representatives becomes an identity between sums of products in $\omega$, which follows from Theorems~\ref{thm:add} and \ref{thm:mult}; for example $x+(-x)=[a,b]+[b,a]=[a+b,a+b]=[0,0]=0$ because $(a+b)+0=0+(a+b)$. As an illustration of the pattern for distributivity: $[a,b]([c,d]+[e,f])=[a(c+e)+b(d+f),\,a(d+f)+b(c+e)]$, which by distributivity in $\omega$ equals $[ac+bd,ad+bc]+[ae+bf,af+be]$. For no zero divisors write $x=\pm m$, $y=\pm n$ by (a); then $xy=\pm[mn,0]$, which is $0$ iff $mn=0$ iff $m=0\vee n=0$ (Theorem~\ref{thm:mult}(g)).
+	
+	(c) Well-defined: if $a+b'=a'+b$ and $a+d<b+c$, then $(a'+d)+b=(a+d)+b'<(b+c)+b'=(b'+c)+b$, and cancelling $b$ (using $m+k<n+k\Rightarrow m<n$, which follows from $m<n\iff\exists j\ne0\;m+j=n$ and Theorem~\ref{thm:add}(e)) gives $a'+d<b'+c$. Trichotomy and transitivity follow from those of $\omega$; (O1), (O2) reduce to inequalities in $\omega$.
+\end{proof}
+
+\section{Construction of $\Q$}
+
+\begin{definition}[Rationals]
+	On $\Z\times(\Z\setminus\{0\})$, $(a,b)\sim(c,d):\iff ad=bc$ (an equivalence relation: Example~\ref{ex:fractions}, using that $\Z$ has no zero divisors). $\Q:=(\Z\times(\Z\setminus\{0\}))/{\sim}$; $a/b$ denotes the class of $(a,b)$.
+	\[
+	\tfrac ab+\tfrac cd:=\tfrac{ad+bc}{bd},\qquad\tfrac ab\cdot\tfrac cd:=\tfrac{ac}{bd},\qquad\tfrac ab>0:\iff ab>0\text{ in }\Z.
+	\]
+\end{definition}
+
+\begin{theorem}[$\Q$ is an ordered field]\label{thm:Q}
+	The operations and the order are well defined, $\Q$ is an ordered field, and $n\mapsto n/1$ embeds $\Z$ into $\Q$ preserving $+,\cdot,<$.
+\end{theorem}
+\begin{proof}
+	Note $bd\neq0$ because $\Z$ has no zero divisors. \emph{Well-definedness.} Let $ab'=a'b$. \emph{Sum:} $(ad+bc)\,b'd=ab'd^2+bb'cd=a'bd^2+bb'cd=(a'd+b'c)\,bd$, so $\frac{ad+bc}{bd}=\frac{a'd+b'c}{b'd}$. \emph{Product:} $(ac)(b'd)=(ab')(cd)=(a'b)(cd)=(a'c)(bd)$. \emph{Order:} if $ab>0$ then $a\ne0$ and $(ab)(a'b')=(ab')^2>0$, so $a'b'>0$ (two integers with positive product have the same sign). \emph{Field axioms.} Commutativity, associativity and distributivity follow by clearing denominators from the corresponding ring laws of $\Z$. $0=0/1$ and $1=1/1$ are identities; $-\frac ab=\frac{-a}b$; if $\frac ab\neq0$ then $a\neq0$ and $\frac ba$ is a multiplicative inverse since $\frac{ab}{ba}=\frac11$. $0\ne1$ because $0\cdot1\neq1\cdot1$. \emph{Order axioms:} (O1) and (O2) reduce to sign rules for products in $\Z$ (using positive denominators as representatives: every class has a representative with $b>0$). The embedding is clear from the formulas.
+\end{proof}
+
+\begin{remark}
+	$\Q$ is an ordered field with the \emph{Archimedean property} (for $x,y>0$ some $n\in\N$ has $nx>y$: take $x=a/b$, $y=c/d$ with positive $a,b,c,d$ and $n=bc+1$), but, as shown in Chapter~\ref{ch:reals}, $\Q$ is not complete: it has ``holes'' such as $\sqrt2$. Repairing this is the purpose of the next chapter.
+\end{remark}

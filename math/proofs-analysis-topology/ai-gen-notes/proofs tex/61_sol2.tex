@@ -1,0 +1,90 @@
+\chapter{Assignment 2: Conditionals, Quantifiers, Negation}\label{ch:sol2}
+
+\subsection*{Problem 1}
+Let $P$: ``$n$ is divisible by $6$'', $Q$: ``$n$ is divisible by $3$''.
+\begin{itemize}
+	\item[(a)] If $n$ is divisible by $6$, then $n$ is divisible by $3$.
+	\item[(b)] $n$ is divisible by $6$ only if $n$ is divisible by $3$.
+	\item[(c)] $n$ being divisible by $6$ is sufficient for $n$ to be divisible by $3$.
+	\item[(d)] $n$ being divisible by $3$ is necessary for $n$ to be divisible by $6$.
+\end{itemize}
+\emph{Converse} ($Q\Rightarrow P$): if $n$ is divisible by $3$, then $n$ is divisible by $6$. (False in general: $n=3$.)
+\emph{Contrapositive} ($\neg Q\Rightarrow\neg P$): if $n$ is not divisible by $3$, then $n$ is not divisible by $6$.
+By Theorem~\ref{thm:laws}, $P\Rightarrow Q$ is logically equivalent to its \textbf{contrapositive}, not to its converse.
+
+\subsection*{Problem 2}
+Each statement has the (implicitly universally quantified) form $\forall x\,(P(x)\Rightarrow Q(x))$; by Theorem~\ref{thm:qneg} and $\neg(P\Rightarrow Q)\lequiv P\wedge\neg Q$ (Theorem~\ref{thm:laws}), the negation is $\exists x\,(P(x)\wedge\neg Q(x))$: exhibit a case where the hypothesis holds and the conclusion fails.
+
+(a) \textbf{There exists a real number $x$ with $x>2$ and $x^2\le4$.}
+(b) \textbf{There exists a prime integer $n$ that is even (i.e.\ not odd).}
+(c) \textbf{There exist $a,b\in\R$ with $ab=0$, $a\ne0$, and $b\ne0$.}
+
+\subsection*{Problem 3}
+(These are Example ex:translations of Chapter~\ref{ch:pred}, reproduced here.)
+\begin{itemize}
+	\item[(a)] $\forall x\in\Z\ \exists y\in\Z\ (x+y=0)$.
+	\item[(b)] $\exists q\in\Q\ (q^2=2)$.
+	\item[(c)] $\neg\exists x\in\R\ (x^2=-1)$, equivalently $\forall x\in\R\ (x^2\ne-1)$.
+	\item[(d)] $\neg\forall x\in\R\ (x>x^2)$, equivalently $\exists x\in\R\ (x\le x^2)$.
+\end{itemize}
+
+\subsection*{Problem 4}
+Let $S$ = students, $A$ = assignments, $\mathrm{Sub}(s,a)$: ``$s$ submitted $a$''.
+
+(a) ``Every student submitted every assignment'': $\forall s\in S\ \forall a\in A\ \mathrm{Sub}(s,a)$. Negation: $\exists s\in S\ \exists a\in A\ \neg\mathrm{Sub}(s,a)$: \textbf{some student did not submit some assignment.} Rephrasing: \emph{there is an assignment that some student failed to submit.}
+
+(b) ``Some integer is greater than every natural number'': $\exists n\in\Z\ \forall m\in\N\ (n>m)$. Negation: $\forall n\in\Z\ \exists m\in\N\ (n\le m)$: \textbf{every integer is at most some natural number.} Rephrasing: \emph{no integer exceeds all natural numbers.}
+
+(c) ``At least one real number satisfies $x^2+x+1=0$'': $\exists x\in\R\ (x^2+x+1=0)$. Negation: $\forall x\in\R\ (x^2+x+1\ne0)$: \textbf{no real number satisfies the equation.} (This negation is in fact true: the discriminant $1-4=-3<0$.) Rephrasing: \emph{the equation $x^2+x+1=0$ has no real solution.}
+
+\subsection*{Problem 5}
+Universe $\R$.
+\begin{itemize}
+	\item[(a)] $\forall x\,\exists y\,(x+y=0)$: ``every real number has an additive inverse.'' \textbf{True} (take $y=-x$). Negation: $\exists x\,\forall y\,(x+y\ne0)$: ``some real has no additive inverse''; \textbf{false}.
+	\item[(b)] $\exists y\,\forall x\,(x+y=0)$: ``some single real is the additive inverse of every real.'' \textbf{False} (such $y$ would need $y=-x$ for every $x$, impossible for two different $x$). Negation: $\forall y\,\exists x\,(x+y\ne0)$: ``for every $y$ some $x$ is not cancelled by it''; \textbf{true} (given any $y$, take $x=1-y$; then $x+y=1\ne0$).
+	\item[(c)] $\forall x\,\forall y\,(x<y\vee y\le x)$: for any $x,y$, either $x<y$ or $y\le x$ — this exhausts trichotomy, so \textbf{true}. Negation: $\exists x\,\exists y\,(x\ge y\wedge y>x)$, i.e.\ $x\ge y$ and $y>x$ simultaneously; \textbf{false} (self-contradictory).
+	\item[(d)] $\exists x\,\exists y\,(x^2+y^2<0)$: \textbf{false} (a sum of squares is always $\ge0$, Proposition~\ref{prop:abs}-type reasoning: $x^2\ge0$, $y^2\ge0$). Negation: $\forall x\,\forall y\,(x^2+y^2\ge0)$; \textbf{true}.
+\end{itemize}
+
+\subsection*{Problem 6}
+$A:\forall x\in\R\ \exists y\in\R\ (y>x)$: ``every real number has a larger real number'', i.e.\ $\R$ has no upper bound. \textbf{True} (take $y=x+1$). $B:\exists y\in\R\ \forall x\in\R\ (y>x)$: ``some single real exceeds every real number.'' \textbf{False} (such a $y$ would exceed itself). Negations: $\neg A\lequiv\exists x\,\forall y\,(y\le x)$ (``some real is an upper bound of $\R$'') — false; $\neg B\lequiv\forall y\,\exists x\,(x\ge y)$ (``no real is an upper bound of $\R$'') — true.
+
+Changing the order changes the meaning because in $A$ the witness $y$ is chosen \emph{after}, and so may depend on, $x$; in $B$ a \emph{single} $y$ must work uniformly for every $x$ (Theorem~\ref{thm:order}, the ``quantifier game'' of Chapter~\ref{ch:pred}).
+
+\subsection*{Problem 7}
+Domains: students $x$, books $y$; $L(x,y)$: ``$x$ likes $y$.''
+\begin{center}
+	\begin{tabular}{@{}p{5.4cm}p{4.4cm}p{4.6cm}@{}}
+		\toprule
+		\textbf{Statement} & \textbf{Symbols} & \textbf{Negation}\\
+		\midrule
+		(a) Every student likes at least one book & $\forall x\,\exists y\,L(x,y)$ & $\exists x\,\forall y\,\neg L(x,y)$: some student likes no book\\
+		(b) There is a book every student likes & $\exists y\,\forall x\,L(x,y)$ & $\forall y\,\exists x\,\neg L(x,y)$: every book, some student dislikes it\\
+		(c) Some student likes no book & $\exists x\,\forall y\,\neg L(x,y)$ & $\forall x\,\exists y\,L(x,y)$: every student likes some book\\
+		(d) No student likes every book & $\forall x\,\exists y\,\neg L(x,y)$ & $\exists x\,\forall y\,L(x,y)$: some student likes every book\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\emph{Which pairs are negations of one another?} Comparing the ``Negation'' column to the ``Symbols'' column of the other rows: the negation of (a) is exactly (c), and the negation of (c) is exactly (a). So \textbf{(a) and (c) are negations of each other.} The negation of (b) is $\forall y\,\exists x\,\neg L(x,y)$, which is \emph{not} the same statement as (d) $\forall x\,\exists y\,\neg L(x,y)$ — the roles of the two quantified variables under $\forall$ and $\exists$ are swapped ($y$ ranges under $\forall$ in one, $x$ in the other), and by Theorem~\ref{thm:order} such swaps genuinely change meaning. So \textbf{(b) and (d) are not negations of one another}; the negation of (d) is instead ``some student likes every book'' ($\exists x\forall y\,L(x,y)$), which is not literally any of (a)--(c) either, though it does imply (b). This is a case where two statements ((b),(d)) can look like a natural pair but are logically independent: e.g.\ if exactly one student exists and likes exactly one of two books, (d) is true (no student likes \emph{every} book, vacuously false actually if there's only one book... take a concrete model: two students $\{s_1,s_2\}$, two books $\{b_1,b_2\}$, with $L=\{(s_1,b_1),(s_2,b_1)\}$: here (b) holds ($b_1$ is liked by all), and (d) also holds (neither student likes \emph{every} book, since neither likes $b_2$) — so (b) and (d) can be simultaneously true, confirming they are not negations.
+
+\subsection*{Problem 8}
+Using the recipe of Chapter~\ref{ch:pred} (flip every quantifier, negate the innermost connective):
+
+(a) $\neg\bigl[\forall x\in\Z\ \exists y\in\Z\ (x<y\wedge y\le x+5)\bigr]$
+\[
+\lequiv\ \exists x\in\Z\ \forall y\in\Z\ \neg(x<y\wedge y\le x+5)\ \lequiv\ \exists x\in\Z\ \forall y\in\Z\ (x\ge y\vee y>x+5).
+\]
+English: \emph{there is an integer $x$ such that every integer $y$ is either $\le x$ or $>x+5$} — i.e.\ no integer lies strictly between $x$ and $x+5$.
+
+(b) $\neg\bigl[\exists a\in\R\ \forall b\in\Z\ (b<a\Rightarrow b^2<a^2)\bigr]$
+\[
+\lequiv\ \forall a\in\R\ \exists b\in\Z\ \neg(b<a\Rightarrow b^2<a^2)\ \lequiv\ \forall a\in\R\ \exists b\in\Z\ (b<a\wedge b^2\ge a^2).
+\]
+English: \emph{for every real $a$ there is an integer $b$ with $b<a$ but $b^2\ge a^2$.}
+
+(c) $\neg\bigl[\forall m\in\Z\ \forall n\in\Z\ (m\mid n\Rightarrow m\le|n|)\bigr]$
+\[
+\lequiv\ \exists m\in\Z\ \exists n\in\Z\ \neg(m\mid n\Rightarrow m\le|n|)\ \lequiv\ \exists m\in\Z\ \exists n\in\Z\ (m\mid n\wedge m>|n|).
+\]
+English: \emph{there exist integers $m,n$ with $m\mid n$ but $m>|n|$.} (E.g.\ $m=5$, $n=0$: $5\mid0$ since $0=5\cdot0$, and $5>|0|=0$ — so this negation is in fact true, showing the original universal statement is false as stated; it is true for $n\ne0$.)

@@ -1,0 +1,83 @@
+\part{Analysis and Topology}
+
+\chapter{Sequences and Completeness in $\R$}\label{ch:seq}
+
+From now on $\R$ is a complete ordered field (Theorem~\ref{thm:R}); we use its axioms, the Archimedean property, and Proposition~\ref{prop:abs}.
+
+\section{Sequences and limits}
+
+\begin{definition}
+	A \emph{sequence} in a set $X$ is a function $x:\N_{\ge1}\to X$, written $(x_n)_{n\ge1}$. A \emph{subsequence} is $(x_{n_k})_{k\ge1}$ where $n_1<n_2<\cdots$ (a strictly increasing map $\N_{\ge1}\to\N_{\ge1}$). A real sequence \emph{converges to $L\in\R$}, written $x_n\to L$, if
+	\[
+	\forall\varepsilon>0\ \exists N\in\N\ \forall n\ge N\quad|x_n-L|<\varepsilon.
+	\]
+	It is \emph{bounded} if $\exists M\ \forall n\ |x_n|\le M$, and \emph{Cauchy} if $\forall\varepsilon>0\ \exists N\ \forall m,n\ge N\ |x_m-x_n|<\varepsilon$.
+\end{definition}
+
+By Chapter~\ref{ch:pred}, $x_n\not\to L$ iff $\exists\varepsilon>0\ \forall N\ \exists n\ge N\ |x_n-L|\ge\varepsilon$. A sequence \emph{diverges} if it converges to no $L$.
+
+\begin{theorem}[Basic limit laws]\label{thm:limitlaws}
+	Let $x_n\to a$ and $y_n\to b$. (a) The limit is unique. (b) $(x_n)$ is bounded. (c) $x_n+y_n\to a+b$ and $x_ny_n\to ab$. (d) If $x_n\le y_n$ for all $n$ then $a\le b$. (e) \emph{(Squeeze)} If $x_n\le z_n\le y_n$ and $a=b$ then $z_n\to a$.
+\end{theorem}
+\begin{proof}
+	(a) If also $x_n\to a'$, given $\varepsilon>0$ pick $N$ for both with $\varepsilon/2$: $|a-a'|\le|a-x_n|+|x_n-a'|<\varepsilon$ for $n\ge N$. So $|a-a'|<\varepsilon$ for all $\varepsilon>0$, hence $a=a'$ (else $\varepsilon=|a-a'|$ contradicts). (b) Take $\varepsilon=1$: for $n\ge N$, $|x_n|<|a|+1$; so $M=\max\{|x_1|,\dots,|x_{N}|,|a|+1\}$ works. (c) For the sum use $\varepsilon/2$ and the triangle inequality. For the product, $|x_ny_n-ab|\le|x_n||y_n-b|+|b||x_n-a|\le M|y_n-b|+|b||x_n-a|$ with $M$ from (b); choose $N$ so both terms are $<\varepsilon/(2M+2|b|+1)\cdot$ suitably (e.g.\ $|y_n-b|<\frac\varepsilon{2M+1}$, $|x_n-a|<\frac\varepsilon{2|b|+1}$ gives $<\varepsilon$). (d) If $a>b$ take $\varepsilon=\frac{a-b}2$: for large $n$, $x_n>a-\varepsilon=b+\varepsilon>y_n$, contradicting $x_n\le y_n$. (e) $a-\varepsilon<x_n\le z_n\le y_n<a+\varepsilon$ for large $n$.
+\end{proof}
+
+\section{Completeness theorems}
+
+\begin{theorem}[Monotone convergence]\label{thm:mct}
+	A bounded monotone increasing sequence converges (to its supremum); a bounded decreasing one converges to its infimum.
+\end{theorem}
+\begin{proof}
+	Let $s=\sup\{x_n\}$ (exists by completeness). Given $\varepsilon>0$, $s-\varepsilon$ is not an upper bound, so some $x_N>s-\varepsilon$; for $n\ge N$, $s-\varepsilon<x_N\le x_n\le s$. For decreasing sequences apply this to $(-x_n)$.
+\end{proof}
+
+\begin{theorem}[Nested interval property]\label{thm:nip}
+	If $I_n=[a_n,b_n]$ with $I_1\supseteq I_2\supseteq\cdots$ and $a_n\le b_n$, then $\bigcap_nI_n\ne\varnothing$.
+\end{theorem}
+\begin{proof}
+	First, $a_n\le b_m$ for all $m,n$: if $m\ge n$ then $a_n\le a_m\le b_m$ (as $I_m\subseteq I_n$); if $m<n$ then $a_n\le b_n\le b_m$ (as $I_n\subseteq I_m$). So $(a_n)$ is increasing and bounded above by $b_1$. So $s=\sup a_n$ exists, with $a_n\le s\le b_m$ for all $n,m$. Hence $s\in I_n$ for all $n$.
+\end{proof}
+
+\begin{theorem}[Uncountability of $\R$]\label{thm:Runcountable}
+	For every sequence $(x_n)_{n\ge1}$ of reals there is a real number not in the list. Hence $\R$ is uncountable.
+\end{theorem}
+\begin{proof}
+	Set $I_0=[0,1]$. Given $I_{n-1}=[a,b]$ with $a<b$, split it into the closed thirds $[a,a+\ell],[a+\ell,a+2\ell],[a+2\ell,b]$, $\ell=(b-a)/3$; $x_n$ lies in at most two of them ($x_n$ can lie in two only if it is a division point), so the first third not containing $x_n$ defines $I_n$. By Theorem~\ref{thm:nip}, some $y\in\bigcap_{n\ge0}I_n$. But $y\in I_n$ and $x_n\notin I_n$, so $y\neq x_n$ for every $n$. If $\R$ were countable there would be a surjection $\N_{\ge1}\to\R$ (Theorem~\ref{thm:bijection}(b)), contradicting this.
+\end{proof}
+
+\begin{lemma}[Monotone subsequence]\label{lem:monsub}
+	Every real sequence has a monotone subsequence.
+\end{lemma}
+\begin{proof}
+	Call $m$ a \emph{peak} if $x_m\ge x_n$ for all $n>m$. If there are infinitely many peaks $m_1<m_2<\cdots$, then $x_{m_1}\ge x_{m_2}\ge\cdots$ is decreasing. If there are finitely many, choose $n_1$ beyond all peaks; $n_1$ is not a peak, so some $n_2>n_1$ has $x_{n_2}>x_{n_1}$; $n_2$ is not a peak, so there is $n_3>n_2$ with $x_{n_3}>x_{n_2}$; etc. (recursion, Theorem~\ref{thm:recursion}) gives an increasing subsequence.
+\end{proof}
+
+\begin{theorem}[Bolzano--Weierstrass]\label{thm:bw}
+	Every bounded real sequence has a convergent subsequence.
+\end{theorem}
+\begin{proof}
+	By Lemma~\ref{lem:monsub} it has a monotone subsequence, which is bounded, hence convergent by Theorem~\ref{thm:mct}.
+\end{proof}
+
+\begin{theorem}[Cauchy criterion]\label{thm:cauchy}
+	A real sequence converges if and only if it is Cauchy.
+\end{theorem}
+\begin{proof}
+	($\Rightarrow$) If $x_n\to L$, take $N$ for $\varepsilon/2$: $|x_m-x_n|\le|x_m-L|+|L-x_n|<\varepsilon$. ($\Leftarrow$) A Cauchy sequence is bounded (take $\varepsilon=1$: $|x_n|\le|x_N|+1$ for $n\ge N$). By Bolzano--Weierstrass a subsequence $x_{n_k}\to L$. Given $\varepsilon>0$ choose $N$ with $|x_m-x_n|<\varepsilon/2$ for $m,n\ge N$ and $k$ with $n_k\ge N$ and $|x_{n_k}-L|<\varepsilon/2$; then for $n\ge N$, $|x_n-L|\le|x_n-x_{n_k}|+|x_{n_k}-L|<\varepsilon$.
+\end{proof}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.5cm}p{4.6cm}p{6.5cm}@{}}
+		\toprule
+		\textbf{Property of $\R$} & \textbf{Content} & \textbf{Relation to completeness}\\
+		\midrule
+		Least upper bound & bounded non-empty sets have $\sup$ & the axiom\\
+		Monotone convergence & bounded monotone sequences converge & follows from LUB (Thm~\ref{thm:mct}); with the Archimedean property it implies LUB\\
+		Nested intervals & $\bigcap[a_n,b_n]\ne\varnothing$ & follows from LUB; with Archimedean equivalent to LUB\\
+		Bolzano--Weierstrass & bounded sequences have convergent subsequences & follows from MCT\\
+		Cauchy completeness & Cauchy $\Rightarrow$ convergent & follows from BW; with the Archimedean property equivalent to LUB\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+$\Q$ is Archimedean but satisfies none of these ($(1,1.4,1.41,\dots)$ is Cauchy in $\Q$ with no limit in $\Q$), and non-Archimedean ordered fields may satisfy some (Cauchy completeness) without LUB; the Archimedean property is genuinely needed in the converses.

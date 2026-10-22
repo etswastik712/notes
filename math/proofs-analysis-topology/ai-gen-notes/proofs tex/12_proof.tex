@@ -1,0 +1,130 @@
+\chapter{Methods of Proof}\label{ch:proof}
+
+\section{What a proof is}
+
+\begin{definition}[Proof]
+	A \emph{proof} of a statement $S$ from a collection of hypotheses is a finite sequence of statements ending with $S$, in which every statement is (i) a hypothesis, (ii) an axiom or a definition being unfolded, (iii) a previously proved theorem, or (iv) obtained from earlier statements by a valid rule of inference, i.e.\ a rule whose corresponding implication is a tautology (such as modus ponens, Theorem~\ref{thm:laws}) or a quantifier rule from Chapter~\ref{ch:pred}.
+\end{definition}
+
+Mathematical writing compresses this to ordinary prose, but every step must be justifiable in this sense. The key point is that the \emph{logical form of the goal} dictates the shape of the proof.
+
+\section{Proof strategies by logical form}
+
+\begin{center}
+	\begin{tabular}{@{}p{2.6cm}p{6.2cm}p{5.8cm}@{}}
+		\toprule
+		\textbf{Goal / given} & \textbf{To prove it}\ldots & \textbf{To use it (as a hypothesis)}\ldots\\
+		\midrule
+		$P\Rightarrow Q$ & \emph{Direct:} assume $P$, deduce $Q$. \emph{Contrapositive:} assume $\neg Q$, deduce $\neg P$. & From $P$ conclude $Q$ (modus ponens); from $\neg Q$ conclude $\neg P$.\\
+		$P\wedge Q$ & Prove $P$; prove $Q$. & Use both $P$ and $Q$.\\
+		$P\vee Q$ & Assume $\neg P$ and prove $Q$ (or prove one disjunct outright). & \emph{Cases:} show the goal from $P$, and again from $Q$.\\
+		$\neg P$ & Assume $P$ and derive a contradiction. & If $P$ is also obtained, contradiction.\\
+		$P\Leftrightarrow Q$ & Prove $P\Rightarrow Q$ and $Q\Rightarrow P$ separately. & Replace $P$ by $Q$ or vice versa.\\
+		$\forall x\in A\,P(x)$ & Let $x\in A$ be \emph{arbitrary} (assume nothing else about it); prove $P(x)$. & Instantiate at any particular element of $A$.\\
+		$\exists x\in A\,P(x)$ & Exhibit a \emph{witness} $a\in A$ and prove $P(a)$ (constructive), or argue indirectly (non-constructive). & Introduce a \emph{new name} $a\in A$ with $P(a)$; assume nothing more about $a$.\\
+		$\exists!x\,P(x)$ & Existence: exhibit $a$ with $P(a)$. Uniqueness: assume $P(a)$ and $P(b)$, deduce $a=b$. & Take the witness; any two solutions coincide.\\
+		$S$ (arbitrary) & \emph{Contradiction:} assume $\neg S$, derive a statement and its negation. & ---\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\section{The principal techniques}
+
+\subsection{Direct proof}
+\begin{example}
+	\textit{Claim:} if $6\mid n$ then $3\mid n$. \emph{Proof.} Suppose $n=6k$ with $k\in\Z$. Then $n=3(2k)$ with $2k\in\Z$, so $3\mid n$. \qed
+\end{example}
+
+\subsection{Contrapositive}
+To prove $P\Rightarrow Q$ it suffices to prove $\neg Q\Rightarrow\neg P$ since they are equivalent (Theorem~\ref{thm:laws}).
+\begin{example}
+	\textit{Claim:} for $n\in\Z$, if $n^2$ is even then $n$ is even. \emph{Proof by contrapositive.} Assume $n$ is odd, $n=2k+1$. Then $n^2=4k^2+4k+1=2(2k^2+2k)+1$ is odd. \qed
+\end{example}
+
+\subsection{Contradiction}
+To prove $S$, assume $\neg S$ and derive some statement $R$ together with $\neg R$; since $(\neg S\Rightarrow(R\wedge\neg R))\Rightarrow S$ is a tautology, $S$ follows.
+
+\begin{warning}
+	Contrapositive and contradiction are different: contrapositive proves a conditional by proving another conditional; contradiction proves any statement. A contrapositive proof can always be dressed as a contradiction proof, but not conversely.
+\end{warning}
+
+\begin{theorem}\label{thm:sqrt2}
+	$\sqrt2$ is irrational.
+\end{theorem}
+\begin{proof}
+	Suppose $\sqrt2=a/b$ with $a,b\in\Z$, $b>0$, and (by cancelling common factors) $\gcd(a,b)=1$. Then $a^2=2b^2$, so $a^2$ is even, so $a$ is even by the previous example, say $a=2c$. Then $4c^2=2b^2$, i.e.\ $b^2=2c^2$, so $b$ is even too. Then $2$ divides both $a$ and $b$, contradicting $\gcd(a,b)=1$.
+\end{proof}
+
+\begin{theorem}[Euclid]\label{thm:euclid}
+	There are infinitely many primes. (A \emph{prime} is an integer $p\ge2$ whose only positive divisors are $1$ and $p$.)
+\end{theorem}
+\begin{proof}
+	\emph{Step 1: every integer $n\ge2$ has a prime divisor.} The set of divisors of $n$ that exceed $1$ is non-empty (it contains $n$), so it has a least element $d$ (well-ordering, Theorem~\ref{thm:wellorder}). If $d$ were not prime it would have a divisor $e$ with $1<e<d$; then $e\mid d\mid n$, contradicting minimality of $d$. So $d$ is a prime divisor of $n$.
+	
+	\emph{Step 2.} Suppose there were only finitely many primes $p_1,\dots,p_k$ ($k\ge1$ since $2$ is prime). Let $N=p_1p_2\cdots p_k+1\ge3$. By Step 1, some prime $q$ divides $N$, so $q=p_i$ for some $i$. Then $q$ divides $N$ and $p_1\cdots p_k$, hence divides their difference $1$, which is impossible for $q\ge2$.
+\end{proof}
+
+\subsection{Cases and ``without loss of generality''}
+To prove $R$ from $P\vee Q$, prove $P\Rightarrow R$ and $Q\Rightarrow R$ (Theorem~\ref{thm:laws}, proof by cases). If the cases are symmetric, one writes ``WLOG'' and treats one case; this is legitimate only if relabelling really turns one case into the other. Example: to show $|a-b|\le|a|+|b|$ split on signs.
+
+\subsection{Existence and uniqueness; constructive and non-constructive proofs}
+A proof that exhibits the object is \emph{constructive}. Some existence proofs do not:
+\begin{example}
+	\textit{Claim:} there exist irrational $a,b$ with $a^b$ rational. Let $x=\sqrt2^{\sqrt2}$. If $x$ is rational take $a=b=\sqrt2$. If $x$ is irrational take $a=x$, $b=\sqrt2$: then $a^b=\sqrt2^{\sqrt2\cdot\sqrt2}=\sqrt2^{\,2}=2$. In either case the claim holds, though we have not decided which case occurs.
+\end{example}
+Existence via Zorn's lemma (Chapter~\ref{ch:zorn}) is non-constructive in an even stronger sense.
+
+\subsection{Counterexamples}
+To disprove $\forall x\,P(x)$, exhibit one $x$ with $\neg P(x)$ (Theorem~\ref{thm:qneg}). To disprove $P\Rightarrow Q$, exhibit a situation where $P$ is true and $Q$ false. Examples do \emph{not} prove universal statements.
+
+\section{Mathematical induction}
+
+Induction is a property of the natural numbers. In Part~IV we \emph{prove} it from the axioms of set theory; until then we use it as the familiar principle.
+
+\begin{theorem}[Three equivalent forms]\label{thm:induction-forms}
+	For $\N=\{0,1,2,\dots\}$, the following are equivalent.
+	\begin{enumerate}[label=(\alph*)]
+		\item \emph{Induction:} if $S\subseteq\N$, $0\in S$, and $n\in S\Rightarrow n+1\in S$ for all $n$, then $S=\N$.
+		\item \emph{Strong induction:} if $S\subseteq\N$ and for every $n$, ($\forall k<n\;k\in S)\Rightarrow n\in S$, then $S=\N$.
+		\item \emph{Well-ordering:} every non-empty subset of $\N$ has a least element.
+	\end{enumerate}
+\end{theorem}
+(A proof is given in Chapter~\ref{ch:nat}, where all three are derived.)
+
+\begin{center}
+	\begin{tabular}{@{}p{2.6cm}p{4.8cm}p{4.2cm}p{2.8cm}@{}}
+		\toprule
+		\textbf{Form} & \textbf{What you prove} & \textbf{Typical use} & \textbf{Base case}\\
+		\midrule
+		Induction & $P(0)$; $P(n)\Rightarrow P(n+1)$ & formulas, inequalities & $P(0)$ (or $P(n_0)$)\\
+		Strong induction & $\bigl(\forall k<n\,P(k)\bigr)\Rightarrow P(n)$ & factorisations, recursions using several previous cases & none needed separately, but the argument must cover $n=0$\\
+		Well-ordering & take a least counterexample and derive a smaller one & minimal-counterexample arguments & ---\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{example}
+	\textit{Claim:} $1+2+\dots+n=\dfrac{n(n+1)}2$ for all $n\ge1$. Base: $n=1$ gives $1=1$. Step: if the formula holds for $n$, then $1+\dots+n+(n+1)=\frac{n(n+1)}2+(n+1)=\frac{(n+1)(n+2)}2$, which is the formula for $n+1$.
+\end{example}
+
+\begin{warning}
+	The inductive step must be proved for an \emph{arbitrary} $n$ using only the hypothesis $P(n)$. The classic fake ``proof'' that all horses have the same colour breaks because the step $P(1)\Rightarrow P(2)$ silently fails. Never omit the base case, and never assume $P(n+1)$ while proving $P(n+1)$.
+\end{warning}
+
+\section{Frequent errors}
+
+\begin{center}
+	\begin{tabular}{@{}p{4.2cm}p{5.4cm}p{5cm}@{}}
+		\toprule
+		\textbf{Error} & \textbf{Why it is wrong} & \textbf{Correct approach}\\
+		\midrule
+		Affirming the consequent: from $P\Rightarrow Q$ and $Q$ conclude $P$ & $P\Rightarrow Q$ is not equivalent to its converse & prove $Q\Rightarrow P$ separately, or use $\Leftrightarrow$\\
+		Proving a universal statement by examples & finitely many instances do not cover the domain & pick an arbitrary element\\
+		Treating $\exists$ as $\forall$ (or swapping quantifier order) & Theorem~\ref{thm:order} & respect dependencies\\
+		Circular reasoning: using the claim (or an equivalent) in its own proof & nothing has been derived & identify the axioms/definitions being used\\
+		Chains of $\Rightarrow$ where $\Leftrightarrow$ is needed & each arrow may lose information (e.g.\ squaring) & check reversibility at each step\\
+		Dividing by a possibly-zero quantity & $0\cdot a=0\cdot b$ does not give $a=b$ & treat $x=0$ as a separate case\\
+		Negating ``$P\Rightarrow Q$'' as ``$P\Rightarrow\neg Q$'' & Theorem~\ref{thm:laws} & $P\wedge\neg Q$\\
+		\bottomrule
+	\end{tabular}
+\end{center}

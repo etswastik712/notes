@@ -1,0 +1,175 @@
+\chapter{Partially Ordered Sets}\label{ch:orders}
+
+\section{Partial orders}
+
+\begin{definition}[Poset]
+	A \emph{partially ordered set} (\emph{poset}) is a pair $(P,\le)$ where $\le$ is a partial order on $P$: reflexive, antisymmetric, transitive (Chapter~\ref{ch:relations}). Write $x<y$ for $x\le y\wedge x\ne y$. Elements $x,y$ are \emph{comparable} if $x\le y$ or $y\le x$, and \emph{incomparable} otherwise. A subset $C\subseteq P$ is a \emph{chain} if any two of its elements are comparable (the induced order on $C$ is total); it is an \emph{antichain} if any two distinct elements are incomparable. The \emph{dual} order is $x\le^{\mathrm{op}}y:\iff y\le x$; $(P,\le^{\mathrm{op}})$ is again a poset. Any subset $S\subseteq P$ is a poset under the restricted order.
+\end{definition}
+
+\begin{example}\label{ex:posets}
+	\begin{enumerate}[label=(\arabic*)]
+		\item $(\R,\le)$, $(\Z,\le)$, $(\N,\le)$: total orders.
+		\item $(\pset(X),\subseteq)$; comparable pairs are those where one set contains the other. For $|X|\ge2$ it is not total: $\{a\}$, $\{b\}$ are incomparable.
+		\item $(\N,\mid)$ and $(\{1,2,3,4,6,8,12,24\},\mid)$, divisibility: reflexive ($a\mid a$), antisymmetric on non-negative integers, transitive. (On $\Z$ divisibility is only a preorder, since $2\mid-2$ and $-2\mid2$.)
+		\item The set $\mathrm{Sub}(V)$ of all vector subspaces of a vector space $V$, ordered by inclusion.
+		\item Product order (Proposition below) on $\Z\times\Z$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}[Product order]\label{prop:productorder}
+	If $(P,\le_P)$ and $(Q,\le_Q)$ are posets, then $(a,b)\le(c,d):\iff a\le_Pc\wedge b\le_Qd$ is a partial order on $P\times Q$. It is total only in degenerate cases: e.g.\ on $\Z\times\Z$, $(0,1)$ and $(1,0)$ are incomparable.
+\end{proposition}
+\begin{proof}
+	Reflexive: $(a,b)\le(a,b)$. Antisymmetric: $(a,b)\le(c,d)\le(a,b)$ gives $a\le c\le a$ and $b\le d\le b$, so $a=c$, $b=d$ (antisymmetry in each factor), hence $(a,b)=(c,d)$ by (OP). Transitive: componentwise.
+\end{proof}
+
+\begin{definition}[Covering relation, Hasse diagram]
+	In a poset, $y$ \emph{covers} $x$ if $x<y$ and there is no $z$ with $x<z<y$. A \emph{Hasse diagram} of a finite poset draws each element as a point, with $y$ above $x$ and a segment joining them whenever $y$ covers $x$; $x\le y$ iff one can climb from $x$ to $y$ along segments.
+\end{definition}
+
+\begin{center}
+	\begin{tikzpicture}[every node/.style={font=\small,fill=white,inner sep=2pt}]
+		\node (n1) at (0,0) {$1$};
+		\node (n2) at (-1,1.1) {$2$};
+		\node (n3) at (1,1.1) {$3$};
+		\node (n4) at (-2,2.2) {$4$};
+		\node (n6) at (0,2.2) {$6$};
+		\node (n8) at (-3,3.3) {$8$};
+		\node (n12) at (-1,3.3) {$12$};
+		\node (n24) at (-2,4.4) {$24$};
+		\draw (n1)--(n2) (n1)--(n3) (n2)--(n4) (n2)--(n6) (n3)--(n6) (n4)--(n8) (n4)--(n12) (n6)--(n12) (n8)--(n24) (n12)--(n24);
+	\end{tikzpicture}
+	
+	\emph{Hasse diagram of the divisors of $24$ under divisibility.}
+\end{center}
+
+\section{Extremal elements and bounds}
+
+Fix a poset $(P,\le)$ and a subset $S\subseteq P$.
+
+\begin{definition}[Minimal, maximal, minimum, maximum]\label{def:extremal}
+	An element $m\in S$ is
+	\begin{itemize}
+		\item \emph{minimal in $S$} if $\forall s\in S\,(s\le m\Rightarrow s=m)$: nothing in $S$ lies strictly below $m$;
+		\item \emph{maximal in $S$} if $\forall s\in S\,(m\le s\Rightarrow s=m)$;
+		\item the \emph{minimum} (least element) of $S$ if $\forall s\in S\;m\le s$;
+		\item the \emph{maximum} (greatest element) of $S$ if $\forall s\in S\;s\le m$.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}[Bounds]\label{def:bounds}
+	An element $l\in P$ (\emph{not necessarily in $S$}) is a \emph{lower bound} of $S$ if $\forall s\in S\;l\le s$, and $u\in P$ is an \emph{upper bound} if $\forall s\in S\;s\le u$. Let $S^{\downarrow}$ and $S^{\uparrow}$ be the sets of lower and upper bounds in $P$. The \emph{greatest lower bound} $\glb S$ (also $\inf S$) is the maximum of $S^{\downarrow}$, and the \emph{least upper bound} $\lub S$ ($\sup S$) is the minimum of $S^{\uparrow}$, when these exist.
+\end{definition}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.0cm}p{1.9cm}p{4.5cm}p{1.9cm}p{2.3cm}@{}}
+		\toprule
+		\textbf{Notion} & \textbf{Lives in} & \textbf{Condition} & \textbf{Unique?} & \textbf{Always exists?}\\
+		\midrule
+		minimal element & $S$ & nothing of $S$ strictly below & no & yes if $S$ finite, $\ne\varnothing$\\
+		minimum & $S$ & $\le$ every element of $S$ & yes & no\\
+		lower bound & $P$ & $\le$ every element of $S$ & no (possibly none) & no\\
+		$\glb S$ & $P$ & greatest lower bound & yes & no\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+(The rows for maximal, maximum, upper bound, $\lub$ are the duals.)
+
+\begin{theorem}[Uniqueness of the minimum]\label{thm:minunique}
+	If a poset $(P,\le)$ has a minimum element, it is unique. The same holds for a maximum, and for any subset $S\subseteq P$.
+\end{theorem}
+\begin{proof}
+	Let $m,m'$ both be minima. Then $m\le m'$ (as $m$ is a minimum) and $m'\le m$ (as $m'$ is), so $m=m'$ by antisymmetry. For a subset $S$ apply this to the poset $(S,\le)$. For maxima apply the result to the dual order.
+\end{proof}
+
+\begin{corollary}
+	$\glb S$ and $\lub S$ are unique when they exist.
+\end{corollary}
+\begin{proof}
+	They are the maximum of $S^\downarrow$ and the minimum of $S^\uparrow$ (Theorem~\ref{thm:minunique}).
+\end{proof}
+
+\begin{proposition}[Relations between the notions]\label{prop:extremal-rel}
+	\begin{enumerate}[label=(\alph*)]
+		\item A minimum of $S$ is minimal in $S$ and is a lower bound of $S$ lying in $S$. If $S$ has a minimum $m$, then $\glb S=m$.
+		\item If $S$ is a chain, then $m$ is minimal iff $m$ is the minimum.
+		\item $S$ may have several minimal elements and no minimum.
+		\item $\glb S$ need not lie in $S$; if it does, it is the minimum of $S$. (Dually for $\lub$.)
+	\end{enumerate}
+\end{proposition}
+\begin{proof}
+	(a) If $s\le m$ with $s\in S$, then $m\le s$ too, so $s=m$; so $m$ is minimal. $m\in S^\downarrow$ by definition, and every lower bound $l$ satisfies $l\le m$ because $m\in S$; so $m=\max S^\downarrow$.
+	
+	(b) If $m$ is minimal and $s\in S$, comparability gives $m\le s$ or $s\le m$; in the second case $s=m$ by minimality, so $m\le s$ anyway. Hence $m$ is the minimum. The converse is (a).
+	
+	(c) See the example below. (d) If $\glb S=g\in S$ then $g\le s$ for all $s\in S$ (it is a lower bound), so $g=\min S$. For non-membership see the example below.
+\end{proof}
+
+\begin{example}\label{ex:divsub}
+	In $P=\{1,2,3,4,6,8,12,24\}$ under divisibility take $S=\{4,6,8,12\}$. Minimal elements: $4$ and $6$ (the divisors of $4$ in $S$ are only $4$; of $6$ only $6$). Maximal: $8$ and $12$ ($8$ has no proper multiple in $S$, nor does $12$). No minimum ($4\nmid6$) and no maximum ($8\nmid12$). Lower bounds: $x\in P$ dividing $4,6,8,12$, i.e.\ dividing $\gcd=2$: $\{1,2\}$. Upper bounds: multiples of $\operatorname{lcm}=24$ in $P$: $\{24\}$. So $\glb S=2\notin S$ and $\lub S=24\notin S$.
+\end{example}
+
+\begin{intuition}
+	Minimal/maximal are \emph{local} notions (nothing in $S$ is below/above), and can occur many times, like several local low points of a landscape. Minimum/maximum are \emph{global}: one element beats everyone. Bounds live in the ambient poset $P$: they measure the whole of $S$ from outside, and $\glb$/$\lub$ pick the best such bound. Whether a $\lub$ exists depends on $P$, not just on $S$: the same $S$ can have a $\lub$ in one ambient poset and none in another (Example~\ref{ex:Qgap}).
+\end{intuition}
+
+\begin{proposition}[When does $\lub S$ belong to $S$?]\label{prop:lub-max}
+	If $S$ has a maximum $M$ then $\lub S=M$. If $\lub S=u$ exists and $u\in S$ then $u=\max S$. If $\lub S$ exists and $\notin S$, then $S$ has no maximum.
+\end{proposition}
+\begin{proof}
+	The three claims are the duals of Proposition~\ref{prop:extremal-rel}(a),(d); the last follows from the first: if $\max S=M$ existed, then $\lub S=M\in S$.
+\end{proof}
+
+\begin{example}[Sup without max]
+	In $(\R,\le)$, $S=[0,1)$ has $\lub S=1\notin S$ and no maximum. In $(\Q,\le)$ the set $\{q\in\Q:q^2<2\}$ is bounded above but has \emph{no} $\lub$ in $\Q$ (Example~\ref{ex:Qgap} proves this in Chapter~\ref{ch:reals}); this failure is the reason for constructing $\R$.
+\end{example}
+
+\section{Finite posets}
+
+\begin{theorem}[Existence of extremal elements in finite posets]\label{thm:finitemax}
+	Every non-empty finite poset has a maximal element and a minimal element.
+\end{theorem}
+\begin{proof}
+	\emph{Maximal element}, by induction on $n=|P|\ge1$. For $n=1$ the single element is maximal. Suppose the claim holds for posets with $n$ elements and let $|P|=n+1$. Fix $p\in P$ and let $P'=P\setminus\{p\}$, a poset with $n\ge1$ elements; let $m'$ be maximal in $P'$. If $m'$ is maximal in $P$ we are done. Otherwise there is $x\in P$ with $m'<x$; as $m'$ is maximal in $P'$ we cannot have $x\in P'$, so $x=p$ and $m'<p$. We claim $p$ is maximal in $P$. Suppose $p<y$ with $y\in P$. Then $y\neq p$, so $y\in P'$, and $m'<p<y$ gives $m'\le y$ by transitivity. Also $m'\ne y$, for $m'=y$ would give $p<m'<p$, i.e.\ $p\le m'\le p$ and $p=m'$, contradicting $m'<p$. Thus $m'<y$ with $y\in P'$, contradicting maximality of $m'$ in $P'$. So $p$ is maximal.
+	
+	\emph{Minimal element:} apply this to the dual order, in which maximal elements are the minimal elements of the original.
+\end{proof}
+
+\begin{remark}
+	Both hypotheses matter. $\varnothing$ has no maximal element; $(\N,\le)$ has no maximal element (and $(\Z,\le)$ has no maximal or minimal element). Zorn's lemma (Chapter~\ref{ch:zorn}) is precisely the tool that replaces finiteness by a condition on chains.
+\end{remark}
+
+\section{Lattices}
+
+\begin{definition}[Lattice]
+	A poset is a \emph{lattice} if every two-element subset $\{a,b\}$ has a $\lub$ (the \emph{join} $a\vee b$) and a $\glb$ (the \emph{meet} $a\wedge b$). It is a \emph{complete lattice} if \emph{every} subset (including $\varnothing$) has a $\lub$ and a $\glb$.
+\end{definition}
+
+\begin{center}
+	\begin{tabular}{@{}p{4.6cm}p{2.9cm}p{2.9cm}p{3.6cm}@{}}
+		\toprule
+		\textbf{Poset} & \textbf{Join} & \textbf{Meet} & \textbf{Complete?}\\
+		\midrule
+		$(\pset(X),\subseteq)$ & $A\cup B$ & $A\cap B$ & yes\\
+		divisors of $24$, $\mid$ & $\operatorname{lcm}$ & $\gcd$ & yes (finite)\\
+		$(\mathrm{Sub}(V),\subseteq)$ & $U+W$ & $U\cap W$ & yes\\
+		$(\R,\le)$ & $\max$ & $\min$ & no (unbounded)\\
+		$([0,1],\le)$ & $\max$ & $\min$ & yes\\
+		$\{a,b,c\}$ with $a<c$, $b<c$ only & $c$ & \emph{none} for $a,b$ & not a lattice\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{proposition}[Subspaces]\label{prop:subspaces}
+	In $(\mathrm{Sub}(V),\subseteq)$, $\glb\{U,W\}=U\cap W$ and $\lub\{U,W\}=U+W:=\{u+w:u\in U,w\in W\}$. In general $\lub\{U,W\}\neq U\cup W$, since $U\cup W$ is usually not a subspace.
+\end{proposition}
+\begin{proof}
+	$U\cap W$ is a subspace contained in $U$ and $W$; if a subspace $L\subseteq U$ and $L\subseteq W$, then $L\subseteq U\cap W$. So it is the greatest lower bound. $U+W$ is a subspace (closed under addition and scalars), containing $U$ (take $w=0$) and $W$; any subspace $M\supseteq U\cup W$ contains all sums $u+w$, so $M\supseteq U+W$. Hence $U+W$ is the least upper bound.
+\end{proof}
+
+\section{Well-orders and order maps}
+
+\begin{definition}
+	A total order is a \emph{well-order} if every non-empty subset has a least element. A map $f:P\to Q$ between posets is \emph{monotone} if $x\le y\Rightarrow f(x)\le f(y)$, and an \emph{order isomorphism} if it is a bijection with $x\le y\iff f(x)\le f(y)$.
+\end{definition}
+$(\N,\le)$ is a well-order (Theorem~\ref{thm:wellorder}); $(\Z,\le)$ and $([0,1],\le)$ are not ($\Z$ has no least element; $(0,1]\subseteq[0,1]$ has none). The well-ordering theorem (every set admits a well-order) is equivalent to Choice (Chapter~\ref{ch:zorn}).

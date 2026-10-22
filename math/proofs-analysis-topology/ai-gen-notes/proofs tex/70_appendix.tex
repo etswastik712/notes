@@ -1,0 +1,333 @@
+\chapter{Summary of Definitions and Theorems}\label{ch:summary}
+
+This chapter is a compressed, chapter-by-chapter recap of the main definitions and theorems in Parts~I--V. It is a memory aid, not a substitute for the full statements; every entry points back to the precise definition, theorem, or example it summarises. Nothing here is stated with full hypotheses --- consult the reference before quoting a result.
+
+\section*{Part I: Logic and the Language of Proof}
+
+\subsection*{Chapter~\ref{ch:prop}: Propositional Logic}
+\begin{itemize}
+	\item A \emph{statement} is a sentence with a definite truth value (Definition~\ref{def:connectives} context). The connectives $\neg,\wedge,\vee,\Rightarrow,\Leftrightarrow$ are truth-functional; $\Rightarrow$ is \emph{material}: false only when antecedent true, consequent false.
+	\item \emph{Logical equivalence} $P\sim Q$ (same truth value under every assignment) is a statement about forms, not a connective --- contrast $\Leftrightarrow$ (Warning).
+	\item Theorem~\ref{thm:laws}: the standard algebra of forms (commutativity, associativity, distributivity, De Morgan, double negation, contrapositive equivalence $P\Rightarrow Q\ \sim\ \neg Q\Rightarrow\neg P$).
+	\item Theorem~\ref{thm:adequacy}: $\{\neg,\wedge\}$ (and $\{\neg,\vee\}$, $\{\neg,\Rightarrow\}$) are functionally complete --- every form is equivalent to one built from these alone.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:pred}: Predicates and Quantifiers}
+\begin{itemize}
+	\item A \emph{predicate} $P(x)$ becomes a statement only once $x$ is assigned a value or quantified.
+	\item Theorem~\ref{thm:qneg}: $\neg\forall x\,P(x)\ \sim\ \exists x\,\neg P(x)$ and $\neg\exists x\,P(x)\ \sim\ \forall x\,\neg P(x)$ --- quantifier negation flips the quantifier and negates the body.
+	\item Theorem~\ref{thm:order}: $\forall x\,\forall y$ and $\exists x\,\exists y$ commute; \emph{mixed} quantifiers do not ($\forall x\,\exists y$ is strictly weaker than $\exists y\,\forall x$).
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:proof}: Methods of Proof}
+\begin{itemize}
+	\item Direct, contrapositive, and contradiction all prove $P\Rightarrow Q$, but differ in what is assumed: direct assumes $P$; contrapositive assumes $\neg Q$ and derives $\neg P$; contradiction assumes $P\wedge\neg Q$ and derives \emph{any} falsehood.
+	\item Theorem~\ref{thm:induction-forms}: weak induction, strong induction, and the well-ordering principle for $\N$ are logically equivalent proof schemes (the equivalence is reproved from the ZFC construction of $\N$ in Theorem~\ref{thm:wellorder}).
+	\item Existence proofs are \emph{constructive} (exhibit a witness) or \emph{non-constructive} (Theorem~\ref{thm:euclid} vs.\ the $\sqrt2^{\sqrt2}$ example; Zorn's lemma, Chapter~\ref{ch:zorn}, is the strongest non-constructive tool used in this document).
+\end{itemize}
+
+\section*{Part II: Set Theory from the ZFC Axioms}
+
+\subsection*{Chapter~\ref{ch:language}: The Language of Set Theory and the ZFC Axioms}
+\begin{itemize}
+	\item Theorem~\ref{thm:russell} (Russell): $\{x:x\notin x\}$ is not a set --- motivates restricting comprehension to \emph{Separation} inside an existing set.
+	\item The nine axioms: Extensionality, Separation (schema), Pairing, Union, Power Set, Infinity, Replacement (schema), Regularity, Choice.
+	\item A \emph{class} $\{x:\varphi(x)\}$ is always meaningful as a formula; it is a \emph{set} only when an axiom certifies it.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:fromaxioms}: Constructions from the Axioms}
+\begin{itemize}
+	\item Theorem~\ref{thm:empty}: the empty set exists and is unique; Theorem~\ref{thm:nouniversal}: no set of all sets exists (else Russell's class would be separable).
+	\item Ordered pairs are defined by the \emph{Kuratowski trick} $(a,b):=\{\{a\},\{a,b\}\}$ (Definition, Ch.~\ref{ch:fromaxioms}) --- Theorem~\ref{thm:kuratowski} proves the defining property $(a,b)=(c,d)\iff a=c\wedge b=d$ using only Extensionality and Pairing.
+	\item Cartesian products $A\times B$ exist by Separation inside $\pset(\pset(A\cup B))$ (Theorem~\ref{thm:product}).
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:algebra}: The Algebra of Sets}
+\begin{itemize}
+	\item Theorem~\ref{thm:setlaws}: the Boolean algebra of $\cup,\cap,\comp$ mirrors the Boolean algebra of $\vee,\wedge,\neg$ exactly (the logic--set dictionary).
+	\item Theorem~\ref{thm:gendemorgan}: De Morgan generalises to arbitrary families, $\left(\bigcup_{i\in I}A_i\right)\comp=\bigcap_{i\in I}A_i\comp$, and dually.
+\end{itemize}
+
+\section*{Part III: Relations, Functions and Orders}
+
+\subsection*{Chapter~\ref{ch:relations}: Binary Relations}
+\begin{itemize}
+	\item Six properties --- reflexive, irreflexive, symmetric, antisymmetric, asymmetric, transitive, total --- combine to define equivalence relations, partial orders, and total orders (see the comparison table in Appendix~\ref{ch:comparisons}).
+	\item Warning: symmetric $+$ transitive does not imply reflexive (fails exactly at elements not $R$-related to anything).
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:equiv}: Equivalence Relations and Partitions}
+\begin{itemize}
+	\item Theorem~\ref{thm:eqdisjoint}: equivalence classes are pairwise equal or disjoint.
+	\item Theorem~\ref{thm:equiv-partition}: equivalence relations on $A$ correspond bijectively to partitions of $A$ (class map one way, ``same block'' relation the other).
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:functions}: Functions, Indexed Families and Products}
+\begin{itemize}
+	\item A function is a set of ordered pairs satisfying the vertical-line condition (Definition); $f:A\to B$ additionally fixes domain $A$ and codomain $B$.
+	\item Theorem~\ref{thm:imgpre}: preimages commute with \emph{all} unions, intersections and complements; images commute only with unions (Warning after Theorem~\ref{thm:imgpre}).
+	\item Theorem~\ref{thm:bijection}: $f$ has a two-sided inverse iff $f$ is a bijection; a left inverse alone characterises injectivity, a right inverse alone characterises surjectivity (assuming Choice for the latter).
+	\item Theorem~\ref{thm:factor}: every function factors as (surjection onto its image) $\circ$ ... $\circ$ (bijection) $\circ$ ... $\circ$ (inclusion), via its kernel.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:orders}: Partially Ordered Sets}
+\begin{itemize}
+	\item Poset $=$ reflexive $+$ antisymmetric $+$ transitive; \emph{total} order additionally requires totality; \emph{well}-order additionally requires every non-empty subset to have a minimum.
+	\item Theorem~\ref{thm:minunique}: minima and maxima, when they exist, are unique; \emph{minimal} elements need not be unique and need not exist even in non-empty posets (infinite case).
+	\item Theorem~\ref{thm:finitemax}: every non-empty finite poset has a maximal and a minimal element.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:zorn}: Zorn's Lemma and the Existence of a Basis}
+\begin{itemize}
+	\item Theorem~\ref{thm:zorn} (Zorn): if every chain in a non-empty poset has an upper bound, the poset has a maximal element. Proved here as a consequence of the Axiom of Choice.
+	\item Theorem~\ref{thm:basis}: every vector space has a basis --- the paradigm application: the poset of linearly independent sets, ordered by inclusion, satisfies Zorn's hypothesis, and a maximal element is a basis.
+	\item The argument is non-constructive: no explicit basis of, e.g., $\R$ over $\Q$ is produced.
+\end{itemize}
+
+\section*{Part IV: Number Systems from ZFC}
+
+\subsection*{Chapter~\ref{ch:nat}: The Natural Numbers}
+\begin{itemize}
+	\item $\omega$ is the smallest inductive set (Theorem~\ref{thm:omega}), guaranteed to exist by the Axiom of Infinity; $\N:=\omega$.
+	\item Theorem~\ref{thm:peano}: the constructed $\N$, with $0:=\varnothing$ and successor $S(n):=n\cup\{n\}$, satisfies the Peano axioms.
+	\item Theorem~\ref{thm:recursion} (Recursion): a function on $\N$ may be defined by specifying its value at $0$ and its value at $S(n)$ in terms of its value at $n$ --- the theorem that legitimises definitions by induction.
+	\item Theorem~\ref{thm:wellorder}: weak induction, strong induction, and well-ordering of $\N$ are equivalent, now proved (not merely asserted, as in Chapter~\ref{ch:proof}) from the construction.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:finite}: Finite Sets and Cardinality}
+\begin{itemize}
+	\item $A$ is finite iff $A$ is equinumerous with some $n\in\N$; Theorem~\ref{thm:powersize}: a finite set of size $n$ has power set of size $2^n$.
+	\item Theorem~\ref{thm:cantor} (Cantor): no set is equinumerous with its own power set --- the diagonal argument, stated for arbitrary sets, so it already implies the existence of infinite cardinalities beyond $|\N|$.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:zq}: The Integers and the Rationals}
+\begin{itemize}
+	\item $\Z$ is constructed as equivalence classes of pairs $(m,n)\in\N\times\N$ under $(m,n)\sim(m',n')\iff m+n'=m'+n$ (``$m-n$''); Theorem~\ref{thm:Z}: $\Z$ is an integral domain, ordered, with $\N$ embedded as $\{[n,0]\}$.
+	\item $\Q$ is constructed as equivalence classes of pairs $(a,b)\in\Z\times(\Z\setminus\{0\})$ under $(a,b)\sim(c,d)\iff ad=bc$ (``$a/b$''); Theorem~\ref{thm:Q}: $\Q$ is an ordered field.
+	\item $\Q$ is \emph{not} order-complete (Example~\ref{ex:Qgap}, proved formally in Chapter~\ref{ch:reals}) --- the gap that Chapter~\ref{ch:reals} closes.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:reals}: The Real Numbers}
+\begin{itemize}
+	\item Definition: an ordered field has the \emph{least upper bound property} if every non-empty bounded-above subset has a supremum.
+	\item Construction by \emph{Dedekind cuts}: a real number is a downward-closed, upward-unbounded subset of $\Q$ with no maximum; Theorem~\ref{thm:R}: the cuts, with the induced order and defined arithmetic, form a complete ordered field.
+	\item Theorem~\ref{thm:arch} (Archimedean property) and Theorem~\ref{thm:sqrtexist} (existence of square roots of non-negative reals) are the first payoffs of completeness.
+\end{itemize}
+
+\section*{Part V: Analysis and Topology}
+
+\subsection*{Chapter~\ref{ch:seq}: Sequences and Completeness in $\R$}
+\begin{itemize}
+	\item Theorem~\ref{thm:limitlaws}: limits respect $+,-,\times,\div$ (division requires a nonzero-limit hypothesis).
+	\item Four equivalent-in-consequence completeness statements are proved: Theorem~\ref{thm:mct} (monotone convergence), Theorem~\ref{thm:nip} (nested intervals), Theorem~\ref{thm:bw} (Bolzano--Weierstrass), Theorem~\ref{thm:cauchy} (Cauchy criterion).
+	\item Theorem~\ref{thm:Runcountable}: $\R$ is uncountable (diagonal argument on decimal/cut representations).
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:metric}: Metric Spaces}
+\begin{itemize}
+	\item A metric $d$ generalises $|x-y|$; open balls generate a topology (Theorem~\ref{thm:metrictop}).
+	\item Theorem~\ref{thm:contchar}: continuity via $\varepsilon$--$\delta$, via preimages of open sets, and via sequences ($x_n\to x\Rightarrow f(x_n)\to f(x)$) all coincide in metric spaces.
+\end{itemize}
+
+\subsection*{Chapter~\ref{ch:topspaces}: Topological Spaces}
+\begin{itemize}
+	\item A topology $\mathcal T$ on $X$ is a collection of ``open'' sets closed under arbitrary unions and finite intersections, containing $\varnothing$ and $X$ --- strictly more general than a metric topology.
+	\item Continuity is \emph{defined} as: preimages of open sets are open (no $\varepsilon$--$\delta$ available in general).
+	\item Theorem~\ref{thm:heineborel} (Heine--Borel): a subset of $\R^n$ is compact iff it is closed and bounded --- compactness is the topological invariant; closed-and-bounded is its concrete characterisation in $\R^n$ only.
+	\item Connectedness (no separation into two disjoint non-empty relatively-open pieces) is proved equivalent, for subsets of $\R$, to being an interval (Theorem).
+\end{itemize}
+
+\chapter{Comparative Reference Tables}\label{ch:comparisons}
+
+The tables below collect, across chapters, comparisons that are useful to see side by side. They restate material proved earlier; each row is annotated with where the claim is proved.
+
+\section*{B.1 The tower of number systems}
+
+\begin{center}
+\begin{tabular}{@{}lp{3.6cm}p{3.5cm}p{3.9cm}@{}}
+	\toprule
+	\textbf{System} & \textbf{Construction} & \textbf{Gains over predecessor} & \textbf{Still missing}\\
+	\midrule
+	$\N$ (Ch.~\ref{ch:nat}) & smallest inductive set $\omega$ & a well-ordered semiring with $0$ & subtraction, division\\
+	$\Z$ (Ch.~\ref{ch:zq}) & pairs $(m,n)\in\N^2$ mod ``same difference'' & subtraction (additive group) & division\\
+	$\Q$ (Ch.~\ref{ch:zq}) & pairs $(a,b)\in\Z\times(\Z\setminus\{0\})$ mod ``same ratio'' & division by nonzero elements: an ordered field & order-completeness (Example~\ref{ex:Qgap})\\
+	$\R$ (Ch.~\ref{ch:reals}) & Dedekind cuts of $\Q$ & the least upper bound property (Theorem~\ref{thm:R}) & algebraic closure (not treated)\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+Each system is constructed \emph{inside} ZFC as a specific set (or set of equivalence classes) built from the previous one; none is postulated.
+
+\section*{B.2 Named order-like relations}
+
+\begin{center}
+\begin{tabular}{@{}lccccc@{}}
+	\toprule
+	\textbf{Name} & refl. & antisymm. & trans. & total & extra condition\\
+	\midrule
+	Preorder & \checkmark & & \checkmark & & ---\\
+	Partial order (Ch.~\ref{ch:orders}) & \checkmark & \checkmark & \checkmark & & ---\\
+	Total order (Ch.~\ref{ch:orders}) & \checkmark & \checkmark & \checkmark & \checkmark & ---\\
+	Well-order (Ch.~\ref{ch:nat}, \ref{ch:orders}) & \checkmark & \checkmark & \checkmark & \checkmark & every non-empty subset has a minimum\\
+	Equivalence relation (Ch.~\ref{ch:equiv}) & \checkmark & --- & \checkmark & --- & symmetric instead of antisymmetric\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+An equivalence relation and a partial order share reflexivity and transitivity but are never both antisymmetric and symmetric on a set with more than one element (Warning) --- they are genuinely different generalisations of ``$=$''.
+
+\section*{B.3 Proof-technique decision guide}
+
+\begin{center}
+\begin{tabular}{@{}p{3.3cm}p{6.2cm}p{4.2cm}@{}}
+	\toprule
+	\textbf{Goal} & \textbf{Preferred technique} & \textbf{Reference}\\
+	\midrule
+	Prove $P\Rightarrow Q$, $P$ easy to unpack & Direct proof & Ch.~\ref{ch:proof}\\
+	Prove $P\Rightarrow Q$, $\neg Q$ easier to unpack than $Q$ & Contrapositive & Ch.~\ref{ch:proof}\\
+	Prove $P\Rightarrow Q$ (or any statement) where assuming the negation gives a contradiction with something already known & Contradiction & Ch.~\ref{ch:proof}\\
+	Prove $\forall n\in\N\,P(n)$, $P(n{+}1)$ follows from $P(n)$ alone & Weak induction & Theorem~\ref{thm:induction-forms}\\
+	Prove $\forall n\in\N\,P(n)$, $P(n{+}1)$ needs several/all previous cases & Strong induction & Theorem~\ref{thm:induction-forms}\\
+	Prove existence, with a maximal object under inclusion doing the job, no explicit bound in sight & Zorn's Lemma & Theorem~\ref{thm:zorn}\\
+	Disprove $\forall x\,P(x)$ & Single counterexample & Key to Language (front matter)\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{B.4 Metric spaces vs.\ general topological spaces}
+
+\begin{center}
+\begin{tabular}{@{}p{4.1cm}p{4.3cm}p{4.3cm}@{}}
+	\toprule
+	\textbf{Notion} & \textbf{Metric space (Ch.~\ref{ch:metric})} & \textbf{Topological space (Ch.~\ref{ch:topspaces})}\\
+	\midrule
+	Basic open set & open ball $B(x,r)$ & member of a basis, or any set in $\mathcal T$\\
+	Open set & union of open balls & member of $\mathcal T$ (definitional)\\
+	Continuity & $\varepsilon$--$\delta$; equivalently preimages of open sets open; equivalently sequential (Theorem~\ref{thm:contchar}) & preimages of open sets open \emph{only} (no metric to write $\varepsilon$--$\delta$ or, in general, sequences)\\
+	Convergence & $d(x_n,x)\to0$ & $x_n\to x$ iff every open set containing $x$ contains all but finitely many $x_n$\\
+	Compactness test & closed and bounded, \emph{but only in $\R^n$} (Heine--Borel, Theorem~\ref{thm:heineborel}) & open-cover definition only; no general closed-and-bounded shortcut\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+Every metric space is a topological space (Theorem~\ref{thm:metrictop}); the converse fails --- there exist topological spaces with no metric inducing their topology (not constructed in this document, flagged here as a genuine gap).
+
+\section*{B.5 Function properties and inverses}
+
+\begin{center}
+\begin{tabular}{@{}lp{5.2cm}p{5.2cm}@{}}
+	\toprule
+	\textbf{Property} & \textbf{Definition} & \textbf{Inverse behaviour (Theorem~\ref{thm:bijection})}\\
+	\midrule
+	Injective & $f(x)=f(y)\Rightarrow x=y$ & has a left inverse ($A\ne\varnothing$)\\
+	Surjective & $\forall b\in B\,\exists a\,f(a)=b$ & has a right inverse (uses Choice if $A$ infinite)\\
+	Bijective & injective and surjective & has a two-sided inverse $f^{-1}$, itself a bijection\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+\chapter{Dependency Map}\label{ch:dependency}
+
+\section*{C.1 How to read this document}
+
+The chapters are written in \emph{strictly sequential logical order}: every proof uses only definitions, axioms, and theorems that appear \emph{earlier} in the reading order below. This is the same claim made in the Key at the start of the document, restated here as an explicit chain.
+
+\begin{center}
+\begin{tabular}{@{}cl@{}}
+	\toprule
+	\textbf{Position} & \textbf{Chapter}\\
+	\midrule
+	1 & \ref{ch:prop}. Propositional Logic\\
+	2 & \ref{ch:pred}. Predicates and Quantifiers\\
+	3 & \ref{ch:proof}. Methods of Proof\\
+	4 & \ref{ch:language}. Language of Set Theory and the ZFC Axioms\\
+	5 & \ref{ch:fromaxioms}. Constructions from the Axioms\\
+	6 & \ref{ch:algebra}. The Algebra of Sets\\
+	7 & \ref{ch:relations}. Binary Relations\\
+	8 & \ref{ch:equiv}. Equivalence Relations and Partitions\\
+	9 & \ref{ch:functions}. Functions, Indexed Families and Products\\
+	10 & \ref{ch:orders}. Partially Ordered Sets\\
+	11 & \ref{ch:zorn}. Zorn's Lemma and the Existence of a Basis\\
+	12 & \ref{ch:nat}. The Natural Numbers\\
+	13 & \ref{ch:finite}. Finite Sets and Cardinality\\
+	14 & \ref{ch:zq}. The Integers and the Rationals\\
+	15 & \ref{ch:reals}. The Real Numbers\\
+	16 & \ref{ch:seq}. Sequences and Completeness in $\R$\\
+	17 & \ref{ch:metric}. Metric Spaces\\
+	18 & \ref{ch:topspaces}. Topological Spaces\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+Note the one deliberate exception to strict logical bootstrapping, flagged already in the Key: Parts~I--III use the informal numbers $0,1,2,\dots$ for metalanguage purposes (counting symbols, indexing cases) before $\N$ is formally constructed at position~12. Nothing in positions 1--11 depends on a \emph{proved property} of $\N$ --- only on the reader's pre-formal arithmetic.
+
+\section*{C.2 Forward pointers (previews, not dependencies)}
+
+Several chapters mention, by name, a concept defined only later --- always as motivation or an example, never as a hypothesis used in a proof. Each is listed here with a confirmation that it is safely non-circular.
+
+\begin{center}
+\begin{longtable}{@{}p{3.2cm}p{3.2cm}p{7.9cm}@{}}
+	\toprule
+	\textbf{Appears in} & \textbf{Points ahead to} & \textbf{Role}\\
+	\midrule
+	\endhead
+	Ch.~\ref{ch:proof} & Ch.~\ref{ch:zorn} & Names Zorn's Lemma as a stronger example of non-constructivity; not used to prove anything in Ch.~\ref{ch:proof}.\\
+	Ch.~\ref{ch:functions} & Ch.~\ref{ch:topspaces} & Notes that the image/preimage asymmetry \emph{motivates} the topological definition of continuity later; Ch.~\ref{ch:functions} itself proves only the set-theoretic facts.\\
+	Ch.~\ref{ch:zorn} & Ch.~\ref{ch:topspaces} & Lists Tychonoff's theorem in a table of Choice-equivalent statements, for context; Tychonoff is not proved anywhere in this document.\\
+	Ch.~\ref{ch:equiv} (Example~\ref{ex:fractions}) & Ch.~\ref{ch:zq} & The fractions example previews the construction of $\Q$; the equivalence-relation argument given is self-contained and does not assume $\Q$ exists yet.\\
+	Ch.~\ref{ch:finite} (Corollary after Theorem~\ref{thm:cantor}) & Ch.~\ref{ch:seq} & Defers the proof that $\R$ is uncountable to Ch.~\ref{ch:seq}; the corollary in Ch.~\ref{ch:finite} is about $\pset(\omega)$ only and does not need it.\\
+	Ch.~\ref{ch:orders} (the ``Sup without max'' example) & Ch.~\ref{ch:reals} & The ``sup without max'' example is illustrated in $\R$ and $\Q$ before $\R$ is formally constructed; treated informally, consistent with the Key's bootstrapping remark.\\
+	\bottomrule
+\end{longtable}
+\end{center}
+
+\section*{C.3 What each chapter's proofs actually draw on}
+
+For quick sanity-checking, the heaviest imports are: Chapter~\ref{ch:zorn} uses the Axiom of Choice (Ch.~\ref{ch:language}) and posets (Ch.~\ref{ch:orders}); Chapter~\ref{ch:nat} uses only Infinity (Ch.~\ref{ch:language}) and induction-shaped arguments from Chapter~\ref{ch:proof}; Chapters~\ref{ch:zq}--\ref{ch:reals} use equivalence relations (Ch.~\ref{ch:equiv}) repeatedly to build each system from the last; Chapters~\ref{ch:seq}--\ref{ch:topspaces} use the completed $\R$ (Ch.~\ref{ch:reals}) throughout and Chapter~\ref{ch:metric} before Chapter~\ref{ch:topspaces} for intuition, though Chapter~\ref{ch:topspaces}'s definitions do not formally require it.
+
+\chapter{Catalogue of Counterexamples and Common Errors}\label{ch:counterexamples}
+
+A single place to look up the standard counterexamples and false converses scattered through the notes, organised by theme. Each entry names the trap and points to its source.
+
+\section*{D.1 Logic}
+
+\begin{itemize}
+	\item \textbf{$\sim$ is not $\Leftrightarrow$.} Logical equivalence $P\sim Q$ is a statement \emph{about} two forms; $\Leftrightarrow$ is a connective that builds a new form $P\Leftrightarrow Q$ (Warning, Ch.~\ref{ch:prop}).
+	\item \textbf{Negating a conditional does not give another conditional.} $\neg(P\Rightarrow Q)$ is $P\wedge\neg Q$, never another ``if\ldots then'' (Warning, Ch.~\ref{ch:prop}).
+	\item \textbf{Restricted quantifiers use different connectives.} $\forall x\in A\,P(x)$ unpacks with $\Rightarrow$; $\exists x\in A\,P(x)$ unpacks with $\wedge$. Using the wrong connective silently changes the meaning (Warning, Ch.~\ref{ch:pred}).
+	\item \textbf{Quantifier order is not commutative when mixed.} $\forall x\,\exists y\,P(x,y)$ does \emph{not} imply $\exists y\,\forall x\,P(x,y)$ (Theorem~\ref{thm:order}, Ch.~\ref{ch:pred}); the standard witness is $P(x,y):\;y>x$ on $\N$.
+\end{itemize}
+
+\section*{D.2 Proof technique}
+
+\begin{itemize}
+	\item \textbf{Contrapositive $\ne$ contradiction.} Contrapositive proves $P\Rightarrow Q$ by proving the single conditional $\neg Q\Rightarrow\neg P$; contradiction assumes $P\wedge\neg Q$ and derives \emph{anything} false (Warning, Ch.~\ref{ch:proof}).
+	\item \textbf{The fake horse-colour induction.} The classic ``proof'' that all horses are the same colour fails because the inductive step secretly assumes two overlapping subsets of horses share a common member, which is false for the step $1\to2$ (Warning, Ch.~\ref{ch:proof}).
+	\item \textbf{A picture is not a proof.} A Venn diagram or Hasse diagram illustrates a claim but a valid proof must argue for an \emph{arbitrary} element or case, not a drawn instance (Warning, Ch.~\ref{ch:algebra}).
+\end{itemize}
+
+\section*{D.3 Relations and orders}
+
+\begin{itemize}
+	\item \textbf{Symmetric $+$ transitive $\not\Rightarrow$ reflexive.} Fails at any element unrelated to anything; the standard example is a relation defined only on a proper subset of $A$ (Ch.~\ref{ch:relations}).
+	\item \textbf{Antisymmetric is not ``not symmetric''.} Equality is both symmetric and antisymmetric simultaneously; $\le$ is antisymmetric but not symmetric; a relation can fail to be either (Warning, Ch.~\ref{ch:relations}).
+	\item \textbf{Minimal $\ne$ minimum.} A poset can have several minimal elements and no minimum (they need not be comparable); infinite posets can have no minimal element at all, e.g.\ $(\Z,\le)$ (Ch.~\ref{ch:orders}).
+	\item \textbf{Supremum need not be a maximum.} $[0,1)\subseteq\R$ has $\lub=1\notin[0,1)$ and no maximum (Example ``Sup without max'', Ch.~\ref{ch:orders}).
+	\item \textbf{Bounded above in $\Q$ need not have a supremum in $\Q$.} $\{q\in\Q:q^2<2\}$ is bounded above in $\Q$ but has no least upper bound in $\Q$ --- the failure that motivates constructing $\R$ (Example~\ref{ex:Qgap}, Ch.~\ref{ch:reals}).
+\end{itemize}
+
+\section*{D.4 Functions and cardinality}
+
+\begin{itemize}
+	\item \textbf{Images preserve unions but not intersections in general;} preimages preserve \emph{everything} (unions, intersections, complements). $f(A\cap B)\subseteq f(A)\cap f(B)$ can be strict (Theorem~\ref{thm:imgpre} and the remark after it, Ch.~\ref{ch:functions}).
+	\item \textbf{A right inverse existing is not automatic without Choice.} Every surjection has a right inverse only granted the Axiom of Choice (a choice of preimage for each point of $B$); this is used silently and flagged explicitly in Ch.~\ref{ch:functions}.
+	\item \textbf{Cantor's diagonal argument applies to every set, including infinite ones.} $|A|<|\pset(A)|$ always, so there is no largest cardinality (Theorem~\ref{thm:cantor}, Ch.~\ref{ch:finite}).
+\end{itemize}
+
+\section*{D.5 Analysis and topology}
+
+\begin{itemize}
+	\item \textbf{Closed and bounded $\Rightarrow$ compact is special to $\R^n$.} In a general metric or topological space this implication can fail; the converse direction (compact $\Rightarrow$ closed and bounded) is the part that survives in general metric spaces (Ch.~\ref{ch:topspaces}, Theorem~\ref{thm:hb-closed-bounded} vs.\ Theorem~\ref{thm:heineborel}).
+	\item \textbf{Every metric space is topological, not conversely.} There exist topologies not induced by any metric; this document constructs the forward implication only (Theorem~\ref{thm:metrictop}, Ch.~\ref{ch:metric}), flagged in Table~B.4 above as a genuine gap.
+	\item \textbf{$\varepsilon$--$\delta$ continuity has no direct analogue without a metric.} In a bare topological space, continuity must be defined via preimages of open sets; sequential continuity can even fail to characterise it in very general spaces (not needed for $\R^n$, noted for completeness in Ch.~\ref{ch:topspaces}).
+\end{itemize}

@@ -1,0 +1,128 @@
+\part{Number Systems from ZFC}
+
+\chapter{The Natural Numbers}\label{ch:nat}
+
+We now \emph{construct} $\N$ inside ZFC. In this chapter $S(x)=x\cup\{x\}$ is the successor.
+
+\section{Inductive sets and $\omega$}
+
+\begin{definition}
+	A set $I$ is \emph{inductive} if $\varnothing\in I$ and $x\in I\Rightarrow S(x)\in I$. By the Axiom of Infinity (Axiom~\ref{ax:inf}) an inductive set $J$ exists. Put
+	\[
+	\omega:=\{x\in J:\ x\in I\text{ for every inductive }I\subseteq J\}=\bigcap\{I\in\pset(J):I\text{ inductive}\}.
+	\]
+\end{definition}
+
+\begin{theorem}[$\omega$ is the smallest inductive set]\label{thm:omega}
+	$\omega$ is inductive, and $\omega\subseteq I$ for every inductive set $I$. In particular $\omega$ does not depend on the choice of $J$. We write $\N:=\omega$, $0:=\varnothing$, $1:=S(0)$, $2:=S(1),\dots$; its elements are the \emph{natural numbers}.
+\end{theorem}
+\begin{proof}
+	$J$ is itself an inductive subset of $J$, so the family is non-empty and $\omega\subseteq J$. $\varnothing\in\omega$ since $\varnothing$ lies in every inductive set. If $x\in\omega$ and $I\subseteq J$ is inductive then $x\in I$, so $S(x)\in I$; also $S(x)\in J$ because $J$ is inductive, so $S(x)\in\omega$. Now let $I$ be any inductive set. Then $I\cap J$ is an inductive subset of $J$ (both contain $\varnothing$ and are closed under $S$), hence $\omega\subseteq I\cap J\subseteq I$. If $J'$ were another inductive set, the resulting $\omega'$ would satisfy $\omega\subseteq\omega'$ and $\omega'\subseteq\omega$, so $\omega=\omega'$ by Extensionality.
+\end{proof}
+
+\begin{theorem}[Principle of induction]\label{thm:induction}
+	If $T\subseteq\omega$, $0\in T$ and $n\in T\Rightarrow S(n)\in T$, then $T=\omega$.
+\end{theorem}
+\begin{proof}
+	$T$ is an inductive set, so $\omega\subseteq T$ by Theorem~\ref{thm:omega}; with $T\subseteq\omega$, $T=\omega$.
+\end{proof}
+
+\begin{lemma}\label{lem:transitive}
+	(a) Every $n\in\omega$ is a transitive set: $x\in n\Rightarrow x\subseteq n$. (b) $\omega$ is transitive: $n\in\omega\Rightarrow n\subseteq\omega$. (c) $n\notin n$ for $n\in\omega$. (d) Every $n\in\omega$ satisfies $n=0$ or $n=S(p)$ for some $p\in\omega$.
+\end{lemma}
+\begin{proof}
+	(a) Induction. $\varnothing$ is transitive. If $n$ is transitive and $y\in S(n)=n\cup\{n\}$: if $y\in n$ then $y\subseteq n\subseteq S(n)$; if $y=n$ then $y\subseteq S(n)$. (b) Induction: $\varnothing\subseteq\omega$; if $n\subseteq\omega$ then $S(n)=n\cup\{n\}\subseteq\omega$ as $n\in\omega$. (c) Proposition~\ref{prop:regularity}(a). (d) The set of $n$ satisfying ``$n=0$ or $n$ is a successor of an element of $\omega$'' contains $0$ and is closed under $S$; apply induction.
+\end{proof}
+
+\begin{theorem}[Peano's axioms]\label{thm:peano}
+	(P1) $0\in\omega$. (P2) $n\in\omega\Rightarrow S(n)\in\omega$. (P3) $S(n)\ne0$. (P4) $S$ is injective. (P5) Induction (Theorem~\ref{thm:induction}).
+\end{theorem}
+\begin{proof}
+	(P1),(P2): $\omega$ is inductive. (P3): $n\in S(n)$, so $S(n)\ne\varnothing$. (P4): let $S(m)=S(n)$. Then $m\in S(n)$, so $m\in n$ or $m=n$; and $n\in S(m)$, so $n\in m$ or $n=m$. If $m\ne n$ then $m\in n$ and $n\in m$; as $n$ is transitive (Lemma~\ref{lem:transitive}(a)), $m\in n$ gives $m\subseteq n$, whence $n\in m\subseteq n$, i.e.\ $n\in n$, contradicting Lemma~\ref{lem:transitive}(c). So $m=n$.
+\end{proof}
+
+\section{The recursion theorem}
+
+\begin{theorem}[Recursion]\label{thm:recursion}
+	Let $X$ be a set, $a\in X$ and $g:X\to X$. There is a unique function $f:\omega\to X$ with $f(0)=a$ and $f(S(n))=g(f(n))$ for all $n\in\omega$.
+\end{theorem}
+\begin{proof}
+	Call a function $h$ an \emph{approximation} if $\dom h=S(m)$ for some $m\in\omega$, $h(0)=a$, $\ran h\subseteq X$, and $h(S(k))=g(h(k))$ whenever $S(k)\in\dom h$. The approximations form a set $\mathcal A\subseteq\pset(\omega\times X)$.
+	
+	\emph{(i) Agreement.} If $h,h'\in\mathcal A$ then $h(k)=h'(k)$ for all $k\in\dom h\cap\dom h'$. Let $T$ be the set of $k\in\omega$ for which this holds. $0\in T$ since $h(0)=a=h'(0)$. If $k\in T$ and $S(k)\in\dom h\cap\dom h'$, then $k\in\dom h$ because $\dom h$ is a natural number and hence transitive ($k\in S(k)\subseteq\dom h$), likewise $k\in\dom h'$; so $h(k)=h'(k)$ and $h(S(k))=g(h(k))=g(h'(k))=h'(S(k))$. So $T=\omega$.
+	
+	\emph{(ii) Existence of approximations with each domain.} For every $m\in\omega$ there is an approximation with domain $S(m)$. For $m=0$ take $\{(0,a)\}$. If $h$ has domain $S(m)$, put $h'=h\cup\{(S(m),g(h(m)))\}$. It is a function since $S(m)\notin S(m)$ (Lemma~\ref{lem:transitive}(c)), and $\dom h'=S(S(m))$. Checking the recursion clause: let $S(k)\in\dom h'$. If $S(k)=S(m)$ then $k=m$ by (P4) and $h'(S(m))=g(h(m))=g(h'(m))$. Otherwise $S(k)\in S(m)$, so $k\in S(m)$ by transitivity and $h'(S(k))=h(S(k))=g(h(k))=g(h'(k))$.
+	
+	\emph{(iii)} Put $f=\bigcup\mathcal A$. By (i), $f$ is a function; by (ii), $\dom f=\omega$ (each $m$ lies in $S(m)$); $f(0)=a$. For $k\in\omega$ choose $h\in\mathcal A$ with $\dom h=S(S(k))$; then $f(S(k))=h(S(k))=g(h(k))=g(f(k))$.
+	
+	\emph{(iv) Uniqueness.} If $f,f'$ both satisfy the conditions, $\{n:f(n)=f'(n)\}$ contains $0$ and is closed under $S$ (as $f(S(n))=g(f(n))=g(f'(n))=f'(S(n))$), hence is $\omega$.
+\end{proof}
+
+\section{Arithmetic}
+
+\begin{definition}[Addition, multiplication, exponentiation]
+	For $m\in\omega$, Theorem~\ref{thm:recursion} (with $X=\omega$) defines $m+\cdot$ and $m\cdot\cdot$ and $m^\cdot$ by
+	\[
+	m+0=m,\qquad m+S(n)=S(m+n);\qquad m\cdot0=0,\qquad m\cdot S(n)=m\cdot n+m;
+	\]
+	\[
+	m^0=1,\qquad m^{S(n)}=m^n\cdot m.
+	\]
+	(For $m\cdot\cdot$ use $g(x)=x+m$; for $m^\cdot$ use $g(x)=x\cdot m$.) Note $x+0=x$ and $S(x)=x+1$.
+\end{definition}
+
+\begin{theorem}[Laws for $+$]\label{thm:add}
+	For $m,n,k\in\omega$: (a) $0+n=n$; (b) $S(m)+n=S(m+n)$; (c) $m+n=n+m$; (d) $(m+n)+k=m+(n+k)$; (e) $m+k=n+k\Rightarrow m=n$; (f) $m+n=0\Rightarrow m=n=0$.
+\end{theorem}
+\begin{proof}
+	All by induction on the last variable.
+	(a) $0+0=0$; $0+S(n)=S(0+n)=S(n)$. (b) $S(m)+0=S(m)=S(m+0)$; $S(m)+S(n)=S(S(m)+n)=S(S(m+n))=S(m+S(n))$.
+	(c) $m+0=m=0+m$ by (a); $m+S(n)=S(m+n)=S(n+m)=S(n)+m$ by (b).
+	(d) $(m+n)+0=m+n=m+(n+0)$; $(m+n)+S(k)=S((m+n)+k)=S(m+(n+k))=m+S(n+k)=m+(n+S(k))$.
+	(e) $k=0$ is trivial. If $m+S(k)=n+S(k)$ then $S(m+k)=S(n+k)$, so $m+k=n+k$ by (P4), so $m=n$.
+	(f) If $n=S(p)$ then $m+n=S(m+p)\neq0$ by (P3); so $n=0$ and then $m=m+0=0$.
+\end{proof}
+
+\begin{theorem}[Laws for $\cdot$]\label{thm:mult}
+	For $m,n,k\in\omega$: (a) $0\cdot n=0$; (b) $S(m)\cdot n=m\cdot n+n$; (c) $m\cdot n=n\cdot m$; (d) $m\cdot(n+k)=m\cdot n+m\cdot k$; (e) $(m\cdot n)\cdot k=m\cdot(n\cdot k)$; (f) $m\cdot1=m$; (g) $m\cdot n=0\Rightarrow m=0\vee n=0$.
+\end{theorem}
+\begin{proof}
+	(a) $0\cdot0=0$; $0\cdot S(n)=0\cdot n+0=0$. (b) $n=0$: both sides $0$. Step: $S(m)\cdot S(n)=S(m)\cdot n+S(m)=(mn+n)+S(m)$. By Theorem~\ref{thm:add}, $(mn+n)+S(m)=mn+S(n+m)=mn+(m+S(n))=(mn+m)+S(n)=m\cdot S(n)+S(n)$. (c) $m\cdot0=0=0\cdot m$; $m\cdot S(n)=mn+m=nm+m=S(n)\cdot m$ by (b). (d) $k=0$: both sides $mn$. Step: $m(n+S(k))=m\,S(n+k)=m(n+k)+m=(mn+mk)+m=mn+(mk+m)=mn+m\,S(k)$. (e) $k=0$: both $0$. Step: $(mn)S(k)=(mn)k+mn=m(nk)+mn=m(nk+n)=m(n\,S(k))$ by (d). (f) $m\cdot1=m\cdot S(0)=m\cdot0+m=m$. (g) If $n=S(p)$ then $mn=mp+m$, which is $0$ only if $m=0$ by Theorem~\ref{thm:add}(f).
+\end{proof}
+
+\section{Order and well-ordering}
+
+\begin{definition}
+	For $m,n\in\omega$: $m<n:\iff m\in n$, and $m\le n:\iff m\in n\vee m=n$.
+\end{definition}
+
+\begin{lemma}\label{lem:order}
+	(a) $0=n$ or $0\in n$. (b) If $m\in n$ then $S(m)\in n$ or $S(m)=n$. (c) If $m\in n$ then $S(m)\in S(n)$.
+\end{lemma}
+\begin{proof}
+	(a) Induction on $n$: if $0=n$ or $0\in n$ then $0\in n\cup\{n\}=S(n)$. (b) Induction on $n$: vacuous for $n=0$. Assume it for $n$ and let $m\in S(n)$. If $m=n$ then $S(m)=S(n)$. If $m\in n$ then $S(m)\in n$ or $S(m)=n$ by hypothesis, and in both cases $S(m)\in S(n)$. (c) If $m\in n$ then by (b) $S(m)\in n\subseteq S(n)$ or $S(m)=n\in S(n)$.
+\end{proof}
+
+\begin{theorem}[Total order]\label{thm:trichotomy}
+	$(\omega,\le)$ is a total order; for all $m,n$ exactly one of $m<n$, $m=n$, $n<m$ holds.
+\end{theorem}
+\begin{proof}
+	\emph{At least one.} Let $T=\{m\in\omega:\forall n\in\omega\,(m\in n\vee m=n\vee n\in m)\}$. $0\in T$ by Lemma~\ref{lem:order}(a). Suppose $m\in T$ and let $n\in\omega$. If $n\in m$ or $n=m$ then $n\in S(m)$. If $m\in n$ then by Lemma~\ref{lem:order}(b) $S(m)\in n$ or $S(m)=n$. So $S(m)\in T$. \emph{At most one:} $m\in n\wedge m=n$ would give $n\in n$; $m\in n\wedge n\in m$ contradicts Proposition~\ref{prop:regularity}(b). Transitivity: $m\in n\in k$ gives $m\in k$ as $k$ is a transitive set; reflexivity and antisymmetry then follow from the exclusivity just proved.
+\end{proof}
+
+\begin{theorem}[Well-ordering; equivalence of the three forms of induction]\label{thm:wellorder}
+	(a) Every non-empty $S\subseteq\omega$ has a least element. (b) \emph{Strong induction:} if $S\subseteq\omega$ and for every $n$, $(\forall k<n\;k\in S)\Rightarrow n\in S$, then $S=\omega$. (c) Hence Induction, Strong induction and Well-ordering are equivalent (Theorem~\ref{thm:induction-forms}).
+\end{theorem}
+\begin{proof}
+	(a) Suppose $S\subseteq\omega$ has no least element. Let $T=\{n\in\omega:\forall k<n\;k\notin S\}$. $0\in T$ (nothing is $<0$). If $n\in T$ then $n\notin S$: otherwise $n\in S$ and no $k<n$ lies in $S$, so by trichotomy $n\le s$ for all $s\in S$, making $n$ least. Consequently if $n\in T$ then $S(n)\in T$, since $k<S(n)$ means $k\in n$ (so $k\notin S$ by $n\in T$) or $k=n$ (so $k\notin S$ as just shown). Thus $T=\omega$, so $S(n)\in T$ and $n<S(n)$ give $n\notin S$ for every $n$, i.e.\ $S=\varnothing$.
+	
+	(b) If $S\neq\omega$, then $\omega\setminus S$ has a least element $n$ by (a); all $k<n$ lie in $S$, so $n\in S$ by hypothesis, a contradiction.
+	
+	(c) Induction $\Rightarrow$ Well-ordering was (a) (it used induction); Well-ordering $\Rightarrow$ Strong induction is (b); Strong induction $\Rightarrow$ Induction: given $S$ with $0\in S$ and closed under $S$, for any $n$ with all $k<n$ in $S$: either $n=0\in S$ or $n=S(p)$ (Lemma~\ref{lem:transitive}(d)) with $p<n$, so $p\in S$ and $n=S(p)\in S$; strong induction then gives $S=\omega$.
+\end{proof}
+
+Order and arithmetic interact as expected (for instance $m\le n\iff\exists k\;m+k=n$, and $m<n\Rightarrow m+k<n+k$); these are proved by the same inductions, and we use them freely below.
+
+\begin{remark}
+	Everything from Part~I that referred to ``induction'' or the ``well-ordering of $\N$'' (Chapter~\ref{ch:proof}; Euclid's theorem; the division algorithm) is now justified by Theorems~\ref{thm:induction}, \ref{thm:wellorder}.
+\end{remark}

@@ -1,0 +1,150 @@
+\part{Solutions to the Assignments}
+
+\chapter{Assignment 1: Statements, Truth Tables, Tautologies}\label{ch:sol1}
+
+Throughout, $P,Q,R$ denote statements, as in the assignment.
+
+\subsection*{Problem 1. Truth tables}
+
+\noindent(a) $P\vee Q$, (b) $\neg P$, (c) $\neg(P\wedge Q)$:
+\begin{center}
+	\begin{tabular}{cc|c|c|c}
+		\toprule
+		$P$ & $Q$ & $P\vee Q$ & $\neg P$ & $\neg(P\wedge Q)$\\
+		\midrule
+		$\T$&$\T$&$\T$&$\F$&$\F$\\
+		$\T$&$\F$&$\T$&$\F$&$\T$\\
+		$\F$&$\T$&$\T$&$\T$&$\T$\\
+		$\F$&$\F$&$\F$&$\T$&$\T$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\noindent(d) $(P\vee Q)\wedge(P\vee R)$:
+\begin{center}
+	\begin{tabular}{ccc|c|c|c}
+		\toprule
+		$P$&$Q$&$R$&$P\vee Q$&$P\vee R$&$(P\vee Q)\wedge(P\vee R)$\\
+		\midrule
+		$\T$&$\T$&$\T$&$\T$&$\T$&$\T$\\
+		$\T$&$\T$&$\F$&$\T$&$\T$&$\T$\\
+		$\T$&$\F$&$\T$&$\T$&$\T$&$\T$\\
+		$\T$&$\F$&$\F$&$\T$&$\T$&$\T$\\
+		$\F$&$\T$&$\T$&$\T$&$\T$&$\T$\\
+		$\F$&$\T$&$\F$&$\T$&$\F$&$\F$\\
+		$\F$&$\F$&$\T$&$\F$&$\T$&$\F$\\
+		$\F$&$\F$&$\F$&$\F$&$\F$&$\F$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+(Note this column equals that of $P\vee(Q\wedge R)$, illustrating the distributive law of Theorem~\ref{thm:laws}.)
+
+\noindent(e) $\neg(\neg P)$: $\T\mapsto\F\mapsto\T$ and $\F\mapsto\T\mapsto\F$, so $\neg(\neg P)$ has the same column as $P$ (double negation, Theorem~\ref{thm:laws}).
+
+\subsection*{Problem 2. Negations}
+(a) ``2 is an integer'' negates to \textbf{``2 is not an integer.''}
+(b) ``$x$ is a real number and $x>0$'' is $P\wedge Q$; by De Morgan its negation is $\neg P\vee\neg Q$: \textbf{``$x$ is not a real number, or $x\le0$.''}
+
+\subsection*{Problem 3. Verifying equivalences by truth table}
+All five are instances of Theorem~\ref{thm:laws}, whose proof (Chapter~\ref{ch:prop}) is by truth table; we exhibit the tables.
+
+(a)(i) $\neg(P\vee Q)\lequiv(\neg P)\wedge(\neg Q)$; (ii) $\neg(P\wedge Q)\lequiv(\neg P)\vee(\neg Q)$:
+\begin{center}
+	\begin{tabular}{cc|c|c|c|c}
+		\toprule
+		$P$&$Q$&$\neg(P\vee Q)$&$(\neg P)\wedge(\neg Q)$&$\neg(P\wedge Q)$&$(\neg P)\vee(\neg Q)$\\
+		\midrule
+		$\T$&$\T$&$\F$&$\F$&$\F$&$\F$\\
+		$\T$&$\F$&$\F$&$\F$&$\T$&$\T$\\
+		$\F$&$\T$&$\F$&$\F$&$\T$&$\T$\\
+		$\F$&$\F$&$\T$&$\T$&$\T$&$\T$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+Columns 3,4 agree and columns 5,6 agree: both De Morgan laws hold.
+
+(b) $P\wedge\top\lequiv P$ and (c) $P\vee\bot\lequiv P$ (writing $\top$ for a tautology, $\bot$ for a contradiction — every row of $\top$'s column is $\T$, every row of $\bot$'s is $\F$):
+\begin{center}
+	\begin{tabular}{c|c|c|c|c}
+		\toprule
+		$P$&$\top$&$P\wedge\top$&$\bot$&$P\vee\bot$\\
+		\midrule
+		$\T$&$\T$&$\T$&$\F$&$\T$\\
+		$\F$&$\T$&$\F$&$\F$&$\F$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+Both middle columns reproduce the column of $P$.
+
+(d) $(P\Rightarrow Q)\lequiv(\neg P\vee Q)$:
+\begin{center}
+	\begin{tabular}{cc|c|c}
+		\toprule
+		$P$&$Q$&$P\Rightarrow Q$&$\neg P\vee Q$\\
+		\midrule
+		$\T$&$\T$&$\T$&$\T$\\
+		$\T$&$\F$&$\F$&$\F$\\
+		$\F$&$\T$&$\T$&$\T$\\
+		$\F$&$\F$&$\T$&$\T$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+Identical columns.
+
+(e) $P\vee Q\lequiv\neg((\neg P)\wedge(\neg Q))$: by (a)(i) with $P,Q$ replaced by $\neg P,\neg Q$: $\neg((\neg P)\wedge(\neg Q))\lequiv\neg\neg P\vee\neg\neg Q\lequiv P\vee Q$ (double negation). Directly:
+\begin{center}
+	\begin{tabular}{cc|c|c}
+		\toprule
+		$P$&$Q$&$P\vee Q$&$\neg((\neg P)\wedge(\neg Q))$\\
+		\midrule
+		$\T$&$\T$&$\T$&$\T$\\
+		$\T$&$\F$&$\T$&$\T$\\
+		$\F$&$\T$&$\T$&$\T$\\
+		$\F$&$\F$&$\F$&$\F$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\subsection*{Problem 4. Classification}
+\begin{center}
+	\begin{tabular}{cc|c|c|c|c|c}
+		\toprule
+		$P$&$Q$&$P\vee\neg P$&$P\wedge\neg P$&$(P\wedge Q)\Rightarrow P$&$P\Rightarrow(P\wedge Q)$\\
+		\midrule
+		$\T$&$\T$&$\T$&$\F$&$\T$&$\T$\\
+		$\T$&$\F$&$\T$&$\F$&$\T$&$\F$\\
+		$\F$&$\T$&$\T$&$\F$&$\T$&$\T$\\
+		$\F$&$\F$&$\T$&$\F$&$\T$&$\T$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+(a) $P\vee\neg P$: all $\T$ — \textbf{tautology} (law of excluded middle). (b) $P\wedge\neg P$: all $\F$ — \textbf{contradiction}. (c) $(P\wedge Q)\Rightarrow P$: all $\T$ — \textbf{tautology}. (d) $P\Rightarrow(P\wedge Q)$: mixed — \textbf{contingency} (false when $P=\T,Q=\F$).
+
+\subsection*{Problem 5. Symbolic translation}
+(a) $P\wedge\neg Q$. (b) $P\vee Q$. (c) $P\Rightarrow\neg Q$. (d) $P\Leftrightarrow Q$.
+
+\subsection*{Problem 6. True or false}
+
+(a) \textbf{False.} A counterexample suffices (Chapter~\ref{ch:proof}): $p=11$ is prime, but $2^{11}-1=2047=23\times89$ is composite. ($p=2,3,5,7$ give the primes $3,7,31,127$, but the pattern fails at $p=11$.)
+
+(b) \textbf{True.} This is Theorem~\ref{thm:euclid} (Euclid), proved in full in Chapter~\ref{ch:proof}.
+
+(c) \textbf{False}, and here is the corrected statement.
+
+\begin{proposition}
+	Every prime $p>5$ ends (in base ten) in one of the digits $1,3,7,9$.
+\end{proposition}
+\begin{proof}
+	The last digit of $p$ is $p\bmod10$. Since $p>5$ is prime, $2\nmid p$ (else $p$ would have $2$ as a proper divisor, as $p>2$), so $p$ is odd and its last digit lies in $\{1,3,5,7,9\}$. Also $5\nmid p$ (else, as $p>5$, $5$ would be a proper divisor of $p$), and a number is divisible by $5$ iff its last digit is $0$ or $5$; since the last digit is already odd, this rules out last digit $5$. Hence the last digit lies in $\{1,3,7,9\}$.
+\end{proof}
+The original statement fails for $p=2$ (ends in $2$) and $p=5$ (ends in $5$), which is exactly why the corrected statement excludes them.
+
+\subsection*{Problem 7. Goldbach and twin prime conjectures}
+
+\textbf{Goldbach's conjecture} (1742): every even integer $n>2$ can be written as a sum of two primes. \textbf{Twin prime conjecture}: there are infinitely many primes $p$ such that $p+2$ is also prime.
+
+Neither is proved; both remain open problems in number theory.
+\begin{itemize}
+	\item \emph{Goldbach:} the conjecture has been verified by computer for all even $n$ up to at least $4\times10^{18}$, with no counterexample found, but a proof for all $n$ is lacking. (The related \emph{weak} Goldbach conjecture, that every odd integer $>5$ is a sum of three primes, was proved by Helfgott in 2013; this does not resolve the original, \emph{binary}, Goldbach conjecture.)
+	\item \emph{Twin primes:} Zhang (2013) first proved that there are infinitely many pairs of primes differing by at most some fixed bound, with bound $7\times10^7$; the Polymath project and Maynard's independent method quickly reduced this to $246$ (2014). Progress has continued since: further refinements have pushed the bound into the low-to-mid $200$s as of 2026. However, none of this proves the twin prime conjecture itself, which asks for gap exactly $2$; only a finite bound on the gap (however small) has been achieved, not gap $2$.
+\end{itemize}

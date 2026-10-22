@@ -1,0 +1,91 @@
+\chapter{Metric Spaces}\label{ch:metric}
+
+\section{Definitions}
+
+\begin{definition}[Metric]
+	A \emph{metric} on a set $X$ is a function $d:X\times X\to\R$ such that for all $x,y,z\in X$: (M1) $d(x,y)\ge0$, with equality iff $x=y$; (M2) $d(x,y)=d(y,x)$; (M3) $d(x,z)\le d(x,y)+d(y,z)$ (triangle inequality). $(X,d)$ is a \emph{metric space}.
+\end{definition}
+
+\begin{example}
+	$\R$ with $d(x,y)=|x-y|$ (Proposition~\ref{prop:abs} gives (M1)--(M3)); $\R^n$ with the Euclidean metric $d(x,y)=\sqrt{\sum_i(x_i-y_i)^2}$; any set with the \emph{discrete metric} $d(x,y)=1$ if $x\ne y$, $0$ if $x=y$; any subset $S\subseteq X$ with $d$ restricted (a \emph{subspace}); and, for a set $A$, $d(f,g)=\sup_{a\in A}|f(a)-g(a)|$ on bounded functions $A\to\R$.
+\end{example}
+
+\begin{definition}[Balls, open and closed sets]
+	The \emph{open ball} of radius $r>0$ about $x$ is $B(x,r):=\{y\in X:d(x,y)<r\}$. A set $U\subseteq X$ is \emph{open} if $\forall x\in U\ \exists r>0\ B(x,r)\subseteq U$. A set $F\subseteq X$ is \emph{closed} if $X\setminus F$ is open.
+\end{definition}
+
+\begin{proposition}[Balls are open]\label{prop:ballopen}
+	Every open ball $B(x,r)$ is open.
+\end{proposition}
+\begin{proof}
+	Let $y\in B(x,r)$, so $d(x,y)<r$; put $\rho=r-d(x,y)>0$. If $z\in B(y,\rho)$ then $d(x,z)\le d(x,y)+d(y,z)<d(x,y)+\rho=r$, so $z\in B(x,r)$. Hence $B(y,\rho)\subseteq B(x,r)$.
+\end{proof}
+
+\begin{theorem}[The topology of a metric space]\label{thm:metrictop}
+	In any metric space $(X,d)$: (a) $\varnothing$ and $X$ are open; (b) the union of any family of open sets is open; (c) the intersection of finitely many open sets is open. Dually, $\varnothing,X$ are closed, arbitrary intersections of closed sets are closed, and finite unions of closed sets are closed.
+\end{theorem}
+\begin{proof}
+	(a) $\varnothing$ vacuously; $X$ trivially (any ball works). (b) If $x\in\bigcup_i U_i$ then $x\in U_j$ for some $j$, so some $B(x,r)\subseteq U_j\subseteq\bigcup_iU_i$. (c) Let $x\in U_1\cap\dots\cap U_n$; choose $r_i>0$ with $B(x,r_i)\subseteq U_i$, and let $r=\min\{r_1,\dots,r_n\}>0$ (a finite minimum of positive numbers is positive); then $B(x,r)\subseteq U_i$ for every $i$. The closed statements follow by De Morgan (Theorem~\ref{thm:indexedDM}: complement turns unions into intersections and vice versa).
+\end{proof}
+
+\begin{example}
+	$[a,b]$ is closed in $\R$: its complement $(-\infty,a)\cup(b,\infty)$ is a union of open balls (each point has a ball avoiding $[a,b]$). $(a,b)$ is open: it is a union of balls. $[a,b)$ is neither open (no ball about $a$ stays inside) nor closed (its complement is not open at $b$). An infinite intersection of open sets need not be open: $\bigcap_{n\ge1}(-1/n,1/n)=\{0\}$, not open in $\R$; an infinite union of closed sets need not be closed: $\bigcup_{n\ge1}[\frac1n,1-\frac1n]=(0,1)$ for $n\ge2$, not closed.
+\end{example}
+
+\section{Convergence and continuity}
+
+\begin{definition}
+	A sequence $(x_n)$ in $(X,d)$ \emph{converges} to $L\in X$ if $d(x_n,L)\to0$ in $\R$ (Chapter~\ref{ch:seq}), i.e.\ $\forall\varepsilon>0\ \exists N\ \forall n\ge N\ d(x_n,L)<\varepsilon$.
+\end{definition}
+
+\begin{proposition}[Closed sets via sequences]\label{prop:closedseq}
+	$F\subseteq X$ is closed iff every sequence in $F$ converging (in $X$) to some $L\in X$ has $L\in F$.
+\end{proposition}
+\begin{proof}
+	($\Rightarrow$) If $L\notin F$ then, since $X\setminus F$ is open, some ball $B(L,r)\subseteq X\setminus F$; so no $x_n\in F$ lies in $B(L,r)$, i.e.\ $d(x_n,L)\ge r$ for all $n$, contradicting $x_n\to L$. ($\Leftarrow$) Suppose $F$ is not closed: some $x\in X\setminus F$ has every ball $B(x,1/n)$ meeting $F$; pick $x_n\in F\cap B(x,1/n)$. Then $d(x_n,x)<1/n\to0$, so $x_n\to x\notin F$, contradicting the hypothesis.
+\end{proof}
+
+\begin{definition}[Continuity]
+	$f:(X,d_X)\to(Y,d_Y)$ is \emph{continuous at $a\in X$} if
+	\[
+	\forall\varepsilon>0\ \exists\delta>0\ \forall x\in X\ \bigl(d_X(x,a)<\delta\Rightarrow d_Y(f(x),f(a))<\varepsilon\bigr),
+	\]
+	and \emph{continuous} if continuous at every point of $X$.
+\end{definition}
+
+\begin{theorem}[Continuity via open sets and via sequences]\label{thm:contchar}
+	For $f:X\to Y$, the following are equivalent: (a) $f$ is continuous; (b) $f^{-1}(V)$ is open in $X$ for every open $V\subseteq Y$; (c) for every $x\in X$ and every sequence $x_n\to x$ in $X$, $f(x_n)\to f(x)$ in $Y$.
+\end{theorem}
+\begin{proof}
+	(a)$\Rightarrow$(b): let $V\subseteq Y$ be open and $a\in f^{-1}(V)$. Since $V$ is open and $f(a)\in V$, some $\varepsilon>0$ has $B(f(a),\varepsilon)\subseteq V$. By continuity at $a$, some $\delta>0$ has $f(B(a,\delta))\subseteq B(f(a),\varepsilon)\subseteq V$, i.e.\ $B(a,\delta)\subseteq f^{-1}(V)$ (Theorem~\ref{thm:imgpre}(c) rearranged: $x\in B(a,\delta)\Rightarrow f(x)\in B(f(a),\varepsilon)\Rightarrow f(x)\in V\Rightarrow x\in f^{-1}(V)$).
+	
+	(b)$\Rightarrow$(a): fix $a\in X$, $\varepsilon>0$. $V=B(f(a),\varepsilon)$ is open (Proposition~\ref{prop:ballopen}), so $f^{-1}(V)$ is open and contains $a$; some $\delta>0$ has $B(a,\delta)\subseteq f^{-1}(V)$, i.e.\ $d_X(x,a)<\delta\Rightarrow f(x)\in V\Rightarrow d_Y(f(x),f(a))<\varepsilon$.
+	
+	(a)$\Rightarrow$(c): given $\varepsilon>0$ take $\delta$ from continuity at $x$; since $x_n\to x$, eventually $d_X(x_n,x)<\delta$, so eventually $d_Y(f(x_n),f(x))<\varepsilon$.
+	
+	(c)$\Rightarrow$(a): suppose $f$ is not continuous at some $a$: $\exists\varepsilon>0\ \forall\delta>0\ \exists x\ (d_X(x,a)<\delta\wedge d_Y(f(x),f(a))\ge\varepsilon)$ (negating as in Example~\ref{ex:eps-delta-neg}). For each $n\ge1$ take $\delta=1/n$ to get $x_n$ with $d_X(x_n,a)<1/n$ and $d_Y(f(x_n),f(a))\ge\varepsilon$. Then $x_n\to a$ but $f(x_n)\not\to f(a)$, contradicting (c).
+\end{proof}
+
+\section{Completeness}
+
+\begin{definition}
+	A sequence $(x_n)$ in $(X,d)$ is \emph{Cauchy} if $\forall\varepsilon>0\ \exists N\ \forall m,n\ge N\ d(x_m,x_n)<\varepsilon$. $(X,d)$ is \emph{complete} if every Cauchy sequence converges in $X$.
+\end{definition}
+
+\begin{theorem}
+	$\R$ (with $d(x,y)=|x-y|$) is complete.
+\end{theorem}
+\begin{proof}
+	This is Theorem~\ref{thm:cauchy}.
+\end{proof}
+
+\begin{example}
+	$\Q$ (with the same formula) is not complete (Chapter~\ref{ch:reals}); $(0,1)\subseteq\R$ is not complete (the sequence $1/n$ is Cauchy but its limit $0$ is outside); any set with the discrete metric is complete (a Cauchy sequence is eventually constant, taking $\varepsilon=1/2$).
+\end{example}
+
+\begin{proposition}
+	A closed subspace of a complete metric space is complete; a complete subspace of any metric space is closed.
+\end{proposition}
+\begin{proof}
+	Let $F\subseteq X$ closed, $X$ complete, $(x_n)$ Cauchy in $F$. It is Cauchy in $X$, so converges to some $L\in X$; by Proposition~\ref{prop:closedseq}, $L\in F$. Conversely if $F$ is complete and $x_n\in F$ converges to $L\in X$, then $(x_n)$ is Cauchy (Theorem~\ref{thm:cauchy}'s easy direction, valid verbatim in any metric space), so it converges in $F$ to some $L'\in F$; but limits in $X$ are unique (as in Theorem~\ref{thm:limitlaws}(a), same proof with $|\cdot|$ replaced by $d$), so $L=L'\in F$. By Proposition~\ref{prop:closedseq}, $F$ is closed.
+\end{proof}

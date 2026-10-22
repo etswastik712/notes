@@ -1,0 +1,113 @@
+\chapter{The Real Numbers}\label{ch:reals}
+
+\section{Completeness and the failure of $\Q$}
+
+\begin{definition}[Least upper bound property]
+	An ordered field $F$ is \emph{complete} (has the \emph{least upper bound property}) if every non-empty subset $S\subseteq F$ that is bounded above has a least upper bound $\lub S$ in $F$ (Definition~\ref{def:bounds}, in the poset $(F,\le)$).
+\end{definition}
+
+\begin{example}[$\Q$ is not complete]\label{ex:Qgap}
+	Let $S=\{q\in\Q:q>0,\ q^2<2\}$. It is non-empty ($1\in S$) and bounded above by $2$ (if $q>2$ then $q^2>4$). Suppose $u\in\Q$ were its least upper bound; $u\ge1>0$. By Theorem~\ref{thm:sqrt2}, $u^2\neq2$. Put $u'=\dfrac{2u+2}{u+2}=u-\dfrac{u^2-2}{u+2}$; then $u'\in\Q$ and
+	\[
+	u'^2-2=\frac{2(u^2-2)}{(u+2)^2}.
+	\]
+	\emph{If $u^2<2$:} then $u'>u$ and $u'^2<2$, so $u'\in S$, contradicting that $u$ is an upper bound. \emph{If $u^2>2$:} then $0<u'<u$ and $u'^2>2$; for $s\in S$ we have $s^2<2<u'^2$ so $s<u'$; thus $u'$ is a smaller upper bound, contradicting leastness. Hence $S$ has no least upper bound in $\Q$.
+\end{example}
+
+\section{Construction by Dedekind cuts}
+
+\begin{definition}[Cut]
+	A \emph{(Dedekind) cut} is a set $\alpha\subseteq\Q$ such that (i) $\varnothing\neq\alpha\neq\Q$; (ii) if $p\in\alpha$ and $q<p$ ($q\in\Q$) then $q\in\alpha$; (iii) $\alpha$ has no greatest element. Let $\R$ be the set of all cuts (a subset of $\pset(\Q)$), and order it by $\alpha<\beta:\iff\alpha\subsetneq\beta$.
+\end{definition}
+
+\begin{intuition}
+	The cut $\alpha$ stands for the ``real number just to the right of all elements of $\alpha$ and to the left of all rationals not in $\alpha$''. For a rational $q$ the cut $q^*=\{p\in\Q:p<q\}$; for $\sqrt2$ the cut $\{p\in\Q:p\le0\text{ or }p^2<2\}$, which is not of the form $q^*$. So the missing ``hole'' of Example~\ref{ex:Qgap} is filled by a cut.
+\end{intuition}
+
+\begin{lemma}\label{lem:cutfacts}
+	For a cut $\alpha$: if $p\in\alpha$ and $q\notin\alpha$ then $p<q$; if $q\notin\alpha$ and $r>q$ then $r\notin\alpha$.
+\end{lemma}
+\begin{proof}
+	If $q\le p$ then $q\in\alpha$ by (ii), a contradiction; so $p<q$. The second claim is the contrapositive of (ii).
+\end{proof}
+
+\begin{theorem}[Order and completeness of cuts]\label{thm:cuts-lub}
+	$(\R,<)$ is a strict total order, and every non-empty subset $\mathcal S\subseteq\R$ bounded above has a least upper bound, namely $\bigcup\mathcal S$.
+\end{theorem}
+\begin{proof}
+	$<$ is irreflexive and transitive as $\subsetneq$ is. \emph{Trichotomy.} Let $\alpha,\beta$ be cuts with $\alpha\not\subseteq\beta$; pick $p\in\alpha\setminus\beta$. For every $q\in\beta$, $q<p$ by Lemma~\ref{lem:cutfacts}, hence $q\in\alpha$ by (ii). So $\beta\subseteq\alpha$ and $\beta\ne\alpha$, i.e.\ $\beta<\alpha$. Otherwise $\alpha\subseteq\beta$ and either $\alpha=\beta$ or $\alpha<\beta$.
+	
+	\emph{Completeness.} Let $\gamma$ be an upper bound of $\mathcal S$ and $\sigma=\bigcup\mathcal S$. (i) $\sigma\ne\varnothing$ as $\mathcal S\ne\varnothing$ and cuts are non-empty; $\sigma\subseteq\gamma\neq\Q$. (ii) If $p\in\sigma$, say $p\in\alpha\in\mathcal S$, and $q<p$, then $q\in\alpha\subseteq\sigma$. (iii) If $p\in\alpha\in\mathcal S$, some $r\in\alpha$ has $r>p$. So $\sigma$ is a cut. It contains every $\alpha\in\mathcal S$, so it is an upper bound; and if $\gamma'$ is any upper bound, $\alpha\subseteq\gamma'$ for all $\alpha\in\mathcal S$ so $\sigma\subseteq\gamma'$. Thus $\sigma=\lub\mathcal S$.
+\end{proof}
+
+\begin{definition}[Addition and zero]
+	$\alpha+\beta:=\{r+s:r\in\alpha,s\in\beta\}$ and $0^*:=\{q\in\Q:q<0\}$.
+\end{definition}
+
+\begin{theorem}[Additive structure]\label{thm:cut-add}
+	$\alpha+\beta$ is a cut; $+$ is commutative and associative; $\alpha+0^*=\alpha$; and every cut $\alpha$ has an additive inverse $-\alpha:=\{p\in\Q:\exists r>0\;(-p-r\notin\alpha)\}$.
+\end{theorem}
+\begin{proof}
+	\emph{Cut:} non-empty clearly. If $p\notin\alpha$, $q\notin\beta$ then every $r\in\alpha$, $s\in\beta$ has $r<p$, $s<q$ (Lemma~\ref{lem:cutfacts}) so $r+s<p+q$: hence $p+q\notin\alpha+\beta$. (ii): if $t<r+s$ then $t-s<r$ so $t-s\in\alpha$ and $t=(t-s)+s\in\alpha+\beta$. (iii): $r+s<r'+s$ for $r'\in\alpha$, $r'>r$. Commutativity and associativity come from those of $\Q$.
+	
+	\emph{Zero:} If $r\in\alpha$ and $s<0$ then $r+s<r$ so $r+s\in\alpha$: $\alpha+0^*\subseteq\alpha$. If $p\in\alpha$ choose $r\in\alpha$ with $r>p$ by (iii); then $p=r+(p-r)$ with $p-r<0$, so $p\in\alpha+0^*$.
+	
+	\emph{Inverse:} Let $\beta=-\alpha$. (i) Take $q\notin\alpha$; then $p=-q-1\in\beta$ (with $r=1$: $-p-1=q\notin\alpha$). And if $p\in\alpha$ then $-p\notin\beta$: for $r>0$, $-(-p)-r=p-r<p$ lies in $\alpha$. (ii) If $p\in\beta$ with witness $r$ and $q<p$, then $-q-r>-p-r\notin\alpha$, so $-q-r\notin\alpha$ and $q\in\beta$. (iii) If $p\in\beta$ with witness $r$, then $p'=p+r/2\in\beta$ (witness $r/2$, as $-p'-r/2=-p-r\notin\alpha$) and $p'>p$. So $\beta$ is a cut.
+	
+	$\alpha+\beta=0^*$: ($\subseteq$) For $r\in\alpha$ and $s\in\beta$ with witness $t>0$ we have $-s-t\notin\alpha$, hence $r<-s-t$ and $r+s<-t<0$. ($\supseteq$) Let $v<0$ and $w=-v/2>0$. Choose $q\notin\alpha$ and $p\in\alpha$. The set $\{n\in\Z:nw\in\alpha\}$ is non-empty (some multiple of $w$ lies below $p$, by the Archimedean property of $\Q$) and bounded above (if $nw\in\alpha$ then $nw<q$ by Lemma~\ref{lem:cutfacts}), so it has a greatest element $n$: $nw\in\alpha$ and $(n+1)w\notin\alpha$. Put $r=nw\in\alpha$ and $s=-(n+2)w$. Then $-s-w=(n+1)w\notin\alpha$, so $s\in\beta$, and $r+s=-2w=v$.
+\end{proof}
+
+\begin{definition}[Multiplication]
+	For $\alpha,\beta>0^*$ let $\alpha\beta:=\{p\in\Q:p\le rs\text{ for some }r\in\alpha,s\in\beta\text{ with }r,s>0\}$. Put $\alpha\cdot0^*=0^*\cdot\alpha=0^*$, and extend by the sign rules $\alpha\beta=(-\alpha)(-\beta)$ if $\alpha,\beta<0^*$ and $\alpha\beta=-\bigl(\alpha\cdot(-\beta)\bigr)$ or $-\bigl((-\alpha)\beta\bigr)$ in the mixed cases. The multiplicative unit is $1^*=\{q\in\Q:q<1\}$.
+\end{definition}
+
+\begin{theorem}[$\R$ is a complete ordered field]\label{thm:R}
+	$(\R,+,\cdot,<)$ is an ordered field with the least upper bound property, and $q\mapsto q^*=\{p\in\Q:p<q\}$ is an order-preserving embedding $\Q\to\R$ preserving $+$ and $\cdot$.
+\end{theorem}
+\begin{proof}
+	Completeness is Theorem~\ref{thm:cuts-lub}, the additive group structure Theorem~\ref{thm:cut-add}. Order axiom (O1): $\alpha<\beta\Rightarrow\alpha+\gamma\subseteq\beta+\gamma$, and equality would give, after adding $-\gamma$ and using associativity and inverses, $\alpha=\beta$; so $\alpha+\gamma<\beta+\gamma$. The remaining verifications --- associativity, commutativity and distributivity of $\cdot$, existence of inverses of non-zero cuts, (O2), and the properties of $q\mapsto q^*$ --- are direct set computations of the same nature as those above (each involves finitely many rationals and inequalities in $\Q$); they are lengthy but routine, and we do not reproduce them (see W.\ Rudin, \emph{Principles of Mathematical Analysis}, Appendix to Chapter~1).
+\end{proof}
+
+\begin{remark}[Uniqueness and what we use from now on]
+	Any two complete ordered fields are isomorphic, by a unique order- and field-isomorphism. So ``the real numbers'' are characterised by the axioms: an ordered field with the least upper bound property. \emph{From now on we use only these axioms of $\R$}, not the construction; $\Q\subseteq\R$ and $\N\subseteq\Z\subseteq\Q\subseteq\R$ via the embeddings.
+\end{remark}
+
+\section{First consequences of completeness}
+
+\begin{theorem}[Archimedean property]\label{thm:arch}
+	$\N$ is not bounded above in $\R$. Equivalently, for all $x,y>0$ there is $n\in\N$ with $nx>y$.
+\end{theorem}
+\begin{proof}
+	If $\N$ were bounded above, it would have a least upper bound $s$. Then $s-1$ is not an upper bound, so some $n\in\N$ has $n>s-1$, hence $n+1>s$ with $n+1\in\N$, contradicting that $s$ is an upper bound. For the equivalent form apply this to $y/x$.
+\end{proof}
+
+\begin{corollary}[Density of $\Q$]\label{cor:density}
+	(a) For $x>0$ there is $n\ge1$ with $1/n<x$. (b) If $x<y$ are real, there is $q\in\Q$ with $x<q<y$.
+\end{corollary}
+\begin{proof}
+	(a) Apply Theorem~\ref{thm:arch} to get $n>1/x$. (b) Choose $n\ge1$ with $n(y-x)>1$. The set of integers $k$ with $k>nx$ is non-empty (Theorem~\ref{thm:arch}) and bounded below (by a negative integer $-N$ with $N>-nx$), so by well-ordering it has a least element $m$. Then $m-1\le nx<m$, so $nx<m\le nx+1<ny$, i.e.\ $x<\frac mn<y$.
+\end{proof}
+
+\begin{theorem}[Square roots]\label{thm:sqrtexist}
+	For every real $a>0$ there is a unique $x>0$ with $x^2=a$ (in particular $\sqrt2\in\R$).
+\end{theorem}
+\begin{proof}
+	Let $S=\{t>0:t^2<a\}$. $S\ne\varnothing$ (take $t=a/(1+a)<1$, so $t^2<t<a$), and $S$ is bounded above by $1+a$ (if $t>1+a$ then $t^2>(1+a)^2>a$). Let $s=\sup S>0$.
+	
+	\emph{$s^2<a$ is impossible:} take $h=\min\{1,\frac{a-s^2}{2(2s+1)}\}>0$; as $h^2\le h$, $(s+h)^2\le s^2+h(2s+1)\le s^2+\frac{a-s^2}2<a$, so $s+h\in S$, contradicting that $s$ is an upper bound.
+	
+	\emph{$s^2>a$ is impossible:} take $h=\frac{s^2-a}{2s}$, so $0<h<s$, $t=s-h>0$, and $t^2>s^2-2sh=a$. Any $u\in S$ with $u>t$ would give $u^2>t^2>a$, impossible; so $t$ is an upper bound of $S$ smaller than $s$, a contradiction. Hence $s^2=a$.
+	
+	\emph{Uniqueness:} if $x,y>0$ and $x^2=y^2$ then $(x-y)(x+y)=0$ and $x+y>0$, so $x=y$.
+\end{proof}
+
+\begin{definition}[Absolute value, intervals]
+	$|x|:=x$ if $x\ge0$ and $-x$ otherwise. For $a<b$: $(a,b)=\{x:a<x<b\}$, $[a,b]=\{x:a\le x\le b\}$, and similarly $[a,b)$, $(a,b]$, $(a,\infty)$, $(-\infty,b]$, etc.
+\end{definition}
+
+\begin{proposition}[Absolute value]\label{prop:abs}
+	For $x,y,r\in\R$: (a) $|x|\ge0$ and $|x|=0\iff x=0$; (b) $|xy|=|x||y|$; (c) $|x|<r\iff-r<x<r$ and $|x|\le r\iff-r\le x\le r$; (d) \emph{(triangle inequality)} $|x+y|\le|x|+|y|$; (e) $\bigl||x|-|y|\bigr|\le|x-y|$.
+\end{proposition}
+\begin{proof}
+	(a),(b): case analysis on signs. (c) Note $|x|=\max\{x,-x\}$ (if $x\ge0$ then $-x\le0\le x$; if $x<0$ then $x<0<-x$). So $|x|<r\iff(x<r\wedge-x<r)\iff-r<x<r$, and likewise for $\le$. (d) By (c) applied to $|x|\ge x\ge-|x|$ and $|y|\ge y\ge-|y|$, adding gives $-(|x|+|y|)\le x+y\le|x|+|y|$, so $|x+y|\le|x|+|y|$ by (c). (e) $|x|=|(x-y)+y|\le|x-y|+|y|$ gives $|x|-|y|\le|x-y|$; interchanging $x,y$ gives $|y|-|x|\le|x-y|$; together $\bigl||x|-|y|\bigr|\le|x-y|$ by (c).
+\end{proof}

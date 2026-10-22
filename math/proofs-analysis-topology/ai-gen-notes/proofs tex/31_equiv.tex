@@ -1,0 +1,87 @@
+\chapter{Equivalence Relations and Partitions}\label{ch:equiv}
+
+\section{Equivalence classes}
+
+\begin{definition}
+	A relation $\sim$ on a set $A$ is an \emph{equivalence relation} if it is reflexive, symmetric and transitive. The \emph{equivalence class} of $a\in A$ is $[a]:=\{x\in A:x\sim a\}$. The set of all classes is the \emph{quotient set} $A/{\sim}:=\{S\in\pset(A):\exists a\in A\;S=[a]\}$ (a set by Separation). Any element of a class is a \emph{representative} of it.
+\end{definition}
+
+\begin{lemma}\label{lem:classes}
+	For $a,b\in A$: $a\sim b\iff[a]=[b]\iff[a]\cap[b]\ne\varnothing$. Also $a\in[a]$.
+\end{lemma}
+\begin{proof}
+	$a\in[a]$ by reflexivity. Suppose $a\sim b$. If $x\in[a]$ then $x\sim a$ and $a\sim b$ give $x\sim b$, i.e.\ $x\in[b]$; so $[a]\subseteq[b]$. By symmetry $b\sim a$, and the same argument gives $[b]\subseteq[a]$; hence $[a]=[b]$. If $[a]=[b]$ then $a\in[a]=[b]\cap[a]$, so $[a]\cap[b]\neq\varnothing$. If $z\in[a]\cap[b]$ then $z\sim a$ and $z\sim b$; by symmetry $a\sim z$, and by transitivity $a\sim b$.
+\end{proof}
+
+\begin{theorem}[Two classes are equal or disjoint]\label{thm:eqdisjoint}
+	For any equivalence relation, any two equivalence classes are either equal or disjoint.
+\end{theorem}
+\begin{proof}
+	Let $[a],[b]$ be classes. If $[a]\cap[b]\neq\varnothing$ then $[a]=[b]$ by Lemma~\ref{lem:classes}. Otherwise they are disjoint.
+\end{proof}
+
+\section{Partitions}
+
+\begin{definition}[Partition]
+	A \emph{partition} of a set $A$ is a set $\mathcal P$ of subsets of $A$ (its \emph{blocks}) such that (i) $\varnothing\notin\mathcal P$; (ii) distinct blocks are disjoint; (iii) $\bigcup\mathcal P=A$. Equivalently, every element of $A$ lies in \emph{exactly one} block.
+\end{definition}
+
+\begin{theorem}[Equivalence relations $\leftrightarrow$ partitions]\label{thm:equiv-partition}
+	Let $A$ be a set.
+	\begin{enumerate}[label=(\alph*)]
+		\item If $\sim$ is an equivalence relation on $A$, then $A/{\sim}$ is a partition of $A$.
+		\item If $\mathcal P$ is a partition of $A$, then $a\sim_{\mathcal P}b:\iff\exists P\in\mathcal P\,(a\in P\wedge b\in P)$ is an equivalence relation on $A$, and its equivalence classes are exactly the blocks of $\mathcal P$.
+		\item The two constructions are mutually inverse: $\sim_{A/\sim}$ is $\sim$, and $A/{\sim_{\mathcal P}}=\mathcal P$.
+	\end{enumerate}
+	Thus equivalence relations on $A$ correspond bijectively to partitions of $A$.
+\end{theorem}
+\begin{proof}
+	(a) Each class is non-empty ($a\in[a]$). Distinct classes are disjoint by Theorem~\ref{thm:eqdisjoint}. Every $a\in A$ lies in $[a]$, so $\bigcup(A/{\sim})=A$.
+	
+	(b) \emph{Reflexive:} given $a\in A=\bigcup\mathcal P$, choose $P\in\mathcal P$ with $a\in P$; then $a\sim_{\mathcal P}a$. \emph{Symmetric:} the definition is symmetric in $a,b$. \emph{Transitive:} if $a,b\in P$ and $b,c\in Q$ with $P,Q\in\mathcal P$, then $b\in P\cap Q$, so $P=Q$ (distinct blocks are disjoint), whence $a,c\in P$. \emph{Classes are blocks:} let $a\in P\in\mathcal P$. Since $a$ lies in exactly one block, $x\sim_{\mathcal P}a\iff\exists Q\,(x\in Q\wedge a\in Q)\iff x\in P$; so $[a]=P$. Thus every class is a block; conversely every block $P$ is non-empty, so $P\ni a$ for some $a$ and $P=[a]$.
+	
+	(c) Let $\sim$ be given and $\mathcal P=A/{\sim}$. Then $a\sim_{\mathcal P}b$ iff $a,b\in[c]$ for some $c$. If $a,b\in[c]$ then $a\sim c$ and $b\sim c$, so $a\sim b$; conversely if $a\sim b$ then $a,b\in[b]$. So $\sim_{\mathcal P}=\sim$. Starting from $\mathcal P$, part (b) says $A/{\sim_{\mathcal P}}=\mathcal P$.
+\end{proof}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.3cm}p{4.2cm}p{7.3cm}@{}}
+		\toprule
+		\textbf{View} & \textbf{Data} & \textbf{Conditions}\\
+		\midrule
+		Equivalence relation & $\sim\ \subseteq A\times A$ & reflexive, symmetric, transitive\\
+		Partition & a set $\mathcal P\subseteq\pset(A)$ & blocks non-empty, pairwise disjoint, union $A$\\
+		Quotient/kernel & a surjection $\pi:A\to A/{\sim}$ (Chapter~\ref{ch:functions}) & $a\sim b\iff\pi(a)=\pi(b)$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+A partition $\mathcal P$ is \emph{finer} than $\mathcal Q$ if every block of $\mathcal P$ lies inside a block of $\mathcal Q$ (equivalently $\sim_{\mathcal P}\subseteq\sim_{\mathcal Q}$). The finest partition has singleton blocks (the relation $=$), the coarsest has one block (the relation $A\times A$). For $A=\{1,2,3\}$ there are exactly $5$ equivalence relations, corresponding to the partitions $\{123\}$, $\{1|23\}$, $\{2|13\}$, $\{3|12\}$, $\{1|2|3\}$; the numbers for $|A|=1,2,3,4,5$ are $1,2,5,15,52$ (Bell numbers).
+
+\section{Examples}
+
+\begin{example}[Congruence modulo $n$]\label{ex:congruence}
+	Fix $n\in\Z$ and define $x\sim y\iff n\mid(x-y)$. It is reflexive ($n\mid0$), symmetric ($x-y=nk\Rightarrow y-x=n(-k)$) and transitive ($x-z=(x-y)+(y-z)$ is a sum of multiples of $n$), for every integer $n$ (for $n=0$ it is equality; $n$ and $-n$ give the same relation). Its classes are $[a]=a+n\Z=\{a+kn:k\in\Z\}$.
+	
+	\emph{Number of classes} for $n\ge1$. \emph{Division algorithm:} for $a\in\Z$ there are unique $q,r\in\Z$ with $a=qn+r$, $0\le r<n$. (Existence: the set $\{a-qn:q\in\Z\}\cap\N$ is non-empty (take $q=-|a|$), so has a least element $r=a-qn$; if $r\ge n$ then $r-n=a-(q+1)n$ would be a smaller element, contradiction. Uniqueness: if $qn+r=q'n+r'$ with $0\le r\le r'<n$, then $r'-r=n(q-q')$ lies in $[0,n)$ and is a multiple of $n$, hence $0$.) So each $a$ is congruent to exactly one $r\in\{0,\dots,n-1\}$: $a\sim r$ by definition, and $r\sim r'$ with $r,r'$ in that range forces $r=r'$ by uniqueness. Therefore
+	\[
+	\Z/n\Z=\{[0],[1],\dots,[n-1]\}\quad\text{has exactly $n$ elements.}
+	\]
+	For $n=0$ the classes are the singletons $\{a\}$; for $n=\pm1$ there is a single class $\Z$.
+\end{example}
+
+\begin{proposition}[Well-defined operations on classes]\label{prop:wd}
+	If $a\equiv a'$ and $b\equiv b'\pmod n$ then $a+b\equiv a'+b'$ and $ab\equiv a'b'$. Hence $[a]+[b]:=[a+b]$ and $[a]\cdot[b]:=[ab]$ are well-defined on $\Z/n\Z$.
+\end{proposition}
+\begin{proof}
+	Write $a'-a=nk$, $b'-b=nl$. Then $(a'+b')-(a+b)=n(k+l)$, and $a'b'-ab=a'(b'-b)+b(a'-a)=n(a'l+bk)$.
+\end{proof}
+\begin{intuition}
+	An operation defined ``via representatives'' is meaningful only if the answer does not depend on which representative you picked; this is the meaning of \emph{well-defined}. Proposition~\ref{prop:wd} is exactly that check. Without it, $[a]+[b]:=[a+b]$ could give different answers for different names of the same class.
+\end{intuition}
+
+\begin{example}[``Lie on the same line'' (Assignment 4, Problem 5(a))]\label{ex:sameline}
+	Read literally, $P\sim Q$ iff \emph{there is a line in $\R^2$ containing both $P$ and $Q$}. Any two points lie on a common line (if $P\ne Q$ the line $PQ$; if $P=Q$ any line through $P$). So $\sim$ is the total relation $\R^2\times\R^2$: an equivalence relation with a single class $\R^2$. The relation becomes interesting if one asks for \emph{lines through the origin}: on $\R^2\setminus\{0\}$, $P\sim Q\iff P,Q,0$ are collinear is an equivalence relation whose classes are the punctured lines through $0$ (the projective line); but on all of $\R^2$ this fails transitivity, since $0$ is related to everything ($P\sim0\sim Q$) while non-collinear $P,Q$ are not related.
+\end{example}
+
+\begin{example}[Fractions]\label{ex:fractions}
+	On $\Z\times(\Z\setminus\{0\})$ put $(a,b)\sim(c,d)\iff ad=bc$. Reflexive and symmetric are clear. Transitive: if $ad=bc$ and $cf=de$, then $adf=bcf=bde$, so $d(af-be)=0$; since $d\ne0$, $af=be$. The classes are the rational numbers (Chapter~\ref{ch:zq}).
+\end{example}

@@ -1,0 +1,111 @@
+\part{Relations, Functions and Orders}
+
+\chapter{Binary Relations}\label{ch:relations}
+
+\section{Definitions}
+
+\begin{definition}[Relation]
+	A \emph{binary relation from $A$ to $B$} is a subset $R\subseteq A\times B$. A relation \emph{on} $A$ is a subset of $A\times A$. One writes $x\mathrel Ry$ for $(x,y)\in R$. Its \emph{domain} is $\dom R=\{x:\exists y\,(x,y)\in R\}$ and its \emph{range} is $\ran R=\{y:\exists x\,(x,y)\in R\}$; its \emph{inverse} is $R^{-1}=\{(y,x):(x,y)\in R\}$; and the \emph{composite} of $R\subseteq A\times B$ and $S\subseteq B\times C$ is $S\circ R=\{(x,z):\exists y\,(x\mathrel Ry\wedge y\mathrel Sz)\}$.
+\end{definition}
+(All these sets exist by Separation applied to a suitable product, e.g.\ $\dom R\subseteq\bigcup\bigcup R$.) A relation \emph{is} its set of pairs; two relations are equal iff they relate exactly the same pairs.
+
+\begin{definition}[Properties of a relation $R$ on $A$]\label{def:relprops}
+	\begin{center}
+		\begin{tabular}{@{}lp{4.4cm}p{7.6cm}@{}}
+			\toprule
+			\textbf{Property} & \textbf{Symbolic form} & \textbf{Negation (how it fails)}\\
+			\midrule
+			reflexive & $\forall x\in A\;x\mathrel Rx$ & some $x$ with $\neg(x\mathrel Rx)$\\
+			irreflexive & $\forall x\in A\;\neg(x\mathrel Rx)$ & some $x$ with $x\mathrel Rx$\\
+			symmetric & $\forall x,y\;(x\mathrel Ry\Rightarrow y\mathrel Rx)$ & some $x,y$ with $x\mathrel Ry$ and $\neg(y\mathrel Rx)$\\
+			antisymmetric & $\forall x,y\;(x\mathrel Ry\wedge y\mathrel Rx\Rightarrow x=y)$ & some $x\ne y$ with $x\mathrel Ry$ and $y\mathrel Rx$\\
+			asymmetric & $\forall x,y\;(x\mathrel Ry\Rightarrow\neg(y\mathrel Rx))$ & some $x,y$ with $x\mathrel Ry$ and $y\mathrel Rx$\\
+			transitive & $\forall x,y,z\;(x\mathrel Ry\wedge y\mathrel Rz\Rightarrow x\mathrel Rz)$ & some $x\mathrel Ry$, $y\mathrel Rz$ but $\neg(x\mathrel Rz)$\\
+			total (connex) & $\forall x,y\;(x\mathrel Ry\vee y\mathrel Rx)$ & some $x,y$ related in neither direction\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{definition}
+
+\begin{warning}
+	``Antisymmetric'' is \emph{not} the negation of ``symmetric''. Equality is both symmetric and antisymmetric; $\le$ is antisymmetric but not symmetric; $\neq$ is symmetric but not antisymmetric; the relation $\{(1,2),(2,1),(1,3)\}$ on $\{1,2,3\}$ is neither. Also, a hypothesis that is never satisfied makes a property hold vacuously: $<$ on $\Z$ is antisymmetric (and asymmetric) because $x<y\wedge y<x$ never occurs.
+\end{warning}
+
+\begin{center}
+	\begin{tabular}{@{}p{4.3cm}cccccc@{}}
+		\toprule
+		\textbf{Relation} & refl. & irrefl. & symm. & antisymm. & trans. & total\\
+		\midrule
+		$=$ on $\Z$ & \checkmark & & \checkmark & \checkmark & \checkmark & \\
+		$\le$ on $\Z$ & \checkmark & & & \checkmark & \checkmark & \checkmark\\
+		$<$ on $\Z$ & & \checkmark & & \checkmark & \checkmark & \\
+		$\ne$ on $\Z$ & & \checkmark & \checkmark & & & \\
+		$\mid$ on $\Z$ & \checkmark & & & & \checkmark & \\
+		$\equiv\pmod n$, $n\ge2$ & \checkmark & & \checkmark & & \checkmark & \\
+		$|x-y|=1$ on $\Z$ & & \checkmark & \checkmark & & & \\
+		$\subseteq$ on $\pset(X)$, $|X|\ge2$ & \checkmark & & & \checkmark & \checkmark & \\
+		$\varnothing$ on a non-empty set & & \checkmark & \checkmark & \checkmark & \checkmark & \\
+		$A\times A$, $|A|\ge2$ & \checkmark & & \checkmark & & \checkmark & \checkmark\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{example}[Verifying entries]
+	$\mid$ on $\Z$ is reflexive ($x=x\cdot1$, including $0\mid0$ since $0=0\cdot k$), transitive ($y=ak$, $z=yl\Rightarrow z=a(kl)$), not symmetric ($2\mid4$, $4\nmid2$), and not antisymmetric ($2\mid-2$ and $-2\mid2$ but $2\neq-2$). It is antisymmetric on $\N$. $\ne$ is not transitive: $1\ne2$, $2\ne1$ but $1\not\ne1$.
+\end{example}
+
+\section{Named types of relations}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.4cm}p{6cm}p{5.2cm}@{}}
+		\toprule
+		\textbf{Name} & \textbf{Required properties} & \textbf{Prototype}\\
+		\midrule
+		Preorder (quasi-order) & reflexive, transitive & $\mid$ on $\Z$; $\le$ on $\R$\\
+		Partial order & reflexive, antisymmetric, transitive & $\subseteq$ on $\pset(X)$; $\mid$ on $\N$\\
+		Strict partial order & irreflexive, transitive (hence asymmetric) & $<$ on $\R$; $\subsetneq$\\
+		Total (linear) order & partial order that is total & $\le$ on $\R$\\
+		Equivalence relation & reflexive, symmetric, transitive & $\equiv\pmod n$; ``same length''\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+Equivalence relations are studied in Chapter~\ref{ch:equiv} and partial orders in Chapter~\ref{ch:orders}.
+
+\begin{proposition}[Strict and non-strict orders correspond]\label{prop:strict-nonstrict}
+	If $\le$ is a partial order on $A$ then $x<y:\iff(x\le y\wedge x\ne y)$ is a strict partial order. If $<$ is a strict partial order then $x\le y:\iff(x<y\vee x=y)$ is a partial order. These constructions are mutually inverse.
+\end{proposition}
+\begin{proof}
+	Let $\le$ be a partial order. $<$ is irreflexive by definition. Transitivity: if $x<y<z$ then $x\le z$; if $x=z$ then $x\le y\le x$ gives $x=y$ by antisymmetry, contradicting $x\ne y$; so $x\ne z$, hence $x<z$. Conversely let $<$ be a strict partial order. $\le$ is reflexive by the disjunct $x=y$. Antisymmetry: if $x\le y\le x$ and $x\ne y$ then $x<y$ and $y<x$, and transitivity gives $x<x$, contradicting irreflexivity. Transitivity of $\le$: if $x\le y\le z$ there are four cases: $x<y<z$ gives $x<z$ by transitivity of $<$; $x<y=z$ and $x=y<z$ give $x<z$ by substitution; $x=y=z$ gives $x=z$. In each case $x\le z$. Finally, $x\le y\iff(x<y\vee x=y)$ round-trips because $x<y\iff x\le y\wedge x\ne y$ in both directions.
+\end{proof}
+
+\section{A trap: symmetric and transitive does not give reflexive}
+
+The following ``proof'' that symmetric plus transitive implies reflexive is invalid: ``$x\mathrel Ry$, so $y\mathrel Rx$ by symmetry, so $x\mathrel Rx$ by transitivity.'' It assumes $x$ is related to \emph{something}.
+
+\begin{proposition}
+	A symmetric transitive relation $R$ on $A$ is reflexive iff every element of $A$ is related to at least one element (i.e.\ $\dom R=A$). In particular, $\varnothing\subseteq A\times A$ is symmetric and transitive, but reflexive only if $A=\varnothing$.
+\end{proposition}
+\begin{proof}
+	If $R$ is reflexive, each $x$ is related to $x$. Conversely, if $x\mathrel Ry$ for some $y$, then $y\mathrel Rx$ (symmetry) and $x\mathrel Rx$ (transitivity applied to $x\mathrel Ry\wedge y\mathrel Rx$).
+\end{proof}
+
+\section{Examples of separating the properties}
+
+\begin{example}[Reflexive, transitive, not symmetric]\label{ex:refl-trans}
+	On $A=\{1,2\}$ let $R=\{(1,1),(2,2),(1,2)\}$. It is reflexive. It is transitive: the only pairs $(x,y),(y,z)$ with $x\ne y$ or $y\ne z$ are $(1,1),(1,2)$ giving $(1,2)$; $(1,2),(2,2)$ giving $(1,2)$; $(x,x),(x,x)$ giving $(x,x)$. It is not symmetric, since $(1,2)\in R$ but $(2,1)\notin R$. (The order $\le$ on $\R$ is another example.)
+\end{example}
+
+\begin{example}[Not reflexive, not symmetric, but transitive]\label{ex:trans-only}
+	On $A=\{1,2\}$ let $R=\{(1,2)\}$. Not reflexive: $(1,1)\notin R$. Not symmetric: $(1,2)\in R$, $(2,1)\notin R$. Transitive, \emph{vacuously}: a violation would need $(x,y),(y,z)\in R$ with $(x,z)\notin R$; the only pair in $R$ is $(1,2)$, and there is no pair $(2,z)\in R$, so no such configuration exists. (The strict order $<$ on $\R$ is another example.)
+\end{example}
+
+\section{Closures}
+
+\begin{proposition}\label{prop:closure}
+	Let $\mathcal R$ be a non-empty set of relations on $A$, each reflexive (respectively symmetric, respectively transitive). Then $\bigcap\mathcal R$ has the same property. Hence for any relation $R$ on $A$ there is a smallest reflexive (symmetric, transitive) relation containing $R$: the intersection of all such relations containing $R$ (the family is non-empty, containing $A\times A$).
+\end{proposition}
+\begin{proof}
+	Transitivity: if $(x,y),(y,z)\in\bigcap\mathcal R$ then for every $S\in\mathcal R$ both pairs are in $S$, so $(x,z)\in S$ by transitivity of $S$; hence $(x,z)\in\bigcap\mathcal R$. Reflexivity and symmetry are identical. The family of relations containing $R$ with the property is a subset of $\pset(A\times A)$, so it is a set, and the intersection is contained in each member.
+\end{proof}
+These are the \emph{reflexive, symmetric, transitive closures}; the smallest equivalence relation containing $R$ is obtained by requiring all three.

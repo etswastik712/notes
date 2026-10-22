@@ -1,0 +1,132 @@
+\chapter{Functions, Indexed Families and Products}\label{ch:functions}
+
+\section{Functions as sets}
+
+\begin{definition}[Function]
+	A \emph{function from $A$ to $B$}, written $f:A\to B$, is a relation $f\subseteq A\times B$ such that $\forall x\in A\;\exists!y\in B\;(x,y)\in f$. The unique such $y$ is denoted $f(x)$. $A$ is the \emph{domain}, $B$ the \emph{codomain}, and $f(A)=\ran f$ the \emph{image}. The set of all functions $A\to B$ is $B^A:=\{f\in\pset(A\times B):f\text{ is a function }A\to B\}$ (Separation).
+\end{definition}
+
+\begin{proposition}[Equality of functions]
+	For $f,g:A\to B$, $f=g\iff\forall x\in A\;f(x)=g(x)$.
+\end{proposition}
+\begin{proof}
+	($\Leftarrow$) $(x,y)\in f\iff y=f(x)=g(x)\iff(x,y)\in g$; use Extensionality. ($\Rightarrow$) is substitution.
+\end{proof}
+
+\begin{example}
+	The \emph{identity} $\id_A=\{(x,x):x\in A\}$; for $S\subseteq A$ the \emph{inclusion} $S\hookrightarrow A$ and the \emph{restriction} $f{\restriction}_S=f\cap(S\times B)$; the \emph{constant} function $x\mapsto b$; the \emph{projections} $\mathrm{pr}_1:A\times B\to A$, $(a,b)\mapsto a$ (well-defined by (OP)); and for $S\subseteq A$ the \emph{characteristic function} $\chi_S:A\to\{0,1\}$, $\chi_S(x)=1$ iff $x\in S$. There is exactly one function $\varnothing\to B$ (the empty set), and none $A\to\varnothing$ if $A\neq\varnothing$.
+\end{example}
+
+\begin{definition}[Composition]
+	For $f:A\to B$, $g:B\to C$, $g\circ f:=\{(x,z):\exists y\,(y=f(x)\wedge z=g(y))\}$; then $(g\circ f)(x)=g(f(x))$, and composition is associative: $(h\circ g)\circ f=h\circ(g\circ f)$ (both send $x$ to $h(g(f(x)))$).
+\end{definition}
+
+\section{Images and preimages}
+
+\begin{definition}
+	For $f:A\to B$, $S\subseteq A$, $T\subseteq B$: $f(S):=\{f(x):x\in S\}=\{y\in B:\exists x\in S\;f(x)=y\}$ and $f^{-1}(T):=\{x\in A:f(x)\in T\}$.
+\end{definition}
+
+\begin{theorem}[Images and preimages]\label{thm:imgpre}
+	Let $f:A\to B$; $S,S'\subseteq A$; $T,T'\subseteq B$; $\mathcal T$ a non-empty set of subsets of $B$.
+	\begin{enumerate}[label=(\alph*)]
+		\item $f^{-1}\bigl(\bigcup\mathcal T\bigr)=\bigcup\{f^{-1}(T):T\in\mathcal T\}$ and $f^{-1}\bigl(\bigcap\mathcal T\bigr)=\bigcap\{f^{-1}(T):T\in\mathcal T\}$; $f^{-1}(B\setminus T)=A\setminus f^{-1}(T)$.
+		\item $f(S\cup S')=f(S)\cup f(S')$, but only $f(S\cap S')\subseteq f(S)\cap f(S')$.
+		\item $S\subseteq f^{-1}(f(S))$ and $f(f^{-1}(T))=T\cap f(A)\subseteq T$.
+		\item $f(S)\setminus f(S')\subseteq f(S\setminus S')$.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+	(a) $x\in f^{-1}(\bigcup\mathcal T)\iff f(x)\in\bigcup\mathcal T\iff\exists T\in\mathcal T\,(f(x)\in T)\iff\exists T\in\mathcal T\,(x\in f^{-1}(T))$; likewise for $\bigcap$ with $\forall$ in place of $\exists$; and $x\in f^{-1}(B\setminus T)\iff f(x)\notin T\iff x\notin f^{-1}(T)$.
+	
+	(b) $y\in f(S\cup S')\iff\exists x\,((x\in S\vee x\in S')\wedge f(x)=y)\iff y\in f(S)\vee y\in f(S')$. If $y=f(x)$ with $x\in S\cap S'$ then $y\in f(S)\cap f(S')$. Strictness: $f:\R\to\R$, $f(x)=x^2$, $S=\{-1\}$, $S'=\{1\}$: $f(S\cap S')=\varnothing$ but $f(S)\cap f(S')=\{1\}$.
+	
+	(c) If $x\in S$ then $f(x)\in f(S)$, so $x\in f^{-1}(f(S))$. For the second, $y\in f(f^{-1}(T))\iff\exists x\,(f(x)\in T\wedge f(x)=y)\iff y\in T\wedge y\in f(A)$.
+	
+	(d) If $y\in f(S)\setminus f(S')$, then $y=f(x)$ with $x\in S$, and $x\notin S'$ (else $y\in f(S')$).
+\end{proof}
+
+Preimages preserve all set operations; images preserve only unions. This asymmetry is why continuity in topology is defined through preimages (Chapter~\ref{ch:topspaces}).
+
+\section{Injections, surjections, bijections, inverses}
+
+\begin{definition}
+	$f:A\to B$ is \emph{injective} if $\forall x,x'\in A\,(f(x)=f(x')\Rightarrow x=x')$; \emph{surjective} if $f(A)=B$; \emph{bijective} if both. A \emph{left inverse} of $f$ is $g:B\to A$ with $g\circ f=\id_A$; a \emph{right inverse} is $h:B\to A$ with $f\circ h=\id_B$.
+\end{definition}
+
+\begin{theorem}\label{thm:bijection}
+	(a) $f$ is bijective iff $f^{-1}:=\{(y,x):(x,y)\in f\}$ is a function $B\to A$; then it is the unique two-sided inverse. (b) If $A\ne\varnothing$, $f$ is injective iff it has a left inverse. (c) (\textbf{uses Choice}) $f$ is surjective iff it has a right inverse.
+\end{theorem}
+\begin{proof}
+	(a) $f^{-1}$ is a function iff every $y\in B$ has exactly one $x$ with $f(x)=y$: existence is surjectivity and uniqueness is injectivity.
+	
+	(b) ($\Rightarrow$) Fix $a_0\in A$; define $g(y)=x$ if $y=f(x)$ (the $x$ is unique by injectivity) and $g(y)=a_0$ if $y\notin f(A)$. Then $g(f(x))=x$. ($\Leftarrow$) If $f(x)=f(x')$ then $x=g(f(x))=g(f(x'))=x'$.
+	
+	(c) ($\Leftarrow$) $y=f(h(y))\in f(A)$. ($\Rightarrow$) The sets $F_y:=f^{-1}(\{y\})$, $y\in B$, are non-empty (surjectivity) and pairwise disjoint (if $x\in F_y\cap F_{y'}$ then $y=f(x)=y'$). By Choice there is a set $C$ with $C\cap F_y=\{h(y)\}$ a singleton for each $y$; this defines $h:B\to A$ with $f(h(y))=y$.
+\end{proof}
+
+\begin{remark}
+	In (c) Choice is genuinely needed: the statement ``every surjection has a right inverse'' is equivalent to the Axiom of Choice over ZF. Compare (b), which needs no choice. This asymmetry recurs throughout mathematics.
+\end{remark}
+
+\section{Kernel of a function and factorisation}
+
+\begin{theorem}[Factorisation]\label{thm:factor}
+	Let $f:A\to B$. Define $x\sim_fy:\iff f(x)=f(y)$. Then $\sim_f$ is an equivalence relation whose classes are the non-empty fibres $f^{-1}(\{b\})$, and the map $\bar f:A/{\sim_f}\to B$, $[x]\mapsto f(x)$ is well defined and injective. With $\pi:A\to A/{\sim_f}$, $\pi(x)=[x]$, and $\iota:f(A)\hookrightarrow B$ we have $f=\iota\circ\bar f\circ\pi$, where $\bar f$ is a bijection onto $f(A)$. Moreover every equivalence relation $\sim$ on $A$ is the kernel of its projection $\pi$.
+\end{theorem}
+\begin{proof}
+	Reflexivity, symmetry and transitivity of $\sim_f$ are those of $=$ on $B$. $[x]=\{y:f(y)=f(x)\}=f^{-1}(\{f(x)\})$. \emph{Well-defined:} if $[x]=[x']$ then $x\sim_fx'$, so $f(x)=f(x')$. \emph{Injective:} $\bar f([x])=\bar f([x'])\Rightarrow f(x)=f(x')\Rightarrow[x]=[x']$ by Lemma~\ref{lem:classes}. The image of $\bar f$ is $f(A)$, and $\iota\bar f\pi(x)=f(x)$. Finally $\pi(x)=\pi(y)\iff[x]=[y]\iff x\sim y$.
+\end{proof}
+
+\begin{corollary}[Universal property of the quotient]
+	If $g:A\to C$ satisfies $x\sim y\Rightarrow g(x)=g(y)$, there is a unique $\tilde g:A/{\sim}\to C$ with $\tilde g\circ\pi=g$, namely $\tilde g([x])=g(x)$.
+\end{corollary}
+\begin{proof}
+	The formula is well-defined by hypothesis; uniqueness holds because $\pi$ is surjective.
+\end{proof}
+
+\section{Indexed families}
+
+\begin{definition}[Indexed family]
+	An \emph{indexed family} of sets with index set $I$ is a function $i\mapsto A_i$ with domain $I$ (whose values are sets; its range is a set by Replacement, or by Separation if the values are known to lie in some given set). It is written $(A_i)_{i\in I}$. Two indices may carry the same set. Put
+	\[
+	\bigcup_{i\in I}A_i:=\bigcup\{A_i:i\in I\},\qquad\bigcap_{i\in I}A_i:=\bigcap\{A_i:i\in I\}\ \ (I\ne\varnothing).
+	\]
+	So $x\in\bigcup_iA_i\iff\exists i\in I\,(x\in A_i)$ and $x\in\bigcap_iA_i\iff\forall i\in I\,(x\in A_i)$.
+\end{definition}
+
+\begin{definition}[Cartesian product of a family]\label{def:product}
+	For $(A_i)_{i\in I}$ let
+	\[
+	\prod_{i\in I}A_i:=\Bigl\{f\in\Bigl(\bigcup_{i\in I}A_i\Bigr)^I:\ \forall i\in I\;f(i)\in A_i\Bigr\}.
+	\]
+	It is a set (a subset of $\pset(I\times\bigcup_iA_i)$). Its elements are the ``choice functions'' $f$ with $f(i)\in A_i$; $f$ is written $(x_i)_{i\in I}$ with $x_i=f(i)$. The \emph{projection} $\mathrm{pr}_j:\prod_iA_i\to A_j$ is $f\mapsto f(j)$. If all $A_i=A$, the product is $A^I$.
+\end{definition}
+
+\begin{remark}[Finite tuples, sequences]
+	For $I=\{1,\dots,n\}$ the elements are the $n$-tuples $(x_1,\dots,x_n)$; the map $f\mapsto((\cdots(f(1),f(2)),\dots),f(n))$ is a canonical bijection with the iterated ordered pairs of Chapter~\ref{ch:fromaxioms}, and one identifies them; for $I=\N_{\ge1}$ the elements are \emph{sequences} $(x_n)_{n\ge1}$ with $x_n\in A_n$. For $I=\{1,2\}$ this is $A_1\times A_2$ up to the same identification.
+\end{remark}
+
+\begin{theorem}[Products and emptiness]\label{thm:prodempty}
+	\begin{enumerate}[label=(\alph*)]
+		\item If $A_j=\varnothing$ for some $j\in I$, then $\prod_{i\in I}A_i=\varnothing$.
+		\item If $I=\varnothing$, then $\prod_{i\in\varnothing}A_i=\{\varnothing\}$ (one element, the empty function).
+		\item (\textbf{Choice}) If every $A_i\neq\varnothing$ then $\prod_iA_i\ne\varnothing$. Conversely this statement implies the Axiom of Choice; the two are equivalent.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+	(a) An element $f$ would need $f(j)\in A_j=\varnothing$. (b) There is exactly one function with domain $\varnothing$.
+	
+	(c) Suppose all $A_i\neq\varnothing$. The sets $\bar A_i:=\{i\}\times A_i$ are non-empty and pairwise disjoint (their elements have different first coordinates). Choice supplies $C$ with $C\cap\bar A_i$ a singleton $\{(i,x_i)\}$ for each $i$. Then $i\mapsto x_i$ lies in $\prod_iA_i$. Conversely, assume the product statement and let $\mathcal X$ be a set of non-empty pairwise disjoint sets. Apply it to the family indexed by $I=\mathcal X$ with $A_Y=Y$: there is $f$ with $f(Y)\in Y$ for all $Y\in\mathcal X$. Put $C=\ran f$. If $c\in C\cap Y$ then $c=f(Y')\in Y'$ for some $Y'$, so $c\in Y\cap Y'$ and disjointness forces $Y'=Y$, i.e.\ $c=f(Y)$. Thus $C\cap Y=\{f(Y)\}$.
+\end{proof}
+
+\begin{theorem}[De Morgan for indexed families]\label{thm:indexedDM}
+	For $A_i\subseteq X$ ($i\in I\ne\varnothing$): $X\setminus\bigcup_iA_i=\bigcap_i(X\setminus A_i)$ and $X\setminus\bigcap_iA_i=\bigcup_i(X\setminus A_i)$.
+\end{theorem}
+\begin{proof}
+	This is Theorem~\ref{thm:gendemorgan} applied to $\mathcal F=\{A_i:i\in I\}$, since $\{X\setminus A_i:i\in I\}=\{X\setminus A:A\in\mathcal F\}$.
+\end{proof}
+
+\begin{example}[Products of intervals, a preview]
+	For $A_n=[-\tfrac1n,\tfrac1n]$ ($n\ge1$), $\prod_{n\ge1}A_n=\{(x_n)_{n\ge1}:\forall n\;|x_n|\le\tfrac1n\}\subseteq\R^{\N_{\ge1}}$: a set of \emph{sequences}, not a set of real numbers, in contrast to $\bigcup_nA_n=[-1,1]$ and $\bigcap_nA_n=\{0\}$. Such products are worked out in Assignment~3, Problems 7--12.
+\end{example}

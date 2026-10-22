@@ -1,0 +1,128 @@
+\chapter{Zorn's Lemma and the Existence of a Basis}\label{ch:zorn}
+
+\section{Statement}
+
+Recall (Chapter~\ref{ch:orders}) that a \emph{chain} in a poset $(P,\le)$ is a subset $C\subseteq P$ in which any two elements are comparable. An element $u\in P$ is an \emph{upper bound} of $C$ if $x\le u$ for all $x\in C$; note that $u$ is required to lie in $P$, \emph{not} necessarily in $C$. An element $m\in P$ is \emph{maximal} if $m\le x\Rightarrow x=m$ for all $x\in P$.
+
+\begin{theorem}[Zorn's Lemma]\label{thm:zorn}
+	Let $(P,\le)$ be a non-empty partially ordered set in which every chain has an upper bound in $P$. Then $P$ has a maximal element.
+\end{theorem}
+
+\begin{remark}
+	(1) The empty set is a chain, and every element of $P$ is an upper bound of it, so the hypothesis ``$P\ne\varnothing$'' is exactly the requirement for the empty chain; some texts phrase Zorn's lemma as ``every chain, including the empty chain, has an upper bound'', which contains the non-emptiness assumption. (2) Compare Theorem~\ref{thm:finitemax}: in a finite poset every chain is finite and has a maximum element, so the chain condition is automatic, and the conclusion is the finite result. (3) Zorn's lemma is an existence theorem: it gives no way to \emph{find} the maximal element.
+\end{remark}
+
+Zorn's lemma is not an additional axiom; it is a theorem of ZFC equivalent to the Axiom of Choice.
+
+\begin{center}
+	\begin{tabular}{@{}p{5.6cm}p{9cm}@{}}
+		\toprule
+		\textbf{Statement} & \textbf{Content}\\
+		\midrule
+		Axiom of Choice (Axiom~\ref{ax:choice}) & every set of non-empty pairwise disjoint sets has a choice set\\
+		Choice functions & every family $(A_i)_{i\in I}$ of non-empty sets has a function $i\mapsto x_i\in A_i$; equivalently $\prod_iA_i\ne\varnothing$ (Theorem~\ref{thm:prodempty})\\
+		Zorn's Lemma & Theorem~\ref{thm:zorn}\\
+		Well-ordering theorem & every set admits a well-order\\
+		Hausdorff maximal principle & every poset has a maximal chain\\
+		Tychonoff's theorem & any product of compact spaces is compact (Chapter~\ref{ch:topspaces})\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+We have shown (Theorem~\ref{thm:prodempty}) that the first two rows are equivalent. We now show Zorn's lemma implies them; the converse (Choice $\Rightarrow$ Zorn) goes through well-orderings and transfinite recursion and is not proved here.
+
+\begin{theorem}[Zorn $\Rightarrow$ choice functions]\label{thm:zorn-choice}
+	Assuming Zorn's lemma, every set $\mathcal A$ of non-empty sets has a function $c:\mathcal A\to\bigcup\mathcal A$ with $c(A)\in A$ for all $A\in\mathcal A$.
+\end{theorem}
+\begin{proof}
+	Let $P$ be the set of all functions $g$ with $\dom g\subseteq\mathcal A$ and $g(A)\in A$ for $A\in\dom g$ (a subset of $\pset(\mathcal A\times\bigcup\mathcal A)$), ordered by inclusion of sets of pairs (extension). $P\ne\varnothing$ since $\varnothing\in P$. Let $C$ be a chain in $P$ and $U=\bigcup C$. $U$ is a function: if $(A,x),(A,x')\in U$ then $(A,x)\in g$, $(A,x')\in g'$ with $g,g'\in C$ comparable, say $g\subseteq g'$, so both pairs are in $g'$ and $x=x'$. Clearly $U(A)\in A$ and $U\supseteq g$ for all $g\in C$, so $U\in P$ is an upper bound (for $C=\varnothing$, $U=\varnothing$). By Zorn there is a maximal $c\in P$. If $\dom c\ne\mathcal A$ pick $A\in\mathcal A\setminus\dom c$ and $a\in A$ (as $A\ne\varnothing$); then $c\cup\{(A,a)\}\in P$ strictly extends $c$, contradicting maximality. So $\dom c=\mathcal A$.
+\end{proof}
+
+\section{Linear algebra background}
+
+Throughout, $V$ is a vector space over a field $F$.
+
+\begin{definition}
+	A subset $S\subseteq V$ is \emph{linearly independent} if for every $n\ge1$, every \emph{distinct} $v_1,\dots,v_n\in S$ and all $a_1,\dots,a_n\in F$: $a_1v_1+\dots+a_nv_n=0\Rightarrow a_1=\dots=a_n=0$. The \emph{span} of $S$ is
+	\[
+	\Span(S):=\bigcap\{W:W\text{ is a subspace of }V,\ S\subseteq W\}.
+	\]
+	A \emph{basis} of $V$ is a linearly independent set $B$ with $\Span(B)=V$.
+\end{definition}
+
+\begin{lemma}[Span as finite linear combinations]\label{lem:span}
+	$\Span(S)$ is the set $L(S)$ of all finite linear combinations $a_1v_1+\dots+a_nv_n$ ($n\ge0$, $v_i\in S$, $a_i\in F$), where the empty combination ($n=0$) is $0$. In particular $\Span(\varnothing)=\{0\}$.
+\end{lemma}
+\begin{proof}
+	$L(S)$ contains $0$ and $S$, and is closed under addition and scalar multiplication, so it is a subspace containing $S$; hence $\Span(S)\subseteq L(S)$. Conversely every subspace $W\supseteq S$ is closed under finite linear combinations, so $L(S)\subseteq W$; thus $L(S)\subseteq\bigcap W=\Span(S)$. For $S=\varnothing$: $L(\varnothing)=\{0\}$ (directly: every subspace contains $0$, and $\{0\}$ is itself a subspace, so the intersection is $\{0\}$).
+\end{proof}
+
+\begin{example}[The zero space]
+	If $V=\{0\}$, $\varnothing$ is a basis: it is independent vacuously (there are no vectors, hence no non-trivial relation among them), and $\Span(\varnothing)=\{0\}=V$. (The set $\{0\}$ is \emph{not} independent, since $1\cdot0=0$ is a non-trivial relation.)
+\end{example}
+
+\begin{lemma}[Extending an independent set]\label{lem:extend}
+	If $B\subseteq V$ is independent and $v\in V\setminus\Span(B)$, then $B\cup\{v\}$ is independent.
+\end{lemma}
+\begin{proof}
+	Take distinct elements of $B\cup\{v\}$ and a vanishing combination. If $v$ does not occur, the relation involves only elements of $B$, so all coefficients are $0$. Otherwise it reads $a_1b_1+\dots+a_nb_n+\lambda v=0$ with $b_i\in B$ distinct. If $\lambda\neq0$, then $v=-\lambda^{-1}(a_1b_1+\dots+a_nb_n)\in\Span(B)$, a contradiction. So $\lambda=0$; then $a_1b_1+\dots+a_nb_n=0$ gives all $a_i=0$ by independence of $B$.
+\end{proof}
+
+\begin{lemma}[Union of a chain of independent sets]\label{lem:chainunion}
+	If $\mathcal C$ is a non-empty chain (under $\subseteq$) of linearly independent subsets of $V$, then $U=\bigcup\mathcal C$ is linearly independent.
+\end{lemma}
+\begin{proof}
+	Let $v_1,\dots,v_n\in U$ be distinct with $\sum a_iv_i=0$. For each $i$ choose $S_i\in\mathcal C$ with $v_i\in S_i$. The sets $S_1,\dots,S_n$ are finitely many members of a chain, so one of them, say $S_j$, contains all the others (finite induction: among two comparable sets one contains the other). Then all $v_i\in S_j$, and $S_j$ is independent, so all $a_i=0$.
+\end{proof}
+
+\section{Every vector space has a basis}
+
+\begin{theorem}[Extension to a basis]\label{thm:basis}
+	Assume Zorn's lemma. Let $L$ be a linearly independent subset of $V$. Then there is a basis $B$ of $V$ with $L\subseteq B$. In particular (take $L=\varnothing$) \textbf{every vector space $V$ over a field $F$ has a basis.}
+\end{theorem}
+\begin{proof}
+	Let $P=\{S\subseteq V:S\text{ independent},\ L\subseteq S\}$, ordered by inclusion.
+	
+	\emph{Step 1: $P\ne\varnothing$.} $L\in P$ (for $L=\varnothing$ this is the statement that $\varnothing$ is independent).
+	
+	\emph{Step 2: every chain in $P$ has an upper bound in $P$.} Let $\mathcal C\subseteq P$ be a chain. If $\mathcal C=\varnothing$, then $L$ is an upper bound. If $\mathcal C\ne\varnothing$, let $U=\bigcup\mathcal C$. By Lemma~\ref{lem:chainunion}, $U$ is independent; and $L\subseteq U$ since $L\subseteq S$ for any $S\in\mathcal C$. So $U\in P$ and $S\subseteq U$ for all $S\in\mathcal C$: $U$ is an upper bound.
+	
+	\emph{Step 3: apply Zorn.} $P$ has a maximal element $B$. It is independent and contains $L$. We claim $\Span(B)=V$. Otherwise choose $v\in V\setminus\Span(B)$; then $v\notin B$ (as $B\subseteq\Span(B)$) and, by Lemma~\ref{lem:extend}, $B\cup\{v\}$ is independent and contains $L$, so it belongs to $P$ and strictly contains $B$, contradicting maximality of $B$. Hence $B$ is independent and spans $V$: a basis.
+\end{proof}
+
+\begin{remark}[Relation to the class-note proof]
+	The class notes treat $V=\{0\}$ separately (Case 1) and apply Zorn to the poset of all independent sets in Case 2. Above, Case 1 is automatically covered (the poset then is $\{\varnothing\}$ and $\varnothing$ is maximal), but the verification that $\Span(\varnothing)=\{0\}$ (Lemma~\ref{lem:span}) is the key point there. The proof also makes the treatment of the empty chain explicit.
+\end{remark}
+
+\begin{corollary}\label{cor:basis-consequences}
+	(a) Every spanning set $G$ contains a basis. (b) Every subspace $W\le V$ has a complement $W'$ with $V=W+W'$ and $W\cap W'=\{0\}$.
+\end{corollary}
+\begin{proof}
+	(a) Apply Zorn to $P=\{S\subseteq G:S\text{ independent}\}$ (same chain argument) to get a maximal $B$. For $g\in G\setminus B$, $B\cup\{g\}$ is dependent by maximality; a non-trivial relation must involve $g$ with non-zero coefficient (otherwise $B$ would be dependent), so $g\in\Span(B)$. Hence $G\subseteq\Span(B)$ and $V=\Span(G)\subseteq\Span(B)$.
+	
+	(b) Let $B_W$ be a basis of $W$ and extend it to a basis $B$ of $V$ (Theorem~\ref{thm:basis}). Put $W'=\Span(B\setminus B_W)$. Every $v\in V$ is a combination of $B$, hence in $W+W'$. If $x\in W\cap W'$, expressing $x$ in $B_W$ and in $B\setminus B_W$ and subtracting gives a relation among distinct elements of $B$, forcing $x=0$.
+\end{proof}
+
+\section{The pattern of a Zorn argument, and non-constructivity}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.3cm}p{3.3cm}p{2.6cm}p{5.4cm}@{}}
+		\toprule
+		\textbf{Result} & \textbf{Poset $P$ (under $\subseteq$)} & \textbf{Chain bound} & \textbf{Maximal element is\ldots}\\
+		\midrule
+		Basis exists & independent subsets of $V$ & union & spanning (else extend by $v\notin\Span$)\\
+		Extension of $L$ to basis & independent supersets of $L$ & union & spanning\\
+		Choice function & partial choice functions & union & total (else extend by one value)\\
+		Maximal ideal (Krull) & proper ideals of a ring $R$ with $1$ & union (still avoids $1$) & maximal ideal\\
+		Szpilrajn extension & partial orders extending a given one & union & total (else add one comparison)\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{intuition}
+	Each argument has the same shape: keep adding to a structure as long as you can; the union of a chain of partial constructions is again a partial construction (this is what you verify); and a construction that cannot be extended any further must already be complete (this is the contradiction argument). Zorn's lemma says you may run this ``infinitely often'' without saying how.
+\end{intuition}
+
+\begin{remark}
+	No basis of $\R^{\N}$ (all real sequences) over $\R$, and none of $\R$ over $\Q$, can be written down explicitly; such \emph{Hamel bases} exist only by Zorn's lemma. Conversely, the existence of bases for all vector spaces implies the Axiom of Choice.
+\end{remark}

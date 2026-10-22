@@ -1,0 +1,823 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,enumitem}
+\usepackage{siunitx}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\sisetup{group-separator={,}, detect-all}
+
+% ---------- boxes (same three families as the companion notes) ----------
+\newtcolorbox[auto counter,number within=chapter]{workedex}[1]{%
+  breakable, colback=blue!3, colframe=blue!50!black, fonttitle=\bfseries,
+  title={Worked Example \thetcbcounter: #1}}
+\newtcolorbox{keyidea}[1]{%
+  breakable, colback=green!4, colframe=green!40!black, fonttitle=\bfseries,
+  title={Intuition / Key Idea: #1}}
+\newtcolorbox{pitfall}[1]{%
+  breakable, colback=red!4, colframe=red!60!black, fonttitle=\bfseries,
+  title={Common Pitfall: #1}}
+
+% ---------- theorem-like environments ----------
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{law}[definition]{Law}
+\newtheorem{remark}[definition]{Remark}
+\theoremstyle{plain}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+
+% ---------- pointers into the two companion documents ----------
+\newcommand{\KD}[1]{[\textsc{Kd}: #1]}   % Kardar Ch.~I notes
+\newcommand{\ZD}[1]{[\textsc{Zd}: #1]}   % Zemansky--Dittman Ch.~1--5 notes
+
+% ---------- shorthand ----------
+\newcommand{\kB}{k_{\mathrm{B}}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dbar}{\mathchar'26\mkern-12mu \dd}
+\newcommand{\avg}[1]{\left\langle #1\right\rangle}
+\newcommand{\pd}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\rr}{\mathbf{r}}
+\newcommand{\vbar}{\bar{v}}
+
+\title{\textbf{Kinetic Theory of Gases}\\[4pt]
+\large From Molecular Collisions to Pressure, Temperature, Transport, and the Boltzmann Equation\\[4pt]
+\normalsize A Rigorous Treatment, Companion Chapter to the Kardar (Ch.~I) and Zemansky--Dittman (Ch.~1--5) Notes}
+\author{Compiled with Claude}
+\date{September 29, 2026}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+% =====================================================================
+\chapter*{Preface and How to Use This Chapter}
+\addcontentsline{toc}{chapter}{Preface and How to Use This Chapter}
+
+The two companion documents are purely phenomenological: nothing in them refers to molecules except in a few flagged remarks. The Zemansky--Dittman (ZD) notes quote the pressure formula $PV=\tfrac13 Nm_0\avg{v^2}$ \emph{without proof} \ZD{Thm.~5.13, Eq.~(5.12)} and state equipartition \ZD{Law~5.14} without derivation; the Kardar (Kd) notes close with the remark that entropy is $S=\kB\ln g$ \KD{Sec.~5.6} and defer the microscopic justification of the laws. This chapter supplies the first rung of that ladder: a \emph{mechanical} model of a dilute gas, from which we derive, rather than assume, the equation of state, the temperature identification, the Maxwell velocity distribution, effusion, equipartition, the mean free path, the three transport coefficients, and the Boltzmann equation with its $H$-theorem (which is the microscopic counterpart of the Second Law statement $\dd S\ge 0$ for an isolated system, \KD{Prop.~3.9(4)}).
+
+\medskip
+\noindent\textbf{Conventions.} Notation follows Kardar: $E$ is internal energy, and work and heat added to the system are positive, $\dd E=\dbar Q+\dbar W$, $\dbar W=-P\,\dd V$ for a fluid \KD{Eq.~(2.3)--(2.4)}. Zemansky's $U$ is our $E$; his $W$ is $-W_{\rm Kardar}$. The Boltzmann constant is written $\kB$ throughout, and $N\kB=n R$ with $N=nN_A$. References in square brackets point into the companion notes: \ZD{\dots} for Zemansky--Dittman and \KD{\dots} for Kardar.
+
+\medskip
+\noindent\textbf{Assumed background and honesty about scope.} Multivariable calculus, Gaussian integrals, and the thermodynamics in the companion notes are taken as known. Where a step genuinely needs machinery not developed until the ensemble chapters (the canonical Boltzmann weight $e^{-H/\kB T}$, the virial expansion), it is \emph{flagged} as an input, never silently used. The Chapman--Enskog solution of the Boltzmann equation is stated, not derived; a fully derived, but approximate, relaxation-time treatment is given in its place.
+
+% ---------------------------------------------------------------------
+\chapter*{Key: Notation, Symbols, and Terminology}
+\addcontentsline{toc}{chapter}{Key: Notation, Symbols, and Terminology}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{2.2cm}p{8.6cm}p{2.6cm}@{}}
+\toprule
+Symbol & Meaning & SI unit\\
+\midrule
+$m$ & Mass of one molecule (ZD writes $m_0$) & kg\\
+$N,\ n,\ \rho$ & Number of molecules; number density $N/V$ (\emph{not} moles here, see below); mass density $nm$ & --,\ m$^{-3}$,\ kg\,m$^{-3}$\\
+$n_{\rm mol}$ & Number of moles (ZD's $n$); $N\kB=n_{\rm mol}R$ & mol\\
+$\vv=(v_x,v_y,v_z)$ & Molecular velocity; $v=|\vv|$ speed & m/s\\
+$f(\vv)$ & Velocity distribution normalised to $n$: $\int f\,\dd^3v=n$ & m$^{-6}$s$^3$\\
+$\varphi(v_i)$ & One-component (1D) distribution, $\int\varphi\,\dd v_i=1$ & s/m\\
+$F(v)$ & Speed distribution, $\int_0^\infty F\,\dd v=1$ & s/m\\
+$\vbar=\avg{v}$ & Mean speed & m/s\\
+$v_{\rm mp},\ v_{\rm rms}$ & Most probable speed; $\sqrt{\avg{v^2}}$ & m/s\\
+$\beta$ & $1/\kB T$ (\emph{not} ZD's volume expansivity) & J$^{-1}$\\
+$d,\ \sigma$ & Hard-sphere diameter; total cross section $\pi d^2$ & m, m$^2$\\
+$\nu,\ \lambda,\ \tau$ & Collision frequency; mean free path; mean time between collisions & s$^{-1}$, m, s\\
+$\mathrm{Kn}$ & Knudsen number $\lambda/L$ & --\\
+$\Phi$ & Number flux (molecules per area per time) & m$^{-2}$s$^{-1}$\\
+$D,\ \eta,\ \kappa_{\rm th}$ & Self-diffusion coefficient; shear viscosity; thermal conductivity & m$^2$/s, Pa\,s, W/(m\,K)\\
+$f_{\rm dof}$ & Number of active quadratic degrees of freedom (ZD's $f$; renamed here to avoid clash with the distribution $f(\vv)$) & --\\
+$\gamma$ & $C_P/C_V=(f_{\rm dof}+2)/f_{\rm dof}$ \ZD{Eq.~(5.5)} & --\\
+$\Theta_{\rm rot},\Theta_{\rm vib}$ & Characteristic rotational and vibrational temperatures & K\\
+$H[f]$ & Boltzmann $H$-functional (not enthalpy) & --\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{3.2cm}p{11.8cm}@{}}
+\toprule
+Term & Working definition (developed in the section noted)\\
+\midrule
+Ideal (dilute) gas model & $N$ identical point-like or hard-sphere molecules; interactions only through brief binary collisions; negligible potential energy between collisions (\S\ref{sec:model}).\\
+Molecular chaos & Pre-collision velocities of two colliding molecules are statistically independent (Stosszahlansatz; \S\ref{sec:boltzmann}).\\
+Effusion & Molecular flow through a hole small compared with $\lambda$ (\S\ref{sec:effusion}).\\
+Equipartition & Each independent quadratic term in the energy carries mean energy $\tfrac12\kB T$ (\S\ref{sec:equip}).\\
+Collision invariant & A function $\psi(\vv)$ with $\psi(\vv_1)+\psi(\vv_2)=\psi(\vv_1')+\psi(\vv_2')$ in every elastic collision: $1$, $\vv$, $v^2$ (\S\ref{sec:boltzmann}).\\
+Transport coefficient & Proportionality constant between a flux and the gradient driving it (\S\ref{sec:transport}).\\
+$H$-theorem & $\dd H/\dd t\le 0$ for the Boltzmann equation, with equality iff $f$ is Maxwellian (\S\ref{sec:boltzmann}).\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =====================================================================
+\chapter{Kinetic Theory of Gases}
+\label{ch:ktg}
+
+% =====================================================================
+\section{The Molecular Model and Its Regime of Validity}
+\label{sec:model}
+
+\begin{definition}[Dilute-gas model]\label{def:model}
+A \emph{dilute gas} of $N$ identical molecules of mass $m$ in a container of volume $V$ satisfies:
+\begin{enumerate}[label=(\roman*),nosep]
+\item \textbf{Classical mechanics:} translational motion of each molecule obeys Newton's laws.
+\item \textbf{Diluteness:} the molecular diameter $d$ is small compared with the mean spacing $n^{-1/3}$, i.e.\ $n d^3\ll1$.
+\item \textbf{Free flight and binary collisions:} between collisions molecules move in straight lines (no external force; gravity is reinstated in \S\ref{sec:boltzfactor}); collisions are elastic, instantaneous and involve exactly two molecules.
+\item \textbf{Equilibrium statistical assumptions:} the distribution of velocities is spatially uniform and isotropic (relaxed for transport in \S\ref{sec:transport}).
+\end{enumerate}
+\end{definition}
+
+Condition (ii) is what makes a gas simple: since $nd^3\ll1$, the fraction of volume occupied by molecules is small, three-body encounters are rare compared with two-body ones, and the energy stored in intermolecular potentials is negligible. A gas with these properties will turn out to satisfy both defining conditions of the ideal gas of \ZD{Def.~5.4}: the equation of state $PV=N\kB T$ and Joule's Law $E=E(T)$.
+
+\begin{table}[h]
+\centering
+\caption{Regimes of gas flow, classified by the Knudsen number $\mathrm{Kn}=\lambda/L$, with $L$ the smallest macroscopic length in the problem (vessel size, hole diameter, \dots).}
+\label{tab:knudsen}
+\begin{tabular}{@{}llp{7.2cm}@{}}
+\toprule
+$\mathrm{Kn}$ & Regime & Consequence\\
+\midrule
+$\lesssim 10^{-2}$ & Continuum & Local equilibrium; Navier--Stokes and Fourier laws with the coefficients of \S\ref{sec:transport}.\\
+$10^{-2}$--$10^{-1}$ & Slip & Continuum equations with modified wall boundary conditions.\\
+$10^{-1}$--$10$ & Transition & Full Boltzmann equation needed (\S\ref{sec:boltzmann}).\\
+$\gtrsim 10$ & Free molecular & Molecules collide with walls, not each other; effusion (\S\ref{sec:effusion}).\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% =====================================================================
+\section{Pressure From Momentum Transfer}
+\label{sec:pressure}
+
+Let $f(\vv)\,\dd^3v$ be the number of molecules per unit volume with velocity in the cell $\dd^3v$ about $\vv$, so that $\int f\,\dd^3v=n$ and $\avg{g}=\frac1n\int g f\,\dd^3v$. Suppose (for now) that $f$ is uniform in space and isotropic: $f(\vv)$ depends only on $|\vv|$.
+
+\begin{theorem}[Kinetic pressure formula]\label{thm:pressure}
+For a dilute gas obeying Def.~\ref{def:model},
+\begin{equation}
+P=n\,m\avg{v_x^2}=\tfrac13\, n\,m\avg{v^2},\qquad\text{equivalently}\qquad PV=\tfrac13 Nm\avg{v^2}=\tfrac23 N\avg{\tfrac12 mv^2}.
+\label{eq:Pkinetic}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Take a flat wall element of area $A$ with inward normal $-\hat x$ (the gas lies at $x<0$ and the wall at $x=0$). A molecule with $v_x>0$ that reaches the wall is reflected elastically, so $v_x\to -v_x$ and it delivers momentum $2mv_x$ to the wall. In a time $\dd t$, the molecules with velocity in $\dd^3v$ that hit the area $A$ are exactly those in the slanted cylinder of base $A$ and height $v_x\,\dd t$, of volume $A v_x\,\dd t$; their number is $f(\vv)\,\dd^3v\; A v_x\,\dd t$. The force is the momentum delivered per unit time, so
+\[
+P=\frac{F}{A}=\int_{v_x>0} 2m v_x\; v_x f(\vv)\,\dd^3v=2m\int_{v_x>0} v_x^2 f\,\dd^3v .
+\]
+Since $f$ is even in $v_x$, the integral over $v_x>0$ is half of that over all $\vv$, giving $P=m\int v_x^2 f\,\dd^3v=nm\avg{v_x^2}$. Isotropy gives $\avg{v_x^2}=\avg{v_y^2}=\avg{v_z^2}=\tfrac13\avg{v^2}$.
+\end{proof}
+
+\begin{keyidea}{why the result does not depend on the wall or on collisions}
+The derivation assumed specular reflection and ignored collisions among molecules. Neither is needed. Consider any \emph{imaginary} plane inside the gas: per unit area and time, $\int_{v_x>0}v_x f\,\dd^3v$ molecules carrying $x$-momentum $mv_x$ cross it in the $+x$ direction, and an equal number carrying $-mv_x$ cross the other way. The net momentum flux, which is the force per area exerted by one side on the other, is $\int m v_x^2 f\,\dd^3v=nm\avg{v_x^2}$, the same number. A real wall in equilibrium behaves like an interior plane, because equilibrium demands no net momentum accumulation. Collisions among molecules merely exchange momentum \emph{within} the gas and drop out of the momentum flux through the plane. This is the reason the result holds for any gas shape and any wall material (rough, absorbing and re-emitting), provided $f$ is the equilibrium distribution.
+\end{keyidea}
+
+\begin{proposition}[Temperature identification]\label{prop:Tident}
+Requiring Eq.~\eqref{eq:Pkinetic} to agree with the ideal-gas equation of state $PV=N\kB T$, where $T$ is the ideal-gas temperature of \KD{Eq.~(1.7)}, gives
+\begin{equation}
+\avg{\tfrac12 mv^2}=\tfrac32\,\kB T,\qquad \avg{\tfrac12 mv_x^2}=\tfrac12\kB T .
+\label{eq:Ttrans}
+\end{equation}
+Consequently the translational internal energy is $E_{\rm tr}=\tfrac32N\kB T$, a function of $T$ alone (Joule's Law, \ZD{Def.~5.4}, \KD{Prop.~2.5}), and $C_V=\tfrac32N\kB$, $C_P=\tfrac52N\kB$, $\gamma=\tfrac53$, in agreement with \ZD{Table~5.2}.
+\end{proposition}
+
+\begin{proof}
+Eq.~\eqref{eq:Pkinetic} and $PV=N\kB T$ give $\tfrac23N\avg{\tfrac12mv^2}=N\kB T$, which is Eq.~\eqref{eq:Ttrans}. Since $E_{\rm tr}=N\avg{\tfrac12mv^2}$ has no dependence on $V$, $(\partial E/\partial V)_T=0$. The heat capacities follow from $C_V=(\partial E/\partial T)_V$ \ZD{Eq.~(4.6)} and Mayer's relation \ZD{Thm.~5.5}.
+\end{proof}
+
+\begin{pitfall}{what has and has not been derived}
+Proposition~\ref{prop:Tident} identifies the \emph{ideal-gas} temperature (defined operationally through $\lim_{P\to0}PV$) with a mean kinetic energy; it does not derive $PV\propto T$ from mechanics. That proportionality is an \emph{input} taken from experiment (\ZD{Law~5.1}). The genuine microscopic derivation of the temperature scale, in which $T$ is defined via $1/T=\partial S/\partial E$ \KD{Eq.~(3.5)}, comes from the ensemble chapters; the two definitions agree, and \S\ref{sec:maxwell} will show that the mechanical model, together with $PV=N\kB T$, fixes the \emph{whole} velocity distribution.
+\end{pitfall}
+
+\begin{proposition}[Dalton's law and equal mean kinetic energies]\label{prop:dalton}
+In a mixture of dilute gases, each species $s$ contributes independently $P_s=n_s\kB T$, so $P=\sum_sP_s$, and every species has the same mean translational kinetic energy $\tfrac32\kB T$.
+\end{proposition}
+\begin{proof}
+The momentum-flux argument above is linear in $f$: with $f=\sum_sf_s$, $P=\sum_s m_s\int v_x^2f_s\,\dd^3v=\sum_sn_sm_s\avg{v_x^2}_s$. Thermal equilibrium among species (Zeroth Law, \KD{Thm.~1.5}) means all species share one $T$; applying Eq.~\eqref{eq:Ttrans} to each species (which can be isolated in a separate container with a semipermeable wall) gives equal mean kinetic energy.
+\end{proof}
+
+% =====================================================================
+\section{The Maxwell Velocity Distribution}
+\label{sec:maxwell}
+
+\subsection{Maxwell's derivation}
+
+The pressure formula involves only the second moment of $f$. To compute anything else (effusion rates, collision rates, transport) we need $f$ itself. Maxwell's 1860 argument obtains it from two structural properties.
+
+\begin{theorem}[Maxwell distribution]\label{thm:maxwell}
+Suppose the equilibrium velocity distribution satisfies
+\begin{enumerate}[label=(\alph*),nosep]
+\item \textbf{Isotropy:} $f(\vv)=n\,\Phi(v_x^2+v_y^2+v_z^2)$ depends only on $|\vv|$;
+\item \textbf{Independence of components:} $f(\vv)=n\,\varphi(v_x)\varphi(v_y)\varphi(v_z)$ with $\int\varphi\,\dd v_i=1$;
+\end{enumerate}
+with $\varphi$ continuously differentiable and nowhere zero, and $\avg{v_x^2}<\infty$. Then, with $\alpha=m/2\kB T$,
+\begin{equation}
+\varphi(v_i)=\sqrt{\frac{m}{2\pi\kB T}}\,e^{-mv_i^2/2\kB T},\qquad
+f(\vv)=n\left(\frac{m}{2\pi\kB T}\right)^{3/2}e^{-mv^2/2\kB T}.
+\label{eq:maxwell}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let $g=\ln\varphi$ and $h=\ln\Phi$. Then (a) and (b) together say
+\begin{equation}
+g(v_x)+g(v_y)+g(v_z)=h(s),\qquad s=v_x^2+v_y^2+v_z^2 .
+\label{eq:funceq}
+\end{equation}
+Differentiate with respect to $v_x$ at fixed $v_y,v_z$: $g'(v_x)=2v_xh'(s)$, i.e.\ $g'(v_x)/(2v_x)=h'(s)$. The left side depends on $v_x$ only. The right side depends on $s$, and $s$ can be changed at fixed $v_x$ by varying $v_y$ or $v_z$. So both sides are a common constant, $-\alpha$. Then $g'(v)=-2\alpha v$ and $g(v)=-\alpha v^2+g(0)$: $\varphi(v)=\varphi(0)e^{-\alpha v^2}$. Normalisability forces $\alpha>0$ and $\varphi(0)=\sqrt{\alpha/\pi}$ (use $\int_{-\infty}^\infty e^{-\alpha v^2}\dd v=\sqrt{\pi/\alpha}$).
+
+To fix $\alpha$, compute $\avg{v_x^2}=\int v_x^2\varphi\,\dd v_x=1/(2\alpha)$ (Gaussian moment). By Theorem~\ref{thm:pressure}, $P=nm\avg{v_x^2}=nm/2\alpha$, and the equation of state $P=n\kB T$ then gives $\alpha=m/2\kB T$.
+\end{proof}
+
+\begin{remark}
+Assumption (b) looks arbitrary, because $v_x$ and $v_y$ of a molecule need not be independent in general. In an equilibrium gas, however, it is a \emph{consequence} of the ensemble result that the weight is $e^{-H/\kB T}$ with $H=\sum_i p_i^2/2m$, which factorises over components; and the $H$-theorem of \S\ref{sec:boltzmann} proves that Maxwell's form is the only collision-invariant equilibrium. Maxwell's argument is therefore best read as a consistency check that gives the right answer from minimal assumptions; the full justification appears in the canonical-ensemble chapter and in Theorem~\ref{thm:Htheorem}.
+\end{remark}
+
+\subsection{Speed and energy distributions and their moments}
+
+Going to spherical coordinates in velocity space, $\dd^3v=v^2\,\dd v\,\dd\Omega$ with $\int\dd\Omega=4\pi$. The distribution of speeds is
+\begin{equation}
+F(v)\,\dd v=4\pi\left(\frac{m}{2\pi\kB T}\right)^{3/2}v^2e^{-mv^2/2\kB T}\,\dd v,\qquad\int_0^\infty F\,\dd v=1.
+\label{eq:speeddist}
+\end{equation}
+All the moments we need come from a single family of Gaussian integrals:
+\begin{equation}
+I_k(a)\equiv\int_0^\infty v^k e^{-av^2}\,\dd v=\frac{\Gamma\!\left(\frac{k+1}{2}\right)}{2\,a^{(k+1)/2}},\qquad a=\frac{m}{2\kB T}.
+\label{eq:gaussint}
+\end{equation}
+(Substitute $u=av^2$ to obtain a gamma integral.)
+
+\begin{proposition}[Characteristic speeds]\label{prop:speeds}
+\begin{align}
+v_{\rm mp}&=\sqrt{\frac{2\kB T}{m}},&
+\vbar=\avg{v}&=\sqrt{\frac{8\kB T}{\pi m}}=\frac{2}{\sqrt\pi}\,v_{\rm mp},&
+v_{\rm rms}&=\sqrt{\avg{v^2}}=\sqrt{\frac{3\kB T}{m}}=\sqrt{\tfrac32}\,v_{\rm mp}.
+\end{align}
+Hence $v_{\rm mp}:\vbar:v_{\rm rms}=1:1.128:1.225$.
+\end{proposition}
+\begin{proof}
+$v_{\rm mp}$ maximises $F$: $\dd F/\dd v\propto (2v-2av^3)e^{-av^2}=0\Rightarrow v^2=1/a$. The mean: $\avg{v}=4\pi(a/\pi)^{3/2}I_3=4\pi a^{3/2}\pi^{-3/2}\cdot\frac{\Gamma(2)}{2a^2}=\frac{2}{\sqrt{\pi a}}$. The mean square: $\avg{v^2}=4\pi(a/\pi)^{3/2}I_4=4\pi a^{3/2}\pi^{-3/2}\cdot\frac{\Gamma(5/2)}{2a^{5/2}}=\frac{3}{2a}$, using $\Gamma(5/2)=3\sqrt\pi/4$. Insert $a=m/2\kB T$.
+\end{proof}
+The value of $\avg{v^2}$ reproduces Eq.~\eqref{eq:Ttrans}, as it must.
+
+\begin{proposition}[Energy distribution]\label{prop:Edist}
+With $\epsilon=\tfrac12mv^2$, the distribution of translational kinetic energies is
+\begin{equation}
+p(\epsilon)\,\dd\epsilon=\frac{2}{\sqrt\pi}(\kB T)^{-3/2}\sqrt{\epsilon}\,e^{-\epsilon/\kB T}\,\dd\epsilon,
+\end{equation}
+with mean $\tfrac32\kB T$ and most probable value $\tfrac12\kB T$.
+\end{proposition}
+\begin{proof}
+Change variables in Eq.~\eqref{eq:speeddist}: $v=\sqrt{2\epsilon/m}$, $\dd v=\dd\epsilon/\sqrt{2m\epsilon}$; the Jacobian supplies the $\sqrt\epsilon$. The mode is found from $\dd p/\dd\epsilon=0$: $\tfrac1{2\epsilon}-\tfrac1{\kB T}=0$.
+\end{proof}
+
+\begin{pitfall}{the peak of $F(v)$ is not the peak of $p(\epsilon)$}
+The most probable \emph{speed} $v_{\rm mp}$ corresponds to energy $\tfrac12mv_{\rm mp}^2=\kB T$, whereas the most probable \emph{energy} is $\tfrac12\kB T$. A probability density is not a function that can be transformed by substitution alone: densities pick up a Jacobian $|\dd v/\dd\epsilon|$, which shifts the maximum. The same applies to the Cartesian $\varphi(v_x)$, whose maximum is at $v_x=0$, versus $F(v)$, which vanishes at $v=0$ because the volume of velocity space $4\pi v^2\dd v$ vanishes there.
+\end{pitfall}
+
+\begin{table}[h]
+\centering
+\caption{Characteristic speeds at $T=\SI{300}{K}$ (m/s), from Prop.~\ref{prop:speeds}.}
+\label{tab:speeds}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Gas & $m$ (u) & $v_{\rm mp}$ & $\vbar$ & $v_{\rm rms}$\\
+\midrule
+H$_2$ & 2.016 & 1570 & 1780 & 1930\\
+He & 4.003 & 1120 & 1260 & 1370\\
+N$_2$ & 28.01 & 422 & 476 & 517\\
+O$_2$ & 32.00 & 395 & 446 & 484\\
+Ar & 39.95 & 353 & 399 & 433\\
+CO$_2$ & 44.01 & 337 & 380 & 412\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{workedex}{molecular speeds and the speed of sound in nitrogen}
+Compute $v_{\rm mp}$, $\vbar$, $v_{\rm rms}$ for N$_2$ at \SI{300}{K}, and compare $v_{\rm rms}$ with the speed of sound.
+
+\medskip\noindent\textbf{Solution.} $m=28.014\,\mathrm{u}=\SI{4.652e-26}{kg}$ and $\kB T=(1.3806\times10^{-23})(300)=\SI{4.142e-21}{J}$. Then
+\[
+v_{\rm mp}=\sqrt{\frac{2(4.142\times10^{-21})}{4.652\times10^{-26}}}=\sqrt{1.781\times10^5}=\SI{422}{m/s},\quad
+\vbar=1.128\times422=\SI{476}{m/s},\quad
+v_{\rm rms}=1.225\times422=\SI{517}{m/s}.
+\]
+The Laplace speed of sound \ZD{Thm.~5.12} is $v_s=\sqrt{\gamma\kB T/m}$ (using $\gamma RT/M=\gamma\kB T/m$), and since $v_{\rm rms}^2=3\kB T/m$,
+\begin{equation}
+\frac{v_s}{v_{\rm rms}}=\sqrt{\frac\gamma3}.
+\label{eq:vsvrms}
+\end{equation}
+For $\gamma=1.40$: $v_s=0.683\times517=\SI{353}{m/s}$, which agrees with $\sqrt{(1.40)(8.314)(300)/0.028014}=\SI{353}{m/s}$. Sound is slower than the rms molecular speed because a pressure disturbance propagates through a correlated sequence of collisions rather than by a single molecule's flight; the factor $\sqrt{\gamma/3}$ is the price of that. Newton's isothermal estimate corresponds to $\gamma\to1$: $v_s^{\rm iso}=v_{\rm rms}/\sqrt3=\SI{298}{m/s}$, about 15\% low.
+\end{workedex}
+
+\begin{remark}[Experimental verification]
+The distribution~\eqref{eq:speeddist} has been measured directly by velocity selectors (Stern, Zartman--Ko, Miller--Kusch) in which molecules from an oven pass through rotating slotted discs. Because the beam is weighted by the flux $v\,F(v)$ (\S\ref{sec:effusion}), the observed spectrum is $\propto v^3e^{-mv^2/2\kB T}$, not $F$ itself, and it must be corrected for this before comparison.
+\end{remark}
+
+% ---------------------------------------------------------------------
+\subsection{The Boltzmann factor in an external field: the barometric law}
+\label{sec:boltzfactor}
+
+Now let there be a potential $U(z)=mgz$. Force balance on a slab of gas gives $\dd P=-nmg\,\dd z$. With $P=n\kB T$ at uniform temperature, $\dd n/\dd z=-(mg/\kB T)n$, so
+\begin{equation}
+n(z)=n(0)\,e^{-mgz/\kB T}.
+\label{eq:barometric}
+\end{equation}
+Combining with Eq.~\eqref{eq:maxwell}, the full phase-space density is
+\begin{equation}
+f(\rr,\vv)=n(0)\left(\frac{m}{2\pi\kB T}\right)^{3/2}\exp\!\left[-\frac{\tfrac12mv^2+U(\rr)}{\kB T}\right],
+\end{equation}
+the Maxwell--Boltzmann distribution: probability $\propto e^{-(\text{energy})/\kB T}$. The same result follows from thermodynamics: equilibrium of a gas column requires uniform \emph{total} chemical potential $\mu(z)+mgz$, and the isothermal ideal-gas chemical potential is $\mu=\mu_0+\kB T\ln(P/P_0)$ \KD{Worked Example~4.3}; then $\kB T\,\dd\ln P=-mg\,\dd z$, which is Eq.~\eqref{eq:barometric}. The kinetic route and the thermodynamic route (Gibbs--Duhem, \KD{Prop.~4.8}) agree, as they must.
+
+% =====================================================================
+\section{Wall Collisions and Effusion}
+\label{sec:effusion}
+
+\begin{theorem}[Flux to a wall]\label{thm:flux}
+The number of molecules striking unit area of a wall per unit time in an equilibrium gas is
+\begin{equation}
+\Phi=\int_{v_z>0}v_zf\,\dd^3v=\frac{n\vbar}{4}=\frac{P}{\sqrt{2\pi m\kB T}}.
+\label{eq:flux}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Use polar coordinates with axis along the wall normal: $v_z=v\cos\theta$, $\dd^3v=v^2\dd v\,\sin\theta\,\dd\theta\,\dd\phi$, and $f$ isotropic. Then
+\[
+\Phi=n\int_0^\infty vF(v)\,\dd v\cdot\frac{1}{4\pi}\int_0^{\pi/2}\!\!\cos\theta\sin\theta\,\dd\theta\int_0^{2\pi}\!\!\dd\phi
+=n\vbar\cdot\frac{2\pi\cdot\frac12}{4\pi}=\frac{n\vbar}{4}.
+\]
+Substituting $n=P/\kB T$ and $\vbar=\sqrt{8\kB T/\pi m}$ gives $P/\sqrt{2\pi m\kB T}$.
+\end{proof}
+
+\begin{definition}[Effusion]
+Effusion is the flow of gas through a hole of linear size $\ll\lambda$ (i.e.\ $\mathrm{Kn}\gg1$, Table~\ref{tab:knudsen}). Molecules leave individually without colliding near the hole, so they carry the flux distribution of Eq.~\eqref{eq:flux}, and the rate through area $A$ is $\dot N=\Phi A=AP/\sqrt{2\pi m\kB T}$.
+\end{definition}
+
+\begin{corollary}[Graham's law]
+At the same $T$ and $P$, the effusion rates of two gases obey $\dot N_1/\dot N_2=\sqrt{m_2/m_1}$.
+\end{corollary}
+
+\begin{proposition}[Energy carried by effusing molecules]\label{prop:effE}
+The mean kinetic energy per effusing molecule is $2\kB T$, exceeding the in-gas average $\tfrac32\kB T$.
+\end{proposition}
+\begin{proof}
+Effusing molecules are weighted by $v_zf$, i.e.\ by $v\cos\theta\cdot v^2e^{-av^2}$ radially. The angular part cancels in the ratio, leaving $\avg{\tfrac12mv^2}_{\rm eff}=\tfrac12m\,I_5/I_3$. By Eq.~\eqref{eq:gaussint}, $I_5=1/a^3$ and $I_3=1/2a^2$, so the ratio is $2/a$ and the mean energy is $m/a=2\kB T$.
+\end{proof}
+
+The result has a simple reading: faster molecules hit the hole more often, so the effusing sample is biased toward high speeds. If heat is not resupplied, the gas left behind loses $2\kB T$ per departing molecule while the average is only $\tfrac32\kB T$, so it \emph{cools}. This is the kinetic mechanism of evaporative cooling.
+
+\begin{workedex}{isotopic enrichment by effusion of UF$_6$}
+Find the single-stage separation factor for $^{235}$UF$_6$ versus $^{238}$UF$_6$.
+
+\medskip\noindent\textbf{Solution.} Molecular masses are $349.03\,\mathrm{u}$ and $352.02\,\mathrm{u}$ (using $^{19}$F $=18.998\,\mathrm u$). By Graham's law,
+\[
+\alpha=\sqrt{\frac{352.02}{349.03}}=\sqrt{1.00857}=1.0043 .
+\]
+A gain of $0.43\%$ per stage is tiny, which is why gaseous-diffusion enrichment plants require cascades of thousands of stages, and why a more selective method (centrifuges) displaced them.
+\end{workedex}
+
+\begin{workedex}{effusion rate of N$_2$ through a pinhole}
+N$_2$ at $T=\SI{300}{K}$ and $P=\SI{1}{Pa}$ effuses through a hole of area $A=\SI{1}{mm^2}$. Find $\Phi$ and $\dot N$.
+
+\medskip\noindent\textbf{Solution.} $2\pi m\kB T=2\pi(4.652\times10^{-26})(4.142\times10^{-21})=1.211\times10^{-45}$, whose square root is $3.479\times10^{-23}$. So $\Phi=1/3.479\times10^{-23}=\SI{2.87e22}{m^{-2}s^{-1}}$ and $\dot N=\Phi A=\SI{2.9e16}{s^{-1}}$. (Validity: $\lambda\approx\SI{7}{mm}$ at $\SI{1}{Pa}$ from Worked Example~\ref{wex:mfp}, larger than the hole's \SI{1}{mm} scale, so $\mathrm{Kn}>1$ and effusion applies.) Measuring $\dot N$ by the mass loss of a Knudsen cell inverts this formula to give vapour pressures of low-volatility solids.
+\end{workedex}
+
+% =====================================================================
+\section{Equipartition of Energy}
+\label{sec:equip}
+
+\subsection{A general theorem}
+
+ZD state equipartition \ZD{Law~5.14} without proof. We prove it here from a single input: the Boltzmann weight $e^{-\beta H}$ (established for translation by Eq.~\eqref{eq:maxwell} and in general by the canonical ensemble).
+
+\begin{theorem}[Generalised equipartition]\label{thm:equip}
+Let a system have Hamiltonian $H(q)$ of phase-space coordinates $q_1,\dots,q_M$ (positions and momenta), distributed with density $\propto e^{-\beta H}$, with $H\to+\infty$ at the boundary of the accessible region so that $q_ie^{-\beta H}\to0$ there. Then
+\begin{equation}
+\avg{q_i\,\frac{\partial H}{\partial q_j}}=\delta_{ij}\,\kB T .
+\end{equation}
+\end{theorem}
+\begin{proof}
+With $Z=\int e^{-\beta H}\dd^Mq$,
+\[
+\avg{q_i\partial_jH}=\frac1Z\int q_i(\partial_jH)e^{-\beta H}\dd^Mq=-\frac{1}{\beta Z}\int q_i\,\partial_j\!\left(e^{-\beta H}\right)\dd^Mq .
+\]
+Integrate by parts in $q_j$: the boundary term vanishes by hypothesis, and $\partial_jq_i=\delta_{ij}$, so the expression equals $\frac{\delta_{ij}}{\beta Z}\int e^{-\beta H}\dd^Mq=\delta_{ij}\kB T$.
+\end{proof}
+
+\begin{corollary}[Quadratic degrees of freedom]\label{cor:quad}
+If a coordinate $q$ enters the energy only as a term $\tfrac12cq^2$ ($c>0$), then $\avg{\tfrac12cq^2}=\tfrac12\kB T$. Thus a system with $f_{\rm dof}$ independent quadratic terms has
+\begin{equation}
+E=\frac{f_{\rm dof}}{2}N\kB T,\quad C_V=\frac{f_{\rm dof}}{2}N\kB,\quad C_P=\frac{f_{\rm dof}+2}{2}N\kB,\quad\gamma=\frac{f_{\rm dof}+2}{f_{\rm dof}} .
+\end{equation}
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:equip} with $H\ni\tfrac12cq^2$ gives $\avg{q\,\partial_qH}=\avg{cq^2}=\kB T$, so $\avg{\tfrac12cq^2}=\tfrac12\kB T$. The heat capacities follow from $E$ and Mayer's relation \ZD{Thm.~5.5}, as in \ZD{Sec.~5.8}.
+\end{proof}
+
+\begin{table}[h]
+\centering
+\caption{Quadratic degrees of freedom (classical limit). Compare with \ZD{Table~5.2}. Kinetic-plus-potential vibrational energy counts as two quadratic terms.}
+\label{tab:dof}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+System & Trans. & Rot. & Vib. (active) & $f_{\rm dof}$ & $\gamma$\\
+\midrule
+Monatomic & 3 & 0 & 0 & 3 & $5/3$\\
+Diatomic, rigid & 3 & 2 & 0 & 5 & $7/5$\\
+Diatomic, vibrating & 3 & 2 & 2 & 7 & $9/7$\\
+Linear triatomic, rigid & 3 & 2 & 0 & 5 & $7/5$\\
+Nonlinear polyatomic, rigid & 3 & 3 & 0 & 6 & $4/3$\\
+Monatomic crystal (3 harmonic modes/atom) & 0 & 0 & 6 & 6 & --\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The last row explains the law of Dulong and Petit: a solid with $N$ atoms, each an isotropic harmonic oscillator in three directions, has $E=3N\kB T$ and $C=3N\kB=3R$ per mole.
+
+\subsection{Why some degrees of freedom are missing: quantum freezing}
+
+Equipartition is a classical result. A mode whose energy levels are spaced by $\Delta\epsilon$ contributes its classical $\tfrac12\kB T$ only if $\kB T\gg\Delta\epsilon$; for $\kB T\ll\Delta\epsilon$ the mode is not excited and contributes negligibly to $E$ and $C_V$. Writing $\Delta\epsilon=\kB\Theta$ defines a characteristic temperature.
+
+\begin{table}[h]
+\centering
+\caption{Approximate characteristic temperatures (K). Rotational modes are active for $T\gg\Theta_{\rm rot}$, vibrational modes for $T\gg\Theta_{\rm vib}$. Rotation about the axis of a linear molecule has an enormous $\Theta$ because the moment of inertia about that axis is tiny, so it is never excited at ordinary $T$.}
+\label{tab:theta}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Molecule & $\Theta_{\rm rot}$ & $\Theta_{\rm vib}$\\
+\midrule
+H$_2$ & 88 & 6300\\
+N$_2$ & 2.9 & 3400\\
+O$_2$ & 2.1 & 2300\\
+CO$_2$ (bending mode) & 0.56 & 960\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This resolves the puzzle flagged in \ZD{Sec.~5.8}: at $\SI{300}{K}$, $\Theta_{\rm rot}\ll T\ll\Theta_{\rm vib}$ for N$_2$ and O$_2$, so $f_{\rm dof}=5$ and $\gamma=7/5$; for H$_2$, $\Theta_{\rm rot}\approx\SI{88}{K}$ so $\gamma$ falls toward $5/3$ below about $\SI{100}{K}$; and for CO$_2$ the low $\Theta_{\rm vib}$ of the bending mode makes it partially active at room temperature, pulling $\gamma$ below $7/5$. Classical mechanics cannot explain these deviations; they were historically one of the central failures that pushed physics toward quantum theory, and their treatment belongs to the quantum-statistics chapters.
+
+% =====================================================================
+\section{Adiabatic Compression From the Molecular Viewpoint}
+\label{sec:adiabatic}
+
+The adiabatic law $PV^{\gamma}=\text{const}$ \ZD{Thm.~5.7} was derived thermodynamically. For a monatomic gas it can also be obtained mechanically, which makes the source of the heating explicit.
+
+\begin{proposition}[Adiabatic invariance and $PV^{5/3}$]\label{prop:adiab}
+Let a cubical container of side $L$ be compressed uniformly and infinitely slowly. Then each velocity component satisfies $v_iL=\text{const}$, so $\avg{v^2}\propto V^{-2/3}$, $T\propto V^{-2/3}$ and $PV^{5/3}=\text{const}$.
+\end{proposition}
+\begin{proof}
+Consider one molecule bouncing between two parallel walls a distance $L(t)$ apart, one of which moves inward with speed $u\ll v_x$. In the wall's frame the speed is unchanged upon reflection; transforming back, each reflection off the approaching wall increases $|v_x|$ by $2u$. Collisions with that wall occur at rate $v_x/2L$, so $\dd v_x/\dd t=(v_x/2L)(2u)=-v_x\dot L/L$, using $\dot L=-u$. Hence $\dd(v_xL)/\dd t=0$. Applying this to each of the three directions (each with its own pair of walls moving inward at the same fractional rate) gives $v_i\propto L^{-1}=V^{-1/3}$ for all $i$; the Gaussian form of $f$ is preserved (every $v_i$ is rescaled by the same factor), so it remains a Maxwell distribution with $T\propto\avg{v^2}\propto V^{-2/3}$. Then $P=\tfrac13nm\avg{v^2}\propto V^{-1}V^{-2/3}=V^{-5/3}$.
+\end{proof}
+The result $TV^{2/3}=\text{const}$ is $TV^{\gamma-1}$ with $\gamma=5/3$ \ZD{Eq.~(5.6)}. Only the translational modes are compressed directly; for a gas with internal degrees of freedom the extra energy must flow into rotation through collisions, which is why the effective $\gamma$ changes to $(f_{\rm dof}+2)/f_{\rm dof}$ when collisions are frequent enough to keep the modes in equilibrium at every stage (quasi-static condition, \ZD{Def.~3.3}).
+
+% =====================================================================
+\section{Collisions, Cross Section, and the Mean Free Path}
+\label{sec:mfp}
+
+\begin{definition}[Hard-sphere cross section]
+Two identical hard spheres of diameter $d$ collide when their centres approach within $d$. The \emph{total collision cross section} is $\sigma=\pi d^2$: a test molecule sweeps a cylinder of cross-sectional area $\sigma$ around the line of travel of its centre, and any other centre inside it is hit.
+\end{definition}
+
+\begin{proposition}[Mean relative speed]\label{prop:vrel}
+For two independent molecules in an equilibrium gas, the relative velocity $\mathbf u=\vv_1-\vv_2$ is Maxwell-distributed with the reduced mass $m/2$, so $\avg{u}=\sqrt2\,\vbar$.
+\end{proposition}
+\begin{proof}
+The joint density is a product of Gaussians in $\vv_1,\vv_2$: $\propto\exp[-\tfrac{m}{2\kB T}(v_1^2+v_2^2)]$. Write $v_1^2+v_2^2=\tfrac12(\vv_1+\vv_2)^2+\tfrac12(\vv_1-\vv_2)^2=2V_{\rm cm}^2+\tfrac12u^2$ with $\mathbf V_{\rm cm}=\tfrac12(\vv_1+\vv_2)$. The weight factorises, and the $\mathbf u$ factor is $\exp[-\tfrac{m}{4\kB T}u^2]=\exp[-\tfrac{\mu_{\rm red}}{2\kB T}u^2]$ with $\mu_{\rm red}=m/2$. Apply Prop.~\ref{prop:speeds} with $m\to m/2$: $\avg u=\sqrt{8\kB T/(\pi m/2)}=\sqrt2\,\vbar$.
+\end{proof}
+
+\begin{theorem}[Collision frequency and mean free path]\label{thm:mfp}
+\begin{equation}
+\nu=n\sigma\avg u=\sqrt2\,n\pi d^2\,\vbar,\qquad
+\lambda=\frac{\vbar}{\nu}=\frac{1}{\sqrt2\,n\pi d^2}=\frac{\kB T}{\sqrt2\,\pi d^2P},\qquad\tau=\frac1\nu .
+\label{eq:mfp}
+\end{equation}
+\end{theorem}
+\begin{proof}
+A given molecule, moving at relative speed $u$ with respect to the others, sweeps volume $\sigma u\,\dd t$ in time $\dd t$, and encounters $n\sigma u\,\dd t$ centres on average. Averaging over the relative-speed distribution (Prop.~\ref{prop:vrel}) gives $\nu=n\sigma\avg u$. The mean distance between collisions is the distance $\vbar$ travelled per unit time divided by collisions per unit time. The final form uses $n=P/\kB T$.
+\end{proof}
+
+\begin{pitfall}{the factor $\sqrt2$, and what ``$\lambda$'' means precisely}
+The $\sqrt2$ arises because the \emph{targets move}: using $\vbar$ instead of $\avg u$ (as if the other molecules were frozen) would give $\lambda'=\sqrt2\lambda$, a 41\% error that is common in introductory texts. Note also that $\lambda=\vbar/\nu$ is the ratio of a mean speed to a mean rate. The molecule-by-molecule mean distance between collisions is a slightly different average, because faster molecules collide more often; the two differ by $O(1)$ factors that are absorbed into the numerical prefactors in \S\ref{sec:transport} (see Table~\ref{tab:transport}).
+\end{pitfall}
+
+\begin{proposition}[Distribution of free paths]\label{prop:freepath}
+Treating collisions as a Poisson process with constant rate per unit length $1/\lambda$, the probability that a molecule travels a distance $x$ without collision is $e^{-x/\lambda}$, and the probability density of the free path is $\lambda^{-1}e^{-x/\lambda}$, with mean $\lambda$ and variance $\lambda^2$.
+\end{proposition}
+\begin{proof}
+Let $S(x)$ be the survival probability. The probability of a collision in $[x,x+\dd x]$ given survival to $x$ is $\dd x/\lambda$, so $S(x+\dd x)=S(x)(1-\dd x/\lambda)$, i.e.\ $S'=-S/\lambda$, $S(0)=1$. The density is $-S'=e^{-x/\lambda}/\lambda$; the moments are $\int_0^\infty x\lambda^{-1}e^{-x/\lambda}\dd x=\lambda$ and $\avg{x^2}=2\lambda^2$.
+\end{proof}
+
+\begin{workedex}{mean free path and collision rate of nitrogen at 1 atm}
+\label{wex:mfp}
+Take $d=\SI{3.7e-10}{m}$ for N$_2$, $T=\SI{300}{K}$, $P=\SI{1.013e5}{Pa}$.
+
+\medskip\noindent\textbf{Solution.} $n=P/\kB T=1.013\times10^5/4.142\times10^{-21}=\SI{2.45e25}{m^{-3}}$ and $\sigma=\pi d^2=\SI{4.30e-19}{m^2}$. Then
+\[
+\lambda=\frac{1}{\sqrt2(2.45\times10^{25})(4.30\times10^{-19})}=\SI{6.7e-8}{m}\approx\SI{67}{nm},
+\qquad \nu=\frac{\vbar}{\lambda}=\frac{476}{6.7\times10^{-8}}=\SI{7.1e9}{s^{-1}} .
+\]
+Check of diluteness: $nd^3=(2.45\times10^{25})(5.07\times10^{-29})=1.2\times10^{-3}\ll1$, and $\lambda/d\approx180$, so molecules travel about 180 diameters between collisions. Since $\lambda\propto1/P$ at fixed $T$, $\lambda\approx\SI{6.8}{mm}$ at $\SI{1}{Pa}$ and about \SI{7}{m} at $\SI{e-3}{Pa}$ (already larger than a laboratory vessel, so gas in high-vacuum systems is in the free-molecular regime of Table~\ref{tab:knudsen}).
+\end{workedex}
+
+% =====================================================================
+\section{Transport Phenomena}
+\label{sec:transport}
+
+The equilibrium distribution applies when the gas is uniform. If there are gradients of density, velocity or temperature, there are fluxes that drive the gas toward uniformity: the \emph{transport} (irreversible) processes. We first derive their scaling with the mean-free-path picture, then sharpen the derivation with the relaxation-time approximation in \S\ref{sec:boltzmann}.
+
+\subsection{The general flux formula}
+
+\begin{proposition}[Flux of a molecular property]\label{prop:genflux}
+Let $\phi(z)$ be the mean value, per molecule, of some property in a gas that varies slowly in $z$ over the distance $\lambda$, and $n$, $\vbar$ uniform. To first order in $\lambda\,\phi'/\phi$, the net flux of $\phi$ across a plane $z=\mathrm{const}$ (in the $+z$ direction) is
+\begin{equation}
+J_\phi=-\tfrac13\,n\,\vbar\,\lambda\,\frac{\dd\phi}{\dd z}.
+\label{eq:genflux}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Molecules arriving at the plane at polar angle $\theta$ from the $z$-axis carry the value of $\phi$ at the point of their last collision, a distance $\lambda$ back along their path, i.e.\ at height $z-\lambda\cos\theta$. The flux of molecules crossing the plane in the solid angle $\dd\Omega$ about $\theta$ is $\frac{n\vbar}{4\pi}\cos\theta\,\dd\Omega$ (the angular integrand of Thm.~\ref{thm:flux}). Upward-moving ($0\le\theta<\pi/2$) molecules bring $\phi(z)-\lambda\cos\theta\,\phi'$, and downward-moving ones bring $\phi(z)+\lambda|\cos\theta|\phi'$. The zeroth-order terms cancel between the two hemispheres, leaving
+\[
+J_\phi=-\frac{n\vbar\lambda\phi'}{4\pi}\cdot2\int_{\rm hemisphere}\cos^2\theta\,\dd\Omega
+=-\frac{n\vbar\lambda\phi'}{4\pi}\cdot2\cdot\frac{2\pi}{3}=-\tfrac13n\vbar\lambda\phi' .
+\]
+\end{proof}
+
+\subsection{The three coefficients}
+
+\begin{theorem}[Transport coefficients, mean-free-path theory]\label{thm:transport}
+\begin{enumerate}[label=(\alph*),nosep]
+\item \textbf{Self-diffusion} ($\phi=$ concentration fraction of tagged molecules, $J=-D\,\nabla n_{\rm tag}$):
+$D=\tfrac13\vbar\lambda$.
+\item \textbf{Shear viscosity} ($\phi=mu_x(z)$, the mean $x$-momentum per molecule in a shear flow $u_x(z)$; shear stress $\tau_{zx}=-\eta\,\dd u_x/\dd z$):
+$\eta=\tfrac13nm\vbar\lambda=\tfrac13\rho\vbar\lambda$.
+\item \textbf{Thermal conductivity} ($\phi=\bar\varepsilon(T)$, the mean internal energy per molecule, $\dd\bar\varepsilon=c_V\,\dd T$ with $c_V=C_V/N$; Fourier law $J_Q=-\kappa_{\rm th}\,\dd T/\dd z$):
+$\kappa_{\rm th}=\tfrac13n\,c_V\,\vbar\lambda$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Substitute the respective $\phi$ into Eq.~\eqref{eq:genflux}. For (b) the flux of $x$-momentum in the $z$-direction \emph{is} the shear stress (force per area exerted across the plane on the slower layer). For (c), $\dd\bar\varepsilon/\dd z=c_V\,\dd T/\dd z$.
+\end{proof}
+
+\begin{corollary}[Dependence on pressure and temperature]\label{cor:transport}
+Using Eq.~\eqref{eq:mfp}, $\vbar\propto\sqrt T$:
+\begin{align}
+\eta&=\frac{m\vbar}{3\sqrt2\,\pi d^2}=\frac{2}{3\pi^{3/2}d^2}\sqrt{m\kB T},\\
+\kappa_{\rm th}&=\frac{\eta\,c_V}{m},\qquad D=\frac{\eta}{\rho},\qquad D=\frac{\kB T}{3\sqrt2\,\pi d^2P}\,\vbar\ \propto\ \frac{T^{3/2}}{P}.
+\end{align}
+\end{corollary}
+\begin{proof}
+In $\eta=\tfrac13nm\vbar\lambda$, the factor $n$ cancels against $\lambda\propto1/n$, leaving $\eta=\tfrac13m\vbar/(\sqrt2\sigma)$. Then $\kappa_{\rm th}/\eta=c_V/m$ and $D/\eta=1/(nm)=1/\rho$ follow by direct division.
+\end{proof}
+
+\begin{table}[h]
+\centering
+\caption{Simple mean-free-path theory of the three transport processes, and dependence on $T$ and $P$ at fixed volume ratio. ``$\lambda$'' is Eq.~\eqref{eq:mfp}.}
+\label{tab:transport}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Process & Property carried & Driving gradient & Coefficient & Scaling\\
+\midrule
+Self-diffusion & Tagged molecules & $\nabla n_{\rm tag}$ & $D=\tfrac13\vbar\lambda$ & $\propto T^{3/2}/P$\\
+Viscosity & $x$-momentum $mu_x$ & $\dd u_x/\dd z$ & $\eta=\tfrac13nm\vbar\lambda$ & $\propto T^{1/2}$, indep.\ of $P$\\
+Thermal conduction & Energy $\bar\varepsilon$ & $\dd T/\dd z$ & $\kappa_{\rm th}=\tfrac13nc_V\vbar\lambda$ & $\propto T^{1/2}$, indep.\ of $P$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{keyidea}{Maxwell's surprise: viscosity does not depend on density}
+More molecules mean more carriers of momentum, but each carrier travels a shorter distance $\lambda\propto1/n$ between collisions, so the two effects cancel exactly. Maxwell predicted in 1860 that the viscosity of a gas is independent of its pressure over a wide range and confirmed this experimentally. The result fails when $\lambda$ becomes comparable to the container size (then $\lambda\to L$ replaces $\lambda$ and $\eta_{\rm eff}\propto P$; likewise $\kappa_{\rm th}\propto P$ at low pressures, the principle of the Pirani gauge). It also predicts $\eta\propto\sqrt T$, whereas real gases show a faster rise because the effective molecular diameter decreases with collision energy (Sutherland's correction).
+\end{keyidea}
+
+\begin{workedex}{viscosity of nitrogen: simple theory versus experiment}
+Estimate $\eta$ for N$_2$ at \SI{300}{K} with $d=\SI{3.7e-10}{m}$.
+
+\medskip\noindent\textbf{Solution.} $m\kB T=(4.652\times10^{-26})(4.142\times10^{-21})=1.927\times10^{-46}$, whose root is $1.388\times10^{-23}$. Then
+\[
+\eta=\frac{2}{3\pi^{3/2}(3.7\times10^{-10})^2}\cdot1.388\times10^{-23}=(0.1197)\frac{1.388\times10^{-23}}{1.369\times10^{-19}}=\SI{1.2e-5}{Pa\,s}.
+\]
+The measured value is about $\SI{1.8e-5}{Pa\,s}$: the simple theory is right in magnitude and in $P$-independence but off by $\approx30\%$. The Chapman--Enskog solution of the Boltzmann equation replaces the prefactor $2/(3\pi^{3/2})$ by $5/(16\sqrt\pi)$, i.e.\ multiplies by $15\pi/32=1.47$, giving $\SI{1.79e-5}{Pa\,s}$, in excellent agreement.
+
+\medskip\noindent Similarly $D=\tfrac13\vbar\lambda=\tfrac13(476)(6.7\times10^{-8})=\SI{1.1e-5}{m^2/s}$ versus a measured $\approx\SI{2e-5}{m^2/s}$: correct order of magnitude.
+\end{workedex}
+
+\begin{remark}[Eucken factor and the limits of the simple theory]
+Simple theory gives $\kappa_{\rm th}=\eta c_V/m$, i.e.\ the ratio $\kappa_{\rm th}m/(\eta c_V)=1$. Exact kinetic theory gives $5/2$ for a monatomic gas, and Eucken's correction $\tfrac14(9\gamma-5)$ (about $1.9$ for $\gamma=1.4$) for polyatomic gases, since internal energy is transported by diffusing molecules more efficiently than the simple $c_V$ weighting suggests. These numerical prefactors are not derivable from the crude mean-free-path picture, which assigns each molecule the same speed and free path; the relaxation-time and Chapman--Enskog analyses below correct them.
+\end{remark}
+
+% =====================================================================
+\section{The Boltzmann Equation and the $H$-Theorem}
+\label{sec:boltzmann}
+
+\subsection{The equation}
+
+Let $f(\rr,\vv,t)$ be the phase-space density, so $f\,\dd^3r\,\dd^3v$ is the number of molecules in $\dd^3r$ about $\rr$ with velocity in $\dd^3v$ about $\vv$. In the absence of collisions, each molecule moves along $\dot\rr=\vv$, $\dot\vv=\mathbf F/m$, so $f$ is constant along these trajectories (Liouville): $\dd f/\dd t=0$. Collisions modify this to
+\begin{equation}
+\frac{\partial f}{\partial t}+\vv\cdot\nabla_{\rr}f+\frac{\mathbf F}{m}\cdot\nabla_{\vv}f=\left(\frac{\partial f}{\partial t}\right)_{\rm coll}\equiv C[f].
+\label{eq:boltzmann}
+\end{equation}
+For elastic binary collisions $(\vv_1,\vv_2)\to(\vv_1',\vv_2')$ with differential cross section $\dd\sigma/\dd\Omega$,
+\begin{equation}
+C[f](\vv_1)=\int\dd^3v_2\int\dd\Omega\;\frac{\dd\sigma}{\dd\Omega}\,|\vv_1-\vv_2|\,\Big[f(\vv_1')f(\vv_2')-f(\vv_1)f(\vv_2)\Big].
+\label{eq:collint}
+\end{equation}
+The first term counts molecules \emph{scattered into} $\vv_1$ (gain), the second those scattered \emph{out of} $\vv_1$ (loss). Writing the loss term as a product $f(\vv_1)f(\vv_2)$ is the assumption of \textbf{molecular chaos} (Stosszahlansatz): velocities of two molecules about to collide are uncorrelated. It is valid for a dilute gas ($nd^3\ll1$) and is the one place where a statistical assumption not implied by Newtonian mechanics enters.
+
+\begin{remark}[Collision invariants]
+The functions $\psi=1,\ \vv,\ v^2$ satisfy $\psi(\vv_1)+\psi(\vv_2)=\psi(\vv_1')+\psi(\vv_2')$ (conservation of number, momentum, energy). Multiplying~\eqref{eq:boltzmann} by $\psi$ and integrating over $\vv$ gives $\int\psi\,C[f]\,\dd^3v=0$, and the resulting moment equations are the continuity equation, the momentum equation, and the energy equation of hydrodynamics. Closing them with the local-equilibrium $f$ yields the Euler equations; the first-order correction to local equilibrium (Chapman--Enskog) yields Navier--Stokes and Fourier's law, with $\eta$, $\kappa_{\rm th}$ computed from the collision integral.
+\end{remark}
+
+\subsection{The $H$-theorem}
+
+\begin{definition}[Boltzmann $H$-functional]
+$H[f]=\int\dd^3r\int\dd^3v\;f\ln f$ (dimensionally, the argument of the logarithm is measured in a unit of phase-space density; the choice affects $H$ only by an additive constant $\propto N$).
+\end{definition}
+
+\begin{theorem}[$H$-theorem]\label{thm:Htheorem}
+For a spatially homogeneous gas with no external force, $f(\vv,t)$ obeying Eq.~\eqref{eq:boltzmann}--\eqref{eq:collint},
+\begin{equation}
+\frac{\dd H}{\dd t}\le0,
+\end{equation}
+with equality if and only if $f(\vv_1)f(\vv_2)=f(\vv_1')f(\vv_2')$ for all collisions, which holds if and only if $f$ is a Maxwellian
+$f=n(m/2\pi\kB T)^{3/2}\exp[-m(\vv-\mathbf u)^2/2\kB T]$.
+\end{theorem}
+\begin{proof}
+Since $\partial_tf=C[f]$ and $\int C[f]\,\dd^3v=0$,
+$\dot H=\int(1+\ln f_1)C[f]_1\,\dd^3v_1=\int\ln f_1\,C[f]_1\,\dd^3v_1$. Write $w\ge0$ for the collision kernel $|\vv_1-\vv_2|\,\dd\sigma/\dd\Omega$, $X=f_1'f_2'$, $Y=f_1f_2$, and integrate over all $\vv_1,\vv_2,\Omega$:
+\[
+\dot H=\int w\,(X-Y)\ln f_1 .
+\]
+$w$ is symmetric under $1\leftrightarrow2$ (identical molecules), so $\dot H=\tfrac12\int w(X-Y)\ln(f_1f_2)=\tfrac12\int w(X-Y)\ln Y$. It is also symmetric under interchange of pre- and post-collision states $(\vv_1,\vv_2)\leftrightarrow(\vv_1',\vv_2')$, a consequence of the time-reversibility of the microscopic dynamics; this swaps $X\leftrightarrow Y$, so $\dot H=\tfrac12\int w(Y-X)\ln X$. Averaging the two forms,
+\[
+\dot H=-\tfrac14\int w\,(X-Y)(\ln X-\ln Y)\ \le\ 0,
+\]
+because $(x-y)(\ln x-\ln y)\ge0$ for all $x,y>0$, with equality only for $x=y$. Hence $\dot H=0$ iff $X=Y$ for all collisions, i.e.\ $\ln f_1+\ln f_2=\ln f_1'+\ln f_2'$: $\ln f$ is a collision invariant. The general collision invariant is a linear combination $a+\mathbf b\cdot\vv+c\,v^2$ (stated without proof; it amounts to the statement that number, momentum and energy are the only additive conserved quantities of a two-body elastic collision), so $f=\exp(a+\mathbf b\cdot\vv+cv^2)$. Integrability requires $c<0$, and completing the square gives the drifting Maxwellian.
+\end{proof}
+
+\begin{corollary}[Connection to the Second Law]
+With $S_{\rm gas}=-\kB H+\text{const}$ for a dilute gas, the theorem says $\dot S\ge0$, with the maximum entropy at the Maxwellian, the equilibrium of \S\ref{sec:maxwell}. This is the microscopic counterpart of $\dd S\ge0$ for an isolated system \KD{Prop.~3.9(4)}; evaluating $-\kB H$ at the Maxwellian and comparing with the thermodynamic entropy $S=\tfrac32N\kB\ln T+N\kB\ln V+\text{const}$ (obtained by integrating $\dd S=\dd E/T+P\,\dd V/T$ with $E=\tfrac32N\kB T$, \KD{Eq.~(3.4)}) confirms the identification.
+\end{corollary}
+
+\begin{pitfall}{the $H$-theorem versus reversibility (Loschmidt's paradox)}
+The underlying equations are time-reversal invariant, yet $H$ decreases monotonically. The resolution is that the irreversibility entered through molecular chaos: the assumption that pre-collision velocities are uncorrelated is imposed at \emph{all} times, but post-collision velocities are correlated, and running the dynamics backward would give the opposite behaviour. The $H$-theorem is thus a statement about typical, not all, initial conditions; making this statement precise is the subject of ergodic theory and the statistical-mechanics chapters. It also gives the \emph{arrow of time} of \KD{Prop.~3.9(4)} a mechanical origin. Related is the Zermelo recurrence objection: the recurrence time for macroscopic $N$ vastly exceeds the age of the universe.
+\end{pitfall}
+
+\subsection{Relaxation-time approximation: a fully derived viscosity}
+
+Replace the collision integral by the BGK form $C[f]\approx-(f-f_0)/\tau_c$, where $f_0$ is the local Maxwellian with the local density, drift and temperature, and $\tau_c$ is a relaxation time (of order the mean time between collisions). It conserves the right moments provided $f_0$ is chosen with the same $n,\mathbf u,T$ as $f$.
+
+\begin{proposition}[Viscosity in the relaxation-time approximation]\label{prop:BGK}
+For a steady shear flow $u_x(z)$ with $|\dd u_x/\dd z|$ small, $\eta=n\kB T\,\tau_c=P\tau_c$.
+\end{proposition}
+\begin{proof}
+To first order, $f=f_0+f_1$ with $f_1=-\tau_c\,\vv\cdot\nabla f_0$ (from Eq.~\eqref{eq:boltzmann}, steady state, $C=-f_1/\tau_c$). Here $f_0=n(m/2\pi\kB T)^{3/2}\exp[-mc^2/2\kB T]$ with $\mathbf c=\vv-u_x(z)\hat x$, and $\partial_zf_0=f_0\,(m\,c_x/\kB T)\,u_x'$. So $f_1=-\tau_cv_z\,f_0\,(mc_x/\kB T)\,u_x'$. The flux in the $z$-direction of $x$-momentum (relative to the local flow) is
+\[
+\Pi_{zx}=m\int c_zc_xf\,\dd^3v=m\int c_zc_xf_1\,\dd^3c=-\tau_c\frac{m^2u_x'}{\kB T}\int c_z^2c_x^2f_0\,\dd^3c,
+\]
+(with $v_z=c_z$ and the $f_0$ contribution vanishing by symmetry). For a Maxwellian, $\int c_z^2c_x^2f_0\,\dd^3c=n(\kB T/m)^2$. Thus $\Pi_{zx}=-n\kB T\tau_c\,u_x'$, which is $-\eta\,u_x'$ with $\eta=n\kB T\tau_c$.
+\end{proof}
+Comparing with $\eta=\tfrac13nm\vbar\lambda=\tfrac13nm\vbar^2\tau=\tfrac{8}{3\pi}n\kB T\tau=0.85\,n\kB T\tau$ (simple theory, with $\tau=\lambda/\vbar$) shows that the simple formula and the relaxation-time formula agree up to an $O(1)$ factor, and both have $\eta\propto P\tau\propto P\lambda/\vbar$, independent of $P$ because $\lambda\propto1/P$: Maxwell's density-independence appears here as well.
+
+% =====================================================================
+\section{Beyond the Ideal Gas: Real-Gas Corrections}
+\label{sec:real}
+
+\subsection{Joule's law as a thermodynamic identity}
+
+The energy of a real gas depends on volume. The exact relation is obtained from the fundamental relation and a Maxwell relation. From $\dd E=T\,\dd S-P\,\dd V$ \KD{Eq.~(3.4)} and the Maxwell relation from $F$, $(\partial S/\partial V)_T=(\partial P/\partial T)_V$ \KD{Table~4.2, second row; with $J=-P$},
+\begin{equation}
+\left(\frac{\partial E}{\partial V}\right)_T=T\left(\frac{\partial P}{\partial T}\right)_V-P .
+\label{eq:eos}
+\end{equation}
+For the ideal gas $P=N\kB T/V$, the right side is $N\kB T/V-P=0$, which is Joule's law, now \emph{derived} from the equation of state rather than assumed (\KD{Prop.~2.5} announced this).
+
+\subsection{The van der Waals gas}
+
+The van der Waals equation $\left(P+\frac{an_{\rm mol}^2}{V^2}\right)(V-n_{\rm mol}b)=n_{\rm mol}RT$ is the simplest model in which molecules have finite size ($b$) and attract each other ($a$). We insert it into Eq.~\eqref{eq:eos}: since $P=\frac{n_{\rm mol}RT}{V-n_{\rm mol}b}-\frac{an_{\rm mol}^2}{V^2}$,
+\[
+T\left(\frac{\partial P}{\partial T}\right)_V-P=\frac{n_{\rm mol}RT}{V-n_{\rm mol}b}-P=\frac{an_{\rm mol}^2}{V^2},
+\quad\text{so}\quad E(T,V)=\frac{f_{\rm dof}}{2}n_{\rm mol}RT-\frac{an_{\rm mol}^2}{V}+\text{const}.
+\]
+The energy is lowered by attractions at small volumes, as expected: $-an_{\rm mol}^2/V$ is the mean potential energy of a gas with pair attractions. The Joule coefficient of \ZD{Def.~5.3} follows from the cyclic relation:
+\begin{equation}
+\eta_J=\left(\frac{\partial T}{\partial V}\right)_E=-\frac{(\partial E/\partial V)_T}{(\partial E/\partial T)_V}=-\frac{an_{\rm mol}^2}{C_VV^2}<0,
+\end{equation}
+so a free expansion always \emph{cools} a van der Waals gas ($a>0$), as ZD found for real gases \ZD{Sec.~5.2}: work is done against attractive forces at the expense of kinetic energy.
+
+\begin{remark}[Molecular meaning of $a$ and $b$ (stated, derived later)]
+For a hard-sphere gas the constant $b$ per molecule equals four times the molecular volume, $b_{\rm mol}=\tfrac23\pi d^3$, and comes from the second virial coefficient $B_2(T)=2\pi\int_0^\infty(1-e^{-u(r)/\kB T})r^2\dd r$ of the pair potential $u(r)$. The van der Waals equation corresponds to the weak-attraction approximation $B_2=b_{\rm mol}-a_{\rm mol}/\kB T$. The virial expansion is derived from the canonical ensemble and belongs to that chapter.
+\end{remark}
+
+% =====================================================================
+\section{Limits of the Theory and Look Ahead}
+
+\begin{table}[h]
+\centering
+\caption{What each level of the theory delivers, and what remains to be justified. ``Input'' refers to what is assumed rather than derived at that stage.}
+\begin{tabular}{@{}p{3.4cm}p{4.6cm}p{5.8cm}@{}}
+\toprule
+Level & Delivers & Input / limitation\\
+\midrule
+Wall collisions (\S\ref{sec:pressure}) & $PV=\tfrac23N\avg\epsilon$; $C_V=\tfrac32N\kB$ (monatomic) & Needs $PV=N\kB T$ to fix $T$\\
+Maxwell's argument (\S\ref{sec:maxwell}) & Full $f(\vv)$; moments; barometric law & Isotropy, independence; regularity of $\varphi$\\
+Equipartition (\S\ref{sec:equip}) & $C_V$, $\gamma$ for all molecule types & Boltzmann weight; classical; fails when frozen\\
+Mean free path (\S\ref{sec:mfp},\ref{sec:transport}) & $D,\eta,\kappa_{\rm th}$ scalings, correct $P$ and $T$ dependence & $O(1)$ prefactors approximate\\
+Boltzmann equation (\S\ref{sec:boltzmann}) & $H$-theorem; exact coefficients (Chapman--Enskog); Maxwell as unique equilibrium & Molecular chaos; dilute gas only; classical scattering\\
+Real gases (\S\ref{sec:real}) & $E(T,V)$, $\eta_J$, van der Waals & Weak attraction; virial coefficients from ensemble theory\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The following points are taken up in the later chapters of the full set of notes:
+\begin{itemize}[nosep]
+\item The Boltzmann weight $e^{-\beta H}$ as a theorem of the canonical ensemble, from which Theorem~\ref{thm:equip} and Eq.~\eqref{eq:maxwell} follow in one stroke and Maxwell's assumptions (a), (b) become consequences.
+\item The Sackur--Tetrode entropy, obtained by counting phase-space volume, which fixes the additive constant left open in the entropy formula of the $H$-theorem corollary and connects to the Third Law discussion in \KD{Sec.~5.6}.
+\item Quantum statistics, which restore the missing rotational and vibrational heat capacities (Table~\ref{tab:theta}) and replace Maxwell--Boltzmann by Bose--Einstein or Fermi--Dirac at high density or low temperature.
+\item The failure of the classical treatment at $n\lambda_{\rm th}^3\gtrsim1$, where $\lambda_{\rm th}=h/\sqrt{2\pi m\kB T}$ is the thermal de~Broglie wavelength.
+\end{itemize}
+
+% =====================================================================
+\appendix
+\chapter{Summary of Key Results: Kinetic Theory of Gases}
+
+\section*{A.1\quad Model and pressure}
+\begin{itemize}[nosep]
+\item Dilute gas: $nd^3\ll1$, free flight, elastic binary collisions (Def.~\ref{def:model}). Regimes by $\mathrm{Kn}=\lambda/L$ (Table~\ref{tab:knudsen}).
+\item $P=nm\avg{v_x^2}=\tfrac13nm\avg{v^2}$ (Eq.~\eqref{eq:Pkinetic}); with $PV=N\kB T$: $\avg{\tfrac12mv^2}=\tfrac32\kB T$; $E=\tfrac32N\kB T$, $C_V=\tfrac32N\kB$, $\gamma=5/3$.
+\item Dalton: $P=\sum_sn_s\kB T$.
+\end{itemize}
+
+\section*{A.2\quad Maxwell distribution}
+\[
+f(\vv)=n\Big(\tfrac{m}{2\pi\kB T}\Big)^{3/2}e^{-mv^2/2\kB T},\quad
+F(v)=4\pi\Big(\tfrac{m}{2\pi\kB T}\Big)^{3/2}v^2e^{-mv^2/2\kB T}.
+\]
+\[
+v_{\rm mp}=\sqrt{2\kB T/m},\quad\vbar=\sqrt{8\kB T/\pi m},\quad v_{\rm rms}=\sqrt{3\kB T/m};\quad
+p(\epsilon)=\tfrac{2}{\sqrt\pi}(\kB T)^{-3/2}\sqrt\epsilon\,e^{-\epsilon/\kB T}.
+\]
+Barometric law: $n(z)=n(0)e^{-mgz/\kB T}$. Sound: $v_s=\sqrt{\gamma/3}\,v_{\rm rms}$.
+
+\section*{A.3\quad Effusion}
+\[
+\Phi=\tfrac14n\vbar=\frac{P}{\sqrt{2\pi m\kB T}},\qquad\dot N=\Phi A,\qquad\frac{\dot N_1}{\dot N_2}=\sqrt{\frac{m_2}{m_1}},\qquad\avg{\epsilon}_{\rm eff}=2\kB T.
+\]
+
+\section*{A.4\quad Equipartition}
+\begin{itemize}[nosep]
+\item $\avg{q_i\,\partial H/\partial q_j}=\delta_{ij}\kB T$; each quadratic term $\tfrac12\kB T$.
+\item $E=\tfrac{f_{\rm dof}}2N\kB T$, $C_V=\tfrac{f_{\rm dof}}{2}N\kB$, $\gamma=\tfrac{f_{\rm dof}+2}{f_{\rm dof}}$ (Table~\ref{tab:dof}); modes are frozen for $T\ll\Theta$ (Table~\ref{tab:theta}).
+\item Adiabatic (monatomic): $v_iL=\text{const}\Rightarrow PV^{5/3}=\text{const}$.
+\end{itemize}
+
+\section*{A.5\quad Collisions}
+\[
+\avg u=\sqrt2\vbar,\qquad\nu=\sqrt2\,n\pi d^2\vbar,\qquad\lambda=\frac{1}{\sqrt2\,n\pi d^2}=\frac{\kB T}{\sqrt2\pi d^2P},\qquad p(x)=\lambda^{-1}e^{-x/\lambda}.
+\]
+
+\section*{A.6\quad Transport}
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Coefficient & Simple theory & Exact / better\\
+\midrule
+$D$ & $\tfrac13\vbar\lambda$ & $\approx\tfrac{6}{5}\eta/\rho$ (hard spheres, Chapman--Enskog)\\
+$\eta$ & $\tfrac13nm\vbar\lambda=\tfrac{2}{3\pi^{3/2}d^2}\sqrt{m\kB T}$ & $\tfrac{5}{16\sqrt\pi}\tfrac{\sqrt{m\kB T}}{d^2}$; BGK: $P\tau_c$\\
+$\kappa_{\rm th}$ & $\eta c_V/m$ & $\tfrac52\eta c_V/m$ (monatomic); Eucken $\tfrac14(9\gamma-5)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+General flux: $J_\phi=-\tfrac13n\vbar\lambda\,\phi'$. $\eta$ and $\kappa_{\rm th}$ independent of $P$; $D\propto1/P$.
+
+\section*{A.7\quad Boltzmann equation}
+\begin{itemize}[nosep]
+\item $\partial_tf+\vv\cdot\nabla f+(\mathbf F/m)\cdot\nabla_{\vv}f=C[f]$; molecular chaos gives Eq.~\eqref{eq:collint}.
+\item Collision invariants $1,\vv,v^2$ give hydrodynamic conservation laws.
+\item $H=\int f\ln f$: $\dot H\le0$, equality iff Maxwellian; $S=-\kB H+$ const, matching $\dd S\ge0$.
+\end{itemize}
+
+\section*{A.8\quad Real gases}
+$(\partial E/\partial V)_T=T(\partial P/\partial T)_V-P$; ideal gas: $0$. van der Waals: $E=\tfrac{f_{\rm dof}}2n_{\rm mol}RT-an_{\rm mol}^2/V$, $\eta_J=-an_{\rm mol}^2/(C_VV^2)<0$.
+
+\section*{A.9\quad Master table}
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Quantity & Formula & Where used\\
+\midrule
+Pressure & $\tfrac13nm\avg{v^2}$ & Equation of state\\
+Temperature & $\tfrac32\kB T=\avg{\tfrac12mv^2}$ & Links \KD{Eq.~(1.7)} to mechanics\\
+Speeds (300 K, N$_2$) & 422 / 476 / 517 m/s & Sound, effusion\\
+Mean free path (1 atm, N$_2$) & 67 nm & Kn, transport\\
+$\eta$ (N$_2$, 300 K) & $1.8\times10^{-5}$ Pa\,s & Exact vs.\ simple $\times1.47$\\
+$\gamma$ & $(f_{\rm dof}+2)/f_{\rm dof}$ & \ZD{Sec.~5.8}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

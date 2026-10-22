@@ -1,0 +1,62 @@
+\chapter{Finite Sets and Cardinality}\label{ch:finite}
+
+\section{Equinumerosity and finite sets}
+
+\begin{definition}
+	Sets $A,B$ are \emph{equinumerous}, $A\approx B$, if there is a bijection $A\to B$. $A\preceq B$ means there is an injection $A\to B$. $A$ is \emph{finite} if $A\approx n$ for some $n\in\omega$ (recall $n=\{0,\dots,n-1\}$); then $\card(A)=|A|:=n$ (justified by Corollary~\ref{cor:card} below). Otherwise $A$ is \emph{infinite}.
+\end{definition}
+
+$\approx$ is reflexive ($\id$), symmetric (inverse bijection) and transitive (composition), but it relates \emph{all} sets of a given size, so it is not an equivalence relation on a set of sets (there is no set of all sets).
+
+\begin{lemma}[Pigeonhole]\label{lem:pigeon}
+	For $m,n\in\omega$, if there is an injection $n\to m$ then $n\le m$.
+\end{lemma}
+\begin{proof}
+	Induction on $m$. For $m=0$: an injection $n\to\varnothing$ forces $n=\varnothing=0$. Assume the claim for $m$, and let $f:n\to S(m)$ be injective. If $n=0$ then $0\le S(m)$. Otherwise $n=S(p)$ (Lemma~\ref{lem:transitive}(d)). Let $\tau$ be the permutation of $S(m)$ that swaps $f(p)$ and $m$ (identity if they are equal). Then $\tau\circ f:S(p)\to S(m)$ is injective and sends $p$ to $m$, so by injectivity no element of $p$ is sent to $m$; hence its restriction to $p$ is an injection $p\to S(m)\setminus\{m\}=m$. By the hypothesis $p\le m$, so $S(p)\le S(m)$ by Lemma~\ref{lem:order}(c), i.e.\ $n\le S(m)$.
+\end{proof}
+
+\begin{corollary}\label{cor:card}
+	If $m,n\in\omega$ and $m\approx n$ then $m=n$. Hence $\card(A)$ is well defined for finite $A$. Moreover $\omega$ is infinite.
+\end{corollary}
+\begin{proof}
+	A bijection gives injections both ways, so $m\le n$ and $n\le m$ by Lemma~\ref{lem:pigeon}, and $m=n$ by antisymmetry. If $\omega\approx n$ then $S(n)\subseteq\omega$ injects into $n$, giving $S(n)\le n$, contradicting $n<S(n)$.
+\end{proof}
+
+\begin{lemma}[Sum rule]\label{lem:sum}
+	If $X\approx m$, $Y\approx n$ and $X\cap Y=\varnothing$ then $X\cup Y\approx m+n$.
+\end{lemma}
+\begin{proof}
+	Induction on $n$. For $n=0$, $Y=\varnothing$ and $X\cup Y=X\approx m=m+0$. Suppose the claim holds for $n$ and $Y\approx S(n)$ via $\beta$. Let $y_0=\beta^{-1}(n)$ and $Y'=Y\setminus\{y_0\}\approx n$. By hypothesis there is a bijection $\varphi:X\cup Y'\to m+n$. Then $\varphi\cup\{(y_0,m+n)\}$ is a bijection $X\cup Y\to S(m+n)=m+S(n)$, because $m+n\notin m+n$ (Lemma~\ref{lem:transitive}(c)).
+\end{proof}
+
+\begin{theorem}[Size of the power set]\label{thm:powersize}
+	If $A$ is finite with $\card(A)=n$, then $\pset(A)$ is finite with $\card(\pset(A))=2^n$.
+\end{theorem}
+\begin{proof}
+	Induction on $n$. For $n=0$, $A=\varnothing$ and $\pset(A)=\{\varnothing\}\approx1=2^0$. Assume the statement for all sets of size $n$, and let $\card(A)=S(n)$. Choose $a\in A$ and put $A'=A\setminus\{a\}$, so $\card(A')=n$ (as in Lemma~\ref{lem:sum}). Every subset of $A$ either omits $a$ or contains $a$, so
+	\[
+	\pset(A)=\pset(A')\ \cup\ \mathcal B,\qquad\mathcal B:=\{T\subseteq A:a\in T\},
+	\]
+	a disjoint union. The map $T\mapsto T\cup\{a\}$ is a bijection $\pset(A')\to\mathcal B$ (inverse $U\mapsto U\setminus\{a\}$, well-defined since $a\notin A'$). By the hypothesis, $\pset(A')\approx2^n\approx\mathcal B$. By Lemma~\ref{lem:sum}, $\card\pset(A)=2^n+2^n=2^n\cdot2=2^{S(n)}$, using $x\cdot2=x\cdot1+x=x+x$.
+\end{proof}
+
+\section{Infinite cardinalities}
+
+\begin{theorem}[Cantor]\label{thm:cantor}
+	For every set $A$ there is no surjection $A\to\pset(A)$. In particular $A\preceq\pset(A)$ (via $a\mapsto\{a\}$) but $A\not\approx\pset(A)$.
+\end{theorem}
+\begin{proof}
+	Let $f:A\to\pset(A)$ be any function and $D=\{a\in A:a\notin f(a)\}$ (Separation). If $D=f(a_0)$ then $a_0\in D\iff a_0\notin f(a_0)=D$, a contradiction. So $D\notin\ran f$.
+\end{proof}
+
+\begin{definition}
+	$A$ is \emph{countable} if $A\preceq\omega$ and \emph{countably infinite} if $A\approx\omega$. A set that is not countable is \emph{uncountable}.
+\end{definition}
+
+\begin{corollary}
+	$\pset(\omega)$ is uncountable: an injection $\pset(\omega)\to\omega$ would have a left inverse (Theorem~\ref{thm:bijection}(b)), a surjection $\omega\to\pset(\omega)$, contradicting Theorem~\ref{thm:cantor}. \emph{(The Schr\"oder--Bernstein theorem, $A\preceq B\wedge B\preceq A\Rightarrow A\approx B$, and the countability of $\Z$ and $\Q$ are standard; we shall prove that $\R$ is uncountable in Chapter~\ref{ch:seq}.)}
+\end{corollary}
+
+\begin{intuition}
+	Cantor's diagonal set $D$ is built by disagreeing with $f(a)$ at the single point $a$; so $D$ differs from every value of $f$. Infinity comes in different sizes: there is no largest one, since $\pset$ always increases it.
+\end{intuition}

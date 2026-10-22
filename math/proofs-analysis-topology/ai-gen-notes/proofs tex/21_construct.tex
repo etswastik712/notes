@@ -1,0 +1,224 @@
+\chapter{Constructions from the Axioms}\label{ch:fromaxioms}
+
+From now on, ``set'' means an object of ZFC. Every new symbol is introduced as in Definition~\ref{def:defext}: existence by an axiom, uniqueness by Extensionality.
+
+\section{The empty set and inclusion}
+
+\begin{theorem}[Empty set]\label{thm:empty}
+	\begin{enumerate}[label=(\alph*)]
+		\item There is a set with no elements.
+		\item It is unique; it is denoted $\varnothing$.
+		\item $\varnothing\subseteq A$ for every set $A$.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+	(a) First-order logic presupposes a non-empty universe, so some set $X$ exists. Apply Separation (Axiom~\ref{ax:sep}) to $X$ and the formula $\varphi(x):\ x\neq x$: there is $Y$ with $x\in Y\Leftrightarrow(x\in X\wedge x\ne x)$. Since $x=x$ for all $x$, no $x$ is in $Y$.
+	
+	(b) If $E,E'$ both have no elements, then $\forall x\,(x\in E\Leftrightarrow x\in E')$ holds because both sides are false for every $x$; by Extensionality $E=E'$.
+	
+	(c) $\forall x\,(x\in\varnothing\Rightarrow x\in A)$ is vacuously true: the hypothesis $x\in\varnothing$ is false for every $x$, so each instance of the implication is true (Definition of $\Rightarrow$; Chapter~\ref{ch:pred}, vacuous truth).
+\end{proof}
+
+\begin{proposition}[Properties of $\subseteq$]\label{prop:subset}
+	For all sets $A,B,C$: (a) $A\subseteq A$; (b) $A\subseteq B$ and $B\subseteq C$ imply $A\subseteq C$; (c) \emph{(double inclusion)} $A=B\iff(A\subseteq B\wedge B\subseteq A)$.
+\end{proposition}
+\begin{proof}
+	(a) $x\in A\Rightarrow x\in A$ is a tautology instance. (b) If $x\in A$ then $x\in B$ then $x\in C$. (c) ($\Rightarrow$) If $A=B$ then by substitution $x\in A\Rightarrow x\in B$ and conversely. ($\Leftarrow$) The two inclusions give $\forall x\,(x\in A\Leftrightarrow x\in B)$; apply Extensionality.
+\end{proof}
+
+Double inclusion is the standard method for proving equality of sets: take an arbitrary element of each side and show it lies in the other.
+
+\section{Boolean operations via Separation}
+
+\begin{definition}[Intersection, difference, symmetric difference, complement]
+	For sets $A,B$ Separation (with parameter $B$) provides sets, unique by Extensionality:
+	\[
+	A\cap B:=\{x\in A:x\in B\},\quad A\setminus B:=\{x\in A:x\notin B\},\quad A\sy B:=(A\setminus B)\cup(B\setminus A).
+	\]
+	If $A\subseteq X$, the \emph{complement of $A$ relative to $X$} is $A\comp:=X\setminus A$.
+\end{definition}
+
+\begin{theorem}[No universal set]\label{thm:nouniversal}
+	For every set $X$ the set $R_X:=\{x\in X:x\notin x\}$ exists and $R_X\notin X$. Consequently there is no set of which every set is an element.
+\end{theorem}
+\begin{proof}
+	$R_X$ exists by Separation. If $R_X\in X$ then $R_X\in R_X\Leftrightarrow(R_X\in X\wedge R_X\notin R_X)\Leftrightarrow R_X\notin R_X$, a contradiction. If a set $V$ contained every set, then $R_V\in V$, contradicting what was just shown.
+\end{proof}
+
+\begin{remark}
+	Because there is no universal set, the \emph{absolute} complement $\{x:x\notin A\}$ is a proper class, not a set. This is why all complements in this document are taken relative to an ambient set $X$ fixed in advance.
+\end{remark}
+
+\section{Pairing and Union}
+
+\begin{definition}[Unordered pairs, singletons]
+	For $a,b$ let $\{a,b\}$ be the unique set (Pairing, Extensionality) whose elements are exactly $a$ and $b$, and $\{a\}:=\{a,a\}$.
+\end{definition}
+
+Note $\{a,b\}=\{b,a\}$ and $\{a,a\}=\{a\}$ by Extensionality.
+
+\begin{definition}[Union]
+	For a set $\mathcal F$, $\bigcup\mathcal F$ is the unique set with $x\in\bigcup\mathcal F\iff\exists Y\,(Y\in\mathcal F\wedge x\in Y)$. For sets $A,B$ put $A\cup B:=\bigcup\{A,B\}$.
+\end{definition}
+
+\begin{proposition}\label{prop:binunion}
+	$x\in A\cup B\iff(x\in A\vee x\in B)$. Also $\bigcup\varnothing=\varnothing$.
+\end{proposition}
+\begin{proof}
+	$x\in\bigcup\{A,B\}\iff\exists Y\,(Y\in\{A,B\}\wedge x\in Y)\iff\exists Y\,((Y=A\vee Y=B)\wedge x\in Y)\iff x\in A\vee x\in B$. For $\mathcal F=\varnothing$ no $Y$ satisfies $Y\in\mathcal F$, so $\bigcup\mathcal F$ has no element.
+\end{proof}
+
+We define $\{a,b,c\}:=\{a,b\}\cup\{c\}$, and so on for finite lists. The \emph{successor} of $x$ is $S(x):=x\cup\{x\}$. Then
+\[
+0:=\varnothing,\quad 1:=S(0)=\{0\},\quad 2:=S(1)=\{0,1\},\quad 3:=S(2)=\{0,1,2\},\ \dots
+\]
+(This is the seed of Chapter~\ref{ch:nat}.)
+
+\begin{definition}[Arbitrary intersection]\label{def:bigcap}
+	Let $\mathcal F\ne\varnothing$. Choose $A_0\in\mathcal F$ and put $\bigcap\mathcal F:=\{x\in A_0:\forall Y\in\mathcal F\;x\in Y\}$ (Separation).
+\end{definition}
+
+\begin{proposition}
+	$x\in\bigcap\mathcal F\iff\forall Y\in\mathcal F\;(x\in Y)$; in particular the set does not depend on the choice of $A_0$. Also $\bigcap\{A,B\}=A\cap B$. For $\mathcal F=\varnothing$ no such set exists.
+\end{proposition}
+\begin{proof}
+	If $\forall Y\in\mathcal F\,(x\in Y)$ then in particular $x\in A_0$, so $x\in\bigcap\mathcal F$; the converse is by definition. This criterion mentions no $A_0$, so by Extensionality any two choices give the same set. For $\mathcal F=\{A,B\}$ the criterion reads $x\in A\wedge x\in B$. If $\mathcal F=\varnothing$, the condition ``$\forall Y\in\varnothing\;x\in Y$'' is vacuously true for \emph{every} $x$, so $\bigcap\varnothing$ would be a universal set, impossible by Theorem~\ref{thm:nouniversal}.
+\end{proof}
+
+\section{Power set}
+
+\begin{definition}
+	$\pset(X)$ is the unique set (Axiom~\ref{ax:power}, Extensionality) with $Y\in\pset(X)\iff Y\subseteq X$.
+\end{definition}
+
+\begin{example}
+	$\pset(\varnothing)=\{\varnothing\}$ (the only subset of $\varnothing$ is $\varnothing$), which is a set with \emph{one} element; $\pset(\{\varnothing\})=\{\varnothing,\{\varnothing\}\}$; $\pset(\{a,b\})=\{\varnothing,\{a\},\{b\},\{a,b\}\}$ for $a\ne b$.
+\end{example}
+
+\section{Regularity}
+
+\begin{proposition}\label{prop:regularity}
+	For all sets $A,B$: (a) $A\notin A$; (b) not both $A\in B$ and $B\in A$.
+\end{proposition}
+\begin{proof}
+	(a) Suppose $A\in A$. The set $\{A\}$ is non-empty, so by Regularity it has a member $Y$ with $Y\cap\{A\}=\varnothing$. Necessarily $Y=A$, but then $A\in A\cap\{A\}$, a contradiction.
+	
+	(b) Suppose $A\in B$ and $B\in A$. The set $X=\{A,B\}$ has a member $Y$ with $Y\cap X=\varnothing$. If $Y=A$ then $B\in A\cap X$; if $Y=B$ then $A\in B\cap X$. Either way $Y\cap X\ne\varnothing$, a contradiction.
+\end{proof}
+
+\section{Ordered pairs}
+
+\subsection{What an ordered pair must do}
+
+An ordered pair must ``remember'' which entry is first. The \emph{only} thing required of a set-theoretic representation $F(A,B)$ of the ordered pair $(A,B)$ is
+\[
+F(A,B)=F(C,D)\iff A=C\ \text{and}\ B=D.\tag{OP}
+\]
+The implication ($\Leftarrow$) is automatic by substitution, so the content of (OP) is ($\Rightarrow$). Note what (OP) does \emph{not} demand: it does not demand $F(A,B)\ne F(B,A)$ for \emph{all} $A,B$ (when $A=B$ these are the same object), nor that $F(A,A)\ne\{A\}$. It says that both coordinates can be recovered uniquely from $F(A,B)$.
+
+\emph{Test:} to reject a candidate $F$, exhibit $A,B,C,D$ with $F(A,B)=F(C,D)$ but $(A,B)\neq(C,D)$ as pairs of data; to accept it, prove (OP) for all sets.
+
+\subsection{Failed candidates}
+
+\begin{example}[$F(A,B)=\{A,B\}$]
+	Unordered pairs satisfy $\{A,B\}=\{B,A\}$; with $A=\varnothing,B=\{\varnothing\}$ we get $F(A,B)=F(B,A)$ but $A\ne B$. So (OP) fails.
+\end{example}
+
+\begin{example}[$F(A,B)=\{\{A\},\{B\}\}$]
+	Again $F(A,B)=\{\{A\},\{B\}\}=\{\{B\},\{A\}\}=F(B,A)$. It is symmetric in $A,B$, so it cannot separate coordinates.
+\end{example}
+
+\begin{example}[$F(A,B)=\{A,\{B\}\}$]\label{ex:Ab}
+	This looks better, since $A$ and $B$ occur in different forms, but (OP) still fails. Let $X=\varnothing$, $Y=\{\varnothing\}$, $Z=\{\{\varnothing\}\}=\{Y\}$. Then
+	\[
+	F(Z,X)=\{Z,\{X\}\}=\{Z,Y\},\qquad F(Y,Y)=\{Y,\{Y\}\}=\{Y,Z\},
+	\]
+	so $F(Z,X)=F(Y,Y)$. But $Z\ne Y$ ($Y\in Z$, while $Y\notin Y$ because the only element of $Y$ is $\varnothing\ne Y$), so the first coordinates differ. Hence two different data have the same representation.
+\end{example}
+
+\subsection{The Kuratowski definition}
+
+\begin{definition}[Kuratowski pair]
+	$(A,B):=\{\{A\},\{A,B\}\}$.
+\end{definition}
+
+The design idea: $A$ occurs in both inner sets, $B$ only in $\{A,B\}$; the roles are asymmetric.
+
+\begin{lemma}\label{lem:kur-int-union}
+	For any sets $S,T$: $\bigcap\{S,T\}=S\cap T$ and $\bigcup\{S,T\}=S\cup T$. In particular $\bigcap(A,B)=\{A\}$ and $\bigcup(A,B)=\{A,B\}$. If $S=T$ these formulas remain valid (then $\{S,T\}=\{S\}$).
+\end{lemma}
+\begin{proof}
+	The first is the criterion of Definition~\ref{def:bigcap} and the second is Proposition~\ref{prop:binunion}. Now $\{A\}\cap\{A,B\}=\{A\}$ since $A\in\{A,B\}$, and $\{A\}\cup\{A,B\}=\{A,B\}$.
+\end{proof}
+
+\begin{theorem}[Kuratowski pairs satisfy (OP)]\label{thm:kuratowski}
+	$\{\{A\},\{A,B\}\}=\{\{C\},\{C,D\}\}\iff A=C\wedge B=D$.
+\end{theorem}
+\begin{proof}
+	($\Leftarrow$) By substitution.
+	
+	($\Rightarrow$) Suppose $(A,B)=(C,D)$. Equal sets have equal intersections and unions (an element lies in every member of one iff it lies in every member of the other; similarly for ``some member''). By Lemma~\ref{lem:kur-int-union}, $\{A\}=\bigcap(A,B)=\bigcap(C,D)=\{C\}$, hence $A=C$ (two singletons are equal iff their elements are). Similarly $\{A,B\}=\bigcup(A,B)=\bigcup(C,D)=\{C,D\}$, so with $A=C$ we get $\{A,B\}=\{A,D\}$. Now $B\in\{A,B\}=\{A,D\}$, so $B=A$ or $B=D$. If $B=D$ we are done. If $B=A$ then $\{A,D\}=\{A,B\}=\{A\}$, whence $D\in\{A\}$, so $D=A=B$. In all cases $B=D$.
+\end{proof}
+
+\begin{corollary}[Recovering the coordinates]
+	If $p=(a,b)$ then $a$ is the unique element of $\bigcap p$; and $b$ is the unique element of $\bigcup p\setminus\bigcap p$ if $a\ne b$, while $b=a$ if $\bigcup p=\bigcap p$.
+\end{corollary}
+\begin{proof}
+	By Lemma~\ref{lem:kur-int-union}, $\bigcap p=\{a\}$ and $\bigcup p=\{a,b\}$; if $a\ne b$ then $\{a,b\}\setminus\{a\}=\{b\}$, and if $a=b$ then $\bigcup p=\{a\}=\bigcap p$.
+\end{proof}
+
+\subsection{The case $A=B$}
+
+$(A,A)=\{\{A\},\{A,A\}\}=\{\{A\}\}$. This is \emph{not} the same as $\{A\}$: if $\{\{A\}\}=\{A\}$ then $\{A\}=A$ (a singleton equality forces equality of the elements), so $A\in\{A\}=A$, i.e.\ $A\in A$, contradicting Regularity (Proposition~\ref{prop:regularity}). Hence $(A,A)\ne\{A\}$. As stressed above, this is a \emph{consequence} of the construction, not part of (OP).
+
+\subsection{A valid alternative: $\{A,\{A,B\}\}$}
+
+\begin{theorem}\label{thm:alt-pair}
+	In ZFC, $\{A,\{A,B\}\}=\{C,\{C,D\}\}$ implies $A=C$ and $B=D$.
+\end{theorem}
+\begin{proof}
+	Assume $\{A,\{A,B\}\}=\{C,\{C,D\}\}$. Since $A$ belongs to the left side, it belongs to the right: $A=C$ or $A=\{C,D\}$. Symmetrically $C=A$ or $C=\{A,B\}$. Suppose $A\ne C$. Then $A=\{C,D\}$ and $C=\{A,B\}$, so $C\in A$ and $A\in C$, contradicting Proposition~\ref{prop:regularity}(b). Hence $A=C$.
+	
+	The equation becomes $\{A,\{A,B\}\}=\{A,\{A,D\}\}$. By Regularity $A\ne\{A,B\}$ (else $A\in A$). The element $\{A,B\}$ of the left side lies in the right side, so $\{A,B\}=A$ or $\{A,B\}=\{A,D\}$; the first is excluded, so $\{A,B\}=\{A,D\}$. Exactly as in the proof of Theorem~\ref{thm:kuratowski}, this gives $B=D$.
+\end{proof}
+
+\subsection{Comparison}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.2cm}p{2.2cm}p{5.6cm}p{2.8cm}@{}}
+		\toprule
+		\textbf{Candidate $F(A,B)$} & \textbf{(OP)?} & \textbf{Reason} & \textbf{Uses Regularity?}\\
+		\midrule
+		$\{A,B\}$ & no & symmetric in $A,B$ & ---\\
+		$\{\{A\},\{B\}\}$ & no & symmetric in $A,B$ & ---\\
+		$\{A,\{B\}\}$ & no & $F(\{\{\varnothing\}\},\varnothing)=F(\{\varnothing\},\{\varnothing\})$ & ---\\
+		$\{A,\{A,B\}\}$ & yes & Theorem~\ref{thm:alt-pair} & yes (essential)\\
+		$\{\{A\},\{A,B\}\}$ & yes & Theorem~\ref{thm:kuratowski} & no\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+The Kuratowski definition is the standard one because it is elementary (only Pairing and Union are needed), its proof of (OP) is short and does not depend on Regularity, and its coordinates can be read off with $\bigcap$ and $\bigcup$.
+
+\section{Cartesian products}
+
+\begin{theorem}[Existence of $A\times B$]\label{thm:product}
+	For sets $A,B$ there is a unique set $A\times B$ such that
+	\[
+	p\in A\times B\iff\exists a\in A\ \exists b\in B\ \;p=(a,b).
+	\]
+\end{theorem}
+\begin{proof}
+	Let $a\in A$, $b\in B$. Then $\{a\}\subseteq A\cup B$ and $\{a,b\}\subseteq A\cup B$, so $\{a\},\{a,b\}\in\pset(A\cup B)$, so $(a,b)=\{\{a\},\{a,b\}\}\subseteq\pset(A\cup B)$, i.e.\ $(a,b)\in W:=\pset(\pset(A\cup B))$. Define, by Separation, $A\times B:=\{p\in W:\exists a\in A\,\exists b\in B\;p=(a,b)\}$. By the computation just made, membership in $W$ is automatic for any $p$ of the form $(a,b)$, giving the stated criterion. Uniqueness is Extensionality.
+\end{proof}
+
+\begin{proposition}\label{prop:product-basic}
+	(a) $(a,b)\in A\times B\iff a\in A\wedge b\in B$. (b) $A\times B=\varnothing\iff A=\varnothing\vee B=\varnothing$. (c) In general $A\times B\ne B\times A$.
+\end{proposition}
+\begin{proof}
+	(a) ($\Leftarrow$) is the criterion. ($\Rightarrow$) If $(a,b)\in A\times B$ then $(a,b)=(a',b')$ for some $a'\in A$, $b'\in B$; by (OP) $a=a'$, $b=b'$. (b) A non-empty product contains some $(a,b)$, so $A,B\ne\varnothing$; conversely, if $a\in A$, $b\in B$ then $(a,b)\in A\times B$. (c) If $a\ne b$, then $(a,b)\in\{a\}\times\{b\}$ but $(a,b)\notin\{b\}\times\{a\}$ by (a) and (OP).
+\end{proof}
+
+\begin{definition}[Triples]
+	$(a,b,c):=((a,b),c)$ and $A\times B\times C:=(A\times B)\times C$. By (OP) applied twice, $(a,b,c)=(a',b',c')$ iff $a=a'$, $b=b'$, $c=c'$. General finite tuples and infinite products are treated in Chapter~\ref{ch:functions} through functions.
+\end{definition}

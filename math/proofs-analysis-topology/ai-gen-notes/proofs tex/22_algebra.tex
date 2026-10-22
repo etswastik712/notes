@@ -1,0 +1,150 @@
+\chapter{The Algebra of Sets}\label{ch:algebra}
+
+Throughout this chapter $X$ is a fixed ambient set, $A,B,C\subseteq X$, and complements are relative to $X$.
+
+\section{The logic--set dictionary}
+
+By the definitions of Chapter~\ref{ch:fromaxioms}, membership in a constructed set unfolds to a logical condition on membership in its ingredients:
+\begin{center}
+	\begin{tabular}{@{}lcl@{}}
+		\toprule
+		\textbf{Sets} & & \textbf{Logic (for $x\in X$)}\\
+		\midrule
+		$x\in A\cap B$ & $\iff$ & $x\in A\wedge x\in B$\\
+		$x\in A\cup B$ & $\iff$ & $x\in A\vee x\in B$\\
+		$x\in A\comp$ & $\iff$ & $\neg(x\in A)$\\
+		$x\in A\setminus B$ & $\iff$ & $x\in A\wedge\neg(x\in B)$\\
+		$x\in A\sy B$ & $\iff$ & $\neg(x\in A\Leftrightarrow x\in B)$\\
+		$A\subseteq B$ & $\iff$ & $\forall x\,(x\in A\Rightarrow x\in B)$\\
+		$A=B$ & $\iff$ & $\forall x\,(x\in A\Leftrightarrow x\in B)$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+Consequently every identity between sets built from $\cap,\cup,{}^{\mathsf c}$ reduces, via Extensionality, to a logical equivalence from Theorem~\ref{thm:laws}, valid for each $x$ separately.
+
+\begin{theorem}[Laws of the algebra of sets]\label{thm:setlaws}
+	For all $A,B,C\subseteq X$:
+	\begin{center}
+		\begin{tabular}{@{}p{3.8cm}p{5.4cm}p{5.4cm}@{}}
+			\toprule
+			\textbf{Law} & \textbf{With $\cap$} & \textbf{With $\cup$}\\
+			\midrule
+			Commutativity & $A\cap B=B\cap A$ & $A\cup B=B\cup A$\\
+			Associativity & $(A\cap B)\cap C=A\cap(B\cap C)$ & $(A\cup B)\cup C=A\cup(B\cup C)$\\
+			Idempotence & $A\cap A=A$ & $A\cup A=A$\\
+			Distributivity & $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$ & $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$\\
+			Identity & $A\cap X=A$ & $A\cup\varnothing=A$\\
+			Domination & $A\cap\varnothing=\varnothing$ & $A\cup X=X$\\
+			Complement & $A\cap A\comp=\varnothing$ & $A\cup A\comp=X$\\
+			Involution & \multicolumn{2}{l}{$(A\comp)\comp=A$}\\
+			De Morgan & $(A\cap B)\comp=A\comp\cup B\comp$ & $(A\cup B)\comp=A\comp\cap B\comp$\\
+			Difference & \multicolumn{2}{l}{$A\setminus B=A\cap B\comp$}\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{theorem}
+\begin{proof}
+	We prove the two De Morgan laws \emph{directly} and one distributive law; the remaining identities are proved identically, by translating through the dictionary into the corresponding law of Theorem~\ref{thm:laws} (commutativity, associativity, idempotence, identity/domination, excluded middle, non-contradiction, double negation).
+	
+	\emph{De Morgan, first law.} Let $x\in X$. Then
+	\begin{align*}
+		x\in(A\cap B)\comp&\iff x\notin A\cap B\iff\neg(x\in A\wedge x\in B)\\
+		&\iff x\notin A\vee x\notin B\iff x\in A\comp\vee x\in B\comp\iff x\in A\comp\cup B\comp.
+	\end{align*}
+	The third step is De Morgan's law of logic. As this holds for every $x\in X$ and both sets are subsets of $X$, Extensionality gives equality.
+	
+	\emph{De Morgan, second law.} Likewise $x\in(A\cup B)\comp\iff\neg(x\in A\vee x\in B)\iff x\notin A\wedge x\notin B\iff x\in A\comp\cap B\comp$.
+	
+	\emph{Distributivity.} $x\in A\cap(B\cup C)\iff x\in A\wedge(x\in B\vee x\in C)\iff(x\in A\wedge x\in B)\vee(x\in A\wedge x\in C)\iff x\in(A\cap B)\cup(A\cap C)$, by the distributive law of logic.
+\end{proof}
+
+\begin{proposition}[Inclusion criteria]\label{prop:inclusion-crit}
+	For $A,B\subseteq X$ the following are equivalent: (i) $A\subseteq B$; (ii) $A\cap B=A$; (iii) $A\cup B=B$; (iv) $B\comp\subseteq A\comp$; (v) $A\setminus B=\varnothing$.
+\end{proposition}
+\begin{proof}
+	(i)$\Rightarrow$(ii): $A\cap B\subseteq A$ always; if $x\in A$ then $x\in B$ so $x\in A\cap B$. (ii)$\Rightarrow$(i): $A=A\cap B\subseteq B$. (i)$\Rightarrow$(iii): $B\subseteq A\cup B$ always; if $x\in A\cup B$ then $x\in B$ (if $x\in A$, by (i)). (iii)$\Rightarrow$(i): $A\subseteq A\cup B=B$. (i)$\iff$(iv): the contrapositive $x\in A\Rightarrow x\in B$ $\sim$ $x\notin B\Rightarrow x\notin A$. (i)$\iff$(v): $A\setminus B=\varnothing$ says no $x$ has $x\in A\wedge x\notin B$, which is the negation of the negation of $\forall x\,(x\in A\Rightarrow x\in B)$ (Theorems~\ref{thm:qneg}, \ref{thm:laws}).
+\end{proof}
+
+\section{Venn diagrams}
+
+A \emph{Venn diagram} for sets $A,B$ (respectively $A,B,C$) draws overlapping regions so that every combination of ``in / not in'' for each set is represented by exactly one region (an \emph{atom}). For two sets there are $2^2=4$ atoms, matching the $4$ rows of a truth table:
+\begin{center}
+	\begin{tabular}{@{}cccp{6.5cm}@{}}
+		\toprule
+		$x\in A$? & $x\in B$? & Atom & Description\\
+		\midrule
+		$\T$&$\T$& $A\cap B$ & the lens\\
+		$\T$&$\F$& $A\cap B\comp=A\setminus B$ & the part of $A$ outside $B$\\
+		$\F$&$\T$& $A\comp\cap B$ & the part of $B$ outside $A$\\
+		$\F$&$\F$& $A\comp\cap B\comp$ & outside both circles\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+A set built from $A,B$ by $\cap,\cup,{}^{\mathsf c}$ is shaded exactly on those atoms whose truth-table row makes the corresponding form true; so drawing the diagram is the same as computing a truth table (Solution to Assignment~3, Problem~4, uses this).
+
+\begin{warning}
+	A picture illustrates but does not by itself prove: a proof must argue for an \emph{arbitrary} element (as above), not for a drawn one, and diagrams for more than three sets require care to keep every atom present.
+\end{warning}
+
+\section{Cartesian products and the Boolean operations}
+
+\begin{lemma}[Pair principle]\label{lem:pairprinciple}
+	If $S,T\subseteq A\times B$ (or arbitrary sets of pairs) and $(a,b)\in S\iff(a,b)\in T$ for all $a,b$, then $S=T$.
+\end{lemma}
+\begin{proof}
+	Every element of $S$ or $T$ has the form $(a,b)$ (Theorem~\ref{thm:product}); apply Extensionality.
+\end{proof}
+
+\begin{theorem}\label{thm:product-laws}
+	For sets $T,A,A',B,B',C$:
+	\begin{enumerate}[label=(\alph*)]
+		\item If $T\subseteq A$ then $T\times B\subseteq A\times B$.
+		\item $A\times(B\cup C)=(A\times B)\cup(A\times C)$ and $(B\cup C)\times A=(B\times A)\cup(C\times A)$.
+		\item $A\times(B\cap C)=(A\times B)\cap(A\times C)$.
+		\item $A\times(B\setminus C)=(A\times B)\setminus(A\times C)$.
+		\item $(A\times B)\cap(A'\times B')=(A\cap A')\times(B\cap B')$.
+		\item $(A\times B)\cup(A'\times B')\subseteq(A\cup A')\times(B\cup B')$, and equality can fail.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+	By Proposition~\ref{prop:product-basic}(a), $(a,b)\in A\times B\iff a\in A\wedge b\in B$.
+	
+	(a) Let $(t,b)\in T\times B$; then $t\in T\subseteq A$ and $b\in B$, so $(t,b)\in A\times B$; every element of $T\times B$ has this form.
+	
+	(b) $(a,b)\in A\times(B\cup C)\iff a\in A\wedge(b\in B\vee b\in C)\iff(a\in A\wedge b\in B)\vee(a\in A\wedge b\in C)\iff(a,b)\in(A\times B)\cup(A\times C)$; apply Lemma~\ref{lem:pairprinciple}. The second identity is symmetric.
+	
+	(c) $a\in A\wedge(b\in B\wedge b\in C)\iff(a\in A\wedge b\in B)\wedge(a\in A\wedge b\in C)$ (idempotence and rearrangement).
+	
+	(d) $a\in A\wedge(b\in B\wedge b\notin C)\iff(a\in A\wedge b\in B)\wedge\neg(a\in A\wedge b\in C)$ \emph{when} $a\in A$; and both sides are false when $a\notin A$. So the equivalence holds in every case.
+	
+	(e) $(a\in A\wedge b\in B)\wedge(a\in A'\wedge b\in B')\iff(a\in A\wedge a\in A')\wedge(b\in B\wedge b\in B')$.
+	
+	(f) If $(a,b)\in(A\times B)\cup(A'\times B')$ then either $a\in A\subseteq A\cup A'$ and $b\in B\subseteq B\cup B'$, or the same with primes. For strictness take $A=B=\{1\}$, $A'=B'=\{2\}$: the union has two elements $(1,1),(2,2)$, but $(A\cup A')\times(B\cup B')$ also contains $(1,2)$.
+\end{proof}
+
+\section{Families of subsets}
+
+\begin{theorem}[Generalised De Morgan laws]\label{thm:gendemorgan}
+	Let $X$ be a set and $\mathcal F\ne\varnothing$ a set of subsets of $X$. Then $\mathcal F^{\mathsf c}:=\{X\setminus A:A\in\mathcal F\}$ is a set and
+	\[
+	X\setminus\bigcup\mathcal F=\bigcap\mathcal F^{\mathsf c},\qquad X\setminus\bigcap\mathcal F=\bigcup\mathcal F^{\mathsf c}.
+	\]
+\end{theorem}
+\begin{proof}
+	$\mathcal F^{\mathsf c}=\{B\in\pset(X):\exists A\in\mathcal F\;B=X\setminus A\}$ by Separation. For $x$:
+	\begin{align*}
+		x\in X\setminus\bigcup\mathcal F&\iff x\in X\wedge\neg\exists A\in\mathcal F\,(x\in A)\iff x\in X\wedge\forall A\in\mathcal F\,(x\notin A)\quad(\text{Theorem~\ref{thm:qneg}})\\
+		&\iff\forall A\in\mathcal F\,(x\in X\wedge x\notin A)\iff x\in\bigcap\mathcal F^{\mathsf c},
+	\end{align*}
+	where the passage to the third expression uses $\mathcal F\ne\varnothing$ (to conclude $x\in X$ from the right-hand side, pick any $A\in\mathcal F$). Similarly
+	\[
+	x\in X\setminus\bigcap\mathcal F\iff x\in X\wedge\neg\forall A\in\mathcal F\,(x\in A)\iff\exists A\in\mathcal F\,(x\in X\wedge x\notin A)\iff x\in\bigcup\mathcal F^{\mathsf c}.\qedhere
+	\]
+\end{proof}
+
+\begin{proposition}[Distributivity over families]
+	For a set $B$ and a set $\mathcal F$ of sets (the families $\{B\cap A:A\in\mathcal F\}$ and $\{B\cup A:A\in\mathcal F\}$ are sets, by Separation applied to $\pset(B\cup\bigcup\mathcal F)$), $B\cap\bigcup\mathcal F=\bigcup\{B\cap A:A\in\mathcal F\}$, and if $\mathcal F\neq\varnothing$ also $B\cup\bigcap\mathcal F=\bigcap\{B\cup A:A\in\mathcal F\}$.
+\end{proposition}
+\begin{proof}
+	$x\in B\cap\bigcup\mathcal F\iff x\in B\wedge\exists A\in\mathcal F\,(x\in A)\iff\exists A\in\mathcal F\,(x\in B\wedge x\in A)$ (the conjunct $x\in B$ does not involve $A$). For the second: $x\in B\vee\forall A\in\mathcal F\,(x\in A)\iff\forall A\in\mathcal F\,(x\in B\vee x\in A)$ (for $\Leftarrow$: if $x\notin B$, every $A$ contains $x$; $\mathcal F\ne\varnothing$ makes the right side meaningful).
+\end{proof}

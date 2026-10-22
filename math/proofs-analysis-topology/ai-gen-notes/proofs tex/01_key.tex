@@ -1,0 +1,160 @@
+\chapter*{Key to Language, Notation and Conventions}
+\addcontentsline{toc}{chapter}{Key to Language, Notation and Conventions}
+
+\section*{How to read this document}
+
+The material is arranged so that \emph{every result uses only results (and axioms) that appear earlier}. The only exception is the ordinary mathematical English and elementary logic in which the text itself is written; Part~I makes that logic explicit.
+
+\begin{center}
+	\begin{tabular}{@{}lp{10.3cm}@{}}
+		\toprule
+		\textbf{Part} & \textbf{Content and role}\\
+		\midrule
+		I & Propositional and predicate logic; methods of proof. This is the \emph{metalanguage} in which everything else is written.\\
+		II & The language of set theory and the ZFC axioms; all basic set constructions (pairs, products, unions) are derived from the axioms.\\
+		III & Relations, equivalence relations, functions, indexed families, partial orders, Zorn's lemma and the existence of bases.\\
+		IV & The natural numbers as sets; finite sets and cardinality; construction of $\Z$, $\Q$, $\R$.\\
+		V & Sequences in $\R$, metric spaces, topological spaces (continuity, compactness, connectedness).\\
+		VI & Rigorous solutions to Assignments 1--4.\\
+		App. & Summary tables, a dependency map, and a catalogue of counterexamples.\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{remark}[Bootstrapping]
+	In Parts~I--III we occasionally use the familiar numbers $0,1,2,\dots$ (for instance to say ``a formula has finitely many symbols'' or to give examples such as $6\mid n$). This is the informal number system of the metalanguage. Part~IV \emph{constructs} $\N$ inside ZFC and proves that the constructed $\N$ has the properties we had been using informally. Nothing in Parts~II--III depends on properties of $\N$ that are not proved in Part~IV.
+\end{remark}
+
+\section*{Types of environment}
+
+\begin{center}
+	\begin{tabular}{@{}lp{10.6cm}@{}}
+		\toprule
+		\textbf{Label} & \textbf{Meaning}\\
+		\midrule
+		Definition & Introduces a term or notation; it is neither true nor false, only a convention.\\
+		Axiom & A statement assumed without proof (ZFC axioms only).\\
+		Theorem, Proposition & A proved statement; ``Theorem'' is used for central results.\\
+		Lemma, Corollary & A proved auxiliary result; a proved immediate consequence.\\
+		Example & A concrete instance, used to test definitions.\\
+		Remark & A comment on scope, subtlety, or alternative formulation.\\
+		Intuition & Informal motivation. \emph{Never part of the logical development.}\\
+		Warning & A common mistake or a false converse.\\
+		Exercise & A statement left for the reader, with all needed tools already available.\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\section*{Logical notation}
+
+\begin{longtable}{@{}p{3.6cm}p{11cm}@{}}
+	\toprule
+	\textbf{Symbol} & \textbf{Meaning}\\
+	\midrule
+	\endhead
+	$\neg P$ & not $P$ (negation)\\
+	$P\wedge Q,\ P\vee Q$ & $P$ and $Q$; $P$ or $Q$ (always \emph{inclusive} or)\\
+	$P\Rightarrow Q$ & if $P$ then $Q$ (material conditional)\\
+	$P\Leftrightarrow Q$ & $P$ if and only if $Q$ (``iff'')\\
+	$P\sim Q$ or $P\equiv Q$ & $P$ and $Q$ are \emph{logically equivalent}: same truth value under every assignment of truth values to their components (a statement \emph{about} $P,Q$, not a connective)\\
+	$\forall x,\ \exists x,\ \exists!x$ & for all $x$; there exists $x$; there exists exactly one $x$\\
+	$\forall x\in A\;P(x)$ & abbreviation of $\forall x\,(x\in A\Rightarrow P(x))$\\
+	$\exists x\in A\;P(x)$ & abbreviation of $\exists x\,(x\in A\wedge P(x))$\\
+	$\T,\ \F$ & truth values true, false\\
+	$:=$ & ``is defined to be'' (between objects)\\
+	$\iffdef$ & ``is defined to mean'' (between statements)\\
+	$\square$ & end of proof\\
+	\bottomrule
+\end{longtable}
+
+\section*{Set-theoretic notation}
+
+\begin{longtable}{@{}p{3.6cm}p{11cm}@{}}
+	\toprule
+	\textbf{Symbol} & \textbf{Meaning}\\
+	\midrule
+	\endhead
+	$x\in A$,\ $x\notin A$ & $x$ is (is not) an element of $A$\\
+	$A\subseteq B$ & $\forall x\,(x\in A\Rightarrow x\in B)$. \textbf{The class notes and assignments write $\subset$ for this; here $\subseteq$ always allows equality.}\\
+	$A\subsetneq B$ & $A\subseteq B$ and $A\neq B$ (proper subset)\\
+	$\varnothing$ & the empty set (written $\phi$ in the assignments)\\
+	$\pset(X)$ & the power set of $X$ (written $\wp(X)$; the set of all subsets of $X$)\\
+	$\{x\in A : \varphi(x)\}$ & the set of those $x\in A$ satisfying $\varphi$ (Separation)\\
+	$A\cup B,\ A\cap B$ & union, intersection\\
+	$A\setminus B$ & difference $\{x\in A: x\notin B\}$ (written $A-B$ in the assignments)\\
+	$A\comp$ & complement of $A$ \emph{relative to a fixed ambient set $X$}: $X\setminus A$\\
+	$A\sy B$ & symmetric difference $(A\setminus B)\cup(B\setminus A)$\\
+	$\bigcup\mathcal F,\ \bigcap\mathcal F$ & union, intersection of all members of a set $\mathcal F$ of sets\\
+	$\bigcup_{i\in I}A_i,\ \bigcap_{i\in I}A_i$ & union, intersection of an indexed family\\
+	$(a,b)$ & ordered pair; $(a,b)=\{\{a\},\{a,b\}\}$ (Kuratowski)\\
+	$A\times B,\ \prod_{i\in I}A_i$ & Cartesian product of two sets; of an indexed family\\
+	$\card(A)$ or $|A|$ & number of elements of a finite set; cardinality in general\\
+	\bottomrule
+\end{longtable}
+
+\section*{Relations, functions, orders}
+
+\begin{longtable}{@{}p{3.6cm}p{11cm}@{}}
+	\toprule
+	\textbf{Symbol} & \textbf{Meaning}\\
+	\midrule
+	\endhead
+	$x\mathrel{R}y$ & $(x,y)\in R$\\
+	$\dom R,\ \ran R$ & domain and range of a relation\\
+	$f:A\to B$ & a function from $A$ to $B$; $B^A$ is the set of all such functions\\
+	$f(S),\ f^{-1}(T)$ & image of $S$; preimage of $T$\\
+	$g\circ f$,\ $\id_A$ & composition; identity function on $A$\\
+	$\sim$ (on a set) & an equivalence relation; $[a]$ is the class of $a$, and $A/{\sim}$ the set of classes\\
+	$\le,\ <$ & a partial order and its strict part (context says which order)\\
+	$\min S,\ \max S$ & the minimum (least) and maximum (greatest) element of $S$, when they exist\\
+	$\lub S,\ \glb S$ & least upper bound and greatest lower bound (also $\sup S,\ \inf S$)\\
+	$a\mid b$ & $a$ divides $b$: $\exists k\in\Z\; b=ak$\\
+	\bottomrule
+\end{longtable}
+
+\section*{Numbers, analysis, topology}
+
+\begin{longtable}{@{}p{3.6cm}p{11cm}@{}}
+	\toprule
+	\textbf{Symbol} & \textbf{Meaning}\\
+	\midrule
+	\endhead
+	$\N$ & $\{0,1,2,\dots\}$; we write $\N_{\ge1}=\{1,2,3,\dots\}$ for the positive integers. ``$n\in\N,\ n\ge1$'' in the assignments means $n\in\N_{\ge1}$.\\
+	$\Z,\ \Q,\ \R$ & integers, rationals, reals\\
+	$|x|$ & absolute value; $d(x,y)$ a metric\\
+	$B(x,r)$ & open ball $\{y: d(x,y)<r\}$\\
+	$\cl A,\ \inte A,\ \bd A$ & closure, interior, boundary of $A$\\
+	$(x_n)_{n\ge1}$ & a sequence, i.e.\ a function $\N_{\ge1}\to X$\\
+	$\eps,\delta,N$ & conventional names for a positive real, a positive real, a natural number\\
+	$\mathcal T$ & a topology\\
+	\bottomrule
+\end{longtable}
+
+\section*{Glossary of the words used in proofs}
+
+\begin{longtable}{@{}p{3.6cm}p{11cm}@{}}
+	\toprule
+	\textbf{Word} & \textbf{Precise meaning in this document}\\
+	\midrule
+	\endhead
+	statement & A sentence that is either true or false (not both). ``$x>0$'' alone is not a statement.\\
+	predicate & An expression $P(x_1,\dots,x_n)$ that becomes a statement when each variable is given a value from its domain.\\
+	iff & ``if and only if''; a proof of it has two directions, each proved separately.\\
+	tautology & A propositional form true under every truth assignment; a property of \emph{logical form} alone.\\
+	contradiction & A propositional form false under every assignment.\\
+	contingency & A form that is neither.\\
+	vacuously true & A statement $\forall x\,(P(x)\Rightarrow Q(x))$ that holds because $P(x)$ is never true.\\
+	counterexample & A value of the variable that makes a universal statement false.\\
+	necessary / sufficient & $Q$ is \emph{necessary} for $P$ means $P\Rightarrow Q$; $P$ is \emph{sufficient} for $Q$ means $P\Rightarrow Q$.\\
+	well-defined & A definition that depends on a choice (of representative, of name) is well-defined if the outcome is independent of that choice.\\
+	WLOG & ``Without loss of generality'': one of several symmetric cases is treated and the others follow by relabelling.\\
+	it suffices to show & The remaining claim implies the one wanted.\\
+	family & A set whose elements are sets (unindexed), or an indexed family (a function $i\mapsto A_i$).\\
+	class & A collection $\{x:\varphi(x)\}$ defined by a formula; it may be too large to be a set (Chapter~\ref{ch:language}).\\
+	trivial / routine & A verification that follows immediately from the definitions and is not written out; in this document such a claim is always marked and the reader is told what to check.\\
+	\bottomrule
+\end{longtable}
+
+\begin{warning}
+	Some texts write $A\subset B$ for the \emph{proper} subset relation, others for $\subseteq$. The assignments use $\subset$ for $\subseteq$; this document never writes bare $\subset$.
+\end{warning}

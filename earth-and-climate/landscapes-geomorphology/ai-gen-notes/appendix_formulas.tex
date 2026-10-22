@@ -1,0 +1,311 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[margin=1.1cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{booktabs,array,tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist{itemsep=0pt,topsep=1pt,parsep=0pt,leftmargin=1.1em}
+\renewcommand{\arraystretch}{1.05}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\dv}[2]{\dfrac{\dd #1}{\dd #2}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\Ord}[1]{\mathcal{O}(#1)}
+
+\definecolor{hd}{RGB}{20,70,130}
+\definecolor{bx}{RGB}{245,247,250}
+\definecolor{bxline}{RGB}{150,170,195}
+
+\titleformat{\section}{\large\bfseries\color{hd}}{\thesection}{0.5em}{}[{\color{hd}\titlerule[0.8pt]}]
+\titleformat{\subsection}{\normalsize\bfseries\color{hd!70!black}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+
+\newtcolorbox{eqbox}{colback=bx,colframe=bxline,boxrule=0.4pt,arc=1pt,
+  left=3pt,right=3pt,top=2pt,bottom=2pt,boxsep=0pt,before skip=2pt,after skip=3pt,
+  breakable}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\itshape EC2123 --- formula sheet}
+\fancyhead[R]{\footnotesize\itshape\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+\title{\vspace{-1.3cm}\textbf{\large Landscapes and Their Evolution --- Revision Formula Sheet}\vspace{-4pt}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-16pt}
+{\footnotesize Concise companion to the full notes: every key equation, grouped by chapter, with the one line of context needed to use it. No derivations here --- see the main document for those.\par}
+\begin{multicols}{2}
+
+\section{Toolkit: maths and mechanics}
+\begin{eqbox}
+\textbf{Taylor series:} $f(t)=\sum_{k\ge0}\frac{t^k}{k!}f^{(k)}(0)$.\\
+\textbf{Stability of $F(x_*)=0$:} $F'(x_*)<0$ stable, $>0$ unstable, $=0$ neutral.\\
+\textbf{Continuity (1-D):} $\partial_tn=-\partial_xQ+s(x)$.\\
+\textbf{Diffusion:} $Q=-D\partial_xn\Rightarrow\partial_tn=D\partial_x^2n+s$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Steady, uniform source:} $n=n_0-\dfrac{s}{2D}x^2$ (parabola).\\
+\textbf{Step/boundary diffusion:} $n=n_s\,\mathrm{erfc}\!\left(\dfrac{x}{2\sqrt{Dt}}\right)$; penetration $\ell\sim2\sqrt{Dt}$.\\
+\textbf{Periodic forcing:} $n=a\,\ee^{-x/\delta}\cos(\omega t-x/\delta)$, $\delta=\sqrt{2D/\omega}=\sqrt{DP/\pi}$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Hydrostatic equilibrium:} $\partial_zP+\rho g=0\Rightarrow P=\rho g\,(\text{depth})$.\\
+\textbf{Archimedes:} buoyant force $=\rho_fgV$ (from integrating hydrostatic $P$ over the body).\\
+\textbf{Rayleigh--Taylor growth rate:} $\sigma^2=Agk$, $A=\dfrac{\rho_1-\rho_2}{\rho_1+\rho_2}$ (heavy over light $\Rightarrow$ unstable).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Stokes (solid at rest, 2-D):}
+$-\partial_y\sigma_{xy}-\partial_x\sigma_{xx}=0$,\quad
+$-\partial_x\sigma_{xy}-\partial_y\sigma_{yy}-\rho g=0$.\\
+Stress tensor symmetric: $\sigma_{xy}=\sigma_{yx}$ (zero net torque).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Newtonian viscosity:} $\tau=\mu\,\dd v_x/\dd y$.\\
+\textbf{Flow down an infinite slab (no slip at bed, free surface):}
+\[
+v_x(y)=\frac{\rho g\sin\theta}{\mu}\Big(Hy-\frac{y^2}2\Big),\ \ U_s=\frac{\rho g\sin\theta H^2}{2\mu},\ \ q=\frac{\rho g\sin\theta H^3}{3\mu}.
+\]
+Scaling check: $v\sim\rho g\sin\theta\,H^2/\mu$.
+\end{eqbox}
+
+\section{DEMs and map projections}
+\begin{eqbox}
+\textbf{Finite differences:} $\partial_xz\approx\dfrac{z_E-z_W}{2\Delta}$,\ \ $\nabla^2z\approx\dfrac{z_N+z_S+z_E+z_W-4z}{\Delta^2}$.\\
+\textbf{Slope:} $\tan s=|\nabla z|$.\ \ \textbf{Aspect:} $a=\mathrm{atan2}(-p,-q)$.\\
+\textbf{Hillshade:} $I=\cos Z\cos s+\sin Z\sin s\cos(A_z-a)$.\\
+\textbf{Stereo parallax:} $h=Hp/(B+p)\approx Hp/B$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Mercator:} $x=R\lambda$, $y=R\ln\tan(\pi/4+\varphi/2)$, scale $k=\sec\varphi$ (area $\times k^2$).\\
+\textbf{Transverse Mercator (UTM):} $k=k_0\sec(x/R)$; accurate within $\sim15^\circ$ of central meridian; zones $6^\circ$ wide, $k_0=0.9996$.\\
+\textbf{Ellipsoid:} $f=(a-c)/a$; WGS84 $a=6378.137$ km, $1/f=298.257$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Hypsometry:} $a(h)=A(>h)/A_\mathrm{tot}$; hypsometric integral $=(\bar h-h_{\min})/(h_{\max}-h_{\min})$.
+\end{eqbox}
+
+\section{Planetary shape \& maximum topography}
+\begin{eqbox}
+\textbf{Round when:} $R_\mathrm{crit}=\sqrt{3\sigma_y/(2\pi G\rho^2)}$ (central pressure $P_c=\tfrac23\pi G\rho^2R^2\gtrsim\sigma_y$).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Oblateness:}
+\[
+\boxed{\dfrac{\Delta R}{R}=\dfrac{\bar\rho\,\omega^2R}{2g\rho_s}}\qquad(\text{monopole potential: }\Delta R=\omega^2R^2/2g,\ f=q/2\text{--}5q/4).
+\]
+\end{eqbox}
+\begin{eqbox}
+\textbf{Mohr circle:} $\sigma_n=\tfrac12(\sigma_1+\sigma_3)+\tfrac12(\sigma_1-\sigma_3)\cos2\theta$, $\tau=\tfrac12(\sigma_1-\sigma_3)\sin2\theta$; $\tau_\mathrm{max}=\tfrac12(\sigma_1-\sigma_3)$ at $45^\circ$.\\
+\textbf{Coulomb failure:} $\tau=C+f\sigma_n$, $f=\tan\phi$; Byerlee $f\approx0.85$.\\
+\textbf{Fault-plane angle:} $\beta=45^\circ-\phi/2$ from $\sigma_1$; $\sigma_1/\sigma_3=(1+\sin\phi)/(1-\sin\phi)$ ($C=0$).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Max.\ relief (large bodies):}
+\[
+\Delta h_\mathrm{max}=\dfrac{2\tau_y}{\rho_cg}=\dfrac{3\tau_y}{2\pi G\rho_c\bar\rho R}\ \propto\ 1/R.
+\]
+\textbf{Small bodies (friction-limited):} $\Delta h/R\sim f$, indep.\ of $R,g,\rho$.\\
+Transition radius: $R_*=\sqrt{3\tau_y/(2\pi G\rho_c\bar\rho f)}$.
+\end{eqbox}
+
+\section{Isostasy}
+\begin{eqbox}
+\textbf{Airy freeboard:} $h-b=h(1-\rho_c/\rho_m)$.\\
+\textbf{Mountain root:} $b_1=\dfrac{\rho_c}{\rho_m-\rho_c}h_1$.\quad
+\textbf{Basin thinning:} $b_2=\dfrac{\rho_c-\rho_w}{\rho_m-\rho_c}h_2$.\\
+\textbf{Pratt:} $\rho_i=\rho_0D/(D+h_i)$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Viscous relaxation of topography (wavelength $\lambda$):}
+\[
+\boxed{\tau_r=\dfrac{4\pi\mu}{\rho g\lambda}}\qquad w=w_0\ee^{-t/\tau_r}.
+\]
+\end{eqbox}
+\begin{eqbox}
+\textbf{Ocean floor depth vs.\ age (half-space cooling):}
+\[
+D(t)=D_0+\frac{2\rho_m\alpha_vT_m}{\rho_m-\rho_w}\sqrt{\frac{\kappa t}\pi}\ \propto\ \sqrt t.
+\]
+Plate model: flattens to $D_\infty=D_0+\dfrac{\alpha_v\rho_mT_my_L}{2(\rho_m-\rho_w)}$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Erosion unloading:} uniform removal $e$ $\Rightarrow$ $\Delta h_\mathrm{surface}=-(1-\rho_c/\rho_m)e$, Moho rises by $(1-\rho_c/\rho_m)$-complement $\times e$ (i.e.\ $85\%$ replaced for $\rho_c/\rho_m=2800/3300$).
+\end{eqbox}
+
+\section{Plate tectonics \& earthquakes}
+\begin{eqbox}
+\textbf{Strain rate:} $\dot\epsilon_{ij}=\tfrac12(\partial_iv_j+\partial_jv_i)$.\\
+\textbf{Rayleigh number:}
+\[
+\mathrm{Ra}=\dfrac{\rho_0g\alpha_v\Delta T\,b^3}{\mu\kappa}\ ;\quad \mathrm{Ra}_c=\dfrac{27\pi^4}{4}\approx658\ (\text{free-slip}),\ \lambda_c\approx2.83\,b.
+\]
+\end{eqbox}
+\begin{eqbox}
+\textbf{Plate speed scaling:} $W\Delta\rho g\sim 2\mu V/R\Rightarrow V\sim\dfrac{W\Delta\rho g R}{2\mu}$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Slider-block earthquake cycle:} slip $\Delta=2(F_s-F_d)/k$; period $T=\Delta/u_0$; long-term slip rate $=u_0$.\\
+\textbf{Seismic moment:} $M_0=\mu_rA\Delta$; \ $M_w=\tfrac23(\log_{10}M_0-9.1)$ [N\,m].\\
+\textbf{InSAR:} one fringe $=\lambda_\mathrm{radar}/2$ line-of-sight motion.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Newmark critical accel.:} $a_c=g\cos\theta(\tan\phi-\tan\theta)$.
+\end{eqbox}
+
+\section{Flexure \& folds}
+\begin{eqbox}
+\textbf{Flexural rigidity:} $D=\dfrac{ET_e^3}{12(1-\nu^2)}$;\quad
+$D\,w''''+\Delta\rho g\,w=q(x)$.\\
+\textbf{Flexural parameter:} $\alpha=\left(\dfrac{4D}{\Delta\rho g}\right)^{1/4}$;\quad
+$w=w_0\ee^{-|x|/\alpha}\!\left(\cos\dfrac x\alpha+\sin\dfrac{|x|}\alpha\right)$.\\
+Zero crossing $x=3\pi\alpha/4$; bulge at $x=\pi\alpha$, height $-0.043w_0$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Dominant fold wavelength (Biot--Ramberg):}
+\[
+\lambda_d=2\pi h\left(\dfrac{\mu_l}{6\mu_m}\right)^{1/3}\ \propto\ h.
+\]
+\end{eqbox}
+\begin{eqbox}
+\textbf{Critical taper (Coulomb wedge):}
+$\alpha+\beta\approx\dfrac{f_b+\beta}{K}$,\quad $K=\dfrac{1+\sin\phi}{1-\sin\phi}$.
+\end{eqbox}
+
+\section{Weathering}
+\begin{eqbox}
+\textbf{Regolith mass balance:} $\dd H/\dd t=P(H)-E$.\\
+Exponential production: $P=P_0\ee^{-H/h_0}\Rightarrow H_s=h_0\ln(P_0/E)$, relax.\ time $\tau_H=h_0/E$ (stable).\\
+Humped $P(H)$: bistable (thin branch unstable, thick stable).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Weathering strain (immobile tracer, e.g.\ zircon):} $\epsilon_{Zr,w}=\dfrac{\rho_pC_p}{\rho_wC_w}-1$.\\
+CDF $=1-C_{Zr,p}/C_{Zr,w}$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Diffusion-limited weathering-front advance:} $\ell(t)=\sqrt{2DC_st/N}\ \propto\sqrt t$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Thermal stress:} $\sigma=E\alpha_\ell\Delta T$ (uniaxial), $/(1-\nu)$ (biaxial).\\
+\textbf{Periodic heat wave in rock:}
+\[
+T=T_0+T_\mathrm{amp}\,\ee^{-z/z^*}\sin(2\pi t/P-z/z^*),\quad z^*=\sqrt{\kappa P/\pi}.
+\]
+\end{eqbox}
+\begin{eqbox}
+\textbf{Clausius--Clapeyron (frost cracking):}
+$\dv PT=\dfrac{L}{T(v_w-v_i)}\approx-13\ \mathrm{MPa\,K^{-1}}$.\\
+Frost-cracking window: $-3$ to $-8^\circ$C (empirical, not $0^\circ$C).
+\end{eqbox}
+
+\section{Hillslopes}
+\begin{eqbox}
+\textbf{Rain-splash net transport:} $L_\mathrm{net}=\dfrac{2v^2\cos^2\beta}{g}\tan\theta\ \propto\ S$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Hillslope diffusion equation:}
+\[
+\boxed{\partial_tz=U+\kappa_h\partial_x^2z}\qquad(\text{from }Q_x=-k\partial_xz,\ \kappa_h=k/\rho_b).
+\]
+Nonlinear (near angle of repose): $q=-\kappa_hS/[1-(S/S_c)^2]$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Steady convex hillslope:}
+\[
+z(x)=z_c-\frac{\mathcal E}{2\kappa_h}x^2,\quad S=\frac{\mathcal E}{\kappa_h}x,\quad q=\mathcal Ex\ \ (\text{parabola}).
+\]
+\textbf{Scarp degradation:} $z=-\tfrac h2\mathrm{erf}(x/2\sqrt{\kappa_ht})$; $S_\mathrm{max}=\dfrac{h}{2\sqrt{\pi\kappa_ht}}\propto t^{-1/2}$.
+\end{eqbox}
+
+\section{Landslides}
+\begin{eqbox}
+\textbf{Infinite-slope factor of safety:}
+\[
+\mathrm{FS}=\dfrac{C+(\rho gh\cos^2\theta-P_w)\tan\phi}{\rho gh\sin\theta\cos\theta}.
+\]
+Dry, cohesionless: $\theta_c=\phi$. Saturated (seepage parallel to slope): $\tan\theta_c=(1-\rho_w/\rho)\tan\phi$.\\
+Liquefaction: $P_w\to\sigma\Rightarrow$ strength $\to0$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Newmark:} slips when $a_s>a_c=g\cos\theta(\tan\phi-\tan\theta)$.\\
+\textbf{Heim's ratio (runout):} $H/L=f_\mathrm{eff}$ (falls with volume for large slides).\\
+\textbf{Power-law area distribution:} $p(A)\propto A^{-\beta}$, $\beta\approx2.5$.
+\end{eqbox}
+
+\section{Glaciers}
+\begin{eqbox}
+\textbf{Mass conservation:} $\partial_tS=Wb-\partial_xQ$; steady: $Q(x)=\int_0^xWb\,\dd x'$, max at ELA.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Newtonian ice flow (slab):} same as Ch.\,2 slab result with $\rho\to\rho_i$.\\
+\textbf{Glen's law:} $\dd U/\dd z=A\tau^n$, $n\approx3$; $\tau_{xz}=\tau_b(1-z/H)$, $\tau_b=\rho_igH\sin\theta$.
+\[
+U(z)=\frac{A\tau_b^nH}{n+1}\Big[1-(1-z/H)^{n+1}\Big],\quad U_s=\frac{A\tau_b^nH}{n+1}\ \propto H^{n+1}\sin^n\theta.
+\]
+Discharge/width: $q=A\tau_b^nH^2/(n+2)$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Submergence/emergence:} ice moves through the (steady) surface at speed $-b$ (down in accumulation zone, up in ablation zone).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Coral terrace uplift rate:} $U=(z-\zeta(t))/t$.
+\end{eqbox}
+
+\section{Fluvial \& aeolian (post-midsem)}
+\begin{eqbox}
+\textbf{Stream power / incision law:} $\mathcal E=KA^mS^n$; steady state ($\mathcal E=U$):
+\[
+S=k_sA^{-\theta},\quad \theta=m/n\ \ (\text{concavity}).
+\]
+\end{eqbox}
+\begin{eqbox}
+\textbf{Knickpoint (kinematic wave, $n=1$):} celerity $c(x)=KA(x)^m$; migrates upstream, stays sharp (advective, not diffusive).
+\end{eqbox}
+\begin{eqbox}
+\textbf{Shields threshold (water):} $\tau_*=\dfrac{\tau_b}{(\rho_s-\rho_w)gD}\sim0.03\text{--}0.06$.
+\end{eqbox}
+\begin{eqbox}
+\textbf{Aeolian threshold (Bagnold):} $u_{*t}=A_B\sqrt{(\rho_s-\rho_a)gD/\rho_a}$, $A_B\approx0.1$--$0.12$.\\
+\textbf{Sand flux:} $Q_s\propto u_*^3$.\\
+\textbf{Dune migration:} $\dv{x_d}{t}=\dfrac{Q_s}{H}\ \propto\ 1/H$.
+\end{eqbox}
+
+\section{Quick-reference constants \& values}
+\begin{eqbox}
+\footnotesize
+$G=6.674\times10^{-11}\ \mathrm{m^3kg^{-1}s^{-2}}$\quad
+$g_\oplus=9.81\ \mathrm{m\,s^{-2}}$\\
+$\rho_c\approx2800$, $\rho_m\approx3300$, $\rho_w=1000$, $\rho_i=917\ \mathrm{kg\,m^{-3}}$\\
+$\kappa_\mathrm{rock}\sim10^{-6}\ \mathrm{m^2s^{-1}}$;\quad $\alpha_v\sim3\times10^{-5}\ \mathrm{K^{-1}}$\\
+$\mu_\mathrm{mantle}\sim10^{21}$ Pa\,s;\ \ $\mu_\mathrm{ice}\sim10^{13\text{--}14}$ Pa\,s;\ \ $\mu_\mathrm{water}=10^{-3}$ Pa\,s\\
+Byerlee friction $f\approx0.85$;\ \ typical rock $\phi\approx30^\circ$--$35^\circ$\\
+Rock tensile/shear strength $\tau_y\sim10^7$--$10^8$ Pa\\
+$1\ \mathrm{yr}\approx3.156\times10^7$ s;\ \ WGS84 $f=1/298.257$
+\end{eqbox}
+
+\section{One-line concept map}
+\begin{eqbox}
+\footnotesize
+Force balance $+$ mass conservation $\Rightarrow$ every result here.\\
+\textbf{Equilibrium} (hydrostatic $\to$ isostasy) sets \emph{what floats where}.\\
+\textbf{Diffusion} (heat/hillslope/topographic relaxation) sets \emph{how fast smooth things smooth}.\\
+\textbf{Threshold rheology} (Coulomb friction, Byerlee, Shields, Bagnold) sets \emph{when things fail/move suddenly}.\\
+\textbf{Power-law rheology} (Glen's law, mantle creep) sets \emph{how strongly flow concentrates near high stress}.\\
+\textbf{Scaling arguments} (balance dominant terms, drop $\mathcal O(1)$) recover every boxed result to a constant factor --- the fastest way to sanity-check an answer in the exam.
+\end{eqbox}
+
+\end{multicols}
+\end{document}

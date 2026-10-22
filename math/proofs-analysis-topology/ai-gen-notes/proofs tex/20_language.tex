@@ -1,0 +1,137 @@
+\part{Set Theory from the ZFC Axioms}
+
+\chapter{The Language of Set Theory and the ZFC Axioms}\label{ch:language}
+
+\section{Why axioms are needed: Russell's paradox}
+
+Cantor's naive view is that every property $\varphi(x)$ determines a set $\{x:\varphi(x)\}$ (\emph{naive comprehension}). This is inconsistent.
+
+\begin{theorem}[Russell]\label{thm:russell}
+	There is no set $R$ such that $\forall x\,(x\in R\Leftrightarrow x\notin x)$.
+\end{theorem}
+\begin{proof}
+	Suppose $R$ had this property. Instantiating the universal statement at $x:=R$ gives $R\in R\Leftrightarrow R\notin R$, which is of the form $P\Leftrightarrow\neg P$, a contradiction (a contradiction in the sense of Chapter~\ref{ch:prop}).
+\end{proof}
+
+So naive comprehension, which would produce $R=\{x:x\notin x\}$, must be abandoned. Axiomatic set theory keeps only those set-forming principles that are known (or believed) to be safe.
+
+\begin{intuition}
+	The trouble is size: ``the collection of \emph{all} sets'' or ``\emph{all} sets that are not members of themselves'' is too big to be a set. The ZFC axioms allow you to build new sets only from sets you already have: carve out a piece (Separation), pair, unite, take all subsets, take images. You never conjure a set out of a bare property.
+\end{intuition}
+
+\section{The first-order language of set theory}
+
+\begin{definition}[Language $\mathcal L_\in$]
+	The \emph{alphabet} consists of variables $x,y,z,A,B,\dots$, the two binary predicate symbols $\in$ and $=$, the connectives $\neg,\wedge,\vee,\Rightarrow,\Leftrightarrow$, the quantifiers $\forall,\exists$ and brackets. \emph{Atomic formulas} are $x\in y$ and $x=y$ for variables $x,y$. \emph{Formulas} are built recursively: atomic formulas are formulas; if $\varphi,\psi$ are formulas and $x$ a variable, then $\neg\varphi$, $(\varphi\wedge\psi)$, $(\varphi\vee\psi)$, $(\varphi\Rightarrow\psi)$, $(\varphi\Leftrightarrow\psi)$, $\forall x\,\varphi$, $\exists x\,\varphi$ are formulas. Free and bound occurrences of variables are as in Chapter~\ref{ch:pred}.
+\end{definition}
+
+The variables range over \emph{sets}, and the \emph{only} primitive notions are membership $\in$ and equality. There are no ``urelements'': numbers, functions, pairs, relations will all be defined as sets. The logic (Chapters~\ref{ch:prop}--\ref{ch:proof}) is the background in which the axioms are stated and used.
+
+\begin{definition}[Abbreviations]
+	$x\notin y:=\neg(x\in y)$; $x\subseteq y:=\forall z\,(z\in x\Rightarrow z\in y)$; $x\subsetneq y:= x\subseteq y\wedge x\neq y$; $\exists x\in y\,\varphi:=\exists x\,(x\in y\wedge\varphi)$; $\forall x\in y\,\varphi:=\forall x\,(x\in y\Rightarrow\varphi)$.
+\end{definition}
+
+\begin{definition}[Definitional extension]\label{def:defext}
+	Suppose we have proved $\exists!y\,\varphi(x_1,\dots,x_n,y)$ for all $x_1,\dots,x_n$. Then we may introduce a new operation symbol $F(x_1,\dots,x_n)$ standing for that unique $y$, and abbreviate every statement using $F$ by its unfolding using $\varphi$. All symbols such as $\varnothing,\{a,b\},\cup,\pset$ are introduced this way; the definition is legitimate \emph{only after} existence and uniqueness are proved.
+\end{definition}
+
+\begin{definition}[Classes]
+	For a formula $\varphi(x)$ the expression $\{x:\varphi(x)\}$ is a \emph{class}. Writing $a\in\{x:\varphi(x)\}$ is an abbreviation for $\varphi(a)$. A class that is (extensionally) equal to a set is called a \emph{set}; otherwise it is a \emph{proper class}. Classes are not objects of the theory; they are a notational convenience. By Theorem~\ref{thm:russell}, $\{x:x\notin x\}$ is a proper class.
+\end{definition}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.3cm}p{5.6cm}p{5.6cm}@{}}
+		\toprule
+		& \textbf{Naive comprehension} & \textbf{Separation (ZFC)}\\
+		\midrule
+		Statement & For every $\varphi$ there is $\{x:\varphi(x)\}$ & For every $\varphi$ and every set $X$ there is $\{x\in X:\varphi(x)\}$\\
+		Source of elements & anything at all & only elements of an \emph{already given} set $X$\\
+		Status & inconsistent (Russell) & an axiom schema of ZFC\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\section{The axioms of ZFC}
+
+Throughout, formulas may contain additional \emph{parameters} (free variables other than the ones displayed), and the universal closure is understood.
+
+\begin{axiom}[Extensionality]\label{ax:ext}
+	Two sets with the same elements are equal:
+	\[
+	\forall A\,\forall B\,\bigl[\forall x\,(x\in A\Leftrightarrow x\in B)\Rightarrow A=B\bigr].
+	\]
+\end{axiom}
+A set is determined by its members; order and repetition are irrelevant: $\{1,2\}=\{2,1\}=\{1,1,2\}$.
+
+\begin{axiom}[Separation schema]\label{ax:sep}
+	For every formula $\varphi(x,p_1,\dots,p_k)$ in which $Y$ does not occur,
+	\[
+	\forall p_1\cdots\forall p_k\,\forall X\,\exists Y\,\forall x\,\bigl[x\in Y\Leftrightarrow(x\in X\wedge\varphi(x,p_1,\dots,p_k))\bigr].
+	\]
+\end{axiom}
+This is not one axiom but one for each formula $\varphi$ (a \emph{schema}). Given a set $X$ we may carve out the subset of those elements satisfying $\varphi$.
+
+\begin{axiom}[Pairing]\label{ax:pair}
+	For all $a,b$ there is a set containing exactly $a$ and $b$:
+	$\forall a\,\forall b\,\exists c\,\forall x\,[x\in c\Leftrightarrow(x=a\vee x=b)]$.
+\end{axiom}
+
+\begin{axiom}[Union]\label{ax:union}
+	For every set $\mathcal F$ there is a set consisting of all elements of members of $\mathcal F$:
+	$\forall\mathcal F\,\exists U\,\forall x\,[x\in U\Leftrightarrow\exists Y\,(Y\in\mathcal F\wedge x\in Y)]$.
+\end{axiom}
+
+\begin{axiom}[Power set]\label{ax:power}
+	For every set $X$ there is a set whose members are exactly the subsets of $X$:
+	$\forall X\,\exists P\,\forall Y\,[Y\in P\Leftrightarrow Y\subseteq X]$.
+\end{axiom}
+
+\begin{axiom}[Infinity]\label{ax:inf}
+	There is a set $I$ containing the empty set and closed under $x\mapsto x\cup\{x\}$:
+	\[
+	\exists I\,\bigl[\,\exists e\,(e\in I\wedge\forall z\,z\notin e)\ \wedge\ \forall x\,\bigl(x\in I\Rightarrow\exists y\,(y\in I\wedge\forall z\,(z\in y\Leftrightarrow(z\in x\vee z=x)))\bigr)\bigr].
+	\]
+	(In the abbreviated notation of Chapter~\ref{ch:fromaxioms}: $\varnothing\in I$ and $x\in I\Rightarrow x\cup\{x\}\in I$.)
+\end{axiom}
+
+\begin{axiom}[Replacement schema]\label{ax:repl}
+	For every formula $\varphi(x,y,p_1,\dots,p_k)$ in which $B$ does not occur,
+	\[
+	\forall\vec p\,\forall A\,\bigl[\forall x\in A\,\exists!y\,\varphi(x,y,\vec p)\Rightarrow\exists B\,\forall y\,\bigl(y\in B\Leftrightarrow\exists x\in A\;\varphi(x,y,\vec p)\bigr)\bigr].
+	\]
+\end{axiom}
+If a formula defines a ``function'' on the set $A$, its collection of values is a set. (Replacement is needed for constructions beyond the scope of these notes, such as large ordinals; it is stated for completeness of ZFC.)
+
+\begin{axiom}[Regularity / Foundation]\label{ax:reg}
+	Every non-empty set has an $\in$-minimal member:
+	$\forall X\,\bigl[X\neq\varnothing\Rightarrow\exists Y\,(Y\in X\wedge\forall z\,(z\in Y\Rightarrow z\notin X))\bigr]$, i.e.\ $Y\cap X=\varnothing$.
+\end{axiom}
+
+\begin{axiom}[Choice]\label{ax:choice}
+	Every set $\mathcal X$ of non-empty, pairwise disjoint sets admits a \emph{choice set}: a set $C$ containing exactly one element from each member of $\mathcal X$:
+	\[
+	\forall\mathcal X\,\bigl[\bigl(\forall Y\in\mathcal X\ Y\ne\varnothing\ \wedge\ \forall Y,Z\in\mathcal X\,(Y\ne Z\Rightarrow Y\cap Z=\varnothing)\bigr)\Rightarrow\exists C\,\forall Y\in\mathcal X\ \exists!x\,(x\in C\cap Y)\bigr].
+	\]
+\end{axiom}
+
+\begin{center}
+	\begin{tabular}{@{}p{2.8cm}p{5.4cm}p{6.4cm}@{}}
+		\toprule
+		\textbf{Axiom} & \textbf{What it guarantees} & \textbf{Main consequences developed here}\\
+		\midrule
+		Extensionality & sets are determined by elements & uniqueness of $\varnothing$, $\{a,b\}$, $\cup$, $\cap$; double inclusion\\
+		Separation & subsets defined by formulas & $\varnothing$ exists; $\cap$, $\setminus$, $\triangle$; $\bigcap\mathcal F$; $A\times B$\\
+		Pairing & $\{a,b\}$, $\{a\}$ & ordered pairs, binary union, successor\\
+		Union & $\bigcup\mathcal F$ & unions, $A\cup B$, ordered pair recovery\\
+		Power set & $\pset(X)$ & $A\times B$, function sets $B^A$\\
+		Infinity & an inductive set & $\N$ (Chapter~\ref{ch:nat})\\
+		Replacement & images of definable maps are sets & (ordinals; not needed below)\\
+		Regularity & no $x\in x$, no membership cycles & $\{A,\{A,B\}\}$ works as an ordered pair; $\N$ facts\\
+		Choice & choice sets exist & Zorn's lemma, bases, products of non-empty sets (Chapters~\ref{ch:functions}--\ref{ch:zorn})\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{remark}[ZF, ZFC and their status]
+	ZF denotes Axioms~\ref{ax:ext}--\ref{ax:reg}; ZFC adds Choice. If ZFC is consistent, its consistency cannot be proved inside ZFC (G\"odel), and statements such as the Continuum Hypothesis are independent of it. The axioms are a \emph{convention} on what is allowed to be called a set, chosen so that (i) all of classical mathematics can be developed and (ii) the known paradoxes are avoided.
+\end{remark}

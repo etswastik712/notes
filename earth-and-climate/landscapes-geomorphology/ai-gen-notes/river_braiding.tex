@@ -1,0 +1,777 @@
+\documentclass[11pt,a4paper]{report}
+
+% ---------- PACKAGES ----------
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{booktabs,array,longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,decorations.pathmorphing,calc,fit,backgrounds,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=teal!60!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+
+% ---------- THEOREM ENVIRONMENTS ----------
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{assumption}{Assumption}[chapter]
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{result}{Result}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+% ---------- HEADER/FOOTER ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+
+% ---------- CUSTOM MACROS ----------
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\pdv}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\Fr}{\mathrm{Fr}}
+\renewcommand{\Re}{\mathrm{Re}}
+\newcommand{\Shi}{\theta}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+\title{\Huge\textbf{River Braiding}\\[6pt]\Large From Fluid-Dynamical Fundamentals to Morphodynamic Stability Theory\\[4pt]\large with the Brahmaputra as a Worked Case Study}
+\author{Compiled for Earth Science Undergraduate Study}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent This text develops, from first principles in fluid mechanics and sediment transport, the mathematical theory of alluvial channel pattern selection, with special emphasis on the braided pattern. Beginning with a compressed recap of the fluid-dynamical and sedimentological prerequisites, we derive the depth-averaged (Saint-Venant / shallow-water) flow equations and the Exner sediment-continuity equation, combine them into the coupled morphodynamic system, and use linear stability analysis to explain \emph{why} an initially flat, straight alluvial bed spontaneously organises itself into bars, and why, beyond a critical channel width-to-depth ratio, multiple bar rows destabilise simultaneously to produce a braided network. The physical controls identified by the mathematics --- sediment supply, bed-material calibre, gradient, bank erodibility, and discharge variability --- are then connected back to field observations, quantified through braiding indices and regime diagrams, and finally applied, with real field data, to the Brahmaputra River as it debouches from the Himalaya onto the Assam plains.
+\end{abstract}
+\tableofcontents
+
+% ======================================================================
+\chapter*{Notation}
+\addcontentsline{toc}{chapter}{Notation}
+All symbols are listed here for reference; they are (re)introduced at first use in the text. Vector quantities are bold; hats denote perturbation (complex) amplitudes; subscript $0$ denotes a base (uniform-flow) state.
+
+\begin{longtable}{@{}p{2.6cm}p{9.6cm}p{2.4cm}@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} & \textbf{Units} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Symbol} & \textbf{Meaning} & \textbf{Units} \\
+\midrule
+\endhead
+$x,y,z$ & streamwise, transverse (cross-stream), vertical coordinates & m \\
+$t$ & time & s \\
+$u,v$ & depth-averaged velocity components in $x,y$ & m\,s$^{-1}$ \\
+$w$ & vertical velocity & m\,s$^{-1}$ \\
+$h$ & local flow depth & m \\
+$z_b$ & bed elevation (positive upward) & m \\
+$\zeta$ & free-surface elevation, $\zeta = h+z_b$ & m \\
+$S_0$ & base (reach-averaged) bed/energy slope & -- \\
+$S_f$ & local friction (energy) slope & -- \\
+$B$ & channel (or braid-belt) width & m \\
+$D_0$ & reference (base-state) flow depth & m \\
+$U_0$ & reference (base-state) mean velocity & m\,s$^{-1}$ \\
+$Q$ & water discharge & m$^3$\,s$^{-1}$ \\
+$q_w$ & water discharge per unit width, $q_w=Uh$ & m$^2$\,s$^{-1}$ \\
+$q_s,\ \vect{q}_s$ & volumetric sediment transport rate (per unit width), vector & m$^2$\,s$^{-1}$ \\
+$Q_s$ & total sediment discharge & m$^3$\,s$^{-1}$ (or t\,yr$^{-1}$) \\
+$g$ & gravitational acceleration & m\,s$^{-2}$ \\
+$\rho,\ \rho_s$ & density of water, of sediment & kg\,m$^{-3}$ \\
+$\Delta$ & submerged relative density, $\Delta=(\rho_s-\rho)/\rho$ & -- \\
+$d,\ d_{50}$ & grain diameter, median grain diameter & m \\
+$p$ & bed sediment porosity & -- \\
+$\nu$ & kinematic viscosity of water & m$^2$\,s$^{-1}$ \\
+$\tau_b,\ \vect{\tau}_b$ & bed shear stress (magnitude, vector) & Pa \\
+$u_*$ & shear (friction) velocity, $u_*=\sqrt{\tau_b/\rho}$ & m\,s$^{-1}$ \\
+$C$ & dimensional Chézy coefficient & m$^{1/2}$\,s$^{-1}$ \\
+$n_M$ & Manning roughness coefficient & s\,m$^{-1/3}$ \\
+$C^*$ & non-dimensional Chézy number, $C^*=C/\sqrt g$ & -- \\
+$\theta$ & Shields (mobility) parameter & -- \\
+$\theta_c$ & critical (threshold-of-motion) Shields parameter & -- \\
+$\Re$ & flow Reynolds number & -- \\
+$\Re_p$ & particle (grain) Reynolds number & -- \\
+$\Fr$ & Froude number, $\Fr=U/\sqrt{gh}$ & -- \\
+$\beta$ & channel aspect (width-to-depth) ratio, $\beta = B/(2D_0)$ & -- \\
+$\beta_c(m)$ & critical aspect ratio for onset of bar mode $m$ & -- \\
+$m$ & transverse bar-mode (row) number & -- \\
+$k$ & streamwise wavenumber of a perturbation & m$^{-1}$ \\
+$\sigma$ & complex growth rate of a perturbation, $\sigma=\sigma_r+i\sigma_i$ & s$^{-1}$ \\
+$\sigma_r$ & growth rate (real part of $\sigma$) & s$^{-1}$ \\
+$c_m$ & migration celerity of a perturbation, $c_m=-\sigma_i/k$ & m\,s$^{-1}$ \\
+$\widehat{(\cdot)}$ & complex perturbation amplitude of a quantity & -- \\
+$\tilde{(\cdot)}$ & (small) perturbation of a base-state quantity & -- \\
+$n$ & sediment-transport-rate exponent, $q_s\propto u^n$ & -- \\
+$\lambda,\ r$ & transverse bed-slope (gravitational pull) coefficients & m$^{-1}$, -- \\
+$L_a$ & sediment (transport / adaptation) length scale & m \\
+$BI$ & braiding index (channel-count based) & -- \\
+$B_i$ & Brice braiding index & -- \\
+$P$ & wetted perimeter of a cross-section & m \\
+$\omega$ & stream power per unit bed area, $\omega=\rho g Q S_0/B$ & W\,m$^{-2}$ \\
+\bottomrule
+\end{longtable}
+
+% ======================================================================
+\chapter{Introduction and Scope}
+
+Rivers that flow over their own sediment (\emph{alluvial rivers}) do not adopt an arbitrary planform. Field observation across scales --from glacial outwash streams a few metres wide to the Brahmaputra, several kilometres wide-- shows that alluvial channels fall, with some overlap, into a small number of recurring \emph{patterns}: straight, meandering, braided, and anastomosing (anabranching). Among these, the \textbf{braided pattern} --- a network of interconnected, mobile channels separated by unstable bars --- is the subject of this text.
+
+The central question this text answers mathematically is:
+\begin{quote}
+\itshape Given a channel of a certain width, depth, slope, and sediment character, carrying a certain water and sediment discharge, why does the bed spontaneously break up into multiple, shifting channels rather than remaining as one?
+\end{quote}
+
+The answer is a problem in \textbf{linear stability analysis} of a coupled fluid-sediment (\emph{morphodynamic}) system: we ask whether small, arbitrary perturbations of an initially flat, uniform alluvial bed grow or decay under the combined action of the flow field and the sediment transport it drives. Braiding emerges as the outcome of an intrinsic \emph{bed instability} that requires no external triggering, together with practical/environmental controls (sediment supply, bank strength, discharge regime, tectonics) that determine whether, and how intensely, that instability is realised in nature.
+
+\paragraph{Structure of this text.} Chapter 2 summarises, at the level expected of a UG earth-science student who has already met elementary fluid mechanics and sediment transport, the prerequisite material, so that later chapters can build directly on it without re-deriving the basics. Chapter 3 derives the governing partial differential equations of river morphodynamics: the depth-averaged (shallow-water/Saint-Venant) flow equations from the Navier--Stokes equations, and the Exner sediment-continuity equation. Chapter 4 is the mathematical core: a full linear stability analysis of the coupled system, explaining the origin of alternate bars and their generalisation to multiple-row (braided) instability. Chapter 5 reconnects the mathematics to the physical controls identified qualitatively in field studies. Chapter 6 introduces quantitative measures of braiding intensity and empirical regime diagrams. Chapter 7 synthesises the causal logic as a flowchart. Chapter 8 is a fully worked case study of the Brahmaputra River in the Assam plains, using real field data. Chapter 9 summarises and gives pointers for further reading.
+
+% ======================================================================
+\chapter{Prerequisite Recap: Fluid Mechanics and Sediment Transport Basics}
+\label{ch:prereq}
+
+This chapter is a compressed summary, \emph{not} a first teaching of these topics; it exists so that every symbol and result used later has been defined once, explicitly, in one place. A UG student should recognise all of it from earlier fluid mechanics / hydrology / sedimentology courses.
+
+\section{Continuum fluid mechanics}
+
+\subsection{Mass and momentum conservation}
+For an incompressible Newtonian fluid of density $\rho$ and kinematic viscosity $\nu$, the local instantaneous velocity field $\vect{u}=(u,v,w)$ satisfies the \textbf{continuity equation}
+\begin{equation}
+\nabla\cdot\vect{u} = \pdv{u}{x}+\pdv{v}{y}+\pdv{w}{z} = 0,
+\label{eq:continuity3d}
+\end{equation}
+and the \textbf{Navier--Stokes momentum equation}
+\begin{equation}
+\rho\left(\pdv{\vect{u}}{t} + \vect{u}\cdot\nabla \vect{u}\right) = -\nabla p + \rho \vect{g} + \mu \nabla^2 \vect{u},
+\label{eq:NS}
+\end{equation}
+where $p$ is pressure, $\vect g$ gravitational acceleration, and $\mu=\rho\nu$ dynamic viscosity. Equations \eqref{eq:continuity3d}--\eqref{eq:NS} are exact but analytically intractable for natural turbulent river flow; river mechanics therefore works with \emph{depth-averaged} and \emph{Reynolds-averaged} reductions of them, derived in \S\ref{sec:shallowwater}.
+
+\subsection{Open-channel (free-surface) flow}
+A river is a free-surface flow: pressure at $z=\zeta(x,y,t)$ (the water surface) is atmospheric, and the flow is driven down a gravitational gradient (bed slope) rather than by an imposed pressure gradient as in a pipe. Two non-dimensional numbers govern its character:
+
+\begin{definition}[Froude number]
+\begin{equation}
+\Fr = \frac{U}{\sqrt{gh}},
+\end{equation}
+the ratio of flow speed to the speed of a shallow-water (long) gravity wave. $\Fr<1$: \emph{subcritical} flow (the normal condition for large lowland/plains rivers, including braided ones); $\Fr>1$: \emph{supercritical}.
+\end{definition}
+
+\begin{definition}[Reynolds number]
+\begin{equation}
+\Re = \frac{Uh}{\nu},
+\end{equation}
+the ratio of inertial to viscous forces. Natural river flows have $\Re\sim10^5$--$10^7$: turbulence is fully developed, and molecular viscosity is dynamically irrelevant except within a thin near-bed layer.
+\end{definition}
+
+\subsection{Uniform flow and flow resistance}
+For steady, uniform flow (depth and velocity constant along the channel) down a slope $S_0$, the downslope component of gravity exactly balances bed friction. This gives the \textbf{Chézy} and \textbf{Manning} resistance laws,
+\begin{equation}
+U = C\sqrt{h S_0}, \qquad U = \frac{1}{n_M}h^{2/3}S_0^{1/2},
+\label{eq:chezy}
+\end{equation}
+with $C$ (units m$^{1/2}$s$^{-1}$) and $n_M$ empirical roughness coefficients related by $C = h^{1/6}/n_M$. The associated \textbf{bed shear stress} is
+\begin{equation}
+\tau_b = \rho g h S_0 = \rho \frac{g}{C^2}U^2 = \rho u_*^2,
+\label{eq:taub}
+\end{equation}
+which defines the \textbf{shear (friction) velocity} $u_*=\sqrt{\tau_b/\rho}$. Equation \eqref{eq:taub} is used throughout as the \emph{closure} that relates the mean flow (which we can compute) to the force actually available at the bed to move sediment (which we cannot measure directly).
+
+\section{Sediment transport basics}
+
+\subsection{The threshold of motion: the Shields parameter}
+\begin{definition}[Shields parameter]
+\begin{equation}
+\theta = \frac{\tau_b}{(\rho_s-\rho)g\,d} = \frac{\tau_b}{\rho\, \Delta\, g\, d},
+\label{eq:shields}
+\end{equation}
+the ratio of the destabilising fluid drag on a bed grain to its stabilising submerged weight, where $\Delta=(\rho_s-\rho)/\rho\approx1.65$ for quartz sand/gravel in water.
+\end{definition}
+Grains begin to move when $\theta$ exceeds an empirical critical value $\theta_c\approx0.03$--$0.06$ (weakly dependent on the particle Reynolds number $\Re_p=u_*d/\nu$, the \emph{Shields curve}). Braided rivers operate with $\theta \gg \theta_c$ over much of the flood hydrograph: sediment is abundantly and continuously mobile.
+
+\subsection{Modes and rates of transport}
+Sediment moves as \textbf{bedload} (rolling/saltating grains in a thin layer near the bed) and \textbf{suspended load} (grains held aloft by turbulence). Braided, sand/gravel-bed rivers are typically bedload- to mixed-load-dominated. A widely used empirical bedload formula (Meyer-Peter--Müller type) is
+\begin{equation}
+q_s^* = \alpha\,(\theta-\theta_c)^{3/2}, \qquad q_s = q_s^*\sqrt{g\Delta d^3},
+\label{eq:MPM}
+\end{equation}
+with $\alpha\approx 8$; more generally, over the range of Shields stresses relevant to a given reach, transport is often \emph{locally} approximated by a power law
+\begin{equation}
+q_s \;\propto\; U^{\,n}, \qquad n \approx 3\text{--}5,
+\label{eq:powerlaw}
+\end{equation}
+which is the form used in the stability analysis of Chapter~\ref{ch:stability}: because $q_s$ depends so steeply on velocity ($n>1$), even small velocity perturbations produce disproportionately large sediment-flux perturbations --- this steepness is the mathematical seed of every instability discussed later.
+
+\subsection{Channel patterns: a first, qualitative look}
+\begin{definition}[Channel pattern]
+The planform organisation of an alluvial channel: \textbf{straight}, \textbf{meandering} (single sinuous thread), \textbf{braided} (multiple, mobile, dividing/rejoining threads separated by bars), or \textbf{anastomosing/anabranching} (multiple relatively stable, vegetated-bank threads around large, semi-permanent islands).
+\end{definition}
+Leopold \& Wolman (1957) first showed empirically that pattern correlates with channel slope \emph{and} discharge; Chapter~\ref{ch:indices} revisits this as a quantitative regime diagram. The task of Chapters~\ref{ch:governing}--\ref{ch:stability} is to show that this empirical correlation is a \emph{consequence} of the underlying flow-sediment stability physics, not an independent empirical rule.
+
+% ======================================================================
+\chapter{Governing Equations of River Morphodynamics}
+\label{ch:governing}
+
+\section{Depth averaging: from Navier--Stokes to the shallow-water equations}
+\label{sec:shallowwater}
+
+Rivers are, almost everywhere, \emph{shallow}: horizontal length scales (channel width $B$, bar wavelength $L$) vastly exceed the flow depth $h$, formally $h/B \ll 1$ and $h/L\ll1$. This is the basis of the \textbf{shallow-water approximation}.
+
+\begin{assumption}[Shallow water / hydrostatic pressure]
+Vertical accelerations are negligible compared with $g$, so pressure is hydrostatic:
+\begin{equation}
+p(x,y,z,t) = \rho g\big(\zeta(x,y,t) - z\big).
+\label{eq:hydrostatic}
+\end{equation}
+\end{assumption}
+
+\subsection{Depth-integrated continuity}
+Integrate the 3-D continuity equation \eqref{eq:continuity3d} over depth, from the bed $z=z_b(x,y,t)$ to the free surface $z=\zeta(x,y,t)$, and apply the kinematic boundary conditions at both surfaces (that they are material surfaces, i.e.\ a fluid particle on them stays on them):
+\begin{equation}
+\int_{z_b}^{\zeta}\left(\pdv{u}{x}+\pdv{v}{y}\right)\dd z + \Big[w-\big(\vect{u}\cdot\nabla\big)z\Big]^{\zeta}_{z_b} = 0.
+\end{equation}
+Using Leibniz's rule to move $\partial/\partial x,\partial/\partial y$ outside the integrals, and defining the depth-averaged velocities
+\begin{equation}
+u(x,y,t)=\frac{1}{h}\int_{z_b}^{\zeta}u\,\dd z, \qquad v(x,y,t)=\frac{1}{h}\int_{z_b}^{\zeta}v\,\dd z, \qquad h=\zeta-z_b,
+\end{equation}
+the kinematic boundary terms cancel the Leibniz correction terms exactly, leaving the compact \textbf{2-D depth-averaged continuity equation}:
+\begin{equation}
+\boxed{\pdv{h}{t} + \pdv{(hu)}{x} + \pdv{(hv)}{y} = 0.}
+\label{eq:swcont}
+\end{equation}
+
+\subsection{Depth-integrated momentum}
+Integrating the horizontal Navier--Stokes momentum equations over depth in the same way, substituting the hydrostatic pressure \eqref{eq:hydrostatic} (so that $-\frac1\rho\int\partial p/\partial x\,\dd z = -gh\,\partial\zeta/\partial x$), absorbing the vertical turbulent momentum flux divergence into a single bed shear stress term evaluated at $z=z_b$ (the free-surface shear, wind stress, is neglected), and neglecting the (generally small) dispersive stresses arising from vertical non-uniformity of the velocity profile, gives the \textbf{2-D shallow-water (Saint-Venant) momentum equations}:
+\begin{align}
+\pdv{u}{t} + u\pdv{u}{x} + v\pdv{u}{y} &= -g\pdv{\zeta}{x} - \frac{\tau_{bx}}{\rho h}, \label{eq:swmomx}\\[4pt]
+\pdv{v}{t} + u\pdv{v}{x} + v\pdv{v}{y} &= -g\pdv{\zeta}{y} - \frac{\tau_{by}}{\rho h}. \label{eq:swmomy}
+\end{align}
+Using the Chézy closure \eqref{eq:taub} generalised to a vector velocity $(u,v)$,
+\begin{equation}
+\left(\frac{\tau_{bx}}{\rho},\ \frac{\tau_{by}}{\rho}\right) = \frac{g}{C^2}(u,v)\sqrt{u^2+v^2}.
+\label{eq:vecfriction}
+\end{equation}
+Equations \eqref{eq:swcont}, \eqref{eq:swmomx}--\eqref{eq:swmomy} with closure \eqref{eq:vecfriction} are three coupled, nonlinear PDEs in the three flow unknowns $(u,v,h)$, for a \emph{given}, fixed bed $z_b(x,y)$. They are of mixed hyperbolic (for the free-surface gravity-wave part) character. To close the \emph{morphodynamic} problem we must let $z_b$ itself evolve.
+
+\section{Sediment mass conservation: the Exner equation}
+
+\begin{proposition}[Exner equation]
+Conservation of sediment mass in the bed layer, for a bed of porosity $p$ (voids fraction) exchanging sediment only through the transport vector $\vect{q}_s=(q_{sx},q_{sy})$ (volume of solid grains per unit time per unit width), requires
+\begin{equation}
+\boxed{(1-p)\,\pdv{z_b}{t} + \pdv{q_{sx}}{x} + \pdv{q_{sy}}{y} = 0.}
+\label{eq:exner}
+\end{equation}
+\end{proposition}
+\begin{proof}[Derivation]
+Consider a control column of the bed, plan area $\dd x\,\dd y$, extending from an arbitrary reference depth up to $z_b$. The solid volume within it is $(1-p)z_b\,\dd x\,\dd y$ (plus a constant). Its rate of change equals the net influx of sediment volume through the four vertical faces, i.e.\ $-\big(\partial q_{sx}/\partial x+\partial q_{sy}/\partial y\big)\dd x\,\dd y$ by the divergence theorem in 2-D. Equating the two and dividing by $\dd x\,\dd y$ gives \eqref{eq:exner}.
+\end{proof}
+
+\begin{remark}
+Equation \eqref{eq:exner} is a statement of mass conservation only; it contains no physics of \emph{how fast} or \emph{in which direction} sediment moves. That information must be supplied by a \textbf{sediment transport closure}, $\vect q_s = \vect q_s(u,v,h,\ldots)$, such as \eqref{eq:powerlaw}, generalised to a vector as in \S\ref{sec:transversetransport}.
+\end{remark}
+
+\subsection{Direction of transport: the bed-slope (gravitational) effect}
+\label{sec:transversetransport}
+On a flat bed, sediment moves in the direction of the local bed shear stress, i.e.\ along $(u,v)$. On a \emph{sloping} bed, gravity exerts an additional pull on moving grains down the local slope, deflecting the transport vector away from the flow-velocity direction and \emph{down} the steepest descent of $z_b$. A standard closure (Ikeda 1982; Talmon, Struiksma \& van Mierlo 1995) is
+\begin{equation}
+q_{sy} = q_{sx}\left[\frac{v}{u} - \lambda\,\pdv{z_b}{y}\right], \qquad \lambda = \frac{r}{\sqrt{\theta}},
+\label{eq:slopecorrection}
+\end{equation}
+where $r=O(0.5\text{--}1)$ is an empirical constant. This term is small but is \emph{physically essential}: it is a stabilising, diffusive-like effect that limits how sharply bed topography can vary transversely, and (as shown in Chapter~\ref{ch:stability}) it is what selects a finite, preferred bar wavelength rather than allowing instability at arbitrarily short scales.
+
+\section{The coupled morphodynamic system}
+
+Collecting Equations \eqref{eq:swcont}--\eqref{eq:swmomy}, \eqref{eq:exner}, and a transport closure such as \eqref{eq:powerlaw} with \eqref{eq:slopecorrection}, gives a closed system for $(u,v,h,z_b)$:
+\begin{equation}
+\underbrace{\pdv{h}{t}+\nabla\cdot(h\vect u)=0}_{\text{flow continuity}}, \quad
+\underbrace{\pdv{\vect u}{t}+(\vect u\cdot\nabla)\vect u = -g\nabla\zeta - \dfrac{g}{C^2 h}\vect u|\vect u|}_{\text{flow momentum}}, \quad
+\underbrace{(1-p)\pdv{z_b}{t}+\nabla\cdot\vect q_s(u,v,h,z_b)=0}_{\text{bed evolution}}.
+\label{eq:fullsystem}
+\end{equation}
+
+\begin{remark}[Two disparate time scales]
+Because natural sediment concentrations are low, the volume of sediment moved in a given time is a small fraction of the volume of water moved: the \textbf{morphological time scale} over which $z_b$ changes appreciably is typically $10^2$--$10^4$ times longer than the \textbf{hydrodynamic time scale} over which $(u,v,h)$ adjust to a given bed configuration. This scale separation licenses the \textbf{quasi-steady} (or ``morphodynamic'') approximation used throughout Chapter~\ref{ch:stability}: at each instant, solve the \emph{steady} flow equations for the instantaneous bed $z_b(x,y,t)$, then advance $z_b$ using Exner with that quasi-steady flow field. Formally this amounts to neglecting $\partial u/\partial t,\partial v/\partial t,\partial h/\partial t$ in \eqref{eq:fullsystem} while retaining $\partial z_b/\partial t$.
+\end{remark}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, minimum width=3.6cm, minimum height=1.1cm, align=center, font=\small},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[box, fill=blue!8] (flow) {Flow equations\\ \eqref{eq:swcont}--\eqref{eq:swmomy}\\ (given $z_b$)};
+\node[box, fill=orange!10, right=2.6cm of flow] (stress) {Bed shear stress\\ $\tau_b(u,v,h)$};
+\node[box, fill=green!10, below=1.3cm of stress] (transport) {Sediment transport\\ $\vect q_s(\tau_b,\ \partial z_b/\partial y)$};
+\node[box, fill=red!8, below=1.3cm of flow] (exner) {Exner equation\\ updates $z_b$};
+\draw[arr] (flow) -- (stress);
+\draw[arr] (stress) -- (transport);
+\draw[arr] (transport) -- (exner);
+\draw[arr] (exner) -- (flow) node[midway, below, font=\scriptsize] {new bed geometry};
+\end{tikzpicture}
+\caption{The morphodynamic feedback loop encoded by Eq.~\eqref{eq:fullsystem}. Flow shapes the bed (via sediment transport); the bed shapes the flow (via the geometry entering the momentum/continuity equations). Instability arises when a perturbation, once round this loop, is \emph{larger} than it started --- see Chapter~\ref{ch:stability}.}
+\label{fig:loop}
+\end{figure}
+
+% ======================================================================
+\chapter{Linear Stability Theory of Bed Patterns: From Bars to Braiding}
+\label{ch:stability}
+
+\section{Strategy}
+We ask: starting from a perfectly flat, straight, uniform channel (an exact steady solution of \eqref{eq:fullsystem}), does an infinitesimal, arbitrary perturbation of the bed grow (instability $\Rightarrow$ bars/braiding form) or decay (stability $\Rightarrow$ the bed remains flat)? This is answered by \textbf{linearising} \eqref{eq:fullsystem} about the uniform base state, decomposing the perturbation into Fourier (normal) modes, and finding the sign of the growth rate of each mode.
+
+\subsection{Base state}
+Consider a straight prismatic channel of constant width $B$ ($-B/2\le y\le B/2$), bed sloping uniformly at $S_0$, carrying steady uniform flow:
+\begin{equation}
+u=U_0,\quad v=0,\quad h=D_0,\quad z_{b0}(x) = -S_0 x, \quad U_0 = C\sqrt{D_0 S_0}.
+\label{eq:basestate}
+\end{equation}
+This satisfies \eqref{eq:fullsystem} exactly provided the (uniform) transport rate $q_{sx}(U_0,D_0)$ is itself uniform in $x$ (so $\partial z_{b0}/\partial t=0$): a river that is neither aggrading nor degrading on average.
+
+\subsection{Perturbation ansatz}
+Write every field as base state $+$ small perturbation ($\tilde{(\cdot)} \ll$ base value):
+\begin{equation}
+u=U_0+\tilde u,\quad v=\tilde v,\quad h=D_0+\tilde h,\quad z_b = z_{b0}(x)+\tilde z(x,y,t).
+\end{equation}
+Because the base state is invariant under translation in $x$, $y$ and $t$ individually (up to the mean bed slope), the linear(ised) equations admit solutions that are separable, sinusoidal in $x$ and $t$, and satisfy the geometric boundary conditions in $y$. We therefore seek \textbf{normal-mode} solutions of the form
+\begin{equation}
+\tilde z(x,y,t) = \widehat Z\, e^{\sigma t}e^{ikx}\cos\!\Big(\frac{m\pi}{B}\Big(y+\frac{B}{2}\Big)\Big), \qquad m=0,1,2,3,\dots
+\label{eq:ansatz}
+\end{equation}
+with corresponding forms $\tilde u=\widehat U e^{\sigma t}e^{ikx}\cos(\cdot)$, $\tilde h=\widehat H e^{\sigma t}e^{ikx}\cos(\cdot)$, and $\tilde v = \widehat V e^{\sigma t}e^{ikx}\sin(\cdot)$ (sine, so that $v=0$ automatically at the side walls $y=0,B$, the no-transverse-flow boundary condition). Here:
+\begin{itemize}[nosep]
+\item $k$ (real) is the \textbf{streamwise wavenumber}: the perturbation is periodic in $x$ with wavelength $L=2\pi/k$;
+\item $m=1,2,3,\dots$ is the \textbf{transverse bar-mode number}: the number of half-wavelengths that fit across the channel width. $m=1$ is a single, alternating row of bars (the precursor of meandering); $m\ge2$ is \textbf{multiple, simultaneous rows of bars} --- the defining planform structure of a \textbf{braided} channel;
+\item $\sigma=\sigma_r+i\sigma_i$ (complex) is the \textbf{growth rate}. $\sigma_r>0$: the perturbation amplifies exponentially (instability); $\sigma_r<0$: it decays; the perturbation additionally migrates downstream (or upstream) at celerity $c_m = -\sigma_i/k$.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=1.0, >=Latex]
+% m=1
+\begin{scope}
+\draw[thick] (0,0) rectangle (6,1.6);
+\node at (-0.6,0.8) {\small $m=1$};
+\foreach \x in {0,0.05,...,6}{
+  \pgfmathsetmacro{\yy}{0.8+0.7*sin(2*\x*57.2958)}
+}
+\shade[left color=blue!10, right color=blue!45, opacity=0.55]
+  plot[domain=0:6,samples=60] (\x, {0.8+0.7*sin((360/3)*\x)})
+  -- (6,1.6) -- (0,1.6) -- cycle;
+\draw[very thick, blue!60!black] plot[domain=0:6,samples=60] (\x, {0.8+0.7*sin((360/3)*\x)});
+\end{scope}
+% m=2
+\begin{scope}[yshift=-2.4cm]
+\draw[thick] (0,0) rectangle (6,1.6);
+\node at (-0.6,0.8) {\small $m=2$};
+\shade[left color=orange!10, right color=orange!45, opacity=0.55]
+  plot[domain=0:6,samples=60] (\x, {0.8+0.65*sin((360/3)*\x)*cos(0)}) -- (6,1.6) -- (0,1.6) -- cycle;
+\draw[very thick, orange!70!black] plot[domain=0:6,samples=60] (\x, {0.4+0.35*sin((360/3)*\x)});
+\draw[very thick, orange!70!black] plot[domain=0:6,samples=60] (\x, {1.2+0.35*sin((360/3)*\x+180)});
+\end{scope}
+% m=3
+\begin{scope}[yshift=-4.8cm]
+\draw[thick] (0,0) rectangle (6,1.6);
+\node at (-0.6,0.8) {\small $m=3$};
+\draw[very thick, teal!70!black] plot[domain=0:6,samples=60] (\x, {0.27+0.24*sin((360/3)*\x)});
+\draw[very thick, teal!70!black] plot[domain=0:6,samples=60] (\x, {0.8+0.24*sin((360/3)*\x+120)});
+\draw[very thick, teal!70!black] plot[domain=0:6,samples=60] (\x, {1.33+0.24*sin((360/3)*\x+240)});
+\end{scope}
+\node at (3,2.3) {\textbf{Central (thalweg) line of each braid strand, transverse mode $m$}};
+\node at (3,-3.5) {\small increasing $m$ $\;\Rightarrow\;$ more simultaneous channels $\;\Rightarrow\;$ higher braiding intensity};
+\end{tikzpicture}
+\caption{Schematic plan-view thalweg pattern of the transverse eigenmodes in the perturbation ansatz \eqref{eq:ansatz}. $m=1$: single sinuous/alternating-bar channel (meandering precursor). $m\geq2$: multiple simultaneously unstable rows of bars, i.e.\ braiding. Real braided rivers realise a superposition of several unstable $m$ at once.}
+\label{fig:modes}
+\end{figure}
+
+\section{Linearisation of the flow equations}
+\label{sec:linflow}
+
+We invoke the quasi-steady approximation (drop $\partial/\partial t$ in the flow equations) and, for analytical tractability, the classical \textbf{friction-dominated (``quasi-uniform'') closure} used by Engelund (1970) and in essence by most subsequent linear bar theories: at each point, the local depth-averaged velocity is assumed to adjust to the \emph{local} depth and \emph{local} backwater (energy) slope exactly as it would in uniform flow,
+\begin{equation}
+u(x,y) = C\sqrt{h(x,y)\,S_f(x,y)}, \qquad S_f = -\pdv{\zeta}{x}.
+\label{eq:quasi-uniform}
+\end{equation}
+\begin{assumption}
+The free surface is only weakly deformed in the transverse direction compared with the bed, so that to leading order $\zeta=\zeta(x,t)$ only (no explicit $y$-dependence). Physically: for a wide, shallow, subcritical channel, transverse water-surface gradients equilibrate much faster than the bed evolves, so the surface stays close to transversely level while the bed beneath it undulates. This is a standard simplification of the earliest (and still pedagogically clearest) bar-instability theories; refined theories retain a transversely varying $\zeta$ and add secondary-flow (curvature-driven helical motion) terms, which shift the quantitative thresholds derived below without changing their qualitative form.
+\end{assumption}
+With this assumption, $\tilde h = \tilde\zeta(x,t) - \tilde z(x,y,t)$, i.e.\ the depth perturbation is the (transversely uniform) water-surface perturbation minus the (transversely varying) bed perturbation --- deep spots are exactly where the bed is locally low.
+
+Linearising \eqref{eq:quasi-uniform} ($\ln u = \ln C + \tfrac12\ln h + \tfrac12\ln S_f$, then perturb and keep first-order terms) gives
+\begin{equation}
+\frac{\tilde u}{U_0} = \frac12\frac{\tilde h}{D_0} - \frac{1}{2S_0}\pdv{\tilde \zeta}{x}.
+\label{eq:linu}
+\end{equation}
+Linearising depth-averaged continuity \eqref{eq:swcont} (steady, so $\partial \tilde h/\partial t\to0$ is \emph{not} set — continuity must still hold instantaneously for the quasi-steady flow field, so we keep the equation but without the local-storage term appropriate to unsteady flow; equivalently, at each instant $D_0\partial \tilde u/\partial x + U_0\partial \tilde h/\partial x + D_0 \partial \tilde v/\partial y = 0$):
+\begin{equation}
+\pdv{\tilde v}{y} = -\pdv{\tilde u}{x} - \frac{U_0}{D_0}\pdv{\tilde h}{x}.
+\label{eq:linv}
+\end{equation}
+Substituting the normal-mode ansatz (with $\tilde\zeta = \widehat Z_\zeta\, e^{\sigma t}e^{ikx}$, uniform in $y$ by assumption) into \eqref{eq:linu}:
+\begin{equation}
+\widehat U = U_0\left[\frac{\widehat Z_\zeta - \widehat Z\cos(\cdot)}{2D_0} - \frac{ik}{2S_0}\widehat Z_\zeta\right],
+\end{equation}
+and \eqref{eq:linv} then fixes $\widehat V$ (via the $\cos\to\sin$, $\partial/\partial y\to (m\pi/B)$ replacement appropriate to the ansatz) in terms of $\widehat Z$ and $\widehat Z_\zeta$. Finally, the requirement that the depth-averaged discharge perturbation integrated across the section carry no net additional water (the reach is not storing water on average) pins $\widehat Z_\zeta$ itself to $\widehat Z$, closing the flow sub-problem: \emph{the flow perturbation $(\widehat U,\widehat V,\widehat H)$ is entirely slaved to, and calculable from, the instantaneous bed perturbation $\widehat Z$.} This is the precise mathematical sense in which ``the flow adjusts to the bed'' under the quasi-steady approximation.
+
+\section{Linearisation of the Exner equation and the dispersion relation}
+
+Linearise the transport closure \eqref{eq:powerlaw} together with the slope correction \eqref{eq:slopecorrection}:
+\begin{equation}
+\frac{\widetilde{q_{sx}}}{q_{s0}} = n\,\frac{\tilde u}{U_0}, \qquad
+\widetilde{q_{sy}} = q_{s0}\left[\frac{\tilde v}{U_0} - \lambda\,\pdv{\tilde z}{y}\right],
+\label{eq:linqs}
+\end{equation}
+and substitute, together with the normal-mode forms for $\tilde u,\tilde v,\tilde z$, into the linearised Exner equation
+\begin{equation}
+(1-p)\pdv{\tilde z}{t} + \pdv{\widetilde{q_{sx}}}{x} + \pdv{\widetilde{q_{sy}}}{y} = 0.
+\label{eq:linexner}
+\end{equation}
+Because $\widehat U,\widehat V$ are themselves linear in $\widehat Z$ (previous section), Eq.~\eqref{eq:linexner} reduces, after cancelling the common factor $e^{\sigma t}e^{ikx}\cos(m\pi y'/B)$, to a single \textbf{algebraic dispersion relation}
+\begin{equation}
+\boxed{\ \sigma = \sigma(k,\,m;\ \beta,\ \theta,\ n,\ r,\ S_0)\ }
+\label{eq:dispersion}
+\end{equation}
+relating the (complex) growth rate to the streamwise wavenumber $k$, the transverse mode $m$, and the governing dimensionless groups: the \textbf{aspect ratio} $\beta=B/(2D_0)$, the Shields number $\theta$, the transport exponent $n$, the slope-effect coefficient $r$, and the base slope $S_0$ (equivalently, through \eqref{eq:basestate}, the Froude number). The full algebraic reduction of \eqref{eq:linexner} is elementary but lengthy (it involves collecting real and imaginary parts of a complex-valued trigonometric/polynomial expression in $k,m$); it is carried out in full in the classical references (Callander 1969; Engelund 1970; Fredsøe 1978; refined with secondary-flow and resonance effects by Struiksma et al.\ 1985 and Colombini, Seminara \& Tubino 1987). We do not re-derive the closed-form coefficients here, but we \emph{use} the structure just derived --- a linear, homogeneous system in which the bed perturbation drives a slaved flow perturbation, which in turn drives, through the steeply nonlinear transport law \eqref{eq:powerlaw}--\eqref{eq:linqs}, a sediment-flux convergence that feeds back onto the bed --- to state and interpret its well-established qualitative and semi-quantitative conclusions.
+
+\begin{result}[Qualitative structure of the neutral-stability curve]
+\label{res:neutral}
+Solving $\sigma_r(k,m;\beta,\theta,\ldots)=0$ for each $m$ defines a \textbf{neutral curve} $\beta = \beta_c(k,m;\theta,\ldots)$ in the $(k,\beta)$-plane separating growing ($\sigma_r>0$) from decaying ($\sigma_r<0$) perturbations. Minimising over $k$ for fixed $m$ gives the critical aspect ratio $\beta_c(m)$ below which \emph{no} wavenumber of mode $m$ can grow. The classical results establish:
+\begin{enumerate}[label=(\roman*), nosep]
+\item $\beta_c(m)$ \textbf{increases monotonically, and to leading order roughly linearly, with $m$}: $\beta_c(m)\approx m\,\beta_c(1)$. Higher-order (multiple-row) modes require a proportionally wider, shallower channel to destabilise.
+\item For each unstable mode, there is a \textbf{preferred (fastest-growing) wavenumber} $k^*(m)$, selected by the competition between the destabilising advective/transport-steepness effect (favouring short wavelengths) and the stabilising transverse bed-slope diffusion term $\lambda$ in \eqref{eq:linqs} (favouring long wavelengths, since it penalises sharp transverse curvature). This is why bars have a finite, reproducible wavelength (empirically $L\sim 4$--$10\,B$ for alternate bars) rather than forming at arbitrarily fine scale.
+\item $\beta_c(m)$ \textbf{decreases as $\theta$ increases} (more mobile beds are more unstable) and as $n$ increases (a steeper transport-rate law is more destabilising) — consistent with the physical statement that braiding requires abundant, easily mobilised sediment (Ch.~\ref{ch:physical}).
+\item For $\beta$ only slightly above $\beta_c(1)$, only the $m=1$ mode is unstable: the channel develops a single row of \textbf{alternate bars}, the geomorphic precursor of \textbf{meandering}. For $\beta$ well above $\beta_c(1)$, several modes $m=1,2,3,\dots,M$ are \emph{simultaneously} unstable (all satisfy $\beta>\beta_c(m)$): the bed cannot select a single row and instead develops $\sim M$ concurrent, competing rows of bars, which is the mathematical origin of a \textbf{braided} planform. The number of simultaneously unstable modes, and hence a first-order theoretical measure of braiding intensity, therefore scales approximately with $\beta/\beta_c(1)$.
+\end{enumerate}
+\end{result}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=12.4cm, height=7.2cm,
+  xlabel={Shields parameter $\theta$}, ylabel={aspect ratio $\beta=B/(2D_0)$},
+  xmin=0.02, xmax=0.35, ymin=0, ymax=60,
+  domain=0.03:0.35, samples=100,
+  legend pos=north east, legend style={font=\scriptsize},
+  title={\small Schematic neutral-stability (braiding) diagram},
+  axis lines=left,
+]
+\addplot[thick, blue!70!black] {6/(x^0.9)};
+\addlegendentry{$\beta_c(1)$ -- single row (bars/meandering onset)}
+\addplot[thick, orange!80!black] {12/(x^0.9)};
+\addlegendentry{$\beta_c(2)$ -- two simultaneous rows}
+\addplot[thick, teal!70!black] {18/(x^0.9)};
+\addlegendentry{$\beta_c(3)$ -- three simultaneous rows}
+\addplot[thick, red!70!black] {24/(x^0.9)};
+\addlegendentry{$\beta_c(4)$ -- four simultaneous rows}
+\node[align=center, font=\scriptsize] at (axis cs: 0.09,8) {STABLE\\(straight, flat bed)};
+\node[align=center, font=\scriptsize] at (axis cs: 0.20,26) {single bar row\\(meandering precursor)};
+\node[align=center, font=\scriptsize, rotate=8] at (axis cs: 0.24,48) {\textbf{multiple simultaneous rows: BRAIDED}};
+\end{axis}
+\end{tikzpicture}
+\caption{Schematic form of the neutral stability curves $\beta_c(m;\theta)$ implied by Result~\ref{res:neutral} (curve shapes and coefficients are illustrative, drawn to show the correct qualitative ordering and slope, not digitised from a specific dataset). A point $(\theta,\beta)$ lying above the curve for mode $m$ has that mode unstable. Points above several curves simultaneously correspond to a braided channel with (approximately) that many bar rows.}
+\label{fig:neutral}
+\end{figure}
+
+\section{Interpretation: why braiding is fundamentally a two-dimensional instability}
+
+\begin{proposition}[1-D perturbations are neutral, to leading order]
+Consider a purely streamwise (mode $m=0$, no $y$-dependence) bed perturbation in a wide channel. Using the local-normal-flow (kinematic) closure $q_w=Uh$ fixed, $U=C\sqrt{hS_f}\approx C\sqrt{hS_0}$ pointwise (i.e.\ neglecting backwater/inertial corrections), sediment flux becomes a function of depth alone, $q_s=q_s(h)$, and Exner reduces to a first-order \textbf{kinematic wave equation}
+\begin{equation}
+(1-p)\pdv{z_b}{t} + c_k(h)\pdv{z_b}{x} = 0, \qquad c_k = -\frac{1}{1-p}\frac{\dd q_s}{\dd z_b} = \frac{1}{1-p}\frac{\dd q_s}{\dd h},
+\label{eq:kinwave}
+\end{equation}
+which simply \emph{translates} an initial bed perturbation downstream at the kinematic celerity $c_k$ \emph{without amplifying it}. Growth requires the next-order backwater (finite-Froude, $\partial h/\partial x$ retained) correction, which introduces a diffusive term; for subcritical flow ($\Fr<1$, the near-universal condition for large lowland rivers including the Brahmaputra) this correction is \textbf{damping}, not amplifying.
+\end{proposition}
+This is a genuinely important structural fact: \textbf{a subcritical, effectively one-dimensional alluvial channel is linearly stable} --- it does not spontaneously develop longitudinal steps or waves. Instability, and hence bars and braiding, is intrinsically a consequence of allowing the \emph{transverse} ($m\ge1$) degree of freedom: only when water and sediment can be redistributed sideways, between a locally scouring and a locally depositing part of the same cross-section, can a self-reinforcing (positive-feedback) loop of the kind sketched in Fig.~\ref{fig:loop} operate. Braiding is thus best understood as what happens when \emph{several} such transverse redistributions become simultaneously self-reinforcing across a channel too wide (relative to its depth) to sustain only one.
+
+\begin{remark}[What refined theories add]
+The friction-dominated, transversely-flat-surface model above captures the essential mechanism and the correct qualitative ordering of Result~\ref{res:neutral}. Retaining the full unsteady, transversely-varying free-surface momentum balance (Colombini et al.\ 1987), and adding curvature-induced secondary (helical) flow, alters the quantitative critical aspect ratios and can produce \textbf{resonance} between ``forced'' bars (topographically locked to a fixed planform irregularity) and ``free'' bars (migrating at their own celerity) when the two have comparable wavelength — a phenomenon relevant to why braid bars often lock onto persistent nodal points. These refinements are cited for completeness; the physical conclusions of Result~\ref{res:neutral}, on which Chapters~\ref{ch:physical}--\ref{ch:brahmaputra} rely, are robust to them.
+\end{remark}
+
+% ======================================================================
+\chapter{Physical Controls, Expressed Mathematically}
+\label{ch:physical}
+
+Chapter~\ref{ch:stability} showed that instability --- and its intensification into braiding --- is controlled by two dimensionless groups above all: the \textbf{aspect ratio} $\beta=B/(2D_0)$ and the \textbf{Shields/mobility number} $\theta$ (with $\beta_c$ falling as $\theta$ rises). Every qualitative field control on braiding, familiar from descriptive fluvial geomorphology, can be read off as a statement about how it moves a river's operating point $(\theta,\beta)$ relative to the neutral curves of Fig.~\ref{fig:neutral}.
+
+\section{Sediment supply and the transport-capacity ratio}
+Define the \textbf{sediment supply ratio}
+\begin{equation}
+\Gamma = \frac{Q_{s,\text{supplied}}}{Q_{s,\text{capacity}}(\theta)},
+\end{equation}
+the ratio of sediment actually delivered from upstream to the amount the flow is \emph{capable} of transporting at the prevailing $\theta$. Sustained $\Gamma\gtrsim1$ (abundant supply, at or above capacity, as when a river emerges from a rapidly eroding, tectonically active mountain front) keeps the bed continuously mobile at high $\theta$ and forces local, patchy over-capacity deposition --- precisely the condition under which the bar instability of Chapter~\ref{ch:stability} operates most readily and at the largest number of simultaneously unstable modes $m$.
+
+\section{Slope, stream power, and the abrupt-gradient-break mechanism}
+Stream power per unit bed area,
+\begin{equation}
+\omega = \frac{\rho g Q S_0}{B},
+\end{equation}
+measures the rate of potential-energy dissipation available to do geomorphic work (erode banks, entrain bed material). A sudden decrease in $S_0$ at a slope break (mountain front, fan apex) forces, at fixed $Q$, an immediate drop in $\omega$ and (via \eqref{eq:MPM}, since $\theta\propto h S_0$ and, for a fixed discharge, $h$ cannot fall as fast as $S_0$ drops without an accompanying rise in $B$) a drop in transport capacity that cannot keep pace with the sediment flux arriving from upstream: $\Gamma$ jumps well above 1 at exactly the point where the gradient breaks, producing the classic sediment-choked, over-widened, braided reach immediately downstream of a mountain front (worked quantitatively for the Brahmaputra in Chapter~\ref{ch:brahmaputra}).
+
+\section{Bank erodibility and the aspect ratio}
+$\beta=B/(2D_0)$ is not an independent external parameter; it is itself set by a balance between the flow's capacity to erode banks (increasing $\beta$) and bank material's cohesive/vegetative resistance (limiting $\beta$). A river cutting through weakly cohesive sand or silt banks with little vegetation cannot resist widening, and (regime/extremal theories such as Parker's (1978) threshold-channel hypothesis, in which channel shape adjusts so that bed and banks are everywhere marginally at the threshold of motion, $\theta(y)\approx\theta_c$ across the section) tends towards a wide, shallow equilibrium cross-section — i.e.\ towards \emph{large} $\beta$ — which Result~\ref{res:neutral} shows is precisely the condition for multiple simultaneously unstable bar modes. Conversely, cohesive or well-vegetated banks resist widening, keep $\beta$ close to $\beta_c(1)$, and favour single-thread (meandering) rather than braided channels. This is the mathematical statement underlying the classical qualitative claim that ``braiding needs erodible banks.''
+
+\section{Discharge variability}
+Because $\theta\propto Q^{2/3}$--$Q^{4/5}$ (through the dependence of $h$ and $S_f$ on $Q$ via the flow resistance law \eqref{eq:chezy}), a flashy, highly seasonal hydrograph (e.g.\ monsoon-fed) repeatedly drives $\theta$ far above $\theta_c$ during floods --- reworking bars, cutting new channels, and resetting the bed --- and then drops $\theta$ toward or below $\theta_c$ in the low-flow season, when the multiple flood-formed channels are too shallow individually to merge back into one. This alternation is what keeps a braided pattern \emph{persistently} multi-threaded rather than allowing it to consolidate into a single low-flow channel; the reference (bankfull or near-bankfull) $\theta$ used in Fig.~\ref{fig:neutral} should therefore be understood as a flood-dominant value.
+
+\section{Vegetation and cohesion}
+Vegetation increases effective bank (and even in-channel bar) roughness and root-cohesion, raising the effective critical Shields stress for bank/bar material and directly opposing the widening tendency of \S 5.3; this is why historically braided reaches in temperate rivers have narrowed and shifted toward single-thread patterns following floodplain afforestation, and why deforestation (as documented for the Himalayan headwaters of several South Asian rivers, including the Brahmaputra) acts to \emph{increase} $\beta$ and braiding intensity by both destabilising banks and increasing hillslope sediment supply ($\Gamma\uparrow$) simultaneously.
+
+\section{Tectonics and base level}
+Tectonic uplift in the source area steepens hillslopes, increases landslide frequency, and hence raises $\Gamma$ (sediment supply); coseismic sediment pulses (documented for the Brahmaputra following the 1950 Assam earthquake, Chapter~\ref{ch:brahmaputra}) can transiently move a reach's operating point far above several $\beta_c(m)$ curves at once, producing an abrupt, basin-wide increase in braiding intensity that then relaxes over subsequent decades as the pulse is evacuated downstream.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\footnotesize},
+  factor/.style={draw, rounded corners, fill=blue!7, minimum width=3.5cm, minimum height=0.9cm, align=center},
+  mech/.style={draw, rounded corners, fill=orange!10, minimum width=3.6cm, minimum height=0.9cm, align=center},
+  outcome/.style={draw, thick, rounded corners, fill=red!12, minimum width=4.4cm, minimum height=1cm, align=center},
+  arr/.style={-{Latex[length=2mm]}, thick}
+]
+\node[factor] (grad) at (0,6) {Abrupt gradient\\decrease at mountain front};
+\node[factor] (supply) at (0,4.4) {High sediment supply\\(tectonics, deforestation)};
+\node[factor] (bank) at (0,2.8) {Erodible, non-cohesive\\banks};
+\node[factor] (Q) at (0,1.2) {Large, seasonally\\variable discharge};
+
+\node[mech] (theta) at (5,5.2) {$\theta\uparrow$ : bed mobility rises\\(Ch.5.1, 5.4)};
+\node[mech] (beta) at (5,2.0) {$\beta\uparrow$ : channel widens,\\shallows (Ch.5.3)};
+
+\node[outcome] (braid) at (10.3,3.6) {Operating point $(\theta,\beta)$\\crosses \emph{multiple} $\beta_c(m)$\\curves $\Rightarrow$ BRAIDED PATTERN};
+
+\draw[arr] (grad) -- (theta);
+\draw[arr] (supply) -- (theta);
+\draw[arr] (Q) -- (theta);
+\draw[arr] (bank) -- (beta);
+\draw[arr] (Q) -- (beta);
+\draw[arr] (theta) -- (braid);
+\draw[arr] (beta) -- (braid);
+\end{tikzpicture}
+\caption{Field-scale causal factors (left) mapped, via the mechanisms of Chapter~\ref{ch:physical}, onto the two controlling dimensionless groups of the stability theory (centre), which jointly determine whether the operating point lies above one, several, or no critical curves in Fig.~\ref{fig:neutral} (right).}
+\label{fig:causal}
+\end{figure}
+
+% ======================================================================
+\chapter{Quantifying Braided Patterns}
+\label{ch:indices}
+
+\section{Braiding indices}
+A purely descriptive classification is insufficient for comparison across rivers or through time; several quantitative indices have been defined.
+
+\begin{definition}[Brice braiding index]
+\begin{equation}
+B_i = \frac{2\sum L_{\text{islands/bars}}}{L_{\text{reach, along mid-channel}}},
+\end{equation}
+twice the total length of bars/islands within a reach, divided by the reach length measured along the channel centreline (Brice 1964).
+\end{definition}
+
+\begin{definition}[Channel-count braiding index]
+\begin{equation}
+BI = \left\langle \frac{\text{number of active channels crossing a transect}}{1}\right\rangle,
+\end{equation}
+averaged over many transects along a reach (Howard, Keetch \& Vincent 1970, and variants). $BI=1$: single-thread; $BI>1$: braided, with larger $BI$ indicating a greater number of simultaneously active anabranches — the direct empirical analogue of the theoretical ``number of simultaneously unstable modes $m$'' from Result~\ref{res:neutral}.
+\end{definition}
+
+\section{The Leopold--Wolman slope--discharge regime diagram}
+Leopold \& Wolman (1957) showed empirically that braided and meandering rivers separate, to first order, along a threshold in slope--discharge space,
+\begin{equation}
+S_0 \approx 0.06\, Q_{bf}^{-0.44},
+\label{eq:LW}
+\end{equation}
+($Q_{bf}$ in m$^3$s$^{-1}$; coefficient/exponent vary slightly between studies and bed-material calibre), with braided rivers plotting above the line (steeper, for a given discharge) and meandering rivers below it.
+
+\begin{proposition}[Eq.~\eqref{eq:LW} as a corollary of Result~\ref{res:neutral}]
+This empirical threshold is not an independent law; it is what Result~\ref{res:neutral} predicts once $S_0$ is related to $\theta$ (via $\theta \propto h S_0/d$, with $h$ itself an increasing function of $Q$ through the resistance law \eqref{eq:chezy}) and $B$ is related to $Q$ through empirical \emph{hydraulic geometry} scaling $B\propto Q^{0.5}$: increasing $S_0$ at fixed $Q$ raises $\theta$ (Ch.~5.2) and hence lowers $\beta_c(1)$ (Result~\ref{res:neutral}(iii)), pushing the operating point across the $m=1$, and eventually higher-$m$, neutral curves.
+\end{proposition}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=12cm, height=7cm,
+  xmode=log, ymode=log,
+  xlabel={bankfull discharge $Q_{bf}$ (m$^3$/s)}, ylabel={channel slope $S_0$},
+  xmin=1, xmax=30000, ymin=1e-5, ymax=0.05,
+  axis lines=left,
+  legend pos=outer north east, legend style={font=\scriptsize},
+  title={\small Leopold--Wolman-type regime diagram}
+]
+\addplot[thick, black, domain=1:30000, samples=100] {0.06*x^(-0.44)};
+\addlegendentry{$S_0=0.06\,Q_{bf}^{-0.44}$}
+\addplot[only marks, mark=triangle*, mark size=2.6pt, color=red!70!black] coordinates {
+ (200,0.008) (900,0.004) (2500,0.0015) (5000,0.0012) (8000,0.0009)
+};
+\addlegendentry{braided rivers (schematic)}
+\addplot[only marks, mark=*, mark size=2.2pt, color=blue!60!black] coordinates {
+ (150,0.0006) (600,0.0004) (2000,0.00018) (6000,0.0001) (12000,0.00006)
+};
+\addlegendentry{meandering rivers (schematic)}
+\addplot[only marks, mark=square*, mark size=3.2pt, color=teal!70!black] coordinates {(16682,0.0001)};
+\addlegendentry{Brahmaputra, Assam valley}
+\node[font=\scriptsize, align=left] at (axis cs: 3,0.0003) {ABOVE line:\\braided regime};
+\node[font=\scriptsize, align=left] at (axis cs: 3000,0.00003) {BELOW line:\\meandering regime};
+\end{axis}
+\end{tikzpicture}
+\caption{Schematic Leopold--Wolman slope--discharge regime diagram (coefficient/exponent, and all plotted river points other than the Brahmaputra, are illustrative/representative, not digitised field data). The Brahmaputra in Assam plots essentially \emph{on} the threshold line despite carrying one of the largest discharges of any braided river on Earth, because its exceptional sediment supply and erodible banks (Ch.~\ref{ch:brahmaputra}) keep $\theta$ and $\beta$ high enough to sustain braiding at a slope that would otherwise favour meandering for a river of this size.}
+\label{fig:LWdiagram}
+\end{figure}
+
+% ======================================================================
+\chapter{Synthesis: The Full Causal Chain}
+\label{ch:synthesis}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\footnotesize},
+  stepbox/.style={draw, rounded corners, fill=gray!8, minimum width=4.6cm, minimum height=1cm, align=center, text width=4.3cm},
+  dec/.style={draw, diamond, aspect=2.6, fill=yellow!15, align=center, text width=3.1cm, inner sep=2pt},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[stepbox] (s1) at (0,10) {Base alluvial channel: flat bed, uniform flow (\S4.2.1)};
+\node[stepbox] (s2) at (0,8.4) {Compute governing dimensionless groups: $\theta$, $\beta=B/2D_0$, $\Fr$, $n$ (Ch.2--3)};
+\node[dec] (d1) at (0,6.5) {Is $\beta>\beta_c(1;\theta)$? (Result 4.1)};
+\node[stepbox, fill=green!10] (stab) at (-4.3,6.5) {Bed remains flat /\\weakly rippled: STRAIGHT channel};
+\node[dec] (d2) at (0,4.2) {Is $\beta>\beta_c(m)$ for \emph{several} $m\ge2$ simultaneously?};
+\node[stepbox, fill=blue!10] (single) at (4.6,6.5) {Single mode $m{=}1$ unstable:\\alternate bars $\to$ MEANDERING};
+\node[stepbox, fill=red!12] (braid) at (0,2.0) {Multiple modes unstable simultaneously:\\\textbf{BRAIDED channel}};
+\node[stepbox, fill=orange!10] (mod) at (0,0.0) {Intensity set by: sediment supply $\Gamma$,\\gradient/stream power $\omega$, bank erodibility,\\discharge variability, vegetation, tectonics (Ch.5)};
+
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (d1);
+\draw[arr] (d1) -- node[left, font=\scriptsize]{no} (stab);
+\draw[arr] (d1) -- node[right, font=\scriptsize]{yes} (single);
+\draw[arr] (d1) -- node[right, font=\scriptsize]{yes, and further} (d2);
+\draw[arr] (d2) -- node[right, font=\scriptsize]{yes} (braid);
+\draw[arr] (braid) -- (mod);
+\end{tikzpicture}
+\caption{Decision flowchart synthesising Chapters~\ref{ch:governing}--\ref{ch:indices}: from a flat alluvial bed, through the linear-stability criterion, to the realised channel pattern and the field factors that set its intensity.}
+\label{fig:flowchart}
+\end{figure}
+
+% ======================================================================
+\chapter{Case Study: The Brahmaputra in the Assam Plains}
+\label{ch:brahmaputra}
+
+\section{Physiographic setting}
+The Brahmaputra rises on the Tibetan plateau (Chema Yundung glacier) and descends roughly $4800$~m in elevation over about $1700$~km through Tibet (mean slope $\approx 2.82$~m/km), before cutting through the Himalayan and Siwalik ranges in deep bedrock gorges with local gradients of $4.3$--$16.8$~m/km. At Pasighat, it debouches abruptly onto the Assam plains: within about $12$~km downstream of Pasighat the gradient falls to only $\approx 0.27$~m/km, and further downstream through the Assam valley the reach-averaged slope is of order $0.1$~m/km. Over that same short distance the channel widens from roughly $600$~m in the Himalayan gorge to about $10$~km. Through Assam (Kobo to Dhubri) the river is joined by some 20 tributaries on its north bank and 13 on its south, each adding further water and, critically, sediment.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=1.0]
+\draw[-{Latex}] (0,0) -- (12.6,0) node[below right, font=\scriptsize, align=left] {distance\\downstream};
+\draw[-{Latex}] (0,0) -- (0,4.9) node[above, font=\scriptsize] {elevation (schematic, not to scale)};
+\draw[very thick, brown!70!black]
+  (0,4.2) -- (2.4,3.6) -- (4.6,2.6) node[above, font=\scriptsize, sloped] {steep Himalayan gorges, $4$--$17$ m/km}
+  -- (6.3,1.55) -- (6.5,1.5)
+  -- (7.0,1.35)
+  -- (12.4,0.45);
+\node[font=\scriptsize, below] at (6.95,1.3) {\textbf{Pasighat}};
+\node[font=\scriptsize, align=center] at (9.6,1.75) {Assam plains, $S_0\sim0.1$--$0.27$ m/km\\(braided reach)};
+\draw[dashed] (6.9,0) -- (6.9,1.4);
+\draw[decorate, decoration={brace, amplitude=5pt}] (7.0,-0.35) -- (12.4,-0.35);
+\node[font=\scriptsize, align=center] at (9.7,-0.75) {braided channel, up to $\sim$15 km wide};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}] (0,4.35) -- (4.5,2.75);
+\node[font=\scriptsize, align=center] at (2.2, 4.65) {single-thread,\\confined, $\sim600$ m wide};
+\end{tikzpicture}
+\caption{Schematic long-profile of the Brahmaputra from the Himalaya to the Assam plains, showing the abrupt gradient break at Pasighat that triggers the sediment-choked, braided reach downstream (Chapter~\ref{ch:physical}, \S5.2).}
+\label{fig:longprofile}
+\end{figure}
+
+\section{Hydrological and sedimentological data}
+\begin{center}
+\begin{tabular}{@{}p{7.6cm}p{5.4cm}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+Mean annual discharge (at Pandu, 1955--1990) & $\approx 16{,}682$ m$^3$/s \\
+Peak monthly discharge fraction & July, $\approx19\%$ of annual \\
+Mean annual rainfall in basin (Assam) & $\approx 300$ cm, $66$--$85\%$ in monsoon (Jun--Sep) \\
+Annual suspended + bed sediment load & $\approx 1 \times 10^{9}$ t/yr \\
+Daily mean sediment discharge (monsoon) & $\approx 2\times10^{6}$ t/day \\
+Bank material & fine sand/silt, clay fraction $<5\%$ \\
+Gradient, Himalayan gorge & $4.3$--$16.8$ m/km \\
+Gradient, just below Pasighat & $\approx0.27$ m/km \\
+Gradient, general Assam valley & $\approx0.1$ m/km \\
+Width, Himalayan gorge & $\approx0.6$ km \\
+Width, Assam plains (locally) & up to $>15$ km \\
+\bottomrule
+\end{tabular}
+\end{center}
+(Sources: Sarma \& Phukan; Sarma 2005; Sarma \& Acharjee 2018, \emph{Geosciences} 8(9):343; Assam Water Resources Dept.; NASA Earth Observatory.)
+
+\section{Applying the stability criterion}
+\subsection{Estimating the governing dimensionless groups}
+Take, as representative order-of-magnitude values for an individual anabranch (not the full $\sim$10--15~km braid belt) within the Assam-valley braided reach: depth $D_0\approx6$~m, local channel width $B\approx1$--$2$~km (a single active anabranch; the full braid belt, containing several such anabranches side by side plus intervening bars, is what totals $\sim10$--$15$~km), bed material $d_{50}\approx0.3$--$0.5$~mm (fine-medium sand, consistent with the reported bank material), and local slope $S_0\approx1\times10^{-4}$ (the Assam-valley value).
+
+\textbf{Aspect ratio.} Taking $B\approx1.5$~km, $D_0\approx6$~m:
+\begin{equation}
+\beta = \frac{B}{2D_0} = \frac{1500}{2\times6} \approx 125.
+\end{equation}
+This is extremely large compared with typical single-thread river values of $\beta\sim10$--$20$: by Result~\ref{res:neutral}(i), $\beta_c(m)\approx m\,\beta_c(1)$, a $\beta$ of this magnitude places the reach far above the $m=1$ curve and, for any reasonable $\beta_c(1)=O(10)$, above $\beta_c(m)$ for many $m=O(5\text{--}10)$ simultaneously — i.e.\ the theory predicts a channel wide/shallow enough to sustain \emph{many concurrent unstable modes at once}, exactly the multi-anabranch structure observed.
+
+\textbf{Shields parameter.} Using $\tau_b=\rho g D_0 S_0$:
+\begin{equation}
+\theta = \frac{\rho g D_0 S_0}{\rho\Delta g d_{50}} = \frac{D_0 S_0}{\Delta\, d_{50}} = \frac{6\times1\times10^{-4}}{1.65\times4\times10^{-4}} \approx 0.9,
+\end{equation}
+roughly \emph{fifteen to thirty times} the threshold value $\theta_c\approx0.03$--$0.06$: bed sediment is very far above the threshold of motion during monsoon flow, consistent with the reported daily monsoon sediment flux of $\sim2\times10^6$ tonnes. By Result~\ref{res:neutral}(iii), such a high $\theta$ depresses \emph{all} the $\beta_c(m)$ curves substantially, reinforcing the conclusion above.
+
+\textbf{Froude number.} $U_0\approx q_w/D_0$ with representative unit discharge (for the anabranch) $q_w\sim U_0 D_0$; using the Chézy relation with a representative $C\approx40$~m$^{1/2}$s$^{-1}$ (sand-bed, moderate roughness), $U_0=C\sqrt{D_0S_0}=40\sqrt{6\times10^{-4}}\approx1.0$~m/s, giving
+\begin{equation}
+\Fr = \frac{U_0}{\sqrt{gD_0}} = \frac{1.0}{\sqrt{9.81\times6}} \approx 0.13,
+\end{equation}
+strongly subcritical, consistent with the assumption underlying the whole stability analysis of Chapter~\ref{ch:stability} (and with Chapter~4's result that a subcritical channel is only unstable through its \emph{transverse}, not longitudinal, degrees of freedom).
+
+\subsection{Sediment supply ratio}
+The reach receives sediment not only from its own bed/bank erosion but from $\sim$33 major tributaries draining actively eroding, seismically active, and (in the twentieth century) increasingly deforested Himalayan headwaters, together with the documented post-1950-earthquake sediment pulse. This corresponds to $\Gamma\gg1$ in the notation of \S5.1: transport capacity in the plains reach is persistently exceeded by supply, forcing chronic, widespread over-bank and mid-channel deposition rather than the episodic, spatially-limited deposition of a supply-limited river.
+
+\section{Synthesis for the Brahmaputra}
+Collecting the pieces via the flowchart of Fig.~\ref{fig:flowchart}:
+\begin{enumerate}[nosep]
+\item The abrupt gradient break at Pasighat (Fig.~\ref{fig:longprofile}) instantaneously raises $\theta$ and forces a compensating rise in $B$ (hence $\beta$) as the river adjusts toward a new, lower-capacity equilibrium — \S5.2's mechanism, operating in its most extreme natural expression anywhere on Earth.
+\item Weak, non-cohesive, low-clay bank material (\S5.3) permits that widening to actually occur rather than being resisted, driving $\beta$ to the very large value ($\sim10^2$) estimated above.
+\item An exceptional sediment supply (\S5.1), sourced from active Himalayan denudation, numerous tributaries, historical deforestation, and episodic seismic pulses, keeps $\theta$ persistently far above threshold and $\Gamma\gg1$, further depressing every $\beta_c(m)$ curve (Result~\ref{res:neutral}(iii)).
+\item A strongly seasonal monsoon hydrograph (\S5.4) repeatedly drives $\theta$ to its highest values during the same months as peak sediment delivery, then allows partial (but never complete, given the persistently large $\beta$) channel consolidation in the dry season.
+\end{enumerate}
+The operating point $(\theta,\beta)\approx(0.9,\,125)$ estimated above lies, on any reasonable calibration of Fig.~\ref{fig:neutral}, far above the neutral curves for many simultaneous transverse modes $m$ — the linear-stability theory of Chapter~\ref{ch:stability} therefore predicts, from first principles, precisely the intensely multi-threaded, dynamically shifting braided pattern that makes the Brahmaputra the paradigm example of a braided river.
+
+% ======================================================================
+\chapter{Summary and Further Reading}
+
+\section{Summary}
+Braiding is the outcome of a linear instability of the coupled flow-sediment (morphodynamic) system, Eq.~\eqref{eq:fullsystem}, that is intrinsically transverse (Chapter~\ref{ch:stability}): a straight, one-dimensional subcritical channel is stable, but once the channel is wide and shallow enough ($\beta$ large) and the bed mobile enough ($\theta$ large), \emph{multiple} transverse bar modes become simultaneously unstable, and the channel cannot organise itself into a single thread. Every classical qualitative field control on braiding --- steep/broken gradient, abundant sediment supply, erodible banks, flashy discharge, sparse vegetation, active tectonics --- acts, quantitatively, by moving a river's $(\theta,\beta)$ operating point across an increasing number of the critical curves $\beta_c(m)$ derived from that instability. The Brahmaputra in the Assam plains realises essentially every one of these controls simultaneously and at an extreme magnitude, which is why it is both the world's most cited example of a braided river and, as shown quantitatively in Chapter~\ref{ch:brahmaputra}, a textbook-consistent outcome of the underlying mathematics rather than a special or anomalous case.
+
+\section{Further reading}
+\begin{itemize}[nosep]
+\item Leopold, L.B. \& Wolman, M.G. (1957) \emph{River channel patterns: braided, meandering and straight}. USGS Prof.\ Paper 282-B.
+\item Callander, R.A. (1969) Instability and river channels. \emph{J.\ Fluid Mech.} 36, 465--480.
+\item Engelund, F. (1970) Instability of erodible beds. \emph{J.\ Fluid Mech.} 42, 225--244.
+\item Parker, G. (1976) On the cause and characteristic scales of meandering and braiding in rivers. \emph{J.\ Fluid Mech.} 76, 457--480.
+\item Fredsøe, J. (1978) Meandering and braiding of rivers. \emph{J.\ Fluid Mech.} 84, 609--624.
+\item Struiksma, N., Olesen, K.W., Flokstra, C. \& de Vriend, H.J. (1985) Bed deformation in curved alluvial channels. \emph{J.\ Hydraul.\ Res.} 23, 57--79.
+\item Colombini, M., Seminara, G. \& Tubino, M. (1987) Finite-amplitude alternate bars. \emph{J.\ Fluid Mech.} 181, 213--232.
+\item Ikeda, S. \& Parker, G. (eds.) (1989) \emph{River Meandering}. AGU Water Resources Monograph 12.
+\item Seminara, G. (2010) Fluvial sedimentary patterns. \emph{Annu.\ Rev.\ Fluid Mech.} 42, 43--66.
+\item Ashmore, P. (2013) Morphology and dynamics of braided rivers, in \emph{Treatise on Geomorphology}, vol.\ 9, Elsevier.
+\item Sarma, J.N. (2005) Fluvial process and morphology of the Brahmaputra River in Assam, India. \emph{Geomorphology} 70, 226--256.
+\item Sarma, J.N. \& Acharjee, S. (2018) A study on variation in channel width and braiding intensity of the Brahmaputra River in Assam, India. \emph{Geosciences} 8(9), 343.
+\end{itemize}
+
+\end{document}

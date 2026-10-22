@@ -1,0 +1,2110 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{tikz}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+% ---------- Theorem environments ----------
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}[definition]{Example}
+\newtheorem{problem}[definition]{Problem}
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{axiom}[definition]{Axiom}
+
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{intuition}[definition]{Intuition}
+
+% ---------- Supplementary / "further reading" material box (RED) ----------
+\newenvironment{extra}[1][Supplementary Material (beyond the core syllabus)]{%
+  \begin{quote}\color{red}\noindent\textbf{#1.}\par\smallskip
+}{%
+  \end{quote}
+}
+
+% ---------- Custom macros ----------
+\newcommand{\Prob}[1]{\mathbf{P}\!\left[#1\right]}
+\newcommand{\E}[1]{\mathbf{E}\!\left[#1\right]}
+\newcommand{\Var}[1]{\operatorname{Var}\!\left[#1\right]}
+\newcommand{\SD}[1]{\operatorname{SD}\!\left[#1\right]}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Nz}{\mathbb{N}_0}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Om}{\Omega}
+\newcommand{\iid}{\text{i.i.d.}}
+\newcommand{\perm}[2]{{}^{#1}P_{#2}}
+\newcommand{\multinom}[2]{\dbinom{#1}{#2}}
+\newcommand{\dd}{\,d}
+
+\title{\textbf{Rigorous Study Notes: Combinatorics and Probability Theory}\\
+\large Compiled and expanded from lecture notes (5 August -- 10 September 2026)}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% =========================================================================
+\section{Notation and Terminology: A Key}
+% =========================================================================
+
+Before proceeding, we fix the notation and vocabulary used throughout. Every symbol below is used consistently in the sections that follow.
+
+\subsection{Set-theoretic and logical symbols}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{p{2.7cm} p{11.5cm}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+$\in$, $\notin$ & ``is an element of'', ``is not an element of'' \\
+$\subset$, $\subseteq$ & ``is a subset of'' (we use $\subset$ to allow equality unless stated otherwise, matching the source notes) \\
+$\cup$, $\cap$ & union, intersection of sets \\
+$A \setminus B$ & set difference: elements of $A$ not in $B$, i.e.\ $A \cap B^c$ \\
+$A^c$ & complement of $A$ relative to the ambient sample space $S$ \\
+$\varnothing$ & the empty set \\
+$|A|$ & cardinality (number of elements) of a finite set $A$ \\
+$2^{\Omega}$ & the power set of $\Omega$: the set of \emph{all} subsets of $\Omega$ \\
+$\mathbb{N}$, $\mathbb{N}_0$ & $\{1,2,3,\dots\}$ and $\{0,1,2,3,\dots\}$ respectively \\
+$\mathbb{R}$ & the real numbers \\
+$\forall$, $\exists$ & ``for all'', ``there exists'' \\
+s.t. & ``such that'' \\
+$\iff$ & ``if and only if'' \\
+$:=$ & ``is defined to be'' \\
+$\{x_n\}_{n\in\N}$ & a sequence indexed by $n$ \\
+$x_n \to x$ & the sequence $(x_n)$ converges to $x$ \\
+$x_n \downarrow a$ & $(x_n)$ decreases monotonically to $a$ \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{Combinatorial and probabilistic symbols}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{p{3.2cm} p{11cm}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+$n!$ & $n$ factorial, $n(n-1)(n-2)\cdots 1$, with $0! := 1$ \\
+$\perm{n}{r}$ & number of \emph{permutations} of $r$ objects chosen from $n$ distinguishable objects, $= \dfrac{n!}{(n-r)!}$ \\
+$\dbinom{n}{r}$ & the binomial coefficient, ``$n$ choose $r$'', $=\dfrac{n!}{r!(n-r)!}$: the number of $r$-element subsets of an $n$-element set \\
+$\dbinom{n}{m_1,m_2,\dots,m_r}$ & the multinomial coefficient $=\dfrac{n!}{m_1!m_2!\cdots m_r!}$, where $m_1+\cdots+m_r=n$ \\
+$S$ or $\Omega$ & the sample space of a random experiment: the set of all possible outcomes \\
+$\omega$ & a generic sample point, $\omega \in S$ \\
+$E, F, G, A, B, \dots$ & events, i.e.\ subsets of the sample space \\
+$\mathbf{P}[E]$ or $\mathbf{P}(E)$ & the probability of the event $E$ \\
+$\mathbf{P}[E \mid F]$ & the conditional probability of $E$ given $F$ \\
+$X, Y, Z$ & random variables \\
+$p(x)$ or $p_X(x)$ & the probability mass function (pmf) of a discrete random variable $X$: $p(x) = \mathbf{P}[X=x]$ \\
+$f(x)$ or $f_X(x)$ & the probability density function (pdf) of a continuous random variable $X$ \\
+$F(x)$ or $F_X(x)$ & the cumulative distribution function (cdf): $F(x) = \mathbf{P}[X \le x]$ \\
+$\mathbf{E}[X]$ & the expectation (mean) of $X$ \\
+$\operatorname{Var}[X]$ & the variance of $X$ \\
+$\operatorname{SD}[X]$ & the standard deviation of $X$, $=\sqrt{\operatorname{Var}[X]}$ \\
+$\mathbf{1}_A$ & the indicator random variable of an event $A$: equals $1$ if $A$ occurs, $0$ otherwise \\
+$X \sim \text{Binomial}(n,p)$ & ``$X$ is distributed as a Binomial random variable with parameters $n,p$'' \\
+i.i.d. & ``independent and identically distributed'' \\
+$q$ & shorthand for $1-p$, when $p$ denotes a success probability \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{Key terminology (informal glossary)}
+
+\begin{itemize}[leftmargin=1.6em]
+\item \textbf{Random experiment}: a procedure whose set of possible outcomes is known in advance, but whose actual outcome, on any particular performance, cannot be predicted with certainty.
+\item \textbf{Sample space}: the set of \emph{all} possible outcomes of a random experiment.
+\item \textbf{Sample point}: a single element of the sample space, i.e.\ one possible outcome.
+\item \textbf{Event}: any subset of the sample space; informally, a statement about the outcome that is either true or false once the experiment is performed.
+\item \textbf{Mutually exclusive (disjoint) events}: events $E,F$ with $E \cap F = \varnothing$; they cannot both occur.
+\item \textbf{Random variable}: a real-valued (or vector-valued) function defined on the sample space.
+\item \textbf{Discrete random variable}: one taking at most countably many values.
+\item \textbf{Continuous random variable}: one whose cdf is (absolutely) continuous everywhere; equivalently, one possessing a probability density function.
+\item \textbf{Support}: the set of values at which the pmf (or pdf) is (or can be) strictly positive.
+\item \textbf{Independence}: informally, the property that knowledge of one event/random variable provides no information about another.
+\end{itemize}
+
+\bigskip
+\textit{A note on rigor and intuition.} Every claim below that can be proved is proved --
+using only the axioms and previously established results, in the style of the original notes.
+Where a passage is genuinely subtle (for instance, the definition of a probability density, or
+why exchangeability holds), we add a boxed \textbf{Intuition} paragraph with a concrete example.
+Passages in \textcolor{red}{red} correspond to ``further reading'' material that goes strictly beyond
+the examinable syllabus (typically requiring ideas from measure theory), included here in full
+rigor for completeness.
+
+\newpage
+% =========================================================================
+\section{Combinatorial Foundations}
+% =========================================================================
+
+Combinatorics is logically prior to probability theory because the \emph{naive} definition of
+probability (Section~\ref{sec:naive-prob}) reduces every probability computation, on a finite
+sample space with equally likely outcomes, to a pair of counting problems: counting the
+favourable outcomes, and counting the total outcomes.
+
+\subsection{The basic principle of counting}
+
+\begin{proposition}[Basic principle of counting -- two experiments]
+\label{prop:basic-counting-2}
+If experiment $1$ can result in any one of $m$ possible outcomes, and, regardless of the outcome
+of experiment $1$, experiment $2$ can result in any one of $n$ possible outcomes, then the two
+experiments together can result in $mn$ possible outcome-pairs.
+\end{proposition}
+
+\begin{proof}
+List the outcomes of experiment $1$ as $O_1, O_2, \dots, O_m$. For each fixed $O_i$, the possible
+outcome-pairs with first coordinate $O_i$ are $(O_i, 1), (O_i,2), \dots, (O_i, n)$ -- exactly $n$
+of them, one for each outcome of experiment $2$. These $m$ collections of pairs (one collection
+per choice of $i$) are pairwise disjoint (a pair with first coordinate $O_i$ cannot equal a pair
+with first coordinate $O_j$ for $i \ne j$), and their union is the set of \emph{all}
+outcome-pairs. Hence the total number of pairs is
+$\underbrace{n + n + \cdots + n}_{m \text{ times}} = mn$.
+\end{proof}
+
+\begin{proposition}[Generalized basic principle of counting]
+If $r$ experiments are performed, and the $i$-th experiment (for $1 \le i \le r$) can result in
+$m_i$ possible outcomes irrespective of the outcomes of the other experiments, then the total
+number of possible $r$-tuples of outcomes is $m_1 m_2 \cdots m_r$.
+\end{proposition}
+
+\begin{proof}
+Induction on $r$. The base case $r=1$ is trivial. Suppose the claim holds for $r-1$ experiments,
+so that there are $m_1 m_2 \cdots m_{r-1}$ possible $(r-1)$-tuples from the first $r-1$
+experiments. Now regard the ``first $r-1$ experiments taken together'' as a single experiment
+with $m_1 \cdots m_{r-1}$ possible outcomes, and the $r$-th experiment as a second experiment
+with $m_r$ outcomes. By Proposition~\ref{prop:basic-counting-2}, the total number of pairs
+(($r-1$)-tuple, outcome of experiment $r$) -- which is precisely the number of $r$-tuples -- is
+$(m_1 \cdots m_{r-1}) \cdot m_r = m_1 m_2 \cdots m_r$.
+\end{proof}
+
+\subsection{Permutations}
+
+\begin{theorem}[Permutations of distinguishable objects]
+The number of ways to arrange $n$ distinguishable objects in a row (i.e.\ the number of
+permutations of $n$ distinct objects) is $n!$.
+\end{theorem}
+
+\begin{proof}
+Think of filling $n$ positions, one at a time, from left to right. There are $n$ choices for
+which object occupies position $1$. Having filled position $1$, there are $n-1$ remaining objects,
+hence $n-1$ choices for position $2$; and so on, until there is exactly $1$ choice remaining for
+position $n$. By the generalized basic principle of counting, the total number of arrangements is
+$n(n-1)(n-2)\cdots 1 = n!$.
+\end{proof}
+
+\begin{theorem}[Permutations with repetition]
+\label{thm:perm-repetition}
+Suppose $n$ objects consist of $r$ distinguishable \emph{types}, with $k_1$ objects of type $1$,
+$k_2$ of type $2$, \dots, $k_r$ of type $r$ (objects of the same type being mutually
+indistinguishable), where $k_1 + k_2 + \cdots + k_r = n$. Then the number of distinguishable
+arrangements of these $n$ objects is
+\[
+\frac{n!}{k_1!\,k_2! \cdots k_r!}.
+\]
+\end{theorem}
+
+\begin{proof}
+Temporarily label the $k_i$ objects of type $i$ as $i_1, i_2, \dots, i_{k_i}$, rendering all $n$
+objects distinguishable. There are now $n!$ arrangements of these fully-labeled objects. Every
+\emph{genuine} (unlabeled) arrangement of the original $n$ objects corresponds to exactly
+$k_1! k_2! \cdots k_r!$ labeled arrangements, because within each block of $k_i$ same-type objects
+the labels can be permuted amongst themselves in $k_i!$ ways without altering the underlying
+unlabeled arrangement, and this can be done independently for each of the $r$ types (basic
+principle of counting again). Hence the labeled arrangements are partitioned into classes of size
+$k_1!\cdots k_r!$, each class corresponding to one genuine arrangement, so the number of genuine
+arrangements is $n! / (k_1! \cdots k_r!)$.
+\end{proof}
+
+\begin{intuition}
+Take $n=3$ letters with two \texttt{A}'s and one \texttt{B} ($k_1=2, k_2=1$). Labeling gives
+$A_1 A_2 B, A_2 A_1 B, A_1 B A_2, \dots$ -- $3! = 6$ labeled strings. But $A_1A_2B$ and $A_2A_1B$
+are the \emph{same} unlabeled string \texttt{AAB}. Indeed the genuine arrangements are
+$\texttt{AAB}, \texttt{ABA}, \texttt{BAA}$ -- exactly $3!/(2!1!) = 3$ of them.
+\end{intuition}
+
+\subsection{Combinations}
+
+\begin{definition}
+Given $n$ distinguishable objects and $0 \le r \le n$, a \textbf{combination} of size $r$ is an
+(unordered) subset of $r$ objects chosen from the $n$. We write $\dbinom{n}{r}$ for the number of
+such subsets.
+\end{definition}
+
+\begin{theorem}
+\label{thm:binom-coeff}
+\[
+\binom{n}{r} = \frac{n!}{(n-r)!\,r!} = \frac{n(n-1)\cdots(n-r+1)}{r!}.
+\]
+\end{theorem}
+
+\begin{proof}[Proof via equivalence classes]
+Consider the set $\mathcal{P}_r$ of all \emph{ordered} selections of $r$ distinct objects from the
+$n$ objects -- these are the $r$-permutations, and by the same slot-filling argument as above,
+$|\mathcal{P}_r| = n(n-1)\cdots(n-r+1) = \dfrac{n!}{(n-r)!}$.
+
+Define a relation $\sim$ on $\mathcal{P}_r$: two ordered $r$-tuples of distinct objects are related
+if they consist of exactly the same underlying \emph{set} of $r$ objects (differing only, perhaps,
+in the order in which the objects are listed). One checks immediately that $\sim$ is reflexive,
+symmetric, and transitive, i.e.\ an equivalence relation; it therefore partitions $\mathcal{P}_r$
+into disjoint equivalence classes.
+
+Fix any equivalence class: it consists precisely of all the orderings of one particular
+$r$-element subset, and there are $r!$ such orderings (permutations of $r$ distinct objects).
+Hence every equivalence class has exactly $r!$ elements. Moreover, the equivalence classes are in
+bijection with the $r$-element subsets of the original $n$ objects (each class $\leftrightarrow$
+the unique subset underlying it).
+
+Since $\mathcal{P}_r$ is partitioned into equally-sized (size $r!$) classes, and the number of
+classes equals $\dbinom{n}{r}$ (the quantity we want), we obtain
+\[
+|\mathcal{P}_r| = \binom{n}{r} \cdot r! \quad\Longrightarrow\quad \binom{n}{r} =
+\frac{|\mathcal{P}_r|}{r!} = \frac{n!}{(n-r)!\,r!}. \qedhere
+\]
+\end{proof}
+
+\begin{theorem}[Pascal's identity]
+For $1 \le r \le n-1$,
+\[
+\binom{n}{r} = \binom{n-1}{r} + \binom{n-1}{r-1}.
+\]
+\end{theorem}
+
+\begin{proof}[Combinatorial proof]
+We count the $r$-element subsets of an $n$-element set $\{1,2,\dots,n\}$ in two ways. Fix the
+element $n$. Every $r$-subset either
+\begin{itemize}
+\item does \emph{not} contain $n$: such subsets are exactly the $r$-subsets of $\{1,\dots,n-1\}$,
+of which there are $\dbinom{n-1}{r}$; or
+\item \emph{does} contain $n$: removing $n$ leaves an $(r-1)$-subset of $\{1,\dots,n-1\}$, and
+this correspondence is a bijection, so there are $\dbinom{n-1}{r-1}$ such subsets.
+\end{itemize}
+These two cases are exhaustive and mutually exclusive, so by the addition of disjoint counts,
+$\dbinom{n}{r} = \dbinom{n-1}{r} + \dbinom{n-1}{r-1}$.
+\end{proof}
+
+\begin{theorem}[Binomial theorem]
+\label{thm:binomial-thm}
+For any $n \in \Nz$,
+\[
+(x+y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k}.
+\]
+\end{theorem}
+
+\begin{proof}[Proof by induction on $n$]
+\textbf{Base case} ($n=0$): both sides equal $1$.
+
+\textbf{Inductive step}: suppose the identity holds for $n$. Then
+\[
+(x+y)^{n+1} = (x+y)(x+y)^n = (x+y)\sum_{k=0}^n \binom{n}{k}x^k y^{n-k}
+= \sum_{k=0}^n \binom{n}{k}x^{k+1}y^{n-k} + \sum_{k=0}^n \binom{n}{k}x^k y^{n-k+1}.
+\]
+In the first sum, substitute $j = k+1$ (so $j$ ranges over $1,\dots,n+1$):
+\[
+\sum_{j=1}^{n+1}\binom{n}{j-1}x^j y^{n+1-j}.
+\]
+Relabel $j$ as $k$ in both sums and adopt the convention $\dbinom{n}{-1}=\dbinom{n}{n+1}=0$, so
+both sums may now be taken over $k=0,\dots,n+1$:
+\[
+(x+y)^{n+1} = \sum_{k=0}^{n+1}\left[\binom{n}{k-1}+\binom{n}{k}\right]x^k y^{n+1-k}
+= \sum_{k=0}^{n+1}\binom{n+1}{k}x^k y^{n+1-k},
+\]
+where the last equality is Pascal's identity. This completes the induction.
+\end{proof}
+
+\begin{proof}[Combinatorial proof]
+Write $(x+y)^n$ as the product of $n$ factors, $(x+y)(x+y)\cdots(x+y)$. Expanding, each term of
+the expansion is obtained by choosing, from \emph{each} of the $n$ factors, either the term $x$
+or the term $y$, and multiplying the $n$ choices together. A term equal to $x^k y^{n-k}$ arises
+precisely from those choices in which $x$ was selected from exactly $k$ of the $n$ factors (and
+$y$ from the remaining $n-k$). The number of ways to choose \emph{which} $k$ of the $n$ factors
+contribute an $x$ is $\dbinom{n}{k}$ (Theorem~\ref{thm:binom-coeff}). Summing over all
+$k=0,\dots,n$ gives the stated identity.
+\end{proof}
+
+\subsection{Multinomial coefficients and the multinomial theorem}
+
+\begin{theorem}[Multinomial coefficients]
+Suppose $n$ \emph{distinct} objects are to be divided into $r$ \emph{distinguishable} (labeled)
+groups, the $i$-th group required to contain exactly $m_i$ objects, where $m_1+\cdots+m_r=n$. The
+number of ways to do this is
+\[
+\binom{n}{m_1,m_2,\dots,m_r} := \frac{n!}{m_1!\,m_2!\cdots m_r!}.
+\]
+\end{theorem}
+
+\begin{proof}
+Build the partition group by group. Choose the $m_1$ objects for group $1$ out of $n$:
+$\dbinom{n}{m_1}$ ways. Then choose the $m_2$ objects for group $2$ out of the remaining $n-m_1$:
+$\dbinom{n-m_1}{m_2}$ ways. Continue; at the $i$-th step there are $n - m_1 - \cdots - m_{i-1}$
+objects left, and we choose $\dbinom{n-m_1-\cdots-m_{i-1}}{m_i}$ ways to select group $i$. By the
+basic principle of counting, the total number of ways is the product
+\[
+\binom{n}{m_1}\binom{n-m_1}{m_2}\binom{n-m_1-m_2}{m_3}\cdots\binom{m_r}{m_r}.
+\]
+Writing out factorials, this telescopes:
+\[
+\frac{n!}{m_1!(n-m_1)!}\cdot\frac{(n-m_1)!}{m_2!(n-m_1-m_2)!}\cdot
+\frac{(n-m_1-m_2)!}{m_3!(n-m_1-m_2-m_3)!}\cdots = \frac{n!}{m_1!m_2!\cdots m_r!}. \qedhere
+\]
+\end{proof}
+
+\begin{remark}
+Compare this with Theorem~\ref{thm:perm-repetition}. The two formulas coincide algebraically, but
+the combinatorial \emph{interpretations} differ: Theorem~\ref{thm:perm-repetition} counts
+arrangements of $n$ objects of $r$ indistinguishable types in a row, while the multinomial
+coefficient counts assignments of $n$ distinct objects to $r$ labeled groups of prescribed sizes.
+There is a natural bijection between the two: reading off, in a permutation-with-repetition
+arrangement, \emph{which positions} hold type-$i$ objects, for each $i$, exactly recovers a
+partition of the $n$ positions (now playing the role of ``$n$ distinct objects'') into $r$ labeled
+groups of sizes $k_1,\dots,k_r$.
+\end{remark}
+
+\begin{theorem}[Multinomial theorem]
+For any $n \in \Nz$ and $r \ge 1$,
+\[
+(x_1+x_2+\cdots+x_r)^n = \sum_{\substack{m_1,\dots,m_r \in \Nz \\ m_1+\cdots+m_r = n}}
+\binom{n}{m_1,\dots,m_r} x_1^{m_1}x_2^{m_2}\cdots x_r^{m_r}.
+\]
+\end{theorem}
+
+\begin{proof}
+Exactly as in the combinatorial proof of the binomial theorem: write the left side as a product
+of $n$ factors $(x_1+\cdots+x_r)$. A term $x_1^{m_1}\cdots x_r^{m_r}$ (with $\sum m_i = n$) arises
+from those selections in which, for each $i$, the value $x_i$ was chosen from exactly $m_i$ of the
+$n$ factors. Choosing, for each $i=1,\dots,r$, which $m_i$ of the $n$ factors contribute $x_i$ is
+precisely an assignment of the $n$ (distinct, because we track \emph{which} factor) factors into
+$r$ labeled groups of sizes $m_1,\dots,m_r$ -- there are $\dbinom{n}{m_1,\dots,m_r}$ such
+assignments. Summing over all admissible $(m_1,\dots,m_r)$ gives the result.
+\end{proof}
+
+\subsection{Distributing balls into boxes (``stars and bars'')}
+
+\begin{theorem}
+\label{thm:stars-bars}
+The number of ways to place $n$ indistinguishable balls into $k$ distinguishable (labeled) boxes
+is
+\[
+\binom{n+k-1}{k-1} = \binom{n+k-1}{n}.
+\]
+If, in addition, each box is required to contain \emph{at least one} ball (so necessarily
+$n \ge k$), the number of ways is
+\[
+\binom{n-1}{k-1}.
+\]
+\end{theorem}
+
+\begin{proof}
+\textbf{Unrestricted case.} Represent a placement of $n$ identical balls into $k$ labeled boxes
+by a string of $n$ stars ($\star$) and $k-1$ bars ($|$): the stars before the first bar denote the
+number of balls in box $1$, the stars between the first and second bars denote the number of
+balls in box $2$, and so on, with the stars after the last bar denoting the number of balls in box
+$k$. Every such string of $n$ stars and $k-1$ bars (in any order) corresponds to exactly one
+placement, and conversely. The number of such strings is the number of ways to choose the
+positions of the $k-1$ bars among the $n+k-1$ total symbols, i.e.\ $\dbinom{n+k-1}{k-1}$.
+
+\textbf{At-least-one-ball case.} First place one ball in each of the $k$ boxes (using up $k$ of
+the $n$ balls, forced and with no remaining choice). The remaining $n-k$ balls are then
+distributed \emph{without restriction} among the $k$ boxes, which by the unrestricted case has
+$\dbinom{(n-k)+k-1}{k-1} = \dbinom{n-1}{k-1}$ solutions.
+\end{proof}
+
+\begin{intuition}
+This is exactly the combinatorics of writing a positive integer $n$ as an \emph{ordered} sum of
+$k$ non-negative (respectively, positive) integers: $n = x_1 + x_2 + \cdots + x_k$ with $x_i \ge 0$
+(resp. $x_i \ge 1$), where $x_i$ is the number of balls in box $i$.
+\end{intuition}
+
+\subsection{Worked example: antennas with no two defectives adjacent}
+
+\begin{problem}
+There are $n$ antennas in total, of which $m$ are defective, $m \le n$. All defective antennas are
+mutually indistinguishable, and all functioning antennas are mutually indistinguishable. In how
+many ways can the antennas be arranged in a row so that no two defective antennas are placed
+consecutively?
+\end{problem}
+
+\begin{proof}[Solution]
+First arrange the $n-m$ functioning antennas in a row; since they are indistinguishable, there is
+exactly $\boxed{1}$ way to do this, and it creates $n-m+1$ ``gaps'' -- one before the first
+functioning antenna, one after each functioning antenna, and one after the last:
+\[
+\_\, F \,\_\, F \,\_\, F \,\cdots\, F \,\_
+\]
+There are $n-m+1$ underscores (gaps). To ensure no two defective antennas are consecutive, each
+gap may receive \emph{at most one} defective antenna (placing two or more defectives in the same
+gap would put them adjacent to each other). We must choose $m$ of these $n-m+1$ gaps to each
+receive exactly one (indistinguishable) defective antenna. The number of ways to choose which $m$
+gaps receive a defective antenna is
+\[
+\binom{n-m+1}{m},
+\]
+which is therefore the number of valid arrangements (this requires $m \le n-m+1$, i.e.\
+$m \le \lceil (n+1)/2 \rceil$, else the answer is $0$).
+\end{proof}
+
+\subsection{Summary comparison table}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{4.3cm} p{3.7cm} p{2.2cm} p{4.3cm}}
+\toprule
+\textbf{Scenario} & \textbf{Formula} & \textbf{Order matters?} & \textbf{Repetition?} \\
+\midrule
+Arrangements of $n$ distinct objects & $n!$ & Yes & No \\
+$r$-permutations of $n$ distinct objects & $\dfrac{n!}{(n-r)!}$ & Yes & No \\
+$r$-combinations of $n$ distinct objects & $\dbinom{n}{r}$ & No & No \\
+Arrangements of $n$ objects, $r$ types with multiplicities $k_1,\dots,k_r$ & $\dfrac{n!}{k_1!\cdots k_r!}$ & Yes (positions) & Yes (within type) \\
+Partition $n$ distinct objects into $r$ labeled groups of sizes $m_1,\dots,m_r$ & $\dbinom{n}{m_1,\dots,m_r}$ & No (within group) & --- \\
+$n$ identical balls into $k$ labeled boxes & $\dbinom{n+k-1}{k-1}$ & --- & Yes \\
+$n$ identical balls into $k$ labeled boxes, each $\ge 1$ & $\dbinom{n-1}{k-1}$ & --- & Yes \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\newpage
+% =========================================================================
+\section{Foundations of Probability Theory}
+% =========================================================================
+
+\subsection{Random experiments, sample spaces, and events}
+
+\begin{definition}
+A \textbf{random experiment} is a procedure for which the set of all possible outcomes is known
+in advance, but the outcome that will actually be observed on any given performance cannot be
+predicted with certainty.
+\end{definition}
+
+\begin{example}
+Administering a blood-pressure-lowering drug to a patient and measuring the resulting blood
+pressure (in whole mmHg) is a random experiment: the set of conceivable readings is known (some
+range of positive integers), but the actual reading cannot be known in advance, since it depends
+on age, dosage, co-morbidities, allergies, and so on.
+\end{example}
+
+\begin{definition}
+The \textbf{sample space} $S$ (also written $\Omega$) of a random experiment is the set of all
+its possible outcomes. Each element $\omega \in S$ is a \textbf{sample point}.
+\end{definition}
+
+\begin{definition}
+An \textbf{event} is any subset $E \subset S$ of the sample space.
+\end{definition}
+
+\begin{example}
+Tossing a fair coin $3$ times gives sample space
+\[
+S = \{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\}.
+\]
+Throwing a die twice gives $S = \{(i,j) : 1 \le i,j \le 6\}$, $|S|=36$.
+The event ``the sum of the two throws is even'' is
+$E = \{(i,j) \in S : i+j \text{ even}\}$; the event ``the sum is divisible by $3$'' is
+$F = \{(i,j)\in S : 3 \mid (i+j)\}$.
+\end{example}
+
+\subsection{The algebra of events}
+
+Since events are sets, they obey the ordinary laws of set algebra. Given events $E,F,G$ (subsets
+of the same $S$):
+\begin{itemize}[leftmargin=1.6em]
+\item \textbf{Commutativity}: $E \cup F = F \cup E$, \quad $E \cap F = F \cap E$.
+\item \textbf{Associativity}: $E \cup (F \cup G) = (E \cup F) \cup G$, \quad
+$E \cap (F \cap G) = (E \cap F) \cap G$.
+\item \textbf{Distributivity}: $(E\cup F)\cap G = (E\cap G)\cup(F\cap G)$, \quad
+$(E\cap F)\cup G = (E \cup G) \cap (F \cup G)$.
+\end{itemize}
+
+\begin{proof}[Proof of one distributive law, as a representative example]
+We show $(E \cup F)\cap G = (E \cap G) \cup (F \cap G)$ by mutual inclusion (``element chasing'').
+
+($\subseteq$) Let $\omega \in (E\cup F)\cap G$. Then $\omega \in G$ and ($\omega \in E$ or
+$\omega \in F$). If $\omega \in E$, then since also $\omega \in G$, we get $\omega \in E \cap G$,
+hence $\omega \in (E\cap G)\cup(F\cap G)$. If instead $\omega \in F$, symmetrically
+$\omega \in F \cap G \subset (E\cap G)\cup(F\cap G)$. Either way $\omega$ belongs to the right side.
+
+($\supseteq$) Let $\omega \in (E\cap G)\cup(F\cap G)$. If $\omega \in E \cap G$ then $\omega \in E
+\subset E \cup F$ and $\omega \in G$, so $\omega \in (E\cup F)\cap G$. If $\omega \in F \cap G$ the
+argument is symmetric. Either way $\omega$ belongs to the left side.
+
+Since each side contains the other, the sets are equal.
+\end{proof}
+
+\begin{theorem}[De Morgan's Laws]
+For events $E_1,\dots,E_n$ of the same sample space $S$,
+\[
+\left(\bigcup_{i=1}^n E_i\right)^{\!c} = \bigcap_{i=1}^n E_i^c, \qquad
+\left(\bigcap_{i=1}^n E_i\right)^{\!c} = \bigcup_{i=1}^n E_i^c.
+\]
+\end{theorem}
+
+\begin{proof}
+For the first identity: $\omega \in \left(\bigcup_i E_i\right)^c$ $\iff$ $\omega \notin
+\bigcup_i E_i$ $\iff$ $\omega \notin E_i$ for every $i$ $\iff$ $\omega \in E_i^c$ for every $i$
+$\iff$ $\omega \in \bigcap_i E_i^c$. The chain of iff's establishes set equality. The second
+identity follows by applying the first to the events $E_i^c$ (or by an entirely analogous chain of
+iff's, replacing every ``for every $i$'' with ``for some $i$'').
+\end{proof}
+
+\subsection{The naive definition of probability}
+\label{sec:naive-prob}
+
+\begin{definition}[Naive probability]
+If a random experiment has a \emph{finite} sample space $S$ in which every sample point is
+equally likely, then for $A \subset S$,
+\[
+\mathbf{P}[A] = \frac{|A|}{|S|} = \frac{\text{number of outcomes favourable to } A}
+{\text{total number of outcomes}}.
+\]
+\end{definition}
+
+This is the definition underlying most of the combinatorial examples of Section~2. It is
+intuitive (probability as a \emph{proportion}) but limited: it presupposes finiteness and equal
+likelihood, and offers no route to probabilities on infinite or non-uniform sample spaces.
+
+\subsection{The frequentist (relative-frequency) heuristic}
+
+\begin{definition}[Relative-frequency probability]
+Suppose a random experiment is repeated $n$ times under (idealized) identical conditions, and let
+$n(E)$ denote the number of repetitions in which event $E$ occurs. The relative-frequency notion
+of probability sets
+\[
+\mathbf{P}(E) = \lim_{n \to \infty} \frac{n(E)}{n}.
+\]
+\end{definition}
+
+This definition, while intuitive, suffers from two logical gaps that the axiomatic theory is
+designed to bypass:
+\begin{enumerate}
+\item There is no a priori guarantee that the sequence $n(E)/n$ converges at all.
+\item Even granting convergence, there is no guarantee that the limit is the \emph{same} across
+different (infinite) sequences of repetitions of the experiment.
+\end{enumerate}
+
+\subsection{The axiomatic (Kolmogorov) definition of probability}
+
+\begin{axiom}[Kolmogorov's axioms]
+\label{ax:kolmogorov}
+To every event $E$ of the sample space $S$ of a random experiment we associate a real number
+$\mathbf{P}(E)$, the \textbf{probability} of $E$, satisfying:
+\begin{enumerate}[label=(\arabic*)]
+\item $0 \le \mathbf{P}(E) \le 1$ for every event $E \subset S$;
+\item $\mathbf{P}(S) = 1$;
+\item (Countable additivity) for any sequence $E_1, E_2, \dots$ of pairwise disjoint events (i.e.\
+$E_i \cap E_j = \varnothing$ for $i \ne j$),
+\[
+\mathbf{P}\left(\bigcup_{i=1}^\infty E_i\right) = \sum_{i=1}^\infty \mathbf{P}(E_i).
+\]
+\end{enumerate}
+\end{axiom}
+
+\begin{proposition}
+$\mathbf{P}(\varnothing) = 0$.
+\end{proposition}
+\begin{proof}
+Since $S$ and $\varnothing$ are disjoint and $S \cup \varnothing = S$, Axiom~3 (with the sequence
+$S, \varnothing, \varnothing, \dots$) gives
+\[
+\mathbf{P}(S) = \mathbf{P}(S) + \mathbf{P}(\varnothing) + \mathbf{P}(\varnothing) + \cdots.
+\]
+By Axiom~2, $\mathbf{P}(S)=1$, so $1 = 1 + \sum_{i\ge 1}\mathbf{P}(\varnothing)$. Since each term
+$\mathbf{P}(\varnothing) \ge 0$ by Axiom~1, this forces $\mathbf{P}(\varnothing) = 0$.
+\end{proof}
+
+\begin{proposition}[Finite additivity]
+\label{prop:finite-additivity}
+If $E_1, \dots, E_n$ are pairwise disjoint events, then
+$\mathbf{P}\left(\bigcup_{i=1}^n E_i\right) = \sum_{i=1}^n \mathbf{P}(E_i)$.
+\end{proposition}
+\begin{proof}
+Extend the finite sequence to an infinite one by setting $E_j := \varnothing$ for all $j > n$. The
+extended sequence is still pairwise disjoint ($\varnothing$ is disjoint from every set, including
+another copy of $\varnothing$). Axiom~3 gives
+\[
+\mathbf{P}\left(\bigcup_{i=1}^\infty E_i\right) = \sum_{i=1}^\infty \mathbf{P}(E_i).
+\]
+But $\bigcup_{i=1}^\infty E_i = \bigcup_{i=1}^n E_i$ (the extra terms are empty), and
+$\sum_{i=1}^\infty \mathbf{P}(E_i) = \sum_{i=1}^n \mathbf{P}(E_i) + \sum_{i>n}\mathbf{P}(\varnothing)
+= \sum_{i=1}^n \mathbf{P}(E_i)$, using the previous proposition. The claim follows.
+\end{proof}
+
+\begin{proposition}[Complement rule]
+For any event $E$, $\mathbf{P}(E^c) = 1 - \mathbf{P}(E)$.
+\end{proposition}
+\begin{proof}
+$E$ and $E^c$ are disjoint (by definition of complement) with $E \cup E^c = S$. By finite
+additivity and Axiom~2, $1 = \mathbf{P}(S) = \mathbf{P}(E) + \mathbf{P}(E^c)$, whence the claim.
+\end{proof}
+
+\begin{proposition}[Monotonicity]
+\label{prop:monotone}
+If $E \subset F$ (both events of the same sample space), then $\mathbf{P}(E) \le \mathbf{P}(F)$.
+\end{proposition}
+\begin{proof}
+Write $F = E \cup (F\setminus E)$; this is a disjoint union since $E$ and $F \setminus E$ share no
+points. By finite additivity, $\mathbf{P}(F) = \mathbf{P}(E) + \mathbf{P}(F\setminus E)$. Since
+$\mathbf{P}(F \setminus E) \ge 0$ by Axiom~1, we get $\mathbf{P}(F) \ge \mathbf{P}(E)$.
+\end{proof}
+
+\subsection{Inclusion--exclusion}
+
+\begin{theorem}[Inclusion--exclusion, two events]
+\label{thm:incl-excl-2}
+For any events $E, F$,
+\[
+\mathbf{P}(E \cup F) = \mathbf{P}(E) + \mathbf{P}(F) - \mathbf{P}(E\cap F).
+\]
+\end{theorem}
+\begin{proof}
+The set $E \cup F$ decomposes into the three pairwise disjoint pieces $E\setminus F$,
+$F \setminus E$, and $E \cap F$:
+\[
+E \cup F = (E\setminus F) \cup (F\setminus E) \cup (E\cap F).
+\]
+Similarly $E = (E\setminus F)\cup(E\cap F)$ (disjoint) and $F=(F\setminus E)\cup(E\cap F)$
+(disjoint). Applying finite additivity to each decomposition:
+\[
+\mathbf{P}(E) = \mathbf{P}(E\setminus F) + \mathbf{P}(E\cap F)
+\ \Longrightarrow\ \mathbf{P}(E\setminus F) = \mathbf{P}(E) - \mathbf{P}(E\cap F),
+\]
+\[
+\mathbf{P}(F) = \mathbf{P}(F\setminus E) + \mathbf{P}(E\cap F)
+\ \Longrightarrow\ \mathbf{P}(F\setminus E) = \mathbf{P}(F) - \mathbf{P}(E\cap F),
+\]
+\[
+\mathbf{P}(E\cup F) = \mathbf{P}(E\setminus F)+\mathbf{P}(F\setminus E)+\mathbf{P}(E\cap F).
+\]
+Substituting the first two expressions into the third:
+\[
+\mathbf{P}(E\cup F) = \big[\mathbf{P}(E)-\mathbf{P}(E\cap F)\big] +
+\big[\mathbf{P}(F)-\mathbf{P}(E\cap F)\big] + \mathbf{P}(E\cap F)
+= \mathbf{P}(E)+\mathbf{P}(F)-\mathbf{P}(E\cap F). \qedhere
+\]
+\end{proof}
+
+\begin{theorem}[Inclusion--exclusion, three events]
+\[
+\mathbf{P}(E\cup F\cup G) = \mathbf{P}(E)+\mathbf{P}(F)+\mathbf{P}(G)
+-\mathbf{P}(E\cap F)-\mathbf{P}(E\cap G)-\mathbf{P}(F\cap G)+\mathbf{P}(E\cap F\cap G).
+\]
+\end{theorem}
+\begin{proof}
+Apply Theorem~\ref{thm:incl-excl-2} to the two events $E\cup F$ and $G$:
+\[
+\mathbf{P}(E\cup F\cup G) = \mathbf{P}\big((E\cup F)\cup G\big)
+= \mathbf{P}(E\cup F) + \mathbf{P}(G) - \mathbf{P}\big((E\cup F)\cap G\big).
+\]
+By the distributive law, $(E\cup F)\cap G = (E\cap G)\cup(F\cap G)$, so, applying
+Theorem~\ref{thm:incl-excl-2} again to this union:
+\[
+\mathbf{P}\big((E\cap G)\cup(F\cap G)\big) = \mathbf{P}(E\cap G)+\mathbf{P}(F\cap G)
+-\mathbf{P}\big((E\cap G)\cap(F\cap G)\big) = \mathbf{P}(E\cap G)+\mathbf{P}(F\cap G)-\mathbf{P}(E\cap F\cap G),
+\]
+using $(E\cap G)\cap(F\cap G) = E\cap F\cap G$. Also $\mathbf{P}(E\cup F) = \mathbf{P}(E)+\mathbf{P}(F)-\mathbf{P}(E\cap F)$
+by Theorem~\ref{thm:incl-excl-2}. Substituting both expressions above gives the claim.
+\end{proof}
+
+\begin{theorem}[General inclusion--exclusion]
+\label{thm:incl-excl-n}
+For events $E_1,\dots,E_n$ of the same sample space,
+\[
+\mathbf{P}\left(\bigcup_{i=1}^n E_i\right) = \sum_i \mathbf{P}(E_i) - \sum_{i<j}\mathbf{P}(E_i\cap E_j)
++ \sum_{i<j<k}\mathbf{P}(E_i\cap E_j\cap E_k) - \cdots + (-1)^{n-1}\mathbf{P}\left(\bigcap_{i=1}^n E_i\right).
+\]
+\end{theorem}
+\begin{proof}[Combinatorial proof]
+Fix any sample point $\omega \in \bigcup_i E_i$, and suppose $\omega$ belongs to \emph{exactly}
+$j \ge 1$ of the $n$ events (relabel so that these are $E_1, \dots, E_j$, for notational
+convenience, WLOG). We compute the net number of times $\omega$ is ``counted'' on the right-hand
+side.
+
+$\omega$ contributes $1$ to $\mathbf{P}(E_i)$ for each of the $j$ indices $i$ with $\omega \in E_i$
+-- i.e.\ $\binom{j}{1}$ contributions at the first-order level. In general, for the $r$-th order
+sum $\sum_{i_1<\cdots<i_r}\mathbf{P}(E_{i_1}\cap\cdots\cap E_{i_r})$, $\omega$ contributes to a term
+if and only if all $r$ indices lie among the $j$ indices for which $\omega \in E_i$; there are
+$\binom{j}{r}$ such terms. Hence the total (signed) contribution of $\omega$ to the right-hand side
+is
+\[
+\sum_{r=1}^{j} (-1)^{r-1}\binom{j}{r}.
+\]
+We claim this sum equals $1$ for every $j \ge 1$. Indeed, by the binomial theorem
+(Theorem~\ref{thm:binomial-thm}) with $x=1,y=-1$:
+\[
+0 = (1-1)^j = \sum_{r=0}^j \binom{j}{r}(-1)^r = \binom{j}{0} + \sum_{r=1}^j (-1)^r \binom{j}{r}
+= 1 - \sum_{r=1}^j (-1)^{r-1}\binom{j}{r},
+\]
+so $\sum_{r=1}^j (-1)^{r-1}\binom{j}{r} = 1$, as claimed.
+
+Thus every sample point in $\bigcup_i E_i$ contributes net weight exactly $1$ to the right-hand
+side, matching its contribution of $1$ to $\mathbf{P}(\bigcup_i E_i)$ (via the naive/relative-
+frequency interpretation, or more rigorously, by an entirely analogous inductive argument applying
+Theorem~\ref{thm:incl-excl-2} repeatedly, which we omit as it mirrors the $n=3$ case above). A
+sample point outside $\bigcup_i E_i$ contributes $0$ to every term on both sides. Hence the two
+sides are equal.
+\end{proof}
+
+\begin{extra}[Probability as a continuous set function]
+This subsection develops material explicitly marked in the source notes as ``further reading, for
+the curious'' -- not required for examinations, but presented here with full rigor.
+
+\begin{definition}
+A sequence of events $\{E_n\}_{n\in\N}$ is \textbf{increasing} if $E_1 \subset E_2 \subset \cdots$
+(i.e.\ $E_i \subset E_{i+1}$ for every $i$), and \textbf{decreasing} if
+$E_1 \supset E_2 \supset \cdots$. For an increasing sequence we define
+$\displaystyle \lim_{n\to\infty} E_n := \bigcup_{n=1}^\infty E_n$, and for a decreasing sequence,
+$\displaystyle \lim_{n\to\infty} E_n := \bigcap_{n=1}^\infty E_n$.
+\end{definition}
+
+\begin{theorem}[Continuity of probability]
+\label{thm:continuity-prob}
+If $\{E_n\}$ is an increasing or decreasing sequence of events, then
+\[
+\mathbf{P}\left(\lim_{n\to\infty}E_n\right) = \lim_{n\to\infty}\mathbf{P}(E_n).
+\]
+\end{theorem}
+
+\begin{proof}[Proof (increasing case), via disjointification]
+Let $\{E_n\}$ be increasing. Define a new sequence $\{F_n\}$ by
+\[
+F_1 = E_1, \qquad F_n = E_n \setminus \left(\bigcup_{i=1}^{n-1}E_i\right) = E_n \setminus E_{n-1}
+\ \text{for } n \ge 2
+\]
+(the last equality holds because the sequence is increasing, so $\bigcup_{i=1}^{n-1}E_i=E_{n-1}$).
+
+\emph{Claim 1: the $F_n$ are pairwise disjoint.} Suppose $i<j$. Then $F_j = E_j \setminus
+\bigcup_{\ell<j}E_\ell \subset E_j \setminus E_i$ (since $E_i \subset \bigcup_{\ell<j}E_\ell$ for
+$i<j$), so $F_j \cap E_i = \varnothing$. Since $F_i \subset E_i$, we get $F_i \cap F_j = \varnothing$.
+
+\emph{Claim 2: $E_n = \bigcup_{i=1}^n F_i$ for every $n$.} We have
+$\bigcup_{i=1}^n F_i = F_1 \cup \bigcup_{i=2}^n (E_i \setminus E_{i-1})$. By induction on $n$: true
+for $n=1$; assuming $\bigcup_{i=1}^{n-1}F_i = E_{n-1}$, we get
+$\bigcup_{i=1}^n F_i = E_{n-1} \cup (E_n \setminus E_{n-1}) = E_{n-1}\cup E_n = E_n$ (since
+$E_{n-1}\subset E_n$).
+
+By Claim 2 and finite additivity (Proposition~\ref{prop:finite-additivity}, using Claim 1),
+\begin{equation}
+\mathbf{P}(E_n) = \mathbf{P}\left(\bigcup_{i=1}^n F_i\right) = \sum_{i=1}^n \mathbf{P}(F_i)
+\quad \text{for every } n. \tag{$\ast$}
+\end{equation}
+
+\emph{Claim 3: $\bigcup_{n=1}^\infty E_n = \bigcup_{n=1}^\infty F_n$.} If $\omega \in
+\bigcup_n E_n$, then $\omega \in E_N$ for some $N$; let $m$ be the \emph{smallest} such index (this
+exists by well-ordering of $\N$). Then $\omega \in E_m$ but $\omega \notin E_{m-1}$ (or $m=1$), so
+$\omega \in F_m \subset \bigcup_n F_n$. Conversely each $F_n \subset E_n \subset \bigcup_m E_m$, so
+$\bigcup_n F_n \subset \bigcup_n E_n$.
+
+By Claim 3, Axiom~3 (countable additivity, valid since the $F_n$ are pairwise disjoint by Claim 1),
+and $(\ast)$:
+\[
+\mathbf{P}\left(\bigcup_{n=1}^\infty E_n\right) = \mathbf{P}\left(\bigcup_{n=1}^\infty F_n\right)
+= \sum_{n=1}^\infty \mathbf{P}(F_n) = \lim_{n\to\infty}\sum_{i=1}^n \mathbf{P}(F_i)
+= \lim_{n\to\infty}\mathbf{P}(E_n),
+\]
+which, recalling the definition $\lim_n E_n = \bigcup_n E_n$ for increasing sequences, is exactly
+the claim.
+\end{proof}
+
+\begin{proof}[Proof (decreasing case), via the increasing case and De Morgan]
+If $\{E_n\}$ is decreasing, then $\{E_n^c\}$ is increasing (immediate from $E_n \supset E_{n+1}
+\iff E_n^c \subset E_{n+1}^c$). By the increasing case applied to $\{E_n^c\}$:
+\[
+\lim_{n\to\infty}\mathbf{P}(E_n^c) = \mathbf{P}\left(\bigcup_{n=1}^\infty E_n^c\right)
+= \mathbf{P}\left(\Big(\bigcap_{n=1}^\infty E_n\Big)^{\!c}\right)
+\]
+by De Morgan's law. Using the complement rule on both sides,
+\[
+\lim_{n\to\infty}\big[1-\mathbf{P}(E_n)\big] = 1 - \mathbf{P}\left(\bigcap_{n=1}^\infty E_n\right)
+\ \Longrightarrow\ \lim_{n\to\infty}\mathbf{P}(E_n) = \mathbf{P}\left(\bigcap_{n=1}^\infty E_n\right),
+\]
+which, since $\lim_n E_n = \bigcap_n E_n$ for decreasing sequences, is the claim.
+\end{proof}
+\end{extra}
+
+\subsection{Worked examples}
+
+\begin{example}[Statistics course scheduling]
+A college has $10$ time slots and offers exactly $3$ statistics courses, each independently and
+uniformly randomly assigned one of the $10$ slots (courses may collide). What is the probability
+that $2$ or more of the courses share a time slot?
+
+\emph{Solution.} It is easier to compute the complement: ``all three courses get distinct slots.''
+The sample space has $10^3 = 1000$ equally likely outcomes (an ordered triple of slot assignments).
+The number of outcomes with all-distinct slots is $10\cdot 9\cdot 8 = 720$ (choose a slot for
+course 1, then a different slot for course 2, then a different slot for course 3). So
+\[
+\mathbf{P}(\text{all distinct}) = \frac{720}{1000} = 0.72, \qquad
+\mathbf{P}(\text{some collision}) = 1-0.72 = \boxed{0.28}.
+\]
+\end{example}
+
+\begin{example}[Gimli and Legolas -- linear table]
+Twelve people, including Gimli and Legolas, are seated in a row, with every one of the $12!$
+arrangements equally likely. Find $\mathbf{P}(\text{Gimli and Legolas are adjacent})$.
+
+\emph{Solution.} Glue Gimli and Legolas into a single ``super-person''; this super-person, together
+with the other $10$ people, gives $11$ entities to arrange in $11!$ ways; within the super-person,
+Gimli and Legolas can be ordered in $2!$ ways. So the number of favourable arrangements is
+$11!\cdot 2!$, and
+\[
+\mathbf{P}(\text{adjacent}) = \frac{11!\cdot 2!}{12!} = \frac{2}{12} = \boxed{\tfrac{1}{6}}.
+\]
+\end{example}
+
+\begin{example}[Gimli and Legolas -- circular table]
+The same twelve people are now seated around a circular table with unlabeled chairs, but
+left/right position relative to others still matters (rotations of a seating are considered the
+\emph{same} arrangement; reflections are considered \emph{different}). Find
+$\mathbf{P}(\text{Gimli and Legolas adjacent})$.
+
+\emph{Solution.} The number of distinct circular arrangements of $n$ distinct people (identifying
+rotations) is $(n-1)!$: fix one person's seat as a reference (this uses up the rotational
+symmetry), and arrange the remaining $n-1$ people in the remaining seats in $(n-1)!$ ways. So the
+total sample space has $11! $ equally likely arrangements.
+
+For the favourable count, glue Gimli and Legolas into a super-person; now $11$ entities are
+arranged around the circle, giving $(11-1)! = 10!$ circular arrangements, times $2!$ internal
+orders of the super-person. So
+\[
+\mathbf{P}(\text{adjacent}) = \frac{10!\cdot 2!}{11!} = \frac{2}{11}.
+\]
+\emph{(Note this probability is slightly higher than in the linear case, $2/11 > 1/6$, since on a
+circle every seat has two neighbours, including the two ``end'' seats of the linear arrangement,
+which only have one neighbour each.)}
+\end{example}
+
+\begin{example}[The matching / derangement problem, and the coat-check problem]
+\label{ex:derangement}
+A friend has $n$ cards numbered $1,\dots,n$, placed face-down on a table in an order unknown to
+you. You guess the number on each card, in order, from left to right. You \emph{win} if at least
+one guess matches. Equivalently (the ``coat check'' formulation): $n$ party-goers each receive a
+uniformly random permutation of $n$ coats; what is the probability that \emph{no one} receives
+their own coat back (a \textbf{derangement})?
+
+\emph{Solution.} Let $A_i$ be the event that the $i$-th person receives their own coat (equivalently,
+guess $i$ is correct). We want $\mathbf{P}\!\left[\bigcap_{i=1}^n A_i^c\right] = 1 - \mathbf{P}\!\left[\bigcup_{i=1}^n A_i\right]$.
+
+For any distinct indices $i_1,\dots,i_k \in \{1,\dots,n\}$, conditioning on $k$ specific people
+getting their own coats leaves the remaining $n-k$ coats distributed uniformly at random among the
+remaining $n-k$ people, so
+\[
+\mathbf{P}[A_{i_1}\cap \cdots \cap A_{i_k}] = \frac{(n-k)!}{n!}.
+\]
+By Theorem~\ref{thm:incl-excl-n}, noting there are $\dbinom{n}{k}$ terms of order $k$
+(each with the same value $(n-k)!/n!$ by symmetry):
+\[
+\mathbf{P}\!\left[\bigcup_{i=1}^n A_i\right] = \sum_{k=1}^n (-1)^{k-1}\binom{n}{k}\frac{(n-k)!}{n!}.
+\]
+Hence
+\[
+\mathbf{P}[\text{no matches}] = 1 - \sum_{k=1}^n (-1)^{k-1}\binom{n}{k}\frac{(n-k)!}{n!}
+= \sum_{k=0}^n (-1)^k \binom{n}{k}\frac{(n-k)!}{n!} = \sum_{k=0}^n \frac{(-1)^k}{k!},
+\]
+using $\binom{n}{k}\frac{(n-k)!}{n!} = \frac{1}{k!}$. So
+\[
+\boxed{\mathbf{P}[\text{no matches}] = \sum_{k=0}^n \frac{(-1)^k}{k!}}
+\qquad\text{and}\qquad
+\mathbf{P}[\text{you win}] = 1 - \sum_{k=0}^n \frac{(-1)^k}{k!}.
+\]
+Since $\sum_{k=0}^\infty (-1)^k/k! = e^{-1}$, for large $n$,
+$\mathbf{P}[\text{no matches}] \approx e^{-1} \approx 0.3679$, so
+$\mathbf{P}[\text{you win}] \to 1-e^{-1} \approx 0.6321$, remarkably independent of $n$ (for large
+$n$).
+\end{example}
+
+\begin{example}[Bayes/partition problem: the missing plane]
+A plane is missing and, a priori, equally likely to have gone down in any of $3$ regions
+($\mathbf{P}(R_i)=1/3$ for $i=1,2,3$). Let $1-\beta_i$ denote the probability that a search of
+region $i$ finds the plane, \emph{given} the plane is actually in region $i$. Given that a search
+of region $1$ was unsuccessful, find $\mathbf{P}(R_i \mid F_1^c)$ for each $i$, where $F_1^c$
+denotes ``the search of region 1 failed.''
+
+\emph{Solution.} If the plane is not in region $1$, a search of region $1$ is certain to fail:
+$\mathbf{P}(F_1^c \mid R_2) = \mathbf{P}(F_1^c\mid R_3) = 1$. If the plane is in region 1,
+$\mathbf{P}(F_1^c\mid R_1) = \beta_1$ by definition. By the law of total probability (established
+formally in Section~4),
+\[
+\mathbf{P}(F_1^c) = \beta_1\cdot\tfrac13 + 1\cdot \tfrac13 + 1\cdot\tfrac13 = \frac{\beta_1+2}{3}.
+\]
+By Bayes' formula,
+\[
+\mathbf{P}(R_1\mid F_1^c) = \frac{\beta_1 \cdot \tfrac13}{(\beta_1+2)/3} = \frac{\beta_1}{\beta_1+2},
+\qquad
+\mathbf{P}(R_2\mid F_1^c) = \mathbf{P}(R_3\mid F_1^c) = \frac{1\cdot \tfrac13}{(\beta_1+2)/3} =
+\frac{1}{\beta_1+2}.
+\]
+As a sanity check, these three probabilities sum to $\dfrac{\beta_1+1+1}{\beta_1+2}=1$. Note that
+$\mathbf{P}(R_1\mid F_1^c) < \mathbf{P}(R_1) = 1/3$ (an unsuccessful search of region 1 makes it
+\emph{less} likely the plane is there, and correspondingly more likely it is in region 2 or 3) --
+unless $\beta_1=1$ (search is useless), in which case the failed search carries no information and
+$\mathbf{P}(R_i\mid F_1^c) = 1/3$ for all $i$.
+\end{example}
+
+\begin{example}[Bayes' formula: a diagnostic test]
+A disease test is $95\%$ sensitive ($\mathbf{P}[+\mid \text{disease}]=0.95$) and has a $1\%$
+false-positive rate ($\mathbf{P}[+\mid \text{no disease}] = 0.01$). The disease prevalence is
+$0.5\%$. Given a positive test result, find the probability the person actually has the disease.
+
+\emph{Solution.} By the law of total probability,
+\[
+\mathbf{P}[+] = \mathbf{P}[+\mid D]\mathbf{P}[D] + \mathbf{P}[+\mid D^c]\mathbf{P}[D^c]
+= (0.95)(0.005) + (0.01)(0.995) = 0.00475 + 0.00995 = 0.0147.
+\]
+By Bayes' formula,
+\[
+\mathbf{P}[D\mid +] = \frac{\mathbf{P}[+\mid D]\mathbf{P}[D]}{\mathbf{P}[+]}
+= \frac{0.00475}{0.0147} \approx \boxed{0.3231}.
+\]
+Despite the test's apparent accuracy, fewer than a third of positive results are true positives --
+a consequence of the low base rate (prevalence). This is the classic caution against confusing
+$\mathbf{P}[+\mid D]$ with $\mathbf{P}[D\mid +]$.
+\end{example}
+
+\newpage
+% =========================================================================
+\section{Conditional Probability and Independence}
+% =========================================================================
+
+\subsection{Definition and basic examples}
+
+\begin{definition}
+Given events $E,F$ with $\mathbf{P}[F]>0$, the \textbf{conditional probability} of $E$ given $F$
+is
+\[
+\mathbf{P}[E\mid F] := \frac{\mathbf{P}[E\cap F]}{\mathbf{P}[F]}.
+\]
+\end{definition}
+
+\begin{intuition}
+Knowing that $F$ has occurred restricts attention to the ``reduced sample space'' $F$: outcomes
+outside $F$ are now known to be impossible. Within this reduced space, the (renormalized)
+likelihood of $E$ occurring is the fraction of $F$ that also lies in $E$, i.e.\
+$|E\cap F|/|F|$ in the naive/finite-uniform case -- exactly $\mathbf{P}[E\cap F]/\mathbf{P}[F]$.
+\end{intuition}
+
+\begin{proposition}
+For fixed $F$ with $\mathbf{P}[F]>0$, the set function $f(A) := \mathbf{P}[A\mid F]$, defined for
+events $A \subset S$, is itself a legitimate probability function, i.e.\ satisfies
+Axiom~\ref{ax:kolmogorov}.
+\end{proposition}
+\begin{proof}
+(1) $f(A) = \mathbf{P}[A\cap F]/\mathbf{P}[F] \ge 0$ since numerator and denominator are
+non-negative, and $f(A) \le 1$ since $\mathbf{P}[A\cap F]\le \mathbf{P}[F]$ by monotonicity
+(Proposition~\ref{prop:monotone}, as $A\cap F \subset F$).
+(2) $f(S) = \mathbf{P}[S\cap F]/\mathbf{P}[F] = \mathbf{P}[F]/\mathbf{P}[F]=1$.
+(3) If $A_1,A_2,\dots$ are pairwise disjoint, so are $A_1\cap F, A_2\cap F,\dots$, and
+$\left(\bigcup_i A_i\right)\cap F = \bigcup_i (A_i \cap F)$ by distributivity, so
+\[
+f\left(\bigcup_i A_i\right) = \frac{\mathbf{P}\left[\bigcup_i(A_i\cap F)\right]}{\mathbf{P}[F]}
+= \frac{\sum_i \mathbf{P}[A_i\cap F]}{\mathbf{P}[F]} = \sum_i f(A_i). \qedhere
+\]
+\end{proof}
+
+\subsection{The multiplication rule}
+
+\begin{theorem}[Multiplication rule]
+For events $E_1,\dots,E_n$ with $\mathbf{P}[E_1\cap\cdots\cap E_{n-1}]>0$,
+\[
+\mathbf{P}\!\left[\bigcap_{i=1}^n E_i\right] = \mathbf{P}[E_1]\,\mathbf{P}[E_2\mid E_1]\,
+\mathbf{P}[E_3\mid E_1\cap E_2]\cdots \mathbf{P}\!\left[E_n \,\middle|\, \bigcap_{i=1}^{n-1}E_i\right].
+\]
+\end{theorem}
+\begin{proof}
+By definition, $\mathbf{P}[E_2\mid E_1]\mathbf{P}[E_1] = \mathbf{P}[E_1\cap E_2]$. Inductively,
+$\mathbf{P}\!\left[E_k \mid \bigcap_{i<k}E_i\right]\cdot \mathbf{P}\!\left[\bigcap_{i<k}E_i\right]
+= \mathbf{P}\!\left[\bigcap_{i\le k}E_i\right]$ directly from the definition of conditional
+probability (with $E=E_k$, $F=\bigcap_{i<k}E_i$). Chaining these equalities from $k=n$ down to
+$k=2$ telescopes to the stated product.
+\end{proof}
+
+\subsection{The law of total probability and Bayes' formula}
+
+\begin{theorem}[Law of total probability -- two-event form]
+For events $E,F$ with $0<\mathbf{P}[F]<1$,
+\[
+\mathbf{P}[E] = \mathbf{P}[E\mid F]\,\mathbf{P}[F] + \mathbf{P}[E\mid F^c]\,\mathbf{P}[F^c].
+\]
+\end{theorem}
+\begin{proof}
+$E = (E\cap F)\cup(E\cap F^c)$ is a disjoint union, so by finite additivity,
+$\mathbf{P}[E]=\mathbf{P}[E\cap F]+\mathbf{P}[E\cap F^c]
+= \mathbf{P}[E\mid F]\mathbf{P}[F] + \mathbf{P}[E\mid F^c]\mathbf{P}[F^c]$, using the definition of
+conditional probability twice (in the form $\mathbf{P}[E\cap F]=\mathbf{P}[E\mid F]\mathbf{P}[F]$).
+\end{proof}
+
+\begin{theorem}[Law of total probability -- partition form]
+Let $E_1,\dots,E_n$ be a \textbf{partition} of the sample space $\Omega$, i.e.\
+$\bigcup_i E_i = \Omega$ and $E_i \cap E_j = \varnothing$ for $i \ne j$, each with
+$\mathbf{P}[E_i]>0$. Then for any event $F$,
+\[
+\mathbf{P}[F] = \sum_{i=1}^n \mathbf{P}[F\mid E_i]\,\mathbf{P}[E_i].
+\]
+\end{theorem}
+\begin{proof}
+$F = F \cap \Omega = F \cap \bigcup_i E_i = \bigcup_i (F\cap E_i)$ (distributivity), a disjoint
+union since the $F\cap E_i$ inherit disjointness from the $E_i$. By finite additivity,
+$\mathbf{P}[F] = \sum_i \mathbf{P}[F\cap E_i] = \sum_i \mathbf{P}[F\mid E_i]\mathbf{P}[E_i]$.
+\end{proof}
+
+\begin{theorem}[Bayes' formula, general form]
+\label{thm:bayes}
+With $E_1,\dots,E_n$ a partition of $\Omega$ as above, and $F$ an event with $\mathbf{P}[F]>0$,
+\[
+\mathbf{P}[E_i \mid F] = \frac{\mathbf{P}[F\mid E_i]\,\mathbf{P}[E_i]}
+{\sum_{j=1}^n \mathbf{P}[F\mid E_j]\,\mathbf{P}[E_j]}.
+\]
+\end{theorem}
+\begin{proof}
+By definition, $\mathbf{P}[E_i\mid F] = \mathbf{P}[F\cap E_i]/\mathbf{P}[F] =
+\mathbf{P}[F\mid E_i]\mathbf{P}[E_i]/\mathbf{P}[F]$; now substitute the law of total probability
+for the denominator $\mathbf{P}[F]$.
+\end{proof}
+
+\subsection{Worked examples}
+
+\begin{example}[Bridge hands]
+A standard $52$-card deck is dealt equally to North, South, East, West (13 cards each, uniformly
+at random). Given that North and South together hold $8$ spades, find $\mathbf{P}(\text{East holds
+exactly 3 spades})$.
+
+\emph{Solution.} There are $13$ spades total; if North+South (26 cards) hold $8$ of them, the
+remaining $26$ cards (held jointly by East and West) contain the remaining $13-8=5$ spades. Given
+this, the $26$ non-(North/South) cards are dealt uniformly at random into East's $13$ and West's
+$13$; this is exactly a hypergeometric sampling situation: choosing $13$ of $26$ cards (5 spades,
+21 non-spades) for East. Hence
+\[
+\mathbf{P}(\text{East has exactly 3 spades}) = \frac{\dbinom{5}{3}\dbinom{21}{10}}{\dbinom{26}{13}}
+= \frac{10\cdot 352716}{10400600} \approx \boxed{0.3391}.
+\]
+\end{example}
+
+\begin{example}[Aces in four bridge hands]
+The $52$ cards are dealt into $4$ labeled piles of $13$ each. Find $\mathbf{P}(\text{each pile
+contains exactly one ace})$.
+
+\emph{Solution 1 (multiplication rule).} Deal the four aces one at a time (conceptually), tracking
+which pile each lands in, along with the other $48$ cards filling in the remaining $12$ slots per
+pile. The first ace can go anywhere. Given the first ace's pile, the second ace lands in a
+\emph{different} pile with probability $39/51$ (there are $51$ remaining card-slots overall, of
+which $12$ remain in the first ace's pile and $39$ lie in the other three piles). Given the first
+two aces are in different piles, the third ace avoids both with probability $26/50$ (of the
+remaining $50$ slots, $26$ lie in the two untouched piles). The fourth ace must then land in the
+one remaining (ace-free) pile, with probability $13/49$. By the multiplication rule,
+\[
+\mathbf{P} = \frac{39}{51}\cdot\frac{26}{50}\cdot\frac{13}{49}
+= \frac{39\cdot26\cdot13}{51\cdot50\cdot49} = \frac{13182}{124950} \approx \boxed{0.1055}.
+\]
+
+\emph{Solution 2 (direct counting).} The total number of ways to deal $52$ cards into $4$ labeled
+piles of $13$ is the multinomial coefficient $\dbinom{52}{13,13,13,13} = \dfrac{52!}{(13!)^4}$.
+Favourable deals: first assign the $4$ distinct aces to the $4$ piles, one each, in $4!$ ways; then
+distribute the remaining $48$ cards into the remaining $12$ slots of each pile, in
+$\dbinom{48}{12,12,12,12}=\dfrac{48!}{(12!)^4}$ ways. So
+\[
+\mathbf{P} = \frac{4!\cdot 48!/(12!)^4}{52!/(13!)^4}
+= 4!\left(\frac{13!}{12!}\right)^{\!4}\frac{48!}{52!}
+= \frac{24\cdot 13^4}{52\cdot51\cdot50\cdot49} = \frac{685464}{6497400}\approx 0.1055,
+\]
+agreeing exactly with Solution 1.
+\end{example}
+
+\begin{example}[The urn model without replacement, and exchangeability]
+\label{ex:urn}
+An urn contains $b$ black and $w$ white balls; balls are drawn sequentially, without replacement.
+
+\textbf{(a)} $\mathbf{P}(\text{1st black, 2nd white})$ vs.\ $\mathbf{P}(\text{1st white, 2nd
+black})$:
+\[
+\mathbf{P}(B_1 W_2) = \frac{b}{b+w}\cdot\frac{w}{b+w-1}, \qquad
+\mathbf{P}(W_1 B_2) = \frac{w}{b+w}\cdot\frac{b}{b+w-1}.
+\]
+These are \emph{equal} -- both equal $\dfrac{bw}{(b+w)(b+w-1)}$ -- even though the events describe
+opposite orders.
+
+\textbf{(b) General exchangeability.} For any $k \le b+w$ and any specific sequence of colours
+$C_1,\dots,C_k$ (each black or white) with exactly $\ell$ black and $k-\ell$ white,
+\[
+\mathbf{P}[\text{draws } 1,\dots,k \text{ have colours } C_1,\dots,C_k]
+= \frac{b(b-1)\cdots(b-\ell+1)\;w(w-1)\cdots(w-k+\ell+1)}{(b+w)(b+w-1)\cdots(b+w-k+1)},
+\]
+\emph{regardless of the particular order in which the $\ell$ blacks and $k-\ell$ whites appear.}
+
+\emph{Proof.} Every time a ball is drawn, its (conditional) probability of being black equals
+(current number of black balls)/(current total number of balls). The denominator, at the $i$-th
+draw, is $b+w-i+1$ \emph{regardless of the colours drawn previously}; multiplying over
+$i=1,\dots,k$ gives the denominator $(b+w)(b+w-1)\cdots(b+w-k+1)$. For the numerator: each time a
+black ball is drawn, the number of black balls available decreases by one from its current value,
+regardless of when the black draws occur relative to white draws; so if black balls are drawn at
+$\ell$ of the $k$ draw-times (in any pattern), the successive black-counts realized are
+$b, b-1,\dots,b-\ell+1$ (in that order, since each black draw reduces the black-count by exactly
+one from wherever it currently stands) -- and likewise the white contributions are
+$w,w-1,\dots,w-k+\ell+1$. The product of all these numerators, by the multiplication rule, is as
+stated, independent of the interleaving pattern. This property is called \textbf{exchangeability}.
+$\blacksquare$
+
+\textbf{(c) Given $k$ black balls drawn among the first $n$: probability the first ball is
+black.} By part (b), \emph{every} sequence of $n$ colours containing exactly $k$ blacks has the
+\emph{same} probability; there are $\dbinom{n}{k}$ such sequences (choose which of the $n$ draw-
+positions are black), so, conditionally on ``exactly $k$ blacks among the first $n$ draws,'' each
+of these $\dbinom{n}{k}$ sequences is equally likely. The number of these sequences with the first
+draw black is $\dbinom{n-1}{k-1}$ (the remaining $k-1$ blacks are placed among the other $n-1$
+positions). Hence
+\[
+\mathbf{P}(\text{1st draw black} \mid k \text{ blacks among first } n)
+= \frac{\dbinom{n-1}{k-1}}{\dbinom{n}{k}} = \frac{k}{n}.
+\]
+\emph{(This last simplification: $\dbinom{n-1}{k-1}/\dbinom{n}{k} =
+\dfrac{(n-1)!/[(k-1)!(n-k)!]}{n!/[k!(n-k)!]} = \dfrac{(n-1)!\,k!}{(k-1)!\,n!}=\dfrac{k}{n}$.)}
+\end{example}
+
+\subsection{Independence}
+
+\begin{definition}
+Events $E,F$ (with $\mathbf{P}[F]>0$) are \textbf{independent} if $\mathbf{P}[E\mid F]=\mathbf{P}[E]$,
+equivalently (multiplying both sides by $\mathbf{P}[F]$),
+\[
+\mathbf{P}[E\cap F] = \mathbf{P}[E]\,\mathbf{P}[F].
+\]
+\end{definition}
+
+\begin{proposition}
+If $E$ and $F$ are independent, so are $E$ and $F^c$.
+\end{proposition}
+\begin{proof}
+$\mathbf{P}[E\cap F^c] = \mathbf{P}[E] - \mathbf{P}[E\cap F]$ (from $E = (E\cap F)\cup(E\cap F^c)$,
+disjoint union, and finite additivity) $= \mathbf{P}[E] - \mathbf{P}[E]\mathbf{P}[F]$ (using
+independence of $E,F$) $= \mathbf{P}[E](1-\mathbf{P}[F]) = \mathbf{P}[E]\mathbf{P}[F^c]$.
+\end{proof}
+
+\begin{definition}
+A finite collection of events $E_1,\dots,E_r$ is \textbf{(mutually) independent} if, for
+\emph{every} nonempty subset of indices $\{i_1,\dots,i_s\}\subset\{1,\dots,r\}$,
+\[
+\mathbf{P}\!\left[\bigcap_{j=1}^s E_{i_j}\right] = \prod_{j=1}^s \mathbf{P}[E_{i_j}].
+\]
+An infinite collection is independent if every finite sub-collection is independent.
+\end{definition}
+
+\begin{example}[Pairwise independence does not imply mutual independence]
+\label{ex:pairwise-not-mutual}
+Roll two fair, independent dice. Let
+\[
+A = \{\text{die 1 is even}\}, \quad B=\{\text{die 2 is even}\}, \quad
+C=\{\text{both dice show the same parity}\}.
+\]
+Each of $A,B,C$ has probability $1/2$ (by symmetry: $C$ occurs for $18$ of the $36$ equally likely
+outcomes -- $9$ with both even, $9$ with both odd).
+
+\emph{Pairwise independence.} $\mathbf{P}[A\cap B]$ = both even = $\tfrac12\cdot\tfrac12=\tfrac14 =
+\mathbf{P}[A]\mathbf{P}[B]$: independent. $\mathbf{P}[A\cap C]$ = die 1 even \emph{and} same parity
+= die 1 and die 2 both even = $\tfrac14 = \mathbf{P}[A]\mathbf{P}[C]$: independent. By symmetry
+$B,C$ are independent too.
+
+\emph{Failure of mutual independence.} $\mathbf{P}[A\cap B\cap C]$ = both dice even (which
+automatically satisfies $C$) $=\tfrac14$. But $\mathbf{P}[A]\mathbf{P}[B]\mathbf{P}[C] =
+\tfrac12\cdot\tfrac12\cdot\tfrac12=\tfrac18 \ne \tfrac14$.
+
+So $A,B,C$ are pairwise independent but \emph{not} mutually independent: knowing any two of $A,B,C$
+in fact fully determines the third (e.g.\ $A$ and $C$ together force $B$), so the triple carries
+strictly less ``independent information'' than three genuinely unrelated coin flips would.
+\end{example}
+
+\subsection{Comparison table: conditional probability concepts}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{3.3cm} p{5.7cm} p{5.7cm}}
+\toprule
+\textbf{Concept} & \textbf{Definition} & \textbf{Key identity} \\
+\midrule
+Conditional probability & Belief in $E$ updated by knowing $F$ occurred & $\mathbf{P}[E\mid F]=\mathbf{P}[E\cap F]/\mathbf{P}[F]$ \\
+Independence (2 events) & $F$ carries no information about $E$ & $\mathbf{P}[E\cap F]=\mathbf{P}[E]\mathbf{P}[F]$ \\
+Pairwise independence ($n$ events) & every \emph{pair} multiplies & $\mathbf{P}[E_i\cap E_j]=\mathbf{P}[E_i]\mathbf{P}[E_j]$, all $i\ne j$ \\
+Mutual independence ($n$ events) & every \emph{subcollection} multiplies & $\mathbf{P}\big[\bigcap_{j\in S}E_j\big]=\prod_{j\in S}\mathbf{P}[E_j]$, all $S$ \\
+Law of total probability & Decompose $F$ over a partition & $\mathbf{P}[F]=\sum_i \mathbf{P}[F\mid E_i]\mathbf{P}[E_i]$ \\
+Bayes' formula & Invert a conditional probability & $\mathbf{P}[E_i\mid F] = \mathbf{P}[F\mid E_i]\mathbf{P}[E_i]/\mathbf{P}[F]$ \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\newpage
+% =========================================================================
+\section{Discrete Random Variables}
+% =========================================================================
+
+\subsection{Definition, pmf, and cdf}
+
+\begin{definition}
+A \textbf{random variable} is a (real-valued, or more generally $\R^n$-valued) function
+$X : S \to \R$ defined on the sample space of a random experiment.
+\end{definition}
+
+\begin{definition}
+A random variable $X$ is \textbf{discrete} if it takes at most countably many values.
+The \textbf{probability mass function (pmf)} of a discrete $X$ is
+$p(x) := \mathbf{P}[X=x]$ for $x \in \R$; necessarily $p(x)>0$ for at most countably many $x$, and
+$\sum_{i} p(x_i) = 1$ where $x_1,x_2,\dots$ enumerate the values with $p(x_i)>0$.
+\end{definition}
+
+\begin{definition}
+The \textbf{cumulative distribution function (cdf)} of any random variable $X$ is
+$F(a) := \mathbf{P}[X\le a]$ for $a \in \R$. For discrete $X$, $F(a) = \sum_{x\le a}p(x)$.
+\end{definition}
+
+\begin{proposition}[Properties of the cdf]
+\label{prop:cdf-properties}
+For any random variable $X$ with cdf $F$:
+\begin{enumerate}[label=(\arabic*)]
+\item (Monotonicity) $x_1 \le x_2 \implies F(x_1)\le F(x_2)$.
+\item (Right-continuity) $\lim_{y\to x^+}F(y) = F(x)$ for every $x$.
+\item (Limits at infinity) $\lim_{x\to\infty}F(x)=1$, $\lim_{x\to-\infty}F(x)=0$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\textbf{(1)} $\{X\le x_1\}\subset \{X\le x_2\}$ as sets (any $\omega$ with $X(\omega)\le x_1$ also
+satisfies $X(\omega)\le x_2$), so by monotonicity of probability (Proposition~\ref{prop:monotone}),
+$F(x_1)=\mathbf{P}[X\le x_1]\le \mathbf{P}[X\le x_2]=F(x_2)$.
+
+\textbf{(2)} Take any sequence $x_n \downarrow x$ (decreasing to $x$), and set $A_n := \{X\le x_n\}$.
+Since $x_n$ is decreasing, $\{A_n\}$ is a decreasing sequence of events, with
+$\bigcap_n A_n = \{X\le x\}$ (an outcome satisfies $X(\omega)\le x_n$ for \emph{every} $n$ if and
+only if $X(\omega)\le x$, since $x_n \downarrow x$). By continuity of probability
+(Theorem~\ref{thm:continuity-prob}), $F(x_n)=\mathbf{P}[A_n]\to \mathbf{P}[\bigcap_n A_n]=F(x)$.
+Since this holds for \emph{every} sequence $x_n\downarrow x$, we conclude $\lim_{y\to x^+}F(y)=F(x)$.
+
+\textbf{(3)} Apply Theorem~\ref{thm:continuity-prob} to the increasing sequence
+$\{X\le n\}_{n\in\N}$, whose union is all of $S$ (every real-valued $X(\omega)$ is $\le$ some
+integer), giving $F(n)\to \mathbf{P}(S)=1$; and to the decreasing sequence $\{X\le -n\}_{n\in\N}$,
+whose intersection is $\varnothing$, giving $F(-n)\to \mathbf{P}(\varnothing)=0$.
+\end{proof}
+
+\begin{remark}
+For a discrete random variable, $F$ is a right-continuous \textbf{step function}, with jumps of
+size $p(x)$ exactly at the points $x$ where $p(x)>0$. For a continuous random variable (Section~8),
+by contrast, $F$ is continuous everywhere and $\mathbf{P}[X=x]=0$ for every single point $x$.
+\end{remark}
+
+\subsection{Expectation and the law of the unconscious statistician (LOTUS)}
+
+\begin{definition}
+The \textbf{expectation} of a discrete random variable $X$ with pmf $p$ is
+\[
+\E{X} = \sum_{x\,:\,p(x)>0} x\,p(x).
+\]
+\end{definition}
+
+\begin{theorem}[LOTUS]
+\label{thm:lotus}
+Let $X$ be discrete, taking values $x_1,x_2,\dots$, with pmf $p$, and let $g:\R\to\R$. Then
+$Y := g(X)$ is also a discrete random variable, and
+\[
+\E{g(X)} = \sum_{i} g(x_i)\,p(x_i).
+\]
+\end{theorem}
+\begin{proof}
+Let $Y$ take values in $\{y_1,y_2,\dots\}$ (a countable set, since $Y$ is a function of the
+countably-valued $X$). For each $j$, define $S_j := \{x_i : g(x_i)=y_j\}$. The sets $\{S_j\}$ form
+a \textbf{partition} of $\{x_1,x_2,\dots\}$: they are disjoint (an $x_i$ maps to a unique $g(x_i)$,
+hence lies in exactly one $S_j$), and their union is everything (every $x_i$ lies in $S_j$ for
+$j$ such that $y_j = g(x_i)$).
+
+Since $Y=y_j$ if and only if $X=x_i$ for some $x_i \in S_j$, the events $\{X=x_i\}$, $x_i \in S_j$,
+are disjoint with union $\{Y=y_j\}$, so by finite (or countable) additivity,
+\[
+\mathbf{P}[Y=y_j] = \sum_{x_i \in S_j} \mathbf{P}[X=x_i] = \sum_{x_i\in S_j}p(x_i).
+\]
+Now compute, using the partition $\{S_j\}$ to reorganize the sum (valid since all terms are
+non-negative, or more generally the series converges absolutely -- an implicit standing
+assumption whenever we write $\E{X}$):
+\[
+\sum_i g(x_i)p(x_i) = \sum_j \sum_{x_i \in S_j} g(x_i)p(x_i)
+= \sum_j \sum_{x_i\in S_j} y_j\, p(x_i)
+= \sum_j y_j \sum_{x_i \in S_j}p(x_i) = \sum_j y_j\, \mathbf{P}[Y=y_j] = \E{Y}. \qedhere
+\]
+\end{proof}
+
+\begin{remark}
+The value of LOTUS is practical: to compute $\E{g(X)}$ one need not first derive the pmf of the
+transformed variable $Y=g(X)$; the pmf of $X$ together with $g$ suffices.
+\end{remark}
+
+\begin{corollary}[Linearity of expectation, discrete scalar case]
+For constants $a,b\in\R$, $\E{aX+b} = a\E{X}+b$.
+\end{corollary}
+\begin{proof}
+Apply LOTUS with $g(x)=ax+b$: $\E{aX+b} = \sum_i (ax_i+b)p(x_i) = a\sum_i x_i p(x_i) + b\sum_i p(x_i)
+= a\E{X}+b\cdot 1$.
+\end{proof}
+
+\subsection{The discrete distributions catalogue}
+
+We now derive, from first principles, the pmf, mean, and variance of each of the standard discrete
+distributions appearing in the notes.
+
+\subsubsection{Bernoulli$(p)$}
+
+A single trial with $\mathbf{P}[X=1]=p$ (``success''), $\mathbf{P}[X=0]=1-p$ (``failure'').
+\[
+\E{X} = 1\cdot p + 0\cdot(1-p) = p, \qquad
+\E{X^2} = 1^2\cdot p+0^2\cdot(1-p) = p,\qquad
+\Var{X} = p-p^2 = p(1-p).
+\]
+
+\subsubsection{Binomial$(n,p)$}
+
+$n$ independent Bernoulli$(p)$ trials; $X=$ total number of successes.
+
+\begin{theorem}
+$\displaystyle \mathbf{P}[X=k] = \binom{n}{k}p^k(1-p)^{n-k}$, $k=0,1,\dots,n$.
+\end{theorem}
+\begin{proof}
+Fix $k$. Any \emph{specific} sequence of $n$ trial-outcomes with exactly $k$ successes and $n-k$
+failures has probability $p^k(1-p)^{n-k}$ by independence (multiplication rule for independent
+events). The number of such sequences is the number of ways to choose \emph{which} $k$ of the $n$
+trials are the successes, i.e.\ $\dbinom{n}{k}$. Since these $\dbinom{n}{k}$ sequences are disjoint
+events whose union is $\{X=k\}$, finite additivity gives the stated pmf.
+\end{proof}
+
+\begin{theorem}
+$\E{X}=np$ and $\Var{X}=np(1-p)$.
+\end{theorem}
+\begin{proof}
+\textbf{Mean.} Write $X = \sum_{i=1}^n X_i$ where $X_i = \mathbf{1}_{\{\text{trial } i \text{ is a
+success}\}}$ is Bernoulli$(p)$. By linearity of expectation (extended by induction to $n$
+summands, from the two-summand case proved in Section~6),
+$\E{X} = \sum_i \E{X_i} = \sum_i p = np$.
+
+\textbf{Variance,} via the factorial moment $\E{X(X-1)}$ (this route is self-contained and avoids
+needing to prove that variances of independent variables add):
+\[
+\E{X(X-1)} = \sum_{k=0}^n k(k-1)\binom{n}{k}p^k(1-p)^{n-k}.
+\]
+The $k=0,1$ terms vanish. For $k\ge 2$, use
+$k(k-1)\dbinom{n}{k} = k(k-1)\dfrac{n!}{k!(n-k)!} = n(n-1)\dfrac{(n-2)!}{(k-2)!(n-k)!}
+= n(n-1)\dbinom{n-2}{k-2}$. So
+\[
+\E{X(X-1)} = n(n-1)p^2\sum_{k=2}^n \binom{n-2}{k-2}p^{k-2}(1-p)^{n-k}
+= n(n-1)p^2 \sum_{j=0}^{n-2}\binom{n-2}{j}p^j(1-p)^{(n-2)-j} = n(n-1)p^2,
+\]
+where the last sum is $1$ by the binomial theorem (it is the total probability of a Binomial$(n-2,p)$
+pmf). Hence
+\[
+\E{X^2} = \E{X(X-1)}+\E{X} = n(n-1)p^2+np,
+\]
+and
+\[
+\Var{X} = \E{X^2}-(\E{X})^2 = n(n-1)p^2+np - n^2p^2 = np - np^2 = np(1-p). \qedhere
+\]
+\end{proof}
+
+\subsubsection{Geometric$(p)$}
+
+$X=$ number of independent Bernoulli$(p)$ trials up to and including the first success.
+
+\begin{theorem}
+$\mathbf{P}[X=k]=(1-p)^{k-1}p$, $k=1,2,\dots$; $\E{X}=1/p$; $\Var{X}=(1-p)/p^2$.
+\end{theorem}
+\begin{proof}
+\textbf{PMF.} $\{X=k\}$ = ``first $k-1$ trials fail, $k$-th succeeds''; by independence, this has
+probability $(1-p)^{k-1}p$.
+
+\textbf{Mean.} Write $q=1-p$. Differentiate the geometric series $\sum_{k=0}^\infty q^k = 1/(1-q)$
+term-by-term with respect to $q$ (valid for $|q|<1$, a standard fact about power series within
+their radius of convergence):
+\[
+\sum_{k=1}^\infty k q^{k-1} = \frac{1}{(1-q)^2}.
+\]
+Then $\E{X} = \sum_{k=1}^\infty k q^{k-1}p = p\cdot\dfrac{1}{(1-q)^2} = \dfrac{p}{p^2}=\dfrac1p$.
+
+\textbf{Variance.} Differentiate once more: $\sum_{k=2}^\infty k(k-1)q^{k-2} = \dfrac{2}{(1-q)^3}$,
+so $\sum_{k=1}^\infty k(k-1)q^{k-1} = q\cdot\dfrac{2}{(1-q)^3} = \dfrac{2q}{p^3}$. Then
+\[
+\E{X(X-1)} = p\sum_{k=1}^\infty k(k-1)q^{k-1} = p\cdot\frac{2q}{p^3} = \frac{2q}{p^2},
+\]
+\[
+\E{X^2} = \E{X(X-1)}+\E{X} = \frac{2q}{p^2}+\frac1p = \frac{2q+p}{p^2} = \frac{2-p}{p^2}
+\quad(\text{using } q=1-p),
+\]
+\[
+\Var{X} = \E{X^2}-(\E{X})^2 = \frac{2-p}{p^2}-\frac{1}{p^2} = \frac{1-p}{p^2}. \qedhere
+\]
+\end{proof}
+
+\subsubsection{Negative Binomial$(k,p)$}
+
+$Y=$ number of independent Bernoulli$(p)$ trials up to and including the $k$-th success.
+
+\begin{theorem}
+\[
+\mathbf{P}[Y=n] = \binom{n-1}{k-1}p^k(1-p)^{n-k}, \qquad n=k,k+1,k+2,\dots
+\]
+\end{theorem}
+\begin{proof}
+$\{Y=n\}$ occurs iff exactly $k-1$ successes occur among the first $n-1$ trials (in any of
+$\dbinom{n-1}{k-1}$ patterns, each with probability $p^{k-1}(1-p)^{n-k}$ by independence) \emph{and}
+trial $n$ is itself a success (probability $p$). Multiplying (again by independence across trials)
+and summing over the $\dbinom{n-1}{k-1}$ disjoint patterns:
+\[
+\mathbf{P}[Y=n] = \binom{n-1}{k-1}p^{k-1}(1-p)^{n-k}\cdot p = \binom{n-1}{k-1}p^k(1-p)^{n-k}.
+\qedhere
+\]
+\end{proof}
+
+\begin{proposition}[Sum of Geometrics representation and the mean]
+$Y = X_1+X_2+\cdots+X_k$ where $X_i$ is the number of trials \emph{after} the $(i-1)$-st success
+until (and including) the $i$-th success; the $X_i$ are i.i.d.\ Geometric$(p)$. Hence, by linearity
+of expectation,
+\[
+\E{Y} = \sum_{i=1}^k \E{X_i} = \frac{k}{p}.
+\]
+\end{proposition}
+\begin{proof}
+That the $X_i$ are i.i.d.\ Geometric$(p)$ follows from the independence of the underlying Bernoulli
+trials: the process ``restarts'' after each success, with the same success probability $p$ at
+every trial, regardless of the past. Linearity of expectation (proved in Section~6 for two
+variables, and extending inductively to any finite number of random variables, discrete or not,
+independent or not) then gives $\E{Y}=k\E{X_1}=k/p$.
+\end{proof}
+
+\begin{remark}
+The variance formula $\Var{Y} = k(1-p)/p^2$ also holds, and follows from $\Var{Y}=\sum_i\Var{X_i}$
+\emph{because the $X_i$ are independent}. We do not prove the general fact ``variance of a sum of
+\emph{independent} random variables equals the sum of the variances'' here, since it requires the
+notion of covariance, which lies beyond the scope of the source notes; it is flagged here only as
+a forward reference.
+\end{remark}
+
+\subsubsection{Hypergeometric}
+
+Urn with $w$ white, $b$ black balls; draw $n\le w+b$ without replacement; $X=$ number of white
+balls drawn.
+
+\begin{theorem}
+\[
+\mathbf{P}[X=k] = \frac{\dbinom{w}{k}\dbinom{b}{n-k}}{\dbinom{w+b}{n}}, \qquad
+\max(0,n-b)\le k \le \min(n,w).
+\]
+\end{theorem}
+\begin{proof}
+The sample space (unordered) consists of all $\dbinom{w+b}{n}$ equally likely $n$-subsets of the
+$w+b$ balls. The favourable outcomes -- those with exactly $k$ white balls -- are formed by
+choosing $k$ of the $w$ white balls ($\dbinom{w}{k}$ ways) \emph{and}, independently, $n-k$ of the
+$b$ black balls ($\dbinom{b}{n-k}$ ways); by the basic principle of counting, there are
+$\dbinom{w}{k}\dbinom{b}{n-k}$ favourable outcomes. Dividing by the total gives the naive
+probability.
+\end{proof}
+
+\begin{theorem}
+$\E{X} = \dfrac{nw}{w+b}$.
+\end{theorem}
+\begin{proof}
+Label the white balls $1,\dots,w$ and let $Y_i := \mathbf{1}_{\{\text{white ball } i \text{ is
+among the } n \text{ drawn}\}}$, so $X = \sum_{i=1}^w Y_i$.
+
+By the same reasoning as Example~\ref{ex:urn}(c) (symmetry among the $\dbinom{w+b}{n}$ equally
+likely $n$-subsets): the number of $n$-subsets containing a \emph{particular} ball is
+$\dbinom{w+b-1}{n-1}$ (choose the remaining $n-1$ balls from the other $w+b-1$), so
+\[
+\E{Y_i} = \mathbf{P}[Y_i=1] = \frac{\dbinom{w+b-1}{n-1}}{\dbinom{w+b}{n}} = \frac{n}{w+b}
+\]
+(the same algebraic simplification as before), for \emph{every} $i=1,\dots,w$ -- notably
+\emph{without} needing the $Y_i$ to be independent. By linearity of expectation,
+\[
+\E{X} = \sum_{i=1}^w \E{Y_i} = w\cdot\frac{n}{w+b} = \frac{nw}{w+b}. \qedhere
+\]
+\end{proof}
+
+\begin{remark}
+$\Var{X} = n\cdot\dfrac{w}{w+b}\cdot\dfrac{b}{w+b}\cdot\dfrac{w+b-n}{w+b-1}$ is the standard result,
+but its derivation requires the covariance $\mathrm{Cov}(Y_i,Y_j)$ of the (dependent!) indicators
+$Y_i,Y_j$, which is beyond the present scope; we record it here only as a forward reference. Note
+the extra factor $\frac{w+b-n}{w+b-1}$ (the ``finite population correction'') relative to the
+Binomial variance $n\cdot\frac{w}{w+b}\cdot\frac{b}{w+b}$ one would get from sampling \emph{with}
+replacement -- reflecting the negative dependence induced by sampling \emph{without} replacement.
+\end{remark}
+
+\subsubsection{Poisson$(\lambda)$}
+
+\begin{theorem}[Poisson as a limit of Binomial]
+\label{thm:poisson-limit}
+Fix $c>0$. As $n\to\infty$ with $p=c/n$,
+\[
+\binom{n}{k}\left(\frac{c}{n}\right)^{\!k}\left(1-\frac{c}{n}\right)^{\!n-k}
+\longrightarrow \frac{e^{-c}c^k}{k!}, \qquad k=0,1,2,\dots
+\]
+\end{theorem}
+\begin{proof}
+Write
+\[
+\binom{n}{k}\left(\frac{c}{n}\right)^{\!k} = \frac{n(n-1)\cdots(n-k+1)}{k!}\cdot\frac{c^k}{n^k}
+= \frac{c^k}{k!}\prod_{j=0}^{k-1}\left(1-\frac{j}{n}\right).
+\]
+As $n\to\infty$ (with $k$ fixed), each factor $1-j/n \to 1$, so the product $\to 1$, giving
+$\binom{n}{k}(c/n)^k \to c^k/k!$.
+
+For the remaining factor, $\left(1-\dfrac{c}{n}\right)^{n-k} =
+\left(1-\dfrac{c}{n}\right)^{\!n}\left(1-\dfrac{c}{n}\right)^{\!-k}$. As $n\to\infty$,
+$\left(1-\dfrac{c}{n}\right)^{n}\to e^{-c}$ (the standard limit definition of the exponential
+function), while $\left(1-\dfrac{c}{n}\right)^{-k}\to 1$ (fixed, finite power, base $\to 1$).
+
+Multiplying the two limits (product of convergent sequences converges to the product of the
+limits) gives $\binom{n}{k}(c/n)^k(1-c/n)^{n-k} \to \dfrac{c^k}{k!}\cdot e^{-c}$.
+\end{proof}
+
+\begin{definition}
+$X\sim\text{Poisson}(\lambda)$ if $\mathbf{P}[X=k] = e^{-\lambda}\lambda^k/k!$, $k\in\Nz$.
+\end{definition}
+
+\begin{theorem}
+$\E{X}=\lambda$ and $\Var{X}=\lambda$.
+\end{theorem}
+\begin{proof}
+\[
+\E{X} = \sum_{k=0}^\infty k\,\frac{e^{-\lambda}\lambda^k}{k!}
+= e^{-\lambda}\lambda\sum_{k=1}^\infty \frac{\lambda^{k-1}}{(k-1)!}
+= e^{-\lambda}\lambda\, e^{\lambda} = \lambda,
+\]
+using $\sum_{m=0}^\infty \lambda^m/m! = e^\lambda$ (the exponential series) with $m=k-1$. Similarly,
+\[
+\E{X(X-1)} = \sum_{k=0}^\infty k(k-1)\frac{e^{-\lambda}\lambda^k}{k!}
+= e^{-\lambda}\lambda^2 \sum_{k=2}^\infty \frac{\lambda^{k-2}}{(k-2)!} = e^{-\lambda}\lambda^2 e^\lambda
+= \lambda^2,
+\]
+so $\E{X^2}=\E{X(X-1)}+\E{X}=\lambda^2+\lambda$, and $\Var{X}=\E{X^2}-(\E{X})^2=\lambda^2+\lambda-\lambda^2=\lambda$.
+\end{proof}
+
+\subsubsection{Discrete Uniform on $\{1,\dots,n\}$}
+
+\begin{theorem}
+If $\mathbf{P}[X=i]=1/n$ for $i=1,\dots,n$, then $\E{X}=\dfrac{n+1}{2}$ and
+$\Var{X}=\dfrac{n^2-1}{12}$.
+\end{theorem}
+\begin{proof}
+Using $\sum_{i=1}^n i = \dfrac{n(n+1)}{2}$:
+\[
+\E{X} = \frac1n\sum_{i=1}^n i = \frac1n\cdot\frac{n(n+1)}{2} = \frac{n+1}{2}.
+\]
+Using $\sum_{i=1}^n i^2 = \dfrac{n(n+1)(2n+1)}{6}$:
+\[
+\E{X^2} = \frac1n\sum_{i=1}^n i^2 = \frac{(n+1)(2n+1)}{6}.
+\]
+Then
+\[
+\Var{X} = \frac{(n+1)(2n+1)}{6} - \frac{(n+1)^2}{4}
+= (n+1)\left[\frac{2(2n+1)-3(n+1)}{12}\right]
+= (n+1)\cdot\frac{n-1}{12} = \frac{n^2-1}{12}. \qedhere
+\]
+\end{proof}
+
+\subsection{Summary comparison table of discrete distributions}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.7}
+\begin{longtable}{p{2.2cm} p{3.6cm} p{2.6cm} p{2.2cm} p{3.7cm}}
+\toprule
+\textbf{Distribution} & \textbf{PMF} & \textbf{Mean} & \textbf{Variance} & \textbf{Arises when\dots} \\
+\midrule
+Bernoulli$(p)$ & $p^x(1-p)^{1-x}$, $x\in\{0,1\}$ & $p$ & $p(1-p)$ & single success/failure trial \\
+Binomial$(n,p)$ & $\dbinom{n}{k}p^k(1-p)^{n-k}$, $k=0,\dots,n$ & $np$ & $np(1-p)$ & \# successes in $n$ i.i.d.\ trials (sampling \emph{with} replacement) \\
+Geometric$(p)$ & $(1-p)^{k-1}p$, $k=1,2,\dots$ & $1/p$ & $(1-p)/p^2$ & \# trials to \emph{first} success \\
+Negative Binomial$(k,p)$ & $\dbinom{n-1}{k-1}p^k(1-p)^{n-k}$, $n=k,k+1,\dots$ & $k/p$ & $k(1-p)/p^2$ & \# trials to $k$-th success \\
+Hypergeometric$(w,b,n)$ & $\dbinom{w}{k}\dbinom{b}{n-k}/\dbinom{w+b}{n}$ & $\dfrac{nw}{w+b}$ & $n\dfrac{w}{w+b}\dfrac{b}{w+b}\dfrac{w+b-n}{w+b-1}$ & \# white balls in $n$ draws \emph{without} replacement \\
+Poisson$(\lambda)$ & $e^{-\lambda}\lambda^k/k!$, $k=0,1,\dots$ & $\lambda$ & $\lambda$ & limit of Binomial$(n,c/n)$ as $n\to\infty$; rare events \\
+Discrete Uniform$\{1,\dots,n\}$ & $1/n$ & $(n+1)/2$ & $(n^2-1)/12$ & a single value chosen ``completely at random'' from a finite set \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{Further worked examples}
+
+\begin{example}[Coin tossed until a head or $n$ flips]
+Independent flips with $\mathbf{P}[\text{head}]=p$ continue until a head occurs, or until $n$
+flips have been made (whichever comes first). Let $X$ be the number of flips made. Find the pmf.
+
+\emph{Solution.} $X$ is discrete, taking values in $\{1,\dots,n\}$. For $k=1,\dots,n-1$:
+$\{X=k\}$ means the first $k-1$ flips were tails and the $k$-th was a head, so
+$\mathbf{P}[X=k]=(1-p)^{k-1}p$, exactly as in the (untruncated) Geometric distribution. For $k=n$:
+$\{X=n\}$ occurs if the first $n-1$ flips are \emph{all} tails (regardless of the $n$-th flip's
+outcome, since we stop at $n$ flips regardless), so $\mathbf{P}[X=n]=(1-p)^{n-1}$.
+
+\emph{Check:} $\sum_{k=1}^{n-1}(1-p)^{k-1}p + (1-p)^{n-1}
+= p\cdot\dfrac{1-(1-p)^{n-1}}{p} + (1-p)^{n-1} = 1$. \checkmark
+\end{example}
+
+\begin{example}[Determining a normalizing constant]
+$p(i) = c\lambda^i/i!$ for $i \in \Nz$, with $\lambda>0$ a given constant. Find $c$, then compute
+$\mathbf{P}[X=0]$ and $\mathbf{P}[X>2]$.
+
+\emph{Solution.} Normalization requires $\sum_{i=0}^\infty p(i)=1$:
+\[
+c\sum_{i=0}^\infty \frac{\lambda^i}{i!} = c\,e^{\lambda} = 1 \implies c = e^{-\lambda}.
+\]
+(This identifies $p(\cdot)$ as exactly the Poisson$(\lambda)$ pmf.) Then
+\[
+\mathbf{P}[X=0] = p(0) = c = e^{-\lambda},
+\]
+\[
+\mathbf{P}[X>2] = 1-p(0)-p(1)-p(2) = 1 - e^{-\lambda}\left(1+\lambda+\frac{\lambda^2}{2}\right).
+\]
+\end{example}
+
+\begin{example}[Size-biased sampling: the school-bus problem]
+$120$ students ride $3$ buses, with $36, 40, 44$ students respectively. One of the $120$ students
+is chosen uniformly at random; let $X$ be the number of students on \emph{that student's} bus.
+Find $\E{X}$.
+
+\emph{Solution.} Since the student is chosen uniformly among all $120$ students (not among the $3$
+buses), the probability that $X$ equals a given bus's size is proportional to that bus's size:
+\[
+\mathbf{P}[X=36]=\frac{36}{120}, \quad \mathbf{P}[X=40]=\frac{40}{120}, \quad \mathbf{P}[X=44]=\frac{44}{120}.
+\]
+So
+\[
+\E{X} = 36\cdot\frac{36}{120} + 40\cdot\frac{40}{120} + 44\cdot\frac{44}{120}
+= \frac{36^2+40^2+44^2}{120} = \frac{1296+1600+1936}{120} = \frac{4832}{120} \approx \boxed{40.27}.
+\]
+\end{example}
+
+\begin{intuition}
+Notice $\E{X}\approx 40.27$ exceeds the simple average bus size $(36+40+44)/3=40$. This is the
+\textbf{inspection paradox} / \textbf{size-biased sampling} phenomenon: a randomly chosen
+\emph{student} is more likely to be on a large bus than a small one (simply because large buses
+carry more students), so the ``bus size as seen by a random student'' systematically overweights
+larger buses relative to the plain average over buses.
+\end{intuition}
+
+\begin{example}[Betting on high-numbered balls]
+Three balls are drawn without replacement from $20$ balls numbered $1$ to $20$. Find the
+probability that at least one of the three drawn balls has a number $\ge 17$.
+
+\emph{Solution.} Complement: all three balls have numbers $\le 16$. There are $\dbinom{16}{3}$
+ways to choose $3$ balls from the $16$ numbered $1$--$16$, out of $\dbinom{20}{3}$ total ways.
+\[
+\mathbf{P}(\text{win}) = 1-\frac{\dbinom{16}{3}}{\dbinom{20}{3}} = 1-\frac{560}{1140}
+= 1-\frac{28}{57} = \boxed{\frac{29}{57}} \approx 0.5088.
+\]
+\end{example}
+
+\begin{example}[Random walk / gambler's ruin position]
+A particle starts at $0$ on $\Z$ and takes $n$ independent steps, each $+1$ with probability $p$
+and $-1$ with probability $1-p$. Let $Y$ be its position after $n$ steps. Find the pmf of $Y$.
+
+\emph{Solution.} Let $X$ = number of $+1$ steps among the $n$; then $X\sim\text{Binomial}(n,p)$,
+and the position is $Y = X\cdot(+1) + (n-X)\cdot(-1) = 2X - n$ (a linear/bijective transformation of
+$X$ on the relevant range). By LOTUS (or directly, since $Y=2X-n \iff X = (Y+n)/2$),
+\[
+\mathbf{P}[Y=y] = \mathbf{P}\!\left[X=\frac{y+n}{2}\right]
+= \binom{n}{\frac{y+n}{2}}\,p^{\frac{y+n}{2}}(1-p)^{\frac{n-y}{2}},
+\]
+defined whenever $y+n$ is even and $-n\le y\le n$ (and $0$ otherwise, since $X$ cannot take a
+non-integer or out-of-range value).
+\end{example}
+
+\newpage
+% =========================================================================
+\section{Joint Distributions of Random Variables}
+% =========================================================================
+
+\subsection{Joint and marginal pmfs}
+
+\begin{definition}
+Let $X_1,X_2$ be discrete random variables on the same sample space, with $X_1$ taking values in
+$\{a_1,a_2,\dots\}$ and $X_2$ in $\{b_1,b_2,\dots\}$. Their \textbf{joint pmf} is
+\[
+p(a_i,b_j) := \mathbf{P}[X_1=a_i, X_2=b_j] = \mathbf{P}\big[\{X_1=a_i\}\cap\{X_2=b_j\}\big].
+\]
+The \textbf{marginal pmf} of $X_1$ is recovered by summing out $X_2$:
+\[
+p_{X_1}(a_i) = \mathbf{P}[X_1=a_i] = \mathbf{P}\!\left[\{X_1=a_i\}\cap\bigcup_j\{X_2=b_j\}\right]
+= \sum_j p(a_i,b_j),
+\]
+using finite/countable additivity over the disjoint events $\{X_1=a_i,X_2=b_j\}$, $j=1,2,\dots$
+(which partition $\{X_1=a_i\}$). Symmetrically $p_{X_2}(b_j)=\sum_i p(a_i,b_j)$.
+\end{definition}
+
+\begin{example}[Sum and maximum of two dice]
+Roll two distinguishable fair dice; let $X_1$ be their sum, $X_2$ their maximum. For instance,
+\[
+\mathbf{P}[X_1=7, X_2=5] = \mathbf{P}[\{(2,5),(5,2)\}] = \frac{2}{36} = \frac{1}{18},
+\]
+since $X_1=7, X_2=5$ forces the (unordered) pair of face values to be $\{2,5\}$, realized by the
+two ordered outcomes $(2,5)$ and $(5,2)$ out of the $36$ equally likely outcomes.
+\end{example}
+
+\begin{example}[Sum and absolute difference]
+Let $U=X_1+X_2$ (sum) and $V=|X_1-X_2|$ (absolute difference) for two fair dice. If $V=0$, then
+$X_1=X_2=U/2$, which is only possible if $U$ is even, and corresponds to exactly $1$ of the $36$
+outcomes, so $\mathbf{P}[U=u,V=0] = 1/36$ for even $u\in\{2,4,6,8,10,12\}$. If $V=v>0$, then
+$\{X_1,X_2\}=\left\{\frac{u+v}{2},\frac{u-v}{2}\right\}$, requiring $u+v$ even and
+$1\le \frac{u-v}{2} < \frac{u+v}{2}\le 6$; when these hold there are exactly $2$ ordered outcomes
+(swap $X_1,X_2$), so $\mathbf{P}[U=u,V=v]=2/36=1/18$. Otherwise $\mathbf{P}[U=u,V=v]=0$.
+\end{example}
+
+\subsection{Independence of random variables}
+
+\begin{definition}
+Discrete random variables $X_1,X_2$ (taking values in $\{a_1,a_2,\dots\}$, $\{b_1,b_2,\dots\}$
+respectively) are \textbf{independent} if
+\[
+\mathbf{P}[X_1=a_i,X_2=b_j] = \mathbf{P}[X_1=a_i]\,\mathbf{P}[X_2=b_j] \quad \text{for all } i,j
+\]
+(equivalently, in terms of cdfs, $\mathbf{P}[X_1\le x_1,X_2\le x_2]=\mathbf{P}[X_1\le
+x_1]\mathbf{P}[X_2\le x_2]$ for all $x_1,x_2\in\R$ -- the definition applicable to any, not just
+discrete, random variables).
+\end{definition}
+
+\begin{example}
+Toss a fair coin twice, independently; let $X_i=\mathbf{1}_{\{i\text{-th toss is heads}\}}$. Then
+$\mathbf{P}[X_1=1,X_2=1] = \mathbf{P}[HH]=\tfrac14 = \mathbf{P}[X_1=1]\mathbf{P}[X_2=1]$, and
+similarly for the other three value-pairs, confirming $X_1,X_2$ are independent -- as one would
+expect, since the tosses themselves were assumed independent.
+\end{example}
+
+\subsection{Indicator random variables}
+
+\begin{definition}
+For an event $A$, the \textbf{indicator random variable} $\mathbf{1}_A$ (also written $X$) is
+defined by $\mathbf{1}_A(\omega) = 1$ if $\omega \in A$, and $0$ otherwise.
+\end{definition}
+
+Indicator variables are the crucial bookkeeping device that lets us compute expectations of
+complicated counting random variables (Binomial, Hypergeometric, etc.) via linearity of
+expectation \emph{without} needing to first derive their pmf -- as seen repeatedly above.
+
+\subsection{Linearity of expectation (full proof)}
+
+\begin{theorem}[Linearity of expectation]
+\label{thm:linearity}
+For any two random variables $X_1,X_2$ on the same sample space (not necessarily independent, and
+not necessarily discrete -- though we prove it here in the discrete case),
+\[
+\E{X_1+X_2} = \E{X_1}+\E{X_2}.
+\]
+\end{theorem}
+\begin{proof}
+Let $X_1$ take values in $\{a_1,a_2,\dots\}$, $X_2$ in $\{b_1,b_2,\dots\}$, with joint pmf
+$p(\cdot,\cdot)$. By LOTUS applied to the pair $(X_1,X_2)$ and the function $g(a,b)=a+b$:
+\begin{equation}
+\E{X_1+X_2} = \sum_i\sum_j (a_i+b_j)\,p(a_i,b_j). \tag{$\dagger$}
+\end{equation}
+By the marginalization identity above, $\sum_j p(a_i,b_j) = \mathbf{P}[X_1=a_i]$ and
+$\sum_i p(a_i,b_j)=\mathbf{P}[X_2=b_j]$. Expanding $(\dagger)$ and splitting the double sum:
+\[
+\E{X_1+X_2} = \sum_i\sum_j a_i\,p(a_i,b_j) + \sum_i\sum_j b_j\,p(a_i,b_j)
+= \sum_i a_i\underbrace{\sum_j p(a_i,b_j)}_{=\,\mathbf{P}[X_1=a_i]}
++ \sum_j b_j\underbrace{\sum_i p(a_i,b_j)}_{=\,\mathbf{P}[X_2=b_j]}
+\]
+(interchanging the order of summation, valid under absolute convergence)
+\[
+= \sum_i a_i\,\mathbf{P}[X_1=a_i] + \sum_j b_j\,\mathbf{P}[X_2=b_j] = \E{X_1}+\E{X_2}. \qedhere
+\]
+\end{proof}
+
+\begin{remark}
+By induction, $\E{X_1+\cdots+X_n} = \sum_{i=1}^n \E{X_i}$ for any finite collection of random
+variables -- \emph{no independence assumption is needed}. This is what licenses the
+indicator-variable technique used throughout Section~5 (Binomial and Hypergeometric means).
+Independence \emph{is}, however, generally needed for the analogous additivity of
+\emph{variances} (flagged as a forward reference at several points above).
+\end{remark}
+
+\newpage
+% =========================================================================
+\section{Moments, Variance, and Their Basic Algebra}
+% =========================================================================
+
+\begin{definition}
+For $n\in\N$, the \textbf{$n$-th (raw) moment} of $X$ is $\E{X^n}$; for discrete $X$,
+$\E{X^n}=\sum_i x_i^n p(x_i)$ (by LOTUS with $g(x)=x^n$). The \textbf{$n$-th central moment} is
+$\E{(X-\E{X})^n}$.
+\end{definition}
+
+\begin{definition}
+The \textbf{variance} of $X$ is $\Var{X} := \E{(X-\E{X})^2}$ (the second central moment); the
+\textbf{standard deviation} is $\SD{X}:=\sqrt{\Var{X}}$.
+\end{definition}
+
+\begin{proposition}[Computational formula for variance]
+\label{prop:var-comp}
+$\Var{X} = \E{X^2} - (\E{X})^2$.
+\end{proposition}
+\begin{proof}
+Let $\mu = \E{X}$. Expand $(X-\mu)^2 = X^2 - 2\mu X + \mu^2$. By linearity of expectation
+(Theorem~\ref{thm:linearity}, extended to include the constant $\mu^2$ via
+$\E{aX+b}=a\E{X}+b$):
+\[
+\Var{X} = \E{X^2-2\mu X+\mu^2} = \E{X^2} - 2\mu\,\E{X} + \mu^2 = \E{X^2}-2\mu^2+\mu^2
+= \E{X^2}-\mu^2. \qedhere
+\]
+\end{proof}
+
+\begin{proposition}
+For constants $a,b$: $\Var{aX+b} = a^2\Var{X}$.
+\end{proposition}
+\begin{proof}
+Let $\mu=\E{X}$; then $\E{aX+b} = a\mu+b$ (linearity of expectation), so
+\[
+\Var{aX+b} = \E{\big[(aX+b) - (a\mu+b)\big]^2} = \E{\big[a(X-\mu)\big]^2}
+= a^2\E{(X-\mu)^2} = a^2\Var{X}. \qedhere
+\]
+\end{proof}
+
+\subsection{Comparison table: mean and variance formulas}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{6.5cm} p{5.5cm}}
+\toprule
+\textbf{Identity} & \textbf{Requires independence?} \\
+\midrule
+$\E{X_1+X_2} = \E{X_1}+\E{X_2}$ & No \\
+$\E{aX+b}=a\E{X}+b$ & No \\
+$\Var{X}=\E{X^2}-(\E{X})^2$ & No \\
+$\Var{aX+b} = a^2\Var{X}$ & No \\
+$\Var{X_1+X_2} = \Var{X_1}+\Var{X_2}$ & \textbf{Yes} (in general there is a cross term
+$2\,\mathrm{Cov}(X_1,X_2)$, which vanishes when $X_1,X_2$ are independent) \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\newpage
+% =========================================================================
+\section{Continuous Random Variables}
+% =========================================================================
+
+\subsection{Definition and the density function}
+
+\begin{definition}
+A random variable $X$ is \textbf{continuous} if its cdf $F(x)=\mathbf{P}[X\le x]$ is
+\emph{(absolutely) continuous} everywhere -- in particular (since absolute continuity implies
+ordinary continuity), $F$ is continuous at every $x \in \R$.
+\end{definition}
+
+\begin{proposition}
+If $X$ is continuous, $\mathbf{P}[X=x]=0$ for every fixed $x\in\R$.
+\end{proposition}
+\begin{proof}
+By right-continuity of $F$ (Proposition~\ref{prop:cdf-properties}, valid for \emph{any} random
+variable), $\lim_{y\to x^+}F(y)=F(x)$. We separately claim $\lim_{y\to x^-}F(y) = F(x^-) :=
+\mathbf{P}[X<x]$: for any sequence $y_n \uparrow x$, the events $\{X\le y_n\}$ increase to
+$\{X<x\}$ (an outcome satisfies $X(\omega)\le y_n$ for \emph{some} $n$ iff $X(\omega)<x$, since
+$y_n\uparrow x$), so by continuity of probability (Theorem~\ref{thm:continuity-prob}),
+$F(y_n)=\mathbf{P}[X\le y_n]\to \mathbf{P}[X<x]$.
+
+If $F$ is continuous at $x$, it is in particular left-continuous there, so
+$F(x^-) = \lim_{y\to x^-}F(y) = F(x)$. Hence
+\[
+\mathbf{P}[X=x] = \mathbf{P}[X\le x] - \mathbf{P}[X<x] = F(x)-F(x^-) = 0. \qedhere
+\]
+\end{proof}
+
+\begin{definition}
+Equivalently, $X$ is continuous if there exists a non-negative function $f:\R\to[0,\infty)$, the
+\textbf{probability density function (pdf)}, such that
+\[
+\mathbf{P}[X\in B] = \int_B f(x)\,dx
+\]
+for every (measurable) set $B\subset\R$.
+\end{definition}
+
+\begin{intuition}[Why ``density''?]
+Let $\varepsilon>0$ be small, and suppose $f$ is continuous at $x$ (so $f(y)\approx f(x)$ for $y$
+near $x$). Then
+\[
+\mathbf{P}[x-\varepsilon<X<x+\varepsilon] = \int_{x-\varepsilon}^{x+\varepsilon} f(y)\,dy
+\approx \int_{x-\varepsilon}^{x+\varepsilon} f(x)\,dy = f(x)\cdot 2\varepsilon.
+\]
+Reading $\mathbf{P}[x-\varepsilon<X<x+\varepsilon]$ as the probability ``mass'' contained in the
+small interval of ``volume'' (length) $2\varepsilon$, we see $f(x) \approx
+\dfrac{\text{mass}}{\text{volume}}$ -- exactly the physical notion of a density.
+\end{intuition}
+
+\begin{proposition}[Fundamental properties of a pdf]
+Any pdf $f$ satisfies: (1) $f(x)\ge 0$ for all $x$; (2) $\displaystyle\int_{-\infty}^\infty
+f(x)\,dx = 1$.
+\end{proposition}
+\begin{proof}
+(1) is definitional. (2): take $B=\R$ in the defining property, so
+$\int_\R f(x)dx = \mathbf{P}[X\in\R]=\mathbf{P}(S)=1$.
+\end{proof}
+
+Since single points have probability zero for continuous $X$, we have, for any $a\le b$,
+\[
+\mathbf{P}[a<X<b]=\mathbf{P}[a\le X<b]=\mathbf{P}[a<X\le b]=\mathbf{P}[a\le X\le b]
+= \int_a^b f(x)\,dx,
+\]
+and the cdf/pdf are related by
+\[
+F(x) = \int_{-\infty}^x f(y)\,dy, \qquad F'(x)=f(x) \ \ \text{(by the Fundamental Theorem of Calculus)}.
+\]
+
+\begin{remark}
+The cdf is defined, and fundamental, for \emph{every} random variable (discrete or continuous or
+neither); the pmf applies only to discrete random variables, and the pdf only to continuous ones.
+Strategy: to find the distribution of a random variable, first find its cdf; then, if it is
+(absolutely) continuous, differentiate to obtain the pdf.
+\end{remark}
+
+\subsection{Expectation and variance for continuous random variables}
+
+\begin{definition}
+For continuous $X$ with pdf $f$: $\displaystyle \E{X} = \int_{-\infty}^\infty x f(x)\,dx$.
+\end{definition}
+
+\begin{proposition}[LOTUS, continuous case]
+For $g:\R\to\R$, $\displaystyle \E{g(X)} = \int_{-\infty}^\infty g(x)f(x)\,dx$.
+\end{proposition}
+\emph{(The proof, for non-negative $g$, mirrors the discrete case with sums replaced by integrals
+and a partition of the range of $g$ into level sets; we omit the measure-theoretic details, which
+lie outside the present syllabus, and simply record the identity, exactly as in the source notes.)}
+
+\begin{definition}
+$\Var{X} := \E{(X-\mu)^2} = \displaystyle\int_{-\infty}^\infty (x-\mu)^2 f(x)\,dx$, where
+$\mu=\E{X}$; equivalently (same proof as Proposition~\ref{prop:var-comp}, verbatim, with sums
+replaced by integrals),
+\[
+\Var{X} = \int_{-\infty}^\infty x^2 f(x)\,dx - \left(\int_{-\infty}^\infty x f(x)\,dx\right)^{\!2}.
+\]
+\end{definition}
+
+All of the algebraic identities of Section~7 -- $\E{aX+b}=a\E{X}+b$, $\Var{aX+b}=a^2\Var{X}$, and
+linearity of expectation $\E{\sum_i X_i}=\sum_i \E{X_i}$ (for any, possibly mixed
+discrete/continuous, finite collection of random variables) -- continue to hold verbatim in the
+continuous setting, since their proofs rest only on the algebra of the expectation operator, not
+on discreteness.
+
+\newpage
+% =========================================================================
+\section{Supplementary Derivations}
+% =========================================================================
+
+This section reproduces, with full rigor, two supplementary derivations included in the source
+material as auxiliary handouts.
+
+\subsection{Why the Negative Binomial distribution has its name}
+
+Let $X$ be the number of trials required to achieve the $m$-th success, with per-trial success
+probability $p$ and $q:=1-p$.
+
+\begin{proposition}
+$\mathbf{P}[X=n] = \dbinom{n-1}{m-1}p^m q^{n-m}$ for $n=m,m+1,\dots$ (as already derived in
+Section 5.3.3 for general $k$; here we simply relabel $k\to m$ to match the alternate source, and
+proceed to explain the terminology).
+\end{proposition}
+
+Let $f := n-m$ denote the number of \emph{failures} that occur before the $m$-th success, so
+$n = f+m$. Substituting $n=f+m$ into the pmf:
+\[
+\mathbf{P}[X=f+m] = \binom{f+m-1}{m-1}p^m q^f = p^m\binom{m+f-1}{f}q^f
+\]
+(using $\dbinom{f+m-1}{m-1}=\dbinom{f+m-1}{f}$, since choosing which $m-1$ of the $f+m-1$ slots are
+successes is equivalent to choosing which $f$ are failures).
+
+\begin{proposition}[Generalized binomial series]
+For any real $m$ and $|q|<1$,
+\[
+(1-q)^{-m} = \sum_{f=0}^\infty \binom{m+f-1}{f}q^f.
+\]
+\end{proposition}
+\begin{proof}
+This is Newton's generalized binomial theorem, applied with exponent $-m$ and argument $-q$:
+\[
+(1-q)^{-m} = \sum_{f=0}^\infty \binom{-m}{f}(-q)^f,
+\qquad \binom{-m}{f} := \frac{(-m)(-m-1)\cdots(-m-f+1)}{f!}.
+\]
+Now,
+\[
+\binom{-m}{f}(-1)^f = \frac{(-1)^f\,m(m+1)\cdots(m+f-1)}{f!}(-1)^f
+= \frac{m(m+1)\cdots(m+f-1)}{f!} = \binom{m+f-1}{f}
+\]
+(the last equality since $m(m+1)\cdots(m+f-1) = \dfrac{(m+f-1)!}{(m-1)!}$ when $m$ is a positive
+integer, matching the usual binomial-coefficient formula; the identity extends to general real $m$
+by definition of the generalized binomial coefficient). Substituting proves the claim.
+\end{proof}
+
+Hence $\mathbf{P}[X=f+m] = p^m\binom{m+f-1}{f}q^f$ is \emph{exactly} $p^m$ times the coefficient of
+$q^f$ in the power-series expansion of $(1-q)^{-m}$ -- which is precisely why this family of
+distributions is called the \textbf{Negative Binomial} distribution: it is generated by a
+binomial-type series with a \emph{negative} exponent.
+
+\subsection{The mean of the Binomial distribution, via differentiation of the Binomial Theorem}
+
+We now give an alternative proof (independent of, and not relying on, indicator variables or
+linearity of expectation) of $\E{X}=np$ for $X\sim\text{Binomial}(n,p)$, exactly as presented in
+the source handout, with every step justified.
+
+\begin{theorem}
+If $\mathbf{P}[X=i]=\dbinom{n}{i}p^i(1-p)^{n-i}$ for $i=0,\dots,n$, then
+$\displaystyle\sum_{i=0}^n i\,\mathbf{P}[X=i] = np$.
+\end{theorem}
+\begin{proof}
+Start from the Binomial Theorem, valid as an identity of polynomials in two variables $x,y$:
+\[
+(x+y)^n = \sum_{r=0}^n \binom{n}{r}x^r y^{n-r}.
+\]
+Differentiate both sides with respect to $x$ (treating $y$ as a constant; term-by-term
+differentiation of a finite sum is always valid):
+\[
+n(x+y)^{n-1} = \sum_{r=0}^n \binom{n}{r}\,r\,x^{r-1}y^{n-r}
+\]
+(the $r=0$ term contributes $0$ since it is multiplied by $r=0$). Multiply both sides by $x$:
+\[
+nx(x+y)^{n-1} = \sum_{r=0}^n r\binom{n}{r}x^r y^{n-r}.
+\]
+This is an identity valid for \emph{all} real $x,y$; substitute $x=p$, $y=1-p$, so that
+$x+y=1$:
+\[
+np\cdot(1)^{n-1} = \sum_{r=0}^n r\binom{n}{r}p^r(1-p)^{n-r}
+\quad\Longrightarrow\quad
+np = \sum_{r=0}^n r\,\mathbf{P}[X=r] = \E{X}. \qedhere
+\]
+\end{proof}
+
+\begin{remark}
+This computation is logically independent of, but numerically consistent with, the
+indicator-variable proof of $\E{X}=np$ given in Section~5.3.2. It illustrates a second, purely
+analytic technique -- ``differentiate the generating identity, then specialize the variables'' --
+that recurs throughout probability theory (e.g.\ in the theory of probability and moment
+generating functions, a topic beyond the present notes).
+\end{remark}
+
+\newpage
+% =========================================================================
+\section*{Appendix: Master Comparison Table}
+\addcontentsline{toc}{section}{Appendix: Master Comparison Table}
+% =========================================================================
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{p{3.4cm} p{3.6cm} p{3.6cm} p{4.0cm}}
+\toprule
+\textbf{Object} & \textbf{Defined for} & \textbf{Fundamental property} & \textbf{Relation to others} \\
+\midrule
+pmf $p(x)$ & discrete $X$ & $p(x)\ge 0$, $\sum_x p(x)=1$ & $F(a)=\sum_{x\le a}p(x)$ \\
+pdf $f(x)$ & continuous $X$ & $f(x)\ge 0$, $\int_\R f=1$ & $F(x)=\int_{-\infty}^x f$, $F'=f$ \\
+cdf $F(x)$ & any $X$ & monotone, right-continuous, $F(\pm\infty)=1,0$ & $\mathbf{P}[a<X\le b]=F(b)-F(a)$ \\
+$\mathbf{E}[X]$ (discrete) & $\sum_x x\,p(x)$ & linear: $\mathbf{E}[aX+b]=a\mathbf{E}[X]+b$ & LOTUS: $\mathbf{E}[g(X)]=\sum_x g(x)p(x)$ \\
+$\mathbf{E}[X]$ (continuous) & $\int_\R x f(x)dx$ & same linearity & LOTUS: $\mathbf{E}[g(X)]=\int_\R g(x)f(x)dx$ \\
+$\operatorname{Var}[X]$ & $\mathbf{E}[(X-\mathbf{E}[X])^2]$ & $=\mathbf{E}[X^2]-(\mathbf{E}[X])^2$ & $\operatorname{Var}[aX+b]=a^2\operatorname{Var}[X]$ \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\end{document}

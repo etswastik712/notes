@@ -1,0 +1,238 @@
+\part{Logic and the Language of Proof}
+
+\chapter{Propositional Logic}\label{ch:prop}
+
+\section{Statements and connectives}
+
+\begin{definition}[Statement]
+	A \emph{statement} (or \emph{proposition}) is a declarative sentence that is either true or false, but not both. Its \emph{truth value} is $\T$ or $\F$.
+\end{definition}
+
+\begin{example}
+	``$2$ is an integer'' is a (true) statement; ``$3<2$'' is a (false) statement; ``$x>0$'' is \emph{not} a statement, since its truth depends on $x$ (it is a \emph{predicate}, Chapter~\ref{ch:pred}); ``This sentence is false'' is excluded, since it cannot consistently be assigned either truth value.
+\end{example}
+
+\begin{definition}[Connectives]\label{def:connectives}
+	Given statements $P,Q$ the statements $\neg P$ (not $P$), $P\wedge Q$ ($P$ and $Q$), $P\vee Q$ ($P$ or $Q$), $P\Rightarrow Q$ (if $P$ then $Q$) and $P\Leftrightarrow Q$ ($P$ if and only if $Q$) have truth values given by:
+	\begin{center}
+		\begin{tabular}{cc|c|c|c|c|c}
+			$P$ & $Q$ & $\neg P$ & $P\wedge Q$ & $P\vee Q$ & $P\Rightarrow Q$ & $P\Leftrightarrow Q$\\
+			\midrule
+			$\T$&$\T$&$\F$&$\T$&$\T$&$\T$&$\T$\\
+			$\T$&$\F$&$\F$&$\F$&$\T$&$\F$&$\F$\\
+			$\F$&$\T$&$\T$&$\F$&$\T$&$\T$&$\F$\\
+			$\F$&$\F$&$\T$&$\F$&$\F$&$\T$&$\T$
+		\end{tabular}
+	\end{center}
+\end{definition}
+
+Three features deserve emphasis.
+\begin{itemize}
+	\item \textbf{$\vee$ is inclusive.} $P\vee Q$ is true when both are true. The \emph{exclusive} ``either $P$ or $Q$ but not both'' is $(P\vee Q)\wedge\neg(P\wedge Q)$.
+	\item \textbf{$P\Rightarrow Q$ is false in exactly one case:} $P$ true and $Q$ false. When $P$ is false the conditional is true regardless of $Q$ (it is \emph{vacuously} true).
+	\item \textbf{$P\Leftrightarrow Q$ is true exactly when $P$ and $Q$ have the same truth value.}
+\end{itemize}
+
+\begin{intuition}
+	Read $P\Rightarrow Q$ as a promise: ``if it rains, I will bring an umbrella.'' The promise is broken only if it rains and I do not bring one. If it does not rain, nothing has been violated whatever I carry, so the promise is kept. Mathematics needs exactly this convention so that statements like ``$\forall n\,(n>5\Rightarrow n^2>25)$'' are true \emph{for every $n$}, including $n=3$ where the hypothesis fails.
+\end{intuition}
+
+\section{Propositional forms, truth tables, logical equivalence}
+
+To reason about \emph{all} statements of a given shape at once, one studies the shapes themselves.
+
+\begin{definition}[Propositional form]
+	Fix an infinite supply of \emph{propositional variables} $P,Q,R,\dots$. \emph{Propositional forms} are defined recursively: every variable is a form; if $\Phi,\Psi$ are forms, then $\neg\Phi$, $(\Phi\wedge\Psi)$, $(\Phi\vee\Psi)$, $(\Phi\Rightarrow\Psi)$, $(\Phi\Leftrightarrow\Psi)$ are forms; nothing else is a form.
+\end{definition}
+
+\begin{definition}[Truth assignment, truth value of a form]
+	A \emph{truth assignment} is a map $v$ from the variables to $\{\T,\F\}$. It extends uniquely to a map on all forms by applying the tables of Definition~\ref{def:connectives} recursively. If a form contains $n$ distinct variables, only their values matter, giving $2^n$ relevant assignments; listing them all with the resulting value of the form is a \emph{truth table}.
+\end{definition}
+
+\begin{definition}[Logical equivalence]
+	Forms $\Phi,\Psi$ are \emph{logically equivalent}, written $\Phi\sim\Psi$ (or $\Phi\equiv\Psi$), if $v(\Phi)=v(\Psi)$ for every truth assignment $v$.
+\end{definition}
+
+\begin{proposition}\label{prop:equiv-taut}
+	$\Phi\sim\Psi$ if and only if $\Phi\Leftrightarrow\Psi$ is true under every truth assignment (i.e.\ is a tautology, Definition~\ref{def:taut} below).
+\end{proposition}
+\begin{proof}
+	By the table for $\Leftrightarrow$, $v(\Phi\Leftrightarrow\Psi)=\T$ iff $v(\Phi)=v(\Psi)$. Quantifying over all $v$ gives the claim.
+\end{proof}
+
+\begin{warning}
+	$\sim$ is a relation \emph{between forms} (it says something \emph{about} $\Phi$ and $\Psi$); $\Leftrightarrow$ is a connective producing a new form. Proposition~\ref{prop:equiv-taut} is the bridge. Likewise $=$ is reserved for equality of mathematical objects (numbers, sets), never for statements.
+\end{warning}
+
+\section{Tautologies, contradictions, contingencies}
+
+\begin{definition}[Classification of forms]\label{def:taut}
+	A form is a \emph{tautology} if it is true under every truth assignment, a \emph{contradiction} if false under every assignment, and a \emph{contingency} if it is neither.
+\end{definition}
+
+\begin{example}\label{ex:taut-list}
+	Truth tables show that
+	\begin{center}
+		\begin{tabular}{cc|c|c|c|c}
+			$P$&$Q$&$P\vee\neg P$&$P\wedge\neg P$&$(P\wedge Q)\Rightarrow P$&$P\Rightarrow(P\wedge Q)$\\ \midrule
+			$\T$&$\T$&$\T$&$\F$&$\T$&$\T$\\
+			$\T$&$\F$&$\T$&$\F$&$\T$&$\F$\\
+			$\F$&$\T$&$\T$&$\F$&$\T$&$\T$\\
+			$\F$&$\F$&$\T$&$\F$&$\T$&$\T$
+		\end{tabular}
+	\end{center}
+	so $P\vee\neg P$ (excluded middle) and $(P\wedge Q)\Rightarrow P$ are tautologies, $P\wedge\neg P$ is a contradiction, and $P\Rightarrow(P\wedge Q)$ is a contingency.
+\end{example}
+
+\subsection*{True statements versus tautologies}
+
+Being a tautology is a property of \emph{logical form}. It is easy to confuse with the different property of being a true statement.
+
+\begin{itemize}
+	\item $0\neq 1$ is a true mathematical statement. Its truth comes from the axioms/construction of the number system, not from logical form; it is \emph{not} a tautology.
+	\item $5<7$ is true but not a tautology, for the same reason.
+	\item $(P\wedge Q)\Rightarrow P$ is a tautology: every statement of this shape is true, whatever $P,Q$ are.
+\end{itemize}
+
+If $P$ is \emph{any} true statement, then $P$ and $0\neq1$ have the same truth value, so the statement $P\Leftrightarrow(0\neq1)$ is true; one says they are \emph{materially equivalent}. This is weaker than $P\sim(0\neq 1)$, which is a claim about all truth assignments to forms. Hence:
+\[
+\text{true statement}\ \not\Rightarrow\ \text{tautology}.
+\]
+(The implication ``tautology $\Rightarrow$ true'' holds: a tautology is true under every assignment, in particular the actual one.)
+
+\begin{center}
+	\begin{tabular}{@{}p{3.2cm}p{4.2cm}p{3.7cm}p{3.4cm}@{}}
+		\toprule
+		\textbf{Notion} & \textbf{Applies to} & \textbf{What decides it} & \textbf{Example}\\
+		\midrule
+		True statement & A specific statement & Mathematics (axioms, proofs) & $5<7$\\
+		Tautology & A propositional \emph{form} & Truth table only & $P\vee\neg P$\\
+		Logical equivalence $\sim$ & Two \emph{forms} & Same truth table & $P\Rightarrow Q\sim\neg P\vee Q$\\
+		Material equivalence & Two specific statements & Both have the same truth value & $5<7$ and $0\ne1$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\section{The standard laws}
+
+\begin{theorem}[Laws of propositional logic]\label{thm:laws}
+	For all forms $P,Q,R$ the following logical equivalences hold.
+	\begin{center}
+		\begin{tabular}{@{}p{4.3cm}p{5.4cm}p{5.2cm}@{}}
+			\toprule
+			\textbf{Law} & \textbf{Form with $\wedge$} & \textbf{Form with $\vee$}\\
+			\midrule
+			Double negation & \multicolumn{2}{l}{$\neg\neg P\sim P$}\\
+			Commutativity & $P\wedge Q\sim Q\wedge P$ & $P\vee Q\sim Q\vee P$\\
+			Associativity & $(P\wedge Q)\wedge R\sim P\wedge(Q\wedge R)$ & $(P\vee Q)\vee R\sim P\vee(Q\vee R)$\\
+			Idempotence & $P\wedge P\sim P$ & $P\vee P\sim P$\\
+			Distributivity & $P\wedge(Q\vee R)\sim(P\wedge Q)\vee(P\wedge R)$ & $P\vee(Q\wedge R)\sim(P\vee Q)\wedge(P\vee R)$\\
+			De Morgan & $\neg(P\wedge Q)\sim\neg P\vee\neg Q$ & $\neg(P\vee Q)\sim\neg P\wedge\neg Q$\\
+			Identity ($t$ tautology, $c$ contradiction) & $P\wedge t\sim P$ & $P\vee c\sim P$\\
+			Domination & $P\wedge c\sim c$ & $P\vee t\sim t$\\
+			Absorption & $P\wedge(P\vee Q)\sim P$ & $P\vee(P\wedge Q)\sim P$\\
+			\midrule
+			Conditional as disjunction & \multicolumn{2}{l}{$(P\Rightarrow Q)\sim\neg P\vee Q\sim\neg(P\wedge\neg Q)$}\\
+			Contrapositive & \multicolumn{2}{l}{$(P\Rightarrow Q)\sim(\neg Q\Rightarrow\neg P)$}\\
+			Negation of a conditional & \multicolumn{2}{l}{$\neg(P\Rightarrow Q)\sim P\wedge\neg Q$}\\
+			Biconditional & \multicolumn{2}{l}{$(P\Leftrightarrow Q)\sim(P\Rightarrow Q)\wedge(Q\Rightarrow P)$}\\
+			Negation of a biconditional & \multicolumn{2}{l}{$\neg(P\Leftrightarrow Q)\sim(P\wedge\neg Q)\vee(Q\wedge\neg P)\sim(P\Leftrightarrow\neg Q)$}\\
+			Exportation & \multicolumn{2}{l}{$((P\wedge Q)\Rightarrow R)\sim(P\Rightarrow(Q\Rightarrow R))$}\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	Moreover, the following are tautologies: \emph{modus ponens} $(P\wedge(P\Rightarrow Q))\Rightarrow Q$; \emph{hypothetical syllogism} $((P\Rightarrow Q)\wedge(Q\Rightarrow R))\Rightarrow(P\Rightarrow R)$; \emph{proof by cases} $((P\Rightarrow R)\wedge(Q\Rightarrow R))\Rightarrow((P\vee Q)\Rightarrow R)$.
+\end{theorem}
+
+\begin{proof}
+	Each claim involves at most three variables, so it is decided by finitely many truth-table rows. We display the two-variable ones with the largest content; the others are checked in the same way (the three-variable distributive laws have $8$ rows; the reader should fill them in --- see Solution to Assignment~1, Problem~1(d)).
+	\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+		\begin{tabular}{cc|cc|cc|ccc|cc}
+			$P$&$Q$&$\neg(P\wedge Q)$&$\neg P\vee\neg Q$&$\neg(P\vee Q)$&$\neg P\wedge\neg Q$&$P\Rightarrow Q$&$\neg P\vee Q$&$\neg Q\Rightarrow\neg P$&$P\wedge\neg Q$&$\neg(P\Rightarrow Q)$\\ \midrule
+			$\T$&$\T$&$\F$&$\F$&$\F$&$\F$&$\T$&$\T$&$\T$&$\F$&$\F$\\
+			$\T$&$\F$&$\T$&$\T$&$\F$&$\F$&$\F$&$\F$&$\F$&$\T$&$\T$\\
+			$\F$&$\T$&$\T$&$\T$&$\F$&$\F$&$\T$&$\T$&$\T$&$\F$&$\F$\\
+			$\F$&$\F$&$\T$&$\T$&$\T$&$\T$&$\T$&$\T$&$\T$&$\F$&$\F$
+		\end{tabular}
+	\end{center}
+	Columns $3$--$4$, $5$--$6$, $7$--$9$ and $10$--$11$ agree row by row, proving De Morgan (both), the conditional as disjunction, the contrapositive and the negation of a conditional. For modus ponens: if $P\wedge(P\Rightarrow Q)$ is true then $P$ is true and $P\Rightarrow Q$ is true, which by the table of $\Rightarrow$ forces $Q$ to be true; so the implication never has true hypothesis and false conclusion.
+\end{proof}
+
+\section{Adequacy of connectives}
+
+\begin{theorem}[Functional completeness]\label{thm:adequacy}
+	Let $n\ge1$ and let $g:\{\T,\F\}^n\to\{\T,\F\}$ be any function. Then there is a form built from $P_1,\dots,P_n$ using only $\neg,\wedge,\vee$ whose truth value under the assignment $v$ is $g(v(P_1),\dots,v(P_n))$.
+\end{theorem}
+\begin{proof}
+	If $g$ is constantly $\F$, take $P_1\wedge\neg P_1$. Otherwise, for each $u=(u_1,\dots,u_n)\in g^{-1}(\T)$ let $L_i^u:=P_i$ if $u_i=\T$ and $L_i^u:=\neg P_i$ if $u_i=\F$, and put $C_u:=L_1^u\wedge\dots\wedge L_n^u$. Then $C_u$ is true under $v$ iff every $L_i^u$ is, iff $v(P_i)=u_i$ for all $i$. So $\bigvee_{u\in g^{-1}(\T)}C_u$ is true under $v$ iff $(v(P_1),\dots,v(P_n))\in g^{-1}(\T)$, i.e.\ iff $g(\dots)=\T$.
+\end{proof}
+
+\begin{corollary}
+	$\{\neg,\wedge\}$, $\{\neg,\vee\}$ and $\{\neg,\Rightarrow\}$ each suffice to express every truth function.
+\end{corollary}
+\begin{proof}
+	$P\vee Q\sim\neg(\neg P\wedge\neg Q)$ (De Morgan and double negation), so $\vee$ is expressible from $\{\neg,\wedge\}$; symmetrically $P\wedge Q\sim\neg(\neg P\vee\neg Q)$; and $P\vee Q\sim\neg P\Rightarrow Q$, $P\wedge Q\sim\neg(P\Rightarrow\neg Q)$. Now apply Theorem~\ref{thm:adequacy}.
+\end{proof}
+
+\section{Conditionals in ordinary mathematical language}
+
+\begin{definition}[Related conditionals]
+	For $P\Rightarrow Q$ its \emph{converse} is $Q\Rightarrow P$, its \emph{contrapositive} is $\neg Q\Rightarrow\neg P$, and its \emph{inverse} is $\neg P\Rightarrow\neg Q$.
+\end{definition}
+
+\begin{proposition}
+	$(P\Rightarrow Q)\sim(\neg Q\Rightarrow\neg P)$ and $(Q\Rightarrow P)\sim(\neg P\Rightarrow\neg Q)$. In general, $P\Rightarrow Q$ is \emph{not} equivalent to its converse or inverse.
+\end{proposition}
+\begin{proof}
+	The first equivalence is Theorem~\ref{thm:laws}; the second is the first with $P,Q$ interchanged. For the failure, take $P=\T$, $Q=\F$: then $P\Rightarrow Q$ is false and $Q\Rightarrow P$ is true; take $P=\F,Q=\T$: then $P\Rightarrow Q$ is true and $Q\Rightarrow P$ is false.
+\end{proof}
+
+\begin{center}
+	\begin{tabular}{@{}p{6.2cm}p{8.6cm}@{}}
+		\toprule
+		\textbf{English phrase} & \textbf{Symbolic content}\\
+		\midrule
+		If $P$, then $Q$; $P$ implies $Q$; $Q$ whenever $P$ & $P\Rightarrow Q$\\
+		$P$ only if $Q$ & $P\Rightarrow Q$ \quad(not $Q\Rightarrow P$!)\\
+		$P$ is sufficient for $Q$ & $P\Rightarrow Q$\\
+		$Q$ is necessary for $P$ & $P\Rightarrow Q$\\
+		$Q$ if $P$ & $P\Rightarrow Q$\\
+		$P$ if and only if $Q$; $P$ is necessary and sufficient for $Q$ & $P\Leftrightarrow Q$\\
+		$P$ unless $Q$ & $\neg Q\Rightarrow P$ (equivalently $P\vee Q$)\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{example}\label{ex:6-3}
+	Let $P$: ``$6\mid n$'' and $Q$: ``$3\mid n$'', for an integer $n$. Then $P\Rightarrow Q$ reads ``if $n$ is divisible by $6$ then $n$ is divisible by $3$'' (true); the converse ``if $3\mid n$ then $6\mid n$'' is false ($n=3$); the contrapositive ``if $3\nmid n$ then $6\nmid n$'' is true and equivalent to the original; the inverse ``if $6\nmid n$ then $3\nmid n$'' is false ($n=3$) and equivalent to the converse.
+\end{example}
+
+\begin{intuition}
+	``Only if'' trips up almost everyone. ``You may vote \emph{only if} you are $18$'' says that being $18$ is a \emph{requirement}: $\text{vote}\Rightarrow\text{18}$. It does not promise that every $18$-year-old votes.
+\end{intuition}
+
+\section{Negating compound statements}
+
+Negation is the most error-prone operation in proofs. The table collects the rules derived above.
+
+\begin{center}
+	\begin{tabular}{@{}p{4cm}p{5.2cm}p{5.3cm}@{}}
+		\toprule
+		\textbf{Statement} & \textbf{Negation (as a form)} & \textbf{How it fails, in words}\\
+		\midrule
+		$P\wedge Q$ & $\neg P\vee\neg Q$ & at least one of $P,Q$ fails\\
+		$P\vee Q$ & $\neg P\wedge\neg Q$ & both fail\\
+		$P\Rightarrow Q$ & $P\wedge\neg Q$ & $P$ holds \emph{and} $Q$ fails\\
+		$P\Leftrightarrow Q$ & $(P\wedge\neg Q)\vee(\neg P\wedge Q)$ & exactly one of the two holds\\
+		$P\Rightarrow(Q\vee R)$ & $P\wedge\neg Q\wedge\neg R$ & $P$ holds, but neither $Q$ nor $R$\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{example}
+	The negation of ``$x$ is a real number and $x>0$'' is ``$x$ is not a real number, or $x\le 0$'' (if $x$ is not real, the second conjunct is regarded as false). The negation of ``if $x>2$ then $x^2>4$'' is ``$x>2$ and $x^2\le4$''.
+\end{example}
+
+\begin{warning}
+	The negation of a conditional is \emph{not} another conditional. ``If $x>2$ then $x^2>4$'' is negated by ``$x>2$ and $x^2\le 4$'', never by ``if $x>2$ then $x^2\le4$''.
+\end{warning}

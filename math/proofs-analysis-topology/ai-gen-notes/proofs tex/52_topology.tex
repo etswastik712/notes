@@ -1,0 +1,142 @@
+\chapter{Topological Spaces}\label{ch:topspaces}
+
+\section{Definitions}
+
+\begin{definition}[Topology]
+	A \emph{topology} on a set $X$ is a set $\tau\subseteq\pset(X)$ such that (T1) $\varnothing,X\in\tau$; (T2) $\tau$ is closed under arbitrary unions; (T3) $\tau$ is closed under finite intersections. $(X,\tau)$ is a \emph{topological space}; the members of $\tau$ are the \emph{open sets}, and $F\subseteq X$ is \emph{closed} if $X\setminus F\in\tau$.
+\end{definition}
+
+By Theorem~\ref{thm:metrictop}, every metric space $(X,d)$ gives a topology
+\[
+\tau_d:=\{U\subseteq X:U\text{ open in the metric sense}\};
+\]
+a topology arising this way is \emph{metrisable}.
+
+\begin{example}
+	On any $X$: the \emph{discrete topology} $\tau=\pset(X)$ (metrisable, from the discrete metric) and the \emph{indiscrete topology} $\tau=\{\varnothing,X\}$ (not metrisable if $|X|\ge2$, since (M1) would separate points: $B(x,d(x,y))$ is open, contains $x$, and is neither $\varnothing$ nor $X$ when $y\notin B(x,d(x,y))$). On an infinite set $X$, the \emph{cofinite topology} $\{U\subseteq X:X\setminus U\text{ finite}\}\cup\{\varnothing\}$: (T1),(T3) direct, (T2): the complement of a union of cofinite sets is an intersection of finite sets, hence finite. The \emph{subspace topology} on $S\subseteq X$ is $\{U\cap S:U\in\tau\}$.
+\end{example}
+
+\begin{definition}[Basis]
+	A \emph{basis} for a topology $\tau$ is $\mathcal B\subseteq\tau$ such that every $U\in\tau$ is a union of members of $\mathcal B$. In a metric space, the open balls form a basis (Proposition~\ref{prop:ballopen} and the definition of open set).
+\end{definition}
+
+\section{Continuity}
+
+\begin{definition}
+	$f:(X,\tau_X)\to(Y,\tau_Y)$ is \emph{continuous} if $f^{-1}(V)\in\tau_X$ for every $V\in\tau_Y$.
+\end{definition}
+
+By Theorem~\ref{thm:contchar}, this agrees with the $\varepsilon$--$\delta$ definition when $X,Y$ are metric spaces with their metric topologies.
+
+\begin{proposition}
+	Compositions of continuous maps are continuous; the identity is continuous; a constant map is continuous.
+\end{proposition}
+\begin{proof}
+	If $g:Y\to Z$, $f:X\to Y$ are continuous and $W\in\tau_Z$ is open, then $g^{-1}(W)$ is open in $Y$, so $(g\circ f)^{-1}(W)=f^{-1}(g^{-1}(W))$ (a direct check: $x\in f^{-1}(g^{-1}(W))\iff f(x)\in g^{-1}(W)\iff g(f(x))\in W\iff x\in(g\circ f)^{-1}(W)$) is open in $X$. The other two are immediate from the definitions.
+\end{proof}
+
+\section{Closure, interior, boundary}
+
+\begin{definition}
+	For $A\subseteq X$: the \emph{interior} $\inte(A):=\bigcup\{U\in\tau:U\subseteq A\}$ (the largest open subset of $A$); the \emph{closure} $\cl(A):=\bigcap\{F:F\text{ closed},A\subseteq F\}$ (the smallest closed superset); the \emph{boundary} $\bd(A):=\cl(A)\setminus\inte(A)$.
+\end{definition}
+
+\begin{proposition}
+	$\inte(A)$ is open, $\cl(A)$ is closed, $\inte(A)\subseteq A\subseteq\cl(A)$, $A$ is open iff $A=\inte(A)$, and $A$ is closed iff $A=\cl(A)$.
+\end{proposition}
+\begin{proof}
+	$\inte(A)$ is a union of open sets, hence open (T2); $\cl(A)$ is an intersection of closed sets, hence closed (De Morgan, as in Theorem~\ref{thm:metrictop}). Every $U$ in the union defining $\inte(A)$ satisfies $U\subseteq A$, so $\inte(A)\subseteq A$; every $F$ in the intersection defining $\cl(A)$ satisfies $A\subseteq F$, so $A\subseteq\cl(A)$. If $A$ is open, $A$ is itself one of the sets in the union defining $\inte(A)$, and it contains every such set, so $\inte(A)=A$; conversely if $A=\inte(A)$ then $A$ is open since $\inte(A)$ is. The closed case is dual.
+\end{proof}
+
+\begin{example}
+	In $\R$: $\inte([0,1])=(0,1)$, $\cl((0,1))=[0,1]$, $\bd([0,1])=\{0,1\}$; $\inte(\Q)=\varnothing$ (every interval contains an irrational, Corollary~\ref{cor:density} and the analogous density of irrationals), $\cl(\Q)=\R$ (Corollary~\ref{cor:density}), so $\bd(\Q)=\R$.
+\end{example}
+
+\section{Compactness}
+
+\begin{definition}[Open cover, compactness]
+	An \emph{open cover} of $A\subseteq X$ is a set $\mathcal U\subseteq\tau$ with $A\subseteq\bigcup\mathcal U$. $A$ is \emph{compact} if every open cover of $A$ has a \emph{finite subcover}: a finite $\mathcal U_0\subseteq\mathcal U$ with $A\subseteq\bigcup\mathcal U_0$.
+\end{definition}
+
+\begin{theorem}[Heine--Borel, one direction]\label{thm:hb-closed-bounded}
+	If $A\subseteq\R$ is compact, then $A$ is closed and bounded.
+\end{theorem}
+\begin{proof}
+	\emph{Bounded:} $\{(-n,n):n\ge1\}$ covers $\R\supseteq A$; a finite subcover has a largest $n$, so $A\subseteq(-n,n)$.
+	
+	\emph{Closed:} let $y\notin A$; for each $x\in A$ let $r_x=|x-y|/2>0$; the balls $B(x,r_x)$ cover $A$; take a finite subcover $B(x_1,r_{x_1}),\dots,B(x_k,r_{x_k})$ and $r=\min_ir_{x_i}>0$. Then $B(y,r)\cap A=\varnothing$: if $z\in A\cap B(y,r)$, then $z\in B(x_i,r_{x_i})$ for some $i$, so $|x_i-y|\le|x_i-z|+|z-y|<r_{x_i}+r\le2r_{x_i}=|x_i-y|$, a contradiction. So $X\setminus A$ is open, i.e.\ $A$ is closed.
+\end{proof}
+
+\begin{theorem}[Closed bounded intervals are compact]\label{thm:closedintervalcompact}
+	Every closed bounded interval $[a,b]\subseteq\R$ is compact.
+\end{theorem}
+\begin{proof}
+	Let $\mathcal U$ be an open cover of $[a,b]$. Let $S=\{x\in[a,b]:[a,x]\text{ has a finite subcover from }\mathcal U\}$. $a\in S$ (some $U\in\mathcal U$ contains $a$, and $\{U\}$ covers $[a,a]$), so $S\ne\varnothing$; $S$ is bounded above by $b$. Let $s=\sup S\le b$. Choose $U_0\in\mathcal U$ with $s\in U_0$; as $U_0$ is open, $B(s,\delta)\subseteq U_0$ for some $\delta>0$. Since $s-\delta$ is not an upper bound of $S$ (if $s>a$; if $s=a$ the argument is easier and we take $x_0=a$), some $x_0\in S$ with $x_0>s-\delta$; let $\mathcal U_0$ be a finite subcover of $[a,x_0]$ and put $\mathcal U_0'=\mathcal U_0\cup\{U_0\}$, finite. It covers $[a,\min(s+\delta/2,b)]$: any $x$ in this interval either lies in $[a,x_0]\subseteq\bigcup\mathcal U_0$ or in $(x_0,s+\delta/2]\subseteq(s-\delta,s+\delta)\subseteq U_0$. So $\min(s+\delta/2,b)\in S$. If $s<b$ this contradicts $s=\sup S$ (as $\min(s+\delta/2,b)>s$); so $s=b$, and $b\in S$ by the same covering argument applied at $s=b$ (using only the left half-neighbourhood).
+\end{proof}
+
+\begin{theorem}[Heine--Borel]\label{thm:heineborel}
+	$A\subseteq\R$ is compact iff $A$ is closed and bounded.
+\end{theorem}
+\begin{proof}
+	($\Rightarrow$) Theorem~\ref{thm:hb-closed-bounded}. ($\Leftarrow$) $A$ bounded gives $A\subseteq[a,b]$ for some $a,b$. Let $\mathcal U$ be an open cover of $A$; add $X\setminus A$ (open, as $A$ is closed) to get an open cover $\mathcal U\cup\{X\setminus A\}$ of $[a,b]$, which is compact (Theorem~\ref{thm:closedintervalcompact}), so it has a finite subcover; discard $X\setminus A$ if present to get a finite subcover of $A$ from $\mathcal U$.
+\end{proof}
+
+\begin{proposition}[Compactness and continuity]
+	If $f:X\to Y$ is continuous and $K\subseteq X$ is compact, then $f(K)$ is compact.
+\end{proposition}
+\begin{proof}
+	Let $\mathcal V$ be an open cover of $f(K)$ in $Y$. Then $\{f^{-1}(V):V\in\mathcal V\}$ is a set of open subsets of $X$ (continuity) covering $K$ (if $x\in K$, $f(x)\in V$ for some $V\in\mathcal V$, so $x\in f^{-1}(V)$). Take a finite subcover $f^{-1}(V_1),\dots,f^{-1}(V_n)$ of $K$; then $V_1,\dots,V_n$ cover $f(K)$ (if $y=f(x)$, $x\in f^{-1}(V_i)$ for some $i$, so $y\in V_i$).
+\end{proof}
+
+\begin{corollary}[Extreme value theorem]
+	A continuous $f:[a,b]\to\R$ is bounded and attains a maximum and a minimum.
+\end{corollary}
+\begin{proof}
+	$f([a,b])$ is compact (previous proposition and Theorem~\ref{thm:closedintervalcompact}), hence closed and bounded (Heine--Borel). Bounded gives $\sup f([a,b])=:M<\infty$ exists; $M\in\cl(f([a,b]))=f([a,b])$ since $f([a,b])$ is closed and $M$ is a limit of points of $f([a,b])$ (Proposition~\ref{prop:closedseq}, or directly: if $M\notin f([a,b])$, its complement is open and contains $M$, giving room below $M$ still an upper bound, contradicting $M=\sup$). So $M=f(x_0)$ for some $x_0$. Dually for the minimum.
+\end{proof}
+
+\section{Connectedness}
+
+\begin{definition}
+	$(X,\tau)$ is \emph{disconnected} if $X=U\cup V$ for disjoint non-empty open sets $U,V$ (equivalently, some non-empty proper subset is both open and closed); otherwise $X$ is \emph{connected}. $A\subseteq X$ is connected if it is connected in the subspace topology.
+\end{definition}
+
+\begin{theorem}\label{thm:intervalsconnected}
+	$A\subseteq\R$ is connected iff $A$ is an interval (possibly empty, a point, or unbounded), i.e.\ $\forall x,y\in A\ \forall z\ (x<z<y\Rightarrow z\in A)$.
+\end{theorem}
+\begin{proof}
+	($\Rightarrow$, contrapositive) If $A$ is not an interval, there are $x,y\in A$ and $z\notin A$ with $x<z<y$. Then $U=A\cap(-\infty,z)$, $V=A\cap(z,\infty)$ are open in $A$, non-empty ($x\in U$, $y\in V$), disjoint, and cover $A$ (as $z\notin A$); so $A$ is disconnected.
+	
+	($\Leftarrow$) Let $A$ be an interval and suppose $A=U\cup V$, a disconnection. Pick $x\in U$, $y\in V$; WLOG $x<y$; since $A$ is an interval, $[x,y]\subseteq A$. Let $s=\sup(U\cap[x,y])$ (exists, bounded by $y$, non-empty as $x\in U$); $s\in[x,y]\subseteq A=U\cup V$. If $s\in U$: since $U$ is open in $A$ and $s\ne y$ (as $y\in V$, disjoint from $U$), some ball about $s$ meets $A$ inside $U$ and extends past $s$ within $[x,y]$ (using $s<y$), contradicting $s=\sup$. If $s\in V$: since $V$ is open in $A$ and $s\ne x$ (as $x\in U$), some interval about $s$ lies in $V$, so points of $U\cap[x,y]$ near $s$ from below would have to avoid this interval, forcing $\sup(U\cap[x,y])<s$, a contradiction; more directly, $V$ open gives $\delta>0$ with $(s-\delta,s+\delta)\cap A\subseteq V$, so no point of $U\cap[x,y]$ lies in $(s-\delta,s]$, so $s-\delta$ is an upper bound of $U\cap[x,y]$ smaller than $s$, contradicting $s=\sup$.
+\end{proof}
+
+\begin{proposition}[Connectedness and continuity]
+	If $f:X\to Y$ is continuous and $X$ is connected, then $f(X)$ is connected.
+\end{proposition}
+\begin{proof}
+	Suppose $f(X)=U\cup V$ is a disconnection (in $f(X)$, so $U=U'\cap f(X)$, $V=V'\cap f(X)$ for open $U',V'\subseteq Y$). Then $f^{-1}(U'),f^{-1}(V')$ are open in $X$ (continuity), disjoint (if $x$ were in both, $f(x)\in U\cap V=\varnothing$), non-empty, and cover $X$ (as $U'\cup V'\supseteq f(X)$), disconnecting $X$ — contradiction.
+\end{proof}
+
+\begin{corollary}[Intermediate value theorem]
+	If $f:[a,b]\to\R$ is continuous and $f(a)<c<f(b)$ (or $f(b)<c<f(a)$), then $f(x)=c$ for some $x\in[a,b]$.
+\end{corollary}
+\begin{proof}
+	$[a,b]$ is connected (Theorem~\ref{thm:intervalsconnected}), so $f([a,b])$ is connected, hence an interval (Theorem~\ref{thm:intervalsconnected} again) containing $f(a)$ and $f(b)$; so it contains $c$.
+\end{proof}
+
+\section{Summary}
+
+\begin{center}
+	\begin{tabular}{@{}p{3.2cm}p{5.7cm}p{5.3cm}@{}}
+		\toprule
+		\textbf{Notion} & \textbf{Metric-space definition} & \textbf{Topological definition}\\
+		\midrule
+		Open set & union of open balls & member of $\tau$\\
+		Continuity & $\varepsilon$--$\delta$ & preimages of open sets open\\
+		Convergence & $d(x_n,L)\to0$ & every open $U\ni L$ contains $x_n$ eventually\\
+		Compact & every open cover has a finite subcover (equiv.\ to closed+bounded in $\R^n$) & same definition, no such equivalence in general\\
+		Connected & no separation by disjoint open sets & same\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+Every metric space is a topological space via $\tau_d$; not every topological space is metrisable (e.g.\ the indiscrete topology on $|X|\ge2$ points, or the cofinite topology on an infinite set, which is not even Hausdorff-separating in the metric sense). This is the sense in which topology generalises the metric setting.
