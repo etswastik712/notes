@@ -34,6 +34,9 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback]] Lecture 4: Sensitivity & (albedo) Feedback (2026-08-19)
 - [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases]] Lecture 5: Atmosphere & Green house gases (2026-08-20)
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs]] Lecture 6: Planetary energy balance with GHGs, from the compiled L1–L6 notes (2026-08-21)
+- [[introduction-to-climate-science/2026-10-22-study-material-12-large-scale-circulation-patterns]] Study material 12: Large-scale circulation pattern (Hartmann Ch 6) (2026-10-22)
+- [[introduction-to-climate-science/2026-10-22-study-material-13-geostrophic-motion]] Study material 13: Geostrophic motion (Marshall and Plumb Ch 7) (2026-10-22)
+- [[introduction-to-climate-science/2026-10-22-advanced-reading-monsoon-dynamical-theory-webster]] Advanced reading: Monsoon dynamical theory, Webster and Fasullo (2026-10-22)
 
 ## Tasks
 
@@ -41,6 +44,7 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - No exam or quiz dates announced in the posts seen.
 - 2026-10-23: Quiz 2 covering post-midsem material taught up until 22 October 2026. (Classroom)
 - 2026-08-21: In-class quiz at 10:00, covering all content up to Lecture 5; calculator allowed, constants and relevant quantities provided (no need to memorise them). Seating by list: LHC 105/106 etc.; anyone not on the list goes to LHC 205. (Classroom)
+- 2026-10-23: Quiz 2 at 10:00; sit in the same room as the previous quiz and bring a calculator (seating list by room posted). (Classroom)
 
 ## Announcements
 - 2026-08-27: Matlab and Python code shared for the 28 August tutorial (Lorenz system and simple pendulum); students asked to bring laptops. See [[introduction-to-climate-science/2026-08-27-tutorial-lorenz-model-and-simple-pendulum]]. (Classroom)
@@ -68,3 +72,7 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-08-20: Student notes for Lecture 5 shared. See [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases]]. (Classroom)
 - 2026-08-20: Reminder to return the thermometer with its box by the next day (2026-08-21); see [[introduction-to-climate-science/2026-08-07-thermometer-experiment]]. (Classroom)
 - 2026-08-21: Compiled student notes for Lectures 1–6 shared (`climate_intro_notes_L1_L6.pdf`); Lecture 6 is new. See [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs]]. (Classroom)
+- 2026-10-16: The tutorial that day was held in LHC 105 and LHC 106. (Classroom)
+- 2026-10-22: Study material 12 (Hartmann, large-scale circulation patterns) and 13 (Marshall and Plumb, geostrophic motion) posted. See [[introduction-to-climate-science/2026-10-22-study-material-12-large-scale-circulation-patterns]] and [[introduction-to-climate-science/2026-10-22-study-material-13-geostrophic-motion]]. (Classroom)
+- 2026-10-22: Monograph on the dynamical theory of monsoons (Webster and Fasullo) shared as "advanced reading", for those who want to explore further. See [[introduction-to-climate-science/2026-10-22-advanced-reading-monsoon-dynamical-theory-webster]]. (Classroom)
+- 2026-10-23: For the Quiz 2 at 10 am, sit in the same room as for the previous quiz and carry calculators; a seating list by room (LHC 105, 106, 107, 108, 205) was posted as Room_arrangement.pdf (names not filed). (Classroom)
