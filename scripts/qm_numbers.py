@@ -302,3 +302,192 @@ def psin_num(n, z):
 n_hi = 20; xt_hi = np.sqrt(2 * n_hi + 1)
 Pq = quad(lambda z: psin_num(n_hi, z) ** 2, -xt_hi / 2, xt_hi / 2, limit=400)[0]
 P(f"n=20: quantum P(|x| < x_t/2) = {Pq:.4f} vs classical 1/3 (correspondence)")
+
+
+sec("QM06 oscillator toolbox: Hermite polynomials")
+from math import factorial as fac
+from scipy.special import eval_hermite, gammaln
+from scipy.linalg import expm
+from scipy.integrate import solve_ivp
+from scipy.optimize import brentq
+xi_, t_ = sp.symbols("xi t", real=True)
+Hn = [sp.hermite(n, xi_) for n in range(9)]
+for n_ in range(7):
+    P(f"  H_{n_} =", sp.expand(Hn[n_]))
+P("Rodrigues H_n = (-1)^n e^{xi^2} d^n/dxi^n e^{-xi^2}, n<=7:", all(sp.simplify((-1) ** n_ * sp.exp(xi_ ** 2) * sp.diff(sp.exp(-xi_ ** 2), xi_, n_) - Hn[n_]) == 0 for n_ in range(8)))
+P("recurrence H_{n+1} = 2 xi H_n - 2 n H_{n-1}, n=1..7:", all(sp.expand(Hn[n_ + 1] - (2 * xi_ * Hn[n_] - 2 * n_ * Hn[n_ - 1])) == 0 for n_ in range(1, 8)))
+P("H_n' = 2 n H_{n-1}, n=1..8:", all(sp.expand(sp.diff(Hn[n_], xi_) - 2 * n_ * Hn[n_ - 1]) == 0 for n_ in range(1, 9)))
+P("H_{n+1} = 2 xi H_n - H_n' (the ladder identity), n=0..7:", all(sp.expand(Hn[n_ + 1] - (2 * xi_ * Hn[n_] - sp.diff(Hn[n_], xi_))) == 0 for n_ in range(8)))
+P("Hermite ODE h'' - 2 xi h' + 2 n h = 0, n=0..8:", all(sp.expand(sp.diff(Hn[n_], xi_, 2) - 2 * xi_ * sp.diff(Hn[n_], xi_) + 2 * n_ * Hn[n_]) == 0 for n_ in range(9)))
+gf = sp.series(sp.exp(2 * xi_ * t_ - t_ ** 2), t_, 0, 9).removeO()
+P("generating function e^{2 xi t - t^2} = sum H_n t^n/n!, n<=8:", all(sp.expand(sp.Poly(gf, t_).coeff_monomial(t_ ** n_) * fac(n_) - Hn[n_]) == 0 for n_ in range(9)))
+P("H_n(0), n=0..8:", [Hn[n_].subs(xi_, 0) for n_ in range(9)], " (even n=2k: (-1)^k (2k)!/k! =", [(-1) ** k * fac(2 * k) // fac(k) for k in range(5)], ")")
+P("leading coefficient of H_n = 2^n:", [sp.Poly(Hn[n_], xi_).LC() for n_ in range(8)])
+orth = [[sp.integrate(Hn[m_] * Hn[n_] * sp.exp(-xi_ ** 2), (xi_, -sp.oo, sp.oo)) for n_ in range(5)] for m_ in range(5)]
+P("int H_m H_n e^{-xi^2} (m,n<=4):", [[sp.simplify(v) for v in row] for row in orth])
+P("  sqrt(pi) 2^n n! =", [sp.simplify(sp.sqrt(sp.pi) * 2 ** n_ * fac(n_)) for n_ in range(5)])
+from numpy.polynomial.hermite import hermroots
+for n_ in range(1, 8):
+    r = np.sort(hermroots([0] * n_ + [1]))
+    P(f"  zeros of H_{n_} (positive): {r[r > 1e-12]}")
+# probabilists' Hermite
+Hep = [sp.expand(sp.hermite_prob(n_, xi_)) for n_ in range(7)]
+P("  He_n(x) = 2^{-n/2} H_n(x/sqrt2), n<=6:", all(sp.simplify(Hep[n_] - 2 ** (-sp.Rational(n_, 2)) * Hn[n_].subs(xi_, xi_ / sp.sqrt(2))) == 0 for n_ in range(7)))
+for n_ in range(5):
+    P(f"  He_{n_} =", Hep[n_])
+phi_ = sp.exp(-xi_ ** 2 / 2) / sp.sqrt(2 * sp.pi)
+P("  E[He_m(Z) He_n(Z)] (m,n<=4) =", [[sp.simplify(sp.integrate(Hep[m_] * Hep[n_] * phi_, (xi_, -sp.oo, sp.oo))) for n_ in range(5)] for m_ in range(5)], "(n! on the diagonal)")
+P("  E[Z^{2k}] =", [sp.integrate(xi_ ** (2 * k) * phi_, (xi_, -sp.oo, sp.oo)) for k in range(5)], " (2k-1)!! =", [int(np.prod(range(1, 2 * k, 2))) if k else 1 for k in range(5)])
+P("  generating function of He_n: e^{x t - t^2/2}; the MGF of N(0,1) is e^{t^2/2}, so e^{x t - t^2/2} = e^{x t} / M_Z(t)")
+
+sec("QM06 normalisation of psi_n three ways (units hbar = m = omega = 1)")
+hermfun = lambda n, z: np.pi ** -0.25 * np.exp(-z ** 2 / 2 - 0.5 * (n * np.log(2) + gammaln(n + 1))) * eval_hermite(n, z)
+P("int psi_n^2 dx, n=0..10:", [round(quad(lambda z: hermfun(n_, z) ** 2, -14, 14, limit=300)[0], 10) for n_ in range(11)])
+for n_ in (5, 10):
+    P(f"  int H_{n_}^2 e^(-xi^2) = {quad(lambda z: eval_hermite(n_, z) ** 2 * np.exp(-z ** 2), -14, 14, limit=300)[0]:.6e} ; sqrt(pi) 2^n n! = {np.sqrt(np.pi) * 2 ** n_ * fac(n_):.6e}")
+P("  ladder constant recursion N_{n+1} = N_n / sqrt(2(n+1)):", all(abs(np.pi ** -0.25 / np.sqrt(2.0 ** (n_ + 1) * fac(n_ + 1)) - np.pi ** -0.25 / np.sqrt(2.0 ** n_ * fac(n_)) / np.sqrt(2 * (n_ + 1))) < 1e-15 for n_ in range(12)))
+
+sec("QM06 series solution and the shooting method")
+def series_coeffs(K, J=61, par=0):
+    a = np.zeros(J + 1); a[par] = 1.0
+    for j in range(par, J - 1, 2):
+        a[j + 2] = (2 * j + 1 - K) / ((j + 1) * (j + 2)) * a[j]
+    return a
+P("K = 5 (n=2), even series:", series_coeffs(5.0)[:7], " -> 1 - 2 xi^2 = -H_2/2")
+P("K = 3 (n=1), odd series:", series_coeffs(3.0, par=1)[:6], " -> xi (H_1/2)")
+P("K = 9 (n=4), even series:", series_coeffs(9.0)[:9], " -> 1 - 4 xi^2 + (4/3) xi^4 = H_4/12")
+a2 = series_coeffs(2.0, J=121)
+for j in (20, 40, 80):
+    P(f"  K=2 (not allowed): a_(j+2)/a_j at j={j}: {a2[j + 2] / a2[j]:.5f} vs 2/(j+2) = {2 / (j + 2):.5f} (the coefficient ratio of e^(xi^2))")
+def shoot(K, par, xe=6.0):
+    f = lambda z, y: [y[1], (z ** 2 - K) * y[0]]
+    y0 = [1.0, 0.0] if par == 0 else [0.0, 1.0]
+    return solve_ivp(f, [0, xe], y0, rtol=1e-10, atol=1e-12).y[0, -1]
+for par in (0, 1):
+    Ks = np.linspace(0.2, 10.5, 2000); vals = [shoot(K_, par) for K_ in Ks]
+    roots = [brentq(lambda K_: shoot(K_, par), Ks[i], Ks[i + 1]) for i in range(len(Ks) - 1) if vals[i] * vals[i + 1] < 0]
+    P(f"  {'even' if par == 0 else 'odd'} solutions: psi(6) changes sign at K = {np.round(roots, 4)} -> E = K/2 = {np.round(np.array(roots) / 2, 4)}")
+
+sec("QM06 number basis (Fock) matrices, units hbar = m = omega = 1")
+NN = 200
+a_f = np.diag(np.sqrt(np.arange(1, NN)), 1); ad_f = a_f.T
+x_f = (a_f + ad_f) / np.sqrt(2); p_f = 1j * (ad_f - a_f) / np.sqrt(2)
+nn_ = 8
+P("a (top-left 5x5):\n", a_f[:5, :5].round(4))
+P("x (top-left 5x5):\n", x_f[:5, :5].round(4))
+P("p (top-left 5x5, imaginary part):\n", p_f[:5, :5].imag.round(4))
+cm = a_f @ ad_f - ad_f @ a_f
+P("[a, a+] diagonal: first 4:", np.diag(cm)[:4], " last:", np.diag(cm)[-1], "(truncation artefact: [a,a+]=1 cannot hold in a finite matrix, its trace is 0)")
+X2 = x_f @ x_f; X3 = X2 @ x_f; X4 = X2 @ X2; P2 = p_f @ p_f; P4 = P2 @ P2
+n_arr = np.arange(10)
+P("<n|x^2|n> / (1/2):", np.diag(X2)[:10].real * 2, " = 2n+1")
+P("<n|x^4|n> / (1/2)^2 vs 6n^2+6n+3:", np.round(np.diag(X4)[:10].real * 4, 8), (6 * n_arr ** 2 + 6 * n_arr + 3))
+P("<n|p^4|n> / (1/2)^2:", np.round(np.diag(P4)[:10].real * 4, 8))
+P("<n|x^3|n> (all zero):", np.abs(np.diag(X3)[:10]).max())
+P("<n|x^2|n+2> / (1/2) vs sqrt((n+1)(n+2)):", np.round(np.diag(X2, 2)[:6] * 2, 6), np.round(np.sqrt((n_arr[:6] + 1) * (n_arr[:6] + 2)), 6))
+m_ = 3
+P(f"completeness: sum_n |<{m_}|x|n>|^2 = {np.sum(np.abs(x_f[m_, :]) ** 2):.6f} = <{m_}|x^2|{m_}> = {X2[m_, m_].real:.6f}")
+En_ = np.arange(NN) + 0.5
+P(f"Thomas-Reiche-Kuhn sum rule: sum_n (E_n - E_{m_}) |x_nm|^2 = {np.sum((En_ - En_[m_]) * np.abs(x_f[:, m_]) ** 2):.6f} = hbar^2/2m = 0.5")
+Ht = (X2 + P2).real / 2
+w_ = np.linalg.eigvalsh(Ht[:60, :60])
+P("(x^2+p^2)/2 in a 60x60 truncation, lowest 5:", np.round(w_[:5], 6), " top 2:", np.round(w_[-2:], 3), " (the top rows are corrupted by truncation: use n << N)")
+selection = np.argwhere(np.abs(x_f[:12, :12]) > 1e-12)
+P("nonzero <m|x|n> for m,n<12 occur only for |m-n| =", sorted({abs(int(i) - int(j)) for i, j in selection}))
+
+sec("QM06 Fourier invariance of the Hermite functions (momentum space)")
+for n_ in range(5):
+    for p0 in (0.4, 1.3):
+        re = quad(lambda z: hermfun(n_, z) * np.cos(p0 * z), -14, 14, limit=300)[0] / np.sqrt(2 * np.pi)
+        im = -quad(lambda z: hermfun(n_, z) * np.sin(p0 * z), -14, 14, limit=300)[0] / np.sqrt(2 * np.pi)
+        P(f"  n={n_}, p={p0}: psi~_n(p)/psi_n(p) = {(re + 1j * im) / hermfun(n_, p0):.5f} ; (-i)^n = {(-1j) ** n_}")
+
+sec("QM06 uncertainty-principle estimate of the zero-point energy")
+f_ = lambda s: 1 / (8 * s) + s / 2
+r_ = minimize_scalar(f_, bounds=(0.01, 5), method="bounded", options=dict(xatol=1e-10))
+P(f"E(s) = 1/(8 s) + s/2 with s = (Dx)^2: minimum E = {r_.fun:.6f} at s = {r_.x:.6f} (exact: 1/2 at s = 1/2) -> hbar omega/2, sharp because the ground state is a Gaussian")
+
+sec("QM06 virial theorem beyond the oscillator (finite-difference ground states, hbar = m = 1)")
+from scipy.linalg import eigh_tridiagonal
+def gs(V, L=7.0, Ng=6001):
+    xg = np.linspace(-L, L, Ng); dxg = xg[1] - xg[0]
+    d = 1 / dxg ** 2 + V(xg); e = -0.5 / dxg ** 2 * np.ones(Ng - 1)
+    w, v = eigh_tridiagonal(d, e, select="i", select_range=(0, 0))
+    f = v[:, 0] / np.sqrt(np.sum(v[:, 0] ** 2) * dxg)
+    T = 0.5 * np.sum(np.gradient(f, dxg) ** 2) * dxg; Vv = np.sum(V(xg) * f ** 2) * dxg
+    return w[0], T, Vv
+for nm, V, s in (("x^2/2", lambda z: 0.5 * z ** 2, 2), ("x^4", lambda z: z ** 4, 4), ("|x|", lambda z: np.abs(z), 1)):
+    E0, T0, V0 = gs(V)
+    P(f"  V = {nm}: E0 = {E0:.5f}, <T> = {T0:.5f}, <V> = {V0:.5f}, 2<T>/<V> = {2 * T0 / V0:.4f} (virial: s = {s})")
+
+sec("QM06 Ehrenfest and Heisenberg (units hbar = m = omega = 1)")
+x_s = sp.symbols("x", real=True)
+ps0 = sp.pi ** sp.Rational(-1, 4) * sp.exp(-x_s ** 2 / 2); ps1 = sp.sqrt(2) * x_s * ps0
+Psi = (ps0 * sp.exp(-sp.I * t_ / 2) + ps1 * sp.exp(-3 * sp.I * t_ / 2)) / sp.sqrt(2)
+Psic = (ps0 * sp.exp(sp.I * t_ / 2) + ps1 * sp.exp(3 * sp.I * t_ / 2)) / sp.sqrt(2)
+ex = sp.simplify(sp.integrate(Psic * x_s * Psi, (x_s, -sp.oo, sp.oo)))
+ep = sp.simplify(sp.integrate(Psic * (-sp.I) * sp.diff(Psi, x_s), (x_s, -sp.oo, sp.oo)))
+P("<x>(t) =", ex, " ; <p>(t) =", ep)
+P("Ehrenfest d<x>/dt - <p> =", sp.simplify(sp.diff(ex, t_) - ep), " ; d<p>/dt + <x> =", sp.simplify(sp.diff(ep, t_) + ex))
+Nh = 40; Hd = np.diag(np.arange(Nh) + 0.5); a_h = np.diag(np.sqrt(np.arange(1, Nh)), 1); tt0 = 0.83
+U = expm(1j * Hd * tt0); a_t = U @ a_h @ U.conj().T
+P(f"Heisenberg a(t) = a e^(-i w t): max error {np.abs(a_t - a_h * np.exp(-1j * tt0)).max():.2e}")
+x_h = (a_h + a_h.T) / np.sqrt(2); p_h = 1j * (a_h.T - a_h) / np.sqrt(2)
+x_t = U @ x_h @ U.conj().T
+P(f"Heisenberg x(t) = x cos wt + p sin wt (m = w = 1): max error {np.abs(x_t - (x_h * np.cos(tt0) + p_h * np.sin(tt0))).max():.2e}")
+P("[H, x] = -i p and [H, p] = i x (units): errors", np.abs((Hd @ x_h - x_h @ Hd)[:30, :30] + 1j * p_h[:30, :30]).max(), np.abs((Hd @ p_h - p_h @ Hd)[:30, :30] - 1j * x_h[:30, :30]).max())
+
+sec("QM06 coherent states (units hbar = m = omega = 1)")
+from scipy import stats
+Nc = 90; nn = np.arange(Nc)
+a_c = np.diag(np.sqrt(np.arange(1, Nc)), 1); ad_c = a_c.T
+def coh(al): return np.exp(-abs(al) ** 2 / 2) * np.array([al ** k / np.sqrt(float(fac(k))) for k in range(Nc)])
+al1, al2 = 2.0 + 0j, 1.2 + 0.9j
+for al in (al1, al2):
+    c = coh(al)
+    x_m = c.conj() @ ((a_c + ad_c) / np.sqrt(2)) @ c; p_m = c.conj() @ (1j * (ad_c - a_c) / np.sqrt(2)) @ c
+    x2m = c.conj() @ (((a_c + ad_c) / np.sqrt(2)) @ ((a_c + ad_c) / np.sqrt(2))) @ c
+    p2m = c.conj() @ ((1j * (ad_c - a_c) / np.sqrt(2)) @ (1j * (ad_c - a_c) / np.sqrt(2))) @ c
+    nmean = (np.abs(c) ** 2 * nn).sum(); nvar = (np.abs(c) ** 2 * nn ** 2).sum() - nmean ** 2
+    P(f"  alpha = {al}: norm {np.vdot(c, c).real:.8f}; |a c - alpha c| = {np.linalg.norm(a_c @ c - al * c):.2e}; <n> = {nmean:.5f} (|alpha|^2 = {abs(al) ** 2:.5f}); Var n = {nvar:.5f}")
+    P(f"     <x> = {x_m.real:.5f} (sqrt2 Re a = {np.sqrt(2) * al.real:.5f}); <p> = {p_m.real:.5f} (sqrt2 Im a = {np.sqrt(2) * al.imag:.5f}); Dx = {np.sqrt(x2m.real - x_m.real ** 2):.5f}; Dp = {np.sqrt(p2m.real - p_m.real ** 2):.5f}; Dx Dp = {np.sqrt((x2m.real - x_m.real ** 2) * (p2m.real - p_m.real ** 2)):.5f}")
+    P(f"     max | |c_n|^2 - Poisson(|alpha|^2) | = {np.abs(np.abs(c) ** 2 - stats.poisson.pmf(nn, abs(al) ** 2)).max():.2e}")
+c = coh(al2)
+for tt1 in (0.0, 0.7, 2.0):
+    ct = c * np.exp(-1j * (nn + 0.5) * tt1)
+    P(f"  t = {tt1}: <x> = {(ct.conj() @ ((a_c + ad_c) / np.sqrt(2)) @ ct).real:.5f} vs sqrt2 Re(alpha e^(-it)) = {np.sqrt(2) * (al2 * np.exp(-1j * tt1)).real:.5f}")
+be = 0.3 - 0.5j
+P(f"  |<alpha|beta>| = {abs(np.vdot(coh(al2), coh(be))):.6f} vs exp(-|alpha-beta|^2/2) = {np.exp(-abs(al2 - be) ** 2 / 2):.6f}")
+Dd = expm(al2 * ad_c - np.conj(al2) * a_c)
+P(f"  D(alpha)|0> vs |alpha>: max difference {np.abs(Dd[:, 0] - coh(al2)).max():.2e}")
+xg = np.array([-2.0, -0.5, 0.3, 1.7]); x0, p0 = np.sqrt(2) * al2.real, np.sqrt(2) * al2.imag
+psi_sum = sum(coh(al2)[k] * hermfun(k, xg) for k in range(Nc))
+psi_gauss = np.pi ** -0.25 * np.exp(-(xg - x0) ** 2 / 2 + 1j * p0 * xg - 1j * x0 * p0 / 2)
+P("  psi_alpha(x) from the Fock sum / Gaussian formula (should be 1):", np.round(psi_sum / psi_gauss, 6))
+
+sec("QM06 thermal oscillator")
+c2 = 1.438777   # second radiation constant, K per cm^-1
+for nm, nu in (("CO stretch 2143 cm^-1", 2143.0), ("CO2 bend 667 cm^-1", 667.0)):
+    th = c2 * nu
+    for T in (288.0, 300.0):
+        x = th / T
+        P(f"  {nm}: theta_v = {th:.0f} K ; T = {T:.0f} K: x = {x:.3f}, <n> = {1 / np.expm1(x):.5f}, P(n>=1) = {np.exp(-x):.5f}, C/k = {x ** 2 * np.exp(x) / np.expm1(x) ** 2:.5f}")
+for x in (0.1, 1.0, 3.0, 10.0):
+    P(f"  Einstein function x = {x}: C/k = {x ** 2 * np.exp(x) / np.expm1(x) ** 2:.5f} (1 - x^2/12 = {1 - x ** 2 / 12:.5f})")
+x = 1.7; pq = (1 - np.exp(-x)) * np.exp(-x * nn)
+P(f"  p_n = (1 - e^-x) e^(-n x), x = {x}: sum = {pq.sum():.8f}; mean n = {(pq * nn).sum():.6f} vs 1/(e^x - 1) = {1 / np.expm1(x):.6f}; geometric (failures) mean q/p = {np.exp(-x) / (1 - np.exp(-x)):.6f}; Var = {((pq * nn ** 2).sum() - (pq * nn).sum() ** 2):.5f} vs q/p^2 = {np.exp(-x) / (1 - np.exp(-x)) ** 2:.5f}")
+P("  thermal Mandel Q = Var/<n> - 1 = <n> (super-Poissonian); coherent Q = 0")
+
+sec("QM06 degeneracy of isotropic oscillators")
+from itertools import product
+for N in range(7):
+    d2 = sum(1 for t in product(range(N + 1), repeat=2) if sum(t) == N)
+    d3 = sum(1 for t in product(range(N + 1), repeat=3) if sum(t) == N)
+    P(f"  N = {N}: 2D degeneracy {d2} (N+1 = {N + 1}); 3D degeneracy {d3} ((N+1)(N+2)/2 = {(N + 1) * (N + 2) // 2})")
+
+sec("QM06 anharmonic shift: H = (p^2 + x^2)/2 + lambda x^4")
+Nb = 260; ab = np.diag(np.sqrt(np.arange(1, Nb)), 1); xb = (ab + ab.T) / np.sqrt(2); x4 = np.linalg.matrix_power(xb, 4)[:140, :140]
+Hb0 = np.diag(np.arange(140) + 0.5)
+for lam in (0.001, 0.002):
+    Ev = np.linalg.eigvalsh(Hb0 + lam * x4)[:3]
+    P(f"  lambda = {lam}: E_0 - 1/2 = {Ev[0] - 0.5:.8f} ; first order 3 lambda/4 = {0.75 * lam:.8f} ; with -21 lambda^2/8: {0.75 * lam - 21 / 8 * lam ** 2:.8f} ; E_1 - 3/2 = {Ev[1] - 1.5:.8f} vs 15 lambda/4 = {15 * lam / 4:.8f}")

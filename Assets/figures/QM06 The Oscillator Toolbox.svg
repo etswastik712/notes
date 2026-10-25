@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">The oscillator toolbox: one algebra, many representations</text>
+<line x1="311.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="399.3" y1="198.0" x2="277.7" y2="268.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="729.3" y1="198.0" x2="607.7" y2="268.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="330.0" x2="679.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="320.7" y1="375.7" x2="679.3" y2="484.3" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="449.6" y1="199.6" x2="220.4" y2="470.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="779.6" y1="199.6" x2="550.4" y2="470.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="35.0" y="92.0" width="270" height="96" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Hamiltonian</text>
+<text x="170" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">H = hbar w (a+ a- + 1/2)</text>
+<text x="170" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(factorised sum of squares)</text>
+<rect x="355.0" y="85.0" width="290" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Ladder algebra</text>
+<text x="500" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">[a-, a+] = 1</text>
+<text x="500" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">a- |n&gt; = sqrt(n) |n-1&gt;</text>
+<text x="500" y="175.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">a+ |n&gt; = sqrt(n+1) |n+1&gt;</text>
+<rect x="685.0" y="85.0" width="290" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Number basis |n&gt;</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E_n = (n + 1/2) hbar w</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">psi_n = (a+)^n psi_0 / sqrt(n!)</text>
+<rect x="25.0" y="271.0" width="290" height="118" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="305.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">x, p = a+ +- a-</text>
+<text x="170" y="325.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">tridiagonal matrices</text>
+<text x="170" y="345.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">&lt;x^2&gt; = (2n+1) hbar/2mw</text>
+<text x="170" y="365.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">selection rule dn = +-1</text>
+<rect x="355.0" y="271.0" width="290" height="118" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="305.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Hermite functions</text>
+<text x="500" y="325.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">psi_n ~ H_n(xi) e^(-xi^2/2)</text>
+<text x="500" y="345.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Rodrigues, recurrence, generating fn</text>
+<text x="500" y="365.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">norm sqrt(pi) 2^n n!</text>
+<rect x="685.0" y="282.0" width="290" height="96" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Momentum space</text>
+<text x="830" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">psi~_n(p) = (-i)^n psi_n(p)</text>
+<text x="830" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">x and p play the same role</text>
+<rect x="25.0" y="475.0" width="290" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Coherent states</text>
+<text x="170" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">a |alpha&gt; = alpha |alpha&gt;</text>
+<text x="170" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Poisson in n, Dx Dp = hbar/2</text>
+<text x="170" y="565.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">moves on the classical orbit</text>
+<rect x="355.0" y="475.0" width="290" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Thermal oscillator</text>
+<text x="500" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">P(n) geometric, &lt;n&gt; = 1/(e^x - 1)</text>
+<text x="500" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Planck mean energy</text>
+<text x="500" y="565.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Einstein heat capacity</text>
+<rect x="685.0" y="475.0" width="290" height="110" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Dynamics</text>
+<text x="830" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Ehrenfest: &lt;x&gt;, &lt;p&gt; classical</text>
+<text x="830" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Heisenberg: a(t) = a e^(-iwt)</text>
+<text x="830" y="565.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">virial: &lt;T&gt; = &lt;V&gt; = E/2</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">QM05-QM06: every result follows from [a-, a+] = 1 and the ground-state condition a- psi_0 = 0</text>
+</svg>
