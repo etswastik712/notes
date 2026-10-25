@@ -58,43 +58,73 @@
     },
     {
       "query": "path:04-Evolution-of-Earth-and-Life",
-      "color": { "a": 1, "rgb": 3046706 }
+      "color": {
+        "a": 1,
+        "rgb": 3046706
+      }
     },
     {
       "query": "path:05-Landscapes-Geomorphology",
-      "color": { "a": 1, "rgb": 9268835 }
+      "color": {
+        "a": 1,
+        "rgb": 9268835
+      }
     },
     {
       "query": "path:06-Quantum-Mechanics",
-      "color": { "a": 1, "rgb": 8280002 }
+      "color": {
+        "a": 1,
+        "rgb": 8280002
+      }
     },
     {
       "query": "path:07-Waves",
-      "color": { "a": 1, "rgb": 2541274 }
+      "color": {
+        "a": 1,
+        "rgb": 2541274
+      }
     },
     {
       "query": "path:08-Probability",
-      "color": { "a": 1, "rgb": 15690752 }
+      "color": {
+        "a": 1,
+        "rgb": 15690752
+      }
     },
     {
       "query": "path:10-Group-Theory",
-      "color": { "a": 1, "rgb": 15483002 }
+      "color": {
+        "a": 1,
+        "rgb": 15483002
+      }
     },
     {
       "query": "path:11-Proofs-Analysis-Topology",
-      "color": { "a": 1, "rgb": 6056896 }
+      "color": {
+        "a": 1,
+        "rgb": 6056896
+      }
     },
     {
       "query": "path:12-Inorganic-Chemistry",
-      "color": { "a": 1, "rgb": 10275941 }
+      "color": {
+        "a": 1,
+        "rgb": 10275941
+      }
     },
     {
       "query": "path:13-Neuroscience",
-      "color": { "a": 1, "rgb": 16763432 }
+      "color": {
+        "a": 1,
+        "rgb": 16763432
+      }
     },
     {
       "query": "path:inbox",
-      "color": { "a": 1, "rgb": 10395294 }
+      "color": {
+        "a": 1,
+        "rgb": 10395294
+      }
     }
   ],
   "collapse-display": false,
@@ -107,6 +137,6 @@
   "repelStrength": 12,
   "linkStrength": 1,
   "linkDistance": 200,
-  "scale": 0.5,
+  "scale": 0.2759898904708949,
   "close": false
 }
