@@ -24,6 +24,8 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-09-18-quiz-3-solutions]] Quiz 3 solutions: negative binomial vs binomial, memorylessness of the geometric (2026-09-18)
 - [[introduction-to-probability/2026-09-22-mid-semester-solutions]] Mid-semester examination solutions (2026-09-22)
 - [[introduction-to-probability/2026-10-08-week-1-post-mid-term-hw-and-lecture-notes]] Week 1 post mid-term: continuous distributions, LOTUS, normal; HW (2026-10-08)
+- [[introduction-to-probability/2026-10-15-hw-2-problems]] HW 2 problems: exponential, Gumbel, E[F(X)] (2026-10-15)
+- [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]] HW3 problems and median clarification: median, mode, skewness, mgf (2026-10-22)
 
 ## Tasks
 
@@ -57,3 +59,8 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-09-22: Mid-semester solutions posted; the teacher invites questions any time during the semester. See [[introduction-to-probability/2026-09-22-mid-semester-solutions]]. (Classroom)
 - 2026-10-08: Second part of the course begins with a weekly homework: "Week 1 (post mid-term)" on continuous random variables. See [[introduction-to-probability/2026-10-08-week-1-post-mid-term-hw-and-lecture-notes]]. (Classroom)
 - 2026-10-08: Remedial classes resume on Saturday 2026-10-10, 2:00-4:00 PM, Seminar Room 41, 3rd floor, Main Building (venue changed for that week). (Classroom)
+- 2026-10-10: Extra remedial class "tomorrow" (2026-10-11), 4:00-5:30 PM, Madhava Hall. (Classroom)
+- 2026-10-15: HW 2 posted. See [[introduction-to-probability/2026-10-15-hw-2-problems]]. (Classroom)
+- 2026-10-15: Remedial class on Saturday 2026-10-17, 2:00-4:00 PM, Madhava Hall, 3rd floor, Main Building. (Classroom)
+- 2026-10-22: Median of a discrete random variable corrected: $c$ is a median if $P(X\le c)\ge1/2$ and $P(X\ge c)\ge1/2$ (the board had $\le1/2$ by mistake); HW3 posted. See [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]]. (Classroom)
+- 2026-10-24: Lecture notes for Weeks 2 and 3 posted (the files filed so far hold only the homework problems); tutorial attendance is a cause of concern, so attend the tutorials. (Classroom)

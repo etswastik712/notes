@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 590" width="980" height="590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="980" height="590" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="490.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Models of covalent bonding in CH2113: which one answers which question</text>
+<line x1="281.0" y1="134.6" x2="339.0" y2="127.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="277.0" y1="202.3" x2="350.9" y2="232.7" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="490.0" y1="166.0" x2="490.0" y2="229.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="640.8" y1="254.5" x2="689.2" y2="243.1" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="689.2" y1="168.6" x2="640.8" y2="154.3" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="490.0" y1="351.0" x2="490.0" y2="414.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="25.0" y="100.0" width="250" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="150" y="135.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Lewis / octet rule</text>
+<text x="150" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">electron pairs</text>
+<text x="150" y="175.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">fails: BeH2, NO, SF6</text>
+<rect x="345.0" y="60.0" width="290" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="490" y="95.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">VSEPR</text>
+<text x="490" y="115.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">regions of electron density</text>
+<text x="490" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">repel: gives the SHAPE</text>
+<rect x="345.0" y="235.0" width="290" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="490" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Valence bond (VB)</text>
+<text x="490" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">localised spin-paired bonds</text>
+<text x="490" y="315.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">promotion, hybridisation</text>
+<rect x="695.0" y="155.0" width="270" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="195.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Hybrids</text>
+<text x="830" y="215.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sp, sp2, sp3, dsp3, d2sp3</text>
+<text x="830" y="235.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">cos(theta) = S/(S-1); Bent&#x27;s rule</text>
+<rect x="325.0" y="420.0" width="330" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="490" y="455.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Molecular orbital (MO)</text>
+<text x="490" y="475.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">delocalised orbitals, N AOs -&gt; N MOs</text>
+<text x="490" y="495.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">spectra, magnetism, hypervalence</text>
+<rect x="25.0" y="360.0" width="250" height="100" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="150" y="395.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Same question,</text>
+<text x="150" y="415.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">three answers:</text>
+<text x="150" y="435.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">shape, bond, energy levels</text>
+<text x="490.0" y="572" text-anchor="middle" font-size="13" fill="#52514e">CH-2113 slides 1-52: VSEPR (1-7), valence bond and hybridisation (8-26), molecular orbitals (27-52)</text>
+</svg>

@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. The mid-semester examination has taken place (solutions posted 2026-09-22, answer scripts shown 2026-09-26 and 2026-10-13); no later quiz or exam date is in the posts. Rule for any quiz or exam: no electronic gadget, notes or paper on your person; a phone found means 0 for that quiz (Classroom, 2026-08-28), and at the mid-semester a violation cancelled the examination and was reported to the Academic Office (Classroom, 2026-09-18). No calculator was needed at the mid-semester.
+Not announced yet. The mid-semester examination has taken place (solutions posted 2026-09-22, answer scripts shown 2026-09-26 and 2026-10-13); no later quiz or exam date is in the posts, the latest of which is dated 2026-10-24. Rule for any quiz or exam: no electronic gadget, notes or paper on your person; a phone found means 0 for that quiz (Classroom, 2026-08-28), and at the mid-semester a violation cancelled the examination and was reported to the Academic Office (Classroom, 2026-09-18). No calculator was needed at the mid-semester.
 
 ## Covered so far
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: Bernoulli/binomial as sums of indicators, Poisson as a binomial limit, pmf of $g(X)$, $E[g(X)]$, $E[aX+b]$
@@ -26,6 +26,8 @@ Not announced yet. The mid-semester examination has taken place (solutions poste
 - [[introduction-to-probability/2026-09-18-quiz-3-solutions]]: $P[\text{NegBin}>n]=P[\text{Bin}<r]$, memorylessness of the geometric
 - [[introduction-to-probability/2026-09-22-mid-semester-solutions]]: Poisson moment recursion, matchbox problem, bus paradox, Bayes with guessing, normalising constant, inclusion-exclusion, stamps
 - [[introduction-to-probability/2026-10-08-week-1-post-mid-term-hw-and-lecture-notes]]: uniform, logistic, Rayleigh, standard normal and Gaussian; LOTUS with proof for $g\ge0$; $E(Y)=\int_0^\infty P(Y>y)\,dy$; homework of 6 problems
+- [[introduction-to-probability/2026-10-15-hw-2-problems]]: HW 2 (exponential repair time, Gumbel and the maximum of exponentials, $E[F(X)]$)
+- [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]]: median of a discrete variable (corrected definition); HW3 (median, mode, skewness, mgf, folded normal)
 - Earlier chapters in the vault: [[08-Probability/Probability - Course Map]]
 
 ## Must know
@@ -56,6 +58,8 @@ Not announced yet. The mid-semester examination has taken place (solutions poste
 - $\text{Unif}(a,b)$: $f=1/(b-a)$ on $[a,b]$, $E=(a+b)/2$, $\operatorname{Var}=(b-a)^2/12$.
 - Standard normal $\varphi(x)=e^{-x^2/2}/\sqrt{2\pi}$, with $\int e^{-x^2/2}dx=\sqrt{2\pi}$ (via $I^2$ in polar coordinates); $E(Z)=0$, $\operatorname{Var}(Z)=1$. $X\sim N(\mu,\sigma)$ iff $X=\sigma Z+\mu$; then $E(X)=\mu$, $\operatorname{Var}(X)=\sigma^2$.
 - Rayleigh: $f(x)=xe^{-x^2/2}$ for $x>0$, $F(x)=1-e^{-x^2/2}$, $E=\sqrt{\pi/2}$. Logistic: $f(x)=e^x/(1+e^x)^2$, $F(x)=e^x/(1+e^x)$, $E=0$.
+- Median: $c$ is a median of $X$ if $P(X\le c)\ge\tfrac12$ and $P(X\ge c)\ge\tfrac12$ (the instructor corrected the board, which had $P(X\ge c)\le\tfrac12$). For a discrete $X$ with values $x_1<\dots<x_n$, if $p_1+\dots+p_{i-1}<\tfrac12\le p_1+\dots+p_i$, then $x_i$ is a median (the smallest that works), since $p_i+\dots+p_n=1-(p_1+\dots+p_{i-1})\ge\tfrac12$ (Classroom: announcement of 2026-10-22).
+- Skewness is the standardised third central moment and kurtosis the fourth; higher moments matter e.g. for the Lyapunov condition in central limit theorems (Classroom: announcement of 2026-09-15).
 - In proofs, use only results fully proved in class, and state them with complete clarity (Quiz 2 solutions marking: a non-rigorous remark earns no points).
 - A solution may use mgfs as a concept, but the mgf of a known distribution (e.g. binomial) must be derived before use, or points are lost (Classroom, 2026-09-17).
 - $\operatorname{Var}\big[\sum X_i\big]=\sum\operatorname{Var}[X_i]$ for independent $X_i$ is not proved in this course, so it cannot be used in solutions (Classroom: practice sheet, problem 5).
@@ -85,15 +89,22 @@ Not announced yet. The mid-semester examination has taken place (solutions poste
 - Mean and variance of a function of a continuous variable via LOTUS, and its cdf/pdf by the cdf method (area of a circle with uniform radius). Practise: Week 1 homework, problem 2.
 - Expectation of a truncated normal, $E(\max\{Z-c,0\})$; inflection points of the normal pdf. Practise: Week 1 homework, problems 4-5.
 - Proof that $E(Y)=\int_0^\infty P(Y>y)\,dy-\int_0^\infty P(Y<-y)\,dy$ and LOTUS for general $g$. Practise: Week 1 homework, problem 6 (starred, optional).
+- Exponential tail and conditional tail (repair time with $\lambda=1/2$: $P(>2)$, $P(\ge10\mid>9)$). Practise: [[introduction-to-probability/2026-10-15-hw-2-problems]], problem 1.
+- Cdf of a transformed variable ($-\log X$, Gumbel) and convergence in distribution of $M_n-\log n$ for the maximum of i.i.d. $\text{Expo}(1)$. Practise: HW 2, problem 2.
+- $E[F(X)]$ for continuous $X$, with and without LOTUS. Practise: HW 2, problem 3.
+- Median and mode of uniform, exponential and Pareto distributions; skewness of the exponential (positive, free of $\lambda$). Practise: [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]], problems 1-3.
+- Mgf of a sum of two dice rolls; mean and variance of $\text{Geom}(p)$ from its mgf (derive the mgf first); two integral expressions for the mgf of the folded normal $|Z|$. Practise: HW3, problems 4-6.
 
 ## Gaps
 - Practice problems 4 September 2026: the PDF could not be downloaded (RemoteDisconnected), so its problems are not covered.
 - No date is announced for the next quiz or exam (end-semester or otherwise), nor its syllabus.
-- Week 1 homework: due date and whether it is collected are not stated. The PDF is handwritten and was read from page images, so formulas should be checked against the file.
+- Week 1 homework: due date and whether it is collected are not stated. The PDF is handwritten and was read from page images, so formulas should be checked against the file. The due dates of HW 2 and HW3 are not stated either.
+- The Week2_notes.pdf and Week3_notes.pdf files hold only the homework problems; the lecture notes for Weeks 2 and 3 (announced as posted on 2026-10-24) are not filed, so the exponential distribution, the median/mode/skewness lectures, the mgf definition and the folded normal "discussed in class" have no class notes here yet.
+- HW3 problem 4 is marked "postponed to next hw" in the file but listed without that remark in the post.
 - Quiz 3, problem 3: statement not in the solutions file ("deduced in class in detail").
 - Whether the geometric/negative-binomial derivations and their expectations are examined: the notes say they "will be derived in class", with no written derivation in these files.
 - The variance proofs ($E[X^2]-(E[X])^2$, $\operatorname{Var}[aX+b]$) are "done in class", not written in the notes; variance of a sum of independent variables is stated not to be proved in the course.
-- Class notes after 10 September are not filed (the lecture of 15-17 September where mgfs were mentioned); post mid-term class notes beyond Week 1 (the normal distribution is covered only briefly, no exponential or gamma) are not filed. The vault chapter [[08-Probability/PR05 Continuous Random Variables]] covers more densities.
+- Class notes after 10 September other than Week 1 are not filed (the lecture of 15-17 September where mgfs were mentioned). The vault chapter [[08-Probability/PR05 Continuous Random Variables]] covers more densities and [[08-Probability/PR06 Moments Generating Functions and Limit Theorems]] mgfs.
 - Joint cdf and conditional distributions appear in the vault chapters ([[08-Probability/PR04 Joint Distributions Expectation and Variance]]) but not in the class notes filed so far; joint distributions of continuous variables are not yet filed.
 - Mid-semester solutions problem 6 shows the data are contradictory ($1057>1000$); the original problem statement is not in the file.
 <!-- /kurooto:exam-prep -->
