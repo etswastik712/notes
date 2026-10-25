@@ -258,3 +258,47 @@ P("psi0 in momentum space ~ exp(-p^2/(2 m w hbar)): Dp = sqrt(m w hbar/2) ; Dx =
 for k_, f in enumerate((psi0_, psi1, psi2_, psi3)):
     P(f"  a+ a- psi{k_} / psi{k_} =", sp.simplify(ap(am(f)) / f))
 P("[H,a-]/hbar w = -a- :", sp.simplify((Hh(am(psi2_)) - am(Hh(psi2_))) / (hbs * w) + am(psi2_)) == 0, " ; [H,a+] = +hbar w a+:", sp.simplify((Hh(ap(psi2_)) - ap(Hh(psi2_))) / (hbs * w) - ap(psi2_)) == 0)
+
+
+sec("QM05 update: oscillator lecture (Harmonic_oscillator.pdf) and Tutorial III")
+psis = [psi0]
+for n_ in range(1, 7):
+    psis.append(sp.simplify(ap(psis[-1]) / sp.sqrt(n_)))
+Int = lambda f: sp.simplify(sp.integrate(f, (xx, -sp.oo, sp.oo)))
+# lecture pp.10-11: a+ psi_n = sqrt(n+1) psi_{n+1}, a- psi_n = sqrt(n) psi_{n-1}
+P("a+ psi_n / psi_{n+1}, n=0..5:", [sp.simplify(ap(psis[n_]) / psis[n_ + 1]) for n_ in range(6)], "(sqrt(n+1))")
+P("a- psi_n / psi_{n-1}, n=1..6:", [sp.simplify(am(psis[n_]) / psis[n_ - 1]) for n_ in range(1, 7)], "(sqrt(n))")
+P("H psi_n / psi_n (units hbar w), n=0..6:", [sp.simplify(Hh(f) / f / (hbs * w)) for f in psis], "(n + 1/2)")
+# lecture p.9 identity: int f (a+ g) dx = int (a- f) g dx (real functions, adjoint relation)
+ok = all(sp.simplify(Int(psis[n_] * ap(psis[m_])) - Int(am(psis[n_]) * psis[m_])) == 0 for n_ in range(5) for m_ in range(5))
+P("lecture identity  int f a+ g = int (a- f) g   for n,m <= 4:", ok)
+# the page-9 line writes a+ = hbar d/dx + m w x (sign of a-): with it, the identity fails for psi_0, psi_1
+ap_wrong = lambda f: (m * w * xx * f + hbs * sp.diff(f, xx)) / sp.sqrt(2 * hbs * m * w)
+P("with the page-9 sign (hbar d/dx + m w x): int psi0 (a'psi1) - int (a- psi0) psi1 =", sp.simplify(Int(psis[0] * ap_wrong(psis[1])) - Int(am(psis[0]) * psis[1])), "(not 0: slip)")
+# lecture p.12-13 and Tutorial III Q1
+P("<x>_n, n=0..4:", [Int(f * xx * f) for f in psis[:5]])
+P("<p>_n, n=0..4:", [Int(f * (-sp.I * hbs) * sp.diff(f, xx)) for f in psis[:5]])
+P("<x^2>_n / (hbar/(2 m w)), n=0..5:", [sp.simplify(Int(f * xx ** 2 * f) / (hbs / (2 * m * w))) for f in psis[:6]], "(2n+1)")
+P("<p^2>_n / (hbar m w / 2), n=0..5:", [sp.simplify(Int(f * (-hbs ** 2) * sp.diff(f, xx, 2)) / (hbs * m * w / 2)) for f in psis[:6]], "(2n+1)")
+# Tutorial III Q1 by the ladder formula: <p^2> = -(m hbar w / 2) <(a+ - a-)^2> = (m hbar w / 2)(2n+1)
+# Tutorial III Q2: Gaussian integrals for the ground state
+a_ = sp.symbols("a", positive=True)
+P("int x^2 e^{-a x^2} dx =", sp.simplify(sp.integrate(xx ** 2 * sp.exp(-a_ * xx ** 2), (xx, -sp.oo, sp.oo))), " (= sqrt(pi)/(2 a^{3/2}) = -d/da sqrt(pi/a))")
+P("-d/da sqrt(pi/a) =", sp.simplify(-sp.diff(sp.sqrt(sp.pi / a_), a_)))
+P("<x^2>_0 = ", sp.simplify(sp.sqrt(m * w / (sp.pi * hbs)) * sp.sqrt(sp.pi) / (2 * (m * w / hbs) ** sp.Rational(3, 2))), "= hbar/(2 m w)")
+# Tutorial III Q3: orthogonality
+P("<psi_m|psi_n>, 0<=m<n<=6 (all zero?):", all(Int(psis[m_] * psis[n_]) == 0 for n_ in range(7) for m_ in range(n_)))
+P("<psi_n|psi_n> =", [Int(f * f) for f in psis[:7]])
+# the classical question on lecture p.2: time spent near x for x = A cos(w t)
+rng_q = np.random.default_rng(5)
+tt = rng_q.uniform(0, 2 * np.pi, 2_000_000); xc = np.cos(tt)
+P("classical x = A cos(wt): P(|x| < A/2) simulated", round(float((np.abs(xc) < 0.5).mean()), 4), " exact (2/pi) arcsin(1/2) = 1/3 =", round(2 / np.pi * np.arcsin(0.5), 4))
+P("  P(|x| > 0.9 A) simulated", round(float((np.abs(xc) > 0.9).mean()), 4), " exact 1-(2/pi) arcsin(0.9) =", round(1 - 2 / np.pi * np.arcsin(0.9), 4))
+P("  normalisation of 1/(pi sqrt(A^2-x^2)) over [-A,A]:", quad(lambda x: 1 / (np.pi * np.sqrt(1 - x ** 2)), -1, 1)[0])
+# quantum density of n=20 vs classical time-average, averaged over a window near the centre
+from scipy.special import eval_hermite, gammaln
+def psin_num(n, z):
+    return np.pi ** -0.25 * np.exp(-z ** 2 / 2 - 0.5 * (n * np.log(2) + gammaln(n + 1))) * eval_hermite(n, z)
+n_hi = 20; xt_hi = np.sqrt(2 * n_hi + 1)
+Pq = quad(lambda z: psin_num(n_hi, z) ** 2, -xt_hi / 2, xt_hi / 2, limit=400)[0]
+P(f"n=20: quantum P(|x| < x_t/2) = {Pq:.4f} vs classical 1/3 (correspondence)")
