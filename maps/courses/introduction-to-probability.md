@@ -26,6 +26,10 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-10-08-week-1-post-mid-term-hw-and-lecture-notes]] Week 1 post mid-term: continuous distributions, LOTUS, normal; HW (2026-10-08)
 - [[introduction-to-probability/2026-10-15-hw-2-problems]] HW 2 problems: exponential, Gumbel, E[F(X)] (2026-10-15)
 - [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]] HW3 problems and median clarification: median, mode, skewness, mgf (2026-10-22)
+- [[introduction-to-probability/2026-08-05-why-study-probability]] Why study probability: applications and the role of statistics (2026-08-05)
+- [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]] Class notes 5 August: counting, permutations, combinations, binomial and multinomial theorems (2026-08-05)
+- [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]] Class notes 6 August: sample space, events, naive definition, axioms of probability (2026-08-05)
+- [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]] Practice problems 7 August: 12 problems on counting, naive definition, axioms (2026-08-06)
 
 ## Tasks
 
@@ -37,6 +41,9 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-09-18: Mid-semester examination rules: only pens, pencils, erasers, sharpeners, rulers and a water bottle on your person; no calculator needed; no phones, smart watches, tablets, laptops, notes or paper of any kind. Violation means the examination is cancelled and a report to the Academic Office. The mid-semester has since taken place (solutions posted 2026-09-22). (Classroom)
 - 2026-09-26: Mid-semester answer scripts shown 3-4 PM in NLH. Already past. (Classroom)
 - 2026-10-13: Mid-semester answer scripts shown again, 5-6 PM in NLH. Already past. (Classroom)
+- 2026-08-05: Evaluation scheme: 6 quizzes (10 points each, up to 2 questions, about 20 minutes, held in the tutorial), of which the best 4 count for 40 points; mid-semester examination 30 points and final examination 30 points, each 2 hours, on dates set by the Academic Office. Tentative quiz dates (very unlikely to change except under exigent circumstances): 14 August, 28 August, 11 September (3 before the mid-semester); 16 October, 30 October, 13 November (3 after). Quiz 3 has since moved to 18 September. (Classroom)
+- 2026-10-30: Quiz 5 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial, 12:00-1:00 PM). Syllabus not announced. (Classroom)
+- 2026-11-13: Quiz 6 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial). Syllabus not announced. (Classroom)
 
 ## Announcements
 - 2026-08-28: Strict rule for quizzes and exams: no electronic gadget of any kind on your person. Anyone caught with a phone gets 0 for that quiz, with no exceptions. (Classroom)
@@ -64,3 +71,11 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-10-15: Remedial class on Saturday 2026-10-17, 2:00-4:00 PM, Madhava Hall, 3rd floor, Main Building. (Classroom)
 - 2026-10-22: Median of a discrete random variable corrected: $c$ is a median if $P(X\le c)\ge1/2$ and $P(X\ge c)\ge1/2$ (the board had $\le1/2$ by mistake); HW3 posted. See [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]]. (Classroom)
 - 2026-10-24: Lecture notes for Weeks 2 and 3 posted (the files filed so far hold only the homework problems); tutorial attendance is a cause of concern, so attend the tutorials. (Classroom)
+- 2026-08-05: Missed-quiz policy: up to 2 missed quizzes, nothing more to do (4 best of the rest count); 3 missed, the fourth score is the mean of the 3 written, so the total is $x_1+x_2+x_3+(x_1+x_2+x_3)/3$; more than 3 missed, no prorating (the total is just the sum of the scores written). Any change to the scheme will be announced in Classroom and in class. (Classroom)
+- 2026-08-05: In every quiz and exam only writing materials (pens, pencils, erasers, sharpeners, and, if permitted, simple non-graphing calculators) and water bottles are allowed. Phones, laptops, tablets, other electronic gadgets or notes in any form, or any unfair means, mean being barred from that quiz or exam and the score forfeited. (Classroom)
+- 2026-08-05: Textbooks: "Introduction to Probability" by Hwang and Blitzstein (free copy at http://probabilitybook.net/; library copies exist) is the primary book; "A First Course in Probability" by Sheldon Ross is a second source with many practice problems, though some students find it cryptic. The instructor provides only summarised notes, which need not contain all the details discussed in class. (Classroom)
+- 2026-08-05: Instructor's office hours: Saturdays in office 464, main building, until about 3-4 pm (unless sick or travelling), for examples you could not solve after consulting your TA. See [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]]. (Classroom)
+- 2026-08-05: Motivation notes posted (applications in physics, chemistry, biology, climate; why statistics needs probability). See [[introduction-to-probability/2026-08-05-why-study-probability]]. (Classroom)
+- 2026-08-05: Class notes for 5 and 6 August posted. See [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]] and [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]]. (Classroom)
+- 2026-08-06: Tutorials are every Friday, 12:00-1:00 PM; attend only the session of your own batch. Your batch is 7 (TA Aakash Choudhary, room LHC107) per the Batch-7 list; report any discrepancy to the instructor. (Classroom)
+- 2026-08-06: Updated 12-problem practice sheet for the 7 August tutorial posted. (Classroom)
