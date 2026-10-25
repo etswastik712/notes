@@ -22,5 +22,11 @@ Instructor: R. Boomi Shankar. Classroom: https://classroom.google.com/c/ODcxOTI3
 
 ## Exams
 - 2026-09-08: Quiz 1, 12:00, in the tutorial classrooms; topics from the beginning up to and including molecular orbital theory (announced 2026-09-03). Already past.
+- 2026-10-21: Quiz 2 (announced 2026-10-07). Syllabus: redox chemistry taught up to 2026-10-14 and covered in the TA session of 2026-10-13; study Shriver & Atkins, Inorganic Chemistry, 5th ed., Chapter 5 (Oxidation and reduction), pp. 147–161 only. Typo on p. 161, eq. 5.11: the signs should be minus (first term), plus (second), plus (third), minus (fourth) (announced 2026-10-15). Already past.
 
 ## Announcements
+- 2026-10-05: Quiz 1 and midsem answer papers shown by the TAs in the NLH classroom from 12:00 on 2026-10-06; no tutorials that day.
+- 2026-10-06: Marking queries go only to the TA who corrected that question; the instructor will not override TA evaluations, will not post answer keys in the stream, and will have the TAs discuss answers in a tutorial or by appointment. Another answer-paper checking session with the TAs was to be announced.
+- 2026-10-07: No lecture on Monday 2026-10-19 (cancelled).
+- 2026-10-08: Midsem Q2(i): since HSAB theory was not mentioned in the question, 1 mark was also given for the answer CH3NH2.
+- 2026-10-08: Last paper-review session for students with doubts or who had not yet reviewed, Friday 2026-10-09 in the Demonstration Room, Ground Floor, Cipla Building, in roll-number slots (6:00–6:40 PM and 6:50–7:30 PM); no further opportunity.

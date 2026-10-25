@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. Quiz 1 (2026-09-08, up to and including MOT) is already past. Ask the instructor or check Classroom for the next quiz/end-semester dates.
+Not announced yet. Past: Quiz 1 (2026-09-08, up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins 5th ed. Ch. 5, pp. 147–161). Check Classroom for the end-semester date.
 
 ## Covered so far
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-26-molecular-orbital-theory-part-2]]: MOT of polyatomics (H3, NH3, SF6, H2O)
@@ -32,6 +32,7 @@ Not announced yet. Quiz 1 (2026-09-08, up to and including MOT) is already past.
 - Wade's rules: closo $n+1$, nido $n+2$, arachno $n+3$, hypho $n+4$ skeletal electron pairs; each BH gives 2 electrons, each extra H gives 1, charges counted; for ligand-free clusters skeleton electrons = $g - 2n$.
 - Borazine B3N3H6: "inorganic benzene", B–N 1.436 Å, prone to addition (e.g. 3 Br2); dehydropolymerizes to BN on pyrolysis at 1200 °C.
 - Cyclophosphazenes $(\mathrm{NPX_2})_n$: pπ–dπ (Dewar "island") bonding; heating (NPCl2)3 at 210–250 °C gives polyphosphazenes $[\mathrm{N{=}PR_2}]_n$.
+- Midsem Q2(i) point: when HSAB is not named in the question, CH3NH2 was also accepted for 1 mark (Classroom: announcement 2026-10-08).
 
 ## Typical questions
 - Define and compare acid–base concepts: Tutorial 3 Q1, Q3, Q4, Q6.
@@ -43,12 +44,15 @@ Not announced yet. Quiz 1 (2026-09-08, up to and including MOT) is already past.
 - Wade's rules classification and electron counting: Tutorial 4 Q4.
 - Borazine synthesis and reactions: Tutorial 4 Q5, Q6, Q7.
 - Phosphazenes: Tutorial 4 Q8, Q9, Q10.
+- Redox (Quiz 2 scope): practise from Shriver & Atkins Ch. 5, pp. 147–161; no notes yet.
 
 ## Gaps
+- Redox chemistry (Quiz 2 scope, Shriver & Atkins Ch. 5, pp. 147–161, TA session of 2026-10-13) has no notes yet. Note the sign typo in eq. 5.11 on p. 161 (signs should be −, +, +, −).
 - The H2O MO slides and many diagrams in the lectures are images only; the diagrams are not captured in the notes.
 - H3PO3's non-acidic proton is posed as a question in Acids and Bases Lecture 2 with no answer in the material.
 - MOT content before Part 2 (diatomics, Quiz 1 scope) has no notes here.
 - Phosphorus oxides/sulfides (P4O6, P4S10 reactions), silicates and low-valent/organometallic main group topics have no notes yet.
 - Slide statements to verify against the textbook: "more nodes, higher symmetry" (MOT rule 1) and the SF6 orbital labels.
 - The RMgX product in Tutorial 4 Q9 is drawn unclearly on the answer sheet.
+- Midsem and end-semester dates are not in the notes.
 <!-- /kurooto:exam-prep -->
