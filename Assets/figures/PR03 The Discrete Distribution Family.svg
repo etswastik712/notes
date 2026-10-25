@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 590" width="940" height="590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="940" height="590" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="470.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">The discrete catalogue: what each distribution counts and how they are related</text>
+<line x1="296.0" y1="150.0" x2="339.0" y2="150.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="327.5" y="144.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">sum</text>
+<line x1="601.0" y1="150.0" x2="664.0" y2="150.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="642.5" y="144.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">limit</text>
+<line x1="170.0" y1="198.0" x2="170.0" y2="282.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="180.0" y="234.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">wait</text>
+<line x1="296.0" y1="330.0" x2="339.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="327.5" y="324.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">sum</text>
+<line x1="549.9" y1="194.9" x2="710.1" y2="285.1" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="640.0" y="234.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">w/o replacement</text>
+<rect x="50.0" y="108.0" width="240" height="84" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="135.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Bernoulli(p)</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">one trial, 0 or 1</text>
+<text x="170" y="175.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">mean p, var p(1-p)</text>
+<rect x="345.0" y="108.0" width="250" height="84" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="470" y="135.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Binomial(n, p)</text>
+<text x="470" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sum of n independent</text>
+<text x="470" y="175.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">mean np, var np(1-p)</text>
+<rect x="670.0" y="108.0" width="240" height="84" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="790" y="135.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Poisson(lambda)</text>
+<text x="790" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">limit n -&gt; inf, np -&gt; lambda</text>
+<text x="790" y="175.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">mean = var = lambda</text>
+<rect x="50.0" y="288.0" width="240" height="84" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Geometric(p)</text>
+<text x="170" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">trials to first success</text>
+<text x="170" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">mean 1/p, var (1-p)/p^2</text>
+<rect x="345.0" y="288.0" width="250" height="84" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="470" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Negative binomial(k, p)</text>
+<text x="470" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sum of k geometrics</text>
+<text x="470" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">mean k/p, var k(1-p)/p^2</text>
+<rect x="670.0" y="288.0" width="240" height="84" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="790" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Hypergeometric</text>
+<text x="790" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sampling WITHOUT replacement</text>
+<text x="790" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">mean n w/(w+b)</text>
+<rect x="50.0" y="455.0" width="240" height="70" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="485.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Discrete uniform</text>
+<text x="170" y="505.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">on {1,...,n}: 1/n</text>
+<text x="470.0" y="572" text-anchor="middle" font-size="13" fill="#52514e">MT2113 class notes 20 Aug - 9 Sep 2026: Bernoulli, binomial, hypergeometric, uniform, geometric, negative binomial, Poisson (limit of Binomial(n, c/n))</text>
+</svg>

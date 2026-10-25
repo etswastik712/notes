@@ -1,0 +1,35 @@
+---
+title: Hydrostatic Balance
+subject: climate
+type: concept
+scope: [taught, extra-beyond]
+by: [argha, suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/beyond, src/argha, src/suhas-pre, status/draft]
+---
+# Hydrostatic Balance
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** $\partial p/\partial z=-\rho g$, force-balance derivation, pressure = weight of the column (Argha L5 sl. 51; Suhas pre-midsem) · 🔵 **extra:** scale analysis with numbers, where it fails
+
+> [!intuition] In one picture
+> A stack of mattresses: the pressure at any level is the weight of everything above it. The bottom is squashed hardest, so air is densest and pressure highest at the ground.
+
+> [!key] Definition
+> **Hydrostatic balance** is the balance between the upward pressure-gradient force and the downward weight of the air, so that there is no net vertical acceleration:
+> $$\frac{\partial p}{\partial z}=-\rho g\quad\Longleftrightarrow\quad g\,\mathrm dz=-\alpha\,\mathrm dp.$$
+
+- **Derivation:** a slab of area $\delta a$ and thickness $\delta z$: $p\,\delta a-(p+\delta p)\,\delta a-\rho g\,\delta a\,\delta z=0$ ⇒ $-\delta p=\rho g\,\delta z$.
+- **Integrated:** $p(z)=\int_z^\infty\rho g\,\mathrm dz'$ = weight per unit area of the air above. At sea level $p_0/g=10\,330$ kg m⁻² (10.3 m of water).
+- **Numbers:** $\rho g=12.0$ Pa m⁻¹ ⇒ about 1 hPa per 8.3 m near the ground.
+- **With the gas law:** $p(z)=p_0e^{-z/H}$ ([[Scale Height]]); with $T$ varying, the [[Hypsometric Equation]].
+- **Validity:** excellent when the horizontal scale is much larger than the vertical depth (error $\sim10^{-6}$ for synoptic flow); fails for deep convection, steep slopes and vertically propagating sound waves.
+
+Chapter: [[CL06 Hydrostatic Balance and Vertical Structure]]. Related: [[Geopotential]], [[Standard Atmosphere]], [[Ideal Gas Law]], [[Atmospheric Stability]], [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] (the horizontal counterpart is geostrophic balance).
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

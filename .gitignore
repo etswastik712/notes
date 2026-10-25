@@ -1,0 +1,13 @@
+# Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Obsidian: keep settings, drop machine-local state and bulky plugin binaries (see 00-Home/Toolkit.md)
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/plugins/
+.obsidian/cache
+
+# LaTeX build products
+Assets/latex/build/

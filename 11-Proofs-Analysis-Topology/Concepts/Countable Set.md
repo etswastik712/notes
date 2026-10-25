@@ -1,0 +1,31 @@
+---
+title: Countable Set
+aliases: ["countably infinite", "countable", "listing"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Countable Set
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Countable-Uncountable-sets.pdf#page=1|Lecture 17]], [[Assignment-7.pdf#page=1|Assignment 7]].
+
+> [!intuition] In one picture
+> Its elements can be listed $a_1,a_2,a_3,\dots$ with none repeated and none left out.
+
+> [!key] Definition
+> Finite or in bijection with $\mathbb N$. Countable: $\mathbb Z$, $\mathbb Q$, $\mathbb N\times\mathbb N$, algebraic numbers, finite subsets of $\mathbb N$. Closed under subsets, finite products, countable unions.
+
+$\mathbb N\times\mathbb N$: walk the anti-diagonals, position of $(m,n)$ is $\frac{(m+n-2)(m+n-1)}2+m$ (a bijection onto $1..820$ for $m+n\le41$); or $2^m3^n$ injects. $\mathbb Q$: grid of $m/n$ along diagonals, skip repeats: $1,\frac12,2,3,\frac13,\frac14,\frac23,\frac32,4,5,\dots$ Subsets: take the least $n_1<n_2<\cdots$ landing in $S$ (well-ordering).
+
+Used in: [[PA04 Functions and Cardinality]]. Related: [[Uncountable Set]] · [[Cardinality]] · [[Well-Ordering Principle]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

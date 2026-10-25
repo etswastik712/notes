@@ -1,0 +1,31 @@
+---
+title: Cardinality
+aliases: ["same cardinality", "equinumerous", "finite and infinite sets", "aleph-null"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Cardinality
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Countable-Uncountable-sets.pdf#page=1|Lectures 17–18]], [[Assignment-7.pdf#page=1|Assignment 7]].
+
+> [!intuition] In one picture
+> Two sets are the same size when their elements can be paired off one-to-one.
+
+> [!key] Definition
+> $|A|=|B|$ (write $A\sim B$) iff there is a bijection $A\to B$; $\sim$ is an equivalence relation. Finite: $\varnothing$ or $\sim\{1,\dots,k\}$. $|\mathbb N|=\aleph_0$; $|\mathbb R|=\mathfrak c=2^{\aleph_0}>\aleph_0$.
+
+Finite sets never match a proper subset (pigeonhole: no injection $\mathbb N_{n+1}\to\mathbb N_n$); infinite sets can: $\mathbb N\sim$ odd numbers $\sim\mathbb Z$. Dedekind (1888) **defined** infinite as "in bijection with a proper subset". Galileo matched $\mathbb N$ with the squares in 1638.
+
+Used in: [[PA04 Functions and Cardinality]]. Related: [[Countable Set]] · [[Uncountable Set]] · [[Cantor's Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

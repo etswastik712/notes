@@ -1,0 +1,35 @@
+---
+title: Energy Quantisation
+aliases: ["quantised energy levels", "discrete spectrum"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Energy Quantisation
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=8|L9 §12]], [[Particle_in_a_box.pdf#page=5|box lecture p.5]].
+
+> [!intuition] In one picture
+> The spectrum of allowed energies, and how it scales with the size of the system.
+
+> [!key] Definition
+> Bound or confined systems have discrete allowed energies $E_n$, fixed by boundary conditions; **unconfined** ones (free particle) have a continuum. Box: $E_n\propto n^2/a^2$; ring: $\propto n^2/R^2$; oscillator: $(n+\tfrac12)\hbar\omega$.
+
+## Scaling and visibility
+Spacing $\propto\hbar^2/(m\,\text{size}^2)$: electron in 1 nm: eV; ring of 0.83 nm: $2.18n^2$ eV; ring of 1 cm: $10^{-14}$ eV $\ll k_BT$; marble in 10 cm: $\Delta E/E\sim10^{-27}$.
+
+> [!pitfall] Quantisation does not vanish, it becomes invisible
+> Compare the spacing with $k_BT$ or the instrument's resolution. Equally spaced levels (oscillator) give one absorption frequency per mode; $n^2$ levels (box, ring) have spacing growing with $n$.
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Boundary Conditions and Quantisation]] · [[Correspondence Principle]] · [[Particle in a Box]] · [[Harmonic Oscillator]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,31 @@
+---
+title: Equivalence Relation
+aliases: ["equivalence", "quotient set"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Equivalence Relation
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Assignment-prems_merged.pdf#page=1|Assignment 4, Q5, Q8–Q9]].
+
+> [!intuition] In one picture
+> "Same for our purposes": it cuts the set into non-overlapping blocks.
+
+> [!key] Definition
+> Reflexive + symmetric + transitive. Classes $[a]=\{x:x\sim a\}$ are equal or disjoint and cover $A$; $A/{\sim}$ is the set of classes.
+
+Examples: congruence mod $n$; same parity; $x-y\in\mathbb Z$ on $\mathbb R$ (classes $\leftrightarrow[0,1)$); same cardinality; the relations that build $\mathbb Z$ and $\mathbb Q$; thermal equilibrium (the zeroth law). $x\mid y$ is **not** one (not symmetric).
+
+Used in: [[PA03 Relations Equivalence and Order]]. Related: [[Equivalence Class and Partition]] · [[Congruence Modulo n]] · [[Binary Relation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

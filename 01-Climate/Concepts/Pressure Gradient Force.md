@@ -1,0 +1,32 @@
+---
+title: Pressure Gradient Force
+subject: climate
+type: concept
+scope: [taught]
+by: [suhas-pre, suhas-post]
+status: draft
+tags: [subject/climate, type/concept, taught, src/suhas-pre, src/suhas-post, status/draft]
+---
+# Pressure Gradient Force
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** derivation from a fluid box and $-\frac1\rho\nabla p$ (Suhas pre-midsem; used on 22 Oct p9–17)
+
+> [!intuition] In one picture
+> Stand in a swimming pool: water presses on you from every side, but it is the *difference* between the push on your front and the push on your back that moves you. Air is the same: a uniform pressure, however large, does nothing; only a pressure **difference** across the parcel pushes it, from high toward low.
+
+> [!key] Definition
+> The **pressure gradient force per unit mass** is $-\dfrac1\rho\nabla p$: it points from high to low pressure, is proportional to how fast $p$ changes in space and is independent of the absolute pressure.
+
+**Derivation.** A box $\delta x\,\delta y\,\delta z$: pressure on the two faces normal to $x$ is $p\mp\tfrac12\frac{\partial p}{\partial x}\delta x$, so the net force is $F_x=-\frac{\partial p}{\partial x}\delta x\,\delta y\,\delta z$; dividing by the mass $\rho\,\delta x\,\delta y\,\delta z$ gives $F_x/m=-\frac1\rho\frac{\partial p}{\partial x}$. Same for $y,z$; the vertical component combined with gravity gives hydrostatic balance ([[CL06 Hydrostatic Balance and Vertical Structure]]).
+
+**Numbers.** Surface charts with 4 hPa isobars 300 km apart: $|\nabla p|=1.33\times10^{-3}$ Pa m⁻¹, so the force is $1.1\times10^{-3}$ m s⁻² ($\approx10^{-4}\,g$): tiny, but it acts for hours over thousands of kilometres.
+
+Used in [[CL13 Horizontal Motion - Geostrophic Balance and Friction]]; balances Coriolis in [[Geostrophic Balance]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

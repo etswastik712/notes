@@ -1,0 +1,103 @@
+/* Second-brain callouts: scope labels, provenance, cross-subject links.
+   Usage in notes:  > [!extra-book]- Title   (the trailing "-" makes it collapsed by default) */
+
+/* ---- scope: what was taught vs extra ---- */
+.callout[data-callout="taught"] {
+  --callout-color: 34, 197, 94;
+  --callout-icon: lucide-graduation-cap;
+}
+.callout[data-callout="extra-book"] {
+  --callout-color: 245, 158, 11;
+  --callout-icon: lucide-book-open;
+}
+.callout[data-callout="extra-beyond"] {
+  --callout-color: 59, 130, 246;
+  --callout-icon: lucide-telescope;
+}
+
+/* ---- syllabus map (top of every chapter) ---- */
+.callout[data-callout="syllabus"] {
+  --callout-color: 20, 184, 166;
+  --callout-icon: lucide-map;
+}
+.callout[data-callout="syllabus"] ul { margin: 0.15em 0 0.4em; }
+
+/* ---- pedagogy ---- */
+.callout[data-callout="key"] {
+  --callout-color: 168, 85, 247;
+  --callout-icon: lucide-key-round;
+}
+.callout[data-callout="derivation"] {
+  --callout-color: 100, 116, 139;
+  --callout-icon: lucide-sigma;
+}
+.callout[data-callout="pitfall"] {
+  --callout-color: 239, 68, 68;
+  --callout-icon: lucide-triangle-alert;
+}
+.callout[data-callout="intuition"] {
+  --callout-color: 20, 184, 166;
+  --callout-icon: lucide-lightbulb;
+}
+.callout[data-callout="example"] {
+  --callout-color: 14, 165, 233;
+  --callout-icon: lucide-calculator;
+}
+.callout[data-callout="connection"] {
+  --callout-color: 236, 72, 153;
+  --callout-icon: lucide-git-branch;
+}
+.callout[data-callout="verify"] {
+  --callout-color: 234, 179, 8;
+  --callout-icon: lucide-search-check;
+}
+.callout[data-callout="provenance"] {
+  --callout-color: 148, 163, 184;
+  --callout-icon: lucide-library;
+}
+
+/* provenance blocks are reference material: keep them quiet */
+.callout[data-callout="provenance"] .callout-content {
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+/* scope badges used in the first line under a note title */
+.scope-taught, .scope-extra-book, .scope-extra-beyond {
+  display: inline-block;
+  padding: 0 0.55em;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-right: 0.3em;
+}
+.scope-taught       { background: rgba(34,197,94,.18);  color: rgb(21,128,61); }
+.scope-extra-book   { background: rgba(245,158,11,.20); color: rgb(180,83,9); }
+.scope-extra-beyond { background: rgba(59,130,246,.18); color: rgb(29,78,216); }
+.theme-dark .scope-taught       { color: rgb(134,239,172); }
+.theme-dark .scope-extra-book   { color: rgb(252,211,77); }
+.theme-dark .scope-extra-beyond { color: rgb(147,197,253); }
+
+/* wide equations should scroll instead of overflowing */
+.markdown-rendered mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+/* figures: centred, soft frame, readable on dark themes */
+.markdown-rendered img { border-radius: 6px; }
+.theme-dark .markdown-rendered img:not([src*="svg"]) { background: #fff; }
+
+/* scope chips: the line under every section heading */
+.markdown-rendered h2 + p > .scope-taught:first-child,
+.markdown-rendered h2 + p > .scope-extra-book:first-child,
+.markdown-rendered h2 + p > .scope-extra-beyond:first-child,
+.markdown-rendered h3 + p > .scope-taught:first-child,
+.markdown-rendered h3 + p > .scope-extra-book:first-child,
+.markdown-rendered h3 + p > .scope-extra-beyond:first-child {
+  margin-right: 0.5em;
+}
+.markdown-rendered h2 + p:has(> .scope-taught:first-child),
+.markdown-rendered h2 + p:has(> .scope-extra-book:first-child),
+.markdown-rendered h2 + p:has(> .scope-extra-beyond:first-child) {
+  color: var(--text-muted);
+  font-size: 0.88em;
+  margin-top: -0.4em;
+}

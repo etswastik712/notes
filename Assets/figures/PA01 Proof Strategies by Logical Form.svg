@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" width="960" height="590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="960" height="590" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="480.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Choosing a proof strategy from the logical form of the goal</text>
+<line x1="281.0" y1="118.1" x2="349.0" y2="111.9" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="325.0" y="109.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">conditional</text>
+<line x1="280.9" y1="153.8" x2="349.1" y2="166.2" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="325.0" y="154.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">universal</text>
+<line x1="232.5" y1="167.5" x2="408.5" y2="247.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="330.5" y="201.5" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">existential</text>
+<line x1="203.0" y1="168.5" x2="433.9" y2="336.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="328.4" y="246.5" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">conjunction</text>
+<line x1="189.2" y1="169.2" x2="445.8" y2="425.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="327.5" y="291.5" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">disjunction</text>
+<line x1="592.4" y1="221.6" x2="679.2" y2="246.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="645.8" y="227.8" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">to refute</text>
+<line x1="611.0" y1="280.0" x2="679.0" y2="280.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="655.0" y="274.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">negation is for-all</text>
+<rect x="25.0" y="95.0" width="250" height="70" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="150" y="135.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Goal has the form...</text>
+<rect x="355.0" y="65.0" width="250" height="70" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="480" y="85.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">P =&gt; Q</text>
+<text x="480" y="105.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">assume P, derive Q</text>
+<text x="480" y="125.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(or contrapositive, or contradiction)</text>
+<rect x="355.0" y="160.0" width="250" height="60" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="480" y="185.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">for all x in A, P(x)</text>
+<text x="480" y="205.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">take arbitrary x, prove P(x)</text>
+<rect x="355.0" y="250.0" width="250" height="60" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="480" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">there exists x, P(x)</text>
+<text x="480" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">exhibit a witness (or non-constructive)</text>
+<rect x="355.0" y="340.0" width="250" height="60" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="480" y="365.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">P and Q</text>
+<text x="480" y="385.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">prove each part</text>
+<rect x="355.0" y="430.0" width="250" height="60" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="480" y="455.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">P or Q</text>
+<text x="480" y="475.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">assume not P, prove Q (or cases)</text>
+<rect x="685.0" y="240.0" width="230" height="80" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="800" y="265.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Disproving a for-all:</text>
+<text x="800" y="285.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">ONE counterexample</text>
+<text x="800" y="305.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(negation: there exists x, not P(x))</text>
+<text x="480.0" y="572" text-anchor="middle" font-size="13" fill="#52514e">Assignments 1-2 and the tautology note; AI notes ch. 3 (methods of proof) used for the table of strategies</text>
+</svg>

@@ -1,0 +1,35 @@
+---
+title: Scale Height
+subject: climate
+type: concept
+scope: [taught, extra-book]
+by: [argha, suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/book, src/argha, src/suhas-pre, status/draft]
+---
+# Scale Height
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** $H=k_BT/(mg)\approx7.5$ km and $p=p_0e^{-z/H}$ (Argha L5 sl. 52, 55; Suhas) · 🟡 **extra book:** $H_i$ above the turbopause, 10-folding depth (W&H Ch. 1, §3.2.2)
+
+> [!intuition] In one picture
+> The decay length of the atmosphere, like the half-life of a radioactive sample: every $H$ of ascent the pressure falls to $1/e$. It is just *thermal energy ÷ weight per molecule*: $k_BT/(mg)$.
+
+> [!key] Definition
+> For an isothermal atmosphere in hydrostatic balance, $p(z)=p_0e^{-z/H}$ with
+> $$H=\frac{R_dT}{g}=\frac{k_BT}{mg},\qquad m=M_d/N_A=4.81\times10^{-26}\ \mathrm{kg}.$$
+
+- $H=6.4$ km at 220 K, **7.5 km at 255 K**, 8.4 km at 288 K; observed 7–8.5 km. $H\propto T$.
+- Pressure **halves every $H\ln2\approx5.5$ km**; falls by 10 every 17 km. Half the mass is below 5.5 km (500 hPa), 63 % within the first scale height.
+- It is not the "height of the atmosphere": there is no top.
+- Check: Argha's slide uses $m=5\times10^{-26}$ kg, which gives 7.2 km rather than 7.5 km (see [[CL06 Hydrostatic Balance and Vertical Structure]]).
+- The same exponent is the Boltzmann factor $e^{-mgz/k_BT}$ ([[Thermodynamics - Course Map]]); above the turbopause each species has its own $H_i=R^*T/(M_ig_0)$.
+
+Related: [[Hydrostatic Balance]], [[Standard Atmosphere]], [[Ideal Gas Law]], [[Atmospheric Composition]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

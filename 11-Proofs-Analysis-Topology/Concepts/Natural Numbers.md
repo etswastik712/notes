@@ -1,0 +1,31 @@
+---
+title: Natural Numbers
+aliases: ["von Neumann naturals", "Peano axioms"]
+subject: analysis
+type: concept
+scope: [extra-book]
+by: [ai-notes]
+status: draft
+tags: [subject/analysis, type/concept, extra/book, src/ai-notes, status/draft]
+---
+# Natural Numbers
+
+<span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟡 **extra · book:** [[proofs-prems-topo.pdf#page=58|AI notes ch. 12]].
+
+> [!intuition] In one picture
+> $0$ is the empty set; the successor of $n$ is $n\cup\{n\}$.
+
+> [!key] Definition
+> $0=\varnothing$, $n+1=n\cup\{n\}$: $1=\{\varnothing\}$, $2=\{0,1\}$, … $\mathbb N$ is the smallest set containing $0$ and closed under successor (Axiom of Infinity), so induction holds by construction. The $n$-th number has $n$ elements and $m<n\iff m\in n\iff m\subsetneq n$.
+
+Checked for $m,n\le6$: $|n|=n$, $m\in n\iff m<n$, $m\subseteq n\iff m\le n$. The assignments use $\mathbb N=\{1,2,\dots\}$; the set-theoretic convention starts at 0.
+
+Used in: [[PA05 Induction and the Number Systems]]. Related: [[Principle of Mathematical Induction]] · [[Recursion Theorem]] · [[Construction of Integers and Rationals]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

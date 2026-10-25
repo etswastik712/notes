@@ -1,0 +1,34 @@
+---
+title: Global Mean Surface Temperature
+aliases: [GMST, Global mean temperature]
+subject: climate
+type: concept
+scope: [taught, extra-beyond]
+by: [argha]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/beyond, src/argha, status/draft]
+---
+# Global Mean Surface Temperature
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** the need to define a global mean, time and area averaging, Hansen & Lebedeff, anomalies in the NASA record (Argha L2 sl. 24–27) · 🔵 **extra:** GISTEMP numbers, uncertainty and homogenisation
+
+> [!intuition] In one picture
+> A school's average test score depends on how you weight the classes. The global mean temperature is an average over the surface with each patch weighted by its *area*, computed from anomalies so that a station on a hill and one in a valley vote on how much it changed, not on how high they sit.
+
+> [!key] Definition
+> The **global mean surface temperature (GMST)** is the **area-weighted** average over the Earth's surface of near-surface air temperature over land and sea-surface temperature over ocean, usually expressed as an **anomaly** relative to a reference period: $\bar T'(t)=\dfrac{\sum_iT_i'A_i}{\sum_iA_i}$ ([[Area-Weighted Averaging]]).
+
+- **Real numbers (NASA GISTEMP v4, annual, base 1951–1980):** −0.17 K (1880), +1.01 (2016), +1.17 (2023), +1.28 (2024, record), +1.18 (2025). **Trend 1975–2025: 0.207 ± 0.014 K per decade.**
+- **Absolute value:** about 288 K (15 °C) for the real surface (versus the 255 K [[Effective Emission Temperature]]); the absolute value is *less* well known than anomalies (≈ ±0.5 K) because it depends on altitude and local setting.
+- **Why anomalies:** altitude (−6.5 K km⁻¹) and local effects cancel; the anomaly field is correlated over ~1000 km, so sparse stations suffice.
+- **Construction issues:** urban heat islands, station moves, ship vs buoy sea-surface temperatures, polar coverage. Reanalyses ([[Reanalysis Data]]) give an independent estimate.
+
+Chapter: [[CL02 Observing Global Temperature]]. Related: [[Climate vs Weather]], [[Radiative Forcing]], [[CL04 Feedback and Multiple Steady States]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

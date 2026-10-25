@@ -1,0 +1,31 @@
+---
+title: Function
+aliases: ["map", "domain and codomain"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Function
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Assignment-6.pdf#page=1|Assignment 6]].
+
+> [!intuition] In one picture
+> A rule giving each input exactly one output.
+
+> [!key] Definition
+> $f:A\to B$ assigns to **each** $a\in A$ **exactly one** $f(a)\in B$. Domain $A$, codomain $B$, image $f(A)\subseteq B$. As a set, $f\subseteq A\times B$ with each $a$ in exactly one pair.
+
+$f(1)=a$, $f(1)=b$ is not a function (two values); a rule missing an input is not a function either. $x\mapsto\sqrt x$ is not a function $\mathbb R\to\mathbb R$. A function is the triple $(f,A,B)$: change the codomain and surjectivity changes.
+
+Used in: [[PA04 Functions and Cardinality]]. Related: [[Injective Surjective and Bijective Functions]] · [[Image and Preimage]] · [[Cartesian Product]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

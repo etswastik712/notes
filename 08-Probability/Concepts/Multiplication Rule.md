@@ -1,0 +1,34 @@
+---
+title: Multiplication Rule
+aliases: ["chain rule of probability"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Multiplication Rule
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=14|class notes 13 Aug]], [[ilovepdf_merged-1.pdf#page=15|19 Aug]].
+
+> [!intuition] In one picture
+> The probability that a sequence of things all happen is the product of the probability of each given that the earlier ones did.
+
+> [!key] Definition
+> $P\Big[\bigcap_{i=1}^nE_i\Big]=P[E_1]\,P[E_2\mid E_1]\,P[E_3\mid E_1\cap E_2]\cdots P\Big[E_n\Big|\bigcap_{i<n}E_i\Big].$
+
+## Example: four piles, one ace each
+$E_2$ = ace of hearts in a different pile from the ace of spades ($\frac{39}{51}$), $E_3$ = the third ace in a new pile ($\frac{26}{50}$), $E_4$: $\frac{13}{49}$. Product $0.1055$; counting gives the same $\frac{4!\,48!/(12!)^4}{52!/(13!)^4}$.
+
+If the $E_i$ are independent each conditional probability equals the plain one and the chain collapses to $\prod P[E_i]$.
+
+Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: [[Conditional Probability]] · [[Law of Total Probability]] · [[Exchangeability]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

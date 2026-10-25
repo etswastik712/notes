@@ -1,0 +1,37 @@
+---
+title: Monty Hall Problem
+aliases: ["Monty Hall", "three doors"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Monty Hall Problem
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Practice problems 14th August 2026.pdf#page=1|sheet 14 Aug, problem 4 (solved in class)]].
+
+> [!intuition] In one picture
+> The host's choice of door carries information because he knows where the prize is.
+
+> [!key] Definition
+> You pick door 1; the host, who knows the prize location, opens a goat door among 2 and 3; switching wins with probability $\tfrac23$.
+
+## Bayes
+$C_i$ = prize behind door $i$ ($\tfrac13$ each), $H_3$ = host opens door 3. $P[H_3\mid C_1]=\tfrac12$, $P[H_3\mid C_2]=1$, $P[H_3\mid C_3]=0$. So $P[C_2\mid H_3]=\frac{1\cdot\frac13}{\frac12\cdot\frac13+\frac13}=\tfrac23$.
+
+Simulation of 100,000 plays: switch wins $0.666$. With 100 doors and 98 opened: $0.99$.
+
+> [!pitfall] A host who opens randomly
+> If the host opened a door at random and happened to reveal a goat, switching and staying would be equally good: the reasoning depends on the host's rule, not only on the observed outcome.
+
+Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: [[Bayes' Theorem]] · [[Conditional Probability]] · [[Law of Total Probability]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

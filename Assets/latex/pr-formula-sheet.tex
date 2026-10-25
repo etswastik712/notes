@@ -1,0 +1,91 @@
+\documentclass[9pt]{article}
+\input{preamble-brain.tex}
+\geometry{margin=14mm}
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\title{MT2113 Probability\\\large formula sheet, key numbers and traps}
+\author{second brain $\cdot$ chapters PR01--PR06}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\section*{PR01 Counting and the axioms}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+counting & $n!$; $\tfrac{n!}{k_1!\cdots k_r!}$; $\binom nr=\tfrac{n!}{r!(n-r)!}$; Pascal $\binom nr=\binom{n-1}r+\binom{n-1}{r-1}$; multinomial $\tfrac{n!}{m_1!\cdots m_r!}$ & teams $2,5,5$ of 12: $8316$; $4,4,4$ unlabelled: $5775$\\
+stars and bars & $n$ identical balls, $k$ boxes: $\binom{n+k-1}{k-1}$; all non-empty $\binom{n-1}{k-1}$ & $n=10$, $k=4$: $286$; $84$\\
+axioms & $0\le P\le1$, $P(S)=1$, countable additivity; $P(E^c)=1-P(E)$; $E\subset F\Rightarrow P(F\setminus E)=P(F)-P(E)$ & naive $P=|A|/|S|$ needs equal likelihood\\
+incl.--excl. & $P(\cup E_i)=\sum P(E_i)-\sum_{i<j}P(E_iE_j)+\dots$; point in $r$ events counted $1-(1-1)^r=1$ & $0.85$ in the sheet example\\
+matching & $P(\text{no match})=\sum_{k=0}^n\tfrac{(-1)^k}{k!}\to e^{-1}$ & $0.3333,0.375,0.3667,0.367879$\\
+numbers & full house $0.00144$; straight flush $1.54\times10^{-5}$; 3 courses/10 slots $0.28$ & Gimli--Legolas $\tfrac16$ (row), $\tfrac2{11}$ (circle)\\
+\bottomrule
+\end{tabular}
+
+\section*{PR02 Conditional probability, Bayes, independence}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+conditional & $P[E|F]=\tfrac{P[E\cap F]}{P[F]}$; chain $P[\cap E_i]=P[E_1]P[E_2|E_1]\cdots$; $P[\cdot|F]$ obeys the axioms & four piles one ace each $0.1055$\\
+total prob. & $P[F]=\sum_jP[F|E_j]P[E_j]$ (partition) & machines: $0.029$\\
+Bayes & $P[E_i|F]=\tfrac{P[F|E_i]P[E_i]}{\sum_jP[F|E_j]P[E_j]}$; odds = LR $\times$ prior odds & test $0.323$ ($0.95$/$0.01$/$0.5\%$); $0.161$ ($95/95$, $1\%$)\\
+urn & without replacement: every colour order equally likely; $P[B_1|k\text{ blacks in }n]=k/n$ & Monty Hall switch $\tfrac23$\\
+independence & $P[E\cap F]=P[E]P[F]$; all sub-collections for mutual; pairwise $\ne$ mutual; disjoint $\ne$ independent & dice $A,B,C$: $\tfrac1{36}$ vs $\tfrac1{216}$\\
+recursions & ruin $p_i=\tfrac{\rho^i-\rho^n}{1-\rho^n}$, $\rho=\tfrac{1-p}p$; fair $1-\tfrac in$; 5 before 7: $\tfrac4{4+6}$ & $i=3,n=10$: $0.70$, $0.284$ ($p=.6$)\\
+\bottomrule
+\end{tabular}
+
+\section*{PR03 Discrete random variables}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+pmf, cdf & $p(x)=P[X=x]$, $\sum p=1$; $F(a)=P[X\le a]$ increasing, right-continuous, limits $0,1$; jump $=p$ & step cdf mean $1.15$\\
+expectation & $E[X]=\sum xp(x)$; $E[g(X)]=\sum g(x)p(x)$; $E[aX+b]=aE[X]+b$ & $E[g(X)]\ne g(E[X])$; buses $40.27$\\
+Bin, Bern & $\binom nkp^kq^{n-k}$; mean $np$; Bernoulli $=n{=}1$ & Bin$(10,.3)$: $3$, $2.1$\\
+hypergeom. & $\tfrac{\binom wk\binom b{n-k}}{\binom{w+b}n}$; mean $\tfrac{nw}{w+b}$ & $0.2994$ vs binomial $0.3077$\\
+geometric & $q^{n-1}p$; mean $1/p$ (trials) & $p=.25$: $4$\\
+neg. binomial & $\binom{n-1}{k-1}p^kq^{n-k}$ (trials); mean $k/p$ & $k{=}3$, $p{=}.4$: $7.5$\\
+Poisson & $e^{-\lambda}\lambda^n/n!$; limit of Bin$(n,c/n)$; mean $\lambda$ & $\lambda=3.2$: $P[X\le2]=0.3799$\\
+\bottomrule
+\end{tabular}
+
+\section*{PR04 Joint distributions, variance}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+joint pmf & $p(a_i,b_j)$; marginals = row/col sums; independent iff product in \emph{every} cell & sum/max: $\tfrac1{18}\ne\tfrac1{24}$\\
+linearity & $E[\sum a_iX_i+b]=\sum a_iE[X_i]+b$ always; $E[\#]=\sum P[A_i]$ & fixed points $=1$; $NH_N$\\
+variance & $E[X^2]-E[X]^2$; $\mathrm{Var}[aX+b]=a^2\mathrm{Var}X$; $E[X(X-1)]$ trick & die $\tfrac{35}{12}$\\
+variances & Bin $npq$; Poisson $\lambda$; Geom $q/p^2$; NegBin $kq/p^2$ & $2.1$; $3.2$; $12$; $11.25$\\
+Poisson moments & $E[X^n]=\lambda E[(X+1)^{n-1}]$; $E[X^3]=\lambda^3+3\lambda^2+\lambda$ & $22$ at $\lambda=2$\\
+sums (extra) & indep.\ $\Rightarrow\mathrm{Var}[\sum X_i]=\sum\mathrm{Var}X_i$; $\mathrm{Cov}=0\not\Rightarrow$ indep.; $\mathrm{Cov}(\text{sum},\max)=\tfrac{35}{12}$ & $\rho=0.860$\\
+\bottomrule
+\end{tabular}
+
+\section*{PR05 Continuous random variables}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+pdf & $f\ge0$, $\int f=1$; $P[a<X<b]=\int_a^bf$; $P[X=x]=0$; $F'=f$ & $c(1-x^2)$: $c=\tfrac34$\\
+expectation & $E[X]=\int xf$; LOTUS $E[g(X)]=\int gf$; $E[Y]=\int_0^\infty P[Y>y]\dd y$ & circle $E[A]=\tfrac\pi3$, $\mathrm{Var}=\tfrac{4\pi^2}{45}$\\
+uniform & $\tfrac{a+b}2$, $\tfrac{(b-a)^2}{12}$ & stick $\tfrac12+p-p^2\le\tfrac34$\\
+Rayleigh & $F=1-e^{-x^2/2}$; mean $\sqrt{\pi/2}$; var $2-\tfrac\pi2$ & quartiles $0.759,1.177,1.665$\\
+logistic & $F=\tfrac{e^x}{1+e^x}$, mean $0$, var $\tfrac{\pi^2}3$ & $P[X>1]=0.269$\\
+normal & $\int e^{-x^2/2}=\sqrt{2\pi}$ (polar); $X=\sigma Z+\mu$; inflection $\mu\pm\sigma$ & $68.3,95.4,99.7\%$\\
+transformations & $F_Y(y)=P[g(X)\le y]$, then differentiate; $Z^2\sim\chi^2_1$ & $E[(Z-c)^+]=\varphi(c)-c(1-\Phi(c))$\\
+\bottomrule
+\end{tabular}
+
+\section*{PR06 MGFs and limit theorems (extra)}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+MGF & $M(t)=E[e^{tX}]$; $E[X^k]=M^{(k)}(0)$; $M_{aX+b}=e^{bt}M(at)$; $M_{\sum}=\prod M_i$ & derive each named MGF first\\
+MGFs & Bin $(q+pe^t)^n$; Poisson $e^{\lambda(e^t-1)}$; Geom $\tfrac{pe^t}{1-qe^t}$; Exp $\tfrac\lambda{\lambda-t}$; $N$: $e^{\mu t+\sigma^2t^2/2}$ & Cauchy: none\\
+shape & $\gamma_1=\mu_3/\sigma^3$, $\gamma_2=\mu_4/\sigma^4-3$ & Exp $2,6$; unif $0,-1.2$\\
+inequalities & Markov $P[X\ge a]\le E[X]/a$; Chebyshev $1/k^2$; WLLN $\sigma^2/(n\varepsilon^2)$ & $k{=}2$: $0.25$ vs $0.0455$\\
+CLT & $\tfrac{S_n-n\mu}{\sigma\sqrt n}\to N(0,1)$; error $\approx\tfrac{\gamma_1}{6\sqrt{2\pi n}}$ & Exp: $0.0133$ at $n{=}100$\\
+normal approx. & Bin$\approx N(np,npq)$, $P[X\le k]\approx\Phi\!\big(\tfrac{k+1/2-np}{\sqrt{npq}}\big)$ & Bin$(30,.3)$: $0.7304$ vs $0.7250$\\
+\bottomrule
+\end{tabular}
+
+\vspace{3pt}
+\begin{verifybox}{scope}
+PR01--PR05 follow the instructor's typed and handwritten class notes and sheets; PR06 (MGFs, limit theorems) comes from AI-written notes and textbooks only. Confirm with the instructor whether MGFs, Chebyshev, the LLN and the CLT are examinable.
+\end{verifybox}
+\end{document}

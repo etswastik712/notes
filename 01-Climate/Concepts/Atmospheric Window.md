@@ -1,0 +1,32 @@
+---
+title: Atmospheric Window
+subject: climate
+type: concept
+scope: [taught, extra-beyond]
+by: [argha, suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/beyond, src/argha, src/suhas-pre, status/draft]
+---
+# Atmospheric Window
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** transparent regions of the spectrum (Argha L5 sl. 59; Suhas notes p.15) · 🔵 **extra:** the 25 % number, the ozone notch, closing the window
+
+> [!intuition] In one picture
+> A curtain with holes: light leaks through where the weave is open. In the visible the gases are transparent (sunlight reaches the ground); in the infrared the main hole is 8–12 µm, where the surface can see straight to space.
+
+> [!key] Definition
+> An **atmospheric window** is a wavelength range in which the atmosphere is nearly transparent. Two matter for climate: the **visible/near-UV window** (0.3–0.7 µm: sunlight reaches the surface) and the **infrared window at 8–12 µm** (surface emission escapes to space), interrupted by the **ozone notch at 9.6 µm**.
+
+- A 288 K surface sends **25 %** of its blackbody emission into 8–12 µm (numerical integral of the Planck curve); 19 % lies in the CO₂ 13–17 µm band and 37 % beyond 17 µm (water-vapour rotation band, saturated near the ground). The leak $1-\varepsilon=0.22$ of the leaky layer ([[One-Layer Greenhouse Model]]) is close to the window fraction.
+- At wavelengths outside the windows, satellites see the **cold upper layer** (brightness temperature ≈ 220 K at 15 µm), in the window they see the **warm ground** (≈ 288 K): the **emission level** idea.
+- **Closing the window** by adding absorbers (CFCs, the water-vapour continuum, more CO₂ wings) strengthens the greenhouse effect: many synthetic gases absorb at 8–12 µm.
+
+See [[CL07 Optical Properties of the Atmosphere]], [[Greenhouse Gases and Absorption Bands]], [[Outgoing Longwave Radiation]], [[Greenhouse Effect]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

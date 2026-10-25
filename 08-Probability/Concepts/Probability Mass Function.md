@@ -1,0 +1,35 @@
+---
+title: Probability Mass Function
+aliases: ["pmf", "probability mass function (pmf)"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Probability Mass Function
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=17|class notes 20 Aug]].
+
+> [!intuition] In one picture
+> The table of probabilities, one per possible value of a discrete random variable.
+
+> [!key] Definition
+> $p(x)=P[X=x]$; $p(x_i)>0$ for the countably many possible values and $\sum_ip(x_i)=1$. The cdf is $F(a)=\sum_{x\le a}p(x)$.
+
+## Reading a pmf
+A frequency distribution is the empirical pmf of an experiment. From a step cdf, the pmf is the **jump** at each step: $p(x)=F(x)-F(x^-)$. Example: $F=\tfrac12,\tfrac35,\tfrac45,\tfrac9{10},1$ at $0,1,2,3,3.5$ gives $p=\tfrac12,\tfrac1{10},\tfrac15,\tfrac1{10},\tfrac1{10}$, mean $1.15$.
+
+> [!pitfall] A pmf is a probability; a pdf is not
+> $p(x)\le1$ always, whereas a density may exceed 1 ([[Probability Density Function]]).
+
+Used in: [[PR03 Discrete Random Variables and Distributions]]. Related: [[Cumulative Distribution Function]] · [[Expectation]] · [[Probability Density Function]] · [[Random Variable]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

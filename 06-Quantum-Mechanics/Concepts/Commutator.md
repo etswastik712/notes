@@ -1,0 +1,35 @@
+---
+title: Commutator
+aliases: ["commutation relation", "compatible observables"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Commutator
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_states_operators_notes.pdf#page=5|SO §5]], [[PH2113_matrices_expectation_uncertainty.pdf#page=3|MX §8]].
+
+> [!intuition] In one picture
+> Does the order of two questions matter? If not, both can be sharp together.
+
+> [!key] Definition
+> $[\hat A,\hat B]=\hat A\hat B-\hat B\hat A$. If $[\hat A,\hat B]=0$ the observables are **compatible** (common eigenstates, both can be definite); if not, they are **incompatible**.
+
+## Rules and examples
+$[\hat A,\hat B]=-[\hat B,\hat A]$; $[\hat A,\hat B\hat C]=[\hat A,\hat B]\hat C+\hat B[\hat A,\hat C]$. $[\hat x,\hat p^2]=2i\hbar\hat p$, hence $[\hat x,\hat H]=i\hbar\hat p/m$; $[\hat p,V(\hat x)]=-i\hbar V'$; $[\hat H,\hat p]=0$ for a free particle; $[X,Y]=2iZ$ for the two-level matrices.
+
+> [!pitfall] Compatible does not mean always sharp
+> Commuting operators *can* share eigenstates; a given state still has to be in one of them. A state with definite $E$ in a box has $\Delta p\ne0$ because $[\hat H,\hat p]\ne0$ there.
+
+Used in: [[QM03 States Operators and Measurement]], [[QM05 The Harmonic Oscillator]]. Related: [[Canonical Commutation Relation]] · [[Generalised Uncertainty Principle]] · [[Pauli Matrices]] · [[Operator]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

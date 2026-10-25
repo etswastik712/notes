@@ -1,0 +1,35 @@
+---
+title: Stationary State
+aliases: ["energy eigenstate", "state of definite energy"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Stationary State
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=1|L9 §1]], [[PH2113_states_operators_notes.pdf#page=10|SO §9.1]].
+
+> [!intuition] In one picture
+> Everything about the state is frozen except a global phase that spins.
+
+> [!key] Definition
+> $\Psi(x,t)=\psi(x)\,e^{-iEt/\hbar}$ with $\hat H\psi=E\psi$. Then $|\Psi|^2=|\psi|^2$ is independent of time, and so are all expectation values of time-independent observables.
+
+## Examples
+Ring $\psi_n=e^{ik_nx}/\sqrt L$: definite $p$ and $E$, uniform density $1/L$. The cosine $\sqrt{2/L}\cos k_nx$ is **also stationary** (both components have energy $E_n$) though it is not a momentum eigenstate. Box states are stationary.
+
+> [!pitfall] Stationary does not mean at rest
+> A momentum state moves (its current is $v|\psi|^2$) but its density does not change. And a superposition of **different** energies is not stationary: its density moves at the Bohr frequencies $(E_m-E_n)/\hbar$.
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]]. Related: [[Time-Independent Schrodinger Equation]] · [[Time Evolution of a Superposition]] · [[Degeneracy]] · [[Global and Relative Phase]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

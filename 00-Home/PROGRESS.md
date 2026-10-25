@@ -1,0 +1,104 @@
+---
+title: PROGRESS
+tags: [meta, type/meta]
+---
+# PROGRESS: read this first in every new session
+
+> **Resume protocol (any Claude session):**
+> 1. Read this file, then [[Roadmap]], [[Conventions]], [[Sources]], [[Toolkit]].
+> 2. Pick the first `todo` in the status table (or the stub the user names). Read its **brief and source map** inside the stub note.
+> 3. **Save early**: update this file after every finished note, not only at the end.
+> 4. Before ending: update *Last session* and *Next actions*; run the link check (see [[Toolkit]]).
+> 5. Work in the order *read primary sources → compute/verify numbers → write note → figures → handout → update indices*.
+
+## Project definition (from the user, 2026-10-23)
+- Build a detailed, interconnected **Obsidian vault** for all subjects in this repo ("a second brain / database to read up anything"), visual **and** text heavy, LaTeX at its best, PDFs integrated, graphs, figures, canvases, Excalidraw. Figure out which subjects relate and which do not.
+- **Climate first** (taught by **Argha**: the deck `climate_intro_L1_L6.pdf` only; everything else is **Suhas**: pre-midsem and post-midsem; the dated slides are Suhas post-midsem), then **eco-evo**, then the rest one by one; do **parallel topics** (thermodynamics plus whatever is needed) alongside.
+- **Tags, not folders.** Where the same topic was taught twice, merge into one continuous sequential note. Use books and other material. Compare the books Suhas assigned with the dated slides (photos) to label content **taught / in syllabus** vs **extra**; add further extras of my own, labelled. Related topics chunked; interconnectedness essential.
+- Home folder with progress, roadmap, toolkit. Web allowed (academic sources and Wikipedia).
+
+## Decisions taken (user answers, 2026-10-23)
+| Question | Answer |
+|---|---|
+| Vault root | the **notes repo itself** (`/home/swastik/Documents/notes`) so notes can link to the source PDFs in place |
+| Plugins | copy **all** from `~/Documents/Landlab-SSIIM-Vault/.obsidian/plugins` (25 folders; the same 23 enabled) |
+| Working mode | **pilot first, then parallel agents** |
+| Figures | generated figures + crops/embeds from own materials + open-licensed images, all cited |
+
+## Status
+| Item | Status |
+|---|---|
+| Vault shell: config, 25 plugins, CSS callouts, venv, templates, global theme v2 ([[Conventions]] §1, §7) | done |
+| Home, Roadmap, PROGRESS, Conventions, Toolkit, Sources, Dashboard, Tag Index, Subject Map (+canvas), [[Glossary]] (generated) | done |
+| Climate chapters drafted to v2 (syllabus map, scope chips, intuition boxes, worked examples, solutions, summary) | **all 15: CL01–CL15** (4.6k–8.7k words each, ≈95k total) |
+| [[Climate Quiz Prep]] (formula sheet, 25 verified traps, derivations, self-test) | done |
+| Concept notes: 377 (84 climate/thermo/foundations + 10 EE01 + 68 EE02–EE07 + 51 QM + 50 TH01–TH06 + 58 PR01–PR06 + **56 PA01–PA07**); [[Glossary]] regenerated | draft |
+| Figures (66 PNG/SVG in `Assets/figures/`; GISTEMP data in `Assets/data/`), Excalidraw+SVG diagrams, 2 LaTeX handouts, 2 canvases | done |
+| **Eco-evo EE01** (7.1k words, 10 concept notes, 6 figures/diagrams, `scripts/ee01_numbers.py`) | **done (draft v2)** |
+| **Eco-evo EE02** (9.3k raw words, 6 worked examples, 10 practice problems, 5 figures + 1 diagram, `scripts/ee02_numbers.py`) | **done (draft v2)** |
+| **Eco-evo EE03** (6.8k raw words, 12 pre-existing figures checked and used, 5 worked examples, 10 practice problems; `ee03_numbers.py` extended) | **done (draft v2)** |
+| **Eco-evo EE04** (≈6.5k raw words, 4 worked examples, 10 practice problems, 2 figures + 1 diagram, `ee04_numbers.py`; Molles Ch. 13 and Sakai 2001 read) | **done (draft v2)** |
+| **Eco-evo EE05** (≈5.2k raw words, 3 worked examples, 10 practice problems, 1 figure, `ee05_numbers.py`; Molles Ch. 14 OCR'd and read) | **done (draft v2)** |
+| **Eco-evo EE06** (≈6.5k raw words, 2 worked examples, 10 practice problems, 1 figure + 1 diagram, `ee06_numbers.py`; Lampert and Sommer, Scheffer 2001, Stinko read; Søndergaard text layer garbled, not OCR'd) | **done (draft v2)** |
+| **Eco-evo EE07** (≈6.8k raw words, 6 worked examples, 11 practice problems, 1 new figure + 1 diagram, 2 earlier figures checked and 2 labels fixed, `ee07_numbers.py`; Hunter and Gibbs, Karanth and Nichols, Bucher read) | **done (draft v2)** |
+| **Eco-evo concept notes (68) for EE02–EE07** (user's order: stubs first, then elaborate after all 7 chapters) | **elaborated 2026-10-25** (`status: draft`, mean ≈ 430 words incl. front matter): each has syllabus line, intuition, definition, derivation or numbers, a worked example (all numbers recomputed), a pitfall, links and the live *Linked from* block |
+| *(eco-evo block complete: EE01–EE07 chapters + 78 concept notes; review pending)* | |
+| **Eco-evo revision set** (2026-10-25): [[Eco-Evo Exam Prep]] (formula sheet, 28 traps, derivations, self-test, essay prompts), [[Eco-Evo Problem Bank]] (25 problems, `scripts/ee_problem_bank.py`), `Assets/pdf/ecoevo-formula-sheet.pdf` | **done (draft)** |
+| **Quantum Mechanics (PH2113)**: [[QM01 From Waves to Probabilities]], [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]] (≈4–5k words each, 50 practice problems with solutions, 9 figures + 1 diagram, `scripts/qm_numbers.py`), 51 concept notes, course map, `qm-formula-sheet.pdf` | **done (draft)**; sources limited (see course map *Gaps*) |
+| **Thermodynamics**: [[TH01 Temperature and the Zeroth Law]] … [[TH06 From Kinetic Theory to Statistical Mechanics]] (6 chapters ≈ 4–5k words each, 60 practice problems with solutions, 7 figures + 1 diagram, `scripts/th_numbers.py`), 50 concept notes, course map, `th-formula-sheet.pdf` | **done (draft)**; syllabus not stated in the folder (see course map) |
+| **Probability (MT2113)**: [[PR01 Counting and the Axioms of Probability]] … [[PR06 Moments Generating Functions and Limit Theorems]] (6 chapters ≈ 2.3–3.2k raw words, LaTeX-heavy; 60 practice problems with solutions, 6 figures + 1 diagram, `scripts/pr_numbers.py`), 58 concept notes, full [[Probability - Course Map]], `pr-formula-sheet.pdf` | **done (draft)**; PR06 has **no lecture source** (see course map *Gaps*) |
+| **Proofs, Analysis and Topology**: [[PA01 Logic and Methods of Proof]] … [[PA07 Metric and Topological Spaces]] (7 chapters ≈ 2.3–3.6k raw words, LaTeX-heavy; 70 practice problems with solutions, 6 figures + 2 diagrams, `scripts/pa_numbers.py`), 56 concept notes, full [[Proofs, Analysis and Topology - Course Map]], `pa-formula-sheet.pdf` | **done (draft)**; PA06–PA07 have **no lecture source**, Lectures 1–16 absent |
+| 6 other-subject course maps (04, 05, 07, 10, 12, 13) | stub |
+| **User review of the v2 chapters** | **pending** |
+
+## Pending
+00. **User review of EE02–EE07** (the whole eco-evo block) and of the plan for elaborating the concept stubs. Source questions to confirm with the instructor (each flagged `[!verify]` in the chapter): EE03 slide 25's **r = 2.5 panel is a 2-cycle, not a 4-cycle**; EE06 slide 11 "Oligotrophy → Lake Stinko" should say eutrophy; EE04 slide 8's legend is inverted (so which diatom wins is not stated here); which sections of **Molles Ch. 11 (EE02), Ch. 13 (EE04) and Ch. 14 (EE05)** count as "relevant"; EE02 slide 28 "used occasionally ~70 years" (the paper's *seasonal offshore* TEDs); the 1996 Indian TED legislation (slide statement, unchecked).
+0. **User review of EE01** (the first eco-evo chapter): is the depth right for a *conceptual* chapter, and is the 🟡/🔵 split useful? Flags: `[!verify]` on the Curtin 62.6 % figure (Botswana desert wildebeest, muscle biopsies) and on Hopcraft's "5 km radius of perception".
+1. **User review** of v2: depth, intuition, labelling (syllabus map + chips), link organisation. Especially the quiz chapters CL09–CL12.
+2. Open the vault in Obsidian (File → Open vault → `/home/swastik/Documents/notes`), turn off Restricted mode, confirm plugins, Dataview blocks, canvases and the Excalidraw files render (none has been opened in Obsidian yet).
+3. Source discrepancies to confirm with the instructors (each is flagged in its chapter with `[!verify]`): CL04 missing factor 0.6 on slide 45 and 0.28 vs 0.27; CL10 slide 8 polar value and net-radiation crossover (33° vs 40°); CL12 "poleward effective gravity" wording; CL14 jet latitude (35° on slide 11 vs 30°/45° in M&P); CL15 monsoon onset dates (Hartmann vs Webster).
+4. Data used in figures that are **idealised fits, not measurements** (labelled as such): CL10 zonal-mean TOA profiles and temperature cross-section; CL14 zonal-mean wind section; CL15 columns and rainfall curves; CL01 Stommel diagram and CL02 Pune-like series (synthetic). Real data used: NASA GISS GISTEMP (CL02).
+5. More source discrepancies to confirm (each flagged `[!verify]`): CL01 Suhas docx Coriolis arithmetic (30° vs 60°); CL02 slide-22 isotope plots look schematic; CL06 slide 52 mass 5×10⁻²⁶ kg gives H=7.2 km not 7.5 km and slide 55 note on N₂O/NO₂; CL07/CL08 Mars pressure on slides 39/68 (real ≈ 600 Pa) and Sun temperature on slide 59.
+
+## Last session (2026-10-25, session 3, continued)
+- **Proofs, Analysis and Topology done** (the last subject in the user's order): read Assignments 1–8, Lectures 17–20 (typed), the Tautology / Ordered Pairs / Zorn notes, the two AI monographs (TOCs, Parts I–V and the solutions) and the AI-typeset solutions; books cited by section only. PA01–PA05 follow the instructor (🟢); **PA06 (sequences, completeness) and PA07 (metric and topological spaces) have no lecture source** and are 🟡 from the AI notes with proofs rechecked. **Flags:** Lectures 1–16 are not in the folder; Assignment 4 Q5(a) ("same line") is trivial as written; Lecture 20 writes $\mathfrak c=\aleph_1$ (that is CH); the `HANDOFF_mt2113_week1.md` in the proofs folder belongs to the probability notes. Verified by `scripts/pa_numbers.py` (exhaustive counts of relations/orders/topologies on 2–4 points: 29 and 355 topologies = preorders; Kuratowski pair test on V_3; explicit bijections; Cantor's theorem on random functions).
+- **All five subjects in the user's order are now drafted** (eco-evo extras, quantum mechanics, thermodynamics, probability, proofs/analysis/topology). Nothing committed to git.
+
+## Earlier in session 3 (probability)
+- **Probability done** (user's order): read the merged typed class notes (32 pp.), the 9 handwritten week-1 pages (as images), 7 practice sheets; AI notes and Ross only cross-checked. PR01–PR05 follow the instructor (🟢); PR06 (MGFs, LLN, CLT, Chebyshev, exponential) is 🟡 from the AI notes because no lecture note covers it. **Flags:** class notes mark continuity of probability, cdf-property proofs and gambler's ruin as outside the syllabus; the sheet says the variance of a sum is not proved in class (so variances are derived by $E[X(X-1)]$); the "updated 27 Aug" notes on transformations are not in the folder; the NegBin convention counts trials (software counts failures). Verified by `scripts/pr_numbers.py` (exact + Monte Carlo; sympy for every MGF); the CLT gap for sums of Exp(1) matches the leading Edgeworth term $\gamma_1/(6\sqrt{2\pi n})$ to four digits. Extended the older [[Bayes' Theorem]] note with an MT2113 section.
+
+## Earlier in session 3 (2026-10-25)
+- **Thermodynamics done** (user's order): MIT 8.333 Lectures 1–4 read in full, Zemansky OCR'd (Ch.1–5 located), AI notes only cross-checked; TH01–TH05 from the lectures (🟢) with Zemansky extras (🟡); TH06 (kinetic theory, ensembles, Planck mean energy) is optional and AI-note based. Verified: Sackur–Tetrode reproduces noble-gas entropies to 0.01 J/mol/K; Carnot cycle numbers; CO₂ vdW critical point. **Sign-convention clash** (MIT vs Zemansky/climate) flagged in TH02 §2.
+- **Folder rule made global** (user): every subject folder keeps concept notes in `Concepts/` (162 moved). **Eco-evo extras**: exam prep, problem bank, formula sheet. **Quantum mechanics** (user's order: eco-evo → quantum → thermo → probability → proofs): read all of `physics/quantum-mechanics/` (typed lecture notes L7–L9, three topic notes, tutorial note, handwritten box lecture read as images, Tutorials I–II; AI monographs used only to cross-check; Griffiths OCR'd for section pages), wrote QM01–QM05, 51 concept notes, figures, diagram, formula sheet. **No instructor slides and no Lectures 1–5 in the folder**; flagged in the course map. Installed `sympy` into `.venv`.
+- **Elaborated all 68 concept stubs** (batches by chapter, written by hand from what the chapters and sources established; every example number recomputed with the chapters' scripts). Removed the obsolete `[!verify]` boxes (Population Biology of Invasions, Tiger Population Surveys, Reserve Design: sources now read); kept those that still apply (Ricker r = 2.5 panel, Lake Washington slide slip, Functional and Numerical Responses tier). Lint: no stub text left, math delimiters balanced, links 0 problems, glossary 162 concepts.
+- (All eco-evo chapters EE01–EE07 now exist; see the status table.)
+- User instruction: **make concept stubs now; elaborate them in detail only after all 7 primary chapters are done.** Created **68 concept stubs** for EE02–EE07 (`02-Eco-Evo/`, plus `Phase Plane and Isoclines` in `09-Foundations/`), generated once from a spec (not kept in the vault): each has frontmatter (`status: stub`), a syllabus line with slide-page links, intuition, key definition, optional `[!verify]`, a `[!warning] Stub` plan list and the live *Linked from* block. Glossary: 162 concepts.
+- Wrote **EE02** to the v2 standard: slides (text + all figures via contact sheets), **Molles §10.3–10.4 and Ch. 11 (mandatory; OCR)**, **Crowder 1994 (OCR)**, Caswell 1997 (OCR), Begon temperature (OCR), Spellman Ch. 2, WPP key messages, India article. **Reproduced and checked**: the slide-16 Leslie simulation (λ = 1.05082 to all printed digits), Crowder's Table 2 from Table 1 (≤ 0.003), Table 3, Fig. 4 (±0.002), the TED times (67 and 33 yr vs paper ≈ 70 and about half). Fig. 2 elasticities differ by convention (paper's sum to 1.6, mine to 1): explained in §5.4.
+- Wrote **EE06** (Lampert and Sommer pp. 251–259, Scheffer 2001 Box 1 solved numerically: bistable window 0.05–0.63, jumps ×2.8, 92 % rule; Lake Washington timeline from the reading and *Rescue of Lake Stinko*; slide 11 says "Oligotrophy" for eutrophy) and **EE05** (slides; Molles Ch. 14 OCR'd: Krebs et al. 1995 ×2/×3/×11, Gause (b) = predator extinct, Huffaker's 120 oranges; own LV figure; Volterra's principle) and **EE04** (slides, Molles Ch. 13, Sakai 2001; Park's *Tribolium* table and Connell's barnacles read from the slide images; own R* chemostat and L-V four-panel figures) and **EE03** the same session (May 1976 and Turchin and Taylor 1992 OCR'd; the six practice sums solved; the earlier worker's 12 figures vetted). The slide's **Ricker r = 2.5 panel is a 2-cycle, not a 4-cycle** (second doubling at r = 2.5265): flagged with `[!verify]` in EE03 §5.1 and in the `Ricker Model` stub; the Lake Washington slide says "Oligotrophy" where eutrophy is meant (stub `[!verify]`).
+
+## Previous session (2026-10-24, session 2)
+- Resumed from this file. Found **unrecorded eco-evo work** from an earlier worker: figure scripts and PNGs for EE01 (4), EE03 (12, plus `scripts/ee03_numbers.py`) and EE07 (2), but no chapter text (all EE stubs untouched).
+- Wrote **EE01** to the v2 standard: read the 22 slides (image-only; contact sheet + slides 13–14 at full size), Holdo 2009, Hopcraft 2015 (numbers checked), Pigliucci 2002, and Mayr pp.21–82 (the PDF text layer is garbage; **OCR'd with tesseract**, text in the session scratchpad only). Web-checked Curtin 2018, Subalusky 2017 and the rinderpest–fire paper (`[verify]` where only secondary sources were seen).
+- New: 10 concept notes (8 in `02-Eco-Evo/`, **Bayes' Theorem** and **Akaike Information Criterion** in `08-Probability/`), `fig_ee01_swamping.py`, `diagrams_ee01.py` (2 SVG + Excalidraw), fixed `fig_ee01_levels.py` to match slide 13 (the "CHANGING" arrow covers population and above; added the gamete life-cycle loop). Glossary regenerated (94 concepts); link check 0 problems.
+- **Corrections to the earlier LaTeX notes** (recorded in EE01 *Provenance*): Holdo compares models at 10 and 25 km (not 5 and 25); the tracking radius is >80–100 km (not "180–100"); the fire slide has no text.
+- Did **not** commit anything to git. Did not spawn parallel workers (not asked; they used about half of the usage last time).
+
+## Next actions
+1. Review feedback on EE01, EE02 and on the 15 climate chapters.
+2. **Eco-evo and quantum mechanics are drafted.** Awaiting user review of depth, the 🟡/🔵 split, the instructor questions in Pending 00 and the QM gaps (Lectures 1–5, tunnelling). **Quantum mechanics, thermodynamics, probability and proofs/analysis/topology are drafted.** The user's list is complete; remaining subjects (04 Evolution of Earth and Life, 05 Landscapes, 07 Waves, 10 Group Theory, 12 Inorganic Chemistry, 13 Neuroscience) have stub course maps. **Awaiting user review and instructions.** Questions for the instructors: PR06 and PA06–PA07 scope, Lectures 1–16 of the proofs course, the 27 Aug updated probability notes, the thermo syllabus, QM Lectures 1–5.
+   - **Tier corrections to the stubs' "check tier" notes** (from each deck's reading slide): EE04 Molles Ch. 13 "relevant sections" mandatory, Sakai 2001 = paper; EE05 Molles Ch. 14 "relevant sections" mandatory (no papers); EE06 Lampert and Sommer pp. 251–259 and Søndergaard 2012 pp. 455–458 **mandatory**, Farley 2012 detailed, Scheffer and van Nes 2007 / Lake Stinko / Scheffer 2001 papers; EE07 Hunter and Gibbs Ch. 11 **mandatory**, Karanth and Nichols 2010 and Bucher 1992 papers.
+3. Workflow reminder for any further subject: read slides + papers → `scripts/<x>_numbers.py` → figures/diagrams → chapter → concept notes (stub, then elaborate) → link check → update this file. The eco-evo tier rule (slides + mandatory = taught; detailed reading and papers = extra·book) is in EE01 §7.
+4. Then: formula sheet, full-book LaTeX PDF and problem bank for climate and eco-evo.
+5. Cost note: parallel workers (forks) used about half of the usage; use them for whole chapters only, and only if asked.
+
+## Tooling gotchas
+- **Folder rule (GLOBAL, user, 2026-10-25):** in every subject folder all `type: concept` notes live in that folder's `Concepts/` subfolder (162 moved: 70 climate, 75 eco-evo, 8 thermo, 2 probability, 7 foundations; later subjects write there directly: QM 49, thermo 50, probability 58, analysis 56); chapters, course map and quiz prep stay at the top. Put every new concept note there, in any subject. `build_glossary.py` walks subfolders; `check_links.py` resolves by name.
+- The shell is **fish**: no `$(...)` with arrays, `echo ====` needs quotes; run complex scripts with `bash -c` or Python files.
+- Python lives in `.venv/` (matplotlib, scipy, PyMuPDF, networkx, pillow, pyyaml). Always `.venv/bin/python -W ignore …`; ignore the harmless `onnxruntime` affinity messages.
+- The dated slides are **phone photos, no text layer**: triage with `scripts/contact_sheet.py`, then read single pages at ≥1400 px width; handwritten notes need a crop at 2× to read.
+- PDF links use the **PDF page index** (book page = PDF page − 17 for Wallace & Hobbs, − 8 for *The Earth System*).
+- Do not name a LaTeX stdout redirect `build/*.out`: it collides with the hyperref `.out` file.
+- The cwd can drift into a source folder after a `cd` inside a Bash call: use absolute paths.
+- Image-only or garbled-text PDFs (Mayr extract, Molles chapters, Crowder, Caswell, Begon): `pdftoppm -r 150` then `tesseract` page by page (≈2 min for 60 pages); run it in the background (`nohup`), keep the OCR text outside the vault. Test a PDF's text layer first with `pdftotext`: Molles and Begon extract as substitution-cipher garbage.
+- `scripts/diagrams.py` arrowheads are SVG markers: PyMuPDF does not draw them, browsers do; check layout (clipping, gaps) with `fitz` but do not judge the arrows from it.
+- fish: `echo '------'` needs quotes; use `python3 - <<'EOF'` heredocs for multi-line edits.

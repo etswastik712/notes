@@ -1,0 +1,42 @@
+---
+title: Eigenstate and Eigenvalue
+aliases: ["eigenfunction", "eigenvalue", "definite value"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Eigenstate and Eigenvalue
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_states_operators_notes.pdf#page=4|SO §4]].
+
+> [!intuition] In one picture
+> An eigenstate is a state for which the question has a single, certain answer.
+
+> [!key] Definition
+> $\hat A\phi=a\phi$: $\phi$ is an **eigenstate** of $\hat A$ with **eigenvalue** $a$. In $\phi$ a measurement of $A$ gives $a$ with certainty: $\langle A\rangle=a$, $\Delta A=0$.
+
+## Always ask: eigenstate of which operator?
+| state | $\hat p$ | $\hat H$ |
+|---|---|---|
+| ring $e^{ik_nx}/\sqrt L$ | yes ($\hbar k_n$) | yes |
+| $\sqrt{2/L}\cos k_nx$ | no | yes |
+| box $\sqrt{2/a}\sin(n\pi x/a)$ | no | yes |
+| $(\psi_0+\psi_1)/\sqrt2$ | no | **no** |
+
+Eigenstates of an observable form a **basis**: any state is $\Psi=\sum c_a\phi_a$ and $P(a)=|c_a|^2$ ([[Measurement Postulate]]).
+
+> [!pitfall] Eigenstate of one, not of another
+> The same state can have a sharp $H$ and a spread-out $p$ because $[\hat H,\hat p]\ne0$ in a box. In two dimensions $|{+z}\rangle$ is an eigenstate of $Z$ but an equal superposition of $X$ eigenstates ([[Two-Level System]]).
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Operator]] · [[Measurement Postulate]] · [[Degeneracy]] · [[Hermitian Operator]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

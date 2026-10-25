@@ -1,0 +1,39 @@
+---
+title: Sample Space and Events
+aliases: ["sample space", "event", "algebra of events", "De Morgan's laws"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Sample Space and Events
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=3|class notes 6 Aug]].
+
+> [!intuition] In one picture
+> List everything that could happen (the sample space); an event is any subset of that list you might ask about.
+
+> [!key] Definition
+> The **sample space** $S$ (or $\Omega$) is the set of all possible outcomes of a random experiment; an **event** is a subset $E\subset S$. Events combine as sets: $E\cup F$ (either), $E\cap F$ (both), $E^c=S\setminus E$ (not); $E,F$ are **mutually exclusive** if $E\cap F=\varnothing$.
+
+## De Morgan's laws
+$$\Big(\bigcup_iE_i\Big)^c=\bigcap_iE_i^c,\qquad\Big(\bigcap_iE_i\Big)^c=\bigcup_iE_i^c .$$
+"Not (A or B)" is "not A and not B": the complement trick for "at least one" events (see [[Inclusion-Exclusion Principle]]).
+
+## Examples from class
+Three coin tosses: $S=\{HHH,\dots,TTT\}$ with 8 points. Two dice: 36 ordered pairs; "the sum is even" has 18, "the sum is divisible by 3" has 12. A light bulb known to last at least 1000 h: $S=[1000,\infty)$, a continuous space.
+
+> [!pitfall] Choose the space whose outcomes are equally likely
+> The sum of two dice can take 11 values but they are not equally likely; work in the 36 ordered pairs ([[Naive Definition of Probability]]).
+
+Used in: [[PR01 Counting and the Axioms of Probability]]. Related: [[Axioms of Probability]] · [[Naive Definition of Probability]] · [[Inclusion-Exclusion Principle]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

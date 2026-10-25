@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 590" width="920" height="590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="920" height="590" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="460.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Structured populations in one pass: from a life table to a conservation decision</text>
+<line x1="200.0" y1="183.0" x2="200.0" y2="242.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="478.7" y1="179.2" x2="311.3" y2="245.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="351.0" y1="290.0" x2="459.0" y2="290.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="721.0" y1="290.0" x2="749.0" y2="290.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="590.0" y1="348.0" x2="590.0" y2="392.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="439.0" y1="440.0" x2="351.0" y2="440.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="55.0" y="93.0" width="290" height="84" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="200" y="120.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Cohort life table</text>
+<text x="200" y="140.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">l_x (survival), m_x (fecundity)</text>
+<text x="200" y="160.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">R0 = sum of l_x m_x</text>
+<rect x="445.0" y="93.0" width="290" height="84" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="590" y="120.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Survivorship curve</text>
+<text x="590" y="140.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">log l_x against age:</text>
+<text x="590" y="160.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Type I, II or III</text>
+<rect x="55.0" y="248.0" width="290" height="84" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="200" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Projection matrix</text>
+<text x="200" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">n(t+1) = A n(t)</text>
+<text x="200" y="315.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Leslie (age) or Lefkovitch (stage)</text>
+<rect x="465.0" y="238.0" width="250" height="104" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="590" y="265.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Eigen-analysis of A</text>
+<text x="590" y="285.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">lambda: long-run growth</text>
+<text x="590" y="305.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">w: stable distribution</text>
+<text x="590" y="325.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">v: reproductive value</text>
+<rect x="755.0" y="248.0" width="150" height="84" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Age pyramids</text>
+<text x="830" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">base width</text>
+<text x="830" y="315.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">follows lambda</text>
+<rect x="445.0" y="398.0" width="290" height="84" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="590" y="425.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Perturbation analysis</text>
+<text x="590" y="445.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">elasticity of lambda:</text>
+<text x="590" y="465.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">which rate matters most?</text>
+<rect x="55.0" y="398.0" width="290" height="84" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="200" y="425.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Management</text>
+<text x="200" y="445.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">protect large juveniles</text>
+<text x="200" y="465.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(turtle excluder devices)</text>
+<text x="460.0" y="572" text-anchor="middle" font-size="13" fill="#52514e">Slides 9-29: Phlox table -&gt; survivorship -&gt; Leslie matrix -&gt; stable age distribution -&gt; loggerhead stage matrix -&gt; sensitivity -&gt; TEDs; humans: pyramids</text>
+</svg>

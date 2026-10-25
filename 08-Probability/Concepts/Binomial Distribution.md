@@ -1,0 +1,38 @@
+---
+title: Binomial Distribution
+aliases: ["binomial", "Bin(n,p)"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Binomial Distribution
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=19|class notes 20 Aug]], [[ilovepdf_merged-1.pdf#page=32|mean from the binomial theorem]].
+
+> [!intuition] In one picture
+> The number of successes in $n$ independent trials with the same success probability.
+
+> [!key] Definition
+> $P[X=k]=\binom nkp^k(1-p)^{n-k}$, $k=0,\dots,n$. $E[X]=np$, $\mathrm{Var}[X]=np(1-p)$, MGF $(1-p+pe^t)^n$.
+
+## Mean, two ways
+Binomial theorem: differentiate $(x+y)^n=\sum\binom nrx^ry^{n-r}$ in $x$, multiply by $x$ and set $x=p$, $y=1-p$ to get $np=\sum r\binom nrp^r(1-p)^{n-r}$. Or $X=\sum X_i$ and linearity.
+
+## Variance
+$E[X(X-1)]=n(n-1)p^2$ (use $k(k-1)\binom nk=n(n-1)\binom{n-2}{k-2}$), so $\mathrm{Var}=n(n-1)p^2+np-n^2p^2=np(1-p)$.
+
+> [!example] Numbers
+> Bin$(10,0.3)$: mean 3, variance 2.1. A symmetric walk after 6 steps with $p=0.6$ ($Y=2X-6$): $P[Y=2]=0.3110$, $E[Y]=1.2$.
+
+Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Bernoulli Distribution]] · [[Hypergeometric Distribution]] · [[Poisson Limit Theorem]] · [[Normal Approximation to the Binomial]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

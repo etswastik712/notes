@@ -1,0 +1,14 @@
+{
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "Assets/figures",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "strictLineBreaks": false,
+  "propertiesInDocument": "visible",
+  "userIgnoreFilters": [
+    "scripts/",
+    "Assets/latex/build/",
+    "00-Home/Templates/"
+  ]
+}

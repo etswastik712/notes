@@ -1,0 +1,37 @@
+---
+title: Operator
+aliases: ["quantum operator", "observable as an operator"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Operator
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_states_operators_notes.pdf#page=3|SO §3]], [[PH2113_states_operators_notes.pdf#page=12|SO §12–13]].
+
+> [!intuition] In one picture
+> An operator is a question put to a state: it acts on the wavefunction and returns another function.
+
+> [!key] Definition
+> Observables correspond to **linear** operators: $\hat x=x$, $\hat p=-i\hbar\,\mathrm d/\mathrm dx$, $\hat H=-\frac{\hbar^2}{2m}\frac{\mathrm d^2}{\mathrm dx^2}+V$, parity $\hat P\psi(x)=\psi(-x)$. $\hat A(c_1\psi_1+c_2\psi_2)=c_1\hat A\psi_1+c_2\hat A\psi_2$.
+
+## Actions
+$\hat pe^{ikx}=\hbar k\,e^{ikx}$ (same function times a number); $\hat p\cos kx=i\hbar k\sin kx$ (different function); $\hat H\cos kx=\frac{\hbar^2k^2}{2m}\cos kx$ ($V=0$); $\hat P\cos kx=+\cos kx$, $\hat P\sin kx=-\sin kx$.
+
+**Why operators at all?** Classically an observable is a number $A(x,p)$; a quantum state need not contain a definite value, so the observable must be something that returns **possible results, their probabilities and the post-measurement state**. Non-commuting operators encode that two quantities cannot both be sharp (numbers always commute).
+
+> [!pitfall] Order matters
+> $\hat A\hat B\ne\hat B\hat A$ in general ([[Commutator]]). Operators act on whatever stands to their right, including the factor $x$ in $\hat p(x\psi)$.
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]]. Related: [[Eigenstate and Eigenvalue]] · [[Commutator]] · [[Hermitian Operator]] · [[Measurement Postulate]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

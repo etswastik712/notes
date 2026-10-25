@@ -1,0 +1,285 @@
+---
+title: EE05 Predation
+aliases: [EE05, Predator-prey, Lotka-Volterra predator-prey, anti-predator strategies, BI2113 lecture 5]
+subject: eco-evo
+type: chapter
+chapter: 5
+part: II
+scope: [taught, extra-book, extra-beyond]
+by: [slides]
+status: draft
+prereq: ["[[EE04 Competition and Invasions]]"]
+tags: [subject/eco-evo, type/chapter, taught, extra/book, extra/beyond, src/slides, src/book, src/own-notes, status/draft]
+---
+# EE05 · Predation
+
+◀ [[EE04 Competition and Invasions]] · [[Ecology and Evolution - Course Map|Course Map]] · [[EE06 Eutrophication and Alternative Stable States]] ▶
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
+> 🟢 **In syllabus (taught)**: the lecture of 1 Sep 2026 ([[05_01_Sep_2026_Predation.pdf|24 slides]]) **and** the *mandatory* reading, "relevant sections" of Molles Ch. 14 ([[Predation_Molles_9Ed_2022.pdf|reading]], 18 pages; the deck does not say which sections, see §8)
+> - §1 what predation is, why study it, types (sl. 1–3)
+> - §2 population cycles: Elton's fur returns; intrinsic or extrinsic? (sl. 4; Molles §14.2)
+> - §3 the Lotka-Volterra predator-prey model and its assumptions (sl. 5–7)
+> - §4 density-dependent prey growth, and the three-part puzzle (sl. 8–9)
+> - §5 laboratory tests: Gause's *Paramecium*-*Didinium*, Huffaker's mites (sl. 10–14; Molles §14.3)
+> - §6 what happens in nature (sl. 15)
+> - §7 strategies of predator avoidance: coloration, crypsis, mimicry, behaviour, chemistry (sl. 16–23)
+> - §8 the reference slide (sl. 24)
+>
+> 🟡 **Extra · book**
+> - §2 Molles on the snowshoe-hare cycle: the sunspot and overpopulation hypotheses, and the Krebs et al. (1995) field experiment
+> - §6 Molles §14.4: prey-dependent (Holling) and ratio-dependent functional responses; §14.1 field experiments on the effects of consumers
+> - the video *Predator-Prey Interactions, Camouflage, Mimicry and Warning Coloration* (not examinable)
+>
+> 🔵 **Extra · beyond** (my additions, labelled)
+> - §3 the conserved quantity, the period of the cycles, and Volterra's principle; §4 the stability of the logistic-prey model
+> - §6 a numerical example of a type II response; §7 why Batesian mimics must be rarer than their models
+
+> [!key] After this chapter you can
+> - define **predation** and list its five types,
+> - describe the **hare-lynx cycle** and the *intrinsic versus extrinsic* question, and say what Krebs's experiment found,
+> - write the **Lotka-Volterra predator-prey equations**, find the equilibrium, explain the **neutral cycles** and their **assumptions**,
+> - show what changes when **prey growth is density dependent** (spiral, stable equilibrium),
+> - state the three-part puzzle (real cycles, unrealistic model cycles, realistic models with no cycles) and how **Gause** and **Huffaker** speak to it,
+> - classify **anti-predator** strategies (aposematism, crypsis, Batesian and Müllerian mimicry, behavioural, chemical).
+
+## 1. What predation is
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=1|slides 1–3]]*
+
+> [!key] Definition, reasons, types
+> **Predation** is "the process by which an organism eats all or part of another organism" ([[Predation]]). Why study it? **Economic** (pest management, resource management), **ecological** (community organisation, conservation biology) and **evolutionary** (it shapes the traits of both parties).
+> Types (slide 3): **herbivory**: animals eat plants, sometimes partially; **carnivory**: an animal or plant eats animal(s); **parasitoidism**: eggs are laid on or near hosts that are later killed by the offspring; **parasitism**: living on or inside hosts and depending on them for nutrition, without consuming the host; **cannibalism**: predator and prey belong to the same species.
+
+> [!intuition] Eating is the only interaction that moves energy
+> Competition (EE04) divides a fixed supply; predation *transfers* biomass up a food chain and kills the loser. That is why predator and prey numbers feed back on each other in a *cycle*: more prey feeds more predators, and more predators remove more prey.
+
+## 2. The empirical starting point: population cycles
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=4|slide 4]] · Molles §14.2* · <span class="scope-extra-book">extra · book</span> *Molles on hypotheses and experiments*
+
+Slide 4 shows Elton's (1924) data from the **fur returns of the Hudson's Bay Company**: the numbers of **snowshoe hares** and **lynx** trapped each year from about 1850 to 1930. Both series oscillate regularly, with peaks about every ten years, the lynx following the hare ([[Predator-Prey Cycles]]). The slide asks the question that organises the lecture:
+
+> [!key] Intrinsic or extrinsic?
+> What kind of factors cause these oscillations: **intrinsic** (generated by the interaction of the populations themselves: food, predators, disease) or **extrinsic** (imposed from outside: weather, sunspots, habitat)?
+
+> [!extra-book]+ 🟡 Extra (book): how Molles answers it
+> Molles (§14.2, [[Predation_Molles_9Ed_2022.pdf#page=7|pp. 304–307]]) retells the history. Elton (1924) proposed that cycles of hare and lynx are driven by **sunspot cycles** (solar radiation altering hares and their food); MacLulich (1937) and Moran (1949) showed that the sunspot cycle does not match the hare cycle. A second group of hypotheses, the **"overpopulation theories"** (Keith 1963), blamed disease and parasites, physiological stress at high density, or starvation. A third: **predators drive the cycle**. Keith concluded that none alone explains it, and that long-term, multi-specialist studies were needed.
+> The decisive study is the **field experiment of Krebs et al. (1995)**: nine 1-km² blocks of boreal forest (three controls) and treatments of **food addition**, **fertiliser**, **electric fences excluding mammalian predators** (not hawks and owls), and fence plus food, run for **8 years** through one hare cycle. Results: fertiliser raised plant growth but not hare numbers; averaged over the peak and decline phases, **reducing predators doubled hare density, adding food tripled it, and adding food and excluding predators raised it eleven-fold** relative to controls, through higher survival and reproduction. Conclusion: the cycle results from an **interaction among three trophic levels**: hares, their food and their predators (Molles' summary; the experiment had to be at large scale and in the field).
+
+> [!example] Worked example 1: do the effects add, multiply or interact?
+> Set the control density to 1. Predator exclusion gives 2, food addition gives 3 and both give 11. *If the two factors were independent and **additive***: $1+(2-1)+(3-1)=4$. *If they were independent and **multiplicative***: $2\times3=6$. The observed **11** exceeds both: the factors **interact synergistically**. A food-rich hare population is better able to turn lower predation into numbers, and a predator-free population converts extra food into growth (it is not culled). This is exactly why the single-factor hypotheses (food only, predators only) failed on their own.
+
+The slide leaves the intrinsic-extrinsic question open; the rest of the lecture develops a *model* of the intrinsic route.
+
+## 3. The Lotka-Volterra predator-prey model
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=5|slides 5–7]]*
+
+Slide 5 builds the model from two verbal statements ([[Lotka-Volterra Predator-Prey Model]]). Let $H$ be the **prey** ("victim", herbivore) density and $P$ the **predator** density.
+
+- **Prey**: grow exponentially on their own and are removed by predation: $\;\dfrac{dH}{dt}=rH-pHP$. The loss $pHP$ is proportional to the number of *encounters*, $HP$ (random meetings), with capture coefficient $p$. At equilibrium $dH/dt=0\Rightarrow P^*=r/p$ (slide 5).
+- **Predator**: without prey they die at rate $m$; with prey they grow by converting captured prey into offspring with efficiency $a$: $\;\dfrac{dP}{dt}=apHP-mP$. At equilibrium $H^*=m/(ap)$.
+
+$$\boxed{\frac{dH}{dt}=rH-pHP,\qquad \frac{dP}{dt}=apHP-mP,\qquad (H^*,P^*)=\Big(\frac{m}{ap},\ \frac rp\Big)}$$
+
+> [!intuition] Each isocline fixes the *other* species
+> The **prey** stop changing when the predators are at $P^*=r/p$: just enough to eat the prey growth. The **predators** stop changing when the prey are at $H^*=m/(ap)$: just enough to feed them. So *the prey density is set by the predator's efficiency and mortality; the predator density is set by the prey's growth rate*. Double the prey growth rate $r$ and you get **twice the predators, not more prey**. This is the model's counterintuitive signature, and part of why the equations have to be read carefully.
+
+> [!derivation] Why the orbits are closed (neutral cycles)
+> The phase plane has a vertical isocline $H=H^*$ (where $\dot P=0$) and a horizontal one $P=P^*$ (where $\dot H=0$), crossing at the equilibrium ([[Phase Plane and Isoclines]]). Linearising ([[Fixed Points and Linear Stability]]): the Jacobian at $(H^*,P^*)$ is $\begin{pmatrix}0&-pH^*\\apP^*&0\end{pmatrix}$ with eigenvalues $\pm i\sqrt{rm}$, purely imaginary: **neutral** oscillation of angular frequency $\sqrt{rm}$ and period $T=2\pi/\sqrt{rm}$ for small cycles. Globally, the function
+> $$V(H,P)=apH-m\ln H+pP-r\ln P$$
+> is constant along every solution: $\dot V=\big(ap-\tfrac mH\big)(rH-pHP)+\big(p-\tfrac rP\big)(apHP-mP)=(apH-m)(r-pP)+(pP-r)(apH-m)=0$. Each level set of $V$ is a closed curve around the equilibrium, so the population goes round the same orbit forever.
+
+> [!example] Worked example 2: numbers for $r=1,\ p=0.02,\ a=0.5,\ m=0.5$
+> Equilibrium: $H^*=0.5/(0.5\times0.02)=50$, $P^*=1/0.02=50$. Small cycles: $T=2\pi/\sqrt{1\times0.5}=8.9$ time units; the large orbit started at $(30,30)$ has period $9.25$ (nonlinear cycles are a little slower), prey between 19.5 and 102.5 and predators between 26.4 and 84.6. The first **predator peak follows the prey peak by 1.7** time units, about a fifth of a period (a quarter for small cycles). Prey and predator densities run in a chase: prey rise, then predators rise, then prey fall, then predators fall.
+
+![[fig_ee05_lv.png|900]]
+*Figure EE5.1. A: closed orbits of the basic model; B: the time series with the predator peaks lagging the prey peaks; C: the same with logistic prey growth, §4. Slides 6 and 8 show the same pictures from Populus simulations.*
+
+Slide 6 shows the combined model: the closed phase-plane orbits and the prey and predator time series, with the comment "**only admits oscillatory behaviour**" (and a Populus simulation). The equations have no other long-run behaviour: no steady state is approached.
+
+### 3.1 The assumptions (slide 7)
+1. The growth of the victim population is limited **only by predation** and nothing else.
+2. The predator is a **specialist** that can persist only if the victim population is present.
+3. **No change in environment** during the process.
+4. Predator and victim **encounter each other randomly in a homogeneous environment**.
+
+Slide 7 asks: *how would you make this more realistic?*
+
+> [!pitfall] Neutral cycles are structurally unstable
+> Every orbit of the basic model is as good as every other: a small shock to the numbers moves the system to a different orbit and it stays there. And any small change *in the equations* (an extra term of either sign) turns the closed orbits into spirals that either grow or decay. Real systems always have such terms, so the basic model's perfect cycles cannot be taken literally. That is why slide 9 treats it as a puzzle.
+
+> [!extra-beyond]- 🔵 Extra (beyond): Volterra's principle
+> Suppose a pesticide or hunting kills prey and predators at the *same extra rate* $\delta$: $r\to r-\delta$, $m\to m+\delta$. The equilibrium moves to $H^*=(m+\delta)/(ap)$ (**prey up**) and $P^*=(r-\delta)/p$ (**predators down**). With $r=0.8,\ m=0.4,\ a=0.2,\ p=0.01$ and $\delta=0.1$: prey $200\to250$, predators $80\to70$. Indiscriminate killing *helps* the prey on average. This is a classical warning for pest control and fisheries.
+
+## 4. Making the prey growth density dependent
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=8|slides 8–9]]*
+
+Slide 8's improvement: replace the exponential prey growth by logistic growth,
+
+$$\frac{dH}{dt}=rH\Big(1-\frac HK\Big)-pHP,\qquad \frac{dP}{dt}=apHP-mP$$
+
+("solve it now and tell me what it shows"). The predator isocline is still vertical, $H^*=m/(ap)$, but the **prey isocline now slopes downward**, $P=(r/p)(1-H/K)$, reaching zero at $H=K$ (slide 8's figure: "the effect of a victim carrying capacity on the victim isocline"). They cross at
+
+$$H^*=\frac m{ap},\qquad P^*=\frac rp\Big(1-\frac{H^*}K\Big)\qquad\text{(positive only if }K>H^*=m/(ap)\text{)}.$$
+
+> [!derivation] Why the equilibrium is now stable
+> The Jacobian is $\begin{pmatrix}-rH^*/K&-pH^*\\apP^*&0\end{pmatrix}$: trace $=-rH^*/K<0$ and determinant $=ap^2H^*P^*>0$, so the equilibrium is **stable**; when $(\text{tr})^2<4\det$ it is a spiral (**damped oscillations**). The negative diagonal entry is the density dependence of the prey: it removes the neutrality by damping every cycle. For the numbers of Example 2 with $K=200$: $P^*=50(1-50/200)=37.5$, eigenvalues $-0.125\pm0.60\,i$, so the oscillation has period $10.5$ and its amplitude halves every $5.5$ time units (Fig. EE5.1C).
+
+> [!intuition] A leash on the prey
+> In the basic model nothing but predators holds the prey in check, so the prey can overshoot, and the predators with them. A carrying capacity pulls the prey back whenever they get too numerous, so each swing is smaller than the one before. The same logic as the logistic's relaxation to $K$ in [[EE03 Population Dynamics and Chaos]].
+
+> [!key] The three-part puzzle (slide 9)
+> "Take a break and reflect on what we have learned: **(1)** real-life data show population cycles; **(2)** a highly unrealistic Lotka-Volterra model shows population cycles; **(3)** realistic Lotka-Volterra models do not show cycles." So the simple model gets the observation for the wrong reason, and making it more realistic loses the observation. "**Enter lab experiments.**"
+
+## 5. Laboratory tests: Gause and Huffaker
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=10|slides 10–14]] · Molles §14.3*
+
+### 5.1 Gause's *Paramecium* and *Didinium* (slide 10)
+Gause's predator-prey microcosms used *Paramecium* (prey) and *Didinium* (predator) ([[Gause Predator-Prey Experiments]]). The three experiments on slide 10:
+
+| experiment | what Gause did | result |
+|---|---|---|
+| (a) no refuge | prey and predator in a simple culture | the predator eats all the prey, then starves: **both extinct** |
+| (b) with refuge | sediment on the bottom gives the prey somewhere to hide | the predator eats the prey outside the refuge, then starves: **predator extinct** (the prey recover) |
+| (c) immigration | one prey and one predator added every third day | **sustained oscillations** |
+
+Molles ([[Predation_Molles_9Ed_2022.pdf#page=12|pp. 309–310]]) adds that Gause's successful cycles in a related system used *Paramecium aurelia* as predator on the yeast *Saccharomyces exiguus*, and that in (b) "once *Didinium* had eaten all of the *Paramecium* not hiding in bottom sediments, it starved and became extinct". The slide's wording "led to extinction" in (b) therefore means *extinction of the predator*.
+
+> [!key] Gause's conclusion (slide 10)
+> "The system would be driven to extinction if left to itself. **Oscillations are possible only when there are constant interferences from outside the system.**" The microcosm cannot sustain a predator and its prey by itself. The Lotka-Volterra cycles need something the simple model leaves out.
+
+### 5.2 Huffaker's mites (slides 11–14)
+"**Gause's system was too simple and lacked environmental heterogeneity.**" Huffaker used a herbivorous mite *Eotetranychus sexmaculatus* (prey) feeding on **oranges** and the predatory mite *Typhlodromus occidentalis* ([[Huffaker Mite Experiment]]). The slide's pictures show an orange and a tray of oranges; Molles explains the arrangement: oranges (or oranges mixed with rubber balls) separated by **partial barriers of petroleum jelly**, the herbivore able to **disperse by "ballooning"** on silk threads (Huffaker gave it wooden posts as launch pads and a fan) while the predator had to **crawl**. Only about 5 % of the area of each orange was exposed to attack. Simple arrangements gave no sustained oscillations; the most elaborate set-up, **120 oranges**, gave **three full oscillations over about six months**, "a deadly game of hide-and-seek".
+
+> [!key] What Huffaker concluded (slides 11–14)
+> "Could obtain oscillations **only with complicated spatial arrangement of patches**." The distributions and relative abundance of the mites changed over time. **Prey need some advantage to survive.** **Metapopulations promote prey survivorship through extinction and recolonisation.** **If the predator is efficient, the prey can survive only in a patchy environment.** And: "predators can reduce the population size of the prey in nature, sometimes they are more effective than pesticides" (slide 14).
+
+> [!intuition] Hide-and-seek in space
+> Within one orange the predator wins and the prey die out. But the prey keep escaping to a fresh orange before the predators arrive, and the predators then have to find them again. The whole system persists as a patchwork of local extinctions and recolonisations: a **metapopulation** ([[Metapopulation]]), in which the colonisation rate $c$ must exceed the local extinction rate $e$ (Levins: the fraction of occupied patches $p^*=1-e/c$, positive only if $c>e$).
+
+> [!extra-book]- 🟡 Extra (book): refuges in Lotka's own theory
+> Molles points out that Lotka (1932) already included refuges: the capture coefficient $p$ should be **lower where prey have more refuges**, so a structurally richer environment has a weaker predator effect and a higher prey equilibrium $H^*=m/(ap)$. Molles also covers the refuge idea more widely: periodic cicadas (emerging in synchronous broods, a defence like the predator swamping of [[Predator Satiation]]) and the **ecology of fear** (prey that avoid risky places and so create their own refuges).
+
+## 6. What is happening in nature?
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=15|slide 15]]*
+
+Slide 15: "It's a **very complicated story**; all kinds of dynamics are being observed." Possible reasons listed:
+
+- **multiple prey and multiple predators** (not a one-on-one chase),
+- **spatial heterogeneity**, including refugia (Huffaker),
+- **predator efficiency changes across time**,
+- **evolutionary changes** in prey and predator (defences evolve; see §7).
+
+> [!extra-book]- 🟡 Extra (book): functional and numerical responses (Molles §14.4)
+> The Lotka-Volterra model assumes the number of prey one predator eats is *proportional to prey density*, $pH$. A real predator saturates: **Holling's prey-dependent functional response** is $g(N)=\dfrac{aN}{1+ahN}$ with searching efficiency $a$ and handling time $h$, rising with prey density $N$ and levelling at $1/h$. Arditi and Ginzburg's **ratio-dependent** version replaces $N$ by the ratio $N/P$ of prey to predators, so that predator interference lowers feeding at high predator density. Molles illustrates with the oyster drill *Urosalpinx* and with wolves on Isle Royale (1971–2011). A **numerical response** is the change in predator numbers (by reproduction or immigration) with prey density; Molles notes that lynx and coyote numbers increased six- to sevenfold after hares rose.
+> **Example (my numbers).** $a=0.02$ per predator per day per prey, $h=0.5$ days: the maximum is $1/h=2$ prey per predator per day, and the response is half of that, $1$, at $N=1/(ah)=100$ ($g=0.02\times100/(1+0.02\times100\times0.5)=2/2=1$). A predator eating twice as fast when prey double is what the Lotka-Volterra model assumes; the saturating curve says it cannot.
+
+> [!verify] Which parts of Molles Ch. 14 are "relevant"?
+> The slide says "relevant sections of Chapter 14" are mandatory and "the rest of Chapter 14" is further reading. By the slide content, §14.2 (cycles; mathematical and laboratory models) and §14.3 (refuges; Gause and Huffaker) are relevant. §14.1 (the effects of consumers; field experiments on predators, herbivores, parasites and disease) and §14.4 (functional responses) are probably "further reading". This chapter follows that reading; the instructor should confirm.
+
+## 7. Strategies for predator avoidance
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=16|slides 16–23]]*
+
+Slide 16 is an overview video (the slide notes that it has been removed from YouTube and will be uploaded with the course files). The rest of the lecture classifies how prey avoid being eaten: **coloration** (slides 17–21: aposematic, crypsis, Batesian and Müllerian mimicry), **behavioural** (22) and **chemical** (23) strategies.
+
+| strategy | idea | slide's examples |
+|---|---|---|
+| **aposematic (warning) coloration** | markings that make a dangerous, poisonous or foul-tasting animal conspicuous and recognisable | the yellow-winged darter *Sympetrum flaveolum* |
+| **crypsis** | look like the background or an object | dead-leaf mantis, tawny frogmouth, leaf-mimicking mantis *Choeradodis rhomboidea*, lantern fly |
+| **Batesian mimicry** | the mimic sends the model's signal but lacks the unpalatability | drone fly mimicking a honey bee |
+| **Müllerian mimicry** | two or more species share a warning signal *and* genuine defences | *Heliconius* butterflies |
+| **catalepsis** | playing dead so that the predator ignores the prey | opossum (*Didelphis virginiana*); Costa Rican katydids |
+| **intimidation display** | startle the predator long enough to escape, or convince it the prey is too costly to attack | moths |
+| **group living** | more watchful eyes, mobbing, confusing the predator; alarm calls; alarm pheromones in aphids | mobbing in birds |
+| **chemical defence** | make the prey too toxic, smelly or distasteful | badger and skunk; the bombardier beetle *Brachinus crepitans* |
+
+Definitions on the slides: **mimicry** is the attempt by one species to resemble another. **Batesian**: "the mimic sends signals similar to the model, but does not share the attribute that makes it unprofitable to predators (e.g. unpalatability)". **Müllerian**: "two (or more) species have very similar warning signals and both share genuine anti-predation attributes (e.g. being unpalatable). If two species were confused with one another by a common predator, individuals in both would be more likely to survive."
+
+> [!pitfall] Toxins alone are not enough
+> The slide's note on chemical defences: "toxins can poison the predator, but this often does not save the prey. They need to be associated with **aposematic coloration**." A predator that has been poisoned is no help to the prey it just killed. A **warning signal** is what lets the predator *learn from a sample* (or from another individual) and avoid the whole population thereafter. That is why conspicuous colour and distastefulness evolve together ([[Aposematism]], [[Crypsis]], [[Mimicry]], [[Anti-Predator Behaviour and Chemical Defence]]).
+
+> [!example] Worked example 3: when does a Batesian mimic pay? (my toy)
+> Suppose a predator meets prey wearing a signal. A fraction $q$ of signal-bearers are the **distasteful model**, the rest $(1-q)$ are harmless mimics. A mimic or model that the predator eats costs the predator $C$ if it is a model (distaste, toxin) and gives it $G$ if it is a mimic (a meal). The predator's expected gain from attacking is $(1-q)G-qC$, and it attacks only if this is positive, i.e. if $q<\dfrac{G}{G+C}$. With $G=C$ the predator attacks any signal-bearer when fewer than **half** are really distasteful. So a Batesian mimic is **protected only when it is rarer than its model**; as mimics become common the signal loses its information and the predator starts to attack. In Müllerian mimicry all signal-bearers are distasteful ($q=1$), and each added species only *helps* by sharing the cost of predator education.
+
+> [!connection] Group living and predator swamping
+> Group living lowers an individual's risk partly by **dilution** and **vigilance**; at its extreme it becomes the *predator satiation* of [[EE01 Introduction to Biology and Ecological Thinking|EE01]] (synchronous calving of the wildebeest, [[Predator Satiation]]): when prey appear in numbers far above what predators can eat, the fraction taken falls.
+
+The deck also points to a video on camouflage, mimicry and warning coloration ([[Predator-Prey Interactions, Camouflage, Mimicry & Warning Coloration.mp4|file]]); it is not examinable.
+
+## 8. The reference slide
+<span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=24|slide 24]]*
+
+| item | tier |
+|---|---|
+| lecture slides | syllabus |
+| "Relevant sections of Chapter 14" of Molles | **mandatory**, syllabus (see the `[!verify]` in §6) |
+| "Rest of Chapter 14" | further reading, no exam weight |
+| (no *papers* tier on this deck) | |
+
+The classic experiments of Gause and Huffaker are *slide* content here, not papers.
+
+## Map of this chapter
+> [!connection] How EE05 connects
+> **Builds on:** [[EE03 Population Dynamics and Chaos]] (logistic growth, delays and overshoot) and [[EE04 Competition and Invasions]] (two-species models, isoclines, the same phase-plane tools).
+> **Leads to:** [[EE06 Eutrophication and Alternative Stable States]] (trophic cascades: fish remove zooplankton, which graze algae: biomanipulation) → [[EE07 Conservation Biology]] (small populations of predators and prey; refuges as reserves).
+> **Concepts:** [[Predation]] · [[Predator-Prey Cycles]] · [[Lotka-Volterra Predator-Prey Model]] · [[Phase Plane and Isoclines]] · [[Gause Predator-Prey Experiments]] · [[Huffaker Mite Experiment]] · [[Metapopulation]] · [[Functional and Numerical Responses]] · [[Aposematism]] · [[Crypsis]] · [[Mimicry]] · [[Anti-Predator Behaviour and Chemical Defence]] · [[Predator Satiation]]
+> **Other subjects:** [[Fixed Points and Linear Stability]] (the Jacobian; neutral stability) · [[Relaxation Time]] (the damping rate of the spiral) · [[Waves - Course Map]] (oscillations: the predator-prey cycle is a nonlinear oscillator) · [[Evolution of Earth and Life - Course Map]] (arms races, coevolution)
+
+> [!connection] Oscillators
+> The prey-predator loop is a pair of coupled equations with an oscillation frequency $\sqrt{rm}$, the same structure as a mass on a spring ($\omega=\sqrt{k/m}$) in [[Waves - Course Map]]. Density dependence in the prey plays the role of friction: it damps the oscillation to a spiral.
+
+## Summary
+> [!summary] Cheat-sheet
+> - **Predation** = eating all or part of another organism; types: herbivory, carnivory, parasitoidism, parasitism, cannibalism.
+> - **Hare-lynx** (Elton 1924, Hudson's Bay Co.): cycles of about 10 years; *intrinsic or extrinsic?* Krebs et al. (1995): predator exclusion ×2, food ×3, both **×11** (synergy): three trophic levels interact.
+> - **Lotka-Volterra**: $\dot H=rH-pHP$, $\dot P=apHP-mP$; $H^*=m/(ap)$, $P^*=r/p$; **neutral closed orbits** ($V=apH-m\ln H+pP-r\ln P$ constant); small-cycle period $2\pi/\sqrt{rm}$; predators lag prey. Four assumptions: prey limited only by predation; specialist predator; constant environment; random encounters in a homogeneous space.
+> - **Logistic prey**: $P^*=(r/p)(1-H^*/K)$, requires $K>m/(ap)$; stable (spiral), cycles die out.
+> - **Puzzle**: real cycles; unrealistic model cycles; realistic models no cycles.
+> - **Gause**: no refuge ⇒ both extinct; refuge ⇒ predator extinct; periodic immigration ⇒ sustained oscillations. **Huffaker**: 120 oranges, barriers: three oscillations; patchiness and dispersal (metapopulation) let prey survive an efficient predator.
+> - **In nature**: multiple prey and predators, spatial heterogeneity, changing predator efficiency, evolution.
+> - **Avoidance**: aposematism, crypsis, Batesian/Müllerian mimicry, catalepsis, intimidation, group living, chemicals; toxins need warning colours.
+
+## Practice
+1. **Classify.** Name the type of predation: (a) a moose browsing willow shoots; (b) a wasp laying eggs in a caterpillar whose larvae later eat it; (c) a tick on a deer; (d) a pitcher plant digesting an insect; (e) a spider eating another spider of its own species.
+2. **Equilibrium.** $r=0.8$, $p=0.01$, $a=0.2$, $m=0.4$. Find $H^*$, $P^*$, and the period of small cycles. What happens to $H^*$ and $P^*$ if $r$ doubles?
+3. **Volterra.** A pesticide adds a death rate $0.1$ to both prey and predator in problem 2. New $H^*$ and $P^*$? What is the lesson for pest control?
+4. **Logistic prey.** In problem 2 add $K=300$. Find $P^*$ and say whether the equilibrium is stable. What happens if $K=150$?
+5. **Lag.** The hare cycle has period 10 years and the cycles are small. Estimate the lag between the hare peak and the lynx peak. Which peaks first?
+6. **Gause.** Sketch the outcomes of Gause's three experiments and say which one(s) support the claim that "the system would be driven to extinction if left to itself". What does the third add?
+7. **Krebs.** Reducing predators gives 2× hares, extra food 3×, both 11×. Compute the expected effect if the two were independent and additive, and if multiplicative. What does the observed value say?
+8. **Huffaker.** Explain why the 120-orange arrangement kept prey and predator together while a few oranges did not. Which model assumption of Lotka-Volterra does it violate?
+9. **Anti-predator.** For each, say aposematic, crypsis, Batesian mimicry, Müllerian mimicry, catalepsis, or chemical defence: (a) a drone fly that looks like a honey bee; (b) two unpalatable *Heliconius* species with the same pattern; (c) a leaf-like mantis; (d) an opossum feigning death; (e) a bright yellow dragonfly. Why do toxins usually come with bright colours?
+10. **Exam-style.** "Real predator-prey systems show cycles. The Lotka-Volterra model also shows cycles, yet we do not believe the model. Explain." Outline an answer with the puzzle, one lab experiment and one reason from the natural story.
+
+> [!example]- Solutions
+> 1. (a) herbivory; (b) parasitoidism; (c) parasitism; (d) carnivory (a plant eating an animal); (e) cannibalism.
+> 2. $H^*=m/(ap)=0.4/(0.2\times0.01)=200$; $P^*=r/p=80$; $T=2\pi/\sqrt{rm}=2\pi/\sqrt{0.32}=11.1$. If $r$ doubles to 1.6: $P^*=160$ (double) and $H^*=200$ unchanged: the extra prey growth feeds more *predators*, not more prey.
+> 3. $r\to0.7$, $m\to0.5$: $H^*=0.5/0.002=250$ (up), $P^*=0.7/0.01=70$ (down). Killing both indiscriminately raises the prey (Volterra's principle): a pesticide that also kills the natural enemies can make the pest *more* abundant.
+> 4. $H^*=200$ unchanged; $P^*=(r/p)(1-H^*/K)=80\times(1-200/300)=26.7$. Stable (trace $-rH^*/K<0$, determinant $>0$); damped oscillations. With $K=150<H^*=200$ there is no positive predator equilibrium: the predators cannot be fed, they die out ($P\to0$) and the prey settle at $K=150$.
+> 5. For small cycles the predator peak lags by a quarter period: $2.5$ years; the **prey (hare) peaks first**, then the lynx. (For large cycles the lag is a bit less: 1.7 of 9.25 in Example 2.)
+> 6. (a) no refuge: predator eats all prey, both extinct; (b) refuge: predator extinct, prey persist; (c) one prey and predator added every third day: sustained oscillations. (a) and (b) show that left alone the system goes extinct. (c) shows that **immigration (rescue from outside)** keeps the cycles going, just as dispersal among patches does in Huffaker's design.
+> 7. Additive: $1+(2-1)+(3-1)=4$. Multiplicative: $2\times3=6$. Observed $11>6>4$: **synergy** (positive interaction): the factors reinforce each other, so the effect of one depends on the other, and it takes all three trophic levels to understand the cycle.
+> 8. With many patches and barriers the prey can disperse to empty oranges (they balloon; the predators crawl) before the predators arrive; local extinction is balanced by recolonisation (a metapopulation). A single orange or a few gives the predators total access. This violates Lotka-Volterra's assumption of **random encounter in a homogeneous environment** (and "no refuge").
+> 9. (a) Batesian mimicry; (b) Müllerian mimicry; (c) crypsis; (d) catalepsis (a behavioural strategy); (e) aposematic (warning) coloration. Toxins "do not save the prey" that has already been eaten; a predator must **learn to avoid** the species, so the poison is advertised by conspicuous colour (aposematism).
+> 10. *Puzzle:* (1) real data cycle, (2) the unrealistic Lotka-Volterra model cycles (neutrally), (3) realistic (density-dependent) versions damp to a stable point. *Lab:* Gause's simple microcosm went extinct, and cycles needed immigration; Huffaker's patchy orange system sustained three oscillations. *Nature:* multiple prey and predators, spatial heterogeneity and refugia, changing predator efficiency, evolution; and Krebs's field experiment shows that food and predators interact (×11). The model's cycles are neutral and structurally unstable, so they cannot be the explanation.
+
+## Provenance
+> [!provenance]- Source map for this chapter
+> | Topic | Source | Scope |
+> |---|---|---|
+> | predation, why, types | [[05_01_Sep_2026_Predation.pdf#page=1\|sl. 1–3]] | taught |
+> | Elton's fur returns; intrinsic vs extrinsic | [[05_01_Sep_2026_Predation.pdf#page=4\|sl. 4]]; Molles §14.2 | taught |
+> | Lotka-Volterra predator-prey; assumptions; logistic prey; puzzle | [[05_01_Sep_2026_Predation.pdf#page=5\|sl. 5–9]] | taught |
+> | Gause; Huffaker | [[05_01_Sep_2026_Predation.pdf#page=10\|sl. 10–14]]; Molles §14.3 | taught |
+> | what happens in nature | [[05_01_Sep_2026_Predation.pdf#page=15\|sl. 15]] | taught |
+> | predator avoidance | [[05_01_Sep_2026_Predation.pdf#page=16\|sl. 16–23]] | taught |
+> | sunspot, overpopulation, Krebs et al. (1995) | Molles §14.2 | extra/book |
+> | functional responses | Molles §14.4 | extra/book |
+> | conserved quantity, period, Volterra's principle, logistic-prey stability; type II numbers; Batesian toy | computed here (`scripts/ee05_numbers.py`, `fig_ee05_lv.py`) | extra/beyond |
+>
+> **Read and not read.** Molles Ch. 14 was OCR'd (the text layer is garbled) and read for §14.2–14.4 in the parts quoted; §14.1 only skimmed. The video was not watched (no text; not examinable). Slides 16–23 are mostly photographs: their identifications (species, labels) are taken from the slide text.
+>
+> **Clarified from the source.** The slide's Gause (b), "with refugia: led to extinction", does not say *whose* extinction; Molles says the predator starved and the prey recovered. Slide 4's species (snowshoe hare and lynx) are named in the figure legend.
+
+**References.** Lotka, A. J. (1925) *Elements of Physical Biology* · Volterra, V. (1926) *Nature* 118, 558 · Elton, C. S. (1924) *Br. J. Exp. Biol.* 2, 119 · Krebs, C. J. et al. (1995) *Science* 269, 1112 · Gause, G. F. (1934) *The Struggle for Existence* · Huffaker, C. B. (1958) *Hilgardia* 27, 343 · Holling, C. S. (1959) *Can. Entomol.* 91, 385 · Arditi, R. & Ginzburg, L. R. (1989) *J. Theor. Biol.* 139, 311 · Levins, R. (1969) *Bull. Entomol. Soc. Am.* 15, 237 · Bates, H. W. (1862); Müller, F. (1878) · Molles, M. C. (2022) *Ecology: Concepts and Applications*, 9th ed., Ch. 14.

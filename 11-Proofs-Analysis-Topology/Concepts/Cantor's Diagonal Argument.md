@@ -1,0 +1,31 @@
+---
+title: Cantor's Diagonal Argument
+aliases: ["diagonal argument", "Cantor diagonalisation"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Cantor's Diagonal Argument
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Countable-Uncountable-sets.pdf#page=4|Lecture 19]], [[Assignment-8.pdf#page=1|Assignment 8, Q3]].
+
+> [!intuition] In one picture
+> Build a number that differs from the $n$-th item of the list in its $n$-th place.
+
+> [!key] Definition
+> For $f:\mathbb N\to(0,1)$ with normalised expansions $f(n)=0.a_{n1}a_{n2}\dots$ put $b_k=3$ if $a_{kk}\ne3$, else $7$. Then $b\in(0,1)$ is normalised (no 9s) and $b\ne f(n)$ for every $n$. For $\{0,1\}^{\mathbb N}$: $b_n=1-a_{nn}$.
+
+Normalised: not ending in 9s, so each real has one expansion ($0.4999\dots=0.5000\dots$). Digits 3 and 7 avoid 0 and 9, so $b$ has a unique expansion. Nested intervals (split into thirds avoiding $x_n$) give a second proof.
+
+Used in: [[PA04 Functions and Cardinality]]. Related: [[Uncountable Set]] · [[Cantor's Theorem]] · [[Nested Interval Property]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

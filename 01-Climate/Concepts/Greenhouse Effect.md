@@ -1,0 +1,42 @@
+---
+title: Greenhouse Effect
+subject: climate
+type: concept
+scope: [taught, extra-beyond]
+by: [argha, suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/beyond, src/argha, src/suhas-pre, status/draft]
+---
+# Greenhouse Effect
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** the 33 K gap, gases, layer models (Argha L3, L5–L6; Suhas) · 🔵 **extra:** glass-greenhouse analogy
+
+> [!intuition] In one picture
+> A blanket does not make heat; it slows its escape so you must run warmer to lose the same amount. The atmosphere is a partial blanket for infrared: the surface has to warm until enough heat leaks out to match the sunlight.
+
+> [!key] Definition
+> The **greenhouse effect** is the warming of a planet's surface above its effective emission temperature because the atmosphere is transparent to sunlight but absorbs and re-emits longwave radiation: the surface radiates $\sigma T_s^4$, but only a fraction escapes, so the surface must be warmer to restore balance. For Earth $T_s-T_e=288-255=33$ K (it is *not* how a glass greenhouse works, which suppresses convection).
+
+- Gases that matter are triatomic or polar molecules with vibrational modes in the thermal infrared: H₂O, CO₂, CH₄, N₂O, O₃. N₂ and O₂ do not absorb in the infrared ([[CL07 Optical Properties of the Atmosphere]]).
+- First models: one opaque layer ($T_s=2^{1/4}T_e=303$ K, too warm), a "leaky" layer with emissivity $\varepsilon<1$, multi-layer ([[CL08 Greenhouse Models]]).
+- Convection limits the vertical temperature gradient ([[CL09 Radiative-Convective Equilibrium]]).
+- Venus (+510 K), Earth (+33 K), Mars (+4 K): [[CL03 Radiation and Planetary Energy Balance]].
+
+Connections: molecular vibration spectra need quantum mechanics and symmetry (selection rules): [[Quantum Mechanics - Course Map]], [[Group Theory - Course Map]], [[Inorganic Chemistry - Course Map]].
+
+## In numbers: the layer models
+<span class="scope-taught">taught</span> *Argha L6 sl. 60–68; Suhas Models 1–3* · <span class="scope-extra-beyond">extra · beyond</span> *flux definition, CO₂ numbers*
+
+- **As a flux:** $G=\sigma T_s^4-\mathrm{OLR}=390-239\approx151$ W m⁻² (the temperature version is 33 K).
+- **One opaque layer:** $T_s=2^{1/4}T_e=303$ K (+48 K): too warm. **Leaky layer** with absorptivity $\varepsilon$: $T_s=T_e(1-\varepsilon/2)^{-1/4}$, Earth $\varepsilon=0.78$ ([[One-Layer Greenhouse Model]]). **$N$ layers:** $T_s=(N+1)^{1/4}T_e$ ([[Multi-Layer Greenhouse Model]]).
+- **Why it works:** gases that absorb in the infrared but not in the visible ([[Greenhouse Gases and Absorption Bands]], [[Atmospheric Window]]); $\varepsilon=1-e^{-\tau}$ ([[Beer-Lambert Law and Optical Depth]]).
+- **CO₂ doubling:** forcing 3.7 W m⁻² ⇒ 1.1 K without feedback, 2.2 K with water vapour ([[Water-Vapour Feedback]]).
+Chapters: [[CL07 Optical Properties of the Atmosphere]], [[CL08 Greenhouse Models]], [[CL09 Radiative-Convective Equilibrium]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

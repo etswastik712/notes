@@ -1,0 +1,35 @@
+---
+title: Degeneracy
+aliases: ["degenerate levels", "degenerate states"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Degeneracy
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=5|L9 §5]], [[PH2113_states_operators_notes.pdf#page=4|SO §4]].
+
+> [!intuition] In one picture
+> Different states, same energy: like two ways of going round the ring at the same speed.
+
+> [!key] Definition
+> An energy level is **degenerate** if more than one linearly independent state has that energy. Ring: $E_n=E_{-n}$ ($\pm p_n$).
+
+## Consequences
+Any superposition of states with the **same** $E$ is again a stationary state of energy $E$: $\sqrt{2/L}\cos k_nx$ has definite $E_n$ but not definite $p$. Degenerate eigenfunctions can be chosen with definite parity ($\cos$, $\sin$ instead of $e^{\pm ikx}$).
+
+> [!pitfall] 1-D bound states in a box are not degenerate
+> Box and oscillator levels are non-degenerate in 1-D; the ring and the free particle are degenerate because motion in either direction is allowed. The ground state of a 1-D well is unique if it is nodeless ([[Ground State Uniqueness]]).
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]]. Related: [[Particle on a Ring]] · [[Stationary State]] · [[Parity Operator]] · [[Eigenstate and Eigenvalue]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,35 @@
+---
+title: Conditional Independence
+aliases: ["conditionally independent"]
+subject: probability
+type: concept
+scope: [extra-book]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, extra/book, src/lecture-notes, status/draft]
+---
+# Conditional Independence
+
+<span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟡 **extra · book:** Blitzstein and Hwang, Ch. 2 (the 21 Aug sheet's marble problem is an instance).
+
+> [!intuition] In one picture
+> Two events can be unrelated once you know a third thing, even if they are related before.
+
+> [!key] Definition
+> $E,F$ are **conditionally independent given $G$** if $P[E\cap F\mid G]=P[E\mid G]P[F\mid G]$.
+
+## Neither implies the other
+Two tosses of a coin with unknown bias are conditionally independent given the bias, but not independent: the first toss is evidence about the bias and hence about the second. Conversely, independent events can become dependent after conditioning (**explaining away**): two independent fair coins become dependent given that at least one landed heads.
+
+> [!example] Marble (21 Aug sheet, problem 10)
+> One marble, blue or green with equal probability; a green one is added and a marble drawn at random is green. $P[\text{the other is green}]=\tfrac23$, not $\tfrac12$: the observation favours the bag with two greens.
+
+Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: [[Independence of Events]] · [[Conditional Probability]] · [[Bayes' Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

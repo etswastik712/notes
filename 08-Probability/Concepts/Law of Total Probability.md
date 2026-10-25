@@ -1,0 +1,37 @@
+---
+title: Law of Total Probability
+aliases: ["total probability", "partition formula"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Law of Total Probability
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=13|class notes 13 Aug]], [[ilovepdf_merged-1.pdf#page=15|19 Aug]].
+
+> [!intuition] In one picture
+> Split the world into non-overlapping cases and add up the probability of the event within each case, weighted by how likely the case is.
+
+> [!key] Definition
+> If $E_1,\dots,E_n$ partition $\Omega$ (disjoint, union $\Omega$): $P[F]=\sum_jP[F\mid E_j]\,P[E_j]$. Special case: $P[E]=P[E\mid F]P[F]+P[E\mid F^c](1-P[F])$.
+
+## Why
+$F=\bigcup_j(F\cap E_j)$ is a disjoint union, so $P[F]=\sum_jP[F\cap E_j]$ and each term is $P[F\mid E_j]P[E_j]$.
+
+> [!example] Defective items
+> Machines make 50 %, 30 %, 20 % of the output with defect rates 2 %, 3 %, 5 %: $P[\text{defective}]=0.01+0.009+0.01=0.029$. Inverting gives the machine posteriors $0.345,0.310,0.345$ ([[Bayes' Theorem]]).
+
+It is the "first-step analysis" engine: condition on the first trial to get a recursion ([[Gambler's Ruin]], the geometric mean).
+
+Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: [[Conditional Probability]] · [[Bayes' Theorem]] · [[Gambler's Ruin]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

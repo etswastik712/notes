@@ -1,0 +1,37 @@
+---
+title: Negative Binomial Distribution
+aliases: ["negative binomial", "NegBin"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Negative Binomial Distribution
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=25|class notes 2 Sep]], [[ilovepdf_merged-1.pdf#page=31|p.31 'reason for the name']].
+
+> [!intuition] In one picture
+> The wait for the $k$-th success: a sum of $k$ independent geometric waits.
+
+> [!key] Definition
+> (Class convention, trials) $P[Y=n]=\binom{n-1}{k-1}p^k(1-p)^{n-k}$, $n\ge k$. $E[Y]=\frac kp$, $\mathrm{Var}[Y]=\frac{k(1-p)}{p^2}$.
+
+## The name
+With $f=n-k$ failures, $\binom{f+k-1}f=(-1)^f\binom{-k}f$ is the coefficient of $q^f$ in $(1-q)^{-k}$ (generalised binomial theorem).
+
+> [!verify] Convention
+> Class: trials up to the $k$-th success. Software (`scipy.stats.nbinom`, R `dnbinom`): failures before the $k$-th success, mean $k(1-p)/p$. For $k=3$, $p=0.4$: trials mean $7.5$, failures mean $4.5$.
+
+Over-dispersed counts (variance above the mean) are often modelled by a negative binomial instead of a [[Poisson Distribution]].
+
+Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Geometric Distribution]] · [[Binomial Distribution]] · [[Poisson Distribution]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

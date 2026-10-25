@@ -1,0 +1,33 @@
+---
+title: Geopotential
+subject: climate
+type: concept
+scope: [taught]
+by: [suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, src/suhas-pre, status/draft]
+---
+# Geopotential
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** $\mathrm d\Phi=g\,\mathrm dz=-\alpha\,\mathrm dp$, geopotential height $Z=\Phi/g_0$, table of $z$ vs $Z$ (Suhas pre-midsem)
+
+> [!intuition] In one picture
+> An honest ruler for energy: equal steps in $Z$ cost equal energy, even though gravity weakens slightly with height. A weather chart's 'height' is geopotential height.
+
+> [!key] Definition
+> The **geopotential** $\Phi(z)=\int_0^zg\,\mathrm dz'$ is the work (J kg⁻¹) to lift 1 kg from sea level to height $z$. The **geopotential height** is $Z=\Phi/g_0$ with $g_0=9.80665$ m s⁻² (unit: gpm).
+
+- By hydrostatic balance $\mathrm d\Phi=-\alpha\,\mathrm dp=-R_dT_v\,\mathrm d\ln p$, so $\Phi$ is computable from radiosonde $p$ and $T$.
+- With $g=g_0[a/(a+z)]^2$: $Z=az/(a+z)$. $z=100$ km ⇒ $Z=98.45$ km; $z=500$ km ⇒ $463.6$ km; below 100 km the difference from $z$ is under 2 %.
+- The 500 hPa surface lies at $Z\approx5.5$ km, i.e. $\Phi\approx54$ kJ kg⁻¹.
+- On a pressure surface the horizontal pressure force is $-\nabla_p\Phi$ (no density): the basis of upper-air maps and geostrophic balance ([[CL13 Horizontal Motion - Geostrophic Balance and Friction]]).
+
+Chapter: [[CL06 Hydrostatic Balance and Vertical Structure]]. Related: [[Hydrostatic Balance]], [[Hypsometric Equation]], [[Virtual Temperature]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,40 @@
+---
+title: Gaussian Wave Packet
+aliases: ["Gaussian packet", "minimum-uncertainty packet"]
+subject: qm
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, extra/book, src/lecture-notes, status/draft]
+---
+# Gaussian Wave Packet
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=3|WU §9]], [[PH2113_Lecture6-7.pdf#page=2|L7 §3]]. · 🟡 **extra · book:** spreading in time (AI monograph §4.5; re-checked).
+
+> [!intuition] In one picture
+> The tightest bundle of waves quantum mechanics allows: nothing wastes uncertainty.
+
+> [!key] Definition
+> $\psi(x)=(2\pi\sigma^2)^{-1/4}e^{-x^2/4\sigma^2}$: $\Delta x=\sigma$, $\tilde\psi(k)=(2\sigma^2/\pi)^{1/4}e^{-\sigma^2k^2}$, $\Delta k=1/2\sigma$, $\Delta x\,\Delta p=\hbar/2$: the **minimum** allowed by the uncertainty principle. Adding $e^{ik_0x}$ gives mean momentum $\hbar k_0$.
+
+## Properties and numbers
+- The Fourier transform of a Gaussian is a Gaussian ([[Gaussian Integral]]); $\sigma$ cancels in the product.
+- It is the **ground state of the harmonic oscillator** with $\sigma^2=\hbar/2m\omega$ ([[Harmonic Oscillator]]).
+- A tennis ball / electron: $\Delta p=\hbar/2\sigma$; an electron with $\sigma=0.1$ nm has $\Delta p=5.3\times10^{-25}$ kg m/s, $\Delta p^2/2m=0.95$ eV.
+
+> [!extra-book]- 🟡 Extra (book): free spreading
+> Under the free-particle equation $\sigma(t)=\sigma_0\sqrt{1+(\hbar t/2m\sigma_0^2)^2}$ (verified numerically). Spreading time $2m\sigma_0^2/\hbar$: $1.7\times10^{-16}$ s for an electron with $\sigma_0=1$ Å; $10^{27}$ s for a 57 g ball with $\sigma_0=1$ mm. The centre moves at $v_g=\hbar k_0/m$.
+
+> [!pitfall] Minimum only for the Gaussian
+> The box states and the oscillator excited states have $\Delta x\,\Delta p>\hbar/2$ ([[QM04 The Particle in a Box]]).
+
+Used in: [[QM01 From Waves to Probabilities]], [[QM05 The Harmonic Oscillator]]. Related: [[Heisenberg Uncertainty Principle]] · [[Fourier Transform and Wave Packets]] · [[Harmonic Oscillator]] · [[Free Particle]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

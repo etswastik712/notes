@@ -1,0 +1,38 @@
+---
+title: Time-Independent Schrodinger Equation
+aliases: ["TISE", "eigenvalue equation for energy"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Time-Independent Schrodinger Equation
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=8|L8 §11]], [[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=1|L9 §1]].
+
+> [!intuition] In one picture
+> Ask for solutions whose time dependence is a pure phase; what is left is an eigenvalue problem for the shape.
+
+> [!key] Definition
+> For $V=V(x)$, $\Psi=\psi(x)T(t)$ separates: $T=e^{-iEt/\hbar}$ and $-\dfrac{\hbar^2}{2m}\psi''+V\psi=E\psi$, i.e. $\hat H\psi=E\psi$. Input $V$; output allowed $E$ and $\psi(x)$.
+
+## Method
+Divide the TDSE by $\psi T$: left side depends only on $t$, right only on $x$, so both equal a constant $E$. Solve the ODE, then impose the **physical conditions** (single-valued, normalisable, matching at jumps, wall conditions).
+
+> [!example] Three solutions
+> $V=0$ on a line: $\psi=Ae^{ikx}+Be^{-ikx}$, $E=\hbar^2k^2/2m$ (continuous). Ring: $e^{in\theta}$, $E=\hbar^2n^2/2mR^2$. Box: $\sqrt{2/a}\sin(n\pi x/a)$, $E=n^2\pi^2\hbar^2/2ma^2$.
+
+> [!pitfall] Only for time-independent $V$
+> If $V$ depends on $t$ the separation fails and the state is not simply $\psi(x)e^{-iEt/\hbar}$. A general state is a superposition $\sum c_n\psi_ne^{-iE_nt/\hbar}$ ([[Time Evolution of a Superposition]]).
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Schrodinger Equation]] · [[Stationary State]] · [[Boundary Conditions and Quantisation]] · [[Eigenstate and Eigenvalue]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

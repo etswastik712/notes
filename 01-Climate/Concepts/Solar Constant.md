@@ -1,0 +1,36 @@
+---
+title: Solar Constant
+subject: climate
+type: concept
+scope: [taught]
+by: [argha, suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, src/argha, src/suhas-pre, status/draft]
+---
+# Solar Constant
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** $S=\sigma T_\odot^4(R_\odot/d)^2$, 1361 W m⁻² (Argha L3) · 🔵 **extra:** variability, 1361 vs 1367
+
+> [!intuition] In one picture
+> Think of the Sun as a lamp: standing twice as far away you get a quarter of the light (the same light spread over four times the area, $d^{-2}$). "Constant" is a misnomer only at the 0.1 % level.
+
+> [!key] Definition
+> The **total solar irradiance** (the "solar constant") $S$ is the solar power per unit area at the top of the atmosphere, on a surface perpendicular to the beam, at Earth's mean distance: $S\approx1361\ \mathrm{W\,m^{-2}}$.
+
+$$S=\frac{L_\odot}{4\pi d^2}=\sigma T_\odot^{4}\Big(\frac{R_\odot}{d}\Big)^{2}.$$
+With $T_\odot=5772$ K, $R_\odot=6.957\times10^{8}$ m, $d=1.496\times10^{11}$ m: $S=1361.2$ W m⁻².
+
+- Globally averaged over the sphere: $S/4=340$ W m⁻² ([[CL03 Radiation and Planetary Energy Balance]]).
+- Not constant: ±0.1 % (~1 W m⁻²) over the 11-year solar cycle, and ±3.3 % over the year because Earth's orbit is slightly elliptical (perihelion early January).
+- **1361 vs 1367 W m⁻².** The older value 1367 is from pre-2008 radiometers affected by scattered light; the SORCE/TIM instrument measured $1360.8\pm0.5$ W m⁻² (Kopp & Lean 2011). This vault uses 1361.
+- Scaling with distance: $S\propto d^{-2}$: Venus 2601, Mars 586, Jupiter 50 W m⁻².
+
+See also [[Blackbody Radiation]], [[Stefan-Boltzmann Law]], [[Faint Young Sun Paradox]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,38 @@
+---
+title: Born Rule
+aliases: ["Born interpretation", "probability interpretation"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Born Rule
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=1|WU §2]]; generalised to any observable in [[PH2113_states_operators_notes.pdf#page=7|SO §6]].
+
+> [!intuition] In one picture
+> The wave is not the particle; it is the **amplitude**. Square its size to get the chance of finding the particle there.
+
+> [!key] Definition
+> The probability of finding the particle between $x$ and $x+\mathrm dx$ is $P(x,t)\,\mathrm dx=|\psi(x,t)|^2\mathrm dx$, with $\int|\psi|^2\mathrm dx=1$. For a general observable $A$ with eigenstates $\phi_a$: $P(A=a)=|c_a|^2$, $c_a=\langle\phi_a|\psi\rangle$.
+
+## Use
+**Amplitudes add, probabilities do not.** With two paths, $|\psi_A+\psi_B|^2=|\psi_A|^2+|\psi_B|^2+2\,\mathrm{Re}(\psi_A^*\psi_B)$; the last term is interference.
+
+> [!example] Normalise, then ask a probability
+> $\psi=Ae^{-|x|/a}$: $\int A^2e^{-2|x|/a}\mathrm dx=A^2a=1\Rightarrow A=a^{-1/2}$. Then $P(|x|<a/2)=\int_{-a/2}^{a/2}\tfrac1ae^{-2|x|/a}\mathrm dx=1-e^{-1}=0.632$.
+
+> [!pitfall] A density, not a probability
+> $|\psi|^2$ has units of 1/length (in 1-D); only $|\psi|^2\mathrm dx$ is a probability. $|\psi|^2$ can exceed 1 (a narrow packet) without any contradiction. The overall phase of $\psi$ drops out; the relative phase between two terms does not.
+
+Used in: [[QM01 From Waves to Probabilities]], [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]]. Related: [[Wavefunction]] · [[Normalisation of a Wavefunction]] · [[Measurement Postulate]] · [[Wave-Particle Duality]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

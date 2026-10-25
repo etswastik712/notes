@@ -1,0 +1,32 @@
+---
+title: Exchangeability
+aliases: ["exchangeable sequence"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Exchangeability
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=14|class notes 13 Aug §2]].
+
+> [!intuition] In one picture
+> The probability of a sequence of draws does not depend on the order in which the colours appear.
+
+> [!key] Definition
+> Draws without replacement from an urn of $b$ black and $w$ white balls: for any colour sequence with $\ell$ black among $k$ draws, $P=\dfrac{b(b-1)\cdots(b-\ell+1)\,w(w-1)\cdots(w-k+\ell+1)}{(b+w)(b+w-1)\cdots(b+w-k+1)}$ regardless of the order.
+
+## Consequences
+Each draw is black with the same marginal probability $\frac b{b+w}$ even though the draws are dependent; $P[B_1W_2]=P[W_1B_2]$ ($\tfrac{15}{56}$ for $b=5,w=3$); and, given $k$ blacks in $n$ draws, $P[\text{first is black}\mid k]=k/n$ (21 Aug sheet, problem 1). This is why the mean of the [[Hypergeometric Distribution]] is $\frac{nw}{w+b}$ by [[Linearity of Expectation]].
+
+Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: [[Multiplication Rule]] · [[Hypergeometric Distribution]] · [[Linearity of Expectation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

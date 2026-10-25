@@ -1,0 +1,35 @@
+---
+title: Probability Density Function
+aliases: ["pdf", "density"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Probability Density Function
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=29|class notes 10 Sep]], [[week1_mt2113.pdf#page=3|week 1 p.3]].
+
+> [!intuition] In one picture
+> Probability per unit length: mass equals density times length for a short interval.
+
+> [!key] Definition
+> $f\ge0$, $\int_{-\infty}^\infty f=1$, $P[a<X<b]=\int_a^bf$, $F(x)=\int_{-\infty}^xf$, $F'=f$ where $f$ is continuous. For small $\varepsilon$: $P[x-\varepsilon<X<x+\varepsilon]\approx2\varepsilon f(x)$.
+
+## Normalising
+$f(x)=\frac34(1-x^2)$ on $(-1,1)$: $\int(1-x^2)=\frac43$, so $c=\frac34$; cdf $F(x)=\frac12+\frac34x-\frac14x^3$.
+
+> [!pitfall] A density can exceed 1
+> $U(0,\tfrac12)$ has $f=2$. Only $\int f=1$ is required.
+
+Used in: [[PR05 Continuous Random Variables]]. Related: [[Cumulative Distribution Function]] · [[Probability Mass Function]] · [[Continuous Random Variable]] · [[Law of the Unconscious Statistician]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,38 @@
+---
+title: Probability Current
+aliases: ["probability flux", "continuity equation"]
+subject: qm
+type: concept
+scope: [taught, extra-beyond]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, extra/beyond, src/lecture-notes, status/draft]
+---
+# Probability Current
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Lecture6-7.pdf#page=5|L7 §13]] (statement). · 🔵 **extra · beyond:** the full derivation and complex-potential remark.
+
+> [!intuition] In one picture
+> Probability behaves like a conserved fluid: if it leaves one region it flows into another.
+
+> [!key] Definition
+> With $P=|\psi|^2$: $\partial_tP+\partial_xj=0$ where $j=\dfrac{\hbar}{2mi}\big(\psi^*\psi'-\psi\psi^{*\prime}\big)$. Hence $\frac{\mathrm d}{\mathrm dt}\int|\psi|^2\mathrm dx=0$ for a real $V$.
+
+## Derivation and examples
+$\partial_tP=\psi^*\partial_t\psi+\psi\,\partial_t\psi^*$; the $V$ terms cancel, leaving $\frac{i\hbar}{2m}(\psi^*\psi''-\psi\psi^{*\prime\prime})=-\partial_xj$.
+
+> [!example] Currents
+> Plane wave $Ae^{ikx}$: $j=\hbar k|A|^2/m=v|A|^2$. Ring state: $j=v_n/L$. A real $\psi$ (cosine, box state): $j=0$. $Ae^{ikx}+Be^{-ikx}$: $j=\frac{\hbar k}m(|A|^2-|B|^2)$.
+
+> [!pitfall] Complex $V$ breaks it
+> For $V=V_R+i\Gamma$: $\partial_tP+\partial_xj=(2\Gamma/\hbar)P$; probability grows or decays. Used as a model of absorption, it is not a closed-system potential.
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]]. Related: [[Schrodinger Equation]] · [[Plane Wave]] · [[Born Rule]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

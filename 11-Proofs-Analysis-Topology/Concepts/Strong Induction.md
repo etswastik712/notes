@@ -1,0 +1,31 @@
+---
+title: Strong Induction
+aliases: ["complete induction", "course-of-values induction"]
+subject: analysis
+type: concept
+scope: [extra-book]
+by: [ai-notes]
+status: draft
+tags: [subject/analysis, type/concept, extra/book, src/ai-notes, status/draft]
+---
+# Strong Induction
+
+<span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟡 **extra · book:** [[proofs-prems-topo.pdf#page=60|AI notes ch. 12.4]].
+
+> [!intuition] In one picture
+> Assume the statement for **all** smaller numbers, not just the previous one.
+
+> [!key] Definition
+> If $[P(1)\wedge\dots\wedge P(k)]\Rightarrow P(k+1)$ for all $k$ (with $P(1)$ proved), then $P(n)$ for all $n$.
+
+Every $n\ge2$ is a product of primes (checked for $n\le10^4$): $n=ab$ with $1<a,b<n$ and each factors. $F_n<2^n$ for Fibonacci numbers needs the two previous cases.
+
+Used in: [[PA05 Induction and the Number Systems]]. Related: [[Principle of Mathematical Induction]] · [[Well-Ordering Principle]] · [[Recursion Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

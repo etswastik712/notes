@@ -1,0 +1,66 @@
+\documentclass[9pt]{article}
+\input{preamble-brain.tex}
+\geometry{margin=14mm}
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\title{Proofs, Analysis and Topology\\\large formula sheet, key facts and traps}
+\author{second brain $\cdot$ chapters PA01--PA07}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\section*{PA01 Logic}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+connectives & $\vee$ inclusive; $P\Rightarrow Q$ false only for (T,F); $\Leftrightarrow$ same value; $=$ objects, $\sim$ statements & $2^n$ rows; $2^{2^n}$ truth functions\\
+equivalences & $P\Rightarrow Q\sim\neg P\vee Q\sim\neg Q\Rightarrow\neg P$; $\neg(P\Rightarrow Q)\sim P\wedge\neg Q$; De Morgan; distributive; exportation & converse $\not\sim$ original\\
+tautology & true by form: $P\vee\neg P$, $(P\wedge Q)\Rightarrow P$; contradiction $P\wedge\neg P$; $P\Rightarrow(P\wedge Q)$ contingency & true $\not\Rightarrow$ tautology ($0\ne1$, $5<7$)\\
+words & only if, sufficient (for $P\Rightarrow Q$); necessary (the other way) & $6\mid n\Rightarrow3\mid n$\\
+quantifiers & $\neg\forall\sim\exists\neg$; $\neg\exists\sim\forall\neg$; $\forall\exists\ne\exists\forall$; one counterexample kills $\forall$ & $2^{11}-1=23\cdot89$; $n=40$: $41^2$\\
+\bottomrule
+\end{tabular}
+
+\section*{PA02--PA03 Sets, relations, orders}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+sets & $\varnothing\subseteq A$ (vacuous); $|\mathcal P(A)|=2^n$; $(A\cap B)^c=A^c\cup B^c$; element chasing & $\mathcal P(\mathcal P(\{a,b\}))$: $16$\\
+families & $\bigcup(-\tfrac1n,\tfrac1n)=(-1,1)$, $\bigcap=\{0\}$; $[-n,1-\tfrac1n)$: $(-\infty,1)$, $[-1,0)$; $H_n$: $\mathbb R^2$, $H_1$ & empty $A_k$ kills $\bigcap,\prod$\\
+ordered pair & $(A,B)=\{\{A\},\{A,B\}\}$; test $F(A,B)=F(C,D)\Rightarrow A=C,B=D$; $\{A,B\}$, $\{A,\{B\}\}$ fail & $\{A,\{A,B\}\}$ needs Regularity\\
+ZFC & Ext., Sep., Pair., Union, Power, Inf., Repl., Reg., Choice; Russell $\{x:x\notin x\}$ & CH independent\\
+relations & reflexive, symmetric, antisymmetric, transitive; sym.+trans.\ $\not\Rightarrow$ refl. & $n{=}3$: $512,64,64,5,19,29$\\
+equivalence & classes equal or disjoint; $\leftrightarrow$ partitions; mod $n$: $n$ classes, $+,\cdot$ well defined & Bell $1,2,5,15,52$; $3^{16}\equiv1\ (4)$\\
+orders & minimal $\ne$ minimum; bounds may lie outside $S$; glb, lub; divisibility: gcd, lcm & $S=\{2,3,4,6\}$: glb $1$, lub $12$\\
+Zorn & non-empty poset, every chain has upper bound $\Rightarrow$ maximal element; every vector space has a basis & union of a chain\\
+\bottomrule
+\end{tabular}
+
+\section*{PA04 Functions and cardinality}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+functions & each input has exactly one output; inj.\ $\le1$ preimage, surj.\ $\ge1$, bij.\ exactly 1; properties of $(f,A,B)$ & $\mathbb N\to\mathbb Z$: $0,1,-1,2,-2,\dots$\\
+cardinality & $A\sim B$ iff bijection (equivalence); finite never $\sim$ proper subset; $\mathbb N\sim$ odd numbers & $|\mathbb N|=\aleph_0$\\
+countable & $\mathbb Z,\mathbb Q,\mathbb N\times\mathbb N$ ($\tfrac{(m+n-2)(m+n-1)}2+m$ or $2^m3^n$), subsets, finite products, countable unions & algebraic numbers\\
+uncountable & $(0,1)$ by diagonal (digits $3/7$, normalised); $(a,b)\sim(0,1)\sim\mathbb R$; $\{0,1\}^{\mathbb N}$; $\mathbb R\setminus\mathbb Q$ & $0.4999\ldots=0.5$\\
+Cantor & $B=\{a:a\notin f(a)\}$ not in the image: $|A|<|\mathcal P(A)|$; $\mathfrak c=2^{\aleph_0}$; CH independent (G\"odel 1940, Cohen 1963) & Lecture 20: $\mathfrak c=\aleph_1$ is CH\\
+\bottomrule
+\end{tabular}
+
+\section*{PA05--PA07 Induction, reals, topology}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+induction & define $P(n)$; base; step $P(k)\Rightarrow P(k+1)$; conclude; WOP $\Leftrightarrow$ PMI $\Leftrightarrow$ strong induction & $2^n>n^2$ for $n\ge5$ only\\
+traps & step valid but no base ($n=n+1$); induction fails on $\mathbb Q$; horses: step $1\to2$ fails & $6\mid n^3+5n$\\
+number systems & $0=\varnothing$, $n+1=n\cup\{n\}$; $\mathbb Z$: $a+d=c+b$; $\mathbb Q$: $ad=bc$; $\mathbb R$: Dedekind cuts & 11 and 23 classes (examples)\\
+completeness & non-empty bounded above $\Rightarrow$ sup; $\mathbb Q$ fails; Archimedean; density; $\sqrt a$ exists & $u'=\tfrac{2u+2}{u+2}$\\
+sequences & $x_n\to L$: $\forall\varepsilon\,\exists N\,\forall n\ge N$; MCT $\Rightarrow$ nested closed intervals $\Rightarrow$ B--W $\Rightarrow$ Cauchy converges & $H_{2n}-H_n\ge\tfrac12$\\
+metric, topology & metric axioms; open = unions, finite $\cap$; continuity: preimages of open sets open; $\|x-y\|^2$ not a metric & topologies on $n$ points: $1,4,29,355$\\
+compact, connected & compact: finite subcover; in $\mathbb R$ closed and bounded; connected: intervals; EVT, IVT & $(0,1)$ not compact\\
+\bottomrule
+\end{tabular}
+
+\vspace{3pt}
+\begin{verifybox}{scope}
+PA01--PA05 follow the instructor's assignments 1--8, lectures 17--20 and three notes; PA06--PA07 (sequences, metric spaces, topology) come from AI notes and textbooks only. Confirm with the instructor how far the course goes; lectures 1--16 are not in the folder.
+\end{verifybox}
+\end{document}

@@ -1,0 +1,33 @@
+---
+title: Planck Sensitivity
+subject: climate
+type: concept
+scope: [taught]
+by: [argha]
+status: draft
+tags: [subject/climate, type/concept, taught, src/argha, status/draft]
+---
+# Planck Sensitivity
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** $\Lambda_P=1/4\sigma T^3$ (Argha L4) · 🔵 **extra:** IPCC feedback-parameter language
+
+> [!intuition] In one picture
+> When you push on a stiff spring it moves a little; the stiffness is $4\sigma T^3$, the extra radiation each kelvin buys. $\Lambda_P$ is the *compliance*, the inverse: how many kelvin per extra W m⁻².
+
+> [!key] Definition
+> The **Planck sensitivity** $\Lambda_P$ is the equilibrium warming per unit radiative forcing when nothing but blackbody emission responds:
+> $$\Lambda_P=\frac{\partial T}{\partial F}=\frac{1}{4\sigma T^{3}}\approx0.27\ \mathrm{K\,(W\,m^{-2})^{-1}}\quad(T=255\ \mathrm K).$$
+
+- Equivalent: **3.76 W m⁻² per kelvin** of extra emission, $4\sigma T^3$. Argha writes 0.28 (slide 43); Wallace & Hobbs Ex. 10.3 gets 0.266. See [[CL04 Feedback and Multiple Steady States]].
+- It falls as $T^{-3}$: 0.27 at 255 K, 0.18 at 288 K.
+- Also called the "Planck feedback" because it is the (stabilising) response that sets the new steady state; in IPCC language it is the Planck feedback parameter $\lambda_P\approx-3.2$ W m⁻² K⁻¹ in comprehensive models, somewhat smaller in magnitude than 3.76 because the atmosphere does not warm uniformly with height `[verify]` against IPCC AR6 Ch. 7.
+
+Related: [[Climate Feedback Factor]], [[Linearisation and Sensitivity]], [[Zero-Dimensional Energy Balance Model]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

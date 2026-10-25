@@ -1,0 +1,77 @@
+\documentclass[9pt]{article}
+\input{preamble-brain.tex}
+\geometry{margin=14mm}
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\title{PH2113 Introductory Quantum Physics\\\large formula sheet, key numbers and traps}
+\author{second brain $\cdot$ chapters QM01--QM05}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\section*{QM01 Waves to probabilities}
+\begin{tabular}{@{}p{2.8cm}p{8.3cm}p{6.3cm}@{}}
+\toprule
+Born rule & $P\,\dd x=|\psi|^2\dd x$, $\int|\psi|^2\dd x=1$; two paths: $|\psi_A+\psi_B|^2=|\psi_A|^2+|\psi_B|^2+2\mathrm{Re}(\psi_A^*\psi_B)$ & amplitudes add, not probabilities\\
+plane wave & $Ae^{i(kx-\omega t)}$, $p=\hbar k$, $E=\hbar\omega$, $|\psi|^2=|A|^2$ & $\Delta p=0$, $\Delta x=\infty$; not normalisable\\
+Fourier pair & $\tilde\psi(k)=\tfrac1{\sqrt{2\pi}}\!\int\!\psi e^{-ikx}\dd x$; $\tfrac1{2\pi}\!\int_{-K}^{K}\!e^{ikx}\dd k=\tfrac{\sin Kx}{\pi x}$ & $\Delta x\Delta k\approx\pi$ (band); $\ge\tfrac12$ always\\
+Gaussian & $\psi=(2\pi\sigma^2)^{-1/4}e^{-x^2/4\sigma^2}$, $\Delta x=\sigma$, $\tilde\psi\propto e^{-\sigma^2k^2}$, $\Delta k=\tfrac1{2\sigma}$ & $\Delta x\Delta p=\hbar/2$ (minimum)\\
+uncertainty & $\Delta x\,\Delta p\ge\hbar/2$ (outcome spreads, not instrument error) & ball $9\times10^{-31}$ m/s; electron at $a_0$: $10^6$ m/s\\
+hydrogen & $E(r)=\tfrac{\hbar^2}{2mr^2}-\tfrac{e^2}{4\pi\varepsilon_0r}$; $a_0=\tfrac{4\pi\varepsilon_0\hbar^2}{me^2}$ & $0.529$ \AA, $-13.6$ eV; $\hbar/2r$: $a_0/4$, $-54.4$ eV\\
+Compton scale & $\ell=\hbar^ac^bm^d\Rightarrow\hbar/mc$; $\lambda_C=h/mc$ & $3.86\times10^{-13}$ m; $2.426$ pm\\
+Compton shift$^{\text{b}}$ & $\lambda'-\lambda=\lambda_C(1-\cos\theta)$ & $2.426$ pm at $90^\circ$\\
+de Broglie & $\lambda=h/p$, $v_{ph}=v/2$, $v_g=v$ & electron 100 V: $0.1226$ nm\\
+\bottomrule
+\end{tabular}
+
+\section*{QM02 Schr\"odinger equation}
+\begin{tabular}{@{}p{2.8cm}p{8.3cm}p{6.3cm}@{}}
+\toprule
+operators & $\hat p=-i\hbar\partial_x$, $\hat E=i\hbar\partial_t$ (from a plane wave) & \\
+TDSE & $i\hbar\partial_t\psi=-\tfrac{\hbar^2}{2m}\partial_x^2\psi+V\psi$ (postulate) & free: $\omega=\hbar k^2/2m$\\
+continuity & $\partial_tP+\partial_xj=0$, $j=\tfrac{\hbar}{2mi}(\psi^*\psi'-\psi\psi^{*\prime})$ & plane wave $j=v|\psi|^2$; real $\psi$: $j=0$\\
+TISE & $-\tfrac{\hbar^2}{2m}\psi''+V\psi=E\psi$; $\Psi=\psi e^{-iEt/\hbar}$, $|\Psi|^2$ time-independent & stationary\\
+free & $e^{\pm ikx}$, $E=\hbar^2k^2/2m$ continuous & any $k$\\
+ring & $\psi(\theta+2\pi)=\psi(\theta)$: $\psi_n=e^{in\theta}$, $E_n=\tfrac{\hbar^2n^2}{2mR^2}$, $E_n=E_{-n}$ & benzene $L=0.83$ nm: $E_1=2.18$ eV; 1 cm: $10^{-14}$ eV\\
+two energies & $|\Psi|^2$ oscillates at $(E_2-E_1)/\hbar$; overall phase irrelevant & \\
+matching & finite jump in $V$: $\psi,\psi'$ continuous; $\delta$: $\Delta\psi'=\tfrac{2m\lambda}{\hbar^2}\psi$ & $V\to V+V_0$: $\psi\to e^{-iV_0t/\hbar}\psi$\\
+\bottomrule
+\end{tabular}
+
+\section*{QM03 Operators and measurement}
+\begin{tabular}{@{}p{2.8cm}p{8.3cm}p{6.3cm}@{}}
+\toprule
+eigen & $\hat A\phi=a\phi$: definite $a$, $\Delta A=0$ & ask: eigenstate of \emph{which} operator?\\
+measurement & $\Psi=\sum c_a\phi_a$: result $a$ with $P=|c_a|^2$; $c_a=\langle\phi_a|\Psi\rangle$ & collapse to $\phi_a$\\
+mean, spread & $\langle A\rangle=\int\Psi^*\hat A\Psi$, $\Delta A=\sqrt{\langle A^2\rangle-\langle A\rangle^2}$ & mean need not be a result\\
+ring mixture & $a\psi_n+b\psi_{-n}$: $\langle p\rangle=(|a|^2-|b|^2)p_n$, $\Delta p=2|a||b||p_n|$ & cos: $E_n$ sharp, $p=\pm p_n$\\
+commutator & $[\hat x,\hat p]=i\hbar$; $[\hat H,\hat p]=0$ free; $[\hat x,\hat H]=i\hbar\hat p/m$ & compatible iff $[\hat A,\hat B]=0$\\
+general bound$^{\text{b}}$ & $\Delta A\Delta B\ge\tfrac12|\langle[\hat A,\hat B]\rangle|$ & $|{+z}\rangle$: $\Delta X\Delta Y=1$ (saturated)\\
+two-level & $X,Y,Z$; $[X,Y]=2iZ$ cyclic; $|{+x}\rangle=\tfrac{1-i}2|{+y}\rangle+\tfrac{1+i}2|{-y}\rangle$ & $(\tfrac{\sqrt3}2,\tfrac12)$: $Z$ $0.75/0.25$, $X$ $0.933/0.067$\\
+evolution & $\Psi=\sum c_ne^{-iE_nt/\hbar}\psi_n$; $|c_n|^2$, $\langle E\rangle$, $\Delta E$ constant & no $\hat T$ with $[\hat T,\hat H]=i\hbar$ (spectrum bounded below)\\
+\bottomrule
+\end{tabular}
+
+\section*{QM04 Box and QM05 oscillator}
+\begin{tabular}{@{}p{2.8cm}p{8.3cm}p{6.3cm}@{}}
+\toprule
+box & $\psi_n=\sqrt{2/a}\sin\tfrac{n\pi x}a$, $E_n=\tfrac{n^2\pi^2\hbar^2}{2ma^2}=n^2E_1$, $n\ge1$ & $n-1$ nodes; parity $(-1)^{n+1}$\\
+box moments & $\langle x\rangle=\tfrac a2$, $\Delta x=a\sqrt{\tfrac1{12}-\tfrac1{2n^2\pi^2}}$, $\Delta p=\tfrac{n\pi\hbar}a$ & $\Delta x\Delta p=0.568\hbar$ ($n=1$)\\
+electron, 1 nm & $E_1=0.376$ eV, $E_2=1.50$, $E_3=3.38$ & $1\to2$: 1.10 \textmu m\\
+Tutorial I & $\tfrac1{\sqrt3}(\psi_1+\psi_2+\psi_3)$: $E_1,4E_1,9E_1$ each $\tfrac13$, $\langle E\rangle=\tfrac{14}3E_1$ & $\tfrac1{\sqrt2}(\psi_1+\psi_2)$: $\langle x\rangle=\tfrac a2-\tfrac{16a}{9\pi^2}\cos\tfrac{3E_1t}{\hbar}$\\
+theorems & symmetric $V\Rightarrow$ even/odd; $E>V_{\min}$ & finite well lowers $E_n$\\
+ladder & $\hat a_\pm=\tfrac{m\omega\hat x\mp i\hat p}{\sqrt{2\hbar m\omega}}$, $[\hat a_-,\hat a_+]=1$, $\hat H=\hbar\omega(\hat a_+\hat a_-+\tfrac12)$ & $[\hat H,\hat a_\mp]=\mp\hbar\omega\hat a_\mp$\\
+spectrum & $\hat a_-\psi_0=0$: $\psi_0=(\tfrac{m\omega}{\pi\hbar})^{1/4}e^{-m\omega x^2/2\hbar}$; $E_n=(n+\tfrac12)\hbar\omega$; $\psi_n=\tfrac{(\hat a_+)^n}{\sqrt{n!}}\psi_0$ & $\hat a_+\psi_n=\sqrt{n+1}\psi_{n+1}$\\
+oscillator moments & $\langle x^2\rangle=(n+\tfrac12)\tfrac\hbar{m\omega}$, $\langle p^2\rangle=(n+\tfrac12)m\hbar\omega$ & $\Delta x\Delta p=(n+\tfrac12)\hbar$\\
+sloshing & $\tfrac1{\sqrt2}(\psi_0+\psi_1)$: $\langle x\rangle=\sqrt{\tfrac\hbar{2m\omega}}\cos\omega t$ & forbidden region ($n=0$): $15.7\%$\\
+uniqueness & nodeless ground state is unique ($\psi_1-c\psi_2$ would have a node) & $\int e^{-ax^2+bx}=\sqrt{\pi/a}\,e^{b^2/4a}$\\
+vibrations & CO: $0.266$ eV (4.66 \textmu m); CO$_2$ bend: $0.083$ eV (15.0 \textmu m) & Boltzmann factor $0.036$ at 288 K\\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{keybox}[Reading rule]
+Typed lecture notes, the handwritten box lecture and the two tutorials are the syllabus; the AI monographs and textbooks are secondary. $^{\text{b}}$: book-level proof or statement. Missing from the sources: Lectures 1--5, tunnelling, hydrogen, spin.
+\end{keybox}
+\end{document}

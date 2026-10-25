@@ -1,0 +1,33 @@
+---
+title: Monsoon
+subject: climate
+type: concept
+scope: [taught, extra-book]
+by: [suhas-post]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/book, src/suhas-post, status/draft]
+---
+# Monsoon
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** seasonal wind reversal, the five monsoon systems, Indian rainfall maps and annual cycle (Suhas 22 Oct p25–31) · 🟡 **extra book:** Webster's list of defining features (trough, active/break periods), Hartmann §6.5.1
+
+> [!intuition] In one picture
+> A monsoon is a **sea breeze with a seasonal clock**: the same land-warms-faster-than-sea idea, but stretched over a continent and a whole summer, so the air that is drawn in carries enough moisture to feed months of rain.
+
+> [!key] Definition
+> A **monsoon** is a regular seasonal reversal of the low-level wind, accompanied by a shift between a very dry and a very rainy regime (Arabic *mausim*, "season"). In summer the lower-tropospheric flow is *towards* the heated continent, the upper flow is reversed, and rain falls in a low-pressure **monsoon trough** over the land and adjacent seas.
+
+- **Systems:** Asian–Australian (the only truly interhemispheric one), West African, North American, South American, with the two American monsoons nearly separate. Equatorial land (Amazon, Congo, Indonesia) has *two* rainfall maxima at the equinoxes and is **not** strictly monsoonal: a monsoon has one solstitial maximum.
+- **Time structure:** a rapid **onset**, then **active periods** (10–30 days of heavy rain) separated by **breaks**.
+- **Position:** the monsoon trough sits well poleward of the oceanic [[Intertropical Convergence Zone]]; South Asian monsoon rain falls at the latitudes of the great deserts.
+- **Why:** [[Land-Sea Thermal Circulation]] + [[Cross-Equatorial Flow]] + latent heating; helped by [[Orographic Precipitation]] and the [[Tibetan Plateau and Monsoon Heating]].
+
+Chapter: [[CL15 Monsoons]]. Large-scale context: [[Hadley Cell]], [[Trade Winds and Westerlies]]; dynamics prerequisites: [[Coriolis Force]], [[CL13 Horizontal Motion - Geostrophic Balance and Friction]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

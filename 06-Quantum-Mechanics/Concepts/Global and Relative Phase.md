@@ -1,0 +1,37 @@
+---
+title: Global and Relative Phase
+aliases: ["overall phase", "relative phase"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Global and Relative Phase
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=6|L9 §9]], [[PH2113_wavefunctions_potentials_schrodinger_Tutorial.pdf#page=3|Tutorial P4]].
+
+> [!intuition] In one picture
+> The overall phase of a state is like the origin of a clock: no experiment sees it. The phase **between** two components is the hands of the clock: it sets interference.
+
+> [!key] Definition
+> $\Psi$ and $e^{i\alpha}\Psi$ describe the same state ($|e^{i\alpha}\Psi|^2=|\Psi|^2$). In $\psi_1+e^{i\varphi}\psi_2$ the relative phase $\varphi$ changes the density.
+
+## Examples
+- Shifting $V\to V+V_0$ multiplies the state by $e^{-iV_0t/\hbar}$: a **global** phase, so probabilities and energy **differences** are unchanged.
+- $|\psi_1+e^{i\varphi}\psi_2|^2=|\psi_1|^2+|\psi_2|^2+2\mathrm{Re}(e^{i\varphi}\psi_1^*\psi_2)$.
+- Time evolution of a superposition rotates the relative phase at $(E_2-E_1)/\hbar$.
+
+> [!pitfall] A stationary state has no observable phase
+> $e^{-iEt/\hbar}$ spins for ever yet never shows: only differences of energy are observable ([[Stationary State]]).
+
+Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]]. Related: [[Superposition Principle]] · [[Stationary State]] · [[Time Evolution of a Superposition]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

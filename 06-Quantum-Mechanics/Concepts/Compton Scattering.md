@@ -1,0 +1,38 @@
+---
+title: Compton Scattering
+aliases: ["Compton shift", "Compton effect"]
+subject: qm
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, extra/book, src/lecture-notes, status/draft]
+---
+# Compton Scattering
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** referred to as 'introduced earlier' in [[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=2|L8 §2]] (the lecture itself is not in the folder). · 🟡 **extra · book:** the four-momentum derivation (AI monograph §2.2, re-derived).
+
+> [!intuition] In one picture
+> An X-ray bounces off an electron like a billiard ball and comes out with a longer wavelength: light carries momentum $h/\lambda$.
+
+> [!key] Definition
+> A photon of wavelength $\lambda$ scattered by a free electron at rest through angle $\theta$ has $\lambda'-\lambda=\dfrac h{m_ec}(1-\cos\theta)=\lambda_C(1-\cos\theta)$.
+
+## Derivation (summary) and numbers
+Conserve four-momentum, $P_\gamma+P_e=P_\gamma'+P_e'$, square $P_e'=P_\gamma-P_\gamma'+P_e$ and use $P_\gamma^2=0$, $P_e^2=m^2c^2$: $P_e\!\cdot\!(P_\gamma-P_\gamma')=P_\gamma\!\cdot\!P_\gamma'$, i.e. $m_ehc(\lambda'-\lambda)/\lambda\lambda'=h^2(1-\cos\theta)/\lambda\lambda'$.
+
+> [!example] Numbers
+> Shift: $1.213$ pm at $60^\circ$, $2.426$ pm at $90^\circ$, $4.853$ pm at $180^\circ$. Mo K$\alpha$ X-rays ($71.1$ pm, $17.44$ keV) at $90^\circ$: $73.53$ pm, $16.86$ keV, electron recoil $575$ eV. A 2 pm $\gamma$-ray backscattered shifts by $243\%$.
+
+> [!pitfall] Only visible for short wavelengths
+> The fractional shift is $\lambda_C(1-\cos\theta)/\lambda$: large only when $\lambda\sim\lambda_C$. Classical (Thomson) scattering predicts no shift.
+
+Used in: [[QM01 From Waves to Probabilities]]. Related: [[Compton Wavelength]] · [[Wave-Particle Duality]] · [[de Broglie Relation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

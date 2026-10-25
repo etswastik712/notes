@@ -1,0 +1,31 @@
+---
+title: Discrete Uniform Distribution
+aliases: ["discrete uniform"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Discrete Uniform Distribution
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=20|class notes 20 Aug]].
+
+> [!intuition] In one picture
+> A fair die, a random slip from a hat: every value equally likely.
+
+> [!key] Definition
+> On a finite set $\Omega$: $P[X=x]=1/|\Omega|$. For $\{1,\dots,n\}$: $E[X]=\frac{n+1}2$, $\mathrm{Var}[X]=\frac{n^2-1}{12}$.
+
+For a die $E=3.5$, $\mathrm{Var}=\frac{35}{12}=2.917$. The maximum of 5 slips drawn from 100 has $P[X=k]=\binom{k-1}4/\binom{100}5$ and mean $5\cdot\frac{101}6=84.17$. The continuous analogue is the [[Uniform Distribution]].
+
+Used in: [[PR03 Discrete Random Variables and Distributions]]. Related: [[Naive Definition of Probability]] · [[Uniform Distribution]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,64 @@
+---
+title: Ecology and Evolution - Course Map
+aliases: [Eco-Evo, BI2113, Ecology and Evolution (BI2113)]
+subject: eco-evo
+type: moc
+scope: [taught, extra-book]
+by: [slides]
+status: draft
+tags: [subject/eco-evo, type/moc, taught, extra/book, src/slides, status/draft]
+---
+# Ecology and Evolution: Course Map (BI2113)
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+Seven lecture topics, each with a slide deck plus readings (textbook chapters, papers). The instructor's own classification (from each deck's *Reading material* slide): **mandatory reading + the slides = the syllabus**; *detailed/recommended* chapters and *papers* carry no exam weight but build a feel for research. This vault keeps that split visible (🟢 taught / 🟡 extra·book). Rules: [[Conventions]]; sources: `biology/eco-evo/`.
+
+## The storyline
+```mermaid
+flowchart LR
+  A["EE01<br/>What is ecology?<br/>Case: wildebeest"] --> B["EE02<br/>Structured populations<br/>(matrices)"]
+  B --> C["EE03<br/>Growth, chaos<br/>(logistic, Ricker)"]
+  C --> D["EE04<br/>Competition<br/>and invasions"]
+  C --> E["EE05<br/>Predation"]
+  D --> F["EE06<br/>Eutrophication<br/>alternative stable states"]
+  E --> F
+  F --> G["EE07<br/>Conservation<br/>biology"]
+```
+Central thread: **one population → many populations (structure) → how populations change in time (growth, chaos) → interactions (competition, predation) → whole ecosystems and their tipping points (lakes) → what to do when it goes wrong (conservation).**
+
+## Chapters
+| # | Chapter | Status |
+|---|---|---|
+| 01 | [[EE01 Introduction to Biology and Ecological Thinking]] | draft (v2) |
+| 02 | [[EE02 Structured Population Models]] | draft (v2) |
+| 03 | [[EE03 Population Dynamics and Chaos]] | draft (v2) |
+| 04 | [[EE04 Competition and Invasions]] | draft (v2) |
+| 05 | [[EE05 Predation]] | draft (v2) |
+| 06 | [[EE06 Eutrophication and Alternative Stable States]] | draft (v2) |
+| 07 | [[EE07 Conservation Biology]] | draft (v2) |
+
+```dataview
+TABLE chapter AS "#", scope AS "Scope", status AS "Status"
+FROM #subject/eco-evo AND #type/chapter
+SORT chapter ASC
+```
+
+## Why this subject is tightly linked to the others
+- **Climate:** the same mathematics of stability and tipping: [[Fixed Points and Linear Stability]], [[Bistability and Tipping Points]] (shallow lakes ↔ ice-albedo), [[Relaxation Time]]; chaos ↔ [[CL01 Earth as a System|Lorenz in CL01]]; Daisyworld; biosphere feedbacks.
+- **Probability:** stochastic demography, sampling and capture-recapture: [[Probability - Course Map]].
+- **Foundations:** [[Jensen Inequality]] (fluctuating environments), [[Linearisation and Sensitivity]] (matrix sensitivities).
+- **Earth and life, analysis, chemistry:** [[Evolution of Earth and Life - Course Map]] (extinction), [[Proofs, Analysis and Topology - Course Map]] (bifurcations), [[Inorganic Chemistry - Course Map]] (nutrient cycles).
+
+## Revision
+- [[Eco-Evo Exam Prep]]: formula sheet (all seven chapters, scope-marked), 28 traps, derivations, self-test, essay prompts, study plan.
+- [[Eco-Evo Problem Bank]]: 25 mixed calculation problems with solutions (`scripts/ee_problem_bank.py`).
+- Printable formula sheet: [[ecoevo-formula-sheet.pdf]] (2 pages, `Assets/latex/ecoevo-formula-sheet.tex`).
+
+## Existing material
+`biology/eco-evo/_progress/main.tex` and `BI2113_Consolidated_Notes.pdf` (60-page LaTeX notes from an earlier session) cover all seven topics with the instructor's rules; they are used as a cross-check. Full map: [[Subject Map]].
+
+## Concept index
+```dataview
+LIST FROM #type/concept AND #subject/eco-evo SORT file.name ASC
+```

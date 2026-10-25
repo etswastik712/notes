@@ -1,0 +1,31 @@
+---
+title: Bernoulli Distribution
+aliases: ["Bernoulli", "Bernoulli trial"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Bernoulli Distribution
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=19|class notes 20 Aug]].
+
+> [!intuition] In one picture
+> One yes/no trial.
+
+> [!key] Definition
+> $X\sim$ Bernoulli$(p)$: $P[X=1]=p$, $P[X=0]=1-p$. $E[X]=p$, $\mathrm{Var}[X]=p(1-p)$, MGF $1-p+pe^t$.
+
+Building block of the binomial (sum of $n$ independent copies), geometric (trials until the first 1) and negative binomial. It is the same as the indicator of an event of probability $p$.
+
+Used in: [[PR03 Discrete Random Variables and Distributions]]. Related: [[Binomial Distribution]] · [[Indicator Random Variable]] · [[Geometric Distribution]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

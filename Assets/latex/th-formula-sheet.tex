@@ -1,0 +1,78 @@
+\documentclass[9pt]{article}
+\input{preamble-brain.tex}
+\geometry{margin=14mm}
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\title{Thermodynamics (MIT 8.333 Ch.~I, Zemansky)\\\large formula sheet, key numbers and traps}
+\author{second brain $\cdot$ chapters TH01--TH06}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\begin{keybox}[Sign convention]
+MIT (this sheet): $\dd E=\bar{\dd}Q+\bar{\dd}W$, $\bar{\dd}W=\sum J_i\dd x_i$, fluid $-P\dd V$ (work \emph{on} the system). Zemansky and the climate notes: $\dd U=\bar{\dd}Q-\bar{\dd}W$, $W_{\rm by}=\int P\dd V$. $Q$ is heat added in both.
+\end{keybox}
+
+\section*{TH01--TH03 Temperature, first law, ideal gas}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+zeroth law & A$\sim$C, B$\sim$C $\Rightarrow$ A$\sim$B $\Rightarrow$ $\Theta(\text{coordinates})$ equal in equilibrium & isotherm = equation of state\\
+ideal-gas scale & $T=273.16\,\lim(PV)/\lim(PV)_{\rm tp}$; const.\ volume $T=273.16P/P_{\rm tp}$ & $80$ kPa, $109.3$ kPa $\to373.2$ K\\
+vdW & $(P+a/V^2)(V-b)=Nk_BT$; $T_c=\tfrac{8a}{27Rb}$, $P_c=\tfrac a{27b^2}$, $V_c=3b$ & CO$_2$: $304.0$ K, $7.40$ MPa, $128$ cm$^3$/mol\\
+exact $\dd z$ & $M\dd x+N\dd y$: $\partial_yM=\partial_xN$; cyclic $(\partial_xy)_z(\partial_yz)_x(\partial_zx)_y=-1$ & $\bar{\dd}Q$ inexact; $\bar{\dd}Q_{\rm rev}/T$ exact\\
+responses & $\beta=\tfrac1V(\partial_TV)_P$, $\kappa_T=-\tfrac1V(\partial_PV)_T$, $(\partial_TP)_V=\beta/\kappa_T$ & ideal $P/T$; water $4.5$ bar/K\\
+first law & adiabatic work depends on endpoints $\Rightarrow$ $E$; $\Delta Q=\Delta E-\Delta W$ & $Q,W$ path-dependent\\
+work (by gas) & isothermal $nRT\ln\tfrac{V_2}{V_1}$; isobaric $P\Delta V$; adiabatic $C_V(T_1-T_2)$ & $1729$, $2494$, $1385$ J (1 mol, $V\to2V$)\\
+heat capacity & $C_V=(\partial_TE)_V$; $C_P=(\partial_TH)_P$; ideal $C_P-C_V=Nk_B$; general $\tfrac{TV\alpha^2}{\kappa_T}$ & air $c_p=1004.5$, $c_v=717.5$\\
+Joule & free expansion $\Delta E=0$, $\Delta T=0$ (ideal) $\Rightarrow E=E(T)$ & vdW CO$_2$ 1$\to$2 L: $-6.3$ K\\
+adiabat & $PV^\gamma$, $TV^{\gamma-1}$, $T^\gamma P^{1-\gamma}$ const.; $\gamma=1+\tfrac2f$ & $5/3$, $7/5$, $4/3$; air $\times10$: $754$ K\\
+sound, lapse & $c=\sqrt{\gamma RT/M}$; R\"uchhardt $T=2\pi\sqrt{mV/\gamma PA^2}$; $\Gamma_d=g/c_p$ & $343.2$ m/s (20 $^\circ$C); $9.77$ K/km\\
+\bottomrule
+\end{tabular}
+
+\section*{TH04 Second law and entropy}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+engine, fridge & $\eta=\tfrac W{Q_H}$; $\omega=\tfrac{Q_C}{Q_H-Q_C}$ & Carnot: $\eta=1-\tfrac{T_C}{T_H}$; $\omega=\tfrac{T_C}{T_H-T_C}$\\
+statements & Kelvin: no total heat$\to$work; Clausius: no cold$\to$hot alone; equivalent & ``sole result''\\
+Carnot & reversible, two isotherms + two adiabats; $\tfrac{Q_C}{Q_H}=\tfrac{T_C}{T_H}$; no engine beats it & $500/300$ K: $\eta=0.40$, $W=1153$ J\\
+Clausius & $\oint\bar{\dd}Q/T\le0$; $S(B)-S(A)=\int\bar{\dd}Q_{\rm rev}/T$; $\dd S\ge\bar{\dd}Q/T$ & isolated: $\delta S\ge0$\\
+fundamental & $\dd E=T\dd S+\sum J_i\dd x_i+\mu\dd N$; $(\partial_ES)_x=1/T$, $(\partial_{x}S)_E=-J/T$ & $n$ work pairs $\Rightarrow n+1$ coordinates\\
+$\Delta S$ & ideal gas $C_V\ln T+R\ln V$; free expansion $R\ln2$; melting $L/T$; heat flow $Q(\tfrac1{T_C}-\tfrac1{T_H})$ & $5.76$; $1223$ J/K/kg; $1.333$ J/K per kJ\\
+lost work & $W_{\rm lost}=T_C\,\Delta S_{\rm gen}$ & $400$ J\\
+\bottomrule
+\end{tabular}
+
+\section*{TH05 Potentials, stability, third law}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+potentials & $H=E-J\!\cdot\!x$, $F=E-TS$, $G=E-TS-J\!\cdot\!x$, $\tilde G=E-TS-\mu N$ & fluid $J=-P$, $x=V$\\
+differentials & $\dd H=T\dd S-x\dd J$; $\dd F=-S\dd T+J\dd x$; $\dd G=-S\dd T-x\dd J$ & min.: $\delta H\le0$, $\delta F\le0$, $\delta G\le0$\\
+phase equil. & $\mu_1=\mu_2$; Clausius--Clapeyron $\tfrac{\dd P}{\dd T}=\tfrac L{T\Delta v}\approx\tfrac{LP}{R_vT^2}$ & $3.56$ kPa/K at 100 $^\circ$C; $6.3\%$/K at 15 $^\circ$C\\
+extensivity & $E=TS+J\!\cdot\!x+\mu N$; Gibbs--Duhem $S\dd T+x\!\cdot\!\dd J+N\dd\mu=0$ & $\mu=\mu_0+k_BT\ln\tfrac P{P_0}$\\
+Maxwell & $-(\partial_xS)_T=(\partial_TJ)_x$; $(\partial_JS)_T=(\partial_Tx)_J$; fluid $(\partial_VS)_T=(\partial_TP)_V$ & $(\partial_VE)_T=T(\partial_TP)_V-P$\\
+stability & $\delta T\delta S+\delta J\delta x+\delta\mu\delta N\ge0$: $C_x\ge0$, $\kappa_T\ge0$, response matrix pos.\ def. & critical: $\partial_VP=\partial_V^2P=0$, $\partial_V^3P<0$\\
+third law & $S(T\to0)=0$; $\partial_XS\to0$; $C\to0$; $\alpha\to0$; $T=0$ unattainable & $S=k_B\ln g$, $g=1$; $C=aT^n\Rightarrow n>0$\\
+\bottomrule
+\end{tabular}
+
+\section*{TH06 Kinetic theory and statistical mechanics (extra)}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+kinetic & $P=\tfrac13nm\langle v^2\rangle$; $\langle\tfrac12mv^2\rangle=\tfrac32k_BT$ & N$_2$ 300 K: $v_{rms}=517$ m/s\\
+Maxwell & $f(v)=4\pi(\tfrac m{2\pi k_BT})^{3/2}v^2e^{-mv^2/2k_BT}$; $v_{mp},\langle v\rangle,v_{rms}=\sqrt{\tfrac{2k_BT}m},\sqrt{\tfrac{8k_BT}{\pi m}},\sqrt{\tfrac{3k_BT}m}$ & $422,476,517$; $4.6\%>2v_{mp}$\\
+free path & $\lambda=\tfrac1{\sqrt2n\sigma}$; effusion $\propto1/\sqrt m$ & air $67$ nm (1 atm); He/N$_2$ $2.65$\\
+equipartition & $\tfrac12k_BT$ per quadratic term; frozen if $\hbar\omega\gg k_BT$ & CO$_2$ bend $x=3.3$: $0.43k_B$\\
+entropy & $S=k_B\ln\Omega$; Sackur--Tetrode $S=Nk_B[\ln(\tfrac VN(\tfrac{2\pi mk_BT}{h^2})^{3/2})+\tfrac52]$ & He $126.15$ J/mol/K\\
+canonical & $p_i=e^{-\beta E_i}/Z$; $F=-k_BT\ln Z$; $E=-\partial_\beta\ln Z$; $\mathrm{Var}E=k_BT^2C_V$ & $\Delta E/E=\sqrt{2/3N}$\\
+two-level, oscillator & $C/k_B=\tfrac{x^2e^x}{(e^x+1)^2}$ (max $0.439$); $\tfrac{x^2e^x}{(e^x-1)^2}$; $\bar\varepsilon=\tfrac{\hbar\omega}{e^x-1}$ & $x=\varepsilon/k_BT$ or $\hbar\omega/k_BT$\\
+radiation & $u=\tfrac{\hbar\omega^3}{\pi^2c^3}\tfrac1{e^x-1}$; $a=7.566\times10^{-16}$; $\sigma=5.670\times10^{-8}$; $b=2.898$ mm\,K & 288 K: $390$ W/m$^2$\\
+\bottomrule
+\end{tabular}
+
+\vspace{3pt}
+\begin{verifybox}{scope}
+The MIT lectures are the only lecture material in the folder; TH06 comes from AI notes and is optional. Confirm the course syllabus with the instructor.
+\end{verifybox}
+\end{document}

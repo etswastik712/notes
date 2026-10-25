@@ -1,0 +1,34 @@
+---
+title: Independence of Random Variables
+aliases: ["independent random variables"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Independence of Random Variables
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=24|class notes 2 Sep]].
+
+> [!intuition] In one picture
+> Neither variable carries information about the other.
+
+> [!key] Definition
+> $P[X_1\le x_1,X_2\le x_2]=P[X_1\le x_1]P[X_2\le x_2]$ for all $x_1,x_2$; for discrete variables, $p(a_i,b_j)=p_1(a_i)p_2(b_j)$ for all $i,j$. For $n$ variables, the product rule for every sub-collection.
+
+## Consequences
+$E[XY]=E[X]E[Y]$, $\mathrm{Cov}=0$, $\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]$, $M_{X+Y}=M_XM_Y$. The converse of the covariance statement is false: $X$ uniform on $\{-2,\dots,2\}$ and $Y=X^2$ have $E[XY]=0=E[X]E[Y]$ yet $Y$ is a function of $X$.
+
+A single failing cell disproves independence: for (sum, max) of two dice, $P[7,5]=\frac1{18}\ne\frac6{36}\cdot\frac9{36}=\frac1{24}$.
+
+Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Independence of Events]] · [[Joint Distribution]] · [[Covariance and Correlation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

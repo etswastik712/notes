@@ -1,0 +1,31 @@
+---
+title: Counterexample
+aliases: ["disproof by counterexample"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Counterexample
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Assignment-prems_merged.pdf#page=7|Assignment 1, Q6]].
+
+> [!intuition] In one picture
+> One value that breaks a universal claim.
+
+> [!key] Definition
+> To disprove $\forall x\,P(x)$ exhibit one $x$ with $\neg P(x)$. Examples: $2^{11}-1=2047=23\cdot89$ refutes "$p$ prime $\Rightarrow2^p-1$ prime"; $2$ and $5$ refute "every prime ends in $1,3,7,9$"; $n=40$ refutes "$n^2+n+41$ is always prime" ($1681=41^2$).
+
+Checking many cases proves nothing (the Euler polynomial is prime for $n=0,\dots,39$). Goldbach and the twin-prime conjecture have no known counterexample and no proof.
+
+Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Quantifiers and Their Negation]] · [[Proof Techniques]] · [[Conditional Statement]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,31 @@
+---
+title: Uncountable Set
+aliases: ["uncountable", "uncountably infinite"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Uncountable Set
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Countable-Uncountable-sets.pdf#page=4|Lectures 19–20]], [[Assignment-8.pdf#page=1|Assignment 8]].
+
+> [!intuition] In one picture
+> Too many to list: any list misses something.
+
+> [!key] Definition
+> Infinite and not countable. $(0,1)$, $(a,b)$, $[0,1]$, $\mathbb R$, $\mathbb R\setminus\mathbb Q$, $\{0,1\}^{\mathbb N}$, $\mathcal P(\mathbb N)$ are uncountable. A set containing an uncountable subset is uncountable.
+
+$\mathbb R\setminus\mathbb Q$ is uncountable: otherwise $\mathbb R=\mathbb Q\cup(\mathbb R\setminus\mathbb Q)$ would be countable. Since the algebraic numbers are countable, **most reals are transcendental**. A continuous random variable takes values in an uncountable set, so $P[X=x]=0$ for each $x$ ([[Continuous Random Variable]]).
+
+Used in: [[PA04 Functions and Cardinality]]. Related: [[Cantor's Diagonal Argument]] · [[Cantor's Theorem]] · [[Countable Set]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

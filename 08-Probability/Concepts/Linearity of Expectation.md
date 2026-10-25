@@ -1,0 +1,38 @@
+---
+title: Linearity of Expectation
+aliases: ["additivity of expectation"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Linearity of Expectation
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=25|class notes 2 Sep]].
+
+> [!intuition] In one picture
+> The mean of a sum is the sum of the means, whether or not the pieces are related.
+
+> [!key] Definition
+> $E[X_1+X_2]=E[X_1]+E[X_2]$ for any random variables on the same space; $E[\sum a_iX_i+b]=\sum a_iE[X_i]+b$.
+
+## Proof (discrete)
+$E[X_1+X_2]=\sum_i\sum_j(a_i+b_j)p(a_i,b_j)=\sum_ia_iP[X_1=a_i]+\sum_jb_jP[X_2=b_j]$ by summing the joint pmf along each axis.
+
+## Uses
+Binomial $np$; negative binomial $k/p$; hypergeometric $\frac{nw}{w+b}$; fixed points $=1$; two biased coins $0.6+0.7=1.3$; distinct coupons $N[1-(1-\frac1N)^n]$.
+
+> [!pitfall] It is the variance, not the mean, that needs independence
+> $\mathrm{Var}[X+Y]=\mathrm{Var}X+\mathrm{Var}Y+2\mathrm{Cov}(X,Y)$ ([[Covariance and Correlation]]).
+
+Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Indicator Random Variable]] · [[Coupon Collector Problem]] · [[Matching Problem]] · [[Hypergeometric Distribution]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

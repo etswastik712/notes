@@ -1,0 +1,30 @@
+---
+title: Poleward Energy Transport
+subject: climate
+type: concept
+scope: [taught, extra-beyond]
+by: [suhas-post]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/beyond, src/suhas-post, status/draft]
+---
+# Poleward Energy Transport
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!key] Definition
+> The **poleward energy transport** $F(\varphi)$ is the total northward flux of energy (W) by the atmosphere plus ocean across latitude $\varphi$, required to balance the net top-of-atmosphere radiation:
+> $$F(\varphi)=2\pi a^{2}\int_{-\pi/2}^{\varphi}R_{TOA}(\varphi')\cos\varphi'\,\mathrm d\varphi'.$$
+
+- $\mathrm dF/\mathrm d\varphi=2\pi a^2R_{TOA}\cos\varphi$: the flux is largest where $R_{TOA}$ changes sign (≈ 35–40°), zero at both poles.
+- Peak ≈ **5.8 PW** (6 PW per hemisphere); at 20° N the atmosphere and the ocean carry ≈ 2.0 PW each; the ocean dominates in the tropics (peak ≈ 20°), the atmosphere beyond ≈ 30° (peak ≈ 40°). The ocean value is the residual total − atmosphere.
+- Without it the tropics would be warmer and the poles much colder.
+
+> [!extra-beyond]- Extra (beyond): carried as moist static energy
+> The atmospheric flux is the transport of $h=c_pT+gz+Lq$ (sensible + potential + latent): the Hadley cell exports it in the tropics, mid-latitude eddies beyond ≈ 30°.
+
+Derivation and numbers: [[CL10 Global Energy Balance and Meridional Structure#4. The energy equation and the poleward flux|CL10 §4]]. Mechanisms: [[CL11 Mean Meridional Circulation and Angular Momentum]]. See [[Top-of-Atmosphere Radiation Budget]], [[Insolation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,33 @@
+---
+title: Radiative Forcing
+subject: climate
+type: concept
+scope: [taught, extra-book, extra-beyond]
+by: [argha]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/book, extra/beyond, src/argha, status/draft]
+---
+# Radiative Forcing
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** forcing $F$ as an added energy input at fixed temperature, $\Delta T=\Lambda F$ (Argha L4 sl. 43–44; L2 sl. 27 "drivers or forcing?") · 🟡 **extra book:** the tropopause-after-stratospheric-adjustment definition (Wallace & Hobbs §10.3) · 🔵 **extra:** CO₂ formula, effective forcing
+
+> [!intuition] In one picture
+> Turn the heater setting up a notch (the forcing) and the room warms until the walls lose heat as fast as the heater adds it. The forcing is the *notch*; the final warming is the *response*, and the ratio is the climate sensitivity.
+
+> [!key] Definition
+> **Radiative forcing** $F$ [W m⁻²] is the **change in net radiative flux** at the top of the atmosphere (or tropopause) caused by an external driver (greenhouse gases, aerosols, solar change, land use), **before the surface temperature has responded**. Convention: positive = more energy in. The steady response is $\Delta T=\Lambda F$ with $\Lambda=\Lambda_P/(1-\sum f_i)$ ([[Planck Sensitivity]], [[Climate Feedback Factor]]).
+
+- **CO₂:** $F=5.35\ln(C/C_0)$ W m⁻² (Myhre et al. 1998): 280 → 420 ppm gives 2.17 W m⁻²; a doubling gives 3.71 W m⁻².
+- **Total anthropogenic forcing** since 1750 is of order 2.5–3 W m⁻² (slides: "~3 W m⁻²", Forster et al. 2023; IPCC AR6) `[verify]`; aerosols partly offset the greenhouse gases.
+- **Definition detail** (Wallace & Hobbs footnote 19, p.444): measured at the tropopause after the stratosphere has re-equilibrated, because the surface and troposphere are strongly coupled while the stratosphere adjusts within months.
+- **Drivers or forcing?** (Argha L2 sl. 27): natural forcings are solar variability and volcanic aerosols; anthropogenic are greenhouse gases, aerosols and land-use albedo.
+
+Chapters: [[CL02 Observing Global Temperature]] (attribution), [[CL04 Feedback and Multiple Steady States]] (definition and response). Related: [[Greenhouse Effect]], [[Global Mean Surface Temperature]], [[Zero-Dimensional Energy Balance Model]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

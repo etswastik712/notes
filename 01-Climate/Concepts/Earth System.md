@@ -1,0 +1,34 @@
+---
+title: Earth System
+aliases: [Earth-system science]
+subject: climate
+type: concept
+scope: [taught, extra-book]
+by: [argha]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/book, src/argha, status/draft]
+---
+# Earth System
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** interacting spheres exchanging matter and energy, Amsterdam declaration, tipping points (Argha L1 sl. 5–8) · 🟡 **extra book:** systems vocabulary, feedback loops, Daisyworld (Kump et al. Ch. 2)
+
+> [!intuition] In one picture
+> A human body: organs (heart, lungs, brain) connected by blood and nerves. You cannot understand a fever from the heart alone. The Earth system's "organs" are the atmosphere, ocean, ice, life, rock and people, connected by fluxes of heat, water, carbon and momentum.
+
+> [!key] Definition
+> The **Earth system** is the set of interacting **spheres** (atmosphere, hydrosphere/ocean, cryosphere, biosphere, lithosphere, and the anthroposphere) that **exchange matter and energy**, so that a change in one is sensed by the others. It behaves as a single, self-regulating system (Amsterdam Declaration, 2001).
+
+- A **system** has components, a **state** (the set of important attributes at a time) and **links**; links can be **positive** (amplifying) or **negative** (stabilising) **feedbacks**; equilibria may be stable or unstable.
+- **Reservoirs and residence times:** $\tau=M/F$. Atmospheric water: 9 days; ocean: 3,200 yr ([[CL01 Earth as a System]]).
+- **Scales:** from seconds and centimetres to 10⁸ years and 10⁷ m (Stommel diagram).
+- Climate science is the study of the *coupled* behaviour: [[Ice-Albedo Feedback]] (ice ↔ atmosphere), the monsoon ([[Monsoon]]), the carbon cycle and glacial cycles.
+
+Chapter: [[CL01 Earth as a System]]. Related: [[Bistability and Tipping Points]], [[Climate Feedback Factor]], [[Ecology and Evolution - Course Map]] (biosphere), [[Evolution of Earth and Life - Course Map]] (deep-time coupling).
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

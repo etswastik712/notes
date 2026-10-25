@@ -1,0 +1,38 @@
+---
+title: Wavefunction
+aliases: ["state function", "psi"]
+subject: qm
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Wavefunction
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=1|WU §2]], [[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=3|L8 §3]], [[PH2113_states_operators_notes.pdf#page=2|SO §2]].
+
+> [!intuition] In one picture
+> A list of complex numbers, one for each place the particle could be; the squares give the odds.
+
+> [!key] Definition
+> The **wavefunction** $\psi(x,t)$ is the complex amplitude that describes the state of a particle. An ordinary state is single-valued, normalisable ($\int|\psi|^2\mathrm dx<\infty$) and obeys the boundary conditions of the problem; it is the position representation of the abstract state $|\psi\rangle$.
+
+## Properties
+- **Complex.** Magnitude $\to$ probability; phase $\to$ interference, momentum content ($e^{ikx}$ has $p=\hbar k$).
+- **Units.** In 1-D, $[\psi]=\text{length}^{-1/2}$: ring state $e^{ikx}/\sqrt L$, box state $\sqrt{2/a}\,\sin(n\pi x/a)$.
+- **Linear space.** Sums of wavefunctions are wavefunctions: the state space is a vector space ([[Superposition Principle]]).
+- **Not measurable itself.** Only $|\psi|^2$ (and expectation values built from $\psi^*\hat A\psi$) are.
+
+> [!pitfall] State versus function
+> The same state can be written $\psi(x)$, $\tilde\psi(k)$ or $|\psi\rangle$; the notation changes, the physical state does not ([[Fourier Transform and Wave Packets]]). A function can be a perfectly good state and still not be an energy eigenstate of a given $V$.
+
+Used in: [[QM01 From Waves to Probabilities]], [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]]. Related: [[Born Rule]] · [[Admissible Wavefunction]] · [[Schrodinger Equation]] · [[Superposition Principle]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

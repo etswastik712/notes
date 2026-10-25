@@ -1,0 +1,33 @@
+---
+title: Rayleigh Scattering
+subject: climate
+type: concept
+scope: [taught, extra-book, extra-beyond]
+by: [argha]
+status: draft
+tags: [subject/climate, type/concept, taught, extra/book, extra/beyond, src/argha, status/draft]
+---
+# Rayleigh Scattering
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** size parameter and 'why is the sky blue, red or grey?' (Argha L5 sl. 56, Fig. 4.11) · 🟡 **extra book:** $K\propto\lambda^{-4}$, Mie (W&H §4.4.1) · 🔵 **extra:** the dipole argument, the sunset numbers
+
+> [!intuition] In one picture
+> A molecule is a tiny antenna: the wave shakes its charges and they re-radiate, and faster shaking (shorter wavelength) re-radiates much more, as the fourth power. Large water drops are not antennas but mirrors, and scatter all colours alike.
+
+> [!key] Statement
+> For particles much smaller than the wavelength, **size parameter** $x=2\pi r/\lambda\ll1$, the scattering efficiency goes as $K\propto\lambda^{-4}$ (W&H Eq. 4.20) and the light is scattered equally forward and backward. Larger particles ($x\sim1$, **Mie**) scatter mostly forward and less selectively; for $x\gg1$ (cloud droplets) scattering is nearly independent of wavelength.
+
+- **Numbers.** Blue (0.45 µm) scatters $(0.70/0.45)^4=5.9$ times more than red (0.70 µm). The Rayleigh optical depth of the whole atmosphere is $\tau_R(0.55\ \mu\mathrm m)=0.097$.
+- **Blue sky** (side-scattered blue); **red sunset** (path ≈ 38× longer, blue removed: at the horizon 0.03 % of the 0.45 µm light survives, 24 % of the 0.70 µm light); **white/grey clouds** ($x\gg1$).
+- **Scattering ≠ absorption:** it redirects light (part of it back to space: [[Albedo]]) but does not heat the air.
+- *Extra:* induced dipole radiates $\propto\omega^4$; sphere cross-section $\sigma=\tfrac{8\pi}{3}k^4r^6\big(\tfrac{m^2-1}{m^2+2}\big)^2$.
+
+Worked in [[CL07 Optical Properties of the Atmosphere]]. See [[Beer-Lambert Law and Optical Depth]]; waves: [[Waves - Course Map]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

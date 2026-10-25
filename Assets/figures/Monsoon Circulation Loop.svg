@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 590" width="780" height="590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="780" height="590" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="390.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">The monsoon as a land–sea circulation loop</text>
+<line x1="205.4" y1="339.3" x2="331.4" y2="421.7" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="448.6" y1="421.7" x2="574.6" y2="339.3" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="574.6" y1="240.7" x2="448.6" y2="158.3" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="331.4" y1="158.3" x2="205.4" y2="240.7" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="10.0" y="244.0" width="240" height="92" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="130" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Cold ocean column</text>
+<text x="130" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">high surface pressure</text>
+<text x="130" y="315.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sinking air</text>
+<rect x="245.0" y="425.0" width="290" height="70" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="390" y="455.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Low-level flow towards the land</text>
+<text x="390" y="475.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">moist, spiralling across isobars</text>
+<rect x="530.0" y="244.0" width="240" height="92" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="650" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Warm land: thermal low</text>
+<text x="650" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">convergence, ascent,</text>
+<text x="650" y="315.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">latent heating</text>
+<rect x="245.0" y="85.0" width="290" height="70" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="390" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Upper-level outflow towards the ocean</text>
+<text x="390" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">reversed pressure gradient</text>
+<rect x="285.0" y="248.0" width="210" height="84" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="390" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Rain over the land</text>
+<text x="390" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">= solar energy collected</text>
+<text x="390" y="315.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">over the ocean</text>
+<text x="390.0" y="572" text-anchor="middle" font-size="13" fill="#52514e">Heating contrast → pressure contrast → flow; moisture imported at low levels returns as latent heat aloft</text>
+</svg>

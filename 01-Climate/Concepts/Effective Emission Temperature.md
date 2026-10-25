@@ -1,0 +1,32 @@
+---
+title: Effective Emission Temperature
+subject: climate
+type: concept
+scope: [taught]
+by: [argha, suhas-pre]
+status: draft
+tags: [subject/climate, type/concept, taught, src/argha, src/suhas-pre, status/draft]
+---
+# Effective Emission Temperature
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** $T_e=255$ K and its derivation (Argha L3, Suhas) · 🔵 **extra:** emission-height estimate
+
+> [!intuition] In one picture
+> Seen from space the Earth looks like a glowing 255 K ball. The surface is warmer because the glow you see comes from *higher*, colder air: the effective temperature is the temperature of the **layer you see**, not the one you stand on.
+
+> [!key] Definition
+> $T_e$ is the temperature of a blackbody that emits the same total flux to space as the planet: $\sigma T_e^4=\text{OLR}$. In steady state OLR equals absorbed sunlight, $S(1-\alpha)/4$, so $T_e=[S(1-\alpha)/4\sigma]^{1/4}$.
+
+- Earth: $T_e\approx255$ K (OLR ≈ 240 W m⁻²), but the global-mean surface is at $T_s=288$ K. The 33 K difference is the [[Greenhouse Effect]].
+- Physically $T_e$ is the temperature at the **effective emission level** from which radiation escapes to space. With a mean tropospheric lapse rate of ~6.5 K km⁻¹ the level where $T=T_e$ lies at $\approx(288-255)/6.5\approx5$ km (a rough estimate, my arithmetic; radiative-transfer models give 5–6 km).
+- It is a property of the *whole* planet (surface + atmosphere); radius cancels, so $T_e$ depends only on $S$ and $\alpha$.
+
+Derived in [[CL03 Radiation and Planetary Energy Balance]]. See [[Albedo]], [[Zero-Dimensional Energy Balance Model]], [[Stefan-Boltzmann Law]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

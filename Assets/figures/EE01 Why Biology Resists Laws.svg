@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 630" width="860" height="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="860" height="630" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="430.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Why biology feels different from physics, and what the course does about it</text>
+<line x1="195.9" y1="147.4" x2="327.2" y2="204.6" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="345.9" y1="149.7" x2="386.8" y2="202.3" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="490.5" y1="149.8" x2="451.7" y2="202.2" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="640.4" y1="147.4" x2="511.3" y2="204.6" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="362.2" y1="286.5" x2="282.8" y2="343.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="477.8" y1="286.5" x2="557.2" y2="343.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="289.3" y1="426.2" x2="349.4" y2="464.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="550.7" y1="426.2" x2="490.6" y2="464.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="15.0" y="75.0" width="190" height="70" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="110" y="105.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Diversity and</text>
+<text x="110" y="125.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">interconnectedness</text>
+<rect x="220.0" y="75.0" width="190" height="70" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="315" y="105.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Stochasticity</text>
+<text x="315" y="125.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">&#x27;chancy world&#x27;</text>
+<rect x="425.0" y="75.0" width="190" height="70" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="520" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Historicity</text>
+<rect x="630.0" y="75.0" width="190" height="70" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="725" y="105.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Emergence:</text>
+<text x="725" y="125.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">reductionism fails</text>
+<rect x="150.0" y="207.0" width="540" height="76" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="420" y="240.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Result: mathematical formulation is hard; links to reality</text>
+<text x="420" y="260.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">are statistical and conditional, not exact laws</text>
+<rect x="60.0" y="347.0" width="330" height="76" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="225" y="380.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">1. Describe what is there</text>
+<text x="225" y="400.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(natural history, classification)</text>
+<rect x="450.0" y="347.0" width="330" height="76" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="615" y="380.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">2. Build simplified models</text>
+<text x="615" y="400.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(with caveats; limited prediction)</text>
+<rect x="100.0" y="468.0" width="640" height="84" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="420" y="495.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Approach of BI2113: oversimplified mathematical models,</text>
+<text x="420" y="515.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">concepts, historical narrative, examining the pedagogy.</text>
+<text x="420" y="535.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Breadth over depth.</text>
+<text x="430.0" y="612" text-anchor="middle" font-size="13" fill="#52514e">Slides 15-17: features to be observed -&gt; result -&gt; two approaches -&gt; the approach of BI2113</text>
+</svg>

@@ -1,0 +1,36 @@
+% Shared preamble for the second-brain PDF handouts.  Compile with:  latexmk -pdf -outdir=build <file>.tex
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=18mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol,detect-all}
+\usepackage{booktabs,array,enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathreplacing,positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+% palette shared with the figures (dataviz reference, light mode)
+\definecolor{cBlue}{HTML}{2A78D6}
+\definecolor{cOrange}{HTML}{EB6834}
+\definecolor{cAqua}{HTML}{1BAF7A}
+\definecolor{cViolet}{HTML}{6250D6}
+\definecolor{cRed}{HTML}{E34948}
+\definecolor{cInk}{HTML}{0B0B0B}
+\definecolor{cMuted}{HTML}{52514E}
+
+% boxes mirroring the Obsidian callouts
+\newtcolorbox{keybox}[1][]{enhanced,colback=violet!5,colframe=cViolet,fonttitle=\bfseries,title={#1},boxrule=0.6pt,arc=2pt,left=4pt,right=4pt}
+\newtcolorbox{derivbox}[1][]{enhanced,colback=black!3,colframe=cMuted,fonttitle=\bfseries,title={#1},boxrule=0.6pt,arc=2pt,left=4pt,right=4pt}
+\newtcolorbox{extrabox}[1][]{enhanced,colback=blue!4,colframe=cBlue,fonttitle=\bfseries,title={Extra (beyond): #1},boxrule=0.6pt,arc=2pt,left=4pt,right=4pt}
+\newtcolorbox{verifybox}[1][]{enhanced,colback=yellow!10,colframe=orange!70!black,fonttitle=\bfseries,title={Check: #1},boxrule=0.6pt,arc=2pt,left=4pt,right=4pt}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\DD}{\mathrm{D}}
+\newcommand{\vect}[1]{\bm{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}

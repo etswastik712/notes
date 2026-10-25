@@ -1,0 +1,31 @@
+---
+title: Basis of a Vector Space
+aliases: ["Hamel basis", "every vector space has a basis"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Basis of a Vector Space
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Zorn's_lemma.pdf#page=1|instructor's note]].
+
+> [!intuition] In one picture
+> A linearly independent set that spans: coordinates for the whole space.
+
+> [!key] Definition
+> $B$ is a **basis** of $V$ if $B$ is linearly independent and $\mathrm{span}B=V$. **Theorem.** Every vector space has a basis (Zorn on the independent sets).
+
+$V=\{0\}$: $\varnothing$ is a basis ($\mathrm{span}\varnothing=\bigcap W=\{0\}$). In general a maximal independent set spans: otherwise $B\cup\{v\}$ is still independent. $\{e_1,e_2,\dots\}$ is **not** a basis of $\prod_{n\ge1}\mathbb R$ ($(1,1,1,\dots)$ is not a finite combination); a basis exists but is non-constructive, as is a Hamel basis of $\mathbb R$ over $\mathbb Q$ (uncountable).
+
+Used in: [[PA03 Relations Equivalence and Order]]. Related: [[Zorn's Lemma]] · [[Axiom of Choice]] · [[Indexed Family of Sets]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

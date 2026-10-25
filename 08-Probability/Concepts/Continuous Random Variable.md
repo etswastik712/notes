@@ -1,0 +1,34 @@
+---
+title: Continuous Random Variable
+aliases: ["continuous rv", "absolutely continuous"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Continuous Random Variable
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=28|class notes 10 Sep]].
+
+> [!intuition] In one picture
+> A quantity that can take any value in an interval, so no single value has positive probability.
+
+> [!key] Definition
+> $X$ is continuous if its cdf $F$ is (absolutely) continuous; equivalently there is a density $f\ge0$ with $P[X\in B]=\int_Bf$. Then $P[X=x]=F(x)-F(x^-)=0$ for every $x$.
+
+$P[a<X<b]=P[a\le X\le b]$: endpoints do not matter. The cdf is more fundamental (it exists for every random variable); the pdf only for continuous ones and the pmf only for discrete ones. To find a distribution, find $F$ first and differentiate ([[Cdf Method for Transformations]]).
+
+> [!example] Why zero
+> A measurement error of exactly $0.000\ldots$ has probability zero; only intervals ("within 0.01 of the true value") have positive probability.
+
+Used in: [[PR05 Continuous Random Variables]]. Related: [[Probability Density Function]] · [[Cumulative Distribution Function]] · [[Random Variable]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

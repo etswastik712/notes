@@ -1,0 +1,97 @@
+\documentclass[9pt]{article}
+\input{preamble-brain.tex}
+\geometry{margin=14mm}
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\title{BI2113 Ecology and Evolution\\\large formula sheet, key numbers and traps}
+\author{second brain $\cdot$ chapters EE01--EE07 $\cdot$ scope: \textbf{taught} unless marked $^{\text{b}}$ (book/paper) or $^{\text{x}}$ (my extra)}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\section*{EE02 Structured populations}
+\begin{tabular}{@{}p{2.6cm}p{8.2cm}p{6.6cm}@{}}
+\toprule
+bookkeeping & $N_{t+1}=N_t+B-D+I-E$ & \\
+life table & $l_x=n_x/n_0$, \quad $R_0=\sum_x l_xm_x$ & \emph{Phlox}: $R_0=2.4177$\\
+survivorship & constant risk $q$: $\ln n_x=\ln n_0+x\ln(1-q)$ & straight on log axis $=$ type II\\
+generation time$^{\text{x}}$ & $T=\sum x\,l_xm_x/R_0$, \quad $r\approx\ln R_0/T$; Euler--Lotka $1=\sum F_xl_x\lambda^{-x}$ & $\lambda>1\iff R_0>1$\\
+Leslie matrix & $\vect n_{t+1}=\mathbf L\vect n_t$; row 1 fecundities, sub-diagonal survivals & $\lambda=1.05082$; SAD $(.635,.302,.057,.005)$\\
+Perron--Frobenius & non-negative, irreducible, \textbf{primitive} $\Rightarrow$ $\lambda_1>0$ simple, $\vect w,\vect v>0$, $\vect n_t\to c\lambda^t\vect w$ & \\
+stage matrix & $P$ stay, $G$ grow, $F$ fecundity; $P+G=\sigma$ & loggerhead $\lambda=0.9516$\\
+sensitivity, elasticity & $s_{ij}=\dfrac{v_iw_j}{\vect v\cdot\vect w}$, \quad $e_{ij}=\dfrac{a_{ij}}{\lambda}s_{ij}$, \quad $\sum e_{ij}=1$ & protect large juveniles; eggs alone cannot give $\lambda>1$\\
+doubling & $t_d=\ln 2/r$ & Rwanda $r=0.027$: 25.7 yr\\
+\bottomrule
+\end{tabular}
+
+\section*{EE03 Dynamics and chaos}
+\begin{tabular}{@{}p{2.6cm}p{8.2cm}p{6.6cm}@{}}
+\toprule
+exponential & $N_{t+1}=\lambda N_t$; \quad $N=N_0e^{rt}$; \quad $\lambda=e^r$ & $t_d=\ln2/r$\\
+logistic & $\dot N=rN(1-N/K)$; \quad $N=K\big/\big[1+\tfrac{K-N_0}{N_0}e^{-rt}\big]$ & inflection $K/2$, max rate $rK/4$, time $1/r$\\
+Ricker & $n_{t+1}=n_te^{r(1-n_t/K)}$, \quad $g'(K)=1-r$ & stable $0<r<2$; 2-cycle $r>2$; 4-cycle $2.5265$; 8-cycle $2.6564$; chaos $2.6924$\\
+chaos & bounded, aperiodic, sensitive: $\Lambda>0$; horizon $\approx\ln(\text{range}/\delta_0)/\Lambda$ $^{\text{x}}$ & $r=3$: $\Lambda\approx0.39$; Feigenbaum $4.669$\\
+Hassell & $N_{t+1}=\lambda N_t(1+aN_t)^{-\beta}$; \quad $f'(N^*)=1-\beta(1-\lambda^{-1/\beta})$ & 22/24 insect series monotone\\
+\bottomrule
+\end{tabular}
+
+\begin{verifybox}{slide 25}
+The $r=2.5$ Ricker panel is a \textbf{2-cycle}; the 4-cycle begins at $r=2.5265$. $K$ only rescales; $r$ decides the dynamics. Integer populations cannot be strictly chaotic (lattice effect).
+\end{verifybox}
+
+\section*{EE04 Competition}
+\begin{tabular}{@{}p{2.6cm}p{8.2cm}p{6.6cm}@{}}
+\toprule
+L--V competition & $\dot N_1=\dfrac{r_1N_1(K_1-N_1-\alpha_{12}N_2)}{K_1}$, and $1\leftrightarrow2$ & $\alpha_{ij}$: effect of $j$ \emph{on} $i$\\
+isoclines & $N_1=K_1-\alpha_{12}N_2$; \quad $N_2=K_2-\alpha_{21}N_1$ & intercepts $K_i$ and $K_i/\alpha_{ij}$\\
+outcomes & 1 wins; 2 wins; stable coexistence; unstable (priority) & \textbf{3 of 4 are exclusion}\\
+coexistence$^{\text{x}}$ & $\alpha_{12}<K_1/K_2$ \textbf{and} $\alpha_{21}<K_2/K_1$ & product $<1$ is necessary, not sufficient\\
+$R^*$ rule & $R^*=\dfrac{mk}{\mu-m}$ (Monod); lowest $R^*$ wins, on one resource & the fast grower can lose\\
+niche overlap$^{\text{x}}$ & $\alpha=\exp(-d^2/4\sigma^2)$ & $0.78$ at $d=\sigma$; $0.37$ at $2\sigma$\\
+\bottomrule
+\end{tabular}
+
+\section*{EE05 Predation}
+\begin{tabular}{@{}p{2.6cm}p{8.2cm}p{6.6cm}@{}}
+\toprule
+L--V predator--prey & $\dot H=rH-pHP$, \quad $\dot P=apHP-mP$ & $H^*=\dfrac{m}{ap}$, \quad $P^*=\dfrac rp$\\
+neutral cycles & $V=apH-m\ln H+pP-r\ln P$ constant; period $\approx2\pi/\sqrt{rm}$ & predator lags prey\\
+logistic prey & $P^*=\dfrac rp\Bigl(1-\dfrac{H^*}{K}\Bigr)$, needs $K>m/ap$; stable spiral & cycles die out\\
+Volterra$^{\text{x}}$ & kill both at rate $\delta$: $r\to r-\delta$, $m\to m+\delta$ & prey up, predators down\\
+Krebs 1995 & predators removed $\times2$, food $\times3$, both $\times11$ & synergy\\
+Gause, Huffaker & no refuge: both extinct; refuge: predator extinct; immigration: cycles; Huffaker: 120 oranges & patchiness $\Rightarrow$ persistence\\
+Levins$^{\text{x}}$ & $\dot p=cp(1-p)-ep$, \quad $p^*=1-e/c$ & lost if $D>1-e/c$\\
+Holling II$^{\text{b}}$ & $aN/(1+ahN)$, max $1/h$ & destabilising\\
+\bottomrule
+\end{tabular}
+
+\section*{EE06 Lakes}
+\begin{tabular}{@{}p{2.6cm}p{8.2cm}p{6.6cm}@{}}
+\toprule
+trophic classes & $P_{tot}$ at spring circulation, \unit{\micro\gram\per\litre} & $<5$, $5$--$10$, $10$--$30$, $30$--$100$, $>100$\\
+retention & $P_L=1.55\bigl[P_{in}/(1+\sqrt{\tau_w})\bigr]^{0.82}$ & halving $P_{in}$: $\times0.566$\\
+Lake Washington & diversion $1968$; \emph{Daphnia} back $1976$ & transparency $1\to3\text{--}4\to10$ m\\
+Box 1$^{\text{b}}$ & $\dot x=a-bx+r\dfrac{x^p}{x^p+h^p}$, bistable iff $\max rf'>b$ & $b{=}1,r{=}1.4,h{=}1,p{=}8$: $a\in(0.050,0.626)$; restoring needs $92\%$ cut\\
+feedback loop & $(-)(+)(-)(+)=+$ & vegetation $\rightleftarrows$ turbidity\\
+\bottomrule
+\end{tabular}
+
+\section*{EE07 Conservation}
+\begin{tabular}{@{}p{2.6cm}p{8.2cm}p{6.6cm}@{}}
+\toprule
+extinction rate & $100$--$1000\times$ background & Muir, Pinchot, Leopold\\
+extinction risk$^{\text{x}}$ & $P_{ext}=(d/b)^{N_0}>0$ even for $b>d$ & $b/d=1.2$: $26$ founders for $<1\%$\\
+persistence$^{\text{x}}$ & mean time $\sim e^{K\ln(b/d)}$ & $\times4$--$5$ per $+10$ at small $K$\\
+Allee$^{\text{x}}$ & $f=rN(N/A-1)(1-N/K)$; harvest fold & $r{=}0.5,A{=}20,K{=}100$: max harvest $26.3$\\
+drift$^{\text{x}}$ & $H_t=H_0(1-\tfrac1{2N_e})^t$; \quad $N_e=\tfrac{4N_mN_f}{N_m+N_f}$ & half-life $\approx1.39N_e$\\
+counting & $\hat N=C/\hat p$; \quad L--P $Mn/m$; \quad Chapman $\tfrac{(M+1)(n+1)}{m+1}-1$ & $p^*=1-(1-p)^K$\\
+tigers & $1827$ (1972) $\to$ $2967$ (2018; $2603$--$3346$) & $70\%$ of wild tigers\\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{keybox}[Reading rule (lecture 1, slide 18)]
+Slides $+$ \emph{mandatory} reading $=$ syllabus. \emph{Detailed reading} and \emph{papers} are not examinable. Marks: $^{\text{b}}$ book or paper tier; $^{\text{x}}$ my derivations.
+\end{keybox}
+\end{document}

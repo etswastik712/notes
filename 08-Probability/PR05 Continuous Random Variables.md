@@ -1,0 +1,223 @@
+---
+title: PR05 Continuous Random Variables
+aliases: [PR05, continuous random variables, pdf, uniform, Rayleigh, logistic, normal distribution, LOTUS, MT2113 classes 10 September and week 1 post-midterm]
+subject: probability
+type: chapter
+chapter: 5
+part: III
+scope: [taught, extra-book, extra-beyond]
+by: [lecture-notes, handwritten-notes]
+status: draft
+prereq: [PR03 Discrete Random Variables and Distributions, PR04 Joint Distributions Expectation and Variance]
+tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+---
+# PR05 · Continuous Random Variables
+
+◀ [[PR04 Joint Distributions Expectation and Variance]] · [[PR06 Moments Generating Functions and Limit Theorems]] ▶
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
+> 🟢 **In syllabus (taught)**: [[ilovepdf_merged-1.pdf#page=28|class notes of 10 Sep]] (pp.28–30), the handwritten **post-midterm Week 1** notes ([[week1_mt2113.pdf#page=3|pp.3–9]], with the homework on pp.1–2), and sheet problem 11 of [[Practice problems 17th September and following tutorial and weekend.pdf|17 Sep]].
+> - §1 continuous random variables, the pdf and its link to the cdf; $P[X=x]=0$
+> - §2 uniform, logistic, Rayleigh, standard normal and $N(\mu,\sigma^2)$
+> - §3 expectation, **LOTUS** $E[g(X)]=\int g\,f$ with the proof for $g\ge0$, variance, linearity
+> - §4 the worked computations (uniform, logistic, Rayleigh, normal) and the **week-1 homework** (Rayleigh quartiles, random circle, broken stick, $E[\max(Z-c,0)]$, inflection points of the normal pdf, LOTUS for any $g$)
+> - §5 the cdf method for $Y=g(X)$
+>
+> 🟡 **Extra · book**
+> - §6 the exponential distribution and its memorylessness; the Gaussian tail (Blitzstein and Hwang Ch. 5; Ross Ch. 5)
+>
+> 🔵 **Extra · beyond** (my additions, labelled)
+> - §2 the 68–95–99.7 values; §5 the $\chi^2_1$ density of $Z^2$; every integral rechecked numerically (`scripts/pr_numbers.py`)
+
+> [!key] After this chapter you can
+> - pass between **cdf and pdf** ($f=F'$, $F=\int f$), normalise a density, and compute $P[a<X<b]$,
+> - compute $E[X]$, $E[g(X)]$ and $\mathrm{Var}[X]$ by integration and by the shortcut $E[X^2]-E[X]^2$,
+> - show $\int e^{-x^2/2}\,\mathrm dx=\sqrt{2\pi}$ and derive the mean and variance of $N(0,1)$ and $N(\mu,\sigma^2)$,
+> - find the distribution of $Y=g(X)$ by the **cdf method**, and use LOTUS to avoid it when only moments are needed.
+
+> [!intuition] The one-sentence story
+> A pmf puts mass on points; a pdf spreads mass over a line, so single points get zero probability and intervals get areas; every sum from the discrete chapters becomes an integral and every formula carries over.
+
+![[fig_pr05_continuous.png]]
+*Figure PR5.1. A: the Rayleigh cdf and pdf, with the quartiles $0.759$, $1.177$, $1.665$ and the shaded area $P[1<X<3]=0.595$. B: the standard normal, with the probabilities within $\pm1$, $\pm2$, $\pm3$ and the inflection points $\pm1$. C: the layer-cake identity $E[Y]=\int_0^\infty P[Y>y]\,\mathrm dy$ for $Y=X^2$, $X\sim U(0,1)$ (area $\tfrac13$).*
+
+## 1. Continuous random variables, the pdf
+<span class="scope-taught">taught</span> *10 Sep ([[ilovepdf_merged-1.pdf#page=28|pp.28–30]]); week 1, p.3 ([[week1_mt2113.pdf#page=3|handwritten]])*
+
+A random variable $X$ is **continuous** if its cdf $F(x)=P[X\le x]$ is (absolutely) continuous; equivalently there is a function $f\ge0$ with
+$$P[X\in B]=\int_Bf(x)\,\mathrm dx\quad\text{for every reasonable }B\subset\mathbb R,\qquad\int_{-\infty}^\infty f(x)\,\mathrm dx=1 .$$
+$f$ is the **probability density function** (pdf). It must be non-negative, integrate to 1, and (week-1 notes) be continuous except at finitely many points.
+
+> [!key] Consequences
+> - **No mass at a point:** $P[X=x]=\int_x^xf=0$ (equivalently $F(x)-F(x^-)=0$ since $F$ is continuous). Hence $P[a<X<b]=P[a\le X<b]=P[a<X\le b]=P[a\le X\le b]=\int_a^bf$.
+> - **Density meaning:** for small $\varepsilon$, $P[x-\varepsilon<X<x+\varepsilon]\approx f(x)\cdot2\varepsilon$: mass = density × length. So $f(x)$ itself is not a probability and may exceed 1.
+> - **cdf and pdf:** $F(x)=\int_{-\infty}^xf(y)\,\mathrm dy$ and $F'(x)=f(x)$ wherever $f$ is continuous.
+> - The **cdf is more fundamental**: it exists for every random variable. To find a distribution, find $F$ first and differentiate.
+
+> [!pitfall] A density can be larger than 1
+> $X\sim U(0,\tfrac12)$ has $f=2$ on $(0,\tfrac12)$. Only the integral is bounded by 1.
+
+> [!example] A polynomial density (17 Sep sheet, problem 11)
+> $f(x)=c(1-x^2)$ on $(-1,1)$, 0 elsewhere. Normalise: $c\int_{-1}^1(1-x^2)\mathrm dx=c\cdot\tfrac43=1$, so $c=\tfrac34$. The cdf is $F(x)=0$ for $x\le-1$; $F(x)=\tfrac34\big(x-\tfrac{x^3}3+\tfrac23\big)=\tfrac12+\tfrac34x-\tfrac14x^3$ for $-1<x<1$; $F(x)=1$ for $x\ge1$. Check: $F(0)=\tfrac12$ (symmetry), $F(1)=\tfrac12+\tfrac34-\tfrac14=1$.
+
+## 2. The distributions of the course
+<span class="scope-taught">taught</span> *week 1 (post midterm), [[week1_mt2113.pdf#page=3|pp.3–4]] and [[week1_mt2113.pdf#page=8|p.8]]*
+
+> [!key] Uniform $U(a,b)$
+> $f(x)=\dfrac1{b-a}$ on $[a,b]$, 0 outside; $F(x)=\dfrac{x-a}{b-a}$ on $[a,b]$. For $B\subset[a,b]$, $P[X\in B]=\dfrac{|B|}{b-a}$: probability is proportional to length.
+
+> [!key] Logistic
+> $f(x)=\dfrac{e^x}{(1+e^x)^2}$, $x\in\mathbb R$. It is non-negative and continuous. Substituting $u=1+e^x$ (so $\mathrm du=e^x\mathrm dx$): $\int\!f=\int_1^\infty\dfrac{\mathrm du}{u^2}=1$. The cdf is $F(x)=\int_{-\infty}^x\dfrac{e^t\,\mathrm dt}{(1+e^t)^2}=1-\dfrac1{1+e^x}=\dfrac{e^x}{1+e^x}$.
+
+> [!key] Rayleigh
+> $f(x)=xe^{-x^2/2}$ for $x\ge0$, $0$ for $x<0$; $F(x)=1-e^{-x^2/2}$ for $x\ge0$, $0$ for $x<0$ (and $\lim_{x\to\infty}F=1$, so $f$ is a density).
+
+> [!key] Standard normal $N(0,1)$ and the Gaussian
+> $\varphi(z)=\dfrac{e^{-z^2/2}}{\sqrt{2\pi}}$, $z\in\mathbb R$ (the bell curve, Figure PR5.1 B). To show $\int\varphi=1$ one needs $I=\int_{-\infty}^\infty e^{-x^2/2}\mathrm dx=\sqrt{2\pi}$.
+> $$I^2=\int\!\!\int_{\mathbb R^2}e^{-(x^2+y^2)/2}\mathrm dx\,\mathrm dy=\int_0^{2\pi}\!\!\int_0^\infty e^{-r^2/2}\,r\,\mathrm dr\,\mathrm d\theta=2\pi\Big[-e^{-r^2/2}\Big]_0^\infty=2\pi .$$
+> **General Gaussian** $N(\mu,\sigma^2)$ (with $\sigma>0$, $\mu\in\mathbb R$): $X\sim N(\mu,\sigma^2)$ if $Z=\dfrac{X-\mu}\sigma\sim N(0,1)$, i.e. $X=\sigma Z+\mu$, so its pdf is $\dfrac1{\sigma}\varphi\big(\tfrac{x-\mu}\sigma\big)$.
+
+> [!example] Normal probabilities (recomputed)
+> $P[|Z|<1]=0.6827$, $P[|Z|<2]=0.9545$, $P[|Z|<3]=0.9973$: the **68–95–99.7 rule**. **Inflection points (week-1 homework Q5).** $\varphi'(z)=-z\varphi(z)$ and $\varphi''(z)=(z^2-1)\varphi(z)$, which changes sign at $z=\pm1$ (the orange dots in Figure PR5.1 B). For $N(\mu,\sigma^2)$ the pdf is $f(x)=\tfrac1\sigma\varphi\big(\tfrac{x-\mu}\sigma\big)$ and $f''(x)=\tfrac1{\sigma^3}\varphi''\big(\tfrac{x-\mu}\sigma\big)$, so the inflection points are $x=\mu\pm\sigma$; $\varphi(1)/\varphi(0)=e^{-1/2}=0.607$.
+
+> [!pitfall] "$\sqrt{2\pi}$" is not "$\sqrt\pi$"
+> $\int e^{-x^2}\mathrm dx=\sqrt\pi$ but $\int e^{-x^2/2}\mathrm dx=\sqrt{2\pi}$; the $\tfrac12$ in the exponent is what makes the variance 1. The polar trick above is the same trick as the Gaussian integral of [[Gaussian Integral]] in the foundations.
+
+## 3. Expectation, LOTUS and variance
+<span class="scope-taught">taught</span> *10 Sep (pp.29–30); week 1, [[week1_mt2113.pdf#page=5|pp.5–9]]*
+
+> [!key] Definitions
+> $$E[X]=\int_{-\infty}^\infty x\,f(x)\,\mathrm dx,\qquad\boxed{E[g(X)]=\int_{-\infty}^\infty g(x)f(x)\,\mathrm dx}\ \text{(LOTUS)},$$
+> $$\mathrm{Var}[X]=E[(X-\mu)^2]=\int(x-\mu)^2f=E[X^2]-(E[X])^2,\qquad\mu=E[X].$$
+> $E[aX+b]=aE[X]+b$, $\mathrm{Var}[aX+b]=a^2\mathrm{Var}[X]$, and linearity $E[\sum X_i]=\sum E[X_i]$ holds for any random variables, continuous or not.
+> LOTUS = **Law of the Unconscious Statistician**: you can compute $E[g(X)]$ from the pdf of $X$ **without finding** the pdf of $g(X)$.
+
+> [!derivation] The lemma $E[Y]=\int_0^\infty P[Y>y]\,\mathrm dy$ for $Y\ge0$ (week 1, p.6)
+> $\displaystyle\int_0^\infty P[Y>y]\,\mathrm dy=\int_0^\infty\!\!\int_y^\infty f_Y(t)\,\mathrm dt\,\mathrm dy=\int_0^\infty\!\!\int_0^tf_Y(t)\,\mathrm dy\,\mathrm dt=\int_0^\infty t\,f_Y(t)\,\mathrm dt=E[Y]$, interchanging the order of integration over the region $0<y<t$ (the triangle in the handwritten sketch). (Figure PR5.1 C: for $Y=X^2$, $X\sim U(0,1)$, the area under $1-\sqrt y$ is $\tfrac13=E[X^2]$.)
+
+> [!derivation] Proof of LOTUS for $g\ge0$ (week 1, p.7)
+> Let $Y=g(X)\ge0$. By the lemma and since $\{Y>y\}=\{X\in\{x:g(x)>y\}\}$,
+> $$E[g(X)]=\int_0^\infty P[X\in\{g>y\}]\,\mathrm dy=\int_0^\infty\!\!\int_{\{x:\,g(x)>y\}}\!f(x)\,\mathrm dx\,\mathrm dy=\int_{\{x:\,g(x)>0\}}f(x)\Big(\int_0^{g(x)}\mathrm dy\Big)\mathrm dx=\int_{\mathbb R}g(x)f(x)\,\mathrm dx .$$
+> The last equality holds because $g(x)f(x)=0$ where $g=0$. The general case ($g$ of either sign) is an optional homework (split $g=g^+-g^-$).
+
+> [!derivation] The variance shortcut by LOTUS (week 1, p.7)
+> With $\mu=E[X]$: $\int(x-\mu)^2f=\int x^2f+\mu^2\!\int\!f-2\mu\!\int xf=E[X^2]+\mu^2-2\mu^2=E[X^2]-\mu^2$.
+
+## 4. Worked computations
+<span class="scope-taught">taught</span> *week 1 (post midterm), [[week1_mt2113.pdf#page=5|pp.5–9]] and the homework*
+
+> [!example] Uniform
+> $E[X]=\displaystyle\int_a^b\frac{x\,\mathrm dx}{b-a}=\frac{b^2-a^2}{2(b-a)}=\frac{a+b}2$. $E[X^2]=\dfrac{b^3-a^3}{3(b-a)}=\dfrac{a^2+ab+b^2}3$, so $\mathrm{Var}[X]=\dfrac{a^2+ab+b^2}3-\dfrac{(a+b)^2}4=\dfrac{(b-a)^2}{12}$. For $U(0,1)$: mean $\tfrac12$, variance $\tfrac1{12}=0.0833$.
+
+> [!example] Logistic
+> $E[X]=\int_{-\infty}^\infty\dfrac{xe^x\,\mathrm dx}{(1+e^x)^2}=\int\dfrac{x\,\mathrm dx}{(e^{x/2}+e^{-x/2})^2}=0$, because the integrand is **odd** (the density is symmetric about 0). 🔵 The variance is $\pi^2/3=3.290$ (numerical integral and a simulation of $10^6$ draws: $3.292$).
+
+> [!example] Rayleigh mean and variance
+> $E[X]=\displaystyle\int_0^\infty x^2e^{-x^2/2}\mathrm dx$. Integrate by parts with $u=x$, $\mathrm dv=xe^{-x^2/2}\mathrm dx$ ($v=-e^{-x^2/2}$): $=\big[-xe^{-x^2/2}\big]_0^\infty+\int_0^\infty e^{-x^2/2}\mathrm dx=\tfrac12I=\sqrt{\pi/2}=1.2533$ (the even integrand gives half of $I=\sqrt{2\pi}$). $E[X^2]=\int_0^\infty x^3e^{-x^2/2}\mathrm dx=2$ (substitute $t=x^2/2$), so $\mathrm{Var}[X]=2-\tfrac\pi2=0.4292$.
+
+> [!example] The normal mean and variance
+> $E[Z]=\int z\varphi(z)\mathrm dz=0$ (odd integrand). By LOTUS, $E[Z^2]=\int z^2\varphi=\dfrac2{\sqrt{2\pi}}\int_0^\infty z^2e^{-z^2/2}\mathrm dz=\dfrac2{\sqrt{2\pi}}\cdot\dfrac{\sqrt{2\pi}}2=1$, using the Rayleigh computation above ($\int_0^\infty x^2e^{-x^2/2}=\tfrac12I$). So $\mathrm{Var}[Z]=1$. For $X=\sigma Z+\mu$: $E[X]=\sigma E[Z]+\mu=\mu$ and $\mathrm{Var}[X]=\sigma^2\mathrm{Var}[Z]=\sigma^2$; the standard deviation is $\sigma$.
+
+### Homework, week 1
+
+> [!example] Q1 Rayleigh quartiles
+> **(a)** $P[1<X<3]=F(3)-F(1)=e^{-1/2}-e^{-9/2}=0.6065-0.0111=0.5954$. **(b)** $q_i$ solves $F(q_i)=\tfrac i4$: $1-e^{-q^2/2}=\tfrac i4\Rightarrow q_i=\sqrt{-2\ln(1-\tfrac i4)}$, i.e. $q_1=0.7585$, $q_2$ (median) $=\sqrt{2\ln2}=1.1774$, $q_3=1.6651$ (Figure PR5.1 A).
+
+> [!example] Q2 A random circle
+> $R\sim U(0,1)$ is the radius, $A=\pi R^2$ the area. **(a) Without the cdf (LOTUS):** $E[A]=\int_0^1\pi r^2\mathrm dr=\dfrac\pi3=1.0472$, $E[A^2]=\int_0^1\pi^2r^4\mathrm dr=\dfrac{\pi^2}5$, $\mathrm{Var}[A]=\dfrac{\pi^2}5-\dfrac{\pi^2}9=\dfrac{4\pi^2}{45}=0.8773$. **(b) cdf and pdf:** for $0\le a\le\pi$, $F_A(a)=P[\pi R^2\le a]=P\big[R\le\sqrt{a/\pi}\big]=\sqrt{a/\pi}$, so $f_A(a)=\dfrac1{2\sqrt{\pi a}}$ on $(0,\pi)$ (a Monte Carlo of $10^6$ circles gives mean $1.0475$ and variance $0.8776$). Check: $\int_0^\pi a\cdot\frac{\mathrm da}{2\sqrt{\pi a}}=\pi/3$ ✓.
+
+> [!example] Q3 The broken stick
+> A stick of length 1 is split at a uniform point $U$; $p\in[0,1]$ is a fixed point; $X$ = length of the part containing $p$. If $U>p$ the left piece $[0,U]$ contains $p$ and $X=U$; if $U<p$ the right piece $[U,1]$ contains it and $X=1-U$. Hence
+> $$E[X]=\int_p^1u\,\mathrm du+\int_0^p(1-u)\,\mathrm du=\frac{1-p^2}2+p-\frac{p^2}2=\frac12+p-p^2 .$$
+> Maximising: $\tfrac{\mathrm d}{\mathrm dp}=1-2p=0\Rightarrow p=\tfrac12$ and $E[X]=\tfrac34$ (simulation $0.7501$). The stick is longest on average when $p$ is the midpoint; for $p=0$ or $1$, $E[X]=\tfrac12$.
+
+> [!example] Q4 Expected excess of a normal over a threshold
+> $Z\sim N(0,1)$, $c\in\mathbb R$: $E[\max\{Z-c,0\}]=\displaystyle\int_c^\infty(z-c)\varphi(z)\,\mathrm dz=\int_c^\infty z\varphi(z)\mathrm dz-c\,[1-\Phi(c)]=\varphi(c)-c\,[1-\Phi(c)]$, because $z\varphi(z)=-\varphi'(z)$. Values: $c=0$: $0.3989$; $c=1$: $0.0833$; $c=2$: $0.0085$; $c=-1$: $1.0833$ (each agrees with a direct numerical integral). This "expected payoff" integral is the building block of option pricing and of expected shortfall.
+
+> [!example] Q6 The tail formula for any sign, and LOTUS for any $g$ (the starred problem)
+> **(a)** Write $Y=Y^+-Y^-$ with $Y^\pm\ge0$. For $y>0$, $\{Y^+>y\}=\{Y>y\}$ and $\{Y^->y\}=\{Y<-y\}$, so by the lemma applied to $Y^+$ and $Y^-$,
+> $$E[Y]=E[Y^+]-E[Y^-]=\int_0^\infty P[Y>y]\,\mathrm dy-\int_0^\infty P[Y<-y]\,\mathrm dy .$$
+> **(b)** For arbitrary $g$ put $g=g^+-g^-$ with $g^\pm\ge0$. LOTUS for non-negative functions gives $E[g^\pm(X)]=\int g^\pm f$, and $g(X)=g^+(X)-g^-(X)$, so $E[g(X)]=\int g^+f-\int g^-f=\int gf$ (when both integrals are finite).
+
+## 5. Transformations: the cdf method
+<span class="scope-taught">taught</span> *9 Sep ("how to derive the cdf, pmf and expectation of a transformed random variable"); week 1 homework Q2*
+
+For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the event in terms of $X$**, then differentiate. If $g$ is strictly increasing and differentiable, $F_Y(y)=F_X(g^{-1}(y))$ and $f_Y(y)=f_X(g^{-1}(y))\big|\tfrac{\mathrm d}{\mathrm dy}g^{-1}(y)\big|$.
+
+> [!example] Three transformations
+> - **Linear:** $Y=aX+b$, $a>0$: $F_Y(y)=F_X\big(\tfrac{y-b}a\big)$, $f_Y(y)=\tfrac1af_X\big(\tfrac{y-b}a\big)$; this is how $N(\mu,\sigma^2)$ comes from $N(0,1)$.
+> - **Square of a uniform:** $Y=X^2$, $X\sim U(0,1)$: $F_Y(y)=P[X\le\sqrt y]=\sqrt y$, $f_Y=\tfrac1{2\sqrt y}$ on $(0,1)$; $E[Y]=\int_0^1y\cdot\tfrac{\mathrm dy}{2\sqrt y}=\tfrac13$ (the same as by LOTUS).
+> - **Square of a normal** (non-monotone): $W=Z^2$: $F_W(w)=P[-\sqrt w\le Z\le\sqrt w]=2\Phi(\sqrt w)-1$, $f_W(w)=\dfrac{e^{-w/2}}{\sqrt{2\pi w}}$ for $w>0$ (the $\chi^2_1$ density); $E[W]=1$, the variance of $Z$.
+
+> [!pitfall] Check the event, not the formula
+> For non-monotone $g$ (like $z^2$) the event $\{g(X)\le y\}$ is a union of intervals; forgetting the second branch halves the density.
+
+
+## 6. The exponential distribution and memorylessness
+<span class="scope-extra-book">extra · book</span> *Blitzstein and Hwang Ch. 5; Ross Ch. 5; the AI notes' MGF section*
+
+> [!key] Exponential$(\lambda)$
+> $f(x)=\lambda e^{-\lambda x}$, $F(x)=1-e^{-\lambda x}$ for $x\ge0$. $E[X]=\tfrac1\lambda$, $\mathrm{Var}[X]=\tfrac1{\lambda^2}$ (integrate by parts, or by the lemma $E[X]=\int_0^\infty e^{-\lambda x}\mathrm dx=\tfrac1\lambda$). It is the continuous analogue of the geometric distribution: $P[X>s+t\mid X>s]=\dfrac{e^{-\lambda(s+t)}}{e^{-\lambda s}}=e^{-\lambda t}=P[X>t]$ (**memoryless**: for $\lambda=0.5$, $s=2$, $t=3$: $0.2231$ regardless of the 2 elapsed).
+
+> [!note] Why it matters here
+> The Rayleigh $R$ and the exponential are linked: if $R$ is Rayleigh then $R^2/2\sim$ Exp$(1)$ (since $P[R^2/2>t]=P[R>\sqrt{2t}]=e^{-t}$). This is how the distribution of the length of a 2D Gaussian vector arises, as in the polar-coordinate derivation of $\int e^{-x^2/2}\mathrm dx=\sqrt{2\pi}$.
+
+## Map of this chapter
+> [!connection] How PR05 connects
+> **Builds on:** [[PR03 Discrete Random Variables and Distributions]] and [[PR04 Joint Distributions Expectation and Variance]] (the same definitions with integrals; the cdf).
+> **Leads to:** [[PR06 Moments Generating Functions and Limit Theorems]] (MGFs, the normal approximation, the central limit theorem).
+> **Concepts:** [[Continuous Random Variable]] · [[Probability Density Function]] · [[Uniform Distribution]] · [[Rayleigh Distribution]] · [[Logistic Distribution]] · [[Normal Distribution]] · [[Standard Normal Distribution]] · [[Exponential Distribution]] · [[Law of the Unconscious Statistician]] · [[Cdf Method for Transformations]] · [[Gaussian Integral]] · [[Memoryless Property]]
+> **Other subjects:** [[Probability - Course Map]], [[QM01 From Waves to Probabilities]] (the Gaussian wave packet, $|\psi|^2$ as a pdf, $\int|\psi|^2=1$), [[QM04 The Particle in a Box]] (uniform-like densities, $\langle x\rangle$ and $\Delta x$ are integrals of this chapter), [[TH06 From Kinetic Theory to Statistical Mechanics]] (a molecular speed is the length of a 3D Gaussian velocity vector; the 2D analogue of that length is exactly the Rayleigh law), [[Dimensional Analysis]].
+
+## Summary
+> [!summary] Cheat-sheet
+> - $f\ge0$, $\int f=1$; $P[a<X<b]=\int_a^bf$; $P[X=x]=0$; $F(x)=\int_{-\infty}^xf$, $F'=f$.
+> - $E[X]=\int xf$; **LOTUS** $E[g(X)]=\int gf$; $\mathrm{Var}=E[X^2]-E[X]^2$; $\mathrm{Var}[aX+b]=a^2\mathrm{Var}$. Lemma $E[Y]=\int_0^\infty P[Y>y]\mathrm dy$ ($Y\ge0$).
+> - $U(a,b)$: $\frac{a+b}2$, $\frac{(b-a)^2}{12}$. Logistic $f=\frac{e^x}{(1+e^x)^2}$, $F=\frac{e^x}{1+e^x}$, mean 0. Rayleigh $F=1-e^{-x^2/2}$, mean $\sqrt{\pi/2}$, var $2-\frac\pi2$. $N(0,1)$: $\int e^{-x^2/2}=\sqrt{2\pi}$ (polar), mean 0, var 1; $N(\mu,\sigma^2)=\sigma Z+\mu$. Exp$(\lambda)$: mean $1/\lambda$, memoryless.
+> - **cdf method:** $F_Y(y)=P[g(X)\le y]$, then differentiate.
+> - **Numbers:** Rayleigh $P[1<X<3]=0.595$, quartiles $0.759,1.177,1.665$; circle $E[A]=\pi/3$, $\mathrm{Var}=4\pi^2/45$; broken stick $\tfrac12+p-p^2\le\tfrac34$; $c=\tfrac34$ for $c(1-x^2)$.
+
+## Practice
+1. **Normalise.** $f(x)=cx^2$ on $[0,2]$. Find $c$, the cdf, $P[X>1]$ and $E[X]$.
+2. **From a cdf.** $F(x)=1-e^{-x^2/4}$ for $x\ge0$. Find the pdf, the median and $P[1<X<2]$.
+3. **Uniform.** $X\sim U(2,8)$. Find $E[X]$, $\mathrm{Var}[X]$, $P[X>6]$, and the probability that $X$ is within 1 of its mean.
+4. **Logistic.** For the logistic distribution find $P[X>1]$ and the median, and show that $f$ is symmetric about 0.
+5. **LOTUS.** $X\sim U(0,2)$. Find $E[X^3]$, $E[e^X]$ and $\mathrm{Var}[X^2]$.
+6. **Normal.** $X\sim N(10,4)$ (variance 4). Find $P[8<X<12]$, $P[X>14]$, and the value $a$ with $P[|X-10|<a]=0.95$.
+7. **cdf method.** $X\sim U(0,1)$ and $Y=-\ln X$. Find the cdf and pdf of $Y$, and its mean.
+8. **Square.** $X\sim U(-1,1)$ and $W=X^2$. Find the pdf of $W$ and $E[W]$.
+9. **Tail formula.** For the exponential with rate 2 compute $E[X]$ via $\int_0^\infty P[X>y]\mathrm dy$ and $E[X^2]$ by LOTUS. Verify the variance.
+10. **Gaussian integral.** Use the polar-coordinate trick to evaluate $\int_{-\infty}^\infty e^{-x^2}\mathrm dx$ and deduce $\int_0^\infty x^2e^{-x^2}\mathrm dx$.
+
+> [!example]- Solutions
+> 1. $c\cdot\tfrac83=1\Rightarrow c=\tfrac38$. $F(x)=\tfrac{x^3}8$ on $[0,2]$. $P[X>1]=1-\tfrac18=\tfrac78$. $E[X]=\tfrac38\int_0^2x^3\mathrm dx=\tfrac38\cdot4=\tfrac32$.
+> 2. $f(x)=\tfrac x2e^{-x^2/4}$ ($x\ge0$). Median: $e^{-m^2/4}=\tfrac12\Rightarrow m=2\sqrt{\ln2}=1.665$. $P[1<X<2]=e^{-1/4}-e^{-1}=0.7788-0.3679=0.4109$.
+> 3. $E=5$; $\mathrm{Var}=\tfrac{36}{12}=3$; $P[X>6]=\tfrac26=\tfrac13$; $P[4<X<6]=\tfrac26=\tfrac13$.
+> 4. $F(x)=\tfrac{e^x}{1+e^x}$ so $P[X>1]=1-F(1)=\tfrac1{1+e}=0.2689$; median: $F(m)=\tfrac12\Rightarrow m=0$. $f(-x)=\tfrac{e^{-x}}{(1+e^{-x})^2}=\tfrac{e^{-x}e^{2x}}{(e^x+1)^2}=f(x)$.
+> 5. $f=\tfrac12$: $E[X^3]=\tfrac12\int_0^2x^3=2$; $E[e^X]=\tfrac12(e^2-1)=3.195$; $E[X^2]=\tfrac43$, $E[X^4]=\tfrac12\cdot\tfrac{32}5=\tfrac{16}5$; $\mathrm{Var}[X^2]=\tfrac{16}5-\tfrac{16}9=\tfrac{64}{45}=1.422$.
+> 6. $\sigma=2$: $P[8<X<12]=P[|Z|<1]=0.6827$; $P[X>14]=P[Z>2]=0.0228$; $a=1.96\sigma=3.92$.
+> 7. $F_Y(y)=P[-\ln X\le y]=P[X\ge e^{-y}]=1-e^{-y}$, $y\ge0$: Exp$(1)$, $f_Y=e^{-y}$, $E[Y]=1$.
+> 8. $F_W(w)=P[|X|\le\sqrt w]=\sqrt w$ on $(0,1)$, $f_W=\tfrac1{2\sqrt w}$; $E[W]=\tfrac13$ (also $\int x^2\cdot\tfrac12\mathrm dx$ by LOTUS).
+> 9. $P[X>y]=e^{-2y}$, so $E[X]=\tfrac12$. $E[X^2]=\int_0^\infty x^2\,2e^{-2x}\mathrm dx=\tfrac{2}{\lambda^2}=\tfrac12$ (integrate by parts twice). $\mathrm{Var}=\tfrac12-\tfrac14=\tfrac14=\tfrac1{\lambda^2}$ ✓.
+> 10. $J=\int e^{-x^2}\mathrm dx$; $J^2=\int_0^{2\pi}\!\int_0^\infty e^{-r^2}r\,\mathrm dr\,\mathrm d\theta=2\pi\cdot\tfrac12=\pi$, so $J=\sqrt\pi$. By parts with $u=x$, $\mathrm dv=xe^{-x^2}\mathrm dx$: $\int_0^\infty x^2e^{-x^2}\mathrm dx=\tfrac12\int_0^\infty e^{-x^2}\mathrm dx=\tfrac{\sqrt\pi}4$.
+
+## Provenance
+> [!provenance]- Source map for this chapter
+> | Topic | Source | Scope |
+> |---|---|---|
+> | continuous rv, pdf, $P[X=x]=0$, cdf–pdf link, expectation, variance, linearity | [[ilovepdf_merged-1.pdf#page=28\|class notes 10 Sep, pp.28–30]] | taught |
+> | uniform, logistic, Rayleigh, SND, polar-coordinates proof of $\sqrt{2\pi}$, $N(\mu,\sigma^2)$ | [[week1_mt2113.pdf#page=3\|week 1 post-midterm, handwritten pp.3–9]] | taught |
+> | lemma $E[Y]=\int P[Y>y]$, LOTUS proof, variance shortcut | [[week1_mt2113.pdf#page=6\|handwritten pp.6–7]] | taught |
+> | homework Q1 (Rayleigh), Q2 (circle), Q3 (stick) | [[week1_mt2113.pdf#page=1\|handwritten p.1]] | taught |
+> | homework Q4 ($E\max\{Z-c,0\}$), Q5 (inflection points), Q6 (tail formula and LOTUS for any $g$) | [[week1_mt2113.pdf#page=2\|handwritten p.2]] | taught |
+> | $c(1-x^2)$ | [[Practice problems 17th September and following tutorial and weekend.pdf\|sheet 17 Sep, problem 11]] | taught |
+> | exponential, memorylessness, $\chi^2_1$, payoff integral | Blitzstein and Hwang Ch. 5 (not opened); `scripts/pr_numbers.py` | extra/book, beyond |
+>
+> **Notes.** The handwritten pages are images (no text layer); I read them page by page. The page numbers above are the PDF page indices: p.1–2 homework, pp.3–4 definitions and examples, p.5 expectations, p.6 LOTUS lemma, p.7 LOTUS proof and variance, p.8 uniform variance and SND, p.9 normal moments. LOTUS for $g$ of either sign is left as homework Q6 (p.2); my solution is in §4.
+
+> [!verify] Which midterm cut
+> The handwritten notes are headed "Week 1 (post mid-term) MT2113" and the continuous-variable material starts on 10 Sep in the typed notes. If the instructor treats the exponential and the $\chi^2$ as part of this course, they are in §6 and §5 respectively; neither appears in the class notes I have.
+
+**References.** Blitzstein, J. K. and Hwang, J. *Introduction to Probability*, Ch. 5 · Ross, S. *A First Course in Probability* (8th ed.), Ch. 5 · Gauss, C. F. (1809) *Theoria motus corporum coelestium*.

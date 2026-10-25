@@ -1,0 +1,32 @@
+---
+title: Tautology
+aliases: ["contradiction", "contingency", "true statement versus tautology"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Tautology
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Assignment-prems_merged.pdf#page=7|Assignment 1, Q4]] and the instructor's note [[Tautology.pdf]].
+
+> [!intuition] In one picture
+> True because of its shape, whatever the pieces say.
+
+> [!key] Definition
+> A form is a **tautology** (true under every assignment), **contradiction** (false under every assignment) or **contingency**. $P\vee\neg P$ and $(P\wedge Q)\Rightarrow P$ are tautologies; $P\wedge\neg P$ is a contradiction; $P\Rightarrow(P\wedge Q)$ is a contingency.
+
+> [!pitfall] True is not tautological
+> $0\ne1$ and $5<7$ are true statements, but their truth comes from arithmetic, not their form: **true statement $\not\Rightarrow$ tautology**; tautology $\Rightarrow$ true. Modus ponens $(P\wedge(P\Rightarrow Q))\Rightarrow Q$ and the hypothetical syllogism are tautologies.
+
+Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Logical Equivalence]] · [[Statement and Truth Table]] · [[Proof Techniques]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

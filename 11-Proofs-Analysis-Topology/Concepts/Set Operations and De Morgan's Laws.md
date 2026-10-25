@@ -1,0 +1,31 @@
+---
+title: Set Operations and De Morgan's Laws
+aliases: ["De Morgan's laws", "algebra of sets", "union and intersection", "set difference"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Set Operations and De Morgan's Laws
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Assignment-prems_merged.pdf#page=3|Assignment 3, Q4–Q6]].
+
+> [!intuition] In one picture
+> Sets mirror logic: $\cap\leftrightarrow\wedge$, $\cup\leftrightarrow\vee$, complement $\leftrightarrow\neg$.
+
+> [!key] Definition
+> $(A\cap B)^c=A^c\cup B^c$, $(A\cup B)^c=A^c\cap B^c$; $A\setminus B=A\cap B^c$; $A\times(B\cup C)=(A\times B)\cup(A\times C)$. Prove by **element chasing** through the logical equivalence.
+
+$A\triangle B=(A\setminus B)\cup(B\setminus A)=(A\cup B)\setminus(A\cap B)$. Complement is relative to an ambient set. Direct method: $x\in(A\cap B)^c\iff\neg(x\in A\wedge x\in B)\iff x\notin A\vee x\notin B\iff x\in A^c\cup B^c$.
+
+Used in: [[PA02 Sets Families and the ZFC Foundations]]. Related: [[Power Set]] · [[Indexed Family of Sets]] · [[Logical Equivalence]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

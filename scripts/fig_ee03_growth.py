@@ -1,0 +1,33 @@
+"""EE03 - exponential vs logistic growth, and the logistic growth-rate curves (K=100, r=0.6, N0=2)."""
+from figlib import *
+
+r, K, N0 = 0.6, 100.0, 2.0
+t = np.linspace(0, 14, 400)
+Ne = N0 * np.exp(r * t)
+Nl = K / (1 + (K - N0) / N0 * np.exp(-r * t))
+fig, (a, b) = plt.subplots(1, 2, figsize=(10.0, 3.9))
+a.plot(t, Ne, color=ORANGE, label=r"exponential  $N_0e^{rt}$")
+a.plot(t, Nl, color=BLUE, label=r"logistic  $K/[1+((K-N_0)/N_0)e^{-rt}]$")
+a.axhline(K, color=MUTED, ls=":", lw=1)
+a.annotate("K", (13.4, K + 4), fontsize=9, color=MUTED)
+tm = np.log((K - N0) / N0) / r
+a.plot([tm], [K / 2], "o", color=BLUE, ms=6)
+a.annotate("inflection at $N=K/2$\n(fastest growth)", (tm, K / 2), xytext=(10, -38), textcoords="offset points", fontsize=8.5)
+a.annotate("exponential leaves\nthe axes at $t\\approx7.4$", (7.2, 158), xytext=(-86, -6), textcoords="offset points", fontsize=8.2, color=MUTED)
+a.set_ylim(0, 165); a.set_xlim(0, 14); a.set_xlabel("time t"); a.set_ylabel("population size N")
+a.set_title("Same start, same r: the ceiling changes everything", fontsize=10)
+a.legend(loc="upper left", fontsize=8.3, bbox_to_anchor=(0.0, 0.93))
+N = np.linspace(0, K, 300)
+b.plot(N, r * (1 - N / K), color=BLUE)
+b.set_ylabel(r"per-capita rate $\frac{1}{N}\frac{dN}{dt}=r(1-N/K)$", color=BLUE)
+b.set_ylim(0, 0.7)
+b.set_xlabel("population size N")
+b2 = b.twinx()
+b2.spines["right"].set_visible(True); b2.grid(False)
+b2.plot(N, r * N * (1 - N / K), color=ORANGE)
+b2.plot([K / 2], [r * K / 4], "o", color=ORANGE, ms=6)
+b2.set_ylim(0, 17.5)
+b2.set_ylabel(r"growth rate $dN/dt=rN(1-N/K)$", color=ORANGE)
+b2.annotate(r"max $rK/4=15$ at $N=K/2$", (K / 2, r * K / 4), xytext=(-60, 10), textcoords="offset points", fontsize=8.5)
+b.set_title("Per-capita rate falls linearly; total growth peaks at K/2", fontsize=10)
+fig.tight_layout(); save(fig, "fig_ee03_growth")

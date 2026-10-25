@@ -1,0 +1,38 @@
+---
+title: Naive Definition of Probability
+aliases: ["classical probability", "equally likely outcomes"]
+subject: probability
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Naive Definition of Probability
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[ilovepdf_merged-1.pdf#page=5|class notes 6 Aug]].
+
+> [!intuition] In one picture
+> When every outcome is equally likely, probability is just a fraction of the list.
+
+> [!key] Definition
+> For a finite sample space with equally likely outcomes, $P[A]=\dfrac{|A|}{|S|}$ = favourable / total.
+
+## Use and misuse
+It is a special case of the axioms ($P(\{i\})=1/N$) and turns probability into [[Counting Principles]]. It fails when outcomes are not equally likely (a biased die) or the space is infinite.
+
+> [!example] Poker
+> Full house: $\dfrac{13\binom43\cdot12\binom42}{\binom{52}5}=\dfrac{3744}{2\,598\,960}=0.00144$. Straight flush (royal included): $\dfrac{40}{\binom{52}5}=1.5\times10^{-5}$.
+
+> [!pitfall] Is it really symmetric?
+> "Two children, at least one boy" has outcomes BB, BG, GB (not GG) equally likely, so $P(BB)=\tfrac13$, but "the older is a boy" gives $\tfrac12$ ([[Conditional Probability]]).
+
+Used in: [[PR01 Counting and the Axioms of Probability]]. Related: [[Counting Principles]] · [[Sample Space and Events]] · [[Axioms of Probability]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

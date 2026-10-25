@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 590" width="900" height="590" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="900" height="590" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="450.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Why a shallow lake keeps its state: vegetation and turbidity harm each other</text>
+<line x1="532.7" y1="179.9" x2="662.3" y2="250.1" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="607.5" y="209.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">-</text>
+<line x1="659.8" y1="339.8" x2="535.2" y2="405.2" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="587.5" y="366.5" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">+</text>
+<line x1="364.8" y1="405.2" x2="240.2" y2="339.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="292.5" y="366.5" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">-</text>
+<line x1="237.7" y1="250.1" x2="367.3" y2="179.9" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<text x="312.5" y="209.0" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">+</text>
+<rect x="305.0" y="93.0" width="290" height="84" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="450" y="130.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Turbidity T</text>
+<text x="450" y="150.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(algae, suspended matter)</text>
+<rect x="610.0" y="253.0" width="270" height="84" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="745" y="300.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Light at the lake bed L</text>
+<rect x="305.0" y="408.0" width="290" height="84" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="450" y="455.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Submerged vegetation V</text>
+<rect x="20.0" y="253.0" width="270" height="84" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="155" y="290.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Sediment resuspension R</text>
+<text x="155" y="310.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(waves, fish stirring)</text>
+<rect x="355.0" y="253.0" width="190" height="84" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="450" y="280.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Loop sign</text>
+<text x="450" y="300.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(-)(+)(-)(+) = +</text>
+<text x="450" y="320.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">reinforcing</text>
+<text x="450.0" y="572" text-anchor="middle" font-size="13" fill="#52514e">More turbidity gives less light (-); more light gives more vegetation (+); vegetation reduces resuspension (-); resuspension raises turbidity (+)</text>
+</svg>

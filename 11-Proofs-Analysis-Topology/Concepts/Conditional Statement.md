@@ -1,0 +1,32 @@
+---
+title: Conditional Statement
+aliases: ["implication", "converse", "contrapositive", "necessary and sufficient"]
+subject: analysis
+type: concept
+scope: [taught]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+---
+# Conditional Statement
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[Assignment-prems_merged.pdf#page=5|Assignment 2, Q1–Q2]].
+
+> [!intuition] In one picture
+> A promise: broken only when the condition holds and the conclusion fails.
+
+> [!key] Definition
+> $P\Rightarrow Q$: "if $P$ then $Q$" = "$P$ only if $Q$" = "$P$ is sufficient for $Q$" = "$Q$ is necessary for $P$". **Converse** $Q\Rightarrow P$ (not equivalent); **contrapositive** $\neg Q\Rightarrow\neg P$ (equivalent); **negation** $P\wedge\neg Q$.
+
+> [!example] Divisibility
+> $P$: $6\mid n$; $Q$: $3\mid n$. $P\Rightarrow Q$ true; converse false ($n=3$); contrapositive "$3\nmid n\Rightarrow6\nmid n$" true. Negating "if $n$ is prime then $n$ is odd" gives "$n$ is prime and even": $n=2$.
+
+Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Logical Equivalence]] · [[Quantifiers and Their Negation]] · [[Counterexample]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="760" height="540" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="380.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Four fates of a beam crossing a layer</text>
+<line x1="241.0" y1="280.0" x2="259.0" y2="280.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="501.0" y1="280.0" x2="524.0" y2="280.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="380.0" y1="331.0" x2="380.0" y2="404.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="380.0" y1="229.0" x2="380.0" y2="156.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="25.0" y="245.0" width="210" height="70" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="130" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Incoming beam</text>
+<text x="130" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">I₀</text>
+<rect x="265.0" y="235.0" width="230" height="90" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="380" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Layer of air</text>
+<text x="380" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">optical depth τ</text>
+<rect x="530.0" y="245.0" width="210" height="70" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="635" y="275.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Transmitted</text>
+<text x="635" y="295.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">I₀ e^(−τ)</text>
+<rect x="255.0" y="410.0" width="250" height="70" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="380" y="440.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Absorbed → heat</text>
+<text x="380" y="460.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">then re-emitted (Kirchhoff)</text>
+<rect x="255.0" y="80.0" width="250" height="70" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="380" y="110.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Scattered → redirected</text>
+<text x="380" y="130.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">some back to space (albedo)</text>
+<text x="380.0" y="522" text-anchor="middle" font-size="13" fill="#52514e">Extinction = absorption + scattering; only absorption heats the air</text>
+</svg>
