@@ -29,6 +29,9 @@ $A=\pi R^2$, $R\sim U(0,1)$: $F_A(a)=\sqrt{a/\pi}$ on $[0,\pi]$, $f_A=\frac1{2\s
 
 Used in: [[PR05 Continuous Random Variables]]. Related: [[Law of the Unconscious Statistician]] · [[Cumulative Distribution Function]] · [[Uniform Distribution]].
 
+## Added with the Week 2 and Week 3 lectures
+Week 2 examples of the method: the **folded normal** $|Z|$ ($F=2\Phi-1$, $f=2\varphi$ on $y\ge0$, [[Folded Normal Distribution]]), the **Gumbel** variable $-\ln X$ with $X\sim\mathrm{Expo}(1)$ ($F=e^{-e^{-y}}$, [[Gumbel Distribution]]) and the **probability integral transform** $F(X)\sim U(0,1)$ ([[Probability Integral Transform]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

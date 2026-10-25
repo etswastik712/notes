@@ -69,15 +69,22 @@ Rayleigh & $F=1-e^{-x^2/2}$; mean $\sqrt{\pi/2}$; var $2-\tfrac\pi2$ & quartiles
 logistic & $F=\tfrac{e^x}{1+e^x}$, mean $0$, var $\tfrac{\pi^2}3$ & $P[X>1]=0.269$\\
 normal & $\int e^{-x^2/2}=\sqrt{2\pi}$ (polar); $X=\sigma Z+\mu$; inflection $\mu\pm\sigma$ & $68.3,95.4,99.7\%$\\
 transformations & $F_Y(y)=P[g(X)\le y]$, then differentiate; $Z^2\sim\chi^2_1$ & $E[(Z-c)^+]=\varphi(c)-c(1-\Phi(c))$\\
+folded normal (W2) & $|Z|$: $f=2\varphi$ on $y\ge0$, $F=2\Phi-1$; $E=\sqrt{2/\pi}$, $\mathrm{Var}=1-\tfrac2\pi$ & $0.7979$, $0.3634$\\
+exponential (W2) & $f=\lambda e^{-\lambda x}$, $F=1-e^{-\lambda x}$; $E[X^n]=\tfrac{n!}{\lambda^n}$ ($I_n=\tfrac n\lambda I_{n-1}$) & mean $\tfrac1\lambda$, var $\tfrac1{\lambda^2}$\\
+geometric limit & $P[G\ge k]=q^k$, $p=\lambda h$: $(1-\lambda h)^{x/h}\to e^{-\lambda x}$ & $0.3164\to0.3679$ ($\lambda{=}\tfrac12$, $x{=}2$)\\
+memoryless (W2) & $P[X\ge t+s\mid X\ge s]=P[X\ge t]$ $\iff$ Geom (discrete) or Expo (continuous) & $G(t+s)=G(t)G(s)\Rightarrow G=G(1)^x$\\
+HW2 & Gumbel: $-\ln X$, $X{\sim}$Exp$(1)$ has $F=e^{-e^{-y}}$; $\max_n-\ln n\to$ Gumbel; $E[F(X)]=\tfrac12$ & $P[T{\ge}10|T{>}9]=e^{-1/2}=0.607$\\
 \bottomrule
 \end{tabular}
 
 \section*{PR06 MGFs and limit theorems (extra)}
 \begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
 \toprule
-MGF & $M(t)=E[e^{tX}]$; $E[X^k]=M^{(k)}(0)$; $M_{aX+b}=e^{bt}M(at)$; $M_{\sum}=\prod M_i$ & derive each named MGF first\\
-MGFs & Bin $(q+pe^t)^n$; Poisson $e^{\lambda(e^t-1)}$; Geom $\tfrac{pe^t}{1-qe^t}$; Exp $\tfrac\lambda{\lambda-t}$; $N$: $e^{\mu t+\sigma^2t^2/2}$ & Cauchy: none\\
-shape & $\gamma_1=\mu_3/\sigma^3$, $\gamma_2=\mu_4/\sigma^4-3$ & Exp $2,6$; unif $0,-1.2$\\
+median, mode (W3) & median: $P[X{\le}c]\ge\tfrac12$ and $P[X{\ge}c]\ge\tfrac12$ ($F(c)=\tfrac12$); mode: max of $f$ or $p_i$ & Exp $\tfrac{\ln2}\lambda,0$; Pareto$(a)$ $2^{1/a},1$; unif $\tfrac{a+b}2$, all\\
+MGF (W3) & $M(t)=E[e^{tX}]$ = EGF of moments: $E[X^n]=n!\,[t^n]M$; $M_{aX+b}=e^{bt}M(at)$; $M_{\sum}=\prod M_i$ & derive each named MGF first\\
+MGFs & Bern $q+pe^t$; Bin $(q+pe^t)^n$; Poisson $e^{\lambda(e^t-1)}$; Exp $\tfrac\lambda{\lambda-t}$; $N$: $e^{\mu t+\sigma^2t^2/2}$ (not $-$); $U(a,b)$: $\tfrac{e^{tb}-e^{ta}}{t(b-a)}$; $|Z|$: $2e^{t^2/2}\Phi(t)$ & Cauchy: none\\
+geometric & failures (lectures): $q^kp$, MGF $\tfrac p{1-qe^t}$, mean $\tfrac qp$, var $\tfrac q{p^2}$; trials (PR03): $\tfrac{pe^t}{1-qe^t}$, mean $\tfrac1p$ & $X_{\rm tr}=1+X_{\rm fail}$\\
+shape (W3) & $\gamma_1=\mu_3/\sigma^3$; lecture's kurtosis $=\mu_4/\sigma^4-3$ (\emph{excess}) & Exp $2,6$; unif $0,-1.2$; $E[X^m]_{U}=\tfrac{b^{m+1}-a^{m+1}}{(m+1)(b-a)}$\\
 inequalities & Markov $P[X\ge a]\le E[X]/a$; Chebyshev $1/k^2$; WLLN $\sigma^2/(n\varepsilon^2)$ & $k{=}2$: $0.25$ vs $0.0455$\\
 CLT & $\tfrac{S_n-n\mu}{\sigma\sqrt n}\to N(0,1)$; error $\approx\tfrac{\gamma_1}{6\sqrt{2\pi n}}$ & Exp: $0.0133$ at $n{=}100$\\
 normal approx. & Bin$\approx N(np,npq)$, $P[X\le k]\approx\Phi\!\big(\tfrac{k+1/2-np}{\sqrt{npq}}\big)$ & Bin$(30,.3)$: $0.7304$ vs $0.7250$\\
@@ -86,6 +93,6 @@ normal approx. & Bin$\approx N(np,npq)$, $P[X\le k]\approx\Phi\!\big(\tfrac{k+1/
 
 \vspace{3pt}
 \begin{verifybox}{scope}
-PR01--PR05 follow the instructor's typed and handwritten class notes and sheets; PR06 (MGFs, limit theorems) comes from AI-written notes and textbooks only. Confirm with the instructor whether MGFs, Chebyshev, the LLN and the CLT are examinable.
+PR01--PR05 and the first half of PR06 (median, mode, moments, MGFs; W2/W3 = the handwritten Week 2 and 3 lectures) follow the instructor's class notes, handwritten pages and sheets; Markov, Chebyshev, the LLN and the CLT come from AI-written notes and textbooks only. Confirm with the instructor whether they are examinable. Two slips on the Week 3 pages (uniform Taylor denominator; $N(\mu,\sigma^2)$ sign) are corrected here.
 \end{verifybox}
 \end{document}

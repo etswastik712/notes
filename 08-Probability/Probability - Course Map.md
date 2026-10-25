@@ -12,12 +12,14 @@ tags: [subject/probability, type/moc, taught, extra/book, src/lecture-notes, sta
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
 
-Six chapters. PR01–PR05 follow the instructor's **typed class notes** (5 Aug – 10 Sep 2026, one merged 32-page PDF), the **handwritten post-midterm Week 1** notes (9 pages, with a homework page) and the seven **practice-problem sheets** (7 Aug – 17 Sep). PR06 (MGFs, moments, limit theorems) is the part for which there is **no lecture note**; it is built from AI-written notes and the textbooks and marked 🟡.
+Six chapters. PR01–PR05 follow the instructor's **typed class notes** (5 Aug – 10 Sep 2026, one merged 32-page PDF), the **handwritten post-midterm Week 1, 2 and 3** notes (9, 5 and 6 pages, each with a homework page) and the seven **practice-problem sheets** (7 Aug – 17 Sep). **PR06** is now partly taught: the **Week 3** notes cover median and mode, moments, skewness, kurtosis, the MGF and six first-principles MGFs; the rest of PR06 (independent sums, Markov and Chebyshev, the law of large numbers, the CLT) still has **no lecture note** and stays 🟡 (AI notes and textbooks). **Week 2** supplies the exponential distribution, the folded normal and the memoryless theorem (PR05 §5–§6).
 
 > [!warning] What is and is not in the sources
 > - **Taught (🟢)**: counting and axioms, conditional probability and independence, discrete random variables and the named discrete distributions, joint pmfs, linearity of expectation, variance, continuous random variables with the uniform, logistic, Rayleigh and normal laws.
 > - **Not formally in the syllabus (the instructor says so)**: continuity of probability (§2 of 12 Aug), the proofs of the cdf properties (right-continuity), gambler's ruin, the variance of a sum of independent variables ("not proved in class, possibly not in this course").
-> - **No lecture source (🟡)**: MGFs, skewness/kurtosis, Chebyshev, the law of large numbers, the CLT, the exponential distribution. The AI notes record a **course policy**: MGFs may be used in homework and exams, but each named MGF must be derived from first principles first. **Ask the instructor** whether these are examinable.
+> - **Taught in Weeks 2–3 (🟢, added 2026-10-25)**: the folded normal, the exponential distribution (moments, geometric limit, memoryless characterisation), median and mode, moments, skewness, (excess) kurtosis, the MGF with its EGF remark, and the MGFs of the uniform, exponential, normal, Bernoulli, binomial and geometric laws (each derived from first principles, in line with the AI notes' **course policy**).
+> - **Still no lecture source (🟡)**: existence of moments (Cauchy), the Poisson and negative-binomial MGFs, sums of independent variables, Markov, Chebyshev, the law of large numbers, the CLT. **Ask the instructor** whether these are examinable.
+> - **Two slips on the handwritten Week 3 pages** (the uniform Taylor denominator $m\to m+1$; the sign in the $N(\mu,\sigma^2)$ exponent) and a **convention clash** (the lectures' geometric counts failures, PR03's counts trials) are flagged with `[!verify]` in PR06 §3.
 > - The 9 Sep notes refer to "updated class notes of 27 Aug" on transformations of random variables; the version in the folder is the earlier one. The cdf method for a transformation is covered from the 9 Sep remark, the homework (random circle) and the sheets.
 > - Blitzstein and Hwang is a **scan** (not read; only cited by page where the class notes cite it); Ross has a text layer and was used as a cross-check.
 
@@ -41,8 +43,8 @@ Central thread: **probability is counting with a consistent set of rules (PR01) 
 | 02 | [[PR02 Conditional Probability Bayes Rule and Independence]] | class notes 13, 19 Aug; sheets 14 and 21 Aug | draft |
 | 03 | [[PR03 Discrete Random Variables and Distributions]] | class notes 20, 27 Aug, 2 Sep; sheet 28 Aug | draft |
 | 04 | [[PR04 Joint Distributions Expectation and Variance]] | class notes 2, 9 Sep; sheets 4, 11–12 and 17 Sep | draft |
-| 05 | [[PR05 Continuous Random Variables]] | class notes 10 Sep; handwritten week 1 (post midterm); sheet 17 Sep | draft |
-| 06 | [[PR06 Moments Generating Functions and Limit Theorems]] | AI notes (moments and MGFs); Ross, Blitzstein–Hwang | draft (🟡) |
+| 05 | [[PR05 Continuous Random Variables]] | class notes 10 Sep; handwritten week 1 and **week 2** (post midterm); sheet 17 Sep | draft |
+| 06 | [[PR06 Moments Generating Functions and Limit Theorems]] | handwritten **week 3** (median, mode, moments, MGF); AI notes (limit theorems); Ross, Blitzstein–Hwang | draft (🟢 §1–§3, 🟡 §4–§5) |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"
@@ -55,12 +57,14 @@ SORT chapter ASC
 |---|---|---|---|
 | CN | [[ilovepdf_merged-1.pdf]] | the instructor's typed class notes, 5 Aug – 10 Sep 2026 (32 pp; p.1–2 counting, 3–6 sample space and axioms, 7–11 properties and inclusion-exclusion, 12–14 conditioning, 15–16 Bayes and independence, 17–19 random variables, 20–22 Poisson and expectation, 23–26 joint pmfs and waiting times, 27 variance, 28–30 continuous rvs, 31–32 appendices) | taught: PR01–PR05 |
 | W1 | [[week1_mt2113.pdf]] | handwritten post-midterm Week 1 notes (9 pp images): homework (p.1–2), pdf/cdf, uniform, logistic, Rayleigh, LOTUS, variance, standard normal | taught: PR05 |
+| W2 | [[Week2_notes.pdf]] | handwritten post-midterm Week 2 (5 pp, Xournal++, created 23 Oct 2026): folded normal, exponential, geometric limit, memoryless theorem (pp.1–4); Homework 2 typed on p.5 | taught: PR05 §4–§6 |
+| W3 | [[Week3_notes.pdf]] | handwritten post-midterm Week 3 (6 pp, Xournal++, created 24 Oct 2026): median, mode, moments, skewness, kurtosis, MGF, six MGFs (pp.1–5); Homework 3 typed on p.6 | taught: PR06 §1–§3 |
 | S7–S17 | [[Practice problems 7th August 2026.pdf]], [[Practice problems 14th August 2026.pdf]], [[Practice problems 21st August 2026.pdf]], [[Practice problems 28th August and following weekend.pdf]], [[Practice problems 4th September 2026.pdf]], [[Practice problems weekend of 12th September 2026.pdf]], [[Practice problems 17th September and following tutorial and weekend.pdf]] | weekly practice sheets with hints | taught: all chapters |
 | AI | `probability_notes.pdf`, `probability_moments_and_mgf_notes.pdf`, `mt2113_week1_notes.pdf`, `prob_prems_problems.pdf` (+ `.tex`) | AI-written notes: class-notes companion, moments and MGFs (with the MGF policy), a typed version of week 1, a rigorous problem set | secondary; PR06 and cross-checks |
 | BK | `A-First-Course-in-Probability-8th-ed.pdf` (Ross, text), `Blitzstein Hwang Probability.pdf` (scan) | textbooks | extra/book |
 
 ## Gaps (to ask the instructor / supply later)
-- Is PR06 (MGFs, LLN, CLT, Chebyshev, exponential) examinable? Is there a later lecture on it?
+- Are the **LLN, Chebyshev, CLT** (the remainder of PR06) examinable? Is there a Week 4 lecture on them? (The Week 2–3 notes settled the exponential distribution, median, mode, moments and the MGF.)
 - The "updated 27 Aug class notes" on transformations of random variables; the typed notes after 10 Sep (continuous joint distributions, conditional densities?), if they exist.
 - Whether **gambler's ruin**, the **continuity of probability** and the **variance of a sum** are to be examined or are background only.
 - A statement of the mid-semester and end-semester syllabus.

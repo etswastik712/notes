@@ -29,6 +29,9 @@ Random circle ($R\sim U(0,1)$, $A=\pi R^2$ has cdf $\sqrt{a/\pi}$); the broken s
 
 Used in: [[PR05 Continuous Random Variables]]. Related: [[Discrete Uniform Distribution]] · [[Cdf Method for Transformations]] · [[Probability Density Function]].
 
+## Added with the Week 2 and Week 3 lectures
+Week 3: median $\frac{a+b}2$, **every** point is a mode, $E[X^m]=\frac{b^{m+1}-a^{m+1}}{(m+1)(b-a)}$, MGF $\frac{e^{tb}-e^{ta}}{t(b-a)}$ ($t\ne0$). Not memoryless. $F(X)\sim U(0,1)$ for any continuous $X$ ([[Probability Integral Transform]], [[Median and Mode]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -125,6 +125,9 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 > $$P[X=n]=(1-p)^{n-1}p,\ n=1,2,\dots;\qquad E[X]=\frac1p .$$
 > Check of normalisation: $\sum_{n\ge1}q^{n-1}p=p/(1-q)=1$ (with $q=1-p$).
 
+> [!verify] Trials here, failures in the Week 2–3 lectures
+> The post-midterm handwritten notes ([[Week2_notes.pdf#page=2|Week 2]], [[Week3_notes.pdf#page=5|Week 3]]) define $\mathrm{Geom}(p)$ by $P[X=k]=q^kp$, $k=0,1,2,\dots$ (**failures** before the first success; mean $q/p$, variance $q/p^2$, MGF $\frac p{1-qe^t}$; Homework 3 Q5 asks for exactly $q/p$ and $q/p^2$). The class notes of 2 Sep, followed above, count **trials** (mean $1/p$). The two are related by $X_{\rm trials}=1+X_{\rm fail}$. Check the support in each problem. See [[PR06 Moments Generating Functions and Limit Theorems]] §3.2.
+
 > [!derivation] $E[X]=1/p$, two ways
 > *Series:* $E[X]=\sum_{n\ge1}n\,q^{n-1}p=p\,\dfrac{d}{dq}\sum_{n\ge0}q^n=p\,\dfrac1{(1-q)^2}=\dfrac1p$.
 > *First step* 🟡 (conditioning, PR02): with probability $p$ the first trial succeeds ($X=1$); otherwise one trial is spent and the process restarts: $E[X]=p\cdot1+q(1+E[X])\Rightarrow E[X]=1/p$.

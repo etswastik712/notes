@@ -35,6 +35,9 @@ Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Dist
 ## Added with QM06 (oscillator toolbox)
 **Quantum link:** the occupation $n$ of a thermal oscillator has $P(n)=(1-e^{-x})e^{-nx}$, a geometric distribution in the **failures-counting** convention of the Week 3 lecture (support $0,1,\dots$, mean $q/p=1/(e^x-1)$, variance $q/p^2$), with $x=\hbar\omega/k_BT$ ([[Thermal Harmonic Oscillator]]).
 
+## Added with the Week 2 and Week 3 lectures
+**Convention warning.** The Week 2 and 3 lectures use $P[X=k]=q^kp$, $k=0,1,\dots$ (**failures** before the first success): survival $P[X\ge k]=q^k$, mean $\frac qp$, variance $\frac q{p^2}$, MGF $\frac p{1-qe^t}$. The class notes (PR03) count **trials**, $q^{n-1}p$, mean $\frac1p$. $X_{\rm trials}=1+X_{\rm fail}$. The failures form is the one that has the memoryless property in the form $P[X\ge m+n\mid X\ge m]=q^n$ and that tends to the exponential ([[Memoryless Property]], [[Exponential Distribution]]); the thermal-oscillator occupation is also geometric in this convention ([[Thermal Harmonic Oscillator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

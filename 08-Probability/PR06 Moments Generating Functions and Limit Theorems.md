@@ -1,38 +1,40 @@
 ---
 title: PR06 Moments Generating Functions and Limit Theorems
-aliases: [PR06, moment generating function, MGF, skewness, kurtosis, Chebyshev, law of large numbers, central limit theorem]
+aliases: [PR06, moment generating function, MGF, median, mode, skewness, kurtosis, Chebyshev, law of large numbers, central limit theorem, MT2113 week 3]
 subject: probability
 type: chapter
 chapter: 6
 part: IV
-scope: [extra-book, extra-beyond]
-by: [ai-notes]
+scope: [taught, extra-book, extra-beyond]
+by: [handwritten-notes, ai-notes]
 status: draft
 prereq: [PR04 Joint Distributions Expectation and Variance, PR05 Continuous Random Variables]
-tags: [subject/probability, type/chapter, extra/book, extra/beyond, src/ai-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/ai-notes, src/own-notes, status/draft]
 ---
 # PR06 · Moments, Generating Functions and Limit Theorems
 
 ◀ [[PR05 Continuous Random Variables]] · [[Probability - Course Map]]
 
-<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
 > [!warning] Scope of this chapter
-> No lecture note in the folder covers MGFs or limit theorems. The AI-written `probability_moments_and_mgf_notes.pdf` states a **course policy**: MGFs and their general theorems may be used in homework and exams, but **the algebraic form of the MGF of any named distribution must first be derived from first principles in the solution**. I therefore treat this chapter as 🟡 (likely to be needed, but not yet backed by a lecture note) and derive every MGF below from the definition. **Ask the instructor** whether the central limit theorem, Chebyshev's inequality and the law of large numbers are examinable.
+> **Updated 2026-10-25.** The handwritten **post-midterm Week 3** notes ([[Week3_notes.pdf#page=1|pp.1–5 lecture summary, p.6 Homework 3]]) now cover the **median and mode**, **moments, skewness and kurtosis**, the **MGF** (definition, the exponential-generating-function remark, Taylor coefficients, the affine rule $M_{aX+b}=e^{tb}M_X(at)$) and the MGFs of the **uniform, exponential, standard normal, Bernoulli, binomial and geometric** laws, each derived from the integral or sum. Those parts are 🟢. **Still without a lecture source (🟡):** existence of moments (Cauchy), the Poisson and negative-binomial MGFs, sums of independent variables, uniqueness and continuity, **Markov, Chebyshev, the law of large numbers, the CLT**. The AI-written `probability_moments_and_mgf_notes.pdf` states a **course policy** (MGFs may be used in homework and exams, but the form for a named distribution must first be derived from first principles), which the Week 3 lecture follows. **Ask the instructor** whether the CLT, Chebyshev and the LLN are examinable.
 
 > [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
-> 🟡 **Extra · book** (AI notes `probability_moments_and_mgf_notes.pdf`, checked line by line; textbooks Ross Ch. 7–8, Blitzstein and Hwang Ch. 6 and 10)
-> - §1 skewness and kurtosis; existence of moments (Cauchy)
-> - §2 the MGF: definition, moments by differentiation, linear maps, sums of independent variables, uniqueness (stated)
-> - §3 first-principles MGFs of the Bernoulli, binomial, Poisson, geometric, negative binomial, uniform, exponential, normal
-> - §4 applications: sum of independent Poissons and normals; the Poisson limit via MGFs
-> - §5 Markov and Chebyshev inequalities, the law of large numbers, the central limit theorem and the normal approximation
+> 🟢 **Taught (Week 3, [[Week3_notes.pdf#page=1|handwritten notes]])**
+> - §1 median (continuous, discrete, the unified definition), mode, raw moments, $E[X^2]=\sigma^2+\mu^2$, skewness, (excess) kurtosis
+> - §2 the MGF $M_X(t)=E[e^{tX}]$, the exponential-generating-function remark, $E[X^n]$ as a Taylor coefficient, $M_{aX+b}$
+> - §3 first-principles MGFs: uniform, exponential, $N(0,1)$ (and $N(\mu,\sigma^2)$), Bernoulli, binomial, geometric; **Homework 3** (median and mode, Pareto, skewness, the two-dice MGF, the geometric mean and variance by MGF, the folded-normal MGF)
 >
-> 🔵 **Extra · beyond** (my additions, labelled)
-> - §5 the $1/\sqrt n$ rate of the CLT checked against the exact Gamma distribution (leading Edgeworth term $\gamma_1/(6\sqrt{2\pi n})$ agrees to four digits); symbolic checks of every MGF with `sympy` (`scripts/pr_numbers.py`)
+> 🟡 **Extra · book** (AI notes `probability_moments_and_mgf_notes.pdf`, checked line by line; Ross Ch. 7–8, Blitzstein and Hwang Ch. 6 and 10)
+> - §1 existence of moments, Cauchy; §2 independent sums, uniqueness, continuity (stated); §3 Poisson and negative-binomial MGFs
+> - §4 sums of independent Poissons and normals; the Poisson limit; §5 Markov, Chebyshev, the law of large numbers, the CLT and the normal approximation
+>
+> 🔵 **Extra · beyond** (my additions, all numbers in `scripts/pr_numbers.py`)
+> - §1 mean $>$ median $>$ mode for right-skewed laws; §3 the closed form $M_{|Z|}(t)=2e^{t^2/2}\Phi(t)$, the geometric convention link, the checks of two slips in the handwriting; §5 the $1/\sqrt n$ rate of the CLT against the exact Gamma law (leading Edgeworth term $\gamma_1/(6\sqrt{2\pi n})$)
 
 > [!key] After this chapter you can
-> - compute **skewness** and **kurtosis** and say which moments of a distribution exist,
+> - find the **median and mode** of a discrete or continuous law, compute **skewness** and **kurtosis** and say which moments exist,
 > - **derive** an MGF from the definition, read off $E[X^k]=M^{(k)}(0)$, and use $M_{aX+b}$ and $M_{\sum X_i}=\prod M_{X_i}$,
 > - prove that independent normals (and Poissons) add, and that Binomial$(n,c/n)\to$ Poisson$(c)$, using MGFs,
 > - state and apply **Markov, Chebyshev, the law of large numbers and the CLT**, with the continuity correction for the binomial.
@@ -40,13 +42,25 @@ tags: [subject/probability, type/chapter, extra/book, extra/beyond, src/ai-notes
 > [!intuition] The one-sentence story
 > The MGF $E[e^{tX}]$ packs all moments into one function; because $e^{t(X+Y)}=e^{tX}e^{tY}$ it turns sums of independent variables into products, which is why sums of many small independent pieces converge to the normal curve.
 
-## 1. Higher moments, skewness and kurtosis
-<span class="scope-extra-book">extra · book</span> *AI notes §1.1–1.4*
+## 1. Median, mode, higher moments, skewness and kurtosis
+<span class="scope-taught">taught</span> *Week 3, [[Week3_notes.pdf#page=1|pp.1–2]]* · <span class="scope-extra-book">extra · book</span> *AI notes §1.1–1.4 (existence of moments, Cauchy)*
+
+> [!key] Median and mode (lecture p.1) ([[Median and Mode]])
+> - **Continuous** $X$ with pdf $f$ and cdf $F$: $c$ is a **median** iff $F(c)=\tfrac12$; $c$ is a **mode** iff $f(c)\ge f(x)$ for all $x$ (the pdf has a global maximum at $c$).
+> - **Discrete** $X$ with values $x_1<x_2<\cdots$ and $p_i=P[X=x_i]$: there is a first $i$ with $p_1+\dots+p_{i-1}<\tfrac12$ and $p_1+\dots+p_i\ge\tfrac12$. If $p_1+\dots+p_i>\tfrac12$ then $x_i$ is the **unique** median; if $=\tfrac12$ then **every** $c\in[x_i,x_{i+1}]$ is a median (in practice $x_i$ or $\tfrac12(x_i+x_{i+1})$). The **mode** is a value $x_i$ with $p_i\ge p_j$ for all $j$.
+> - **Unified definition:** $c$ is a median iff $P[X\le c]\ge\tfrac12$ **and** $P[X\ge c]\ge\tfrac12$ (equivalently $P[X<c]\le\tfrac12$).
+
+> [!example] Examples (checked)
+> A **fair die**: $P[X\le3]=\tfrac12=P[X\ge4]$, so every $c\in[3,4]$ is a median; every face is a mode. $U(a,b)$: median $\tfrac{a+b}2$, **every** point of $[a,b]$ is a mode. Expo$(\lambda)$: median $\ln2/\lambda$ ($0.9902$ at $\lambda=0.7$), mode $0$. Pareto$(a)$ (homework 3): median $2^{1/a}$ ($\sqrt2=1.4142$ for $a=2$), mode $1$, mean $a/(a-1)=2$. For these **right-skewed** laws **mean $>$ median $>$ mode** (Expo$(1)$: $1>0.693>0$); for the normal all three coincide ($\mu$).
+
+> [!pitfall] Median and mode need not be unique, and the mode can sit on the boundary
+> The uniform has infinitely many modes, the fair die has six and a discrete median can be an interval. The exponential's density is largest as $x\to0^+$; with the lecture's definition ($f(x)=0$ for $x\le0$) the supremum $\lambda$ is not attained, so the usual convention $f(0)=\lambda$ is needed to say "mode $=0$".
 
 Raw moments $E[X^k]$ and central moments $\mu_k=E[(X-\mu)^k]=\sum_{j=0}^k\binom kj(-\mu)^{k-j}E[X^j]$ (binomial expansion, linearity). The standardised third and fourth moments are
 
-> [!key] Shape numbers
+> [!key] Shape numbers (lecture p.2: $n$-th moment $E[X^n]$, $E[X^0]=1$, $E[X^1]=\mu$, $E[X^2]=\sigma^2+\mu^2$)
 > $$\text{skewness }\gamma_1=\frac{E[(X-\mu)^3]}{\sigma^3},\qquad\text{kurtosis }\alpha_4=\frac{E[(X-\mu)^4]}{\sigma^4},\qquad\text{excess kurtosis }\gamma_2=\alpha_4-3 .$$
+> **Convention warning:** the lecture writes $\mathrm{Kurtosis}(X)=E\big[(\tfrac{X-\mu}\sigma)^4\big]-3$, so its "kurtosis" is already the **excess** kurtosis $\gamma_2$ (zero for the normal); some books keep the $3$ ($\alpha_4$).
 > $\gamma_1=0$ for any distribution symmetric about its mean (the cube is an odd function); $\gamma_1>0$: long right tail. $\gamma_2=0$ for the normal; $\gamma_2>0$ means heavier tails and a sharper peak than the normal, $\gamma_2<0$ lighter tails.
 
 > [!example] Values (recomputed)
@@ -62,7 +76,10 @@ Raw moments $E[X^k]$ and central moments $\mu_k=E[(X-\mu)^k]=\sum_{j=0}^k\binom 
 *Figure PR6.1. A: the Binomial$(30,0.3)$ pmf and its normal approximation; $P(X\le10)$ exact $0.7304$, with continuity correction $0.7250$, without $0.6548$. B: running means of 5000 draws (two runs each): the normal mean converges, the Cauchy mean does not.*
 
 ## 2. The moment generating function
-<span class="scope-extra-book">extra · book</span> *AI notes §2.2*
+<span class="scope-taught">taught</span> *Week 3, [[Week3_notes.pdf#page=2|pp.2–3]] (definition, EGF remark, Taylor coefficients, affine rule)* · <span class="scope-extra-book">extra · book</span> *AI notes §2.2 (independent sums, uniqueness, continuity)*
+
+> [!key] Why "generating function" (lecture p.2)
+> $M_X(t)=E[e^{tX}]$ is required to exist on $-\delta<t<\delta$ for some $\delta>0$. It is the **exponential generating function** of the numbers $a_n=E[X^n]$: in combinatorics the EGF of $\{a_n\}_{n\ge0}$ is the formal power series $\sum_{n\ge0}a_n\dfrac{x^n}{n!}$. Hence **$E[X^n]$ is $n!$ times the coefficient of $t^n$** in the Taylor expansion of $M_X(t)$ (the "this is $E(X^n)$" arrows in the lecture), the same statement as $E[X^n]=M_X^{(n)}(0)$ below.
 
 > [!key] Definition and basic theorems
 > $$M_X(t)=E\big[e^{tX}\big]=\sum_xe^{tx}p(x)\ \text{ or }\ \int e^{tx}f(x)\,\mathrm dx,$$
@@ -79,7 +96,7 @@ Raw moments $E[X^k]$ and central moments $\mu_k=E[(X-\mu)^k]=\sum_{j=0}^k\binom 
 > 3. $E[e^{t\sum X_i}]=E[\prod e^{tX_i}]=\prod E[e^{tX_i}]$, since for independent variables the expectation of a product is the product of expectations (PR04 §6).
 
 ## 3. First-principles MGFs
-<span class="scope-extra-book">extra · book</span> *AI notes §2.3 (course policy: derive before use). Every result below was also checked symbolically.*
+<span class="scope-taught">taught</span> *Week 3, [[Week3_notes.pdf#page=3|pp.3–5]]: uniform, exponential, $N(0,1)$, Bernoulli, binomial, geometric; $N(\mu,\sigma^2)$ via the affine rule* · <span class="scope-extra-book">extra · book</span> *AI notes §2.3 (Poisson, negative binomial). Course policy: derive before use. Every result below was also checked symbolically.*
 
 Write $q=1-p$.
 
@@ -106,6 +123,41 @@ Write $q=1-p$.
 
 > [!pitfall] Existence region
 > The exponential MGF exists only for $t<\lambda$, the geometric for $t<-\ln q$, the Cauchy for no $t\neq0$. A formula without its domain is incomplete, and uniqueness needs an interval around 0.
+
+### 3.1 Reading the moments off the Taylor series (Week 3, pp.3–5)
+> [!example] The lecture's four expansions, checked
+> - **Bernoulli$(p)$:** $M=q+pe^t=1+\sum_{n\ge1}\frac{t^n}{n!}p$, so $E[X^n]=p$ for every $n\ge1$ (since $X^n=X$).
+> - **Exponential$(\lambda)$:** $M=\frac\lambda{\lambda-t}=\sum_{n\ge0}\frac{t^n}{\lambda^n}=\sum\frac{t^n}{n!}\cdot\frac{n!}{\lambda^n}$ for $|t|<\lambda$ (the radius $\delta=\lambda$): $E[X^n]=n!/\lambda^n$, matching PR05 §6.
+> - **$N(0,1)$:** $M=e^{t^2/2}=\sum_{n}\frac{t^{2n}}{2^nn!}=\sum\frac{t^{2n}}{(2n)!}\cdot\frac{(2n)!}{2^nn!}$: odd moments $0$, $E[Z^{2k}]=\frac{(2k)!}{k!\,2^k}=1,1,3,15,105,945$.
+> - **$U(a,b)$:** $M=\dfrac{e^{tb}-e^{ta}}{t(b-a)}=\sum_{m\ge0}\dfrac{t^m}{m!}\cdot\dfrac{b^{m+1}-a^{m+1}}{(m+1)(b-a)}$, so $E[X^m]=\dfrac{b^m+b^{m-1}a+\dots+a^m}{m+1}$.
+
+> [!verify] Two slips in the handwritten Week 3 page (both corrected here)
+> **(1) The uniform series (p.3).** The page divides $b^m+b^{m-1}a+\dots+ba^{m-1}+a^m$ by $m$ and marks it "this is $E(X^n)$". The sum has $m+1$ terms and the correct denominator is $m+1$: the page's version is undefined for $m=0$ and gives $a+b$ instead of $\tfrac{a+b}2$ for $m=1$ (symbolic check: the Taylor coefficients of $M$ give $\tfrac{a+b}2,\ \tfrac{a^2+ab+b^2}3,\ \tfrac{(a+b)(a^2+b^2)}4$ for $m=1,2,3$). **(2) The normal MGF (p.5).** The affine-rule example ends with $M_Y(t)=e^{t\mu}e^{-(\sigma t)^2/2}=e^{t\mu-\sigma^2t^2/2}$ for $Y=\sigma X+\mu$; the exponent must be **$+\sigma^2t^2/2$** (as the page itself found for $N(0,1)$, $e^{+t^2/2}$). For $\mu=1,\sigma=2,t=0.3$: numerical integral $1.61607=e^{\mu t+\sigma^2t^2/2}$, whereas the page's sign would give $1.1275<e^{\mu t}=1.3499$, impossible by Jensen's inequality ($E[e^{tY}]\ge e^{tE[Y]}$).
+
+### 3.2 The geometric convention (lecture versus PR03)
+> [!verify] Failures here, trials in PR03
+> The Week 2 and Week 3 notes define $\mathrm{Geom}(p)$ by $P[X=k]=(1-p)^kp$ for $k=0,1,2,\dots$ (the number of **failures** before the first success; mean $q/p$, variance $q/p^2$, MGF $\dfrac p{1-qe^t}$, Homework 3 Q5). The typed class notes of 2 Sep that PR03 follows count **trials**, $P[X=n]=q^{n-1}p$ ($n\ge1$), with mean $1/p$ and MGF $\dfrac{pe^t}{1-qe^t}$ (derived above). They are related by $X_{\rm trials}=1+X_{\rm fail}$, so $M_{\rm trials}(t)=e^tM_{\rm fail}(t)$ (checked: both means give $1/p$ and $q/p$). **Read the support before using a formula.** The thermal-oscillator occupation of [[Thermal Harmonic Oscillator]] is Geometric in the failures convention.
+
+### 3.3 Homework, week 3
+<span class="scope-taught">taught</span> *[[Week3_notes.pdf#page=6|handwritten p.6, "HW3 Problems"]]; solutions are mine, all checked in `scripts/pr_numbers.py`*
+
+> [!example] Q1 Median and mode of $U(a,b)$ and Expo$(\lambda)$
+> $U(a,b)$: $F(c)=\frac{c-a}{b-a}=\tfrac12\Rightarrow$ **median $\frac{a+b}2$**; $f=\frac1{b-a}$ is constant on $[a,b]$, so it is maximal everywhere there: **every point of $[a,b]$ is a mode**. Expo$(\lambda)$: $1-e^{-\lambda c}=\tfrac12\Rightarrow$ **median $\frac{\ln2}\lambda$**; $f=\lambda e^{-\lambda x}$ is strictly decreasing, largest as $x\to0^+$: **mode $0$** (with the convention $f(0)=\lambda$). Mean $\tfrac1\lambda>$ median $\tfrac{0.693}\lambda>$ mode $0$.
+
+> [!example] Q2 Pareto$(a)$, $f(x)=a/x^{a+1}$ for $x\ge1$
+> $F(x)=\int_1^xat^{-a-1}\mathrm dt=1-x^{-a}$, so $F(c)=\tfrac12\Rightarrow$ **median $2^{1/a}$** ($1.4142$ for $a=2$, $2$ for $a=1$). $f$ is strictly decreasing on $[1,\infty)$, so the maximum is at the boundary: **mode $1$**, $f(1)=a$. For $a>1$ the mean is $\frac a{a-1}$ ($2$ for $a=2$): mean $>$ median $>$ mode.
+
+> [!example] Q3 Skewness of Expo$(\lambda)$
+> With $\mu=\sigma=\frac1\lambda$ and $E[X^k]=k!/\lambda^k$: $E[(X-\mu)^3]=E[X^3]-3\mu E[X^2]+3\mu^2E[X]-\mu^3=\frac{6-6+3-1}{\lambda^3}=\frac2{\lambda^3}$, so $\gamma_1=\dfrac{2/\lambda^3}{1/\lambda^3}=\boxed{2}$. **Positive** because the density has a long right tail: rare large values dominate the cubed deviations. **Independent of $\lambda$** because $\lambda$ only rescales the axis ($X=W/\lambda$ with $W\sim\mathrm{Expo}(1)$) and the standardised variable $(X-\mu)/\sigma=W-1$ does not contain $\lambda$: skewness is invariant under positive scaling. (Checked: $2.000000$ for $\lambda=0.5,1,3$; excess kurtosis $6$.)
+
+> [!example] Q4 (postponed to the next homework) Two dice
+> $X,Y$ independent fair dice: $M_{X+Y}(t)=M_X(t)M_Y(t)=\Big(\frac16\sum_{k=1}^6e^{kt}\Big)^2=\frac1{36}\sum_{s=2}^{12}c_se^{st}$ with $c_s=1,2,3,4,5,6,5,4,3,2,1$ the numbers of ways to roll $s$. Check: $M'(0)=7$, $\mathrm{Var}=M''(0)-49=\tfrac{35}6=5.833$.
+
+> [!example] Q5 The geometric mean and variance via the MGF
+> $M(t)=\sum_{k\ge0}e^{tk}q^kp=\dfrac p{1-qe^t}$ for $qe^t<1$. $M'(t)=\dfrac{pqe^t}{(1-qe^t)^2}$, so $M'(0)=\dfrac{pq}{p^2}=\dfrac qp$. $M''(t)=\dfrac{pqe^t(1+qe^t)}{(1-qe^t)^3}$, so $M''(0)=\dfrac{pq(1+q)}{p^3}=\dfrac{q(1+q)}{p^2}$ and $\mathrm{Var}=\dfrac{q(1+q)}{p^2}-\dfrac{q^2}{p^2}=\dfrac q{p^2}$ ✓ (symbolic check).
+
+> [!example] Q6 The MGF of the folded normal $Y=|Z|$ in two integrals
+> **From the pdf of $Y$** ($f_Y(y)=\frac2{\sqrt{2\pi}}e^{-y^2/2}$, $y\ge0$): $M_Y(t)=\displaystyle\int_0^\infty e^{ty}\,\frac2{\sqrt{2\pi}}e^{-y^2/2}\mathrm dy$. **From the pdf of $Z$ by LOTUS:** $M_Y(t)=E[e^{t|Z|}]=\displaystyle\int_{-\infty}^\infty e^{t|z|}\frac1{\sqrt{2\pi}}e^{-z^2/2}\mathrm dz$. They agree because the integrand is even. 🔵 **Closed form:** $2\int_0^\infty e^{ty}\varphi(y)\mathrm dy=2e^{t^2/2}\int_0^\infty\varphi(y-t)\mathrm dy=\boxed{2e^{t^2/2}\Phi(t)}$; at $t=0.7$ both integrals and the formula give $1.936967$; at $t=0$ it gives $1$ ✓. The MGF exists for **every** $t$ (it is not $e^{t^2/2}$, which would be the MGF of $Z$).
 
 ## 4. Applications of MGFs
 <span class="scope-extra-book">extra · book</span> *AI notes §2.4*
@@ -154,11 +206,14 @@ Write $q=1-p$.
 > [!connection] How PR06 connects
 > **Builds on:** [[PR04 Joint Distributions Expectation and Variance]] (variance of a sum, independence) and [[PR05 Continuous Random Variables]] (the normal and exponential densities).
 > **Leads to:** statistics and stochastic processes (confidence intervals, Poisson processes, random walks).
-> **Concepts:** [[Moment Generating Function]] · [[Skewness and Kurtosis]] · [[Markov and Chebyshev Inequalities]] · [[Law of Large Numbers]] · [[Central Limit Theorem]] · [[Normal Approximation to the Binomial]] · [[Cauchy Distribution]] · [[Poisson Limit Theorem]]
+> **Concepts:** [[Median and Mode]] · [[Moment Generating Function]] · [[Skewness and Kurtosis]] · [[Moments of a Random Variable]] · [[Pareto Distribution]] · [[Folded Normal Distribution]] · [[Exponential Distribution]] · [[Markov and Chebyshev Inequalities]] · [[Law of Large Numbers]] · [[Central Limit Theorem]] · [[Normal Approximation to the Binomial]] · [[Cauchy Distribution]] · [[Poisson Limit Theorem]]
 > **Other subjects:** [[Probability - Course Map]], [[TH06 From Kinetic Theory to Statistical Mechanics]] (the partition function is a Laplace transform of the density of states, the same device as an MGF with $t=-\beta$; fluctuations $\sim1/\sqrt N$ are the CLT), [[QM01 From Waves to Probabilities]] (Fourier transform of a Gaussian is a Gaussian, the characteristic function version of the CLT), [[Akaike Information Criterion]] (large-sample normal approximations of the likelihood).
 
 ## Summary
 > [!summary] Cheat-sheet
+> - **Median:** $F(c)=\tfrac12$; unified: $P[X\le c]\ge\tfrac12$ and $P[X\ge c]\ge\tfrac12$. **Mode:** global max of $f$ (or $p_i$). Expo: median $\ln2/\lambda$, mode $0$; Pareto$(a)$: median $2^{1/a}$, mode $1$; $U(a,b)$: median $\frac{a+b}2$, every point a mode.
+> - **Lecture's "kurtosis" is the excess** $E[(\frac{X-\mu}\sigma)^4]-3$. $E[X^n]=n!\times[t^n]M_X(t)$ (EGF of the moments).
+> - **Geometric (failures):** $P=q^kp$, MGF $\frac p{1-qe^t}$, mean $\frac qp$, var $\frac q{p^2}$; trials version $\frac{pe^t}{1-qe^t}$. $M_{|Z|}=2e^{t^2/2}\Phi(t)$. $E[X^m]_{U(a,b)}=\frac{b^{m+1}-a^{m+1}}{(m+1)(b-a)}$.
 > - $\gamma_1=\mu_3/\sigma^3$, $\gamma_2=\mu_4/\sigma^4-3$. Exp: $\gamma_1=2$, $\gamma_2=6$; normal $\gamma_2=0$; uniform $-1.2$; Poisson $1/\sqrt\lambda$, $1/\lambda$.
 > - $M_X(t)=E[e^{tX}]$; $E[X^k]=M^{(k)}(0)$; $M_{aX+b}=e^{bt}M_X(at)$; $M_{\sum}=\prod M_i$ (independent); equal MGFs near 0 ⇒ equal laws.
 > - **MGFs (derive first):** Bern $q+pe^t$; Bin $(q+pe^t)^n$; Poisson $e^{\lambda(e^t-1)}$; Geom $\frac{pe^t}{1-qe^t}$; NegBin its $r$-th power; Unif $\frac{e^{tb}-e^{ta}}{t(b-a)}$; Exp $\frac\lambda{\lambda-t}$ ($t<\lambda$); $N(\mu,\sigma^2)$ $e^{\mu t+\sigma^2t^2/2}$.
@@ -193,11 +248,14 @@ Write $q=1-p$.
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |
 > |---|---|---|
-> | moments, skewness, kurtosis, Cauchy, Pareto, Lyapunov | `probability_moments_and_mgf_notes.pdf` §1 (AI-written) | extra/book |
-> | MGF definition and theorems, first-principles MGFs, normal sum, CLT proof | same file §2 (AI-written, including the course-policy remark) | extra/book |
+> | median, mode, moments, skewness, (excess) kurtosis | [[Week3_notes.pdf#page=1\|week 3 post-midterm, handwritten pp.1–2]] | taught |
+> | MGF definition, EGF remark, Taylor coefficients, affine rule; MGFs of uniform, exponential, $N(0,1)$, Bernoulli, binomial, geometric | [[Week3_notes.pdf#page=2\|handwritten pp.2–6]] | taught |
+> | homework 3 (Q1–Q6) | [[Week3_notes.pdf#page=6\|handwritten p.6]] (typed statements; solutions mine) | taught |
+> | existence of moments, Cauchy, Pareto, Lyapunov | `probability_moments_and_mgf_notes.pdf` §1 (AI-written) | extra/book |
+> | independent sums, uniqueness, continuity, Poisson and NegBin MGFs, normal sum, CLT proof | same file §2 (AI-written, including the course-policy remark) | extra/book |
 > | Markov, Chebyshev, WLLN, continuity correction | Ross Ch. 8 (text layer, not opened); Blitzstein and Hwang Ch. 10 | extra/book |
 > | symbolic and numeric checks, Edgeworth comparison, figures | `scripts/pr_numbers.py`, `fig_pr06_limits.py`, `fig_pr06_clt.py` | extra/beyond |
 >
-> **Notes.** The AI notes cite "Theorem 1.7" for the statement that $E|X|=\infty$ implies $E|X|^k=\infty$ for $k\ge1$; the theorem they state is numbered 1.9 and gives the converse form used above. The proofs of uniqueness and of the continuity theorem are not given (they need characteristic functions or measure theory).
+> **Notes.** (1) The Week 3 pages are Xournal++ handwriting with typed homework statements; two slips were found and corrected (see the `[!verify]` in §3.1). (2) The lecture's geometric convention (failures) differs from PR03's (trials). (3) The AI notes cite "Theorem 1.7" for the statement that $E|X|=\infty$ implies $E|X|^k=\infty$ for $k\ge1$; the theorem they state is numbered 1.9 and gives the converse form used above. The proofs of uniqueness and of the continuity theorem are not given (they need characteristic functions or measure theory).
 
 **References.** Ross, S. *A First Course in Probability* (8th ed.), Ch. 7–8 · Blitzstein, J. K. and Hwang, J. *Introduction to Probability*, Ch. 6, 10 · Lyapunov, A. M. (1901) *Nouvelle forme du théorème sur la limite de probabilité*.

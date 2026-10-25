@@ -29,6 +29,9 @@ $E[Z]=0$ (odd); $E[Z^2]=\frac2{\sqrt{2\pi}}\int_0^\infty z^2e^{-z^2/2}dz=1$; $E[
 
 Used in: [[PR05 Continuous Random Variables]]. Related: [[Normal Distribution]] · [[Gaussian Integral]] · [[Standardisation of a Random Variable]].
 
+## Added with the Week 2 and Week 3 lectures
+$|Z|$ is the folded (half-) normal: $f=2\varphi$ on $y\ge0$, mean $\sqrt{2/\pi}$, variance $1-\frac2\pi$, MGF $2e^{t^2/2}\Phi(t)$ ([[Folded Normal Distribution]]). Even moments $E[Z^{2k}]=\frac{(2k)!}{k!2^k}$ from the Taylor series of $e^{t^2/2}$.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

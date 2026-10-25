@@ -34,6 +34,9 @@ Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Mo
 ## Added with QM06 (oscillator toolbox)
 **Hermite link:** $e^{xt-t^2/2}=e^{xt}/M_Z(t)$ with $M_Z(t)=e^{t^2/2}$ is the generating function of the probabilists' Hermite polynomials; $E[Z^{2k}]=(2k-1)!!$ is also $\langle x^{2k}\rangle_0$ in the oscillator ground state ([[Probabilists' Hermite Polynomials]]).
 
+## Added with the Week 2 and Week 3 lectures
+**Taught (Week 3):** $M_X(t)=E[e^{tX}]$ on $-\delta<t<\delta$; the **exponential generating function** of the moments ([[Exponential Generating Function]]), so $E[X^n]=n!\,[t^n]M_X$; $M_{aX+b}(t)=e^{tb}M_X(at)$ (so $N(\mu,\sigma^2)$: $e^{\mu t+\sigma^2t^2/2}$); first-principles MGFs of uniform ($\frac{e^{tb}-e^{ta}}{t(b-a)}$), exponential ($\frac\lambda{\lambda-t}$), $N(0,1)$ ($e^{t^2/2}$), Bernoulli ($q+pe^t$), binomial ($(q+pe^t)^n$), geometric in the **failures** convention ($\frac p{1-qe^t}$; trials: $\frac{pe^t}{1-qe^t}$), two dice ($(\frac16\sum e^{kt})^2$), folded normal ($2e^{t^2/2}\Phi(t)$). **Two slips on the handwritten pages** (uniform Taylor denominator $m\to m+1$; the sign in the $N(\mu,\sigma^2)$ exponent) are corrected in [[PR06 Moments Generating Functions and Limit Theorems]] §3.1.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
