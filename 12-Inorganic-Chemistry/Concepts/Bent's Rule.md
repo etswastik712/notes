@@ -1,0 +1,38 @@
+---
+title: Bent's Rule
+aliases: ["Bent rule", "isovalent hybridisation", "electronegativity and s character"]
+subject: chemistry
+type: concept
+scope: [taught, extra-beyond]
+by: [slides, own-notes]
+status: draft
+tags: [subject/chemistry, type/concept, taught, extra/beyond, src/slides, src/own-notes, status/draft]
+---
+# Bent's Rule
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=26|slides 24–26]] ($\mathrm{PCl_xF_{5-x}}$, take-home $\mathrm{CH_2F_2}$). · 🔵 **extra · beyond:** the numbers.
+
+> [!intuition] In one picture
+> An atom spends its $s$ character where it is most valuable: on the bonds to the **less** electronegative partners and in lone pairs.
+
+> [!key] Definition
+> **More electronegative substituents prefer hybrid orbitals with less $s$ character; more electropositive substituents prefer hybrids with more $s$ character.**
+
+## Examples
+- $\mathrm{PCl_2F_3}$: F (more electronegative) takes the **axial** $dp$ positions (0 % $s$), Cl the equatorial $sp^2$ (33 % $s$).
+- $\mathrm{CH_2F_2}$: C–F hybrids $p$-rich, C–H hybrids $s$-rich, so $\angle\mathrm{FCF}<109.5^\circ<\angle\mathrm{HCH}$ (calc. 108.3° → 110.7°; observed about 113°, recalled).
+- $\mathrm{NF_3}$ (102.3°, recalled) has bonds of only 17.6 % $s$ against 23.4 % for $\mathrm{NH_3}$.
+- Lone pairs have the highest $s$ character (water 30 %, ammonia 32 %, phosphine 83 %).
+
+## Energy reason
+Hybrid energy is the weighted average of the atomic-orbital energies, and the cost of hybridising a filled $s$ orbital is of the order of a bond energy ([[Promotion Energy]]).
+
+Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[Coulson's Theorem]] · [[Hybridisation]] · [[Lone Pair Stereochemical Activity]] · [[VSEPR Model]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

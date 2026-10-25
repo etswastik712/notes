@@ -102,6 +102,17 @@ Files live under `math/proofs-analysis-topology/`. **Tier logic:** the instructo
 | BK | Munkres *Topology*, Hatcher *Point-Set Topology*, Kumaresan et al., Sundstrom | books | extra/book (cited by section, not read) |
 | — | `proofs tex/mt2113_week1/HANDOFF_mt2113_week1.md` | handoff note for the **probability** week-1 notes (misplaced here) | used in PR05 |
 
+## Inorganic Chemistry (CH2113)
+Files live under `chemistry/inorganic-chemistry/`. **Tier logic:** the instructor's slide pack is `taught`; summaries of Classroom posts by another tool (`ch2113-principles-of-inorganic-chemistry-august-20/`, `agent_written`) are secondary but give dates, tutorials and assessments; textbooks are `extra/book`; AI notes are cross-check only. Full table: [[Inorganic Chemistry - Course Map]].
+
+| ID | File | Pages | Role |
+|---|---|---|---|
+| PK | [[chem pre-ms .pdf]] | 119 (text layer; diagrams are images; VSEPR 1–7, VB 8–26, MOT 27–52, acids and bases 53–82, main group 83–119) | taught: CH01–CH08 |
+| OL | [[1-4.pdf]] | 4 (OneNote export, 133 characters of text; not yet read as images) | unknown |
+| KR | the 8 notes in `ch2113-principles-of-inorganic-chemistry-august-20/` (7 dated lecture/tutorial summaries + `exam-prep`) | 321–794 words each | secondary |
+| SA | [[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf]] | 1363 (text layer; **book page = PDF page − 27**; Ch. 2 starts PDF p.61, VSEPR pp.63–66, VB pp.66–69) and the redox excerpt [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf]] (Ch. 5, pp.147–161) | extra/book (excerpt = taught for Quiz 2) |
+| AI | `inorganic-chemistry-notes*.pdf`, `inorganicchemmaster/*`, `redox_notes.pdf` | 8–80 | secondary |
+
 ## How "taught" was decided (climate)
 1. List what a lecture shows (Argha: slide text; Suhas post-midsem: photographs triaged page by page).
 2. Compare each assigned book passage with that list: shown or derived in class ⇒ `taught`; present only in the book ⇒ `extra/book`.

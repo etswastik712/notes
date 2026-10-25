@@ -1,0 +1,32 @@
+---
+title: Promotion Energy
+aliases: ["electron promotion", "promotion"]
+subject: chemistry
+type: concept
+scope: [taught, extra-book]
+by: [slides, book]
+status: draft
+tags: [subject/chemistry, type/concept, taught, extra/book, src/slides, src/book, status/draft]
+---
+# Promotion Energy
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=13|slide 13]], [[chem pre-ms .pdf#page=24|slides 24–25]]. · 🟡 **extra · book:** Shriver and Atkins ([[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf#page=68|PDF p.68]]).
+
+> [!intuition] In one picture
+> You pay to lift an electron, and you get it back many times over if the lifted electron lets you make more bonds.
+
+> [!key] Definition
+> Promotion $2s^22p^2\to2s^12p^3$ in carbon: an energy investment "worthwhile if the energy can be more than recovered from the greater strength of the number of bonds". For C it is small; for P (no promotion) hybridisation has a real cost, of order a bond energy.
+
+## Consequences
+Carbon: four bonds instead of two, and relief of the $2s$ repulsion, repay the promotion. Nitrogen and oxygen: no promotion, so $\mathrm{NH_3}$ and $\mathrm{H_2O}$ keep their lone pairs in $s$-rich orbitals. The promotion energy is independent of how the promoted state is then hybridised (slide 24), which is why $sp^3$ costs carbon nothing extra ([[Bent's Rule]]).
+
+Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[Hybridisation]] · [[Valence Bond Theory]] · [[Lone Pair Stereochemical Activity]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

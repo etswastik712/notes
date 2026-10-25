@@ -1,23 +1,79 @@
 ---
 title: Inorganic Chemistry - Course Map
-aliases: [Inorganic Chemistry]
+aliases: [Inorganic Chemistry, CH2113, Principles of Inorganic Chemistry, Introductory Inorganic Chemistry]
 subject: chemistry
 type: moc
-scope: [taught]
-by: [own-notes]
-status: stub
-tags: [subject/chemistry, type/moc, taught, src/own-notes, status/stub]
+scope: [taught, extra-book]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/moc, taught, extra/book, src/slides, status/draft]
 ---
-# Inorganic Chemistry - Course Map
+# Inorganic Chemistry: Course Map (CH2113)
 
-> [!warning] Stub: not yet written
-> Planned. Redox and equilibria connect to atmospheric chemistry and the carbonate system.
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
 
-## What exists in the repository
-- chemistry/inorganic-chemistry/books (Shriver & Atkins, Huheey, Lee, Cotton & Wilkinson)
-- …/lecture-notes-slides, …/ai-gen-notes (redox, MOT, structural diagrams)
+*CH2113 Principles of Inorganic Chemistry (August 2026), instructor R. Boomi Shankar.* The syllabus has four blocks: **models of covalent bonding** (VSEPR, valence bond, molecular orbital theory), **acids and bases** (four definitions, trends, hard and soft acids and bases), **main-group chemistry** (boron hydrides and Wade's rules, Zintl ions, phosphorus cages, borazine and phosphazenes) and **redox** (Shriver and Atkins Ch. 5). The notes are being written as a **pilot**: CH01 is finished, the rest is planned from the slides' page map below.
 
-## Connections
-[[Group Theory - Course Map]] · [[Quantum Mechanics - Course Map]] · [[Thermodynamics - Course Map]] · [[Climate - Course Map]]
+> [!warning] What is and is not in the sources
+> The **pre-midsem pack** [[chem pre-ms .pdf]] (119 slides with a text layer, instructor's own) covers slides 1–119: VSEPR (1–7), valence bond theory (8–26), molecular orbital theory (27–52), acids and bases (53–82) and main-group chemistry (83–119). Many diagrams (the $\mathrm{H_2O}$ MO slides 46–52, the $\mathrm{H_3}$ and $\mathrm{NH_3}$ level diagrams) are **images only**. **Redox** (Quiz 2) has no lecture slides in the folder, only a textbook excerpt and AI notes. Everything about assessments below is taken from summaries of Google Classroom posts written by another tool (`agent_written`), not from an official syllabus. Details in *Gaps*.
+
+## The storyline
+```mermaid
+flowchart LR
+  A["CH01<br/>VSEPR, valence bond,<br/>hybrids (done)"] --> B["CH02-03<br/>molecular orbitals:<br/>diatomics, polyatomics"]
+  B --> C["CH04-06<br/>acids and bases,<br/>HSAB"]
+  C --> D["CH07-08<br/>main group: clusters,<br/>rings and polymers"]
+  B --> E["CH09<br/>redox"]
+```
+Central thread: **how electrons are shared (models of bonding) $\to$ which species give or accept them (acids and bases, hard and soft) $\to$ what happens when many atoms share them (clusters, rings, polymers) $\to$ and when electrons are transferred (redox).**
+
+## Chapters
+| # | Chapter | Slide pages and sources | Status |
+|---|---|---|---|
+| 01 | [[CH01 VSEPR and Valence Bond Theory]] | slides 1–26; Shriver and Atkins Ch. 2 | **draft** |
+| 02 | CH02 Molecular orbital theory: diatomics | slides 27–39 (LCAO, $\mathrm{H_2}$, $\mathrm{N_2}$, HF, CO, ICl) | planned |
+| 03 | CH03 Molecular orbital theory: polyatomics | slides 40–52 and the "MOT Part 2" note ($\mathrm{H_3}$, $\mathrm{NH_3}$, $\mathrm{SF_6}$, $\mathrm{H_2O}$) | planned |
+| 04 | CH04 Acid–base concepts | slides 53–65 (Arrhenius, Brønsted–Lowry, Lux–Flood, Lewis, generalised) | planned |
+| 05 | CH05 Acid strength, Lewis acidity, reactions | slides 66–77 (aqua/oxo acids, trends, 4 reaction types) | planned |
+| 06 | CH06 Hard and soft acids and bases | slides 78–82; Tutorial 3 | planned |
+| 07 | CH07 Main group: cages and clusters | slides 83–100 (boranes, Wade, Zintl, P cages); Tutorial 4 | planned |
+| 08 | CH08 Main group: rings and polymers | slides 101–119 (borazine, B–N polymers, phosphazenes) | planned |
+| 09 | CH09 Redox | Shriver and Atkins Ch. 5, pp.147–161 (PDF pp.174–188); AI `redox_notes.pdf` | planned |
+
+```dataview
+TABLE chapter AS "#", scope AS "Scope", status AS "Status"
+FROM #subject/chemistry AND #type/chapter
+SORT chapter ASC
+```
+
+## Assessments (from the Classroom summaries, `agent_written`)
+- **Quiz 1:** 2026-09-08, 12:00, topics up to and including molecular orbital theory.
+- **Midsem:** date not stated; Q2(i): when HSAB was not mentioned in the question, CH$_3$NH$_2$ also earned 1 mark (announcement 2026-10-08).
+- **Quiz 2:** 2026-10-21, redox up to 2026-10-14, Shriver and Atkins Ch. 5 **pp.147–161 only**; sign typo in eq. 5.11 on p.161 (signs should be −, +, +, −).
+- **End-semester:** not announced. Source: [[ch2113-principles-of-inorganic-chemistry-august-20/exam-prep|exam-prep]].
+
+## Sources and what they are
+| ID | File | What it is | Role |
+|---|---|---|---|
+| PK | [[chem pre-ms .pdf]] | pre-midsem slide pack, 119 pp. (text layer; diagrams as images) | taught: CH01–CH08 |
+| OL | [[1-4.pdf]] | 4 pp. OneNote export, no usable text layer; not read yet | unknown |
+| KR | [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-26-molecular-orbital-theory-part-2\|MOT Part 2]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-1\|Acids and bases 1]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-2\|2]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-14-hard-and-soft-acids-and-bases\|HSAB]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-16-main-group-chemistry-cages-and-clusters\|cages]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers\|rings]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers\|Tutorials 3–4]] | summaries of Classroom lecture posts and tutorials by another tool (`agent_written`) | secondary: dates, tutorial answers |
+| SA | [[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf]] and the excerpt [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf]] | the course textbook (book page = PDF − 27) | extra/book; redox excerpt = taught |
+| BK | `Lee`, `Huheey`, `Cotton and Wilkinson`, `B.Sc. 1st year` | other textbooks | extra/book (not opened) |
+| AI | `inorganic-chemistry-notes*.pdf`, `inorganicchemmaster/*` (MOT group theory, structural diagrams), `redox_notes.pdf` | AI-written notes | secondary, cross-check only |
+
+## Gaps (to ask the instructor / supply later)
+- **Redox** has no lecture material; only the book excerpt (S&A Ch.5 pp.147–161) and AI notes.
+- **Slides that are images:** the $\mathrm{H_2O}$ MO sequence (slides 46–52), the $\mathrm{H_3}$ and $\mathrm{NH_3}$ diagrams, the three trigonal-bipyramid structures on slide 6 (unlabelled).
+- **Slide statements to verify:** MOT rule 1 reads "the greater the number of nodes in a M.O., the greater the anti-bonding character and **higher the symmetry**" (more nodes means higher energy; "higher symmetry" is not generally true); the $\mathrm{SF_6}$ orbital labels ($1a_1$, $1t_1$, $1e$ for $a_{1g}$, $t_{1u}$, $e_g$); the hybrid-set table on slide 15 ("angular" with $sp$, "trigonal pyramidal" with $sp^2$).
+- **Unanswered in the material:** why $\mathrm{H_3PO_3}$ has a non-acidic proton (posed in Acids and Bases Lecture 2); the RMgX product in Tutorial 4 Q9.
+- **Dates:** midsem and end-semester not in the notes.
+
+## Why this subject is linked to the others
+- **Quantum mechanics:** LCAO and the variational idea are the particle-in-a-box and oscillator ideas applied to molecules; the $\mathrm{H_2}$ valence-bond function uses indistinguishability and orthonormality ([[Quantum Mechanics - Course Map]], [[QM06 The Oscillator Toolbox]]).
+- **Group theory:** ligand-group orbitals ($a_{1g}$, $e_g$, $t_{1u}$), point groups and character tables carry the MO diagrams of polyatomics ([[Group Theory - Course Map]]).
+- **Thermodynamics:** redox potentials, $\Delta G=-nFE$, the Nernst equation ([[Thermodynamics - Course Map]]).
+- **Climate:** oxidation states of N, S and C in the atmosphere, acid rain (acid–base chemistry), the carbonate system ([[Climate - Course Map]], [[Greenhouse Gases and Absorption Bands]] for vibrations).
+- **Probability and counting:** the 90° repulsion counts of VSEPR are small enumerations ([[Probability - Course Map]]).
 
 See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] for its place in the plan.

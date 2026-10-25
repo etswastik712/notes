@@ -120,3 +120,12 @@ S0 = S_closed(R0)
 P(f"  r_e(H2) = 0.74 A = {R0:.4f} a0: S = {S0:.4f}; N^2 = 1/(2(1+S^2)) = {1 / (2 * (1 + S0 ** 2)):.4f}; N = {1 / math.sqrt(2 * (1 + S0 ** 2)):.4f}")
 P(f"  1 eV = 96.485 kJ/mol: 4.5 eV = {4.5 * 96.485:.1f} kJ/mol (slide: 434); 11.4 eV bonding->antibonding = {11.4 * 96.485:.0f} kJ/mol")
 P(f"  Z formula check: SO4 2- Z = (6+0+2-0)/2 = {(6 + 2) / 2}; CO3 2- Z = {(4 + 2) / 2}; H2O lone pairs = (6 - 1x2)/2 = {(6 - 2) / 2}")
+
+
+sec("CH01 extra examples of Coulson's theorem (literature angles recalled, flagged [verify] in the chapter)")
+for nm, th, nlp, nb in (("NH3", 107.8, 1, 3), ("PH3", 93.5, 1, 3), ("AsH3", 92.0, 1, 3), ("NF3", 102.3, 1, 3), ("H2O", 104.5, 2, 2), ("H2S", 92.1, 2, 2), ("H2Se", 91.0, 2, 2)):
+    Sb = S_from(th)
+    Sl = (1 - nb * Sb) / nlp
+    P(f"  {nm:5s} X-X-X angle {th:5.1f} deg: bond hybrids {100 * Sb:5.1f} % s (sp^{(1 - Sb) / Sb:5.2f}); lone pair(s) {100 * Sl:5.1f} % s")
+P("  VSEPR/Bent check CH2F2: F-C-F smaller than H-C-H (calc. 108.3 -> 110.7 deg; literature about 113 deg, recalled)")
+P("  PCl2F3 (Bent): electronegative F axial (p-rich dp axial hybrids), Cl equatorial (sp2, 33 % s)")

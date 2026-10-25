@@ -1,0 +1,35 @@
+---
+title: Valence Bond Theory
+aliases: ["VB theory", "VBT", "localised bond theory", "Heitler-London-Pauling"]
+subject: chemistry
+type: concept
+scope: [taught, extra-book]
+by: [slides, book]
+status: draft
+tags: [subject/chemistry, type/concept, taught, extra/book, src/slides, src/book, status/draft]
+---
+# Valence Bond Theory
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=9|slides 8–12]]. · 🟡 **extra · book:** Shriver and Atkins ([[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf#page=66|PDF pp.66–68]]).
+
+> [!intuition] In one picture
+> Lewis's electron pair, written as a wavefunction: two electrons with opposite spins shared by two atomic orbitals.
+
+> [!key] Definition
+> A $\sigma$ bond is the spin-paired overlap of two orbitals with cylindrical symmetry about the axis; a $\pi$ bond is side-on overlap. $\mathrm{N_2}$: $1\sigma+2\pi$. The $\mathrm{H_2}$ wavefunction is $\chi_A(1)\chi_B(2)+\chi_A(2)\chi_B(1)$ ([[Heitler-London Wavefunction]]).
+
+## Successes and the first failure
+It explains $\mathrm{H_2}$, $\mathrm{N_2}$ and the $\sigma$/$\pi$ language; but unrefined VB predicts $90^\circ$ for $\mathrm{H_2O}$ and $\mathrm{NH_3}$ (two or three perpendicular $p$ orbitals) and only two bonds for carbon. **Promotion** and **hybridisation** repair this ([[Promotion Energy]], [[Hybridisation]]).
+
+## Compared with MO theory
+VB keeps electrons localised in bonds; MO theory (CH02) delocalises them and explains spectra, magnetism ($\mathrm{O_2}$) and hypervalence more naturally. "The M.O. theory largely superseded V.B. theory" (slide 8), but the VB vocabulary survives.
+
+Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[Heitler-London Wavefunction]] · [[Hybridisation]] · [[Octet Rule and Its Limits]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

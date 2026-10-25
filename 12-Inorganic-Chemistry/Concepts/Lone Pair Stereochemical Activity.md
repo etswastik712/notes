@@ -1,0 +1,38 @@
+---
+title: Lone Pair Stereochemical Activity
+aliases: ["inert lone pair", "stereochemically inactive lone pair", "inert pair effect"]
+subject: chemistry
+type: concept
+scope: [taught, extra-beyond]
+by: [slides, own-notes]
+status: draft
+tags: [subject/chemistry, type/concept, taught, extra/beyond, src/slides, src/own-notes, status/draft]
+---
+# Lone Pair Stereochemical Activity
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=7|slide 7]] ($[\mathrm{SeF_6}]^{2-}$, $[\mathrm{TeCl_6}]^{2-}$, $[\mathrm{XeF_5}]^-$) and [[chem pre-ms .pdf#page=24|slides 24–25]] (hybridisation energy). · 🔵 **extra · beyond:** the heavy-hydride numbers.
+
+> [!intuition] In one picture
+> In heavy atoms the lone pair hides in a round $s$ orbital and no longer pushes the other atoms around.
+
+> [!key] Definition
+> A lone pair is **stereochemically active** if it occupies a directional hybrid and distorts the shape; for heavy $p$-block atoms it often sits in a spherical non-directional $s$ orbital and is **inert**: $[\mathrm{SeF_6}]^{2-}$, $[\mathrm{TeCl_6}]^{2-}$ are regular octahedra although $Z=7$.
+
+## Why
+Hybridising a filled $ns$ with $np$ costs energy that is not repaid (no promotion energy to recover, [[Promotion Energy]]); for P the lecture quotes about 600 kJ/mol to hybridise the central atom, higher for heavier congeners. **Numbers (Coulson, computed):** $\mathrm{NH_3}$ (107.8°) lone pair 29.8 % $s$; $\mathrm{PH_3}$ (93.5°) bonds 5.8 % $s$, lone pair **82.7 % $s$**; $\mathrm{AsH_3}$ (92.0°) lone pair 89.9 % $s$ (angles recalled). [[Coulson's Theorem]]
+
+## Contrast
+$[\mathrm{XeF_5}]^-$ ($Z=7$, two lone pairs) is **pentagonal planar** with the lone pairs axial: here they *are* active. The activity depends on the element and ligand, not on $Z$ alone.
+
+> [!pitfall] "Inert pair effect" is also used for oxidation states
+> Here it refers to the **shape**; the thermodynamic inert-pair effect (Tl$^+$, Pb$^{2+}$) is related but is a separate topic.
+
+Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[VSEPR Model]] · [[Bent's Rule]] · [[Hybridisation]] · [[Promotion Energy]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

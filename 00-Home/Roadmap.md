@@ -72,6 +72,12 @@ Course map: [[Ecology and Evolution - Course Map]].
 | 2 | 56 concept notes (`11-Proofs-Analysis-Topology/Concepts/`), full course map, 2-page formula sheet ([[pa-formula-sheet.pdf]]) | **done (draft)** |
 | 3 | confirm how far the course goes (PA06–PA07 have no lecture source); Lectures 1–16; exam prep and problem bank | todo |
 
+## Phase 3e: Inorganic Chemistry (CH2113) — pilot
+| Step | Work | Status |
+|---|---|---|
+| 1 | [[Inorganic Chemistry - Course Map]] (real), [[CH01 VSEPR and Valence Bond Theory]] + 13 concept notes + 1 figure + 1 diagram | **done (draft pilot)**, 2026-10-25 |
+| 2 | CH02–CH03 molecular orbital theory (slides 27–52, MOT Part 2); CH04–CH06 acids, bases and HSAB (53–82); CH07–CH08 main-group clusters, rings, polymers (83–119); CH09 redox (S&A Ch. 5) | todo, **after the user's review of the pilot** |
+
 ## Parallel topics added alongside climate
 - **Thermodynamics** ([[Thermodynamics - Course Map]]): done: blackbody laws, ideal gas law. To add: first law and adiabats, moist thermodynamics (Clausius–Clapeyron), entropy and heat engines, kinetic theory, statistical mechanics of photons.
 - **Foundations**: done: stability, linearisation, bistability, Jensen, relaxation, rotating frames. To add: ODE/PDE basics, vector calculus identities, dimensional analysis, Fourier series, dynamical systems (bifurcations, chaos for eco-evo).
