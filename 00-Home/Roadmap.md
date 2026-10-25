@@ -47,7 +47,8 @@ Course map: [[Ecology and Evolution - Course Map]].
 | 1 | [[QM01 From Waves to Probabilities]] · [[QM02 The Schrodinger Equation and Stationary States]] · [[QM03 States Operators and Measurement]] · [[QM04 The Particle in a Box]] · [[QM05 The Harmonic Oscillator]] (9 figures + 1 diagram, `qm_numbers.py`) | **done (draft)**, 2026-10-25 |
 | 2 | 51 concept notes (`06-Quantum-Mechanics/Concepts/`, plus Dimensional Analysis and Gaussian Integral in `09-Foundations/Concepts/`) | **done (draft)** |
 | 3 | course map, 2-page formula sheet ([[qm-formula-sheet.pdf]]) | **done** |
-| 4 | tunnelling/steps, hydrogen, angular momentum, spin: **sources needed** (not in the folder); exam prep and problem bank | todo |
+| 3b | **QM05 rebuilt** on the handwritten oscillator lecture and Tutorial III; **[[QM06 The Oscillator Toolbox]]** (number basis, expectation values, normalisation, Hermite polynomials in full, momentum space, Ehrenfest/Heisenberg/virial, coherent and thermal states) with 35 new concept notes; [[Quantum Mechanics Quiz Prep]] (mock quiz + 3 Sep quiz) | **done (draft)**, 2026-10-25 |
+| 4 | tunnelling/steps, hydrogen, angular momentum, spin: **sources needed** (not in the folder); a full problem bank | todo |
 
 ## Phase 3b: Thermodynamics
 | Step | Work | Status |
@@ -61,7 +62,8 @@ Course map: [[Ecology and Evolution - Course Map]].
 |---|---|---|
 | 1 | [[PR01 Counting and the Axioms of Probability]] · [[PR02 Conditional Probability Bayes Rule and Independence]] · [[PR03 Discrete Random Variables and Distributions]] · [[PR04 Joint Distributions Expectation and Variance]] · [[PR05 Continuous Random Variables]] · [[PR06 Moments Generating Functions and Limit Theorems]] (6 figures + 1 diagram, `pr_numbers.py`, 60 practice problems with solutions) | **done (draft)**, 2026-10-25 |
 | 2 | 58 new concept notes (60 in `08-Probability/Concepts/`), course map, 2-page formula sheet ([[pr-formula-sheet.pdf]]) | **done (draft)** |
-| 3 | confirm with the instructor whether PR06 (MGFs, LLN, CLT, Chebyshev) is examinable; the "updated 27 Aug" notes; later notes after 10 Sep; exam prep and problem bank | todo |
+| 2b | **Week 2 and Week 3 handwritten lectures integrated** (PR05: folded normal, exponential, memoryless theorem, HW2; PR06: median, mode, moments, MGFs, HW3), 6 new concept notes, formula sheet rebuilt | **done (draft)**, 2026-10-25 |
+| 3 | confirm with the instructor whether Markov/Chebyshev/LLN/CLT are examinable; the "updated 27 Aug" notes; a Week 4 lecture; exam prep and problem bank | todo |
 
 ## Phase 3d: Proofs, Analysis and Topology
 | Step | Work | Status |
