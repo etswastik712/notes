@@ -2,7 +2,7 @@
   "collapse-filter": false,
   "search": "-path:Assets -path:scripts",
   "showTags": true,
-  "showAttachments": true,
+  "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
@@ -127,8 +127,8 @@
       }
     }
   ],
-  "collapse-display": true,
-  "showArrow": true,
+  "collapse-display": false,
+  "showArrow": false,
   "textFadeMultiplier": -0.5,
   "nodeSizeMultiplier": 1.1,
   "lineSizeMultiplier": 1,
@@ -137,6 +137,6 @@
   "repelStrength": 12,
   "linkStrength": 1,
   "linkDistance": 200,
-  "scale": 0.47373543919910743,
+  "scale": 0.34241623048131276,
   "close": false
 }
