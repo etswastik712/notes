@@ -79,3 +79,8 @@ Think about it, even if you do not agree with me.
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]]: the other tectonic-landscape case in this course (an active orogen versus this passive-margin escarpment).
 - [[05-landscapes-geomorphology/landscapes-and-geomorphology-course-map]]: the planned landscapes course map this material belongs under.
 - [[maps/courses/landscape-evolution]]: course page.
+
+<!-- kurooto:materialf79b24df -->
+## Concepts in Geomorphic Features of the Deccan Traps Terrain
+[[zettel/deccan-volcanic-province]], [[zettel/compound-hummocky-pahoehoe]], [[zettel/massive-sheet-flow]], [[zettel/columnar-jointing]]
+<!-- /kurooto:materialf79b24df -->
