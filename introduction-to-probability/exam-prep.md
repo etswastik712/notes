@@ -9,9 +9,16 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. The mid-semester examination has taken place (solutions posted 2026-09-22, answer scripts shown 2026-09-26 and 2026-10-13); no later quiz or exam date is in the posts, the latest of which is dated 2026-10-24. Rule for any quiz or exam: no electronic gadget, notes or paper on your person; a phone found means 0 for that quiz (Classroom, 2026-08-28), and at the mid-semester a violation cancelled the examination and was reported to the Academic Office (Classroom, 2026-09-18). No calculator was needed at the mid-semester.
+Quiz 5 is tentatively on Friday 2026-10-30, held in the Friday tutorial (12:00-1:00 PM, about 20 minutes, up to 2 questions, 10 points); Quiz 6 is tentatively on Friday 2026-11-13 (Classroom: evaluation scheme, 2026-08-05). The dates were called very unlikely to change except under exigent circumstances, but Quiz 3 did move (11 to 18 September). Syllabus for either quiz: not announced. The final examination (30 points, 2 hours) is on a date set by the Academic Office, not yet announced. Scheme: the 4 best of 6 quizzes count (40 points), mid-semester 30, final 30. The mid-semester examination has taken place (solutions posted 2026-09-22). Quiz 1 (syllabus: up to the axiomatic definition of probability and the first week's suggested problems, announced 2026-08-11) is already past.
+Rule for any quiz or exam: no electronic gadget, notes or paper on your person; a phone found means 0 for that quiz (Classroom, 2026-08-28), and at the mid-semester a violation cancelled the examination and was reported to the Academic Office (Classroom, 2026-09-18). No calculator was needed at the mid-semester or for Quiz 1.
 
 ## Covered so far
+- [[introduction-to-probability/2026-08-05-why-study-probability]]: applications of probability and why statistics needs it (motivation only)
+- [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]]: counting principle, permutations, combinations, Pascal's identity, binomial and multinomial theorems
+- [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]]: random experiment, sample space, events, De Morgan, naive and axiomatic probability, $P(\emptyset)=0$
+- [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]]: sheet of 12 problems (counting, cards and dice, full house, teams, Pascal story proof, $P[B\setminus A]$)
+- [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]]: full house $\binom21\binom{13}2\binom43\binom42$, overcounting, straight flush $10\times4=40$, multinomial theorem with $k>n$
+- [[introduction-to-probability/2026-08-10-video-lecture-on-tutorial-1]]: video of Tutorial 1 solutions; round-robin outcomes $2^{n(n-1)/2}$
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: Bernoulli/binomial as sums of indicators, Poisson as a binomial limit, pmf of $g(X)$, $E[g(X)]$, $E[aX+b]$
 - [[introduction-to-probability/2026-08-26-practice-problems-28th-august-and-following-weekend]]: sheet of 8 problems (sampling with and without replacement, coupon collector, hypergeometric and Poisson means, pmf from cdf)
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026]]: joint pmf, independence of random variables, indicators, negative binomial, linearity of expectation
@@ -31,6 +38,15 @@ Not announced yet. The mid-semester examination has taken place (solutions poste
 - Earlier chapters in the vault: [[08-Probability/Probability - Course Map]]
 
 ## Must know
+- Basic counting principle: $r$ experiments with $m_1,\dots,m_r$ outcomes give $m_1m_2\cdots m_r$ outcome $r$-tuples; $n$ distinguishable objects have $n!$ arrangements; with $k_i$ objects of kind $i$ ($\sum k_i=n$) there are $n!/(k_1!\cdots k_r!)$ (Classroom: Class notes 5th August 2026).
+- $\binom nr=\dfrac{n!}{(n-r)!\,r!}$; Pascal's identity $\binom nr=\binom{n-1}r+\binom{n-1}{r-1}$; binomial theorem $(x+y)^n=\sum_k\binom nkx^ky^{n-k}$; multinomial coefficient $\dfrac{n!}{m_1!\cdots m_r!}$ for splitting $n$ items into labelled groups of sizes $m_i$, and the multinomial theorem (same notes). If the number of variables $k$ exceeds the exponent $n$, group $y=x_{n+1}+\dots+x_k$, expand $(x_1+\dots+x_n+y)^n$ and then each power of $y$ (Classroom: announcement of 2026-08-06).
+- Full house (5 cards): $\binom{13}1\binom43\binom{12}1\binom42=\binom21\binom{13}2\binom43\binom42=3744$; the factor $\binom21$ chooses which of the two denominations appears 3 times. Counting cards one at a time as $\binom{52}1\binom32\binom{48}1\binom31$ overcounts (triple 3 times, pair twice) (Classroom: announcements of 2026-08-07).
+- Straight flush: the Ace is low (A-2-3-4-5) or high (10-J-Q-K-A), with no wrap-around, so there are 10 rank sequences and $10\times4=40$ straight flushes (same announcements).
+- Round-robin with $n$ players: $\binom n2$ games, so $2^{n(n-1)/2}$ outcomes (Classroom: Video Lecture on Tutorial 1, 2026-08-10).
+- Sample space $S$ is the set of all possible outcomes of a random experiment; an event is any subset of $S$; De Morgan: $(\bigcup E_i)^c=\bigcap E_i^c$ and $(\bigcap E_i)^c=\bigcup E_i^c$ (Classroom: Class notes 6th August 2026).
+- Naive definition: for finite $S$, $P[A]=|A|/|S|$; the justification is equal probability $1/N$ for each of the $N$ sample points (Classroom: Class notes 6th and 12th August 2026).
+- Axioms: $0\le P(E)\le1$; $P(S)=1$; $P(\bigcup E_i)=\sum P(E_i)$ for pairwise disjoint $E_1,E_2,\dots$. Consequences: $P(\emptyset)=0$ and finite additivity (take $E_j=\emptyset$ for $j>n$); $P(E^c)=1-P(E)$ and $E\subset F\Rightarrow P(E)\le P(F)$ (Classroom: Class notes 6th and 12th August 2026).
+- $P(E\cup F)=P(E)+P(F)-P(E\cap F)$, and inclusion-exclusion for three events (Classroom: Class notes 12th August 2026).
 - A discrete random variable takes at most countably many values; pmf $p(x)=P[X=x]$ and $\sum_ip(x_i)=1$ (Classroom: Class notes 20th August).
 - cdf $F(a)=P[X\le a]=\sum_{x\le a}p(x)$; monotone increasing, right-continuous, $F\to0$ at $-\infty$ and $\to1$ at $+\infty$ (proofs of the last two are not in the formal course material).
 - $P[X=x]=F(x)-F(x^-)$, where $F(x^-)=\lim_{y\to x^-}F(y)=P[X<x]$ (Classroom: practice sheet of 17 September).
@@ -65,6 +81,10 @@ Not announced yet. The mid-semester examination has taken place (solutions poste
 - $\operatorname{Var}\big[\sum X_i\big]=\sum\operatorname{Var}[X_i]$ for independent $X_i$ is not proved in this course, so it cannot be used in solutions (Classroom: practice sheet, problem 5).
 
 ## Typical questions
+- Counting and naive-probability problems: rankings, committees versus offices, card hands (full house, straight flush), two-dice sums, round-robin tournaments, restricted dinner schedules, splitting people into unlabelled teams, elevator stops, birth orders. Practise: [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]], problems 1-8, 10, 11; the Chapter 1 problems in Blitzstein and Hwang and Sheldon Ross are suggested too.
+- Card-hand counts with the right multiplicity factors and overcount checks (full house $3744$, straight flush $40$). Practise: problem 5 of the same sheet; [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]].
+- Story (combinatorial) proof of Pascal's identity; derive $P[B\setminus A]=P[B]-P[A]$ for $A\subset B$ from the axioms. Practise: same sheet, problems 9 and 12; [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]].
+- "At least two share a slot" via the complement; neighbours at a table (linear and circular). Posed in the 12 August class notes.
 - pmf of a count under sampling with vs without replacement; "at least once" via complement. Practise: [[introduction-to-probability/2026-08-26-practice-problems-28th-august-and-following-weekend]], problem 1; [[introduction-to-probability/2026-09-17-practice-problems-17th-september-and-following-tutorial-and-weekend]], problem 1.
 - pmf of winnings or another function of a count. Practise: 28 August sheet, problem 2; 17 September sheet, problems 4, 6, 7.
 - Coupon collector pmf via $P[T>n]$ and inclusion–exclusion. Practise: 28 August sheet, problem 3.
@@ -96,14 +116,17 @@ Not announced yet. The mid-semester examination has taken place (solutions poste
 - Mgf of a sum of two dice rolls; mean and variance of $\text{Geom}(p)$ from its mgf (derive the mgf first); two integral expressions for the mgf of the folded normal $|Z|$. Practise: HW3, problems 4-6.
 
 ## Gaps
+- The 5 and 6 August class notes were filed late (in October) from the Classroom posts; the 12 August class notes are in the Classroom materials but are not yet filed as a note, so the inclusion-exclusion and complement examples above come from there only briefly. Class notes between 12 and 27 August (conditional probability, independence, Bayes, definition of random variables) are not filed either.
+- Quiz 5 (30 October) and Quiz 6 (13 November): syllabus not announced; whether quizzes 4 and 5 took place on their tentative dates (16 and 30 October) is not stated in the posts. The final examination date and syllabus are not announced.
 - Practice problems 4 September 2026: the PDF could not be downloaded (RemoteDisconnected), so its problems are not covered.
-- No date is announced for the next quiz or exam (end-semester or otherwise), nor its syllabus.
 - Week 1 homework: due date and whether it is collected are not stated. The PDF is handwritten and was read from page images, so formulas should be checked against the file. The due dates of HW 2 and HW3 are not stated either.
 - The Week2_notes.pdf and Week3_notes.pdf files hold only the homework problems; the lecture notes for Weeks 2 and 3 (announced as posted on 2026-10-24) are not filed, so the exponential distribution, the median/mode/skewness lectures, the mgf definition and the folded normal "discussed in class" have no class notes here yet.
 - HW3 problem 4 is marked "postponed to next hw" in the file but listed without that remark in the post.
 - Quiz 3, problem 3: statement not in the solutions file ("deduced in class in detail").
 - Whether the geometric/negative-binomial derivations and their expectations are examined: the notes say they "will be derived in class", with no written derivation in these files.
 - The variance proofs ($E[X^2]-(E[X])^2$, $\operatorname{Var}[aX+b]$) are "done in class", not written in the notes; variance of a sum of independent variables is stated not to be proved in the course.
+- The 6 August sheet has no worked solutions; the antenna problem and the box-and-balls count (stars and bars) are posed in the 5 and 6 August notes without an answer written down.
+- The Tutorial 1 video (YouTube) was not watched, so the solutions to problems 1-12 given there are not in the notes beyond the question 6 correction; the image attached to the 7 August full-house post was not read.
 - Class notes after 10 September other than Week 1 are not filed (the lecture of 15-17 September where mgfs were mentioned). The vault chapter [[08-Probability/PR05 Continuous Random Variables]] covers more densities and [[08-Probability/PR06 Moments Generating Functions and Limit Theorems]] mgfs.
 - Joint cdf and conditional distributions appear in the vault chapters ([[08-Probability/PR04 Joint Distributions Expectation and Variance]]) but not in the class notes filed so far; joint distributions of continuous variables are not yet filed.
 - Mid-semester solutions problem 6 shows the data are contradictory ($1057>1000$); the original problem statement is not in the file.

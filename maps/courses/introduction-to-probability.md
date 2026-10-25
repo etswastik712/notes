@@ -30,6 +30,8 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]] Class notes 5 August: counting, permutations, combinations, binomial and multinomial theorems (2026-08-05)
 - [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]] Class notes 6 August: sample space, events, naive definition, axioms of probability (2026-08-05)
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]] Practice problems 7 August: 12 problems on counting, naive definition, axioms (2026-08-06)
+- [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]] Tutorial 1 clarifications: full house, straight flush, overcounting, multinomial with k>n (2026-08-07)
+- [[introduction-to-probability/2026-08-10-video-lecture-on-tutorial-1]] Video lecture on Tutorial 1, with correction to question 6 (2026-08-10)
 
 ## Tasks
 
@@ -44,6 +46,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-08-05: Evaluation scheme: 6 quizzes (10 points each, up to 2 questions, about 20 minutes, held in the tutorial), of which the best 4 count for 40 points; mid-semester examination 30 points and final examination 30 points, each 2 hours, on dates set by the Academic Office. Tentative quiz dates (very unlikely to change except under exigent circumstances): 14 August, 28 August, 11 September (3 before the mid-semester); 16 October, 30 October, 13 November (3 after). Quiz 3 has since moved to 18 September. (Classroom)
 - 2026-10-30: Quiz 5 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial, 12:00-1:00 PM). Syllabus not announced. (Classroom)
 - 2026-11-13: Quiz 6 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial). Syllabus not announced. (Classroom)
+- 2026-08-11: Quiz 1 (tentatively 14 August per the evaluation scheme) covers everything in class up to and including the axiomatic definition of probability, and the practice problems suggested at the end of the first week (perhaps as discussed by the TAs in the 7 August tutorials); the 12 and 13 August class notes are not needed for Quiz 1 (they are for Quiz 2). No calculator; only writing materials and water bottle, no electronic gadgets, notebooks or paper on your person. Already past. (Classroom)
 
 ## Announcements
 - 2026-08-28: Strict rule for quizzes and exams: no electronic gadget of any kind on your person. Anyone caught with a phone gets 0 for that quiz, with no exceptions. (Classroom)
@@ -79,3 +82,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-08-05: Class notes for 5 and 6 August posted. See [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]] and [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]]. (Classroom)
 - 2026-08-06: Tutorials are every Friday, 12:00-1:00 PM; attend only the session of your own batch. Your batch is 7 (TA Aakash Choudhary, room LHC107) per the Batch-7 list; report any discrepancy to the instructor. (Classroom)
 - 2026-08-06: Updated 12-problem practice sheet for the 7 August tutorial posted. (Classroom)
+- 2026-08-06: Multinomial theorem with more variables than the exponent ($k>n$): set $y=x_{n+1}+\dots+x_k$, expand $(x_1+\dots+x_n+y)^n$, then expand each power of $y$. See [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]]. (Classroom)
+- 2026-08-07: Clarifications on practice problem 5: full house written as $\binom21\binom{13}2\binom43\binom42=3744$, the overcount in $\binom{52}1\binom32\binom{48}1\binom31$ (triple counted 3 times, pair twice), and straight flushes $=10\times4=40$ (the Ace is low or high, no wrap-around). See [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]]. (Classroom)
+- 2026-08-07: Remedial classes announced to start 2026-08-08, Saturdays 10:00 AM-12:00 noon (written "12:00 AM"), Madhava Hall, Mathematics Department, 3rd floor, Main Building; further information on the remedial-class WhatsApp group, extra material in the Classwork tab. Later posts changed the time and venue. (Classroom)
+- 2026-08-10: Video of solutions to Tutorial 1 posted; correction: in question 6 the number of outcomes is $2^{n(n-1)/2}$. See [[introduction-to-probability/2026-08-10-video-lecture-on-tutorial-1]]. (Classroom)
