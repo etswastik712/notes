@@ -32,6 +32,13 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]] Practice problems 7 August: 12 problems on counting, naive definition, axioms (2026-08-06)
 - [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]] Tutorial 1 clarifications: full house, straight flush, overcounting, multinomial with k>n (2026-08-07)
 - [[introduction-to-probability/2026-08-10-video-lecture-on-tutorial-1]] Video lecture on Tutorial 1, with correction to question 6 (2026-08-10)
+- [[introduction-to-probability/2026-08-11-class-notes-12th-august-2026]] Class notes 12 August: consequences of the axioms, inclusion-exclusion, matching/coats problem, continuity of probability (2026-08-11)
+- [[introduction-to-probability/2026-08-11-class-notes-13th-august-2026]] Class notes 13 August: conditional probability, urn models and exchangeability, multiplication rule (2026-08-11)
+- [[introduction-to-probability/2026-08-13-practice-problems-14th-august-2026]] Practice problems 14 August: inclusion-exclusion proofs, Bayes problems, Monty Hall (2026-08-13)
+- [[introduction-to-probability/2026-08-19-class-notes-20th-august-2026]] Class notes 20 August: random variables, pmf, cdf, expectation, binomial, hypergeometric, discrete uniform (2026-08-19)
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]] Practice problems 21 August: 10 problems on Bayes, independence, gambler's ruin (2026-08-19)
+- [[introduction-to-probability/2026-08-19-class-notes-19th-august-2026]] Class notes 19 August: Bayes' rule for several events, multiplication rule, independence of events (2026-08-19)
+- [[introduction-to-probability/2026-08-19-solutions-quiz-1]] Solutions to Quiz 1: committee with exactly j couples, symmetric difference (2026-08-19)
 
 ## Tasks
 
@@ -47,6 +54,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-10-30: Quiz 5 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial, 12:00-1:00 PM). Syllabus not announced. (Classroom)
 - 2026-11-13: Quiz 6 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial). Syllabus not announced. (Classroom)
 - 2026-08-11: Quiz 1 (tentatively 14 August per the evaluation scheme) covers everything in class up to and including the axiomatic definition of probability, and the practice problems suggested at the end of the first week (perhaps as discussed by the TAs in the 7 August tutorials); the 12 and 13 August class notes are not needed for Quiz 1 (they are for Quiz 2). No calculator; only writing materials and water bottle, no electronic gadgets, notebooks or paper on your person. Already past. (Classroom)
+- 2026-08-20: Quiz 2 syllabus: conditional probability and independence, i.e. everything covered since the last quiz, up to everything covered in the 21 August tutorial. Already past. (Classroom)
 
 ## Announcements
 - 2026-08-28: Strict rule for quizzes and exams: no electronic gadget of any kind on your person. Anyone caught with a phone gets 0 for that quiz, with no exceptions. (Classroom)
@@ -86,3 +94,12 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-08-07: Clarifications on practice problem 5: full house written as $\binom21\binom{13}2\binom43\binom42=3744$, the overcount in $\binom{52}1\binom32\binom{48}1\binom31$ (triple counted 3 times, pair twice), and straight flushes $=10\times4=40$ (the Ace is low or high, no wrap-around). See [[introduction-to-probability/2026-08-07-tutorial-1-clarifications-full-house-straight-flush-multinomial]]. (Classroom)
 - 2026-08-07: Remedial classes announced to start 2026-08-08, Saturdays 10:00 AM-12:00 noon (written "12:00 AM"), Madhava Hall, Mathematics Department, 3rd floor, Main Building; further information on the remedial-class WhatsApp group, extra material in the Classwork tab. Later posts changed the time and venue. (Classroom)
 - 2026-08-10: Video of solutions to Tutorial 1 posted; correction: in question 6 the number of outcomes is $2^{n(n-1)/2}$. See [[introduction-to-probability/2026-08-10-video-lecture-on-tutorial-1]]. (Classroom)
+- 2026-08-11: Students needing a scribe for quizzes/exams must arrange one through the Academic Office (instructors cannot find scribes); do so soon, the first quiz is that Friday. (Classroom)
+- 2026-08-13: Missing a quiz is excused (and prorated) only with a medical certificate issued by the IISER medical personnel; otherwise the missed quiz score is not made up. (Classroom)
+- 2026-08-13: The 12 August class notes were re-uploaded with a written inclusion-exclusion solution of the coats problem. See [[introduction-to-probability/2026-08-11-class-notes-12th-august-2026]]. (Classroom)
+- 2026-08-13: Bayes' theorem will be done formally the following Wednesday, with more conditional-probability practice; Monty Hall was only motivation. See [[introduction-to-probability/2026-08-13-practice-problems-14th-august-2026]]. (Classroom)
+- 2026-08-19: Next class opens with the independent-events example and the definition of (mutual) independence. See [[introduction-to-probability/2026-08-19-class-notes-20th-august-2026]]. (Classroom)
+- 2026-08-19: Quiz 1 solutions posted (they need not be unique). See [[introduction-to-probability/2026-08-19-solutions-quiz-1]]. (Classroom)
+- 2026-08-19: Many students missed Quiz 1; absence is not excused and there is no proration without a medical certificate from the IISER healthcare personnel (emailed to the instructor or, better, the TA, who has the headcounts). (Classroom)
+- 2026-08-19: Practice problems on conditional probability posted, more to follow; final list by the next evening. (Classroom)
+- 2026-08-20: One more problem (dice, 5 before 7) added to the suggested list for 21 August, because there were few examples on independence. See [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]]. (Classroom)
