@@ -1,6 +1,6 @@
 ---
 id: zettel/compound-hummocky-pahoehoe
-aliases: ["Compound Hummocky Pāhoehoe", "hummocky pāhoehoe", "inflated lava flows"]
+aliases: ["Compound Hummocky Pāhoehoe", "hummocky pāhoehoe", "inflated lava flows", "Hummocky Pāhoehoe Flow Field", "Compound pāhoehoe"]
 tags: [zettel, agent-written, landscape-evolution]
 trust_tier: agent_written
 ---

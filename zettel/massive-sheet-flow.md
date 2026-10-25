@@ -1,6 +1,6 @@
 ---
 id: zettel/massive-sheet-flow
-aliases: ["Massive Sheet Flow", "sheet flows"]
+aliases: ["Massive Sheet Flow", "sheet flows", "Sheet Flow", "Massive sheet flows", "Flood basalt sheet flows"]
 tags: [zettel, agent-written, landscape-evolution]
 trust_tier: agent_written
 ---
