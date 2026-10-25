@@ -20,11 +20,17 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - [[introduction-to-climate-science/2026-09-10-reading-manabe-and-strickler-1964]] Reading: Manabe and Strickler (1964) Thermal Equilibrium with Convective Adjustment (2026-09-10)
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance]] Study material 5: Radiative balance (Marshall and Plumb Ch 2) (2026-09-17)
 - [[introduction-to-climate-science/2026-09-17-study-material-6-radiative-convective-equilibrium]] Study material 6: Radiative-convective equilibrium (Marshall and Plumb Ch 4) (2026-09-17)
+- [[introduction-to-climate-science/2026-10-07-study-material-7-meridional-circulation-part-1]] Study material 7: Meridional circulation part1 (2026-10-07)
+- [[introduction-to-climate-science/2026-10-08-study-material-8-top-of-the-atmosphere-energy-balance-and-poleward-transport-of-energy]] study material 8: Top of the atmosphere energy balance and poleward transport of energy (2026-10-08)
+- [[introduction-to-climate-science/2026-10-08-study-material-9-mean-meridional-circulation-part-2-observation]] Study material 9: Mean meridional circulation: Part 2 observation (2026-10-08)
+- [[introduction-to-climate-science/2026-10-14-study-material-10-meridional-circulation-and-angular-momentum-balance]] Study material 10: Meridional circulation and Angular momentum balance (2026-10-14)
+- [[introduction-to-climate-science/2026-10-14-study-material-11-transformation-from-a-rotating-to-an-inertial-coordinate]] Study material 11: Transformation from a rotating to an inertial coordinate (2026-10-14)
 
 ## Tasks
 
 ## Exams
 - No exam or quiz dates announced in the posts seen.
+- 2026-10-23: Quiz 2 covering post-midsem material taught up until 22 October 2026. (Classroom)
 
 ## Announcements
 - 2026-08-27: Matlab and Python code shared for the 28 August tutorial (Lorenz system and simple pendulum); students asked to bring laptops. See [[introduction-to-climate-science/2026-08-27-tutorial-lorenz-model-and-simple-pendulum]]. (Classroom)
@@ -35,3 +41,6 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-09-10: Supplementary research paper by Manabe & Strickler (1964) shared on radiative and radiative-convective equilibrium (non-mandatory reading). See [[introduction-to-climate-science/2026-09-10-reading-manabe-and-strickler-1964]]. (Classroom)
 - 2026-09-11: Demonstration video and Google Colab notebook shared for Quiz 1 Question 3 on temperature response under periodic emissivity ($\epsilon$) variation. (Classroom)
 - 2026-09-15: Classes on 15–16 September 2026 cancelled due to instructor health issues. (Classroom)
+- 2026-09-17: Regular tutorial on 18 September 2026 announced as doubt clearing session for the midsem. (Classroom)
+- 2026-10-09: Collaborative peer/TA doubt-clearing document and atmospheric basics guide shared. (Classroom)
+- 2026-10-16: Quiz 2 announced for Friday 23 October covering post-midsem topics up to 22 October. (Classroom)
