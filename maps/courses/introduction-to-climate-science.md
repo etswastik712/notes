@@ -32,6 +32,8 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - [[introduction-to-climate-science/2026-08-13-tutorial-2-energy-balance-problems]] Tutorial 2 (August): energy-balance problems and code (2026-08-13)
 - [[introduction-to-climate-science/2026-08-19-lecture-3-planetary-energy-balance]] Lecture 3: Planetary Energy Balance (2026-08-19)
 - [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback]] Lecture 4: Sensitivity & (albedo) Feedback (2026-08-19)
+- [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases]] Lecture 5: Atmosphere & Green house gases (2026-08-20)
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs]] Lecture 6: Planetary energy balance with GHGs, from the compiled L1–L6 notes (2026-08-21)
 
 ## Tasks
 
@@ -62,3 +64,7 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-08-17: Lecture notes updated (clarification of feedback and sensitivity factors on slide 44); slides for that day's lecture added. See [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback]]. (Classroom)
 - 2026-08-19: Student notes for Lectures 3 and 4 shared (textbook references are to *The Earth System*, Kump, Kasting & Crane). See [[introduction-to-climate-science/2026-08-19-lecture-3-planetary-energy-balance]] and [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback]]. (Classroom)
 - 2026-08-19: Correction to page 43 of that day's lecture slides announced; the attached file was not accessible, so the correction itself is not filed. (Classroom)
+- 2026-08-20: Slides for Lectures 1–6 (`climate_intro_L1_L6.pdf`, 60 MB) posted; too large to read, open the Drive link. Students are asked to report errors, typos or missing logical steps. (Classroom)
+- 2026-08-20: Student notes for Lecture 5 shared. See [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases]]. (Classroom)
+- 2026-08-20: Reminder to return the thermometer with its box by the next day (2026-08-21); see [[introduction-to-climate-science/2026-08-07-thermometer-experiment]]. (Classroom)
+- 2026-08-21: Compiled student notes for Lectures 1–6 shared (`climate_intro_notes_L1_L6.pdf`); Lecture 6 is new. See [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs]]. (Classroom)
