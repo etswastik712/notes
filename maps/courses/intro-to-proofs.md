@@ -20,6 +20,8 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [[intro-to-proofs/2026-10-19-solutions-assignment-7]] Solutions Assignment 7 (2026-10-19)
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20]] Countable and Uncountable sets: Lectures 17 to 20 (2026-10-20)
 - [[intro-to-proofs/2026-10-22-assignment-8]] Assignment-8 (2026-10-22)
+- [[intro-to-proofs/2026-08-06-assignment-1]] Assignment 1 (2026-08-06)
+- [[intro-to-proofs/2026-08-13-assignment-2]] Assignment-2 (2026-08-13)
 
 ## Tasks
 - [ ] Assignment-3 (due date not given; file Assignment-3.pdf could not be downloaded) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc2MTE0MTQwMDE0/details)
@@ -28,6 +30,8 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [ ] Assignment 6 (due date not given; file could not be downloaded) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODczOTA4Nzk4NTY5/details)
 - [ ] Assignment-7 (due date not given; file could not be downloaded) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc0MDA4MTE4MDQ0/details)
 - [ ] Assignment-8 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc0MjI5OTUzMDM5/details)
+- [ ] Assignment 1 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODcxODQ5NTM3MDk2/details)
+- [ ] Assignment-2 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc0NDM1ODM0MTYx/details)
 
 ## Exams
 - 2026-09-19: mid-sem portion announced: everything covered in class till 18 Sept, excluding the proof that every vector space over a field has a basis. Topics: logical statements, truth tables, conditionals, quantifiers, converse, contrapositive, negation, Venn diagrams, union/intersection/Cartesian product of indexed families, posets, minimal/maximal and minimum/maximum elements, upper/lower bounds, glb, lub, chains, Zorn's lemma, definition of vector space and basis, equivalence relations, partitions, congruence mod n and congruence classes.
@@ -38,3 +42,6 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - 2026-08-31: office hours Saturday 11:00 to 12:00, office A442, Main building.
 - 2026-10-19: Batch 1 tutorial hours moved to Tuesday 4:00-5:00 PM (instead of Friday); Quiz 3 answer sheets available to collect in office hours.
 - 2026-10-20: Batch 1 Quiz 4 graded; collect during office hours Tuesday 4:00-5:00 PM, room A459.
+- 2026-08-04: lectures Monday and Thursday 2:00-3:00 PM in LHC 101; tutorials Friday 2:00-3:00 PM (LHC 205, 206, 101); quizzes are held during tutorials. Evaluation: internal 20%, mid-sem 40%, end-sem 40%.
+- 2026-08-06: tutorials split into three batches by roll number (Batch 1 LHC 101, Batch 2 LHC 205, Batch 3 LHC 206); venues later changed, see 2026-08-26.
+- 2026-08-25: Batch 1 office hours (Ekta, Akanksha) shifted to Thursday 4-5 PM, room 461, main building; otherwise email the instructor to arrange a time.

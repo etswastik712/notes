@@ -9,9 +9,11 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key]]). Quizzes 3 and 4 have been graded (answer sheets can be collected during Batch 1 office hours, Tuesdays 4:00-5:00 PM in A459). No future quiz or end-sem dates have been posted yet.
+Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key]]). Quizzes are held during tutorials; Quizzes 3 and 4 have been graded (answer sheets can be collected during Batch 1 office hours, Tuesdays 4:00-5:00 PM in A459). Evaluation: internal 20%, mid-sem 40%, end-sem 40% (Classroom: announcement 2026-08-04). No future quiz or end-sem dates have been posted yet.
 
 ## Covered so far
+- [[intro-to-proofs/2026-08-06-assignment-1]]: truth tables, De Morgan, tautology/contradiction/contingency, primes, Goldbach and twin prime conjectures
+- [[intro-to-proofs/2026-08-13-assignment-2]]: conditionals (converse, contrapositive), quantifiers, negation, quantifier order
 - [[intro-to-proofs/2026-09-03-assignment-4]]: posets (extremal elements, bounds, glb/lub), equivalence relations, partitions; 9 practice problems
 - [[intro-to-proofs/2026-09-15-ordered-pairs]]: Kuratowski ordered pair and which other encodings work or fail
 - [[intro-to-proofs/2026-09-15-tautology]]: tautology vs. merely true statement
@@ -25,12 +27,15 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - [[intro-to-proofs/2026-10-22-assignment-8]]: Assignment 8: countability of unions, irrational numbers $\mathbb{R} \setminus \mathbb{Q}$, $\{0, 1\}^\mathbb{N}$, Cantor's theorem $|A| < |\mathcal{P}(A)|$, interval bijections $[0, 1) \sim (0, 1) \sim \mathbb{R}$, induction (PMI) identities and scope
 
 ## Must know
+- Logical equivalence $\sim$ is not equality $=$; De Morgan: $\lnot(P\lor Q)\sim\lnot P\land\lnot Q$ and $\lnot(P\land Q)\sim\lnot P\lor\lnot Q$; $(P\Rightarrow Q)\sim(\lnot P\lor Q)$; $P\lor Q\sim\lnot(\lnot P\land\lnot Q)$ (Classroom: Assignment 1 Q3).
+- Contrapositive $\lnot Q\Rightarrow\lnot P$ is equivalent to $P\Rightarrow Q$; the converse $Q\Rightarrow P$ is not. "$P$ only if $Q$", "$P$ is sufficient for $Q$" and "$Q$ is necessary for $P$" all express $P\Rightarrow Q$ (Classroom: Assignment 2 Q1).
+- Order of quantifiers matters: $\forall x\,\exists y\,(y>x)$ is not the same as $\exists y\,\forall x\,(y>x)$ (Classroom: Assignment 2 Q6).
 - Ordered pair property (OP): $(A,B)=(C,D)\iff A=C$ and $B=D$; a proposed encoding $F$ is valid iff $F(A,B)=F(C,D)\iff A=C,\ B=D$.
 - Kuratowski encoding: $(A,B)=\{\{A\},\{A,B\}\}$; $\bigcap(A,B)=\{A\}$, $\bigcup(A,B)=\{A,B\}$. $\{A,B\}$, $\{\{A\},\{B\}\}$ and $\{A,\{B\}\}$ fail; $\{A,\{A,B\}\}$ works in ZFC but needs Regularity.
 - $(A,A)=\{\{A\}\}\ne\{A\}$ by Regularity (else $A\in A$); this is a consequence, not the defining property.
-- Tautology: a compound statement true under every truth assignment, a property of logical form. True statement $\not\Rightarrow$ tautology (e.g. $0\ne1$, $5<7$); $(P\land Q)\Rightarrow P$, $P\lor\lnot P$ and $P\land(P\Rightarrow Q)\Rightarrow Q$ are tautologies (Classroom: mid-sem Q1-Q2).
+- Tautology: a compound statement true under every truth assignment, a property of logical form. True statement $\not\Rightarrow$ tautology (e.g. $0\ne1$, $5<7$); $(P\land Q)\Rightarrow P$, $P\lor\lnot P$ and $P\land(P\Rightarrow Q)\Rightarrow Q$ are tautologies (Classroom: mid-sem Q1-Q2). A contradiction is false under every assignment, e.g. $P\land\lnot P$ (Classroom: Assignment 1 Q4).
 - Partial order: reflexive ($a \le a$), antisymmetric ($a \le b \land b \le a \implies a=b$), transitive ($a \le b \land b \le c \implies a \le c$). Equivalence relation: reflexive, symmetric, transitive (mid-sem Q1).
-- Negation rules: $\lnot(\forall x\,p)\sim\exists x\,\lnot p$; $\lnot(\exists y\,q)\sim\forall y\,\lnot q$; $\lnot(P\Rightarrow Q)\sim P\land\lnot Q$ (mid-sem Q3).
+- Negation rules: $\lnot(\forall x\,p)\sim\exists x\,\lnot p$; $\lnot(\exists y\,q)\sim\forall y\,\lnot q$; $\lnot(P\Rightarrow Q)\sim P\land\lnot Q$ (mid-sem Q3, Assignment 2).
 - $A\times B=B\times A\Rightarrow A=B$ fails only when one set is empty and the other is not; a minimum need not exist when minimal elements do (e.g. $\{2,3\}$ under divisibility) (mid-sem Q4).
 - Chain: subset of a poset with every two elements comparable. Maximal element $m$: $m\le x\Rightarrow x=m$.
 - Zorn's Lemma: a nonempty poset in which every chain has an upper bound has a maximal element.
@@ -46,7 +51,7 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Subsets of countable sets: if $A \subseteq B$ and $B$ is finite, $A$ is finite; if $B$ is countably infinite, any non-empty subset $A \subseteq B$ is countable (well-ordering extraction of increasing indices $n_{k+1} = \min\{n > n_k : f(n) \in A\}$) (Classroom: Lecture 18, Assignment 7 Q4).
 - Uncountable set criterion: if $A \subseteq B$ and $A$ is uncountable, then $B$ is uncountable (Classroom: Lecture 18, Assignment 8).
 - Proper subset non-equivalence: a finite set is never in bijection with any of its proper subsets. Conversely, any infinite set is in bijection with a proper subset (e.g. $\mathbb{N} \sim \text{odd natural numbers}$ via $n \mapsto 2n-1$) (Classroom: Lecture 18).
-- Uncountability of $(0, 1)$: every real in $(0, 1)$ has a unique normalized decimal representation (not ending in infinite 9s); no function $f: \mathbb{N} \to $(0, 1)$ is surjective by Cantor's diagonal argument (perturber $b_k = 3$ if $a_{kk} \ne 3$, $b_k = 7$ if $a_{kk}=3$ satisfies $b \notin \operatorname{Im}(f)$) (Classroom: Lecture 19).
+- Uncountability of $(0, 1)$: every real in $(0, 1)$ has a unique normalized decimal representation (not ending in infinite 9s); no function $f: \mathbb{N} \to (0, 1)$ is surjective by Cantor's diagonal argument (perturber $b_k = 3$ if $a_{kk} \ne 3$, $b_k = 7$ if $a_{kk}=3$ satisfies $b \notin \operatorname{Im}(f)$) (Classroom: Lecture 19).
 - Interval equicardinality: any open interval $(a, b) \sim (0, 1)$ via linear bijection $f(x) = a + (b-a)x$. $(0, 1) \sim \mathbb{R}$ via piecewise bijection $f(x) = 1 - \frac{1}{2x}$ on $(0, 1/2]$ and $\frac{1}{2(1-x)} - 1$ on $[1/2, 1)$ with inverse $g(y) = \frac{1}{2(1-y)}$ for $y \le 0$ and $1 - \frac{1}{2(1+y)}$ for $y \ge 0$. Hence $(a, b)$ and $\mathbb{R}$ are uncountable, with $|\mathbb{R}| = \mathfrak{c} = 2^{\aleph_0}$ (Classroom: Lecture 19-20).
 - Boundary absorption (Hilbert hotel): $[0, 1) \sim (0, 1)$ via $g(0) = 1/2$, $g(1/n) = 1/(n+1)$ for $n \ge 2$, $g(x) = x$ otherwise; hence $[0, 1] \sim (0, 1) \sim \mathbb{R}$ (Classroom: Assignment 8 Q5).
 - Countable union of countable sets: if $\{A_i\}_{i \in \mathbb{N}}$ are pairwise disjoint and countably infinite with bijections $f_i: \mathbb{N} \to A_i$, then $F((i, n)) = f_i(n)$ is a bijection $\mathbb{N} \times \mathbb{N} \to \bigcup_{i \in \mathbb{N}} A_i$, so $\bigcup_{i \in \mathbb{N}} A_i$ is countably infinite (Classroom: Assignment 8 Q2).
@@ -57,6 +62,9 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Inductive sets and PMI: $S \subseteq \mathbb{N}$ is inductive if $k \in S \implies k+1 \in S$. If $1 \in S$ and $S$ is inductive, $S = \mathbb{N}$. Every induction proof requires: (1) predicate $P(n)$, (2) base case, (3) inductive hypothesis $P(k) \implies P(k+1)$, (4) conclusion by PMI (Classroom: Assignment 8).
 
 ## Typical questions
+- Build truth tables (up to three variables), verify equivalences such as De Morgan, classify as tautology/contradiction/contingency: [[intro-to-proofs/2026-08-06-assignment-1]] Q1-Q5.
+- Express a conditional in "only if", "sufficient", "necessary" forms; write converse and contrapositive; negate conditionals as $P\land\lnot Q$: [[intro-to-proofs/2026-08-13-assignment-2]] Q1-Q2.
+- Symbolise quantified statements, negate them and compare truth values (including quantifier order and the $L(x,y)$ likes-book family): Assignment 2 Q3-Q8.
 - Minimal/maximal, minimum/maximum, bounds, glb/lub of a subset of a poset (divisibility, power set, product order, subspaces): [[intro-to-proofs/2026-09-03-assignment-4]] Q1-Q4.
 - Decide whether a relation is an equivalence relation and find its classes; build relations with prescribed properties: Assignment 4 Q5-Q7.
 - Prove uniqueness of the minimum, existence of maximal elements in finite posets, classes equal or disjoint, equivalence relation $\leftrightarrow$ partition: Assignment 4 Q8-Q9.
@@ -79,8 +87,9 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Conceptual analysis of PMI: explaining why inductive step without base case is insufficient, and why PMI cannot prove statements on $\mathbb{Q}$: [[intro-to-proofs/2026-10-22-assignment-8]] Q7.
 
 ## Gaps
-- Assignments 3, 5, and 6: files could not be downloaded previously, so their problem statements are not in the notes.
-- Assignment 7: Questions 1 to 3 are not in the notes (only solutions for Questions 4 and 5 were posted in this batch).
-- Assignment 8: Due date was not specified in the Classroom post.
-- Next assessment: Quiz 5 / End-sem schedule has not been announced yet.
+- Assignments 3, 5, and 6: files could not be downloaded, so their problem statements are not in the notes.
+- Assignment 7: Questions 1 to 3 are not in the notes (only solutions for Questions 4 and 5 were posted).
+- No due dates were given in Classroom for Assignments 1, 2, 4, 5, 6, 7 and 8, and no end-sem or future quiz dates have been announced.
+- Assignments 1 and 2 are filed as problem lists only; no solutions were posted, so worked answers are not in the notes.
+- The syllabus for the end-sem has not been announced; presumably it covers material after the mid-sem (functions, cardinality, induction) but this is not confirmed.
 <!-- /kurooto:exam-prep -->
