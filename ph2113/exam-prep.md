@@ -12,6 +12,12 @@ trust_tier: agent_written
 Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allotted tutorial room; be on time; calculators allowed (Classroom, posted 2026-10-21). Start time, marks and syllabus are not stated; quiz 1 ran 10:00-11:00 for 15 marks. Likely material: oscillator ladder operators and Tutorials I-III, but this is not confirmed. The midsem is past (solutions 2026-09-24); its rule was no formula sheet, so memorise the formulas below.
 
 ## Covered so far
+- [[ph2113/2026-08-04-lectures-1-2-double-slit-and-compton]]: double-slit, amplitudes vs probabilities, which-path, photoelectric effect, Compton observations and momentum balance
+- [[ph2113/2026-08-06-lecture-3-compton-scattering]]: Compton shift law, full derivation, Thomson limit, why invisible for visible light
+- [[ph2113/2026-08-11-lectures-4-5-de-broglie-and-wave-function]]: de Broglie and wave function (file not downloaded, not summarised)
+- [[ph2113/2026-08-11-problem-set-1]]: problem set: amplitudes, photoelectric, Compton, baseball, Davisson-Germer, plane wave, box normalisation
+- [[ph2113/2026-08-13-problem-set-1-solutions]]: worked solutions to Problem Set I
+- [[ph2113/2026-08-18-wavefunction-to-uncertainty]]: Born rule, plane wave, delta function, Gaussian packet, $\Delta x\Delta p\ge\hbar/2$, hydrogen estimate
 - [[ph2113/2026-08-27-tutorial-solutions-wavefunctions-uncertainty-schrodinger]]: uncertainty estimates, acceptable wavefunctions, ring quantisation, probability conservation, global vs relative phase
 - [[ph2113/2026-08-31-states-operators-measurements-notes]]: states, superposition, operators, eigenstates, commutators, measurement probabilities, expectation, uncertainty, time evolution
 - [[ph2113/2026-09-02-mock-quiz-and-solutions]]: mock quiz (photoelectric, Compton, acceptable wavefunctions, time evolution, parity/matrix eigenstates)
@@ -23,7 +29,7 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 - [[ph2113/2026-09-24-midsem-solutions]]: midsem solutions: de Broglie/Davisson-Germer, free-particle current, two-state box evolution, electron length scales, matrix observables, normalisability and complex potentials
 - [[ph2113/2026-10-06-particle-in-a-box-notes]]: infinite well: boundary conditions, $E_n$, orthogonality, time evolution, expectation values (handwritten, partly illegible)
 - [[ph2113/2026-10-06-tutorial-i-particle-in-a-box]]: problem set: $\Delta x\Delta p$ in the box, energy superpositions, symmetric potentials, $E\ge V_{\min}$
-- [[ph2113/2026-10-12-tutorial-ii-harmonic-oscillator-ladder-operators]]: problem set: ladder operators, $\psi_1,\psi_2$, ground-state uniqueness, Gaussian integrals and Fourier transform
+- [[ph2113/2026-10-12-tutorial-ii-harmonic-oscillator-ladder-operators]]: problem set: ladder operators, $\psi_1,\psi_2$, ground-state uniqueness, Gaussians (Gaussian integrals, Fourier transform)
 - [[ph2113/2026-10-19-harmonic-oscillator-ladder-operator-notes]]: oscillator lecture notes: ladder property, ground state, $E_n=\hbar\omega(n+\frac12)$, $\hat a_\pm\psi_n$ normalisation, expectation values (handwritten, partly garbled)
 - [[ph2113/2026-10-19-tutorial-iii-harmonic-oscillator-expectation-values]]: problem set: $\langle p^2\rangle$ via ladder operators, $\langle x\rangle$, $\langle x^2\rangle$ Gaussian integrals, orthogonality of eigenfunctions
 
@@ -33,23 +39,26 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 - Ring: $\psi(x+L)=\psi(x)$, $\psi_n=e^{ik_nx}/\sqrt L$, $k_n=2\pi n/L$, $E_n=2\pi^2\hbar^2n^2/(mL^2)$; $E_n=E_{-n}$ (degenerate), $p_{-n}=-p_n$. Single-valuedness (e.g. $e^{i\varphi/2}$ fails) forces integer $m$, $L_z=m\hbar$.
 - $\hat x=x$, $\hat p=-i\hbar\,d/dx$, $\hat H=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V$; operators are linear.
 - Eigenstate: $\hat A\psi=a\psi$; a measurement of $A$ gives $a$ with certainty; $\Delta A=0$.
-- Born rule: $\Psi=\sum c_a\phi_a\Rightarrow P(A=a)=|c_a|^2$, $\sum|c_a|^2=1$.
+- Born rule: probability of finding the particle in $[x,x+dx]$ is $|\psi|^2dx$ with $\int|\psi|^2dx=1$; for $\Psi=\sum c_a\phi_a$, $P(A=a)=|c_a|^2$, $\sum|c_a|^2=1$ (Classroom: wavefunction lecture note).
 - $\langle A\rangle=\sum|c_a|^2a=\int\Psi^*\hat A\Psi\,dx$ (an average; need not be a possible outcome).
 - $\Delta A=\sqrt{\langle A^2\rangle-\langle A\rangle^2}$; for $a\psi_n+b\psi_{-n}$, $\Delta p=2|a||b||p_n|$.
 - $[\hat A,\hat B]=\hat A\hat B-\hat B\hat A$; $[\hat x,\hat p]=i\hbar$; $\Delta A\Delta B\ge\frac12|\langle[\hat A,\hat B]\rangle|$, so $\Delta x\Delta p\ge\hbar/2$.
 - $[\hat A,\hat B]=0$ means compatible (common eigenstates), not that both uncertainties vanish in every state (degeneracy example: $\sqrt{2/L}\cos kx$ on the ring). Conversely $[A,B]\neq0$: an eigenvector of $A$ is in general not one of $B$ (midsem Q5d).
 - $\langle p\rangle=0$ is not "momentum definitely zero": for $(\psi_++\psi_-)/\sqrt2$, $p=\pm\hbar k$ with probability $\tfrac12$ each, $\Delta p=\hbar k$.
-- Two-path superposition: $|\psi_1+\psi_2|^2=4A^2\cos^2\frac{\varphi_2-\varphi_1}{2}$; fringe spacing $\lambda D/d$; incoherent addition has no interference term.
-- Gaussian packet: $\Delta x=\sigma$, $\Delta p=\hbar/2\sigma$, $\Delta x\Delta p=\hbar/2$; its Fourier transform is again Gaussian, $\tilde\psi(k)=(2\sigma^2/\pi)^{1/4}e^{-\sigma^2k^2}$; narrow in $x$ means broad in $k$.
+- Classical vs quantum alternatives: exclusive classical routes add count densities, $R_{AB}=R_A+R_B$; quantum indistinguishable alternatives add amplitudes, $p_{AB}=|\psi_A+\psi_B|^2=|\psi_A|^2+|\psi_B|^2+2\mathrm{Re}(\psi_A^*\psi_B)$; distinguishable (physically recorded path) alternatives add probabilities (Classroom: Lecture 1).
+- Two-path superposition: $|\psi_1+\psi_2|^2=4A^2\cos^2\frac{\varphi_2-\varphi_1}{2}$; fringe spacing $\lambda D/d$; incoherent addition has no interference term. Interference redistributes particles; it does not change the total count (Problem Set I Q1d).
+- Plane wave $Ae^{i(kx-\omega t)}$: $|\psi|^2=|A|^2$ constant, not normalisable, $\Delta p=0$, $\Delta x=\infty$; wavelength $h/p$ is not a size.
+- Gaussian packet: $\psi=(2\pi\sigma^2)^{-1/4}e^{-x^2/4\sigma^2}$, $\Delta x=\sigma$, $\Delta p=\hbar/2\sigma$, $\Delta x\Delta p=\hbar/2$; its Fourier transform is again Gaussian, $\varphi(k)=(2\sigma^2/\pi)^{1/4}e^{-\sigma^2k^2}$; narrow in $x$ means broad in $k$.
+- Single slit of width $a$: first minimum $\sin\theta=\lambda/a$, $\Delta x\Delta p_x\approx h$. Hydrogen from uncertainty: $E(r)=\hbar^2/2m_er^2-e^2/4\pi\varepsilon_0r$ gives $r_{\min}=a_0$, $E_{\min}=-13.6$ eV (scaling is reliable, prefactor depends on $\Delta p\approx\hbar/r$ vs $\hbar/2r$) (Classroom: wavefunction lecture note §10).
 - Matching conditions: finite jump in $V$ gives continuous $\psi'$; for $V=\lambda\delta(x-x_0)$, $\psi'(x_0^+)-\psi'(x_0^-)=\frac{2m\lambda}{\hbar^2}\psi(x_0)$.
 - TDSE $i\hbar\partial_t\Psi=-\frac{\hbar^2}{2m}\partial_x^2\Psi+V\Psi$; for $V(x)$, separation gives $T(t)=e^{-iEt/\hbar}$ and the TISE $-\frac{\hbar^2}{2m}\psi''+V\psi=E\psi$; stationary state $\Psi=\psi e^{-iEt/\hbar}$ has time-independent $|\Psi|^2$ (Classroom: Lecture 9).
 - Stationary vs general: $\Psi=\sum c_ne^{-iE_nt/\hbar}\psi_n$; $|c_n|$, $\langle E\rangle$, $\Delta E$ constant; $|\Psi|^2$ and off-diagonal observables oscillate at $(E_2-E_1)/\hbar$.
-- Infinite well (width $a$, $0<x<a$): $\psi=A\sin kx+B\cos kx$, $\psi(0)=\psi(a)=0\Rightarrow B=0$, $ka=n\pi$, $\psi_n\propto\sin(n\pi x/a)$, $E_n=n^2\pi^2\hbar^2/2ma^2$, $n=1,2,\dots$; $\int\psi_m^*\psi_n=\delta_{mn}$.
+- Infinite well (width $a$, $0<x<a$): $\psi=A\sin kx+B\cos kx$, $\psi(0)=\psi(a)=0\Rightarrow B=0$, $ka=n\pi$, $\psi_n\propto\sin(n\pi x/a)$, $E_n=n^2\pi^2\hbar^2/2ma^2$, $n=1,2,\dots$; $\int\psi_m^*\psi_n=\delta_{mn}$; normalisation $\sqrt{2/a}$; $P(0<x<L/4)=\tfrac14-\tfrac1{2\pi}\approx0.091$ in the ground state (Problem Set I Q7).
 - Two-state box superposition $(\phi_1+\phi_2)/\sqrt2$: $T=2\pi\hbar/(E_2-E_1)=4mL^2/3\pi\hbar$, $\langle E\rangle=5\pi^2\hbar^2/4mL^2$, $\Delta E=3\pi^2\hbar^2/4mL^2$, $\Delta E\,T=\pi\hbar$ (midsem Q3).
 - Free particle: $\omega=\hbar k^2/2m$, $v_{ph}=\hbar k/2m=\tfrac12v_{gr}$, $v_{gr}=\hbar k/m$ (physical). Current $j=\frac{\hbar}{2mi}(\Psi^*\Psi'-\Psi\Psi'^*)$; standing wave $\Rightarrow j=0$.
 - Continuity: $\partial_t\rho+\partial_xj=0$; a complex potential $V=i\Gamma$ gives $P(t)=P(0)e^{2\Gamma t/\hbar}$, lifetime $\tau=\hbar/2|\Gamma|$ for $\Gamma<0$; $\hat H$ non-Hermitian means probability is not conserved.
 - Superposition of solutions is a solution (linearity) but not an eigenstate unless the energies are equal.
-- de Broglie: $\lambda=h/p=h/\sqrt{2m_eeV}\approx150.4/\sqrt V$ Å; non-relativistic error $\approx K/4mc^2$ (1% at about 20 keV).
+- de Broglie: $\lambda=h/p=h/\sqrt{2m_eeV}\approx150.4/\sqrt V$ Å; non-relativistic error $\approx K/4mc^2$ (1% at about 20 keV). Davisson-Germer 54 V: $\lambda=0.167$ nm, $d\sin\theta=\lambda$ gives about 51° (observed 50°); raising $V$ shrinks $\lambda\propto1/\sqrt V$ and moves the maximum to smaller $\theta$. Wave behaviour is observable when $\lambda_{dB}/d$ (apparatus length scale) is of order 1 or larger.
 - Electron length scales: $r_e=2.8$ fm, $\bar\lambda_C=\hbar/mc=386$ fm, $a_0=\bar\lambda_C/\alpha=0.053$ nm (ratio $\alpha:1:1/\alpha$); $E=-\tfrac12\alpha^2m_ec^2=-13.6$ eV. Confinement to about 1 fm gives $\Delta pc\approx98.5$ MeV, above pair production, so QFT is needed.
 - Oscillator ladder operators: $\hat a_\pm=\frac1{\sqrt{2\hbar m\omega}}(\mp i\hat p+m\omega\hat x)$, $[\hat a_-,\hat a_+]=1$, $\hat H=\hbar\omega(\hat a_+\hat a_-+\tfrac12)=\hbar\omega(\hat a_-\hat a_+-\tfrac12)$ (Classroom: Tutorial III, oscillator notes).
 - $\hat x=\sqrt{\hbar/2m\omega}\,(\hat a_++\hat a_-)$, $\hat p=i\sqrt{\hbar m\omega/2}\,(\hat a_+-\hat a_-)$.
@@ -59,19 +68,23 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 - Hermitian conjugates: $\int f^*(\hat a_\pm g)\,dx=\int(\hat a_\mp f)^*g\,dx$.
 - Eigenfunctions of a Hermitian $\hat H$ with different eigenvalues are orthogonal: $(E_n-E_m)\int\psi_m^*\psi_n\,dx=0$ (Tutorial III Problem 3).
 - Oscillator expectation values by ladder operators: $\langle x\rangle=\langle p\rangle=0$ in $\psi_n$; $\langle p^2\rangle=\hbar m\omega(n+\tfrac12)$ (derived from $\langle\hat a_+\hat a_-\rangle=n$, $\langle\hat a_-\hat a_+\rangle=n+1$; check against your own notes).
-- Photoelectric effect: threshold frequency; intensity changes photon number, not energy per photon ($E=h\nu$). Compton: the photon's wavelength increases; the change is largest for backscattering.
+- Photoelectric effect: $E_\gamma=h\nu$, $K_{\max}=h\nu-\Phi$, $\nu_0=\Phi/h$; $eV_s=K_{\max}$; intensity changes photon number (current), not energy per photon; classical wave theory predicts no threshold. $hc\simeq1240$ eV nm.
+- Compton: $\Delta\lambda=\lambda'-\lambda=\frac h{m_ec}(1-\cos\theta)$, $\lambda_C=h/m_ec=2.426$ pm, $0\le\Delta\lambda\le2\lambda_C=4.853$ pm; $p_\gamma=h/\lambda$; $K_e=E_\gamma-E'_\gamma$; $\mathbf p_\gamma=\mathbf p'_\gamma+\mathbf p_e$; derived from $m_ec^2(1/E'-1/E)=1-\cos\theta$. The shift is independent of $\lambda$, so the effect is visible only when $\Delta\lambda/\lambda$ is non-negligible (X-rays: percent; 500 nm: $\sim5\times10^{-6}$). Thomson: $\nu'=\nu$ for $h\nu\ll m_ec^2$ (Classroom: Lectures 2-3).
 - Time is a parameter, not an operator.
 - Two-state matrices: $X|{\pm y}\rangle=\pm i|{\mp y}\rangle$; $[X,Y]=2iZ$.
 
 ## Typical questions
-- Explain-in-words photoelectric and Compton: [[ph2113/2026-09-02-mock-quiz-and-solutions]], [[ph2113/2026-09-03-quiz-ideal-solutions]].
+- Explain-in-words photoelectric and Compton: [[ph2113/2026-09-02-mock-quiz-and-solutions]], [[ph2113/2026-09-03-quiz-ideal-solutions]]; numerical versions in [[ph2113/2026-08-13-problem-set-1-solutions]] Q2-Q3 (photon energy, stopping potential, threshold, $\lambda'$ and $K_e$, fractional shift).
+- Amplitudes vs probabilities at one screen point: [[ph2113/2026-08-13-problem-set-1-solutions]] Q1.
+- Baseball/de Broglie scale arguments and Davisson-Germer angle: Problem Set I Q4-Q5 in the same note; midsem Q1 in [[ph2113/2026-09-24-midsem-solutions]].
+- Plane-wave non-normalisability and box normalisation/probability in a sub-interval: Problem Set I Q6-Q7.
 - Is a given $\psi$ acceptable (normalisable, single-valued)? [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]] Problem 1; midsem Q6a-b in [[ph2113/2026-09-24-midsem-solutions]].
 - Ring: periodic condition, quantisation, degeneracy: tutorial Q3, quiz Q4, 09-13 Problem 5.
 - Does $|\Psi|^2$ change with time? Two-state superposition in a box: midsem Q3, [[ph2113/2026-10-06-tutorial-i-particle-in-a-box]] problem 3, 09-13 Problem 3.
 - Eigenstate test and measurement probabilities with matrices: midsem Q5, [[ph2113/2026-09-07-matrices-expectation-uncertainty]].
 - Expectation, $\Delta A$ for a superposition: lecture notes sections 6-8; [[ph2113/2026-10-06-tutorial-i-particle-in-a-box]] problems 1-2.
 - Double-slit intensity, fringe spacing: [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty]] Q2.
-- Uncertainty-principle estimates; Gaussian $\Delta x\Delta p$: same note Q3; midsem Q4a.
+- Uncertainty-principle estimates; Gaussian $\Delta x\Delta p$: same note Q3; midsem Q4a; derivation in [[ph2113/2026-08-18-wavefunction-to-uncertainty]].
 - Vanishing commutator but nonzero $\Delta p$: same note Q4.
 - Matching conditions, classify potentials: 09-13 Problem 2.
 - Gaussian integrals and Fourier transform: 09-13 Problem 6; [[ph2113/2026-10-12-tutorial-ii-harmonic-oscillator-ladder-operators]] Problem 5; $\langle x^2\rangle$ in $\psi_0$ by integration by parts: [[ph2113/2026-10-19-tutorial-iii-harmonic-oscillator-expectation-values]] Problem 2.
@@ -84,9 +97,10 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 
 ## Gaps
 - Quiz 2 (2026-10-29): start time, marks and syllabus are not announced; confirm. Formula sheets were not allowed at the midsem, so formulas above need to be memorised.
+- Lectures 4-5 note (de Broglie and wave function, 2026-08-11) could not be downloaded (RemoteDisconnected); not summarised. Retry with /classnotes.
 - The midsem question paper itself is not filed, only its solutions (questions inferred); Q4a and Q5 inputs were reconstructed.
 - Tutorials I, II and III and the 09-13 tutorial have no posted solutions; their problems are unworked in the notes (the $\langle p^2\rangle$ result above is derived, not posted).
 - The particle-in-a-box and oscillator handwritten scans are partly illegible/garbled (box: normalisation constant, final $\langle x^2\rangle$, $\langle p^2\rangle$; oscillator: the $\langle p^2\rangle$ line, parts of the factorisation step).
-- Not yet in course notes: classical probability distribution of the oscillator, explicit $\psi_1,\psi_2$ and Hermite polynomials, $\langle x^2\rangle$ and $\langle V\rangle$ in $\psi_n$, time evolution of oscillator superpositions. Photoelectric, Compton and the Schrödinger equation also lack course notes (see [[06-quantum-mechanics/quantum-mechanics-course-map]] for your own).
-- The 09-15 post says to solve problems not covered in class; which ones is not stated.
+- Not yet in course notes: classical probability distribution of the oscillator, explicit $\psi_1,\psi_2$ in position space, and the remaining items listed previously in this section.
+- Lecture 2 and Lecture 3 differ by rounding ($\Delta\lambda_{180^\circ}$ 4.852 vs 4.853 pm); use 4.853 pm ($2\lambda_C$).
 <!-- /kurooto:exam-prep -->
