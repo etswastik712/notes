@@ -34,6 +34,9 @@ Photon energies: 15 µm = 0.083 eV (vibrational quantum); rotational quanta are 
 
 Worked in [[CL07 Optical Properties of the Atmosphere]]; leads to [[CL08 Greenhouse Models]], [[Greenhouse Effect]], [[Atmospheric Window]]. Symmetry and levels: [[Group Theory - Course Map]], [[Quantum Mechanics - Course Map]], [[Inorganic Chemistry - Course Map]].
 
+## Added with QM06 (oscillator toolbox)
+**Why one line, and why the bend:** an oscillator absorbs only $\Delta n=\pm1$ at $\omega$ ([[Selection Rules]]); a vibration is infrared-active only if the dipole moment changes (the CO$_2$ bend and asymmetric stretch yes, the symmetric stretch no). At 288 K $3.6\%$ of CO$_2$ molecules are in the first excited bend level ([[Thermal Harmonic Oscillator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

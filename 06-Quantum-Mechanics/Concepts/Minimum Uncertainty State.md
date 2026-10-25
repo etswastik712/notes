@@ -1,0 +1,38 @@
+---
+title: Minimum Uncertainty State
+aliases: ["minimum uncertainty wavepacket", "saturates the uncertainty principle", "squeezed state"]
+subject: qm
+type: concept
+scope: [taught, extra-beyond]
+by: [lecture-notes, own-notes]
+status: draft
+tags: [subject/qm, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+---
+# Minimum Uncertainty State
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** the Gaussian has $\Delta x\Delta p=\hbar/2$ ([[PH2113_Wavefunction_to_Uncertainty (1).pdf|WU]], [[PH2113_matrices_expectation_uncertainty.pdf|MX]]). · 🔵 **extra · beyond:** the characterisation.
+
+> [!intuition] In one picture
+> The most classical state allowed: as sharp in $x$ and $p$ together as nature permits.
+
+> [!key] Definition
+> $\Delta x\,\Delta p=\hbar/2$ **iff** $\psi\propto\exp\!\big[-\lambda(x-\langle x\rangle)^2/2\hbar+i\langle p\rangle x/\hbar\big]$ with $\lambda>0$ (a Gaussian).
+
+## Why
+Equality in the Cauchy–Schwarz step behind $\Delta A\Delta B\ge\frac12|\langle[A,B]\rangle|$ requires $(\hat p-\langle p\rangle)\psi=i\lambda(\hat x-\langle x\rangle)\psi$ with $\lambda$ real; this is a first-order equation $-i\hbar\psi'=\langle p\rangle\psi+i\lambda(x-\langle x\rangle)\psi$ whose solution is the Gaussian above. Normalisability needs $\lambda>0$.
+
+## Examples
+$\psi_0$ of the oscillator ($\lambda=m\omega$, $\Delta x^2=\hbar/2m\omega$); every **coherent state** (same width, displaced); a free Gaussian packet at $t=0$ (it spreads afterwards). Other $\lambda$ give **squeezed states**: $\Delta x\Delta p$ still $\hbar/2$ but $\Delta x\ne\sqrt{\hbar/2m\omega}$. Excited Fock states have $\Delta x\Delta p=(n+\tfrac12)\hbar$, not minimum.
+
+> [!pitfall] Minimum uncertainty is not zero uncertainty
+> $\hbar/2$ is a floor; no state has $\Delta x=\Delta p=0$ ([[Heisenberg Uncertainty Principle]], [[Zero-Point Energy]]).
+
+Used in: [[QM06 The Oscillator Toolbox]] §6.4, §7. Related: [[Heisenberg Uncertainty Principle]] · [[Generalised Uncertainty Principle]] · [[Coherent State]] · [[Gaussian Wave Packet]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

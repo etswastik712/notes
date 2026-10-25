@@ -29,6 +29,9 @@ Box: $\sin A\sin B=\tfrac12[\cos(A-B)-\cos(A+B)]$ integrates to zero over $[0,a]
 
 Used in: [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]]. Related: [[Normalisation of a Wavefunction]] · [[Hermitian Operator]] · [[Measurement Postulate]] · [[Particle in a Box]].
 
+## Added with QM06 (oscillator toolbox)
+**Why different energies are orthogonal** (Tutorial III Q3): for a Hermitian $\hat H$ and $E_n\ne E_m$, $(E_n-E_m)\int\psi_m^*\psi_n\,\mathrm dx=0$ (after showing $E$ real). **Oscillator:** $\langle m|n\rangle=0$ for $0\le m<n\le6$ (`sympy`) and by ladders via $\hat a\psi_0=0$. **Hermite weight:** the polynomials are orthogonal only with $e^{-\xi^2}$ ([[Orthogonal Polynomials]]). **Degenerate levels** need [[Gram-Schmidt Orthogonalisation]]. **Parseval:** $\sum|c_n|^2=\langle\psi|\psi\rangle$ ([[Completeness Relation]], [[Parseval-Plancherel Theorem]]). See [[QM05 The Harmonic Oscillator]] §10.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

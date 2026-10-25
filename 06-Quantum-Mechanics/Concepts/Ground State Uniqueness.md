@@ -29,6 +29,9 @@ The nodeless property is a standard theorem (oscillation theorem, not proved her
 
 Used in: [[QM05 The Harmonic Oscillator]]. Related: [[Node of a Wavefunction]] · [[Degeneracy]] · [[Harmonic Oscillator]] · [[Zero-Point Energy]].
 
+## Added with QM06 (oscillator toolbox)
+The isotropic oscillator keeps a unique ground state ($g_0=1$) but its excited levels are degenerate, $g_N=(N+1)(N+2)/2$ in 3-D ([[Isotropic Oscillator and Degeneracy]]): the nodeless argument only protects the lowest level.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

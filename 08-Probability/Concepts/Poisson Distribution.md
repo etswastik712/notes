@@ -32,6 +32,9 @@ $\sum\frac{\lambda^i}{i!}=e^\lambda$ forces $c=e^{-\lambda}$. $E[X(X-1)]=\lambda
 
 Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]], [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Poisson Limit Theorem]] · [[Binomial Distribution]] · [[Moment Generating Function]].
 
+## Added with QM06 (oscillator toolbox)
+**Quantum link:** the number of quanta $n$ in a **coherent state** $|\alpha\rangle$ is Poisson with mean $|\alpha|^2$ (mean = variance, Mandel $Q=0$); laser photon counts are Poissonian ([[Coherent State]], [[Photon Statistics]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

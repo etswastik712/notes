@@ -34,6 +34,9 @@ tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
 
 Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Energy Quantisation]] · [[Particle on a Ring]] · [[Particle in a Box]] · [[Free Particle]].
 
+## Added with QM06 (oscillator toolbox)
+A second example of quantisation by a boundary condition: the oscillator's power series is normalisable only if it terminates, forcing $K=2E/\hbar\omega=2n+1$ ([[Hermite Equation and Series Solution]], shooting check in Figure QM6.2 B).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

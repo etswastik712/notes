@@ -32,6 +32,9 @@ $\hat x$ and $\hat p=-i\hbar\,\mathrm d/\mathrm dx$ are Hermitian (integrate by 
 
 Used in: [[QM03 States Operators and Measurement]]. Related: [[Operator]] · [[Eigenstate and Eigenvalue]] · [[Orthonormality of Eigenfunctions]] · [[Measurement Postulate]].
 
+## Added with QM06 (oscillator toolbox)
+Definition via the adjoint: $\hat A=\hat A^\dagger$ ([[Hermitian Conjugate]]). **Reality of eigenvalues** (Tutorial III Q3, step 4): $\hat A\psi=a\psi\Rightarrow(a-a^*)\int|\psi|^2=0$. **$\hat H$ is Hermitian** because $V$ is real and $-\frac{\hbar^2}{2m}\partial_x^2$ integrates by parts twice with vanishing boundary terms. $i[\hat A,\hat B]$ is Hermitian when $\hat A,\hat B$ are; $\hat a,\hat a^\dagger$ are not Hermitian but $\hat N=\hat a^\dagger\hat a$ is. Unitary operators are a different class ([[Unitary Operator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

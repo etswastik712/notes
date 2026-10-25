@@ -31,6 +31,9 @@ tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
 
 Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Stationary State]] · [[Global and Relative Phase]] · [[Superposition Principle]] · [[Particle in a Box]].
 
+## Added with QM06 (oscillator toolbox)
+For the oscillator every $\langle x\rangle(t)$ oscillates at exactly $\omega$ (equal spacing; $\langle x^2\rangle$ at $0,2\omega$); after one period $T=2\pi/\omega$ all states return up to the phase $-1$ ([[Time Evolution Operator]], [[QM06 The Oscillator Toolbox]] §3).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

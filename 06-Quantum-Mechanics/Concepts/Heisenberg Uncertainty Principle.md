@@ -32,6 +32,9 @@ tags: [subject/qm, type/concept, taught, extra/book, extra/beyond, src/lecture-n
 
 Used in: [[QM01 From Waves to Probabilities]], [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Gaussian Wave Packet]] · [[Fourier Transform and Wave Packets]] · [[Commutator]] · [[Hydrogen Atom Stability]].
 
+## Added with QM06 (oscillator toolbox)
+$\Delta x\Delta p=(n+\tfrac12)\hbar$ for $|n\rangle$ (minimum only for $n=0$); equality $\hbar/2$ also for every coherent and squeezed state ([[Minimum Uncertainty State]]); the principle gives the exact oscillator zero-point energy ([[Zero-Point Energy]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

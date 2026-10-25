@@ -29,6 +29,9 @@ $\Delta x\Delta p=(n+\tfrac12)\hbar$; $\langle V\rangle=\langle T\rangle=E/2$; f
 
 Used in: [[QM05 The Harmonic Oscillator]]. Related: [[Ladder Operators]] · [[Number Operator]] · [[Hermite Polynomials]] · [[Zero-Point Energy]].
 
+## Added with QM06 (oscillator toolbox)
+Everything beyond the course material is in [[QM06 The Oscillator Toolbox]]: [[Number Basis]], [[Matrix Elements of Position and Momentum]], [[Selection Rules]], [[Oscillator Expectation Values]] ($\langle x^4\rangle=(6n^2+6n+3)\sigma^4$), [[Hermite Equation and Series Solution]], [[Hermite Generating Function and Recurrences]], [[Fourier Invariance of Hermite Functions]], [[Ehrenfest Theorem]], [[Virial Theorem]], [[Heisenberg Picture]], [[Coherent State]], [[Thermal Harmonic Oscillator]], [[Einstein Heat Capacity]], [[Isotropic Oscillator and Degeneracy]], [[Anharmonic Oscillator]], [[Classical Probability Density of the Oscillator]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

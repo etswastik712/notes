@@ -29,6 +29,9 @@ $E[\sigma Z+\mu]=\mu$, $\mathrm{Var}[\sigma Z+\mu]=\sigma^2$. Inflection points 
 
 Used in: [[PR05 Continuous Random Variables]], [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Standard Normal Distribution]] · [[Central Limit Theorem]] · [[Moment Generating Function]].
 
+## Added with QM06 (oscillator toolbox)
+**Quantum link:** the oscillator ground-state density $|\psi_0|^2$ is a normal density with variance $\hbar/2m\omega$; higher $|\psi_n|^2$ are Hermite-weighted Gaussians ([[Oscillator Expectation Values]], [[Probabilists' Hermite Polynomials]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

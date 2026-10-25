@@ -32,6 +32,9 @@ For sums of Exp$(1)$, $\sup_x|F_n-\Phi|=0.158,0.0596,0.0243,0.0133,0.0042$ at $n
 
 Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Normal Approximation to the Binomial]] · [[Moment Generating Function]] · [[Standardisation of a Random Variable]].
 
+## Added with QM06 (oscillator toolbox)
+**Hermite link:** the Edgeworth corrections to the CLT are series in $\mathrm{He}_n(x)\varphi(x)$; the leading cdf term $-\frac{\gamma_1}{6\sqrt n}\mathrm{He}_2(x)\varphi(x)$ has maximum modulus $\gamma_1/(6\sqrt{2\pi n})$ ([[Probabilists' Hermite Polynomials]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

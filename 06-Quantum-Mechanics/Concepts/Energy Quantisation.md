@@ -29,6 +29,9 @@ Spacing $\propto\hbar^2/(m\,\text{size}^2)$: electron in 1 nm: eV; ring of 0.83 
 
 Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Boundary Conditions and Quantisation]] · [[Correspondence Principle]] · [[Particle in a Box]] · [[Harmonic Oscillator]].
 
+## Added with QM06 (oscillator toolbox)
+Oscillator: $E_n=(n+\tfrac12)\hbar\omega$ arises both algebraically (ladder) and analytically (series truncation, [[Hermite Equation and Series Solution]]); the thermal consequences are in [[Thermal Harmonic Oscillator]] and [[Einstein Heat Capacity]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

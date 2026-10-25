@@ -29,6 +29,9 @@ Two-level: $Z=1+e^{-\beta\varepsilon}$. Oscillator: $Z=e^{-x/2}/(1-e^{-x})$, $x=
 
 Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Canonical Ensemble]] · [[Helmholtz Free Energy]] · [[Planck Mean Energy]] · [[Schottky Anomaly]].
 
+## Added with QM06 (oscillator toolbox)
+Oscillator: $Z=\sum_ne^{-\beta\hbar\omega(n+\frac12)}=1/(2\sinh(\hbar\omega\beta/2))$; $P(n)=e^{-\beta E_n}/Z$ is geometric ([[Thermal Harmonic Oscillator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

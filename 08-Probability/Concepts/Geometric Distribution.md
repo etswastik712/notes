@@ -32,6 +32,9 @@ $P[X>n]=q^n$, $P[X>m+n\mid X>m]=q^n$: [[Memoryless Property]]. $P[X\ge n]$ summe
 
 Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Negative Binomial Distribution]] · [[Memoryless Property]] · [[Exponential Distribution]].
 
+## Added with QM06 (oscillator toolbox)
+**Quantum link:** the occupation $n$ of a thermal oscillator has $P(n)=(1-e^{-x})e^{-nx}$, a geometric distribution in the **failures-counting** convention of the Week 3 lecture (support $0,1,\dots$, mean $q/p=1/(e^x-1)$, variance $q/p^2$), with $x=\hbar\omega/k_BT$ ([[Thermal Harmonic Oscillator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -29,6 +29,9 @@ Moments follow from $\hat x^2=\frac\hbar{2m\omega}(\hat a_+^2+\hat a_-^2+\hat a_
 
 Used in: [[QM05 The Harmonic Oscillator]]. Related: [[Ladder Operators]] · [[Harmonic Oscillator]] · [[Hermitian Operator]].
 
+## Added with QM06 (oscillator toolbox)
+$\hat N=\hat a^\dagger\hat a$ is Hermitian ($\hat N^\dagger=\hat N$), $\hat N|n\rangle=n|n\rangle$, $\hat a\hat a^\dagger=\hat N+1$, $[\hat N,\hat a]=-\hat a$, $[\hat N,\hat a^\dagger]=\hat a^\dagger$. Its mean and variance identify the state: Fock $|n\rangle$: $(n,0)$; coherent $|\alpha\rangle$: $(|\alpha|^2,|\alpha|^2)$; thermal: $\big(\tfrac1{e^x-1},\langle n\rangle(1+\langle n\rangle)\big)$ ([[Photon Statistics]]). Energy: $\hat H=\hbar\omega(\hat N+\tfrac12)$. See [[Number Basis]], [[QM06 The Oscillator Toolbox]] §2, §7–§8.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

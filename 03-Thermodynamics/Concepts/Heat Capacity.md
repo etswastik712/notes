@@ -29,6 +29,9 @@ tags: [subject/thermo, type/concept, taught, src/lecture-notes, status/draft]
 
 Used in: [[TH02 Work Heat and the First Law]], [[TH03 The Ideal Gas and Adiabatic Processes]]. Related: [[Mayer Relation]] · [[Ratio of Specific Heats]] · [[Enthalpy]] · [[Equipartition of Energy]].
 
+## Added with QM06 (oscillator toolbox)
+**Quantum oscillator:** $C=k_B\,x^2e^x/(e^x-1)^2$, $x=\theta_v/T$; frozen for CO ($\theta_v=3083$ K), partly active for the CO$_2$ bend ($\theta_v=960$ K, $C/k=0.43$ at 288 K) ([[Einstein Heat Capacity]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -29,6 +29,9 @@ tags: [subject/thermo, type/concept, extra/beyond, src/lecture-notes, status/dra
 
 Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Planck Law]] · [[Stefan-Boltzmann Law]] · [[Wien Displacement Law]] · [[Partition Function]].
 
+## Added with QM06 (oscillator toolbox)
+**Quantum derivation:** a single oscillator of frequency $\omega$ at temperature $T$ has $\langle E\rangle=\hbar\omega(\tfrac12+\langle n\rangle)$ with $\langle n\rangle=1/(e^{\hbar\omega/k_BT}-1)$; dropping the zero point gives Planck's mean energy ([[Thermal Harmonic Oscillator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

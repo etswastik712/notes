@@ -31,6 +31,9 @@ The Cauchy has no MGF.
 
 Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Moments of a Random Variable]] · [[Central Limit Theorem]] · [[Poisson Limit Theorem]] · [[Normal Distribution]].
 
+## Added with QM06 (oscillator toolbox)
+**Hermite link:** $e^{xt-t^2/2}=e^{xt}/M_Z(t)$ with $M_Z(t)=e^{t^2/2}$ is the generating function of the probabilists' Hermite polynomials; $E[Z^{2k}]=(2k-1)!!$ is also $\langle x^{2k}\rangle_0$ in the oscillator ground state ([[Probabilists' Hermite Polynomials]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

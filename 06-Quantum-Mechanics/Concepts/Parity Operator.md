@@ -32,6 +32,9 @@ $\hat P\cos kx=\cos kx$, $\hat P\sin kx=-\sin kx$; $e^{ikx}$ is not a parity eig
 
 Used in: [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]]. Related: [[Degeneracy]] · [[Particle in a Box]] · [[Harmonic Oscillator]] · [[Node of a Wavefunction]].
 
+## Added with QM06 (oscillator toolbox)
+$\hat P\psi_n=(-1)^n\psi_n$ for the oscillator (since $H_n$ has parity $(-1)^n$); $\hat x$ is odd so $\langle x\rangle_n=0$ and the matrix element $\langle m|\hat x|n\rangle$ needs $m-n$ odd (the ladder gives the stronger $|m-n|=1$, [[Selection Rules]]). $\hat P$ equals the Fourier transform squared ($\tilde\psi_n\to(-i)^{2n}\psi_n$) and $\hat U(T/2)=-i\hat P$ ([[Time Evolution Operator]]). Unitary, with eigenvalues $\pm1$ ([[Unitary Operator]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

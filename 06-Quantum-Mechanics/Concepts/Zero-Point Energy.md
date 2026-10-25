@@ -29,6 +29,9 @@ Confinement to $\Delta x$ forces $\Delta p\gtrsim\hbar/2\Delta x$, hence $E\gtrs
 
 Used in: [[QM01 From Waves to Probabilities]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Heisenberg Uncertainty Principle]] · [[Particle in a Box]] · [[Hydrogen Atom Stability]] · [[Harmonic Oscillator]].
 
+## Added with QM06 (oscillator toolbox)
+**Oscillator, sharp:** the uncertainty principle gives $E\ge\hbar^2/8m\,\Delta x^2+\tfrac12m\omega^2\Delta x^2\ge\tfrac12\hbar\omega$, with equality for the Gaussian ground state ($\Delta x^2=\hbar/2m\omega$; numerically $0.500000$). **Thermal:** the $\tfrac12\hbar\omega$ never contributes to the heat capacity ([[Thermal Harmonic Oscillator]]). **Virial:** it is half kinetic, half potential, $\langle T\rangle=\langle V\rangle=\tfrac14\hbar\omega$ ([[Virial Theorem]]). **3-D:** $\tfrac32\hbar\omega$ ([[Isotropic Oscillator and Degeneracy]]). See [[Minimum Uncertainty State]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

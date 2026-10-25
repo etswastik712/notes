@@ -33,6 +33,9 @@ tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
 
 Used in: [[QM01 From Waves to Probabilities]], [[QM05 The Harmonic Oscillator]]. Related: [[Gaussian Wave Packet]] · [[Heisenberg Uncertainty Principle]] · [[Gaussian Integral]] · [[Plane Wave]].
 
+## Added with QM06 (oscillator toolbox)
+**All Hermite functions** are Fourier eigenfunctions with eigenvalue $(-i)^n$ ([[Fourier Invariance of Hermite Functions]]); a quarter period of oscillator motion is a Fourier transform. Norm conservation: [[Parseval-Plancherel Theorem]]; plane waves: [[Delta-Function Normalisation]], [[Dirac Delta Function]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

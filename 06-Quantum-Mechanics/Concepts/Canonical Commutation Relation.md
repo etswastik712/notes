@@ -31,6 +31,9 @@ tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
 
 Used in: [[QM03 States Operators and Measurement]], [[QM05 The Harmonic Oscillator]]. Related: [[Commutator]] · [[Heisenberg Uncertainty Principle]] · [[Ladder Operators]] · [[Generalised Uncertainty Principle]].
 
+## Added with QM06 (oscillator toolbox)
+In ladder form $[\hat x,\hat p]=i\hbar\iff[\hat a,\hat a^\dagger]=1$. Check from two matrix elements: $\langle0|[\hat x,\hat p]|0\rangle=x_{01}p_{10}-p_{01}x_{10}=i\hbar$. **No finite matrices:** $\mathrm{tr}[\hat x,\hat p]=0\ne\mathrm{tr}\,(i\hbar)$, so $\hat x,\hat p$ act on an infinite-dimensional space; a truncated $200\times200$ version has last diagonal entry $-199$ ([[Number Basis]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

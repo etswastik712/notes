@@ -29,6 +29,9 @@ Ring of 1 cm: $E_1=1.5\times10^{-14}$ eV, far below $k_BT$. Marble (1 g, 10 cm b
 
 Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Energy Quantisation]] · [[Particle on a Ring]] · [[Particle in a Box]] · [[Harmonic Oscillator]].
 
+## Added with QM06 (oscillator toolbox)
+Three precise forms for the oscillator: (i) the quantum density oscillates about the classical $1/\pi\sqrt{A^2-x^2}$ ([[Classical Probability Density of the Oscillator]]; $n=20$: $0.344$ vs $0.333$); (ii) the kurtosis $\langle x^4\rangle/\langle x^2\rangle^2\to\tfrac32$, the arcsine value; (iii) Ehrenfest holds exactly for linear forces ([[Ehrenfest Theorem]]), and **coherent states** follow the classical orbit with fixed width ([[Coherent State]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

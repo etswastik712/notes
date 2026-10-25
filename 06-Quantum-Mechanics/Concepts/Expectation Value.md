@@ -1,36 +1,48 @@
 ---
 title: Expectation Value
-aliases: ["mean value", "average value", "expectation"]
+aliases: ["mean value", "average value", "expectation", "expected value of an observable"]
 subject: qm
 type: concept
-scope: [taught]
-by: [lecture-notes]
+scope: [taught, extra-beyond]
+by: [lecture-notes, own-notes]
 status: draft
-tags: [subject/qm, type/concept, taught, src/lecture-notes, status/draft]
+tags: [subject/qm, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
 ---
 # Expectation Value
 
-<span class="scope-taught">taught · in syllabus</span>
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
 
 > [!syllabus] In the syllabus vs extra
-> 🟢 **taught:** [[PH2113_states_operators_notes.pdf#page=7|SO §7]], [[PH2113_matrices_expectation_uncertainty.pdf#page=2|MX §4, §6]].
+> 🟢 **taught:** [[PH2113_states_operators_notes.pdf#page=7|SO §7]], [[PH2113_matrices_expectation_uncertainty.pdf#page=2|MX §4, §6]], the oscillator values in [[Harmonic_oscillator.pdf#page=12|lecture pp.12–13]] and [[Tutorial3.pdf#page=1|Tutorial III]]. · 🔵 **extra · beyond:** the probability dictionary, time dependence, the oscillator recipe.
 
 > [!intuition] In one picture
 > The average of many measurements on identically prepared systems; it need not be a result that any single measurement can give.
 
 > [!key] Definition
-> $\langle A\rangle=\sum_a|c_a|^2a=\displaystyle\int\Psi^*\hat A\Psi\,\mathrm dx=\langle\Psi|\hat A|\Psi\rangle$. E.g. $\langle x\rangle=\int x|\Psi|^2\mathrm dx$, $\langle p\rangle=\int\Psi^*(-i\hbar\partial_x)\Psi\,\mathrm dx$.
+> $\langle A\rangle=\sum_a|c_a|^2a=\displaystyle\int\Psi^*\hat A\Psi\,\mathrm dx=\langle\Psi|\hat A|\Psi\rangle$. E.g. $\langle x\rangle=\int x|\Psi|^2\mathrm dx$, $\ \langle p\rangle=\int\Psi^*(-i\hbar\partial_x)\Psi\,\mathrm dx$, $\ \langle E\rangle=\sum|c_n|^2E_n$.
+
+## Three equivalent forms
+- **Spectral:** expand $\Psi=\sum c_a\phi_a$ in eigenstates of $\hat A$; then $\langle A\rangle=\sum|c_a|^2a$ (Born rule weights).
+- **Integral:** $\int\Psi^*\hat A\Psi\,\mathrm dx$; when $\hat A=f(\hat x)$ this is $\int f(x)|\Psi|^2\mathrm dx$, exactly the **LOTUS** formula $E[g(X)]=\int g\,f_X$ of [[PR05 Continuous Random Variables]] with $f_X=|\Psi|^2$.
+- **Dirac:** $\langle\Psi|\hat A|\Psi\rangle$, with matrix elements $A_{mn}=\langle m|\hat A|n\rangle$ ([[Dirac Notation]]).
+
+## Properties
+Real for Hermitian $\hat A$; linear, $\langle\alpha\hat A+\beta\hat B\rangle=\alpha\langle A\rangle+\beta\langle B\rangle$; **not** multiplicative, $\langle AB\rangle\ne\langle A\rangle\langle B\rangle$; $\langle A^2\rangle\ge\langle A\rangle^2$ with equality iff $\Psi$ is an eigenstate ($\Delta A=0$, [[Uncertainty of an Observable]]). For $\Psi=\sum c_n\psi_n$: $\langle A\rangle=\sum_{m,n}c_m^*c_nA_{mn}$: diagonal terms are the stationary part, cross terms oscillate at $(E_m-E_n)/\hbar$ ([[Time Evolution of a Superposition]]).
+
+## Time dependence
+$\dfrac{\mathrm d\langle A\rangle}{\mathrm dt}=\dfrac i\hbar\langle[\hat H,\hat A]\rangle$ ([[Ehrenfest Theorem]]): zero for every $\hat A$ in a stationary state.
 
 ## Examples
-- A state giving $0$ or $10$ eV with probability $\tfrac12$: $\langle E\rangle=5$ eV, but 5 eV is never found.
-- Box: $\langle x\rangle=a/2$ for every $n$ (for $n=2$ the density at $a/2$ is zero).
+- A state giving $0$ or $10$ eV with probability $\tfrac12$: $\langle E\rangle=5$ eV, never observed.
+- Box: $\langle x\rangle=a/2$, $\langle x^2\rangle=a^2\big(\tfrac13-\tfrac1{2n^2\pi^2}\big)$, $\langle p\rangle=0$, $\langle p^2\rangle=(n\pi\hbar/a)^2$ (so $\Delta x\Delta p=\hbar\sqrt{n^2\pi^2/12-\tfrac12}$, $0.568\hbar$ for $n=1$).
 - Ring $a\psi_n+b\psi_{-n}$: $\langle p\rangle=(|a|^2-|b|^2)p_n$.
 - Two-level $(\tfrac{\sqrt3}2,\tfrac12)$: $\langle Z\rangle=\tfrac12$.
+- Oscillator $|n\rangle$: $\langle x^2\rangle=(2n+1)\frac\hbar{2m\omega}$, $\langle x^4\rangle=(6n^2+6n+3)(\frac\hbar{2m\omega})^2$ ([[Oscillator Expectation Values]]); coherent state: $\langle x\rangle=\sqrt{2\hbar/m\omega}\,\mathrm{Re}\,\alpha$.
 
-> [!pitfall] Average is not typical
-> $\langle p\rangle=0$ for a cosine does not mean the momentum is 0: each measurement gives $\pm p_n$. Quote $\Delta A$ with it ([[Uncertainty of an Observable]]).
+> [!pitfall] Average is not typical, and mean is not mode
+> $\langle p\rangle=0$ for $\cos kx$ does not mean the momentum is 0: each measurement gives $\pm p_n$. For $\psi_1$ of the oscillator $\langle x\rangle=0$ while the **most probable** positions are $\pm\sqrt{\hbar/m\omega}$ and $x=0$ has probability density $0$; the mean, median and mode of $|\psi|^2$ are different summaries (the Week 3 probability lecture defines median and mode, [[Median and Mode]]). Quote $\Delta A$ with $\langle A\rangle$.
 
-Used in: [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]]. Related: [[Uncertainty of an Observable]] · [[Measurement Postulate]] · [[Eigenstate and Eigenvalue]] · [[Time Evolution of a Superposition]].
+Used in: [[QM03 States Operators and Measurement]], [[QM04 The Particle in a Box]], [[QM05 The Harmonic Oscillator]], [[QM06 The Oscillator Toolbox]] §3. Related: [[Uncertainty of an Observable]] · [[Measurement Postulate]] · [[Eigenstate and Eigenvalue]] · [[Time Evolution of a Superposition]] · [[Oscillator Expectation Values]] · [[Ehrenfest Theorem]] · [[Expectation]].
 
 ## Linked from
 ```dataview

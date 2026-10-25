@@ -29,6 +29,9 @@ $[\hat A,\hat B]=-[\hat B,\hat A]$; $[\hat A,\hat B\hat C]=[\hat A,\hat B]\hat C
 
 Used in: [[QM03 States Operators and Measurement]], [[QM05 The Harmonic Oscillator]]. Related: [[Canonical Commutation Relation]] · [[Generalised Uncertainty Principle]] · [[Pauli Matrices]] · [[Operator]].
 
+## Added with QM06 (oscillator toolbox)
+Identities used for the oscillator: $[\hat A\hat B,\hat C]=\hat A[\hat B,\hat C]+[\hat A,\hat C]\hat B$; $[\hat a,(\hat a^\dagger)^k]=k(\hat a^\dagger)^{k-1}$; $[\hat H,\hat a]=-\hbar\omega\hat a$; $[\hat H,\hat x]=-i\hbar\hat p/m$, $[\hat H,\hat p]=i\hbar V'$; double commutator $[\hat x,[\hat H,\hat x]]=\hbar^2/m$ ([[Sum Rules]]); $\frac{\mathrm d\langle A\rangle}{\mathrm dt}=\frac i\hbar\langle[\hat H,\hat A]\rangle$ ([[Ehrenfest Theorem]]). Hermitian conjugate: $[\hat A,\hat B]^\dagger=[\hat B^\dagger,\hat A^\dagger]$.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -491,3 +491,47 @@ Hb0 = np.diag(np.arange(140) + 0.5)
 for lam in (0.001, 0.002):
     Ev = np.linalg.eigvalsh(Hb0 + lam * x4)[:3]
     P(f"  lambda = {lam}: E_0 - 1/2 = {Ev[0] - 0.5:.8f} ; first order 3 lambda/4 = {0.75 * lam:.8f} ; with -21 lambda^2/8: {0.75 * lam - 21 / 8 * lam ** 2:.8f} ; E_1 - 3/2 = {Ev[1] - 1.5:.8f} vs 15 lambda/4 = {15 * lam / 4:.8f}")
+
+
+sec("QM06 practice checks")
+Nc2 = 60; nn2 = np.arange(Nc2)
+def coh2(al): return np.exp(-abs(al) ** 2 / 2) * np.array([al ** k / np.sqrt(float(fac(k))) for k in range(Nc2)])
+cat = coh2(1.0) + coh2(-1.0)
+P(f"cat state |1> + |-1>: norm^2 = {np.vdot(cat, cat).real:.5f} (2 + 2 e^-2 = {2 + 2 * np.exp(-2):.5f}); N = {1 / np.sqrt(np.vdot(cat, cat).real):.5f}; odd-n amplitudes max = {np.abs(cat[1::2]).max():.1e}")
+P(f"Poisson(4): P(0) = {np.exp(-4):.5f}, P(4) = {4 ** 4 * np.exp(-4) / 24:.5f}; Var = 4, sd = 2")
+x2 = 1.438777 * 667 / 288
+P(f"CO2 bend 288 K: x = {x2:.4f}, <n> = {1 / np.expm1(x2):.5f}, P(0) = {1 - np.exp(-x2):.5f}, E above zero point = {1 / np.expm1(x2) * 667 * 1.239842e-4:.3e} eV (hbar omega = {667 * 1.239842e-4:.4f} eV)")
+P("kurtosis <x^4>/<x^2>^2 for n=0,1,2,10,100:", [round((6 * n ** 2 + 6 * n + 3) / (2 * n + 1) ** 2, 5) for n in (0, 1, 2, 10, 100)], "-> 3/2 (arcsine)")
+P("<0|[x,p]|0> from x01 p10 - p01 x10 (units hbar=1): x01 = 1/sqrt2, p10 = i/sqrt2:", (1 / np.sqrt(2)) * (1j / np.sqrt(2)) - (-1j / np.sqrt(2)) * (1 / np.sqrt(2)))
+
+
+sec("QM quiz prep: numbers (photoelectric, Compton, ring, uncertainty)")
+hc_eVnm = h * c / eV * 1e9
+P(f"hc = {hc_eVnm:.4f} eV nm")
+phi = 2.0
+P(f"work function {phi} eV: nu0 = {phi * eV / h:.4e} Hz, lambda0 = {hc_eVnm / phi:.1f} nm")
+for lam in (400.0, 550.0):
+    E = hc_eVnm / lam
+    P(f"  light {lam} nm: photon {E:.3f} eV -> K_max = {max(E - phi, 0):.3f} eV; v_max = {np.sqrt(2 * max(E - phi, 0) * eV / me):.3e} m/s" if E > phi else f"  light {lam} nm: photon {E:.3f} eV < {phi} eV: no emission at any intensity")
+lamC_e = h / (me * c); mp_ = 1.67262192369e-27; lamC_p = h / (mp_ * c)
+P(f"Compton wavelength electron {lamC_e * 1e12:.4f} pm; proton {lamC_p * 1e15:.4f} fm; ratio {lamC_e / lamC_p:.1f}; max shift electron 2 lamC = {2 * lamC_e * 1e12:.3f} pm")
+for th in (30, 90, 180):
+    P(f"  electron, theta = {th} deg: shift = {lamC_e * (1 - np.cos(np.radians(th))) * 1e12:.4f} pm")
+lam0 = 71.1e-12
+P(f"  Mo K-alpha 71.1 pm at 90 deg: fractional shift {lamC_e / lam0 * 100:.2f} %; X-ray photon {hc_eVnm / (lam0 * 1e9) / 1e3:.2f} keV")
+P(f"  proton target: shift at 180 deg = {2 * lamC_p * 1e15:.3f} fm (relative to 71.1 pm: {2 * lamC_p / lam0:.1e})")
+L = 0.83e-9
+E1 = 2 * np.pi ** 2 * hb ** 2 / (me * L ** 2) / eV
+P(f"ring L = 0.83 nm: E_1 = {E1:.3f} eV (E_n = E_1 n^2); L = 1 cm: E_1 = {E1 * (0.83e-9 / 1e-2) ** 2:.3e} eV; k_B T(300 K) = {1.380649e-23 * 300 / eV:.4f} eV; ratio kT/E_1(1 cm) = {1.380649e-23 * 300 / eV / (E1 * (0.83e-9 / 1e-2) ** 2):.2e}")
+P(f"tutorial Q1: dp_min = hbar/(2 dx) for dx=1e-10 m: {hb / 2e-10:.3e}; dv = {hb / 2e-10 / me:.3e} m/s = {hb / 2e-10 / me / c:.2e} c; hbar/(m c) = {hb / (me * c):.3e} m")
+# box uncertainty (SO example)
+n = 1
+P(f"box n=1: dx/L = {np.sqrt(1 / 12 - 1 / (2 * n ** 2 * np.pi ** 2)):.4f}; dx dp / hbar = {np.sqrt(n ** 2 * np.pi ** 2 / 12 - 0.5):.4f}")
+# acceptable wavefunction normalisations
+P("e^{-|x|/a}: N^2 a = 1 -> N = 1/sqrt(a); half-line e^{-x/a}: N = sqrt(2/a); x<0 vs x>=0 sign flip of N e^{-x^2/a^2}: jump 2N at 0")
+P("psi_C of mock Q3: N = (2/(pi a^2))^{1/4} =", "norm integral:", quad(lambda x: np.exp(-2 * x ** 2), -np.inf, np.inf)[0], "= sqrt(pi/2) for a=1 ->", np.sqrt(np.pi / 2))
+# 2x2: v = (1,0), A = X
+Xm = np.array([[0, 1], [1, 0]]); v = np.array([1, 0])
+P("A v =", Xm @ v, "; <A> in v =", v @ Xm @ v, "; Delta A in v =", np.sqrt(v @ Xm @ Xm @ v - (v @ Xm @ v) ** 2))
+# momentum of psi2 = e^{ikx} psi1
+P("p e^{ikx} psi1: hbar k shift (checked by the product rule in the page)")

@@ -29,6 +29,9 @@ $\langle\tfrac12\kappa x^2\rangle$ with weight $e^{-\kappa x^2/2k_BT}$ equals $\
 
 Used in: [[TH03 The Ideal Gas and Adiabatic Processes]], [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Ratio of Specific Heats]] · [[Partition Function]] · [[Heat Capacity]] · [[Maxwell-Boltzmann Distribution]].
 
+## Added with QM06 (oscillator toolbox)
+The oscillator reaches the equipartition value $k_B$ per mode only for $T\gg\theta_v$ ($C/k_B=0.99917$ at $x=0.1$, $0.0045$ at $x=10$): vibrations freeze out ([[Einstein Heat Capacity]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
