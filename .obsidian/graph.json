@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
   "search": "-path:Assets -path:scripts",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -137,6 +137,6 @@
   "repelStrength": 12,
   "linkStrength": 1,
   "linkDistance": 200,
-  "scale": 0.38442656570241934,
+  "scale": 0.3849287566460543,
   "close": false
 }
