@@ -82,5 +82,5 @@ Think about it, even if you do not agree with me.
 
 <!-- kurooto:materialf79b24df -->
 ## Concepts in Geomorphic Features of the Deccan Traps Terrain
-[[zettel/deccan-volcanic-province]], [[zettel/compound-hummocky-pahoehoe]], [[zettel/massive-sheet-flow]], [[zettel/columnar-jointing]], [[zettel/trap-topography]], [[zettel/interflow-horizons]], [[zettel/intertrappean-beds]], [[zettel/lava-flow-internal-structure]]
+[[zettel/deccan-volcanic-province]], [[zettel/compound-hummocky-pahoehoe]], [[zettel/massive-sheet-flow]], [[zettel/columnar-jointing]], [[zettel/trap-topography]], [[zettel/interflow-horizons]], [[zettel/intertrappean-beds]], [[zettel/lava-flow-internal-structure]], [[zettel/regional-eastward-tilt]], [[zettel/segmented-quaternary-block-faulting]], [[zettel/bedrock-gorges-and-entrenched-meanders]], [[zettel/fracture-bound-rock-trench]], [[zettel/pothole-networks]], [[zettel/planation-surfaces]], [[zettel/laterite-cappings]]
 <!-- /kurooto:materialf79b24df -->
