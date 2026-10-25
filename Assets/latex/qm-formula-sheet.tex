@@ -4,7 +4,7 @@
 \setlength{\parskip}{2pt}
 \renewcommand{\arraystretch}{1.25}
 \title{PH2113 Introductory Quantum Physics\\\large formula sheet, key numbers and traps}
-\author{second brain $\cdot$ chapters QM01--QM05}
+\author{second brain $\cdot$ chapters QM01--QM06}
 \date{}
 \begin{document}
 \maketitle
@@ -70,8 +70,26 @@ vibrations & CO: $0.266$ eV (4.66 \textmu m); CO$_2$ bend: $0.083$ eV (15.0 \tex
 \bottomrule
 \end{tabular}
 
+\section*{QM05--QM06 Oscillator toolbox (lecture, Tutorials II--III, extra)}
+\begin{tabular}{@{}p{2.8cm}p{8.3cm}p{6.3cm}@{}}
+\toprule
+lecture & $\hat a_-\hat a_+=\tfrac{\hat H}{\hbar\omega}+\tfrac12$; $\int f^*\hat a_+g=\int(\hat a_-f)^*g$; $|d_n|^2=n$, $|c_n|^2=n+1$ & p.9 writes $\hat a_+$ with the sign of $\hat a_-$ (slip)\\
+Tutorial III & $\langle p^2\rangle=(n+\tfrac12)m\hbar\omega$; $\int x^2e^{-ax^2}\dd x=\tfrac{\sqrt\pi}{2a^{3/2}}$; $E_n\ne E_m\Rightarrow\int\psi_m^*\psi_n=0$ & $\langle x^2\rangle_0=\hbar/2m\omega$ (by parts or $-\partial_a$)\\
+number basis$^{\text{b}}$ & $\hat a|n\rangle=\sqrt n|n{-}1\rangle$, $\hat a^\dagger|n\rangle=\sqrt{n{+}1}|n{+}1\rangle$, $\hat x=\sigma(\hat a{+}\hat a^\dagger)$, $\hat p=\tfrac{i\hbar}{2\sigma}(\hat a^\dagger{-}\hat a)$, $\sigma^2=\tfrac\hbar{2m\omega}$ & tridiagonal; $\Delta n=\pm1$ only (one line at $\omega$)\\
+moments$^{\text{b}}$ & $\langle x^2\rangle=(2n{+}1)\sigma^2$, $\langle x^4\rangle=(6n^2{+}6n{+}3)\sigma^4$, $\langle V\rangle=\langle T\rangle=\tfrac12E_n$ & TRK: $\sum(E_n{-}E_m)|x_{nm}|^2=\tfrac{\hbar^2}{2m}$\\
+Hermite$^{\text{b}}$ & $e^{2\xi t-t^2}=\sum H_n\tfrac{t^n}{n!}$; $H_{n+1}=2\xi H_n-2nH_{n-1}$; $H_n'=2nH_{n-1}$; $H_n=(-1)^ne^{\xi^2}\partial^ne^{-\xi^2}$ & $\int H_mH_ne^{-\xi^2}=\sqrt\pi2^nn!\,\delta_{mn}$; $N_n=(\tfrac{m\omega}{\pi\hbar})^{1/4}/\sqrt{2^nn!}$\\
+series$^{\text{b}}$ & $\psi=he^{-\xi^2/2}$: $h''-2\xi h'+(K-1)h=0$, $a_{j+2}=\tfrac{2j+1-K}{(j+1)(j+2)}a_j$ & stops iff $K=\tfrac{2E}{\hbar\omega}=2n+1$; $\mathrm{He}_n(x)=2^{-n/2}H_n(\tfrac x{\sqrt2})$\\
+momentum space$^{\text{b}}$ & $\tilde\psi_n(p)=(-i)^n\psi_n$ (scaled); $\hat a=\tfrac i{\sqrt2}(\eta+\partial_\eta)$ & quarter period of $t$ = Fourier transform\\
+dynamics$^{\text{b}}$ & $\tfrac{\dd}{\dd t}\langle A\rangle=\tfrac i\hbar\langle[\hat H,\hat A]\rangle$; $\hat a(t)=\hat ae^{-i\omega t}$; $2\langle T\rangle=\langle xV'\rangle$ & $\langle x\rangle(t)$ classical for \emph{every} state ($V'$ linear)\\
+zero point$^{\text{b}}$ & $E\ge\tfrac{\hbar^2}{8m\Delta x^2}+\tfrac12m\omega^2\Delta x^2\ge\tfrac12\hbar\omega$ & equality: Gaussian, $\Delta x^2=\tfrac\hbar{2m\omega}$\\
+coherent$^{\text{b}}$ & $\hat a|\alpha\rangle=\alpha|\alpha\rangle$, $P(n)$ Poisson$(|\alpha|^2)$, $\Delta x\Delta p=\tfrac\hbar2$, $\alpha(t)=\alpha e^{-i\omega t}$ & $|\langle\alpha|\beta\rangle|=e^{-|\alpha-\beta|^2/2}$\\
+thermal$^{\text{b}}$ & $P(n)=(1{-}e^{-x})e^{-nx}$, $\langle n\rangle=\tfrac1{e^x-1}$, $\tfrac Ck=\tfrac{x^2e^x}{(e^x-1)^2}$, $x=\tfrac{\hbar\omega}{k_BT}$ & CO: $\theta_v=3083$ K frozen; CO$_2$ bend: 960 K, $P(n{\ge}1)=3.6\%$ at 288 K\\
+3-D & $E=(N+\tfrac32)\hbar\omega$, degeneracy $\tfrac{(N+1)(N+2)}2$; $\lambda x^4$: $\Delta E_n=\lambda\sigma^4(6n^2{+}6n{+}3)$ & 2-D: $N+1$\\
+\bottomrule
+\end{tabular}
+
 \vspace{4pt}
 \begin{keybox}[Reading rule]
-Typed lecture notes, the handwritten box lecture and the two tutorials are the syllabus; the AI monographs and textbooks are secondary. $^{\text{b}}$: book-level proof or statement. Missing from the sources: Lectures 1--5, tunnelling, hydrogen, spin.
+Typed lecture notes, the handwritten box and oscillator lectures and the three tutorials are the syllabus; the AI monographs and textbooks are secondary. $^{\text{b}}$: book-level or extra (QM06) statement. The two quizzes (3 Sep) examined the photoelectric effect, Compton, phase, the ring and operators as \emph{explanations}: see Quantum Mechanics Quiz Prep. Missing from the sources: Lectures 1--5, tunnelling, hydrogen, spin.
 \end{keybox}
 \end{document}

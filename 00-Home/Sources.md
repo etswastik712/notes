@@ -43,7 +43,7 @@ Files live under `biology/eco-evo/<topic folder>/`. Slide decks have a text laye
 **Tier rule (slide 18 of the first lecture, valid for the whole course):** slides + *mandatory reading* = syllabus (`taught`); *detailed/recommended reading* and *papers* are not examinable (`extra/book`). Earlier AI-written notes (`BI2113_Consolidated_Notes.pdf`, `_progress/main.tex`) are secondary and contain a few extraction slips (see EE01 *Provenance*).
 
 ## Quantum Mechanics (PH2113)
-Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lectures 1–5 and everything after the oscillator tutorial are absent. "Taught" = typed lecture notes + handwritten box lecture + the two tutorials. Full table with page roles: [[Quantum Mechanics - Course Map]].
+Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lectures 1–5 and everything after the oscillator are absent. "Taught" = typed lecture notes + handwritten box and **oscillator** lectures + the **three** tutorials (I, II, III). Also the quiz summaries made by another tool under `ph2113/` (Classroom posts; PDFs not in the folder). Full table with page roles: [[Quantum Mechanics - Course Map]].
 
 | ID | File | Pages | Role |
 |---|---|---|---|
@@ -53,6 +53,9 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 | WT | [[PH2113_wavefunctions_potentials_schrodinger_Tutorial.pdf]] | 4 (text) | taught: QM02, QM05 |
 | BOX | [[Particle_in_a_box.pdf]] | 10 (handwritten images; p.1 and p.10 blank; read from page images) | taught: QM04 |
 | T1 / T2 | [[tutorial1.pdf]] / [[Tutorial2.pdf]] | 1 / 2 | taught: QM04 / QM05 |
+| HO | [[Harmonic_oscillator.pdf]] | 13 (handwritten page images; p.1 blank; read as images; p.9 sign slip) | taught: QM05 (added 2026-10-25) |
+| T3 | [[Tutorial3.pdf]] | 2 (TeX, text layer) | taught: QM05 §10 (added) |
+| QZ1 / QZ2 / EP | [[2026-09-02-mock-quiz-and-solutions]] / [[2026-09-03-quiz-ideal-solutions]] / [[ph2113/exam-prep]] | summaries of Classroom posts (another tool, `agent_written`); question texts of the 3 Sep quiz missing | taught: [[Quantum Mechanics Quiz Prep]] |
 | G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 409 (scan; **1st edition**; book page = PDF − 15; §1.2 p.17, §1.4 p.26, §1.6 p.32, §2.1 p.35, §2.2 p.39, §2.3 p.46, §2.4 p.59, §2.5 p.65, §3.4 p.123; OCR'd pp.14–130 for locating sections only) | extra/book |
 | S | Sakurai and Napolitano, 3rd ed. | 568 (text) | extra/book (not used) |
 | AI | `gemqphyprems(2).pdf`, `Quantum_Mechanics_Notes.pdf`, `quantum_notes.pdf`, `Quantum Mechanics II - *.pdf` | 16–73 | secondary; every number cross-checked, no discrepancies found |

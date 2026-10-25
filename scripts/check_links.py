@@ -83,6 +83,13 @@ def check_target(raw, src, line, errs):
                 pass
         return
     p = notes.get(low) or notes.get(low.replace(".md", ""))
+    if not p and "/" in low:          # path-style link, e.g. [[ph2113/exam-prep]]: match by path suffix
+        suffix = "/" + low.replace(".md", "")
+        for path in notes.values():
+            rel = os.path.relpath(path, ROOT).replace(os.sep, "/").lower()
+            if rel.endswith(".md") and ("/" + rel[:-3]).endswith(suffix):
+                p = path
+                break
     if not p:
         errs.append((src, line, f"unresolved note: {base}"))
     elif frag and not frag.startswith(("page=", "^")) and p.endswith(".md"):
