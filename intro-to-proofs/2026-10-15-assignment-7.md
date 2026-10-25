@@ -8,6 +8,7 @@ trust_tier: agent_written
 
 ## Covered
 Not summarised yet: the file could not be downloaded (RemoteDisconnected), so the problems are unknown. Send /classnotes again once the connection works.
+Solutions for Questions 4 and 5 were posted on 2026-10-19: see [[intro-to-proofs/2026-10-19-solutions-assignment-7]].
 
 ## From the post
 (no text)
