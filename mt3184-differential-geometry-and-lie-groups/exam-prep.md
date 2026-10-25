@@ -9,12 +9,13 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Second class test: in the week of 2026-10-26 according to the syllabus outline (exact day, time and syllabus not announced; it should cover the exponential map material, since the same week is listed for one-parameter subgroups and the exponential map, a tutorial and the class test). Then the end-sem, 2026-11-23 to 2026-12-02 (cumulative; exact paper dates not announced). Grading: 2 class tests 20%, mid-term 40%, final 40%. Earlier: Test 1 ([[mt3184-differential-geometry-and-lie-groups/2026-09-03-test-i]]) and the midterm (2026-09-24 15:00, month inferred).
+Second class test: in the week of 2026-10-26 according to the syllabus outline (exact day, time and syllabus not announced; it should cover the exponential map material, since the same week is listed for one-parameter subgroups and the exponential map, a tutorial and the class test). Then the end-sem, 2026-11-23 to 2026-12-02 (cumulative; exact paper dates not announced). Grading: 2 class tests 20%, mid-term 40%, final 40%. Earlier: Test 1 ([[mt3184-differential-geometry-and-lie-groups/2026-09-03-test-i]], first announced on 2026-08-20 for 2026-08-31 on HW1-HW3 and DG 1-8) and the midterm (2026-09-24 15:00, month inferred).
 
 ## Covered so far
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-07-august-3-7]]: smooth manifolds, smooth maps, partitions of unity (slides not readable)
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-14-august-10-14]]: tangent spaces, differentials, change of coordinates (slides not readable)
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21]]: submanifolds and their tangent spaces, Chart Lemma, tangent bundle, vector fields
+- [[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]]: HW3, tangent vectors of curves in projection charts, the tangent bundle via the Chart Lemma, a vector field on $S^2$ with one zero
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-27-august-24-28]]: vector fields, derivations, Lie groups and homomorphisms, rank theorems
 - [[mt3184-differential-geometry-and-lie-groups/2026-09-03-august-31-september-4]]: immersed submanifolds, Lie subgroups, kernels, identity component
 - [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12]]: Closed Subgroup Theorem, group actions, orbits and stabilizers, semidirect products, Lie algebras
@@ -27,7 +28,7 @@ Second class test: in the week of 2026-10-26 according to the syllabus outline (
 - Smooth structure: two smooth atlases induce the same smooth structure iff their union is a smooth atlas; every smooth atlas lies in a unique maximal one ([[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1]] Q1).
 - Smoothness of a continuous map $F$ at $p$ can be checked in one pair of charts: $\psi\circ F\circ\varphi^{-1}$ smooth ([[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1]] Q3).
 - Tangent vectors are local: if $f=g$ near $p$ then $v(f)=v(g)$; $T_{(p,q)}(M\times N)\cong T_pM\oplus T_qN$ via $(d\pi_1,d\pi_2)$ ([[mt3184-differential-geometry-and-lie-groups/2026-08-14-hw2]] Q1, Q2).
-- Smooth Manifold Chart Lemma (Lemma 1.35): bijective charts onto open sets, open overlaps, smooth transitions, countably many charts covering, and separation of points give a unique smooth structure making them charts. $TM$ is then a $2n$-dimensional manifold with $\pi$ smooth (Prop 3.18). (Classroom: DG8, OCR garbled; check the PDF.)
+- Smooth Manifold Chart Lemma (Lemma 1.35): bijective charts onto open sets, open overlaps, smooth transitions, countably many charts covering, and separation of points give a unique smooth structure making them charts. $TM$ is then a $2n$-dimensional manifold with $\pi$ smooth (Prop 3.18); the chart on $\pi^{-1}(U)$ is $\tilde\varphi:\sum v^i\partial_i|_p\mapsto(\varphi(p),v^1,\dots,v^n)$ and the overlap maps are $(x,v)\mapsto(\varphi_\beta\circ\varphi_\alpha^{-1}(x),\,D(\varphi_\beta\circ\varphi_\alpha^{-1})_xv)$ ([[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21]]; proving this is [[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]] Q2).
 - Vector field: smooth $X: M\to TM$ with $\pi\circ X=\mathrm{id}$; smooth iff its component functions in every chart are smooth, iff $Xf\in C^\infty$ for all smooth $f$ (Prop 8.14). (Classroom: DG9)
 - Derivations of $C^\infty(M)$ correspond to vector fields. (Classroom: DG10)
 - $F$-related fields: $dF_p(X_p)=Y_{F(p)}$; a diffeomorphism $F$ gives a unique $F$-related $Y$ for each $X$ (Prop 8.19).
@@ -56,6 +57,9 @@ Second class test: in the week of 2026-10-26 according to the syllabus outline (
 ## Typical questions
 - Atlas questions: maximal atlases, same smooth structure iff union is an atlas, transition maps of the graph and stereographic atlases of $S^2$, distinct smooth structures on a ball ([[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1]]).
 - Tangent vector computations: locality, product manifolds, $Xf$ and change of basis between stereographic charts, local form and derivative of the antipodal map, curves realising a tangent vector ([[mt3184-differential-geometry-and-lie-groups/2026-08-14-hw2]]).
+- Velocity of an explicit curve on $S^2$ in a projection chart, differential of a rotation of $S^2$ in local coordinates, change of basis between projection charts ([[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]] Q1).
+- Prove $TM$ is a manifold and $\pi$ smooth with the Chart Lemma ([[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]] Q2).
+- Build a vector field on $S^2$ with exactly one zero: push a constant field on $\mathbb R^2$ through the inverse stereographic chart, write it in the other chart, check smooth extension of its components ([[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]] Q3).
 - Level sets of regular values are submanifolds with $T_pS=\ker dF_p$ (HW4 Q1).
 - $F$-related fields under an explicit diffeomorphism (HW4 Q3).
 - Differentials of the group operations, $dm_{(e,e)}(X,Y)=X+Y$ and $di_e=-1$ (HW4 Q6).
@@ -73,8 +77,9 @@ Second class test: in the week of 2026-10-26 according to the syllabus outline (
 - Slides DG1-DG7 are scans with no readable text, so weeks 1-3 are only summarised from the posts and homework (definitions of manifolds, tangent spaces and partitions of unity are not noted in detail). DG8 is badly garbled OCR.
 - DG16 (rest), the end of DG20 (explicit Lie algebra example), the end of DG24 (Lie derivative and $[V,W]$), parts of DG23 and the first page and last slide of DG25/DG26 (properties of $\mathcal L_V$; $\exp$ and homomorphisms) were only partly legible; the rest of DG16 is not yet noted.
 - Handwritten slides are OCR-garbled in places; check definitions and statements against the PDFs before relying on them (notably Thm 20.19, the Flowout hypotheses, Prop 9.13, Thm 9.38 and the smoothness proof of $\exp$).
-- The date and syllabus of the second class test are not announced; the midterm's marks/solutions are not known; Test 1 solutions beyond Q1 were unreadable.
+- HW3 is filed as a problem list only; no solutions are in the materials, and the stereographic-chart formulas for Q3 are not worked out anywhere in the notes.
+- The date and syllabus of the second class test are not announced; the midterm's marks/solutions are not known; Test 1 solutions beyond Q1 were unreadable. The 2026-08-31 date announced for Test 1 differs from the 2026-09-03 date in the notes.
 - The syllabus lists differential forms, Stokes' Theorem, infinitesimal generators of group actions and the Closed Subgroup Theorem for later weeks; the Closed Subgroup Theorem is noted but differential forms and Stokes appear in no filed lecture note yet.
 - The 24 October replacement class (exponential map) is filed; no homework on the exponential map yet.
-- No textbook notes (Lee, Boothby) found in the books folder.
+- No textbook notes (Lee, Boothby) were found in the books folder, so nothing here cites a book page.
 <!-- /kurooto:exam-prep -->
