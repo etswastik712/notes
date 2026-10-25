@@ -259,3 +259,67 @@ P("Poisson(3.2) M(0.7) numeric vs e^{lam(e^t-1)}:", float((np.exp(t * xs) * stat
 P("normal M(t)=exp(mu t + sigma^2 t^2/2): mu=1, sigma=2, t=0.3:", math.exp(0.3 + 4 * 0.09 / 2), " numeric:", integrate.quad(lambda x: math.exp(0.3 * x) * stats.norm.pdf(x, 1, 2), -40, 40)[0])
 P("Cauchy has no mean: sample means of 10^5 draws vary:", [round(float(np.mean(rng.standard_cauchy(100000))), 3) for _ in range(5)])
 P("exponential memoryless: P(X>s+t | X>s) = P(X>t): lam=0.5, s=2, t=3:", math.exp(-0.5 * 3))
+
+
+sec("PR05/PR06 update: Week 2 and Week 3 handwritten lectures (folded normal, exponential, median/mode, MGFs)")
+import sympy as sp_
+# --- Week 2: folded normal
+Z_ = stats.norm
+P("folded normal |Z|: E =", integrate.quad(lambda y: y * 2 * Z_.pdf(y), 0, np.inf)[0], " sqrt(2/pi) =", math.sqrt(2 / math.pi),
+  " ; E[X^2] =", integrate.quad(lambda y: y ** 2 * 2 * Z_.pdf(y), 0, np.inf)[0], " ; Var =", 1 - 2 / math.pi, " (", round(1 - 2 / math.pi, 5), ")")
+zs = np.abs(rng.standard_normal(2_000_000))
+P(f"  Monte Carlo: mean {zs.mean():.5f}, var {zs.var():.5f}; cdf at 1: {np.mean(zs <= 1):.5f} vs 2Phi(1)-1 = {2 * Z_.cdf(1) - 1:.5f}")
+# --- Week 2: exponential
+lam_ = 0.7
+P("Exponential: I_n = int_0^inf lam x^n e^{-lam x} dx = n!/lam^n, n=0..5:", [round(integrate.quad(lambda x, n=n: lam_ * x ** n * math.exp(-lam_ * x), 0, np.inf)[0], 6) for n in range(6)], [round(math.factorial(n) / lam_ ** n, 6) for n in range(6)])
+P("  Var = 2/lam^2 - 1/lam^2 = 1/lam^2:", 2 / lam_ ** 2 - 1 / lam_ ** 2, 1 / lam_ ** 2)
+# geometric -> exponential: P(G >= k) = q^k with q = 1 - lam h, k = x/h
+for h_ in (0.5, 0.1, 0.01, 0.001):
+    P(f"  h = {h_}: (1 - lam h)^(x/h) at lam=0.5, x=2: {(1 - 0.5 * h_) ** (2 / h_):.6f}  -> e^-1 = {math.exp(-1):.6f}")
+# memoryless
+P("  memoryless: P(X>=t+s | X>=s) vs P(X>=t), lam=0.5, s=2, t=3:", math.exp(-0.5 * 5) / math.exp(-0.5 * 2), math.exp(-0.5 * 3))
+P("  uniform(0,1) is NOT memoryless: P(X>=0.5+0.25 | X>=0.25) =", (1 - 0.75) / (1 - 0.25), " vs P(X>=0.5) =", 0.5)
+P("  discrete memoryless: Geom(failures, q=0.6): P(G>=m+n | G>=m) vs P(G>=n) for m=2,n=3:", 0.6 ** 5 / 0.6 ** 2, 0.6 ** 3)
+# HW2
+P("HW2 Q1: lam = 1/2: P(T>2) =", math.exp(-1), "; P(T>=10 | T>9) = P(T>=1) =", math.exp(-0.5))
+P("HW2 Q2: Gumbel cdf exp(-e^{-y}); P(M_n - ln n <= y) = (1 - e^{-y}/n)^n; y = 0.5:", [round((1 - math.exp(-0.5) / n) ** n, 6) for n in (1, 2, 5, 20, 200, 10 ** 4)], " limit:", round(math.exp(-math.exp(-0.5)), 6))
+mx = np.max(rng.exponential(size=(20000, 200)), axis=1) - math.log(200)
+P(f"  Monte Carlo n=200: P(M_n - ln n <= 0.5) = {np.mean(mx <= 0.5):.4f}; mean of M_n - ln n = {mx.mean():.4f} (Gumbel mean = Euler gamma = {np.euler_gamma:.4f}); var {mx.var():.4f} (pi^2/6 = {math.pi ** 2 / 6:.4f})")
+gum = -np.log(rng.exponential(size=1_000_000))
+P(f"  -log X, X~Expo(1): mean {gum.mean():.4f}, var {gum.var():.4f}; P(<= 0.5) = {np.mean(gum <= 0.5):.4f} vs exp(-e^-0.5) = {math.exp(-math.exp(-0.5)):.4f}")
+for nm, d in (("normal", stats.norm()), ("exponential(1)", stats.expon()), ("Rayleigh sigma=1", stats.rayleigh()), ("uniform(2,5)", stats.uniform(2, 3))):
+    xs_ = d.rvs(size=1_000_000, random_state=11)
+    P(f"HW2 Q3: E[F(X)] for {nm}: {d.cdf(xs_).mean():.5f} (exact 1/2); E[F(X)^2] = {np.mean(d.cdf(xs_) ** 2):.5f} (1/3)")
+# --- Week 3: median / mode
+P("Median of fair die (discrete): P(X<=3) =", 0.5, ", P(X>=4) = 0.5 -> every c in [3,4] is a median (the unified definition)")
+P("Uniform(a,b): median (a+b)/2; mode = every point. Expo(lam): median ln2/lam =", math.log(2) / 0.7, "for lam=0.7; mode 0 (sup of f at the boundary)")
+P("Pareto(a): F = 1 - x^-a, median 2^(1/a): a=2:", 2 ** 0.5, " a=1:", 2.0, " ; mode 1; mean a/(a-1) for a>1: a=2:", 2.0, " ; scipy:", stats.pareto(2).median(), stats.pareto(2).mean())
+P("Expo skewness = 2 (any lam):", [round(float(stats.expon(scale=1 / l).stats(moments='s')), 6) for l in (0.5, 1, 3)], " ; excess kurtosis 6:", round(float(stats.expon().stats(moments='k')), 6))
+# Uniform MGF Taylor (the lecture's printed denominator slip)
+tt = sp_.symbols("t"); a_, b_ = sp_.symbols("a b", positive=True)
+Mu = (sp_.exp(tt * b_) - sp_.exp(tt * a_)) / (tt * (b_ - a_))
+ser = sp_.series(Mu, tt, 0, 5).removeO()
+for m in range(4):
+    cm = sp_.simplify(ser.coeff(tt, m) * sp_.factorial(m))
+    true = sp_.simplify((b_ ** (m + 1) - a_ ** (m + 1)) / ((m + 1) * (b_ - a_)))
+    P(f"  Uniform(a,b) E[X^{m}] = {sp_.factor(cm)}  (= (b^(m+1)-a^(m+1))/((m+1)(b-a)): {sp_.simplify(cm - true) == 0}); the lecture's printed '/m' would give {sp_.simplify((sum(b_ ** (m - j) * a_ ** j for j in range(m + 1))) / m) if m > 0 else 'undefined (division by 0)'}")
+# N(mu, sigma^2) MGF sign
+mu_, sg_, t0 = 1.0, 2.0, 0.3
+P(f"N(1,4) MGF at t=0.3: numeric {integrate.quad(lambda x: math.exp(t0 * x) * stats.norm.pdf(x, mu_, sg_), -50, 50)[0]:.5f}; exp(mu t + sigma^2 t^2/2) = {math.exp(mu_ * t0 + sg_ ** 2 * t0 ** 2 / 2):.5f}; the page's minus-sign version exp(mu t - sigma^2 t^2/2) = {math.exp(mu_ * t0 - sg_ ** 2 * t0 ** 2 / 2):.5f} (< e^(mu t) = {math.exp(mu_ * t0):.5f}, impossible by Jensen)")
+# HW3 Q4: two dice
+Md = sum(sp_.exp(k * tt) for k in range(1, 7)) / 6
+M2 = sp_.simplify(Md ** 2)
+P("HW3 Q4: M_{X+Y}(t) = ((e^t+...+e^{6t})/6)^2; mean M'(0) =", sp_.simplify(sp_.diff(M2, tt).subs(tt, 0)), " ; Var =", sp_.simplify(sp_.diff(M2, tt, 2).subs(tt, 0) - sp_.diff(M2, tt).subs(tt, 0) ** 2), "(7, 35/6)")
+# HW3 Q5: Geom (failures) via MGF
+p_, q_ = sp_.symbols("p q", positive=True)
+Mg = p_ / (1 - (1 - p_) * sp_.exp(tt))
+m1 = sp_.simplify(sp_.diff(Mg, tt).subs(tt, 0)); m2 = sp_.simplify(sp_.diff(Mg, tt, 2).subs(tt, 0))
+P("HW3 Q5: M(t) = p/(1-(1-p)e^t): E[X] =", sp_.simplify(m1), " ; E[X^2] =", sp_.factor(m2), " ; Var =", sp_.simplify(sp_.factor(m2 - m1 ** 2)), " (q/p, q/p^2 with q=1-p)")
+P("  trials convention X' = X + 1: M' = e^t M = p e^t/(1-q e^t): mean 1/p:", sp_.simplify(sp_.diff(sp_.exp(tt) * Mg, tt).subs(tt, 0)))
+# HW3 Q6: folded normal MGF
+t1 = 0.7
+P(f"HW3 Q6: M_Y(t) = int_0^inf e^{{ty}} 2 phi(y) dy = int e^{{t|z|}} phi(z) dz; at t={t1}: {integrate.quad(lambda y: math.exp(t1 * y) * 2 * stats.norm.pdf(y), 0, np.inf)[0]:.6f}; "
+  f"{integrate.quad(lambda z: math.exp(t1 * abs(z)) * stats.norm.pdf(z), -np.inf, np.inf)[0]:.6f}; closed form 2 e^(t^2/2) Phi(t) = {2 * math.exp(t1 ** 2 / 2) * stats.norm.cdf(t1):.6f}")
+# MGF = EGF of moments; Bernoulli moments; N(0,1) even moments
+P("Bernoulli(p): M = q + p e^t: E[X^n] = p for n>=1; Binomial MGF (q+pe^t)^n; N(0,1) E[Z^{2k}] = (2k)!/(k! 2^k):", [math.factorial(2 * k) // (math.factorial(k) * 2 ** k) for k in range(6)])
+P("Expo MGF lam/(lam - t) = sum (t/lam)^n = sum E[X^n] t^n / n! with E[X^n] = n!/lam^n; radius of convergence |t| < lam")
