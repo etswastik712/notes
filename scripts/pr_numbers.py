@@ -318,8 +318,8 @@ P("HW3 Q5: M(t) = p/(1-(1-p)e^t): E[X] =", sp_.simplify(m1), " ; E[X^2] =", sp_.
 P("  trials convention X' = X + 1: M' = e^t M = p e^t/(1-q e^t): mean 1/p:", sp_.simplify(sp_.diff(sp_.exp(tt) * Mg, tt).subs(tt, 0)))
 # HW3 Q6: folded normal MGF
 t1 = 0.7
-P(f"HW3 Q6: M_Y(t) = int_0^inf e^{{ty}} 2 phi(y) dy = int e^{{t|z|}} phi(z) dz; at t={t1}: {integrate.quad(lambda y: math.exp(t1 * y) * 2 * stats.norm.pdf(y), 0, np.inf)[0]:.6f}; "
-  f"{integrate.quad(lambda z: math.exp(t1 * abs(z)) * stats.norm.pdf(z), -np.inf, np.inf)[0]:.6f}; closed form 2 e^(t^2/2) Phi(t) = {2 * math.exp(t1 ** 2 / 2) * stats.norm.cdf(t1):.6f}")
+P(f"HW3 Q6: M_Y(t) = int_0^inf e^{{ty}} 2 phi(y) dy = int e^{{t|z|}} phi(z) dz; at t={t1}: {integrate.quad(lambda y: math.exp(t1 * y) * 2 * stats.norm.pdf(y), 0, 40)[0]:.6f}; "
+  f"{integrate.quad(lambda z: math.exp(t1 * abs(z)) * stats.norm.pdf(z), -40, 40)[0]:.6f}; closed form 2 e^(t^2/2) Phi(t) = {2 * math.exp(t1 ** 2 / 2) * stats.norm.cdf(t1):.6f}")
 # MGF = EGF of moments; Bernoulli moments; N(0,1) even moments
 P("Bernoulli(p): M = q + p e^t: E[X^n] = p for n>=1; Binomial MGF (q+pe^t)^n; N(0,1) E[Z^{2k}] = (2k)!/(k! 2^k):", [math.factorial(2 * k) // (math.factorial(k) * 2 ** k) for k in range(6)])
 P("Expo MGF lam/(lam - t) = sum (t/lam)^n = sum E[X^n] t^n / n! with E[X^n] = n!/lam^n; radius of convergence |t| < lam")

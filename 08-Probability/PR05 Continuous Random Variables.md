@@ -1,6 +1,6 @@
 ---
 title: PR05 Continuous Random Variables
-aliases: [PR05, continuous random variables, pdf, uniform, Rayleigh, logistic, normal distribution, LOTUS, MT2113 classes 10 September and week 1 post-midterm]
+aliases: [PR05, continuous random variables, pdf, uniform, Rayleigh, logistic, normal distribution, LOTUS, exponential distribution, memoryless property, folded normal, MT2113 classes 10 September, week 1 and week 2 post-midterm]
 subject: probability
 type: chapter
 chapter: 5
@@ -18,18 +18,20 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
 > [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
-> 🟢 **In syllabus (taught)**: [[ilovepdf_merged-1.pdf#page=28|class notes of 10 Sep]] (pp.28–30), the handwritten **post-midterm Week 1** notes ([[week1_mt2113.pdf#page=3|pp.3–9]], with the homework on pp.1–2), and sheet problem 11 of [[Practice problems 17th September and following tutorial and weekend.pdf|17 Sep]].
+> 🟢 **In syllabus (taught)**: [[ilovepdf_merged-1.pdf#page=28|class notes of 10 Sep]] (pp.28–30), the handwritten **post-midterm Week 1** notes ([[week1_mt2113.pdf#page=3|pp.3–9]], with the homework on pp.1–2), the handwritten **post-midterm Week 2** notes ([[Week2_notes.pdf#page=1|pp.1–4]] lecture summary, p.5 with Homework 2: the folded normal, the exponential distribution, its geometric limit and the memoryless characterisation), and sheet problem 11 of [[Practice problems 17th September and following tutorial and weekend.pdf|17 Sep]].
 > - §1 continuous random variables, the pdf and its link to the cdf; $P[X=x]=0$
 > - §2 uniform, logistic, Rayleigh, standard normal and $N(\mu,\sigma^2)$
 > - §3 expectation, **LOTUS** $E[g(X)]=\int g\,f$ with the proof for $g\ge0$, variance, linearity
 > - §4 the worked computations (uniform, logistic, Rayleigh, normal) and the **week-1 homework** (Rayleigh quartiles, random circle, broken stick, $E[\max(Z-c,0)]$, inflection points of the normal pdf, LOTUS for any $g$)
-> - §5 the cdf method for $Y=g(X)$
+> - §4 **week 2 homework** (repair time, the Gumbel limit of a maximum, $E[F(X)]=\tfrac12$)
+> - §5 the cdf method for $Y=g(X)$, including the **folded normal** $|Z|$ (Week 2)
+> - §6 the **exponential distribution**: pdf, cdf, moments by the recursion $I_n=\tfrac n\lambda I_{n-1}$, the limit of the geometric distribution, the memoryless property and its characterisation theorem with proof (Week 2)
 >
 > 🟡 **Extra · book**
-> - §6 the exponential distribution and its memorylessness; the Gaussian tail (Blitzstein and Hwang Ch. 5; Ross Ch. 5)
+> - the Gaussian tail (Blitzstein and Hwang Ch. 5; Ross Ch. 5)
 >
 > 🔵 **Extra · beyond** (my additions, labelled)
-> - §2 the 68–95–99.7 values; §5 the $\chi^2_1$ density of $Z^2$; every integral rechecked numerically (`scripts/pr_numbers.py`)
+> - §2 the 68–95–99.7 values; §5 the $\chi^2_1$ density of $Z^2$; §6 the Rayleigh–exponential link, the degenerate cases of the theorem, the Gumbel mean and variance, the uniform as a non-memoryless counter-example; every integral rechecked numerically (`scripts/pr_numbers.py`)
 
 > [!key] After this chapter you can
 > - pass between **cdf and pdf** ($f=F'$, $F=\int f$), normalise a density, and compute $P[a<X<b]$,
@@ -141,6 +143,21 @@ $f$ is the **probability density function** (pdf). It must be non-negative, inte
 > $$E[Y]=E[Y^+]-E[Y^-]=\int_0^\infty P[Y>y]\,\mathrm dy-\int_0^\infty P[Y<-y]\,\mathrm dy .$$
 > **(b)** For arbitrary $g$ put $g=g^+-g^-$ with $g^\pm\ge0$. LOTUS for non-negative functions gives $E[g^\pm(X)]=\int g^\pm f$, and $g(X)=g^+(X)-g^-(X)$, so $E[g(X)]=\int g^+f-\int g^-f=\int gf$ (when both integrals are finite).
 
+### Homework, week 2
+<span class="scope-taught">taught</span> *[[Week2_notes.pdf#page=5|handwritten p.5, "HW 2 problems"]]; solutions are mine*
+
+> [!example] Q1 A repair time
+> $T\sim\mathrm{Expo}(\lambda)$ hours with $\lambda=\tfrac12$ (mean 2 h). **(a)** $P[T>2]=e^{-\lambda\cdot2}=e^{-1}=0.3679$. **(b)** $P[T\ge10\mid T>9]=\dfrac{e^{-5}}{e^{-4.5}}=e^{-1/2}=0.6065=P[T\ge1]$: by **memorylessness** the nine hours already spent are irrelevant ([[Memoryless Property]]).
+
+> [!example] Q2 The Gumbel distribution and the maximum of exponentials
+> **(a)** $Y=-\ln X$ with $X\sim\mathrm{Expo}(1)$: $P[Y\le y]=P[X\ge e^{-y}]=e^{-e^{-y}}$ for all real $y$. This is the **Gumbel** cdf; the density is $e^{-y}e^{-e^{-y}}$ ([[Gumbel Distribution]]).
+> **(b)** For i.i.d. $X_i\sim\mathrm{Expo}(1)$, $M_n=\max X_i$: independence gives $P[M_n\le m]=(1-e^{-m})^n$ for $m\ge0$. Put $m=y+\ln n$ (so the event is non-trivial once $n>e^{-y}$):
+> $$P[M_n-\ln n\le y]=\Big(1-\frac{e^{-y}}n\Big)^n\ \longrightarrow\ e^{-e^{-y}}\qquad(n\to\infty),$$
+> by $(1+a_n/n)^n\to e^a$ when $a_n\to a$ (here $a=-e^{-y}$). So $M_n-\ln n$ converges **in distribution** to the Gumbel law. At $y=0.5$ the values are $0.393,\ 0.485,\ 0.524,\ 0.540,\ 0.5447,\ 0.5452$ for $n=1,2,5,20,200,10^4$ against the limit $0.5452$ (Figure PR5.2 B). 🔵 The Gumbel mean is Euler's $\gamma=0.5772$ and its variance $\pi^2/6=1.6449$ (simulation: $0.5783$ and $1.655$; for the maximum of $200$: $0.5791$ and $1.622$).
+
+> [!example] Q3 The expectation of $F(X)$, with and without LOTUS
+> $X$ continuous with cdf $F$. **Without LOTUS:** $U=F(X)$ is uniform on $(0,1)$, because $P[F(X)\le u]=P[X\le F^{-1}(u)]=F(F^{-1}(u))=u$ (the **probability integral transform**); so $E[F(X)]=E[U]=\tfrac12$. **With LOTUS:** $E[F(X)]=\int F(x)f(x)\,\mathrm dx=\int F\,F'\,\mathrm dx=\big[\tfrac12F^2\big]_{-\infty}^{\infty}=\tfrac12$. Checked by simulation for the normal, exponential, Rayleigh and uniform laws ($0.4995$–$0.5000$ with $10^6$ draws); likewise $E[F(X)^2]=\tfrac13$. 🔵 The same transform in reverse, $X=F^{-1}(U)$, generates any distribution from uniform random numbers.
+
 ## 5. Transformations: the cdf method
 <span class="scope-taught">taught</span> *9 Sep ("how to derive the cdf, pmf and expectation of a transformed random variable"); week 1 homework Q2*
 
@@ -151,24 +168,67 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > - **Square of a uniform:** $Y=X^2$, $X\sim U(0,1)$: $F_Y(y)=P[X\le\sqrt y]=\sqrt y$, $f_Y=\tfrac1{2\sqrt y}$ on $(0,1)$; $E[Y]=\int_0^1y\cdot\tfrac{\mathrm dy}{2\sqrt y}=\tfrac13$ (the same as by LOTUS).
 > - **Square of a normal** (non-monotone): $W=Z^2$: $F_W(w)=P[-\sqrt w\le Z\le\sqrt w]=2\Phi(\sqrt w)-1$, $f_W(w)=\dfrac{e^{-w/2}}{\sqrt{2\pi w}}$ for $w>0$ (the $\chi^2_1$ density); $E[W]=1$, the variance of $Z$.
 
+> [!example] The folded normal $X=|Z|$ (Week 2, [[Week2_notes.pdf#page=1|handwritten p.1]])
+> cdf: $P[X\le c]=0$ for $c<0$ and $P[-c\le Z\le c]=F(c)-F(-c)$ for $c\ge0$ ($F=\Phi$). Differentiating and using the symmetry $f(-c)=f(c)$: $f_X(c)=F'(c)+F'(-c)=2f(c)$, i.e.
+> $$f_X(c)=\begin{cases}0&c\le0\\\dfrac2{\sqrt{2\pi}}e^{-c^2/2}&c\ge0\end{cases}$$
+> $E[X]=\dfrac2{\sqrt{2\pi}}\displaystyle\int_0^\infty xe^{-x^2/2}\mathrm dx=\dfrac2{\sqrt{2\pi}}\int_0^\infty e^{-t}\mathrm dt=\sqrt{\dfrac2\pi}=0.7979$ (substitute $t=x^2/2$). $E[X^2]=E[Z^2]=1$ (LOTUS, $|Z|^2=Z^2$), so $\mathrm{Var}[X]=1-\dfrac2\pi=0.3634$ (simulation of $2\times10^6$: $0.7976$ and $0.3629$). The folded normal **doubles the right half** of the bell (Figure PR5.2 C). Its MGF is in [[PR06 Moments Generating Functions and Limit Theorems]] (homework 3, Q6).
+
+> [!pitfall] Folded versus half-normal
+> "Folded normal" usually means $|X|$ for $X\sim N(\mu,\sigma^2)$; the lecture's $|Z|$ is the special case $\mu=0,\sigma=1$, also called the **half-normal** ([[Folded Normal Distribution]]).
+
 > [!pitfall] Check the event, not the formula
 > For non-monotone $g$ (like $z^2$) the event $\{g(X)\le y\}$ is a union of intervals; forgetting the second branch halves the density.
 
 
 ## 6. The exponential distribution and memorylessness
-<span class="scope-extra-book">extra · book</span> *Blitzstein and Hwang Ch. 5; Ross Ch. 5; the AI notes' MGF section*
+<span class="scope-taught">taught</span> *Week 2, [[Week2_notes.pdf#page=1|handwritten pp.1–5]]* · <span class="scope-extra-beyond">extra · beyond</span> *the Rayleigh link, the degenerate cases, the counter-example*
 
-> [!key] Exponential$(\lambda)$
-> $f(x)=\lambda e^{-\lambda x}$, $F(x)=1-e^{-\lambda x}$ for $x\ge0$. $E[X]=\tfrac1\lambda$, $\mathrm{Var}[X]=\tfrac1{\lambda^2}$ (integrate by parts, or by the lemma $E[X]=\int_0^\infty e^{-\lambda x}\mathrm dx=\tfrac1\lambda$). It is the continuous analogue of the geometric distribution: $P[X>s+t\mid X>s]=\dfrac{e^{-\lambda(s+t)}}{e^{-\lambda s}}=e^{-\lambda t}=P[X>t]$ (**memoryless**: for $\lambda=0.5$, $s=2$, $t=3$: $0.2231$ regardless of the 2 elapsed).
+> [!key] Exponential$(\lambda)$, $\lambda>0$
+> $$f(x)=\begin{cases}\lambda e^{-\lambda x}&x>0\\0&x\le0\end{cases},\qquad F(x)=1-e^{-\lambda x},\qquad P[X\ge x]=e^{-\lambda x}\quad(x\ge0).$$
+> It is a pdf because $\int_0^\infty\lambda e^{-\lambda x}\mathrm dx=\big[-e^{-\lambda x}\big]_0^\infty=1$. **Interpretation:** the **waiting time before the first success** when successes arrive at rate $\lambda$ per unit time (mean waiting time $1/\lambda$).
 
-> [!note] Why it matters here
-> The Rayleigh $R$ and the exponential are linked: if $R$ is Rayleigh then $R^2/2\sim$ Exp$(1)$ (since $P[R^2/2>t]=P[R>\sqrt{2t}]=e^{-t}$). This is how the distribution of the length of a 2D Gaussian vector arises, as in the polar-coordinate derivation of $\int e^{-x^2/2}\mathrm dx=\sqrt{2\pi}$.
+> [!derivation] Moments by the recursion $I_n=\frac n\lambda I_{n-1}$ (lecture p.2)
+> Let $I_n=\int_0^\infty\lambda x^ne^{-\lambda x}\mathrm dx=E[X^n]$. Integrate by parts with $u=x^n$, $\mathrm dv=\lambda e^{-\lambda x}\mathrm dx$ ($v=-e^{-\lambda x}$):
+> $$I_n=\big[-x^ne^{-\lambda x}\big]_0^\infty+n\int_0^\infty x^{n-1}e^{-\lambda x}\mathrm dx=0+\frac n\lambda I_{n-1}\ \Longrightarrow\ I_n=\frac n\lambda\cdot\frac{n-1}\lambda\cdots\frac1\lambda\,I_0=\boxed{\frac{n!}{\lambda^n}}\quad(I_0=1).$$
+> So $E[X]=\tfrac1\lambda$, $E[X^2]=\tfrac2{\lambda^2}$ and $\mathrm{Var}[X]=\tfrac2{\lambda^2}-\tfrac1{\lambda^2}=\tfrac1{\lambda^2}$. (Checked for $n\le5$ at $\lambda=0.7$ by numerical integration; skewness $2$ and excess kurtosis $6$ for every $\lambda$, [[PR06 Moments Generating Functions and Limit Theorems]].)
+
+> [!derivation] The exponential is the limit of the geometric (lecture pp.2–3)
+> Let trials occur at times $h,2h,3h,\dots$ with success probability $p$ each, and $G$ the number of failures before the first success: $P[G=k]=q^kp$ ($q=1-p$). Then
+> $$P[G\ge k]=\sum_{i\ge k}q^ip=\frac{pq^k}{1-q}=q^k .$$
+> Let $h\to0$ with $k h\to x$ and the **rate** $p/h\to\lambda$ held fixed, i.e. $p=\lambda h$: $P[G\ge k]=(1-\lambda h)^{x/h}\to e^{-\lambda x}$ (with $t=-\lambda h$: $(1+t)^{-\lambda x/t}\to e^{-\lambda x}$). But $P[X\ge x]=1-(1-e^{-\lambda x})=e^{-\lambda x}$ for $X\sim\mathrm{Expo}(\lambda)$: the **same survival function**, so the exponential is the continuous analogue of the geometric distribution. Numbers ($\lambda=\tfrac12$, $x=2$): $0.3164,\ 0.3585,\ 0.3670,\ 0.3678$ for $h=0.5,\ 0.1,\ 0.01,\ 0.001$, limit $e^{-1}=0.3679$ (Figure PR5.2 A).
+
+![[fig_pr05_exp_gumbel.png]]
+*Figure PR5.2. A: the geometric survival function $q^k$ at time $x=kh$ for $\lambda=1$ and shrinking $h$ approaches $e^{-\lambda x}$. B: $P[M_n-\ln n\le y]$ for the maximum of $n$ exponentials against the Gumbel cdf. C: $|Z|$ doubles the right half of the normal density, $E|Z|=\sqrt{2/\pi}$.*
+
+### The memoryless property
+> [!key] Definition and theorem (lecture pp.3–5)
+> A random variable $X$ has the **memoryless property** if $P[X\ge t+s\mid X\ge s]=P[X\ge t]$ for all $s,t\ge0$ (for a discrete $X$, take $s,t$ non-negative integers). **Theorem.** If $X\ge0$ has the memoryless property then $X\sim\mathrm{Geom}(p)$ for some $p$ if $X$ is discrete, and $X\sim\mathrm{Expo}(\lambda)$ for some $\lambda$ if $X$ is continuous.
+
+> [!derivation] Proof, discrete case
+> $\{X\ge m+n\}\subset\{X\ge m\}$, so the definition says $P[X\ge m+n]=P[X\ge m]\,P[X\ge n]$. With $a_n=P[X\ge n]$: $a_{m+n}=a_ma_n$, hence $a_n=a_{n-1}a_1=\dots=a_1^{\,n}$. For $\mathrm{Geom}(p)$ (failures counted) $P[X\ge k]=q^k$, so $q=a_1$: $X\sim\mathrm{Geom}(1-a_1)$.
+
+> [!derivation] Proof, continuous case
+> Let $G(x)=P[X\ge x]=1-F(x)$; then $G(t+s)=G(t)G(s)$ for $s,t\ge0$. Splitting $\tfrac mn$ into $m$ pieces of size $\tfrac1n$: $G(\tfrac mn)=G(\tfrac1n)^m$. Taking $m=n$: $G(1)=G(\tfrac1n)^n$, so $G(\tfrac1n)=G(1)^{1/n}$ and
+> $$G\big(\tfrac mn\big)=G(1)^{m/n}\quad\text{i.e. }G(x)=G(1)^x\text{ for every non-negative rational }x.$$
+> For real $x>0$ take rationals $x_n\to x$; since $G$ is continuous (a continuous variable has a continuous cdf) and $a\mapsto a^x$ is continuous, $G(x)=\lim G(x_n)=\lim G(1)^{x_n}=G(1)^x$. Writing $G(1)=e^{-\lambda}$ with $\lambda=-\ln G(1)$ gives $G(x)=e^{-\lambda x}$: $X\sim\mathrm{Expo}(\lambda)$. $\square$
+
+> [!example] Using it, and a counter-example
+> Repair time (Q1b): $P[T\ge10\mid T>9]=e^{-1/2}=0.6065$. A **geometric** failures count with $q=0.6$: $P[G\ge5]/P[G\ge2]=0.216=P[G\ge3]$ ✓. **Uniform is not memoryless:** for $U(0,1)$, $P[X\ge0.75\mid X\ge0.25]=\tfrac{0.25}{0.75}=\tfrac13\ne P[X\ge0.5]=\tfrac12$ (an aged component of a uniform lifetime is more likely to fail soon).
+
+> [!pitfall] The degenerate cases the lecture does not mention
+> $G(1)$ must lie strictly in $(0,1)$. If $G(1)=0$ then $G(x)=0$ for all $x>0$, so $X=0$ with probability 1 (not continuous); if $G(1)=1$ then $G\equiv1$ and $X=\infty$. Neither is a proper continuous random variable, so the theorem is not affected, but the proof silently assumes it.
+
+> [!pitfall] "No memory" is a modelling statement
+> The exponential says an item that has survived $s$ hours is **as good as new**. That is a fair model for the waiting time to a random event (a Poisson process) and a poor one for wear-out failures.
+
+> [!note] Rayleigh link (🔵)
+> If $R$ is Rayleigh then $R^2/2\sim\mathrm{Exp}(1)$ (since $P[R^2/2>t]=P[R>\sqrt{2t}]=e^{-t}$): the length of a 2-D Gaussian vector, as in the polar-coordinate derivation of $\int e^{-x^2/2}\mathrm dx=\sqrt{2\pi}$.
 
 ## Map of this chapter
 > [!connection] How PR05 connects
 > **Builds on:** [[PR03 Discrete Random Variables and Distributions]] and [[PR04 Joint Distributions Expectation and Variance]] (the same definitions with integrals; the cdf).
 > **Leads to:** [[PR06 Moments Generating Functions and Limit Theorems]] (MGFs, the normal approximation, the central limit theorem).
-> **Concepts:** [[Continuous Random Variable]] · [[Probability Density Function]] · [[Uniform Distribution]] · [[Rayleigh Distribution]] · [[Logistic Distribution]] · [[Normal Distribution]] · [[Standard Normal Distribution]] · [[Exponential Distribution]] · [[Law of the Unconscious Statistician]] · [[Cdf Method for Transformations]] · [[Gaussian Integral]] · [[Memoryless Property]]
+> **Concepts:** [[Continuous Random Variable]] · [[Probability Density Function]] · [[Uniform Distribution]] · [[Rayleigh Distribution]] · [[Logistic Distribution]] · [[Normal Distribution]] · [[Standard Normal Distribution]] · [[Folded Normal Distribution]] · [[Exponential Distribution]] · [[Memoryless Property]] · [[Gumbel Distribution]] · [[Cdf Method for Transformations]] · [[Law of the Unconscious Statistician]] · [[Cdf Method for Transformations]] · [[Gaussian Integral]] · [[Memoryless Property]]
 > **Other subjects:** [[Probability - Course Map]], [[QM01 From Waves to Probabilities]] (the Gaussian wave packet, $|\psi|^2$ as a pdf, $\int|\psi|^2=1$), [[QM04 The Particle in a Box]] (uniform-like densities, $\langle x\rangle$ and $\Delta x$ are integrals of this chapter), [[TH06 From Kinetic Theory to Statistical Mechanics]] (a molecular speed is the length of a 3D Gaussian velocity vector; the 2D analogue of that length is exactly the Rayleigh law), [[Dimensional Analysis]].
 
 ## Summary
@@ -176,7 +236,8 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > - $f\ge0$, $\int f=1$; $P[a<X<b]=\int_a^bf$; $P[X=x]=0$; $F(x)=\int_{-\infty}^xf$, $F'=f$.
 > - $E[X]=\int xf$; **LOTUS** $E[g(X)]=\int gf$; $\mathrm{Var}=E[X^2]-E[X]^2$; $\mathrm{Var}[aX+b]=a^2\mathrm{Var}$. Lemma $E[Y]=\int_0^\infty P[Y>y]\mathrm dy$ ($Y\ge0$).
 > - $U(a,b)$: $\frac{a+b}2$, $\frac{(b-a)^2}{12}$. Logistic $f=\frac{e^x}{(1+e^x)^2}$, $F=\frac{e^x}{1+e^x}$, mean 0. Rayleigh $F=1-e^{-x^2/2}$, mean $\sqrt{\pi/2}$, var $2-\frac\pi2$. $N(0,1)$: $\int e^{-x^2/2}=\sqrt{2\pi}$ (polar), mean 0, var 1; $N(\mu,\sigma^2)=\sigma Z+\mu$. Exp$(\lambda)$: mean $1/\lambda$, memoryless.
-> - **cdf method:** $F_Y(y)=P[g(X)\le y]$, then differentiate.
+> - **cdf method:** $F_Y(y)=P[g(X)\le y]$, then differentiate. Folded normal $|Z|$: $f=2\varphi$ on $y\ge0$, mean $\sqrt{2/\pi}$, var $1-\frac2\pi$.
+> - **Exponential (Week 2):** $f=\lambda e^{-\lambda x}$, $F=1-e^{-\lambda x}$, $E[X^n]=n!/\lambda^n$; limit of Geom ($p=\lambda h$, $(1-\lambda h)^{x/h}\to e^{-\lambda x}$); **memoryless** $P[X\ge t+s\mid X\ge s]=P[X\ge t]$ characterises Geom (discrete) and Expo (continuous); $E[F(X)]=\tfrac12$; $\max$ of $n$ Expo(1) minus $\ln n\to$ Gumbel $e^{-e^{-y}}$.
 > - **Numbers:** Rayleigh $P[1<X<3]=0.595$, quartiles $0.759,1.177,1.665$; circle $E[A]=\pi/3$, $\mathrm{Var}=4\pi^2/45$; broken stick $\tfrac12+p-p^2\le\tfrac34$; $c=\tfrac34$ for $c(1-x^2)$.
 
 ## Practice
@@ -190,6 +251,8 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 8. **Square.** $X\sim U(-1,1)$ and $W=X^2$. Find the pdf of $W$ and $E[W]$.
 9. **Tail formula.** For the exponential with rate 2 compute $E[X]$ via $\int_0^\infty P[X>y]\mathrm dy$ and $E[X^2]$ by LOTUS. Verify the variance.
 10. **Gaussian integral.** Use the polar-coordinate trick to evaluate $\int_{-\infty}^\infty e^{-x^2}\mathrm dx$ and deduce $\int_0^\infty x^2e^{-x^2}\mathrm dx$.
+11. **Memoryless.** A component has an exponential lifetime with mean 1000 h. Given that it has survived 1000 h, what is the probability it survives another 200 h? Why would the answer be different for a uniform lifetime on $(0,2000)$?
+12. **Folded normal.** For $X=|Z|$ find $P[X\le1]$ and the median of $X$.
 
 > [!example]- Solutions
 > 1. $c\cdot\tfrac83=1\Rightarrow c=\tfrac38$. $F(x)=\tfrac{x^3}8$ on $[0,2]$. $P[X>1]=1-\tfrac18=\tfrac78$. $E[X]=\tfrac38\int_0^2x^3\mathrm dx=\tfrac38\cdot4=\tfrac32$.
@@ -202,6 +265,8 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > 8. $F_W(w)=P[|X|\le\sqrt w]=\sqrt w$ on $(0,1)$, $f_W=\tfrac1{2\sqrt w}$; $E[W]=\tfrac13$ (also $\int x^2\cdot\tfrac12\mathrm dx$ by LOTUS).
 > 9. $P[X>y]=e^{-2y}$, so $E[X]=\tfrac12$. $E[X^2]=\int_0^\infty x^2\,2e^{-2x}\mathrm dx=\tfrac{2}{\lambda^2}=\tfrac12$ (integrate by parts twice). $\mathrm{Var}=\tfrac12-\tfrac14=\tfrac14=\tfrac1{\lambda^2}$ ✓.
 > 10. $J=\int e^{-x^2}\mathrm dx$; $J^2=\int_0^{2\pi}\!\int_0^\infty e^{-r^2}r\,\mathrm dr\,\mathrm d\theta=2\pi\cdot\tfrac12=\pi$, so $J=\sqrt\pi$. By parts with $u=x$, $\mathrm dv=xe^{-x^2}\mathrm dx$: $\int_0^\infty x^2e^{-x^2}\mathrm dx=\tfrac12\int_0^\infty e^{-x^2}\mathrm dx=\tfrac{\sqrt\pi}4$.
+> 11. $\lambda=10^{-3}$: $P[X>1200\mid X>1000]=P[X>200]=e^{-0.2}=0.8187$. For $U(0,2000)$: $P[X>1200\mid X>1000]=\tfrac{800}{1000}=0.8$ but $P[X>200]=0.9$, and the conditional probability changes with the elapsed time (not memoryless).
+> 12. $P[X\le1]=2\Phi(1)-1=0.6827$; median $m$: $2\Phi(m)-1=\tfrac12\Rightarrow\Phi(m)=0.75\Rightarrow m=0.6745$ (the upper quartile of $Z$).
 
 ## Provenance
 > [!provenance]- Source map for this chapter
@@ -213,11 +278,13 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > | homework Q1 (Rayleigh), Q2 (circle), Q3 (stick) | [[week1_mt2113.pdf#page=1\|handwritten p.1]] | taught |
 > | homework Q4 ($E\max\{Z-c,0\}$), Q5 (inflection points), Q6 (tail formula and LOTUS for any $g$) | [[week1_mt2113.pdf#page=2\|handwritten p.2]] | taught |
 > | $c(1-x^2)$ | [[Practice problems 17th September and following tutorial and weekend.pdf\|sheet 17 Sep, problem 11]] | taught |
-> | exponential, memorylessness, $\chi^2_1$, payoff integral | Blitzstein and Hwang Ch. 5 (not opened); `scripts/pr_numbers.py` | extra/book, beyond |
+> | folded normal, exponential (moments, geometric limit, memoryless theorem and proof) | [[Week2_notes.pdf#page=1\|week 2 post-midterm, handwritten pp.1–4]] | taught |
+> | homework 2: repair time, Gumbel, $E[F(X)]$ | [[Week2_notes.pdf#page=5\|handwritten p.5]] (typed problem statements; solutions mine) | taught |
+> | $\chi^2_1$, payoff integral, Rayleigh–exponential link, Gumbel moments | `scripts/pr_numbers.py`; Blitzstein and Hwang Ch. 5 (not opened) | extra/book, beyond |
 >
 > **Notes.** The handwritten pages are images (no text layer); I read them page by page. The page numbers above are the PDF page indices: p.1–2 homework, pp.3–4 definitions and examples, p.5 expectations, p.6 LOTUS lemma, p.7 LOTUS proof and variance, p.8 uniform variance and SND, p.9 normal moments. LOTUS for $g$ of either sign is left as homework Q6 (p.2); my solution is in §4.
 
-> [!verify] Which midterm cut
-> The handwritten notes are headed "Week 1 (post mid-term) MT2113" and the continuous-variable material starts on 10 Sep in the typed notes. If the instructor treats the exponential and the $\chi^2$ as part of this course, they are in §6 and §5 respectively; neither appears in the class notes I have.
+> [!verify] Week 2 settles the exponential; the $\chi^2$ is still unconfirmed
+> The Week 2 notes (added 2026-10-25) teach the exponential distribution, so §6 is now 🟢. The $\chi^2_1$ density of $Z^2$ (§5, a 🔵 extra) still appears in no lecture note. **Week 2 page 5** shows the problem statements typed in a monospaced font and the lecture summary handwritten (Xournal++); authorship of the lecture is not stated and is treated as the instructor's.
 
 **References.** Blitzstein, J. K. and Hwang, J. *Introduction to Probability*, Ch. 5 · Ross, S. *A First Course in Probability* (8th ed.), Ch. 5 · Gauss, C. F. (1809) *Theoria motus corporum coelestium*.
