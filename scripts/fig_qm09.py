@@ -70,20 +70,20 @@ def screen_pattern(z, classical, sigma_beam=3.0e-5, nv=400):
 
 def fig_apparatus():
     fig = plt.figure(figsize=(15.8, 4.9))
-    # A: magnet cross-section with field lines
+    # A: magnet cross-section with field lines (S pole with the knife edge on top, N below: B points up, dB_z/dz > 0)
     a = fig.add_subplot(1, 3, 1)
-    a.add_patch(Polygon([[-1.6, 1.55], [1.6, 1.55], [1.6, 0.85], [0.18, 0.85], [0.0, 0.55], [-0.18, 0.85], [-1.6, 0.85]], closed=True, fc="#e5c9c4", ec=INK, lw=1.2))
-    a.add_patch(Polygon([[-1.6, -1.55], [1.6, -1.55], [1.6, -0.85], [0.55, -0.85], [0.45, -0.55], [-0.45, -0.55], [-0.55, -0.85], [-1.6, -0.85]], closed=True, fc="#c4d5e8", ec=INK, lw=1.2))
-    a.text(-1.45, 1.2, "N", fontsize=13, weight="bold"); a.text(-1.45, -1.2, "S", fontsize=13, weight="bold")
+    a.add_patch(Polygon([[-1.6, 1.55], [1.6, 1.55], [1.6, 0.85], [0.18, 0.85], [0.0, 0.55], [-0.18, 0.85], [-1.6, 0.85]], closed=True, fc="#c4d5e8", ec=INK, lw=1.2))
+    a.add_patch(Polygon([[-1.6, -1.55], [1.6, -1.55], [1.6, -0.85], [0.55, -0.85], [0.45, -0.55], [-0.45, -0.55], [-0.55, -0.85], [-1.6, -0.85]], closed=True, fc="#e5c9c4", ec=INK, lw=1.2))
+    a.text(-1.45, 1.2, "S", fontsize=13, weight="bold"); a.text(-1.45, -1.2, "N", fontsize=13, weight="bold")
     X, Z = np.meshgrid(np.linspace(-1.3, 1.3, 40), np.linspace(-0.5, 0.5, 40))
     alpha, B0 = 0.7, 1.0
-    Bx, Bz = -alpha * X, -(B0 + alpha * Z)               # field points from N (top) to S (bottom): -z
-    a.streamplot(X, Z, Bx, Bz, color=MUTED, linewidth=0.9, density=1.1, arrowsize=1.0)
+    Bx, Bz = -alpha * X, (B0 + alpha * Z)                # B_z grows toward the knife edge; div B = -alpha + alpha = 0
+    a.streamplot(X, Z, Bx, Bz, color=MUTED, linewidth=0.9, density=0.8, arrowsize=0.9)
     a.plot([0], [0], "o", color=ORANGE, ms=7, zorder=5)
-    a.annotate("", xy=(0, 0.46), xytext=(0, 0.02), arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=2.2))
-    a.text(0.08, 0.27, "$F_z=\\mu_z\\,\\partial_zB_z$\n(atom with $\\mu_z<0$)", fontsize=8.5, color=INK, va="center")
-    a.text(0.0, -0.33, "beam out of the page (atoms along $y$)", ha="center", fontsize=8.5, color=MUTED)
-    a.set_xlim(-1.65, 1.65); a.set_ylim(-1.65, 1.65); a.set_aspect("equal"); a.set_axis_off()
+    a.annotate("", xy=(0, 0.46), xytext=(0, 0.04), arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=2.4), zorder=6)
+    a.text(0.1, 0.27, "$F_z$", fontsize=10, color=INK, va="center", bbox=dict(fc=SURFACE, ec="none", pad=1.5), zorder=7)
+    a.text(0, -1.85, "atoms fly along $y$ (out of the page);  $F_z=\\mu_z\\,\\partial_zB_z$,\n$\\mu_z>0$ is pushed up, towards the knife edge", ha="center", va="top", fontsize=8.5, color=INK)
+    a.set_xlim(-1.65, 1.65); a.set_ylim(-2.35, 1.65); a.set_aspect("equal"); a.set_axis_off()
     a.set_title("A  knife-edge and groove: $\\mathbf{B}=(-\\alpha x,\\,B_0+\\alpha z)$, $\\nabla\\cdot\\mathbf{B}=0$")
     # B: trajectories
     b = fig.add_subplot(1, 3, 2)
@@ -105,7 +105,7 @@ def fig_apparatus():
     b.text(L1 * 500, 0.19, "magnet", ha="center", fontsize=9); b.text((L1 + L2) * 1e3 - 0.8, -0.19, "plate", ha="right", fontsize=9)
     b.set_xlabel("distance along the beam $y$ (mm)"); b.set_ylabel("deflection $z$ (mm)")
     b.set_ylim(-0.23, 0.23); b.legend(fontsize=8, loc="upper left", bbox_to_anchor=(0.0, 0.86))
-    b.set_title("B  trajectories ($v=548$ m/s, $\\partial_zB=10$ T/cm)")
+    b.set_title("B  trajectories ($v=548$ m/s, $\\partial_zB_z=+10$ T/cm)")
     # C: screen pattern
     c = fig.add_subplot(1, 3, 3)
     zz = np.linspace(-0.6e-3, 0.6e-3, 600)
@@ -116,7 +116,7 @@ def fig_apparatus():
     c.plot(zz * 1e3, qm, color=BLUE, lw=2.3, label="two spots: what is seen")
     c.set_xlabel("position on the plate $z$ (mm)"); c.set_ylabel("deposit density (rel.)")
     c.legend(fontsize=8.5, loc="upper right")
-    c.set_title("C  screen: smear against two lips (beam $\\sigma=30\\,\\mu$m, oven speeds)")
+    c.set_title("C  plate: smear against two lips")
     fig.tight_layout()
     save(fig, "fig_qm09_apparatus")
 
@@ -127,7 +127,7 @@ def fig_sequential():
     a = fig.add_subplot(1, 3, 1, projection="3d")
     sphere(a)
     arrow3(a, (0, 0, 1), BLUE, label="$|{+z}\\rangle$")
-    arrow3(a, (1, 0, 0), ORANGE, label="$|{+x}\\rangle$ ($\\frac{1}{2}$)")
+    arrow3(a, (1, 0, 0), ORANGE, label="$|{+x}\\rangle$ ($\\frac{1}{2}$)", off=(0.12, 0.0, 0.16))
     arrow3(a, (0, 0, -1), AQUA, label="$|{-z}\\rangle$ ($\\frac{1}{2}$)", off=(0.08, 0.0, -0.18))
     t = np.linspace(0, np.pi / 2, 40)
     a.plot(np.sin(t), 0 * t, np.cos(t), color=ORANGE, lw=1.6, ls="--")
@@ -193,7 +193,7 @@ def fig_dynamics():
         c.axvline(k, color=BLUE, lw=0.8, alpha=0.5)
     c.set_xlabel("spin rotation angle $\\varphi=|\\gamma|B\\ell/v$ in the field arm ($\\pi$ rad)")
     c.set_ylabel("interference intensity (rel.)")
-    c.legend(fontsize=8.3, loc="lower right")
+    c.set_ylim(-0.05, 2.75); c.legend(fontsize=8.3, loc="upper center")
     c.set_title("C  neutron interferometer: maxima every $4\\pi$")
     fig.tight_layout()
     save(fig, "fig_qm09_dynamics")
@@ -205,7 +205,7 @@ def fig_bell_spinj():
     a = ax[0]
     th = np.linspace(0, np.pi, 400)
     a.plot(np.degrees(th), -np.cos(th), color=BLUE, lw=2.4, label="quantum: $E=-\\cos\\theta$")
-    a.plot(np.degrees(th), -1 + 2 * th / np.pi, color=ORANGE, lw=2.2, ls="--", label="best 'local' straight line")
+    a.plot(np.degrees(th), -1 + 2 * th / np.pi, color=ORANGE, lw=2.2, ls="--", label="local model $\\mathrm{sgn}(\\mathbf{a}\\cdot\\lambda)$: $-1+2\\theta/\\pi$")
     a.fill_between(np.degrees(th), -np.cos(th), -1 + 2 * th / np.pi, color=BLUE, alpha=0.10)
     for d in (45, 135):
         a.plot([d], [-math.cos(math.radians(d))], "o", color=BLUE, ms=6)
@@ -217,14 +217,14 @@ def fig_bell_spinj():
     ph = np.linspace(0, 90, 400)
     S = np.abs(3 * np.cos(np.radians(ph)) - np.cos(3 * np.radians(ph)))
     b.plot(ph, S, color=BLUE, lw=2.4, label="quantum $|S|=|3\\cos\\varphi-\\cos3\\varphi|$")
-    b.axhline(2, color=ORANGE, lw=1.8, ls="--"); b.text(2, 2.03, "local hidden variables: $|S|\\le2$", color=INK, fontsize=9, va="bottom")
-    b.axhline(2 * math.sqrt(2), color=MUTED, lw=1.4, ls=":"); b.text(2, 2.86, "Tsirelson: $2\\sqrt2=2.828$", color=INK, fontsize=9, va="bottom")
+    b.axhline(2, color=ORANGE, lw=1.8, ls="--"); b.text(2, 2.03, "local hidden variables: $|S|\\leq 2$", color=INK, fontsize=9, va="bottom")
+    b.axhline(2 * math.sqrt(2), color=MUTED, lw=1.4, ls=":"); b.text(2, 2.86, "Tsirelson: $2\\sqrt{2}=2.828$", color=INK, fontsize=9, va="bottom")
     b.fill_between(ph, 2, S, where=S > 2, color=BLUE, alpha=0.12)
     b.plot([45], [2 * math.sqrt(2)], "o", color=BLUE, ms=7)
     b.set_xlabel("$\\varphi$ (deg): axes at $0,\\,\\varphi,\\,2\\varphi,\\,3\\varphi$"); b.set_ylabel("CHSH $|S|$")
     b.set_ylim(0, 3.2); b.set_xlim(0, 90)
     b.legend(fontsize=8.3, loc="lower center")
-    b.set_title("B  CHSH: violated for $\\varphi$ from $0^\\circ$ to $60^\\circ$")
+    b.set_title("B  CHSH: violated for $0<\\varphi<68.5^\\circ$")
     c = ax[2]
     w = 0.36
     ms = np.array([-1, 0, 1])
@@ -250,24 +250,28 @@ def fig_parallels():
     a = ax[0]
     x = np.logspace(-6.5, 1.0, 400)
     a.semilogx(x, np.tanh(x), color=BLUE, lw=2.4, label="$P=\\tanh(\\mu B/kT)$")
-    a.semilogx(x, x, color=GRID, lw=1.6, ls="--", label="linear (Curie) regime")
-    pts = (("proton 1.5 T, 300 K\n$5\\times10^{-6}$", MU_P * 1.5 / (1.380649e-23 * 300), (3e-6, 0.55)),
-           ("electron 1 T, 300 K\n$2.2\\times10^{-3}$", MU_B * 1.0 / (1.380649e-23 * 300), (2e-4, 0.78)),
-           ("electron 1 T, 4 K\n$0.17$", MU_B * 1.0 / (1.380649e-23 * 4), (0.02, 0.35)),
-           ("electron 10 T, 2 K\n$0.998$", MU_B * 10.0 / (1.380649e-23 * 2), (0.8, 0.3)))
-    for lab, xv, xy in pts:
-        a.plot([xv], [math.tanh(xv)], "o", color=ORANGE, ms=7, zorder=5)
-        a.annotate(lab, (xv, math.tanh(xv)), xytext=xy, fontsize=8.2, arrowprops=dict(arrowstyle="-", color=MUTED))
+    a.semilogx(x, x, color=MUTED, lw=1.2, ls="--", label="linear (Curie) regime $P\\approx\\mu B/kT$")
+    pts = (("1", MU_P * 1.5 / (1.380649e-23 * 300)), ("2", MU_B * 1.0 / (1.380649e-23 * 300)),
+           ("3", MU_B * 1.0 / (1.380649e-23 * 4)), ("4", MU_B * 10.0 / (1.380649e-23 * 2)))
+    for lab, xv in pts:
+        a.plot([xv], [math.tanh(xv)], "o", color=ORANGE, ms=8, zorder=5)
+        if lab == "4":
+            a.text(xv * 0.55, math.tanh(xv) - 0.02, lab, ha="center", va="center", fontsize=10, weight="bold")
+        else:
+            a.text(xv * 1.0, math.tanh(xv) + 0.07, lab, ha="center", fontsize=10, weight="bold")
+    a.text(2e-7, 0.93, "1  proton, 1.5 T, 300 K: $5.1\\times10^{-6}$\n2  electron, 1 T, 300 K: $2.2\\times10^{-3}$\n3  electron, 1 T, 4 K: $0.17$\n4  electron, 10 T, 2 K: $0.998$",
+           fontsize=8.8, va="top", ha="left", bbox=dict(fc=SURFACE, ec=GRID, pad=4))
     a.set_xlabel("$\\mu B/k_BT$"); a.set_ylabel("spin polarisation $P=p_\\uparrow-p_\\downarrow$"); a.set_ylim(-0.02, 1.05)
-    a.legend(fontsize=8.5, loc="lower right")
+    a.legend(fontsize=8.3, loc="center left", bbox_to_anchor=(0.0, 0.36))
     a.set_title("A  a two-level paramagnet in equilibrium")
     b = ax[1]
     LE = np.linspace(0, 2000, 800)
     for s22, col, lab in ((1.0, BLUE, "$\\sin^22\\theta=1.0$"), (0.85, ORANGE, "$\\sin^22\\theta=0.85$")):
         b.plot(LE, s22 * np.sin(1.267 * 2.5e-3 * LE) ** 2, color=col, lw=2.2, label=lab)
-    b.axvline(295 / 0.6, color=MUTED, lw=1.2, ls=":"); b.text(500, 0.06, "$295\\,$km, $0.6\\,$GeV", fontsize=8.5, rotation=90, va="bottom", ha="right")
+    b.axvline(295 / 0.6, color=MUTED, lw=1.2, ls=":")
+    b.text(520, 1.12, "long-baseline beam:\n295 km, 0.6 GeV $=$ 492 km/GeV", fontsize=8.5, va="center")
     b.set_xlabel("$L/E$ (km/GeV)"); b.set_ylabel("flavour-change probability")
-    b.legend(fontsize=8.5, loc="upper right"); b.set_ylim(-0.02, 1.05)
+    b.legend(fontsize=8.5, loc="upper right"); b.set_ylim(-0.02, 1.3)
     b.set_title("B  flavour oscillation $=$ Rabi flopping ($\\Delta m^2=2.5\\times10^{-3}$ eV$^2$)")
     c = ax[2]
     n = np.arange(1, 6)

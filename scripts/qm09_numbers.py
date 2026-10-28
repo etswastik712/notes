@@ -462,3 +462,37 @@ for n_ in range(1, 6):
     print(f"  n={n_}: {math.sqrt(n_*(n_+2)):.2f} mu_B  (S={n_/2})")
 print("  O2 (two unpaired pi* electrons, triplet): 2.83 mu_B (spin-only); liquid O2 is attracted into the gap of a magnet (F = grad(mu.B), same force law as SG)")
 print(f"SQUID/Josephson: skip. Transmon qubit: ~5 GHz = {H_PL*5e9/K_B*1e3:.0f} mK -> needs a dilution refrigerator")
+
+
+# ================================================================ 13. Extra checks used in the text
+sec("13. Extra checks")
+# (a) plate pattern: peak positions with the oven speed distribution (same model as fig_qm09.py)
+v = np.linspace(150, 1800, 400)
+wv = v ** 3 * np.exp(-m_ag * v ** 2 / (2 * K_B * T_oven)); wv /= wv.sum()
+zmax = 0.5 * a * (L1 / v) ** 2 + a * (L1 / v) * (L2 / v)
+zz = np.linspace(-0.6e-3, 0.6e-3, 1201)
+dens = np.zeros_like(zz)
+for s_ in (-1.0, 1.0):
+    for w_, zm in zip(wv, zmax):
+        dens += w_ * np.exp(-0.5 * ((zz - s_ * zm) / 3e-5) ** 2)
+dens /= dens.max()
+ipk = np.argmax(dens)
+print(f"plate pattern with the oven speed distribution: peaks at z = +-{abs(zz[ipk])*1e3:.3f} mm (vs +-{z_tot*1e3:.3f} mm at v_mp); dip at 0 = {dens[len(zz)//2]:.3f} of the peak")
+print(f"  mean speed of the beam <v> = {math.sqrt(9*math.pi*K_B*T_oven/(8*m_ag)):.1f} m/s, most probable 548 m/s")
+# (b) Bell's simple local model: A = sgn(a.lam), B = -sgn(b.lam), lam uniform on the sphere
+rng = np.random.default_rng(7)
+lam = rng.normal(size=(2_000_000, 3)); lam /= np.linalg.norm(lam, axis=1)[:, None]
+for deg in (0, 45, 90, 135, 180):
+    t = math.radians(deg)
+    Ea = nvec(0.0); Eb = nvec(t)
+    E_loc = -np.mean(np.sign(lam @ Ea) * np.sign(lam @ Eb))
+    print(f"  local model E({deg:3d} deg) = {E_loc:+.4f}   -1+2 theta/pi = {-1+2*t/math.pi:+.4f}")
+print("  with that model the CHSH sum at the optimal angles is exactly |S| = 2 (every term has |E| = 1/2)")
+# (c) CHSH crossing of 2: 2c^3 - 3c + 1 = 0, c = (sqrt3-1)/2
+c_ = (math.sqrt(3) - 1) / 2
+print(f"CHSH |S|=3cos(phi)-cos(3phi) = 2 at cos(phi) = (sqrt3-1)/2 = {c_:.4f}: phi = {math.degrees(math.acos(c_)):.2f} deg")
+# (d) Larmor/Zeeman scale and gradient force on a proton for comparison
+print(f"For comparison: nuclear magneton mu_N = {MU_N:.4e} J/T, mu_B/mu_N = {MU_B/MU_N:.1f} (why NMR is far weaker than ESR)")
+print(f"ratio of Larmor frequencies electron/proton = {GAMMA_E/GAMMA_P:.1f}")
+# (e) Humpty-Dumpty condition: reversing the gradient (kick -dp) restores the overlap: dp_net = 0 -> overlap 1
+print("Reverse the gradient for the same time: net kick 0, packets overlap again, coherence returns (if nothing else recorded the spin)")
