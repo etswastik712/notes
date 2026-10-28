@@ -119,3 +119,8 @@ Given observed tropical temperature sounding $T(z)$:
 - [[01-climate/concepts/convective-adjustment]]: convective adjustment definition, lapse rate criteria, and numerical formulation
 - [[01-climate/concepts/lapse-rate]]: environmental lapse rate vs. adiabatic lapse rates
 - [[01-climate/concepts/dry-adiabatic-lapse-rate]]: definition and value $\Gamma_d = g/c_p \approx 9.8\text{ K km}^{-1}$
+
+<!-- kurooto:materialdbd4cf21 -->
+## Concepts in Radiative_convective_equilibrium_Marshall_and_plumb
+(none new)
+<!-- /kurooto:materialdbd4cf21 -->
