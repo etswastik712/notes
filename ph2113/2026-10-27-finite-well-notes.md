@@ -39,3 +39,8 @@ Notes for the finite well system.
 - [[ph2113/2026-10-06-particle-in-a-box-notes]]: infinite well, the deep-well limit
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]]: continuity of $\psi,\psi'$ at a finite jump in $V$
 - [[ph2113/2026-08-25-lecture-9-free-particle-ring-general-properties]]: free-particle waves $e^{\pm ikx}$ and their direction of motion
+
+<!-- kurooto:material62580c63 -->
+## Concepts in Finite_well
+[[zettel/deep-wide-well-approximation]], [[zettel/shallow-well-bound-state-existence]], [[zettel/finite-well-scattering-states]]
+<!-- /kurooto:material62580c63 -->
