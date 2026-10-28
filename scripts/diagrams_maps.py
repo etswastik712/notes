@@ -336,6 +336,54 @@ SPECS = {
         footer="Kurzweil-Stellmacher ch. 4; own proofs",
     ),
 
+    "GT07 Nilpotent Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="p-group P\nZ(P) != 1 (class equation)\nso nilpotent", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Upper central series\nZ_1 < Z_2 < ... = G\nclass c", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Not nilpotent\nS3, A4, D6: a Sylow\nsubgroup is not normal", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Five equivalent conditions\nnormalisers grow; maximal normal;\nSylow normal; product of Sylows", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Frattini subgroup\nnon-generators; P/Phi = C_p^d\nBurnside basis theorem", color="orange"),
+            "f": dict(x=250, y=470, w=330, h=100, text="Groups of order 8\nC8, C4xC2, C2^3, D4, Q8", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="Heisenberg group\n[x,p] central: class 2\nlink to quantum mechanics", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "d", ""), ("a", "e", ""), ("e", "f", ""), ("b", "c", ""), ("f", "g", "")],
+        title="GT07: p-groups and nilpotent groups in one page",
+        footer="Kurzweil-Stellmacher ch. 5; own proofs",
+    ),
+
+    "GT08 Solvable Complements Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Solvable group\nderived series reaches 1\ncomposition factors C_p", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Closure\nsubgroups, quotients, extensions\nS_4 yes, A_5 no", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Galois and the quintic\nS_n solvable iff n <= 4", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Semidirect product N x| H\n(n1,h1)(n2,h2) = (n1 phi(h1)(n2), h1h2)\nD_n, S_n, A_4, S_4, F_20, Dic_3", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Five groups of order 12\ntold apart by element orders", color="orange"),
+            "f": dict(x=250, y=470, w=330, h=100, text="Schur-Zassenhaus\ngcd(|N|,|G:N|)=1 => complement\n(proved for Abelian N)", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="Subnormal subgroups\nintersections stay subnormal", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("a", "d", ""), ("d", "e", ""), ("d", "f", ""), ("f", "g", "")],
+        title="GT08: solvable groups and complements in one page",
+        footer="Kurzweil-Stellmacher 6.1, 6.2, 6.7, 3.3; own proofs",
+    ),
+
+    "GT09 Transfer Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Subgroup H, index n\ntransversal t_1..t_n\nh_i(g) = t_i g t_(i.g)^-1", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Transfer V: G -> H/H'\nhomomorphism, independent\nof the transversal", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Cycle formula\nV(g) = prod t g^f t^-1\n(f = cycle lengths)", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Burnside fusion lemma\nP abelian Sylow: conjugacy of\nelements of P happens in N_G(P)", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Burnside's theorem\nP in Z(N_G(P)) => V(x) = x^n on P\n=> normal p-complement ker V", color="orange"),
+            "f": dict(x=250, y=470, w=330, h=100, text="Cayley: cyclic Sylow 2\nregular rep is odd => index 2", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="Smallest prime p, cyclic P\n=> normal p-complement\n(order pq, 30, 385, ...)", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("c", "e", ""), ("d", "e", ""), ("e", "f", ""), ("e", "g", "")],
+        title="GT09: transfer and normal p-complements in one page",
+        footer="Kurzweil-Stellmacher ch. 7; own proofs",
+    ),
+
 }
 
 if __name__ == "__main__":

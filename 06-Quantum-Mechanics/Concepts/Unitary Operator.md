@@ -29,6 +29,9 @@ Time evolution $e^{-i\hat Ht/\hbar}$ (eigenvalues $e^{-iEt/\hbar}$); the Fourier
 
 Used in: [[QM06 The Oscillator Toolbox]] §6. Related: [[Hermitian Conjugate]] · [[Time Evolution Operator]] · [[Displacement Operator]] · [[Parity Operator]] · [[Hilbert Space]].
 
+> [!connection] Group theory used here
+> A symmetry of a quantum system is a unitary representation of a group: [[GT10 Symmetry Representations and Characters]]; see [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

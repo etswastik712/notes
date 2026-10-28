@@ -283,6 +283,9 @@ Slide 59 shows the same idea for the infrared: the emitted spectra of Sun (5525 
 > 8. $\tau=-\ln(1-0.78)=1.51$; the transmitted fraction is $e^{-\tau}=1-\varepsilon=0.22$. (This is the "leak" in the leaky greenhouse.)
 > 9. At line centres $\tau\gg1$ so extra gas changes nothing there; but the *wings* of the lines and the band edges, where $\tau\sim1$, become opaque and widen the absorbing band, so the effective absorption keeps growing (logarithmically): about 3.7 W m⁻² per doubling.
 
+> [!connection] Group theory used here
+> The infrared selection rule for CO$_2$ and H$_2$O (a mode is active if it transforms like a coordinate) is worked out for NH$_3$ and H$_2$O in [[GT10 Symmetry Representations and Characters]] §4; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

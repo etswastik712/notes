@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="630" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">GT07: p-groups and nilpotent groups in one page</text>
+<line x1="321.0" y1="130.0" x2="349.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="432.8" y1="183.7" x2="323.4" y2="271.3" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="293.0" y1="182.3" x2="505.2" y2="272.7" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="515.4" y1="387.5" x2="363.8" y2="457.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="130.0" x2="679.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="421.0" y1="510.0" x2="474.0" y2="510.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="25.0" y="80.0" width="290" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">p-group P</text>
+<text x="170" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Z(P) != 1 (class equation)</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">so nilpotent</text>
+<rect x="355.0" y="80.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Upper central series</text>
+<text x="500" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Z_1 &lt; Z_2 &lt; ... = G</text>
+<text x="500" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">class c</text>
+<rect x="685.0" y="80.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Not nilpotent</text>
+<text x="830" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">S3, A4, D6: a Sylow</text>
+<text x="830" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">subgroup is not normal</text>
+<rect x="85.0" y="275.0" width="330" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Five equivalent conditions</text>
+<text x="250" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">normalisers grow; maximal normal;</text>
+<text x="250" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Sylow normal; product of Sylows</text>
+<rect x="475.0" y="275.0" width="330" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="640" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Frattini subgroup</text>
+<text x="640" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">non-generators; P/Phi = C_p^d</text>
+<text x="640" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Burnside basis theorem</text>
+<rect x="85.0" y="460.0" width="330" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Groups of order 8</text>
+<text x="250" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">C8, C4xC2, C2^3, D4, Q8</text>
+<rect x="480.0" y="460.0" width="340" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="650" y="495.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Heisenberg group</text>
+<text x="650" y="515.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">[x,p] central: class 2</text>
+<text x="650" y="535.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">link to quantum mechanics</text>
+<text x="500.0" y="612" text-anchor="middle" font-size="13" fill="#52514e">Kurzweil-Stellmacher ch. 5; own proofs</text>
+</svg>

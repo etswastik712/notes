@@ -64,6 +64,12 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 | LS-TT | `Topotoolbox_tut_shubhra.pdf` | **Shubhra**, 15 slides, MATLAB TopoToolbox | yes | taught: LS20 |
 | LS-QG | `Introduction_to_QGIS_aju.pptx` | **Aju**, 14 slides, QGIS and basin analysis | partial (images extracted) | taught: LS20 |
 | KS | [[Kurzweil-Stellmacher_Theory of finite groups.pdf]] | Kurzweil and Stellmacher, *The Theory of Finite Groups* (400 pp.; PDF page = printed + 13) | yes | extra · book: GT01–GT05 |
+| FR-OL | [[1-s2.0-S0169555X20305018-main.pdf]] | Olsen (2021), *Geomorphology* 375: 3D braided-channel modelling | yes | Further Research FR01 |
+| FR-NJ | [[Secondary_Current_and_Classification_of_River_Chan.pdf]] | Njenga et al. (2013), *Applied Mathematics* 4 | yes | Further Research FR02 |
+| FR-DA | [[SRC-3-1-5-Das.pdf]] | Das and Biswal (2023), *Sci. Res. Commun.* 3(1): CCHE2D Gomati bend | yes | Further Research FR03 |
+| FR-DZ | [[s43017-021-00143-1.pdf]] | Dal Zilio et al. (2021), *Nat. Rev. Earth Environ.* 2: building the Himalaya | yes | Further Research FR04 |
+| T&S | `[Turcotte_D.L.,_Schubert_G.]_Geodynamics(Bookos.org).pdf`, `geokniga-geodynamics.pdf` | Turcotte and Schubert, *Geodynamics* (two copies) | yes | primary book: LS depth layer |
+| AA | [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf]] | Anderson and Anderson, *Geomorphology: the mechanics and chemistry of landscapes* | yes | primary book: LS depth layer |
 | T3 | [[Tutorial3.pdf]] | 2 (TeX, text layer) | taught: QM05 §10 (added) |
 | QZ1 / QZ2 / EP | [[2026-09-02-mock-quiz-and-solutions]] / [[2026-09-03-quiz-ideal-solutions]] / [[ph2113/exam-prep]] | summaries of Classroom posts (another tool, `agent_written`); question texts of the 3 Sep quiz missing | taught: [[Quantum Mechanics Quiz Prep]] |
 | G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 409 (scan; **1st edition**; book page = PDF − 15; §1.2 p.17, §1.4 p.26, §1.6 p.32, §2.1 p.35, §2.2 p.39, §2.3 p.46, §2.4 p.59, §2.5 p.65, §3.4 p.123; OCR'd pp.14–130 for locating sections only) | extra/book |

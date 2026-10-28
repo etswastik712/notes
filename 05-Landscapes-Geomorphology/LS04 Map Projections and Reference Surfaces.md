@@ -172,6 +172,9 @@ meaning $a=6 378 137$ m and inverse flattening $1/f=298.257223563$. Thus $f=0.00
 > **Previous:** [[LS03 Digital Elevation Models and Terrain Analysis]] · **Next:** [[LS05 Shape of Planets]].
 > **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
+> [!connection] Group theory used here
+> $SO(3)$ as the isometry group of the sphere and $SO(2)$ rotations of the map: [[GT10 Symmetry Representations and Characters]] §6; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

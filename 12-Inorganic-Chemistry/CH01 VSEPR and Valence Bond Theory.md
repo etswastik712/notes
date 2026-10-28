@@ -279,6 +279,9 @@ Period-2 elements obey the octet; later ones do not: P in $\mathrm{PCl_5}$ has 1
 > 9. $\langle h_1|h_2\rangle=\tfrac14(1-1-1+1)=0$ (orthonormal $s,p_x,p_y,p_z$). The $p$ parts are along $(1,1,1)$ and $(-1,-1,1)$: $\cos\theta=\frac{-1-1+1}{3}=-\frac13$, $\theta=109.47^\circ$.
 > 10. $\langle\psi|\psi\rangle=\langle\chi_A\chi_B|\chi_A\chi_B\rangle+\langle\chi_B\chi_A|\chi_B\chi_A\rangle+2\langle\chi_A(1)\chi_B(2)|\chi_A(2)\chi_B(1)\rangle=1+1+2S^2$ with $S=\langle\chi_A|\chi_B\rangle$, so $N=\frac1{\sqrt{2(1+S^2)}}$; for $S=0.7534$: $N=\frac1{\sqrt{2(1.5676)}}=0.5648$.
 
+> [!connection] Group theory used here
+> The shape of a molecule is a point group, equivalent ligands an orbit of that group: [[GT05 Actions Conjugation and Sylow Theorems]], [[GT10 Symmetry Representations and Characters]]; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

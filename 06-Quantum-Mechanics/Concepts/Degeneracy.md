@@ -29,6 +29,9 @@ Any superposition of states with the **same** $E$ is again a stationary state of
 
 Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States Operators and Measurement]]. Related: [[Particle on a Ring]] · [[Stationary State]] · [[Parity Operator]] · [[Eigenstate and Eigenvalue]].
 
+> [!connection] Group theory used here
+> Symmetry explains degeneracy: the degenerate states span an irreducible representation of the symmetry group, whose dimension is the degeneracy: [[GT10 Symmetry Representations and Characters]] §2, §6; see [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

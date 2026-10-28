@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="630" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">GT08: solvable groups and complements in one page</text>
+<line x1="321.0" y1="130.0" x2="349.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="130.0" x2="679.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="192.2" y1="185.6" x2="225.8" y2="269.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="421.0" y1="330.0" x2="469.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="250.0" y1="391.0" x2="250.0" y2="454.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="421.0" y1="510.0" x2="474.0" y2="510.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="25.0" y="80.0" width="290" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Solvable group</text>
+<text x="170" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">derived series reaches 1</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">composition factors C_p</text>
+<rect x="355.0" y="80.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Closure</text>
+<text x="500" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">subgroups, quotients, extensions</text>
+<text x="500" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">S_4 yes, A_5 no</text>
+<rect x="685.0" y="80.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Galois and the quintic</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">S_n solvable iff n &lt;= 4</text>
+<rect x="85.0" y="275.0" width="330" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Semidirect product N x| H</text>
+<text x="250" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(n1,h1)(n2,h2) = (n1 phi(h1)(n2), h1h2)</text>
+<text x="250" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">D_n, S_n, A_4, S_4, F_20, Dic_3</text>
+<rect x="475.0" y="275.0" width="330" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="640" y="325.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Five groups of order 12</text>
+<text x="640" y="345.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">told apart by element orders</text>
+<rect x="85.0" y="460.0" width="330" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="495.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Schur-Zassenhaus</text>
+<text x="250" y="515.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">gcd(|N|,|G:N|)=1 =&gt; complement</text>
+<text x="250" y="535.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(proved for Abelian N)</text>
+<rect x="480.0" y="460.0" width="340" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="650" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Subnormal subgroups</text>
+<text x="650" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">intersections stay subnormal</text>
+<text x="500.0" y="612" text-anchor="middle" font-size="13" fill="#52514e">Kurzweil-Stellmacher 6.1, 6.2, 6.7, 3.3; own proofs</text>
+</svg>

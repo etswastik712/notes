@@ -12,10 +12,15 @@ tags: [subject/group-theory, type/chapter, src/book, src/own-notes, status/draft
 ---
 # GT02 · Homomorphisms, Normal Subgroups and Quotients
 
-◀ [[GT01 Groups Subgroups and Cosets]] · [[Group Theory - Course Map|Course Map]] · next: [[GT05 Actions Conjugation and Sylow Theorems]]
+◀ [[GT01 Groups Subgroups and Cosets]] · [[Group Theory - Course Map|Course Map]] · next: [[GT03 Cyclic and Abelian Groups and Direct Products]]
 
 > [!info] Source and approach
 > Follows K–S §1.2–1.3 ([[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=23|PDF p.23 ff.]]). The explicit quotient $S_4\to S_3$, the commutator subgroup $S_4'=A_4$ and the index-2 argument are my own computations (`scripts/gt_numbers.py`, `scripts/fig_gt.py`).
+
+> [!tip] Start here (first read)
+> - **The picture.** A **homomorphism** is a map between groups that respects multiplication: a "shadow" of a group that forgets some detail (the **kernel**) but remembers how moves combine. **Quotienting** by a normal subgroup is the same idea turned into a construction: *zoom out* until the elements of the kernel become one point. The **homomorphism theorem** says every shadow is such a zoom-out.
+> - **What you need.** Groups, subgroups, cosets and Lagrange ([[GT01 Groups Subgroups and Cosets]]).
+> - **How to read.** The key objects are the kernel, the image and the quotient $G/N$; the one subtle point is *why $N$ must be normal* (so that multiplying cosets does not depend on the representative): read the proof of the quotient-group theorem in §2 slowly. Section 4–5 (cyclic groups, commutators, products) are previewed here and treated in full in [[GT03 Cyclic and Abelian Groups and Direct Products]] and [[GT04 Commutators Simple Groups and Composition Series]].
 
 > [!key] After this chapter you can
 > - define a **homomorphism**, its **kernel** and **image**, and prove that kernels are exactly the **normal subgroups**,

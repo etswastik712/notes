@@ -213,6 +213,9 @@ A **chain** is a subset $C\subseteq P$ in which any two elements are comparable.
 > 9. $7^2=49\equiv10$, $7^4\equiv100\equiv9$, and by Fermat $7^{12}\equiv1$ so $7^{100}=7^{96}7^4\equiv9\pmod{13}$ (checked). $3^4=81\equiv1\pmod{10}$, $2026=4\cdot506+2$, so $3^{2026}\equiv3^2=9$: last digit **9** (checked). Squares: $(2k)^2=4k^2\equiv0$, $(2k+1)^2=4(k^2+k)+1\equiv1$; a sum of two squares is $\equiv0,1,2\pmod4$, never $3$.
 > 10. $\mathbb N$ itself is a chain with no upper bound, and no element is maximal. For finite $P\ne\varnothing$ every chain is finite with a largest element (its upper bound), and a maximal element exists (§3, Q8(b)).
 
+> [!connection] Group theory used here
+> The cosets $gU$ are the equivalence classes of $x\sim y\iff x^{-1}y\in U$ and $G/N$ is a quotient set: [[GT01 Groups Subgroups and Cosets]], [[GT02 Homomorphisms Normal Subgroups and Quotients]]; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

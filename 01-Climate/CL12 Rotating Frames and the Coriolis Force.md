@@ -424,6 +424,9 @@ The derivation chain, effective-gravity diagram (TikZ), component table and rule
 
 ![[climate-rotating-frames-handout.pdf#page=1&height=460]]
 
+> [!connection] Group theory used here
+> Rotations of the plane and the sphere form the groups $SO(2)$ and $SO(3)$: [[GT10 Symmetry Representations and Characters]] §6; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

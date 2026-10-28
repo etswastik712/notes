@@ -235,6 +235,9 @@ $$2\mathrm{Ca_3(PO_4)_2}+6\mathrm{SiO_2}+10\mathrm C\to\mathrm P_4+10\mathrm{CO}
 > 9. $\mathrm P_4$ 6; $\mathrm{P_4O_6}$ 0 (the P–P bonds are replaced by P–O–P); $\mathrm{P_4O_{10}}$ 0; $\mathrm{P_4S_3}$ 3 (the three bonds at the apex P); P is +3 in $\mathrm{P_4O_6}$ and +5 in $\mathrm{P_4O_{10}}$.
 > 10. Shared: acidic oxides ($\mathrm{B_2O_3}$, $\mathrm{SiO_2}$), glass formation (borosilicate), volatile flammable hydrides; B differs from Al in that $\mathrm{Al_2O_3}$ is amphoteric, $\mathrm{AlH_3}$ is a solid and Al is a metal.
 
+> [!connection] Group theory used here
+> The point groups of the polyhedra ($T_d,O_h,I_h,D_{3h}$) and why the icosahedral group $I\cong A_5$ is special (simple, non-solvable): [[GT06 Permutation Groups]], [[GT08 Solvable Groups and Complements]]; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

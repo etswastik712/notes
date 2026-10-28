@@ -7,15 +7,20 @@ chapter: 5
 part: II
 by: [book, own-notes]
 status: draft
-prereq: ["[[GT02 Homomorphisms Normal Subgroups and Quotients]]"]
+prereq: ["[[GT04 Commutators Simple Groups and Composition Series]]"]
 tags: [subject/group-theory, type/chapter, src/book, src/own-notes, status/draft]
 ---
 # GT05 · Actions, Conjugation and Sylow Theorems
 
-◀ [[GT02 Homomorphisms Normal Subgroups and Quotients]] · [[Group Theory - Course Map|Course Map]] · next: [[GT10 Symmetry Representations and Characters]]
+◀ [[GT04 Commutators Simple Groups and Composition Series]] · [[Group Theory - Course Map|Course Map]] · next: [[GT06 Permutation Groups]]
 
 > [!info] Source and approach
 > Follows K–S §3.1–3.2 and §4.3 ([[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=68|PDF p.68 ff.]]). Burnside's lemma, the McKay proof of Cauchy, the proof of Sylow's theorems, the class lists and the simplicity of $A_5$ are my own write-ups and computations (`scripts/gt_numbers.py`).
+
+> [!tip] Start here (first read)
+> - **The picture.** A group becomes powerful when it *acts*: let the moves shuffle the corners of a square, the cosets of a subgroup, or the group's own elements. Look at where one object can be sent (its **orbit**) and which moves leave it alone (its **stabiliser**): *(size of orbit) × (size of stabiliser) = |G|*. Counting orbits and fixed points gives the class equation, Burnside's lemma and Sylow's theorems.
+> - **What you need.** Groups, cosets, quotients ([[GT01 Groups Subgroups and Cosets]], [[GT02 Homomorphisms Normal Subgroups and Quotients]]) and the idea of an equivalence relation: orbits are its classes.
+> - **How to read.** Every counting identity here is orbit–stabiliser in disguise; start with §1. The Sylow proofs (§4) are long but each step is a two-line counting argument: follow the three boxed parts (existence, conjugacy, counting) one at a time.
 
 > [!key] After this chapter you can
 > - define an **action**, its **orbits** and **stabilisers**, and prove **orbit–stabiliser** $|G|=|\alpha^G||G_\alpha|$,

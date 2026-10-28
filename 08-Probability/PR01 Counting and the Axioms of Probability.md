@@ -200,6 +200,9 @@ A sequence of events is **increasing** if $E_1\subset E_2\subset\cdots$ (limit $
 > 9. $n=6$: $\sum_{k=0}^6(-1)^k/k!=1-1+\tfrac12-\tfrac16+\tfrac1{24}-\tfrac1{120}+\tfrac1{720}=0.36806$. Exactly one match: choose the matcher ($6$ ways) and derange the other 5 ($44$ ways): $6\times44/720=0.3667$.
 > 10. (a) $E\cup F=E\cup(F\setminus E)$ disjoint, so $P(E\cup F)=P(E)+P(F\setminus E)\le P(E)+P(F)$ by monotonicity. (b) $E_n\subset E_{n+1}$ gives $P(E_n)\le P(E_{n+1})\le1$ by monotonicity and the first axiom.
 
+> [!connection] Group theory used here
+> Counting objects up to symmetry (Burnside), derangements and random permutations: [[GT05 Actions Conjugation and Sylow Theorems]], [[GT06 Permutation Groups]]; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

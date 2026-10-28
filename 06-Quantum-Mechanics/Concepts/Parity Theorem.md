@@ -25,6 +25,9 @@ It halves the work: solve on $x>0$ with $\psi'(0)=0$ (even) or $\psi(0)=0$ (odd)
 
 Used in: [[QM04 The Particle in a Box]] §6, [[QM07 The Finite Square Well]] §2, §9. Related: [[Parity Operator]] · [[Eigenstate and Eigenvalue]] · [[Node of a Wavefunction]].
 
+> [!connection] Group theory used here
+> [[GT10 Symmetry Representations and Characters]] §2 (irreducible representations of $C_2$); see [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

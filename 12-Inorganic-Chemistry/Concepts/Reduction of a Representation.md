@@ -25,6 +25,9 @@ The number of LGOs of each type equals the number of central-atom orbitals avail
 
 Used in: [[CH03 Molecular Orbital Theory Polyatomics]] §3. Related: [[Ligand Group Orbitals]] · [[Group Theory - Course Map]].
 
+> [!connection] Group theory used here
+> The reduction formula and its proof: [[GT10 Symmetry Representations and Characters]] §2; [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

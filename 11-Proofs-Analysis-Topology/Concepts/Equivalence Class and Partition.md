@@ -25,6 +25,9 @@ Proof: classes cover because $a\in[a]$; two classes meeting at $z$ coincide sinc
 
 Used in: [[PA03 Relations Equivalence and Order]]. Related: [[Equivalence Relation]] · [[Congruence Modulo n]] · [[Law of Total Probability]].
 
+> [!connection] Group theory used here
+> Lagrange's theorem is the statement that cosets partition a group into equal pieces: [[GT01 Groups Subgroups and Cosets]]; see [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

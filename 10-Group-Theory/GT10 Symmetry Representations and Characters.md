@@ -7,15 +7,20 @@ chapter: 10
 part: III
 by: [own-notes, book]
 status: draft
-prereq: ["[[GT05 Actions Conjugation and Sylow Theorems]]"]
+prereq: ["[[GT05 Actions Conjugation and Sylow Theorems]]", "[[GT06 Permutation Groups]]"]
 tags: [subject/group-theory, type/chapter, src/own-notes, src/book, status/draft]
 ---
 # GT10 · Symmetry, Representations and Characters
 
-◀ [[GT05 Actions Conjugation and Sylow Theorems]] · [[Group Theory - Course Map|Course Map]]
+◀ [[GT09 Transfer and Normal p-Complements]] · [[Group Theory - Course Map|Course Map]]
 
 > [!info] Source and approach
 > No source in the repository (K–S excludes representation theory); a bridge to the places where groups are used in this vault. All tables and reductions are computed in `scripts/gt_numbers.py`.
+
+> [!tip] Start here (first read)
+> - **The picture.** A **representation** turns each symmetry into a matrix acting on something physical (the three H orbitals of NH$_3$, the vibrations of H$_2$O, the five $d$ orbitals). The **character** (the trace of each matrix, one number per type of symmetry) is enough to split that something into independent, irreducible pieces that never mix; those pieces are what chemists label $a_1,e,t_{2g}$ and physicists call degenerate multiplets.
+> - **What you need.** Linear algebra (matrix, trace, eigenvalues) and the groups of [[GT01 Groups Subgroups and Cosets]]–[[GT05 Actions Conjugation and Sylow Theorems]] ($S_3$, $D_4$, conjugacy classes).
+> - **How to read.** §1 (point groups) and §3 (a worked NH$_3$ example) are the best entry points; the orthogonality relations of §2 are *stated* and checked by computer rather than proved, since the repository has no source for representation theory proper.
 
 > [!key] After this chapter you can
 > - describe a **representation** (a homomorphism $G\to GL(V)$) and its **character** $\chi(g)=\operatorname{tr}\rho(g)$, a function constant on conjugacy classes,

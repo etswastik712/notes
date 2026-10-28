@@ -206,6 +206,9 @@ Follow the MO energies of $\mathrm{AH_2}$ as the $\mathrm{H{-}A{-}H}$ angle clos
 > 9. The totally symmetric $a_1$ MO set contains both the lowest MO (no nodes) and the highest ($3a_1^*$, many nodes), so "more nodes ⇒ higher symmetry" is false; "more nodes ⇒ higher *energy*" is the content that is right.
 > 10. 5 electrons: the extra electron beyond the 4 of $\mathrm{BeH_2}$ sits in the orbital that drops on bending; Walsh predicts bent, ≈131° for $\mathrm{BH_2}$ (observed ≈131°, recalled). Eight electrons: bent, 104.5°.
 
+> [!connection] Group theory used here
+> Point groups, characters, the reduction formula and symmetry labels are developed in [[GT10 Symmetry Representations and Characters]]; the groups themselves ($C_{2v}$, $C_{3v}\cong S_3$, $T_d\cong S_4$) in [[GT03 Cyclic and Abelian Groups and Direct Products]], [[GT05 Actions Conjugation and Sylow Theorems]], [[GT06 Permutation Groups]]. Full list: [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

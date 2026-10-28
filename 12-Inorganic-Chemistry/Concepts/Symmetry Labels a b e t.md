@@ -25,6 +25,9 @@ $\mathrm{NH_3}$ ($C_{3v}$): $a_1,e$; $\mathrm{H_2O}$ ($C_{2v}$): $a_1,a_2,b_1,b_
 
 Used in: [[CH03 Molecular Orbital Theory Polyatomics]] §1. Related: [[Ligand Group Orbitals]] · [[Reduction of a Representation]].
 
+> [!connection] Group theory used here
+> The labels $a,b,e,t$ are names of irreducible representations (1-, 2-, 3-dimensional): [[GT10 Symmetry Representations and Characters]] §2; see also [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

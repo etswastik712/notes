@@ -34,6 +34,9 @@ $\hat x\propto\hat a+\hat a^\dagger$ changes $n$ by exactly $\pm1$. Parity alone
 
 Used in: [[QM05 The Harmonic Oscillator]] §9, [[QM06 The Oscillator Toolbox]] §3. Related: [[Matrix Elements of Position and Momentum]] · [[Parity Operator]] · [[Ladder Operators]] · [[Anharmonic Oscillator]].
 
+> [!connection] Group theory used here
+> General selection rules (product of irreducible representations contains the trivial one): [[GT10 Symmetry Representations and Characters]] §6; see [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

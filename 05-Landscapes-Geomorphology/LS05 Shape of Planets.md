@@ -221,6 +221,9 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 > **Previous:** [[LS04 Map Projections and Reference Surfaces]] · **Next:** [[LS06 Maximum Topography]].
 > **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
+> [!connection] Group theory used here
+> Spherical harmonics and $SO(3)$ irreps: [[GT10 Symmetry Representations and Characters]] §6; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

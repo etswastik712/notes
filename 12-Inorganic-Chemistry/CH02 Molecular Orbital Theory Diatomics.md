@@ -217,6 +217,9 @@ The slide shows the AO energies I 5s/5p (higher, less electronegative) against C
 > 9. $\mathrm{CO},\ \mathrm{CN^-},\ \mathrm{NO^+},\ \mathrm{C_2^{2-}},\ \mathrm{N_2}$: all $\sigma^2\sigma^{*2}\pi^4\sigma^2$, bond order 3.
 > 10. Valence: 14 e⁻. Order from the bottom: $1\sigma$ (Cl 3s), $2\sigma$ (I 5s), $3\sigma$ (bonding $p_z$), $1\pi$ (bonding), $2\pi^*$ (HOMO, on I? mostly I, since the Cl $p$ are lower and I $p$ are higher in the antibonding combination: antibonding MOs are mostly on the *less* electronegative atom), $4\sigma^*$ (LUMO, mostly I). So HOMO = $2\pi^*$ (mainly I $5p$), LUMO = $4\sigma^*$ (mainly I): consistent with ICl acting as a Lewis acid at I (accepts into $4\sigma^*$).
 
+> [!connection] Group theory used here
+> The $\sigma/\pi$ and $g/u$ labels are characters of $D_{\infty h}$ (rotation about the axis and inversion): [[GT10 Symmetry Representations and Characters]]; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

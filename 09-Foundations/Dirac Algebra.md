@@ -944,6 +944,9 @@ Quantum mechanical wave packets follow classical trajectories to the extent that
 
 ---
 
+> [!connection] Group theory used here
+> The translation operator is a unitary representation of $(\mathbb R,+)$ and $[\hat x,\hat p]=i\hbar$ defines the Heisenberg group: [[GT07 p-Groups and Nilpotent Groups]] §5, [[GT10 Symmetry Representations and Characters]] §6; see [[Where Groups Appear in the Vault]].
+
 ## Map of this chapter
 
 > [!connection] How Dirac Algebra connects to the quantum mechanics vault

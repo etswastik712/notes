@@ -10,50 +10,80 @@ tags: [subject/group-theory, type/moc, src/book, src/own-notes, status/draft]
 # Group Theory - Course Map
 
 > [!summary] Where this subject stands
-> **No lecture course exists for finite groups in this repository**, so nothing here is "taught"; the chapters follow the one book in the repository (Kurzweil and Stellmacher, ch. 1–4) and add a bridge to the places the vault *uses* groups. **GT01–GT10 are drafted** with proofs, brute-force checks (`scripts/gt_numbers.py`), seven figures (`scripts/fig_gt.py`), concept maps and 29 concept notes. Symmetry underlies molecular orbitals, vibrational selection rules (why CO₂ absorbs infrared) and quantum angular momentum.
+> There is **no lecture course** for finite groups in this repository, so the subject follows the one book (Kurzweil and Stellmacher, *The Theory of Finite Groups*, chapters 1–7) in a connected order, written for a 2nd–3rd year reader and keeping the proofs: every chapter has a "start here" box for beginners, a plain-words box before each proof, a concept map, practice problems with answers, a list of where the ideas are **used in other subjects**, and numbers checked by computer (`scripts/gt_numbers.py`, `scripts/gt_numbers2.py`). **GT01–GT10 and three advanced guides are drafted.** Where groups are used elsewhere in the vault: [[Where Groups Appear in the Vault]].
 
 ![[GT01 Groups Map.svg]]
 
-## Chapters
-| # | Chapter | Content | Scope | Source |
-|---|---|---|---|---|
-| 01 | [[GT01 Groups Subgroups and Cosets]] | axioms, subgroup test, product formula, Lagrange | book + mine | K–S §1.1 |
-| 02 | [[GT02 Homomorphisms Normal Subgroups and Quotients]] | homomorphism and isomorphism theorems, $G/Z$, commutators, cyclic and Abelian groups, simple groups | book + mine | K–S §1.2–1.8, 2.1 |
-| 03 | [[GT05 Actions Conjugation and Sylow Theorems]] | orbit–stabiliser, class equation, Burnside, Cauchy, Sylow, $S_n$, $A_5$ simple | book + mine | K–S §3.1–3.2, 4.3 |
-| 04 | [[GT10 Symmetry Representations and Characters]] | point groups, characters, reduction, NH₃/H₂O vibrations, octahedral d splitting, $SO(3)$ | mine | my write-up |
+## Chapters in reading order
+| # | Chapter | Content | K–S |
+|---|---|---|---|
+| **I. Foundations** | | | |
+| 01 | [[GT01 Groups Subgroups and Cosets]] | axioms, subgroup test, product formula, cosets, Lagrange | §1.1 |
+| 02 | [[GT02 Homomorphisms Normal Subgroups and Quotients]] | homomorphism and isomorphism theorems, $G/Z$, previews of cyclic/commutator/product ideas | §1.2–1.3 |
+| **II. Structure** | | | |
+| 03 | [[GT03 Cyclic and Abelian Groups and Direct Products]] | cyclic groups, direct products, structure theorem of Abelian groups (full proof), $\operatorname{Aut}(C_n)$ | §1.4, 1.6, 2.1, 2.2 |
+| 04 | [[GT04 Commutators Simple Groups and Composition Series]] | commutators, simple groups, minimal normal subgroups, Jordan–Hölder (full proof) | §1.5, 1.7, 1.8 |
+| **III. Actions** | | | |
+| 05 | [[GT05 Actions Conjugation and Sylow Theorems]] | orbit–stabiliser, class equation, Burnside, Cauchy, Sylow (full proofs), $A_5$ simple | §3.1, 3.2, 4.3 |
+| 06 | [[GT06 Permutation Groups]] | transitivity, primitivity, Frobenius groups, $A_n$ simple (full proof), wreath products | §4.1–4.4 |
+| **IV. Decomposition** | | | |
+| 07 | [[GT07 p-Groups and Nilpotent Groups]] | nilpotent groups (five-way characterisation), Frattini, groups of order 8 | §5.1–5.3 |
+| 08 | [[GT08 Solvable Groups and Complements]] | solvable groups, semidirect products, Schur–Zassenhaus (Abelian case), subnormal subgroups | §6.1, 6.2, 6.7, 3.3 |
+| 09 | [[GT09 Transfer and Normal p-Complements]] | transfer, Burnside's normal $p$-complement theorem (full proof), Cayley's criterion | §7.1, 7.2 |
+| **V. Bridge** | | | |
+| 10 | [[GT10 Symmetry Representations and Characters]] | point groups, characters, reduction formula, vibrations, crystal-field splitting, $SO(3)$ | none (K–S excludes it) |
+| **Advanced** (folder `Advanced/`, [[Advanced Group Theory]]) | | | |
+| A1 | [[GT-A1 Radical Residue and Hall Subgroups]] | $O_p(G)$, Hall's theorem for solvable groups | §6.3–6.4 |
+| A2 | [[GT-A2 Components and the Generalised Fitting Subgroup]] | $F^*(G)$, $C_G(F)\le F$ (solvable case) | §6.5 |
+| A3 | [[GT-A3 Primitive Maximal Subgroups]] | cores, primitive and affine groups | §6.6 |
 
 ## Reading order
 ```mermaid
 flowchart LR
-  A["GT01<br/>groups, cosets, Lagrange"] --> B["GT02<br/>homomorphisms, quotients"]
-  B --> C["GT05<br/>actions, Sylow"]
-  C --> D["GT10<br/>representations, characters"]
-  D --> E["CH03 MO theory,<br/>QM angular momentum,<br/>MT3184 Lie groups"]
+  A["GT01 groups, cosets"] --> B["GT02 homomorphisms,<br/>quotients"]
+  B --> C["GT03 cyclic, Abelian,<br/>products"]
+  C --> D["GT04 commutators,<br/>simple, Jordan-Holder"]
+  D --> E["GT05 actions, Sylow"]
+  E --> F["GT06 permutation groups"]
+  F --> G["GT07 nilpotent,<br/>p-groups"]
+  G --> H["GT08 solvable,<br/>semidirect products"]
+  H --> I["GT09 transfer,<br/>normal p-complements"]
+  E --> J["GT10 representations,<br/>characters"]
+  I --> J
+  J --> K["CH03 MO theory, QM,<br/>Lie groups (MT3184)"]
 ```
 
-## Concept notes (29)
-GT01: [[Group]] · [[Subgroup]] · [[Coset]] · [[Lagrange's Theorem]] · [[Cyclic Group]] · [[Dihedral Group]] · [[Symmetric Group]]
-GT02: [[Homomorphism]] · [[Kernel and Image]] · [[Normal Subgroup]] · [[Quotient Group]] · [[Isomorphism Theorems]] · [[Commutator Subgroup]] · [[Simple Group]] · [[Direct Product of Groups]]
-GT05: [[Group Action]] · [[Orbit-Stabiliser Theorem]] · [[Conjugacy Class]] · [[Class Equation]] · [[Burnside's Lemma]] · [[Cauchy's Theorem]] · [[Sylow Theorems]] · [[Alternating Group]]
-GT10: [[Point Group]] · [[Representation of a Group]] · [[Character of a Representation]] · [[Irreducible Representation]] · [[Character Table]] · [[Reduction Formula]]
+## Concept notes (66)
+**Basics:** [[Group]] · [[Subgroup]] · [[Coset]] · [[Lagrange's Theorem]] · [[Cyclic Group]] · [[Dihedral Group]] · [[Symmetric Group]] · [[Alternating Group]] · [[Quaternion Group]]
+**Maps and quotients:** [[Homomorphism]] · [[Kernel and Image]] · [[Normal Subgroup]] · [[Quotient Group]] · [[Isomorphism Theorems]] · [[Automorphism Group]] · [[Direct Product of Groups]]
+**Abelian groups:** [[Structure Theorem of Finite Abelian Groups]] · [[Euler Totient Function]] · [[Primitive Root]]
+**Simple groups and series:** [[Commutator Subgroup]] · [[Perfect Group]] · [[Simple Group]] · [[Minimal Normal Subgroup]] · [[Composition Series]] · [[Jordan-Holder Theorem]]
+**Actions and counting:** [[Group Action]] · [[Orbit-Stabiliser Theorem]] · [[Conjugacy Class]] · [[Class Equation]] · [[Burnside's Lemma]] · [[Cauchy's Theorem]] · [[Sylow Theorems]]
+**Permutation groups:** [[Transitive Action]] · [[k-Transitive Action]] · [[Primitive Action and Blocks]] · [[Frobenius Group]] · [[Wreath Product]]
+**Nilpotent and solvable:** [[Nilpotent Group]] · [[Upper Central Series]] · [[Frattini Subgroup]] · [[Burnside Basis Theorem]] · [[Fitting Subgroup]] · [[Heisenberg Group]] · [[Solvable Group]] · [[Derived Series]] · [[Semidirect Product]] · [[Complement of a Normal Subgroup]] · [[Schur-Zassenhaus Theorem]] · [[Subnormal Subgroup]] · [[Extension Problem]]
+**Transfer:** [[Transfer Homomorphism]] · [[Normal p-Complement]] · [[Burnside Normal p-Complement Theorem]] · [[Burnside Fusion Lemma]]
+**Advanced:** [[Radical of a Group]] · [[Hall Subgroup]] · [[Quasisimple Group]] · [[Generalised Fitting Subgroup]] · [[Core of a Subgroup]] · [[Affine Group]]
+**Representations:** [[Point Group]] · [[Representation of a Group]] · [[Character of a Representation]] · [[Irreducible Representation]] · [[Character Table]] · [[Reduction Formula]]
 
 ## Sources
 | Source | Location | Used in |
 |---|---|---|
-| H. Kurzweil, B. Stellmacher, *The Theory of Finite Groups: An Introduction* (Springer, 2004; 400 pp., PDF page = printed page + 13) | `math/group-theory/books/` | GT01–GT05 |
+| H. Kurzweil, B. Stellmacher, *The Theory of Finite Groups: An Introduction* (Springer, 2004; 400 pp.; PDF page = printed page + 13) | `math/group-theory/books/` | GT01–GT09, Advanced (the TOC, the notation list and the theorem labels of ch. 1–4 were read; chapters 4–7 and the advanced sections only by title, so their statements are the standard ones, not a transcription) |
 | MOT group-theory notes (AI-written, **not read**) | `chemistry/inorganic-chemistry/ai-gen-notes/inorganicchemmaster/mot-group-theory-full.pdf` | to compare with GT10 |
 | MT3184 Differential Geometry and Lie Groups lecture notes (other tool; **only referenced**) | `mt3184-differential-geometry-and-lie-groups/`, [[maps/courses/mt3184-differential-geometry-and-lie-groups\|course map]] | GT10 §6 |
 | stray note `inbox/one-parameter-subgroup.md` | `inbox/` | linked from GT10 §6 |
 
 ## Gaps and to-do
-- [ ] **No lectures:** if a group-theory or representation-theory course is added, restructure around it and mark the matching parts 🟢 taught.
-- [ ] K–S ch. 4.1–4.2 (transitive, Frobenius, primitive groups), ch. 5 ($p$-groups, nilpotent), ch. 6 (solvable, Schur–Zassenhaus), ch. 7 (transfer) not written; ch. 8–12 (action on groups, signalizer functors, $N$-groups) are research-level and out of scope.
-- [ ] Representation theory proper (Schur's lemma, proofs of orthogonality, the regular representation) is only stated in GT10; no source for it in the repository.
-- [ ] Lie groups and Lie algebras: write after reading the MT3184 notes in full; connect $SO(3)$, $SU(2)$ and angular momentum.
-- [ ] Compare GT10 with the MOT notes (read them) and with the character tables used in the CH02–CH03 chapters.
-- [ ] Exercises from K–S are not worked; the practice problems here are my own.
+- [ ] **No lectures:** if a group-theory course is added, restructure around it.
+- [ ] K–S chapters 4–7 and §6.3–6.6 were not read in the book itself; compare each chapter with the book and upgrade the "(by title)" provenance rows.
+- [ ] Not written: K–S ch. 8–12 (action on groups, signalizer functors, $N$-groups: research-level).
+- [ ] Representation theory proper (Schur's lemma, proofs of orthogonality, regular representation, induced representations) is only stated in GT10; no source in the repository.
+- [ ] Lie groups and Lie algebras: write after reading the MT3184 notes in full ($SO(3)$, $SU(2)$, angular momentum).
+- [ ] Compare GT10 with the MOT notes and the character tables of CH02–CH03.
+- [ ] Exercises from K–S are not worked; the practice problems are my own.
+- [ ] Optional: the old figures `GT03 Actions Map.svg` and `GT04 Representations Map.svg` in `Assets/figures/` are orphaned by the renumbering (the new maps are `GT05 Actions Map.svg`, `GT10 Representations Map.svg`).
 
 ## Connections
-[[Inorganic Chemistry - Course Map]] · [[Quantum Mechanics - Course Map]] · [[CL07 Optical Properties of the Atmosphere]] · [[Proofs, Analysis and Topology - Course Map]] · [[Probability - Course Map]]
+[[Where Groups Appear in the Vault]] · [[Inorganic Chemistry - Course Map]] · [[Quantum Mechanics - Course Map]] · [[CL07 Optical Properties of the Atmosphere]] · [[Proofs, Analysis and Topology - Course Map]] · [[Probability - Course Map]] · [[Fourier and Laplace Transforms]]
 
 See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] for its place in the plan.

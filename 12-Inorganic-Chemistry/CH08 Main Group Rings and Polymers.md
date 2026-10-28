@@ -158,6 +158,9 @@ Heating $(\mathrm{NPCl_2})_3$ at **210–250 °C** causes **ring-opening polymer
 > 9. $\mathrm{P_3N_3F_6}$; $\mathrm{P_3N_3(OCH_2CF_3)_6}$; $[\mathrm{N{=}PCl_2}]_n$.
 > 10. Repeat masses: $\mathrm{NPCl_2}$ 115.86 g/mol; $\mathrm{N{=}P(OCH_2CF_3)_2}$: $14.007+30.974+2\times99.05=243.1$ g/mol with $\mathrm{OCH_2CF_3}=99.05$ ($\mathrm{O}$ 16.00, $\mathrm{C_2}$ 24.02, $\mathrm{H_2}$ 2.016, $\mathrm{F_3}$ 57.00). Ratio $=243.0/115.86=2.10$: 1 kg gives **2.10 kg**.
 
+> [!connection] Group theory used here
+> $D_{3h}\cong S_3\times C_2$ and its semidirect structure: [[GT08 Solvable Groups and Complements]]; see [[Where Groups Appear in the Vault]].
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

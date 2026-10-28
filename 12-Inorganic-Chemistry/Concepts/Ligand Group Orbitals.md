@@ -25,6 +25,9 @@ An LGO with no central-atom partner is non-bonding (the $e_g$ of SF$_6$; the O $
 
 Used in: [[CH03 Molecular Orbital Theory Polyatomics]] §3–§6. Related: [[Reduction of a Representation]] · [[Symmetry Labels a b e t]].
 
+> [!connection] Group theory used here
+> SALCs are obtained by reducing the permutation representation of the ligand orbitals: [[GT10 Symmetry Representations and Characters]] §3 (NH$_3$: $A_1+E$); see also [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

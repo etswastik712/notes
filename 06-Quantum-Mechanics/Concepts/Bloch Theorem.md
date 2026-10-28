@@ -25,6 +25,9 @@ Consequence: energies form bands $E_n(q)$ separated by gaps.
 
 Used in: [[QM08 Quantum Tunnelling]] §8, [[Dirac Algebra]] §7. Related: [[Kronig-Penney Model]] · [[Unitary Operator]].
 
+> [!connection] Group theory used here
+> The translation group $\mathbb Z$ is Abelian, so its irreducible representations are one-dimensional characters $e^{iqa}$: [[GT03 Cyclic and Abelian Groups and Direct Products]] §6, [[Fourier and Laplace Transforms]] §5.5; see [[Where Groups Appear in the Vault]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
