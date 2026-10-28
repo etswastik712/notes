@@ -83,3 +83,8 @@ Reference: Holton and Hakim (2013) Dynamic Meteorology.
 - [[01-Climate/CL06 Hydrostatic Balance and Vertical Structure]]: vertical component of PGF balancing gravity ($-\frac{1}{\rho}\frac{\partial p}{\partial z} - g = 0$)
 - [[01-Climate/CL12 Rotating Frames and the Coriolis Force]]: apparent forces in rotating reference frames
 - [[01-Climate/CL13 Horizontal Motion - Geostrophic Balance and Friction]]: horizontal balance between PGF and Coriolis force
+
+<!-- kurooto:material59ffa2d0 -->
+## Concepts in Atmos_Circulation_Pressure_gradient_force_letc4
+[[zettel/pressure-gradient-force]]
+<!-- /kurooto:material59ffa2d0 -->
