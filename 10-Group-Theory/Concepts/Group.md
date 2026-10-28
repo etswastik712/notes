@@ -3,17 +3,14 @@ title: Group
 aliases: ["group axioms"]
 subject: group-theory
 type: concept
-scope: [extra-book]
 by: [book]
 status: draft
-tags: [subject/group-theory, type/concept, extra/book, status/draft]
+tags: [subject/group-theory, type/concept, status/draft]
 ---
 # Group
 
-<span class="scope-extra-book">extra · book</span>
-
-> [!syllabus] In the syllabus vs extra
-> 🟡 **Extra · book:** Kurzweil–Stellmacher; written up in [[GT01 Groups Subgroups and Cosets]].
+> [!info] Source
+> Kurzweil–Stellmacher; written up in [[GT01 Groups Subgroups and Cosets]].
 
 > [!intuition] In one picture
 > A set with an associative product, an identity and inverses; the algebra of symmetries.

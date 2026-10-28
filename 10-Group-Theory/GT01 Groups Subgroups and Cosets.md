@@ -5,22 +5,17 @@ subject: group-theory
 type: chapter
 chapter: 1
 part: I
-scope: [extra-book, extra-beyond]
 by: [book, own-notes]
 status: draft
 prereq: ["[[Proofs, Analysis and Topology - Course Map]]"]
-tags: [subject/group-theory, type/chapter, extra/book, extra/beyond, src/book, src/own-notes, status/draft]
+tags: [subject/group-theory, type/chapter, src/book, src/own-notes, status/draft]
 ---
 # GT01 · Groups, Subgroups and Cosets
 
 ◀ [[Group Theory - Course Map|Course Map]] · next: [[GT02 Homomorphisms Normal Subgroups and Quotients]]
 
-<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
-
-> [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
-> **No lecture source** for finite groups (the only lectures in the repository are the MT3184 differential-geometry course, which uses groups as a tool; see [[Group Theory - Course Map]]). The chapter follows the one finite-group book in the repository.
-> 🟡 **Extra · book:** Kurzweil and Stellmacher, *The Theory of Finite Groups: An Introduction*, §1.1 (printed pp. 1–10, [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=14|PDF p.14 ff.]]; the PDF page is the printed page + 13): definition, subgroups (1.1.3–1.1.5), the product formula (1.1.6), Lagrange's theorem (1.1.7–1.1.8), transversals (1.1.9).
-> 🔵 **Extra · beyond** (my additions, every count brute-forced in `scripts/gt_numbers.py`): the Cayley table and subgroup lattices of $S_3$ and $D_4$ with the number of subgroups, the failure of the converse of Lagrange's theorem in $A_4$, and the "symmetry" way of seeing a group.
+> [!info] Source and approach
+> Follows Kurzweil and Stellmacher, *The Theory of Finite Groups* (K–S), §1.1 ([[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=14|PDF p.14 ff.]]; PDF page = printed page + 13). Cayley table, subgroup lattices and all counts are my own computations (`scripts/gt_numbers.py`).
 
 > [!key] After this chapter you can
 > - state the group axioms and derive from them that the identity and inverses are unique and that cancellation holds,
@@ -46,7 +41,7 @@ flowchart LR
 *Concept map.*
 
 ## 1. Groups
-<span class="scope-extra-book">extra · book</span> *K–S §1.1*
+*K–S §1.1*
 
 > [!key] Definition
 > A **group** is a nonempty set $G$ with a rule assigning to each pair $(x,y)\in G\times G$ an element $xy\in G$ such that
@@ -77,8 +72,6 @@ flowchart LR
 > I compose permutations **right to left**: $(pq)(i)=p(q(i))$ (do $q$ first), as in calculus and in the code in `scripts/gt_numbers.py`. `[verify]` K–S write maps on the **right** ($\alpha^{\sigma\tau}$ means "first $\sigma$, then $\tau$"; see their List of Symbols, $X^\varphi$), so a product such as $(123)(12)$ is a *different* permutation in the two conventions. Always check which convention a source uses before comparing a worked product.
 
 ## 2. Symmetry: where groups come from
-<span class="scope-extra-beyond">extra · beyond</span>
-
 > [!intuition] The group of a square and the group of a triangle
 > Rotate an equilateral triangle by $120^\circ$ ($r$) or flip it about the axis through a vertex ($s$): it looks unchanged. All such moves form $D_3\cong S_3$ with $r^3=s^2=1$ and $srs=r^{-1}$. The six elements are $e,r,r^2,s,sr,sr^2$. The **Cayley table** below records every product; the group is non-Abelian because $rs\neq sr$ ($rs=sr^2$).
 
@@ -89,7 +82,7 @@ flowchart LR
 > A symmetry is determined by where it sends one vertex (any of $n$ places) and then whether it preserves or reverses the orientation of the rest (2 choices): $n\cdot2=2n$. Rotations form the cyclic subgroup $\langle r\rangle$ of order $n$; the other $n$ elements are reflections $sr^k$. The relation $srs^{-1}=r^{-1}$ says reflecting reverses the sense of rotation.
 
 ## 3. Subgroups
-<span class="scope-extra-book">extra · book</span> *K–S 1.1.3–1.1.6*
+*K–S 1.1.3–1.1.6*
 
 > [!key] Subgroup, generated subgroup
 > $U\subseteq G$ is a **subgroup** ($U\le G$) if it is a group under the same product. **Test (1.1.3).** *A nonempty finite subset $U$ is a subgroup iff $xy\in U$ for all $x,y\in U$.* For an arbitrary subset $X$, $\langle X\rangle$ is the **smallest subgroup containing $X$** (the intersection of all subgroups containing $X$, 1.1.4). $\langle g\rangle=\{g^k\}$ is **cyclic** and has $|\langle g\rangle|=o(g)$.
@@ -108,7 +101,7 @@ flowchart LR
 > In $D_4$ the centre $Z=\langle r^2\rangle$ (rotation by $180^\circ$) is the only order-2 subgroup lying inside all three order-4 subgroups; each reflection lies in exactly one Klein group. In $S_3$ every order-2 subgroup has no larger proper subgroup above it: the lattice is a "diamond" and $A_3$ is the only non-reflection subgroup. The sizes $1,2,3,4,6,8$ all divide the group orders $6$, $8$, as Lagrange (next section) demands.
 
 ## 4. Cosets and Lagrange's theorem
-<span class="scope-extra-book">extra · book</span> *K–S 1.1.7–1.1.9*
+*K–S 1.1.7–1.1.9*
 
 > [!key] Cosets, index, transversal
 > For $U\le G$ and $g\in G$ the **left coset** is $gU=\{gu:u\in U\}$ (and $Ug$ the right coset). The number of left cosets is the **index** $|G:U|$. A **transversal** of $U$ in $G$ is a set $S$ containing exactly one element from each coset (1.1.9).
@@ -123,10 +116,10 @@ flowchart LR
 > 4. **Tower for products:** with $A,B\le G$, $|G|\ge|AB|=|A||B|/|A\cap B|$, so $|A\cap B|\ge|A||B|/|G|$: two subgroups of more than half the group always meet non-trivially.
 
 > [!pitfall] The converse of Lagrange is false
-> A divisor of $|G|$ need not be the order of a subgroup. $A_4$ (the 12 even permutations of four points) has **no subgroup of order 6**; this is checked by brute force over all subgroups generated by at most three elements in `scripts/gt_numbers.py` (`False`). A one-line reason: a subgroup of order 6 would have index 2 and therefore contain the square of every element; $A_4$ has 8 elements of order 3 and every one of them is the square of another ($g=(g^{2})^{2}$), so all 8 would be in the subgroup, which has only 6 elements. The converse *does* hold for prime powers dividing $|G|$ (Sylow, [[GT03 Actions Conjugation and Sylow Theorems]]) and for cyclic groups.
+> A divisor of $|G|$ need not be the order of a subgroup. $A_4$ (the 12 even permutations of four points) has **no subgroup of order 6**; this is checked by brute force over all subgroups generated by at most three elements in `scripts/gt_numbers.py` (`False`). A one-line reason: a subgroup of order 6 would have index 2 and therefore contain the square of every element; $A_4$ has 8 elements of order 3 and every one of them is the square of another ($g=(g^{2})^{2}$), so all 8 would be in the subgroup, which has only 6 elements. The converse *does* hold for prime powers dividing $|G|$ (Sylow, [[GT05 Actions Conjugation and Sylow Theorems]]) and for cyclic groups.
 
 > [!example] Counting with Lagrange
-> In $S_4$ ($|G|=24$) the possible subgroup orders are among $1,2,3,4,6,8,12,24$; all occur ($S_3$ gives 6, $D_4$ gives 8, $A_4$ gives 12). In a group of order 10 an element of order 4 is impossible, and in a group of order 6 elements have order 1, 2, 3 or 6, so a group of order 6 with no element of order 6 has an element of order 2 and one of order 3 (Cauchy, [[GT03 Actions Conjugation and Sylow Theorems]]).
+> In $S_4$ ($|G|=24$) the possible subgroup orders are among $1,2,3,4,6,8,12,24$; all occur ($S_3$ gives 6, $D_4$ gives 8, $A_4$ gives 12). In a group of order 10 an element of order 4 is impossible, and in a group of order 6 elements have order 1, 2, 3 or 6, so a group of order 6 with no element of order 6 has an element of order 2 and one of order 3 (Cauchy, [[GT05 Actions Conjugation and Sylow Theorems]]).
 
 ## 5. Summary and practice
 > [!summary] Cheat-sheet
@@ -151,16 +144,16 @@ flowchart LR
 
 ## Map of this chapter
 > [!connection] How GT01 connects
-> **Next:** [[GT02 Homomorphisms Normal Subgroups and Quotients]] (maps between groups, the quotient of $G$ by a *normal* subgroup, which needs left and right cosets to agree). **Used by:** [[GT03 Actions Conjugation and Sylow Theorems]] (Lagrange is the counting engine of orbit–stabiliser) and [[GT04 Symmetry Representations and Characters]] ($C_{3v}\cong S_3$ is the point group of ammonia).
+> **Next:** [[GT02 Homomorphisms Normal Subgroups and Quotients]] (maps between groups, the quotient of $G$ by a *normal* subgroup, which needs left and right cosets to agree). **Used by:** [[GT05 Actions Conjugation and Sylow Theorems]] (Lagrange is the counting engine of orbit–stabiliser) and [[GT10 Symmetry Representations and Characters]] ($C_{3v}\cong S_3$ is the point group of ammonia).
 > **Other subjects:** [[Proofs, Analysis and Topology - Course Map]] (proof technique, equivalence relations), [[Inorganic Chemistry - Course Map]] (point groups), [[Quantum Mechanics - Course Map]] (parity group $\mathbb Z_2$), [[Probability - Course Map]] (counting arguments).
 > **Concept notes:** [[Group]] · [[Subgroup]] · [[Coset]] · [[Lagrange's Theorem]] · [[Cyclic Group]] · [[Dihedral Group]] · [[Symmetric Group]]
 
 ## Provenance
 > [!provenance]- Source map for this chapter
-> | Topic | Source | Scope |
+> | Topic | Source | Origin |
 > |---|---|---|
-> | axioms, subgroup test, $\langle X\rangle$, product formula, Lagrange, transversals | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=14|K–S §1.1, PDF pp.14–22]] (1.1.1–1.1.9) | extra · book |
-> | derivation of two-sided identity and inverse, corollaries 1–4, $D_n$ order | my own derivations (standard) | extra · beyond |
-> | Cayley table, lattices, subgroup counts, $A_4$ has no subgroup of order 6, Euler example | `scripts/gt_numbers.py`, `scripts/fig_gt.py` | extra · beyond |
+> | axioms, subgroup test, $\langle X\rangle$, product formula, Lagrange, transversals | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=14|K–S §1.1, PDF pp.14–22]] (1.1.1–1.1.9) | book |
+> | derivation of two-sided identity and inverse, corollaries 1–4, $D_n$ order | my own derivations (standard) | mine |
+> | Cayley table, lattices, subgroup counts, $A_4$ has no subgroup of order 6, Euler example | `scripts/gt_numbers.py`, `scripts/fig_gt.py` | mine |
 >
 > **Flags.** (1) K–S's convention for composing permutations (maps on the right) is stated from memory of their notation list; check before comparing products. (2) The reason given for "$A_4$ has no subgroup of order 6" uses that an index-2 subgroup is normal and contains all squares; this is proved in [[GT02 Homomorphisms Normal Subgroups and Quotients]] (an index-2 subgroup is the kernel of a map to $\mathbb Z_2$).

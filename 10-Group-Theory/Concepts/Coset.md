@@ -3,17 +3,14 @@ title: Coset
 aliases: ["left coset", "index", "transversal"]
 subject: group-theory
 type: concept
-scope: [extra-book]
 by: [book]
 status: draft
-tags: [subject/group-theory, type/concept, extra/book, status/draft]
+tags: [subject/group-theory, type/concept, status/draft]
 ---
 # Coset
 
-<span class="scope-extra-book">extra · book</span>
-
-> [!syllabus] In the syllabus vs extra
-> 🟡 **Extra · book:** Kurzweil–Stellmacher; written up in [[GT01 Groups Subgroups and Cosets]].
+> [!info] Source
+> Kurzweil–Stellmacher; written up in [[GT01 Groups Subgroups and Cosets]].
 
 > [!intuition] In one picture
 > Translate a subgroup: $gU$; cosets partition the group into equal pieces.

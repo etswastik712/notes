@@ -16,7 +16,7 @@ tags: [subject/foundations, type/concept, src/own-notes, status/draft]
 > $X_m=\sum_nx_ne^{-2\pi imn/N}$; $FF^\dagger=N\mathbf 1$; cyclic convolution theorem. Resolution $1/\mathcal T$. It is the character table of $\mathbb Z_N$.
 
 ## In this vault
-Group theory link: [[GT04 Symmetry Representations and Characters]], [[Character Table]]. Numerics: [[Fast Fourier Transform]].
+Group theory link: [[GT10 Symmetry Representations and Characters]], [[Character Table]]. Numerics: [[Fast Fourier Transform]].
 
 > [!pitfall] Watch out
 > Zero-padding interpolates, it does not improve resolution.

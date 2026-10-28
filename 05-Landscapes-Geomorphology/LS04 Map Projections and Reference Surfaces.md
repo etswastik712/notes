@@ -163,7 +163,7 @@ meaning $a=6 378 137$ m and inverse flattening $1/f=298.257223563$. Thus $f=0.00
 
 > [!connection] Where this connects
 > - **Conformal maps are complex-analytic maps:** Mercator is the real part of $w=\ln\tan(\pi/4+\phi/2)+i\lambda$, a conformal map, the same machinery as the 2D potential-flow methods in [[Waves - Course Map]] and complex analysis in [[Proofs, Analysis and Topology - Course Map]].
-> - **Group theory:** the distance-preserving maps of the sphere form the rotation group $SO(3)$ (plus reflections: $O(3)$); the UTM grid rotation (convergence) is an element of $SO(2)$ acting on map coordinates. See [[GT04 Symmetry Representations and Characters]] for $SO(3)$ and its characters.
+> - **Group theory:** the distance-preserving maps of the sphere form the rotation group $SO(3)$ (plus reflections: $O(3)$); the UTM grid rotation (convergence) is an element of $SO(2)$ acting on map coordinates. See [[GT10 Symmetry Representations and Characters]] for $SO(3)$ and its characters.
 > - **Vertical datum** (geoid versus ellipsoid) is [[LS05 Shape of Planets]].
 
 

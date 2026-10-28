@@ -3,17 +3,14 @@ title: Alternating Group
 aliases: ["A_n", "alternating group"]
 subject: group-theory
 type: concept
-scope: [extra-book]
 by: [book]
 status: draft
-tags: [subject/group-theory, type/concept, extra/book, status/draft]
+tags: [subject/group-theory, type/concept, status/draft]
 ---
 # Alternating Group
 
-<span class="scope-extra-book">extra · book</span>
-
-> [!syllabus] In the syllabus vs extra
-> 🟡 **Extra · book:** Kurzweil–Stellmacher; written up in [[GT03 Actions Conjugation and Sylow Theorems]].
+> [!info] Source
+> Kurzweil–Stellmacher; written up in [[GT05 Actions Conjugation and Sylow Theorems]].
 
 > [!intuition] In one picture
 > The even permutations, index 2 in $S_n$; simple for $n\ge5$.
@@ -23,7 +20,7 @@ tags: [subject/group-theory, type/concept, extra/book, status/draft]
 > - $A_5$: classes 1, 12, 12, 15, 20 give simplicity by a counting argument.
 > - $A_4$ has $V_4$ normal and no subgroup of order 6.
 
-Used in: [[GT03 Actions Conjugation and Sylow Theorems]]. Related: [[Symmetric Group]] · [[Simple Group]].
+Used in: [[GT05 Actions Conjugation and Sylow Theorems]]. Related: [[Symmetric Group]] · [[Simple Group]].
 
 ## Linked from
 ```dataview

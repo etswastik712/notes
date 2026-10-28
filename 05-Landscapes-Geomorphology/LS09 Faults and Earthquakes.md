@@ -139,7 +139,7 @@ flowchart LR
 > [!connection] Where else this appears
 > - **Power laws and heavy tails:** [[Pareto]] and [[Gumbel]] in [[Probability - Course Map]]; the Poisson process of earthquake occurrence is [[Poisson Distribution]].
 > - **Periodic loading and the elastic cycle:** the stick-slip oscillation of a spring-block model is a relaxation oscillator: [[Fourier and Laplace Transforms]] §7.5; [[LS02 Mechanics and Mathematics Toolkit]] (Maxwell time and post-seismic relaxation).
-> - **Symmetry of the stress tensor** (torque balance) is why only 6 of its 9 components are independent: [[GT04 Symmetry Representations and Characters]] (rank-2 tensors under rotations).
+> - **Symmetry of the stress tensor** (torque balance) is why only 6 of its 9 components are independent: [[GT10 Symmetry Representations and Characters]] (rank-2 tensors under rotations).
 
 
 ## Finite faults, topography and InSAR (slides 87–88)

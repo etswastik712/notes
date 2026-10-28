@@ -63,7 +63,7 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 | LS-DT | `Geomorphic Features of the Deccan Traps Terrain.pdf` | **Shilpa Patil**, 37 slides | yes | taught: LS18 and 15 concept notes |
 | LS-TT | `Topotoolbox_tut_shubhra.pdf` | **Shubhra**, 15 slides, MATLAB TopoToolbox | yes | taught: LS20 |
 | LS-QG | `Introduction_to_QGIS_aju.pptx` | **Aju**, 14 slides, QGIS and basin analysis | partial (images extracted) | taught: LS20 |
-| KS | [[Kurzweil-Stellmacher_Theory of finite groups.pdf]] | Kurzweil and Stellmacher, *The Theory of Finite Groups* (400 pp.; PDF page = printed + 13) | yes | extra · book: GT01–GT03 |
+| KS | [[Kurzweil-Stellmacher_Theory of finite groups.pdf]] | Kurzweil and Stellmacher, *The Theory of Finite Groups* (400 pp.; PDF page = printed + 13) | yes | extra · book: GT01–GT05 |
 | T3 | [[Tutorial3.pdf]] | 2 (TeX, text layer) | taught: QM05 §10 (added) |
 | QZ1 / QZ2 / EP | [[2026-09-02-mock-quiz-and-solutions]] / [[2026-09-03-quiz-ideal-solutions]] / [[ph2113/exam-prep]] | summaries of Classroom posts (another tool, `agent_written`); question texts of the 3 Sep quiz missing | taught: [[Quantum Mechanics Quiz Prep]] |
 | G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 409 (scan; **1st edition**; book page = PDF − 15; §1.2 p.17, §1.4 p.26, §1.6 p.32, §2.1 p.35, §2.2 p.39, §2.3 p.46, §2.4 p.59, §2.5 p.65, §3.4 p.123; OCR'd pp.14–130 for locating sections only) | extra/book |

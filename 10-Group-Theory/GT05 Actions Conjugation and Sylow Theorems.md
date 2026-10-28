@@ -1,26 +1,21 @@
 ---
-title: GT03 Actions Conjugation and Sylow Theorems
-aliases: [GT03, group action, orbit-stabiliser, class equation, Sylow theorems, Cauchy's theorem, Burnside's lemma, conjugacy classes of S_n, A5 is simple]
+title: GT05 Actions Conjugation and Sylow Theorems
+aliases: [GT03 (old number), group action, orbit-stabiliser, class equation, Sylow theorems, Cauchy's theorem, Burnside's lemma, conjugacy classes of S_n, A5 is simple]
 subject: group-theory
 type: chapter
-chapter: 3
+chapter: 5
 part: II
-scope: [extra-book, extra-beyond]
 by: [book, own-notes]
 status: draft
 prereq: ["[[GT02 Homomorphisms Normal Subgroups and Quotients]]"]
-tags: [subject/group-theory, type/chapter, extra/book, extra/beyond, src/book, src/own-notes, status/draft]
+tags: [subject/group-theory, type/chapter, src/book, src/own-notes, status/draft]
 ---
-# GT03 · Actions, Conjugation and Sylow Theorems
+# GT05 · Actions, Conjugation and Sylow Theorems
 
-◀ [[GT02 Homomorphisms Normal Subgroups and Quotients]] · [[Group Theory - Course Map|Course Map]] · next: [[GT04 Symmetry Representations and Characters]]
+◀ [[GT02 Homomorphisms Normal Subgroups and Quotients]] · [[Group Theory - Course Map|Course Map]] · next: [[GT10 Symmetry Representations and Characters]]
 
-<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
-
-> [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
-> **No lecture source.** K–S's preface says *"the notion of action, in all its facets, is at the centre of our exposition"*; this chapter is that centre.
-> 🟡 **Extra · book:** K–S §3.1 Action (3.1.1–3.1.11, [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=68|PDF p.68 ff.]]), §3.2 Sylow's theorem (3.2.1–3.2.12, [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=75|PDF p.75 ff.]]), §4.3 the symmetric group (4.3.1–4.3.5, [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=100|PDF p.100 ff.]]).
-> 🔵 **Extra · beyond** (`scripts/gt_numbers.py`): Burnside's lemma with the necklace counts, the full class lists of $S_4$ and $A_5$, all Sylow numbers by brute force, the class-size proof that $A_5$ is simple, and the short self-contained proofs of Cauchy (McKay) and of Sylow's three parts written out below.
+> [!info] Source and approach
+> Follows K–S §3.1–3.2 and §4.3 ([[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=68|PDF p.68 ff.]]). Burnside's lemma, the McKay proof of Cauchy, the proof of Sylow's theorems, the class lists and the simplicity of $A_5$ are my own write-ups and computations (`scripts/gt_numbers.py`).
 
 > [!key] After this chapter you can
 > - define an **action**, its **orbits** and **stabilisers**, and prove **orbit–stabiliser** $|G|=|\alpha^G||G_\alpha|$,
@@ -32,8 +27,8 @@ tags: [subject/group-theory, type/chapter, extra/book, extra/beyond, src/book, s
 > [!intuition] The one-sentence story
 > A group is most useful when it *acts*: stand the group on a set (vertices of a square, subgroups of itself, its own elements) and count; every counting identity (orbit–stabiliser, class equation, Burnside, Sylow) is the same sentence, "the orbit has as many points as the group has elements divided by those that fix the point".
 
-![[GT03 Actions Map.svg]]
-*Diagram GT3.0. The chapter in one page. Editable source: [[GT03 Actions Map.excalidraw]].*
+![[GT05 Actions Map.svg]]
+*Diagram GT5.0. The chapter in one page. Editable source: [[GT05 Actions Map.excalidraw]].*
 
 ```mermaid
 flowchart LR
@@ -48,7 +43,7 @@ flowchart LR
 *Concept map.*
 
 ## 1. Actions, orbits, stabilisers
-<span class="scope-extra-book">extra · book</span> *K–S 3.1.1–3.1.6*
+*K–S 3.1.1–3.1.6*
 
 > [!key] Definitions
 > $G$ **acts** on a set $\Omega$ if each $g$ gives a permutation $\omega\mapsto\omega^g$ with $\omega^{1}=\omega$ and $(\omega^g)^h=\omega^{gh}$. Equivalently an action is a **homomorphism $G\to S_\Omega$** (the permutation representation). The **orbit** is $\omega^G=\{\omega^g\}$ and the **stabiliser** is $G_\omega=\{g:\omega^g=\omega\}\le G$. The orbits partition $\Omega$ (the relation "$\beta=\alpha^g$ for some $g$" is an equivalence). The kernel of the action is $\bigcap_\omega G_\omega$.
@@ -60,7 +55,7 @@ flowchart LR
 > $D_4$ acts on the four vertices; orbit of vertex 1 has 4 points, so $|G_1|=8/4=2$: the identity and the reflection in the diagonal through 1, exactly as drawn.
 
 ![[fig_gt03_classes.png]]
-*Figure GT3.1. Left: the class sizes of $S_4$ (24 = 1+3+6+6+8). Middle: the class sizes of $A_5$ (60 = 1+12+12+15+20). Right: $D_4$ acting on the vertices of a square: orbit 4, stabiliser 2, $4\cdot2=8$.*
+*Figure GT5.1. Left: the class sizes of $S_4$ (24 = 1+3+6+6+8). Middle: the class sizes of $A_5$ (60 = 1+12+12+15+20). Right: $D_4$ acting on the vertices of a square: orbit 4, stabiliser 2, $4\cdot2=8$.*
 
 > [!derivation] Three standard actions
 > 1. **Left multiplication** on $G$ (regular action), faithful: **Cayley's theorem** $G\hookrightarrow S_{|G|}$.
@@ -68,7 +63,7 @@ flowchart LR
 3. **Conjugation** $x^g=g^{-1}xg$ on $G$ (or on its subgroups): orbits are **conjugacy classes**, the stabiliser of $x$ is the **centraliser** $C_G(x)$; on subgroups the stabiliser is the **normaliser** $N_G(U)$ (3.1.9, the largest subgroup in which $U$ is normal).
 
 ## 2. The class equation and $p$-groups
-<span class="scope-extra-book">extra · book</span> *K–S 3.1.7–3.1.11*
+*K–S 3.1.7–3.1.11*
 
 > [!derivation] Theorem (class equation, 3.1.8). If $K_1,\dots,K_h$ are the conjugacy classes of size $>1$ with representatives $x_i$, then $|G|=|Z(G)|+\sum_{i=1}^h|G:C_G(x_i)|$.
 > *Proof.* $x$ is central iff its class is $\{x\}$. The remaining classes partition the rest; by orbit–stabiliser a class of $x_i$ has size $|G:C_G(x_i)|$. ∎
@@ -80,8 +75,6 @@ flowchart LR
 > $D_4$: class sizes $1,1,2,2,2$, so $8=2+2+2+2$ with $|Z|=2$. $S_4$: $24=1+3+6+6+8$ (identity, double transpositions, transpositions, 4-cycles, 3-cycles); by cycle type the sizes are $n!/\prod_kk^{m_k}m_k!$ where $m_k$ = number of $k$-cycles: $24/(1^2\cdot2!\cdot2)=6$, $24/(2^2\cdot2!)=3$, $24/3=8$, $24/4=6$.
 
 ## 3. Burnside's lemma
-<span class="scope-extra-beyond">extra · beyond</span>
-
 > [!derivation] Theorem. The number of orbits of $G$ on $\Omega$ is $\dfrac1{|G|}\sum_{g\in G}|\mathrm{Fix}(g)|$.
 > *Proof.* Count the pairs $(g,\omega)$ with $\omega^g=\omega$ in two ways: $\sum_g|\mathrm{Fix}(g)|=\sum_\omega|G_\omega|=\sum_\omega|G|/|\omega^G|$. Each orbit $O$ contributes $\sum_{\omega\in O}|G|/|O|=|G|$, so the total is $|G|\cdot\#\text{orbits}$. ∎
 
@@ -89,7 +82,7 @@ flowchart LR
 > Colour the 4 vertices of a square with $k$ colours, counting colourings equivalent under rotations $C_4=\{e,r,r^2,r^3\}$. A rotation with $c$ cycles on the vertices fixes $k^c$ colourings: $e$: $k^4$; $r,r^3$: $k$; $r^2$: $k^2$. Orbits $=\frac14(k^4+k^2+2k)$: $k=2$: $\frac14(16+4+4)=\mathbf6$; $k=3$: $\frac14(81+9+6)=\mathbf{24}$. Allowing reflections too (all of $D_4$): for $k=2$ also 6 (the extra reflections add $2k^3+2k^2$ terms: $\frac18(16+4+4+2\cdot8+2\cdot4)=6$).
 
 ## 4. Cauchy and Sylow
-<span class="scope-extra-book">extra · book</span> *K–S 3.2.1–3.2.9*
+*K–S 3.2.1–3.2.9*
 
 > [!derivation] Theorem (Cauchy, 3.2.1). If a prime $p$ divides $|G|$ then $G$ has an element of order $p$.
 > *Proof (McKay).* Let $X=\{(g_1,\dots,g_p)\in G^p:g_1g_2\cdots g_p=1\}$; $|X|=|G|^{p-1}$ (choose $g_1,\dots,g_{p-1}$ freely, $g_p$ is forced). The cyclic group $\mathbb Z_p$ acts on $X$ by cyclic shift (a cyclic shift of a product equal to 1 is again 1: $g_2\cdots g_pg_1=g_1^{-1}(g_1\cdots g_p)g_1=1$). Orbits have size 1 or $p$; size 1 means $g_1=\dots=g_p=g$ with $g^p=1$. Hence $|G|^{p-1}\equiv\#\{g:g^p=1\}\pmod p$; the left side is $\equiv0$, so $p$ divides $\#\{g:g^p=1\}$. This number is $\ge1$ (identity), so it is $\ge p$, and some $g\ne1$ has $g^p=1$, i.e. $o(g)=p$. ∎
@@ -105,10 +98,10 @@ flowchart LR
 > [!key] Frattini argument (3.2.7). If $N\trianglelefteq G$ and $P\in\mathrm{Syl}_p(N)$ then $G=N\,N_G(P)$. *Proof.* For $g\in G$, $gPg^{-1}$ is Sylow in $N$, so $=nPn^{-1}$; then $n^{-1}g\in N_G(P)$. ∎
 
 ![[fig_gt03_sylow.png]]
-*Figure GT3.2. Sylow numbers found by brute force. Each satisfies $n_p\equiv1\pmod p$ and $n_p\mid m$: $S_4$: $n_2=3$ ($m=3$), $n_3=4$ ($m=8$); $A_5$: $n_2=5$ ($m=15$), $n_3=10$ ($m=20$), $n_5=6$ ($m=12$).*
+*Figure GT5.2. Sylow numbers found by brute force. Each satisfies $n_p\equiv1\pmod p$ and $n_p\mid m$: $S_4$: $n_2=3$ ($m=3$), $n_3=4$ ($m=8$); $A_5$: $n_2=5$ ($m=15$), $n_3=10$ ($m=20$), $n_5=6$ ($m=12$).*
 
 ## 5. Using Sylow: small groups
-<span class="scope-extra-book">extra · book</span> *K–S 3.2.10–3.2.12*
+*K–S 3.2.10–3.2.12*
 
 > [!example] Order 15 is cyclic
 > $n_3\mid5$, $n_3\equiv1\pmod3$ so $n_3=1$; $n_5\mid3$, $n_5\equiv1\pmod5$ so $n_5=1$. Both Sylow subgroups $A$ (order 3), $B$ (order 5) are normal, $A\cap B=1$, $AB=G$: $G\cong\mathbb Z_3\times\mathbb Z_5\cong\mathbb Z_{15}$. The same argument shows: **if $p<q$ are primes with $q\not\equiv1\pmod p$ then every group of order $pq$ is cyclic**; if $q\equiv1\pmod p$ there is also a non-Abelian one ($S_3$ for $(2,3)$, order 21 for $(3,7)$).
@@ -120,7 +113,7 @@ flowchart LR
 > $n_7\in\{1,8\}$; if 8 there are $8\cdot6=48$ elements of order 7, leaving 8 for the Sylow 2-subgroup (order 8), so it is unique and normal. Either way $G$ is not simple.
 
 ## 6. The symmetric and alternating groups
-<span class="scope-extra-book">extra · book</span> *K–S 4.3.1–4.3.5*
+*K–S 4.3.1–4.3.5*
 
 > [!derivation] Conjugacy in $S_n$ (4.3.1). Two permutations are conjugate in $S_n$ iff they have the same cycle type.
 > *Proof.* $g^{-1}(i_1\,i_2\dots i_k)g=(i_1^g\,i_2^g\dots i_k^g)$: conjugation **renames the points inside the cycles**, so the cycle lengths are unchanged, and any two permutations with the same type can be renamed into each other. ∎ The number of classes is the number of partitions of $n$ ($S_4$: 5, $S_5$: 7).
@@ -158,18 +151,18 @@ flowchart LR
 > 6. **How many Sylow 3-subgroups does $S_5$ have?** *Answer:* each has order 3 and contains 2 three-cycles, so $20/2=10$ (and $10\equiv1\bmod3$, $10\mid40$).
 
 ## Map of this chapter
-> [!connection] How GT03 connects
-> **Builds on:** [[GT01 Groups Subgroups and Cosets]], [[GT02 Homomorphisms Normal Subgroups and Quotients]] (kernel of an action, $G/Z$). **Next:** [[GT04 Symmetry Representations and Characters]] (conjugacy classes label the columns of a character table: the class equation counts the irreducible representations).
+> [!connection] How GT05 connects
+> **Builds on:** [[GT01 Groups Subgroups and Cosets]], [[GT02 Homomorphisms Normal Subgroups and Quotients]] (kernel of an action, $G/Z$). **Next:** [[GT10 Symmetry Representations and Characters]] (conjugacy classes label the columns of a character table: the class equation counts the irreducible representations).
 > **Other subjects:** [[Probability - Course Map]] (counting arguments: necklaces, orbit sizes), [[Quantum Mechanics - Course Map]] (identical particles: $S_n$ acts on $n$-particle wavefunctions), [[Inorganic Chemistry - Course Map]] (the orbit of an atom under the point group = symmetry-equivalent atoms).
 > **Concept notes:** [[Group Action]] · [[Orbit-Stabiliser Theorem]] · [[Conjugacy Class]] · [[Class Equation]] · [[Burnside's Lemma]] · [[Cauchy's Theorem]] · [[Sylow Theorems]] · [[Alternating Group]]
 
 ## Provenance
 > [!provenance]- Source map for this chapter
-> | Topic | Source | Scope |
+> | Topic | Source | Origin |
 > |---|---|---|
-> | actions, orbit–stabiliser, class equation, $p$-groups, Frattini | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=68|K–S §3.1, PDF pp.68–74]] (3.1.1–3.1.11) | extra · book |
-> | Cauchy, Sylow, small groups | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=75|K–S §3.2, PDF pp.75–84]] (3.2.1–3.2.12) | extra · book |
-> | conjugacy in $S_n$, $A_n$ simple | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=100|K–S §4.3, PDF pp.100–104]] (4.3.1–4.3.5) | extra · book |
-> | McKay proof of Cauchy, proof of Sylow (a)–(c), Burnside, orders 15, 12, 56, class lists, $A_5$ simple, practice | my write-ups (standard arguments) and `scripts/gt_numbers.py` | extra · beyond |
+> | actions, orbit–stabiliser, class equation, $p$-groups, Frattini | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=68|K–S §3.1, PDF pp.68–74]] (3.1.1–3.1.11) | book |
+> | Cauchy, Sylow, small groups | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=75|K–S §3.2, PDF pp.75–84]] (3.2.1–3.2.12) | book |
+> | conjugacy in $S_n$, $A_n$ simple | [[Kurzweil-Stellmacher_Theory of finite groups.pdf#page=100|K–S §4.3, PDF pp.100–104]] (4.3.1–4.3.5) | book |
+> | McKay proof of Cauchy, proof of Sylow (a)–(c), Burnside, orders 15, 12, 56, class lists, $A_5$ simple, practice | my write-ups (standard arguments) and `scripts/gt_numbers.py` | mine |
 >
 > **Flags.** (1) I did not read K–S's own proofs of Sylow's theorem; the proofs here are the standard textbook arguments (induction on $|G|$, action on cosets), not a transcription. (2) The general-$n$ part of "$A_n$ is simple" is cited, not proved here; only $A_5$ is proved. (3) Theorem numbers are read from the book's section list; their exact wording was not re-checked.

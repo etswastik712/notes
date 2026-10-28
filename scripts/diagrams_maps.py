@@ -242,7 +242,7 @@ SPECS = {
         footer="Kurzweil-Stellmacher 1.2-1.8; my derivations",
     ),
 
-    "GT03 Actions Map": dict(
+    "GT05 Actions Map": dict(
         size=(1000, 560),
         nodes={
             "a": dict(x=170, y=90, w=290, h=100, text="Action of G on a set\norbits, stabilisers\nCayley, coset action", color="blue"),
@@ -254,11 +254,11 @@ SPECS = {
             "g": dict(x=650, y=470, w=340, h=100, text="S_n classes = cycle types\nA5 simple (12,12,15,20)", color="blue"),
         },
         arrows=[("a", "b", ""), ("b", "c", ""), ("b", "d", ""), ("d", "e", ""), ("e", "f", ""), ("e", "g", "")],
-        title="GT03: actions, conjugation and Sylow in one page",
+        title="GT05: actions, conjugation and Sylow in one page",
         footer="Kurzweil-Stellmacher 3.1, 3.2, 4.3; my proofs",
     ),
 
-    "GT04 Representations Map": dict(
+    "GT10 Representations Map": dict(
         size=(1000, 560),
         nodes={
             "a": dict(x=170, y=90, w=290, h=100, text="Point group\nC2v, C3v = S3, Td = S4, Oh", color="blue"),
@@ -270,7 +270,7 @@ SPECS = {
             "g": dict(x=650, y=470, w=340, h=100, text="SO(3): chi_l(theta)\nLie groups, angular momentum", color="blue"),
         },
         arrows=[("a", "b", ""), ("b", "c", ""), ("c", "d", ""), ("d", "e", ""), ("d", "f", ""), ("d", "g", "")],
-        title="GT04: symmetry, representations and characters in one page",
+        title="GT10: symmetry, representations and characters in one page",
         footer="my write-up; tables checked in gt_numbers.py",
     ),
 
@@ -288,6 +288,52 @@ SPECS = {
         arrows=[("a", "b", ""), ("a", "c", ""), ("a", "d", ""), ("b", "c", ""), ("c", "e", ""), ("c", "f", ""), ("d", "g", ""), ("c", "g", "")],
         title="Fourier and Laplace transforms in one page",
         footer="09-Foundations: own write-up; all numbers checked in scripts/ft_numbers.py",
+    ),
+
+    "GT03 Cyclic Abelian Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Cyclic group C_n\none generator\nC_n = Z/nZ", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Subgroups = divisors of n\nphi(n) generators\nsum phi(d) = n", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Aut(C_n) = (Z/n)^x\n(Z/p)^x cyclic\n(root-counting proof)", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Direct product A x B\nA, B normal, A cap B = 1, AB = G\nCRT: C_m x C_n = C_mn iff gcd = 1", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Structure theorem\nproduct of C_(p^k), unique\nlemma: <a> has a complement", color="orange"),
+            "f": dict(x=450, y=470, w=420, h=100, text="Count: product of partition numbers p(a_i)\norder 72 -> 6 groups, order 16 -> 5", color="grey"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("a", "d", ""), ("d", "e", ""), ("e", "f", "")],
+        title="GT03: cyclic and Abelian groups in one page",
+        footer="Kurzweil-Stellmacher 1.4, 1.6, 2.1, 2.2; own proofs",
+    ),
+
+    "GT04 Commutators Simple Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Commutator [x,y]\nG' = commutator subgroup\nnormal, characteristic", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="G/G' = largest Abelian quotient\nS_n' = A_n, A_4' = V_4\nperfect: G = G'", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Derived series\nreaches 1 <=> solvable\n(S_4 yes, A_5 no)", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Simple group\nno proper normal subgroup\nAbelian simple = C_p", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Minimal normal subgroup\nAbelian case: elementary Abelian\nnon-Abelian: power of a simple", color="orange"),
+            "f": dict(x=250, y=470, w=330, h=100, text="Composition series\nexists for every finite group", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="Jordan-Holder\nfactors unique (proof by diamond)\nclassification: C_p, A_n, Lie type, 26 sporadic", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("d", "e", ""), ("d", "f", ""), ("f", "g", ""), ("c", "f", "")],
+        title="GT04: commutators, simple groups, composition series in one page",
+        footer="Kurzweil-Stellmacher 1.5, 1.7, 1.8; own proofs",
+    ),
+
+    "GT06 Permutation Groups Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Transitive action\n|G| = n |G_a|\nk-transitive: n(n-1)...", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Blocks\nprimitive <=> G_a maximal\n2-transitive => primitive", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Frobenius groups\nkernel K of size n (counting lemma)\nS3, A4, F20, AGL(1,q)", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="S_n and A_n\nA_n is (n-2)-transitive\nZ(S_n) = 1, n >= 3", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="A_n simple, n >= 5\nfour cases: cycle of length >= 4,\ntwo 3-cycles, one 3-cycle, transpositions", color="orange"),
+            "f": dict(x=450, y=470, w=420, h=100, text="Imprimitive groups embed in wreath products\nD4 = C2 wr C2; Sylow p of S_(p^2) = Cp wr Cp", color="grey"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("a", "d", ""), ("d", "e", ""), ("b", "f", "")],
+        title="GT06: permutation groups in one page",
+        footer="Kurzweil-Stellmacher ch. 4; own proofs",
     ),
 
 }
