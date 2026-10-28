@@ -53,6 +53,28 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > A viscous layer of thickness $H$ on a slope $\theta$ has parameters $\rho g\sin\theta [\mathrm{kg m^{-2}s^{-2}}]$, $H [\mathrm m]$, $\mu [\mathrm{kg m^{-1}s^{-1}}]$. A speed $[\mathrm{m s^{-1}}]$ can be formed in only one way: $v\sim(\rho g\sin\theta)^aH^b\mu^c$. Matching kg: $a+c=0$; s: $-2a-c=-1$ gives $a=1, c=-1$; m: $-2a+b-c=1\Rightarrow b=2$. So $v\sim\rho g\sin\theta H^2/\mu$, exactly the result of slide 48 obtained there by force balance. The exact solution (§2.6) differs only by the factor $1/2$.
 
 
+<!-- ls-depth:LS02:1 -->
+> [!intuition] Context: why this toolkit comes first
+> Almost every result in this course is a *scaling*: how a speed, a time or a height changes when a length or a viscosity is changed. Dimensional analysis gives such scalings **before** any differential equation is solved, tells you which *dimensionless numbers* decide the regime (viscous or turbulent, elastic or viscous, advective or diffusive), and later becomes a check on every formula. T&S use exactly this reasoning, e.g. to show that the only length that can appear in cooling of a half-space is $\sqrt{\kappa t}$ (T&S, Bookos copy, PDF p.323) and, in their Problem 6.22, to show that the Stokes drag on a sphere can only be $\propto\mu aU$.
+
+> [!derivation] 🟡 Extra · book / 🔵 beyond: the Buckingham Π theorem, with a proof idea and the Stokes drag example
+> **Statement.** If a physical law relates $n$ variables $q_1,\dots,q_n$ that involve $k$ independent base dimensions (M, L, T, ...), it can be rewritten as a relation among $n-k$ **dimensionless** combinations $\Pi_1,\dots,\Pi_{n-k}$.
+> **Why.** A dimension of the variable $q_j$ is a vector $\mathbf d_j\in\mathbb Z^k$ (exponents of M, L, T). A product $\prod q_j^{a_j}$ is dimensionless iff $\sum_ja_j\mathbf d_j=0$: the exponent vectors $\mathbf a$ form the null space of the $k\times n$ matrix $[\mathbf d_1\cdots\mathbf d_n]$, whose dimension is $n-\operatorname{rank}\ge n-k$. Changing the units rescales each variable independently; a law must be invariant, so it can depend on the variables only through these invariants.
+> **Example (Stokes drag).** A sphere of radius $a$ moves slowly at speed $U$ through a fluid of viscosity $\mu$; at very low Reynolds number inertia (density $\rho$) drops out. Variables: $F\,[\mathrm{M\,L\,T^{-2}}]$, $\mu\,[\mathrm{M\,L^{-1}T^{-1}}]$, $a\,[\mathrm L]$, $U\,[\mathrm{L\,T^{-1}}]$: $n=4$, $k=3$, so exactly **one** $\Pi=F/(\mu aU)$ must be a constant: $F=C\mu aU$. The full solution of the Stokes equations gives $C=6\pi$ ($18.8$); dimensions alone cannot give the number, only the *scaling*: double the radius and the drag doubles; double the viscosity and it doubles. This is the settling law behind sediment transport ([[LS16 Fluvial Landscapes]], [[LS19 Glacial and Aeolian Landforms]]) and magma-ascent estimates.
+
+> [!key] 🟡 Extra · book: the dimensionless numbers used in this course
+> | Number | Meaning | Value in the course | Decides |
+> |---|---|---|---|
+> | Reynolds $Re=\rho UL/\eta$ | inertia / viscous force | glacier $9\times10^{-15}$; mantle $3\times10^{-21}$; basalt lava $27$; wind over a dune $7\times10^{5}$; river $4\times10^{6}$ | laminar creeping flow ($Re\ll1$: ice, mantle, regolith) versus turbulence ($Re\gtrsim2000$ in channels: rivers, wind) |
+> | Péclet $Pe=UL/D$ | advection / diffusion | hillslope: small, diffusion rules | whether material is carried by flow or spreads by diffusion ([[LS12 Hillslope Transport and the Diffusion Equation]]) |
+> | Deborah $De=\tau_M/T$ | material relaxation time / loading time | see "Maxwell time" below | elastic or viscous behaviour |
+> | Froude $Fr=U/\sqrt{gh}$ | flow speed / wave speed | rivers $\sim1$ | subcritical / supercritical flow |
+> *(Reynolds numbers computed in `scripts/ls_depth_numbers.py` with $\eta_{ice}=10^{13}$, $\eta_{mantle}=10^{21}$ Pa s, $\eta_{lava}=100$ Pa s. A&A p. 265 (PDF) give the low-$Re$ drag coefficient $24/Re$ and p. 400 the open-channel turbulence threshold $Re\approx2000$.)*
+
+> [!intuition] Why the Reynolds number is the "regime switch"
+> Both forces on a fluid blob scale with a length $L$: inertia as $\rho U^2L^2$ and viscous drag as $\eta UL$. Their ratio is $\rho UL/\eta=Re$. If $Re\ll1$ viscosity wins, *everything is slow and reversible-looking* (a glacier or the mantle: fluid mechanics reduces to the Stokes equation $\eta\nabla^2\mathbf u=\nabla p-\rho\mathbf g$, which is **linear** and has no inertia). If $Re\gg1$ inertia wins and the flow becomes turbulent, so that the effective mixing viscosity is orders of magnitude larger and one must use empirical friction laws (Manning, Chézy).
+
+
 ## Taylor series and Newton's laws (slides 35–36)
 
 > [!figure]- 🖼 Slides 35–36: open to see the slides this section explains
@@ -307,6 +329,17 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > The slide notes: “one missing equation! Add a compatibility condition”. Count: three unknown fields $\sigma_{xx},\sigma_{xy},\sigma_{yy}$ but only two equations ((8)–(9)). Force balance alone cannot determine stress: many stress fields balance the same loads. Extra information about *how the material deforms* must be added. A neat way to see the structure: define a scalar $\Phi(x,y)$ (Airy stress function) with $\sigma_{xx}=\partial_y^2\Phi$, $\sigma_{xy}=-\partial_x\partial_y\Phi$, $\sigma_{yy}=\partial_x^2\Phi-\rho gy$. Direct substitution shows both (8) and (9) are satisfied identically ($\partial_x\partial_y^2\Phi-\partial_x\partial_y^2\Phi=0$ and $\rho g-\rho g=0$). Equilibrium therefore fixes nothing about $\Phi$. The missing condition is that the strains derived from the stresses (through Hooke's law for an elastic solid) come from a single-valued displacement field — the *compatibility condition*, which for plane strain reads $\nabla^4\Phi=\partial_x^4\Phi+2\partial_x^2\partial_y^2\Phi+\partial_y^4\Phi=0$ (T&S Ch. 3, 8). For a viscous fluid the missing information is Newton's law of viscosity (next section) with velocity as extra unknown.
 
 
+<!-- ls-depth:LS02:2 -->
+> [!derivation] 🟡 Extra · book: Mohr's circle and Coulomb failure in full (used in [[LS06 Maximum Topography]], [[LS09 Faults and Earthquakes]], [[LS13 Landslides]])
+> **Normal and shear stress on an inclined plane.** Let $\sigma_1\ge\sigma_3$ be the principal stresses (compression positive) in a plane and consider a plane whose *normal* makes angle $\theta$ with the $\sigma_1$ axis. Balance forces on a small wedge (area of the plane $A$; the faces perpendicular to the axes have areas $A\cos\theta$ and $A\sin\theta$):
+> $$\sigma_n=\sigma_1\cos^2\theta+\sigma_3\sin^2\theta=\tfrac12(\sigma_1+\sigma_3)+\tfrac12(\sigma_1-\sigma_3)\cos2\theta,\qquad\tau=\tfrac12(\sigma_1-\sigma_3)\sin2\theta.$$
+> Eliminating $\theta$: $(\sigma_n-\tfrac12(\sigma_1+\sigma_3))^2+\tau^2=\big(\tfrac12(\sigma_1-\sigma_3)\big)^2$: all possible $(\sigma_n,\tau)$ lie on a **circle** (Mohr) of centre $\tfrac12(\sigma_1+\sigma_3)$ and radius $\tfrac12(\sigma_1-\sigma_3)$, with the plane at angle $\theta$ represented by the point at angle $2\theta$.
+> **Coulomb criterion.** A plane slips when $\tau=c+\mu_s\sigma_n'$ with $\sigma_n'=\sigma_n-p$ the **effective** normal stress (pore-fluid pressure $p$ carries part of the load), cohesion $c$ and friction coefficient $\mu_s=\tan\varphi$. As $\sigma_1-\sigma_3$ grows the circle expands until it touches this straight line. The radius to the contact point is perpendicular to the line, so $2\theta=90^\circ+\varphi$: **the failure plane makes angle $45^\circ-\varphi/2$ with $\sigma_1$** (for $\mu_s=0.6$: $\varphi=31.0^\circ$, plane at $29.5^\circ\approx30^\circ$ to $\sigma_1$, the observed dip of thrust and normal faults). With $c=0$ the tangency condition gives
+> $$\frac{\sigma_1'}{\sigma_3'}=\frac{1+\sin\varphi}{1-\sin\varphi}=\big(\sqrt{1+\mu_s^2}+\mu_s\big)^2=3.12\quad(\mu_s=0.6).$$
+> **Numbers at 5 km depth** (`scripts/ls_depth_numbers.py`): $\sigma_v=\rho gz=132$ MPa; hydrostatic pore pressure $p=49$ MPa, so $\sigma_v'=83$ MPa. *Thrust* faulting needs the horizontal effective stress $3.12\times83=260$ MPa, i.e. $\sigma_H-\sigma_v=177$ MPa of horizontal squeezing; *normal* faulting needs only $\sigma_h'=83/3.12=27$ MPa, i.e. $\sigma_v-\sigma_h=57$ MPa of horizontal pulling. **Squeezing the crust needs about three times the force of pulling it apart**, which is why compressional mountain belts need strong boundary forces and why rifts open "easily" ([[LS06 Maximum Topography]] uses this for the upper bound on relief; [[LS09 Faults and Earthquakes]] for Anderson's three fault types).
+> *Intuition:* friction grows with the clamping stress; in thrust faulting gravity *adds* to the clamp (the vertical stress is the smallest, $\sigma_3$), in normal faulting gravity does the pushing ($\sigma_v=\sigma_1$) and the horizontal clamp is the small one.
+
+
 ## Viscous flow (slides 47–49)
 
 > [!figure]- 🖼 Slides 47–49: open to see the slides this section explains
@@ -372,6 +405,22 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > [!intuition] Why inertia can be dropped
 > The ratio of inertial to viscous forces is the Reynolds number $\mathrm{Re}=\rho UL/\mu$. For the slab above $\mathrm{Re}\sim917\cdot10^{-7}\cdot100/10^{13}\sim10^{-15}$; for mantle flow $\mathrm{Re}\sim10^{-20}$. Acceleration terms $\rho \mathrm{d}\vect v/\mathrm{d} t$ are then utterly negligible, which is why the force balance of slides 45–49 has no acceleration: the flow is always in instantaneous equilibrium with its driving forces (Stokes flow).
 
+<!-- ls-depth:LS02:3 -->
+> [!derivation] 🟡 Extra · book: the same rock is elastic fast and viscous slow (Maxwell model, Deborah number)
+> **Model.** Put a spring (shear modulus $G$) in series with a dashpot (viscosity $\eta$). Strains add, stress is the same: $\dot\varepsilon=\dot\sigma/G+\sigma/\eta$ (shear). T&S introduce this "Maxwell viscoelastic" rheology in their rheology chapter (T&S, Bookos copy, PDF p.624: the response to a suddenly imposed strain $\varepsilon_0$).
+> **Relaxation.** At fixed strain ($\dot\varepsilon=0$): $\dot\sigma=-(G/\eta)\sigma$, so $\sigma=\sigma_0e^{-t/\tau_M}$ with the **Maxwell time** $\tau_M=\eta/G$. **Loading at time scale $T$:** if $T\ll\tau_M$ the spring responds and the material is *elastic*; if $T\gg\tau_M$ the dashpot flows and it is *viscous*. The ratio $De=\tau_M/T$ is the Deborah number ("the mountains flowed before the Lord").
+> | Material | $\eta$ (Pa s), $G$ (Pa) | $\tau_M$ | Consequence |
+> |---|---|---|---|
+> | mantle | $10^{21}$, $7\times10^{10}$ | **453 yr** | elastic for seismic waves ($De\sim7\times10^{9}$), viscous for ice-age rebound ($De=0.04$) and orogeny ($4\times10^{-5}$): [[LS07 Isostasy]], [[LS15 Glacial Deposits Rebound and Sea Level]] |
+> | asthenosphere | $10^{19}$, $7\times10^{10}$ | 4.5 yr | the layer that relaxes after an earthquake within years |
+> | lower crust | $10^{20}$, $4\times10^{10}$ | 79 yr | decade-scale post-seismic flow |
+> | glacier ice | $10^{13}$, $3.5\times10^{9}$ | **48 min** | elastic only for sound waves and tidal flexing; viscous for glacier flow ([[LS14 Glaciers Mass Balance and Ice Flow]]) |
+> **Consequence for landscapes.** The *crust and lithosphere* behave elastically on the time scale of the earthquake cycle and of flexure ([[LS10 Folds Flexure and Mountain Building]]), but the *mantle beneath* is a viscous fluid for isostatic adjustment: **one Earth, two behaviours, switched by the loading time**, exactly the timescale logic of [[LS01 Landscapes as Physical Systems]].
+
+![[fig_ls02_maxwell.png]]
+*Figure LS02.1. Each bar is the range of loading times over which the material flows viscously; it is elastic to the left of its dot. Vertical dashed lines are typical loading times.*
+
+
 ## Further slides explained one by one
 <span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
 
@@ -379,6 +428,21 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 
 > [!example] 🖼 Reading the diagram: Slide 37: Hydrostatic force balance (steady case)
 > A small rectangular element of fluid (orange) between heights $z$ and $z+dz$ with the pressure $P(z)$ pushing up on its bottom face, $P(z+dz)$ pushing down on its top face and gravity $g$ acting down. With zero net force (fluid at rest) $P(z)-P(z+dz)-\rho g\,dz=0$, i.e. $dP/dz=-\rho g$, the hydrostatic equation derived in this chapter and used throughout (isostasy, lithostatic pressure).
+
+
+<!-- ls-depth:LS02:4 -->
+> [!question] Check yourself (answers below)
+> 1. A pendulum's period $T$ could depend on its length $\ell$, mass $m$ and $g$. Use Buckingham Π to find $T\propto\sqrt{\ell/g}$ and show $m$ drops out.
+> 2. Why can the Stokes drag not contain the fluid density at low $Re$? What changes at high $Re$?
+> 3. The mantle has $\tau_M\approx450$ yr. Why does the lithosphere still behave elastically during a 10-kyr ice age?
+> 4. Using the Coulomb numbers above, by what factor does tripling the pore pressure ratio ($p/\sigma_v$ from 0.37 to 0.9) reduce the stress needed for thrust failure?
+> 5. Compute $Re$ for a 50 m-thick basalt flow moving at 0.5 m/s with $\eta=10^3$ Pa s, $\rho=2700$.
+> *Answers.* (1) $[T]=\mathrm T$, $\ell$: L, $g$: $\mathrm{L\,T^{-2}}$, $m$: M; M appears in only one variable, so it cannot enter any dimensionless group: $T\sqrt{g/\ell}=\text{const}$. (2) Low $Re$: inertia negligible, only $\mu,a,U$ remain; at high $Re$ the pressure drag $\propto\rho U^2a^2$ takes over ($C_d\approx0.4$, A&A PDF p. 332). (3) The *lithosphere* is cold and stiff, its effective viscosity is $\gtrsim10^{23}$ Pa s, so its Maxwell time is $\gg10^4$ yr; only the hot mantle below flows. (4) Effective vertical stress $\sigma_v'=(1-0.9)\sigma_v=13$ MPa instead of $83$: the horizontal stress needed falls from $260$ to $41$ MPa, a factor $\sim6$: high pore pressure makes faults slip (and triggers landslides). (5) $Re=2700\times0.5\times50/10^3=68$: laminar, but not "creeping" ($Re>1$).
+
+> [!connection] Where this toolkit turns up in other subjects
+> - **Buckingham Π, scaling and the diffusion length $\sqrt{Dt}$:** [[Thermodynamics - Course Map]] (heat conduction), [[Waves - Course Map]]; the same dimension-counting argument gives the Bohr radius and the oscillator length in [[Quantum Mechanics - Course Map]] (e.g. [[QM05 The Harmonic Oscillator]]).
+> - **Mohr's circle** is the geometry of diagonalising a symmetric $2\times2$ matrix by a rotation: the same eigenvalue problem as the principal axes of an inertia tensor and, for Hermitian operators, the eigenvalues of [[QM03 States Operators and Measurement]]; a rotation of the axes by $\theta$ moves the point on the circle by $2\theta$ because the traceless part of a symmetric $2\times2$ tensor picks up the phase $e^{\pm2i\theta}$ (it is a *rank-2* object, one of the representations of the rotation group in [[GT04 Symmetry Representations and Characters]]).
+> - **Maxwell time / Deborah number** reappear in [[Climate - Course Map]] as the relaxation time of ocean heat uptake and in [[LS15 Glacial Deposits Rebound and Sea Level]] as the rebound time.
 
 
 ## Map of this chapter
@@ -394,3 +458,13 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS02:5 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | Stokes drag by dimensions; Reynolds number and drag coefficient; channel turbulence threshold | T&S (Bookos copy) PDF p.489 (Problem 6.22; $Re$ formula 6.227); A&A PDF pp.265, 332, 400 (found by text search; the surrounding page was read only where quoted) | b · primary books |
+> | Fourier's law, scaling for half-space cooling | T&S PDF pp.253 and 323 (found by search) | b · primary book |
+> | Maxwell viscoelastic rheology | T&S PDF p.624 (found by search; exercise text) | b · primary book |
+> | Buckingham Π proof idea, Mohr circle derivation, Coulomb numbers, Deborah table, Reynolds table | my own derivations; `scripts/ls_depth_numbers.py` (`LS02`), `scripts/fig_ls_depth.py` | extra · beyond |
+> | Viscosity and modulus values ($\eta_{mantle}=10^{21}$, $\eta_{ice}=10^{13}$, $G$) | standard order-of-magnitude values, not read from a page; `[verify]` against T&S Table 6.? | not checked |

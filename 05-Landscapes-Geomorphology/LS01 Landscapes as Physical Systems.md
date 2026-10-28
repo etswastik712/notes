@@ -58,6 +58,41 @@ Slide 8 adds the *language* of the model: mass conservation, force balance, stea
 *Figure LS01.1. The map–measure–model cycle of slide 7.*
 
 
+<!-- ls-depth:LS01:1 -->
+> [!intuition] Why a *physics* course about landscapes? (context)
+> Geomorphology began as description: **G. K. Gilbert** (1870s–90s, the Henry Mountains) already thought in terms of *rates, forces and equilibrium*, **W. M. Davis** (1899) replaced that by a *cycle* (youth, maturity, old age), and **J. T. Hack** (1960) returned to the idea that a landscape in *steady state* has all its slopes adjusted to each other. What changed after about 1985 is that we can finally **date** things (cosmogenic nuclides, thermochronology, OSL), so models must now get not only the *shape* but also the *rate* right (A&A §1.4). This course is the physics-first version: conservation laws, transport laws (rheology) and the size/frequency of events.
+> *Where to read more:* Anderson and Anderson (A&A) ch. 1 ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=23|PDF pp.23–26]]); Huggett, *Fundamentals of Geomorphology*, ch. 1 on system dynamics and equilibrium ([[Fundamentals of Geomorphology (Fundamentals of Physical Geography) - Second Edition (Richar Huggett) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=36|PDF p.36]]).
+
+> [!key] 🟡 Extra · book: the three guiding principles of A&A (ch. 1)
+> 1. **Conservation.** *"The rate of change of [quantity] within a definable volume equals the rate at which it is produced within that space, plus the rate at which it is transported in across the boundaries, minus the rate at which it is lost across the boundaries."* The quantity may be heat, regolith, ice, water, sediment, a radioactive isotope or momentum. A&A list thirteen uses (heat in the lithosphere, ice in a glacier, regolith on a hillslope, sediment in a bedform, water in a flood, momentum in the Navier–Stokes equation...). *Mathematically they all look the same:* rates of change are governed by spatial gradients in transport rates plus sources and sinks.
+> 2. **Transport rules.** Material is moved by body forces (gravity) and surface tractions (stresses); *how fast* depends on the **rheology**, the relation between strain rate and stress. Different materials have different rheologies (see the table below).
+> 3. **Event size and frequency.** A landscape feels many small events and a few huge ones; the question is which do the *work* (§ "Which events build the landscape?" below).
+
+> [!derivation] 🔵 Extra (my derivation): the master equation behind principle 1
+> Take a control volume with cross-section $A$ and length $\mathrm dx$ along $x$, containing a quantity of density $c$ (per unit volume). Let $q(x,t)$ be the flux (quantity per unit area per unit time) in $+x$ and $P$ the net production per unit volume per time (negative for decay). In $\mathrm dt$: change $=$ in $-$ out $+$ production, so
+> $$\frac{\partial(cA\,\mathrm dx)}{\partial t}=A\big[q(x)-q(x+\mathrm dx)\big]+PA\,\mathrm dx\ \Longrightarrow\ \boxed{\frac{\partial c}{\partial t}=-\frac{\partial q}{\partial x}+P}\qquad\text{(in 3D: }\partial_tc=-\nabla\!\cdot\!\mathbf q+P).$$
+> **Every equation of this course is this equation with a particular $c$, $\mathbf q$ and $P$:**
+> | Chapter | $c$ | flux $q$ (the *transport rule*) | $P$ | result |
+> |---|---|---|---|---|
+> | [[LS01 Landscapes as Physical Systems\|LS01]] | surface height $z$ (mass per area $\rho z$) | none (kinematic: $U-\mathcal E$) | uplift $U$ | $\partial_tz=U-\mathcal E$ |
+> | [[LS02 Mechanics and Mathematics Toolkit\|LS02]], [[LS08 Plate Tectonics Strain Stress and Convection\|LS08]] | temperature ($\rho c_pT$) | $-k\nabla T$ (Fourier) | radioactive heating | heat equation |
+> | [[LS12 Hillslope Transport and the Diffusion Equation\|LS12]] | regolith height $h$ | $-D\,\partial_xz$ (creep) | soil production | hillslope diffusion |
+> | [[LS14 Glaciers Mass Balance and Ice Flow\|LS14]] | ice thickness $H$ | $\bar uH$, $\bar u\propto H^{n+1}S^n$ (Glen) | mass balance $b$ | $\partial_tH=-\partial_xQ+b$ |
+> | [[LS16 Fluvial Landscapes\|LS16]] | channel elevation $z$ | $-KA^mS^n$ (stream power: an *erosion* sink) | uplift $U$ | $\partial_tz=U-KA^mS^n$ |
+> | [[LS17 Aeolian Landscapes\|LS17]], [[LS19 Glacial and Aeolian Landforms\|LS19]] | bed elevation | sand flux $q(u_*)$ | none | $\partial_tz=-\partial_xq/\rho_b$ |
+> The **transport rule** is the only place where the *physics of the material* enters, and it is the only part that differs between chapters.
+
+> [!example] 🟡 Extra · book: transport rules differ because rheologies differ
+> | Material | How it responds to stress (rheology) | Consequence in this course |
+> |---|---|---|
+> | water | linear viscous (Newtonian), turbulent at geomorphic scales | shear stress $\tau=\rho ghS$, bedload $\propto(\tau-\tau_c)^{3/2}$ ([[LS16 Fluvial Landscapes]]) |
+> | air | linear viscous, strongly turbulent | threshold for grain entrainment, $q\propto u_*^3$ ([[LS19 Glacial and Aeolian Landforms]]) |
+> | ice | power-law viscous, $\dot\varepsilon\propto\tau^n$, $n\approx3$ (Glen's law) | $u\propto H^{n+1}$, thin ice flows slowly ([[LS14 Glaciers Mass Balance and Ice Flow]]) |
+> | mantle | linear viscous at geological times, $\eta\sim10^{21}$ Pa s | isostatic rebound ([[LS07 Isostasy]], [[LS15 Glacial Deposits Rebound and Sea Level]]) |
+> | cold lithosphere | elastic, then brittle (friction, Coulomb) | flexure, faults, earthquakes ([[LS09 Faults and Earthquakes]], [[LS10 Folds Flexure and Mountain Building]]) |
+> | regolith on a slope | flux $\propto$ slope (creep) until a threshold, then plastic failure | diffusion, landslides ([[LS12 Hillslope Transport and the Diffusion Equation]], [[LS13 Landslides]]) |
+
+
 ## Landscapes are dynamic: the kinematic bookkeeping
 
 Slide 8 lists what changes a landscape: *uplift, exhumation and subsidence* (vertical mass flux caused by force imbalance), *weathering* (physical and chemical), and *erosion and deposition* (“horizontal” mass transport by viscous flow of mantle/ice/water/air, by deformation and fracture of solids in earthquakes, and by gravity-driven flow of solids in landslides). To use these words rigorously we need precise definitions.
@@ -82,6 +117,24 @@ Slide 8 lists what changes a landscape: *uplift, exhumation and subsidence* (ver
 
 > [!example] 🧮 Worked example: Is a mountain range near steady state?
 > Take $U=2\times10^{-3} \mathrm{m yr^{-1}}$ ($2$ mm/yr, typical of active orogens). To exhume a crustal thickness of $35$ km requires $35 000/0.002=1.75\times10^7$ yr. Yet the Himalaya has been rising for $\sim5\times10^7$ yr, so it can be near steady state or dynamically adjusting – a question that the time scales of Chapters 9–10 will let us answer quantitatively.
+
+
+<!-- ls-depth:LS01:2 -->
+> [!derivation] 🔵 Extra (my derivation): how fast does a landscape forget? Response time and the low-pass filter
+> A landscape that is pushed away from its equilibrium form $z_{eq}$ relaxes back at a rate proportional to the distance (this is exactly what diffusion, stream-power incision or ice flow do to a small perturbation; see the response times in LS12, LS14, LS16):
+> $$\frac{\mathrm dz}{\mathrm dt}=-\frac{z-z_{eq}(t)}{\tau}.$$
+> **Step forcing.** If $z_{eq}$ jumps by $\Delta$ at $t=0$ then $z-z_{eq}$ decays as $e^{-t/\tau}$: after $\tau$ the adjustment is $63\,\%$ complete, after $3\tau$ it is $95\,\%$. **Periodic forcing** $z_{eq}=A\sin\omega t$: the steady response is $z=\dfrac{A}{\sqrt{1+\omega^2\tau^2}}\sin(\omega t-\phi)$ with $\phi=\arctan\omega\tau$. (*Proof:* try $z=B\sin(\omega t-\phi)$; $\omega\tau B\cos(\omega t-\phi)+B\sin(\omega t-\phi)=A\sin\omega t$; write $\sin\omega t=\sin\big((\omega t-\phi)+\phi\big)$ and match the $\sin(\omega t-\phi)$ and $\cos(\omega t-\phi)$ parts: $B=A\cos\phi$ and $\omega\tau B=A\sin\phi$, so $\tan\phi=\omega\tau$ and $B=A\cos\phi=A/\sqrt{1+\omega^2\tau^2}$.)
+> *Meaning:* if the forcing is **slow** compared with the response ($\omega\tau\ll1$) the landscape tracks it (amplitude 1, no lag: *quasi-equilibrium*); if it is **fast** ($\omega\tau\gg1$) the landscape **averages it out**, amplitude falls as $1/\omega\tau$, and it lags by a quarter period.
+> **Numbers** (`scripts/ls_depth_numbers.py`): a 100 m hillslope with $D=0.01\ \mathrm{m^2\,yr^{-1}}$ has $\tau=L^2/D=10^6$ yr, so the 41 kyr obliquity cycle is attenuated to **0.65 %** of its amplitude (phase lag 90°, i.e. about 10 kyr): the *form* of such a hillslope records the long-term uplift, not the ice-age climate cycles. A fast system ($\tau=10$ kyr) follows a 100 kyr cycle with **85 %** of the amplitude and a 9 kyr lag; a river with $\tau\sim10^3$ yr follows it essentially perfectly.
+
+![[fig_ls01_magfreq_filter.png]]
+*Figure LS01.2. Right: the low-pass-filter response above; the two dots are the worked cases (slow hillslope versus 41-kyr forcing; fast system versus 100-kyr forcing). Left: see the next section.*
+
+> [!intuition] Three timescales to keep apart
+> (i) the **forcing time** $T$ (how long the climate or tectonic input stays roughly constant), (ii) the **response time** $\tau$ of the landscape, and (iii) the **age** of the landscape. $\tau\ll T$: the landscape is in quasi-steady state *with respect to that forcing*; $\tau\gg T$: it is a long-term average; $\tau\sim T$: it is out of equilibrium and carries a *transient* signal (knickpoints, perched valleys, terraces: [[LS16 Fluvial Landscapes]]). Whether a mountain is "in steady state" is therefore never yes/no: it depends on *which process* and *which forcing*.
+
+> [!key] 🟡 Extra · book: kinds of equilibrium (Huggett, after Chorley and Kennedy 1971)
+> *Static* (nothing changes), *stable* (returns after a small kick), *unstable* (a small kick sends it to a new state), *metastable* (stable until a **threshold** is crossed), *steady-state* (fluctuates about a fixed mean), *thermodynamic* (maximum entropy: a mountain reduced to a plain), *dynamic* (fluctuations about a mean that trends in one direction), *dynamic metastable* (trending mean that jumps when thresholds are crossed). "$\partial_tz_s=0$" of eq. (1) is the **steady-state** case; Hack's "dynamic equilibrium" is a steady state *of the form* with mass passing through. Huggett warns the early dynamic-equilibrium idea "was open to question and difficult to apply", which is why the finer classification exists.
 
 
 ## The processes at a glance
@@ -122,6 +175,14 @@ Every chapter below quotes a length and a time; their orders of magnitude organi
 | Folds (S80) | $10^{-1}$ to $10^{5}$ m | $10^{3}$–$10^{7}$ yr |
 
 *Orders of magnitude of the scales on the slides.*
+
+
+<!-- ls-depth:LS01:3 -->
+> [!derivation] 🔵 Extra (my illustration): which events build a landscape? Magnitude, frequency and work
+> Let events of size $q$ (a flood discharge, a rainstorm, an earthquake) occur with probability density $f(q)$, and let one event of size $q$ do work $W(q)$. The **total work** done by events of size near $q$ is $W(q)f(q)\,\mathrm dq$; the **effective** (formative) event is where this product peaks. Take a log-normal $f$ (median 1, $\sigma_{\ln q}=1$, a reasonable model for river peaks) and a transport law $W\propto q^b$ (for sediment transport $b\sim2$–3; with a threshold $W\propto(q-q_c)^b$). Then $q^bf(q)\,q$ (per unit $\ln q$) is again a Gaussian in $\ln q$ centred at $\ln q^*=b\sigma^2$, so
+> $$q^*=e^{b\sigma^2}\times\text{median}:\qquad b=1:\ 2.7;\quad b=2:\ 7.4;\quad b=3:\ 20\ \text{times the median}$$
+> (computed numerically: `scripts/ls_depth_numbers.py` reproduces $2.72$, $7.39$, $20.1$). **The steeper the transport law, the larger and rarer the formative event:** with $b=3$ about **74 %** of the total work comes from events more than ten times the median, with $b=1$ only **10 %**. If instead event sizes follow a power law (heavy tail) $P(Q>q)\propto q^{-\alpha}$, the integral $\int q^bf\,\mathrm dq$ converges at large $q$ only if $b<\alpha$: for $b\ge\alpha$ the **largest events dominate without limit**, which is the mathematical content of A&A's "neo-catastrophist" remark that single huge floods, tsunamis or impacts can write a signature that thousands to millions of years cannot erase. (The classic study is Wolman and Miller 1960, quoted from memory; A&A discuss the idea on p. 7 = PDF p. 25.)
+> *Link:* heavy-tailed laws are the Pareto distribution of [[Pareto]] and the extreme-value (Gumbel) distribution of [[Gumbel]] in the probability notes ([[Probability - Course Map]]); landslide sizes ([[LS13 Landslides]]) and earthquakes ([[LS09 Faults and Earthquakes]]) are the clearest geomorphic power laws.
 
 
 ## The Google-Earth tour (slides 10–18) and exercises
@@ -219,6 +280,21 @@ Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sah
 > Text slide. Exercise: use Google Earth to tell the story of a *dynamic* landscape in the Indian subcontinent using its tools (distance and area, elevation profile, historical imagery); discuss vertical and horizontal scales, formation and history, whether it is evolving, going up or down or shifting horizontally, the fluxes of wind, water, ice, sediment, rock, human imprint, Earth-system feedbacks and analogues on Mars or the Moon; check recent papers; Sentinel Hub is an alternative tool.
 
 
+<!-- ls-depth:LS01:4 -->
+> [!question] Check yourself (answers below)
+> 1. A rock column is uplifted at $U=1$ mm/yr while its surface is lowered by denudation at $\mathcal E=0.4$ mm/yr. What is the surface uplift rate and how long to build 1 km of relief if $U,\mathcal E$ stay fixed?
+> 2. A glacier valley responds to climate with $\tau=2\times10^{3}$ yr. Is it in quasi-steady state with respect to a 41 kyr cycle? With respect to a 100-year warm spell?
+> 3. In the master equation $\partial_tc=-\partial_xq+P$, what must $q$ and $P$ be for (a) a decaying isotope in a closed box, (b) heat conduction with no sources?
+> 4. Why does a steeper transport law (larger $b$) push the formative event to rarer, larger events?
+> 5. Name one landscape variable for which "steady state" is a good approximation and one for which it is not, and say why (use $\tau$).
+> *Answers.* (1) $\partial_tz_s=0.6$ mm/yr; $1000\,\mathrm m/0.6\times10^{-3}\ \mathrm{m\,yr^{-1}}\approx1.7$ Myr. (2) Yes for the 41 kyr cycle ($\omega\tau=2\pi\cdot2000/41000\approx0.31$, amplitude $0.96$); no for 100 yr ($\omega\tau\approx126$, amplitude $0.008$: it ignores the spell). (3) (a) $q=0$, $P=-\lambda c$; (b) $q=-k\,\partial_xT$ (with $c\propto T$), $P=0$. (4) $W\propto q^b$ weights large events more; the peak of $q^bf$ moves to $\ln q^*=b\sigma^2$. (5) Channel slope of a small stream ($\tau\sim10^3$ yr) is close to steady; a 100 m hillslope or an orogen ($\tau\sim10^6$–$10^7$ yr) is not, with respect to ice-age forcing.
+
+> [!connection] Where else these ideas turn up in the vault
+> - The **master equation** is the continuity equation of [[Thermodynamics - Course Map]] (heat), [[Waves - Course Map]] (diffusion versus wave propagation) and [[Climate - Course Map]] (energy balance: $c\,\mathrm dT/\mathrm dt=$ in $-$ out, the same relaxation law as above with $\tau=c/\lambda$).
+> - **Response time and forcing frequency** is the same filter as the ocean's thermal inertia in climate and the damped driven oscillator in [[QM06 The Oscillator Toolbox]] (resonance versus lag).
+> - **Event size and frequency** is the probability toolbox of [[Probability - Course Map]] (log-normal, Pareto, extremes).
+
+
 ## Map of this chapter
 > [!connection] How LS01 connects
 > **Previous:** [[Landscapes and Geomorphology - Course Map|Course Map]] · **Next:** [[LS02 Mechanics and Mathematics Toolkit]].
@@ -232,3 +308,12 @@ Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sah
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS01:5 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | principles of conservation, transport rules, event size and frequency; timing; what drives surface processes | [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=23|A&A ch. 1, PDF pp.23–26]] (read) | b · primary book |
+> | types of equilibrium, Hack's steady state | [[Fundamentals of Geomorphology (Fundamentals of Physical Geography) - Second Edition (Richar Huggett) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=36|Huggett PDF p.36]] (read) | b · primary book |
+> | history (Gilbert, Davis, Hack), Wolman and Miller 1960 | my recollection; A&A name Gilbert, Powell, Penck, Davis (PDF p.25) | not checked against a source |
+> | master equation, response time and low-pass filter, effective-event calculation | my own derivations; numbers in `scripts/ls_depth_numbers.py`, figure `scripts/fig_ls_depth.py` | extra · beyond |
