@@ -54,3 +54,8 @@ Here are the Tutorial questions and answers for the topic acids and bases and th
 ## Concepts in Tutorial-4 answers_2026
 [[zettel/three-center-two-electron-bond-in-diborane]], [[zettel/dehydropolymerization-of-borazine]], [[zettel/island-model-of-phosphazenes]]
 <!-- /kurooto:materialc7753a96 -->
+
+<!-- kurooto:material6e1ab971 -->
+## Concepts in Main_group_chemistry_cages and clusters
+[[zettel/three-center-two-electron-bond-in-diborane]], [[zettel/wade-s-rules]], [[zettel/deltahedron]], [[zettel/zintl-compounds-and-clusters]]
+<!-- /kurooto:material6e1ab971 -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/three-center-two-electron-bond-in-diborane
-aliases: ["Three-Center Two-Electron Bond in Diborane", "3c-2e bond in B2H6", "B-H-B bridge bond"]
+aliases: ["Three-Center Two-Electron Bond in Diborane", "3c-2e bond in B2H6", "B-H-B bridge bond", "3c-2e- bond"]
 tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
 trust_tier: agent_written
 ---
@@ -16,5 +16,17 @@ Source: Tutorial-4 answers_2026, pp. 1–13
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers|Main_group_chemistry_cages and clusters]] pp. 1–18
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers|Tutorial-4 answers_2026]] pp. 1–13
+
+### Added from class
+- Main_group_chemistry_cages and clusters pp. 1–18: Details that two B atomic orbitals and one H combine into bonding, nonbonding, and antibonding orbitals, contrasting them with 2c-2e B-B and 3c-2e B-B-B bonds found in higher boranes.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Tutorial-4 answers_2026, pp. 1–13 | B-H-B | bridging boron-hydrogen-boron bond unit |
+| Main_group_chemistry_cages and clusters, pp. 1–18 | 3c-2e ̶ | three-centre two-electron bond |
+<!-- /kurooto:notation -->
