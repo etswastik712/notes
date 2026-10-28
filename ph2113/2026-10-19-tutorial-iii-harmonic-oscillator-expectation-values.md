@@ -42,3 +42,8 @@ Problem set for Tutorial 3.
 ## Concepts in Tutorial3
 [[zettel/orthogonality-of-energy-eigenstates]]
 <!-- /kurooto:material8c36e347 -->
+
+<!-- kurooto:materiala471099d -->
+## Concepts in Harmonic_oscillator
+(none new)
+<!-- /kurooto:materiala471099d -->
