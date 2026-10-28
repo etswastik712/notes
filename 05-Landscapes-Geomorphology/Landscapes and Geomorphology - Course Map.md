@@ -13,7 +13,7 @@ tags: [subject/landscapes, type/moc, taught, extra/book, extra/beyond, src/slide
 *EC2123 Landscapes and Their Evolution, IISER Pune (Argha Banerjee; Deccan deck by Shilpa Patil; practicals by Shubhra and Aju).*
 
 > [!summary] Where this subject stands
-> **Chapters LS01–LS20 and LS99 are drafted** with every slide of the pre-midsem deck (153 slides), the glacial–aeolian deck (48), the Deccan deck (37), TopoToolbox (15) and QGIS (14) shown and explained. Text of LS01–LS17 derives from the AI-written reference notes (secondary) cross-checked against sampled slides. **Still to do:** the fluvial extra chapter from the braiding papers (see gaps) and per-chapter concept notes beyond the 15 Deccan ones.
+> **Chapters LS01–LS20 and LS99 are drafted** (LS01–LS17 now carry a **depth layer**: context, extra derivations and numbers computed in `scripts/ls_depth_numbers.py`, check-yourself problems, cross-subject links; four research papers are explained in **Further Research/**) with every slide of the pre-midsem deck (153 slides), the glacial–aeolian deck (48), the Deccan deck (37), TopoToolbox (15) and QGIS (14) shown and explained. Text of LS01–LS17 derives from the AI-written reference notes (secondary) cross-checked against sampled slides. **Still to do:** a depth layer for LS18–LS20, the Gutiérrez, Migoń, Bierman and Thornbury layers, and per-chapter concept notes beyond the 15 Deccan ones.
 
 ![[LS18 Deccan Map.svg]]
 
@@ -44,6 +44,9 @@ tags: [subject/landscapes, type/moc, taught, extra/book, extra/beyond, src/slide
 
 Reference: [[Landscapes Notation and Glossary]].
 
+## Further Research (papers, beginner-style)
+[[Further Research - Landscapes Papers]]: [[FR01 Braided Rivers in 3D (Olsen 2021)]] · [[FR02 Secondary Currents and River Channel Patterns (Njenga 2013)]] · [[FR03 Flow at a River Bend with CCHE2D (Das and Biswal 2023)]] · [[FR04 Building the Himalaya (Dal Zilio et al 2021)]]
+
 ## Concept notes
 Deccan Traps (15, each with its slide images): [[deccan-volcanic-province]] · [[trap-topography]] · [[massive-sheet-flow]] · [[compound-hummocky-pahoehoe]] · [[columnar-jointing]] · [[lava-flow-internal-structure]] · [[interflow-horizons]] · [[intertrappean-beds]] · [[regional-eastward-tilt]] · [[segmented-quaternary-block-faulting]] · [[bedrock-gorges-and-entrenched-meanders]] · [[fracture-bound-rock-trench]] · [[pothole-networks]] · [[planation-surfaces]] · [[laterite-cappings]]
 
@@ -66,10 +69,12 @@ flowchart LR
 | Deccan Traps deck (37 slides) | `Geomorphic Features of the Deccan Traps Terrain.pdf` | LS18 + 15 concepts |
 | TopoToolbox tutorial (15 slides) | `Topotoolbox_tut_shubhra.pdf` | LS20 |
 | QGIS introduction (14 slides) | `Introduction_to_QGIS_aju.pptx` | LS20 |
-| Textbooks | `books/` (Anderson & Anderson, Bierman & Montgomery, Gutierrez, Huggett, Migoń, Thornbury, Goudie & Viles) | cited by figure number |
+| Primary books | `books/`: Anderson & Anderson (A&A), Turcotte & Schubert (two copies), Gutiérrez (LFS), Huggett | depth layer LS01–LS17 (A&A and T&S pages cited; Huggett p.36; Gutiérrez not yet used) |
+| Other books | Migoń, Bierman & Montgomery, Thornbury, Goudie & Viles | not yet used |
+| Research papers | Olsen 2021, Njenga 2013, Das & Biswal 2023, Dal Zilio 2021, plus `ai-gen-notes/river_braiding` | Further Research FR01–FR04 |
 
 ## Gaps and to-do
-- [ ] **Fluvial extra chapter** from the papers in `books/` (3D braided-channel modelling; secondary currents and classification of river channels; Himalaya from tectonic to earthquake scales; SRC-3-1-5-Das) and `ai-gen-notes/river_braiding`: not yet written.
+- [x] Papers in `books/` explained as chapters FR01–FR04 (guides: only the abstract, introduction, methods and conclusions were read for FR01–FR03; FR04 from abstract, introduction and key points). [ ] Upgrade them to full summaries.
 - [ ] Concept notes for LS01–LS17 and LS19 (only the Deccan set exists).
 - [ ] Verify the AI-note derivations of LS01–LS17 against the remaining slides (only slides 1–12 and 109–120 were sampled).
 - [ ] Constants and fitted values flagged `[verify]` in LS18/LS19 (slide 5 volumes, slide 34 constants α β, slide 36 fit).

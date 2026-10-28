@@ -6,10 +6,10 @@ type: chapter
 chapter: 19
 part: XII
 scope: [taught, extra-book, extra-beyond]
-by: [slides]
+by: [slides, book]
 status: draft
 prereq: ["[[LS14 Glaciers Mass Balance and Ice Flow]]", "[[LS15 Glacial Deposits Rebound and Sea Level]]", "[[LS17 Aeolian Landscapes]]"]
-tags: [subject/landscapes, type/chapter, taught, extra/book, extra/beyond, src/slides, status/draft]
+tags: [subject/landscapes, type/chapter, taught, extra/book, extra/beyond, src/slides, status/draft, src/book]
 ---
 # LS19 · Glacial and Aeolian Landforms
 
@@ -105,6 +105,11 @@ flowchart LR
 > [!example] 🖼 Slides 26–28: models of glacial erosion
 > **Slide 26** (A&A Fig. 8.48): a valley cross-section evolving from V to U in a model experiment: numbers are times in kyr (0, 40, 80, 120, 300); grey lines are velocity contours; the **basal velocity is highest at the centre**, so erosion is fastest there and the V deepens into a parabolic then U shape, with side walls steepened. **Slide 27:** *modelling the long profile assuming erosion proportional to the ice flux* (Fig. 8.51): panels (a)–(e) show the initial and intermediate profiles of a trunk valley and tributaries of different sizes joining it, the ice discharge and total erosion below: the model reproduces **overdeepenings, bedrock steps and hanging valleys** (a tributary joining makes a step in the trunk profile). **Slide 28** (Fig. 8.49): *erosion and lowering of bedrock would cause the glacier extent to diminish, unless there is uplift and/or cooling over hundreds of kyr*: glacier profiles at 3, 6, 9, 15, 30 kyr (steady climate) and with the ELA lowering 4 m/ka: with a steady climate the glacier retreats upvalley as the bed deepens; a falling ELA offsets it.
 
+<!-- ls-depth:LS19:1 -->
+> [!intuition] Where to read the full treatment (A&A ch. 8) and what it adds
+> The lecture slides 25–28 quote A&A Figs 8.41–8.51; the full text is in A&A ch. 8 ("Glaciers and glacial geology"; printed pp.245–265, PDF $=$ printed $+18$): **abrasion** (p.246) and **quarrying** (p.248) as the two erosion processes, **the U-shaped valley** (p.251), **cirques, steps and overdeepenings: the long valley profile** (p.252), **fjords** (p.255), moraines (p.257), eskers (p.260) and **erosion rates** (p.263). Their central modelling idea, quoted on the slides, is that *glacial erosion is proportional to ice flux* or to basal sliding speed, which explains why steps and overdeepenings occur where tributaries join (flux jumps). **Frost cracking** (slide 29) is in A&A ch. 7 (PDF p.191, Fig. 7.11: crack-growth rate versus temperature for Westerly granite with initial cracks of 5 and 50 mm), the same $-3$ to $-8$ °C window seen in the Anderson and Anderson laboratory histogram of the slide.
+
+
 ## 4. Frost cracking, the buzzsaw and the Himalayan exception (slides 29–33)
 <span class="scope-taught">taught</span> *slides 29–33; A&A ch. 7; Brozovic et al. 1997; Montgomery et al. 2001; Banerjee and Wani 2018*
 
@@ -194,3 +199,10 @@ flowchart LR
 > | entrainment threshold, Bagnold flux, dune speed numbers | `scripts/ls_numbers.py` | extra/beyond |
 >
 > **Notes.** (1) The deck has no text layer: all explanations are from the images; small labels (axis values in slides 27–28, 30–31, 36) were read at reduced resolution and are described in outline. (2) The constants $\alpha,\beta$ of slide 34 and the fitted slope of slide 36 are not defined/legible on the slides: `[verify]` in Banerjee and Scherler (2025, 2026). (3) The constant $A\approx0.1$ and Bagnold's $C\approx1.8$ are standard values, not from the slides.
+
+<!-- ls-depth:LS19:2 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | chapter map of A&A ch. 8, erosion processes, frost cracking figure | A&A table of contents (PDF pp.5–9) and PDF p.191–192 (found by search) | b · primary book |
+> | A&A eq. 14.18 constant for aeolian transport (0.18 versus the 1.8 used here) | A&A PDF p.484 (read from a garbled extraction): see the warning box in [[LS17 Aeolian Landscapes]]; the dune-speed numbers of this chapter (§6 derivation box) use Bagnold's recalled $C=1.8$ and are order-of-magnitude only | b · primary book, `[verify]` |

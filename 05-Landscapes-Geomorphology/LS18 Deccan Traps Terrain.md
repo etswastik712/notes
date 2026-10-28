@@ -5,11 +5,11 @@ subject: landscapes
 type: chapter
 chapter: 18
 part: XI
-scope: [taught, extra-beyond]
-by: [slides]
+scope: [taught, extra-beyond, extra-book]
+by: [slides, book]
 status: draft
 prereq: ["[[LS11 Weathering and Regolith]]", "[[LS02 Mechanics and Mathematics Toolkit]]"]
-tags: [subject/landscapes, type/chapter, taught, extra/beyond, src/slides, status/draft]
+tags: [subject/landscapes, type/chapter, taught, extra/beyond, src/slides, status/draft, extra/book, src/book]
 ---
 # LS18 · Deccan Traps Terrain
 
@@ -84,6 +84,21 @@ flowchart LR
 
 > [!derivation] 🔵 Extra: the slope of the eastward tilt (computed)
 > A crest at about 1,000 m and a sea-level outlet 700 km to the east give a mean gradient of $1000\ \mathrm m/700\ \mathrm{km}=1.4\ \mathrm{m/km}\approx0.08^\circ$: the tilt is tiny, which is why flows that were horizontal when erupted still look horizontal, and why the east-flowing rivers (Godavari, Krishna, Bhima) have such gentle gradients compared with the west-flowing coastal rivers that fall ≈1,000 m in 50–100 km (≈10–20 m/km, ten times steeper): they cut headward faster, which is the mechanism of *scarp retreat*.
+
+<!-- ls-depth:LS18:1 -->
+> [!intuition] Context from the book layer: the same escarpment, three descriptions
+> - **Huggett** (*Fundamentals of Geomorphology*, [[Fundamentals of Geomorphology (Fundamentals of Physical Geography) - Second Edition (Richar Huggett) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=124|PDF pp.124–127]]): the Deccan Traps **once covered about 1.5 million km² and erosion has left about 500 000 km²** (compare slide 2's $\approx500\,000$ km²: the deck gives the *present* area); the Western Ghats are "a great escarpment bordering the Deccan Plateau", **ridge crests 500–1 900 m high with remarkable continuity for 1 500 km** despite structural variations, suggesting "a single, post-Cretaceous process of **scarp recession and shoulder uplift**" (Gunnell and Fleitout 2000): denudation and backwearing of the margin promotes **flexural upwarp** (shoulder uplift; [[LS10 Folds Flexure and Mountain Building]]), though deep-Earth forces could also uplift the shoulder.
+> - **Migoń** (ed., *Geomorphological Landscapes of the World*, ch. 26 by **V. S. Kale**, [[Geomorphological landscapes of the world (Migoń, Piotr) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=273|PDF pp.273–275]]): "the Western Ghat Escarpment is one of the classic examples of passive-margin great escarpments"; the $\sim1$ km high wall is "an assemblage of valley heads and spurs", with plateau outliers, deep gorges, **beheaded plateau valleys**, laterite plateaux and many cases of **stream piracy**; *ghat* means "a broad flight of steps leading to a river" (like the *trappa* of slide 3) and **Sahyadri** is Sanskrit for "benevolent mountain". "Most workers believe the escarpment was initiated as a **rifted margin** at the time of the Deccan eruptions in the late Cretaceous"; all agree it has **receded inland**, but there are **differences of opinion about the mode and rate of recession**. (Kale is also the first author of the Kale et al. 2017/2021 papers cited on the slides.)
+> - **Bierman and Montgomery** (*Key Concepts in Geomorphology*, PDF pp.375, 470) mention the Deccan Traps as the standard flood-basalt province and as a possible driver of end-Cretaceous environmental change.
+> **Flags (numbers differ between sources).** Slide 8: escarpment length **1 200 km**, crest elevation **500–1 700 m**, Kalsubai $\approx1\,646$ m; Huggett: **1 500 km** and **500–1 900 m**. The difference is one of *definition* (which segments of the Ghats, where the escarpment ends, and which summits count; the southern Ghats reach $\sim2\,700$ m at Anai Mudi per Migoń's map caption, a recalled reading of a garbled figure label, `[verify]`), not a contradiction. *Use the slide's numbers for the exam and quote the source for any other.*
+
+> [!question] Check yourself (answers below)
+> 1. By what factor has the present Deccan area shrunk relative to its original extent (Huggett)?
+> 2. What two end-member processes can explain the continuity of the Ghat escarpment over 1 200–1 500 km?
+> 3. Why would a rifted passive margin produce a high escarpment close to the coast?
+> 4. What does "beheaded valley" mean, and what process creates it?
+> *Answers.* (1) $1.5\times10^6\to0.5\times10^6$ km²: a factor of 3 (two thirds removed). (2) Scarp **recession** (parallel retreat from the rift line) and **downwearing** of the plateau with flexural **shoulder uplift** (isostatic/flexural response to margin denudation); Kale notes the mode and rate are debated. (3) The rift margin was thinned and flexed upward at its shoulder (flexure of the lithosphere, [[LS10 Folds Flexure and Mountain Building]]), and the steep drop to the coast is the eroded, retreating rift scarp. (4) A plateau valley whose upper part has been cut off (captured) by the headward growth of a steep coastal stream: stream piracy, driven by the steeper west-flowing rivers ([[LS16 Fluvial Landscapes]], knickpoint retreat).
+
 
 ## 3. What controls the terrain?
 <span class="scope-taught">taught</span> *slide 10*
@@ -231,3 +246,12 @@ flowchart LR
 > | thickness, cooling time, thermal stress, tilt, retreat-rate numbers | `scripts/ls_numbers.py` | extra/beyond |
 >
 > **Notes.** (1) The figure descriptions were written from the slide images; some small map labels (slide 30) and the exact numbers in the slide-18 diagram could not be read and are described in outline. (2) The volumes on slide 5 (193,000 + 439,000 km³) differ by ≈2 % from the 617,700 km³ of slide 2 (flagged). (3) The cooling-time, stress, retreat and gorge numbers are order-of-magnitude estimates of mine, not from the deck. (4) One extra sentence in §1's derivation box about volume comparison is a rough illustration; ignore it if it conflicts with a source.
+
+<!-- ls-depth:LS18:2 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | Deccan area (1.5 → 0.5 million km²), Western Ghats length, crest heights, shoulder uplift (Gunnell and Fleitout 2000) | Huggett PDF pp.124–127 (read p.126, p.124 sentence) | b · primary book |
+> | Western Ghat escarpment, features, rifted-margin origin, debated recession, *ghat*, Sahyadri | Migoń ed., ch. 26 (Kale), PDF pp.273–274 (read) | c · other book |
+> | Deccan as flood-basalt standard | Bierman and Montgomery PDF pp.375, 470 (found by search); Thornbury PDF p.521 | c · other books |
+> | slide-versus-book number comparison | my comparison; Anai Mudi height read from a garbled figure caption | `[verify]` |

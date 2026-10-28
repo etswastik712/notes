@@ -77,6 +77,12 @@ flowchart LR
 > *Link to LS19:* the entrainment threshold for $D\approx0.1$ mm is the minimum (the easiest grain to move) while $P>1$ already holds for it: the most mobile grains are the ones that saltate.
 
 
+<!-- ls-depth:LS17:4 -->
+> [!pitfall] ⚠ Cross-check against A&A: the transport-law constant (needs checking)
+> A&A (ch. 14, [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=502|PDF p.484]], Eq. 14.18) write the eolian transport capacity as a **cubic law with a threshold**: $Q=C\,\dfrac{\rho_a}{g}\sqrt{\dfrac{D}{D_0}}\,(u_*-u_{*c})^3$, with $D_0=0.25$ mm and "a dimensional constant equal to **0.18** if all dimensions are in SI units" (the formula was read from a garbled text extraction: `[verify]` on the printed page). This vault (LS17 and [[LS19 Glacial and Aeolian Landforms]]) used **Bagnold's form** $q=C(\rho/g)\sqrt{d/D}\,u_*^3$ with the recalled constant $C=1.8$ and **no threshold subtracted**. For $u_*=0.5$ m/s and $u_{*c}\approx0.23$ m/s the A&A form gives $\approx4\times10^{-4}$ kg m⁻¹ s⁻¹, about **60 times smaller** than the $0.0275$ kg m⁻¹ s⁻¹ used for the dune speeds ($54$ m/yr for a 10 m dune would become $\sim1$ m/yr). **Both forms agree on the physics** (cubic, thresholded: "both effects enhance the importance of rare high fluid speeds", A&A) but they differ in the *prefactor*, and the dune speeds quoted in LS17/LS19 should be read as order-of-magnitude with the prefactor uncertain by $10$–$100\times$. Resolve by reading A&A p.466–468 (printed) and Bagnold (1941).
+> **Other points from A&A worth knowing:** (i) **hysteresis** (PDF p.477): the shear velocity needed to *start* saltation is higher, by several tens of percent, than the one that *sustains* it (Bagnold's lower **impact threshold**); (ii) the saltation system takes **1–2 s** to reach steady transport after the wind rises and a *saltation cloud* needs **several metres** of fetch to reach full capacity (PDF p.484), so gusts of seconds matter; (iii) wind-tunnel laser measurements show **small grains (0.19 mm) are entrained at lower shear velocity than large (0.77 mm)** (Nickling 1988; PDF p.477), consistent with the $\sqrt{d}$ threshold of LS19.
+
+
 ## Dune morphology and migration
 
 
