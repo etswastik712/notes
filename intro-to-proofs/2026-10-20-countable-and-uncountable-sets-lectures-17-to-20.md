@@ -180,3 +180,8 @@ Every $x \in (0, 1)$ can be written as $x = 0.a_1 a_2 a_3 \dots = \sum_{k=1}^\in
 ## Concepts in Countable-Uncountable-sets
 [[zettel/cardinality-equivalence]], [[zettel/uncountable-set]], [[zettel/countability-of-the-rationals]], [[zettel/diagonal-traversal-enumeration]], [[zettel/finite-set-proper-subset-non-equivalence]], [[zettel/infinitude-of-the-natural-numbers]], [[zettel/normalized-decimal-expansion]], [[zettel/cantor-diagonal-argument]], [[zettel/uncountability-of-the-unit-interval]], [[zettel/uncountability-of-the-real-numbers]]
 <!-- /kurooto:material6cdf64b0 -->
+
+<!-- kurooto:material093a383d -->
+## Concepts in Solutions_Assignment_7
+[[zettel/countability-of-subsets]], [[zettel/cartesian-product-of-countably-infinite-sets]]
+<!-- /kurooto:material093a383d -->

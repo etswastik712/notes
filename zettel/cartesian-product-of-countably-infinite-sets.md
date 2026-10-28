@@ -1,0 +1,23 @@
+---
+id: zettel/cartesian-product-of-countably-infinite-sets
+aliases: ["Cartesian Product of Countably Infinite Sets", "countability of product of countable sets"]
+tags: [zettel, agent-written, intro-to-proofs]
+trust_tier: agent_written
+---
+
+# Cartesian Product of Countably Infinite Sets
+
+The Cartesian product of two countably infinite sets is countably infinite. A bijection from N x N to A x B is formed componentwise from the respective bijections from N.
+
+$$F(m, n) = (f(m), g(n))$$
+
+## Links
+- contrasts-with:: [[zettel/uncountable-set]] — Demonstrates that taking Cartesian products of countably infinite sets preserves countability rather than yielding an uncountable set
+
+---
+Source: Solutions_Assignment_7, pp. 1–2
+
+<!-- kurooto:seen -->
+## Seen in
+- [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Solutions_Assignment_7]] pp. 1–2
+<!-- /kurooto:seen -->
