@@ -157,3 +157,8 @@ Reference:  Atmosphere, Ocean, Climate Dynamics by J. Marshall and A. Plumb.
 - [[01-climate/concepts/effective-emission-temperature]]: formal definition and calculation of $T_e$ across planetary bodies
 - [[01-climate/concepts/greenhouse-effect]]: greenhouse trapping by triatomic trace gases
 - [[03-thermodynamics/concepts/blackbody-radiation]]: Planck distribution, Stefan–Boltzmann law, and Wien displacement law
+
+<!-- kurooto:material0ba276fb -->
+## Concepts in Radiative_balance_Marshall_and_Plumb
+[[zettel/planetary-emission-temperature]], [[zettel/stefan-boltzmann-law]], [[zettel/simple-greenhouse-model]]
+<!-- /kurooto:material0ba276fb -->
