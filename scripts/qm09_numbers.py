@@ -469,7 +469,8 @@ sec("13. Extra checks")
 # (a) plate pattern: peak positions with the oven speed distribution (same model as fig_qm09.py)
 v = np.linspace(150, 1800, 400)
 wv = v ** 3 * np.exp(-m_ag * v ** 2 / (2 * K_B * T_oven)); wv /= wv.sum()
-zmax = 0.5 * a * (L1 / v) ** 2 + a * (L1 / v) * (L2 / v)
+acc_ag = F / m_ag
+zmax = 0.5 * acc_ag * (L1 / v) ** 2 + acc_ag * (L1 / v) * (L2 / v)
 zz = np.linspace(-0.6e-3, 0.6e-3, 1201)
 dens = np.zeros_like(zz)
 for s_ in (-1.0, 1.0):
