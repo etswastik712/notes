@@ -121,3 +121,8 @@ Reference: Atmosphere, Ocean, Climate Dynamics by J. Marshall and A. Plumb
 - [[01-climate/cl11-mean-meridional-circulation-and-angular-momentum]]: comprehensive note on the Hadley and Ferrel cells and angular momentum constraints.
 - [[01-climate/concepts/hadley-cell]]: concept card for the tropical Hadley circulation.
 - [[introduction-to-climate-science/2026-10-07-study-material-7-meridional-circulation-part-1]]: Part 1 covering incoming insolation and tropospheric temperature profiles.
+
+<!-- kurooto:materialc3c03163 -->
+## Concepts in Mean_meridional_circulation_observation_Marshall_and_Plumb
+(none new)
+<!-- /kurooto:materialc3c03163 -->
