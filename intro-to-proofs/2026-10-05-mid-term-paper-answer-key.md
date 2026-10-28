@@ -53,3 +53,8 @@ Proof patterns worth remembering: double inclusion for set identities; negation 
 - [[11-Proofs-Analysis-Topology/PA03 Relations Equivalence and Order]]: posets, bounds, equivalence classes (Q1, Q4b, Q7, Q8)
 - [[intro-to-proofs/2026-09-03-assignment-4]]: practice problems on the same poset and equivalence-relation topics
 - [[intro-to-proofs/2026-09-15-tautology]]: tautology vs. true statement (Q1a, Q2)
+
+<!-- kurooto:materialc4884164 -->
+## Concepts in Mid-Sem-Exam-MT2133-solutions-students
+[[zettel/tautology]], [[zettel/partial-order]], [[zettel/equivalence-relation]], [[zettel/quantifier-negation-laws]], [[zettel/set-difference-over-union-distributivity]]
+<!-- /kurooto:materialc4884164 -->
