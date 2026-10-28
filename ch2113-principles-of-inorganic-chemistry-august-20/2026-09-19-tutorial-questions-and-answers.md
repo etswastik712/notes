@@ -49,3 +49,8 @@ Here are the Tutorial questions and answers for the topic acids and bases and th
 ## Related
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-14-hard-and-soft-acids-and-bases]]: Tutorial 3 Q2, Q11, Q12
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers]]: Tutorial 4 Q5–Q10
+
+<!-- kurooto:materialc7753a96 -->
+## Concepts in Tutorial-4 answers_2026
+[[zettel/three-center-two-electron-bond-in-diborane]], [[zettel/dehydropolymerization-of-borazine]], [[zettel/island-model-of-phosphazenes]]
+<!-- /kurooto:materialc7753a96 -->
