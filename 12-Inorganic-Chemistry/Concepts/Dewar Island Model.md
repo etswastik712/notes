@@ -1,0 +1,31 @@
+---
+title: Dewar Island Model
+aliases: ["pi-d bonding in phosphazenes", "island model"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Dewar Island Model
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=117|slide 117]]; Tutorial 4 Q8.
+
+> [!intuition] In one picture
+> The $\pi$ bonding of the ring is not one big loop but three islands, each a three-centre bond over N–P–N with a node at P.
+
+> [!key] Definition and key results
+> The P $d_{xz}$, $d_{yz}$ hybridise into two orthogonal orbitals aimed at the two neighbouring N; each overlaps with the N $p_\pi$. Equal bonds, a flat ring, no benzene-like ring current. (Modern view: negative hyperconjugation, little $d$ participation, `[verify]`.)
+
+Contrast with Craig–Paddock's delocalised $d$-based picture.
+
+Used in: [[CH08 Main Group Rings and Polymers]] §4. Related: [[Cyclophosphazene]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

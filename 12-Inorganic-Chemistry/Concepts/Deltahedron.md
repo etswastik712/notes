@@ -1,0 +1,31 @@
+---
+title: Deltahedron
+aliases: ["deltahedra", "triangulated polyhedron"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Deltahedron
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=98|slide 98]].
+
+> [!intuition] In one picture
+> A polyhedron whose faces are all triangles: the natural shape for atoms sharing electrons across three centres.
+
+> [!key] Definition and key results
+> $E=3n-6$ edges and $F=2n-4$ faces for $n$ vertices: octahedron 12/8, icosahedron 30/20. Closo series $n=5$–12: trigonal bipyramid, octahedron, pentagonal bipyramid, dodecahedron, tricapped trigonal prism, bicapped square antiprism, octadecahedron, icosahedron.
+
+Nido and arachno clusters are closo deltahedra with one or two vertices removed.
+
+Used in: [[CH07 Main Group Cages and Clusters]] §3. Related: [[Wade's Rules]] · [[Closo Nido Arachno]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

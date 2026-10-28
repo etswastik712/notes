@@ -1,0 +1,31 @@
+---
+title: Molecular Orbital Theory
+aliases: ["MO theory", "MOT"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Molecular Orbital Theory
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=27|slides 27–52]].
+
+> [!intuition] In one picture
+> Treat the molecule as one object with its own orbitals, built as waves from the atomic orbitals, and fill them from the bottom.
+
+> [!key] Definition and key results
+> Molecular orbitals are linear combinations of atomic orbitals, $\psi=\sum c_i\chi_i$; $N$ AOs give $N$ MOs; in-phase combinations are bonding, out-of-phase antibonding; electrons fill by the Aufbau, Pauli and Hund rules.
+
+It explains what valence bond theory cannot: paramagnetism of $\mathrm{O_2}$, photoelectron spectra, hypervalence without $d$ orbitals ([[Hypervalence]]), and delocalisation in solids (bands). It is the variational method of [[QM06 The Oscillator Toolbox]] applied to a molecular potential.
+
+Used in: [[CH02 Molecular Orbital Theory Diatomics]], [[CH03 Molecular Orbital Theory Polyatomics]]. Related: [[LCAO Approximation]] · [[Bonding and Antibonding Orbitals]] · [[Bond Order]] · [[Valence Bond Theory]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

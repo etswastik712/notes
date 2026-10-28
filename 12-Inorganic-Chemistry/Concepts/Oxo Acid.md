@@ -1,0 +1,31 @@
+---
+title: Oxo Acid
+aliases: ["oxoacid", "oxyacid"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Oxo Acid
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=68|slides 68–69]].
+
+> [!intuition] In one picture
+> More oxygens on the central atom means the negative charge of the conjugate base spreads over more atoms, so the acid is stronger.
+
+> [!key] Definition and key results
+> $\mathrm{XO}_n(\mathrm{OH})_m$; strength rises with $n$, with the electronegativity of X, and with electron-withdrawing substituents ($\mathrm{O_2SF(OH)}>\mathrm{O_2S(NH_2)(OH)}$).
+
+Count acidic protons on oxygen: $\mathrm{H_3PO_3}=\mathrm{HP(O)(OH)_2}$ is diprotic.
+
+Used in: [[CH05 Acid Strength Lewis Acidity and Reactions]] §2. Related: [[Pauling's Rules for Oxoacids]] · [[Inductive Effect on Acidity]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

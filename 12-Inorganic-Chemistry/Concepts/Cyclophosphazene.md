@@ -1,0 +1,31 @@
+---
+title: Cyclophosphazene
+aliases: ["(NPCl2)3", "phosphonitrilic chloride"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Cyclophosphazene
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=116|slides 116–118]].
+
+> [!intuition] In one picture
+> A planar ring of alternating P and N with all P–N bonds equal and short.
+
+> [!key] Definition and key results
+> $(\mathrm{NPX_2})_n$, $n=3$–40; $\mathrm{PCl_5+NH_4Cl}\to(\mathrm{NPCl_2})_3+(\mathrm{NPCl_2})_4+4\mathrm{HCl}$ (≈50 % trimer). P–N ≈1.58 Å (single ≈1.77, recalled). Substituted by NaF/MeCN, RONa, RNH$_2$, RMgX.
+
+Heated at 210–250 °C it ring-opens to the polymer $[\mathrm{NPCl_2}]_n$.
+
+Used in: [[CH08 Main Group Rings and Polymers]] §4. Related: [[Dewar Island Model]] · [[Polyphosphazene]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

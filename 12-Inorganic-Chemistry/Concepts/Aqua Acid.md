@@ -1,0 +1,31 @@
+---
+title: Aqua Acid
+aliases: ["aqua acids", "hydrated cation acidity"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Aqua Acid
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=66|slides 66–67]].
+
+> [!intuition] In one picture
+> A water molecule bound to a metal ion is more acidic than free water, because the metal pulls on the O lone pairs.
+
+> [!key] Definition and key results
+> $[\mathrm{Fe(H_2O)_6}]^{3+}+\mathrm{H_2O}\rightleftharpoons[\mathrm{Fe(OH_2)_5(OH)}]^{2+}+\mathrm{H_3O^+}$; $\mathrm pK_a\approx13.1-0.62Z^2/r$ ($r$ in 100/pm); $\mathrm{Fe^{3+}}$ 2.2, $\mathrm{Al^{3+}}$ 5.0, $\mathrm{Mg^{2+}}$ 11.4, $\mathrm{Na^+}$ 14.2.
+
+Covalent ions ($\mathrm{Hg^{2+}}$, $\mathrm{Cu^{2+}}$) are more acidic than the charge/size trend predicts.
+
+Used in: [[CH05 Acid Strength Lewis Acidity and Reactions]] §1. Related: [[Oxo Acid]] · [[Pauling's Rules for Oxoacids]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

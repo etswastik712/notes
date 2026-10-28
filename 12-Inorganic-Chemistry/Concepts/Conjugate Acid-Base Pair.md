@@ -1,0 +1,31 @@
+---
+title: Conjugate Acid-Base Pair
+aliases: ["conjugate base", "conjugate acid"]
+subject: chemistry
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
+---
+# Conjugate Acid-Base Pair
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[chem pre-ms .pdf#page=60|slide 60]].
+
+> [!intuition] In one picture
+> Take a proton off an acid and you have its conjugate base; add one to a base and you have its conjugate acid.
+
+> [!key] Definition and key results
+> $\mathrm pK_a+\mathrm pK_b=\mathrm pK_w=14$: $\mathrm{NH_4^+/NH_3}$ 9.25/4.75; $\mathrm{CH_3COOH/CH_3COO^-}$ 4.76/9.24; HF/F$^-$ 3.17/10.83.
+
+The salt of a weak acid is basic (0.1 M acetate: pH 8.88) and of a weak base acidic (0.1 M NH$_4$Cl: pH 5.12).
+
+Used in: [[CH04 Acid-Base Concepts]] §3. Related: [[Bronsted-Lowry Acids and Bases]] · [[Levelling Effect]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -12,7 +12,7 @@ tags: [subject/chemistry, type/moc, taught, extra/book, src/slides, status/draft
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
 
-*CH2113 Principles of Inorganic Chemistry (August 2026), instructor R. Boomi Shankar.* The syllabus has four blocks: **models of covalent bonding** (VSEPR, valence bond, molecular orbital theory), **acids and bases** (four definitions, trends, hard and soft acids and bases), **main-group chemistry** (boron hydrides and Wade's rules, Zintl ions, phosphorus cages, borazine and phosphazenes) and **redox** (Shriver and Atkins Ch. 5). The notes are being written as a **pilot**: CH01 is finished, the rest is planned from the slides' page map below.
+*CH2113 Principles of Inorganic Chemistry (August 2026), instructor R. Boomi Shankar.* The syllabus has four blocks: **models of covalent bonding** (VSEPR, valence bond, molecular orbital theory), **acids and bases** (four definitions, trends, hard and soft acids and bases), **main-group chemistry** (boron hydrides and Wade's rules, Zintl ions, phosphorus cages, borazine and phosphazenes) and **redox** (Shriver and Atkins Ch. 5). All nine chapters are now drafted (CH01 was the pilot; CH02–CH09 written 2026-10-28 after the user's go-ahead).
 
 > [!warning] What is and is not in the sources
 > The **pre-midsem pack** [[chem pre-ms .pdf]] (119 slides with a text layer, instructor's own) covers slides 1–119: VSEPR (1–7), valence bond theory (8–26), molecular orbital theory (27–52), acids and bases (53–82) and main-group chemistry (83–119). Many diagrams (the $\mathrm{H_2O}$ MO slides 46–52, the $\mathrm{H_3}$ and $\mathrm{NH_3}$ level diagrams) are **images only**. **Redox** (Quiz 2) has no lecture slides in the folder, only a textbook excerpt and AI notes. Everything about assessments below is taken from summaries of Google Classroom posts written by another tool (`agent_written`), not from an official syllabus. Details in *Gaps*.
@@ -31,14 +31,14 @@ Central thread: **how electrons are shared (models of bonding) $\to$ which speci
 | # | Chapter | Slide pages and sources | Status |
 |---|---|---|---|
 | 01 | [[CH01 VSEPR and Valence Bond Theory]] | slides 1–26; Shriver and Atkins Ch. 2 | **draft** |
-| 02 | CH02 Molecular orbital theory: diatomics | slides 27–39 (LCAO, $\mathrm{H_2}$, $\mathrm{N_2}$, HF, CO, ICl) | planned |
-| 03 | CH03 Molecular orbital theory: polyatomics | slides 40–52 and the "MOT Part 2" note ($\mathrm{H_3}$, $\mathrm{NH_3}$, $\mathrm{SF_6}$, $\mathrm{H_2O}$) | planned |
-| 04 | CH04 Acid–base concepts | slides 53–65 (Arrhenius, Brønsted–Lowry, Lux–Flood, Lewis, generalised) | planned |
-| 05 | CH05 Acid strength, Lewis acidity, reactions | slides 66–77 (aqua/oxo acids, trends, 4 reaction types) | planned |
-| 06 | CH06 Hard and soft acids and bases | slides 78–82; Tutorial 3 | planned |
-| 07 | CH07 Main group: cages and clusters | slides 83–100 (boranes, Wade, Zintl, P cages); Tutorial 4 | planned |
-| 08 | CH08 Main group: rings and polymers | slides 101–119 (borazine, B–N polymers, phosphazenes) | planned |
-| 09 | CH09 Redox | Shriver and Atkins Ch. 5, pp.147–161 (PDF pp.174–188); AI `redox_notes.pdf` | planned |
+| 02 | [[CH02 Molecular Orbital Theory Diatomics]] | slides 27–39 (LCAO, $\mathrm{H_2}$, $\mathrm{N_2}$, HF, CO, ICl); S&A Ch.2 | **draft** |
+| 03 | [[CH03 Molecular Orbital Theory Polyatomics]] | slides 40–52 ($\mathrm{H_3}$, $\mathrm{NH_3}$, $\mathrm{SF_6}$, $\mathrm{H_2O}$, read from images); "MOT Part 2" note | **draft** |
+| 04 | [[CH04 Acid-Base Concepts]] | slides 53–65 (Arrhenius, Brønsted–Lowry, Lux–Flood, Lewis, generalised) | **draft** |
+| 05 | [[CH05 Acid Strength Lewis Acidity and Reactions]] | slides 66–77 (aqua/oxo acids, Lewis trends, reaction types); Tutorial 3 | **draft** |
+| 06 | [[CH06 Hard and Soft Acids and Bases]] | slides 78–89; Tutorial 3 Q2, Q11, Q12 | **draft** |
+| 07 | [[CH07 Main Group Cages and Clusters]] | slides 90–108 (boranes, Wade, Zintl, P cages); Tutorial 4 Q1–Q4 | **draft** |
+| 08 | [[CH08 Main Group Rings and Polymers]] | slides 109–119 (borazine, B–N polymers, phosphazenes); Tutorial 4 Q5–Q10 | **draft** |
+| 09 | [[CH09 Redox]] | Shriver and Atkins Ch. 5, pp.147–161 (excerpt PDF pp.174–188): Quiz 2 scope | **draft** (book tier; no slides) |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"
@@ -64,9 +64,10 @@ SORT chapter ASC
 
 ## Gaps (to ask the instructor / supply later)
 - **Redox** has no lecture material; only the book excerpt (S&A Ch.5 pp.147–161) and AI notes.
-- **Slides that are images:** the $\mathrm{H_2O}$ MO sequence (slides 46–52), the $\mathrm{H_3}$ and $\mathrm{NH_3}$ diagrams, the three trigonal-bipyramid structures on slide 6 (unlabelled).
+- **Slides that are images:** the $\mathrm{H_2O}$ MO sequence (slides 46–52), the $\mathrm{H_3}$ and $\mathrm{NH_3}$ diagrams, the three trigonal-bipyramid structures on slide 6 (unlabelled): **now read from contact sheets** and written up in CH03; the HSAB table (slide 80), the reaction wheels of $\mathrm{P_4O_6}$/$\mathrm{P_4S_{10}}$ (slides 106–107) and the borazine reaction schemes (slide 114) remain pictures read in outline.
 - **Slide statements to verify:** MOT rule 1 reads "the greater the number of nodes in a M.O., the greater the anti-bonding character and **higher the symmetry**" (more nodes means higher energy; "higher symmetry" is not generally true); the $\mathrm{SF_6}$ orbital labels ($1a_1$, $1t_1$, $1e$ for $a_{1g}$, $t_{1u}$, $e_g$); the hybrid-set table on slide 15 ("angular" with $sp$, "trigonal pyramidal" with $sp^2$).
-- **Unanswered in the material:** why $\mathrm{H_3PO_3}$ has a non-acidic proton (posed in Acids and Bases Lecture 2); the RMgX product in Tutorial 4 Q9.
+- **Unanswered in the material, answered in the notes:** why $\mathrm{H_3PO_3}$ has a non-acidic proton (CH05: it is $\mathrm{HP(O)(OH)_2}$, `[verify]` with the instructor); the RMgX product in Tutorial 4 Q9 is still unclear.
+- **New slide slips flagged** (each marked `[verify]` in the chapter): slide 56 "1 in $10^7$" (the ionised fraction is $1.8\times10^{-9}$); slide 95 "4 B–H terminal bonds = 6 electrons" (8); slide 112 benzene C–C 1.42 Å (1.397); slide 113's unbalanced $\mathrm{RBCl_2+R'NH_2}$ equation and "+3LiCl" (balanced in CH08).
 - **Dates:** midsem and end-semester not in the notes.
 
 ## Why this subject is linked to the others
