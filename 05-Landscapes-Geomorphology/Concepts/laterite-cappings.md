@@ -1,21 +1,33 @@
 ---
-id: zettel/laterite-cappings
-aliases: ["Laterite Cappings", "laterite capping", "lateritic duricrust", "laterite"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+title: Laterite Cappings
+aliases: ["Laterite Cappings", "laterite", "duricrust"]
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Laterite Cappings
 
-Indurated, residual weathering crusts rich in iron and aluminium that form durable protective carapaces preserving high-elevation Deccan planation tablelands against scarp retreat.
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
-- part-of:: [[zettel/planation-surfaces]] — Caps and armors the summit surfaces of elevated palaeoplains against subaerial denudation
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 36 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 29–37
+> [!intuition] In one picture
+> Hard iron- and aluminium-rich crusts capping weathered basalt (saprolite) on plateau tops.
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 29–37
-<!-- /kurooto:seen -->
+![[dec_036.jpg|360]]
+
+> [!key] Key facts
+> - Product of intense tropical weathering: silica and bases leached, Fe/Al oxides remain (slide 36, Ollier and Sheth 2008).
+> - The duricrust armours the surface, so mesa tops are often laterite caps on planation surfaces.
+> - Links to chemical weathering in [[LS11 Weathering and Regolith]].
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[planation-surfaces]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

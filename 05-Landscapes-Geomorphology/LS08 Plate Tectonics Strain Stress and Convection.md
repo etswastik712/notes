@@ -186,6 +186,15 @@ Isostasy describes a mantle-supported *equilibrium*. Plate tectonics is the smal
 >
 > Using $1 \mathrm{yr}\approx3\times10^7$ s, $V\sim10^{22}/10^{21\text{–}23} \mathrm{m yr^{-1}}\sim10^{1}\text{–}10^{-1} \mathrm{m yr^{-1}}$. *Interpretation*: for the high end of the mantle-viscosity range the estimate falls at $0.1$ m yr$^{-1}$ ($10$ cm yr$^{-1}$), the fastest observed plate speed; the observed range is $1$–$10$ cm yr$^{-1}$, so the scaling identifies the correct physics (slab buoyancy vs viscous drag) and puts the plausible mantle viscosity at $\gtrsim10^{22}$ Pa s, but is only an order-of-magnitude estimate (the resistance also includes bending of the plate and friction at the boundaries, and $R$ is not well defined).
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_072.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 72: Rayleigh–Bénard convection and the mantle Rayleigh number
+> *Left:* the Rayleigh number as the ratio of buoyancy to viscous resistance: $Ra=\rho g\alpha\Delta T h^3/(\mu\kappa)=(\Delta\rho\,g/\mu)\times h^2/(\kappa/h)$ (buoyant force × time to diffuse across the cell, over viscous force), with the mantle numbers $\rho\sim10^3$, $g\sim10$, $\alpha\sim10^{-5}$, $\Delta T\sim10^3$, $h\sim10^6$ m, $\mu\sim10^{20}$ Pa s, $\kappa\sim10^{-6}$ m² s$^{-1}$ giving $Ra_{\rm mantle}\sim10^6\gg Ra_{\rm crit}\sim10^3$: **the mantle convects vigorously**. *Top right:* a laboratory convection pattern (hexagonal cells in a heated fluid layer). *Bottom right:* the world map of plate motions (arrows) as the surface expression.
+
+
 ## Map of this chapter
 > [!connection] How LS08 connects
 > **Previous:** [[LS07 Isostasy]] · **Next:** [[LS09 Faults and Earthquakes]].

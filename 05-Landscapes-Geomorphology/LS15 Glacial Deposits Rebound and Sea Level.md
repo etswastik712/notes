@@ -134,6 +134,15 @@ flowchart LR
 >
 > Example: a $125$-ka (MIS 5e) terrace at $z=68$ m: $U=(68-5)/125 000=0.5$ mm yr$^{-1}$: the top panel of the slide; a terrace at $z=5$ m has $U=0$ (stable coast); a terrace at $-20$ m has $U=(-20-5)/125 000=-0.2$ mm yr$^{-1}$: subsiding. Because several terraces of known ages exist ($5a$, $5c$, $5e$, $7$), each gives an independent estimate: agreement tests the assumption of constant $U$. GIA (previous section) also changes local sea level by tens of metres, and is the main source of the “uncertainty” in $\zeta(t)$ for the MIS 5e highstand.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_145.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 145: Deposition by glaciers: where does a fallen rock go?
+> Question slide: *what happens to a piece of rock (or a glaciologist) that falls onto the glacier in the accumulation zone?* The sketch is a glacier outline with the equilibrium-line altitude (ELA) drawn across it. Answer: in the accumulation zone snow buries the rock; ice flows down and, because the flow lines dive in the accumulation zone and rise towards the surface in the ablation zone, the rock is carried englacially and re-emerges below the ELA, where it melts out and joins the surface debris (moraines).
+
+
 ## Map of this chapter
 > [!connection] How LS15 connects
 > **Previous:** [[LS14 Glaciers Mass Balance and Ice Flow]] · **Next:** [[LS16 Fluvial Landscapes]].

@@ -176,6 +176,15 @@ Slide 144: ice flows by *viscous deformation plus sliding at the bed*. It differ
 
 *Newtonian versus power-law flow.*
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_144.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 144: Ice flow: viscous deformation plus sliding
+> *Top left:* Newtonian viscous flow over an inclined plane: $dU/dz=\rho g\sin\theta\,(H-z)/\mu$ with parabolic profile $U(z)=(\rho g\sin\theta/\mu)(Hz-z^2/2)$ (A&A Eq. 8.8). *Below:* ice differs because it follows a power law with $n\approx3$ (Glen): $dU/dz=A\tau^n$, giving $U(z)=A[\rho g\sin\theta]^3[H^3z-\tfrac32z^2H^2+z^3H-\tfrac14z^4]$ (Eq. 8.16). *Right:* the sketch of an ice slab of thickness $H$ and width $w$ over planar bedrock with the velocity profile $u(z)$ made of a sliding part $U_s$ at the bed plus the deformation part $U_{\rm def}$, and the flux $Q_x$ into and out of the element (A&A Fig. 8.7).
+
+
 ## Map of this chapter
 > [!connection] How LS14 connects
 > **Previous:** [[LS13 Landslides]] · **Next:** [[LS15 Glacial Deposits Rebound and Sea Level]].

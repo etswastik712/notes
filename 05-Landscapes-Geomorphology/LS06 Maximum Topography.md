@@ -135,6 +135,15 @@ flowchart LR
 > [!example] 🖼 Reading the diagram: Slide 55: the observed maximum-relief plot
 > Vertical axis: (maximum $-$ minimum elevation)/mean radius, from $10^{-3}$ to $10$; horizontal axis: mean radius from $1$ to $10^{4}$ km. Filled and open circles are icy and rocky bodies. Small bodies ($R\lesssim20$ km) lie near $0.1$–$1$: friction-limited. Beyond a few hundred km the points fall as $1/R^{2}$, following the diagonal strength lines labelled $0.1$ MPa to $1$ GPa (the line labels are strengths); ice and rock bodies straddle different lines because ice is weaker. The nearly horizontal line at the top, labelled $\phi=30^\circ$, is the friction bound. The plot thus contains *both* regimes of the argument above in one figure.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_052.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 52: Friction and cohesion: the strength of rock
+> *Left:* a block of weight (normal stress $\sigma$) sliding on a surface under shear stress $\tau$; the resistance is friction $\mu\sigma$ plus cohesion $C$: $\tau=\mu N+C$. *Right:* Turcotte & Schubert Fig. 6.7 (Byerlee 1977): the maximum shear stress to start sliding against normal stress, for many rock types and pressures (log–log scatter): all points follow one line, $\tau_{\max}\approx0.85\,\sigma$: **Byerlee's law**, a universal friction coefficient $\mu\approx0.85$ (with a cohesion offset at high stress). It is the strength used for the maximum-topography estimate of this chapter.
+
+
 ## Map of this chapter
 > [!connection] How LS06 connects
 > **Previous:** [[LS05 Shape of Planets]] · **Next:** [[LS07 Isostasy]].

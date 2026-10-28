@@ -170,6 +170,55 @@ The syllabus (slide 20) has eight blocks: (1) Google-Earth tour, DEMs, contour m
 
 Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sahyadri, with the mapped dyke swarms (Narmada–Tapi, Pune–Nashik and the Western coastal swarm) and the Western Ghat escarpment; spheroidal (onion-skin) weathering of basalt; and a hillshade of the region. They anticipate Chapters 3 and 11.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_001.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 1: Ganglas, Leh: stories behind landscapes
+> Two photographs open the course. *Left:* a wide view from the Ganglas pass down to the Leh valley, the flat floor of the Indus valley with fields and the town, and behind it the snow-capped Stok–Zanskar range: a high-altitude, arid mountain landscape. *Right:* a group photograph of the LIGSS 2026 field party on the ridge. The caption sets the tone of the whole course: every landscape has a story (uplift, glaciation, rivers) that classical mechanics can read.
+
+![[pre_002.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 2: Ladakh strata and the India–Eurasia collision
+> A desert ridge of tilted, light-coloured sedimentary strata dips steeply to the right: bedding rotated by collision-related folding and thrusting. The inset (Martin et al., PNAS 2020) is a tectonic map of the India–Eurasia collision zone: pink = Eurasian-affinity units, blue = Indian-affinity units, the dark line between them the Indus–Yarlung suture where the Tethys ocean closed. It links what you see in the photograph (rock tilted and folded) with the plate-scale cause (§LS08–LS10).
+
+![[pre_003.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 3: Irshalwadi landslide
+> A rocky basalt hillside in the Western Ghats (Raigad, Maharashtra) with a scar left by the July 2023 Irshalwadi landslide: bare brown rubble above, tree cover at the sides. It is the first of several landslide examples; the mechanics is in [[LS13 Landslides]] and the case studies at the end of that chapter.
+
+![[pre_014.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 14: Google-Earth tour: Himalayan glaciers
+> A Google-Earth view at about 5,300 m (lat 27.97° N, lon 86.8° E, Khumbu region; the label 'Mt Everest' is cut off at the right edge): several debris-covered glacier tongues flow from the snow-covered peaks, with turquoise supraglacial and proglacial lakes. The debris cover (grey-brown) is rock that has fallen onto and out of the ice ([[LS15 Glacial Deposits Rebound and Sea Level]]). Part of the exercise set of slides 10–20.
+
+![[pre_015.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 15: Google-Earth tour: a braided river leaving the mountains
+> A braided gravel-bed river (light bars separated by channels) leaves forested foothills (lat 26.69° N, lon 86.94° E, scale bar 8 km) and spreads on its fan; an abandoned meander loop (circular scar at the centre) shows channel migration. It illustrates fluxes of water and sediment and the lateral mobility of alluvial rivers ([[LS16 Fluvial Landscapes]]).
+
+![[pre_016.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 16: Google-Earth tour: the Sundarbans delta
+> A tidal delta in the Bay of Bengal (lat 21.85° N, lon 89.2° E, scale 26 km): dense mangrove islands separated by branching tidal channels that widen seaward. Landscape evolving at sea level: sediment supply, tides and subsidence control its shape.
+
+![[pre_017.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 17: Google-Earth tour: a dune field
+> A desert dune field: sinuous ridges with slip faces facing one direction and lighter interdune flats. The shape records the wind direction and sand supply ([[LS17 Aeolian Landscapes]]). (The coordinates on the slide are too small to read: location `[verify]`.)
+
+![[pre_018.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 18: Google-Earth tour: Lonar crater
+> A near-circular impact crater with a raised rim in Deccan basalt and a green saline lake on its floor (lat 19.98° N, lon 76.51° E), with the town of Lonar at the right. An example of a landscape made by a single instantaneous event and then modified slowly (see slide 120 on impacts and the Deccan chapter).
+
+![[pre_019.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 19: Google-Earth exercise 2: write a story about a dynamic landscape
+> Text slide. Exercise: use Google Earth to tell the story of a *dynamic* landscape in the Indian subcontinent using its tools (distance and area, elevation profile, historical imagery); discuss vertical and horizontal scales, formation and history, whether it is evolving, going up or down or shifting horizontally, the fluxes of wind, water, ice, sediment, rock, human imprint, Earth-system feedbacks and analogues on Mars or the Moon; check recent papers; Sentinel Hub is an alternative tool.
+
+
 ## Map of this chapter
 > [!connection] How LS01 connects
 > **Previous:** [[Landscapes and Geomorphology - Course Map|Course Map]] · **Next:** [[LS02 Mechanics and Mathematics Toolkit]].

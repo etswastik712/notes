@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="630" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">GT02: homomorphisms and quotients in one page</text>
+<line x1="321.0" y1="130.0" x2="349.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="130.0" x2="679.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="679.3" y1="182.0" x2="415.2" y2="273.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="421.0" y1="330.0" x2="469.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="643.4" y1="391.0" x2="646.9" y2="454.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="250.0" y1="391.0" x2="250.0" y2="454.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="25.0" y="80.0" width="290" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Homomorphism</text>
+<text x="170" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">phi(xy) = phi(x) phi(y)</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">kernel, image</text>
+<rect x="355.0" y="80.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Kernel = normal subgroup</text>
+<text x="500" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">xN = Nx</text>
+<text x="500" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">index 2 =&gt; normal</text>
+<rect x="685.0" y="80.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Quotient G/N</text>
+<text x="830" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">(xN)(yN) = xyN</text>
+<text x="830" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">well defined iff normal</text>
+<rect x="85.0" y="275.0" width="330" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Homomorphism theorem</text>
+<text x="250" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">G/Ker = Im</text>
+<text x="250" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">2nd, 3rd isomorphism thms</text>
+<rect x="475.0" y="275.0" width="330" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="640" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Commutator G&#x27;</text>
+<text x="640" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">G/G&#x27; largest abelian quotient</text>
+<text x="640" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">S_n&#x27; = A_n</text>
+<rect x="85.0" y="460.0" width="330" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Cyclic and abelian groups</text>
+<text x="250" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">structure theorem</text>
+<rect x="480.0" y="460.0" width="340" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="650" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Simple groups, composition series</text>
+<text x="650" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Jordan-Holder</text>
+<text x="500.0" y="612" text-anchor="middle" font-size="13" fill="#52514e">Kurzweil-Stellmacher 1.2-1.8; my derivations</text>
+</svg>

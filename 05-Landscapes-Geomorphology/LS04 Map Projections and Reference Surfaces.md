@@ -121,6 +121,15 @@ meaning $a=6 378 137$ m and inverse flattening $1/f=298.257223563$. Thus $f=0.00
 > [!derivation] 🔵 Extra (not derived in the slides): Radii of curvature on the ellipsoid
 > With eccentricity $e^2=2f-f^2$, the meridional and prime-vertical radii of curvature at geodetic latitude $\varphi$ are $M=a(1-e^2)/(1-e^2\sin^2\varphi)^{3/2}$ and $N=a/\sqrt{1-e^2\sin^2\varphi}$ (quoted). One degree of latitude spans $M \pi/180=110.57$ km at the equator and $111.69$ km at the pole; one degree of longitude spans $(\pi/180)N\cos\varphi$, i.e. $111.32$ km at the equator and $96.4$ km at $30^\circ$ and $105.6$ km at Pune's latitude ($18.5^\circ$). These are the numbers needed to convert a DEM given in degrees to metres before differentiating.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_031.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 31: Mercator and transverse Mercator
+> Google-Earth options (left) and the two cylindrical projections. *Top:* a cylinder wrapped around the globe, tangent along the equator: the Mercator map (right) has straight parallel meridians and parallels, preserving angles (conformal) but exaggerating area at high latitudes; the note says the change in spacing of parallels is less than the true Mercator spacing for the version shown, and the equator always touches the cylinder. *Bottom:* the transverse Mercator, the cylinder turned 90° so that it touches a chosen central meridian: a map accurate in direction, distance and area only within about 15° of the central meridian ('no straight rhumb lines'), the basis of UTM zones.
+
+
 ## Map of this chapter
 > [!connection] How LS04 connects
 > **Previous:** [[LS03 Digital Elevation Models and Terrain Analysis]] · **Next:** [[LS05 Shape of Planets]].

@@ -1,21 +1,33 @@
 ---
-id: zettel/trap-topography
+title: Trap Topography
 aliases: ["Trap Topography", "step-like topography", "trappa"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Trap Topography
 
-A signature terraced or step-like landscape governed by the differential weathering of alternating hard and soft volcanic rock layers.
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
-- needs:: [[zettel/interflow-horizons]] — Interflow horizons constitute the softer, less resistant layers alternating with dense basalt flows that produce the terraced stairs
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 3, 25, 26 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 18–28
+> [!intuition] In one picture
+> A terraced, step-like landscape (Swedish *trappa*, stairs) produced when alternating hard flow cores and soft interflow horizons weather differently.
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 18–28
-<!-- /kurooto:seen -->
+![[dec_003.jpg|360]] ![[dec_025.jpg|360]] ![[dec_026.jpg|360]]
+
+> [!key] Key facts
+> - Signature of the Deccan: flat-topped hills, steeply inclined slopes and gently undulating valley floors (slides 25–26).
+> - Hard layer = dense flow core; soft layer = vesicular crust and base, boles, intertrappean beds.
+> - Occasionally pinnacled (Mangi Tungi, slides 27–28) where a single core survives.
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[interflow-horizons]] · [[lava-flow-internal-structure]] · [[intertrappean-beds]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

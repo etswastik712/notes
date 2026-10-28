@@ -250,6 +250,15 @@ Physical weathering fractures rock: it (i) weakens it mechanically, (ii) makes s
 > [!example] 🧮 Worked example: Weathering products carried by rivers (slide 116, A&A Fig. 7.4)
 > The bars show, for major rivers, sediment load (tonnes km$^{-2}$yr$^{-1}$, left, from $0$ to $2000$) and solute load ($0$ to $100$, right), the two ways weathered rock leaves the landscape. The Brahmaputra, Huang He and Ganga lie at the extreme for sediment load (physical erosion dominates: steep, tectonically active basins with strong rain and glaciers), rivers of low-relief or cold basins at the top of the chart (Chari, Kolyma, Dnieper, Zaire, Ob) carry small loads of both kinds. The box on the slide lists basin area $A$ (km$^2$) and discharge $Q$ (m$^3$ s$^{-1}$): Ganga $10^6$, $1.9\times10^4$; Brahmaputra $0.6\times10^6$, $1.9\times10^4$; Indus $10^6$, $5.5\times10^3$. *Runoff* $q=Q/A$: Ganga $1.9\times10^4/10^{12}=1.9\times10^{-8}$ m s$^{-1}$ $=0.6$ m yr$^{-1}$; Brahmaputra $1.0$ m yr$^{-1}$; Indus $0.17$ m yr$^{-1}$: the Indus is much drier. *Erosion rate* from a sediment load $\Lambda$ (t km$^{-2}$yr$^{-1}$) and rock density $\rho_r=2650$: $\mathcal{E}=\Lambda\times10^3 \mathrm{kg}/(10^6 \mathrm{m^2}\rho_r)$, e.g. $\Lambda=1000$: $3.8\times10^{-4}$ m yr$^{-1}=0.4$ mm yr$^{-1}$.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_098.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 98: Soil production rate depends on soil thickness
+> (a, b) Measured soil production rate (mm per thousand years) against soil depth (cm): production falls as the soil thickens, because a thick soil shields the rock from water and roots (A&A Figs 7.33–34). *Right:* the conceptual humped function: mobile regolith production rate against thickness $H$: zero for bare rock, rising to a maximum at a thin soil (water is retained at the bedrock interface) and falling at large thickness. The decay, $\dot W=\dot W_0e^{-H/H_0}$ is used in the regolith-thickness derivation of this chapter.
+
+
 ## Map of this chapter
 > [!connection] How LS11 connects
 > **Previous:** [[LS10 Folds Flexure and Mountain Building]] · **Next:** [[LS12 Hillslope Transport and the Diffusion Equation]].

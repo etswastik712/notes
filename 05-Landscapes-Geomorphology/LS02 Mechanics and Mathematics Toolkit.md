@@ -372,6 +372,15 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > [!intuition] Why inertia can be dropped
 > The ratio of inertial to viscous forces is the Reynolds number $\mathrm{Re}=\rho UL/\mu$. For the slab above $\mathrm{Re}\sim917\cdot10^{-7}\cdot100/10^{13}\sim10^{-15}$; for mantle flow $\mathrm{Re}\sim10^{-20}$. Acceleration terms $\rho \mathrm{d}\vect v/\mathrm{d} t$ are then utterly negligible, which is why the force balance of slides 45–49 has no acceleration: the flow is always in instantaneous equilibrium with its driving forces (Stokes flow).
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_037.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 37: Hydrostatic force balance (steady case)
+> A small rectangular element of fluid (orange) between heights $z$ and $z+dz$ with the pressure $P(z)$ pushing up on its bottom face, $P(z+dz)$ pushing down on its top face and gravity $g$ acting down. With zero net force (fluid at rest) $P(z)-P(z+dz)-\rho g\,dz=0$, i.e. $dP/dz=-\rho g$, the hydrostatic equation derived in this chapter and used throughout (isostasy, lithostatic pressure).
+
+
 ## Map of this chapter
 > [!connection] How LS02 connects
 > **Previous:** [[LS01 Landscapes as Physical Systems]] · **Next:** [[LS03 Digital Elevation Models and Terrain Analysis]].

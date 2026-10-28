@@ -173,6 +173,25 @@ flowchart LR
 > [!example] ❓ Question on the slides: Slide 94: pending mega-earthquakes? “aseismic creep”?
 > Great earthquakes recur where strain has accumulated. If plate convergence $V_c\approx20$ mm yr$^{-1}$ is accommodated on a fault segment that has not ruptured for $T_\mathrm{elapsed}$ years, the slip deficit is $D_\mathrm{def}=\chi V_cT_\mathrm{elapsed}$ where $\chi\le1$ is the fraction of convergence stored elastically (seismic coupling). A&A Fig. 4.21 shows for the Himalayan arc, coloured yellow, the “slip potential” (m) of segments from Kabul to Bhutan with the maximum magnitude ($7.6$–$8.6$) each could produce, together with historical events (1505, 1555, 1803, 1833, 1905, 1934, 1950) and the population centres at risk. Example: a segment $200\times100$ km unbroken for $500$ yr at $\chi=1$: $D_\mathrm{def}=0.02\times500=10$ m, $M_0=3\times10^{10}\times2\times10^{10}\times10=6\times10^{21}$ N m, $M_w=8.4$. If part of the convergence is taken up by *aseismic creep* or by many small earthquakes, $\chi<1$ and the potential is smaller ($\chi=0.5$ gives $M_w=8.2$); geodetic data show the Himalayan front is largely locked ($\chi\approx1$) up-dip of the locking line, creeping below — the “(?)” on the slide is the question of how much is in fact unlocked.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_087.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 87: Strike-slip faults and the San Andreas record (Anderson & Anderson)
+> *Left:* a block diagram of a right-lateral strike-slip (transform) fault with the National Park Service explanation; centre-top a hillshade of a fault trace with offset streams; *centre:* Fig. 4.11 (Wallace Creek): a stream channel is offset by successive earthquakes, so the total offset divided by the age of the channel gives the long-term slip rate $D/T_1$; *right:* the palaeoseismic record of the San Andreas fault (dates of past earthquakes against number of earthquakes before the 1857 Fort Tejon event) with an average recurrence interval of order 150 years.
+
+![[pre_092.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 92: Uplift in the Himalaya over $10^2$–$10^4$ years
+> *Left:* river terraces (labelled T2–T6) along a Himalayan river, each a former river bed abandoned as the river incised into rising ground; *right:* (a) terrace elevation against distance from the Main Frontal Thrust (MFT), (b) the inferred uplift rate in mm/yr against distance, peaking where the active fold crests, (c) the cross-section of the frontal fold above the thrust ramp with a convergence rate of about 21.5 mm/yr taken up by the thrust (A&A Fig. 4.26).
+
+![[pre_094.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 94: Himalayan great earthquakes and 'aseismic creep'
+> A map of the Himalayan arc (A&A Fig. 4.21) with the rupture segments of historical great earthquakes drawn as yellow strips with magnitudes (8.0–8.6) and years (1505, 1803, 1833, 1897, 1905, 1934, 1950...), cities as circles scaled by population (Kabul, Islamabad, Delhi, Dhaka, Kolkata, Bhuj). The title question asks whether the gaps between ruptures are 'aseismic creep' or locked segments that will break (a seismic hazard for tens of millions of people).
+
+
 ## Map of this chapter
 > [!connection] How LS09 connects
 > **Previous:** [[LS08 Plate Tectonics Strain Stress and Convection]] · **Next:** [[LS10 Folds Flexure and Mountain Building]].

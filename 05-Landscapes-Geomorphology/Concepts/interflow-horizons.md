@@ -1,21 +1,33 @@
 ---
-id: zettel/interflow-horizons
-aliases: ["Interflow Horizons"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+title: Interflow Horizons
+aliases: ["Interflow Horizons", "boles", "red bole", "green bole", "FTB"]
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Interflow Horizons
 
-Relatively soft, weathered, or sedimentary horizons developed between successive lava flows, such as intertrappeans, red boles, and green boles.
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
-- used-in:: [[zettel/trap-topography]] — They provide the weaker intervals between resistant flow interiors that enable step-like scarp retreat
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 21, 22, 23 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 18–28
+> [!intuition] In one picture
+> The weak, weathered or sedimentary layers between successive flows (boles, intertrappeans, flow-top breccias).
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 18–28
-<!-- /kurooto:seen -->
+![[dec_021.jpg|360]] ![[dec_022.jpg|360]] ![[dec_023.jpg|360]]
+
+> [!key] Key facts
+> - Origins of boles: (a) palaeosols formed by weathering of the flow top below; (b) ash-fall deposits (slide 21).
+> - Examples: red bole, green bole, silty clayey horizon with pencil joints between the Poladpur and Ambenali formations (slides 22–23).
+> - They are the soft layers of the trap staircase and the seepage horizons of the plateaus.
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[intertrappean-beds]] · [[trap-topography]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

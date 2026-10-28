@@ -1,20 +1,33 @@
 ---
-id: zettel/massive-sheet-flow
-aliases: ["Massive Sheet Flow", "sheet flows", "Sheet Flow", "Massive sheet flows", "Flood basalt sheet flows"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+title: Massive Sheet Flow
+aliases: ["Massive Sheet Flow", "sheet flows", "simple flows"]
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Massive Sheet Flow
 
-A laterally extensive basalt flow emplaced at extreme flood effusion rates (1,000 to >100,000 m^3/s) with inflated vesicular crusts. These flows span 10 to >100 km^2 and form the planar structural caps of broad high-elevation plateaus and sheer cliffs.
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 12, 16 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 1–17
+> [!intuition] In one picture
+> A thick, laterally extensive lava flow emplaced at flood-level effusion rates; it builds flat plateaus and sheer escarpments.
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 1–17
-<!-- /kurooto:seen -->
+![[dec_012.jpg|360]] ![[dec_016.jpg|360]]
+
+> [!key] Key facts
+> - Effusion rate 10³–10⁵⁺ m³/s; areal extent 10–100+ km² each (slide 16).
+> - Inflated vesicular crust, endogenous emplacement; examples: Tamhini Ghat (west of Pune), Gadaghat (NH-3, Madhya Pradesh).
+> - A 50–100 m thick flow takes decades to centuries to cool by conduction (t ~ h²/κ), so it can travel hundreds of km.
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[compound-hummocky-pahoehoe]] · [[columnar-jointing]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

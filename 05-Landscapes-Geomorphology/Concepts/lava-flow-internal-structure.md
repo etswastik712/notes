@@ -1,21 +1,33 @@
 ---
-id: zettel/lava-flow-internal-structure
-aliases: ["Lava Flow Internal Structure", "Core-Crust Architecture"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+title: Lava Flow Internal Structure
+aliases: ["Lava Flow Internal Structure", "crust core base", "lava lobe structure"]
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Lava Flow Internal Structure
 
-The structural zonation of a basalt lava flow lobe comprising an upper crust (upper vesicular zone / UVZ), a dense central core, and a base (lower vesicular zone / LVZ).
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
-- used-in:: [[zettel/trap-topography]] — The differential mechanical resistance between vesicular crusts/bases and massive dense cores dictates differential weathering across stacked flows
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 18, 19, 20 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 18–28
+> [!intuition] In one picture
+> A lava lobe has an upper vesicular crust, a dense jointed core and a lower vesicular base; this layering sets the weathering contrast.
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 18–28
-<!-- /kurooto:seen -->
+![[dec_018.jpg|360]] ![[dec_019.jpg|360]] ![[dec_020.jpg|360]]
+
+> [!key] Key facts
+> - Crust (UVZ): glassy rind, flow-top breccia (FTB), vesicle sheet, vesicle banding. Core: compact, columnar-jointed. Base (LVZ): pipe vesicles, glassy base.
+> - Lobe types: 'a'ā, pāhoehoe, hummocky, sheet, rubbly (slide 18).
+> - Emplacement is endogenous: the molten interior spreads inside a chilled crust.
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[interflow-horizons]] · [[trap-topography]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

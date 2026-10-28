@@ -164,6 +164,25 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 > [!example] ❓ Question on the slides: Slide 51: how many spherical-harmonic terms are involved in the EGMs?
 > Degree $n$ has $2n+1$ real harmonics ($\cos m\lambda$ for $m=0,\dots,n$; $\sin m\lambda$ for $m=1,\dots,n$). Summing degrees $0$ to $N$: $\sum_{n=0}^{N}(2n+1)=(N+1)^2$ coefficients. EGM96 is complete to degree/order $N=360$: $361^2=130 321$ ($\approx1.3\times10^5$) coefficients; its smallest half-wavelength is $\pi R/N\approx55$ km. EGM2008 is complete to $N=2159$: $2160^2\approx4.7\times10^6$ coefficients ($\approx9$ km half-wavelength). (Figures quoted from the models' documentation; check for the current model.)
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_040.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 40: Why are planets spherical?
+> Title-style text slide: 'Why are planets spherical? Why are they oblate spheroids?'. The two questions are answered in §1 (gravity against strength) and §2 (rotation) of this chapter.
+
+![[pre_041.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 41: Why are planets spherical? How oblate?
+> The same slide with a third question: how oblate any given planet should be, answered by the balance of centrifugal and gravitational force at the equator ($f\approx\omega^2R^3/(GM)\cdot\tfrac52$ for a uniform fluid body).
+
+![[pre_043.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 43: Earth's oblateness to scale
+> A quarter-outline of the Earth (Wikipedia 'Figure of the Earth': *Earth oblateness to scale*). The yellow circle is a perfect sphere, the pink line the true ellipsoid: at this scale (flattening ≈ 1/298) the two are practically indistinguishable, which is why the oblateness is a small perturbation. The slide also gives references on the history of measuring the Earth's shape and the recommended book (Chandrasekhar's *Newton's Principia for the Common Reader*).
+
+
 ## Map of this chapter
 > [!connection] How LS05 connects
 > **Previous:** [[LS04 Map Projections and Reference Surfaces]] · **Next:** [[LS06 Maximum Topography]].

@@ -204,6 +204,20 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > [!derivation] 🔵 Extra (not derived in the slides): Silicate weathering as a thermostat: a two-line model
 > Weathering of Ca-silicate rock by carbonic acid, followed by carbonate precipitation in the ocean (slide 104), gives the net reaction $\mathrm{CaSiO_3+CO_2\to CaCO_3+SiO_2}$: each mole of Ca-silicate weathered removes one mole of CO$_2$. The reverse, in metamorphism at subduction zones and volcanoes, returns CO$_2$ at a rate $V$. Let $C$ be atmosphere–ocean CO$_2$ and suppose the weathering flux is $W=\epsilon C^{\beta}$, where $\epsilon$ rises with the supply of fresh rock (uplift and erosion) and with temperature ($T$ rises with $C$ through the greenhouse effect, a negative feedback that stabilises the system). Steady state: $V=\epsilon C^\beta$, so $C=(V/\epsilon)^{1/\beta}$. If uplift raises $\epsilon$ by a factor $2$, the new steady CO$_2$ is lower by the factor $2^{-1/\beta}$ ($1/2$ for $\beta=1$, $1/4$ for $\beta=\tfrac12$): a geologically slow ($\sim10^5$–$10^6$ yr) cooling forced by tectonics. The deck's chain: uplift $\to$ weathering/erosion $\uparrow$ $\to$ CO$_2$ $\downarrow$ $\to$ cooling $\to$ glaciers, which in turn erode (Chapter 14), while monsoon changes feed back on the Himalayan structure.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_078.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 78: Passive-margin escarpments
+> *Left:* a world map with passive-margin escarpments (stretching) marked; *right:* a relief map of the Indian west coast (the Western Ghats escarpment above a narrow coastal strip). The text: rifting thins the continental crust and gives normal faulting (McKenzie and Sclater 1971); present-day topography is the sum of past tectonics and continuing sub-aerial processes driven mainly by rivers and hillslopes (Summerfield 1991).
+
+![[pre_080.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 80: Compression and folding (Turcotte & Schubert)
+> *Left:* (a) compression of a uniform medium shortens it without folding; (b) a layered medium with a strong (competent) layer in a weak matrix buckles into folds whose wavelength is set by the strong layer. *Right:* log–log plot of fold wavelength $\lambda$ against the thickness $h$ of the dominant member (Currie et al. 1962): data over six orders of magnitude lie on a line of slope 1, $\lambda\propto h$ (the fitted constant is about 30). Folds are sinusoidal at small amplitude and scale with the strong layer's thickness.
+
+
 ## Map of this chapter
 > [!connection] How LS10 connects
 > **Previous:** [[LS09 Faults and Earthquakes]] · **Next:** [[LS11 Weathering and Regolith]].

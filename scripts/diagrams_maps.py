@@ -180,6 +180,100 @@ SPECS = {
         footer="Shriver and Atkins Ch.5 pp.147-161 (Quiz 2 scope)",
     ),
 
+    "LS18 Deccan Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=500, y=90, w=420, h=100, text="Deccan Volcanic Province\n~500,000 km2, ~617,700 km3, 66 Ma\nK-Pg boundary, Reunion plume", color="blue"),
+            "b": dict(x=170, y=270, w=290, h=110, text="Eruptive style\n< 10 m3/s: hummocky pahoehoe\n1e3-1e5 m3/s: sheet flows\ncolumnar jointing", color="orange"),
+            "c": dict(x=500, y=270, w=290, h=110, text="Lithology\ncrust / core / base of lobes\nboles, intertrappeans -> trappa", color="aqua"),
+            "d": dict(x=830, y=270, w=290, h=110, text="Tectonics\neastward tilt (0.08 deg)\nblock faulting, rift scarp retreat", color="red"),
+            "e": dict(x=330, y=450, w=320, h=100, text="Monsoon + rivers\nentrenched gorges, knickpoints,\npotholes, planation surfaces", color="grey"),
+            "f": dict(x=700, y=450, w=320, h=100, text="Terrain: Konkan belt (<100 m),\nWestern Ghats (500-1700 m),\nDeccan plateau, laterite caps", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("a", "c", ""), ("a", "d", ""), ("b", "e", ""), ("c", "e", ""), ("d", "f", ""), ("e", "f", "")],
+        title="LS18: the Deccan Traps terrain in one page",
+        footer="Geomorphic Features of the Deccan Traps Terrain (37 slides)",
+    ),
+
+    "LS19 Glacial Aeolian Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=250, y=80, w=360, h=90, text="Glaciers\nELA, mass balance, flux Q(x)\nflow: deformation + sliding", color="blue"),
+            "b": dict(x=250, y=230, w=360, h=90, text="Glacial erosion\ncirques, U-valleys, steps\nfrost cracking -5 C", color="aqua"),
+            "c": dict(x=250, y=390, w=360, h=100, text="Buzzsaw: relief capped ~1500 m\nabove snowline; Himalaya exception\nrelief ~ sqrt(uplift)", color="orange"),
+            "d": dict(x=750, y=80, w=360, h=90, text="Wind entrainment\ndrag torque vs weight\neasiest grain ~0.1 mm", color="red"),
+            "e": dict(x=750, y=230, w=360, h=90, text="Saltation + sand flux\nq ~ u*^3, thresholded", color="orange"),
+            "f": dict(x=750, y=390, w=360, h=100, text="Dunes: barchan, transverse,\nlinear, star, dome\nWarner model, ripples ~10 cm", color="grey"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("d", "e", ""), ("e", "f", "")],
+        title="LS19: glacial and aeolian landforms in one page",
+        footer="l_glacial_aolian.pdf (48 slides)",
+    ),
+
+    "GT01 Groups Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=280, h=100, text="Group axioms\nassociative, identity, inverse\n=> unique, cancellation", color="blue"),
+            "b": dict(x=500, y=90, w=280, h=100, text="Subgroup test\nfinite: nonempty + closed\n<X> = generated subgroup", color="orange"),
+            "c": dict(x=830, y=90, w=280, h=100, text="Product formula\n|AB| = |A||B|/|A cap B|\nAB subgroup iff AB = BA", color="aqua"),
+            "d": dict(x=330, y=290, w=320, h=110, text="Cosets gU\npartition G into equal pieces\nindex |G:U|", color="aqua"),
+            "e": dict(x=700, y=290, w=320, h=110, text="Lagrange\n|G| = |U| |G:U|\no(g) divides |G|", color="red"),
+            "f": dict(x=250, y=470, w=320, h=100, text="Prime order => cyclic\nFermat, Euler", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="Converse false\nA4 has no subgroup of order 6", color="orange"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("b", "d", ""), ("d", "e", ""), ("e", "f", ""), ("e", "g", "")],
+        title="GT01: groups, subgroups and cosets in one page",
+        footer="Kurzweil-Stellmacher 1.1; my derivations",
+    ),
+
+    "GT02 Quotients Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Homomorphism\nphi(xy) = phi(x) phi(y)\nkernel, image", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Kernel = normal subgroup\nxN = Nx\nindex 2 => normal", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Quotient G/N\n(xN)(yN) = xyN\nwell defined iff normal", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Homomorphism theorem\nG/Ker = Im\n2nd, 3rd isomorphism thms", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Commutator G'\nG/G' largest abelian quotient\nS_n' = A_n", color="aqua"),
+            "f": dict(x=250, y=470, w=330, h=100, text="Cyclic and abelian groups\nstructure theorem", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="Simple groups, composition series\nJordan-Holder", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("c", "d", ""), ("d", "e", ""), ("e", "g", ""), ("d", "f", "")],
+        title="GT02: homomorphisms and quotients in one page",
+        footer="Kurzweil-Stellmacher 1.2-1.8; my derivations",
+    ),
+
+    "GT03 Actions Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Action of G on a set\norbits, stabilisers\nCayley, coset action", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Orbit-stabiliser\n|G| = |orbit| |stab|", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Burnside\n#orbits = mean # fixed points\nnecklaces", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Conjugation\nclass equation\np-group: Z(P) nontrivial", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="Cauchy (McKay)\nSylow: existence, conjugate,\nn_p = 1 mod p, n_p | m", color="orange"),
+            "f": dict(x=250, y=470, w=330, h=100, text="Small groups\norder 15 cyclic, 12, 56", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="S_n classes = cycle types\nA5 simple (12,12,15,20)", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("b", "d", ""), ("d", "e", ""), ("e", "f", ""), ("e", "g", "")],
+        title="GT03: actions, conjugation and Sylow in one page",
+        footer="Kurzweil-Stellmacher 3.1, 3.2, 4.3; my proofs",
+    ),
+
+    "GT04 Representations Map": dict(
+        size=(1000, 560),
+        nodes={
+            "a": dict(x=170, y=90, w=290, h=100, text="Point group\nC2v, C3v = S3, Td = S4, Oh", color="blue"),
+            "b": dict(x=500, y=90, w=290, h=100, text="Representation\nrho: G -> GL(V)\ncharacter = trace", color="orange"),
+            "c": dict(x=830, y=90, w=290, h=100, text="Irreps, character table\n#irreps = #classes\nsum dim^2 = |G|", color="aqua"),
+            "d": dict(x=250, y=290, w=330, h=110, text="Reduction formula\nn_i = (1/|G|) sum |C| chi_i chi", color="red"),
+            "e": dict(x=640, y=290, w=330, h=110, text="NH3: H 1s = A1 + E\nvib = 2A1 + 2E, H2O: 2A1 + B2", color="orange"),
+            "f": dict(x=250, y=470, w=330, h=100, text="d in Oh: E + T2\nligand-field splitting", color="grey"),
+            "g": dict(x=650, y=470, w=340, h=100, text="SO(3): chi_l(theta)\nLie groups, angular momentum", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("b", "c", ""), ("c", "d", ""), ("d", "e", ""), ("d", "f", ""), ("d", "g", "")],
+        title="GT04: symmetry, representations and characters in one page",
+        footer="my write-up; tables checked in gt_numbers.py",
+    ),
+
 }
 
 if __name__ == "__main__":

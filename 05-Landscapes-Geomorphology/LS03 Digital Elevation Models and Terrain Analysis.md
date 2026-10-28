@@ -222,6 +222,15 @@ Drainage area is the variable through which rivers connect to discharge and stre
 > [!example] 🖼 Reading the diagram: Slides 56–57
 > Slide 56 is a global ETOPO DEM (land in grey, ocean floors in cyan shades). Slide 57 repeats it with the elevation histogram: there are *two* preferred levels, not one. A single population (e.g. Gaussian) of topography would be unimodal; the bimodal shape means the surface falls into two classes of crust at two different levels. Isostasy (Chapter 7) explains it: continental crust is thicker and less dense than oceanic crust plus mantle, so it floats higher; the sparse area between the modes is the continental shelf and slope.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_034.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 34: Our neighbourhood in QGIS
+> Four panels from the local-landscape exercise. A QGIS window with a DEM classified in a blue–red elevation ramp (left); a contour map with hillshade (brown contour lines on grey relief, top right); and two map views of the local area (a street map and a drainage-network map with a blue lake) bottom right. The slide shows what the exercise delivers: elevation classes, contours and the stream network from one DEM ([[Landscapes and Geomorphology - Course Map]], practicals).
+
+
 ## Map of this chapter
 > [!connection] How LS03 connects
 > **Previous:** [[LS02 Mechanics and Mathematics Toolkit]] · **Next:** [[LS04 Map Projections and Reference Surfaces]].

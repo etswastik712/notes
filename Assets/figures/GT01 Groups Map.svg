@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="630" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">GT01: groups, subgroups and cosets in one page</text>
+<line x1="316.0" y1="130.0" x2="354.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="646.0" y1="130.0" x2="684.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="453.6" y1="184.6" x2="380.6" y2="270.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="496.0" y1="330.0" x2="534.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="556.9" y1="387.2" x2="380.6" y2="457.8" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="683.1" y1="390.8" x2="665.5" y2="454.2" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="30.0" y="80.0" width="280" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Group axioms</text>
+<text x="170" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">associative, identity, inverse</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">=&gt; unique, cancellation</text>
+<rect x="360.0" y="80.0" width="280" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Subgroup test</text>
+<text x="500" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">finite: nonempty + closed</text>
+<text x="500" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">&lt;X&gt; = generated subgroup</text>
+<rect x="690.0" y="80.0" width="280" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Product formula</text>
+<text x="830" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">|AB| = |A||B|/|A cap B|</text>
+<text x="830" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">AB subgroup iff AB = BA</text>
+<rect x="170.0" y="275.0" width="320" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Cosets gU</text>
+<text x="330" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">partition G into equal pieces</text>
+<text x="330" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">index |G:U|</text>
+<rect x="540.0" y="275.0" width="320" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Lagrange</text>
+<text x="700" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">|G| = |U| |G:U|</text>
+<text x="700" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">o(g) divides |G|</text>
+<rect x="90.0" y="460.0" width="320" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Prime order =&gt; cyclic</text>
+<text x="250" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Fermat, Euler</text>
+<rect x="480.0" y="460.0" width="340" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="650" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Converse false</text>
+<text x="650" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">A4 has no subgroup of order 6</text>
+<text x="500.0" y="612" text-anchor="middle" font-size="13" fill="#52514e">Kurzweil-Stellmacher 1.1; my derivations</text>
+</svg>

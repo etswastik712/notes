@@ -142,6 +142,70 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 > [!intuition] Rain, shaking, and human location
 > Two triggers: (1) heavy rain raises $P_w$ ((26): strength falls); (2) shaking supplies $a_s>a_c$ (Newmark). The Western Ghats events (Irshalwadi, Taliye, Malin) are rain-triggered failures of weathered basalt regolith on steep slopes ($30^\circ$–$40^\circ$) above the friction angle of saturated soil ($\theta_c\approx16^\circ$–$19^\circ$ for cohesionless soil, so cohesion of roots and rock structure carries the slope until rain erodes it); the Himalayan ones add high relief, glaciers and earthquakes.
 
+## Further slides explained one by one
+<span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
+
+![[pre_125.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 125: USGS flume experiment: loose and dense soil
+> *Left:* the 95-m-long steep flume at the USGS in Oregon with a debris-flow experiment on 13 Sept 2001. *Right:* (a) loose soil (porosity 0.52): displacement and pore-water pressure head against time: after about 48 minutes of wetting the pressure builds and, within seconds, the slope fails suddenly and catastrophically (displacement jumps); (b) dense soil (porosity 0.41): over four hours the displacement creeps up gradually and the pressure head stays low. Loose soil contracts when sheared, raising pore pressure and liquefying; dense soil dilates and drains. (A&A Fig. 10.30)
+
+![[pre_127.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 127: Landslide Atlas of India
+> *Left:* NRSC map of India with the landslide inventory 1998–2022 (yellow): clusters in the NW and NE Himalaya and the Western Ghats. *Right:* three news items: the Taliye (Raigad) landslide of July 2021 (49 dead), the Irshalwadi landslide (2023), and the Malin (Pune) landslide of 2014, a mass-fatality mudslide: why landslides matter in India.
+
+![[pre_128.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 128: Irshalwadi landslide: satellite view
+> A satellite image of the hillside above the village after the July 2023 failure: a long, narrow debris track running down a forested basalt slope and spreading into a fan of debris below.
+
+![[pre_129.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 129: Irshalwadi landslide: the source catchment
+> A second Google-Earth view of the same hillside (terraced basalt slopes, forest and cleared land) with the village location marked at the left: the slope above is the source of the debris flow.
+
+![[pre_130.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 130: Dharali disaster, Uttarakhand, 5 August 2025
+> False-colour Sentinel-2 imagery before and after the event (red = vegetation): pre-event (left) shows the settlement of Dharali beside the stream; post-event shows the debris-flow track, deposit and the inundated settlement. *Right:* two high-resolution images (13 June 2024 and 7 Aug 2025) with Dharali circled. The slide points to the Landslide Blog article for the cause (a flood/debris flow from the tributary catchment).
+
+![[pre_131.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 131: Chamoli flash flood, Feb 2021 (Ronti Gad, Tapovan)
+> Ten video frames (A–J) with times in IST (≈10:30 on 7 Feb 2021) from $t_0+14$ s to $t_0+57$ s: a dust and debris cloud rushes down the Ronti Gad valley and across the Tapovan dam: the rock–ice avalanche from the slope above transformed into a flash flood. The slide cites Shugar et al., *Science* 2021 for the detailed reconstruction.
+
+![[pre_132.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 132: Chamoli rock–ice avalanche: source and path
+> Figures from Shugar et al. (*Science* 2021): a 3-D view of the Ronti peak slope that failed; satellite images before/after (E, F show the cross-section of the detached rock-and-glacier-ice block); elevation-change profiles along the path (G–J) showing the thickness removed from the source and deposited below. The orange label gives the source volume of order $2.7\times10^7$ m³ (`[verify]` the exponent).
+
+![[pre_133.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 133: Massive debris flows and rock avalanches (A&A Figs 10.34, 10.36)
+> Examples of very large mass movements: an oblique aerial photo of a lobate rock-avalanche deposit spreading across a desert valley floor (bottom left), a grey-scale view of another long-runout deposit (top left), and Google-Earth views of glacier-covered terrain with debris sheets (right). They show how the runout of large landslides greatly exceeds the fall height.
+
+![[pre_134.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 134: A giant prehistoric rock avalanche near Pokhara, Nepal
+> A map from a *Nature* paper on dated deposits of a huge prehistoric rock avalanche in the Pokhara valley (carbonate-rich Tethyan Himalaya above, High Himalayan gneisses and Lesser Himalayan metasediments below; symbols mark exposure-age, luminescence and radiocarbon samples; the deposits are mapped in yellow and green: breccia, conglomerate, terrace deposits). The orange note dates the event to about 1200 AD and speculates its size might have removed a summit from the list of 8000-m peaks (`[verify]` against the paper).
+
+![[pre_135.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 135: Landslides triggered by the 2015 Gorkha earthquake (Roback et al. 2018)
+> Fig. 1 of the study: a satellite image of central Nepal with the mapped area (blue outline), the landslides (yellow) and obscured areas (purple), the epicentres of the 25 April (M7.8) and 12 May (M7.3) shocks, and Kathmandu, Barpak, Bhote Koshi and Langtang marked; (B) the inventory over topography; (C) before/after imagery near Barpak showing coseismic landslide scars.
+
+![[pre_136.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 136: Landslide statistics
+> (A) Probability density of landslide area on log–log axes: a power-law tail with a rollover at small areas, fitted by $\log p=-2.47+0.11\log A-\dots$ with a slope near $-2.5$ for large landslides. (B) Slope histograms: landslide source slopes (mean $39.5\pm9.1^\circ$) against all hillslopes ($27.5\pm13.7^\circ$): failures preferentially occur on steeper slopes. (C) Runout length against landslide volume: runout grows with volume and debris flows run farther than ordinary landslides.
+
+![[pre_137.jpg|520]]
+
+> [!example] 🖼 Reading the diagram: Slide 137: 25,000 landslides and the ground motion (Gorkha 2015)
+> Map of landslide density across central Nepal against average horizontal peak ground velocity (colour scale 0–70 cm/s), with the April 25 epicentre and the 12 May shock, the main thrusts and a shaded fault-plane projection; (c) landslide counts along a profile away from the epicentre show three peaks: failures correlate with shaking intensity and also with topography (Geophys. Res. Lett. 2022).
+
+
 ## Map of this chapter
 > [!connection] How LS13 connects
 > **Previous:** [[LS12 Hillslope Transport and the Diffusion Equation]] · **Next:** [[LS14 Glaciers Mass Balance and Ice Flow]].

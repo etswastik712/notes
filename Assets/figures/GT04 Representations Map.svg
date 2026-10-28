@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="630" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">GT04: symmetry, representations and characters in one page</text>
+<line x1="321.0" y1="130.0" x2="349.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="130.0" x2="679.0" y2="130.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="679.3" y1="182.0" x2="415.2" y2="273.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="421.0" y1="330.0" x2="469.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="250.0" y1="391.0" x2="250.0" y2="454.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="377.7" y1="387.5" x2="533.4" y2="457.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="25.0" y="80.0" width="290" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Point group</text>
+<text x="170" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">C2v, C3v = S3, Td = S4, Oh</text>
+<rect x="355.0" y="80.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Representation</text>
+<text x="500" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">rho: G -&gt; GL(V)</text>
+<text x="500" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">character = trace</text>
+<rect x="685.0" y="80.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Irreps, character table</text>
+<text x="830" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">#irreps = #classes</text>
+<text x="830" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sum dim^2 = |G|</text>
+<rect x="85.0" y="275.0" width="330" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="325.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Reduction formula</text>
+<text x="250" y="345.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">n_i = (1/|G|) sum |C| chi_i chi</text>
+<rect x="475.0" y="275.0" width="330" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="640" y="325.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">NH3: H 1s = A1 + E</text>
+<text x="640" y="345.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">vib = 2A1 + 2E, H2O: 2A1 + B2</text>
+<rect x="85.0" y="460.0" width="330" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="250" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">d in Oh: E + T2</text>
+<text x="250" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">ligand-field splitting</text>
+<rect x="480.0" y="460.0" width="340" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="650" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">SO(3): chi_l(theta)</text>
+<text x="650" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Lie groups, angular momentum</text>
+<text x="500.0" y="612" text-anchor="middle" font-size="13" fill="#52514e">my write-up; tables checked in gt_numbers.py</text>
+</svg>

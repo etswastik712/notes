@@ -1,21 +1,33 @@
 ---
-id: zettel/fracture-bound-rock-trench
-aliases: ["Fracture-Bound Rock Trench", "constricted rock trench", "linear fracture-controlled channel"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+title: Fracture-Bound Rock Trench
+aliases: ["Fracture-Bound Rock Trench", "fracture-controlled channel"]
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Fracture-Bound Rock Trench
 
-A narrow bedrock river corridor governed by structural joints or fractures that constricts stream discharge, sharply elevating hydraulic head, kinetic energy, and velocity during floods.
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
-- used-in:: [[zettel/pothole-networks]] — Creates the constricted, high-velocity hydraulic conditions required to drill dense pothole fields into basalt floors
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 33 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 29–37
+> [!intuition] In one picture
+> A narrow river trench guided by a straight fracture where a wide valley suddenly constricts.
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 29–37
-<!-- /kurooto:seen -->
+![[dec_033.jpg|360]]
+
+> [!key] Key facts
+> - Constriction raises hydraulic head, kinetic energy and velocity in monsoon floods (slide 33).
+> - With Q conserved, squeezing 200 m to 20 m raises depth ×4 and speed ×2.5, stream power per unit area ×10 (`scripts/ls_numbers.py`).
+> - Host of the Nighoj potholes (Kukadi river).
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[pothole-networks]] · [[bedrock-gorges-and-entrenched-meanders]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

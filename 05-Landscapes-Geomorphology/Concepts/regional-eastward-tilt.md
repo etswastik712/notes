@@ -1,21 +1,33 @@
 ---
-id: zettel/regional-eastward-tilt
-aliases: ["Regional Eastward Tilt", "regional crustal warping", "asymmetric trans-peninsular continental divide"]
-tags: [zettel, agent-written, landscape-evolution]
-trust_tier: agent_written
+title: Regional Eastward Tilt
+aliases: ["Regional Eastward Tilt", "eastward tilt", "continental divide"]
+subject: landscapes
+type: concept
+scope: [taught]
+by: [slides]
+status: draft
+tags: [subject/landscapes, type/concept, taught, src/slides, status/draft]
 ---
-
 # Regional Eastward Tilt
 
-Post-eruptive regional crustal warping that tilted Peninsular India toward the east, establishing an asymmetric drainage divide where major rivers head near the Western Ghats and flow east across the peninsula.
+<span class="scope-taught">taught · in syllabus</span>
 
-## Links
-- part-of:: [[zettel/deccan-volcanic-province]] — Acts as the macro-scale structural tilt directing drainage across the Deccan Volcanic Province into the Bay of Bengal
+> [!syllabus] In the syllabus
+> 🟢 **taught:** slides 8, 29 of [[Geomorphic Features of the Deccan Traps Terrain.pdf]]; written up in [[LS18 Deccan Traps Terrain]].
 
----
-Source: Geomorphic Features of the Deccan Traps Terrain, pp. 29–37
+> [!intuition] In one picture
+> Post-eruptive crustal warping tilted peninsular India eastward, making the Western Ghats crest an asymmetric continental divide.
 
-<!-- kurooto:seen -->
-## Seen in
-- [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain|Geomorphic Features of the Deccan Traps Terrain]] pp. 29–37
-<!-- /kurooto:seen -->
+![[dec_008.jpg|360]] ![[dec_029.jpg|360]]
+
+> [!key] Key facts
+> - Godavari, Krishna and Bhima rise near the Ghat crest and flow >700 km east to the Bay of Bengal (slide 29).
+> - Mean eastward gradient ≈1.4 m/km (0.08°), against 10–20 m/km on the west coast: the west-flowing rivers cut headward and drive scarp retreat.
+> - The Western Ghats Escarpment is 1,200 km long and 500–1700 m high, a rift scarp that has retreated.
+
+Used in: [[LS18 Deccan Traps Terrain]]. Related: [[segmented-quaternary-block-faulting]] · [[trap-topography]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```
