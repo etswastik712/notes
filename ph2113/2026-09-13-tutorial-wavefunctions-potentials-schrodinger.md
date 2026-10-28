@@ -46,3 +46,8 @@ Find attached discussion/ Problem set for Tuesday Tutorial. No new material, jus
 - [[06-quantum-mechanics/concepts/fourier-transform-and-wave-packets]]: Problems 5-6
 - [[06-quantum-mechanics/concepts/gaussian-wave-packet]]: Problem 6
 - [[09-foundations/concepts/gaussian-integral]]: the integral formula used in Problem 6
+
+<!-- kurooto:material250f0717 -->
+## Concepts in PH2113_wavefunctions_potentials_schrodinger_Tutorial
+[[zettel/square-integrability-of-wave-functions]], [[zettel/wave-function-boundary-matching-across-discontinuities]], [[zettel/schrodinger-equation-linearity-and-superposition]], [[zettel/schrodinger-equation-probability-conservation]], [[zettel/particle-in-a-box-time-evolution]], [[zettel/potential-energy-zero-gauge-invariance]], [[zettel/position-momentum-uncertainty-relation-from-fourier-transform]]
+<!-- /kurooto:material250f0717 -->
