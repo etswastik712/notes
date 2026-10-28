@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Dirac algebra: from kets to measurement and time evolution</text>
+<line x1="311.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="408.0" y1="193.0" x2="270.7" y2="272.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="738.0" y1="193.0" x2="600.7" y2="272.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="316.0" y1="330.0" x2="349.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="330.0" x2="679.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="446.8" y1="389.5" x2="383.2" y2="460.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="486.0" y1="520.0" x2="529.0" y2="520.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="789.0" y1="390.0" x2="741.0" y2="460.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="35.0" y="90.0" width="270" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Kets |alpha&gt;</text>
+<text x="170" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">abstract state space</text>
+<text x="170" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">superposition, null ket</text>
+<rect x="355.0" y="90.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Bras &lt;alpha|, inner product</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">&lt;a|b&gt; = &lt;b|a&gt;*</text>
+<text x="500" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Schwarz inequality</text>
+<rect x="685.0" y="90.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Operators</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">X|alpha&gt;, |b&gt;&lt;a| outer product</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">commutator [A,B]</text>
+<rect x="30.0" y="275.0" width="280" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Adjoint, Hermitian</text>
+<text x="170" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">real eigenvalues</text>
+<text x="170" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">orthogonal eigenkets</text>
+<rect x="355.0" y="275.0" width="290" height="110" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Completeness</text>
+<text x="500" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sum |a&gt;&lt;a| = 1</text>
+<text x="500" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">matrix elements, change of basis</text>
+<rect x="685.0" y="275.0" width="290" height="110" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">x and p representations</text>
+<text x="830" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">psi(x) = &lt;x|alpha&gt;</text>
+<text x="830" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">p = -i hbar d/dx, plane waves</text>
+<rect x="180.0" y="465.0" width="300" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Unitary operators</text>
+<text x="330" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">translation T = e^(-i p l/hbar)</text>
+<text x="330" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">[x,p] = i hbar</text>
+<rect x="535.0" y="465.0" width="330" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Measurement + dynamics</text>
+<text x="700" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">P = |&lt;a|alpha&gt;|^2, Robertson DA DB &gt;= |&lt;[A,B]&gt;|/2</text>
+<text x="700" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">U = e^(-iHt/hbar), Heisenberg picture</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">Sakurai Ch.1 and 2.1: the same state in energy, position and momentum language</text>
+</svg>

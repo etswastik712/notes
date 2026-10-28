@@ -9,13 +9,14 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated in Classroom) and project presentations on 5 and 6 Oct 2026. See [[maps/courses/landscape-evolution]].
+Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated in Classroom) and project presentations on 5 and 6 Oct 2026. Upcoming, not an assessment: day trip on Sat 7 or 14 Nov 2026 (date to be fixed). See [[maps/courses/landscape-evolution]].
 
 ## Covered so far
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]: GIS/DEM basics, QGIS with SAGA, topotoolbox workflow (GRIDobj, inpaintnans, FLOWobj, STREAMobj)
 - [[landscape-evolution/2026-08-14-project-groups-and-brief]]: project format and what makes a good project question
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]]: Himalayan mountain building and the Chamoli flood (readings and slides, not yet read)
 - [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain]]: Deccan Traps terrain: Konkan belt, Western Ghats escarpment, plateaus, and the four controls (eruptive style, lithology, tectonics, monsoon erosion)
+- [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]]: glacial and aeolian slides (90 MB file, not read)
 
 ## Must know
 - GIS: a computer system to collect, manage, analyse and visualise geographic data. DEM: raster of elevations; in topotoolbox `DEM.Z` holds the value of each cell. (Classroom: QGIS and topotoolbox tutorial slides)
@@ -37,6 +38,7 @@ Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator
 Not known yet; no problem sheets or past papers have been posted. The Deccan lecture suggests identification questions (recognise flow types, jointing, boles, knickpoints, potholes, planation surfaces in the field or in photos) and cause-to-landform questions; the teacher's 2026-10-24 post stresses applying concepts in the field. The tutorials suggest practical DEM tasks (extract a stream network from the Bhima DEM and explain the effect of `minarea`); practise with [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]].
 
 ## Gaps
+- Glacial and aeolian slides (l_glacial_aolian.pdf, 90 MB, posted 2026-10-27) not read: no definitions or landforms recorded yet. See [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]].
 - Slides pre_ms_landscape_26.pdf (217 MB) not read. Week-1 slides (4 Aug), updated lecture slides (11 and 22 Aug) not accessible (Drive 404), so the lecture content of August is not in the notes.
 - QGIS slides had mostly pictures: the basin-analysis steps (SAGA tools used) are not recorded. The Bhima DEM and campus-hills photo not viewed.
 - The two linked papers (Himalayan mountain building review, Chamoli flood reconstruction) not read.

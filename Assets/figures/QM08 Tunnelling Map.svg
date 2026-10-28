@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">QM08: scattering and tunnelling in one page</text>
+<line x1="316.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="170.0" y1="196.0" x2="170.0" y2="269.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="500.0" y1="196.0" x2="500.0" y2="269.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="830.0" y1="196.0" x2="830.0" y2="269.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="330.0" x2="679.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="220.2" y1="389.6" x2="284.0" y2="465.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="486.0" y1="520.0" x2="534.0" y2="520.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="30.0" y="90.0" width="280" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="115.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Step potential</text>
+<text x="170" y="135.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E &gt; V0: R = ((k1-k2)/(k1+k2))^2</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E &lt; V0: total reflection,</text>
+<text x="170" y="175.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">evanescent tail</text>
+<rect x="355.0" y="90.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Rectangular barrier</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E &lt; V0: T = 1/(1 + V0^2 sinh^2(kappa L)/4E(V0-E))</text>
+<text x="500" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">tunnelling</text>
+<rect x="685.0" y="90.0" width="290" height="100" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Thick barrier</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">T ~ 16 (E/V0)(1-E/V0) e^(-2 kappa L)</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">exponentially small</text>
+<rect x="30.0" y="275.0" width="280" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Probability current</text>
+<text x="170" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">j = (hbar/m) Im(psi* psi&#x27;)</text>
+<text x="170" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">R + T = 1 from conservation</text>
+<rect x="355.0" y="275.0" width="290" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">WKB / Gamow</text>
+<text x="500" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">T ~ exp(-2 int kappa(x) dx)</text>
+<text x="500" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">smooth barriers</text>
+<rect x="685.0" y="275.0" width="290" height="110" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Applications</text>
+<text x="830" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">alpha decay, STM,</text>
+<text x="830" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">tunnel diode, fusion in stars</text>
+<rect x="180.0" y="470.0" width="300" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Delta barrier / well</text>
+<text x="330" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">T = 1/(1 + m alpha^2/(2 hbar^2 E))</text>
+<text x="330" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">bound state kappa = m alpha/hbar^2</text>
+<rect x="540.0" y="470.0" width="320" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Transfer matrix and bands</text>
+<text x="700" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">periodic wells: Kronig-Penney</text>
+<text x="700" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">cos(qL) = cos(kL) + (m alpha/hbar^2 k) sin(kL)</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">QM07 solved the well; here the particle comes from outside: step, barrier, delta, WKB, bands</text>
+</svg>
