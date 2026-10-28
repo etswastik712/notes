@@ -56,3 +56,8 @@ Solution set for todays Tutorial.
 - [[ph2113/2026-08-31-states-operators-measurements-notes]]: measurement probabilities and time evolution
 - [[06-quantum-mechanics/concepts/minimum-uncertainty-state]]: Gaussian saturation of the bound
 - [[06-quantum-mechanics/concepts/heisenberg-uncertainty-principle]]: the pencil argument and $\Delta x\Delta p\ge\hbar/2$
+
+<!-- kurooto:materiald70ac2e2 -->
+## Concepts in PH2113_tutorial_solutions
+[[zettel/energy-eigenstate-superposition-with-momentum-degeneracy]], [[zettel/double-slit-interference-from-state-superposition]], [[zettel/dynamical-amplification-of-quantum-uncertainty]], [[zettel/gaussian-wave-packet-minimum-uncertainty]], [[zettel/simultaneous-eigenstates-and-commuting-observables]], [[zettel/basis-independence-of-quantum-states]], [[zettel/robertson-uncertainty-relation-for-pauli-matrices]], [[zettel/schrodinger-equation-linearity-and-superposition]]
+<!-- /kurooto:materiald70ac2e2 -->
