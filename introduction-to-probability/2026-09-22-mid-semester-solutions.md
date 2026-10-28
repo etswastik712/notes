@@ -33,3 +33,8 @@ Dear everyone, here are the solutions (which, as always, need not be unique) for
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: expectation and the bus example (problem 3).
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026]]: indicators and counting arguments.
 - [[introduction-to-probability/2026-09-10-class-notes-10th-september-2026]]: pdf normalisation (problem 5).
+
+<!-- kurooto:materialfb104674 -->
+## Concepts in Mid-semester solutions
+[[zettel/poisson-distribution-moment-recurrence]], [[zettel/banach-matchbox-problem]], [[zettel/bayes-rule-for-multiple-choice-guessing]], [[zettel/principle-of-inclusion-and-exclusion-for-cardinalities]], [[zettel/coupon-collector-draw-independence-and-conditioning]]
+<!-- /kurooto:materialfb104674 -->
