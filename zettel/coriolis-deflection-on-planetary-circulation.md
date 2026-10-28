@@ -1,0 +1,22 @@
+---
+id: zettel/coriolis-deflection-on-planetary-circulation
+aliases: ["Coriolis Deflection on Planetary Circulation", "coriolis effect", "Coriolis force"]
+tags: [zettel, agent-written, introduction-to-climate-science]
+trust_tier: agent_written
+---
+
+# Coriolis Deflection on Planetary Circulation
+
+The apparent deflection of moving air parcels relative to the rotating surface caused by angular momentum conservation across varying latitudinal circumferences, deflecting motion to the right in the Northern Hemisphere and to the left in the Southern Hemisphere.
+
+## Links
+- needs:: [[zettel/atmospheric-angular-momentum-balance]] — The latitudinal velocity differences causing Coriolis deflection derive directly from angular momentum conservation on a rotating sphere
+- used-in:: [[zettel/atmospheric-convection-cell]] — Rightward or leftward Coriolis deflection halts poleward/equatorward trajectories, dictating the meridional scale of overturning cells
+
+---
+Source: Basics of atmosphere
+
+<!-- kurooto:seen -->
+## Seen in
+- [[maps/courses/introduction-to-climate-science|Basics of atmosphere]]
+<!-- /kurooto:seen -->
