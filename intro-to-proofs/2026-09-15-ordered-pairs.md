@@ -43,3 +43,8 @@ Proof ($\Rightarrow$): equal intersections give $\{A\}=\{C\}$, so $A=C$. Equal u
 ## Related
 - [[11-Proofs-Analysis-Topology/Concepts/Ordered Pair]]: their concept note on the same definition
 - [[11-Proofs-Analysis-Topology/PA02 Sets Families and the ZFC Foundations]]: ZFC axioms (Pairing, Regularity) and families
+
+<!-- kurooto:material57a527db -->
+## Concepts in ordered pairs
+[[zettel/kuratowski-ordered-pair]], [[zettel/wiener-style-ordered-pair-candidate]]
+<!-- /kurooto:material57a527db -->
