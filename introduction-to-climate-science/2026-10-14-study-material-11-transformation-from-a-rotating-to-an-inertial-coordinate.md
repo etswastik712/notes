@@ -140,3 +140,8 @@ Reference: Atmosphere, Ocean and Climate dynamics by J. Marshall and A. Plumb
 - [[01-climate/cl12-rotating-frames-and-the-coriolis-force]]: detailed chapter note on rotating frames, the Coriolis acceleration, and laboratory demonstrations.
 - [[01-climate/concepts/coriolis-force]]: dedicated concept card for Coriolis dynamics and the Rossby number.
 - [[01-climate/cl13-horizontal-motion-geostrophic-balance-and-friction]]: next chapter note covering geostrophic balance resulting from Coriolis-PGF equilibrium.
+
+<!-- kurooto:materialdb0ec860 -->
+## Concepts in Transformstion_from_rotating_to_inertial_coordinate_Marshall_and_Plumb
+(none new)
+<!-- /kurooto:materialdb0ec860 -->
