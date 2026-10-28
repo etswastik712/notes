@@ -40,3 +40,8 @@ Tutorial problem set for this week.
 ## Concepts in Tutorial2
 [[zettel/harmonic-oscillator-excited-states-generation]]
 <!-- /kurooto:material746533cd -->
+
+<!-- kurooto:material7ed6209d -->
+## Concepts in Particle_in_a_box
+[[zettel/infinite-square-well-potential]], [[zettel/classical-particle-in-a-box]], [[zettel/particle-in-a-box-time-evolution]], [[zettel/orthogonality-of-energy-eigenstates]], [[zettel/particle-in-a-box-position-expectation-value]], [[zettel/particle-in-a-box-momentum-expectation-value]]
+<!-- /kurooto:material7ed6209d -->
