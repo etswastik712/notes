@@ -17,8 +17,12 @@ Source: DG19, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|DG17]] pp. 1–5
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG20]] pp. 1–5
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG19]] pp. 1–5
+
+### Added from class
+- DG17 pp. 1–5: Introduces the abstract definition over the real numbers along with explicit conditions of bilinearity, antisymmetry, and the Jacobi identity.
 <!-- /kurooto:seen -->
 
 <!-- kurooto:notation -->
