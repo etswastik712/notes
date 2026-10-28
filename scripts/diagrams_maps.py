@@ -37,6 +37,22 @@ SPECS = {
         title="QM08: scattering and tunnelling in one page",
         footer="QM07 solved the well; here the particle comes from outside: step, barrier, delta, WKB, bands",
     ),
+    "QM09 Stern-Gerlach Map": dict(
+        size=(1000, 600),
+        nodes={
+            "ex": dict(x=170, y=100, w=280, h=100, text="The experiment\nAg beam, inhomogeneous B\nF = mu_z dB_z/dz: two spots,\nnot a smear", color="blue"),
+            "sp": dict(x=500, y=100, w=290, h=100, text="Spin-1/2\nS = (hbar/2) sigma, [Si,Sj] = i hbar eps Sk\nstate space C^2, Bloch sphere", color="orange"),
+            "sq": dict(x=830, y=100, w=290, h=100, text="Sequential SG\nP(+n'|+n) = (1 + n.n')/2\nz-x-z: 1/8, sin^2(theta)/4", color="aqua"),
+            "dm": dict(x=170, y=290, w=280, h=110, text="Density matrix\nrho = (1 + r.sigma)/2\noven beam = I/2, entropy ln 2", color="aqua"),
+            "dy": dict(x=500, y=290, w=290, h=110, text="Dynamics\nLarmor omega = |gamma| B,\nU = exp(-i th n.sigma/2), 4 pi,\nRabi P = Om^2/(Om^2+D^2) sin^2", color="grey"),
+            "me": dict(x=830, y=290, w=290, h=110, text="SG as a measurement\nspin entangled with position\npacket overlap exp(-dp^2/2 sp^2)", color="red"),
+            "aj": dict(x=330, y=480, w=300, h=110, text="Beyond 1/2\nj = 0, 1/2, 1, ...: 2j+1 beams\nSchwinger oscillators, 1/2 x 1/2 = 0 + 1", color="blue"),
+            "bl": dict(x=700, y=480, w=330, h=110, text="Entanglement and parallels\nsinglet E = -cos, CHSH 2 sqrt 2, BB84\npolarisers, NMR, flavour oscillation", color="orange"),
+        },
+        arrows=[("ex", "sp", ""), ("sp", "sq", ""), ("sp", "dm", ""), ("sp", "dy", ""), ("dm", "me", ""), ("sp", "aj", ""), ("aj", "bl", ""), ("dy", "bl", ""), ("me", "bl", "")],
+        title="QM09: the Stern-Gerlach experiment and spin in one page",
+        footer="Sakurai 1.1, 3.2, 3.10, 5.5; Griffiths 4.4; every number in scripts/qm09_numbers.py",
+    ),
     "Dirac Algebra Map": dict(
         size=(1000, 600),
         nodes={
