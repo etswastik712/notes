@@ -35,3 +35,8 @@ Proof pattern: define the poset of the right objects (here independent sets), ch
 - [[11-Proofs-Analysis-Topology/Concepts/Basis of a Vector Space]]: basis definition
 - [[11-Proofs-Analysis-Topology/Concepts/Partially Ordered Set]]: posets, chains
 - [[11-Proofs-Analysis-Topology/PA03 Relations Equivalence and Order]]: their chapter with this proof (section 4)
+
+<!-- kurooto:material5cb8edae -->
+## Concepts in Zorn's_lemma
+[[zettel/zorn-s-lemma]], [[zettel/chain-in-a-poset]], [[zettel/upper-bound-in-a-poset]], [[zettel/maximal-element-in-a-poset]], [[zettel/linear-independence]], [[zettel/linear-span]], [[zettel/existence-of-a-basis-for-vector-spaces]]
+<!-- /kurooto:material5cb8edae -->
