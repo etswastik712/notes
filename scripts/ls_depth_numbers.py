@@ -176,5 +176,24 @@ def LS15():
     print("  Airy depression under 3 km of ice:", rho_i/3300*3000, "m;  shelf exposure 29% -> 36% land for -120 m (A&A)")
     print("  a +- 5 m coral depth range (Acropora palmata) -> sea-level uncertainty +-5 m, i.e. 4 % of the 120 m glacial amplitude:", 5/120)
 
+def LS16():
+    print("== LS16: steady-state slope-area S = (U/K) A^-theta with m=0.5, n=1 (theta=0.5), U=0.5 mm/yr, K=5e-6 /yr ==")
+    U, K, m = 5e-4, 5e-6, 0.5; ks = U/K
+    for A in (1e6, 1e8, 1e10): print(f"  A = {A:.0e} m2 ({A/1e6:.0f} km2): S = {ks*A**-0.5:.4f}; knickpoint celerity c = K A^m = {K*A**m:.3f} m/yr = {K*A**m*1e6/1e3:.0f} km/Myr")
+    print("  response time L/c for L=30 km at A=1e8 (c=0.05 m/yr):", 30e3/0.05/1e6, "Myr")
+    print("== Shields: tau_c = tau*_c (rho_s - rho) g D, tau*_c = 0.045 ==")
+    for D in (2e-3, 20e-3, 50e-3, 200e-3):
+        tc = 0.045*1650*9.81*D; print(f"  D = {D*1e3:.0f} mm: tau_c = {tc:.1f} Pa; critical flow depth at slope 0.01: {tc/(1000*9.81*0.01):.2f} m, at slope 0.001: {tc/(1000*9.81*0.001):.2f} m")
+
+def LS17():
+    print("== LS17: Stokes settling in air: w = (rho_s - rho) g D^2 / (18 mu), valid for Re = rho w D/mu << 1 ==")
+    mu = 1.8e-5; rho = 1.2; rs = 2650; g = 9.81
+    for D in (5e-6, 20e-6, 63e-6, 100e-6):
+        w = (rs-rho)*g*D*D/(18*mu); Re = rho*w*D/mu
+        for us in (0.3,):
+            print(f"  D={D*1e6:.0f} um: w = {w:.4f} m/s, Re = {Re:.3f}, Rouse number w/(0.41 u*) at u*=0.3 m/s: {w/(0.41*us):.2f}")
+    print("  Stokes is accurate only for Re << 1: D=100 um gives Re ~ 5, so it overestimates (true w ~ 0.5 m/s)")
+    print("== Exner: dune speed c = q/(rho_b H) (rho_b = 1600): q=0.0275 kg/m/s ==", [round(0.0275/(1600*H)*3.156e7, 1) for H in (5, 10, 20)])
+
 if __name__ == "__main__":
     for c in (sys.argv[1:] or ["LS01"]): globals()[c]()

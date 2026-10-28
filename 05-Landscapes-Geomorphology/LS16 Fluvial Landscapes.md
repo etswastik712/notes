@@ -109,6 +109,20 @@ flowchart LR
 > Larger drainage area (more water) or steeper slope both erode bedrock faster; the balance $\mathcal{E}=U$ says a river channel steepens (locally) wherever uplift is faster or drainage area is smaller, exactly enough to supply the erosive power needed to keep up. This is the fluvial analogue of the hillslope diffusion balance $\kappa_hz”=-\mathcal E$ of Chapter 12: there, curvature balances erosion; here, slope (to a power) and area balance erosion.
 
 
+<!-- ls-depth:LS16:1 -->
+> [!intuition] Context: why the exponent ratio $m/n$ is the number to know
+> A&A (ch. 13, [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=455|PDF p.455]]) call $\theta=m/n$ the **concavity index** "as it dictates the rapidity with which the slope changes as area increases". The *absolute* values of $m$ and $n$ matter for transient behaviour, but the steady-state slope–area relation involves only the ratio. Observed values $\theta\approx0.4$–$0.6$ are remarkably uniform across climates and rock types, which is why $\theta\approx0.5$ is the default.
+
+> [!derivation] 🔵 Extra (computed): numbers for a bedrock river, and its response time
+> Take $m=0.5$, $n=1$ (so $\theta=0.5$), uplift $U=0.5$ mm/yr and erodibility $K=5\times10^{-6}\ \mathrm{yr^{-1}}$ (with $A$ in m²). The steady-state slope $S=(U/K)A^{-\theta}=100\,A^{-0.5}$ gives
+> | drainage area | $S$ | knickpoint celerity $c=KA^m$ |
+> |---|---|---|
+> | 1 km² | 0.100 | 5 km/Myr |
+> | 100 km² | 0.010 | 50 km/Myr |
+> | $10^4$ km² | 0.001 | 500 km/Myr |
+> (`scripts/ls_depth_numbers.py`.) For $n=1$ the stream-power law is a **kinematic wave equation** $\partial_tz+KA^m\partial_xz=U$: a perturbation (a knickpoint) is carried upstream at speed $c=KA^m$, which grows with area, so *the lower, larger reaches adjust first and a signal takes longest to reach the headwaters*. With $c=0.05$ m/yr (100 km²) a knickpoint needs $L/c=30\ \mathrm{km}/0.05\ \mathrm{m\,yr^{-1}}=0.6$ Myr to travel 30 km. **This is the response time $\tau$ of a bedrock river: $10^5$–$10^6$ yr**, orders of magnitude slower than an alluvial channel. Hence bedrock rivers integrate tectonic and climatic forcing over $\gtrsim10^5$ yr and filter out ice-age cycles ($\omega\tau\gg1$, [[LS01 Landscapes as Physical Systems]]); this is why river profiles are good archives of *uplift history* but poor recorders of climate cycles.
+
+
 ## Knickpoints and transient response
 
 
@@ -173,6 +187,30 @@ flowchart LR
 > In a curved channel, water at the surface is flung outward by inertia (like a car on a curved road) and returns along the bed toward the inner bank: a helical (secondary) flow. This flow carries the fast surface water, and its erosive power, to the outer bank, and drops sediment carried along the bed at the inner bank (point bar). The bend erodes outward and migrates downstream, which is why meander belts widen over time and abandoned meanders (oxbow lakes) are left behind when a bend is cut off.
 
 
+<!-- ls-depth:LS16:2 -->
+> [!derivation] 🔵 Extra (computed): the Shields threshold in real units
+> With $\tau_c=\tau_{*c}(\rho_s-\rho)gD$, $\tau_{*c}=0.045$, $\rho_s=2650$ (`scripts/ls_depth_numbers.py`):
+> | grain size | $\tau_c$ | flow depth needed at $S=0.01$ | at $S=0.001$ |
+> |---|---|---|---|
+> | 2 mm (granule) | 1.5 Pa | 1.5 cm | 15 cm |
+> | 20 mm (gravel) | 15 Pa | 15 cm | 1.5 m |
+> | **50 mm** | 36 Pa | **37 cm** | 3.7 m |
+> | 200 mm (cobble) | 146 Pa | 1.5 m | 15 m |
+> The depth follows from $\tau=\rho_wghS=\tau_c$. *Reading it:* a mountain gravel stream (slope $0.01$) moves 50 mm cobbles once the flow is deeper than $\sim0.4$ m, which happens in a flood; a lowland river ($S=0.001$) needs $\sim4$ m, so large grains stay put except in extreme floods. The threshold is what makes the *effective* (formative) flow a moderately rare flood (the effective-discharge argument of [[LS01 Landscapes as Physical Systems]]).
+
+> [!question] Check yourself (answers below)
+> 1. With $m=0.5,n=1$, how does the steady-state slope change when the uplift rate quadruples?
+> 2. A knickpoint is created at the outlet of a basin with $A=100$ km² and $c=0.05$ m/yr; when does it reach 15 km upstream?
+> 3. At what depth does a 20 mm gravel start to move on a slope of 0.005?
+> 4. Why does a bedrock river filter out 41 kyr cycles but an alluvial one does not?
+> *Answers.* (1) $S\propto U^{1/n}$: quadruples (for $n=1$). (2) $15\ \mathrm{km}/0.05\ \mathrm{m\,yr^{-1}}=3\times10^5$ yr (the celerity increases downstream, so this is an upper bound for a uniform $c$). (3) $h=14.6/(9810\times0.005)=0.30$ m. (4) $\tau$ of $\sim10^6$ yr versus $10^3$ yr: with the transfer function $1/(1+i\omega\tau)$ the 41 kyr signal is attenuated by $\sim0.007$ for the bedrock river but passes unattenuated for the alluvial one.
+
+> [!connection] Where else this appears
+> - **Kinematic waves and characteristics** are first-order transport equations, solved by $x-ct$; in [[Fourier and Laplace Transforms]] §6.2 they are the non-dispersive limit $\omega=ck$.
+> - **Power laws, Hack's law and drainage density:** [[LS03 Digital Elevation Models and Terrain Analysis]] (depth layer).
+> - **Fluvial extra chapters (research papers):** [[Further Research - Landscapes Papers]] (braided-river modelling, secondary currents, flow at a river bend, building the Himalaya).
+
+
 ## Base level, knickpoints and long-term grade
 
 
@@ -200,3 +238,10 @@ flowchart LR
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS16:3 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | concavity index $m/n$ | A&A PDF p.455 (found by search; the sentence read) | b · primary book |
+> | slope–area numbers, kinematic-wave celerity, response time, Shields depths | my computation (`scripts/ls_depth_numbers.py`, `LS16`); $K$, $U$, $\tau_{*c}$ are illustrative values | extra · beyond |

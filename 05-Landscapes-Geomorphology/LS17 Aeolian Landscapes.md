@@ -69,6 +69,14 @@ flowchart LR
 > ($C_B\approx1.5$–$2.8$ depending on sorting, $D_{ref}=250 \mu$m): flux grows as the *cube* of the shear velocity (cf. stream power $\propto u^3$-type scalings in Chapter 16 and rain-splash energy $\propto v^2$ in Chapter 12 — transport rates generically scale steeply with the driving agent's speed once a threshold is exceeded). Doubling the wind speed above threshold increases sand transport roughly eight-fold.
 
 
+<!-- ls-depth:LS17:1 -->
+> [!derivation] 🔵 Extra (computed): why sand saltates and dust floats, in one number (Stokes settling and the Rouse number)
+> A grain falls through air at its **settling velocity** $w$; A&A give two limits (PDF pp.332–333): for low Reynolds number the drag coefficient is $24/Re$, giving Stokes' law
+> $$w=\frac{(\rho_s-\rho)gD^2}{18\mu},\qquad Re=\frac{\rho wD}{\mu}\ll1.$$
+> For quartz in air ($\mu=1.8\times10^{-5}$ Pa s): $D=5\ \mu$m: $w=2$ mm/s; **$20\ \mu$m: $3.2$ cm/s** ($Re=0.04$, Stokes valid); $63\ \mu$m: $0.32$ m/s ($Re=1.3$, Stokes beginning to fail); $100\ \mu$m: Stokes would give $0.80$ m/s ($Re=5$, so it overestimates; the true value is lower, recalled $\sim0.5$ m/s). Compare $w$ with the turbulent velocity scale, the **shear velocity** $u_*\sim0.3$ m/s in a strong wind: the **Rouse number** $P=w/(\kappa u_*)$ with $\kappa=0.41$ is $0.02$ for $5\ \mu$m, $0.26$ for $20\ \mu$m, $2.6$ for $63\ \mu$m and $6.5$ for $100\ \mu$m. **$P\ll1$: turbulence keeps the grain aloft (suspension, dust, travels thousands of km: the loess of A&A's introduction); $P\gg1$: gravity wins, the grain falls back after a hop (saltation, sand, dunes).** The size at which $P\sim1$ ($\sim50$ $\mu$m) is the observed boundary between loess/dust and sand deposits.
+> *Link to LS19:* the entrainment threshold for $D\approx0.1$ mm is the minimum (the easiest grain to move) while $P>1$ already holds for it: the most mobile grains are the ones that saltate.
+
+
 ## Dune morphology and migration
 
 
@@ -95,6 +103,23 @@ flowchart LR
 > [!derivation] 🔵 Extra (not derived in the slides): Exploring martian dunes (syllabus item 8, “exploring martian dunes”)
 > Mars has an atmosphere $\sim1/100$th the density of Earth's ($\rho_a\approx0.02 \mathrm{kg m^{-3}}$), so the threshold formula above gives $u_{*t}\propto1/\sqrt{\rho_a}$: martian threshold shear velocities (and hence near-surface wind speeds) must be roughly an order of magnitude higher than on Earth to move similarly sized grains, which is why martian dunes were long thought inactive; repeat orbital imagery (e.g. HiRISE) has since shown many martian dunes *do* migrate measurably (metres per Earth year, generally slower than terrestrial dunes of the same size, consistent with rarer threshold-exceeding winds), directly testable with the same Google-Earth-type displacement measurement introduced in Chapter 1 (§1.7) applied to Mars orbital imagery instead.
 
+<!-- ls-depth:LS17:2 -->
+> [!example] Conservation of sand, Exner's equation, and the migration speed in numbers
+> The sand mass balance $\rho_b\,\partial_tz=-\partial_xq$ (the master equation of [[LS01 Landscapes as Physical Systems]] with flux $q(u_*)$) gives, for a dune of height $H$ whose crest receives flux $q$ and advances by avalanching down the slip face, $c=q/(\rho_bH)$ ([[LS19 Glacial and Aeolian Landforms]] §6). With $\rho_b=1600$ kg/m³ and Bagnold's $q=0.0275\ \mathrm{kg\,m^{-1}s^{-1}}$ at $u_*=0.5$ m/s: $H=5$ m: **109 m/yr**; $10$ m: $54$ m/yr; $20$ m: $27$ m/yr (computed). *Small dunes outrun big ones; dunes of the same type can collide and merge.* The $q\propto u_*^3$ law means the **strongest few percent of winds move most of the sand**, so dune orientation records the *resultant* of strong-wind directions, not the mean wind.
+
+> [!question] Check yourself (answers below)
+> 1. Estimate the settling velocity of a 20 µm silt grain in air and its Rouse number at $u_*=0.5$ m/s.
+> 2. Why does a dune of 40 m height advance slowly compared with a 4 m dune in the same wind?
+> 3. Why do desert dunes have lee faces at about 30–34°?
+> 4. Which grain sizes are lifted to altitude and carried across oceans?
+> *Answers.* (1) $w=0.032$ m/s, $P=0.032/(0.41\times0.5)=0.16$: suspended. (2) $c\propto1/H$: ten times slower for the same flux. (3) That is the angle of repose of dry sand ($\tan34^\circ=0.67$), where avalanches occur. (4) Silt and clay, $\lesssim50$ µm, with $P\lesssim1$ (dust).
+
+> [!connection] Where else this appears
+> - **Stokes drag by dimensional analysis:** [[LS02 Mechanics and Mathematics Toolkit]] (Buckingham Π; Reynolds number).
+> - **Dust and climate:** radiative effects of mineral aerosols and loess as a palaeoclimate archive: [[Climate - Course Map]].
+> - **Ripples and bedform wavelengths** as a pattern-forming instability (a Fourier-mode growth problem): [[Fourier and Laplace Transforms]] (modes and dispersion).
+
+
 ## Map of this chapter
 > [!connection] How LS17 connects
 > **Previous:** [[LS16 Fluvial Landscapes]] · **Next:** [[LS99 Landscapes Practice Problems]].
@@ -108,3 +133,10 @@ flowchart LR
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS17:3 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | low-$Re$ drag coefficient $24/Re$, settling velocities | A&A PDF pp.265, 332–333 (found by search) | b · primary book |
+> | Stokes values, Rouse numbers, dune speeds | my computation (`scripts/ls_depth_numbers.py`, `LS17`); real settling velocity of 100 µm sand recalled, `[verify]` | extra · beyond |
