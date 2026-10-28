@@ -42,5 +42,21 @@ def LS02():
     ax.set_title("Elastic to the left of a material's Maxwell time, viscous to the right (thick bars = viscous regime)")
     save(fig, "fig_ls02_maxwell")
 
+def LS03():
+    fig, ax = plt.subplots(1, 2, figsize=(10.2, 3.8))
+    n = np.linspace(3, 60, 400); kd = 2 * np.pi / n
+    ax[0].plot(n, np.sin(kd) / kd, color=BLUE, label="slope (central difference)")
+    ax[0].plot(n, 2 * (1 - np.cos(kd)) / kd ** 2, color=ORANGE, label="curvature (second difference)")
+    ax[0].axhline(.99, color=MUTED, ls=":", lw=1); ax[0].text(34, .985, "1% error", fontsize=8, color=MUTED, va="top")
+    ax[0].set_xlabel("wavelength / cell size"); ax[0].set_ylabel("recovered fraction of the true value"); ax[0].set_ylim(0, 1.03); ax[0].legend(fontsize=8, loc="lower right")
+    ax[0].set_title("What a DEM grid does to slope and curvature")
+    th = np.linspace(0, 45, 200); t = np.radians(th)
+    ax[1].plot(th, np.cos(t) + (math.sqrt(2) - 1) * np.sin(t), color=BLUE)
+    ax[1].plot([22.5], [math.cos(math.radians(22.5)) + (math.sqrt(2) - 1) * math.sin(math.radians(22.5))], "o", color=ORANGE)
+    ax[1].annotate("worst case +8.2 %\nat 22.5°", (22.5, 1.0824), xytext=(26, 1.02), fontsize=8.5, arrowprops=dict(arrowstyle="-", color=MUTED))
+    ax[1].set_xlabel("true flow direction from the grid axis (deg)"); ax[1].set_ylabel("D8 path length / straight length"); ax[1].set_ylim(.99, 1.1)
+    ax[1].set_title("D8 routing lengthens every flow path")
+    save(fig, "fig_ls03_grid_errors")
+
 if __name__ == "__main__":
     for c in (sys.argv[1:] or ["LS01"]): globals()[c]()

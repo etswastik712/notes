@@ -144,6 +144,17 @@ A rotating planet is nearly in hydrostatic equilibrium. The argument of slide 42
 > Each point is a planet: the horizontal axis is the predicted bulge $\delta_\mathrm{pred}=0.001R^2\omega^2/(2g)$ km, the vertical axis the observed $R_\mathrm{eq}-R_\mathrm{pol}$ (log–log, from about $10$ km to $10^4$ km). Mars and Earth lie near $10$–$20$ km, Uranus and Neptune near a few hundred km, Jupiter and Saturn at a few thousand km. The points fall on a straight line parallel to (and above) the equality line: the physics is right (a $\propto$ scaling) and only a constant $\mathcal{O}\!\left(1\right)$ factor is missing.
 
 
+<!-- ls-depth:LS05:1 -->
+> [!derivation] 🟡 Extra · book / 🔵 beyond: the bulge reveals the interior (Darwin–Radau, central condensation)
+> **The puzzle.** The pressure-balance argument of the slides, applied to a *uniform-density* Earth, gives a flattening $f_h=\tfrac54q$ with $q=\omega^2a^3/GM=3.4616\times10^{-3}$ (the ratio of centrifugal to gravitational acceleration at the equator), i.e. $f_h=4.33\times10^{-3}=1/231$ and an equatorial bulge $f_ha=27.6$ km. The observed flattening is $f=1/298.257=3.353\times10^{-3}$ (bulge $21.4$ km, computed from the WGS84 axes in [[LS04 Map Projections and Reference Surfaces]]): **the real bulge is 22 % smaller.**
+> **Resolution.** The Earth is *not* uniform: its dense core makes it **centrally condensed**, so there is less mass at large radius to be pushed outwards by rotation. The measure is the **moment-of-inertia factor** $C/MR^2$ ($C$ = moment about the spin axis): $0.4$ for a uniform sphere, smaller if the mass is concentrated towards the centre. T&S tabulate it (PDF p.389): **Earth $0.3307$** (Moon $\approx0.393$, Mars $\approx0.366$, Venus $\approx0.33$ as extracted). The **Darwin–Radau relation** links the flattening of a slowly rotating *fluid* planet in hydrostatic equilibrium to this factor:
+> $$\frac{C}{MR^2}=\frac23\Big[1-\frac25\sqrt{\frac{5q}{2f}-1}\Big]\quad\Longleftrightarrow\quad f=\frac{\tfrac52q}{1+\tfrac{25}{4}\big(1-\tfrac32\tfrac{C}{MR^2}\big)^2}.$$
+> *Checks:* uniform sphere $C/MR^2=0.4$: $1-0.6=0.4$, $\tfrac{25}4\cdot0.16=1$, $f=\tfrac52q/2=\tfrac54q$ ✓. Earth, $C/MR^2=0.3307$: $f=3.345\times10^{-3}=1/299.0$ (observed $1/298.26$), i.e. **within 0.25 %**; inverting the observed $f$ gives $C/MR^2=0.3313$ (computed; `scripts/ls_depth_numbers.py`). So a measurement of *shape* tells you the *radial density profile*: the Earth behaves as a fluid in hydrostatic balance on long time scales (this is the same mantle viscosity statement as in [[LS02 Mechanics and Mathematics Toolkit]]: $\tau_M\sim450$ yr) and its mass is concentrated at the centre. (T&S derive the relation via Clairaut's equation; I quote the result, `[verify]` the exact form against T&S §5, PDF pp.384–389.)
+
+> [!key] The gravitational quadrupole $J_2$ and the same flattening
+> To first order in the small quantities, the oblateness couples to the **quadrupole coefficient** $J_2=(C-A)/Ma^2$ (difference of the polar and equatorial moments of inertia): $f\simeq\tfrac32J_2+\tfrac12q$. With the satellite value $J_2=1.08263\times10^{-3}$ (T&S PDF p.389) this gives $f=3.355\times10^{-3}$, matching $1/298.26=3.353\times10^{-3}$ to 0.06 %. So the shape of the Earth can be obtained either from *geometry* (surveying the radius) or from *satellite orbits*, which precess at a rate set by $J_2$: the two agree because the Earth is in hydrostatic equilibrium.
+
+
 ## Beyond the ellipsoid: the geoid (slides 33, 51)
 
 
@@ -164,6 +175,14 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 > [!example] ❓ Question on the slides: Slide 51: how many spherical-harmonic terms are involved in the EGMs?
 > Degree $n$ has $2n+1$ real harmonics ($\cos m\lambda$ for $m=0,\dots,n$; $\sin m\lambda$ for $m=1,\dots,n$). Summing degrees $0$ to $N$: $\sum_{n=0}^{N}(2n+1)=(N+1)^2$ coefficients. EGM96 is complete to degree/order $N=360$: $361^2=130 321$ ($\approx1.3\times10^5$) coefficients; its smallest half-wavelength is $\pi R/N\approx55$ km. EGM2008 is complete to $N=2159$: $2160^2\approx4.7\times10^6$ coefficients ($\approx9$ km half-wavelength). (Figures quoted from the models' documentation; check for the current model.)
 
+<!-- ls-depth:LS05:2 -->
+> [!derivation] 🔵 Extra (my derivation): how small is the geoid compared with the bulge? Bruns' formula
+> The geoid is the equipotential $W=W_0$ of gravity plus rotation. Write the real potential as the ellipsoid's "normal" potential $U$ plus a small *disturbing potential* $T=W-U$. At a point where the geoid is a height $N$ above the ellipsoid, $W_0=U(\text{ellipsoid})+\gamma N+T$, and the ellipsoid is itself the surface $U=W_0$, so
+> $$N=\frac{T}{\gamma}\qquad(\text{Bruns' formula}),\quad\gamma\approx9.8\ \mathrm{m\,s^{-2}}.$$
+> A geoid high of $N=100$ m (the scale of the EGM96 range, $\approx\pm100$ m on slide 51) therefore needs $T=\gamma N\approx980\ \mathrm{m^2s^{-2}}$ (about 1 kJ per kg), and its relation to the 21 km bulge is $100\ \mathrm m/21\,385\ \mathrm m=0.47\,\%$: *the ellipsoid already captures 99.5 % of the departure from a sphere*. **Meaning of a geoid high:** excess mass beneath (or the density structure of the deep mantle); the sea surface bulges up to follow it (an ocean sitting on a geoid high is a few tens of metres higher) without any currents.
+> **Spherical harmonics.** The disturbing potential is expanded in spherical harmonics $Y_\ell^m(\theta,\varphi)$; degree $\ell$ has $2\ell+1$ functions, so a model complete to degree $\ell_{max}$ has $\sum_{\ell=0}^{\ell_{max}}(2\ell+1)=(\ell_{max}+1)^2$ coefficients (slide 51's question: EGM96 has $\ell_{max}=360$, so $361^2=130\,321$ coefficients; the ellipsoid is only $\ell=0$ and $\ell=2,m=0$). The same harmonics label the angular part of hydrogen orbitals in [[Quantum Mechanics - Course Map]] (angular momentum), and each degree $\ell$ is one irreducible representation of the rotation group of dimension $2\ell+1$ ([[GT04 Symmetry Representations and Characters]], §6).
+
+
 ## Further slides explained one by one
 <span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
 
@@ -183,6 +202,20 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 > A quarter-outline of the Earth (Wikipedia 'Figure of the Earth': *Earth oblateness to scale*). The yellow circle is a perfect sphere, the pink line the true ellipsoid: at this scale (flattening ≈ 1/298) the two are practically indistinguishable, which is why the oblateness is a small perturbation. The slide also gives references on the history of measuring the Earth's shape and the recommended book (Chandrasekhar's *Newton's Principia for the Common Reader*).
 
 
+<!-- ls-depth:LS05:3 -->
+> [!question] Check yourself (answers below)
+> 1. Compute $q$ for the Moon-sized fiction "Earth rotating every 3 hours" (keep $a$, $GM$) and say whether the bulge scaling still holds.
+> 2. Why does a more centrally condensed planet have a smaller flattening for the same spin?
+> 3. If Mars has $C/MR^2=0.366$ and $q=4.57\times10^{-3}$ use Darwin–Radau to estimate $f$.
+> 4. What is the maximum height of the geoid above the ellipsoid if $T$ is at most $1500\ \mathrm{m^2s^{-2}}$?
+> *Answers.* (1) $q\propto\omega^2$: for $T=3$ h, $\omega=5.82\times10^{-4}$, $q=(\omega/\omega_E)^2\,q_E=(7.98)^2\times3.46\times10^{-3}=0.22$: not small, so the small-$q$ formulae fail (the shape would be a strongly flattened Maclaurin spheroid, near break-up). (2) Mass near the axis feels less centrifugal force and contributes less to the equatorial bulge; in the formula a smaller $C/MR^2$ makes the denominator larger. (3) $1-1.5\times0.366=0.451$, $\tfrac{25}{4}0.451^2=1.271$, $f=2.5\times4.57\times10^{-3}/2.271=5.03\times10^{-3}$ (the observed Mars flattening is larger, $\approx5.9\times10^{-3}$ recalled, `[verify]`: Mars is not in hydrostatic equilibrium, a classic result). (4) $N=1500/9.8=153$ m.
+
+> [!connection] Where this connects
+> - **Planetary shape from force balance** uses the same hydrostatic and rotating-frame ideas as [[Thermodynamics - Course Map]] (pressure balance) and the Coriolis/centrifugal terms in [[Climate - Course Map]] (rotating Earth, [[Waves - Course Map]]).
+> - **Spherical harmonics and $SO(3)$ irreps:** [[GT04 Symmetry Representations and Characters]].
+> - **Isostasy** treats the lithosphere as floating on the same fluid mantle: [[LS07 Isostasy]].
+
+
 ## Map of this chapter
 > [!connection] How LS05 connects
 > **Previous:** [[LS04 Map Projections and Reference Surfaces]] · **Next:** [[LS06 Maximum Topography]].
@@ -196,3 +229,11 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS05:4 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | $C/MR^2$ values (Earth 0.3307, Moon, Mars, Venus), $J_2=1.0826265\times10^{-3}$ | T&S (Bookos copy) PDF p.389 (found by search in an extracted table; planets' values read from a garbled line, `[verify]` which entry is which) | b · primary book |
+> | first-order relation of $J_2$, rotation and mass terms | T&S PDF p.384 (found by search) | b · primary book |
+> | Darwin–Radau relation, Bruns' formula, $f\simeq\frac32J_2+\frac12q$, numbers | standard results; arithmetic in `scripts/ls_depth_numbers.py` (`LS05`) | extra · beyond |
