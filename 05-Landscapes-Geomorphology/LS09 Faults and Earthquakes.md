@@ -122,6 +122,26 @@ flowchart LR
 > The size of an earthquake is the *seismic moment* $M_0=\mu_r A \Delta$ (rigidity $\mu_r\approx3\times10^{10}$ Pa, ruptured area $A$, mean slip $\Delta$; units N m), a torque-like measure of the force couple. The moment magnitude is (Hanks and Kanamori's definition, quoted) $M_w=\tfrac23(\log_{10}M_0-9.1)$ with $M_0$ in N m: each unit of $M_w$ is a factor $10^{1.5}\approx32$ in $M_0$. Example: 1857 Fort Tejon: rupture $360$ km $\times$ $15$ km, $\Delta=4.9$ m: $M_0=3\times10^{10}\times5.4\times10^{9}\times4.9=7.9\times10^{20}$ N m, $M_w=7.9$ (the accepted value).
 
 
+<!-- ls-depth:LS09:1 -->
+> [!derivation] 🔵 Extra (computed): why the biggest earthquakes dominate everything (Gutenberg–Richter, moment, and the event-size argument of [[LS01 Landscapes as Physical Systems]])
+> The seismic moment $M_0=\mu_rA\bar D$ and the moment magnitude are related by $M_w=\tfrac23(\log_{10}M_0-9.1)$ ($M_0$ in N m; i.e. $M_0=10^{1.5M_w+9.1}$): **each unit of magnitude is a factor $10^{1.5}=31.6$ in moment**, and a factor $\approx10^{1.5/2}$ in rupture length. The **Gutenberg–Richter law** says the *number* of earthquakes falls by a factor $10^b\approx10$ per unit magnitude ($b\approx1$). Combine:
+> $$P(M_0>m)\propto m^{-2b/3}\qquad(\text{a power law with exponent }\alpha=2b/3\approx0.67<1),$$
+> so the moment released per magnitude bin grows as $10^{(1.5-b)M_w}=10^{0.5M_w}$ for $b=1$: **most of the seismic moment is released by the largest events**, up to the cutoff set by the size of the fault (the finite thickness of the seismogenic layer, $\sim15$–$40$ km). In the language of LS01: the "transport law" $W\propto q^1$ has $b_{LS01}=1>\alpha=0.67$, so the work integral is dominated by the upper end. *Numbers* (`scripts/ls_depth_numbers.py`): an $M_w8$ earthquake ($M_0=1.3\times10^{21}$ N m) releases $1000\times$ the moment of an $M_w6$ one; with $b=1$ there are $100$ times as many $M_w6$ as $M_w8$ events, so the $M_w8$ class still releases about $1000/100=10$ times the *total* moment of the $M_w6$ class. A Gorkha-type event ($M_w7.8$: $M_0=6.3\times10^{20}$ N m) over a $150\times100$ km rupture with $\mu_r=3\times10^{10}$ Pa implies a mean slip of $1.4$ m (the actual average slip was larger because the rupture was smaller; the point is the order of magnitude).
+> **Consequence for landscapes:** deformation of the surface (uplift of terraces, landslide triggering, [[LS13 Landslides]]) is controlled by rare great earthquakes, exactly the "neo-catastrophist" point of A&A ch. 1.
+
+> [!question] Check yourself (answers below)
+> 1. What is $M_0$ for $M_w=7$? By what factor does the energy/moment increase from $M_w6$ to $M_w8$?
+> 2. A fault $100$ km long and $15$ km deep slips $2$ m with $\mu_r=3\times10^{10}$ Pa. What is $M_w$?
+> 3. In the Gutenberg–Richter law with $b=1$, how many $M_w5$ events happen for each $M_w7$?
+> 4. Why does stress on a plane resolved from principal stresses obey the same Mohr circle used for landslides?
+> *Answers.* (1) $M_0=10^{1.5\times7+9.1}=3.98\times10^{19}$ N m; two units: $31.6^2=1000$. (2) $M_0=3\times10^{10}\times(10^5\times1.5\times10^4)\times2=9\times10^{19}$; $M_w=\tfrac23(\log_{10}9\times10^{19}-9.1)=\tfrac23(19.95-9.1)=7.23$. (3) $10^{2}=100$. (4) Both are Coulomb failure of a plane under $\sigma_n,\tau$ ([[LS02 Mechanics and Mathematics Toolkit]]).
+
+> [!connection] Where else this appears
+> - **Power laws and heavy tails:** [[Pareto]] and [[Gumbel]] in [[Probability - Course Map]]; the Poisson process of earthquake occurrence is [[Poisson Distribution]].
+> - **Periodic loading and the elastic cycle:** the stick-slip oscillation of a spring-block model is a relaxation oscillator: [[Fourier and Laplace Transforms]] §7.5; [[LS02 Mechanics and Mathematics Toolkit]] (Maxwell time and post-seismic relaxation).
+> - **Symmetry of the stress tensor** (torque balance) is why only 6 of its 9 components are independent: [[GT04 Symmetry Representations and Characters]] (rank-2 tensors under rotations).
+
+
 ## Finite faults, topography and InSAR (slides 87–88)
 
 
@@ -205,3 +225,10 @@ flowchart LR
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS09:2 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | moment magnitude relation, Gutenberg–Richter, moment per magnitude, power-law exponent $2b/3$, Gorkha-type slip estimate | standard seismology (formulas recalled, not read from a page in the repository); arithmetic in `scripts/ls_depth_numbers.py` (`LS09`) | extra · beyond, `[verify]` constants |
+> | event size and frequency argument | A&A ch. 1 (PDF p.25), via [[LS01 Landscapes as Physical Systems]] | b · primary book |

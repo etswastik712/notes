@@ -103,6 +103,12 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > Right: the modelled flexural response to onshore erosion and offshore deposition (Campanile et al., 2008): deflection (km, up positive) against distance from the coast, curves for effective elastic thickness $T_e=10,30,50,70$ km. Offshore ($x<0$) the deposited sediment load pushes the crust *down*; onshore ($x>0$) erosion removes load and the crust flexes *up*, most strongly near the coast: the coastal escarpment is raised as a *shoulder* (probable flexural origin of the uplift, Gunnell and Fleitout 2000). Thicker plates (larger $T_e$) spread the response over a wider zone, so the maximum shoulder uplift is not simply proportional to $T_e$. Simple estimate: the magnitude of the response scales with the load transfer, $\sim\rho g \overline{h_\mathrm{eroded}} \alpha/\Delta\rho g$ (from $w_0$ above).
 
 
+<!-- ls-depth:LS10:1 -->
+> [!derivation] 🔵 Extra (computed): what the flexural rigidity means in kilometres of rock
+> The rigidity $D=ET_e^3/12(1-\nu^2)$ of a plate of elastic thickness $T_e$ ($E=70$ GPa, $\nu=0.25$) is very sensitive to $T_e$: $T_e=10$ km: $D=6.2\times10^{21}$ N m; **25 km: $9.7\times10^{22}$**; 50 km: $7.8\times10^{23}$; 100 km: $6.2\times10^{24}$ (a factor 8 for each doubling). The value $D=10^{23}$ N m used as an illustration in [[Fourier and Laplace Transforms]] is therefore a plate of **$T_e\approx25$ km**. Its flexural parameter $\alpha=(4D/\Delta\rho g)^{1/4}$ depends on what fills the bending space: empty ($\Delta\rho=3300$): $\alpha=59$ km (wavelength $2\pi\alpha=373$ km); water-filled ($2300$): $65$ km; **sediment-filled foreland basin ($900$): $82$ km ($515$ km)**. Infilling with sediment widens the basin because the restoring buoyancy is weaker.
+> **The Fourier view.** The plate acts as a *low-pass filter* on topography: $1/(1+(k/k_c)^4)$ with half-compensation at $\lambda=2\pi(D/\Delta\rho g)^{1/4}=263$ km ([[Fourier and Laplace Transforms]] §6.3). Short loads (a single volcano, a small thrust sheet) are carried by the plate's strength and produce a local, shallow, narrow flexure; broad loads (an orogen) are compensated as if the plate were not there (Airy, [[LS07 Isostasy]]). This is the content of T&S's Figure 3–27 on the degree of compensation as a function of wavelength.
+
+
 ## Folds (slides 80–84)
 
 
@@ -204,6 +210,23 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > [!derivation] 🔵 Extra (not derived in the slides): Silicate weathering as a thermostat: a two-line model
 > Weathering of Ca-silicate rock by carbonic acid, followed by carbonate precipitation in the ocean (slide 104), gives the net reaction $\mathrm{CaSiO_3+CO_2\to CaCO_3+SiO_2}$: each mole of Ca-silicate weathered removes one mole of CO$_2$. The reverse, in metamorphism at subduction zones and volcanoes, returns CO$_2$ at a rate $V$. Let $C$ be atmosphere–ocean CO$_2$ and suppose the weathering flux is $W=\epsilon C^{\beta}$, where $\epsilon$ rises with the supply of fresh rock (uplift and erosion) and with temperature ($T$ rises with $C$ through the greenhouse effect, a negative feedback that stabilises the system). Steady state: $V=\epsilon C^\beta$, so $C=(V/\epsilon)^{1/\beta}$. If uplift raises $\epsilon$ by a factor $2$, the new steady CO$_2$ is lower by the factor $2^{-1/\beta}$ ($1/2$ for $\beta=1$, $1/4$ for $\beta=\tfrac12$): a geologically slow ($\sim10^5$–$10^6$ yr) cooling forced by tectonics. The deck's chain: uplift $\to$ weathering/erosion $\uparrow$ $\to$ CO$_2$ $\downarrow$ $\to$ cooling $\to$ glaciers, which in turn erode (Chapter 14), while monsoon changes feed back on the Himalayan structure.
 
+<!-- ls-depth:LS10:2 -->
+> [!intuition] Context: "chicken or egg", the 1990 argument (A&A ch. 3)
+> A&A pose the question as it was posed by Molnar and England (1990): the **late-Cenozoic pulse of sediment** in basins around the Himalaya, the Alps and other ranges can be explained *either* by a pulse of tectonic uplift *or* by a climate change that increased erosion (glaciation, a stronger monsoon). Both produce the same sedimentary signal, so basin sediments alone are ambiguous ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=61|A&A PDF p.61]]). A second consequence they discuss is the **aridification of central Asia**: today the monsoon rain is trapped at the Himalayan front, the interior (Gobi, Taklamakan) is dry, and downwind lies the **Loess Plateau** with loess hundreds of metres thick, whose base dates to $\sim8$ Ma, matching the inception of the monsoon deduced from Arabian Sea records. *Perhaps the growth of the Tibetan Plateau triggered the monsoon pattern, which aridified the region downwind.* The slide-95 feedback loop of this chapter (uplift $\to$ orography $\to$ rain and glaciers $\to$ erosion $\to$ isostatic rebound; and uplift $\to$ silicate weathering $\to$ lower CO$_2$ $\to$ cooling, [[LS11 Weathering and Regolith]]) is the formal version of that debate: a *feedback* has no single cause.
+
+> [!question] Check yourself (answers below)
+> 1. By what factor does the flexural rigidity change if the elastic thickness is halved?
+> 2. A sediment-filled foreland basin versus an empty one: which has the larger $\alpha$ and why?
+> 3. A volcano of 20 km diameter and a mountain belt 1000 km wide load the plate. Which is isostatically compensated and which is flexurally supported, using the 263 km half-compensation wavelength?
+> 4. Why does a pulse of basin sediment not prove a pulse of uplift?
+> *Answers.* (1) $D\propto T_e^3$: $1/8$. (2) Sediment-filled: $\alpha\propto(\Delta\rho)^{-1/4}$ and $\Delta\rho$ is smaller, so $\alpha$ is larger (82 versus 59 km). (3) The 20 km volcano is $\ll263$ km: carried by plate strength (little compensation); the 1000 km belt is $\gg263$ km: compensated ($\approx99.5$ %). (4) Increased erosion by climate change delivers the same sediment pulse.
+
+> [!connection] Where else this appears
+> - Flexure and the low-pass filter: [[Fourier and Laplace Transforms]] (flexure as transfer function; the same Fourier modes $e^{ikx}$ as everywhere).
+> - Orogeny and climate: [[Climate - Course Map]] (monsoon, long-term CO$_2$), [[LS11 Weathering and Regolith]] (silicate weathering thermostat), [[LS16 Fluvial Landscapes]] (erosion response).
+> - Stress state of the plate: Mohr–Coulomb and the force balance of [[LS02 Mechanics and Mathematics Toolkit]], [[LS06 Maximum Topography]].
+
+
 ## Further slides explained one by one
 <span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
 
@@ -223,6 +246,9 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > **Previous:** [[LS09 Faults and Earthquakes]] · **Next:** [[LS11 Weathering and Regolith]].
 > **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
+> [!connection] Fourier view
+> Flexure as a wavelength filter, $1/(1+(k/k_c)^4)$ (degree of compensation): [[Fourier and Laplace Transforms]] §6.3.
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |
@@ -231,3 +257,11 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS10:3 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | Molnar and England chicken-or-egg, Tibet, monsoon and Loess Plateau (8 Ma) | A&A PDF p.61 (read) | b · primary book |
+> | degree of compensation versus wavelength | T&S (Bookos copy) Fig. 3–27, PDF p.235 (found by search; caption read) | b · primary book |
+> | $T_e\leftrightarrow D$, $\alpha$ for three infills, half-compensation wavelength | my computation (`scripts/ls_depth_numbers.py`, `LS10`); $E=70$ GPa, $\nu=0.25$ assumed | extra · beyond |

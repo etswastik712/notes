@@ -36,6 +36,9 @@ Used in: [[QM01 From Waves to Probabilities]], [[QM05 The Harmonic Oscillator]].
 ## Added with QM06 (oscillator toolbox)
 **All Hermite functions** are Fourier eigenfunctions with eigenvalue $(-i)^n$ ([[Fourier Invariance of Hermite Functions]]); a quarter period of oscillator motion is a Fourier transform. Norm conservation: [[Parseval-Plancherel Theorem]]; plane waves: [[Delta-Function Normalisation]], [[Dirac Delta Function]].
 
+> [!connection] See also
+> **General treatment:** series, transform, properties, uncertainty proof, sampling and DFT in [[Fourier and Laplace Transforms]] (§3, §3.5).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

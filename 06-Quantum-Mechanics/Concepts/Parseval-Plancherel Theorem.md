@@ -29,6 +29,9 @@ Gaussian packet: $\psi=(2\pi\sigma_x^2)^{-1/4}e^{-x^2/4\sigma_x^2}$ transforms t
 
 Used in: [[QM06 The Oscillator Toolbox]] §1, §5. Related: [[Fourier Transform and Wave Packets]] · [[Completeness Relation]] · [[Unitary Operator]] · [[Hilbert Space]].
 
+> [!connection] See also
+> See [[Fourier and Laplace Transforms]] §3.2 for the statement and §2.3 for the series version (Parseval).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

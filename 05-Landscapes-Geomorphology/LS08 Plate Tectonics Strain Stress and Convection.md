@@ -165,6 +165,29 @@ Isostasy describes a mantle-supported *equilibrium*. Plate tectonics is the smal
 *Figure LS08.1. Marginal-stability curve of eq. (20). Points above the curve are unstable to convection with that wavenumber; the minimum sets the onset.*
 
 
+<!-- ls-depth:LS08:1 -->
+> [!intuition] Context: Arthur Holmes and the Rayleigh number of the mantle
+> Convection as the engine of continental drift was proposed by Arthur Holmes in **1931**, on the strength of exactly this estimate: a mantle with $\mu\sim10^{21}$ Pa s (from postglacial rebound, [[LS07 Isostasy]]) still has a Rayleigh number thousands of times the critical value. T&S's version of the calculation (T&S §6.19, Bookos copy, PDF pp.511–514) uses **internal heat generation** ($H=9\times10^{-12}$ W/kg) and finds $\mathrm{Ra}_H=2\times10^6$ for the upper mantle ($b=700$ km) and $2\times10^9$ for the whole mantle ($b=2880$ km), against minimum critical values of **867.8** (free-slip) and **2772** (no-slip) for an *internally heated* layer.
+> **A cross-check of the numbers.** The critical values in this chapter's derivation ($\mathrm{Ra}_c=657.5$ for free-slip, and 1708 for two no-slip boundaries) are for a layer heated **from below** with fixed temperature at the base; T&S's 867.8 and 2772 are for **internal heating** (a different definition, $\mathrm{Ra}_H=\alpha_v\rho_0^2gHb^5/k\mu\kappa$). They are not in conflict: the two Rayleigh numbers answer slightly different physical set-ups. In both, the mantle is supercritical by factors of $10^3$–$10^6$.
+
+> [!derivation] 🔵 Extra (computed): what a supercritical Rayleigh number implies: lithosphere thickness and plate speed
+> For $\mathrm{Ra}\gg\mathrm{Ra}_c$ convection is confined to thin **thermal boundary layers** of thickness $\delta\sim b\,(\mathrm{Ra}_c/\mathrm{Ra})^{1/3}$ (the layer just stays marginally stable), with an overturn velocity scale $u\sim(\kappa/b)(\mathrm{Ra}/\mathrm{Ra}_c)^{2/3}$ (all coefficients are $O(1)$ in scaling arguments; see [[LS02 Mechanics and Mathematics Toolkit]]). With the slide's mantle values ($\rho_0=3300$, $\alpha_v=3\times10^{-5}$, $\Delta T=3000$ K, $b=2900$ km, $\mu=10^{21}$, $\kappa=10^{-6}$): $\mathrm{Ra}=7.1\times10^7$ and, for $\mathrm{Ra}_c=657$–$1708$,
+> $$\delta\approx61\text{–}84\ \mathrm{km},\qquad u\approx1.3\text{–}2.5\ \mathrm{cm\,yr^{-1}}.$$
+> *Both land on the right scales:* the thickness of the oceanic **lithosphere** (the cold upper boundary layer) is $\sim100$ km ([[LS07 Isostasy]], half-space cooling) and plate speeds are $\sim$ a few cm/yr. The Péclet number $uL/\kappa\approx4600$ (for $5$ cm/yr over $2900$ km) says advection beats diffusion everywhere except inside the boundary layers: the plate is a **cold lid that moves with the flow and loses heat by conduction across it**. (This is a scaling consistency check; real plate speeds also depend on slab pull and ridge push, see the force balance of slides 73–75.)
+
+> [!question] Check yourself (answers below)
+> 1. Why does doubling the layer depth $b$ raise $\mathrm{Ra}$ by a factor 8?
+> 2. If the viscosity fell by 10, what happens to $\mathrm{Ra}$, to $\delta$ and to $u$?
+> 3. What does it mean physically for $\mathrm{Ra}$ to be below $\mathrm{Ra}_c$?
+> 4. Which part of the strain-rate tensor is a pure rotation? In which group does that rotation live?
+> *Answers.* (1) $\mathrm{Ra}\propto b^3$. (2) $\mathrm{Ra}\propto1/\mu$ rises 10×; $\delta\propto\mathrm{Ra}^{-1/3}$ falls by $10^{1/3}=2.15$; $u\propto\mathrm{Ra}^{2/3}$ rises by $10^{2/3}=4.6$. (3) Heat is carried by conduction alone: perturbations decay and the layer is stable. (4) The antisymmetric part of $\nabla\mathbf u$, $\tfrac12(\partial_iu_j-\partial_ju_i)$, an infinitesimal rotation (an element of the Lie algebra $\mathfrak{so}(3)$); the symmetric part is the strain rate. See [[GT04 Symmetry Representations and Characters]] §6.
+
+> [!connection] Where else this appears
+> - **The linear stability analysis** uses the Fourier modes $w\propto\sin(\pi z/b)\,e^{ikx}$: [[Fourier and Laplace Transforms]]; the *growth rate* of a mode is a pole crossing the imaginary axis, the same picture as [[Bistability and Tipping Points]] (critical Ra $=$ a bifurcation) and [[Fixed Points and Linear Stability]].
+> - **Atmospheric analogue:** [[Climate - Course Map]] (Hadley cells, buoyancy-driven overturning) and [[CL12 Rotating Frames and the Coriolis Force]].
+> - **Dimensionless groups:** [[LS02 Mechanics and Mathematics Toolkit]] (Buckingham Π; Reynolds, Péclet, Rayleigh).
+
+
 ## How fast? A plate-speed estimate (slides 73–75)
 
 
@@ -208,3 +231,10 @@ Isostasy describes a mantle-supported *equilibrium*. Plate tectonics is the smal
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS08:2 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | Rayleigh number definition (eq. 6.316), minimum critical values 2772 and 867.8 for internal heating, mantle $\mathrm{Ra}_H=2\times10^6$ and $2\times10^9$, Holmes 1931 | T&S (Bookos copy) PDF pp.511–514 (read p.514; p.511–513 found by search) | b · primary book |
+> | boundary-layer thickness and velocity scalings $\delta\sim b(\mathrm{Ra}_c/\mathrm{Ra})^{1/3}$, $u\sim(\kappa/b)(\mathrm{Ra}/\mathrm{Ra}_c)^{2/3}$, numbers | standard scaling arguments (my statement, coefficients $O(1)$); `scripts/ls_depth_numbers.py` (`LS08`) | extra · beyond |

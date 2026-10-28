@@ -37,6 +37,9 @@ Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Mo
 ## Added with the Week 2 and Week 3 lectures
 **Taught (Week 3):** $M_X(t)=E[e^{tX}]$ on $-\delta<t<\delta$; the **exponential generating function** of the moments ([[Exponential Generating Function]]), so $E[X^n]=n!\,[t^n]M_X$; $M_{aX+b}(t)=e^{tb}M_X(at)$ (so $N(\mu,\sigma^2)$: $e^{\mu t+\sigma^2t^2/2}$); first-principles MGFs of uniform ($\frac{e^{tb}-e^{ta}}{t(b-a)}$), exponential ($\frac\lambda{\lambda-t}$), $N(0,1)$ ($e^{t^2/2}$), Bernoulli ($q+pe^t$), binomial ($(q+pe^t)^n$), geometric in the **failures** convention ($\frac p{1-qe^t}$; trials: $\frac{pe^t}{1-qe^t}$), two dice ($(\frac16\sum e^{kt})^2$), folded normal ($2e^{t^2/2}\Phi(t)$). **Two slips on the handwritten pages** (uniform Taylor denominator $m\to m+1$; the sign in the $N(\mu,\sigma^2)$ exponent) are corrected in [[PR06 Moments Generating Functions and Limit Theorems]] §3.1.
 
+> [!connection] See also
+> The MGF is a (two-sided) Laplace transform and its companion the characteristic function a Fourier transform: [[Fourier and Laplace Transforms]] §7.1, §9.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

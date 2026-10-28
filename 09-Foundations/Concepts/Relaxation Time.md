@@ -31,6 +31,9 @@ tags: [subject/foundations, type/concept, taught, extra/beyond, src/argha, statu
 
 Hence the observed climate lags its equilibrium response ([[CL04 Feedback and Multiple Steady States]]), and near a tipping point $\tau\to\infty$ ([[Bistability and Tipping Points]]). Ecology: return time to equilibrium after a disturbance, $1/r$ for logistic growth.
 
+> [!connection] See also
+> The relaxation time as the inverse of a pole of the transfer function $1/(1+\tau s)$, and the low-pass filter: [[Fourier and Laplace Transforms]] §1, §7.5–7.6.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

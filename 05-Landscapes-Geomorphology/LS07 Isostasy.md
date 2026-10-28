@@ -56,6 +56,12 @@ flowchart LR
 > Top right: a global elevation map (colour scale $-10$ to $+8$ km; purple = deep ocean, red-yellow = high land). Below it: crustal thickness on a $2^\circ\times2^\circ$ grid (0–70 km; blue = thin, red = thick). Correlate the two: crust is thin ($\sim$5–10 km) beneath the ocean basins, $\sim$30–40 km under continental interiors, and reaches $\sim$60–70 km under Tibet/Himalaya and the Andes — exactly where the elevation is highest. Thick crust $\leftrightarrow$ high topography is the signature of isostasy (§7.2). The slide poses the question “over the oceans?” – see §7.4.
 
 
+<!-- ls-depth:LS07:1 -->
+> [!intuition] Context: Gilbert's lake and the idea that the Earth flows
+> The best natural experiment for isostasy was recognised in 1890. G. K. Gilbert noticed that the **Lake Bonneville** shoreline (Utah, formed in a geologically instant 14.5 kyr ago) is not level today: it has been raised by **more than 50 m** in the middle of the former lake, tracing a bull's-eye. The lake's weight depressed the crust; when the water went away the crust rebounded, but not instantly, because the mantle below has to *flow* back (A&A ch. 3, [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=62|PDF pp.61–62]]). The lesson in A&A's words: *"the timescale is determined by the viscosity of the fluid and hence serves as a probe of the mantle viscosity... for mantle materials, of the order of several thousand years"*, and **larger loads probe deeper mantle**. T&S credit Haskell (1935) with the first quantitative treatment (T&S, Bookos copy, PDF p.21: Fennoscandian beach terraces).
+> *Sanity check.* A lake $\sim300$ m deep (recalled) fully compensated would raise the crust by $(\rho_w/\rho_m)h=\tfrac{1000}{3300}\times300\approx91$ m; the observed $>50$ m after 14.5 kyr is therefore a *partially completed* rebound, consistent with a few-kyr relaxation time ([[LS02 Mechanics and Mathematics Toolkit]]).
+
+
 ## Airy isostasy (slides 60–61)
 
 > [!figure]- 🖼 Slides 60–61: open to see the slides this section explains
@@ -158,6 +164,32 @@ flowchart LR
 > Scaling check: the same result to within $4\pi$ follows from “viscous stress $\mu\dot w/\lambda\sim$ load $\rho gw$” (cf. slide 48). **Numbers**: $\mu=10^{21}$ Pa s, $\rho=3300$: $\lambda=1000$ km gives $\tau_r=1.2\times10^4$ yr; $\lambda=3000$ km gives $4\times10^3$ yr; $\lambda=100$ km gives $1.2\times10^5$ yr. Broad features are isostatically compensated within $10^3$–$10^4$ yr, i.e. almost instantly on geological time scales; short-wavelength features (mountains) are held up by the elastic strength of the lithosphere (flexure) instead of flowing away.
 
 
+<!-- ls-depth:LS07:2 -->
+> [!derivation] 🔵 Extra (computed): which description is right, elastic or viscous? Relaxation time versus Maxwell time
+> The viscous half-space result of this chapter, $\tau_r=4\pi\mu/(\rho g\lambda)$, assumes the mantle is a pure fluid. The Maxwell model of [[LS02 Mechanics and Mathematics Toolkit]] says it is a fluid only on time scales longer than $\tau_M=\mu/G\approx450$ yr. Compare the two:
+> $$\frac{\tau_r}{\tau_M}=\frac{4\pi G}{\rho g\lambda}=\frac{27\,200\ \mathrm{km}}{\lambda}\qquad(G=70\ \mathrm{GPa},\ \rho=3300).$$
+> | $\lambda$ | $\tau_r$ ($\mu=10^{21}$ Pa s) | $\tau_r/\tau_M$ |
+> |---|---|---|
+> | 100 km | $1.2\times10^5$ yr | 272 |
+> | 300 km | $4.1\times10^4$ yr | 91 |
+> | 1000 km | $1.2\times10^4$ yr | 27 |
+> | 3000 km | $4.1\times10^3$ yr | 9 |
+> The ratio exceeds 1 for any $\lambda$ less than $27\,000$ km, so **at every geophysical wavelength the viscous treatment is self-consistent**: by the time the load has relaxed, the mantle has long forgotten its elasticity ($De=\tau_M/\tau_r\ll1$). (Only at wavelengths approaching the Earth's circumference would the elastic response matter.)
+> **A counter-intuitive feature.** $\tau_r\propto1/\lambda$: *large* loads relax **faster**. In a deep half-space a broad load moves a large volume of mantle with relatively small velocity gradients, so the restoring pressure $\rho g w$ is spread over a deep layer; narrow loads need steep, slow shearing flow. This is why A&A call large loads better probes of *deep* viscosity: they reach the whole half-space. For **short** wavelengths, however, the plate's elastic strength takes over (the flexure filter of [[Fourier and Laplace Transforms]] §6.3: loads shorter than $\sim260$ km are carried by the plate and do not compensate at all), so $\tau_r$ is only meaningful in the compensated band $\lambda\gtrsim300$ km.
+
+> [!question] Check yourself (answers below)
+> 1. How much would a 3 km ice sheet depress the crust at isostatic equilibrium, and approximately how long would 63 % of the rebound take for $\lambda=2000$ km?
+> 2. If the mantle viscosity were $10^{22}$ Pa s, how would the Fennoscandian rebound time change?
+> 3. Why is the elastic response of the plate to a lake instantaneous while the mantle's is not?
+> 4. Does a larger or smaller load relax faster on a viscous half-space? Does the same hold for a thin viscous layer?
+> *Answers.* (1) Airy: $(\rho_i/\rho_m)h=\tfrac{917}{3300}\times3000=833$ m; $\tau_r=4\pi\times10^{21}/(3300\times9.81\times2\times10^6)=1.94\times10^{11}$ s $\approx6.1$ kyr. (2) $\tau_r\propto\mu$: ten times longer (60 kyr); that Fennoscandia rebounds in a few kyr is the evidence for $\mu\sim10^{21}$. (3) The elastic wave crosses the plate at the speed of sound; the mantle must move mass, and viscosity limits the speed. (4) Larger loads relax faster on a half-space ($\tau_r\propto1/\lambda$); for a thin layer (thickness $\ll\lambda$) the opposite is true, because flow must be squeezed laterally over longer distances.
+
+> [!connection] Where else this appears
+> - **Relaxation time and low-pass filtering:** [[LS01 Landscapes as Physical Systems]] (response time), [[Fourier and Laplace Transforms]] (transfer function $1/(1+\tau s)$; the pole at $-1/\tau$).
+> - **Flexure** as a wavelength-dependent compensation: [[LS10 Folds Flexure and Mountain Building]]; the same $\mu$ controls post-glacial sea-level change in [[LS15 Glacial Deposits Rebound and Sea Level]] and the earthquake cycle's post-seismic flow in [[LS09 Faults and Earthquakes]].
+> - **Climate:** the isostatic response to ice sheets is a feedback on sea level ([[Climate - Course Map]]).
+
+
 ## Oceans: thermal isostasy (slides 62–63)
 
 
@@ -257,3 +289,12 @@ flowchart LR
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS07:3 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | Lake Bonneville, Gilbert 1890, mantle response times, deflection $>50$ m, 14.5 ka | A&A PDF pp.61–62 (read) | b · primary book |
+> | Haskell 1935 and Fennoscandian terraces | T&S (Bookos copy) PDF p.21 (found by search; the sentence read) | b · primary book |
+> | $\tau_r=4\pi\mu/\rho g\lambda$ | already derived in this chapter (agrees with A&A's statement of several kyr) | a · AI notes |
+> | $\tau_r/\tau_M=4\pi G/\rho g\lambda$, table, Airy ice example, Bonneville lake depth (300 m) | my computation, `scripts/ls_depth_numbers.py` (`LS07`); lake depth recalled, `[verify]` | extra · beyond |

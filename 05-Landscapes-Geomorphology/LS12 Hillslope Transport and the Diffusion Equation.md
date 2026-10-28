@@ -62,6 +62,11 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 *Hillslope transport mechanisms. All the slow processes give a flux that is proportional to slope at low $S$; this is what makes the diffusion equation applicable.*
 
 
+<!-- ls-depth:LS12:1 -->
+> [!intuition] Context: why the flux is proportional to slope (A&A on frost creep)
+> The linear law $q=-D\,\partial_xz$ looks like an empirical fit, but A&A derive it from a *process* (PDF p.343, Eq. 10.42 and the frost-heave experiments of Font et al. 2006 on a $1$ m slab at $25^\circ$ and $40^\circ$ slopes): each freeze–thaw cycle moves a regolith column downslope by an amount proportional to the slope; summing over the $f$ frost events per year and over the frost-penetration depth distribution gives a flux **linear in slope and proportional to the square of the mean frost depth** ($D\propto f\,\bar z^2$). They contrast this with "the simpler but process-blind formula $Q=-kS$". The lesson: $D$ is not a universal constant but encodes the *climate* (how many frost cycles, how deep) and the *material*; doubling the mean frost depth multiplies $D$ by four. Same structure for rain-splash and bioturbation.
+
+
 ## Rain-splash (slide 118)
 
 
@@ -168,10 +173,38 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 >
 > Example: $h=4$ m, $S_\mathrm{max}=0.2$: $\kappa_ht=16/(4\pi\times0.04)=32$ m$^2$; with $\kappa_h=0.005$, $t=6400$ yr.
 
+<!-- ls-depth:LS12:2 -->
+> [!derivation] 🔵 Extra (computed): reading the age of a fault scarp from its shape
+> A fault or terrace riser that offsets the ground by a vertical step of height $h$ at $t=0$ is smoothed by $\partial_tz=D\,\partial_x^2z$. By the Fourier solution ([[Fourier and Laplace Transforms]] §6.1) the **slope** of the profile is the step's derivative (a delta function) convolved with the heat kernel, i.e. a **Gaussian of variance $2Dt$ and area $h$**:
+> $$\frac{\partial z}{\partial x}=-\frac{h}{\sqrt{4\pi Dt}}\,e^{-x^2/4Dt},\qquad S_{max}=\frac{h}{\sqrt{4\pi Dt}},\qquad\text{width}\sim4\sqrt{Dt}.$$
+> *So the maximum slope falls as $t^{-1/2}$ and the scarp widens as $t^{1/2}$.* For $h=10$ m and $D=0.01\ \mathrm{m^2yr^{-1}}$ (`scripts/ls_depth_numbers.py`):
+> | age | $Dt$ | max slope | width |
+> |---|---|---|---|
+> | 1 kyr | 10 m² | 0.89 ($42^\circ$) | 13 m |
+> | **10 kyr** | 100 m² | **0.28 ($16^\circ$)** | 40 m |
+> | 100 kyr | 1000 m² | 0.089 ($5^\circ$) | 126 m |
+> | 1 Myr | 10⁴ m² | 0.028 ($1.6^\circ$) | 400 m |
+> Inverting: *measure the maximum slope of a scarp of known offset and you know $Dt$*; with $D$ calibrated on scarps of known age (shorelines, dated terraces) this gives a **diffusion-age** (the approach of Hanks and others, recalled, `[verify]`). The same Gaussian argument gives the time for a sinusoidal ridge–valley pattern to decay: $\tau=\lambda^2/4\pi^2D$, $25$ kyr for $\lambda=100$ m.
+
+> [!question] Check yourself (answers below)
+> 1. A 5 m scarp has maximum slope 0.10 today. With $D=0.005\ \mathrm{m^2yr^{-1}}$ what is its age?
+> 2. By what factor does the width of a scarp grow when its age quadruples?
+> 3. How does the frost-creep $D$ change if frost penetrates 3 times deeper?
+> 4. Which wavelengths of topography survive longest on a diffusing hillslope?
+> *Answers.* (1) $S_{max}=h/\sqrt{4\pi Dt}\Rightarrow Dt=h^2/(4\pi S_{max}^2)=25/(4\pi\times0.01)=199$ m², $t=199/0.005=3.98\times10^4$ yr. (2) Width $\propto\sqrt t$: factor 2. (3) $D\propto\bar z^2$: nine times larger. (4) The longest: decay time $\lambda^2/4\pi^2D$ grows as $\lambda^2$, so diffusion smooths short wavelengths first and leaves broad convex ridges.
+
+> [!connection] Where else this appears
+> - **Same equation, other subjects:** heat conduction ([[Thermodynamics - Course Map]]), the Gaussian kernel and Fourier modes ([[Fourier and Laplace Transforms]]), random walks and the normal distribution ([[Normal Distribution]], [[Probability - Course Map]]; $\sigma^2=2Dt$ is the variance of a random walk); the half-space cooling solution of [[LS07 Isostasy]].
+> - **Event size and rates:** [[LS01 Landscapes as Physical Systems]] (response time $L^2/D$).
+
+
 ## Map of this chapter
 > [!connection] How LS12 connects
 > **Previous:** [[LS11 Weathering and Regolith]] · **Next:** [[LS13 Landslides]].
 > **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+
+> [!connection] Fourier view
+> Modes of the diffusion equation decay as $e^{-Dk^2t}$; the Gaussian kernel; decay time $\lambda^2/4\pi^2D$: [[Fourier and Laplace Transforms]] §6.1.
 
 ## Provenance
 > [!provenance]- Source map for this chapter
@@ -181,3 +214,10 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS12:3 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | frost-creep derivation of the linear flux law, $D\propto f\bar z^2$, Font et al. 2006 experiment | A&A PDF p.343 (read; Eq. 10.42) | b · primary book |
+> | scarp-diffusion solution and numbers | my derivation via the Fourier chapter (`scripts/ls_depth_numbers.py`, `LS12`); the diffusion-age method is recalled (Hanks et al.), `[verify]` | extra · beyond |

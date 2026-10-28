@@ -165,6 +165,9 @@ So the five d orbitals split into a two-fold ($e_g$: $d_{z^2},d_{x^2-y^2}$) and 
 > 5. **Show** the sum $\sum_i(\dim\Gamma_i)^2=|G|$ holds for $O$. *Answer:* $1+1+4+9+9=24$.
 > 6. **Compute** $\chi_2(\pi/2)$. *Answer:* $\sin(5\pi/4)/\sin(\pi/4)=-1$ ($d$ under $C_4$).
 
+> [!connection] Fourier transform as characters
+> The DFT matrix is the character table of $\mathbb Z_N$: [[Fourier and Laplace Transforms]] §5.5.
+
 ## Map of this chapter
 > [!connection] How GT04 connects
 > **Builds on:** [[GT03 Actions Conjugation and Sylow Theorems]] (conjugacy classes label character-table columns), [[GT02 Homomorphisms Normal Subgroups and Quotients]] (a representation is a homomorphism). **Used by:** [[CH03 Molecular Orbital Theory Polyatomics]] and [[Ligand Group Orbitals]] (SALCs), [[Symmetry Labels a b e t]], [[Quantum Mechanics - Course Map]] (angular momentum, selection rules).

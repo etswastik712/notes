@@ -34,6 +34,9 @@ tags: [subject/qm, type/concept, taught, extra/book, src/lecture-notes, status/d
 
 Used in: [[QM01 From Waves to Probabilities]], [[QM05 The Harmonic Oscillator]]. Related: [[Heisenberg Uncertainty Principle]] · [[Fourier Transform and Wave Packets]] · [[Harmonic Oscillator]] · [[Free Particle]].
 
+> [!connection] See also
+> Dispersion, phase and group velocity, and the spreading law: [[Fourier and Laplace Transforms]] §6.2.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

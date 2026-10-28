@@ -35,6 +35,9 @@ Used in: [[QM01 From Waves to Probabilities]], [[QM03 States Operators and Measu
 ## Added with QM06 (oscillator toolbox)
 $\Delta x\Delta p=(n+\tfrac12)\hbar$ for $|n\rangle$ (minimum only for $n=0$); equality $\hbar/2$ also for every coherent and squeezed state ([[Minimum Uncertainty State]]); the principle gives the exact oscillator zero-point energy ([[Zero-Point Energy]]).
 
+> [!connection] See also
+> The Fourier proof of $\Delta x\,\Delta k\ge\frac12$ (Cauchy–Schwarz, equality only for Gaussians): [[Fourier and Laplace Transforms]] §3.5.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

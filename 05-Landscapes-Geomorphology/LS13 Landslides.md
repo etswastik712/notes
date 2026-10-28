@@ -90,6 +90,25 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 > A block on a slope with $\theta<\phi$ is stable. Let the ground accelerate down-slope with $a_s$; in the frame of the block a pseudo-force $ma_s$ acts up-slope or down-slope depending on sign; the block slips when the net down-slope force exceeds friction: $m(g\sin\theta+a_s)>mg\cos\theta\tan\phi$, i.e. $a_s>a_c=g(\cos\theta\tan\phi-\sin\theta)=g\cos\theta(\tan\phi-\tan\theta)$. The *critical acceleration* $a_c$ vanishes as $\theta\to\phi$. Example: $\phi=35^\circ$, $\theta=30^\circ$: $a_c=9.8\times0.866\times(0.700-0.577)=1.0$ m s$^{-2}=0.11g$. Strong shaking ($0.2$–$0.5g$) routinely exceeds this on steep slopes; the block moves during the intervals of $a_s>a_c$ (Newmark displacement $=\iint(a_s-a_c) \mathrm{d} t^2$). This is why the 2015 Gorkha earthquake triggered $\sim25 000$ landslides (§13.4).
 
 
+<!-- ls-depth:LS13:1 -->
+> [!derivation] 🔵 Extra (computed): three numbers every slope should be checked against
+> **(1) Water halves the stable angle.** For a cohesionless slope with the water table at the surface and seepage parallel to the slope, the factor of safety is $\mathrm{FS}=(1-\rho_w/\rho)\tan\phi/\tan\theta$ (derived above), so the critical angle is $\tan\theta_c=(1-\rho_w/\rho)\tan\phi$. For a saturated density $\rho=2000$ kg/m³ the factor is $\tfrac12$: $\phi=20^\circ\to\theta_c=10.3^\circ$; $\mathbf{30^\circ\to16.1^\circ}$; $35^\circ\to19.3^\circ$; $40^\circ\to22.8^\circ$ (dry: $\theta_c=\phi$). *A slope that is perfectly stable in the dry season at $30^\circ$ is **unstable** once saturated above $16^\circ$.* This is the quantitative reason landslides cluster in the monsoon.
+> **(2) Cohesion sets a maximum soil depth.** With cohesion $c$ the slope $\theta>\phi$ is stable only to a depth $z_c=\dfrac{c}{\rho g\cos^2\theta\,(\tan\theta-\tan\phi)}$ (set FS $=1$ in $\mathrm{FS}=\dfrac{c+\rho gz\cos^2\theta\tan\phi}{\rho gz\sin\theta\cos\theta}$). For $\rho=1800$, $\phi=30^\circ$: with $c=5$ kPa, $\theta=35^\circ$: **$z_c=3.4$ m**; $\theta=40^\circ$: $1.8$ m; $\theta=45^\circ$: $1.3$ m; for $c=2$ kPa: $1.4$, $0.7$, $0.5$ m. So **steep soil-mantled slopes can carry only a thin regolith**, and the typical landslide is 1–3 m deep, a scale set by the competition of cohesion and weight, not by the slope length.
+> **(3) Size distribution.** Inventories give a power-law *density* of landslide area, $p(A)\propto A^{-2.4}$ (exponent recalled from Malamud et al. 2004, `[verify]`; the cumulative exponent is $\beta=1.4$). By the event-size argument of [[LS01 Landscapes as Physical Systems]], a quantity $\propto A^q$ has a total $\int A^{q}A^{-2.4}\,\mathrm dA\propto A^{q-1.4}$: the **total area** ($q=1$) is dominated by the *many small* slides (contribution falls as $A^{-0.4}$); the **volume** ($V\propto A^{1.5}$, so $q=1.5$) has exponent $+0.1$, i.e. it is *marginally* dominated by the largest events (a factor $\sim2.5$ across four decades of $A$): *neither the smallest nor the largest slides alone control erosion; the whole range matters.*
+
+> [!question] Check yourself (answers below)
+> 1. A slope of $25^\circ$ with $\phi=35^\circ$ is stable when dry. What happens when saturated ($\rho=2000$)?
+> 2. If cohesion doubles, how does the critical depth change?
+> 3. Why do many landslides on the Deccan basalt (Irshalwadi, [[LS18 Deccan Traps Terrain]]) fail along the contact between soil and weathered rock?
+> 4. What does the power-law exponent say about the contribution of small versus large landslides to total area?
+> *Answers.* (1) $\theta_c=19.3^\circ<25^\circ$: it fails. (2) $z_c\propto c$: doubles. (3) A contrast in permeability and strength at a weathered horizon (bole, [[interflow-horizons]]) lets water pool and pore pressure build exactly at the potential failure plane. (4) With exponent $2.4$ (density), small slides dominate the total area; large ones matter most for the sediment volume only marginally.
+
+> [!connection] Where else this appears
+> - **Mohr–Coulomb and pore pressure:** [[LS02 Mechanics and Mathematics Toolkit]] (derivation), [[LS06 Maximum Topography]] (frictional limit), [[LS09 Faults and Earthquakes]] (earthquake triggering).
+> - **Power laws and event-size arguments:** [[Pareto]], [[Probability - Course Map]]; [[LS01 Landscapes as Physical Systems]].
+> - **Deccan terrain** as a landslide setting (weak boles, steep escarpment, monsoon): [[LS18 Deccan Traps Terrain]], [[interflow-horizons]], [[trap-topography]].
+
+
 ## Initiation: loose versus dense soil (slide 126, left)
 
 
@@ -219,3 +238,10 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS13:2 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | FS formulas, critical angles and depths | the chapter's own derivation (a/b: AI notes after A&A ch. 10); numbers computed in `scripts/ls_depth_numbers.py` (`LS13`); densities and $c$ values are illustrative | extra · beyond |
+> | landslide area exponent 2.4, event-size integral | recalled (Malamud et al. 2004); not checked against a page | not checked (`[verify]`) |

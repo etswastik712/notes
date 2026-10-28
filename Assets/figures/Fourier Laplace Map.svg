@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">Fourier and Laplace transforms in one page</text>
+<line x1="391.5" y1="172.6" x2="278.5" y2="227.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="500.0" y1="176.0" x2="500.0" y2="224.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="608.5" y1="172.6" x2="721.5" y2="227.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="321.0" y1="280.0" x2="349.0" y2="280.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="403.1" y1="332.9" x2="266.9" y2="407.1" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="500.0" y1="336.0" x2="500.0" y2="404.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="830.0" y1="336.0" x2="830.0" y2="404.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="596.9" y1="332.9" x2="733.1" y2="407.1" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="290.0" y="70.0" width="420" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="105.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Exponentials e^{ikx}, e^{st}</text>
+<text x="500" y="125.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">eigenfunctions of d/dx and shifts</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">calculus -&gt; algebra</text>
+<rect x="25.0" y="230.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="265.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Fourier series (periodic)</text>
+<text x="170" y="285.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">c_n, Parseval, Gibbs 8.95 %</text>
+<text x="170" y="305.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">smooth &lt;=&gt; fast decay</text>
+<rect x="355.0" y="230.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="265.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Fourier transform</text>
+<text x="500" y="285.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">shift, d/dx -&gt; ik, convolution</text>
+<text x="500" y="305.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">uncertainty dx dk &gt;= 1/2</text>
+<rect x="685.0" y="230.0" width="290" height="100" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="265.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Laplace transform</text>
+<text x="830" y="285.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">initial values, poles</text>
+<text x="830" y="305.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">H(s) = 1/(1 + tau s)</text>
+<rect x="25.0" y="410.0" width="290" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="445.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Sampling and DFT</text>
+<text x="170" y="465.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Nyquist, aliasing, FFT N log N</text>
+<text x="170" y="485.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">DFT = characters of Z_N</text>
+<rect x="355.0" y="410.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="445.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">PDEs by modes</text>
+<text x="500" y="465.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">diffusion e^(-Dk^2 t)</text>
+<text x="500" y="485.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">dispersion omega(k)</text>
+<rect x="685.0" y="410.0" width="290" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="445.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Stability and probability</text>
+<text x="830" y="465.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">poles = eigenvalues, tipping</text>
+<text x="830" y="485.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">char. function, CLT</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">09-Foundations: own write-up; all numbers checked in scripts/ft_numbers.py</text>
+</svg>

@@ -274,6 +274,22 @@ SPECS = {
         footer="my write-up; tables checked in gt_numbers.py",
     ),
 
+    "Fourier Laplace Map": dict(
+        size=(1000, 600),
+        nodes={
+            "a": dict(x=500, y=80, w=420, h=100, text="Exponentials e^{ikx}, e^{st}\neigenfunctions of d/dx and shifts\ncalculus -> algebra", color="blue"),
+            "b": dict(x=170, y=240, w=290, h=100, text="Fourier series (periodic)\nc_n, Parseval, Gibbs 8.95 %\nsmooth <=> fast decay", color="orange"),
+            "c": dict(x=500, y=240, w=290, h=100, text="Fourier transform\nshift, d/dx -> ik, convolution\nuncertainty dx dk >= 1/2", color="aqua"),
+            "d": dict(x=830, y=240, w=290, h=100, text="Laplace transform\ninitial values, poles\nH(s) = 1/(1 + tau s)", color="red"),
+            "e": dict(x=170, y=420, w=290, h=100, text="Sampling and DFT\nNyquist, aliasing, FFT N log N\nDFT = characters of Z_N", color="grey"),
+            "f": dict(x=500, y=420, w=290, h=100, text="PDEs by modes\ndiffusion e^(-Dk^2 t)\ndispersion omega(k)", color="orange"),
+            "g": dict(x=830, y=420, w=290, h=100, text="Stability and probability\npoles = eigenvalues, tipping\nchar. function, CLT", color="blue"),
+        },
+        arrows=[("a", "b", ""), ("a", "c", ""), ("a", "d", ""), ("b", "c", ""), ("c", "e", ""), ("c", "f", ""), ("d", "g", ""), ("c", "g", "")],
+        title="Fourier and Laplace transforms in one page",
+        footer="09-Foundations: own write-up; all numbers checked in scripts/ft_numbers.py",
+    ),
+
 }
 
 if __name__ == "__main__":

@@ -32,6 +32,9 @@ Graphical rule: a stable fixed point is where $f$ crosses zero *downwards* (posi
 
 Applications of the same ideas: [[Bistability and Tipping Points]]; see also [[Linearisation and Sensitivity]].
 
+> [!connection] See also
+> Poles of the linearised system = eigenvalues of the Jacobian: [[Fourier and Laplace Transforms]] §7.6.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

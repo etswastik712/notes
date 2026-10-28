@@ -300,6 +300,9 @@ Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sah
 > **Previous:** [[Landscapes and Geomorphology - Course Map|Course Map]] · **Next:** [[LS02 Mechanics and Mathematics Toolkit]].
 > **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
+> [!connection] Fourier and Laplace view
+> The response-time filter of this chapter is the transfer function $1/(1+\tau s)$ with one pole at $-1/\tau$: [[Fourier and Laplace Transforms]] §1, §7.5.
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

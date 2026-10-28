@@ -35,6 +35,9 @@ Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[No
 ## Added with QM06 (oscillator toolbox)
 **Hermite link:** the Edgeworth corrections to the CLT are series in $\mathrm{He}_n(x)\varphi(x)$; the leading cdf term $-\frac{\gamma_1}{6\sqrt n}\mathrm{He}_2(x)\varphi(x)$ has maximum modulus $\gamma_1/(6\sqrt{2\pi n})$ ([[Probabilists' Hermite Polynomials]]).
 
+> [!connection] See also
+> Proof sketch through characteristic functions with a numerical check: [[Fourier and Laplace Transforms]] §9.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

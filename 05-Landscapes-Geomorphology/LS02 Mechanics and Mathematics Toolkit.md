@@ -450,6 +450,9 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > **Previous:** [[LS01 Landscapes as Physical Systems]] · **Next:** [[LS03 Digital Elevation Models and Terrain Analysis]].
 > **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
+> [!connection] Fourier and Laplace view
+> The Maxwell model solved by Laplace transform (stress relaxation and creep): [[Fourier and Laplace Transforms]] §7.5b.
+
 ## Provenance
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |

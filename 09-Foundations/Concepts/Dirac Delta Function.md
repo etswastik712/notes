@@ -29,6 +29,9 @@ Quantum: $\langle x|x'\rangle=\delta(x-x')$, $\langle p|p'\rangle=\delta(p-p')$ 
 
 Used in: [[QM06 The Oscillator Toolbox]] §1. Related: [[Delta-Function Normalisation]] · [[Delta Function Potential]] · [[Fourier Transform and Wave Packets]] · [[Gaussian Integral]].
 
+> [!connection] See also
+> Transforms of $\delta$, the comb and Poisson summation: [[Fourier and Laplace Transforms]] §4.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -17,6 +17,6 @@ tags: [subject/waves, type/moc, taught, src/own-notes, status/stub]
 - physics/waves/books (Georgi, *The Physics of Waves*)
 
 ## Connections
-[[CL12 Rotating Frames and the Coriolis Force]] (inertial and Rossby waves) · [[Quantum Mechanics - Course Map]] · [[Thermodynamics - Course Map]]
+[[Fourier and Laplace Transforms]] (dispersion relations, phase and group velocity, Fourier modes, wave packets; the mathematical toolkit for this subject) · [[CL12 Rotating Frames and the Coriolis Force]] (inertial and Rossby waves) · [[Quantum Mechanics - Course Map]] · [[Thermodynamics - Course Map]]
 
 See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] for its place in the plan.

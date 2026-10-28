@@ -82,5 +82,99 @@ def LS05():
     J2 = 1.08263e-3; print("  J2 =", J2, " f ~ (3/2) J2 + q/2 =", 1.5*J2 + 0.5*q)
     print("  geoid undulation range ~ +-100 m vs bulge 21.4 km -> ratio", 100/21385)
 
+def LS06():
+    mu = 0.6; phi = math.atan(mu); R = (1 + math.sin(phi)) / (1 - math.sin(phi)); g = 9.81
+    print(f"== LS06: R = sigma1'/sigma3' = {R:.3f}")
+    for z in (3e3, 5e3, 10e3, 15e3):
+        svp = (2700 - 1000) * g * z / 1e6
+        print(f"  z={z/1e3:.0f} km: sigma_v' = {svp:.0f} MPa; thrust strength (R-1)sigma_v' = {(R-1)*svp:.0f} MPa; normal strength (1-1/R)sigma_v' = {(1-1/R)*svp:.0f} MPa")
+    zc = 2e8 / ((R - 1) * 1700 * g); print(f"  depth at which compressional frictional strength = 2e8 Pa: {zc/1e3:.2f} km; extensional strength there = {(1-1/R)*1700*g*zc/1e6:.0f} MPa")
+    for nm, gg, rho in [("Earth", 9.81, 2700), ("Mars", 3.71, 2900), ("Venus", 8.87, 2700), ("Moon", 1.62, 2800), ("Mercury", 3.70, 2700)]:
+        print(f"  {nm}: dh_max = 2e8/(rho g) = {2e8/(rho*gg)/1e3:.1f} km")
+
+def LS07():
+    G = 7e10; rho = 3300; g = 9.81; mu = 1e21
+    print("== LS07: viscous half-space relaxation tau_r = 4 pi mu / (rho g lambda) vs Maxwell time ==")
+    for lam in (100e3, 300e3, 1000e3, 3000e3):
+        tr = 4 * math.pi * mu / (rho * g * lam); print(f"  lambda={lam/1e3:.0f} km: tau_r = {tr:.3g} s = {tr/3.156e7:.3g} yr; tau_r/tau_M = {tr/(mu/G):.1f}")
+    print("  crossover wavelength tau_r = tau_M: 4 pi G/(rho g) =", 4 * math.pi * G / (rho * g) / 1e3, "km")
+    print("== Bonneville: deflection 50 m under a lake load of depth ~300 m ==", "water load", 1000 * g * 300 / 1e6, "MPa; Airy-like rebound if fully compensated: w = (rho_w/rho_m) h =", 1000 / 3300 * 300, "m")
+
+def LS08():
+    rho, g, al, dT, b, kap, eta = 3300, 9.81, 3e-5, 3000, 2.9e6, 1e-6, 1e21
+    Ra = rho*g*al*dT*b**3/(eta*kap); print(f"== LS08: Ra = {Ra:.2e}")
+    for Rac in (657.5, 1000, 1708):
+        d = b*(Rac/Ra)**(1/3); u = kap/b*(Ra/Rac)**(2/3)
+        print(f"  Ra_c = {Rac}: boundary-layer thickness b (Ra_c/Ra)^(1/3) = {d/1e3:.0f} km; velocity scale (kappa/b)(Ra/Ra_c)^(2/3) = {u:.2e} m/s = {u*3.156e7*100:.2f} cm/yr")
+    print("  thermal diffusion time across 100 km lithosphere L^2/kappa =", (1e5)**2/kap/3.156e7/1e6, "Myr")
+    print("  Peclet number u L/kappa for u=5 cm/yr, L=2900 km:", 0.05/3.156e7*2.9e6/kap)
+
+def LS09():
+    print("== LS09: moment magnitude and Gutenberg-Richter ==")
+    for Mw in (5, 6, 7, 7.8, 8, 9, 9.5):
+        M0 = 10**(1.5*Mw + 9.1); print(f"  Mw={Mw}: M0 = {M0:.2e} N m; ratio to Mw-1 = {10**1.5:.1f}")
+    M0 = 10**(1.5*7.8+9.1); A = 150e3*100e3; print(f"  Gorkha-like M0={M0:.2e}: mean slip over 150x100 km with mu=3e10: {M0/(3e10*A):.2f} m")
+    for b in (0.8, 1.0, 1.2):
+        a = 2*b/3; print(f"  b={b}: P(M0>m) ~ m^-{a:.2f}; moment per magnitude unit grows as 10^({1.5-b:.1f} M) -> largest events dominate: {a<1}")
+    print("  number ratio per unit magnitude (b=1):", 10, "; moment ratio:", 10**1.5)
+    print("  moment release of one M8 = ", 10**(1.5*8)/10**(1.5*6), "x M6 events;  number of M6 events with the same total moment per M8 (b=1):", 10**(1.5*2)/10**2, "events of M6 per M6-..." )
+
+def LS10():
+    E, nu, D = 7e10, 0.25, 1e23
+    Te = (12*(1-nu**2)*D/E)**(1/3); print(f"== LS10: D = E Te^3/12(1-nu^2): D=1e23 -> Te = {Te/1e3:.1f} km")
+    for nm, drho in [("no infill (air), drho=3300", 3300), ("water infill, drho=2300", 2300), ("sediment infill, drho=900", 900)]:
+        a = (4*D/(drho*9.81))**0.25; print(f"  {nm}: alpha = (4D/drho g)^(1/4) = {a/1e3:.1f} km; flexural wavelength 2 pi alpha = {2*math.pi*a/1e3:.0f} km")
+    for Te_ in (10e3, 25e3, 50e3, 100e3): print(f"  Te = {Te_/1e3:.0f} km -> D = {E*Te_**3/(12*(1-nu**2)):.2e} N m")
+
+def LS11():
+    R = 8.314
+    print("== LS11: Arrhenius sensitivity exp[(Ea/R)(1/T0 - 1/T1)] ==")
+    for Ea in (30e3, 60e3, 90e3):
+        for T0, T1 in [(288, 298), (288, 293), (278, 283)]:
+            print(f"  Ea={Ea/1e3:.0f} kJ/mol, {T0}->{T1} K: rate x{math.exp(Ea/R*(1/T0-1/T1)):.3f}")
+    print("  CO2 removed per unit mass of CaSiO3 weathered (net 1 CO2 per Ca):", 44.01/116.16, "t/t")
+    print("  Ca2+ + 2HCO3- -> CaCO3 + CO2 + H2O: of the 2 CO2 consumed in weathering, 1 is returned at precipitation")
+
+def LS12():
+    print("== LS12: diffusive scarp degradation: slope profile = h * Gaussian(sigma^2 = 2 D t); max slope = h/sqrt(4 pi D t) ==")
+    h = 10.0; D = 0.01
+    for t in (1e3, 1e4, 1e5, 1e6):
+        sm = h/math.sqrt(4*math.pi*D*t); print(f"  t={t:.0e} yr: D t = {D*t:.3g} m2; max slope {sm:.3f} = {math.degrees(math.atan(sm)):.1f} deg; scarp width ~ 4 sqrt(D t) = {4*math.sqrt(D*t):.0f} m")
+    print("  decay time of a sinusoid lambda=100 m, D=0.01:", 100**2/(4*math.pi**2*0.01), "yr")
+    print("  frost creep flux ~ f z_bar^2 : doubling the frost depth multiplies D by 4")
+
+def LS13():
+    g = 9.81
+    print("== LS13: saturated cohesionless slope critical angle: tan(theta_c) = (1 - rho_w/rho) tan(phi) ==")
+    for phi in (20, 30, 35, 40):
+        t = (1 - 1000/2000) * math.tan(math.radians(phi)); print(f"  phi={phi}: dry {phi} deg; saturated (rho=2000) {math.degrees(math.atan(t)):.1f} deg")
+    print("== critical depth of a cohesive slope z_c = c / (rho g cos^2 th (tan th - tan phi)), rho=1800, phi=30 ==")
+    for c in (2e3, 5e3, 10e3):
+        for th in (35, 40, 45):
+            zc = c/(1800*g*math.cos(math.radians(th))**2*(math.tan(math.radians(th))-math.tan(math.radians(30)))); print(f"  c={c/1e3:.0f} kPa, theta={th}: z_c = {zc:.2f} m")
+    print("== size distribution: noncumulative density ~ A^-2.4 (recalled); moment of order q diverges at the large end if q > 1.4 ==")
+    for q in (1.0, 1.5): print(f"  q={q}: integral exponent {q-2.4+1:+.1f}; ratio of contributions A_max/A_min = 1e4 ->", 1e4**(q-1.4) if q != 1.4 else 'log')
+
+def LS14():
+    rho, g = 917.0, 9.81; A = 2.4e-24; yr = 3.156e7
+    print("== LS14: Glen surface speed U_s = (A/2) (rho g sin a)^3 H^4 (n=3) ==")
+    for H, al in [(50, 5), (100, 5), (200, 5), (400, 5), (100, 2), (100, 10)]:
+        tau = rho*g*H*math.sin(math.radians(al)); U = A/2*(rho*g*math.sin(math.radians(al)))**3*H**4
+        print(f"  H={H} m, slope {al} deg: tau_b = {tau/1e3:.0f} kPa, U_s = {U*yr:.2f} m/yr")
+    print("  doubling H multiplies U by", 2**4, "(at fixed slope)")
+    print("== Nye plastic profile: H^2 = 2 tau0 x /(rho g) ==")
+    for tau0 in (5e4, 1e5): 
+        for x in (100e3, 500e3, 800e3): print(f"  tau0={tau0/1e3:.0f} kPa, x={x/1e3:.0f} km: H = {math.sqrt(2*tau0*x/(rho*g))/1e3:.2f} km")
+    print("  volume response time ~ H / |b_t|: H=100 m, b_t=-3 m/yr ->", 100/3, "yr")
+
+def LS15():
+    A_oc = 3.61e14; rho_i, rho_w = 917, 1000
+    print("== LS15: sea-level equivalent dz = (rho_i/rho_w) V_ice / A_ocean ==")
+    for nm, V in [("Greenland 2.9e6 km3", 2.9e6), ("Antarctica 26.5e6 km3", 26.5e6), ("LGM extra ~47e6 km3", 47e6)]:
+        print(f"  {nm}: {rho_i/rho_w*V*1e9/A_oc:.1f} m of sea level")
+    print("  ice volume for 120 m:", 120*A_oc*rho_w/rho_i/1e9/1e6, "million km3")
+    print("  Airy depression under 3 km of ice:", rho_i/3300*3000, "m;  shelf exposure 29% -> 36% land for -120 m (A&A)")
+    print("  a +- 5 m coral depth range (Acropora palmata) -> sea-level uncertainty +-5 m, i.e. 4 % of the 120 m glacial amplitude:", 5/120)
+
 if __name__ == "__main__":
     for c in (sys.argv[1:] or ["LS01"]): globals()[c]()

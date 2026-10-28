@@ -36,6 +36,9 @@ Consequences: $\langle p^2\rangle_n=m\hbar\omega\langle\xi^2\rangle_n=(n+\tfrac1
 
 Used in: [[QM06 The Oscillator Toolbox]] §5. Related: [[Fourier Transform and Wave Packets]] · [[Hermite Polynomials]] · [[Parity Operator]] · [[Gaussian Wave Packet]] · [[Parseval-Plancherel Theorem]].
 
+> [!connection] See also
+> The transform's rules and the Gaussian derivation: [[Fourier and Laplace Transforms]] §3.3–3.4.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

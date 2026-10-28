@@ -66,6 +66,28 @@ flowchart LR
 > A triangular ridge load (top, mountain shape) rests on an elastic half-space (grey). The nested closed curves are contours of the second invariant $\Sigma_2=\sqrt{\tfrac16[(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2]}$, a measure of how far the stress state is from hydrostatic (pure shear strength). They are concentric around a point *beneath the centre of the load at a depth comparable to its half-width*: failure starts there, not at the surface. Peak $\Sigma_2$ is a fraction $<0.5$ of the peak load pressure $\rho gh$, so taking $\tau_\mathrm{max}=\rho gh/2$ (below) is a conservative simplification.
 
 
+<!-- ls-depth:LS06:1 -->
+> [!intuition] Context: three different answers to "how high can a mountain be?"
+> Everest stands 8.85 km above sea level; the Andes and Tibet hover near 4–6 km; the Moon's maximum relief is 8.7 km but Olympus Mons is 21 km. Different mechanisms cap relief in different places, and it is the *smallest* cap that wins:
+> | Cap | Mechanism | Size | Where developed |
+> |---|---|---|---|
+> | **material strength** | the rock at the base of a tall block yields | $\Delta h\lesssim2\times10^8/\rho_cg$: Earth $7.6$ km, Venus $8.4$, Mars $18.6$, Moon $44$ | this chapter (slides 52–55) |
+> | **isostasy** (not a cap but a *carrier*) | buoyancy of the crustal root carries most of the weight, so strength only has to support the topography *above the compensated level* | roots of $\sim5\times$ the elevation | [[LS07 Isostasy]] |
+> | **glacial buzzsaw** | glaciers erode everything above the snowline | topography rarely exceeds snowline $+\,1.5$ km | [[LS19 Glacial and Aeolian Landforms]] slides 30–36 |
+> | **plate-boundary shear force** | the stress that the subducting plate can transmit limits the supportable elevation | within $\pm10$–$20$ MPa of observed maximum elevations | [[LS19 Glacial and Aeolian Landforms]] slides 37–38 (Dielforder et al. 2020) |
+> The slide-37/38 "open problem" ("reconcile the two approaches to global mountain height") is exactly this table: strength, climate and tectonic stress are three bounds on the same quantity, and the observed range of $\sim5$–$9$ km on Earth sits where several of them overlap.
+
+> [!derivation] 🔵 Extra (computed): where does the slides' "$\sigma_y=2\times10^8$ Pa" come from? Byerlee friction at $\sim5.7$ km depth
+> The Coulomb law with friction $\mu_s=0.6$ and hydrostatic pore pressure gives, at depth $z$ in a *compressional* (thrust) regime, a differential stress at failure $\sigma_1'-\sigma_3'=(R-1)\sigma_v'$ with $R=\sigma_1'/\sigma_3'=3.12$ and $\sigma_v'=(\rho-\rho_w)gz$ (derived in [[LS02 Mechanics and Mathematics Toolkit]]). Numbers from `scripts/ls_depth_numbers.py`:
+> | depth | $\sigma_v'$ | compressional strength $(R-1)\sigma_v'$ | extensional strength $(1-1/R)\sigma_v'$ |
+> |---|---|---|---|
+> | 3 km | 50 MPa | 106 MPa | 34 MPa |
+> | 5 km | 83 MPa | 177 MPa | 57 MPa |
+> | 10 km | 167 MPa | 353 MPa | 113 MPa |
+> | 15 km | 250 MPa | 530 MPa | 170 MPa |
+> The compressional strength equals the slides' $2\times10^8$ Pa at **$z=5.7$ km**, a perfectly reasonable depth for the base of an upper-crustal block, which justifies the constant $\tau_y=10^8$ Pa (differential stress $2\tau_y$) as a *representative* upper-crustal value. **Two consequences:** (i) strength is not constant but *increases with depth* (confinement), so the bound (17) is a rough, order-one estimate; (ii) the **extensional strength at the same depth is only $64$ MPa, three times smaller**, so *extensional* regimes cannot support elevations as high as compressional ones. This is the mechanical reason why high plateaus such as Tibet start to extend (normal faulting) once their elevation reaches $\sim5$ km, and why mountain belts are generally in compression.
+
+
 ## Upper bound on relief (slide 53)
 
 
@@ -135,6 +157,23 @@ flowchart LR
 > [!example] 🖼 Reading the diagram: Slide 55: the observed maximum-relief plot
 > Vertical axis: (maximum $-$ minimum elevation)/mean radius, from $10^{-3}$ to $10$; horizontal axis: mean radius from $1$ to $10^{4}$ km. Filled and open circles are icy and rocky bodies. Small bodies ($R\lesssim20$ km) lie near $0.1$–$1$: friction-limited. Beyond a few hundred km the points fall as $1/R^{2}$, following the diagonal strength lines labelled $0.1$ MPa to $1$ GPa (the line labels are strengths); ice and rock bodies straddle different lines because ice is weaker. The nearly horizontal line at the top, labelled $\phi=30^\circ$, is the friction bound. The plot thus contains *both* regimes of the argument above in one figure.
 
+<!-- ls-depth:LS06:2 -->
+> [!example] 🔵 Extra (computed): bound (17) for the planets with the real surface gravity
+> $\Delta h_{max}=2\times10^8/(\rho_cg)$ with $g$ the surface gravity: Earth ($9.81$, $\rho_c=2700$): **7.6 km**; Venus ($8.87$): **8.4 km**; Mars ($3.71$, $2900$): **18.6 km**; Mercury ($3.70$): **20 km**; Moon ($1.62$, $2800$): **44 km** (observed Mars $21$ km: the bound is reached; observed Moon $8.7$ km: it is *not*, because the Moon's large mountains are old, heavily degraded impact structures, not strength-limited volcanoes). **Lesson:** the bound is a *ceiling*, not a prediction: a body reaches it only if enough construction (volcanism, tectonics) has occurred and not too much degradation (erosion, impacts, viscous relaxation). Earth, with an active climate system, sits below the ceiling because of the **glacial and fluvial caps** of the table above.
+
+> [!question] Check yourself (answers below)
+> 1. Why does $\Delta h_{max}\propto1/R$ for a fixed mean density? What changes for a body twice as large?
+> 2. At what depth does compressional frictional strength reach $3\times10^8$ Pa (take the numbers above)?
+> 3. Why can a mountain be much higher than $\Delta h_{max}$ *if* it is supported isostatically, and what does the strength limit then apply to?
+> 4. Why would a plateau at 5 km elevation tend to collapse by normal faulting?
+> *Answers.* (1) $g\propto\bar\rho R$ so the load $\rho_cg\Delta h$ grows with $R$; a body twice as large has half the maximum relief. (2) $z=3\times10^8/[(R-1)(\rho-\rho_w)g]=3\times10^8/(2.119\times1700\times9.81)=8.5$ km. (3) Buoyancy of a root carries the weight; strength must support only the part of the topography that is not compensated (the load of a block relative to its isostatic position), so high-standing, thick-crust plateaus are possible. (4) At the depth where the load is carried, extensional strength is $\sim\tfrac13$ of compressional, so the same gravitational stress that the crust can resist in compression exceeds the extensional strength.
+
+> [!connection] Where else these ideas appear
+> - **Mohr–Coulomb failure and pore pressure** are derived in [[LS02 Mechanics and Mathematics Toolkit]]; the same $R=3.12$ sets Anderson's fault regimes in [[LS09 Faults and Earthquakes]] and the stability of slopes in [[LS13 Landslides]].
+> - **Scaling $\Delta h\propto1/g$** is a dimensional argument (stress / weight per volume): [[LS02 Mechanics and Mathematics Toolkit]] (Buckingham Π).
+> - **Gravitational potential energy and plate forces** also appear in [[Climate - Course Map]] only indirectly (the Himalaya and the monsoon, [[LS10 Folds Flexure and Mountain Building]]).
+
+
 ## Further slides explained one by one
 <span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
 
@@ -157,3 +196,12 @@ flowchart LR
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS06:3 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | slide 37–38 (Dielforder et al. 2020) and buzzsaw numbers | [[LS19 Glacial and Aeolian Landforms]] (read from the slide images) | a · slides |
+> | Coulomb strength with depth, $R=3.12$, planetary $\Delta h_{max}$ with real $g$, depth of $2\times10^8$ Pa | my own computation: `scripts/ls_depth_numbers.py` (`LS06`); $\mu_s=0.6$, hydrostatic pore pressure and $\rho_c=2700$ are assumed round values | extra · beyond |
+> | surface gravities of Mars, Venus, Moon, Mercury | standard values recalled, not read from a page | not checked (`[verify]`) |
+> | the Tibet/extension remark | general geology (England and Houseman style); not checked against a page | not checked (`[verify]`) |

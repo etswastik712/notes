@@ -134,6 +134,27 @@ flowchart LR
 >
 > Example: a $125$-ka (MIS 5e) terrace at $z=68$ m: $U=(68-5)/125 000=0.5$ mm yr$^{-1}$: the top panel of the slide; a terrace at $z=5$ m has $U=0$ (stable coast); a terrace at $-20$ m has $U=(-20-5)/125 000=-0.2$ mm yr$^{-1}$: subsiding. Because several terraces of known ages exist ($5a$, $5c$, $5e$, $7$), each gives an independent estimate: agreement tests the assumption of constant $U$. GIA (previous section) also changes local sea level by tens of metres, and is the main source of the “uncertainty” in $\zeta(t)$ for the MIS 5e highstand.
 
+<!-- ls-depth:LS15:1 -->
+> [!derivation] 🟡 Extra · book / 🔵 beyond: converting ice volume to sea level (A&A ch. 16)
+> A&A (PDF p.523) start from the **hypsometry of the oceans**: the ocean volume changes as $\mathrm dV/\mathrm dt=\mathrm d(Az)/\mathrm dt$ (their Eq. 16.1), and *if the ocean area $A$ does not depend on level $z$* (a good approximation for a $\pm120$ m swing because the continental margins are steep) this reduces to
+> $$\frac{\mathrm dz}{\mathrm dt}=\frac1A\frac{\mathrm dV}{\mathrm dt}\qquad(16.2),$$
+> so the sea-level change is directly proportional to the change in global ice volume. Quantitatively, with ocean area $A=3.61\times10^{14}$ m² and the density ratio of ice to water ($917/1000$) (computed):
+> $$\Delta z=\frac{\rho_i}{\rho_w}\frac{V_{ice}}{A}:\quad\text{Greenland }(2.9\times10^6\ \mathrm{km^3})\to\mathbf{7.4\ m};\ \ \text{Antarctica }(26.5\times10^6\ \mathrm{km^3})\to67\ \mathrm m\ (\text{a smaller figure, }\approx58\ \mathrm{m},\ \text{is usually quoted because part of the ice sits below sea level});$$
+> and the **120 m of the Last Glacial Maximum requires $47\times10^6$ km³ of extra ice** (the Laurentide, Fennoscandian and other northern sheets). *Caveats stated by A&A:* the simple scaling fails where the ocean basin area changes appreciably, and it ignores that the *crust itself moves* (isostatic loading by ice and by the extra water, [[LS07 Isostasy]]), so **relative sea level differs from eustatic sea level everywhere**: raised beaches near former ice sheets, drowned landscapes far away. The data constraints they use: sea level $0$ today, $+6$ m at 120 ka (the last interglacial, MIS 5e) and $-120$ m at the LGM; coral samples from Barbados (Peltier and Fairbanks 2006, with the LGM at $\sim26$ ka) give the dated record; the coral *Acropora palmata* lives within 5 m of the surface, so each coral point carries a depth uncertainty of $\pm5$ m, about $4\,\%$ of the glacial amplitude.
+
+> [!question] Check yourself (answers below)
+> 1. How much would sea level rise if all of Greenland's ice ($2.9\times10^6$ km³) melted?
+> 2. Why does land near a former ice sheet *rise* relative to sea level while land far away may *sink*?
+> 3. How much ice volume corresponds to 1 mm of sea-level rise?
+> 4. A raised beach is now 40 m above sea level at a site that was ice-covered. What combination of effects does this record?
+> *Answers.* (1) $7.4$ m. (2) Near the ice the crust rebounds (uplift exceeds the water rise); far away the crust is not rebounding and the added water raises sea level. (3) $1\ \mathrm{mm}\times3.61\times10^{14}\ \mathrm{m^2}\times1000/917=3.94\times10^{11}$ m³ $=394$ km³ of ice. (4) Eustatic sea-level change plus rebound; separating them is the problem of ([[LS07 Isostasy]]).
+
+> [!connection] Where else this appears
+> - **Climate:** the 41 and 100 kyr ice-age cycles and the ocean-temperature feedbacks ([[Climate - Course Map]]); the lag of the ice response is the low-pass filter of [[LS01 Landscapes as Physical Systems]].
+> - **Hypsometry as a distribution:** [[LS03 Digital Elevation Models and Terrain Analysis]]; the 29 % vs 36 % land fraction.
+> - **Time series:** the sea-level curve is a record whose spectrum has peaks at the orbital periods ([[Fourier and Laplace Transforms]] §5.4).
+
+
 ## Further slides explained one by one
 <span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*
 
@@ -156,3 +177,10 @@ flowchart LR
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
+
+<!-- ls-depth:LS15:2 -->
+> [!provenance]- Depth-layer sources (added 2026-10-28)
+> | Topic | Source | Priority |
+> |---|---|---|
+> | Eqs 16.1–16.2, constraints (0, +6 m at 120 ka, $-120$ m at LGM), Barbados corals, Peltier and Fairbanks 2006, *Acropora palmata* depth range | A&A PDF p.523 (read) | b · primary book |
+> | ice-sheet volumes and ocean area, sea-level equivalents | recalled values ($2.9$ and $26.5\times10^{6}$ km³, $3.61\times10^{14}$ m²), `[verify]`; arithmetic in `scripts/ls_depth_numbers.py` (`LS15`) | extra · beyond |
