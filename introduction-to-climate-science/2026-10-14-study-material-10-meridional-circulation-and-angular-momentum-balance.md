@@ -134,3 +134,8 @@ Reference: Atmosphere, Ocean and Climate Dynamics by J. Marshall and A. Plumb
 ## Concepts in Angular_momentum_balnce_and_meridional_circulation_Marshall_and_Plumb
 [[zettel/atmospheric-energy-transport]], [[zettel/atmospheric-angular-momentum-balance]]
 <!-- /kurooto:material45550f84 -->
+
+<!-- kurooto:material92503a45 -->
+## Concepts in Meridional_circulation_Marshall_and_Plumb
+[[zettel/zonal-average]]
+<!-- /kurooto:material92503a45 -->
