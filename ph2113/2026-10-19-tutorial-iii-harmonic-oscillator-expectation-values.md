@@ -37,3 +37,8 @@ Problem set for Tutorial 3.
 - [[06-quantum-mechanics/concepts/oscillator-expectation-values]]: your note on $\langle x^2\rangle$, $\langle p^2\rangle$
 - [[06-quantum-mechanics/concepts/orthonormality-of-eigenfunctions]]: your note on the orthogonality proof
 - [[06-quantum-mechanics/concepts/hermitian-operator]]: why the proof in Problem 3 works
+
+<!-- kurooto:material8c36e347 -->
+## Concepts in Tutorial3
+[[zettel/orthogonality-of-energy-eigenstates]]
+<!-- /kurooto:material8c36e347 -->
