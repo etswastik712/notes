@@ -35,3 +35,8 @@ Tutorial problem set for this week.
 - [[06-quantum-mechanics/concepts/ladder-operators]]: your concept note on $\hat a_\pm$
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]]: Gaussian/Fourier primer (Problem 6)
 - [[ph2113/2026-10-06-tutorial-i-particle-in-a-box]]: Problem 5 there is a related bounded-energy argument
+
+<!-- kurooto:material746533cd -->
+## Concepts in Tutorial2
+[[zettel/harmonic-oscillator-excited-states-generation]]
+<!-- /kurooto:material746533cd -->
