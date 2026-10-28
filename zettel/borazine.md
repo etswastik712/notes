@@ -1,0 +1,28 @@
+---
+id: zettel/borazine
+aliases: ["Borazine", "Inorganic Benzene", "B3N3H6", "triborine triamine"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Borazine
+
+A planar, six-membered inorganic heterocycle consisting of alternating boron and nitrogen atoms with alternating formal single and double bonds. Although isoelectronic and isostructural with benzene, electronegativity differences between boron and nitrogen lead to uneven electron density distribution and polar reactivity.
+
+$$3\text{ B}_2\text{H}_6 + 6\text{ NH}_3 \rightarrow 2\text{ B}_3\text{N}_3\text{H}_6 + 12\text{ H}_2$$
+
+$$3\text{ LiBH}_4 + 3\text{ NH}_4\text{Cl} \rightarrow \text{B}_3\text{N}_3\text{H}_6 + 3\text{ LiCl} + 9\text{ H}_2$$
+
+$$3\text{H}_3\text{N}\cdot\text{BH}_3 \rightarrow \text{B}_3\text{N}_3\text{H}_6 + 6\text{H}_2$$
+
+## Links
+- special-case-of:: [[zettel/inorganic-heterocycle]] — Borazine is a specific six-membered ring example within the broader class of inorganic heterocycles
+- used-in:: [[zettel/dehydropolymerization-of-borazine]] — Thermal dehydrogenation of borazine monomers directly yields polyaminoborazylenes or white boron nitride
+
+---
+Source: Main_group_chemistry_rings, macrocycles and polymers_2026, pp. 1–12
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers|Main_group_chemistry_rings, macrocycles and polymers_2026]] pp. 1–12
+<!-- /kurooto:seen -->

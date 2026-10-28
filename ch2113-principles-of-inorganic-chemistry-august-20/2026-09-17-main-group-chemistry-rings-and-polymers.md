@@ -26,3 +26,8 @@ Main Group Chemistry: Rings and Polymers
 ## Related
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-16-main-group-chemistry-cages-and-clusters]]: diborane, the starting material for borazine
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers]]: tutorial 4 questions 5–10
+
+<!-- kurooto:material9b4dcf36 -->
+## Concepts in Main_group_chemistry_rings, macrocycles and polymers_2026
+[[zettel/inorganic-heterocycle]], [[zettel/borazine]], [[zettel/dehydropolymerization-of-borazine]], [[zettel/cyclophosphazenes]], [[zettel/ring-opening-polymerization-of-hexachlorocyclotriphosphazene]], [[zettel/macromolecular-substitution-of-poly-dichlorophosphazene]]
+<!-- /kurooto:material9b4dcf36 -->
