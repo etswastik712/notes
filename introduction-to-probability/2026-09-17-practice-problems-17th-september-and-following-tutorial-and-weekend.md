@@ -34,3 +34,8 @@ Dear everyone, here are some problems we can discuss from, today (apart from wha
 - [[introduction-to-probability/2026-09-10-practice-problems-weekend-of-12th-september-2026]]: previous sheet (variances, Poisson approximation).
 - [[introduction-to-probability/2026-09-10-class-notes-10th-september-2026]]: pdf and cdf for problem 11.
 - [[08-Probability/PR03 Discrete Random Variables and Distributions]]: their chapter on these distributions.
+
+<!-- kurooto:material7e711675 -->
+## Concepts in Practice problems 17th September and following tutorial and weekend
+[[zettel/hypergeometric-promotion-model]], [[zettel/binomial-promotion-model]], [[zettel/binomial-overbooking-survival-sum]], [[zettel/order-statistic-of-first-rank-in-uniform-random-permutations]], [[zettel/difference-random-variable-of-symmetrical-binomial-counters]], [[zettel/consecutive-comparison-win-count-in-random-permutations]]
+<!-- /kurooto:material7e711675 -->
