@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allotted tutorial room; be on time; calculators allowed (Classroom, posted 2026-10-21). Start time, marks and syllabus are not stated; quiz 1 ran 10:00-11:00 for 15 marks. Likely material: oscillator ladder operators and Tutorials I-III, but this is not confirmed. The midsem is past (solutions 2026-09-24); its rule was no formula sheet, so memorise the formulas below.
+Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allotted tutorial room; be on time; calculators allowed (Classroom, posted 2026-10-21). The 2026-10-26 post confirms the quiz stays in this week's tutorial slot and attaches a finite-well practice question on "this week's material", so the finite well is likely examinable. Start time, marks and syllabus are still not stated; quiz 1 ran 10:00-11:00 for 15 marks. Other likely material: oscillator ladder operators and Tutorials I-III (not confirmed). The midsem is past (solutions 2026-09-24); its rule was no formula sheet, so memorise the formulas below.
 
 ## Covered so far
 - [[ph2113/2026-08-04-lectures-1-2-double-slit-and-compton]]: double-slit, amplitudes vs probabilities, which-path, photoelectric effect, Compton observations and momentum balance
@@ -36,6 +36,8 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 - [[ph2113/2026-10-12-tutorial-ii-harmonic-oscillator-ladder-operators]]: problem set: ladder operators, $\psi_1,\psi_2$, ground-state uniqueness, Gaussians (Gaussian integrals, Fourier transform)
 - [[ph2113/2026-10-19-harmonic-oscillator-ladder-operator-notes]]: oscillator lecture notes: ladder property, ground state, $E_n=\hbar\omega(n+\frac12)$, $\hat a_\pm\psi_n$ normalisation, expectation values (handwritten, partly garbled)
 - [[ph2113/2026-10-19-tutorial-iii-harmonic-oscillator-expectation-values]]: problem set: $\langle p^2\rangle$ via ladder operators, $\langle x\rangle$, $\langle x^2\rangle$ Gaussian integrals, orthogonality of eigenfunctions
+- [[ph2113/2026-10-26-tutorial-iv-finite-well-practice]]: practice question: exact shape of $k/k_0$ for the finite well, from values and derivatives
+- [[ph2113/2026-10-27-finite-well-notes]]: finite well: even/odd bound-state conditions, deep and shallow limits, scattering over the well, transmission and resonances (handwritten, partly reconstructed)
 
 ## Must know
 - Acceptable wavefunction on the whole line with a finite nonsingular potential: finite, single-valued, continuous, normalisable ($\int|\psi|^2dx=1$). $\psi\to0$ is necessary but not sufficient: $1/\sqrt{1+|x|}$ is not normalisable (log divergence) (midsem Q6a).
@@ -78,6 +80,9 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 - Hermitian conjugates: $\int f^*(\hat a_\pm g)\,dx=\int(\hat a_\mp f)^*g\,dx$.
 - Eigenfunctions of a Hermitian $\hat H$ with different eigenvalues are orthogonal: $(E_n-E_m)\int\psi_m^*\psi_n\,dx=0$ (Tutorial III Problem 3).
 - Oscillator expectation values by ladder operators: $\langle x\rangle=\langle p\rangle=0$ in $\psi_n$; $\langle p^2\rangle=\hbar m\omega(n+\tfrac12)$ (derived from $\langle\hat a_+\hat a_-\rangle=n$, $\langle\hat a_-\hat a_+\rangle=n+1$; check against your own notes).
+- Finite well ($V=0$ for $|x|<a$, $V_0$ outside), bound states $E<V_0$: $k_0=\sqrt{2mE}/\hbar$ inside, $k=\sqrt{2m(V_0-E)}/\hbar$ outside (decay constant, written $\kappa$ in the lecture note); $k^2+k_0^2=2mV_0/\hbar^2$. Symmetric $V$ gives even or odd $\psi$. Even: $\psi=G\cos k_0x$ inside, $Ae^{-kx}$ outside, matching $\psi,\psi'$ at $x=a$ gives $\tan(k_0a)=k/k_0$ (Classroom: Tutorial IV, Finite_well.pdf). Odd: $\cot(k_0a)=-k/k_0$ (reconstructed from a garbled scan; check).
+- Finite well limits: deep/wide well gives many states and $k_na\approx n\pi/2$, $E_n\approx n^2\pi^2\hbar^2/8ma^2$ (box of width $2a$), slightly lower; shallow/narrow well has few bound states, always at least one even state, possibly no odd one (Classroom: Finite_well.pdf).
+- Finite well, $E>V_0$ (scattering): $Ae^{ikx}+Be^{-ikx}$ for $x<-a$, $Ce^{ik_0x}+De^{-ik_0x}$ inside, $Fe^{ikx}$ for $x>a$; continuity of $\psi,\psi'$ at $\pm a$ fixes $B,C,D,F$ in terms of $A$; $T=|F/A|^2$, $R=|B/A|^2$, $T+R=1$; $T=[1+\frac{(k^2-k_0^2)^2}{4k^2k_0^2}\sin^2(2k_0a)]^{-1}$ (check), with $T=1$ when $2k_0a=n\pi$ (Classroom: Finite_well.pdf).
 - Photoelectric effect: $E_\gamma=h\nu$, $K_{\max}=h\nu-\Phi$, $\nu_0=\Phi/h$; $eV_s=K_{\max}$; intensity changes photon number (current), not energy per photon; classical wave theory predicts no threshold. $hc\simeq1240$ eV nm.
 - Compton: $\Delta\lambda=\lambda'-\lambda=\frac h{m_ec}(1-\cos\theta)$, $\lambda_C=h/m_ec=2.426$ pm, $0\le\Delta\lambda\le2\lambda_C=4.853$ pm; $p_\gamma=h/\lambda$; $K_e=E_\gamma-E'_\gamma$; $\mathbf p_\gamma=\mathbf p'_\gamma+\mathbf p_e$; derived from $m_ec^2(1/E'-1/E)=1-\cos\theta$. The shift is independent of $\lambda$, so the effect is visible only when $\Delta\lambda/\lambda$ is non-negligible (X-rays: percent; 500 nm: $\sim5\times10^{-6}$). Thomson: $\nu'=\nu$ for $h\nu\ll m_ec^2$ (Classroom: Lectures 2-3).
 - Time is a parameter, not an operator.
@@ -106,12 +111,15 @@ Quiz 2 on 2026-10-29 (Thursday), during the regular tutorial slot, in your allot
 - $\langle p^2\rangle$ (and $\langle x^2\rangle$) in $\psi_n$ by ladder operators: [[ph2113/2026-10-19-tutorial-iii-harmonic-oscillator-expectation-values]] Problem 1.
 - Prove orthogonality of eigenfunctions with different eigenvalues: same note Problem 3.
 - Proofs: symmetric $V$ gives parity eigenfunctions; $E\ge V_{\min}$; unique nodeless ground state (Tutorial I Problems 4-5, Tutorial II Problem 4).
+- Finite well: derive the even/odd quantisation conditions by matching $\psi,\psi'$ at $x=a$, count bound states graphically, plot $k/k_0=\sqrt{z_0^2-z^2}/z$ against $z=k_0a$ (decreasing, infinite at $0$, zero with vertical tangent at $z_0$): [[ph2113/2026-10-26-tutorial-iv-finite-well-practice]], [[ph2113/2026-10-27-finite-well-notes]].
+- Transmission over a finite well and perfect-transmission energies: [[ph2113/2026-10-27-finite-well-notes]].
 
 ## Gaps
 - Quiz 2 (2026-10-29): start time, marks and syllabus are not announced; confirm. Formula sheets were not allowed at the midsem, so formulas above need to be memorised.
+- Finite-well lecture notes are a handwritten scan with garbled text extraction; the odd-state condition and the transmission formula are reconstructed from standard results, and the lecture's notation ($K$, $k$, $k_0$ for inside/outside) is unclear. Compare with the PDF. The Tutorial IV question has no posted solution (the $k/k_0$ analysis in its note is derived, not posted).
 - Lectures 4-5 note (de Broglie and wave function, 2026-08-11) could not be downloaded (RemoteDisconnected); not summarised. Retry with /classnotes.
 - The 2026-08-25 tutorial problem sheet could not be downloaded (URLError), so its problems are not listed; the 2026-08-27 solution guide probably answers it (inferred from title and date).
-- Lecture 9 says a few extra topics in the note will be covered in tutorial/class; which ones is not stated. The tunnelling/step-potential lecture that follows it ($E<V$ regions) has no note yet.
+- Lecture 9 says a few extra topics in the note will be covered in tutorial/class; which ones is not stated. The tunnelling/step-potential lecture ($E<V$ regions, barrier penetration) has no note yet.
 - The midsem question paper itself is not filed, only its solutions (questions inferred); Q4a and Q5 inputs were reconstructed.
 - Tutorials I, II and III and the 09-13 tutorial have no posted solutions; their problems are unworked in the notes (the $\langle p^2\rangle$ result above is derived, not posted).
 - The particle-in-a-box and oscillator handwritten scans are partly illegible/garbled (box: normalisation constant, final $\langle x^2\rangle$, $\langle p^2\rangle$; oscillator: the $\langle p^2\rangle$ line, parts of the factorisation step).
