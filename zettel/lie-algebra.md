@@ -1,6 +1,6 @@
 ---
 id: zettel/lie-algebra
-aliases: ["Lie Algebra", "abstract Lie algebra"]
+aliases: ["Lie Algebra", "abstract Lie algebra", "Lie Alg"]
 tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
 trust_tier: agent_written
 ---
@@ -17,5 +17,14 @@ Source: DG19, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG20]] pp. 1–5
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG19]] pp. 1–5
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| DG20, pp. 1–5 | $g$ | Lie algebra underlying vector space |
+| DG19, pp. 1–5 | $\mathfrak{g}$ | Lie algebra vector space |
+<!-- /kurooto:notation -->
