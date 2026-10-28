@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">CH03: molecular orbital theory of polyatomics in one page</text>
+<line x1="316.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="316.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="692.8" y1="192.1" x2="480.3" y2="272.9" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="501.0" y1="330.0" x2="529.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="540.9" y1="387.0" x2="320.6" y2="466.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="637.8" y1="389.1" x2="562.2" y2="460.9" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="741.0" y1="390.0" x2="789.0" y2="460.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="30.0" y="90.0" width="280" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">N AOs -&gt; N MOs</text>
+<text x="170" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">rules: nodes = energy,</text>
+<text x="170" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">low AOs -&gt; low MOs</text>
+<rect x="355.0" y="90.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">H3: linear vs triangle</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">1/2, 1/sqrt2, 1/2</text>
+<text x="500" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">electron count decides</text>
+<rect x="685.0" y="90.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">symmetry labels</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">a, b non-degenerate,</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">e double, t triple</text>
+<rect x="165.0" y="275.0" width="330" height="110" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Ligand-group orbitals</text>
+<text x="330" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">n_i = (1/h) sum chi_G chi_i</text>
+<text x="330" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">only same-symmetry mix</text>
+<rect x="535.0" y="275.0" width="330" height="110" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Fill from the bottom</text>
+<text x="700" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">bonding, nonbonding, antibonding</text>
+<text x="700" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">HOMO = lone pair</text>
+<rect x="25.0" y="465.0" width="290" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">NH3 (C3v): a1 + e</text>
+<text x="170" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">1a1^2 1e^4 2a1^2</text>
+<text x="170" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">PES 11, 16 eV</text>
+<rect x="355.0" y="465.0" width="290" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">SF6 (Oh): a1g + eg + t1u</text>
+<text x="500" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">8 e- in bonding MOs</text>
+<text x="500" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">bond order 0.67, no d</text>
+<rect x="685.0" y="465.0" width="290" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">H2O (C2v): a1 + b1</text>
+<text x="830" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">2a1 1b1 3a1 1b2</text>
+<text x="830" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">two different lone pairs</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">CH-2113 slides 40-52; S&amp;A Ch.2; point groups from the Group Theory notes</text>
+</svg>

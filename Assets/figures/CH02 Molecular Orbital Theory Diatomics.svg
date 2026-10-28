@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">CH02: molecular orbital theory of diatomics in one page</text>
+<line x1="316.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="679.2" y1="183.4" x2="320.8" y2="286.6" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="321.0" y1="330.0" x2="349.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="330.0" x2="679.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="759.4" y1="193.6" x2="407.1" y2="461.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="496.0" y1="520.0" x2="529.0" y2="520.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="30.0" y="90.0" width="280" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Orbital approximation</text>
+<text x="170" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">psi = psi(1) psi(2) ...</text>
+<text x="170" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">one-electron MOs</text>
+<rect x="355.0" y="90.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">LCAO</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">psi = cA chiA + cB chiB</text>
+<text x="500" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">N AOs -&gt; N MOs</text>
+<rect x="685.0" y="90.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">in phase: bonding</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">out of phase: node = antibonding</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">H2: 11.4 eV, 4.5 eV</text>
+<rect x="25.0" y="275.0" width="290" height="110" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Homonuclear</text>
+<text x="170" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">4 sigma + 4 pi from 4+4 AOs</text>
+<text x="170" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">bond order (nb - na)/2</text>
+<rect x="355.0" y="275.0" width="290" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">s-p mixing</text>
+<text x="500" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Li2-N2: pi_u below sigma_g</text>
+<text x="500" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">O2, F2: sigma_g below pi_u</text>
+<rect x="685.0" y="275.0" width="290" height="110" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Magnetism</text>
+<text x="830" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">O2: 2 unpaired (triplet)</text>
+<text x="830" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">B2 para, C2 dia</text>
+<rect x="170.0" y="465.0" width="320" height="110" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Heteronuclear</text>
+<text x="330" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">EN atom dominates bonding MO</text>
+<text x="330" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">CO 1070 vs N2 946 kJ/mol</text>
+<rect x="535.0" y="465.0" width="330" height="110" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">HF: 2 e- in the bond, 6 on F</text>
+<text x="700" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">CO: HOMO 3sigma, LUMO 2pi on C</text>
+<text x="700" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">sigma-donation + pi-back-donation</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">CH-2113 slides 27-39; S&amp;A Ch.2</text>
+</svg>

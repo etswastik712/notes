@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">CH07: cages and clusters in one page</text>
+<line x1="316.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="692.8" y1="192.1" x2="480.3" y2="272.9" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="501.0" y1="330.0" x2="529.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="540.9" y1="387.0" x2="315.1" y2="468.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="217.4" y1="194.5" x2="452.6" y2="465.5" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="520.0" x2="679.0" y2="520.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="30.0" y="90.0" width="280" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="135.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Group 13: B electron deficient</text>
+<text x="170" y="155.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">B-Si diagonal, Tl+ inert pair</text>
+<rect x="355.0" y="90.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">B2H6: 12 e-</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">4 terminal 2c-2e</text>
+<text x="500" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">2 bridging 3c-2e</text>
+<rect x="685.0" y="90.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">3c-2e MO: alpha +- sqrt2 beta, alpha</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">B-B and B-B-B bonds too</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">styx numbers</text>
+<rect x="165.0" y="275.0" width="330" height="110" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Deltahedra</text>
+<text x="330" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">closed, triangular faces</text>
+<text x="330" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E = 3n - 6, F = 2n - 4</text>
+<rect x="535.0" y="275.0" width="330" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Wade: BH = 2 e-, extra H = 1</text>
+<text x="700" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">closos n+1, nido n+2,</text>
+<text x="700" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">arachno n+3, hypho n+4</text>
+<rect x="25.0" y="470.0" width="290" height="100" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Zintl ions: g - 2n</text>
+<text x="170" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Sn5(2-) closo, Sn9(4-) nido,</text>
+<text x="170" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Bi8(2+) arachno</text>
+<rect x="355.0" y="470.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="515.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">P4: 6 edges, 60 degrees</text>
+<text x="500" y="535.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">P4O6, P4O10, P4S3, P4S10</text>
+<rect x="685.0" y="470.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="515.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">2Ca3(PO4)2 + 6SiO2 + 10C</text>
+<text x="830" y="535.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">-&gt; P4 + 10CO + 6CaSiO3</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">CH-2113 slides 90-108; Tutorial 4 Q1-Q4; Wade 1971</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1000" height="670" rx="10" fill="#fcfcfb"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#eb6834"/></marker></defs>
+<text x="500.0" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#0b0b0b">CH09: redox in one page</text>
+<line x1="316.0" y1="140.0" x2="349.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="140.0" x2="679.0" y2="140.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="408.0" y1="193.0" x2="270.7" y2="272.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="738.0" y1="193.0" x2="600.7" y2="272.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="651.0" y1="330.0" x2="679.0" y2="330.0" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="759.4" y1="193.6" x2="400.6" y2="466.4" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<line x1="562.2" y1="389.1" x2="643.0" y2="465.9" stroke="#eb6834" stroke-width="2.6" marker-end="url(#ah)"/>
+<rect x="30.0" y="90.0" width="280" height="100" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Half-reactions</text>
+<text x="170" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">balance O, H, charge</text>
+<text x="170" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Ox + e- -&gt; Red</text>
+<rect x="355.0" y="90.0" width="290" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">DG0 = -nu F E0 = -RT ln K</text>
+<text x="500" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">59.16 mV per decade</text>
+<text x="500" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">+-2 V = 1e+-34</text>
+<rect x="685.0" y="90.0" width="290" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="125.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Electrochemical series</text>
+<text x="830" y="145.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">reduced form reduces</text>
+<text x="830" y="165.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">the couples above it</text>
+<rect x="25.0" y="275.0" width="290" height="110" rx="12" fill="#dbe8f9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="170" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Trends in E0</text>
+<text x="170" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">cycle: sublimation, ionisation,</text>
+<text x="170" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">hydration (Li -3.04 V)</text>
+<rect x="355.0" y="275.0" width="290" height="110" rx="12" fill="#f8d9d9" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="500" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Nernst</text>
+<text x="500" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E = E0 - (RT/nuF) ln Q</text>
+<text x="500" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">pH slope -(m/n) 59 mV</text>
+<rect x="685.0" y="275.0" width="290" height="110" rx="12" fill="#eeeeea" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="830" y="315.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Water: window -0.059 pH</text>
+<text x="830" y="335.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">to 1.23 - 0.059 pH</text>
+<text x="830" y="355.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">O2 oxidises Fe2+, Cu</text>
+<rect x="170.0" y="470.0" width="320" height="100" rx="12" fill="#fbe0d4" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="330" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Disproportionation</text>
+<text x="330" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E0(to lower) &gt; E0(from upper)</text>
+<text x="330" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">Cu+, HClO, Mn(VI)</text>
+<rect x="540.0" y="470.0" width="320" height="100" rx="12" fill="#d3f1e6" stroke="#0b0b0b" stroke-width="1.6"/>
+<text x="700" y="505.0" text-anchor="middle" font-size="15" fill="#0b0b0b" font-weight="600">Complexation</text>
+<text x="700" y="525.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">E0(ML) = E0(M) - 0.059 log(Kox/Kred)</text>
+<text x="700" y="545.0" text-anchor="middle" font-size="14" fill="#0b0b0b" font-weight="400">CN-: Fe(III) x1e7, Ru(II)</text>
+<text x="500.0" y="652" text-anchor="middle" font-size="13" fill="#52514e">Shriver and Atkins Ch.5 pp.147-161 (Quiz 2 scope)</text>
+</svg>
