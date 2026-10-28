@@ -1,6 +1,6 @@
 ---
 id: zettel/uncountable-set
-aliases: ["Uncountable set", "uncountable"]
+aliases: ["Uncountable set", "uncountable", "Countable Set", "countability", "uncountability"]
 tags: [zettel, agent-written, intro-to-proofs]
 trust_tier: agent_written
 ---
@@ -17,5 +17,6 @@ Source: Assignment-8, pp. 1–2
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 - [[intro-to-proofs/2026-10-22-assignment-8|Assignment-8]] pp. 1–2
 <!-- /kurooto:seen -->

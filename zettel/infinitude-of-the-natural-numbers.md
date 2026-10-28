@@ -1,0 +1,23 @@
+---
+id: zettel/infinitude-of-the-natural-numbers
+aliases: ["Infinitude of the Natural Numbers", "N is infinite"]
+tags: [zettel, agent-written, intro-to-proofs]
+trust_tier: agent_written
+---
+
+# Infinitude of the Natural Numbers
+
+The set of natural numbers N is an infinite set, proven by demonstrating a bijection between N and the proper subset of odd natural numbers.
+
+$$f : \mathbb{N} \to O, \quad n \mapsto 2n - 1$$
+
+## Links
+- used-in:: [[zettel/uncountable-set]] — Distinguishes countably infinite sets from finite countable sets
+
+---
+Source: Countable-Uncountable-sets, pp. 1–6
+
+<!-- kurooto:seen -->
+## Seen in
+- [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
+<!-- /kurooto:seen -->

@@ -175,3 +175,8 @@ Every $x \in (0, 1)$ can be written as $x = 0.a_1 a_2 a_3 \dots = \sum_{k=1}^\in
 - [[11-proofs-analysis-topology/pa04-functions-and-cardinality]]: lecture chapter on bijections and equicardinality
 - [[intro-to-proofs/2026-10-19-solutions-assignment-7]]: subset of countable set is countable, and product of countably infinite sets is countably infinite
 - [[intro-to-proofs/2026-10-22-assignment-8]]: assignment sheet practising uncountability proofs and interval bijections
+
+<!-- kurooto:material6cdf64b0 -->
+## Concepts in Countable-Uncountable-sets
+[[zettel/cardinality-equivalence]], [[zettel/uncountable-set]], [[zettel/countability-of-the-rationals]], [[zettel/diagonal-traversal-enumeration]], [[zettel/finite-set-proper-subset-non-equivalence]], [[zettel/infinitude-of-the-natural-numbers]], [[zettel/normalized-decimal-expansion]], [[zettel/cantor-diagonal-argument]], [[zettel/uncountability-of-the-unit-interval]], [[zettel/uncountability-of-the-real-numbers]]
+<!-- /kurooto:material6cdf64b0 -->
