@@ -37,3 +37,8 @@ Suhas
 - [[introduction-to-climate-science/2026-10-22-study-material-12-large-scale-circulation-patterns]]: Hartmann's shorter account of monsoonal climates
 - [[introduction-to-climate-science/2026-09-03-study-material-3-pressure-and-geopotential]]: hydrostatic balance and the pressure–temperature relation used in eqns [4]–[6]
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs]]: diurnal and heat-capacity lag of surface temperature
+
+<!-- kurooto:material766a1084 -->
+## Concepts in Dynamical_theory_of_Monsoon_Webster
+[[zettel/monsoon-circulation]]
+<!-- /kurooto:material766a1084 -->
