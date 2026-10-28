@@ -56,3 +56,8 @@ Dear everyone, here are the class notes for today. Please note that certain conc
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: $E[g(X)]$ for discrete $X$, whose analogue is (1.3).
 - [[08-Probability/PR05 Continuous Random Variables]]: their own chapter on continuous random variables.
 - [[08-Probability/PR06 Moments Generating Functions and Limit Theorems]]: moments in their own notes.
+
+<!-- kurooto:material6511a685 -->
+## Concepts in Class notes 10th September 2026
+[[zettel/continuous-random-variable]], [[zettel/probability-density-function]], [[zettel/linearity-of-expectation]]
+<!-- /kurooto:material6511a685 -->
