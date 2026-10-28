@@ -1,6 +1,6 @@
 ---
 id: zettel/complete-vector-field
-aliases: ["Complete Vector Field", "complete"]
+aliases: ["Complete Vector Field", "complete", "complete vector fields"]
 tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
 trust_tier: agent_written
 ---
@@ -17,4 +17,5 @@ Source: DG22, pp. 1–4
 <!-- kurooto:seen -->
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
+- [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG23]] pp. 1–5
 <!-- /kurooto:seen -->
