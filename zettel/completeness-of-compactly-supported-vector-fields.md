@@ -1,0 +1,22 @@
+---
+id: zettel/completeness-of-compactly-supported-vector-fields
+aliases: ["Completeness of Compactly Supported Vector Fields", "compactly supported vector fields are complete"]
+tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
+trust_tier: agent_written
+---
+
+# Completeness of Compactly Supported Vector Fields
+
+Every smooth vector field with compact support on a manifold is complete.
+
+## Links
+- special-case-of:: [[zettel/complete-vector-field]] — Establishes completeness for the broad class of compactly supported vector fields
+- needs:: [[zettel/uniform-time-lemma]] — Proved by finding a uniform time interval of existence on the compact support
+
+---
+Source: DG22, pp. 1–4
+
+<!-- kurooto:seen -->
+## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
+<!-- /kurooto:seen -->
