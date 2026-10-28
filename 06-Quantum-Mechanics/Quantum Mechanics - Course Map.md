@@ -26,8 +26,9 @@ flowchart LR
   C --> E["QM05<br/>harmonic oscillator<br/>(lecture, Tutorials II-III)"]
   D --> E
   E --> F["QM06 (extra)<br/>number basis, Hermite,<br/>coherent, thermal"]
+  D --> G["QM07 (extra/book)<br/>finite well, penetration,<br/>delta potential"]
 ```
-Central thread: **a wave amplitude gives probabilities (QM01) → a law for how the amplitude changes (QM02) → the general rules for asking questions of a state (QM03) → two systems solved completely, one by boundary conditions (QM04) and one by algebra (QM05) → the algebra's full toolbox (QM06).**
+Central thread: **a wave amplitude gives probabilities (QM01) → a law for how the amplitude changes (QM02) → the general rules for asking questions of a state (QM03) → two systems solved completely, one by boundary conditions (QM04) and one by algebra (QM05) → the algebra's full toolbox (QM06) → the finite well relaxes the infinite walls (QM07).**
 
 ## Chapters
 | # | Chapter | Sources | Status |
@@ -38,6 +39,7 @@ Central thread: **a wave amplitude gives probabilities (QM01) → a law for how 
 | 04 | [[QM04 The Particle in a Box]] | handwritten box lecture, SO §8.2, Tutorial I | draft |
 | 05 | [[QM05 The Harmonic Oscillator]] | **oscillator lecture (HO)**, Tutorial II, **Tutorial III**, Tutorial note P5–P6 | draft |
 | 06 | [[QM06 The Oscillator Toolbox]] (extra) | Griffiths §2.3; derived here, all numbers in `qm_numbers.py` | draft (🟡/🔵) |
+| 07 | [[QM07 The Finite Square Well]] (extra/book) | Griffiths §2.5–§2.6; Sakurai §2.5; [[Finite_well.pdf\|Finite Well notes]] | draft (🟡/🔵) |
 | — | [[Quantum Mechanics Quiz Prep]] | mock quiz and 3 Sep quiz (Classroom summaries QZ1, QZ2) | draft |
 
 ```dataview
@@ -70,7 +72,7 @@ SORT chapter ASC
 - **Lectures 1–5** (photoelectric, Compton, de Broglie, early wave mechanics) are not in the folder; QM01 §8 rebuilds them from the AI monograph and flags it `[!verify]`. The two quizzes (Sep 3) **did** examine them, as explanations ([[Quantum Mechanics Quiz Prep]]), so they are examinable even though no lecture note is present.
 - **Oscillator lecture:** now present ([[Harmonic_oscillator.pdf]]); it stops at $\langle p^2\rangle$, so the superposition dynamics (QM05 §6), the forbidden-region numbers (§9) and all of QM06 are not in it. The lecture's page 9 has a sign slip (flagged). Authorship of the handwritten lectures is not stated.
 - **Quiz texts:** the actual 3 Sep question texts are missing; the Classroom PDFs are not in the folder; the summary of Q5(b) has inconsistent vectors (see the `[!verify]` in the quiz-prep page). No assessment after 3 Sep is announced.
-- **Tunnelling and step potentials** (announced at the end of Lecture 9), finite wells, delta-function scattering: no source. QM02 §10 has only the matching conditions.
+- **Tunnelling and step potentials** (announced at the end of Lecture 9), finite wells, delta-function scattering: the finite well is now in [[QM07 The Finite Square Well]] (extra/book). Step-potential scattering and tunnelling through a barrier remain absent.
 - **Hydrogen, angular momentum, spin, perturbation theory**: only in the AI "QM II" monographs (secondary, beyond this course), not used.
 - **Authorship of the typed notes** is not stated in the files; they are treated as the instructor's.
 
@@ -79,7 +81,7 @@ SORT chapter ASC
 - **Waves:** Fourier analysis, group and phase velocity, standing waves ([[Waves - Course Map]]).
 - **Probability:** the Born rule, expectation, variance, conditioning ([[Probability - Course Map]], [[Bayes' Theorem]]).
 - **Group theory:** the two-level matrices $X,Y,Z$, the ring's rotations and $U(1)$ phase, the ladder algebra ([[Group Theory - Course Map]]).
-- **Foundations:** [[Dimensional Analysis]], [[Gaussian Integral]], [[Fixed Points and Linear Stability]].
+- **Foundations:** [[Dimensional Analysis]], [[Gaussian Integral]], [[Fixed Points and Linear Stability]], [[Dirac Algebra]].
 - **Chemistry:** the box and ring models of conjugated molecules ([[Inorganic Chemistry - Course Map]]).
 
 ## Revision
