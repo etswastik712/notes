@@ -14,7 +14,7 @@ def autocrop(im, pad=14, bg_tol=12):
     return im.crop((max(0, x0 - pad), max(0, y0 - pad), min(im.width, x1 + pad), min(im.height, y1 + pad)))
 
 def main(pdf, prefix, width=1300, first=1, last=None):
-    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Assets", "crops", "ls")
+    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Assets", "crops", os.environ.get("RS_SUB", "ls"))
     os.makedirs(out, exist_ok=True)
     doc = fitz.open(pdf)
     last = last or len(doc)
