@@ -72,3 +72,8 @@ Coursework sheet on countability, uncountability, Cantor's theorem, interval bij
 - [[11-proofs-analysis-topology/concepts/principle-of-mathematical-induction]]: theoretical foundations of PMI and inductive sets
 - [[11-proofs-analysis-topology/pa05-induction-and-the-number-systems]]: lecture chapter on induction techniques and number systems
 - [[11-proofs-analysis-topology/concepts/uncountable-set]]: Cantor's theorem and diagonal proofs
+
+<!-- kurooto:materialac9d6a1f -->
+## Concepts in Assignment-8
+[[zettel/uncountable-set]], [[zettel/inductive-set]], [[zettel/cantor-s-theorem]]
+<!-- /kurooto:materialac9d6a1f -->
