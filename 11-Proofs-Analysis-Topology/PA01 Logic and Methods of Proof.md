@@ -41,6 +41,17 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 > [!intuition] The one-sentence story
 > Mathematics is written in a small precise dialect of English; logic is the grammar of that dialect, and the first job of a proof is to read the statement correctly (what is assumed, what is claimed, and what its negation would say).
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["statements,<br/>connectives"] --> B["truth tables,<br/>equivalence"]
+  B --> C["tautologies,<br/>contradictions"]
+  B --> D["conditionals:<br/>converse, contrapositive"]
+  D --> E["predicates,<br/>quantifiers"]
+  E --> F["methods of proof"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Statements and connectives
 <span class="scope-taught">taught</span> *Assignment 1*
 
@@ -65,6 +76,9 @@ Notation (Assignment 1): $=$ is for equality of mathematical **objects**; $\sim$
 
 ## 2. Truth tables and logical equivalence
 <span class="scope-taught">taught</span> *Assignment 1, questions 1 and 3*
+
+> [!intuition] A truth table is a logic calculator
+> Two statements are the same *logically* exactly when their columns agree on every row. Checking a table replaces arguing.
 
 Forms $\Phi,\Psi$ are **logically equivalent** ($\Phi\sim\Psi$) if they have the same truth value under every assignment. With $n$ variables there are $2^n$ rows.
 
@@ -134,6 +148,9 @@ If $P$ is any true statement then $P$ and $0\ne1$ have the same truth value ($P\
 ## 5. Conditionals in words, converse, contrapositive, negation
 <span class="scope-taught">taught</span> *Assignment 2, questions 1–2*
 
+> [!intuition] 'If P then Q' is only broken by P true and Q false
+> A promise is violated only if the condition holds and the result fails. So the contrapositive ($\neg Q\Rightarrow\neg P$) is equivalent, but the converse ($Q\Rightarrow P$) is a different claim.
+
 For $P\Rightarrow Q$ the following all say the same thing: "if $P$ then $Q$"; "$Q$ if $P$"; "$P$ **only if** $Q$"; "$P$ is **sufficient** for $Q$"; "$Q$ is **necessary** for $P$". The **converse** is $Q\Rightarrow P$ (not equivalent); the **contrapositive** is $\neg Q\Rightarrow\neg P$ (equivalent).
 
 > [!example] Assignment 2 Q1
@@ -147,6 +164,9 @@ For $P\Rightarrow Q$ the following all say the same thing: "if $P$ then $Q$"; "$
 
 ## 6. Predicates and quantifiers
 <span class="scope-taught">taught</span> *Assignment 2, questions 3–8*
+
+> [!intuition] $\forall$ is an infinite AND, $\exists$ an infinite OR
+> Negating swaps them: 'not every swan is white' means 'some swan is not white'. Order of mixed quantifiers matters: $\forall x\exists y$ is weaker than $\exists y\forall x$.
 
 A **predicate** $P(x)$ becomes a statement once $x$ is given a value in its **domain**. Quantifiers: $\forall x\,P(x)$ (for all) and $\exists x\,P(x)$ (there exists), with $\forall x\in A\,P\equiv\forall x\,(x\in A\Rightarrow P)$ and $\exists x\in A\,P\equiv\exists x\,(x\in A\wedge P)$.
 
@@ -186,6 +206,9 @@ An integer $p\ge2$ is **prime** if its only divisors are 1 and $p$. (a) "Wheneve
 
 ## 8. Methods of proof
 <span class="scope-extra-book">extra · book</span> *AI notes Part I ch. 3; Sundstrom Ch. 3*
+
+> [!intuition] Choose the proof by what the negation gives you
+> Direct if the hypothesis hands you something to work with; contrapositive if the negated conclusion does; contradiction if assuming the opposite quickly gets absurd; induction if the claim is a list indexed by $\mathbb N$.
 
 ![[PA01 Proof Strategies by Logical Form.svg]]
 *Figure PA1.1. Choosing a proof strategy from the logical form of the goal (SVG; an editable Excalidraw copy is in `Assets/excalidraw/`).*

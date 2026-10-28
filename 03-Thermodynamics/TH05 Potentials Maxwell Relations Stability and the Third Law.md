@@ -40,11 +40,26 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 > [!intuition] The one-sentence story
 > The right "energy" to minimise depends on what you hold fixed: keep the system isolated and entropy is maximal; keep $T$ fixed and $F$ is minimal; keep $T$ and $P$ fixed and $G$ is minimal. Each potential is the energy with the **conjugate pair** swapped, and the equality of mixed second derivatives then gives relations between measurable quantities for free.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["which variable is fixed?<br/>picks the potential"] --> B["U, H, F, G"]
+  B --> C["chemical work:<br/>mu, grand potential"]
+  B --> D["Maxwell relations<br/>(mixed 2nd derivatives)"]
+  D --> E["stability:<br/>C_V > 0, kappa_T > 0"]
+  C --> F["Gibbs-Duhem,<br/>phase equilibrium"]
+  E --> G["third law:<br/>S -> 0"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ![[TH05 The Potentials by Legendre Transform.svg]]
 *Figure TH5.0. The potentials as Legendre transforms of $E(S,x,N)$ (MIT Lecture 3).*
 
 ## 1. Approach to equilibrium and the potentials
 <span class="scope-taught">taught</span> *L3 §I.G ([[df0c4e121858c0be246b496dd8c39d2c_MIT8_333F13_Lec3.pdf#page=1|pp.1–3]])*
+
+> [!intuition] The potential is the thing nature minimises under your constraints
+> Hold $T$ and $V$ fixed and the system minimises $F=U-TS$; hold $T$ and $P$ and it minimises $G=U-TS+PV$. Same physics, different bookkeeping for the surroundings.
 
 Evolution towards equilibrium obeys the second law: for an adiabatically isolated system $\delta S\ge0$. For systems that are not isolated one can define **other thermodynamic potentials** that are extremal in equilibrium. A ball of mass $m$ on a spring (constant $K$, extension $x$) settles where $\tfrac12Kx^2-mgx$ is minimal, at $x_{\rm eq}=mg/K$, after oscillating and losing energy to friction: the same logic for thermodynamics.
 
@@ -107,6 +122,9 @@ For a fluid $G=\mu N$ and $\mathrm d\mu=-s\,\mathrm dT+v\,\mathrm dP$ (per parti
 ## 4. Maxwell relations
 <span class="scope-taught">taught</span> *L3 §I.H ([[df0c4e121858c0be246b496dd8c39d2c_MIT8_333F13_Lec3.pdf#page=5|pp.5–6]])*
 
+> [!intuition] Maxwell relations let you measure the unmeasurable
+> Entropy has no meter, but $(\partial S/\partial V)_T=(\partial P/\partial T)_V$ and the right side does. They all come from one fact: for a smooth potential the order of the two derivatives does not matter.
+
 Mixed second derivatives of a state function do not depend on the order of differentiation, so each potential yields a relation between measurable derivatives.
 
 - From $E(S,x)$ with $T=(\partial E/\partial S)_x$, $J_i=(\partial E/\partial x_i)_S$: $\ \big(\frac{\partial T}{\partial x_i}\big)_S=\big(\frac{\partial J_i}{\partial S}\big)_x$, equivalently $\big(\frac{\partial S}{\partial J_i}\big)_{x}=\big(\frac{\partial x_i}{\partial T}\big)_S$ (L3 eq. I.54).
@@ -129,6 +147,9 @@ Fluid forms ($J=-P$, $x=V$): $\ (\partial S/\partial V)_T=(\partial P/\partial T
 
 ## 5. Stability conditions
 <span class="scope-taught">taught</span> *L4 §I.I ([[97dcd8dee3d3301cd7c27745b17b10b5_MIT8_333F13_Lec4.pdf#page=1|pp.1–3]])*
+
+> [!intuition] A ball in a bowl, not on a hill
+> Stable equilibrium needs the potential to be convex: $C_V>0$ and $\kappa_T>0$. If $\kappa_T$ were negative squeezing the gas would *lower* its pressure and it would collapse.
 
 A particle in a potential settles at a **minimum**, with the loss of energy to friction guaranteeing it. In thermodynamics the requirement that spontaneous changes always increase entropy constrains the **response functions**. Divide a homogeneous system at equilibrium (intensive $T,J,\mu$; extensive $E,x,N$) into two halves A and B, and let A transfer $\delta E,\delta x,\delta N$ to B at fixed totals; to first order the intensive variables of A change by $\delta T,\delta J,\delta\mu$ and those of B by the opposite amounts. Expanding $S=S_A+S_B=\sum(E/T-J\cdot x/T-\mu N/T)$ about equilibrium (the first-order terms vanish) gives the second-order change
 $$\delta S=-\frac{2}{T_A}\big[\delta T\,\delta S_A+\delta J\cdot\delta x+\delta\mu\,\delta N\big].$$
@@ -154,6 +175,9 @@ This is a quadratic form that must be positive for all $\delta T,\delta x$. Cons
 
 ## 6. The third law
 <span class="scope-taught">taught</span> *L4 §I.J ([[97dcd8dee3d3301cd7c27745b17b10b5_MIT8_333F13_Lec4.pdf#page=4|pp.4–6]])*
+
+> [!intuition] Why absolute zero cannot be reached
+> Cooling steps remove less entropy the colder you get because $S\to0$; infinitely many steps would be needed. The third law is a statement about entropy differences vanishing, not just about a number.
 
 Entropy differences follow from the second law, $\Delta S=\int\bar\mathrm dQ_{\rm rev}/T$. Low-temperature experiments show that $\Delta S(X,T)\to0$ as $T\to0$ for any coordinates $X$ (independent of the other laws).
 

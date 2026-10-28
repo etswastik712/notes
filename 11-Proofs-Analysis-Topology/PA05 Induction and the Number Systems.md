@@ -39,8 +39,21 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 > [!intuition] The one-sentence story
 > The natural numbers are what you reach from $1$ by adding $1$ again and again, and nothing else; induction is the precise form of "nothing else", so a property passed from each number to its successor holds for all of them.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["induction:<br/>base case + step"] --> B["warnings:<br/>false proofs"]
+  A --> C["well-ordering principle"]
+  C --> D["strong induction"]
+  D --> E["where the numbers<br/>come from"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. The Principle of Mathematical Induction
 <span class="scope-taught">taught</span> *Assignment 8, Definition 2, Examples and Remark*
+
+> [!intuition] Dominoes
+> The base case tips the first domino; the inductive step says each domino tips the next. Both are needed: a step without a base is a row of dominoes nobody pushes; a base without a step is one fallen domino.
 
 Throughout $\mathbb N=\{1,2,3,\dots\}$.
 
@@ -85,6 +98,9 @@ Throughout $\mathbb N=\{1,2,3,\dots\}$.
 ## 3. The well-ordering principle
 <span class="scope-taught">taught</span> *used in Lecture 18 (black box 3) and Assignment 7 Q4 (the least $n_1$ with $f(n_1)\in S$)*
 
+> [!intuition] 'Every nonempty set of naturals has a least element'
+> This is induction in different clothing, and it is the engine of proofs by 'minimal counterexample': if a counterexample exists, the smallest one leads to a contradiction.
+
 > [!key] Well-ordering principle (WOP)
 > Every **non-empty** subset of $\mathbb N$ has a **least element**.
 
@@ -98,6 +114,9 @@ It is equivalent to PMI.
 
 ## 4. Strong induction and the finite-set black boxes
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 12–13; Sundstrom Ch. 4*
+
+> [!intuition] Strong induction lets you use *all* smaller cases
+> Prime factorisation: $n$ is prime or $ab$ with $a,b<n$, so assume the claim for every smaller number. Weak induction (only $n-1$) would not be enough.
 
 > [!key] Strong induction
 > If $P(1)$ holds and $[P(1)\wedge\dots\wedge P(k)]\Rightarrow P(k+1)$ for all $k$, then $P(n)$ for all $n$. (Equivalent to PMI and to WOP.)

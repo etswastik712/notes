@@ -45,11 +45,33 @@ tags: [subject/foundations, type/chapter, extra/book, extra/beyond, src/book, sr
 > [!intuition] The one-sentence story
 > Quantum mechanics is linear algebra on an infinite-dimensional complex vector space: physical states are unit-norm kets, physical questions are Hermitian operators whose eigenvalues are the possible measurement outcomes, inner products provide the probability amplitudes, and Dirac's bra-ket notation unifies wave mechanics, matrix mechanics, and momentum space into a single coordinate-free geometric framework.
 
+<!-- da-patch-v1 -->
+![[Dirac Algebra Map.svg]]
+*Diagram DA.0. The chapter in one page: kets and bras, operators, adjoints, completeness, the two continuous representations, unitary translation, measurement and dynamics. Editable source: [[Dirac Algebra Map.excalidraw]].*
+
+> [!intuition] How to read this chapter: five pictures to keep in your head
+> 1. **A ket is an arrow, a wave function is its shadow.** The arrow $|\alpha\rangle$ is the state; $\psi(x)=\langle x|\alpha\rangle$ is its shadow on the "position ruler", $\tilde\psi(p)=\langle p|\alpha\rangle$ its shadow on the "momentum ruler", $c_n=\langle n|\alpha\rangle$ its shadow on the "energy ruler". Same arrow, three rulers (Figure DA.1).
+> 2. **A bra is a measuring device.** $\langle\alpha|$ eats a ket and returns a number: how much of it lies along $\alpha$. Probabilities are $|\text{that number}|^2$.
+> 3. **Inserting $\mathbf{1}=\sum|a\rangle\langle a|$ is free.** It multiplies by 1, so it changes nothing, but it gives you a basis to stand in. Nearly every proof below is "insert 1, then use what you know about the basis".
+> 4. **Hermitian = a ruler that does not lie**: real readings, perpendicular axes. Unitary = a rigid rotation of Hilbert space: lengths and overlaps preserved. Translation and time evolution are unitary; position, momentum and energy are Hermitian.
+> 5. **Non-commuting = different rulers.** If $[A,B]\neq0$ no single set of axes is sharp for both; sharpening the state along $A$ smears it along $B$, and Robertson's inequality is the exchange rate.
+
+> [!pitfall] Six slips that recur in every Dirac-notation calculation
+> 1. $c|\alpha\rangle\leftrightarrow c^*\langle\alpha|$ (the bra is *conjugate*-linear): $\langle\alpha|\,c\,|\beta\rangle=c\langle\alpha|\beta\rangle$ but $(c|\alpha\rangle)^\dagger=c^*\langle\alpha|$.
+> 2. $(AB)^\dagger=B^\dagger A^\dagger$: **reverse the order**.
+> 3. A continuous basis needs $\int dx'\,|x'\rangle\langle x'|$ and $\delta$-normalisation, not a sum and a Kronecker delta.
+> 4. $\langle x'|p'\rangle=e^{ip'x'/\hbar}/\sqrt{2\pi\hbar}$ — the $\sqrt{2\pi\hbar}$ is what makes $\langle p|p'\rangle=\delta(p-p')$.
+> 5. Hermitian is not the same as having real *matrix* entries: only the conjugate-transpose condition counts.
+> 6. A global phase $e^{i\gamma}|\alpha\rangle$ is the same physical state; a *relative* phase between components is physical (it is what makes the beats of §9).
+
 ---
 
 ## 1. Ket space: the abstract state
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.2 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF Ch. 1]]); Griffiths §3.1–3.2 ([[Griffiths - Introduction to quantum mechanics.pdf|PDF pp.95–115]]); Shankar §1.1–1.3*
+
+> [!intuition] Why abstract at all?
+> Because the same physical state can be handed to you as a function of $x$, a function of $p$, or a list of numbers $c_n$, and no one of these is *the* state. The ket is what they have in common. It is like speaking of a vector in the plane rather than of its coordinates: coordinates change when you rotate the axes, the vector does not.
 
 ### Physical motivation: why abstract Hilbert space?
 
@@ -154,6 +176,9 @@ This expansion is the foundation of quantum measurement: the complex coefficient
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.2–1.3 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.12–19]]); Shankar §1.2–1.4; Griffiths §3.2*
 
+> [!intuition] The inner product as a shadow
+> $\langle\alpha|\beta\rangle$ is the (complex) length of the shadow of $|\beta\rangle$ on $|\alpha\rangle$. The Schwarz inequality says a shadow cannot be longer than the arrow, with equality only when the two arrows are parallel: that is the *whole* content of $|\langle\alpha|\beta\rangle|^2\le\langle\alpha|\alpha\rangle\langle\beta|\beta\rangle$ and, later, of the uncertainty principle.
+
 ### The "DC Machine": Dual Correspondence
 
 To every ket space $\mathcal{V}$, mathematicians associate a **dual space** $\mathcal{V}^*$, consisting of all continuous linear functionals that map kets to complex numbers: $f: \mathcal{V} \to \mathbb{C}$. Dirac denoted elements of the dual space as **bras**, written $\langle\alpha|$.
@@ -249,6 +274,9 @@ Because all physical observables and probabilities depend solely on absolute squ
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.3 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.19–26]]); Griffiths §3.2–3.3; Shankar §1.3; Dirac Ch. 1*
 
+> [!intuition] $|\beta\rangle\langle\alpha|$ is the atom of all operators
+> It reads out the $\alpha$-component of whatever you feed it and re-emits that amount along $|\beta\rangle$. Every operator is a sum of such atoms, $X=\sum_{a'',a'}|a''\rangle X_{a''a'}\langle a'|$, which is exactly what a matrix is. The projector $P_n=|n\rangle\langle n|$ is the atom with $\beta=\alpha$: *keep only the $n$-th component*.
+
 ### Linear operators
 
 A **linear operator** $\hat X$ is a mapping from ket space to ket space, $|\alpha\rangle \mapsto \hat X|\alpha\rangle$, preserving linear combinations:
@@ -324,6 +352,9 @@ Its fundamental properties:
 ## 4. The adjoint and Hermitian operators
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.3 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.26–32]]); Griffiths §3.2; Shankar §1.4; Dirac Ch. 2*
+
+> [!intuition] Why observables must be Hermitian
+> A measuring stick must give real numbers and its readings for different outcomes must not overlap. Both are exactly the two theorems proved here: real eigenvalues and orthogonal eigenkets. Geometrically a Hermitian operator stretches (or flips) a set of perpendicular axes by real factors, and nothing else. A non-Hermitian operator such as the ladder $\hat a$ also rotates and shears; that is why it can *move* between eigenstates and cannot be *measured*.
 
 ### Definition of the adjoint (Hermitian conjugate)
 
@@ -436,6 +467,9 @@ This is why all physical observables are required to be Hermitian operators.
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.3–1.4 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.19–26, 33–42]]); Griffiths §3.3–3.4; Shankar §1.5–1.8*
 
+> [!intuition] Change of basis = rotating your ruler
+> A unitary $U_{b'a'}=\langle b'|a'\rangle$ is the table of the new axes' shadows on the old. The state does not change; its list of numbers does. Operators change as $X\to UXU^\dagger$ so that every physical number $\langle\beta|X|\alpha\rangle$ stays the same. Diagonalising an operator is just choosing the rotation in which it is a pure stretch.
+
 ### Expanding states in a complete basis
 
 Let $\{|a'\rangle\}$ be the complete orthonormal eigenbasis of an observable $\hat A$. Inserting the identity operator $\hat 1 = \sum_{a'}|a'\rangle\langle a'|$ decomposes any state $|\alpha\rangle$:
@@ -515,6 +549,9 @@ $$|\alpha\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle.$$
 ## 6. Position and momentum representations
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.6–1.7 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.47–60]]); Griffiths §3.4; Shankar §1.10*
+
+> [!intuition] $p=-i\hbar\,d/dx$ is not a definition, it is a consequence
+> Momentum is *what moves the wave sideways*. If shifting by $\ell$ is $e^{-ip\ell/\hbar}$, then for small $\ell$ the change of $\psi(x)$ is $-\ell\,\psi'(x)$, so $p\leftrightarrow-i\hbar\,d/dx$. A plane wave $e^{ipx/\hbar}$ is the one shape a shift leaves unchanged except for a phase: it is the eigenfunction. The Fourier transform is the change of ruler from $x$ to $p$ (Figure DA.1 B).
 
 ### Continuous spectrum and position eigenkets
 
@@ -602,6 +639,9 @@ $$\psi(x') = \langle x'|\hat 1|\alpha\rangle = \int_{-\infty}^\infty dp'\, \lang
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.6 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.47–54]]); Griffiths §3.2; Shankar §1.6*
 
+> [!intuition] Why $[\hat x,\hat p]=i\hbar$ is a statement about geometry
+> Slide a particle by $\ell$ and then read its position: you find $x+\ell$. Read its position and then slide: you find $x$ and then move the *answer*. The two orders differ by $\ell$, and $\ell$ is exactly what the generator $\hat p$ multiplies. The canonical commutator is the statement that **space has translation symmetry** written in the language of operators.
+
 ### Unitary operators preserve geometry
 
 An operator $\hat U$ is **unitary** if its adjoint equals its inverse:
@@ -651,6 +691,9 @@ Conjugating position by the translation operator shifts the position operator by
 ## 8. Measurement, compatible observables, and the Robertson uncertainty relation
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §1.4–1.5 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.33–47]]); Griffiths §3.4–3.5; Shankar §1.9–1.10*
+
+> [!intuition] Commuting observables share a ruler; non-commuting ones do not
+> If $[A,B]=0$ there is a basis in which both are diagonal: read both at once. If not, the best you can do is trade: a state sharp in $A$ (an eigenket of $A$) is a superposition of $B$-eigenkets, so $B$ is spread. Robertson gives the exact exchange rate, $\Delta A\,\Delta B\ge\frac12|\langle[A,B]\rangle|$, and Figure DA.3 shows the Gaussian that pays no extra.
 
 ### The measurement postulate in Dirac language
 
@@ -734,7 +777,7 @@ $$\big(\hat A - \langle A\rangle\big)|\alpha\rangle = i\lambda\big(\hat B - \lan
 In position space for $\hat A = \hat x$ and $\hat B = \hat p$, this differential equation yields the Gaussian wave packet!
 
 ![[fig_da_uncertainty.png]]
-*Figure DA.3. A: The Heisenberg uncertainty trade-off for a family of Gaussian wave packets: squeezing $\Delta x = \sigma$ unavoidably broadens the momentum profile $\Delta p = \hbar/2\sigma$ such that the product remains fixed at $\hbar/2$. B: Phase-space uncertainty ellipses in the dimensionless $(x, p)$ plane: a coherent state is a symmetric circle of radius $\sqrt{\hbar/2}$, while squeezed states are rotated ellipses maintaining constant phase-space area $\pi\hbar$. C: The Robertson uncertainty product $\Delta x\Delta p = (n+\frac{1}{2})\hbar$ for the harmonic oscillator as a function of quantum number $n$, saturating the fundamental quantum bound $\hbar/2$ exclusively at the ground state $n=0$.*
+*Figure DA.3 (contours in the figure are the $1/e$ Wigner contours, radius 1 in units of $\sqrt{\hbar/m\omega}$, i.e. $\sqrt2$ times the one-standard-deviation radius $\sqrt{\hbar/2}$ used in the caption; the dashed curves in A are the *momentum* densities, of width $\hbar/2\sigma$). A: The Heisenberg uncertainty trade-off for a family of Gaussian wave packets: squeezing $\Delta x = \sigma$ unavoidably broadens the momentum profile $\Delta p = \hbar/2\sigma$ such that the product remains fixed at $\hbar/2$. B: Phase-space uncertainty ellipses in the dimensionless $(x, p)$ plane: a coherent state is a symmetric circle of radius $\sqrt{\hbar/2}$, while squeezed states are rotated ellipses maintaining constant phase-space area $\pi\hbar$. C: The Robertson uncertainty product $\Delta x\Delta p = (n+\frac{1}{2})\hbar$ for the harmonic oscillator as a function of quantum number $n$, saturating the fundamental quantum bound $\hbar/2$ exclusively at the ground state $n=0$.*
 
 > [!example] Worked numerical example: Qubit spin uncertainty
 > For a spin-1/2 particle, $\hat S_x = \frac{\hbar}{2}\sigma_x, \hat S_y = \frac{\hbar}{2}\sigma_y, \hat S_z = \frac{\hbar}{2}\sigma_z$.
@@ -756,6 +799,9 @@ In position space for $\hat A = \hat x$ and $\hat B = \hat p$, this differential
 ## 9. Time evolution: the Schrödinger picture
 
 <span class="scope-extra-book">extra · book</span> *Sakurai §2.1 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.71–86]]); Griffiths §2.1; Shankar §4.1*
+
+> [!intuition] Time evolution is a spinning of the energy axes
+> In the energy basis $e^{-iHt/\hbar}$ multiplies the $n$-th component by $e^{-iE_nt/\hbar}$: each axis spins at its own rate $\omega_n=E_n/\hbar$. A state with one energy only changes phase (nothing observable moves: *stationary*). With two energies the components drift in relative phase and the probability sloshes at $\omega_{21}=(E_2-E_1)/\hbar$ — the quantum beat of Figure DA.4 C. Dynamics is interference between energy components.
 
 ### The time-evolution operator
 
@@ -823,6 +869,9 @@ $$\omega_{mn} = \frac{E_m - E_n}{\hbar}.$$
 ## 10. 🔵 The Schrödinger vs Heisenberg pictures
 
 <span class="scope-extra-beyond">extra · beyond</span> *Sakurai §2.2 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf|Sakurai PDF pp.86–98]]); Shankar §4.3; Cohen-Tannoudji Ch. III*
+
+> [!intuition] Moving the camera or moving the scene
+> Schrödinger: the state moves, the measuring axes stay. Heisenberg: the state stays, the axes counter-rotate. Every prediction is a *relative* orientation of state and axes, so they agree on all of them (Figure DA.4 A,B). The Heisenberg form is the one that makes the classical limit obvious: $\dot x=p/m$, $\dot p=-V'(x)$ as *operator* equations.
 
 ### Defining the Heisenberg picture
 

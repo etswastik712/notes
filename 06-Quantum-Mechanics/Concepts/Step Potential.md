@@ -1,0 +1,31 @@
+---
+title: Step Potential
+aliases: ["potential step"]
+subject: qm
+type: concept
+scope: [extra-book]
+by: [book]
+status: draft
+tags: [subject/qm, type/concept, extra/book, src/book, status/draft]
+---
+# Step Potential
+
+<span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟡 **Extra · book:** Griffiths §2.5 problems; [[QM08 Quantum Tunnelling]] §2.
+
+> [!intuition] In one picture
+> A single wall: the simplest interface, like air to glass for a wave.
+
+> [!key] Definition and key results
+> $V=0$ ($x<0$), $V_0$ ($x>0$). $E>V_0$: $R=\big(\frac{k_1-k_2}{k_1+k_2}\big)^2$, $T=4k_1k_2/(k_1+k_2)^2$. $E<V_0$: $R=1$ with an evanescent tail $\propto e^{-\kappa x}$.
+
+At $E=2V_0$: $T=0.9706$, $R=0.0294$.
+
+Used in: [[QM08 Quantum Tunnelling]] §2. Related: [[Rectangular Barrier]] · [[Evanescent Wave]] · [[Probability Current]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -40,6 +40,17 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > [!intuition] The one-sentence story
 > A joint pmf is a table whose row and column sums are the individual pmfs; the expected value ignores the table's dependence structure (linearity), while the **variance** measures spread, and for a sum of dependent variables it picks up covariance terms.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["joint pmf,<br/>marginals"] --> B["independence:<br/>joint = product"]
+  A --> C["linearity of expectation<br/>(no independence needed)"]
+  C --> D["variance, moments"]
+  D --> E["variances of the<br/>standard distributions"]
+  D --> F["variance of a sum,<br/>covariance"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Joint pmfs and independence
 <span class="scope-taught">taught</span> *2 Sep ([[ilovepdf_merged-1.pdf#page=23|pp.23–24]])*
 
@@ -68,6 +79,9 @@ $$P[X_1=a_i]=\sum_jp(a_i,b_j),\qquad P[X_2=b_j]=\sum_ip(a_i,b_j).$$
 ## 2. Linearity of expectation
 <span class="scope-taught">taught</span> *2 Sep ([[ilovepdf_merged-1.pdf#page=25|pp.25–26]])*
 
+> [!intuition] The indicator trick
+> Write a count as a sum of 0/1 indicators; $E[\text{count}]=\sum P(\text{each})$, whatever the dependence. A hat-check problem with $n$ people has $E[\text{matches}]=1$ for every $n$.
+
 > [!key] Linearity
 > For any random variables $X_1,X_2$ on the same sample space (discrete or not, **dependent or not**),
 > $$E[X_1+X_2]=E[X_1]+E[X_2],\qquad\text{hence}\quad E\Big[\sum_{i=1}^na_iX_i+b\Big]=\sum_ia_iE[X_i]+b .$$
@@ -94,6 +108,9 @@ $$P[X_1=a_i]=\sum_jp(a_i,b_j),\qquad P[X_2=b_j]=\sum_ip(a_i,b_j).$$
 
 ## 3. Moments and variance
 <span class="scope-taught">taught</span> *9 Sep ([[ilovepdf_merged-1.pdf#page=27|p.27]])*
+
+> [!intuition] Variance is the typical squared distance from the mean
+> It measures spread in *squared* units; the standard deviation takes the root to get back to the units of $X$. $\mathrm{Var}(X)=E[X^2]-(E[X])^2$ is the shortcut.
 
 > [!key] Definitions
 > The **$n$-th (raw) moment** is $E[X^n]=\sum_ix_i^np(x_i)$ ($E[X]$ is the first moment); the **$n$-th central moment** is $E[(X-E[X])^n]$. The **variance** is the second central moment,
@@ -158,6 +175,9 @@ Unless $g$ is one-to-one, several $x_i$ map to the same $y$ and their masses add
 
 ## 6. Variance of a sum, covariance
 <span class="scope-extra-book">extra · book</span> *the sheet remarks that (1.1) "will not be proved in class (and possibly, in this course at all)"; Blitzstein and Hwang Ch. 7*
+
+> [!intuition] Covariance is co-movement
+> If $X$ and $Y$ rise together, $\mathrm{Var}(X+Y)$ exceeds the sum of the variances; if one rises when the other falls, it is smaller (diversification). Independent variables have zero covariance (the converse is false).
 
 > [!key] Covariance and the variance of a sum
 > $\mathrm{Cov}(X,Y)=E[(X-\mu_X)(Y-\mu_Y)]=E[XY]-E[X]E[Y]$, and

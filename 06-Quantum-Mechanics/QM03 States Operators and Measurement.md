@@ -45,11 +45,26 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 > [!intuition] The one-sentence story
 > A state is a **vector**; an observable is an **operator** that asks the state a question; the **eigenvectors** of the operator are the states that have a sharp answer; expanding the state in that eigenbasis gives the **probabilities** of the answers; and two questions can both be sharp only if their operators **commute**.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["state:<br/>list of amplitudes c_n"] --> B["operator:<br/>a question you can ask"]
+  B --> C["eigenstates:<br/>sharp answers"]
+  C --> D["probabilities |c_n|^2<br/>expectation, spread"]
+  B --> E["commutators:<br/>which questions are compatible"]
+  A --> F["two-level system:<br/>2x2 matrices"]
+  F --> G["time evolution:<br/>spinning phases"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ![[QM03 From State to Measurement.svg]]
 *Figure QM3.1. The whole chapter in one pass.*
 
 ## 1. States and superposition
 <span class="scope-taught">taught</span> *SO §2 ([[PH2113_states_operators_notes.pdf#page=2|pp.2–3]])*
+
+> [!intuition] A state is an arrow, its amplitudes are coordinates
+> The same arrow has different coordinates in different bases (energy, position, spin-up/down). Superposition just means the arrow is not along any one of your chosen axes.
 
 A quantum system is described by a **state**. In the position representation it is a wavefunction $\psi(x)$; the same state can be denoted abstractly by $|\psi\rangle$ (the notation changes, not the physical state). For a normalised state $\int|\psi|^2\mathrm dx=1$ (for the ring, over any interval of length $L$).
 
@@ -80,6 +95,9 @@ The action is literal: $\hat x\psi=x\psi$, $\hat p\psi=-i\hbar\psi'$. The operat
 ## 3. Eigenstates and eigenvalues
 <span class="scope-taught">taught</span> *SO §4 ([[PH2113_states_operators_notes.pdf#page=4|p.4]])*
 
+> [!intuition] An eigenstate is a direction the operator does not turn
+> Feed an eigenstate to the operator and it comes back stretched by the eigenvalue but pointing the same way. That is why measuring it gives a sharp result: there is only one number to report.
+
 If $\hat A\psi=a\psi$, then $\psi$ is an **eigenstate** of $\hat A$ with **eigenvalue** $a$.
 
 > [!key] Eigenstate means definite value
@@ -96,6 +114,9 @@ If $\hat A\psi=a\psi$, then $\psi$ is an **eigenstate** of $\hat A$ with **eigen
 
 ## 4. Measurement probabilities, expectation values, uncertainty
 <span class="scope-taught">taught</span> *SO §6–8 ([[PH2113_states_operators_notes.pdf#page=7|pp.7–9]]); MX §4–7 ([[PH2113_matrices_expectation_uncertainty.pdf#page=2|pp.2–3]])*
+
+> [!intuition] Average, spread and outcome are three different things
+> A single measurement returns one eigenvalue; $\langle A\rangle$ is the weighted average over many repetitions (it need not be an allowed outcome); $\Delta A$ says how mixed the state is. A state with $\Delta A=0$ is an eigenstate.
 
 Let $\{\phi_a\}$ be normalised eigenstates of $\hat A$, $\hat A\phi_a=a\phi_a$, and expand a normalised state $\Psi=\sum_ac_a\phi_a$, $\sum|c_a|^2=1$. When $A$ is measured:
 
@@ -122,6 +143,9 @@ In an eigenstate $\langle A^2\rangle=a^2$ so $\Delta A=0$: **a definite value an
 
 ## 5. Commutators: which observables can be sharp together?
 <span class="scope-taught">taught</span> *SO §5 ([[PH2113_states_operators_notes.pdf#page=5|pp.5–6]]); MX §8–9 ([[PH2113_matrices_expectation_uncertainty.pdf#page=3|p.3]])*
+
+> [!intuition] Commuting questions can be answered together
+> If $[A,B]=0$ there is a common set of axes in which both are sharp. If not, sharpening one smears the other: the commutator sets the exchange rate (QM03 §5 and [[Dirac Algebra]] §8).
 
 The ring states $\psi_n$ are eigenstates of **both** $\hat p$ and $\hat H$; the box states are eigenstates of $\hat H$ only. What decides this is the **commutator**
 $$[\hat A,\hat B]\equiv\hat A\hat B-\hat B\hat A .$$
@@ -156,6 +180,9 @@ $$\boxed{\ \Delta A\,\Delta B\ \ge\ \frac12\,\big|\langle[\hat A,\hat B]\rangle\
 
 ## 6. A two-level system: matrices instead of functions
 <span class="scope-taught">taught</span> *MX §1–5 ([[PH2113_matrices_expectation_uncertainty.pdf#page=1|pp.1–2]])*
+
+> [!intuition] The whole theory in a 2×2 matrix
+> A two-level system (spin-½, a qubit) has every feature: superposition, non-commuting observables ($X,Y,Z$), measurement collapse, interference. Its state is a point on a sphere and its dynamics a rotation.
 
 The same structure appears in a **two-dimensional** state space, where everything is a $2\times2$ matrix and every integral is a sum. A state is a normalised vector $|\psi\rangle=\binom ab$, $|a|^2+|b|^2=1$; an observable is a Hermitian matrix. Three useful ones:
 $$X=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad Y=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.$$
@@ -194,6 +221,9 @@ The commutators (checked symbolically): $[X,Y]=2iZ$, $[Y,Z]=2iX$, $[Z,X]=2iY$.
 
 ## 7. Time evolution
 <span class="scope-taught">taught</span> *SO §9 ([[PH2113_states_operators_notes.pdf#page=10|pp.10–11]])*
+
+> [!intuition] Time evolution is rotation of the phases
+> In the energy basis each coefficient is multiplied by $e^{-iE_nt/\hbar}$. With two energies the relative phase drifts and the probabilities beat at $(E_2-E_1)/\hbar$.
 
 The TDSE is $i\hbar\,\partial_t\Psi=\hat H\Psi$. In the energy basis:
 - **An energy eigenstate** $\hat H\psi_n=E_n\psi_n$ evolves as $\Psi_n=\psi_n e^{-iE_nt/\hbar}$: only an overall phase, so $|\Psi_n|^2$ is time-independent (a **stationary state**).

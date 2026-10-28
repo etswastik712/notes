@@ -41,6 +41,19 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 > [!intuition] The one-sentence story
 > Everything about the oscillator is encoded in one rule, $[\hat a,\hat a^\dagger]=1$ with $\hat a\psi_0=0$; position space gives Hermite polynomials, momentum space gives the same polynomials again, the number basis gives tridiagonal matrices, and a displaced ground state gives the state that looks most like a classical oscillator.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["normalisation<br/>table"] --> B["number basis |n><br/>Dirac notation"]
+  B --> C["expectation values<br/>by ladders"]
+  C --> D["Hermite polynomials:<br/>n real zeros"]
+  D --> E["momentum space:<br/>same shape, phase (-i)^n"]
+  C --> F["Ehrenfest, virial,<br/>Heisenberg picture"]
+  F --> G["coherent states"]
+  B --> H["thermal oscillator:<br/>Planck, Einstein"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ![[QM06 The Oscillator Toolbox.svg]]
 *Diagram QM6.1. The toolbox. Editable source: [[QM06 The Oscillator Toolbox.excalidraw]].*
 
@@ -80,6 +93,9 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 ## 2. Dirac notation and the number basis
 <span class="scope-extra-beyond">extra · beyond</span> *kets for a two-level system are used in [[PH2113_matrices_expectation_uncertainty.pdf#page=1|MX §1–3]]; the number basis is new*
 
+> [!intuition] Label the state by how many quanta it holds
+> $|n\rangle$ is 'the oscillator with $n$ units of energy'. The ladders are then *counting* operators: $\hat a_-$ removes a unit (and tells you $\sqrt n$ ways to do it), $\hat a_+$ adds one.
+
 **Dirac notation** ([[Dirac Notation]]). A state is a ket $|\psi\rangle$; the inner product is $\langle\phi|\psi\rangle=\int\phi^*\psi\,\mathrm dx$, with $\langle\phi|\psi\rangle^*=\langle\psi|\phi\rangle$ and $\langle\psi|\psi\rangle=1$. The **adjoint** (Hermitian conjugate) of an operator is defined by $\langle\phi|\hat A\psi\rangle=\langle\hat A^\dagger\phi|\psi\rangle$; $\hat A$ is Hermitian if $\hat A^\dagger=\hat A$ ([[Hermitian Conjugate]], [[Hermitian Operator]]). The lecture's identity $\int f^*(\hat a_+g)=\int(\hat a_-f)^*g$ says exactly $\hat a_+=\hat a_-^{\,\dagger}$, so from now on
 $$\hat a\equiv\hat a_-,\qquad\hat a^\dagger\equiv\hat a_+,\qquad\hat N=\hat a^\dagger\hat a,\qquad\hat H=\hbar\omega\big(\hat N+\tfrac12\big).$$
 
@@ -99,6 +115,9 @@ The $|n\rangle$ are **orthonormal** ($\langle m|n\rangle=\delta_{mn}$) and **com
 
 ## 3. Expectation values: the recipe and the results
 <span class="scope-taught">taught</span> *the method, [[Harmonic_oscillator.pdf#page=12|lecture pp.12–13]]; [[Tutorial3.pdf#page=1|Tutorial III Q1]]* · <span class="scope-extra-beyond">extra · beyond</span> *higher powers, selection rules, sum rules*
+
+> [!intuition] Only terms that come back survive
+> $\langle n|\hat x^2|n\rangle$ contains products of two ladders; since $\langle n|m\rangle=\delta_{nm}$ only those with one raise and one lower return to $|n\rangle$. That is why $\langle x^2\rangle=(n+\tfrac12)\hbar/m\omega$ costs one line.
 
 **The recipe** ([[Expectation Value]], [[Oscillator Expectation Values]]). Write the observable as a polynomial in $\hat a,\hat a^\dagger$ using $\hat x=\sqrt{\hbar/2m\omega}(\hat a+\hat a^\dagger)$ and $\hat p=i\sqrt{m\hbar\omega/2}(\hat a^\dagger-\hat a)$. A word of $\hat a$'s and $\hat a^\dagger$'s moves $|n\rangle$ to $|n+(\#\hat a^\dagger-\#\hat a)\rangle$, so it has a non-zero **diagonal** element only if it contains equally many of each. Each step contributes the factor $\sqrt{\text{(the larger of the two indices)}}$.
 
@@ -192,6 +211,9 @@ Three connections ([[Probabilists' Hermite Polynomials]]): **(i)** $e^{xt-t^2/2}
 ## 5. The oscillator in momentum space
 <span class="scope-extra-beyond">extra · beyond</span> *the proof by ladders is mine; the Fourier transform of a Gaussian is taught ([[PH2113_wavefunctions_potentials_schrodinger_Tutorial.pdf#page=3|Tutorial Note P5–P6]])*
 
+> [!intuition] $x$ and $p$ play identical roles
+> $H=\tfrac12(p^2+x^2)$ in oscillator units is symmetric under $x\leftrightarrow p$, so the momentum-space wave function has the same Hermite shape: the Fourier transform of $\psi_n$ is $(-i)^n\psi_n$.
+
 > [!key] Hermite functions are the eigenfunctions of the Fourier transform
 > With $u_n(\xi)=\pi^{-1/4}(2^nn!)^{-1/2}H_n(\xi)e^{-\xi^2/2}$ (so $\psi_n(x)=(m\omega/\hbar)^{1/4}u_n(\xi)$), the momentum-space wavefunction is
 > $$\boxed{\ \tilde\psi_n(p)=(-i)^n\,(m\hbar\omega)^{-1/4}\,u_n\!\Big(\frac p{\sqrt{m\hbar\omega}}\Big)\ }$$
@@ -241,6 +263,9 @@ For $s=2$: $\langle T\rangle=\langle V\rangle=\frac12E$ ✓ (the oscillator valu
 ## 7. Coherent states
 <span class="scope-extra-beyond">extra · beyond</span> *Glauber 1963; Sakurai and Napolitano Ch. 2 Problems*
 
+> [!intuition] The most classical quantum state
+> A coherent state is a fixed-size Gaussian blob ($\Delta x\Delta p=\hbar/2$) that rides the classical orbit without spreading. It is what a laser emits: a quantum state with a definite amplitude and phase.
+
 > [!key] Definition
 > A **coherent state** is an eigenstate of the (non-Hermitian) lowering operator, $\hat a|\alpha\rangle=\alpha|\alpha\rangle$ with $\alpha\in\mathbb C$ ([[Coherent State]]). In the number basis, $c_{n+1}\sqrt{n+1}=\alpha c_n\Rightarrow c_n=\alpha^nc_0/\sqrt{n!}$, and $\sum|c_n|^2=|c_0|^2e^{|\alpha|^2}=1$:
 > $$\boxed{\ |\alpha\rangle=e^{-|\alpha|^2/2}\sum_{n=0}^\infty\frac{\alpha^n}{\sqrt{n!}}\,|n\rangle\ },\qquad P(n)=e^{-|\alpha|^2}\frac{|\alpha|^{2n}}{n!}\ \ (\text{Poisson, mean}=\text{variance}=|\alpha|^2).$$
@@ -260,6 +285,9 @@ For $s=2$: $\langle T\rangle=\langle V\rangle=\frac12E$ ✓ (the oscillator valu
 
 ## 8. The thermal oscillator
 <span class="scope-extra-beyond">extra · beyond</span> *links to [[TH06 From Kinetic Theory to Statistical Mechanics]], [[Planck Law]] and [[CL07 Optical Properties of the Atmosphere]]; numbers from `scripts/qm_numbers.py`*
+
+> [!intuition] Temperature fills the ladder
+> At temperature $T$ rung $n$ is occupied with Boltzmann weight $e^{-n\hbar\omega/kT}$ (geometric). If $kT\ll\hbar\omega$ the oscillator is frozen in its ground state and does not store heat: that is Einstein's explanation of why heat capacities drop at low $T$.
 
 At temperature $T$ the level $n$ is occupied with the Boltzmann probability $P(n)=e^{-E_n/k_BT}/Z$. With $x=\hbar\omega/k_BT$,
 $$Z=\sum_ne^{-x(n+\frac12)}=\frac{e^{-x/2}}{1-e^{-x}}=\frac1{2\sinh(x/2)},\qquad\boxed{\ P(n)=\big(1-e^{-x}\big)e^{-nx}\ }$$

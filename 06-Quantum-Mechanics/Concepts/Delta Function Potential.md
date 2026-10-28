@@ -30,9 +30,9 @@ Outside $x=0$: $\psi=Be^{-\kappa|x|}$ with $\kappa=\sqrt{-2mE}/\hbar$. Integrate
 > The odd wavefunction $\sim\operatorname{sgn}(x)e^{-\kappa|x|}$ is discontinuous at $x=0$ and fails the jump condition: the delta potential in 1-D has **exactly one** bound state.
 
 > [!connection] Limit of the finite well
-> The delta potential is the limit of the finite square well (width $2a$, depth $V_0$) as $V_0\to\infty$, $a\to0$, $2V_0a=\alpha$ fixed. See [[QM07 The Finite Square Well]] §6.
+> The delta potential is the limit of the finite square well (width $2a$, depth $V_0$) as $V_0\to\infty$, $a\to0$, $2V_0a=\alpha$ fixed. See [[QM07 The Finite Square Well]] §7 (the limit) and [[QM08 Quantum Tunnelling]] §4 (the same delta as a *barrier*: its transmission has a pole at the bound state).
 
-Used in: [[QM07 The Finite Square Well]] §5–§6. Related: [[Dirac Delta Function]] · [[QM07 The Finite Square Well]] · [[Boundary Conditions and Quantisation]] · [[Admissible Wavefunction]].
+Used in: [[QM07 The Finite Square Well]] §7–§8, [[QM08 Quantum Tunnelling]] §4, §8. Related: [[Dirac Delta Function]] · [[QM07 The Finite Square Well]] · [[Boundary Conditions and Quantisation]] · [[Admissible Wavefunction]].
 
 ## Linked from
 ```dataview

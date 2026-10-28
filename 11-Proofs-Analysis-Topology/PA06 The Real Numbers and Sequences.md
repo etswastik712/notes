@@ -39,8 +39,21 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 > [!intuition] The one-sentence story
 > The rationals have holes ($\sqrt2$ is missing); completeness says the real line has none, so a sequence that *looks like* it is converging (Cauchy) really does converge, and every theorem of calculus rests on that.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["Q has holes<br/>(sqrt 2)"] --> B["completeness:<br/>sup exists"]
+  B --> C["consequences:<br/>Archimedes, density"]
+  B --> D["sequences,<br/>limits (epsilon-N)"]
+  D --> E["monotone convergence,<br/>Cauchy, Bolzano-Weierstrass"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Why $\mathbb Q$ is not enough
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 15.1*
+
+> [!intuition] $\mathbb Q$ is full of invisible holes
+> The rationals $1,\,1.4,\,1.41,\,1.414,\dots$ keep getting closer to each other but converge to no rational number. $\mathbb R$ is $\mathbb Q$ with every such hole filled.
 
 > [!derivation] $\{q\in\mathbb Q:q>0,\ q^2<2\}$ has no least upper bound in $\mathbb Q$
 > Let $S$ be this set; $1\in S$ and $2$ is an upper bound. Suppose $u\in\mathbb Q$ were a least upper bound ($u\ge1$). Since $u^2\ne2$ (the irrationality of $\sqrt2$, PA01) put $u'=\dfrac{2u+2}{u+2}=u-\dfrac{u^2-2}{u+2}$. Then $u'\in\mathbb Q$ and
@@ -51,6 +64,9 @@ The rationals $1,\tfrac32,\tfrac{17}{12},\tfrac{577}{408},\tfrac{665857}{470832}
 
 ## 2. Completeness and the construction of $\mathbb R$
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 15.2*
+
+> [!intuition] Completeness: no holes
+> Every nonempty set that is bounded above has a *least* upper bound in $\mathbb R$. This one property separates $\mathbb R$ from $\mathbb Q$ and is behind every theorem of calculus.
 
 > [!key] Completeness (least-upper-bound property)
 > An ordered field $F$ is **complete** if every non-empty subset $S\subseteq F$ that is bounded above has a **least upper bound** $\sup S$ in $F$ (the lub of PA03). $\mathbb R$ is *the* complete ordered field: any two complete ordered fields are isomorphic by a unique order- and field-isomorphism. Similarly every non-empty set bounded below has an infimum.
@@ -81,6 +97,9 @@ The rationals $1,\tfrac32,\tfrac{17}{12},\tfrac{577}{408},\tfrac{665857}{470832}
 ## 4. Sequences and limits
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 16.1*
 
+> [!intuition] $\varepsilon$-$N$ is a game
+> I give you a tolerance $\varepsilon$; you must find a point $N$ after which the sequence never again strays by more than $\varepsilon$. A limit exists when you can always win.
+
 A **sequence** in $X$ is a function $\mathbb N\to X$, $n\mapsto x_n$ (a definition by recursion is a sequence, PA05). A **subsequence** is $(x_{n_k})$ with $n_1<n_2<\cdots$.
 
 > [!key] The $\varepsilon$–$N$ definition
@@ -96,6 +115,9 @@ A **sequence** in $X$ is a function $\mathbb N\to X$, $n\mapsto x_n$ (a definiti
 
 ## 5. The completeness theorems
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 16.2*
+
+> [!intuition] Three faces of completeness
+> Bounded monotone sequences converge; Cauchy sequences converge; bounded sequences have convergent subsequences. Each is the least-upper-bound property in a different costume.
 
 > [!key] The chain of theorems (each follows from the previous one)
 > 1. **Monotone convergence:** a bounded increasing sequence converges to its supremum (a bounded decreasing one to its infimum). *Proof:* $s=\sup\{x_n\}$ exists; for $\varepsilon>0$ some $x_N>s-\varepsilon$ and for $n\ge N$, $s-\varepsilon<x_N\le x_n\le s$.

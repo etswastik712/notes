@@ -40,11 +40,25 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > [!intuition] The one-sentence story
 > A random variable is a number attached to the outcome; its pmf is the table of probabilities of that number, and each named distribution is the answer to one counting question (how many successes? how many trials until a success? how many white balls without replacement?).
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["random variable:<br/>outcome -> number"] --> B["pmf and cdf"]
+  B --> C["expectation = centre of mass"]
+  C --> D["Bernoulli, binomial,<br/>hypergeometric, uniform"]
+  D --> E["geometric,<br/>negative binomial"]
+  D --> F["Poisson limit"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ![[PR03 The Discrete Distribution Family.svg]]
 *Figure PR3.0. The discrete family and how its members are related (SVG; an editable Excalidraw copy is in `Assets/excalidraw/`).*
 
 ## 1. Random variables, pmf and cdf
 <span class="scope-taught">taught</span> *20 Aug ([[ilovepdf_merged-1.pdf#page=17|pp.17–19]])*
+
+> [!intuition] A random variable is a function, the pmf is its histogram
+> The randomness lives in the experiment; $X$ just reads off a number from each outcome. The pmf says how much probability sits on each number.
 
 A **random variable** (rv) is a real-valued function of the outcome of a random experiment: when $n$ dice are rolled we may care only about the sum, not the whole outcome. A **discrete** rv takes at most countably many values $x_1,x_2,\dots$. Its **probability mass function**
 $$p(x)=P[X=x]\quad(x\in\mathbb R),\qquad p(x_i)>0,\quad\sum_ip(x_i)=1 .$$
@@ -71,6 +85,9 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 ## 2. Expectation
 <span class="scope-taught">taught</span> *20 and 27 Aug ([[ilovepdf_merged-1.pdf#page=19|p.19]], [[ilovepdf_merged-1.pdf#page=21|pp.21–22]])*
 
+> [!intuition] Expectation is the balance point
+> Put weights $p(x)$ on a ruler at the positions $x$: $E[X]$ is where it balances. It need not be a possible value.
+
 > [!key] Expectation of a discrete rv
 > $$E[X]=\sum_{x:\,p(x)>0}x\,p(x)=\sum_ix_ip(x_i),$$
 > the probability-weighted average of the values (assuming the sum converges absolutely). If the pmf is read as a frequency distribution, this is the usual mean.
@@ -88,6 +105,9 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 
 ## 3. Bernoulli, binomial, uniform, hypergeometric
 <span class="scope-taught">taught</span> *20 and 27 Aug ([[ilovepdf_merged-1.pdf#page=19|pp.19–22]])*
+
+> [!intuition] Binomial counts successes; hypergeometric counts them without replacement
+> $n$ independent yes/no trials give binomial; draw from a finite pot without putting back and the trials become dependent: hypergeometric. For a big pot they look the same.
 
 > [!key] The binomial
 > Toss a coin $n$ times, independently, with $P[\text{head}]=p$; $X$ = number of heads. Then
@@ -120,6 +140,9 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 ## 4. Waiting times: geometric and negative binomial
 <span class="scope-taught">taught</span> *27 Aug and 2 Sep ([[ilovepdf_merged-1.pdf#page=22|pp.22]], [[ilovepdf_merged-1.pdf#page=25|pp.25–26]], [[ilovepdf_merged-1.pdf#page=31|p.31]])*
 
+> [!intuition] Waiting for the first success has no memory
+> Having failed $k$ times tells you nothing about the next trial, so the geometric distribution is memoryless (the only discrete one). Convention warning in the chapter: trials or failures.
+
 > [!key] Geometric$(p)$
 > Independent trials with success probability $p$; $X$ = **number of trials up to and including the first success**:
 > $$P[X=n]=(1-p)^{n-1}p,\ n=1,2,\dots;\qquad E[X]=\frac1p .$$
@@ -148,6 +171,9 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 
 ## 5. The Poisson distribution
 <span class="scope-taught">taught</span> *27 Aug ([[ilovepdf_merged-1.pdf#page=21|p.21]], [[ilovepdf_merged-1.pdf#page=22|p.22]]); 28 Aug sheet, problem 8*
+
+> [!intuition] Poisson is the law of rare events
+> $n$ independent trials with tiny success chance $p$ and $np=\lambda$ fixed: the binomial becomes $e^{-\lambda}\lambda^k/k!$. Phone calls per minute, typos per page, decays per second.
 
 > [!key] Poisson$(\lambda)$
 > $$P[X=n]=e^{-\lambda}\frac{\lambda^n}{n!},\ n=0,1,2,\dots;\qquad E[X]=\lambda .$$

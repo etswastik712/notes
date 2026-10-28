@@ -118,18 +118,18 @@ def fig_uncertainty():
     x = np.linspace(-6, 6, 900)
     for s, col in ((0.5, BLUE), (1.0, ORANGE), (2.0, AQUA)):
         a.plot(x, np.exp(-x ** 2 / (2 * s * s)) / (s * math.sqrt(2 * PI)), color=col, lw=2, label=f"$\\sigma={s}$: $\\Delta x\\,\\Delta p={s*(1/(2*s)):.2f}\\hbar$")
-        a.plot(x, np.exp(-x ** 2 * s * s / 2) * s / math.sqrt(2 * PI), color=col, lw=1.2, ls="--")
+        a.plot(x, np.exp(-2 * s * s * x ** 2) * 2 * s / math.sqrt(2 * PI), color=col, lw=1.2, ls="--")
     a.set_xlabel("$x$ (solid) or $p$ (dashed), $\\hbar=1$"); a.set_ylabel("probability density")
     a.legend(fontsize=8); a.set_title("A  squeeze $x$, spread $p$: product fixed at $\\hbar/2$")
     b = ax[1]
     b.set_aspect("equal"); b.set_xlim(-3.2, 3.2); b.set_ylim(-3.2, 3.2)
-    b.add_patch(Circle((0, 0), math.sqrt(1.0), fill=True, alpha=0.25, color=BLUE)); b.text(0, -0.1, "coherent\n/ ground", ha="center", fontsize=8)
+    b.add_patch(Circle((0, 0), math.sqrt(1.0), fill=True, alpha=0.25, color=BLUE)); b.text(0, -0.1, "coherent / ground\n(1/e contour)", ha="center", fontsize=8)
     for r, ang, col, lab in ((2.0, 0, ORANGE, "squeezed ($r=2$)"), (2.0, 90, AQUA, "squeezed ($r=2$, rotated)")):
         b.add_patch(Ellipse((0, 0), 2 * r, 2 / r, angle=ang, fill=False, color=col, lw=2))
     b.add_patch(Circle((0, 0), math.sqrt(3), fill=False, color=VIOLET, lw=1.6, ls="--"))
     b.text(1.25, 1.55, "$n=1$: $\\sqrt{2n+1}$", color=VIOLET, fontsize=8.5)
     b.set_xlabel("$x/\\sqrt{\\hbar/m\\omega}$"); b.set_ylabel("$p/\\sqrt{m\\hbar\\omega}$")
-    b.text(-3.1, 2.85, "area $\\pi\\hbar/2\\cdot4=2\\pi\\hbar$ for all three\\n(unit circle $=\\Delta x\\Delta p=\\hbar/2$)" if False else "same area $\\pi$ (blue/orange/teal)", fontsize=8.5)
+    b.text(-3.1, 2.85, "area $\\pi\\hbar/2\\cdot4=2\\pi\\hbar$ for all three\\n(unit circle $=\\Delta x\\Delta p=\\hbar/2$)" if False else "1/e Wigner contours, area $\\pi$ (units $\\hbar=1$)", fontsize=8.5)
     b.set_title("B  phase-space uncertainty regions")
     c = ax[2]
     n = np.arange(0, 11)

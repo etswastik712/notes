@@ -42,11 +42,25 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > [!intuition] The one-sentence story
 > A pmf puts mass on points; a pdf spreads mass over a line, so single points get zero probability and intervals get areas; every sum from the discrete chapters becomes an integral and every formula carries over.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["pdf = density<br/>P(X=x) = 0"] --> B["cdf and pdf"]
+  B --> C["uniform, normal,<br/>exponential, gamma ..."]
+  C --> D["E[g(X)] by LOTUS"]
+  B --> E["transformations:<br/>the cdf method"]
+  C --> F["exponential:<br/>memoryless"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ![[fig_pr05_continuous.png]]
 *Figure PR5.1. A: the Rayleigh cdf and pdf, with the quartiles $0.759$, $1.177$, $1.665$ and the shaded area $P[1<X<3]=0.595$. B: the standard normal, with the probabilities within $\pm1$, $\pm2$, $\pm3$ and the inflection points $\pm1$. C: the layer-cake identity $E[Y]=\int_0^\infty P[Y>y]\,\mathrm dy$ for $Y=X^2$, $X\sim U(0,1)$ (area $\tfrac13$).*
 
 ## 1. Continuous random variables, the pdf
 <span class="scope-taught">taught</span> *10 Sep ([[ilovepdf_merged-1.pdf#page=28|pp.28–30]]); week 1, p.3 ([[week1_mt2113.pdf#page=3|handwritten]])*
+
+> [!intuition] Density, not probability
+> $f(x)\,dx$ is the probability of being in a tiny interval; a single point has probability 0. The pdf can exceed 1 (a narrow spike) as long as its area is 1.
 
 A random variable $X$ is **continuous** if its cdf $F(x)=P[X\le x]$ is (absolutely) continuous; equivalently there is a function $f\ge0$ with
 $$P[X\in B]=\int_Bf(x)\,\mathrm dx\quad\text{for every reasonable }B\subset\mathbb R,\qquad\int_{-\infty}^\infty f(x)\,\mathrm dx=1 .$$
@@ -89,6 +103,9 @@ $f$ is the **probability density function** (pdf). It must be non-negative, inte
 
 ## 3. Expectation, LOTUS and variance
 <span class="scope-taught">taught</span> *10 Sep (pp.29–30); week 1, [[week1_mt2113.pdf#page=5|pp.5–9]]*
+
+> [!intuition] LOTUS saves a step
+> To get $E[g(X)]$ you do not need the distribution of $g(X)$; just integrate $g(x)f(x)$. It works because averaging after transforming equals transforming, then averaging over the original weights.
 
 > [!key] Definitions
 > $$E[X]=\int_{-\infty}^\infty x\,f(x)\,\mathrm dx,\qquad\boxed{E[g(X)]=\int_{-\infty}^\infty g(x)f(x)\,\mathrm dx}\ \text{(LOTUS)},$$
@@ -161,6 +178,9 @@ $f$ is the **probability density function** (pdf). It must be non-negative, inte
 ## 5. Transformations: the cdf method
 <span class="scope-taught">taught</span> *9 Sep ("how to derive the cdf, pmf and expectation of a transformed random variable"); week 1 homework Q2*
 
+> [!intuition] When in doubt, transform the cdf
+> $P(g(X)\le y)$ is an event about $X$; compute it, then differentiate. The pdf formula with Jacobians is a shortcut for the monotone case only.
+
 For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the event in terms of $X$**, then differentiate. If $g$ is strictly increasing and differentiable, $F_Y(y)=F_X(g^{-1}(y))$ and $f_Y(y)=f_X(g^{-1}(y))\big|\tfrac{\mathrm d}{\mathrm dy}g^{-1}(y)\big|$.
 
 > [!example] Three transformations
@@ -182,6 +202,9 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 
 ## 6. The exponential distribution and memorylessness
 <span class="scope-taught">taught</span> *Week 2, [[Week2_notes.pdf#page=1|handwritten pp.1–5]]* · <span class="scope-extra-beyond">extra · beyond</span> *the Rayleigh link, the degenerate cases, the counter-example*
+
+> [!intuition] The exponential has no memory
+> $P(X>s+t\mid X>s)=P(X>t)$: if a bulb has lasted $s$ hours its remaining life has the same distribution as a new bulb's. It is the only continuous distribution with this property.
 
 > [!key] Exponential$(\lambda)$, $\lambda>0$
 > $$f(x)=\begin{cases}\lambda e^{-\lambda x}&x>0\\0&x\le0\end{cases},\qquad F(x)=1-e^{-\lambda x},\qquad P[X\ge x]=e^{-\lambda x}\quad(x\ge0).$$

@@ -41,6 +41,18 @@ tags: [subject/chemistry, type/chapter, taught, extra/book, extra/beyond, src/sl
 > [!intuition] The one-sentence story
 > A bond is a pair of electrons that wants to be between two nuclei, and every pair of electrons wants to be as far from every other pair as possible; VSEPR uses only the second wish to get the **shape**, valence bond theory uses the first to get the **bond** and then bends the orbitals (hybridisation) until the shape comes out right.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["octet rule fails:<br/>BeH2, NO, SF6"] --> B["VSEPR:<br/>electron pairs repel"]
+  A --> C["valence bond:<br/>spin-paired overlap"]
+  C --> D["promotion,<br/>hybridisation"]
+  D --> E["Coulson:<br/>cos(theta) = S/(S-1)"]
+  E --> F["Bent's rule"]
+  B --> G["steric number,<br/>lone-pair rules"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ![[CH01 Models of Covalent Bonding.svg]]
 *Diagram CH1.1. Three models, three questions. Editable source: [[CH01 Models of Covalent Bonding.excalidraw]].*
 
@@ -51,6 +63,9 @@ The Lewis/octet picture fails in three ways: **(1) incomplete octets** ($\mathrm
 
 ## 2. VSEPR: electron pairs repel
 <span class="scope-taught">taught</span> *slides 2–7, [[chem pre-ms .pdf#page=2|from slide 2]]* · <span class="scope-extra-book">extra · book</span> *Shriver and Atkins §2.3, PDF pp.63–66*
+
+> [!intuition] Tie balloons at a point
+> Each region of electron density is a balloon: they push apart until the angles are as large as they can be. A lone pair is a fatter balloon (closer to the nucleus), so it squeezes the bonds and takes the roomy equatorial site.
 
 > [!key] The assumption (slide 2)
 > **Regions of enhanced electron density** (bonding pairs, lone pairs, and the electron concentration of a multiple bond) take up positions as far apart as possible, so that their mutual repulsion is minimal ([[VSEPR Model]]).
@@ -108,6 +123,9 @@ Pairs minimise repulsion; ll $>$ lb $>$ bb; lone pairs make angles smaller than 
 ## 3. Valence bond theory
 <span class="scope-taught">taught</span> *slides 8–12* · <span class="scope-extra-book">extra · book</span> *Shriver and Atkins, PDF pp.66–68* · <span class="scope-extra-beyond">extra · beyond</span> *overlap and normalisation*
 
+> [!intuition] A bond is two electrons sitting between two nuclei
+> Valence bond theory writes Lewis's electron pair as a wave function: the electrons are shared in the overlap region, with opposite spins. More overlap, stronger bond.
+
 VB theory is "the first quantum-mechanical theory of bonding", a way of writing Lewis's electron pairs as **wave functions**; MO theory largely superseded it but its language (σ, π, hybrids) survives ([[Valence Bond Theory]]).
 
 > [!key] The hydrogen molecule (slide 10)
@@ -126,6 +144,9 @@ VB theory is "the first quantum-mechanical theory of bonding", a way of writing 
 
 ## 4. Promotion and hybridisation
 <span class="scope-taught">taught</span> *slides 13–17* · <span class="scope-extra-book">extra · book</span> *Shriver and Atkins Ch. 2, "Valence bond theory": promotion PDF p.68, hybridization p.69*
+
+> [!intuition] Hybrids are orbitals pointed at the bonds
+> Mixing $s$ and $p$ on one atom gives lobes that point towards the neighbours and overlap better than pure $s$ or $p$; the energy cost of promotion is repaid by the stronger bonds.
 
 **Promotion (slide 13).** Carbon's ground configuration $2s^22p^2$ suggests two bonds; $\mathrm{CH_4}$ needs four. Promoting an electron, $2s^22p^2\to2s^12p_x^12p_y^12p_z^1$, "requires an investment of energy, [but] it is worthwhile if the energy can be more than recovered from the greater strength of the number of bonds". For carbon the cost is small and is repaid by forming four bonds and by relieving the $2s$ electron–electron repulsion ([[Promotion Energy]]).
 
@@ -160,6 +181,9 @@ Why hybridisation raises bond strength (slide 15): a hybrid has **pronounced dir
 
 ## 5. Composition of hybrids: Coulson's relation
 <span class="scope-taught">taught</span> *slides 18–22 and the take-home exercise* · <span class="scope-extra-beyond">extra · beyond</span> *the derivation and the extra molecules*
+
+> [!intuition] More $s$ means a wider angle
+> Orthogonality of two equivalent hybrids forces $\cos\theta=S/(S-1)$: $s$-richer hybrids spread out ($sp$ 180°, $sp^2$ 120°, $sp^3$ 109.5°); $p$-richer ones close up towards 90°.
 
 Most hybridisations give **equivalent** orbitals (identical $s$/$p$ composition and orientation): tetrahedral and octahedral molecules. In $dsp^3$ **trigonal bipyramids** the hybrids are not equivalent: **three strong equatorial bonds** ($sp^2$, trigonal) and **two weaker axial bonds** ($dp$, linear); the square pyramid is a square-planar $dsp^2$ set plus a $p_z$ (slide 19).
 
@@ -196,6 +220,9 @@ Period-2 elements obey the octet; later ones do not: P in $\mathrm{PCl_5}$ has 1
 
 ## 7. Bent's rule and the energy of hybridisation
 <span class="scope-taught">taught</span> *slides 24–26* · <span class="scope-extra-beyond">extra · beyond</span> *the heavy-hydride numbers*
+
+> [!intuition] Electronegative groups prefer the $p$-rich orbitals
+> Putting the bonding electrons in orbitals with little $s$ character keeps the low-energy $s$ electrons on the central atom: so electronegative substituents take the $p$-rich (axial) sites, and angles close up.
 
 > [!key] Bent's rule (slide 26)
 > **More electronegative substituents prefer hybrid orbitals with less $s$ character, and more electropositive substituents prefer hybrids with more $s$ character.** ([[Bent's Rule]])

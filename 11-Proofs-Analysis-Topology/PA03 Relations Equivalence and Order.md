@@ -39,8 +39,22 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 > [!intuition] The one-sentence story
 > An equivalence relation says "treat these as the same" and cuts a set into blocks; a partial order says "this comes before that" and turns a set into a picture with a bottom, a top and incomparable branches; Zorn's lemma says that if every chain has an upper bound, some element is at the very top.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["relation = set of pairs"] --> B["reflexive, symmetric,<br/>transitive, antisymmetric"]
+  B --> C["equivalence relation<br/>= partition"]
+  B --> D["partial order,<br/>Hasse diagram"]
+  D --> E["Zorn's lemma"]
+  E --> F["every vector space<br/>has a basis"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Binary relations and their properties
 <span class="scope-taught">taught</span> *Assignment 4, questions 5–7*
+
+> [!intuition] Draw a relation as arrows
+> Reflexive: a loop at every point. Symmetric: every arrow has a return arrow. Transitive: two-step paths have a shortcut. A property is a pattern you can check by eye.
 
 A **relation** on $A$ is a subset $R\subseteq A\times A$; write $xRy$ for $(x,y)\in R$. It is
 
@@ -63,6 +77,9 @@ A **relation** on $A$ is a subset $R\subseteq A\times A$; write $xRy$ for $(x,y)
 
 ## 2. Equivalence relations, classes, partitions, congruences
 <span class="scope-taught">taught</span> *Assignment 4 questions 5, 8(c), 9; Assignment 5*
+
+> [!intuition] An equivalence relation sorts things into bins
+> Equivalence classes never overlap and cover everything: that is a *partition*, and every partition comes from a unique equivalence relation. Congruence mod $n$ sorts integers into $n$ bins.
 
 An **equivalence relation** $\sim$ is reflexive, symmetric and transitive. The **class** of $a$ is $[a]=\{x:x\sim a\}$.
 
@@ -92,6 +109,9 @@ An **equivalence relation** $\sim$ is reflexive, symmetric and transitive. The *
 
 ## 3. Partial orders
 <span class="scope-taught">taught</span> *Assignment 4 questions 1–4, 8*
+
+> [!intuition] Partial: some pairs can't be compared
+> Divisibility is a partial order: neither 2 nor 3 divides the other. Hasse diagrams draw only the cover relations; a *chain* is a totally ordered path through it.
 
 A **partial order** is reflexive, antisymmetric and transitive; $(P,\le)$ is a **poset**. For $S\subseteq P$:
 
@@ -125,6 +145,9 @@ A **partial order** is reflexive, antisymmetric and transitive; $(P,\le)$ is a *
 
 ## 4. Zorn's lemma and the existence of a basis
 <span class="scope-taught">taught</span> *the instructor's note [[Zorn's_lemma.pdf|Zorn's Lemma and Existence of a Basis]]*
+
+> [!intuition] Zorn: if every chain has a ceiling, something is maximal
+> It is the tool that lets you pick a largest object without constructing it: maximal linearly independent sets are bases, maximal ideals exist. It is equivalent to the axiom of choice.
 
 A **chain** is a subset $C\subseteq P$ in which any two elements are comparable.
 

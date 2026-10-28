@@ -54,6 +54,9 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 | BOX | [[Particle_in_a_box.pdf]] | 10 (handwritten images; p.1 and p.10 blank; read from page images) | taught: QM04 |
 | T1 / T2 | [[tutorial1.pdf]] / [[Tutorial2.pdf]] | 1 / 2 | taught: QM04 / QM05 |
 | HO | [[Harmonic_oscillator.pdf]] | 13 (handwritten page images; p.1 blank; read as images; p.9 sign slip) | taught: QM05 (added 2026-10-25) |
+| FW | [[Finite_well.pdf]] | 13 (handwritten page images, p.1 blank; garbled text layer; read as images; added 2026-10-27) | taught: QM07 §9–§11 |
+| T4 | [[tutorial4.pdf]] | 1 (text) | taught: QM07 §10 |
+| SH | [[Shankar - Principles of quantum mechanics.pdf]], [[Shankar - contents.pdf]] | book (added 2026-10-27) | extra/book (Dirac Algebra) |
 | T3 | [[Tutorial3.pdf]] | 2 (TeX, text layer) | taught: QM05 §10 (added) |
 | QZ1 / QZ2 / EP | [[2026-09-02-mock-quiz-and-solutions]] / [[2026-09-03-quiz-ideal-solutions]] / [[ph2113/exam-prep]] | summaries of Classroom posts (another tool, `agent_written`); question texts of the 3 Sep quiz missing | taught: [[Quantum Mechanics Quiz Prep]] |
 | G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 409 (scan; **1st edition**; book page = PDF − 15; §1.2 p.17, §1.4 p.26, §1.6 p.32, §2.1 p.35, §2.2 p.39, §2.3 p.46, §2.4 p.59, §2.5 p.65, §3.4 p.123; OCR'd pp.14–130 for locating sections only) | extra/book |

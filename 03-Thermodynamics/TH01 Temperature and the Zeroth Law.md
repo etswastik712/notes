@@ -40,6 +40,18 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 > [!intuition] The one-sentence story
 > If two bodies are each in balance with a third, they are in balance with each other; that innocent fact is what allows us to give every equilibrium state a number called temperature, and it is the reason a thermometer works.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["thermal equilibrium<br/>is transitive"] --> B["zeroth law:<br/>temperature exists"]
+  B --> C["equation of state<br/>f(P,V,T)=0"]
+  C --> D["ideal-gas scale<br/>T = lim PV/nR"]
+  C --> E["state functions,<br/>exact differentials"]
+  E --> F["response coefficients<br/>alpha, kappa_T"]
+  D --> G["climate link:<br/>virtual temperature"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. What thermodynamics is
 <span class="scope-taught">taught</span> *L1 §I.A ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=1|p.1]])*
 
@@ -52,6 +64,9 @@ A system in equilibrium is described by a few **thermodynamic coordinates**, als
 
 ## 2. The zeroth law and the existence of temperature
 <span class="scope-taught">taught</span> *L1 §I.B ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=2|pp.2–3]])*
+
+> [!intuition] Why temperature is a label, not a stuff
+> If A is in equilibrium with C and B is in equilibrium with C then A and B are in equilibrium. So one number (what C reads) can label every body that is in mutual equilibrium: that number is temperature. The law says *nothing* about how it should be scaled.
 
 > [!key] Zeroth law
 > If two systems A and B are separately in equilibrium with a third system C, then they are also in equilibrium with one another (**thermal equilibrium is transitive**).
@@ -71,6 +86,9 @@ Its consequence is a new state function: the **empirical temperature** $\Theta$,
 ## 3. Equations of state: three examples
 <span class="scope-taught">taught</span> *L1 eqs. (I.7)–(I.9) ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=3|p.3]])*
 
+> [!intuition] An equation of state is a surface
+> For a simple fluid $(P,V,T)$ live on a 2-D surface in 3-D space: fix any two and the third is determined. Every thermodynamic process is a path on this surface.
+
 Take three different systems: (A) a wire of length $L$ under tension $F$, (B) a paramagnet of magnetisation $M$ in a field $B$, (C) a gas of volume $V$ at pressure $P$. Observation shows that when they are in equilibrium their coordinates satisfy constraints of the form
 $$\Big(P+\frac a{V^2}\Big)(V-b)(L-L_0)-c\,[F-K(L-L_0)]=0,\qquad\Big(P+\frac a{V^2}\Big)(V-b)\,M-d\,B=0 .$$
 These can be organised into three **empirical temperature functions** that are all equal in equilibrium:
@@ -89,6 +107,9 @@ Each factor is the **equation of state** of one system, taken in its familiar fo
 ## 4. The ideal-gas temperature scale
 <span class="scope-taught">taught</span> *L1 eq. (I.10) ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=3|p.3]])*
 
+> [!intuition] Why gases make the best thermometers
+> Real gases differ at high density but all obey $PV=nRT$ as $P\to0$. So the *limit* $\lim PV/nR$ is the same whichever gas you use: a scale that does not depend on the substance.
+
 The zeroth law merely states the existence of isotherms. For a **practical scale** one needs a reference system, and the dilute gas occupies an important place. Observations show that the product $PV$ is constant along the isotherms of any sufficiently dilute gas; the **ideal gas** is the dilute limit of real gases, and the ideal-gas temperature is proportional to $PV$. The constant of proportionality is fixed by the triple point of the ice-water-vapour system, assigned $273.16$ K:
 $$\boxed{\ T(\mathrm K)\equiv273.16\times\frac{\lim_{P\to0}(PV)_{\rm system}}{\lim_{P\to0}(PV)_{\text{ice-water-gas}}}\ }$$
 
@@ -105,6 +126,9 @@ A **thermometer** is a system with a coordinate $X$ that changes monotonically w
 
 ## 6. State functions, exact differentials and response coefficients
 <span class="scope-extra-book">extra · book</span> *Zemansky Ch. 2, §2.3–2.4 ([[Heat and thermodynamics an intermediate textbook (Mark Waldo Zemansky Richard Dittman) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=52|PDF pp.52–58]])*
+
+> [!intuition] State function versus path
+> Altitude is a state function (it depends on where you are); distance walked is not. $dU$ is exact: integrating around any closed loop gives zero. $\delta Q$ and $\delta W$ are not, which is why they get a $\delta$.
 
 For a simple (hydrostatic) system the state is fixed by two of $(P,V,T)$ and the third follows from the equation of state, e.g. $P=P(T,V)$. A quantity $z(x,y)$ is a **state function** if its change depends only on the endpoints. Its differential
 $$\mathrm dz=M\,\mathrm dx+N\,\mathrm dy\quad(M=\partial_xz,\ N=\partial_yz)$$

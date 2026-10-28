@@ -43,14 +43,32 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 > [!intuition] The one-sentence story
 > A wave that must vanish at both walls fits only whole numbers of half wavelengths, so only certain wavelengths, momenta and energies survive: **the walls quantise the energy**, and a narrower box (smaller $a$) forces shorter wavelengths and higher energy ($E\propto1/a^2$). The lowest state cannot have zero energy because that would mean no wave at all.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["rigid walls:<br/>psi = 0 at x = 0, a"] --> B["half-waves fit:<br/>lambda = 2a/n"]
+  B --> C["E_n = n^2 pi^2 hbar^2/2ma^2"]
+  C --> D["orthonormal basis,<br/>nodes, parity"]
+  D --> E["superposition:<br/>sloshing at Bohr frequency"]
+  C --> F["zero-point energy,<br/>Dx Dp > hbar/2"]
+  C --> G["relax the walls:<br/>QM07 finite well"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. The box and its classical solution
 <span class="scope-taught">taught</span> *handwritten p.2 ([[Particle_in_a_box.pdf#page=2|p.2]])*
+
+> [!intuition] A guitar string clamped at both ends
+> Classically the particle bounces back and forth at constant speed with any energy. Quantum mechanically the *wave* must vanish at both walls, so the allowed shapes are the notes of a clamped string.
 
 $$V(x)=\begin{cases}0,&0\le x\le a\\\infty,&\text{elsewhere.}\end{cases}$$
 **Classically**, a particle of mass $m$ and fixed kinetic energy $p^2/2m$ bounces between the walls at speed $|p|/m$; higher energy means more bounces per unit time. **Any** value of $p$ is allowed: there is no quantisation of energy. The lecture's question, "what is the probability density of finding the particle at some $x$ with $0<x<a$?", has the classical answer **uniform**: because the speed is constant, the particle spends equal times in equal intervals, so $P_{\rm cl}(x)=1/a$.
 
 ## 2. The quantum solution
 <span class="scope-taught">taught</span> *handwritten pp.3–5 ([[Particle_in_a_box.pdf#page=3|pp.3–5]])*
+
+> [!intuition] Why $E\propto n^2$
+> Wavelength $\lambda=2a/n$ so momentum $p=h/\lambda=nh/2a$ and kinetic energy $p^2/2m\propto n^2$. Halve the box and every level quadruples: confinement costs energy.
 
 **Outside** the box ($x\le0$ or $x\ge a$), $V=\infty$ and the TISE can be satisfied by a well-behaved (finite, normalisable) wavefunction only if $\psi(x)=0$ there: the particle cannot be found beyond the walls.
 
@@ -72,6 +90,9 @@ $E_1,E_2,E_3=E_1,\,4E_1,\,9E_1$: the levels spread as $n^2$ and the **lowest ene
 
 ## 3. Normalisation, orthogonality, nodes and parity
 <span class="scope-taught">taught</span> *handwritten pp.5–8 ([[Particle_in_a_box.pdf#page=6|pp.6–8]])*
+
+> [!intuition] Count the nodes
+> The $n$th state has $n-1$ interior nodes. More nodes means more curvature, more kinetic energy. The ground state has none but still has energy: a wave cannot be perfectly flat *and* vanish at the walls ([[Zero-Point Energy]]).
 
 **Normalisation.** $\int_0^a|\psi_n|^2\mathrm dx=|A_n|^2\int_0^a\sin^2\frac{n\pi x}a\,\mathrm dx=|A_n|^2\,\frac a2=1$, using $\sin^2u=\tfrac12(1-\cos2u)$ and $\int_0^a\cos(2n\pi x/a)\mathrm dx=0$. So
 $$\boxed{\ A_n=\sqrt{\frac2a},\qquad\psi_n(x)=\sqrt{\frac2a}\sin\frac{n\pi x}a\ }$$
@@ -98,6 +119,9 @@ $|\Psi_n|^2=|\psi_n|^2$ is time-independent: a **stationary state**. The real pa
 
 ## 5. Expectation values and the uncertainty product
 <span class="scope-taught">taught</span> *handwritten p.9 ([[Particle_in_a_box.pdf#page=9|p.9]]); SO §8.2 ([[PH2113_states_operators_notes.pdf#page=9|p.9]])*
+
+> [!intuition] Why the box never reaches $\hbar/2$
+> The minimum uncertainty needs a Gaussian; the box states are cut off sharply at the walls and have kinks at the edges, which carry extra momentum spread. The $n=1$ product is $0.568\hbar$, only 14 % above the bound, and grows linearly with $n$.
 
 **Position.** $|\psi_n|^2$ is symmetric about $a/2$, so $\langle x\rangle=a/2$ for every $n$. Direct integration agrees (the lecture substitutes $y=n\pi x/a$, writes $\sin^2y=\tfrac12(1-\cos2y)$ and integrates $y\cos2y$ by parts):
 $$\langle x\rangle=\frac2a\int_0^ax\sin^2\frac{n\pi x}a\,\mathrm dx=\frac a2 .$$

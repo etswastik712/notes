@@ -45,8 +45,23 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 > [!intuition] The one-sentence story
 > A beam of electrons makes discrete flashes but arrives with a wave's statistics, so we stop predicting single arrivals and predict **probabilities from a wave amplitude**. A wave that is narrow in space needs many wavelengths, and wavelength is momentum: so **knowing where means not knowing how fast**. Everything in the course follows from taking that seriously.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["double slit:<br/>dots build a wave pattern"] --> B["Born rule<br/>P = |psi|^2"]
+  B --> C["psi is complex:<br/>phases interfere"]
+  C --> D["Fourier pairs:<br/>short pulse = many k"]
+  D --> E["Delta x Delta p >= hbar/2"]
+  E --> F["hydrogen:<br/>size and 13.6 eV"]
+  E --> G["Compton scale:<br/>where this stops"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. The double slit forces a probabilistic description
 <span class="scope-taught">taught</span> *WU §1–2 ([[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=1|p.1]])*
+
+> [!intuition] Single outcomes are random, the pattern is not
+> Each electron lands as one dot at a place you cannot predict; after thousands of dots the stripes of a wave are there. The wave does not tell you *where this electron goes*, it tells you *how likely each place is*. That is the whole meaning of $|\psi|^2$.
 
 Send electrons one at a time through two narrow slits. Each electron produces **one localised flash** on the screen; nothing about a single arrival looks like a wave. But as flashes accumulate they build an interference pattern, and there are positions where electrons **never** arrive even though each slit alone would send electrons there (Fig. QM1.1). A particle that passed through "slit A or slit B" cannot cancel itself, so the explanation must be one of these:
 
@@ -76,6 +91,9 @@ The last term is the **interference term**. Where $\psi_A+\psi_B=0$ the probabil
 ## 2. A first candidate wavefunction, and why $\psi$ is complex
 <span class="scope-taught">taught</span> *WU §3–5 ([[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=1|pp.1–2]])*
 
+> [!intuition] Why a complex number
+> To make fringes the amplitudes from two slits must be able to **cancel**. Adding two real positive numbers can't; adding two complex numbers with opposite phase can. The phase is invisible in one slit and decisive when two paths meet.
+
 Try the simplest wave, $\psi(x)=A\cos kx$ with $k=2\pi/\lambda$. Through de Broglie, $p=h/\lambda=\hbar k$, so one $k$ is one momentum.
 
 - **Not localised.** $|\psi|^2=\tfrac{A^2}{2}[1+\cos 2kx]$ oscillates for ever and averages $A^2/2$ everywhere: the particle is as likely near $x=0$ as near $10^6$ m. So $\Delta x=\infty$.
@@ -96,6 +114,9 @@ the exponentials cancel, so $P$ is the same at all $x$ and all $t$:
 
 ## 3. How to localise a particle
 <span class="scope-taught">taught</span> *WU §6–8 ([[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=2|pp.2–3]]); L7 §1–2 ([[PH2113_Lecture6-7.pdf#page=1|p.1]])*
+
+> [!intuition] The rubber-band trade
+> To make a sharp pulse you must add waves of many different wavelengths so they all agree at one spot and cancel everywhere else. Sharper in $x$ costs spread in $k$, the way squeezing one end of a rubber band makes the other bulge.
 
 ### 3.1 A single slit
 Send a plane wave of wavelength $\lambda$ at a slit of width $a$. Beyond the slit the particle is known to be within $\Delta x\approx a$, and the wave spreads into a diffraction pattern whose first minimum is at $\sin\theta=\lambda/a$. A particle in the central peak has acquired a sideways momentum of order $p\sin\theta$, so
@@ -154,6 +175,9 @@ and the **Gaussian is the minimum-bandwidth shape**. This is a theorem about Fou
 ## 5. From $\Delta k$ to $\Delta p$: the Heisenberg relation
 <span class="scope-taught">taught</span> *L7 §4–5 ([[PH2113_Lecture6-7.pdf#page=2|pp.2–3]]); L8 §1 ([[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=1|p.1]])*
 
+> [!intuition] $\Delta x\,\Delta p\ge\hbar/2$ is a fact about waves, not about clumsy instruments
+> Any wave packet, water or sound included, has $\Delta x\,\Delta k\ge\tfrac12$. Quantum mechanics only adds $p=\hbar k$. The 'uncertainty' is that the particle simply has no sharper pair of values.
+
 Classical physics offers two ideal pictures of matter. A **particle** follows a trajectory, so $x(t)$ and $p(t)$ can be specified together ($\Delta x\,\Delta p$ can be $0$). A **wave** is extended and built from a range of wavenumbers, so it obeys $\Delta x\,\Delta k\gtrsim1$. Quantum matter fits neither column: individual detections are localised, yet the state shows diffraction and interference.
 
 The missing ingredient is not only $p=\hbar k$; it is reading the Fourier coefficients **as quantum amplitudes**. With $p=\hbar k$ we get $\Delta p=\hbar\,\Delta k$ and
@@ -171,6 +195,9 @@ where $\Delta x,\Delta p$ are the standard deviations of the outcomes of positio
 
 ## 6. A first payoff: the size and energy of hydrogen
 <span class="scope-taught">taught</span> *WU §10 ([[PH2113_Wavefunction_to_Uncertainty (1).pdf#page=3|pp.3–4]]); L7 §6 ([[PH2113_Lecture6-7.pdf#page=3|p.3]])*
+
+> [!intuition] Hydrogen without solving anything
+> Confining the electron to radius $r$ costs kinetic energy $\sim\hbar^2/2mr^2$ (squeezing a wave); the Coulomb attraction gains $-e^2/4\pi\varepsilon_0r$. The sum is lowest at $r\sim0.5$ Å with $E\sim-13.6$ eV: the Bohr radius and the Rydberg, from the uncertainty principle alone.
 
 Confine an electron to a region of size $r$ around a proton. Its momentum spread is at least of order $\hbar/r$, so its kinetic energy is of order $\Delta p^2/2m_e$:
 $$E(r)\sim\frac{\hbar^2}{2m_er^2}-\frac{e^2}{4\pi\varepsilon_0r}.$$

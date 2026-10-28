@@ -41,8 +41,23 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 > [!intuition] The one-sentence story
 > Energy can enter a system as work or as heat, and **how much of each** depends on the road you take, but their **sum**, the change of the internal energy, depends only on where you start and finish.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["quasi-static processes"] --> B["work W = sum X dx"]
+  B --> C["first law:<br/>dU = dQ - dW"]
+  C --> D["Joule free expansion:<br/>U depends on T only"]
+  C --> E["heat capacities:<br/>C_P - C_V = nR"]
+  B --> F["PV diagram:<br/>area = work"]
+  F --> G["exact vs inexact"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Quasi-static processes and generalised work
 <span class="scope-taught">taught</span> *L1 §I.C ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=4|pp.4–5]])*
+
+> [!intuition] Work is organised energy transfer, heat is disorganised
+> Pushing a piston moves *all* molecules in step (work). Warming through a wall nudges molecules at random (heat). Both move energy; only the first can lift a weight.
 
 We now consider transformations between equilibrium states, achieved by applying work or heat. A **quasi-static** transformation is performed slowly enough that the system is always in equilibrium, so its coordinates exist at every stage. For such a transformation the state functions split into **generalised displacements** $\{x_i\}$ (usually extensive) and conjugate **generalised forces** $\{J_i\}$ (intensive), and the work done *on* the system is
 $$\bar\mathrm dW=\sum_iJ_i\,\mathrm dx_i .$$
@@ -61,6 +76,9 @@ $$\bar\mathrm dW=\sum_iJ_i\,\mathrm dx_i .$$
 ## 2. Sign conventions: read this twice
 <span class="scope-taught">taught</span> *L1 ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=4|p.4]]); the Zemansky/climate convention for comparison*
 
+> [!intuition] Pick a sign convention and say it out loud
+> $\Delta U=Q-W$ ($W$ done *by* the system) is the convention of these notes and the engines chapter; $\Delta U=Q+W$ is the convention of the climate and chemistry texts. They describe the same energy bookkeeping; mixing them is the commonest error.
+
 | | **MIT / Kardar** (this chapter) | **Zemansky, Wallace and Hobbs, the climate chapters** |
 |---|---|---|
 | $W$ means | work done **on** the system | work done **by** the system |
@@ -73,6 +91,9 @@ $$\bar\mathrm dW=\sum_iJ_i\,\mathrm dx_i .$$
 
 ## 3. The first law
 <span class="scope-taught">taught</span> *L1 §I.C ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=4|p.4]])*
+
+> [!intuition] $U$ is the bank balance, $Q$ and $W$ are transactions
+> You cannot say a gas 'contains' so much heat or so much work; you can say it has so much internal energy, and that deposits (heat in, work done on it) change it.
 
 > [!key] First law (L1 formulation)
 > The amount of **work** required to change the state of an **otherwise adiabatically isolated** system depends only on the initial and final states, **not on the means by which the work is performed**, nor on the intermediate stages.
@@ -88,6 +109,9 @@ $Q$ and $W$ are **not** separately functions of state: they depend on the way th
 
 ## 4. Joule's free expansion
 <span class="scope-taught">taught</span> *L1 ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=5|p.5]])*
+
+> [!intuition] Why free expansion tells you about $U$
+> The gas expands into a vacuum: it does no work and exchanges no heat, so $\Delta U=0$. If the temperature does not change then $U$ cannot depend on volume: $U=U(T)$ for an ideal gas.
 
 If a gas expands **adiabatically** (no heat, $\Delta Q=0$) into a vacuum from $V_i$ to $V_f$, not necessarily quasi-statically, no external work is done ($\Delta W=0$), so $\Delta E=0$. Observation: for a (dilute) gas the **temperature is unchanged**. Since $P$ and $V$ changed but $T$ did not, the internal energy cannot depend on $V$ at fixed $T$:
 $$E(V,T)=E(T)\qquad\text{for the ideal gas}.$$
@@ -118,6 +142,9 @@ $C_P>C_V$ since some of the heat goes into the work of changing the volume. With
 
 ## 6. Work in a fluid: processes on the $PV$ diagram
 <span class="scope-extra-book">extra · book</span> *Zemansky Ch. 3 ([[Heat and thermodynamics an intermediate textbook (Mark Waldo Zemansky Richard Dittman) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=69|PDF pp.69–91]]) and Ch. 4 ([[Heat and thermodynamics an intermediate textbook (Mark Waldo Zemansky Richard Dittman) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=92|PDF pp.92–125]]); numbers recomputed here*
+
+> [!intuition] Read the diagram: area is work
+> The area under a path on the $PV$ plane is the work done by the gas; a closed loop encloses the *net* work. Going round clockwise is an engine, anticlockwise a refrigerator.
 
 In the Zemansky convention the work done **by** a fluid in a quasi-static volume change is $W_{\rm by}=\int_{V_i}^{V_f}P\,\mathrm dV$: the **area under the curve** in the $PV$ plane. It depends on the **path**, not just the endpoints.
 

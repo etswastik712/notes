@@ -45,6 +45,18 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 > [!intuition] The one-sentence story
 > The Born rule says how to read probabilities out of $\psi$ and Fourier analysis says how position and momentum content are linked, but neither says **how $\psi$ changes in time**. The Schrödinger equation is that law. Its energy levels do not come from the equation alone: they come from the equation **plus the physical condition on the solutions**.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["plane wave:<br/>E = hbar w, p = hbar k"] --> B["operators:<br/>p = -i hbar d/dx"]
+  B --> C["time-dependent<br/>Schrodinger equation"]
+  C --> D["probability conserved<br/>(continuity)"]
+  C --> E["separate variables:<br/>stationary states"]
+  E --> F["free particle:<br/>continuous spectrum"]
+  E --> G["boundary conditions:<br/>discrete spectrum, ring"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Why we need a new law
 <span class="scope-taught">taught</span> *L7 §8 ([[PH2113_Lecture6-7.pdf#page=4|p.4]]); L8 §6 ([[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=5|p.5]])*
 
@@ -65,6 +77,9 @@ Because differentiation is linear, these operators act consistently on **superpo
 ## 3. The time-dependent Schrödinger equation
 <span class="scope-taught">taught</span> *L7 §10, §12 ([[PH2113_Lecture6-7.pdf#page=5|p.5]]); L8 §7–8, §10 ([[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=6|pp.6–8]])*
 
+> [!intuition] Energy is the speed of the phase
+> $i\hbar\,\partial_t\psi=\hat H\psi$ says: the faster the phase of a component rotates, the higher its energy. Evolution in time is nothing but each energy component spinning at its own rate $\omega=E/\hbar$.
+
 The classical energy relation $E=p^2/2m+V(x)$ with $E\to i\hbar\partial_t$ and $p\to-i\hbar\partial_x$ gives
 $$\boxed{\ i\hbar\frac{\partial\psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\psi(x,t)}{\partial x^2}+V(x,t)\,\psi(x,t)\ }$$
 the **time-dependent Schrödinger equation (TDSE)**. In three dimensions $\partial_x^2\to\nabla^2=\partial_x^2+\partial_y^2+\partial_z^2$ and the plane wave is $e^{i(\mathbf k\cdot\mathbf r-\omega t)}$. The factor $i$ is essential: it makes $\psi$ **rotate in phase** rather than diffuse, and for a real $V$ it leads to unitary evolution and conservation of total probability (§4).
@@ -79,6 +94,9 @@ the **time-dependent Schrödinger equation (TDSE)**. In three dimensions $\parti
 
 ## 4. Conservation of probability
 <span class="scope-taught">taught</span> *L7 §13 ([[PH2113_Lecture6-7.pdf#page=5|pp.5–6]]) (statement and result)* · <span class="scope-extra-beyond">extra · beyond</span> *the step-by-step derivation is mine*
+
+> [!intuition] Probability behaves like an incompressible fluid
+> $\partial_t\rho+\partial_xj=0$: the probability in a region changes only by what flows through its edges; none appears or vanishes. That is what makes $\int|\psi|^2=1$ stay true at all times.
 
 Born's rule needs a normalised state to **stay** normalised.
 
@@ -99,6 +117,9 @@ Born's rule needs a normalised state to **stay** normalised.
 
 ## 5. Separation of variables: stationary states
 <span class="scope-taught">taught</span> *L8 §11 ([[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=8|p.8]]); L9 §1 ([[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=1|p.1]])*
+
+> [!intuition] A stationary state is a standing wave
+> The shape never changes; only the overall phase spins. Every probability, expectation value and spread is therefore constant, which is why the energy eigenstates are the natural 'resting' states.
 
 If $V=V(x)$ does not depend on time, try $\Psi(x,t)=\psi(x)T(t)$. Substituting and dividing by $\psi T$:
 $$i\hbar\frac1T\frac{\mathrm dT}{\mathrm dt}=-\frac{\hbar^2}{2m}\frac1\psi\frac{\mathrm d^2\psi}{\mathrm dx^2}+V(x).$$
@@ -126,6 +147,9 @@ Why is the energy continuous? On the infinite line **nothing restricts $k$**, so
 
 ## 7. Boundary conditions make the spectrum discrete
 <span class="scope-taught">taught</span> *L9 §3, §5–6 ([[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=3|pp.3–6]]); numbers from the States-and-Operators notes §1.1 ([[PH2113_states_operators_notes.pdf#page=1|p.1]])*
+
+> [!intuition] Why boundaries create a ladder
+> A free wave has any wavelength. Force it to fit between two walls (or round a ring) and only whole numbers of half-waves (or full waves) survive, exactly like the notes of a guitar string. Discreteness is a *fitting* condition.
 
 ### 7.1 One small change: identify $x\equiv x+L$
 Keep the same equation and the right-moving solution $\psi=Ae^{ikx}$, but now identify $x$ with $x+L$ (after a distance $L$ you are back at the same physical point). Then $\psi(x+L)=\psi(x)$, so $e^{ikL}=1$:
@@ -180,6 +204,9 @@ In 3-D the TDSE has $\nabla^2$ in place of $\partial_x^2$ and the free solution 
 
 ## 9. Which functions can be states?
 <span class="scope-taught">taught</span> *L8 §3–5 ([[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=3|pp.3–5]]); L9 §10 ([[PH2113_Lecture9_FreeParticle_Ring_GeneralProperties.pdf#page=7|p.7]]); Tutorial §1, Problem 1 ([[PH2113_wavefunctions_potentials_schrodinger_Tutorial.pdf#page=1|p.1]])*
+
+> [!intuition] What 'allowed' means
+> The function must have finite total probability (square-integrable), and be smooth enough that the energy is finite: kinks are fine if the potential has a step or a delta, but a wavefunction with a jump has infinite kinetic energy.
 
 An ordinary localised state must be **single-valued**, **normalisable** ($\int|\psi|^2\mathrm dx<\infty$, then scale to 1), and obey the **boundary conditions** of the problem. For a **finite, nonsingular potential** the energy eigenfunctions are also **continuous with a continuous first derivative**. Square-integrability is the fundamental probability requirement; extra smoothness depends on the Hamiltonian: a function can be square-integrable yet have **infinite or ill-defined kinetic energy**.
 

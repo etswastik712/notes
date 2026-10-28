@@ -42,8 +42,22 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > [!intuition] The one-sentence story
 > New information shrinks the world of possibilities to $F$, and conditional probability is just "$E$'s share of $F$"; Bayes' rule is that same share read backwards, from effects to causes.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["P(A|B) = P(AB)/P(B)"] --> B["total probability"]
+  B --> C["Bayes' rule"]
+  A --> D["independence"]
+  C --> E["Monty Hall,<br/>urns, exchangeability"]
+  D --> F["conditional probability<br/>is a probability"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Conditional probability
 <span class="scope-taught">taught</span> *13 Aug ([[ilovepdf_merged-1.pdf#page=12|p.12]])*
+
+> [!intuition] Conditioning is zooming in
+> Given $F$ you throw away every outcome outside $F$ and renormalise what is left so it adds to 1. $P(E\mid F)$ is the share of $F$ that is also in $E$.
 
 > [!key] Definition
 > For events $E,F$ with $P[F]>0$,
@@ -67,6 +81,9 @@ When all outcomes are equally likely, work in the **reduced sample space** $F$ a
 
 ## 2. Total probability and Bayes' rule
 <span class="scope-taught">taught</span> *13 and 19 Aug ([[ilovepdf_merged-1.pdf#page=13|p.13]], [[ilovepdf_merged-1.pdf#page=15|p.15]])*
+
+> [!intuition] Bayes flips the question
+> You know how likely the evidence is *given* each cause; you want how likely each cause is *given* the evidence. Multiply the prior by the likelihood, divide by the evidence: updating belief on data.
 
 Split $E=(E\cap F)\cup(E\cap F^c)$, which are disjoint, so
 $$P[E]=P[E\mid F]\,P[F]+P[E\mid F^c]\,(1-P[F]).$$
@@ -123,6 +140,9 @@ For two draws, $P[B_1W_2]=\frac{b}{b+w}\frac{w}{b+w-1}=P[W_1B_2]$. For $b=5$, $w
 ## 4. Independence
 <span class="scope-taught">taught</span> *19 Aug ([[ilovepdf_merged-1.pdf#page=16|p.16]]); sheet 21 Aug, problems 6–8*
 
+> [!intuition] Independent means 'learning one tells you nothing about the other'
+> $P(A\mid B)=P(A)$. It is not the same as mutually exclusive: exclusive events with positive probabilities are *highly* dependent (knowing one happened rules out the other).
+
 > [!key] Definitions
 > Events $E,F$ ($P[F]>0$) are **independent** if $P[E\mid F]=P[E]$, equivalently
 > $$P[E\cap F]=P[E]\,P[F].$$
@@ -160,6 +180,9 @@ For fixed $F$ with $P[F]>0$, the function $A\mapsto P[A\mid F]$ satisfies the th
 
 ## 6. The Monty Hall problem and conditional independence
 <span class="scope-taught">taught</span> (Monty Hall: solved in class, 14 Aug sheet problem 4; named again on 19 Aug) · <span class="scope-extra-book">extra · book</span> (conditional independence)
+
+> [!intuition] The host's choice carries information
+> In Monty Hall the host never opens your door and never the car, so his choice is not random relative to the prize: switching wins with probability 2/3 because the 2/3 that was on the other doors collapses onto the remaining one.
 
 A prize is behind one of 3 doors. You pick door 1; the host, who **knows** where the prize is, always opens a different door with a goat and offers a switch. Let $C_i$ = "prize behind door $i$" and $H_3$ = "host opens door 3". Then $P[H_3\mid C_1]=\tfrac12$ (he may open 2 or 3), $P[H_3\mid C_2]=1$ (forced), $P[H_3\mid C_3]=0$. By Bayes,
 $$P[C_2\mid H_3]=\frac{1\cdot\frac13}{\frac12\cdot\frac13+1\cdot\frac13+0}=\frac23,\qquad P[C_1\mid H_3]=\frac13 .$$

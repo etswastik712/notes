@@ -26,7 +26,8 @@ flowchart LR
   C --> E["QM05<br/>harmonic oscillator<br/>(lecture, Tutorials II-III)"]
   D --> E
   E --> F["QM06 (extra)<br/>number basis, Hermite,<br/>coherent, thermal"]
-  D --> G["QM07 (extra/book)<br/>finite well, penetration,<br/>delta potential"]
+  D --> G["QM07 (taught + extra)<br/>finite well, penetration,<br/>E>V0 scattering (lecture)"]
+  G --> H["QM08 (extra)<br/>step, barrier, WKB,<br/>resonances, bands"]
 ```
 Central thread: **a wave amplitude gives probabilities (QM01) → a law for how the amplitude changes (QM02) → the general rules for asking questions of a state (QM03) → two systems solved completely, one by boundary conditions (QM04) and one by algebra (QM05) → the algebra's full toolbox (QM06) → the finite well relaxes the infinite walls (QM07).**
 
@@ -39,7 +40,9 @@ Central thread: **a wave amplitude gives probabilities (QM01) → a law for how 
 | 04 | [[QM04 The Particle in a Box]] | handwritten box lecture, SO §8.2, Tutorial I | draft |
 | 05 | [[QM05 The Harmonic Oscillator]] | **oscillator lecture (HO)**, Tutorial II, **Tutorial III**, Tutorial note P5–P6 | draft |
 | 06 | [[QM06 The Oscillator Toolbox]] (extra) | Griffiths §2.3; derived here, all numbers in `qm_numbers.py` | draft (🟡/🔵) |
-| 07 | [[QM07 The Finite Square Well]] (extra/book) | Griffiths §2.5–§2.6; Sakurai §2.5; [[Finite_well.pdf\|Finite Well notes]] | draft (🟡/🔵) |
+| 07 | [[QM07 The Finite Square Well]] (**taught** in §9–§11; extra in §1–§8, §12) | **[[Finite_well.pdf\|Finite_well.pdf]] (instructor, 13 pp.)**, **[[tutorial4.pdf\|Tutorial IV]]**; Griffiths §2.5–§2.6; Sakurai §2.5 | draft (🟢/🟡/🔵) |
+| 08 | [[QM08 Quantum Tunnelling]] (extra; the topic announced at the end of Lecture 9) | QM07 §11 continued; Griffiths §2.5; Sakurai §2.5.4; `qm08_numbers.py` | draft (🟡/🔵) |
+| — | [[Dirac Algebra]] (Foundations, extra) | Sakurai Ch. 1 and §2.1; Griffiths Ch. 3; Shankar Ch. 1 | draft (🟡/🔵) |
 | — | [[Quantum Mechanics Quiz Prep]] | mock quiz and 3 Sep quiz (Classroom summaries QZ1, QZ2) | draft |
 
 ```dataview
@@ -61,10 +64,13 @@ SORT chapter ASC
 | BOX | [[Particle_in_a_box.pdf]] | handwritten lecture, 10 pp. (page images; no usable text layer) | taught: QM04 |
 | T1, T2 | [[tutorial1.pdf]], [[Tutorial2.pdf]] | instructor's Tutorial I (6 Oct 2026, box) and II (oscillator) | taught: QM04, QM05 |
 | HO | [[Harmonic_oscillator.pdf]] | **handwritten oscillator lecture, 13 pp.** (page images, p.1 blank; authorship not stated, treated as the instructor's): factorisation, ladder property, ground state, $c_n,d_n$, $\psi_n$, $\langle x\rangle,\langle p\rangle,\langle x^2\rangle,\langle p^2\rangle$; p.9 has a sign slip | taught: QM05 |
+| FW | [[Finite_well.pdf]] | **handwritten finite-well lecture, 13 pp.** (page images, p.1 blank; garbled text layer; added 2026-10-27): bound states with the floor at zero, $\kappa/k_0=\tan k_0a$ and $-\cot k_0a$, the graph, deep/shallow limits, then $E>V_0$ scattering with $T=1/(1+V_0^2\sin^2(2k_0a)/4E(E-V_0))$ and resonances | taught: QM07 §9–§11 |
+| T4 | [[tutorial4.pdf]] | instructor's **Tutorial IV**, 1 p.: plot the exact shape of $\kappa/k_0$ | taught: QM07 §10 |
 | T3 | [[Tutorial3.pdf]] | instructor's **Tutorial III**, 2 pp. TeX: $\langle p^2\rangle$ by ladders, $\langle x\rangle$ and $\langle x^2\rangle$ by Gaussian integrals, orthogonality | taught: QM05 §10 |
 | QZ1, QZ2, EP | [[2026-09-02-mock-quiz-and-solutions]], [[2026-09-03-quiz-ideal-solutions]], [[ph2113/exam-prep]] | summaries of Classroom posts by another tool (`agent_written`); the PDFs and the 3 Sep question texts are **not** in the folder | taught: [[Quantum Mechanics Quiz Prep]] |
 | — | [[qphyprems-merged.pdf]] | merge of WU, L7–L9, SO, MX, WT: the pre-midsem pack | = the pre-midsem syllabus |
 | G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 1st edition, scan (OCR'd Ch. 1–2 to locate sections; book page = PDF − 15) | extra/book |
+| SH | [[Shankar - Principles of quantum mechanics.pdf]] and [[Shankar - contents.pdf]] | Shankar, 2nd ed. and its contents (added 2026-10-27; cited for the Dirac-notation chapter) | extra/book |
 | S | [[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf]] | Sakurai and Napolitano, 3rd ed. (text layer) | extra/book |
 | AI | `gemqphyprems.pdf`, `gemqphyprems2.pdf`, `Quantum_Mechanics_Notes.pdf`, `quantum_notes.pdf`, `Quantum Mechanics II - Chapters 1-2.pdf`, `- Complete.pdf` | AI-written monographs; the first three repeat Lectures 1–9, `quantum_notes.pdf` solves Tutorials I–II, the last two are a QM II course (spin, hydrogen, perturbation theory, scattering) | secondary; cross-check only |
 
@@ -72,7 +78,9 @@ SORT chapter ASC
 - **Lectures 1–5** (photoelectric, Compton, de Broglie, early wave mechanics) are not in the folder; QM01 §8 rebuilds them from the AI monograph and flags it `[!verify]`. The two quizzes (Sep 3) **did** examine them, as explanations ([[Quantum Mechanics Quiz Prep]]), so they are examinable even though no lecture note is present.
 - **Oscillator lecture:** now present ([[Harmonic_oscillator.pdf]]); it stops at $\langle p^2\rangle$, so the superposition dynamics (QM05 §6), the forbidden-region numbers (§9) and all of QM06 are not in it. The lecture's page 9 has a sign slip (flagged). Authorship of the handwritten lectures is not stated.
 - **Quiz texts:** the actual 3 Sep question texts are missing; the Classroom PDFs are not in the folder; the summary of Q5(b) has inconsistent vectors (see the `[!verify]` in the quiz-prep page). No assessment after 3 Sep is announced.
-- **Tunnelling and step potentials** (announced at the end of Lecture 9), finite wells, delta-function scattering: the finite well is now in [[QM07 The Finite Square Well]] (extra/book). Step-potential scattering and tunnelling through a barrier remain absent.
+- **Tunnelling and step potentials** (announced at the end of Lecture 9): the **finite well, its graph and the $E>V_0$ scattering are now lectured material** ([[Finite_well.pdf]], [[QM07 The Finite Square Well]] §9–§11); steps, barriers and tunnelling proper still have no lecture source, so [[QM08 Quantum Tunnelling]] writes them up as extra (🟡/🔵).
+- **Convention clash resolved:** the lecture puts the floor of the well at $E=0$; QM07 §1–§8 (first written from Griffiths) use $V=-V_0$ inside. A dictionary is in QM07 (box after the story); formulas agree via $E_{\rm Griffiths}=E_{\rm lecture}-V_0$.
+- **Slips in the finite-well lecture** (flagged `[verify]` in QM07 §9/§11): the figure labels the walls $\mp a/2$ while the algebra matches at $\mp a$; the first form of $|F/A|^2$ on p.13 lacks the square on $(k^2-k_0^2)$.
 - **Hydrogen, angular momentum, spin, perturbation theory**: only in the AI "QM II" monographs (secondary, beyond this course), not used.
 - **Authorship of the typed notes** is not stated in the files; they are treated as the instructor's.
 
@@ -86,7 +94,7 @@ SORT chapter ASC
 
 ## Revision
 - A printable formula sheet: [[qm-formula-sheet.pdf]] (2 pages).
-- Practice with solutions lives at the end of each chapter (5 × 10 problems).
+- Practice with solutions lives at the end of each chapter (10 problems each, plus the lecture-style extras of QM07).
 
 ## Concept index
 ```dataview

@@ -42,8 +42,23 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 > [!intuition] The one-sentence story
 > The oscillator is the system that is **solved by algebra, not by differential equations**: two operators $\hat a_\pm$ that step the energy up and down by exactly $\hbar\omega$ build the whole equally spaced ladder from one rung, and the bottom rung must be a Gaussian that cannot be stepped down further.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["any well near its minimum<br/>is a parabola"] --> B["factorise H:<br/>ladder operators a-, a+"]
+  B --> C["[a-, a+] = 1<br/>rungs differ by hbar w"]
+  C --> D["ground state:<br/>a- psi0 = 0, E0 = hbar w/2"]
+  D --> E["psi_n = (a+)^n psi0"]
+  E --> F["large n:<br/>classical density"]
+  E --> G["superposition:<br/>sloshes at w"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. The oscillator and why it matters
 <span class="scope-taught">taught</span> *oscillator lecture p.2 (the potential and the question)* · <span class="scope-extra-beyond">extra · beyond</span> *context and the answer, derived here*
+
+> [!intuition] Why this one problem is everywhere
+> Every smooth potential looks like a parabola at its bottom, so every small vibration (molecular bonds, lattice phonons, light modes) is an oscillator. Solve this and you have solved the leading behaviour of all of them.
 
 $$V(x)=\tfrac12m\omega^2x^2,\qquad\hat H=\frac{\hat p^2}{2m}+\tfrac12m\omega^2\hat x^2 .$$
 Classically a mass on a spring of constant $k=m\omega^2$ oscillates with angular frequency $\omega$ and energy $E=\tfrac12m\omega^2A^2$ for **any** amplitude $A$. The potential is the first useful approximation to **any** smooth well: near a minimum $x_0$, $V(x)\approx V(x_0)+\tfrac12V''(x_0)(x-x_0)^2$, so small vibrations of molecules, crystals and fields all look like oscillators with $\omega=\sqrt{V''(x_0)/m}$. The quantum problem asks which energies are allowed and what the states look like.
@@ -57,6 +72,9 @@ The lecture opens with a classical question: ***what is the classical probabilit
 
 ## 2. The ladder operators
 <span class="scope-taught">taught</span> *[[Harmonic_oscillator.pdf#page=2|oscillator lecture p.2]]; [[Tutorial2.pdf|Tutorial II]] preamble (eqs. 1–5); [[Tutorial3.pdf#page=1|Tutorial III]] eqs. (1)–(6)*
+
+> [!intuition] A staircase you can step up and down
+> $\hat a_+$ adds one quantum $\hbar\omega$ of energy, $\hat a_-$ removes one. The algebra $[\hat a_-,\hat a_+]=1$ is the statement that the steps are all the same height.
 
 > [!intuition] Why these operators? (the lecture's factorisation, p.2)
 > $\hat H=\frac1{2m}\big[\hat p^2+(m\omega\hat x)^2\big]$ is a **sum of two squares**, and a sum of squares factorises over the complex numbers: $a^2+b^2=(ia+b)(-ia+b)$. Put $a=\hat p$, $b=m\omega\hat x$ and the two factors are exactly $\hat a_\mp$ up to the constant $\sqrt{2\hbar m\omega}$. Because $\hat x$ and $\hat p$ do not commute the factorisation is not exact: the cross terms leave the commutator, which is the $\pm\tfrac12$ in $\hat H=\hbar\omega(\hat a_\pm\hat a_\mp\pm\tfrac12)$ (§3).
@@ -92,6 +110,9 @@ The operator $\hat N=\hat a_+\hat a_-$ is the **number operator**: $\hat H=\hbar
 ## 4. The ladder property
 <span class="scope-taught">taught</span> *[[Harmonic_oscillator.pdf#page=4|oscillator lecture pp.4–5]]; Tutorial II, Problem 1*
 
+> [!intuition] Why the staircase has a bottom rung with energy left over
+> You cannot step below the lowest rung, so $\hat a_-\psi_0=0$. That condition alone fixes $E_0=\tfrac12\hbar\omega$: the zero-point energy is the price of squeezing $x$ and $p$ at the same time.
+
 > [!key] Lowering and raising
 > If $\hat H\psi=E\psi$ then
 > $$\hat H(\hat a_-\psi)=(E-\hbar\omega)(\hat a_-\psi),\qquad\hat H(\hat a_+\psi)=(E+\hbar\omega)(\hat a_+\psi).$$
@@ -111,6 +132,9 @@ The operator $\hat N=\hat a_+\hat a_-$ is the **number operator**: $\hat H=\hbar
 
 ## 5. The spectrum and the wavefunctions
 <span class="scope-taught">taught</span> *[[Harmonic_oscillator.pdf#page=6|oscillator lecture pp.6–11]]; Tutorial II, Problem 2*
+
+> [!intuition] Equal spacing
+> $E_n=(n+\tfrac12)\hbar\omega$ is a ruler with evenly spaced marks, the quantum image of 'the period does not depend on the amplitude'.
 
 **The ladder must stop at the bottom.** Applying $\hat a_-$ repeatedly lowers $E$ by $\hbar\omega$ each time, but energy cannot go below the bottom of the potential ($E>V_{\min}=0$, [[QM04 The Particle in a Box]]). More directly, $\langle\psi|\hat H|\psi\rangle=\hbar\omega\big(\|\hat a_-\psi\|^2+\tfrac12\big)\ge\tfrac12\hbar\omega$. So there is a lowest state $\psi_0$ for which $\hat a_-\psi_0=0$.
 
@@ -192,6 +216,9 @@ For the normalised packet $\psi=(2\pi\sigma_x^2)^{-1/4}e^{-x^2/4\sigma_x^2}$ (Tu
 
 ## 9. Quantum versus classical, and real vibrations
 <span class="scope-extra-beyond">extra · beyond</span> *all numbers recomputed here*
+
+> [!intuition] Where the classical picture reappears
+> For large $n$ the quantum density, averaged over its fast wiggles, matches the classical probability to be found at $x$, $\propto1/\sqrt{x_t^2-x^2}$: a swinging mass spends most time at the turning points where it moves slowest.
 
 **Forbidden regions.** A classical oscillator with energy $E_n$ cannot go beyond the turning points $x_t=\sqrt{(2n+1)\hbar/m\omega}$. The quantum state does: for $\psi_0$, $P(|x|>x_t)=\operatorname{erfc}(1)=15.7\%$; for $n=1,2,5$ it is $11.2\%,\ 9.5\%,\ 7.4\%$. The penetration is the same effect that makes finite wells lower than infinite wells ([[QM04 The Particle in a Box]]) and, for barriers, produces tunnelling. As $n$ grows the density approaches the classical $1/\pi\sqrt{x_t^2-x^2}$ on average (Fig. QM5.1B): the **correspondence principle**.
 

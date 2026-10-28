@@ -39,8 +39,21 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 > [!intuition] The one-sentence story
 > A set is determined by its members and by nothing else; every other mathematical object (pairs, relations, functions, numbers) is a set built from the empty set, and the ordered pair is the first nontrivial piece of that construction.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["sets, subsets,<br/>power set"] --> B["algebra of sets<br/>(mirrors logic)"]
+  B --> C["indexed families,<br/>products"]
+  C --> D["ordered pairs<br/>(Kuratowski)"]
+  D --> E["Russell's paradox<br/>-> ZFC axioms"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Sets, subsets and the power set
 <span class="scope-taught">taught</span> *Assignment 3, questions 1–3*
+
+> [!intuition] A set is defined by its members, nothing else
+> Order and repetition do not matter. The power set of an $n$-element set has $2^n$ members because each element is 'in' or 'out' of a subset.
 
 A set is determined by its elements. $A\subseteq B$ means $\forall x\,(x\in A\Rightarrow x\in B)$; the assignments write $\subset$ for this (so $A\subset A$ is allowed) and $\varphi$ for the empty set; I write $\subseteq$ and $\varnothing$ and use $A\subsetneq B$ for a proper subset.
 
@@ -58,6 +71,9 @@ A set is determined by its elements. $A\subseteq B$ means $\forall x\,(x\in A\Ri
 
 ## 2. The algebra of sets
 <span class="scope-taught">taught</span> *Assignment 3, questions 4–6*
+
+> [!intuition] Set algebra is logic in disguise
+> $\cup\leftrightarrow\vee$, $\cap\leftrightarrow\wedge$, complement $\leftrightarrow\neg$: De Morgan for sets is De Morgan for statements.
 
 $A\cup B$, $A\cap B$, $A\setminus B$ (written $A-B$ in the assignments), $A^c=X\setminus A$ for a fixed ambient set $X$. 
 
@@ -109,6 +125,9 @@ For sets $A_n$, $n\in\mathbb N$ (an **indexed family**): $\bigcup_nA_n=\{x:\exis
 ## 4. Ordered pairs
 <span class="scope-taught">taught</span> *the instructor's note [[ordered pairs.pdf|Ordered Pairs in ZFC]]*
 
+> [!intuition] How to make order out of unordered sets
+> $(a,b):=\{\{a\},\{a,b\}\}$. All that is needed of an ordered pair is $(a,b)=(c,d)\iff a=c,\ b=d$, and this definition has it.
+
 An ordered pair must satisfy one property:
 
 > [!key] The property (OP)
@@ -148,6 +167,9 @@ An ordered pair must satisfy one property:
 
 ## 5. Why axioms: Russell and ZFC
 <span class="scope-extra-book">extra · book</span> *AI notes `proofs-prems-topo.pdf` ch. 4–5*
+
+> [!intuition] Why axioms
+> 'The set of all sets that are not members of themselves' contradicts itself (Russell). ZFC restricts how sets may be built (separation instead of free comprehension) so that such objects never arise.
 
 > [!key] Russell's paradox
 > If every property defined a set, $R=\{x:x\notin x\}$ would be a set; then $R\in R\iff R\notin R$. So **unrestricted comprehension is inconsistent**. ZFC restricts it: a set can be carved out of an existing set by a property (**Separation**) but there is no universal set.

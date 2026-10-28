@@ -42,8 +42,22 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > [!intuition] The one-sentence story
 > The MGF $E[e^{tX}]$ packs all moments into one function; because $e^{t(X+Y)}=e^{tX}e^{tY}$ it turns sums of independent variables into products, which is why sums of many small independent pieces converge to the normal curve.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["moments:<br/>location, spread,<br/>skew, tails"] --> B["MGF M(t) = E e^{tX}"]
+  B --> C["MGFs by first principles"]
+  C --> D["applications:<br/>sums, identification"]
+  D --> E["Markov, Chebyshev"]
+  E --> F["law of large numbers,<br/>central limit theorem"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Median, mode, higher moments, skewness and kurtosis
 <span class="scope-taught">taught</span> *Week 3, [[Week3_notes.pdf#page=1|pp.1–2]]* · <span class="scope-extra-book">extra · book</span> *AI notes §1.1–1.4 (existence of moments, Cauchy)*
+
+> [!intuition] Four numbers tell the story of a distribution
+> Mean = where it sits, variance = how wide, skewness = which way it leans, kurtosis = how heavy the tails are. Two distributions with the same mean and variance can look very different.
 
 > [!key] Median and mode (lecture p.1) ([[Median and Mode]])
 > - **Continuous** $X$ with pdf $f$ and cdf $F$: $c$ is a **median** iff $F(c)=\tfrac12$; $c$ is a **mode** iff $f(c)\ge f(x)$ for all $x$ (the pdf has a global maximum at $c$).
@@ -77,6 +91,9 @@ Raw moments $E[X^k]$ and central moments $\mu_k=E[(X-\mu)^k]=\sum_{j=0}^k\binom 
 
 ## 2. The moment generating function
 <span class="scope-taught">taught</span> *Week 3, [[Week3_notes.pdf#page=2|pp.2–3]] (definition, EGF remark, Taylor coefficients, affine rule)* · <span class="scope-extra-book">extra · book</span> *AI notes §2.2 (independent sums, uniqueness, continuity)*
+
+> [!intuition] The MGF is all the moments in one function
+> Expand $e^{tX}=\sum t^kX^k/k!$: the coefficient of $t^k/k!$ is $E[X^k]$. Derivatives at $t=0$ read the moments off, and the MGF of a sum of independent variables is the *product* of their MGFs.
 
 > [!key] Why "generating function" (lecture p.2)
 > $M_X(t)=E[e^{tX}]$ is required to exist on $-\delta<t<\delta$ for some $\delta>0$. It is the **exponential generating function** of the numbers $a_n=E[X^n]$: in combinatorics the EGF of $\{a_n\}_{n\ge0}$ is the formal power series $\sum_{n\ge0}a_n\dfrac{x^n}{n!}$. Hence **$E[X^n]$ is $n!$ times the coefficient of $t^n$** in the Taylor expansion of $M_X(t)$ (the "this is $E(X^n)$" arrows in the lecture), the same statement as $E[X^n]=M_X^{(n)}(0)$ below.
@@ -173,6 +190,9 @@ Write $q=1-p$.
 
 ## 5. Inequalities and limit theorems
 <span class="scope-extra-book">extra · book</span> *AI notes Example 2.8 and §1.5; Ross Ch. 8; Blitzstein and Hwang Ch. 10*
+
+> [!intuition] Averages settle down, and their wobble is Gaussian
+> The LLN says $\bar X_n\to\mu$; the CLT says the leftover wobble $(\bar X_n-\mu)\sqrt n/\sigma$ looks like a standard normal whatever the original distribution (finite variance). That is why the bell curve is everywhere.
 
 > [!key] Markov and Chebyshev
 > - **Markov:** $X\ge0$, $a>0$: $P[X\ge a]\le\dfrac{E[X]}a$ (since $a\mathbf 1\{X\ge a\}\le X$).

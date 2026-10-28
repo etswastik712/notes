@@ -39,6 +39,18 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 > [!intuition] The one-sentence story
 > A gas that cannot exchange heat pays for its own expansion out of its internal energy, so it cools; the amount depends on how many ways its molecules can store energy ($\gamma$), and the same fact that sets the cooling of a rising air parcel sets the speed of sound.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["ideal gas PV = nRT"] --> B["degrees of freedom:<br/>C_V = f R/2"]
+  B --> C["gamma = C_P/C_V"]
+  C --> D["reversible adiabat<br/>PV^gamma = const"]
+  D --> E["Ruchhardt's gamma"]
+  D --> F["speed of sound<br/>c = sqrt(gamma R T / M)"]
+  D --> G["atmosphere:<br/>dry lapse rate"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. The ideal gas
 <span class="scope-taught">taught</span> *L1 §I.B–I.C ([[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf#page=3|pp.3, 5–6]])*
 
@@ -51,6 +63,9 @@ For atmospheric work the same law appears per unit mass as $P=\rho R_dT$ with $R
 
 ## 2. Heat capacities, $\gamma$ and degrees of freedom
 <span class="scope-extra-beyond">extra · beyond</span> *equipartition is derived in [[TH06 From Kinetic Theory to Statistical Mechanics]]; stated here*
+
+> [!intuition] $\gamma$ counts the ways a molecule can hold energy
+> Monatomic gas: 3 ways (translation), $\gamma=5/3$. Diatomic at room temperature: 5 (add 2 rotations), $\gamma=7/5$. The more storage modes, the more heat it takes per kelvin and the closer $\gamma$ is to 1.
 
 An ideal gas of molecules with $f$ **active quadratic degrees of freedom** (translations, rotations, and vibrations that are not frozen out) has $E=\tfrac f2Nk_BT$ (**equipartition**), so
 $$C_V=\frac f2Nk_B,\qquad C_P=C_V+Nk_B=\frac{f+2}2Nk_B,\qquad\boxed{\ \gamma\equiv\frac{C_P}{C_V}=1+\frac2f\ }$$
@@ -68,6 +83,9 @@ $$C_V=\frac f2Nk_B,\qquad C_P=C_V+Nk_B=\frac{f+2}2Nk_B,\qquad\boxed{\ \gamma\equ
 
 ## 3. The reversible adiabat
 <span class="scope-taught">taught</span> *L2 §I.E, eqs. (I.18)–(I.19) ([[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf#page=2|p.2]])*
+
+> [!intuition] Why the adiabat is steeper than the isotherm
+> Compress quickly: all the work goes into heating the gas (no time for heat to leave), so pressure rises both from smaller $V$ *and* higher $T$. The isotherm only has the first effect.
 
 For a monatomic ideal gas $E=\tfrac32Nk_BT=\tfrac32PV$. Along a quasi-static path (MIT convention $\bar\mathrm dW=-P\mathrm dV$):
 $$\bar\mathrm dQ=\mathrm dE-\bar\mathrm dW=\mathrm d\Big(\tfrac32PV\Big)+P\,\mathrm dV=\tfrac32V\,\mathrm dP+\tfrac52P\,\mathrm dV .$$
@@ -102,6 +120,9 @@ $$F=A\,\mathrm dP=-\frac{\gamma PA^2}{V}\,x\ \Longrightarrow\ \omega=A\sqrt{\fra
 ## 5. The speed of sound
 <span class="scope-extra-book">extra · book</span> *Zemansky §5.7 ([[Heat and thermodynamics an intermediate textbook (Mark Waldo Zemansky Richard Dittman) (z-library.sk, 1lib.sk, z-lib.sk).pdf#page=141|PDF pp.141–146]]); numbers recomputed*
 
+> [!intuition] Sound is adiabatic
+> Compressions and rarefactions pass too fast for heat to flow between neighbours, so the stiffness is $\gamma P$, not $P$, giving $c=\sqrt{\gamma RT/M}$ (343 m/s at 20 °C).
+
 A sound wave is a longitudinal compression: $c=\sqrt{K/\rho}$ with the bulk modulus $K$ of the medium. Newton took the compressions to be **isothermal**, $K_T=-V(\partial P/\partial V)_T=P$, giving $c=\sqrt{P/\rho}=\sqrt{RT/M}$; this is a factor $\sqrt\gamma=1.18$ too small (about $15\%$ below the measured value). **Laplace** realised the oscillations are too fast for heat to flow between the compressed and rarefied regions: they are **adiabatic**, $K_S=-V(\partial P/\partial V)_S=\gamma P$, so
 $$\boxed{\ c=\sqrt{\frac{\gamma P}\rho}=\sqrt{\frac{\gamma RT}M}\ }$$
 
@@ -117,6 +138,9 @@ The ratio is $\sqrt\gamma=1.183$. Sound speed depends on temperature only (not o
 
 ## 6. The adiabat in the atmosphere
 <span class="scope-extra-beyond">extra · beyond</span> *links to the climate chapters*
+
+> [!intuition] A rising parcel cools without losing heat
+> Rising air expands into lower pressure and does work on its surroundings, so it cools: $dT/dz=-g/c_p\approx-9.8$ K/km. This is the dry adiabatic lapse rate used throughout the climate chapters.
 
 A parcel of air rising or sinking quickly exchanges negligible heat with its surroundings and stays close to the **adiabat**. In hydrostatic balance $\mathrm dP/\mathrm dz=-\rho g=-Pg/(R_dT)$, and from $T^\gamma P^{1-\gamma}=$ const, $\mathrm dT/T=\frac{\gamma-1}\gamma\,\mathrm dP/P=\frac{R_d}{c_p}\mathrm dP/P$. Combining,
 $$\boxed{\ \frac{\mathrm dT}{\mathrm dz}=-\frac g{c_p}\equiv-\Gamma_d=-9.77\ \text{K km}^{-1}}$$

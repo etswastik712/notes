@@ -41,8 +41,23 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 > [!intuition] The one-sentence story
 > Thermodynamics is what is left when you average over $10^{23}$ molecules: temperature is the mean kinetic energy, entropy is the logarithm of the number of ways to arrange them, and the Boltzmann factor $e^{-E/k_BT}$ tells you how likely each arrangement is.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["collisions with walls<br/>give pressure"] --> B["Maxwell speed<br/>distribution"]
+  B --> C["mean free path,<br/>effusion"]
+  B --> D["equipartition:<br/>kT/2 per mode"]
+  D --> E["microstates:<br/>S = k ln Omega, Sackur-Tetrode"]
+  E --> F["canonical ensemble<br/>Z, Boltzmann factor"]
+  F --> G["Planck mean energy,<br/>radiation constants"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Pressure from collisions
 <span class="scope-extra-book">extra · book</span> *`KTG_Chapter.pdf` §1.1–1.2; re-derived*
+
+> [!intuition] Pressure is a rain of tiny impacts
+> Each molecule hitting the wall delivers a momentum $2mv_x$; billions per second average into a steady force. $P=\tfrac13n m\langle v^2\rangle$ and so $\tfrac12m\langle v^2\rangle=\tfrac32kT$: temperature is average kinetic energy.
 
 Model: $N$ point molecules of mass $m$ in a volume $V$, colliding elastically with the walls (and rarely with each other). A molecule with velocity component $v_x$ hitting a wall perpendicular to $x$ transfers momentum $2mv_x$. Per unit area per unit time $\tfrac12nv_x$ molecules with $v_x>0$ arrive ($n=N/V$), so
 $$P=\sum\tfrac12n\,(2mv_x)\,v_x=nm\langle v_x^2\rangle=\tfrac13nm\langle v^2\rangle=\tfrac23\,n\Big\langle\tfrac12mv^2\Big\rangle .$$
@@ -55,6 +70,9 @@ The **temperature** is a measure of the mean translational kinetic energy: $3/2\
 
 ## 2. The Maxwell speed distribution
 <span class="scope-extra-book">extra · book</span> *`KTG_Chapter.pdf` §1.3*
+
+> [!intuition] Why the distribution has that shape
+> Each velocity component is independent and Gaussian. Speeds are the length of a 3-D Gaussian vector: few are very slow (small phase-space), few very fast (Boltzmann suppression); the peak sits at $\sqrt{2kT/m}$.
 
 In equilibrium the probability of a velocity is proportional to the **Boltzmann factor** $e^{-mv^2/2k_BT}$; integrating over directions:
 $$\boxed{\ f(v)=4\pi\Big(\frac m{2\pi k_BT}\Big)^{3/2}v^2\,e^{-mv^2/2k_BT}\ }$$
@@ -83,6 +101,9 @@ The mean free path also sets the **transport coefficients** (viscosity, thermal 
 
 ## 4. Equipartition
 <span class="scope-extra-book">extra · book</span> *`KTG_Chapter.pdf` §1.5; `Thermo_StatMech_Notes.pdf` §5.5*
+
+> [!intuition] Equipartition works until $kT$ is smaller than the level spacing
+> Each quadratic degree of freedom stores $\tfrac12kT$ if the thermal energy is large compared with its quantum spacing. Vibrations freeze out at room temperature (the Einstein oscillator, [[QM06 The Oscillator Toolbox]] §8).
 
 > [!key] Equipartition theorem
 > In classical equilibrium, every degree of freedom that enters the energy **quadratically** ($\tfrac12mv_x^2$, $\tfrac12I\omega^2$, $\tfrac12\kappa x^2$, ...) contributes $\tfrac12k_BT$ to the mean energy, so $E=\tfrac f2Nk_BT$, $C_V=\tfrac f2Nk_B$, $\gamma=1+2/f$ ([[TH03 The Ideal Gas and Adiabatic Processes]]).
@@ -116,6 +137,9 @@ $$\boxed{\ S=Nk_B\Big[\ln\Big(\frac VN\Big(\frac{2\pi mk_BT}{h^2}\Big)^{3/2}\Big
 
 ## 6. The canonical ensemble
 <span class="scope-extra-book">extra · book</span> *`Thermo_StatMech_Notes.pdf` §5; re-derived*
+
+> [!intuition] The Boltzmann factor weighs every state
+> A state of energy $E$ is $e^{-E/kT}$ times as likely as one of zero energy. The partition function $Z=\sum e^{-E/kT}$ is the normaliser and the generating function: derivatives of $\ln Z$ give everything.
 
 For a system in contact with a heat bath at $T$ the probability of microstate $i$ is the **Boltzmann distribution**
 $$\boxed{\ p_i=\frac{e^{-\beta E_i}}Z,\qquad Z=\sum_ie^{-\beta E_i},\qquad\beta=\frac1{k_BT}\ }$$

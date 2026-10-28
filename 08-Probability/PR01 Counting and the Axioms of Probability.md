@@ -40,8 +40,22 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > [!intuition] The one-sentence story
 > Probability starts as counting: when outcomes are equally likely, a probability is a ratio of counts; the axioms keep that arithmetic consistent for events of every shape, and inclusion-exclusion is the bookkeeping that stops overlapping events being counted twice.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["counting:<br/>multiplication principle"] --> B["permutations,<br/>combinations"]
+  B --> C["sample space,<br/>events"]
+  C --> D["axioms of probability"]
+  D --> E["inclusion-exclusion"]
+  D --> F["continuity of P"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Counting
 <span class="scope-taught">taught</span> *5–6 Aug ([[ilovepdf_merged-1.pdf#page=1|pp.1–4]]); sheet of 7 Aug*
+
+> [!intuition] Choices multiply, orderings divide
+> If a task has $m$ choices then $n$ choices, there are $mn$ ways. Orderings that you do not care about are over-counted by the number of ways to shuffle them, so divide by it: that is the whole of $\binom nk=n!/k!(n-k)!$.
 
 > [!key] The tools
 > - **Multiplication principle.** If experiment 1 has $m$ outcomes and experiment 2 has $n$, there are $mn$ outcome-pairs; for $r$ experiments, $m_1m_2\cdots m_r$.
@@ -78,6 +92,9 @@ Two events with $E\cap F=\varnothing$ are **mutually exclusive** (disjoint).
 ## 3. What "probability" means
 <span class="scope-taught">taught</span> *6 and 12 Aug ([[ilovepdf_merged-1.pdf#page=5|pp.5–7]])*
 
+> [!intuition] Three meanings, one calculus
+> Long-run frequency, degree of belief, and a measure on outcomes all satisfy the same three axioms; the theorems do not care which one you have in mind.
+
 **Naive definition.** For a finite sample space with equally likely outcomes,
 $$P[A]=\frac{|A|}{|S|}=\frac{\text{number of favourable outcomes}}{\text{total number of outcomes}} .$$
 It is useful but not abstract (it needs equal likelihood and finiteness).
@@ -111,6 +128,9 @@ It is useful but not abstract (it needs equal likelihood and finiteness).
 
 ## 4. Inclusion-exclusion
 <span class="scope-taught">taught</span> *12 Aug ([[ilovepdf_merged-1.pdf#page=8|pp.8–9]]); sheet of 14 Aug, problems 1–2*
+
+> [!intuition] Add, subtract the double-counted, add back the triple-counted
+> Summing $P(A_i)$ counts overlaps twice; subtract pairwise overlaps; that removes triples too often; add them back; and so on with alternating signs.
 
 For any two events $E,F$: $\ P(E\cup F)=P(E)+P(F)-P(E\cap F)$ (split into the disjoint pieces $E\setminus F$, $F\setminus E$, $E\cap F$). For three,
 $$P(E\cup F\cup G)=P(E)+P(F)+P(G)-P(E\cap F)-P(E\cap G)-P(F\cap G)+P(E\cap F\cap G),$$

@@ -39,6 +39,18 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 > [!intuition] The one-sentence story
 > Heat runs from hot to cold on its own, never the reverse; that single observation, pushed through the logic of engines, produces a temperature scale that depends on no material and a state function, the entropy, that never decreases in an isolated system.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["Kelvin and Clausius<br/>statements"] --> B["Carnot cycle:<br/>maximum efficiency"]
+  B --> C["eta = 1 - Tc/Th"]
+  C --> D["thermodynamic<br/>temperature scale"]
+  B --> E["Clausius theorem:<br/>sum dQ/T <= 0"]
+  E --> F["entropy dS = dQ_rev/T"]
+  F --> G["lost work,<br/>arrow of time"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Heat engines and refrigerators
 <span class="scope-taught">taught</span> *L2 §I.D ([[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf#page=1|p.1]])*
 
@@ -51,6 +63,9 @@ The first law rules out **perpetual motion of the first kind** (work from nothin
 
 ## 2. The Kelvin and Clausius statements
 <span class="scope-taught">taught</span> *L2 §I.D ([[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf#page=1|pp.1–2]])*
+
+> [!intuition] Two faces of one law
+> Clausius: heat will not flow from cold to hot by itself. Kelvin: you cannot turn heat from one reservoir entirely into work. If either failed, you could use it to break the other: they are equivalent.
 
 > [!key] Two statements of the second law
 > - **Kelvin:** no process is possible whose **sole result** is the complete conversion of heat into work. (A "perfect engine" is forbidden.)
@@ -67,6 +82,9 @@ They are **equivalent**: if one is violated so is the other.
 
 ## 3. The Carnot engine and Carnot's theorem
 <span class="scope-taught">taught</span> *L2 §I.E ([[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf#page=2|pp.2–3]])*
+
+> [!intuition] Carnot is the speed limit
+> No engine between two reservoirs beats a reversible one, and all reversible engines have the same efficiency $1-T_c/T_h$, independent of the working substance. A 500 K to 300 K engine can never exceed 40 %.
 
 A **reversible** process can be run backward in time by reversing its inputs and outputs (the thermodynamic analogue of frictionless motion). Reversibility implies equilibrium at each stage, so a reversible process is quasi-static; the converse is false (friction dissipates even in a slow process). An engine that **runs in a cycle** returns to its initial internal state.
 
@@ -109,6 +127,9 @@ All thermodynamic temperatures are **positive**: by $Q_C/Q_H=T_C/T_H$ the heat e
 ## 5. Clausius's theorem and entropy
 <span class="scope-taught">taught</span> *L2 §I.F ([[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf#page=4|pp.4–6]])*
 
+> [!intuition] Entropy is what's conserved in a reversible round trip
+> $\delta Q$ is not exact, but $\delta Q_{\rm rev}/T$ is: dividing by $T$ turns heat into the change of a state function. In an irreversible process the total entropy goes *up*.
+
 > [!key] Clausius's theorem
 > For **any** cyclic transformation (reversible or not), $\displaystyle\oint\frac{\bar\mathrm dQ}T\le0$, where $\bar\mathrm dQ$ is the heat supplied to the system at temperature $T$ (the temperature at the boundary where the heat enters).
 
@@ -140,6 +161,9 @@ a relation between state functions that holds **generally** (not just for revers
 
 ## 7. Lost work, the arrow of time, and the microscopic view
 <span class="scope-extra-beyond">extra · beyond</span> *and the statement at the end of [[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf#page=4|L2 §I.F]]; the microscopic definition is in [[97dcd8dee3d3301cd7c27745b17b10b5_MIT8_333F13_Lec4.pdf#page=5|L4 §I.J]]*
+
+> [!intuition] Why time has a direction
+> Entropy counts microstates. The macrostate with overwhelmingly more microstates is the one you will find; the reverse path is not forbidden, just absurdly unlikely. That is the arrow of time.
 
 **Lost work.** In the heat-flow example the 1000 J flowing from 500 K to 300 K could, through a reversible engine, have delivered $W_{\max}=1000(1-300/500)=400$ J. By letting the heat flow irreversibly that work is **lost**, and $T_C\,\Delta S_{\rm gen}=300\times1.333=400$ J: the lost work equals the sink temperature times the entropy generated (a general result, the Gouy-Stodola theorem). Entropy generation measures irreversibility.
 

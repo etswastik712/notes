@@ -37,8 +37,21 @@ tags: [subject/analysis, type/chapter, extra/book, extra/beyond, src/ai-notes, s
 > [!intuition] The one-sentence story
 > A metric says how far apart points are; a topology keeps only "which sets are open", i.e. which points are near which sets, and that is exactly enough to define continuity, compactness and connectedness.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["metric: distance<br/>with three rules"] --> B["convergence, continuity,<br/>completeness"]
+  B --> C["topological space:<br/>forget distance, keep 'open'"]
+  C --> D["compactness"]
+  C --> E["connectedness,<br/>intermediate value theorem"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Metric spaces
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 17.1*
+
+> [!intuition] Three rules make a notion of nearness
+> Positive (distinct points are apart), symmetric, and the triangle inequality (a detour is never shorter). Anything that satisfies them, from city blocks to functions to words, supports limits and continuity.
 
 > [!key] Definition
 > A **metric** on $X$ is $d:X\times X\to\mathbb R$ with (M1) $d(x,y)\ge0$, $=0$ iff $x=y$; (M2) $d(x,y)=d(y,x)$; (M3) $d(x,z)\le d(x,y)+d(y,z)$ (**triangle inequality**). Examples: $|x-y|$ on $\mathbb R$; the Euclidean metric on $\mathbb R^n$; the **taxicab** $\ell^1$ and **max** $\ell^\infty$ metrics; the **discrete metric** ($1$ if $x\ne y$); the **sup metric** $\sup_a|f(a)-g(a)|$ on bounded functions; any subset with the restricted metric.
@@ -76,6 +89,9 @@ tags: [subject/analysis, type/chapter, extra/book, extra/beyond, src/ai-notes, s
 ## 3. Topological spaces
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 18.1–18.3; Munkres §12–§17*
 
+> [!intuition] Topology keeps only 'who is near whom'
+> You can bend, stretch and squash a space; as long as neighbourhoods are preserved, topology does not notice. A coffee cup and a doughnut are the same.
+
 > [!key] Definition
 > A **topology** on $X$ is a family $\tau\subseteq\mathcal P(X)$ with (T1) $\varnothing,X\in\tau$; (T2) closed under **arbitrary unions**; (T3) closed under **finite intersections**. Members of $\tau$ are **open**; complements are **closed**. A map is **continuous** if preimages of open sets are open; every metric gives a topology $\tau_d$ (§1), a topology of that form is **metrisable**.
 
@@ -97,6 +113,9 @@ tags: [subject/analysis, type/chapter, extra/book, extra/beyond, src/ai-notes, s
 ## 4. Compactness
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 18.4*
 
+> [!intuition] Compact: no escape to infinity or to a missing boundary point
+> In $\mathbb R^n$ that is exactly closed and bounded (Heine–Borel). Its great consequence: a continuous function on a compact set attains its maximum.
+
 > [!key] Definition
 > An **open cover** of $A\subseteq X$ is a family of open sets whose union contains $A$. $A$ is **compact** if every open cover has a **finite subcover**. Every finite set is compact.
 
@@ -114,6 +133,9 @@ tags: [subject/analysis, type/chapter, extra/book, extra/beyond, src/ai-notes, s
 
 ## 5. Connectedness and the intermediate value theorem
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 18.5*
+
+> [!intuition] Connected: in one piece
+> A set that cannot be split into two disjoint open parts. The intermediate value theorem is the statement that a continuous image of an interval is connected: it cannot jump over a value.
 
 > [!key] Definition
 > $X$ is **disconnected** if $X=U\cup V$ with $U,V$ disjoint, non-empty and open (equivalently some non-empty proper subset is both open and closed); otherwise **connected**. $A\subseteq X$ is connected if it is connected in the subspace topology.

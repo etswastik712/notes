@@ -39,6 +39,16 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 > [!intuition] The one-sentence story
 > Size, for infinite sets, means "can be matched one-to-one": $\mathbb N$, $\mathbb Z$ and $\mathbb Q$ all match, so they have the same size, but a list of real numbers always misses one, so $\mathbb R$ is strictly bigger.
 
+<!-- intuition-v1 -->
+```mermaid
+flowchart LR
+  A["function:<br/>one output per input"] --> B["injective, surjective,<br/>bijective"]
+  B --> C["same cardinality<br/>= bijection"]
+  C --> D["countable sets:<br/>N, Z, Q"]
+  C --> E["uncountable:<br/>R, power set (Cantor)"]
+```
+*Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
+
 ## 1. Functions, images and preimages
 <span class="scope-taught">taught</span> *Assignment 6, definitions 1–2 and problems 1–3*
 
@@ -55,6 +65,9 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 
 ## 2. Injective, surjective, bijective
 <span class="scope-taught">taught</span> *Assignment 6, definitions 3–5 and problems 4–9*
+
+> [!intuition] No collisions, nothing missed, both
+> Injective: different inputs, different outputs. Surjective: every target is hit. Bijective: a perfect pairing, so you can undo it (an inverse exists).
 
 > [!key] Three properties
 > $f$ is **injective** if $f(a_1)=f(a_2)\Rightarrow a_1=a_2$ (every $b$ has **at most** one preimage); **surjective** if $\mathrm{Im}f=B$ (**at least** one preimage); **bijective** if both (**exactly** one). A bijection has an **inverse** $f^{-1}:B\to A$, and a composite of bijections is a bijection (so "same cardinality" is transitive).
@@ -79,6 +92,9 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 ## 3. Same cardinality
 <span class="scope-taught">taught</span> *Lectures 17–18; Assignment 7, definitions 1–2*
 
+> [!intuition] 'Same size' means 'can be paired off'
+> That definition, not counting, is the one that works for infinite sets, and it has surprises: the even numbers pair off perfectly with all of $\mathbb N$ (Hilbert's hotel).
+
 > [!key] Definitions (lectures 17–18)
 > $A\sim B$ ("**same cardinality**", $|A|=|B|$) if there is a **bijection** $A\to B$. A set is **finite** if it is empty or $\sim\mathbb N_k=\{1,\dots,k\}$ for some $k$ ($|A|=k$); **countable** if finite or $\sim\mathbb N$ (**countably infinite**); **uncountable** if infinite and not countable. $|\mathbb N|=\aleph_0$.
 > $\sim$ is an **equivalence relation** on sets: $A\sim A$ (identity), $A\sim B\Rightarrow B\sim A$ ($f^{-1}$), $A\sim B\sim C\Rightarrow A\sim C$ ($g\circ f$).
@@ -93,6 +109,9 @@ Black boxes assumed (proved later by induction, [[PA05 Induction and the Number 
 
 ## 4. Countable sets
 <span class="scope-taught">taught</span> *Lecture 17; Assignment 7; Assignment 8 problems 1–2*
+
+> [!intuition] Countable = can be listed
+> $\mathbb Z$ and $\mathbb Q$ can be put in an infinite list, even though $\mathbb Q$ is dense: walk the grid of fractions diagonally and skip repeats.
 
 > [!example] Assignment 7 Q1–Q2
 > $\mathbb N\cup\{0\}$ is countably infinite via $n\mapsto n-1$. $\mathbb N\times\{0,1\}$ is countably infinite via $(n,0)\mapsto2n-1$, $(n,1)\mapsto2n$ (odd numbers for the first copy, even for the second).
@@ -118,6 +137,9 @@ Black boxes assumed (proved later by induction, [[PA05 Induction and the Number 
 
 ## 5. Uncountable sets
 <span class="scope-taught">taught</span> *Lectures 19–20; Assignment 8 problems 1(b), 3–5*
+
+> [!intuition] Cantor's diagonal
+> Given any list of real numbers, build a new one that differs from the $n$th number in its $n$th digit: it is not on the list. So $\mathbb R$ is strictly bigger than $\mathbb N$, and $P(S)$ is always bigger than $S$.
 
 > [!key] Decimal expansions (Lecture 19)
 > Every $x\in(0,1)$ is $0.a_1a_2a_3\dots=\sum a_k10^{-k}$, $a_k\in\{0,\dots,9\}$ (the series converges since $\sum\tfrac9{10^k}$ does: its partial sums are $0.99\dots9=1-10^{-n}\to1$). The representation is **not unique**: $0.4999\dots=\tfrac4{10}+9\sum_{k\ge2}10^{-k}=\tfrac4{10}+\tfrac9{90}=\tfrac12=0.5000\dots$ A representation is **normalised** if it does not end in an infinite string of 9s. **Every real in $(0,1)$ has exactly one normalised expansion, and two normalised expansions are equal iff all their digits agree.**
