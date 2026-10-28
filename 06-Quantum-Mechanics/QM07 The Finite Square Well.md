@@ -5,28 +5,37 @@ subject: qm
 type: chapter
 chapter: 7
 part: II
-scope: [extra-book, extra-beyond]
-by: [book, own-notes]
+scope: [taught, extra-book, extra-beyond]
+by: [slides, book, own-notes]
 status: draft
 prereq: ["[[QM04 The Particle in a Box]]", "[[QM02 The Schrodinger Equation and Stationary States]]"]
-tags: [subject/qm, type/chapter, extra/book, extra/beyond, src/book, src/own-notes, status/draft]
+tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/slides, src/book, src/own-notes, status/draft]
 ---
 # QM07 · The Finite Square Well
 
 ◀ [[QM06 The Oscillator Toolbox]] · [[Quantum Mechanics - Course Map|Course Map]]
 
-<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
+<!-- qm07-patch-v1 -->
 > [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
-> 🟡 **Extra · book**: In the core lecture course, [[QM04 The Particle in a Box]] treated the infinite square well with perfectly rigid, impenetrable walls ($V = \infty$ outside). The finite square well relaxes this unphysical idealisation to a finite barrier height $V_0$. It is introduced in the course's supplementary source [[Finite_well.pdf|Finite Well lecture notes]] (pp. 1–12) and treated comprehensively in Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=78|PDF pp. 78–85]]).
-> - §1 Setup, potential definition, energy regimes, and classical turning points (Griffiths §2.6, [[Finite_well.pdf#page=1|Finite Well notes p. 1]])
-> - §2 The TISE in all three regions, matching boundary conditions, and parity (Griffiths §2.6, [[Finite_well.pdf#page=3|Finite Well notes pp. 3–5]])
-> - §3 Transcendental eigenvalue equations, dimensionless variables $z$ and $z_0$, and graphical circle intersections (Griffiths §2.6, [[Finite_well.pdf#page=6|Finite Well notes pp. 6–8]])
+> 🟢 **Taught** (the instructor's handwritten lecture [[Finite_well.pdf#page=2|Finite_well.pdf]], 13 pp., p.1 blank, and [[tutorial4.pdf|Tutorial IV]]; added 2026-10-27/28). **This is a different convention from §1–§8 below:** the lecture puts the **floor of the well at $E=0$** and the walls at $V_0$, so bound states have $0<E<V_0$ and $k_0=\sqrt{2mE}/\hbar$ (see the dictionary box after the story). What the lecture covers, and where it is written up here:
+> - §9 the bound-state derivation in the lecture's notation: outside $\kappa$ (p.2), inside $k_0$ (p.3), even/odd matching $\kappa/k_0=\tan k_0a$ and $\kappa/k_0=-\cot k_0a$ (pp.3–4), the graph (p.5), the deep/wide and shallow/short limits (p.6): *always an even state, maybe no odd state*
+> - §10 **Tutorial IV**: the exact shape of $\kappa/k_0$ (value, slope, curvature)
+> - §11 $E>V_0$: the scattering solution, matching at $x=\mp a$, the algebra for $B/F$, $F/A$, $|F/A|^2$, $T+R=1$, resonances (pp.7–13)
+> - §12 a visual revision sheet (all figures in one place, "if you see X, think Y")
+>
+> *Sections §1–§8 were written first from Griffiths and are kept in full; their derivations are the same physics in the other energy convention, so §9 is the quickest route to exactly what was lectured.*
+>
+> 🟡 **Extra · book**: In the core lecture course, [[QM04 The Particle in a Box]] treated the infinite square well with perfectly rigid, impenetrable walls ($V = \infty$ outside). The finite square well relaxes this unphysical idealisation to a finite barrier height $V_0$. The same material is lectured in the handwritten [[Finite_well.pdf|Finite Well lecture notes]] (pp. 2–13; §9–§11 below) and treated comprehensively in Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=78|PDF pp. 78–85]]).
+> - §1 Setup, potential definition, energy regimes, and classical turning points (Griffiths §2.6, [[Finite_well.pdf#page=2|Finite Well notes p. 2]])
+> - §2 The TISE in all three regions, matching boundary conditions, and parity (Griffiths §2.6, [[Finite_well.pdf#page=2|Finite Well notes pp. 2–4]])
+> - §3 Transcendental eigenvalue equations, dimensionless variables $z$ and $z_0$, and graphical circle intersections (Griffiths §2.6, [[Finite_well.pdf#page=3|Finite Well notes pp. 3–5]])
 > - §4 Counting bound states, the 1-D theorem (always at least one bound state), and wide/shallow limits (Griffiths §2.6 pp. 82–84)
 > - §5 Normalised wavefunctions, penetration depth $d_\mathrm{pen} = 1/\kappa$, and tunnelling into classically forbidden zones (Griffiths §2.6 pp. 84–85)
 >
 > 🔵 **Extra · beyond** (advanced topics and applications, labelled)
-> - §4 3-D contrast: why the centrifugal barrier and radial origin condition require a threshold depth for spherical wells; §6 Real-world physical applications with exact numbers: GaAs/AlGaAs semiconductor quantum wells, the nuclear deuteron ($^2$H), and nanoscale metallic wells; §7 Rigorous limits to the infinite well ($V_0\to\infty$) and to the Dirac delta potential ($V_0\to\infty, a\to0$ with $2V_0 a = \alpha$), plus transmission resonances; §8 Sakurai's momentum-space integral formulation $\langle p|V|p'\rangle$ using [[Dirac Algebra]] (Sakurai & Napolitano §2.5); numerical tables computed with high precision.
+> - §4 3-D contrast: why the centrifugal barrier and radial origin condition require a threshold depth for spherical wells; §6 Real-world physical applications with exact numbers: GaAs/AlGaAs semiconductor quantum wells, the nuclear deuteron ($^2$H), and nanoscale metallic wells; §7 Rigorous limits to the infinite well ($V_0\to\infty$) and to the Dirac delta potential ($V_0\to\infty, a\to0$ with $2V_0 a = \alpha$), plus transmission resonances; §8 Sakurai's momentum-space integral formulation $\langle p|V|p'\rangle$ using [[Dirac Algebra]] (Sakurai & Napolitano §2.5); numerical tables computed with high precision (`scripts/qm07_numbers.py`).
 
 > [!key] After this chapter you can
 > - write down the TISE in all three regions and apply the **continuity boundary conditions** on $\psi$ and $\psi'$, explaining why $\psi''$ suffers a finite step jump while $\psi'$ remains smooth,
@@ -43,8 +52,40 @@ tags: [subject/qm, type/chapter, extra/book, extra/beyond, src/book, src/own-not
 > [!intuition] The one-sentence story
 > Lowering the infinite walls to a finite depth $V_0$ allows the quantum wave to leak exponentially into the classically forbidden barriers; this penetration effectively widens the box, lowers every discrete energy level below its rigid-box counterpart, and limits the bound states to a finite number—yet in one dimension, the quarter-circle of well strength always captures at least one bound state.
 
+![[QM07 Finite Well Map.svg]]
+*Diagram QM7.0. The chapter in one picture: the well, the matching conditions, the quantisation graph, the limits, the leak into the walls, and (for $E>V_0$) the scattering and its resonances. Editable source: [[QM07 Finite Well Map.excalidraw]].*
+
+> [!intuition] Five ways to *see* the finite well (read these before the algebra)
+> 1. **A guitar string whose ends are not clamped.** In the box the wave is pinned to zero at the walls. In the finite well the walls are soft: the wave keeps going a little way, dying off exponentially. A string with soft ends is effectively *longer*, so its notes are *lower* than for clamped ends. That one sentence is the whole result "finite-well energies lie below the box energies".
+> 2. **The handshake at the wall.** Inside, $\psi$ is a sine/cosine bending *towards* the axis; outside it is an exponential bending *away* from it. At $x=a$ the two curves must agree in height *and* slope. The ratio slope/height, $\psi'/\psi$ (the *logarithmic derivative*), is what is matched, and that ratio is $-k_0\tan k_0a$ inside and $-\kappa$ outside. Quantisation is "the two ratios are equal".
+> 3. **A rope bridge you can only cross at certain tensions.** Pull the energy $E$ up: inside, the wave winds faster ($k_0$ grows); outside, the exponential gets flatter ($\kappa$ shrinks). Only at special $E$ do inside and outside meet with equal slope. Between these energies there is no solution that also decays at $\pm\infty$.
+> 4. **The graph is a seesaw.** Left side $\tan k_0a$ climbs from 0 to $\infty$ on each branch; right side $\kappa/k_0$ slides down from $\infty$ to 0 as $E$ runs from 0 to $V_0$. A climbing curve and a falling curve **must cross once on every branch** — that crossing *is* a bound state. No algebra is needed to see that deeper wells have more branches under the falling curve.
+> 5. **Counting by half-turns.** Each time the well gets strong enough to fit one more *quarter-wave* ($z_0$ grows by $\pi/2$) one more state is allowed, alternately even and odd. A cheap number: for an electron, $z_0\approx5.12\,a[\mathrm{nm}]\sqrt{V_0[\mathrm{eV}]}$ and $N=\lceil 2z_0/\pi\rceil\approx\lceil3.26\,a\sqrt{V_0}\rceil$.
+
+> [!key] Dictionary between the lecture's convention and Griffiths' (used in §1–§8)
+> | | **Lecture** ([[Finite_well.pdf#page=2\|p.2]]) | **Griffiths / §1–§8** |
+> |---|---|---|
+> | potential | $V=0$ for $\|x\|<a$, $V=V_0$ outside | $V=-V_0$ for $\|x\|<a$, $V=0$ outside |
+> | bound states | $0<E<V_0$ | $-V_0<E<0$ |
+> | inside wavenumber | $k_0=\sqrt{2mE}/\hbar$ | $l=\sqrt{2m(E+V_0)}/\hbar$ |
+> | outside decay constant | $\kappa=\sqrt{2m(V_0-E)}/\hbar$ | $\kappa=\sqrt{-2mE}/\hbar$ (the same number) |
+> | scattering | $E>V_0$, outside wavenumber $k=\sqrt{2m(E-V_0)}/\hbar$ | $E>0$, outside $k=\sqrt{2mE}/\hbar$ |
+> | quantisation | $\kappa/k_0=\tan k_0a$ and $\kappa/k_0=-\cot k_0a$ | $z\tan z=\sqrt{z_0^2-z^2}$ and $-z\cot z=\sqrt{z_0^2-z^2}$ with $z=la$ |
+>
+> They are the same equations: $z=k_0a=la$, $z_0=a\sqrt{2mV_0}/\hbar$ (identical), $\kappa a=\sqrt{z_0^2-z^2}$, and **$E_{\rm Griffiths}=E_{\rm lecture}-V_0$**. The lecture's figure on p.2 labels the walls $\pm a/2$ while its algebra matches at $x=\pm a$; this chapter uses the algebra (half-width $a$, full width $2a$).
+
+> [!pitfall] Five mistakes that cost marks
+> 1. **Mixing the two energy origins** (quoting $E_1=0.07V_0$ as a binding energy). From the floor $E_1/V_0=z_1^2/z_0^2$; from the top of the walls $E_1/V_0=z_1^2/z_0^2-1$.
+> 2. **Using $a$ for the full width.** $a$ is the *half*-width: $z_0^2=2mV_0a^2/\hbar^2$, and the rigid-box levels it tends to are those of width $2a$, $E_n=n^2\pi^2\hbar^2/2m(2a)^2=n^2\pi^2\hbar^2/8ma^2$.
+> 3. **Imposing continuity of $\psi''$.** Only $\psi$ and $\psi'$ are continuous across a *finite* step; $\psi''$ jumps by $2mV_0\psi(a)/\hbar^2$.
+> 4. **Counting states with $\lfloor2z_0/\pi\rfloor+1$.** That fails exactly when $z_0$ is a multiple of $\pi/2$; use $N=\lceil2z_0/\pi\rceil$ (a state at $z_0=m\pi/2$ is born *at* the top, with zero binding).
+> 5. **Dropping the exponential tails when normalising**: $\int|\psi|^2$ over the well alone is not 1; the tails carry $P_{\rm out}$ (0.2 % to 64 % in the examples of §6).
+
 ## 1. The finite square well: setup and classical picture
-<span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=78|PDF p. 78]]); [[Finite_well.pdf#page=1|Finite Well notes p. 1]]*
+<span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=78|PDF p. 78]]); [[Finite_well.pdf#page=2|Finite Well notes p. 2]]*
+
+> [!intuition] What actually changes from the box
+> Same valley, softer sides. Three things follow without any calculation: (i) the particle can be found *outside* the classical turning points, (ii) there are only finitely many bound states (a thin enough or shallow enough valley is full after a few levels), (iii) above the rim the particle is free, so the discrete ladder gives way to a continuum. Everything in this chapter is a quantitative version of these three sentences.
 
 In [[QM04 The Particle in a Box]], we considered an idealised potential where the potential energy jumps to infinity at the walls. In any realistic physical system, potential barriers are finite. The simplest model capturing finite confinement while maintaining piecewise constancy is the **symmetric finite square well** of width $2a$ and depth $V_0 > 0$:
 
@@ -89,7 +130,10 @@ The time-independent Schrödinger equation (TISE) dictates three fundamentally d
 *Figure QM7.1. Potential energy diagram, boundary definitions, and physical regimes of the symmetric finite square well. A: The potential profile $V(x)$ showing well depth $V_0$ and half-width $a$, separating Region I ($x < -a$, barrier), Region II ($-a \le x \le a$, well floor at $-V_0$), and Region III ($x > a$, barrier). B: The three energy regimes: the strictly forbidden zone $E < -V_0$ (violating the minimum potential theorem), the discrete bound-state spectrum $-V_0 < E < 0$ where bound states possess oscillatory cores and exponential evanescent tails, and the continuous scattering spectrum $E > 0$. C: The classical turning points at $x = \pm a$, contrasting the absolute classical confinement ($P_\mathrm{cl} = 0$ for $|x|>a$) with the quantum evanescent penetration depth $d_\mathrm{pen} = 1/\kappa$.*
 
 ## 2. The TISE in all three regions and boundary conditions
-<span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=78|PDF p. 78]]); [[Finite_well.pdf#page=3|Finite Well notes pp. 3–5]]*
+<span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=78|PDF p. 78]]); [[Finite_well.pdf#page=2|Finite Well notes pp. 2–4]]*
+
+> [!intuition] Why the wave must curve *away* outside and *towards* the axis inside
+> The Schrödinger equation says $\psi''/\psi=2m(V-E)/\hbar^2$. Where $E>V$ (inside) the right side is negative, so $\psi$ curves back to the axis: sine/cosine. Where $E<V$ (outside) it is positive, so $\psi$ curves away from the axis: if it were not exactly the decaying exponential it would blow up (a growing tail is not normalisable). The only freedom left is the ratio of the amplitudes, which the matching at the wall fixes — and *that* is where the quantisation hides.
 
 We now formulate the bound-state problem ($-V_0 < E < 0$) by solving the 1-D time-independent Schrödinger equation:
 $$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi(x) = E\psi(x).$$
@@ -159,7 +203,10 @@ This splits the solutions into two mutually exclusive, uncoupled families:
 Thanks to symmetry, matching the boundary conditions at $x = +a$ automatically satisfies the boundary conditions at $x = -a$.
 
 ## 3. Transcendental equations and graphical solution
-<span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=79|PDF pp. 79–81]]); [[Finite_well.pdf#page=6|Finite Well notes pp. 6–8]]*
+<span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=79|PDF pp. 79–81]]); [[Finite_well.pdf#page=3|Finite Well notes pp. 3–5]]*
+
+> [!intuition] Reading the graph
+> *Left:* the branches of $z\tan z$ (even) and $-z\cot z$ (odd) — each starts at 0 and shoots to $+\infty$ on an interval of width $\pi/2$. *Right:* the quarter-circle $\sqrt{z_0^2-z^2}$ — it starts at $z_0$ and falls to 0 at $z=z_0$. A rising curve and a falling curve **always** meet exactly once on any branch they both cover: one bound state per branch, even and odd alternating, ground state even. The lecture draws exactly the same picture with $\kappa/k_0$ (see §9–§10).
 
 We now match $\psi$ and $\psi'$ across the interface $x = a$ to obtain the quantization condition for the allowed energies.
 
@@ -245,19 +292,25 @@ In the $(z, y)$ plane, we plot:
 > $$E_n = -V_0 + \frac{\hbar^2 l_n^2}{2m} = -V_0 + \frac{\hbar^2 z_n^2}{2ma^2} = -V_0 \left(1 - \frac{z_n^2}{z_0^2}\right).$$
 
 ![[fig_qm07_graphical.png]]
-*Figure QM7.2. Graphical solution and bound-state spectrum of the finite square well. A: Graphical solution for $z_0 = 3$ showing the quarter-circle $\sqrt{3^2 - z^2}$ (dashed black) intersecting the first even branch $z\tan z$ (solid blue) at $z_1 = 1.248$ (ground state) and the first odd branch $-z\cot z$ (solid red) at $z_2 = 2.474$ (first excited state), giving $N = 2$ bound states. B: Graphical solution for $z_0 = 7$ showing 5 bound states alternating even and odd ($z_1 = 1.373, z_2 = 2.728, z_3 = 4.043, z_4 = 5.277, z_5 = 6.366$). C: Evolution of energy levels $E_n/V_0$ as a function of the well strength parameter $z_0$, showing states emerging from the continuum threshold $E=0$ each time $z_0$ crosses an integer multiple of $\pi/2$. D: Spatial profiles of the 4 bound state wavefunctions for $z_0 = 4\pi \approx 12.57$, exhibiting sinusoidal nodes inside the well and exponential decay outside.*
+*Figure QM7.2. Graphical solution and bound-state spectrum of the finite square well (the $\kappa a$-versus-$z$ form of the lecture's graph; see Figure QM7.4 for the $\kappa/k_0$ form). A: Graphical solution for $z_0 = 3$ showing the quarter-circle $\sqrt{3^2 - z^2}$ (dashed black) intersecting the first even branch $z\tan z$ (blue) at $z_1 = 1.1701$ (ground state) and the first odd branch $-z\cot z$ (orange) at $z_2 = 2.2789$ (first excited state), giving $N = 2$ bound states. B: Graphical solution for $z_0 = 7$ showing 5 bound states alternating even and odd ($z_1 = 1.3733, z_2 = 2.7395, z_3 = 4.0886, z_4 = 5.4017, z_5 = 6.6160$). C: Evolution of energy levels $E_n/V_0$ as a function of the well strength parameter $z_0$, showing states emerging from the continuum threshold $E=0$ each time $z_0$ crosses an integer multiple of $\pi/2$ (vertical grid lines). D: The first four bound-state wavefunctions for $z_0 = 4\pi \approx 12.57$, each drawn on its own level $E_n/V_0$ (lecture convention), exhibiting sinusoidal nodes inside the well and exponential decay outside.*
 
 ## 4. Counting bound states and limiting behaviours
 <span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=82|PDF pp. 82–84]])*
 
+> [!intuition] Why 1-D can never fail to bind
+> On the first branch the rising curve starts *below* the circle (0 < $z_0$) and ends *above* it (at the pole), so it must cross. In words: a weak 1-D well still binds because the even solution only needs to curve a little to match a long, nearly flat exponential — a *very* shallow bound state has a *very* long tail (depth $\propto V_0^2$, size $\propto1/V_0$). In 3-D the $s$-wave must vanish at the origin ($u(0)=0$), which forces the odd branch and hence a threshold.
+
 ### Bound state counting formula
 Because each branch of $z\tan z$ and $-z\cot z$ spans an interval of width $\pi/2$, increasing the radius $z_0$ of the quarter-circle sweeps across new branches sequentially.
-- For $0 < z_0 < \frac{\pi}{2}$: The circle cuts only the first even branch. There is **1 bound state** (even).
-- For $\frac{\pi}{2} \le z_0 < \pi$: The circle reaches into the second interval, intersecting the first odd branch. There are **2 bound states** (1 even, 1 odd).
-- For $\pi \le z_0 < \frac{3\pi}{2}$: The circle reaches into the third interval, intersecting the second even branch. There are **3 bound states** (2 even, 1 odd).
+- For $0 < z_0 \le \frac{\pi}{2}$: The circle cuts only the first even branch. There is **1 bound state** (even).
+- For $\frac{\pi}{2} < z_0 \le \pi$: The circle reaches into the second interval, intersecting the first odd branch. There are **2 bound states** (1 even, 1 odd).
+- For $\pi < z_0 \le \frac{3\pi}{2}$: The circle reaches into the third interval, intersecting the second even branch. There are **3 bound states** (2 even, 1 odd).
 
-In general, the total number of bound states $N$ supported by a well of parameter $z_0$ is given by the floor function:
-$$\boxed{N = \left\lfloor \frac{z_0}{\pi/2} \right\rfloor + 1 = \left\lfloor \frac{2}{\pi}\frac{a\sqrt{2mV_0}}{\hbar} \right\rfloor + 1}$$
+In general, the total number of bound states $N$ supported by a well of parameter $z_0$ is
+$$\boxed{N = \left\lceil \frac{z_0}{\pi/2} \right\rceil = \left\lceil \frac{2}{\pi}\frac{a\sqrt{2mV_0}}{\hbar} \right\rceil}$$
+
+> [!verify] Correction to the first draft of this chapter (checked in `scripts/qm07_numbers.py`)
+> The first version of this section wrote $N=\lfloor z_0/(\pi/2)\rfloor+1$ and its table listed $N=3$ at $z_0=\pi$ and $N=5$ at $z_0=2\pi$. A state is *born at the threshold* when $z_0$ equals a multiple of $\pi/2$, with zero binding, so **at exactly $z_0=m\pi/2$ it is not yet bound**: the solved counts are $N=2$ at $z_0=\pi$ and $N=4$ at $z_0=2\pi$ (and $N=1$ at $\pi/2$, $N=8$ at $4\pi$). The ceiling formula is right for every $z_0$; the floor-plus-one formula agrees with it except exactly at multiples of $\pi/2$. The intervals in the list above are accordingly $0<z_0\le\pi/2$, $\pi/2<z_0\le\pi$, $\pi<z_0\le3\pi/2$.
 
 A new bound state is born at threshold $E = 0^-$ whenever $z_0$ crosses an integer multiple of $\pi/2$:
 $$z_{0,\mathrm{crit}} = m \frac{\pi}{2}, \qquad m = 1, 2, 3, \dots$$
@@ -342,16 +395,19 @@ The following table presents exact numerical solutions for the ground state and 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1.000** | 1 | 0.7391 | 0.6736 | 0.5462 | $-0.4538$ | 1.4846 | 32.64% |
 | **2.000** | 2 | 1.0299 | 1.7145 | 0.2652 | $-0.7348$ | 0.5833 | 9.77% |
-| **$\pi$ (3.142)** | 3 | 1.1843 | 2.9098 | 0.1421 | $-0.8579$ | 0.3437 | 3.63% |
+| **$\pi$ (3.142)** | 2 | 1.1843 | 2.9098 | 0.1421 | $-0.8579$ | 0.3437 | 3.63% |
 | **4.000** | 3 | 1.2524 | 3.7989 | 0.0980 | $-0.9020$ | 0.2632 | 2.04% |
-| **$2\pi$ (6.283)** | 5 | 1.3537 | 6.1356 | 0.0464 | $-0.9536$ | 0.1630 | 0.65% |
+| **$2\pi$ (6.283)** | 4 | 1.3537 | 6.1356 | 0.0464 | $-0.9536$ | 0.1630 | 0.65% |
 | **8.000** | 6 | 1.3955 | 7.8774 | 0.0304 | $-0.9696$ | 0.1269 | 0.34% |
 | **10.000** | 7 | 1.4276 | 9.8976 | 0.0204 | $-0.9796$ | 0.1010 | 0.19% |
 
-*(All values computed with precision $10^{-12}$; $P_\mathrm{tunnel}$ is the exact integrated probability in the classically forbidden barriers $|x|>a$.)*
+*(Counts corrected to $\lceil2z_0/\pi\rceil$; all other values re-verified with `scripts/qm07_numbers.py`, precision $10^{-12}$; $P_\mathrm{tunnel}$ is the exact integrated probability in the classically forbidden barriers $|x|>a$.)*
 
 ## 5. Wavefunctions, penetration, and the forbidden region
 <span class="scope-extra-book">extra · book</span> *Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=84|PDF pp. 84–85]])*
+
+> [!intuition] The leak, in numbers you can remember
+> The tail dies over $d_{\rm pen}=1/\kappa$. For a state bound by $B$ below the rim, $d_{\rm pen}=\hbar/\sqrt{2mB}$: for an electron bound by 1 eV this is 0.195 nm (about a bond length), by 0.01 eV it is 1.95 nm. **Weakly bound means a long tail**, which is why the last bound state of every well in this chapter has the largest $P_{\rm out}$ (23 % to 64 %).
 
 We now construct the full, normalised wavefunctions and investigate their spatial penetration into the classically forbidden barriers.
 
@@ -409,7 +465,10 @@ $$\boxed{P_\mathrm{tunnel} = \frac{\frac{\cos^2(la)}{\kappa}}{a + \frac{\sin(2la
 - As $z_0 \to 0$ (weak well), $\kappa a \to 0$ and $z \to 0$, so $\frac{\cos^2 z}{\kappa a} \to \infty$ dominates the denominator, giving $P_\mathrm{tunnel} \to 100\%$. The particle spends almost all of its time outside the well!
 
 ![[fig_qm07_wavefunctions.png]]
-*Figure QM7.3. Spatial profiles, penetration into classically forbidden barriers, and tunnelling probabilities. A: The first three eigenstates $\psi_1(x), \psi_2(x), \psi_3(x)$ for well strength $z_0 = 5$ (solid colored curves) plotted across all three regions, contrasted with the corresponding rigid infinite-box eigenstates of width $2a$ (dashed black curves). B: Probability density $|\psi_1(x)|^2$ for the ground state; the classically forbidden barrier regions $|x| > a$ are shaded in purple, representing the tunnelling probability $P_\mathrm{tunnel} = 1.34\%$. C: Tunnelling probability $P_\mathrm{tunnel}$ as a function of the well strength parameter $z_0$ for the ground state, illustrating the monotonic transition from $P_\mathrm{tunnel} \to 100\%$ as $z_0 \to 0$ to $P_\mathrm{tunnel} \to 0$ as $z_0 \to \infty$.*
+*Figure QM7.3. Spatial profiles, penetration into classically forbidden barriers, and tunnelling probabilities. A: The first three eigenstates $\psi_1(x), \psi_2(x), \psi_3(x)$ for well strength $z_0 = 5$ (solid colored curves) plotted across all three regions, contrasted with the corresponding rigid infinite-box eigenstates of width $2a$ (dashed black curves). B: Probability density $|\psi_1(x)|^2$ for the ground state; the classically forbidden barrier regions $|x| > a$ are shaded in purple, representing the tunnelling probability $P_\mathrm{tunnel} = 1.17\%$ (corrected from the first draft's 1.34 %). C: Tunnelling probability $P_\mathrm{tunnel}$ as a function of the well strength parameter $z_0$ for the ground state, illustrating the monotonic transition from $P_\mathrm{tunnel} \to 100\%$ as $z_0 \to 0$ to $P_\mathrm{tunnel} \to 0$ as $z_0 \to \infty$.*
+
+![[fig_qm07_limits.png]]
+*Figure QM7.6. The three corners of the finite well (lecture convention). A: $E_n/E_n^{\rm box}$ for $n=1,2,3$ against $z_0$ (solid) with the asymptote $1-2/z_0$ (dashed): the finite-well level approaches the rigid-box level **from below**. B: the decay parameter $\kappa a$ of the single state of a shallow well (solid) against $z_0^2$ (dashed), which is the statement $\kappa=m\alpha/\hbar^2$ with $\alpha=2V_0a$. C: at fixed $\alpha=2V_0a$ (units $\hbar=m=\alpha=1$) the ratio $|E|/(m\alpha^2/2\hbar^2)$ tends to 1 as $a\to0$: the delta-function well. Data: `scripts/qm07_numbers.py`.*
 
 ## 6. Numerical examples with real physics
 <span class="scope-extra-beyond">extra · beyond</span> *Physical semiconductor, nuclear, and electronic systems*
@@ -494,10 +553,13 @@ Consider a free electron ($m = m_e$) trapped in a 1-D potential well of total wi
 | **Ground state energy $E_1$** | $-0.2658$ eV | $-2.180$ MeV | $-4.7282$ eV |
 | **Kinetic energy fraction $E_\mathrm{kin}/V_0$** | $11.4\%$ | $93.8\%$ | $5.4\%$ |
 | **Penetration depth $d_\mathrm{pen}$** | $1.463$ nm | $4.364$ fm | $0.090$ nm |
-| **Tunnelling probability $P_\mathrm{tunnel}$** | $2.58\%$ | $\approx 55\%$ (exterior radial) | $0.83\%$ |
+| **Tunnelling probability $P_\mathrm{tunnel}$** | $2.58\%$ | $63.8\%$ (exterior radial; first draft said $\approx55\%$) | $0.83\%$ |
 
 ## 7. Connection to the infinite well and to the delta potential
 <span class="scope-extra-book">extra · book</span> *Griffiths §2.5–§2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=75|PDF pp. 75–78]]); Sakurai §2.5*
+
+> [!intuition] Zooming out: one family, three corners
+> Think of the $(a,V_0)$ plane. Going **up and to the right** (deep, wide, $z_0\to\infty$) you reach the rigid box; going **down and to the left** (shallow, narrow, $z_0\to0$) you reach the delta well, where only the area $\alpha=2V_0a$ matters. The finite well is the bridge: its three figures (levels, $\kappa a$, $|E|/(m\alpha^2/2\hbar^2)$) are in Figure QM7.6.
 
 The finite square well is the master potential that links together the rigid particle in a box, the contact Dirac delta potential, and continuum scattering theory.
 
@@ -588,6 +650,167 @@ $$\boxed{\phi(p) = \frac{1}{\frac{p^2}{2m} + |E|} \left[ \frac{V_0 a}{\pi\hbar}\
 >    $$\phi(p) = \frac{1}{\frac{p^2}{2m} + |E|} \frac{\alpha}{2\pi\hbar}\int_{-\infty}^\infty \phi(p')\,dp' = \frac{C}{\frac{p^2}{2m} + |E|}.$$
 >    Integrating both sides over $p$ immediately determines the bound-state energy $|E| = \frac{m\alpha^2}{2\hbar^2}$, while the Fourier transform of the Lorentzian $\frac{1}{p^2 + 2m|E|}$ yields the exponential cusp $\psi(x) \propto e^{-\kappa |x|}$! This illustrates the full power of the operator algebraic approach in [[Dirac Algebra]].
 
+## 9. The lecture's route: bound states with the floor at zero
+<span class="scope-taught">taught</span> *[[Finite_well.pdf#page=2|Finite_well.pdf pp.2–6]] (handwritten, read as images)*
+
+> [!key] The set-up (lecture p.2)
+> $V(x)=0$ for $|x|<a$ (region II) and $V(x)=V_0$ for $|x|>a$ (regions I and III); the particle has $0<E<V_0$. The lecture labels the box edges $\mp a/2$ in the sketch but matches at $x=\mp a$ in the algebra; here the half-width is $a$.
+
+**Outside (regions I and III).** The Schrödinger equation $-\frac{\hbar^2}{2m}\psi''+V_0\psi=E\psi$ gives
+$$\psi''=\kappa^2\psi,\qquad \kappa=\sqrt{\frac{2m(V_0-E)}{\hbar^2}},\qquad \psi=Ae^{\kappa x}+Be^{-\kappa x}\ \Rightarrow\ \psi_{\rm I}=Ae^{\kappa x},\ \ \psi_{\rm III}=Be^{-\kappa x}$$
+(the lecture's $A,B$; the other exponential in each region is thrown away because it is not normalisable).
+
+**Inside (region II).**
+$$-\frac{\hbar^2}{2m}\psi''=E\psi\ \Rightarrow\ \psi_{\rm II}=F\sin k_0x+G\cos k_0x,\qquad k_0=\sqrt{\frac{2mE}{\hbar^2}}.$$
+
+**Parity.** $V(-x)=V(x)$, so the solutions are even or odd and *it is enough to solve for $x>0$* (the lecture's boxed remark).
+
+> [!derivation] Even eigenfunctions (lecture p.3)
+> Even: $\psi_{\rm II}=G\cos k_0x$ ($F=0$), outside $\psi_{\rm I}=Ae^{\kappa x}$, $\psi_{\rm III}=Ae^{-\kappa x}$ ($A=B$). At $x=a$ continuity of $\psi$ and $\psi'$ give
+> $$G\cos k_0a=Ae^{-\kappa a},\qquad -k_0G\sin k_0a=-\kappa Ae^{-\kappa a}.$$
+> Dividing the second by the first removes $G$ and $A$:
+> $$\boxed{\frac{\kappa}{k_0}=\tan(k_0a)}\qquad\text{(the quantisation equation, even states).}$$
+
+> [!derivation] Odd eigenfunctions (lecture p.4)
+> Odd: $\psi_{\rm II}=F\sin k_0x$ ($G=0$), outside $\psi_{\rm I}=-Ae^{\kappa x}$, $\psi_{\rm III}=Ae^{-\kappa x}$. Matching at $x=a$:
+> $$F\sin k_0a=Ae^{-\kappa a},\qquad k_0F\cos k_0a=-\kappa Ae^{-\kappa a}\ \Rightarrow\ \boxed{\frac{\kappa}{k_0}=-\cot(k_0a)}.$$
+
+**Both in one variable.** With $z=k_0a$ and $z_0=a\sqrt{2mV_0}/\hbar$ one has $k_0^2+\kappa^2=2mV_0/\hbar^2$, hence $\kappa a=\sqrt{z_0^2-z^2}$ and
+$$\boxed{\frac{\kappa}{k_0}=\sqrt{\frac{z_0^2}{z^2}-1}=\sqrt{\frac{V_0}{E}-1}}$$
+(the lecture writes the right-hand form on the axis of its graph, p.5). The two quantisation equations are $\sqrt{z_0^2/z^2-1}=\tan z$ and $=-\cot z$.
+
+![[fig_qm07_tutorial4.png]]
+*Figure QM7.4. The lecture's graph with the exact $\kappa/k_0$. A: $z_0=5$: the black falling curve is $\kappa/k_0$, the blue branches $\tan k_0a$ (even), the orange branches $-\cot k_0a$ (odd); their four crossings are the bound states $k_0a=1.3064$ (even), 2.5957 (odd), 3.8375 (even), 4.9063 (odd); the dashed vertical line at $k_0a=z_0$ is $E=V_0$, where $\kappa/k_0=0$. B: the exact shape is **universal**: in $u=k_0a/z_0=\sqrt{E/V_0}$ it is $\sqrt{1/u^2-1}$ for every well; it has a pole at $u=0$, a vertical tangent at $u=1$ and an inflection at $u=\sqrt{2/3}$. C: its first and second derivatives (Tutorial IV, §10).*
+
+> [!example] Reading the lecture's graph (p.5): which crossings are even, which odd
+> The lecture draws the falling curve in black, the even branches ($\tan k_0a$, zeros at $0,\pi,2\pi,\dots$, poles at $\pi/2,3\pi/2,\dots$) in red-brown and the odd branches ($-\cot k_0a$, zeros at $\pi/2,3\pi/2,\dots$, poles at $\pi,2\pi,\dots$) in green; the vertical dashed lines are the poles at multiples of $\pi/2$; the curve ends on the axis at $k_0a=\sqrt{2mV_0}\,a/\hbar$ ("$V_0=E$"). Counting crossings left to right gives even, odd, even, odd, ... in strict alternation; for $z_0=5$ there are four.
+
+> [!key] The two limits in the lecture (p.6)
+> **(1) Deep, wide well, $2mV_0a^2/\hbar^2\gg1$.** There are many solutions. For the lowest levels $\kappa_n/k_n\gg1$, so the tangent must be huge: $k_na\approx n\pi/2$, $E_n=n^2\pi^2\hbar^2/8ma^2$. *"Approaches the particle in a box but always slightly lower."* (First-order correction: $E_n\approx E_n^{\rm box}(1-2/z_0)$; §4.)
+> **(2) Shallow, short well, $2mV_0a^2/\hbar^2\ll1$.** *"Small number of bound states. There will always be an even bound state. There may not be an odd bound state."* (Odd states need $z_0>\pi/2$; §4.)
+
+## 10. Tutorial IV: the exact shape of $\kappa/k_0$
+<span class="scope-taught">taught</span> *[[tutorial4.pdf|Tutorial IV]] (one problem)*
+
+> [!example] The problem
+> "For the finite potential well extending from $x=-a$ to $x=a$, we found that the even energy eigenvalues were found by solving $\tan(k_0a)=\kappa/k_0$ [...] We solved this graphically, with some approximate shape for $\kappa/k_0$. Now plot the **exact shape** of $\kappa/k_0$ as a function of $k_0a$, by examining its values and derivatives at various points."
+
+**Set up.** With $z=k_0a$ and the fixed parameter $z_0$,
+$$f(z)\equiv\frac{\kappa}{k_0}=\sqrt{\frac{z_0^2}{z^2}-1},\qquad 0<z\le z_0.$$
+
+> [!derivation] Values, slope, curvature
+> **Values.** $z\to0^+$: $f\simeq z_0/z\to\infty$ (a hyperbola: the wave has almost no energy, so the exterior is a hugely steep exponential relative to the interior wavenumber). $z=z_0$ ($E=V_0$): $f=0$.
+> **First derivative.**
+> $$f'(z)=\frac{1}{2f}\cdot\left(-\frac{2z_0^2}{z^3}\right)=-\frac{z_0^2}{z^2\sqrt{z_0^2-z^2}}<0\quad\text{for all }0<z<z_0:$$
+> **$f$ falls monotonically**, with $f'\to-\infty$ at both ends: for $z\to0^+$, $f'\simeq-z_0/z^2$; for $z\to z_0^-$, $f'\simeq-1/\sqrt{2z_0(z_0-z)}$, which is the derivative of $f\approx\sqrt{2(z_0-z)/z_0}$: a **vertical tangent** at the right end (the curve meets the axis perpendicularly, exactly as drawn in the lecture's graph).
+> **Second derivative.**
+> $$f''(z)=\frac{z_0^2\,(2z_0^2-3z^2)}{z^3\,(z_0^2-z^2)^{3/2}},$$
+> so $f''>0$ for $z<z_0\sqrt{2/3}\approx0.8165\,z_0$ (convex) and $f''<0$ beyond (concave): **one inflection point**, at $E=\tfrac23V_0$ where $f=1/\sqrt2$.
+
+| $u=z/z_0$ | $f=\sqrt{1/u^2-1}$ | $z_0f'$ | $z_0^2f''$ |
+|---|---|---|---|
+| 0.05 | 19.975 | $-400.5$ | $1.600\times10^4$ |
+| 0.20 | 4.899 | $-25.5$ | 250 |
+| 0.50 | 1.732 | $-4.62$ | 15.4 |
+| 0.80 | 0.750 | $-2.60$ | 0.72 |
+| **0.8165** | **0.7071** | $-2.60$ | **0** |
+| 0.90 | 0.484 | $-2.83$ | $-7.12$ |
+| 0.99 | 0.1425 | $-7.23$ | $-345$ |
+| 0.999 | 0.0448 | $-22.4$ | $-1.1\times10^4$ |
+
+(Computed for $z_0=5$ in `scripts/qm07_numbers.py` and rescaled: $z_0f'$ and $z_0^2f''$ are functions of $u$ alone, which is why a single curve describes every well.)
+
+> [!connection] What the exact shape tells you about the spectrum
+> Because $f$ is monotonic and falls from $\infty$ to 0 while every branch of $\tan z$ or $-\cot z$ rises from 0 to $\infty$, **each branch contained in $(0,z_0)$ is crossed exactly once**. That proves "one state per $\pi/2$ of $z_0$", the alternation of parity and the formula $N=\lceil2z_0/\pi\rceil$ without drawing anything. The last partially-covered branch is crossed only if the falling curve has not yet reached zero where the branch starts, i.e. only if $z_0$ exceeds the zero of that branch: the zeros are at $0,\pi/2,\pi,\dots$ (even at $m\pi$, odd at $(2m+1)\pi/2$), which is the birth condition $z_0>m\pi/2$.
+
+## 11. $E>V_0$: scattering, transmission and resonances
+<span class="scope-taught">taught</span> *[[Finite_well.pdf#page=7|Finite_well.pdf pp.7–13]]* · <span class="scope-extra-book">extra · book</span> *Griffiths §2.6 (scattering), see also the short callout in §7*
+
+For $E>V_0$ the particle is "classically free" (lecture p.7): the solutions oscillate in all three regions and the spectrum is continuous. A wave comes in from the left; some is reflected, some transmitted.
+
+> [!key] The ansatz and what is controlled (pp.7–8)
+> $$\psi_{\rm I}=Ae^{ikx}+Be^{-ikx},\quad \psi_{\rm II}=Ce^{ik_0x}+De^{-ik_0x},\quad \psi_{\rm III}=Fe^{ikx},$$
+> $$k=\sqrt{2m(E-V_0)}/\hbar\ \ (\text{outside}),\qquad k_0=\sqrt{2mE}/\hbar\ \ (\text{inside, } k_0>k).$$
+> No wave arrives from the right, hence only $Fe^{ikx}$ in III. The incident amplitude $A$ is "in our control", so $B,C,D,F$ are expressed through $A$.
+
+> [!derivation] Matching, step by step (pp.9–12)
+> **At $x=a$** ($\psi$ and $\psi'$ continuous):
+> $$Ce^{ik_0a}+De^{-ik_0a}=Fe^{ika},\qquad k_0\big[Ce^{ik_0a}-De^{-ik_0a}\big]=kFe^{ika}.$$
+> Adding/subtracting gives $2k_0Ce^{ik_0a}=(k_0+k)Fe^{ika}$ and $2k_0De^{-ik_0a}=(k_0-k)Fe^{ika}$, i.e.
+> $$C=\frac{k_0+k}{2k_0}e^{i(k-k_0)a}F,\qquad D=-\frac{k-k_0}{2k_0}e^{i(k+k_0)a}F.$$
+> **At $x=-a$:**
+> $$Ae^{-ika}+Be^{ika}=Ce^{-ik_0a}+De^{ik_0a},\qquad k\big[Ae^{-ika}-Be^{ika}\big]=k_0\big[Ce^{-ik_0a}-De^{ik_0a}\big].$$
+> *Subtracting* (to isolate $B$): $2kBe^{ika}=(k-k_0)Ce^{-ik_0a}+(k+k_0)De^{ik_0a}$. Substituting $C$ and $D$:
+> $$B=F\,\frac{(k^2-k_0^2)}{4kk_0}\Big[e^{-2ik_0a}-e^{2ik_0a}\Big]\ \Rightarrow\ \boxed{B=-i\,\frac{k^2-k_0^2}{2kk_0}\,\sin(2k_0a)\,F}.$$
+> *Adding* (to isolate $A$): $2kAe^{-ika}=(k+k_0)Ce^{-ik_0a}+(k-k_0)De^{ik_0a}$, which with $C,D$ gives
+> $$\frac FA=\frac{4kk_0\,e^{-2ika}}{(k+k_0)^2e^{-2ik_0a}-(k-k_0)^2e^{2ik_0a}},\qquad \frac BA=\frac{2i\sin(2k_0a)\,e^{-2ika}(k^2-k_0^2)}{(k+k_0)^2e^{-2ik_0a}-(k-k_0)^2e^{2ik_0a}}.$$
+> **Transmission probability** $T=|F/A|^2$ (the lecture's "transmission probability") and **reflection probability** $R=|B/A|^2$. Multiplying $F/A$ by its conjugate (p.12):
+> $$|F/A|^2=\frac{16k^2k_0^2}{(k+k_0)^4+(k-k_0)^4-2(k^2-k_0^2)^2\cos(4k_0a)}
+> =\frac{16k^2k_0^2}{16k^2k_0^2+4(k^2-k_0^2)^2\sin^2(2k_0a)},$$
+> using $(k+k_0)^4+(k-k_0)^4-2(k^2-k_0^2)^2=16k^2k_0^2$ and $1-\cos4\theta=2\sin^22\theta$.
+
+$$\boxed{T=\frac{1}{1+\dfrac{(k^2-k_0^2)^2}{4k^2k_0^2}\sin^2(2k_0a)}=\frac{1}{1+\dfrac{V_0^2}{4E(E-V_0)}\sin^2\!\Big(\dfrac{2a}{\hbar}\sqrt{2mE}\Big)}},\qquad T+R=1.$$
+
+(Lecture p.13 writes $(k^2-k_0^2)$ without the square in the first form; the next line, with $V_0^2$, is the correct one — `[verify]`: $k^2-k_0^2=-2mV_0/\hbar^2$ and $k^2k_0^2=(2m/\hbar^2)^2E(E-V_0)$ give $V_0^2/4E(E-V_0)$ only if the numerator is squared.)
+
+> [!derivation] $T+R=1$ checked two ways
+> *Analytically:* $R=|B/A|^2=\dfrac{4(k^2-k_0^2)^2\sin^2(2k_0a)}{16k^2k_0^2+4(k^2-k_0^2)^2\sin^2(2k_0a)}$ (same denominator as $|F/A|^2$ above), so $T+R=\dfrac{16k^2k_0^2+4(k^2-k_0^2)^2\sin^2}{16k^2k_0^2+4(k^2-k_0^2)^2\sin^2}=1$. *Numerically:* solving the four matching equations directly (`scripts/qm07_numbers.py`) at $E/V_0=1.2,\,2.0,\,3.7$ gives $T=0.490219,\,0.888891,\,0.996468$ and $T+R=1.000000$ to six decimals, equal to the formula.
+
+> [!key] Resonances and threshold (lecture p.13)
+> * **$E\gg V_0$:** $V_0^2/4E(E-V_0)\to0$, so $T\to1$ (the well is invisible).
+> * **Perfect transmission** whenever $\sin^2(2k_0a)=0$, i.e. $2k_0a=n\pi$, $k_0=n\pi/2a$:
+> $$\boxed{E_n=\frac{n^2\pi^2\hbar^2}{2m(2a)^2}}$$
+> **the energy levels of the rigid box of width $2a$** (and, in the other energy convention, the interior of a well from $-a$ to $a$ holds a whole number of half-wavelengths). Only those with $E_n>V_0$ ($n\pi/2>z_0$) are scattering resonances.
+> * **Threshold:** as $E\to V_0^+$, $k\to0$ and $V_0^2/4E(E-V_0)\to\infty$, so $T\to0$ (like $T\simeq4(E-V_0)/[V_0\sin^2(2z_0)]$): the curve in the lecture's sketch starts at zero at $E=V_0$, rises to a first peak at $T=1$, then oscillates with decreasing contrast up to $T\to1$.
+> * **A neat link to §4:** if $z_0$ is exactly a multiple of $\pi/2$ then $\sin(2z_0)=0$ at $E=V_0$ and $T$ tends to **1 at threshold**: that is precisely when a new bound state is being born at $E=V_0$ (a zero-energy resonance).
+> * *"Scattering experiments, probing the potential"* (the lecture's closing line): measuring $T(E)$ gives the resonance spacing, i.e. the width $2a$ of the well, and the contrast gives $V_0$.
+
+![[fig_qm07_scattering.png]]
+*Figure QM7.5. Transmission through the well. A: $T(E/V_0)$ for $z_0=2,5,10$ (lecture convention): zero at $E=V_0$, peaks $T=1$ at the resonances, damped oscillation with $T\to1$; larger $z_0$ gives faster oscillation (more half-wavelengths inside). B: $|\psi|^2$ for $z_0=5$ at the resonance $E/V_0=1.579$ ($k_0a=2\pi$, **blue**: flat outside, no reflected ripple, $T=1$) and at an anti-resonance $E/V_0=1.999$ (**orange**: standing wave on the left, $T=0.89$). C: the rigid-box levels (grey, left) against the finite-well spectrum (right): bound states (solid) are pushed **below** their box levels; above $E=V_0$ the $T=1$ resonances (dashed) sit at the **unshifted** box energies $E_n=n^2\pi^2\hbar^2/8ma^2$. Numbers: `scripts/qm07_numbers.py`.*
+
+| $E/V_0$ | 1.001 | 1.1 | 1.5 | 1.579 | 2.0 | 4.0 | 10.0 |
+|---|---|---|---|---|---|---|---|
+| $T$ for $z_0=5$ | 0.0131 | 0.3655 | 0.9683 | **1** | 0.8889 | 0.9829 | 0.9999 |
+
+> [!intuition] Why is there any reflection above a *lower* region? The optical-coating picture
+> At each edge the wave sees a sudden change of wavenumber ($k\leftrightarrow k_0$), exactly like light going from air into glass: a partial reflection of relative size $\big((k_0-k)/(k_0+k)\big)^2$ at **each** edge. The two reflected waves interfere. If the round trip inside, $2\times2a$, is a whole number of wavelengths ($2k_0a=n\pi$) the two reflections have opposite phase and cancel: $T=1$ — a *quarter-wave*-type anti-reflection coating. In between they add and $T$ dips. The deeper the step ($V_0$ relative to $E$) the stronger the edge reflections and the deeper the dips. Real systems: electrons through a thin film or a noble-gas atom (the **Ramsauer–Townsend** dip is a 3-D, partial-wave effect, but the interference mechanism is this one), and Fabry–Pérot etalons in optics.
+
+> [!example] Numbers: an electron through a thin well
+> Take $2a=0.5$ nm (a few atoms) and $V_0=1$ eV. The resonance energies from the floor are $E_n=n^2\pi^2\hbar^2/2m(2a)^2=1.50,\,6.01,\,13.5\ \mathrm{eV}$ for $n=1,2,3$ ($1.50\,n^2$ eV); only those above $V_0=1$ eV count, so all three are resonances; at $E=6.01$ eV the electron crosses the well with 100 % transmission, while at the worst neighbouring energy the formula gives $T\ge1/(1+1/(4\cdot4\cdot3))=0.98$ near 4 eV, i.e. at most about 2 % reflection: with a weak step the resonances are shallow. (For $2a=0.2$ nm the first resonance moves to 9.40 eV.)
+
+## 12. Visual revision sheet
+<span class="scope-taught">taught</span> · <span class="scope-extra-book">extra · book</span> *one page for revision; every item points to a figure above*
+
+| If you see... | think... | Figure |
+|---|---|---|
+| a falling curve crossing rising $\tan$/$-\cot$ branches | one state per branch, even/odd alternating, ground state even | QM7.2, QM7.4 |
+| $\kappa/k_0=\sqrt{V_0/E-1}$ | pole at $E\to0$, vertical tangent at $E=V_0$, inflection at $E=\tfrac23V_0$ | QM7.4 (Tutorial IV) |
+| $z_0$ | well strength; $N=\lceil2z_0/\pi\rceil$; levels emerge at $z_0=m\pi/2$ | QM7.2 C |
+| exponential tail | $d_{\rm pen}=1/\kappa$; $P_{\rm out}$ big for the *highest* bound state | QM7.3 |
+| deep wide well | box levels, lowered by $2/z_0$ | QM7.6 A |
+| shallow short well | one even state, $\kappa=m\alpha/\hbar^2$, delta well | QM7.6 B, C |
+| $E>V_0$ | $T=1/(1+V_0^2\sin^2(2k_0a)/4E(E-V_0))$; $T=1$ at the box energies | QM7.5 |
+| $T+R=1$ | probability current conservation | §11 |
+
+> [!connection] Same mathematics elsewhere
+> *Optics:* Fabry–Pérot etalons and anti-reflection coatings (resonance = whole half-waves). *Semiconductors:* quantum wells (§6), resonant-tunnelling diodes (QM08). *Chemistry:* a particle-in-a-box fit of a conjugated chain overestimates the transition energies because the box ignores the leak ([[Inorganic Chemistry - Course Map]]). *Climate/waves:* trapped waves and leaky modes in waveguides (the same $\tan$/$\kappa$ matching, [[Waves - Course Map]]).
+
+### Additional practice (lecture style)
+11. **Transmission.** For $z_0=5$ (lecture convention) find $T$ at $E=2V_0$.
+12. **Resonances.** An electron, well width $2a=0.5$ nm: list the first three transmission-resonance energies measured from the floor, and say which are above $V_0=1$ eV.
+13. **Tutorial IV.** Prove that $\kappa/k_0$ is decreasing and has exactly one inflection point; find it.
+14. **Threshold.** Show that as $E\to V_0^+$, $T\to0$ unless $z_0=m\pi/2$, in which case $T\to1$.
+15. **Bound-state count in practice.** A GaAs well ($m^*=0.067m_e$, $V_0=0.30$ eV) of width 10 nm holds 3 bound states (§6); how many for width 20 nm?
+16. **The lecture's claim.** Show that "there will always be an even bound state; there may not be an odd one" follows from the graph with $\kappa/k_0$.
+
+> [!example]- Solutions to 11–16
+> 11. $k_0a=z_0\sqrt{E/V_0}=5\sqrt2=7.0711$, $\sin^2(2k_0a)=\sin^2(14.142)=\sin^2(14.142-4\pi)=\sin^2(1.5756)=0.99998$; $V_0^2/4E(E-V_0)=1/(4\cdot2\cdot1)=0.125$, so $T=1/(1+0.125\times0.99998)=\mathbf{0.8889}$.
+> 12. $E_n=n^2\pi^2\hbar^2/2mL^2$ with $L=2a=0.5$ nm: $\hbar^2/2m=3.81\ \mathrm{eV\,\AA^2}$, so $\pi^2\hbar^2/2m=37.6\ \mathrm{eV\,\AA^2}$ and $E_1=37.6/(5\ \mathrm{\AA})^2=1.50$ eV; hence $E_n=1.50\,n^2$ eV $=1.50,\ 6.01,\ 13.5$ eV. All exceed $V_0=1$ eV, so all three are resonances.
+> 13. $f=\sqrt{z_0^2/z^2-1}$, $f'=-z_0^2/(z^2\sqrt{z_0^2-z^2})<0$ on $(0,z_0)$ (decreasing); $f''=z_0^2(2z_0^2-3z^2)/[z^3(z_0^2-z^2)^{3/2}]$ changes sign only at $z^2=\tfrac23z_0^2$: one inflection at $z=z_0\sqrt{2/3}=0.8165z_0$, $E=\tfrac23V_0$, $f=1/\sqrt2$.
+> 14. $T=1/[1+V_0^2\sin^2(2k_0a)/4E(E-V_0)]$; near $E=V_0$, $E-V_0\to0^+$. If $\sin2z_0\ne0$ the bracket $\to\infty$, $T\to0$, $T\simeq4(E-V_0)\sin^{-2}(2z_0)/V_0$. If $2z_0=m\pi$, then $\sin(2k_0a)=\sin(2z_0+2a\,\delta k_0)\approx\pm2a\,\delta k_0\propto(E-V_0)$, so $\sin^2\propto(E-V_0)^2$ and the bracket $\to1+O(E-V_0)\to1$: $T\to1$.
+> 15. $z_0\propto a$: $z_0(20\ \mathrm{nm})=7.263$, $N=\lceil2\times7.263/\pi\rceil=\lceil4.62\rceil=\mathbf5$.
+> 16. The first even branch $\tan k_0a$ starts at 0 and is zero at $k_0a=0$ while $\kappa/k_0$ is $+\infty$ there and falls to 0 at $z_0$ however small $z_0$ is, so the rising branch must cross it (even always exists). The first odd branch $-\cot k_0a$ is only $\ge0$ for $k_0a>\pi/2$, but $\kappa/k_0$ has already reached 0 at $z_0$; if $z_0\le\pi/2$ there is nothing to cross: **no odd state for $z_0\le\pi/2$**.
+
 ## Map of this chapter
 > [!connection] How QM07 connects to the curriculum
 > **Builds on:**
@@ -597,12 +820,12 @@ $$\boxed{\phi(p) = \frac{1}{\frac{p^2}{2m} + |E|} \left[ \frac{V_0 a}{\pi\hbar}\
 > - [[QM05 The Harmonic Oscillator]]: Non-degeneracy of 1-D bound states, penetration into classically forbidden regions.
 >
 > **Leads to:**
-> - **Barrier Tunnelling (QM08):** Inverting the well potential ($V_0 \to -V_0$) creates a finite rectangular barrier, enabling transmission, reflection, and quantum tunnelling.
+> - **[[QM08 Quantum Tunnelling]]:** inverting the well ($V_0\to-V_0$) gives a rectangular barrier: step, barrier, delta, WKB, resonant tunnelling and the Kronig–Penney bands (new chapter, beyond the syllabus).
 > - **Periodic Potentials and Band Structure:** Arrays of finite square wells form the Kronig-Penney model, explaining conductors, semiconductors, and insulators in solid-state physics.
 > - **Three-Dimensional Central Potentials:** Spherical square wells, the deuteron, and the hydrogen atom.
 >
 > **Key Concepts:**
-> [[Finite Square Well]] · [[Bound State]] · [[Scattering State]] · [[Transcendental Equation]] · [[Penetration Depth]] · [[Classically Forbidden Region]] · [[Tunnelling Probability]] · [[Parity Theorem]] · [[Transmission Resonance]] · [[Delta Function Potential]] · [[Effective Well Width]]
+> [[Finite Square Well]] · [[Transmission Coefficient]] · [[Reflection Coefficient]] · [[Probability Current]] · [[Logarithmic Derivative Matching]] · [[Bound State]] · [[Scattering State]] · [[Transcendental Equation]] · [[Penetration Depth]] · [[Classically Forbidden Region]] · [[Tunnelling Probability]] · [[Parity Theorem]] · [[Transmission Resonance]] · [[Delta Function Potential]] · [[Effective Well Width]]
 
 ## Summary
 > [!summary] Cheat-sheet of key formulas
@@ -612,7 +835,7 @@ $$\boxed{\phi(p) = \frac{1}{\frac{p^2}{2m} + |E|} \left[ \frac{V_0 a}{\pi\hbar}\
 > - **Transcendental equations:**
 >   - Even states: $\boxed{z\tan z = \sqrt{z_0^2 - z^2}}$
 >   - Odd states: $\boxed{-z\cot z = \sqrt{z_0^2 - z^2}}$
-> - **Number of bound states:** $\boxed{N = \lfloor z_0 / (\pi/2) \rfloor + 1}$. Always $\ge 1$ in 1-D (even ground state always binds).
+> - **Number of bound states:** $\boxed{N = \lceil z_0 / (\pi/2) \rceil}$ (the floor-plus-one form of the first draft fails at exact multiples of $\pi/2$). Always $\ge 1$ in 1-D (even ground state always binds).
 > - **Penetration depth:** $\boxed{d_\mathrm{pen} = \frac{1}{\kappa} = \frac{\hbar}{\sqrt{-2mE}}}$. Effective width: $2a_\mathrm{eff} = 2a + 2/\kappa$.
 > - **Tunnelling probability (Even):** $P_\mathrm{tunnel} = \frac{\cos^2(la)/\kappa}{a + \frac{\sin(2la)}{2l} + \frac{\cos^2(la)}{\kappa}}$.
 > - **Deep well limit ($z_0 \gg 1$):** $z_n \approx \frac{n\pi}{2}(1 - 1/z_0)$, $E_n + V_0 \approx E_n^\mathrm{box}(1 - 2/z_0)$.
@@ -724,10 +947,10 @@ $$\boxed{\phi(p) = \frac{1}{\frac{p^2}{2m} + |E|} \left[ \frac{V_0 a}{\pi\hbar}\
 > | Parity decomposition and wavefunctions table | Griffiths §2.6; [[QM04 The Particle in a Box]] §6 parity theorem | extra/book |
 > | Derivation of transcendental equations ($z\tan z, -z\cot z$) | Griffiths §2.6 ([[Griffiths - Introduction to quantum mechanics.pdf#page=79\|PDF pp. 79–81]]); [[Finite_well.pdf#page=6\|Finite Well notes pp. 6–8]] | extra/book |
 > | Graphical circle solution and alternating roots | Griffiths §2.6 pp. 80–82; [[Finite_well.pdf#page=7\|Finite Well notes p. 7]] | extra/book |
-> | Counting bound states ($N = \lfloor z_0/(\pi/2)\rfloor + 1$) | Griffiths §2.6 pp. 82–83; Gasiorowicz §4.3 | extra/book |
+> | Counting bound states ($N = \lceil 2z_0/\pi\rceil$, corrected) | Griffiths §2.6 pp. 82–83; Gasiorowicz §4.3 | extra/book |
 > | 1-D existence proof (always $\ge 1$ state) vs 3-D threshold | Griffiths §2.6 p. 83; Landau & Lifshitz §23 | extra/book |
 > | Deep well ($z_0 \gg 1$) and shallow well ($z_0 \to 0$) limits | Griffiths §2.6 pp. 83–84; Landau & Lifshitz §23 | extra/book |
-> | High-precision reference table for $z_0 \in [1, 10]$ | Computed directly from transcendental roots (`scripts/qm_numbers.py`) | extra/beyond |
+> | High-precision reference table for $z_0 \in [1, 10]$ | Computed directly from transcendental roots (`scripts/qm07_numbers.py`) | extra/beyond |
 > | Normalisation integral and amplitude ratios ($B, G$) | Derived from boundary matching; Griffiths §2.6 problem 2.29 | extra/book |
 > | Penetration depth $d_\mathrm{pen}$ and effective box width | Griffiths §2.6 p. 84; [[QM04 The Particle in a Box]] §5 | extra/book |
 > | Tunnelling probability $P_\mathrm{tunnel}$ into forbidden barrier | Exact analytic integral evaluated from normalised wavefunctions | extra/beyond |
@@ -738,6 +961,6 @@ $$\boxed{\phi(p) = \frac{1}{\frac{p^2}{2m} + |E|} \left[ \frac{V_0 a}{\pi\hbar}\
 > | Sakurai momentum-space formulation ($\mathrm{sinc}$ kernel) | Sakurai & Napolitano §2.5 ([[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf\|Sakurai PDF]]) | extra/beyond |
 > | 10 practice problems with comprehensive solutions | Formulated and verified numerically | extra/beyond |
 >
-> **Read and not read.** Griffiths §2.5–§2.6 was read and forms the core foundation for §§1–5 and §7. The lecture file [[Finite_well.pdf|Finite Well notes]] (12 pp.) provides the course-specific derivation and graphical circle methodology. Sakurai & Napolitano §2.5 was read for the momentum-space integral equation and delta-well connection in §8. All numerical values and table entries were independently computed and verified with precision $10^{-12}$.
+> **Read and not read.** Griffiths §2.5–§2.6 was read and forms the core foundation for §§1–5 and §7. The lecture file [[Finite_well.pdf|Finite Well notes]] (13 pp., p.1 blank, handwritten) is now read in full as images and is written up in §9–§11 in its own notation. Sakurai & Napolitano §2.5 was read for the momentum-space integral equation and delta-well connection in §8. All numerical values and table entries were independently computed and verified with precision $10^{-12}$.
 
 **References.** Griffiths, D. J. *Introduction to Quantum Mechanics* (1st ed.), §2.5–§2.6 · Sakurai, J. J. and Napolitano, J. *Modern Quantum Mechanics* (3rd ed.), §2.5 · Landau, L. D. and Lifshitz, E. M. *Quantum Mechanics* §23 · Gasiorowicz, S. *Quantum Physics* (3rd ed.) §4.3 · CODATA 2018.
