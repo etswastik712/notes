@@ -129,3 +129,8 @@ Reference: Atmosphere, Ocean and Climate Dynamics by J. Marshall and A. Plumb
 - [[01-climate/cl11-mean-meridional-circulation-and-angular-momentum]]: complete chapter note on angular momentum conservation and the Hadley cell.
 - [[01-climate/concepts/hadley-cell]]: dedicated concept note for the tropical circulation cell.
 - [[introduction-to-climate-science/2026-10-08-study-material-9-mean-meridional-circulation-part-2-observation]]: Part 2 covering observed winds, streamfunction $\chi$, and Ferrel cells.
+
+<!-- kurooto:material45550f84 -->
+## Concepts in Angular_momentum_balnce_and_meridional_circulation_Marshall_and_Plumb
+[[zettel/atmospheric-energy-transport]], [[zettel/atmospheric-angular-momentum-balance]]
+<!-- /kurooto:material45550f84 -->
