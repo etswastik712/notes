@@ -34,3 +34,8 @@ Dear everyone, here are some suggested problems. I have not included problems ab
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: Poisson as a binomial limit (problem 1).
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026]]: negative binomial and linearity of expectation (problems 5, 10).
 - [[08-Probability/PR03 Discrete Random Variables and Distributions]]: their chapter on these distributions.
+
+<!-- kurooto:material85817192 -->
+## Concepts in Practice problems weekend of 12th September 2026
+[[zettel/mode-of-the-binomial-distribution]]
+<!-- /kurooto:material85817192 -->
