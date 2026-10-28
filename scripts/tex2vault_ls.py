@@ -37,6 +37,7 @@ CHAPTERS = [
     ("p9_postms.tex", 1, "LS16", "Fluvial Landscapes"),
     ("p9_postms.tex", 2, "LS17", "Aeolian Landscapes"),
     ("p10_problems.tex", 0, "LS99", "Landscapes Practice Problems"),
+    ("p0_front.tex", 0, "LS00", "Landscapes Notation and Glossary"),
 ]
 
 MACROS = {
@@ -149,7 +150,7 @@ def parse(s):
                 while s[j] in " \n":
                     j += 1
                 arg, pos = brace_group(s, j)
-            elif name in ("tabularx", "tabular"):
+            elif name in ("tabularx", "tabular", "longtable"):
                 j = pos
                 if name == "tabularx":
                     _, j = brace_group(s, pos)          # width
@@ -210,6 +211,7 @@ def inline_cleanup(t):
     t = re.sub(r"\\(?:centering|noindent|small|footnotesize|normalsize|large|Large|hfill|medskip|smallskip|bigskip|clearpage|newpage|vspace\*?\{[^}]*\}|hspace\*?\{[^}]*\})\b", "", t)
     t = t.replace("\\&", "&").replace("\\%", "%").replace("\\#", "#").replace("\\_", "_").replace("\\$", "\\$")
     t = t.replace("``", "“").replace("''", "”").replace("---", "—").replace("--", "–")
+    t = re.sub(r"\\S(?=[\d\\ ~])", "§", t)
     t = t.replace("\\S\\,", "§").replace("\\S ", "§ ").replace("\\S~", "§")
     t = t.replace("~", " ").replace("\\ ", " ").replace("\\,", " ")
     t = re.sub(r"\\label\{[^}]*\}", "", t)
@@ -235,6 +237,7 @@ def render_math_env(name, node):
 
 
 def split_tabular(body):
+    body = re.sub(r"\\end(?:first)?head|\\endfoot|\\endlastfoot", "", body)
     body = body.replace("\\toprule", "").replace("\\midrule", "").replace("\\bottomrule", "").replace("\\hline", "")
     rows = [r.strip() for r in re.split(r"\\\\(?:\[[^\]]*\])?", body) if r.strip()]
     table = []
@@ -323,7 +326,7 @@ def render(nodes, ctx):
                 bullet = "- " if name == "itemize" else "%d. " % k
                 items.append(bullet + inline_cleanup(conv_text(it.strip())).replace("\n", "\n  "))
             out.append("\n\n" + "\n".join(items) + "\n\n")
-        elif name in ("tabularx", "tabular"):
+        elif name in ("tabularx", "tabular", "longtable"):
             out.append(render_table(n))
         elif name == "table":
             body = "".join(raw_of(c) if not isinstance(c, str) else c for c in ch)
