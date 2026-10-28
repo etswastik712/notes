@@ -121,3 +121,8 @@ As some of you were trying to visualize that I am sending this to help you under
 - [[01-climate/cl03-radiation-and-planetary-energy-balance]]: blackbody radiation laws, solar constant $S_0$, and planetary emission temperature $T_e$
 - [[01-climate/cl08-greenhouse-models]]: single-layer leaky greenhouse model and surface temperature dependence on emissivity $\epsilon$
 - [[01-climate/concepts/hydrostatic-balance]]: hydrostatic equation $\partial p / \partial z = -\rho g$ condition and validity
+
+<!-- kurooto:material34a6e136 -->
+## Concepts in Solutions_Quiz1
+[[zettel/atmospheric-scale-height]]
+<!-- /kurooto:material34a6e136 -->
