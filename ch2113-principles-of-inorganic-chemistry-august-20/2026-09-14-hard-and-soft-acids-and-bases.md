@@ -31,3 +31,8 @@ best regards
 ## Related
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-2]]: Lewis acidity, on which hardness builds
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers]]: tutorial 3 questions 2, 11, 12 practise HSAB
+
+<!-- kurooto:material7091663f -->
+## Concepts in HSAB Principle
+[[zettel/hard-and-soft-acids-and-bases-principle]], [[zettel/hard-acid]], [[zettel/soft-acid]], [[zettel/hard-base]], [[zettel/soft-base]], [[zettel/goldschmidt-geochemical-classification]]
+<!-- /kurooto:material7091663f -->

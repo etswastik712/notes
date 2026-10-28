@@ -1,0 +1,22 @@
+---
+id: zettel/hard-base
+aliases: ["Hard Base", "Class A base"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Hard Base
+
+A Lewis base possessing low polarizability and high electronegativity, typically bonding through ionic or dipole-dipole mechanisms. Typical examples include fluoride, oxide/silicate minerals, ethers, and amines.
+
+## Links
+- contrasts-with:: [[zettel/soft-base]] — Hard bases are less polarizable and engage in predominantly ionic interactions rather than covalent interactions
+- used-in:: [[zettel/hard-acid]] — Hard bases selectively coordinate with hard acids to produce higher formation constants
+
+---
+Source: HSAB Principle, pp. 1–6
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-14-hard-and-soft-acids-and-bases|HSAB Principle]] pp. 1–6
+<!-- /kurooto:seen -->
