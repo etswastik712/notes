@@ -1,0 +1,26 @@
+---
+id: zettel/lie-bracket-of-vector-fields
+aliases: ["Lie Bracket of Vector Fields", "Lie Bracket", "[X, Y]"]
+tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
+trust_tier: agent_written
+---
+
+# Lie Bracket of Vector Fields
+
+The Lie bracket of two smooth vector fields X and Y is the unique vector field acting on smooth functions as the commutator derivation [X, Y]f = X(Y f) - Y(X f). It measures the failure of the directional derivatives along X and Y to commute.
+
+$$[X, Y]f = X(Y f) - Y(X f)$$
+
+$$[X, Y] = \sum_j \left( \sum_i X^i \frac{\partial Y^j}{\partial x^i} - Y^i \frac{\partial X^j}{\partial x^i} \right) \frac{\partial}{\partial x^j}$$
+
+## Links
+- example-of:: [[zettel/lie-algebra]] — The vector space of smooth vector fields with the Lie bracket operation satisfies bilinearity, antisymmetry, and the Jacobi identity, forming an abstract Lie algebra
+- used-in:: [[zettel/left-invariant-vector-field]] — The Lie algebra of a Lie group is defined via closure of left-invariant vector fields under the Lie bracket
+
+---
+Source: DG16, pp. 1–4
+
+<!-- kurooto:seen -->
+## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|DG16]] pp. 1–4
+<!-- /kurooto:seen -->
