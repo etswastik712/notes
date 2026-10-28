@@ -11,7 +11,7 @@ status: draft
 prereq: ["[[QM03 States Operators and Measurement]]"]
 tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/book, src/own-notes, status/draft]
 ---
-# QM04 · The Particle in a Box
+ # QM04 · The Particle in a Box
 
 ◀ [[QM03 States Operators and Measurement]] · [[Quantum Mechanics - Course Map|Course Map]] · [[QM05 The Harmonic Oscillator]] ▶
 
