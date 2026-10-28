@@ -119,3 +119,8 @@ Reference: Global physical climatology by D. L. Hartmann
 - [[01-climate/cl10-global-energy-balance-and-meridional-structure]]: comprehensive chapter note on global energy balance and observed transport.
 - [[01-climate/concepts/poleward-energy-transport]]: core concept note detailing the 5.8 PW midlatitude energy transport.
 - [[introduction-to-climate-science/2026-10-07-study-material-7-meridional-circulation-part-1]]: Part 1 covering insolation geometry and tropospheric thermal structure.
+
+<!-- kurooto:material2dfb5335 -->
+## Concepts in TOA_energy_balance_and_poleward_energy_transport_Hartmann
+[[zettel/top-of-atmosphere-radiation-balance]], [[zettel/atmospheric-energy-transport]]
+<!-- /kurooto:material2dfb5335 -->
