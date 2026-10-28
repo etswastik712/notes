@@ -57,3 +57,8 @@ As suggested by one of you, we will first scale up the marks on the question pap
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]]: acceptable wavefunctions, complex potentials, continuity (Q6)
 - [[ph2113/2026-08-27-tutorial-solutions-wavefunctions-uncertainty-schrodinger]]: uncertainty estimates and ring quantisation (Q4, Q6)
 - [[06-quantum-mechanics/qm04-the-particle-in-a-box]]: your own notes on the infinite well (Q3)
+
+<!-- kurooto:material153d7137 -->
+## Concepts in ph2113_solutions
+(none new)
+<!-- /kurooto:material153d7137 -->
