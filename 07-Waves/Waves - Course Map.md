@@ -16,6 +16,9 @@ tags: [subject/waves, type/moc, taught, src/own-notes, status/stub]
 ## What exists in the repository
 - physics/waves/books (Georgi, *The Physics of Waves*)
 
+## What exists in the vault so far (added 2026-10-29)
+The first real content comes from an application, not a course: the physics of **ocean surface waves** in the Landscapes coast chapters, [[LS26 Sea Level and Ocean Waves]] (dispersion, group velocity, energy and power, Snell refraction, shoaling, breaking, storm surge) and [[LS27 Coasts Beaches Deltas and Rocky Shores]] (the longshore energy flux, shoreline instability). Concept notes held here: [[Water Wave Dispersion]] · [[Wave Energy and Power]] · [[Wave Shoaling and Refraction]]. The mathematics of dispersion and wave packets is in [[Dispersion Relation]], [[Phase and Group Velocity]], [[Fourier and Laplace Transforms]] and (for the quantum cousin) [[Fourier Transform and Wave Packets]]. **Still to write** when Waves is taken up: the derivation of the linear dispersion relation from the boundary-value problem, standing waves and modes, Rossby and Kelvin waves ([[CL12 Rotating Frames and the Coriolis Force]]), tsunamis, and edge waves.
+
 ## Connections
 [[Fourier and Laplace Transforms]] (dispersion relations, phase and group velocity, Fourier modes, wave packets; the mathematical toolkit for this subject) · [[CL12 Rotating Frames and the Coriolis Force]] (inertial and Rossby waves) · [[Quantum Mechanics - Course Map]] · [[Thermodynamics - Course Map]]
 

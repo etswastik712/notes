@@ -15,8 +15,8 @@ tags: [subject/landscapes, type/moc, taught, extra/book, extra/beyond, src/slide
 > [!summary] Where this subject stands
 > **Chapters LS01–LS20 and LS99 are drafted** (LS01–LS17 now carry a **depth layer**: context, extra derivations and numbers computed in `scripts/ls_depth_numbers.py`, check-yourself problems, cross-subject links; four research papers are explained in **Further Research/**) with every slide of the pre-midsem deck (153 slides), the glacial–aeolian deck (48), the Deccan deck (37), TopoToolbox (15) and QGIS (14) shown and explained. Text of LS01–LS17 derives from the AI-written reference notes (secondary) cross-checked against sampled slides. **Still to do:** a depth layer for LS18–LS20, the Gutiérrez, Migoń, Bierman and Thornbury layers, and per-chapter concept notes beyond the 15 Deccan ones.
 
-> [!key] Added 2026-10-29: the river sequence from the primary book
-> **LS21–LS24 continue Anderson and Anderson Chapters 12–14 in order** (the fluvial lectures have not been taught, so there are no slides; all four are labelled 🟡/🔵 and should be re-labelled 🟢 when the slides arrive): [[LS21 River Hydraulics and Hydraulic Geometry]] → [[LS22 Floods Planform and River Profiles]] → [[LS23 Bedrock Channels and River Incision]] → [[LS24 Sediment Transport Mechanics]]. Each is derivation-level (law of the wall, effective discharge, sine-generated meander, alluvial diffusion, the $\chi$-space solution of the knickpoint wave, the response-time integral, the torque balance, the Rouse profile), with every number in `scripts/ls_rivers_numbers.py` checked by a second route. The interdisciplinary chapter [[LSX1 Clocks in Rocks]] (A&A Ch. 6: decay, tunnelling, cosmogenic nuclides, closure temperature) lives in `Interdisciplinary/`, and its sibling [[THX1 Diffusion Random Walks and the Heat Equation]] in Thermodynamics. 22 new concept notes (below). **Next in A&A:** Ch. 11 water in the landscape, Ch. 16 coasts, Ch. 17 big floods, Ch. 18 whole landscapes, Ch. 9 periglacial, Ch. 4 tectonic geomorphology (not yet written).
+> [!key] Added 2026-10-29: the river, water and coast sequence from the primary book
+> **LS21–LS24 continue Anderson and Anderson Chapters 12–14 in order** (the fluvial lectures have not been taught, so there are no slides; all four are labelled 🟡/🔵 and should be re-labelled 🟢 when the slides arrive): [[LS21 River Hydraulics and Hydraulic Geometry]] → [[LS22 Floods Planform and River Profiles]] → [[LS23 Bedrock Channels and River Incision]] → [[LS24 Sediment Transport Mechanics]]. Each is derivation-level (law of the wall, effective discharge, sine-generated meander, alluvial diffusion, the $\chi$-space solution of the knickpoint wave, the response-time integral, the torque balance, the Rouse profile), with every number in `scripts/ls_rivers_numbers.py` checked by a second route. The interdisciplinary chapter [[LSX1 Clocks in Rocks]] (A&A Ch. 6: decay, tunnelling, cosmogenic nuclides, closure temperature) lives in `Interdisciplinary/`, and its sibling [[THX1 Diffusion Random Walks and the Heat Equation]] in Thermodynamics. 22 new concept notes (below). **Then, the same day:** [[LS25 Water in the Landscape]] (A&A Ch. 11: Horton's laws, soil water, Green–Ampt, Dupuit, runoff mechanisms, channel heads, Coos Bay), [[LS26 Sea Level and Ocean Waves]] and [[LS27 Coasts Beaches Deltas and Rocky Shores]] (A&A Ch. 16: relative sea level, wave dispersion, energy, shoaling, longshore drift, shoreline instability, deltas, rocky coasts), with 20 more concept notes and numbers in `scripts/ls_hydro_coast_numbers.py`. The wave physics of LS26 is also the first real content of the **Waves** subject ([[Waves - Course Map]]). **Next in A&A:** Ch. 17 big floods, Ch. 18 whole landscapes, Ch. 9 periglacial, Ch. 4 tectonic geomorphology (not yet written).
 
 ![[LS18 Deccan Map.svg]]
 
@@ -47,6 +47,9 @@ tags: [subject/landscapes, type/moc, taught, extra/book, extra/beyond, src/slide
 | 22 | [[LS22 Floods Planform and River Profiles]] | extra · book | A&A Ch. 12 (second half) |
 | 23 | [[LS23 Bedrock Channels and River Incision]] | extra · book | A&A Ch. 13 |
 | 24 | [[LS24 Sediment Transport Mechanics]] | extra · book | A&A Ch. 14 |
+| 25 | [[LS25 Water in the Landscape]] | extra · book | A&A Ch. 11 |
+| 26 | [[LS26 Sea Level and Ocean Waves]] | extra · book | A&A Ch. 16 (first half) |
+| 27 | [[LS27 Coasts Beaches Deltas and Rocky Shores]] | extra · book | A&A Ch. 16 (second half) |
 | X1 | [[LSX1 Clocks in Rocks]] (interdisciplinary, in `Interdisciplinary/`) | extra · book + beyond | A&A Ch. 6 |
 | 99 | [[LS99 Landscapes Practice Problems]] | practice | pre-midsem deck |
 
@@ -57,6 +60,8 @@ Reference: [[Landscapes Notation and Glossary]].
 
 ## Concept notes
 Rivers and sediment (16, from LS21–LS24): [[Law of the Wall]] · [[Shear Velocity]] · [[Manning Equation]] · [[Froude Number and Hydraulic Jump]] · [[Hydraulic Geometry]] · [[Effective Discharge]] · [[Meandering and Point Bars]] · [[Braided Rivers]] · [[Stream Power Law]] · [[Knickpoint]] · [[Chi Transform]] · [[Strath Terrace]] · [[Base Level]] · [[Shields Criterion]] · [[Rouse Profile]] · [[Saltation]]
+
+Water and coasts (14, from LS25-LS27): [[Drainage Density and Horton's Laws]] · [[Water Balance]] · [[Soil Water Retention]] · [[Darcy's Law and Hydraulic Conductivity]] · [[Green-Ampt Infiltration]] · [[Dupuit Water Table]] · [[Overland Flow and Runoff Mechanisms]] · [[Channel Head]] · [[Relative Sea Level]] · [[Marine Terrace]] · [[Storm Surge]] · [[Longshore Drift]] · [[Coastline Instability]] · [[Littoral Cell Budget]] · [[Delta Front]] · [[Hyperpycnal Flow]] · [[Rocky Coast Erosion]] (with [[Water Wave Dispersion]], [[Wave Energy and Power]] and [[Wave Shoaling and Refraction]] in Waves)
 
 Clocks (6, from LSX1): [[Radioactive Decay Law]] · [[Cosmogenic Nuclides]] · [[Cosmogenic Erosion Rate]] · [[Burial Dating]] · [[Closure Temperature]] · [[Thermochronology]] (with [[Alpha Decay]] in Quantum Mechanics)
 
@@ -72,6 +77,7 @@ flowchart LR
   A --> F["LS20<br/>GIS practicals"]
   D --> G["LS21-24 (extra)<br/>rivers, bedrock channels,<br/>sediment transport"]
   G --> H["LSX1<br/>clocks in rocks"]
+  G --> I["LS25-27 (extra)<br/>hydrology, sea level,<br/>waves, coasts"]
 ```
 
 ## Sources
@@ -83,12 +89,12 @@ flowchart LR
 | Deccan Traps deck (37 slides) | `Geomorphic Features of the Deccan Traps Terrain.pdf` | LS18 + 15 concepts |
 | TopoToolbox tutorial (15 slides) | `Topotoolbox_tut_shubhra.pdf` | LS20 |
 | QGIS introduction (14 slides) | `Introduction_to_QGIS_aju.pptx` | LS20 |
-| Primary books | `books/`: Anderson & Anderson (A&A), Turcotte & Schubert (two copies), Gutiérrez (LFS), Huggett | depth layer LS01–LS17 (A&A and T&S pages cited; Huggett p.36; Gutiérrez not yet used); **A&A Ch. 6 (LSX1), Ch. 12 (LS21–LS22), Ch. 13 (LS23), Ch. 14 (LS24)**, PDF page = printed + 18, text layer (equations garbled; derivations redone) |
+| Primary books | `books/`: Anderson & Anderson (A&A), Turcotte & Schubert (two copies), Gutiérrez (LFS), Huggett | depth layer LS01–LS17 (A&A and T&S pages cited; Huggett p.36; Gutiérrez not yet used); **A&A Ch. 6 (LSX1), Ch. 11 (LS25), Ch. 12 (LS21–LS22), Ch. 13 (LS23), Ch. 14 (LS24), Ch. 16 (LS26–LS27)**, PDF page = printed + 18, text layer (equations garbled; derivations redone) |
 | Other books | Migoń, Bierman & Montgomery, Thornbury, Goudie & Viles | not yet used |
 | Research papers | Olsen 2021, Njenga 2013, Das & Biswal 2023, Dal Zilio 2021, plus `ai-gen-notes/river_braiding` | Further Research FR01–FR04 |
 
 ## Gaps and to-do
-- [ ] A&A chapters still to write in sequence: **11 Water in the landscape** (hydrology, channel heads), **16 Coastal geomorphology** (waves: bridge to the Waves subject), **17 Geomorphology of big floods**, **18 Whole landscapes** (Santa Cruz), **9 Periglacial**, **4 Tectonic geomorphology**, **5 Atmospheric processes**, and the remaining A&A Ch. 3, 7, 8, 10 rigour layers for LS06–LS15.
+- [ ] A&A chapters still to write in sequence: **17 Geomorphology of big floods** (Missoula, Bonneville, jökulhlaups), **18 Whole landscapes** (Santa Cruz: terraces, seacliffs, uses LS26–LS27), **9 Periglacial**, **4 Tectonic geomorphology**, **5 Atmospheric processes**, and the remaining A&A Ch. 3, 7, 8, 10 rigour layers for LS06–LS15 (Ch. 8's ice-sheet profile and abrasion are done in LS14).
 - [ ] Re-label LS21–LS24 from 🟡/🔵 to 🟢 when the fluvial slides are taught; check the slide notation against the chapter's.
 - [x] Papers in `books/` explained as chapters FR01–FR04 (guides: only the abstract, introduction, methods and conclusions were read for FR01–FR03; FR04 from abstract, introduction and key points). [ ] Upgrade them to full summaries.
 - [ ] Concept notes for LS01–LS17 and LS19 (only the Deccan set exists).

@@ -220,14 +220,14 @@ def fig_ls27_littoral():
     ax[1].set_xlabel("deep-water wave angle $\\alpha_0$ (deg)"); ax[1].set_ylabel("shoreline diffusivity $\\kappa$ ($10^5$ m$^2$/yr)")
     ax[1].set_title("B  $\\kappa=2Q_0\\cos2\\alpha_0/D$ changes sign at $45^\\circ$")
     # C: net vs gross
-    classes = [(0.6, 1.2, +10, "60%: 1.2 m, +10$^\\circ$"), (0.3, 0.8, -15, "30%: 0.8 m, $-15^\\circ$"), (0.1, 2.5, -8, "10%: 2.5 m, $-8^\\circ$")]
+    classes = [(0.6, 1.2, +10, "60% of time\n1.2 m, +10$^\\circ$"), (0.3, 0.8, -15, "30% of time\n0.8 m, $-15^\\circ$"), (0.1, 2.5, -8, "10% of time\n2.5 m, $-8^\\circ$")]
     vals = [f * littoral(Hb, abs(a)) * YR / 1e6 * math.copysign(1, a) for f, Hb, a, _ in classes]
     ax[2].bar(range(3), vals, color=[BLUE, AQUA, ORANGE], width=0.6)
     for i, v in enumerate(vals):
         ax[2].text(i, v + (0.06 if v > 0 else -0.14), f"{v:+.2f}", ha="center", fontsize=9.5)
     ax[2].bar([3], [sum(vals)], color=MUTED, width=0.6); ax[2].text(3, sum(vals) - 0.14, f"net {sum(vals):+.2f}", ha="center", fontsize=9.5)
     ax[2].axhline(0, color=INK, lw=0.8)
-    ax[2].set_xticks(range(4)); ax[2].set_xticklabels([c[3] for c in classes] + ["net drift"], fontsize=8)
+    ax[2].set_xticks(range(4)); ax[2].set_xticklabels([c[3] for c in classes] + ["net\ndrift"], fontsize=8.5); ax[2].set_ylim(-1.05, 1.25)
     ax[2].set_ylabel("drift (million m$^3$/yr, + = one way)"); ax[2].set_title("C  Net drift: a small difference of big numbers")
     save(fig, "fig_ls27_littoral")
 
@@ -243,9 +243,10 @@ def fig_ls27_delta():
     # B: plume diving
     drho = np.linspace(0, 30, 100)
     ax[1].plot(drho, drho / (1 - RHO / RHO_S), color=BLUE)
-    ax[1].plot([25], [40.15], "o", color=ORANGE); ax[1].annotate("river into the sea:\n$C>40$ kg/m$^3$", (25, 40.15), (3, 36), fontsize=9, arrowprops=dict(arrowstyle="->", color=MUTED))
-    ax[1].plot([10], [16.06], "o", color=AQUA); ax[1].annotate("brackish estuary:\n16 kg/m$^3$", (10, 16.06), (16, 8), fontsize=9, arrowprops=dict(arrowstyle="->", color=MUTED))
-    ax[1].text(1, 9, "below: hypopycnal plume\n(spreads over the water)", fontsize=9); ax[1].text(14, 34, "above: hyperpycnal\n(plunges, turbidity current)", fontsize=9)
+    ax[1].plot([25], [40.15], "o", color=ORANGE); ax[1].annotate("river into the sea:\n$C>40$ kg/m$^3$", (25, 40.15), (12.5, 44), fontsize=9, arrowprops=dict(arrowstyle="->", color=MUTED))
+    ax[1].plot([10], [16.06], "o", color=AQUA); ax[1].annotate("brackish estuary:\n$C>16$ kg/m$^3$", (10, 16.06), (13, 3), fontsize=9, arrowprops=dict(arrowstyle="->", color=MUTED))
+    ax[1].text(0.8, 27, "above the line:\nhyperpycnal\n(plunges as a\nturbidity current)", fontsize=9); ax[1].text(19, 14, "below:\nhypopycnal\nplume floats", fontsize=9)
+    ax[1].set_ylim(0, 52)
     ax[1].set_xlabel("ambient minus river-water density (kg/m$^3$)"); ax[1].set_ylabel("critical sediment concentration $C$ (kg/m$^3$)")
     ax[1].set_title("B  When does a river plunge?")
     # C: delta budget

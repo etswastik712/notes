@@ -489,6 +489,31 @@ def ls27():
     # terrace staircase from sea-level oscillations: uplift U, terrace spacing ~ U * period
     for U in (0.2, 1.0, 3.0):
         print(f"   uplift {U} mm/yr x one 100 kyr cycle = {U*100:.0f} m vertical spacing between terraces of successive highstands")
+    # ---- littoral cell budget
+    ecl, Hc, fs, qsh, Lcell = 0.2, 25.0, 0.4, 0.5, 30e3
+    slope_Q = ecl * Hc * fs - qsh
+    Qr, xr = 8e4, 10e3
+    xs = np.linspace(0, Lcell, 3001)
+    Qx = slope_Q * xs + np.where(xs >= xr, Qr, 0.0)
+    print(f"\nlittoral cell: cliff retreat {ecl} m/yr x height {Hc:.0f} m x sand fraction {fs} = {ecl*Hc*fs:.1f} m3/yr per metre of coast, shelf leakage {qsh} m3/yr/m: dQ/dx = {slope_Q:.2f} m3/yr/m")
+    print(f"   Q(10 km, before river) = {slope_Q*xr:.0f} m3/yr; river adds {Qr:.0f} -> {slope_Q*xr+Qr:.0f}; Q(30 km) = {Qx[-1]:.0f} m3/yr  (linear rise with a step at the river mouth)")
+    ok("drift at the end of the cell = slope x L + river input", abs(Qx[-1] - (slope_Q * Lcell + Qr)) < 1e-6)
+    # ---- logarithmic-spiral bay: constant angle between ray and shoreline
+    alpha = math.radians(70)
+    th = np.linspace(0, 2 * math.pi, 4001)
+    r = np.exp(th / math.tan(alpha))
+    xx, yy = r * np.cos(th), r * np.sin(th)
+    dx_, dy_ = np.gradient(xx, th), np.gradient(yy, th)
+    ang = np.degrees(np.arccos((xx * dx_ + yy * dy_) / (np.hypot(xx, yy) * np.hypot(dx_, dy_))))
+    print(f"\nlog-spiral bay r = r0 exp(theta cot a), a = 70 deg: angle between ray and shoreline (numerical) = {ang[10:-10].min():.3f}..{ang[10:-10].max():.3f} deg; radius grows by x{math.exp(2*math.pi/math.tan(alpha)):.2f} per full turn")
+    ok("constant ray-to-shoreline angle", np.ptp(ang[10:-10]) < 0.05 and abs(ang[100] - 70) < 0.05)
+    print(f"   equilibrium (constant Q) needs a constant breaker angle: breaker angle to the shore = 90 - a = {90-70} deg everywhere along the spiral")
+    # ---- cliff fatigue cycles
+    erode, inland = 0.1, 30.0
+    yrs = inland / erode
+    cyc = yrs * 3e6
+    print(f"\ncliff fatigue: retreat 10 cm/yr, elastic loading felt {inland:.0f} m inland -> rock is cycled for {yrs:.0f} yr x 3e6 waves/yr = {cyc:.1e} cycles before exposure")
+    print(f"   Arctic permafrost coast: ice-free days 20-30 -> 50-70 per year; wave attack and thermal erosion retreat tens of m/yr")
     print("\nall checks passed")
 
 
