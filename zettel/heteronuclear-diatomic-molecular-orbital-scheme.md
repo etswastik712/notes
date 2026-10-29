@@ -1,0 +1,25 @@
+---
+id: zettel/heteronuclear-diatomic-molecular-orbital-scheme
+aliases: ["Heteronuclear Diatomic Molecular Orbital Scheme", "heteronuclear diatomic MO"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Heteronuclear Diatomic Molecular Orbital Scheme
+
+A molecular orbital description for diatomics with unequal atoms where atomic orbital energy mismatches diminish overlap, bonding orbitals localize preferentially on the more electronegative atom, antibonding orbitals localize on the less electronegative atom, and the absence of inversion symmetry removes g and u parity labels.
+
+$$\psi = C_A \chi_A + C_B \chi_B + \dots$$
+
+## Links
+- generalises:: [[zettel/homonuclear-diatomic-molecular-orbital-scheme]] — Accounts for unequal coefficients and atomic orbital energy mismatches arising from symmetry breaking and electronegativity differences
+- example-of:: [[zettel/molecular-orbital-model-of-hydrogen-fluoride]] — HF serves as a primary example exhibiting severe energy mismatch and localized non-bonding orbitals
+- example-of:: [[zettel/molecular-orbital-model-of-carbon-monoxide]] — CO exemplifies a heteronuclear diatomic with frontier HOMO and LUMO distributions that facilitate coordination chemistry
+
+---
+Source: Molecular Orbital Theory_Part 1, pp. 1–13
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-22-teaching-material-mot|Molecular Orbital Theory_Part 1]] pp. 1–13
+<!-- /kurooto:seen -->

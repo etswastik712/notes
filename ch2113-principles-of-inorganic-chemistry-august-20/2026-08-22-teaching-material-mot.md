@@ -33,3 +33,8 @@ From Molecular Orbital Theory_Part 1.pdf (Classroom): diatomic molecules.
 ## Related
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-26-molecular-orbital-theory-part-2]]: continues with polyatomic MOs
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2]]: the Lewis/VSEPR picture that MOT refines
+
+<!-- kurooto:materialfb9b5124 -->
+## Concepts in Molecular Orbital Theory_Part 1
+[[zettel/orbital-approximation]], [[zettel/linear-combination-of-atomic-orbitals]], [[zettel/bonding-molecular-orbital]], [[zettel/antibonding-molecular-orbital]], [[zettel/homonuclear-diatomic-molecular-orbital-scheme]], [[zettel/heteronuclear-diatomic-molecular-orbital-scheme]], [[zettel/molecular-orbital-model-of-hydrogen-fluoride]], [[zettel/molecular-orbital-model-of-carbon-monoxide]]
+<!-- /kurooto:materialfb9b5124 -->
