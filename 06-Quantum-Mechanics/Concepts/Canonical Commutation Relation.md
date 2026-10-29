@@ -38,3 +38,6 @@ In ladder form $[\hat x,\hat p]=i\hbar\iff[\hat a,\hat a^\dagger]=1$. Check from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Heisenberg Group]] (Group Theory): the relation $[x,p]=i\hbar$ is the Lie algebra of the Heisenberg group; its unique irreducible unitary representation (Stone-von Neumann) is the Schrodinger representation.

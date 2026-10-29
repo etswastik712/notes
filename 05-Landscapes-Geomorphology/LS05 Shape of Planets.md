@@ -240,3 +240,7 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 > | $C/MR^2$ values (Earth 0.3307, Moon, Mars, Venus), $J_2=1.0826265\times10^{-3}$ | T&S (Bookos copy) PDF p.389 (found by search in an extracted table; planets' values read from a garbled line, `[verify]` which entry is which) | b · primary book |
 > | first-order relation of $J_2$, rotation and mass terms | T&S PDF p.384 (found by search) | b · primary book |
 > | Darwin–Radau relation, Bruns' formula, $f\simeq\frac32J_2+\frac12q$, numbers | standard results; arithmetic in `scripts/ls_depth_numbers.py` (`LS05`) | extra · beyond |
+
+## Across subjects
+- [[Centrifugal Force and Effective Gravity]] (Climate): the equatorial bulge of a rotating planet is the centrifugal term in the effective gravity: the surface is an equipotential of gravity plus $-\tfrac12\Omega^2r^2\cos^2\varphi$.
+- [[CL12 Rotating Frames and the Coriolis Force]] (Climate): the same rotating-frame mechanics that gives the Coriolis force in the atmosphere gives the flattening of the planet (centrifugal term) and the tilt of the geoid.

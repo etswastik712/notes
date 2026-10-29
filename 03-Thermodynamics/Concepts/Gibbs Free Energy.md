@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Rela
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Standard Reduction Potential]] (Chemistry): $\Delta G^\circ=-nFE^\circ$ links a cell potential to the Gibbs free energy: the same quantity that decides spontaneity in thermodynamics is measured as a voltage.

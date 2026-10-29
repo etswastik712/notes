@@ -37,3 +37,6 @@ Used in: [[QM06 The Oscillator Toolbox]] §8. Related: [[Einstein Heat Capacity]
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Planck Law]] (Thermodynamics): each mode of the radiation field is a quantum oscillator; thermal averaging over its levels gives the Planck mean energy $\hbar\omega/(e^{\beta\hbar\omega}-1)$ and hence the Planck law.

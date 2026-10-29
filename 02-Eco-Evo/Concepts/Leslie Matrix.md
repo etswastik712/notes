@@ -39,3 +39,6 @@ Used in: [[EE02 Structured Population Models]]. Related: [[Stable Age Distributi
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Eigenstate and Eigenvalue]] (Quantum Mechanics): both are matrix eigenproblems: the dominant eigenvalue of the Leslie matrix is the growth rate, and Perron-Frobenius (a positive dominant eigenvector) is the matrix analogue of a nodeless, non-degenerate ground state.

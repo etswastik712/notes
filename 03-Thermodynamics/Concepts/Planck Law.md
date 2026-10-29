@@ -37,3 +37,7 @@ Consequences: [[Wien Displacement Law]], [[Stefan-Boltzmann Law]]. Applied in [[
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Atmospheric Window]] (Climate): the 8-12 $\mu$m window sits near the peak of the Planck curve of a $\sim$288 K surface (Wien: $\lambda_{max}\approx10\ \mu$m), so it is the channel through which surface emission escapes.
+- [[Thermal Harmonic Oscillator]] (Quantum Mechanics): each mode of the radiation field is a quantum oscillator; thermal averaging over its levels gives the Planck mean energy $\hbar\omega/(e^{\beta\hbar\omega}-1)$ and hence the Planck law.

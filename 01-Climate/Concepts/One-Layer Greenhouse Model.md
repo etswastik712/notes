@@ -32,3 +32,6 @@ Derived in [[CL08 Greenhouse Models]]; absorptivity from optical depth: [[Beer-L
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Stefan-Boltzmann Law]] (Thermodynamics): the model closes its energy balance with $\sigma T^4$ for the surface and for the single absorbing layer.

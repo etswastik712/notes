@@ -30,3 +30,6 @@ See [[CL07 Optical Properties of the Atmosphere]], [[Greenhouse Gases and Absorp
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Planck Law]] (Thermodynamics): the 8-12 $\mu$m window sits near the peak of the Planck curve of a $\sim$288 K surface (Wien: $\lambda_{max}\approx10\ \mu$m), so it is the channel through which surface emission escapes.

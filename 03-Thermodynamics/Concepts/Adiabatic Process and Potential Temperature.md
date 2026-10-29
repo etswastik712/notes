@@ -32,3 +32,6 @@ Used for: [[Atmospheric Stability]] ($\partial\theta/\partial z>0$ stable, $N^2=
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Lapse Rate]] (Climate): the dry adiabatic lapse rate $\Gamma_d=g/c_p$ is the adiabatic condition $pV^\gamma=$ const applied to a rising, hydrostatically cooled parcel.

@@ -36,3 +36,6 @@ Oscillator: $Z=\sum_ne^{-\beta\hbar\omega(n+\frac12)}=1/(2\sinh(\hbar\omega\beta
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Moment Generating Function]] (Probability): $Z(\beta)=\sum_i e^{-\beta E_i}$ is the moment generating function of the energy at $t=-\beta$ (up to normalisation); $\langle E\rangle=-\partial_\beta\ln Z$ and $\mathrm{Var}\,E=\partial_\beta^2\ln Z$ are the first two cumulants.

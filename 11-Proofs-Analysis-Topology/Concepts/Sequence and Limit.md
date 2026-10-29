@@ -29,3 +29,6 @@ Used in: [[PA06 The Real Numbers and Sequences]]. Related: [[Quantifiers and The
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Law of Large Numbers]] (Probability): the law of large numbers is a limit theorem for the sequence of sample means; unlike the real-analysis limit it holds in probability or almost surely, not pointwise.

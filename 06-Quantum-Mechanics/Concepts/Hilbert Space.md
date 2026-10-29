@@ -33,3 +33,7 @@ Used in: [[QM06 The Oscillator Toolbox]] §2. Related: [[Completeness Relation]]
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Cauchy Sequence]] (Analysis): a Hilbert space is a complete inner-product space: completeness means every Cauchy sequence in the norm converges, which is what licenses eigenfunction expansions.
+- [[Metric Space]] (Analysis): the norm $\|\psi\|=\sqrt{\langle\psi|\psi\rangle}$ gives the metric $d(\psi,\phi)=\|\psi-\phi\|$, so a Hilbert space is a complete metric space with extra (inner-product) structure.

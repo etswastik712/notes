@@ -40,3 +40,6 @@ Chapters: [[CL07 Optical Properties of the Atmosphere]], [[CL08 Greenhouse Model
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Blackbody Radiation]] (Thermodynamics): the emission temperature and every greenhouse model start from blackbody emission $\sigma T^4$; the greenhouse effect is the gap between that balance and the observed surface flux.

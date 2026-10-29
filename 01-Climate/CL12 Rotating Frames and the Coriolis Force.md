@@ -457,3 +457,6 @@ The derivation chain, effective-gravity diagram (TikZ), component table and rule
 > ![[Suhas post midsem.pdf#page=4&height=420]]
 
 **References.** Marshall, J. & Plumb, R. A. (2008) *Atmosphere, Ocean and Climate Dynamics*, Ch. 6 §6.6, Ch. 7 §7.1 · Wallace & Hobbs (2006) §7.2 ([[Atmospheric Science - An Introductory Surv - John M. Wallace.pdf#page=294|PDF p.294 ff.]]) · WGS84 normal gravity (NIMA TR8350.2) for the equator/pole values.
+
+## Across subjects
+- [[LS05 Shape of Planets]] (Landscapes): the same rotating-frame mechanics that gives the Coriolis force in the atmosphere gives the flattening of the planet (centrifugal term) and the tilt of the geoid.

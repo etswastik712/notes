@@ -39,3 +39,6 @@ A gas layer of optical depth $\tau$ at temperature $T$ absorbs the fraction $1-e
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Greenhouse Effect]] (Climate): the emission temperature and every greenhouse model start from blackbody emission $\sigma T^4$; the greenhouse effect is the gap between that balance and the observed surface flux.

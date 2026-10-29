@@ -33,3 +33,6 @@ Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[Valence Bond Theory]
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Singlet and Triplet States]] (Quantum Mechanics): the covalent bond of H$_2$ is the spin-singlet, spatially symmetric Heitler-London combination; the triplet is antisymmetric in space and repulsive.

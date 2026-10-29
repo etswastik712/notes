@@ -29,3 +29,6 @@ Used in: [[CH09 Redox]] §2. Related: [[Faraday Constant]] · [[Galvanic Cell]].
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Gibbs Free Energy]] (Thermodynamics): $\Delta G^\circ=-nFE^\circ$ links a cell potential to the Gibbs free energy: the same quantity that decides spontaneity in thermodynamics is measured as a voltage.

@@ -25,3 +25,7 @@ Used in: [[GT10 Symmetry Representations and Characters]]. Related: [[Character 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Symmetry Labels a b e t]] (Chemistry): the Mulliken labels $a$, $b$ (1-d), $e$ (2-d), $t$ (3-d) are names of irreducible representations of the molecular point group.
+- [[Bloch Theorem]] (Quantum Mechanics): Bloch's theorem is the representation theory of the translation group: its irreducible representations are the one-dimensional characters $e^{i\mathbf k\cdot\mathbf R}$, one for each crystal momentum.

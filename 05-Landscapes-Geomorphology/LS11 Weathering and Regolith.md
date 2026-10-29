@@ -307,3 +307,7 @@ Physical weathering fractures rock: it (i) weakens it mechanically, (ii) makes s
 > | silicate weathering reaction, long-term carbon cycle, decline of dissolution rate with surface age | A&A PDF pp.218–219 (read) | b · primary book |
 > | Arrhenius factors, net CO$_2$ per Ca, mass ratio, tonnage | my computation (`scripts/ls_depth_numbers.py`, `LS11`); $E_a$ range is illustrative | extra · beyond |
 > | proposed link between Himalayan weathering and Cenozoic cooling | argued in A&A/LS10 in general terms; the quantitative relaxation time ($10^5$–$10^6$ yr) is from general knowledge, `[verify]` | not checked |
+
+## Across subjects
+- [[EE06 Eutrophication and Alternative Stable States]] (Eco-Evo): the phosphorus that limits lake productivity is released from apatite by weathering and delivered by erosion, so the geomorphic conveyor sets the supply side of eutrophication.
+- [[CH09 Redox]] (Chemistry): oxidation of Fe$^{2+}$ minerals and of sulfides is a redox reaction whose standard potentials decide which weathering reactions run; the rust-coloured regolith is an Fe(III) product.

@@ -29,3 +29,6 @@ Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Ma
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Sequence and Limit]] (Analysis): the law of large numbers is a limit theorem for the sequence of sample means; unlike the real-analysis limit it holds in probability or almost surely, not pointwise.

@@ -25,3 +25,6 @@ Used in: [[GT05 Actions Conjugation and Sylow Theorems]]. Related: [[Group Actio
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Counting Principles]] (Probability): Burnside's lemma counts distinct arrangements up to symmetry as the average number of fixed points, a counting tool used for isomers, colourings and necklaces.

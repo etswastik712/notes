@@ -32,3 +32,6 @@ Used in: [[CH03 Molecular Orbital Theory Polyatomics]] §3. Related: [[Ligand Gr
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Reduction Formula]] (Group Theory): the chemist's reduction of a reducible representation of a molecule is the group theorist's reduction formula $n_i=\frac1{|G|}\sum_g\chi(g)\chi_i(g)^*$.

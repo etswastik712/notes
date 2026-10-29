@@ -41,3 +41,6 @@ Worked in [[CL07 Optical Properties of the Atmosphere]]; leads to [[CL08 Greenho
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Character of a Representation]] (Group Theory): which normal modes of CO$_2$, H$_2$O or CH$_4$ are infrared-active is read from the characters of the molecule's point group (the mode's irreducible representation must appear in the dipole representation).

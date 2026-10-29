@@ -368,3 +368,6 @@ Three features of the monsoon are the signature of a **threshold system** ([[Bis
 > **Dropped as redundant:** the repeated slides of the cross-equatorial question (22 Oct p32 and p33), the three near-identical hand-drawn sketches (p34, p35, p40) are merged into §§3–4, and the CliSci copies of p26–38 duplicate the photographed slides.
 
 **References.** Webster, P. J. & Fasullo, J. (2003) "Monsoon: Dynamical Theory", in *Encyclopedia of Atmospheric Sciences* (Elsevier) · Hartmann, D. L. (2016) *Global Physical Climatology*, 2nd ed., §6.5 · Halley, E. (1686) *Phil. Trans.* 16, 153 · Charney, J. G. (1975) *Q. J. R. Meteorol. Soc.* 101, 193 · India Meteorological Department monsoon onset normals.
+
+## Across subjects
+- [[LS10 Folds Flexure and Mountain Building]] (Landscapes): the Himalaya and the Tibetan Plateau are both a tectonic product and a boundary condition of the monsoon circulation; rainfall focused on the range feeds back on erosion and isostatic uplift.

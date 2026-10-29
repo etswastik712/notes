@@ -32,3 +32,6 @@ Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §10–§11. Relate
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Heitler-London Wavefunction]] (Chemistry): the covalent bond of H$_2$ is the spin-singlet, spatially symmetric Heitler-London combination; the triplet is antisymmetric in space and repulsive.

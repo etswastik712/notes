@@ -48,3 +48,6 @@ Used in: [[QM06 The Oscillator Toolbox]] §4.2–§4.3. Related: [[Hermite Polyn
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Moment Generating Function]] (Probability): the generating function $e^{xt-t^2/2}=\sum He_n(x)t^n/n!$ is the exponential kernel $e^{tx}$ divided by the moment generating function of the standard normal, $E[e^{tZ}]=e^{t^2/2}$.

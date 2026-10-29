@@ -36,3 +36,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Planc
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Geometric Distribution]] (Probability): the thermal occupation number is geometric, $P(n)=(1-q)q^n$ with $q=e^{-\beta\hbar\omega}$, and its mean $q/(1-q)=1/(e^{\beta\hbar\omega}-1)$ is the Bose-Einstein factor in the Planck mean energy.

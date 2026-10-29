@@ -25,3 +25,7 @@ Used in: [[GT10 Symmetry Representations and Characters]]. Related: [[Character 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Reduction of a Representation]] (Chemistry): the chemist's reduction of a reducible representation of a molecule is the group theorist's reduction formula $n_i=\frac1{|G|}\sum_g\chi(g)\chi_i(g)^*$.
+- [[Ligand Group Orbitals]] (Chemistry): the symmetry-adapted ligand combinations are found by reducing the representation spanned by the ligand orbitals and projecting onto each irreducible representation.

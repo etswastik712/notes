@@ -32,3 +32,7 @@ Used in: [[CH03 Molecular Orbital Theory Polyatomics]] §1. Related: [[Ligand Gr
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Irreducible Representation]] (Group Theory): the Mulliken labels $a$, $b$ (1-d), $e$ (2-d), $t$ (3-d) are names of irreducible representations of the molecular point group.
+- [[Degeneracy]] (Quantum Mechanics): the dimension of the irreducible representation is the degeneracy symmetry forces: $e$ levels are doubly and $t$ levels triply degenerate; any other degeneracy is accidental.

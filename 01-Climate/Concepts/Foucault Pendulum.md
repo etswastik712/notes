@@ -39,3 +39,6 @@ See [[Coriolis Force]], [[Rotating Reference Frames]], [[Eotvos Effect]].
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Larmor Precession]] (Quantum Mechanics): both are rotating-frame effects: the pendulum plane turns at $\Omega\sin\varphi$ because the Earth rotates under it, and a magnetic moment precesses at $\omega_L=-\gamma B$ because in the frame rotating at $\omega_L$ the field disappears (Larmor's theorem).

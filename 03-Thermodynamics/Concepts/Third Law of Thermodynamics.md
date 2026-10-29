@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Rela
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Einstein Heat Capacity]] (Quantum Mechanics): the gapped oscillator spectrum makes $C_V\to0$ exponentially as $T\to0$, which is how quantum mechanics delivers the third law for solids.

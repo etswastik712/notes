@@ -40,3 +40,6 @@ Used in: [[EE03 Population Dynamics and Chaos]]. Related: [[Density Dependence]]
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Logistic Distribution]] (Probability): the solution $N(t)=K/(1+e^{-r(t-t_0)})$ of logistic growth is $K$ times the cdf of a logistic distribution with location $t_0$ and scale $1/r$, so growth quantiles are logistic quantiles.

@@ -40,3 +40,6 @@ Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Leslie Matrix]] (Eco-Evo): both are matrix eigenproblems: the dominant eigenvalue of the Leslie matrix is the growth rate, and Perron-Frobenius (a positive dominant eigenvector) is the matrix analogue of a nodeless, non-degenerate ground state.

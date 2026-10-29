@@ -32,3 +32,6 @@ Used in: [[CH03 Molecular Orbital Theory Polyatomics]] §3–§6. Related: [[Red
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Reduction Formula]] (Group Theory): the symmetry-adapted ligand combinations are found by reducing the representation spanned by the ligand orbitals and projecting onto each irreducible representation.

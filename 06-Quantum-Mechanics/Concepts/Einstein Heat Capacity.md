@@ -36,3 +36,6 @@ Used in: [[QM06 The Oscillator Toolbox]] §8. Related: [[Thermal Harmonic Oscill
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Third Law of Thermodynamics]] (Thermodynamics): the gapped oscillator spectrum makes $C_V\to0$ exponentially as $T\to0$, which is how quantum mechanics delivers the third law for solids.

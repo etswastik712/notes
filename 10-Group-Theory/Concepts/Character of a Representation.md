@@ -25,3 +25,6 @@ Used in: [[GT10 Symmetry Representations and Characters]]. Related: [[Reduction 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Greenhouse Gases and Absorption Bands]] (Climate): which normal modes of CO$_2$, H$_2$O or CH$_4$ are infrared-active is read from the characters of the molecule's point group (the mode's irreducible representation must appear in the dipole representation).

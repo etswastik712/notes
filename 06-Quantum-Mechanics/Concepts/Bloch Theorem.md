@@ -32,3 +32,6 @@ Used in: [[QM08 Quantum Tunnelling]] §8, [[Dirac Algebra]] §7. Related: [[Kron
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Irreducible Representation]] (Group Theory): Bloch's theorem is the representation theory of the translation group: its irreducible representations are the one-dimensional characters $e^{i\mathbf k\cdot\mathbf R}$, one for each crystal momentum.

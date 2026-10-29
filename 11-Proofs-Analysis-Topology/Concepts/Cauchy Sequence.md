@@ -29,3 +29,6 @@ Used in: [[PA06 The Real Numbers and Sequences]]. Related: [[Bolzano-Weierstrass
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Hilbert Space]] (Quantum Mechanics): a Hilbert space is a complete inner-product space: completeness means every Cauchy sequence in the norm converges, which is what licenses eigenfunction expansions.

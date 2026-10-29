@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:Assets -path:scripts",
+  "search": "-path:Assets -path:scripts -path:00-Home -path:digests -path:master -path:dailies",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -8,122 +8,150 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#subject/climate",
+      "query": "path:01-Climate OR tag:#subject/climate",
       "color": {
         "a": 1,
-        "rgb": 3900150
+        "rgb": 3770341
       }
     },
     {
-      "query": "tag:#subject/eco-evo",
+      "query": "path:03-Thermodynamics OR tag:#subject/thermo",
       "color": {
         "a": 1,
-        "rgb": 2278750
+        "rgb": 15099751
       }
     },
     {
-      "query": "tag:#subject/thermo",
+      "query": "path:06-Quantum-Mechanics OR tag:#subject/qm",
       "color": {
         "a": 1,
-        "rgb": 15680580
+        "rgb": 13206784
       }
     },
     {
-      "query": "tag:#subject/foundations",
+      "query": "path:08-Probability OR tag:#subject/probability",
       "color": {
         "a": 1,
-        "rgb": 11032055
+        "rgb": 1678960
       }
     },
     {
-      "query": "tag:#type/moc",
+      "query": "path:02-Eco-Evo OR tag:#subject/eco-evo",
       "color": {
         "a": 1,
-        "rgb": 16436245
+        "rgb": 14244134
       }
     },
     {
-      "query": "tag:#type/concept",
+      "query": "path:10-Group-Theory OR tag:#subject/group-theory",
       "color": {
         "a": 1,
-        "rgb": 9741240
+        "rgb": 33536
       }
     },
     {
-      "query": "tag:#extra",
+      "query": "path:12-Inorganic-Chemistry OR tag:#subject/chemistry",
       "color": {
         "a": 1,
-        "rgb": 16096779
+        "rgb": 13980033
       }
     },
     {
-      "query": "path:04-Evolution-of-Earth-and-Life",
+      "query": "path:11-Proofs-Analysis-Topology OR tag:#subject/analysis",
       "color": {
         "a": 1,
-        "rgb": 3046706
+        "rgb": 9471465
       }
     },
     {
-      "query": "path:05-Landscapes-Geomorphology",
+      "query": "path:05-Landscapes-Geomorphology OR tag:#subject/landscapes",
       "color": {
         "a": 1,
-        "rgb": 9268835
+        "rgb": 9522349
       }
     },
     {
-      "query": "path:06-Quantum-Mechanics",
+      "query": "path:07-Waves OR tag:#subject/waves",
       "color": {
         "a": 1,
-        "rgb": 8280002
+        "rgb": 3645880
       }
     },
     {
-      "query": "path:07-Waves",
+      "query": "path:13-Neuroscience OR tag:#subject/neuroscience",
       "color": {
         "a": 1,
-        "rgb": 2541274
+        "rgb": 10507612
       }
     },
     {
-      "query": "path:08-Probability",
+      "query": "path:04-Evolution-of-Earth-and-Life OR tag:#subject/earth-evolution",
       "color": {
         "a": 1,
-        "rgb": 15690752
+        "rgb": 14244134
       }
     },
     {
-      "query": "path:10-Group-Theory",
+      "query": "path:09-Foundations OR tag:#subject/foundations",
       "color": {
         "a": 1,
-        "rgb": 15483002
+        "rgb": 8750463
       }
     },
     {
-      "query": "path:11-Proofs-Analysis-Topology",
+      "query": "path:ph2113 OR tag:#ph2113",
       "color": {
         "a": 1,
-        "rgb": 6056896
+        "rgb": 13206784
       }
     },
     {
-      "query": "path:12-Inorganic-Chemistry",
+      "query": "path:ch2113 OR tag:#ch2113-principles-of-inorganic-chemistry-august-20",
       "color": {
         "a": 1,
-        "rgb": 10275941
+        "rgb": 13980033
       }
     },
     {
-      "query": "path:13-Neuroscience",
+      "query": "path:mt3184 OR tag:#mt3184 OR tag:#mt3184-differential-geometry-and-lie-groups",
       "color": {
         "a": 1,
-        "rgb": 16763432
+        "rgb": 33536
       }
     },
     {
-      "query": "path:inbox",
+      "query": "path:intro-to-proofs OR tag:#intro-to-proofs",
       "color": {
         "a": 1,
-        "rgb": 10395294
+        "rgb": 9471465
+      }
+    },
+    {
+      "query": "path:introduction-to-probability OR tag:#introduction-to-probability OR tag:#mt2113",
+      "color": {
+        "a": 1,
+        "rgb": 1678960
+      }
+    },
+    {
+      "query": "path:introduction-to-climate-science OR tag:#introduction-to-climate-science",
+      "color": {
+        "a": 1,
+        "rgb": 3770341
+      }
+    },
+    {
+      "query": "path:landscape-evolution OR tag:#landscape-evolution",
+      "color": {
+        "a": 1,
+        "rgb": 9522349
+      }
+    },
+    {
+      "query": "path:zettel OR path:maps OR path:inbox OR path:biology OR path:math",
+      "color": {
+        "a": 1,
+        "rgb": 8750463
       }
     }
   ],
@@ -131,12 +159,12 @@
   "showArrow": false,
   "textFadeMultiplier": -0.5,
   "nodeSizeMultiplier": 1.1,
-  "lineSizeMultiplier": 1,
+  "lineSizeMultiplier": 0.6,
   "collapse-forces": false,
-  "centerStrength": 0.4,
-  "repelStrength": 12,
+  "centerStrength": 0.25,
+  "repelStrength": 16,
   "linkStrength": 1,
-  "linkDistance": 200,
-  "scale": 0.10263424356877686,
+  "linkDistance": 110,
+  "scale": 0.08057787384407755,
   "close": false
 }

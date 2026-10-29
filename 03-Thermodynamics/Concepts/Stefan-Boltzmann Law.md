@@ -32,3 +32,7 @@ Climate: sets the emission term in every energy balance; the $T^4$ dependence gi
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[One-Layer Greenhouse Model]] (Climate): the model closes its energy balance with $\sigma T^4$ for the surface and for the single absorbing layer.
+- [[Effective Emission Temperature]] (Climate): $T_e=[(1-\alpha)S/4\sigma]^{1/4}$ is the Stefan-Boltzmann law inverted for the planet's absorbed flux.

@@ -32,3 +32,6 @@ Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §2, §7.1. Related
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Foucault Pendulum]] (Climate): both are rotating-frame effects: the pendulum plane turns at $\Omega\sin\varphi$ because the Earth rotates under it, and a magnetic moment precesses at $\omega_L=-\gamma B$ because in the frame rotating at $\omega_L$ the field disappears (Larmor's theorem).

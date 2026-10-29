@@ -29,3 +29,6 @@ Used in: [[PA06 The Real Numbers and Sequences]]. Related: [[Least Upper Bound P
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Continuity of Probability]] (Probability): continuity from below, $P(\cup A_n)=\lim P(A_n)$, is the monotone convergence theorem for indicator functions.

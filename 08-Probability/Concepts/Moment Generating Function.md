@@ -44,3 +44,7 @@ Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Mo
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Partition Function]] (Thermodynamics): $Z(\beta)=\sum_i e^{-\beta E_i}$ is the moment generating function of the energy at $t=-\beta$ (up to normalisation); $\langle E\rangle=-\partial_\beta\ln Z$ and $\mathrm{Var}\,E=\partial_\beta^2\ln Z$ are the first two cumulants.
+- [[Hermite Generating Function and Recurrences]] (Quantum Mechanics): the generating function $e^{xt-t^2/2}=\sum He_n(x)t^n/n!$ is the exponential kernel $e^{tx}$ divided by the moment generating function of the standard normal, $E[e^{tZ}]=e^{t^2/2}$.

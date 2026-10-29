@@ -29,3 +29,6 @@ Used in: [[PA07 Metric and Topological Spaces]]. Related: [[Open and Closed Sets
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Hilbert Space]] (Quantum Mechanics): the norm $\|\psi\|=\sqrt{\langle\psi|\psi\rangle}$ gives the metric $d(\psi,\phi)=\|\psi-\phi\|$, so a Hilbert space is a complete metric space with extra (inner-product) structure.

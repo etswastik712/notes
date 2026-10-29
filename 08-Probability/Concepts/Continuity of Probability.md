@@ -35,3 +35,6 @@ Used in: [[PR01 Counting and the Axioms of Probability]]. Related: [[Axioms of P
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Monotone Convergence Theorem]] (Analysis): continuity from below, $P(\cup A_n)=\lim P(A_n)$, is the monotone convergence theorem for indicator functions.

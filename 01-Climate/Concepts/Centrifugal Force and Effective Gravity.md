@@ -39,3 +39,6 @@ Derived and illustrated in [[CL12 Rotating Frames and the Coriolis Force]]. See 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[LS05 Shape of Planets]] (Landscapes): the equatorial bulge of a rotating planet is the centrifugal term in the effective gravity: the surface is an equipotential of gravity plus $-\tfrac12\Omega^2r^2\cos^2\varphi$.

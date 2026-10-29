@@ -25,3 +25,6 @@ Used in: [[GT05 Actions Conjugation and Sylow Theorems]]. Related: [[Group Actio
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Equivalence Class and Partition]] (Analysis): the orbits of a group action are the equivalence classes of $x\sim y\iff y=gx$; counting each class gives the orbit-stabiliser formula.

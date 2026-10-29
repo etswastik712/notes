@@ -32,3 +32,7 @@ Used in: [[PA03 Relations Equivalence and Order]]. Related: [[Equivalence Relati
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Coset]] (Group Theory): the left cosets of a subgroup are the equivalence classes of $a\sim b\iff a^{-1}b\in H$, so they partition the group (the heart of Lagrange's theorem).
+- [[Orbit-Stabiliser Theorem]] (Group Theory): the orbits of a group action are the equivalence classes of $x\sim y\iff y=gx$; counting each class gives the orbit-stabiliser formula.

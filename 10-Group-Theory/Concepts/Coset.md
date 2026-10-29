@@ -26,3 +26,6 @@ Used in: [[GT01 Groups Subgroups and Cosets]]. Related: [[Lagrange's Theorem]] Â
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Equivalence Class and Partition]] (Analysis): the left cosets of a subgroup are the equivalence classes of $a\sim b\iff a^{-1}b\in H$, so they partition the group (the heart of Lagrange's theorem).

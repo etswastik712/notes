@@ -36,3 +36,6 @@ Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Symmetry Labels a b e t]] (Chemistry): the dimension of the irreducible representation is the degeneracy symmetry forces: $e$ levels are doubly and $t$ levels triply degenerate; any other degeneracy is accidental.

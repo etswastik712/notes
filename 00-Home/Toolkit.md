@@ -44,6 +44,7 @@ cd Assets/latex && latexmk -pdf -outdir=build <name>.tex && cp build/<name>.pdf 
 | `scripts/fig_<chapter>_<slug>.py` | one script per figure; the numbers printed by each are the ones quoted in the notes |
 | `scripts/diagrams.py` | node-and-arrow diagrams → `.excalidraw.md` **and** `.svg` (the SVG is embedded; the Excalidraw file is the editable source) |
 | `scripts/build_canvases.py` | JSON Canvas files from tables; edit `SUBJECTS`/`RELATIONS`/`CH` |
+| `scripts/graph_colors.py` | **graph-view colour groups, filter and forces** → `.obsidian/graph.json` (one colour per subject; see [[Conventions]] §8) |
 | `scripts/contact_sheet.py` | numbered thumbnail sheets for reading image-only PDFs |
 | `Assets/latex/preamble-brain.tex` | shared LaTeX preamble: tcolorbox boxes that mirror the callouts, siunitx, pgfplots, TikZ |
 

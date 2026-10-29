@@ -134,3 +134,29 @@ This is the standard for every subject (climate, eco-evo, …). Template: [[Chap
 | **Quality gates** | numbers recomputed; `[!verify]` for source disagreements; link check passes (`scripts/check_links.py`) |
 
 **Depth target.** A chapter should be readable on its own by someone who missed the lectures *and* detailed enough to answer a derivation question: ~4,500–7,000 words, 5+ intuition boxes, 2+ worked examples, 6+ practice problems.
+
+## 8. Graph view colours (2026-10-29)
+The global graph (`.obsidian/graph.json`) is **generated** by `scripts/graph_colors.py` (`--apply` writes it, no flag only reports coverage, `--validate` measures the palette, `--preview out.png` simulates the layout). Do not hand-edit the colour groups: edit `SUBJECTS` in the script and re-run.
+
+**Rules.** (1) Obsidian paints a node with the **first** colour group that matches, so the groups are *only subjects*; note-type groups (`type/moc`, `type/concept`, `extra`) used to sit above the subjects and repainted every concept note by type, which is why QM, group theory, chemistry and probability looked like one subject. To look at a type temporarily, type it into the graph's search box (`tag:#type/moc`). (2) A subject matches by **folder or `subject/` tag**, so both are kept consistent (audited: 0 mismatches; Bayes' Theorem and AIC carry two subject tags on purpose and take the Probability colour because it precedes Eco-Evo). (3) The other tool's notes (un-numbered folders and `zettel`, found by their course tag) take their course's colour at 45 % opacity; its loose notes are a dim grey. (4) `00-Home` (the Glossary alone links 640 notes), `digests`, `master`, `dailies`, `Assets` and `scripts` are filtered out of the graph because they link to everything; open the *local* graph on them.
+
+| Subject | Colour | Hex | Basis |
+|---|---|---|---|
+| Climate | blue | `#3987e5` | validated palette slot |
+| Thermodynamics | red | `#e66767` | validated |
+| Quantum Mechanics | gold | `#c98500` | validated |
+| Probability | aqua | `#199e70` | validated |
+| Eco-Evo | orange | `#d95926` | validated |
+| Group Theory | green | `#008300` | validated |
+| Inorganic Chemistry | magenta | `#d55181` | validated |
+| Proofs, Analysis, Topology | violet | `#9085e9` | validated |
+| Landscapes | purple | `#914cad` | extension hue (farthest-point search) |
+| Waves (stub) | cyan | `#37a1b8` | extension hue |
+| Neuroscience (stub) | brick | `#a0555c` | extension hue |
+| Earth and Life (stub) | orange | `#d95926` | shares Eco-Evo until written |
+| Foundations | grey | `#85857f` | neutral on purpose: the toolkit that links every subject |
+
+The eight validated hues are the dataviz reference palette's dark-column steps (they keep at least 3:1 on both Obsidian surfaces); **which hue goes to which subject was optimised on the real link graph**, so the most heavily linked subject pairs get the most separable colours (Climate–Thermodynamics 29, Climate–Eco-Evo 32, Climate–QM 31, Probability–QM 20 normal-vision ΔE; worst heavy pair QM–Thermodynamics 13.0 normal and 6.7 under colour-blind simulation). Eight hues cannot all be pairwise distinct (a limit of the method), so the weakest pairs are placed on subjects that barely link (Eco-Evo–Thermodynamics 3 links, Climate–Analysis 1). Forces: `centerStrength 0.25`, `repelStrength 16`, `linkDistance 110`, thinner lines (`0.6`), unresolved links hidden.
+
+> [!warning] Obsidian rewrites `graph.json` while the graph pane is open
+> If the colours revert, Obsidian saved its in-memory copy over the file. Close the graph tab (or run *Reload app without saving*), then `.venv/bin/python -W ignore scripts/graph_colors.py --apply`, then reopen the graph.

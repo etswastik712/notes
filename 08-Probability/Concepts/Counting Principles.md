@@ -36,3 +36,6 @@ Used in: [[PR01 Counting and the Axioms of Probability]]. Related: [[Multinomial
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Burnside's Lemma]] (Group Theory): Burnside's lemma counts distinct arrangements up to symmetry as the average number of fixed points, a counting tool used for isomers, colourings and necklaces.

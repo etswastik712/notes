@@ -30,3 +30,6 @@ Comparing $\Gamma$ with $\Gamma_d$ or $\Gamma_s$ classifies a layer as stable, n
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Adiabatic Process and Potential Temperature]] (Thermodynamics): the dry adiabatic lapse rate $\Gamma_d=g/c_p$ is the adiabatic condition $pV^\gamma=$ const applied to a rising, hydrostatically cooled parcel.

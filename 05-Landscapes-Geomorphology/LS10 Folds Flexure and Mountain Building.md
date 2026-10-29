@@ -265,3 +265,6 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > | Molnar and England chicken-or-egg, Tibet, monsoon and Loess Plateau (8 Ma) | A&A PDF p.61 (read) | b · primary book |
 > | degree of compensation versus wavelength | T&S (Bookos copy) Fig. 3–27, PDF p.235 (found by search; caption read) | b · primary book |
 > | $T_e\leftrightarrow D$, $\alpha$ for three infills, half-compensation wavelength | my computation (`scripts/ls_depth_numbers.py`, `LS10`); $E=70$ GPa, $\nu=0.25$ assumed | extra · beyond |
+
+## Across subjects
+- [[CL15 Monsoons]] (Climate): the Himalaya and the Tibetan Plateau are both a tectonic product and a boundary condition of the monsoon circulation; rainfall focused on the range feeds back on erosion and isostatic uplift.
