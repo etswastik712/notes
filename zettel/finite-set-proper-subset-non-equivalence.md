@@ -18,6 +18,7 @@ $$N_j \sim A \sim B \sim N_k \text{ with } j < k$$
 Source: Countable-Uncountable-sets, pp. 1–6
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/cardinality-equivalence]] — The note's argument that finite sets have no bijection with a proper subset relies on the bijection-based definition of same cardinality, which this note states
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 <!-- /kurooto:seen -->
