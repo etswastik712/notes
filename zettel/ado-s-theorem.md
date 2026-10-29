@@ -16,6 +16,8 @@ Every finite-dimensional real Lie algebra admits a faithful representation, impl
 Source: DG20, pp. 1–5
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/faithful-representation]] — Ado's Theorem asserts the existence of a faithful representation for every finite-dimensional real Lie algebra, which is the central content of the note
+- needs:: [[zettel/lie-algebra]] — Ado's Theorem is a statement about finite-dimensional real Lie algebras, so the abstract Lie algebra definition is required to state it
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG20]] pp. 1–5
 <!-- /kurooto:seen -->
