@@ -1,6 +1,6 @@
 ---
 id: zettel/wave-function-physical-acceptability-conditions
-aliases: ["Wave Function Physical Acceptability Conditions", "physically acceptable wave functions", "quantum well-behavedness criteria", "admissibility of wave functions", "quantum admissibility criteria"]
+aliases: ["Wave Function Physical Acceptability Conditions", "physically acceptable wave functions", "quantum well-behavedness criteria", "admissibility of wave functions", "quantum admissibility criteria", "regularity conditions for wave functions"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -24,7 +24,9 @@ Source: PH2113_Mock_Quiz_50min_15marks, pp. 1–2
 ## Seen in
 - [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_50min_15marks]] pp. 1–2
 - [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_Ideal_Solutions]] pp. 1–2
+- [[ph2113/2026-08-25-lecture-9-free-particle-ring-general-properties|PH2113_Lecture9_FreeParticle_Ring_GeneralProperties]] pp. 1–9
 
 ### Added from class
 - PH2113_Mock_Quiz_Ideal_Solutions pp. 1–2: Supplies concrete test examples illustrating each admissibility failure mode: unconstrained exponential growth destroying normalizability and finite boundary step jumps violating spatial continuity.
+- PH2113_Lecture9_FreeParticle_Ring_GeneralProperties pp. 1–9: Identifies the four practical acceptability criteria (single-valuedness, normalizability, continuity of psi, continuity of psi') for finite, nonsingular potentials.
 <!-- /kurooto:seen -->

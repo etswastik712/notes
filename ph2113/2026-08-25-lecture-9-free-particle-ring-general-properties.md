@@ -65,3 +65,8 @@ Central lesson: quantisation is not an extra rule; only some solutions satisfy t
 - [[ph2113/2026-08-27-tutorial-solutions-wavefunctions-uncertainty-schrodinger]]: problems 3 and 5 are the periodic/ring quantisation and phase material
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]]: allowed potentials, matching conditions and stationary-state problems
 - [[ph2113/2026-10-06-particle-in-a-box-notes]]: another case where boundary conditions give a discrete spectrum
+
+<!-- kurooto:materiald0a3dd1c -->
+## Concepts in PH2113_Lecture9_FreeParticle_Ring_GeneralProperties
+[[zettel/particle-in-a-box-time-evolution]], [[zettel/time-independent-schrodinger-equation]], [[zettel/free-particle-on-an-infinite-line]], [[zettel/free-particle-periodic-boundary-condition]], [[zettel/emergence-of-energy-quantization-from-boundary-conditions]], [[zettel/overall-phase-vs-relative-phase]], [[zettel/wave-function-physical-acceptability-conditions]], [[zettel/admissible-potentials-for-stationary-analysis]]
+<!-- /kurooto:materiald0a3dd1c -->
