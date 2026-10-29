@@ -1,6 +1,6 @@
 ---
 id: zettel/energy-eigenstate-superposition-with-momentum-degeneracy
-aliases: ["Energy Eigenstate Superposition with Momentum Degeneracy", "degenerate energy eigenstate superposition", "momentum superposition at fixed energy", "Superposition of Counter-Propagating Waves with Momentum Degeneracy"]
+aliases: ["Energy Eigenstate Superposition with Momentum Degeneracy", "degenerate energy eigenstate superposition", "momentum superposition at fixed energy", "Superposition of Counter-Propagating Waves with Momentum Degeneracy", "Directional Momentum Degeneracy on a Ring", "counter-propagating wave degeneracy", "ring kinetic energy degeneracy"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -26,7 +26,9 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 ## Seen in
 - [[ph2113/2026-09-08-tutorial-states-interference-uncertainty|PH2113_tutorial-pdf]] pp. 1–2
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+- [[ph2113/2026-09-03-quiz-ideal-solutions|PH2113_Quiz_Ideal_Solutions]] pp. 1–3
 
 ### Added from class
 - PH2113_tutorial-pdf pp. 1–2: Provides the explicit evaluation on a ring where Ψ(x) = sqrt(2/L) cos(kx), showing ΔH = 0 while Δp = ħk despite [H, p] = 0.
+- PH2113_Quiz_Ideal_Solutions pp. 1–3: Provides the explicit physical realisation on a ring of circumference L, linking identical kinetic energy K = p^2/(2m) to directional momentum degeneracy between clockwise and anticlockwise traveling waves.
 <!-- /kurooto:seen -->

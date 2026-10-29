@@ -40,3 +40,8 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODc3Mjg2Mz
 - [[06-quantum-mechanics/concepts/particle-on-a-ring]]: Q4
 - [[06-quantum-mechanics/concepts/compton-scattering]]: Q2
 - [[06-quantum-mechanics/qm03-states-operators-and-measurement]]: Q3 and Q5
+
+<!-- kurooto:materiale26cb8e3 -->
+## Concepts in PH2113_Quiz_Ideal_Solutions
+[[zettel/photoelectric-threshold-frequency]], [[zettel/compton-scattering-momentum-and-energy-transfer]], [[zettel/position-dependent-phase-and-momentum-content]], [[zettel/periodic-boundary-condition-on-a-ring]], [[zettel/energy-eigenstate-superposition-with-momentum-degeneracy]], [[zettel/plane-wave-momentum-eigenstate]], [[zettel/non-preservation-of-eigenstate-under-non-degenerate-superposition]]
+<!-- /kurooto:materiale26cb8e3 -->
