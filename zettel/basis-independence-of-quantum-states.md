@@ -23,5 +23,9 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-09-07-matrices-expectation-uncertainty|PH2113_matrices_expectation_uncertainty]] pp. 1–4
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+
+### Added from class
+- PH2113_matrices_expectation_uncertainty pp. 1–4: Provides the explicit matrix representation of the operator X in the Y-basis acting directly on |+x> represented as components in the Y-basis.
 <!-- /kurooto:seen -->

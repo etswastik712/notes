@@ -41,3 +41,8 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODcyODAwNz
 - [[06-quantum-mechanics/concepts/hermitian-operator]]: observables as Hermitian matrices
 - [[06-quantum-mechanics/concepts/commutator]]: commutators and the uncertainty bound
 - [[06-quantum-mechanics/concepts/canonical-commutation-relation]]: $[\hat x,\hat p]=i\hbar$
+
+<!-- kurooto:material373add36 -->
+## Concepts in PH2113_matrices_expectation_uncertainty
+[[zettel/two-dimensional-quantum-state]], [[zettel/eigenstate-definite-value-principle]], [[zettel/basis-independence-of-quantum-states]], [[zettel/quantum-mechanical-correspondence-between-discrete-and-continuous-syst]], [[zettel/operator-commutator]], [[zettel/canonical-commutation-relation-position-momentum]]
+<!-- /kurooto:material373add36 -->
