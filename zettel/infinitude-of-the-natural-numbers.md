@@ -18,6 +18,7 @@ $$f : \mathbb{N} \to O, \quad n \mapsto 2n - 1$$
 Source: Countable-Uncountable-sets, pp. 1–6
 
 <!-- kurooto:seen -->
+- equivalent-to:: [[zettel/finite-set-proper-subset-non-equivalence]] — The note's bijection N to odd naturals is an instance of a proper subset of N being in bijection with N, which is the very property that finite-set-proper-subset-non-equivalence says finite sets lack, so infinitude follows from it
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 <!-- /kurooto:seen -->
