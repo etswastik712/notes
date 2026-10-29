@@ -89,3 +89,8 @@ Reference: Atmospheric Science: An introductory survey by  J.M. Wallace and P.V
 - [[01-Climate/CL05 Thermodynamic State of the Atmosphere]]: dry vs moist air, water vapor partial pressure, and gas constants
 - [[01-Climate/Concepts/Ideal Gas Law]]: ideal gas formulation
 - [[introduction-to-climate-science/2026-09-02-study-material-2-atmospheric-composition]]: Salby Ch 1 on atmospheric composition, Dalton's law, and gas mixtures
+
+<!-- kurooto:material0c1ffe0f -->
+## Concepts in Circulation_Moist_and_dry_air_WH_lect1
+[[zettel/ideal-gas-equation]]
+<!-- /kurooto:material0c1ffe0f -->
