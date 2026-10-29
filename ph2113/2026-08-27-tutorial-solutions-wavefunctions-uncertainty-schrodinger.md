@@ -42,3 +42,8 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODc2MTAyMD
 - [[06-quantum-mechanics/concepts/heisenberg-uncertainty-principle]]: problem 1
 - [[06-quantum-mechanics/concepts/normalisation-of-a-wavefunction]]: problem 2
 - [[06-quantum-mechanics/concepts/boundary-conditions-and-quantisation]]: why periodicity quantises $k$
+
+<!-- kurooto:material7a50f171 -->
+## Concepts in PH2113_Tutorial_Solutions_Wavefunctions_Uncertainty_Schrodinger
+(none new)
+<!-- /kurooto:material7a50f171 -->
