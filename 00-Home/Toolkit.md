@@ -45,6 +45,11 @@ cd Assets/latex && latexmk -pdf -outdir=build <name>.tex && cp build/<name>.pdf 
 | `scripts/diagrams.py` | node-and-arrow diagrams → `.excalidraw.md` **and** `.svg` (the SVG is embedded; the Excalidraw file is the editable source) |
 | `scripts/build_canvases.py` | JSON Canvas files from tables; edit `SUBJECTS`/`RELATIONS`/`CH` |
 | `scripts/graph_colors.py` | **graph-view colour groups, filter and forces** → `.obsidian/graph.json` (one colour per subject; see [[Conventions]] §8) |
+| `scripts/graph_spine.py` | **Atlas blocks**: links every note of a subject from its map (Home → maps → everything); `--apply` rewrites the blocks ([[Conventions]] §8b) |
+| `scripts/cross_links.py` | **curated cross-subject bridges** → an `## Across subjects` bullet on both notes (idempotent; `--apply`) |
+| `scripts/ls_rivers_numbers.py`, `scripts/fig_ls_rivers.py` | every number and the 8 figures of LS21–LS24 (A&A Ch. 12–14), each cross-checked (quadrature, finite differences, ODE) |
+| `scripts/interdisc_numbers.py` | numbers and Monte Carlo/finite-difference checks for LSX1 (decay, Gamow half-lives, cosmogenic, Dodson) and THX1 (random walk, kernels, skin depth, Wright–Fisher) |
+| `scripts/ls_rigour_numbers.py` | numbers of the LS14 rigour layer (plastic and Vialov ice-sheet profiles, abrasion) |
 | `scripts/contact_sheet.py` | numbered thumbnail sheets for reading image-only PDFs |
 | `Assets/latex/preamble-brain.tex` | shared LaTeX preamble: tcolorbox boxes that mirror the callouts, siunitx, pgfplots, TikZ |
 
