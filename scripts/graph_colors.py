@@ -76,12 +76,20 @@ SOURCES = [
 MISC = ("src-misc", "other tool: maps, inbox, loose notes", "path:zettel OR path:maps OR path:inbox OR path:biology OR path:math", NEUTRAL)
 
 # Notes hidden from the graph (they link to everything).  Obsidian search syntax.  Home.md alone stays visible: it is the
-# centre of the graph (Home -> 13 subject maps -> every note, see scripts/graph_spine.py); the other 00-Home notes are hubs
-# that glue every subject together (Glossary links 640 notes) and are used through the local graph instead.
-SEARCH = ("-path:Assets -path:scripts -path:digests -path:master -path:dailies "
-          "-path:00-Home/Conventions -path:00-Home/Dashboard -path:00-Home/Glossary -path:00-Home/PROGRESS "
-          "-path:00-Home/Roadmap -path:00-Home/Sources -path:00-Home/Subject -path:00-Home/Tag -path:00-Home/Templates "
-          "-path:00-Home/Toolkit")
+# centre of the graph (Home -> 13 subject maps and every chapter -> everything, see scripts/graph_spine.py); the other 00-Home
+# notes are hubs that glue every subject together (Glossary links 640 notes) and are used through the local graph instead.
+SEARCH_BASE = ("-path:Assets -path:scripts -path:digests -path:master -path:dailies "
+               "-path:00-Home/Conventions -path:00-Home/Dashboard -path:00-Home/Glossary -path:00-Home/PROGRESS "
+               "-path:00-Home/Roadmap -path:00-Home/Sources -path:00-Home/Subject -path:00-Home/Tag -path:00-Home/Templates "
+               "-path:00-Home/Toolkit")
+# The other tool's source notes (read-only, ~330 notes = 40% of all nodes) hang off their subject only through the atlas and form
+# stringy blobs far from the structure, so the DEFAULT graph shows the vault proper (numbered folders).  `--with-sources` brings
+# them back (they keep their colour groups, dimmed).
+SOURCE_FOLDERS = ["ph2113/", "ch2113-principles-of-inorganic-chemistry-august-20/", "mt3184-differential-geometry-and-lie-groups/",
+                  "intro-to-proofs/", "introduction-to-probability/", "introduction-to-climate-science/", "landscape-evolution/",
+                  "zettel/", "maps/", "inbox/"]
+SEARCH_NO_SOURCES = SEARCH_BASE + " " + " ".join("-path:" + f for f in SOURCE_FOLDERS)
+SEARCH = SEARCH_NO_SOURCES
 HOME_GROUP = ("home", "Home (the centre)", 'path:"00-Home/Home.md"', "#f4f1de")
 
 # Forces: shorter links + stronger repulsion + weaker centring = tight clusters with space between them.
@@ -283,7 +291,10 @@ if __name__ == "__main__":
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--preview")
     ap.add_argument("--validate", action="store_true")
+    ap.add_argument("--with-sources", action="store_true", help="also show the other tool's source notes (dimmed) in the graph")
     a = ap.parse_args()
+    if a.with_sources:
+        SEARCH = SEARCH_BASE
     notes = load_notes()
     asg = report(notes)
     if a.validate:

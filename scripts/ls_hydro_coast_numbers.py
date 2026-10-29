@@ -446,19 +446,15 @@ def ls27():
         for u0 in (50.0,):
             print(f"   {nm:12s}: K = {K:.1e} m2/yr, u0 = {u0:.0f} m/yr -> K/u0 = {K/u0:8.0f} m ({K/u0/1e3:.1f} km)")
     K, u0 = 1.0e5, 50.0
-    nx, dx = 4000, 5.0
+    nx, dx = 400, 40.0
     xg = np.arange(nx) * dx
-    # exact travelling solution as initial condition; evolve diffusion with a prograding source and compare after shifting
-    zprof = lambda xx, t: np.exp(-np.maximum(xx - u0 * t, 0) * u0 / K)
-    # solve in the moving frame by finite differences: dz/dt = K z'' + u0 z'
-    z = np.exp(-xg * u0 / K * 0.5)            # a wrong initial shape
-    dt = 0.2 * dx ** 2 / K * 4
+    z = np.exp(-xg * u0 / K * 0.5)            # a wrong initial shape; evolve dz/dt = K z'' + u0 z' (frame moving with the front)
     dt = 0.2 * dx ** 2 / K
     t = 0.0
     while t < 400.0:
-        zx = np.gradient(z, dx)
-        zxx = np.zeros_like(z); zxx[1:-1] = (z[2:] - 2 * z[1:-1] + z[:-2]) / dx ** 2
-        z[1:-1] += dt * (K * zxx[1:-1] + u0 * zx[1:-1])
+        zx = (z[2:] - z[:-2]) / (2 * dx)
+        zxx = (z[2:] - 2 * z[1:-1] + z[:-2]) / dx ** 2
+        z[1:-1] += dt * (K * zxx + u0 * zx)
         z[0] = 1.0; z[-1] = 0.0
         t += dt
     ex = np.exp(-xg * u0 / K)
