@@ -29,6 +29,11 @@ $|{\pm z}\rangle=\binom10,\binom01$; $|{\pm x}\rangle=\frac1{\sqrt2}\binom1{\pm1
 
 Used in: [[QM03 States Operators and Measurement]]. Related: [[Two-Level System]] · [[Commutator]] · [[Generalised Uncertainty Principle]] · [[Eigenstate and Eigenvalue]].
 
+## Extended in QM09 (extra)
+<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+$\sigma_i\sigma_j=\delta_{ij}+i\epsilon_{ijk}\sigma_k$, hence $(\mathbf a\cdot\boldsymbol\sigma)(\mathbf b\cdot\boldsymbol\sigma)=\mathbf a\cdot\mathbf b+i(\mathbf a\times\mathbf b)\cdot\boldsymbol\sigma$ and $e^{-i\theta\,\mathbf n\cdot\boldsymbol\sigma/2}=\cos\frac\theta2-i\sin\frac\theta2\,\mathbf n\cdot\boldsymbol\sigma$. They are the spin operators $\mathbf S=\frac\hbar2\boldsymbol\sigma$ read off from the [[Stern-Gerlach Experiment]] (complex entries forced by three SG axes), the generators of rotations ([[Spin Rotation Operator]]), the basis of every Hermitian $2\times2$ matrix, and a basis of $\mathfrak{su}(2)$ ([[Quaternion Group]] $=\{\pm1,\pm i\sigma_k\}$). Full treatment: [[QM09 The Stern-Gerlach Experiment and Spin]] §4.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

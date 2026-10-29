@@ -12,7 +12,7 @@ tags: [subject/qm, type/moc, taught, extra/book, src/lecture-notes, status/draft
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
 
-*PH2113 Introductory Quantum Physics.* Six chapters and a quiz-prep page cover everything in the folder: the probabilistic wavefunction and uncertainty, the Schrödinger equation with its first solutions (free particle, ring), the operator/measurement formalism (with a two-level system), the particle in a box, the harmonic oscillator by ladder operators, and an extra chapter (QM06) collecting everything related to the oscillator: the number basis, expectation values, normalisation, the Hermite polynomials in full, coherent states and the thermal oscillator. Each chapter has a syllabus map, worked numbers (recomputed in `scripts/qm_numbers.py`), practice problems with solutions, and a provenance table. **Revision:** [[Quantum Mechanics Quiz Prep]] (the mock quiz and the 3 Sep quiz, formula sheet, traps, self-test) and [[qm-formula-sheet.pdf]].
+*PH2113 Introductory Quantum Physics.* Six chapters and a quiz-prep page cover everything in the folder: the probabilistic wavefunction and uncertainty, the Schrödinger equation with its first solutions (free particle, ring), the operator/measurement formalism (with a two-level system), the particle in a box, the harmonic oscillator by ladder operators, and an extra chapter (QM06) collecting everything related to the oscillator: the number basis, expectation values, normalisation, the Hermite polynomials in full, coherent states and the thermal oscillator. QM09 (extra) adds the Stern–Gerlach experiment, spin-½ with its dynamics, entanglement and the two-level parallels in other subjects. Each chapter has a syllabus map, worked numbers (recomputed in `scripts/qm_numbers.py`), practice problems with solutions, and a provenance table. **Revision:** [[Quantum Mechanics Quiz Prep]] (the mock quiz and the 3 Sep quiz, formula sheet, traps, self-test) and [[qm-formula-sheet.pdf]].
 
 > [!warning] What is and is not in the sources
 > The folder holds **typed lecture notes** (Lectures 6–9 and three topic notes), **handwritten lectures** (the box and, added 2026-10-25, the 13-page **oscillator lecture**), **three instructor tutorials** (I, II and, added, **III**), two textbooks (Griffiths, Sakurai), six AI-written monographs and, from another tool, **summaries of the Classroom posts** (mock quiz, quiz solutions, exam-prep) under `ph2113/`. **There are no instructor slides, and Lectures 1–5 and everything after the oscillator are absent.** "Taught" therefore means "in the typed lecture notes, the handwritten notes or the tutorials"; the AI notes and textbooks are secondary. Lecture 9 announces tunnelling through a step (E < V) as the next topic; it is not in the folder. See *Gaps* below.
@@ -28,6 +28,7 @@ flowchart LR
   E --> F["QM06 (extra)<br/>number basis, Hermite,<br/>coherent, thermal"]
   D --> G["QM07 (taught + extra)<br/>finite well, penetration,<br/>E>V0 scattering (lecture)"]
   G --> H["QM08 (extra)<br/>step, barrier, WKB,<br/>resonances, bands"]
+  C --> I["QM09 (extra)<br/>Stern-Gerlach, spin-1/2,<br/>Bloch sphere, Bell, parallels"]
 ```
 Central thread: **a wave amplitude gives probabilities (QM01) → a law for how the amplitude changes (QM02) → the general rules for asking questions of a state (QM03) → two systems solved completely, one by boundary conditions (QM04) and one by algebra (QM05) → the algebra's full toolbox (QM06) → the finite well relaxes the infinite walls (QM07).**
 
@@ -42,6 +43,7 @@ Central thread: **a wave amplitude gives probabilities (QM01) → a law for how 
 | 06 | [[QM06 The Oscillator Toolbox]] (extra) | Griffiths §2.3; derived here, all numbers in `qm_numbers.py` | draft (🟡/🔵) |
 | 07 | [[QM07 The Finite Square Well]] (**taught** in §9–§11; extra in §1–§8, §12) | **[[Finite_well.pdf\|Finite_well.pdf]] (instructor, 13 pp.)**, **[[tutorial4.pdf\|Tutorial IV]]**; Griffiths §2.5–§2.6; Sakurai §2.5 | draft (🟢/🟡/🔵) |
 | 08 | [[QM08 Quantum Tunnelling]] (extra; the topic announced at the end of Lecture 9) | QM07 §11 continued; Griffiths §2.5; Sakurai §2.5.4; `qm08_numbers.py` | draft (🟡/🔵) |
+| 09 | [[QM09 The Stern-Gerlach Experiment and Spin]] (extra; spin and the two-level system physically; no lecture source) | Sakurai §1.1, §3.2–3.10, §5.5; Griffiths §4.4; `qm09_numbers.py` | draft (🟡/🔵) |
 | — | [[Dirac Algebra]] (Foundations, extra) | Sakurai Ch. 1 and §2.1; Griffiths Ch. 3; Shankar Ch. 1 | draft (🟡/🔵) |
 | — | [[Quantum Mechanics Quiz Prep]] | mock quiz and 3 Sep quiz (Classroom summaries QZ1, QZ2) | draft |
 
@@ -82,6 +84,7 @@ SORT chapter ASC
 - **Convention clash resolved:** the lecture puts the floor of the well at $E=0$; QM07 §1–§8 (first written from Griffiths) use $V=-V_0$ inside. A dictionary is in QM07 (box after the story); formulas agree via $E_{\rm Griffiths}=E_{\rm lecture}-V_0$.
 - **Slips in the finite-well lecture** (flagged `[verify]` in QM07 §9/§11): the figure labels the walls $\mp a/2$ while the algebra matches at $\mp a$; the first form of $|F/A|^2$ on p.13 lacks the square on $(k^2-k_0^2)$.
 - **Hydrogen, angular momentum, spin, perturbation theory**: only in the AI "QM II" monographs (secondary, beyond this course), not used.
+  - **Update 2026-10-29:** the Stern–Gerlach experiment, spin-½, angular momentum, two spins, Bell and magnetic resonance are now written up from Sakurai and Griffiths in [[QM09 The Stern-Gerlach Experiment and Spin]] (labelled 🟡/🔵; still no lecture source). Hydrogen and perturbation theory remain open.
 - **Authorship of the typed notes** is not stated in the files; they are treated as the instructor's.
 
 ## Why this subject is tightly linked to the others

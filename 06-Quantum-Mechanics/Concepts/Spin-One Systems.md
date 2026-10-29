@@ -1,0 +1,34 @@
+---
+title: Spin-One Systems
+aliases: [spin 1, three-beam Stern-Gerlach, spin-1 matrices]
+subject: qm
+type: concept
+scope: [extra-book, extra-beyond]
+by: [book, own-notes]
+status: draft
+tags: [subject/qm, type/concept, extra/book, extra/beyond, src/book, src/own-notes, status/draft]
+---
+# Spin-One Systems
+
+<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟡 **Extra · book:** Sakurai §3.5; Griffiths §4.3. 🔵 **Extra · beyond:** the sequential spin-1 table and the binomial rule ([[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §9.2–§9.3).
+
+> [!intuition] In one picture
+> An SG magnet with three beams (metastable helium, $2\,^3S_1$): the same algebra with a $3\times3$ matrix.
+
+> [!key] Definition and key results
+> $J_z=\hbar\,\mathrm{diag}(1,0,-1)$, $J_x=\frac\hbar{\sqrt2}\begin{pmatrix}0&1&0\\1&0&1\\0&1&0\end{pmatrix}$. Rotated analyser (angle $\beta$): $P(0|0)=\cos^2\beta$, $P(\pm1|0)=\frac12\sin^2\beta$; $P(+1|+1)=\big(\frac{1+\cos\beta}2\big)^2$. For $m_z=0$ through $\mathrm{SG}_x$: $(\frac12,0,\frac12)$; for $m_z=+1$: $(\frac14,\frac12,\frac14)$.
+
+A spin-$j$ beam rotated by $\beta$ gives a binomial: $P(m')=\binom{2j}{j+m'}\cos^{2(j+m')}\frac\beta2\sin^{2(j-m')}\frac\beta2$ (Majorana: $2j$ spin-½'s). At $90^\circ$ and $j=\frac32$: $\frac18,\frac38,\frac38,\frac18$.
+
+> [!pitfall] Pitfall
+> The $m=0$ state is not "a vector along the equator": it has *zero* probability of $S_x=0$.
+
+Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §9.2–§9.3, Fig. QM9.4 C. Related: [[Angular Momentum Algebra]] · [[Spin]] · [[Schwinger Oscillator Model]] · [[Binomial Distribution]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

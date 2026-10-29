@@ -13,7 +13,7 @@ tags: [subject/qm, type/chapter, extra/book, extra/beyond, src/book, src/own-not
 ---
 # QM08 · Quantum Tunnelling
 
-◀ [[QM07 The Finite Square Well]] · [[Quantum Mechanics - Course Map|Course Map]] · next: (end of the quantum-mechanics block)
+◀ [[QM07 The Finite Square Well]] · [[Quantum Mechanics - Course Map|Course Map]] · next: [[QM09 The Stern-Gerlach Experiment and Spin]]
 
 <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

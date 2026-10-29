@@ -32,6 +32,11 @@ state $\leftrightarrow\psi(x)$; Hermitian matrix $\leftrightarrow\hat x,\hat p,\
 
 Used in: [[QM03 States Operators and Measurement]]. Related: [[Pauli Matrices]] · [[Measurement Postulate]] · [[Expectation Value]] · [[Generalised Uncertainty Principle]].
 
+## Extended in QM09 (extra)
+<span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+The physical two-level system is the spin-½ of the [[Stern-Gerlach Experiment]]: states are points on the [[Bloch Sphere]], mixtures are points inside it ([[Density Matrix]]), the dynamics is a rotation ([[Larmor Precession]]), and a drive produces [[Rabi Oscillation]] with $P=\frac{\Omega^2}{\Omega^2+\Delta^2}\sin^2(\tfrac12\sqrt{\Omega^2+\Delta^2}\,t)$ whatever the system: polarisation ([[Photon Polarisation]]), ammonia, H$_2^+$, neutrinos ([[Flavour Oscillation]]), qubits. The QM03 example $(\frac{\sqrt3}2,\frac12)$ is the Bloch vector $(0.866,0,0.5)$. Full treatment: [[QM09 The Stern-Gerlach Experiment and Spin]] §4, §7, §12.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
