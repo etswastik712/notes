@@ -18,6 +18,7 @@ $$x = 0.a_1 a_2 a_3 \dots = \frac{a_1}{10} + \frac{a_2}{100} + \frac{a_3}{1000} 
 Source: Countable-Uncountable-sets, pp. 1–6
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/uncountability-of-the-unit-interval]] — The uncountability proof for (0, 1) represents each real in (0, 1) by decimal digits, and this note's unique canonical expansion is the representation that makes that digit-based argument precise
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 <!-- /kurooto:seen -->
