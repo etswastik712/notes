@@ -19,6 +19,7 @@ $$E_n = \frac{n^2 \pi^2 \hbar^2}{8 m a^2}$$
 Source: Finite_well, pp. 1–13
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/infinite-square-well-potential]] — The deep wide well note's energies converge to those of an infinite square well of width 2a, so the infinite well is the limiting case it approximates
 ## Seen in
 - [[ph2113/2026-10-27-finite-well-notes|Finite_well]] pp. 1–13
 <!-- /kurooto:seen -->
