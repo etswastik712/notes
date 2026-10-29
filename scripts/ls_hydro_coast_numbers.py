@@ -250,7 +250,7 @@ def wave_props(T, h):
     k = wave_k(T, h)
     w = 2 * math.pi / T
     C = w / k
-    n = 0.5 * (1 + 2 * k * h / math.sinh(2 * k * h))
+    n = 0.5 if 2 * k * h > 300 else 0.5 * (1 + 2 * k * h / math.sinh(2 * k * h))
     return k, C, n * C, n
 
 
