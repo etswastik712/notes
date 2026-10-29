@@ -15,6 +15,10 @@ The global balance requiring a net poleward transport of westerly angular moment
 Source: Angular_momentum_balnce_and_meridional_circulation_Marshall_and_Plumb, pp. 1–6
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/atmospheric-energy-transport]] — Angular momentum balance describes the poleward transport of westerly momentum by circulation, whereas energy transport describes the poleward flux of absorbed solar energy; both are needed for the circulation picture but measure different conserved quantities
+- used-in:: [[zettel/atmospheric-convection-cell]] — The meridional circulation cells that carry momentum poleward are the same overturning loops described in the convection cell note, so the momentum budget is applied to those cells
+- needs:: [[zettel/coriolis-deflection-on-planetary-circulation]] — The angular momentum argument relies on the Coriolis deflection arising from conservation of angular momentum across varying latitudinal circumferences, which the Coriolis note explains
+- used-in:: [[zettel/zonal-average]] — The poleward momentum budget is formulated with zonally averaged winds and fluxes, which is the averaging operation defined in the zonal average note
 ## Seen in
 - [[introduction-to-climate-science/2026-10-14-study-material-10-meridional-circulation-and-angular-momentum-balance|Angular_momentum_balnce_and_meridional_circulation_Marshall_and_Plumb]] pp. 1–6
 <!-- /kurooto:seen -->
