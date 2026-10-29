@@ -72,8 +72,8 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 | AA | [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf]] | Anderson and Anderson, *Geomorphology: the mechanics and chemistry of landscapes* | yes | primary book: LS depth layer |
 | T3 | [[Tutorial3.pdf]] | 2 (TeX, text layer) | taught: QM05 §10 (added) |
 | QZ1 / QZ2 / EP | [[2026-09-02-mock-quiz-and-solutions]] / [[2026-09-03-quiz-ideal-solutions]] / [[ph2113/exam-prep]] | summaries of Classroom posts (another tool, `agent_written`); question texts of the 3 Sep quiz missing | taught: [[Quantum Mechanics Quiz Prep]] |
-| G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 409 (scan; **1st edition**; book page = PDF − 15; §1.2 p.17, §1.4 p.26, §1.6 p.32, §2.1 p.35, §2.2 p.39, §2.3 p.46, §2.4 p.59, §2.5 p.65, §3.4 p.123; OCR'd pp.14–130 for locating sections only) | extra/book |
-| S | Sakurai and Napolitano, 3rd ed. | 568 (text) | extra/book (not used) |
+| G | [[Griffiths - Introduction to quantum mechanics.pdf]] | 409 (scan; **1st edition**; book page = PDF − 15; §1.2 p.17, §1.4 p.26, §1.6 p.32, §2.1 p.35, §2.2 p.39, §2.3 p.46, §2.4 p.59, §2.5 p.65, §3.4 p.123; **§4.3 angular momentum p.145 = PDF 160, §4.4 spin p.154 = PDF 169, SG example pp.162–164, CG Table 4.7 p.168**; OCR'd pp.14–130 and 160–200 for locating sections/reading only) | extra/book: QM08, **QM09** |
+| S | Sakurai and Napolitano, 3rd ed. | 568 (text; **book page = PDF − 20**; §1.1 Stern–Gerlach p.1 = PDF 21, §1.4 p.24, §2.1.5 p.69, §3.2 p.155 = PDF 175, §3.4 p.169 = PDF 189, §3.5 p.180, §3.8 p.205, §3.9 p.218, §3.10 p.224 = PDF 244, §5.5.4 p.325 = PDF 345; §2.5.4 WKB p.104 = PDF 124) | extra/book: used in QM08 §5 and **QM09** (§1–§12) |
 | AI | `gemqphyprems(2).pdf`, `Quantum_Mechanics_Notes.pdf`, `quantum_notes.pdf`, `Quantum Mechanics II - *.pdf` | 16–73 | secondary; every number cross-checked, no discrepancies found |
 
 Page anchors for the typed notes were found from section headings (script in the session, not kept); they are accurate to the page.
