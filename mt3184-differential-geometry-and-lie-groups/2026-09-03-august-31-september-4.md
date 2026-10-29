@@ -42,3 +42,8 @@ We talked about the properties of Lie group homomorphisms and Lie subgroups. Alo
 - [[11-proofs-analysis-topology/concepts/topological-space]]: the non-subspace topology on an immersed submanifold.
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-27-august-24-28]]: rank theorems and Lie groups used here.
 - [[mt3184-differential-geometry-and-lie-groups/2026-09-04-hw5]]: homework on this week.
+
+<!-- kurooto:material3c5c1591 -->
+## Concepts in DG12
+[[zettel/rank-theorem]], [[zettel/immersed-submanifold]], [[zettel/image-of-injective-immersion]]
+<!-- /kurooto:material3c5c1591 -->
