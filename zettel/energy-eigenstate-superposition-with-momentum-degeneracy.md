@@ -1,6 +1,6 @@
 ---
 id: zettel/energy-eigenstate-superposition-with-momentum-degeneracy
-aliases: ["Energy Eigenstate Superposition with Momentum Degeneracy", "degenerate energy eigenstate superposition", "momentum superposition at fixed energy"]
+aliases: ["Energy Eigenstate Superposition with Momentum Degeneracy", "degenerate energy eigenstate superposition", "momentum superposition at fixed energy", "Superposition of Counter-Propagating Waves with Momentum Degeneracy"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -24,5 +24,9 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-09-08-tutorial-states-interference-uncertainty|PH2113_tutorial-pdf]] pp. 1–2
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+
+### Added from class
+- PH2113_tutorial-pdf pp. 1–2: Provides the explicit evaluation on a ring where Ψ(x) = sqrt(2/L) cos(kx), showing ΔH = 0 while Δp = ħk despite [H, p] = 0.
 <!-- /kurooto:seen -->

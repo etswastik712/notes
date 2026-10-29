@@ -34,3 +34,8 @@ Problem set.
 - [[06-quantum-mechanics/concepts/generalised-uncertainty-principle]]: the $\Delta A\Delta B\ge\frac12|\langle[A,B]\rangle|$ relation
 - [[06-quantum-mechanics/concepts/gaussian-wave-packet]]: Q3(B)
 - [[06-quantum-mechanics/concepts/superposition-principle]]: Q1 and Q2
+
+<!-- kurooto:material5bbd5fbd -->
+## Concepts in PH2113_tutorial-pdf
+[[zettel/energy-eigenstate-superposition-with-momentum-degeneracy]], [[zettel/dynamical-amplification-of-quantum-uncertainty]], [[zettel/simultaneous-eigenstates-and-commuting-observables]], [[zettel/schrodinger-equation-linearity-and-superposition]]
+<!-- /kurooto:material5bbd5fbd -->

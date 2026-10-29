@@ -1,6 +1,6 @@
 ---
 id: zettel/dynamical-amplification-of-quantum-uncertainty
-aliases: ["Dynamical Amplification of Quantum Uncertainty", "balanced pencil problem", "inverted pendulum quantum instability"]
+aliases: ["Dynamical Amplification of Quantum Uncertainty", "balanced pencil problem", "inverted pendulum quantum instability", "Dynamical Amplification of Quantum Uncertainty in an Inverted Oscillator"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -24,5 +24,9 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-09-08-tutorial-states-interference-uncertainty|PH2113_tutorial-pdf]] pp. 1–2
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+
+### Added from class
+- PH2113_tutorial-pdf pp. 1–2: Formulates the minimum initial quantum seed metric s^2 = (Δx)^2 + (Δp/(Mω))^2 and proves optimal saturation at Δx = sqrt(ħ/(2Mω)) and Δp = sqrt(ħMω/2).
 <!-- /kurooto:seen -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/simultaneous-eigenstates-and-commuting-observables
-aliases: ["Simultaneous Eigenstates and Commuting Observables", "vanishing commutator interpretation", "compatibility of observables"]
+aliases: ["Simultaneous Eigenstates and Commuting Observables", "vanishing commutator interpretation", "compatibility of observables", "Implications of Commuting Observables on Quantum State Dispersion"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -24,5 +24,9 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-09-08-tutorial-states-interference-uncertainty|PH2113_tutorial-pdf]] pp. 1–2
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+
+### Added from class
+- PH2113_tutorial-pdf pp. 1–2: Provides the explicit counterexample on a ring with H = p^2/(2m) where [H, p] = 0, ΔH = 0, but Δp = ħk > 0 due to E(+k) = E(-k) degeneracy.
 <!-- /kurooto:seen -->
