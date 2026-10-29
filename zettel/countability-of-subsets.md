@@ -20,6 +20,7 @@ $$g(k) = f(n_k)$$
 Source: Solutions_Assignment_7, pp. 1–2
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/finite-set-proper-subset-non-equivalence]] — The note's finite-ambient case (a subset of a finite set is finite) relies on the fact that finite sets are not in bijection with proper subsets, which that note establishes
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Solutions_Assignment_7]] pp. 1–2
 <!-- /kurooto:seen -->
