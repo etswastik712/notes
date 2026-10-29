@@ -1,0 +1,23 @@
+---
+id: zettel/simple-pendulum-differential-equation
+aliases: ["Simple Pendulum Differential Equation", "simple pendulum equation of motion", "pendulum differential equation"]
+tags: [zettel, agent-written, introduction-to-climate-science]
+trust_tier: agent_written
+---
+
+# Simple Pendulum Differential Equation
+
+A second-order nonlinear differential equation describing the angular displacement of a simple pendulum under the restoring action of gravity.
+
+$$\frac{d^2\theta}{dt^2} = -\left(\frac{g}{l}\right) \sin(\theta)$$
+
+## Links
+- used-in:: [[zettel/state-space-reduction-for-pendulum-simulation]] — The second-order pendulum equation is converted into a pair of coupled first-order ODEs to allow numerical integration via standard solvers
+
+---
+Source: pendulam
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-climate-science/2026-08-27-tutorial-lorenz-model-and-simple-pendulum|pendulam]]
+<!-- /kurooto:seen -->

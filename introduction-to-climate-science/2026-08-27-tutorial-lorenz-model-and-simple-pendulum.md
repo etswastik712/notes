@@ -90,3 +90,8 @@ Please find the python code for the simple pendulum file
 - [[01-Climate/Concepts/Bistability and Tipping Points]]: tipping points, perturbation response, and stability criteria
 - [[01-Climate/CL09 Radiative-Convective Equilibrium]]: atmospheric convection, vertical buoyancy, and fluid instability
 - [[introduction-to-climate-science/2026-09-04-tutorial-2-model-experiments-and-molecular-weights]]: Tutorial 2 model experiments testing initial-condition sensitivity on SHM and the Lorenz model
+
+<!-- kurooto:materiale2f17c03 -->
+## Concepts in pendulam
+[[zettel/simple-pendulum-differential-equation]], [[zettel/state-space-reduction-for-pendulum-simulation]]
+<!-- /kurooto:materiale2f17c03 -->
