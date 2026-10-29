@@ -16,6 +16,7 @@ Given an embedded submanifold S transversal to a vector field V, flowing points 
 Source: DG23, pp. 1–5
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/fundamental-theorem-on-flows]] — The flowout construction flows points of S along the flow of V, and the Fundamental Theorem on Flows is what provides that unique maximal flow for a smooth vector field
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG23]] pp. 1–5
 <!-- /kurooto:seen -->
