@@ -410,26 +410,36 @@ def ls27():
     # numerical check of the linearised result with the full nonlinear flux
     nx, dx = 600, 100.0
     x = np.arange(nx) * dx
-    y = 5.0 * np.sin(2 * math.pi * x / 20e3)
-    def run_shore(a0deg, t_end, y0):
-        y = y0.copy(); t = 0.0; a0 = math.radians(a0deg)
-        dt = 0.05
-        while t < t_end:
-            th = np.gradient(y, dx)
+    Lx = nx * dx
+    kg = 2 * np.pi * np.fft.rfftfreq(nx, dx)
+    kfund = 2 * math.pi / 20e3
+    cut = kg <= 6.5 * kfund                                    # keep wavelengths >= 3 km: the physical minimum scale (surf-zone width, wave shadowing)
+    y0 = 5.0 * np.sin(kfund * x)
+
+    def run_shore(a0deg, t_end, y_init, dt=0.02):
+        y = y_init.copy(); a0 = math.radians(a0deg); t = 0.0
+        d = lambda f_: np.fft.irfft(1j * kg * np.fft.rfft(f_) * cut, nx)
+        while t < t_end - 1e-12:
+            th = d(y)
             Q = Q0 * np.sin(2 * (a0 - np.arctan(th)))
-            y = y - dt * np.gradient(Q, dx) / Dc
+            y = y - dt * d(Q) / Dc
             t += dt
         return y
-    yA = run_shore(15, 20.0, y)
-    pred = math.exp(-2 * Q0 * math.cos(math.radians(30)) / Dc * (2 * math.pi / 20e3) ** 2 * 20.0)
-    got = np.abs(yA[50:-50]).max() / np.abs(y[50:-50]).max()
-    print(f"   finite-difference check (15 deg, 20 km wavelength, 20 yr, full nonlinear flux): amplitude ratio {got:.3f}, linear theory {pred:.3f}")
-    ok("shoreline diffusion rate matches the linear prediction", abs(got - pred) < 0.03)
-    yB = run_shore(60, 20.0, y)
-    growth = np.abs(yB[50:-50]).max() / np.abs(y[50:-50]).max()
-    predB = math.exp(-2 * Q0 * math.cos(math.radians(120)) / Dc * (2 * math.pi / 20e3) ** 2 * 20.0)
-    print(f"   60 deg: amplitude after 20 yr = x{growth:.3f} (linear theory x{predB:.3f}): high-angle waves amplify bumps -> capes and spits")
-    ok("high-angle instability grows as predicted", abs(growth - predB) / predB < 0.05 and growth > 1.1)
+    amp = lambda yy: abs(np.fft.rfft(yy)[int(round(kfund / (kg[1])))]) * 2 / nx
+    yA = run_shore(15, 20.0, y0)
+    pred = math.exp(-2 * Q0 * math.cos(math.radians(30)) / Dc * kfund ** 2 * 20.0)
+    got = amp(yA) / amp(y0)
+    print(f"   pseudo-spectral integration of the full nonlinear flux (15 deg, 20 km wavelength, 20 yr): amplitude ratio {got:.4f}, linear theory {pred:.4f}")
+    ok("shoreline diffusion rate matches the linear prediction", abs(got - pred) / pred < 0.005)
+    yB = run_shore(60, 20.0, y0)
+    growth = amp(yB) / amp(y0)
+    predB = math.exp(-2 * Q0 * math.cos(math.radians(120)) / Dc * kfund ** 2 * 20.0)
+    print(f"   60 deg, 20 yr: amplitude of the 20 km mode x{growth:.4f} (linear theory x{predB:.4f}): high-angle waves amplify bumps -> capes and spits")
+    ok("high-angle instability grows at the predicted rate", abs(growth - predB) / predB < 0.005 and growth > 1.15)
+    for lam in (1e3, 1e4, 1e5):
+        k_ = 2 * math.pi / lam
+        print(f"   60 deg: e-folding time of a {lam/1e3:5.0f} km perturbation = 1/(|kappa| k^2) = {1/(1e5*k_**2):10.2f} yr")
+    print("   the growth rate |kappa| k^2 is unbounded at short wavelength: linear anti-diffusion is ill-posed (an explicit finite-difference run blows up on the grid scale); real capes have a minimum scale set by wave shadowing and the finite width of the surf zone")
     # ---- delta front: Kenyon-Turcotte
     print("\nsubaqueous delta front: dz/dt = K d2z/dx2 in a frame moving at u0: z = z0 exp(-u0 x/K), length scale K/u0")
     for nm, K in (("Fraser", 2.4e4), ("Mississippi", 5.6e5)):
