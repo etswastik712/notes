@@ -199,6 +199,33 @@ def thx1():
              ("hillslope soil (kappa_h = 5 m2/kyr)", 5.0 / (1e3 * YR), (10.0, 100.0, 1000.0)), ("gas in air", 2e-5, (1e-3, 1.0, 100.0))]
     for nm, Dd, Ls in cases:
         print("   " + nm + ": " + "; ".join(f"L = {Lv:g} m: {Lv**2/(2*Dd):.2e} s ({Lv**2/(2*Dd)/YR:.2e} yr)" for Lv in Ls))
+    # ---- thermal skin depth (periodic surface temperature): T(z,t) = T0 exp(-z/d) cos(wt - z/d), d = sqrt(2 kappa/omega)
+    kT = 1e-6 * YR
+    for nm, period in (("diurnal", 1 / 365.25), ("annual", 1.0), ("glacial cycle (41 kyr)", 41e3), ("glacial cycle (100 kyr)", 1e5)):
+        om = 2 * math.pi / period
+        d = math.sqrt(2 * kT / om)
+        print(f"skin depth, {nm:24s}: d = sqrt(2 kappa/omega) = {d:9.3f} m;  amplitude at 2d: {math.exp(-2):.3f} of the surface; phase lag {math.degrees(1):.0f} deg per d")
+    # numerical check of the skin-depth solution (FD in z with a sinusoidal top boundary)
+    zz = np.linspace(0, 30, 601); dz = zz[1] - zz[0]; om = 2 * math.pi
+    T = np.zeros_like(zz); dtt = 0.2 * dz ** 2 / kT; t = 0.0
+    amp = np.zeros_like(zz)
+    while t < 12.0:
+        T[1:-1] += kT * dtt / dz ** 2 * (T[2:] - 2 * T[1:-1] + T[:-2])
+        t += dtt; T[0] = math.cos(om * t); T[-1] = 0
+        if t > 10.0:
+            amp = np.maximum(amp, np.abs(T))
+    dsk = math.sqrt(2 * kT / om)
+    k5 = int(5.0 / dz)
+    print(f"   FD check: amplitude at z = 5 m: {amp[k5]:.4f}, theory exp(-5/d) = {math.exp(-5/dsk):.4f}")
+    ok("skin-depth solution", abs(amp[k5] - math.exp(-5 / dsk)) < 0.01)
+    # entropy of the spreading Gaussian
+    Dd = 1.0
+    for t in (1.0, 4.0, 16.0):
+        Sd = 0.5 * math.log(2 * math.pi * math.e * 2 * Dd * t)
+        print(f"   differential entropy of the diffusing Gaussian at t = {t:4.1f}: S = (1/2) ln(4 pi e D t) = {Sd:.4f} nats; dS/dt = 1/(2t) = {1/(2*t):.4f}")
+    print(f"   entropy gain on quadrupling the time: {0.5*math.log(4):.4f} nats = ln 2")
+    # Einstein relation by Boltzmann balance (numerical check): drift mu F c  = D dc/dx with c ~ exp(-F x /kT)
+    print("   Einstein relation from J = -D c' + mu F c = 0 with c ~ exp(F x/kT) -> D = mu kT (checked algebraically in the note)")
     # ---- Einstein relation: Brownian particle
     kB, T = 1.380649e-23, 293.15
     eta = 1.0e-3

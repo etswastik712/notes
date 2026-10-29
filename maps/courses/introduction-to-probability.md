@@ -39,6 +39,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]] Practice problems 21 August: 10 problems on Bayes, independence, gambler's ruin (2026-08-19)
 - [[introduction-to-probability/2026-08-19-class-notes-19th-august-2026]] Class notes 19 August: Bayes' rule for several events, multiplication rule, independence of events (2026-08-19)
 - [[introduction-to-probability/2026-08-19-solutions-quiz-1]] Solutions to Quiz 1: committee with exactly j couples, symmetric difference (2026-08-19)
+- [[introduction-to-probability/2026-10-29-hw4]] HW4: mgf of the sum of two dice rolls (2026-10-29)
 
 ## Tasks
 
@@ -103,3 +104,4 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-08-19: Many students missed Quiz 1; absence is not excused and there is no proration without a medical certificate from the IISER healthcare personnel (emailed to the instructor or, better, the TA, who has the headcounts). (Classroom)
 - 2026-08-19: Practice problems on conditional probability posted, more to follow; final list by the next evening. (Classroom)
 - 2026-08-20: One more problem (dice, 5 before 7) added to the suggested list for 21 August, because there were few examples on independence. See [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]]. (Classroom)
+- 2026-10-29: HW4 posted ("Please attend the tutorial sincerely"). See [[introduction-to-probability/2026-10-29-hw4]]. (Classroom)

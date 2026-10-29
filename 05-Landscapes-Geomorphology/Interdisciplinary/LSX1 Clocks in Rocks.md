@@ -3,7 +3,7 @@ title: LSX1 Clocks in Rocks
 aliases: [LSX1, Clocks in Rocks, radiometric dating, geochronology, cosmogenic dating, thermochronology]
 subject: landscapes
 type: chapter
-chapter: 101
+chapter: X1
 part: X
 scope: [extra-book, extra-beyond]
 by: [book, own-notes]
@@ -99,7 +99,7 @@ Each reaction uses up energy, so the production rate falls off exponentially wit
 
 $$P(z)=P_0\,e^{-\rho z/\Lambda},\qquad\Lambda\approx160\ \text{g cm}^{-2}\ \Rightarrow\ z_*=\Lambda/\rho=59\ \text{cm in rock}\ (\rho=2.7).$$
 
-The rate also depends on altitude and latitude (thinner air, weaker geomagnetic shielding near the poles: A&A's "roughly 25-fold" statement for the production at the top of the highest mountains relative to sea level for the exponent of the attenuation in air) and on shielding by snow, water or topography; the surface rate for $^{10}$Be at sea level and high latitude is of order $5$ atoms g$^{-1}$yr$^{-1}$ (recalled, `[verify]`; calibrated in practice on surfaces of known age). At a depth of 0.6 m the production is 36 % of the surface value, at 1.2 m 13 %, at 3 m 0.6 %.
+The rate also depends on altitude and latitude and on shielding by snow, water or topography. Each attenuation length of air removed multiplies the production by $e$: at 5 km altitude the air column is about 540 g/cm² instead of 1033 g/cm² at sea level, so production is higher by $e^{(1033-540)/160}\approx22$ (my arithmetic with a standard-atmosphere column mass, ignoring the geomagnetic latitude effect; `[verify]`); the surface rate for $^{10}$Be at sea level and high latitude is of order $5$ atoms g$^{-1}$yr$^{-1}$ (recalled, `[verify]`; calibrated in practice on surfaces of known age). At a depth of 0.6 m the production is 36 % of the surface value, at 1.2 m 13 %, at 3 m 0.6 %.
 
 ### 4.2 The balance equation
 > [!derivation] 🟡 Extra · book + 🔵 checked: exposure age and erosion rate
@@ -167,7 +167,7 @@ The assumption "horizontal isotherms" is fine for high-temperature systems, but 
 > A catchment's sand has $N=3\times10^{5}$ atoms $^{10}$Be/g quartz. With $P_0=5$, $\lambda=5.0\times10^{-7}$: $\varepsilon=59.3\ \text{cm}\times(5/3\times10^{5}-5\times10^{-7})=59.3\times1.617\times10^{-5}=9.6\times10^{-4}$ cm/yr $=\mathbf{9.6}$ m/Myr; the averaging time is $z_*/\varepsilon=62$ kyr, long enough to integrate over several glacial cycles but short compared with the lifetime of a mountain range.
 
 > [!example] 🧮 Example 2: closure and a cooling rate
-> An apatite He age of 12 Ma and a zircon (higher-temperature) age of 20 Ma give the cooling between the two closure temperatures (say 180 °C and 70 °C): $110\ \text{K}/8\ \text{Myr}=13.8$ K/Myr; at $G=25$ K/km that is an exhumation rate of $0.55$ mm/yr between the two ages. (Dodson's $T_c$ itself depends weakly on this rate: a factor of 10 in cooling rate shifts $T_c$ by $\sim16$ K, so for $\sim14$ K/Myr the correction is a few degrees.)
+> An apatite He age of 12 Ma and a zircon (higher-temperature) age of 20 Ma give the cooling between the two closure temperatures (say 180 °C and 70 °C): $110\ \text{K}/8\ \text{Myr}=13.8$ K/Myr; at $G=25$ K/km that is an exhumation rate of $0.55$ mm/yr between the two ages. (Dodson's $T_c$ itself depends weakly on this rate: at 13.8 K/Myr the apatite-He closure is 72 °C, not the nominal 70 °C.)
 
 ## 8. Check yourself
 > [!question] Problems (answers folded)
@@ -186,11 +186,11 @@ The assumption "horizontal isotherms" is fine for high-temperature systems, but 
 > 1. 3 half-lives: $3\times5730=17.2$ kyr; $\delta t=\tau\,\delta N/N=8267\times0.02=165$ yr.
 > 2. $e^{-\lambda t_{1/2}}=\tfrac12\Rightarrow t_{1/2}=\ln2/\lambda$; the mean of $\lambda e^{-\lambda t}$ is $1/\lambda$.
 > 3. $1/\sqrt{25}=20\%$; for 1 % one needs $10^{4}$ counts, i.e. $10^{4}/25\ \text{h}=400$ h $=16.7$ days.
-> 4. $\lambda\propto e^{-2G}$ and $2G\sim\ 88$ for $^{238}$U; $G$ falls roughly as $Q^{-1/2}$ so a 10 % rise in $Q$ lowers $2G$ by $\sim4$, a factor $e^{4}\approx55$ ... the model (full integral including the nuclear radius) gives a factor 2300: $\Delta(2G)\approx7.7$. The point is the exponential sensitivity.
+> 4. $\lambda\propto e^{-2G}$. The dominant part of $2G$ is $2\pi\eta=2\pi\cdot2Z_de^2/(4\pi\varepsilon_0\hbar v)\propto Q^{-1/2}$, which is $\approx171$ for $^{238}$U (the finite nuclear radius subtracts a nearly $Q$-independent $\approx83$, leaving $2G=88$). A 10 % rise in $Q$ cuts $2\pi\eta$ by $4.7\%\approx8$, so $2G$ falls from 88 to about 80 and $\lambda$ rises by $e^{7.7}\approx2300$, as the full integral confirms.
 > 5. (a) $N/P_0=40$ kyr; (b) $\varepsilon=59.3\times(2.5\times10^{-5}-5\times10^{-7})=1.45\times10^{-3}$ cm/yr $=14.5$ m/Myr.
 > 6. Without erosion the concentration after 25 kyr would be $P_0t=1.25\times10^{5}$; the measured $1.5\times10^{5}$ exceeds it, so the boulder has *inherited* nuclides (it was exposed before deposition): the moraine age cannot be tested without a second measurement.
 > 7. $t=2.07\ln6.75=3.95$ Myr.
-> 8. At 30 K/Myr, $T_c\approx70+16\log_{10}(3)=77.6\,^\circ$C (from the 16 K/decade slope; exact iteration gives within 1 K).
+> 8. Iterating Dodson's equation gives $T_c=77.6\,^\circ$C (the 16 K/decade slope from 70 °C at 10 K/Myr predicts $70+16.4\log_{10}3=77.8$).
 > 9. $z_c=(180-10)/30=5.7$ km, $\varepsilon=5.7/30=0.19$ mm/yr.
 > 10. $t=\tau\ln(N_0/N)$, so $\delta t=\tau\,\delta N/N$: a fractional error in $N$ gives a fixed time error, because $d\ln N/dt=-1/\tau$ is constant for an exponential.
 
