@@ -16,6 +16,7 @@ A smooth vector field on a Lie group that is invariant under the pushforward by 
 Source: DG19, pp. 1–5
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/lie-group]] — The note defines left-invariant vector fields as invariant under left translations on a Lie group, so the notion only makes sense once G is a Lie group
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG19]] pp. 1–5
 <!-- /kurooto:seen -->
