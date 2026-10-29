@@ -75,3 +75,8 @@ Standard atmospheric pressure at sea level is $1.013 \times 10^5\text{ Pa} = 101
 - [[01-Climate/Concepts/Hypsometric Equation]]: layer thickness and sounding interpretation
 - [[01-Climate/CL06 Hydrostatic Balance and Vertical Structure]]: vertical coordinates, geopotential, and scale heights
 - [[introduction-to-climate-science/2026-09-02-study-material-moist-and-dry-air]]: virtual temperature derivation used in the hypsometric equation
+
+<!-- kurooto:material4b77a9af -->
+## Concepts in Circulation_Pressure_and_geopotential_WH_lect2
+[[zettel/geopotential-height]], [[zettel/hypsometric-equation]]
+<!-- /kurooto:material4b77a9af -->
