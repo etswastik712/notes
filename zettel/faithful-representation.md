@@ -15,6 +15,7 @@ A Lie group representation that is injective as a group homomorphism.
 Source: DG19, pp. 1–5
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/lie-group]] — A faithful representation is an injective homomorphism of a Lie group into GL(V), so the notion presupposes a Lie group G
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG19]] pp. 1–5
 <!-- /kurooto:seen -->
