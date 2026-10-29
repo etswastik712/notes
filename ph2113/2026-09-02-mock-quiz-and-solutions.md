@@ -48,3 +48,8 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODc3MDM3OD
 ## Concepts in PH2113_Mock_Quiz_50min_15marks
 [[zettel/photoelectric-threshold-frequency]], [[zettel/compton-scattering-momentum-and-energy-transfer]], [[zettel/wave-function-physical-acceptability-conditions]], [[zettel/particle-in-a-box-time-evolution]], [[zettel/schrodinger-equation-linearity-and-superposition]], [[zettel/parity-operator-eigenvalue-action]], [[zettel/non-preservation-of-eigenstate-under-non-degenerate-superposition]]
 <!-- /kurooto:material37427251 -->
+
+<!-- kurooto:material74d76668 -->
+## Concepts in PH2113_Mock_Quiz_Ideal_Solutions
+[[zettel/photoelectric-threshold-frequency]], [[zettel/compton-scattering-momentum-and-energy-transfer]], [[zettel/wave-function-physical-acceptability-conditions]], [[zettel/particle-in-a-box-time-evolution]], [[zettel/non-preservation-of-eigenstate-under-non-degenerate-superposition]]
+<!-- /kurooto:material74d76668 -->

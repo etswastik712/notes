@@ -1,6 +1,6 @@
 ---
 id: zettel/wave-function-physical-acceptability-conditions
-aliases: ["Wave Function Physical Acceptability Conditions", "physically acceptable wave functions", "quantum well-behavedness criteria", "admissibility of wave functions"]
+aliases: ["Wave Function Physical Acceptability Conditions", "physically acceptable wave functions", "quantum well-behavedness criteria", "admissibility of wave functions", "quantum admissibility criteria"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -23,4 +23,8 @@ Source: PH2113_Mock_Quiz_50min_15marks, pp. 1–2
 <!-- kurooto:seen -->
 ## Seen in
 - [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_50min_15marks]] pp. 1–2
+- [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_Ideal_Solutions]] pp. 1–2
+
+### Added from class
+- PH2113_Mock_Quiz_Ideal_Solutions pp. 1–2: Supplies concrete test examples illustrating each admissibility failure mode: unconstrained exponential growth destroying normalizability and finite boundary step jumps violating spatial continuity.
 <!-- /kurooto:seen -->

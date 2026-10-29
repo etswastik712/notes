@@ -1,6 +1,6 @@
 ---
 id: zettel/non-preservation-of-eigenstate-under-non-degenerate-superposition
-aliases: ["Non-Preservation of Eigenstate Under Non-Degenerate Superposition", "superposition of non-degenerate eigenstates", "eigenvalue weighting of superposition components"]
+aliases: ["Non-Preservation of Eigenstate Under Non-Degenerate Superposition", "superposition of non-degenerate eigenstates", "eigenvalue weighting of superposition components", "non-eigenvector linear combination"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -24,8 +24,10 @@ Source: PH2113_Quiz_Ideal_Solutions, pp. 1–3
 <!-- kurooto:seen -->
 ## Seen in
 - [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_50min_15marks]] pp. 1–2
+- [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_Ideal_Solutions]] pp. 1–2
 - [[ph2113/2026-09-03-quiz-ideal-solutions|PH2113_Quiz_Ideal_Solutions]] pp. 1–3
 
 ### Added from class
 - PH2113_Mock_Quiz_50min_15marks pp. 1–2: Supplies the explicit 2x2 matrix representation involving the Pauli-X operator Â and the canonical basis state v = (1, 0)^T = (u_+ + u_-)/sqrt(2), showing Av = (0, 1)^T is orthogonal rather than proportional.
+- PH2113_Mock_Quiz_Ideal_Solutions pp. 1–2: Supplies an explicit two-dimensional matrix-vector demonstration using the Pauli X / exchange matrix acting on basis vector (1, 0)^T expanded in diagonal eigenvectors.
 <!-- /kurooto:seen -->

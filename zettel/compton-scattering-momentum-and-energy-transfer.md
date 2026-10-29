@@ -1,6 +1,6 @@
 ---
 id: zettel/compton-scattering-momentum-and-energy-transfer
-aliases: ["Compton Scattering Momentum and Energy Transfer", "Compton collision dynamics", "photon-electron scattering energy transfer"]
+aliases: ["Compton Scattering Momentum and Energy Transfer", "Compton collision dynamics", "photon-electron scattering energy transfer", "photon recoil kinematics"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -19,8 +19,10 @@ Source: PH2113_Quiz_Ideal_Solutions, pp. 1–3
 <!-- kurooto:seen -->
 ## Seen in
 - [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_50min_15marks]] pp. 1–2
+- [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_Ideal_Solutions]] pp. 1–2
 - [[ph2113/2026-09-03-quiz-ideal-solutions|PH2113_Quiz_Ideal_Solutions]] pp. 1–3
 
 ### Added from class
 - PH2113_Mock_Quiz_50min_15marks pp. 1–2: Adds the collision kinematic reasoning connecting observed target recoil directly to photon momentum conservation, and contrasts finite-mass recoil wavelength shifts with infinite/large mass limits resembling Thomson scattering.
+- PH2113_Mock_Quiz_Ideal_Solutions pp. 1–2: Adds the explicit qualitative dependence on target particle mass, establishing that massive scatterers absorb negligible kinetic energy and yield vanishing photon wavelength shifts.
 <!-- /kurooto:seen -->
