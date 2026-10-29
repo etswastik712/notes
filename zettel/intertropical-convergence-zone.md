@@ -17,6 +17,8 @@ The low-pressure belt situated near the equator where trade winds converge and h
 Source: Basics of atmosphere
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/trade-winds]] — The ITCZ is defined as the zone where trade winds converge, so the trade-wind flow is an input to the ITCZ's formation
+- needs:: [[zettel/coriolis-deflection-on-planetary-circulation]] — The deflection of equatorward flow by Earth's rotation produces the trade winds that converge in the ITCZ, so Coriolis deflection underlies the convergence
 ## Seen in
 - [[maps/courses/introduction-to-climate-science|Basics of atmosphere]]
 <!-- /kurooto:seen -->
