@@ -15,6 +15,8 @@ The property that a one-dimensional symmetric square well, no matter how shallow
 Source: Finite_well, pp. 1–13
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/deep-wide-well-approximation]] — Both notes come from the same finite-well analysis, and this note's shallow, narrow limit is the opposite regime to the deep, wide limit where the lowest levels approach the infinite-well energies
+- contrasts-with:: [[zettel/finite-well-scattering-states]] — This note concerns bound states of a finite well, while the scattering-states note treats energies above the well depth, which are the classically free continuum solutions of the same well
 ## Seen in
 - [[ph2113/2026-10-27-finite-well-notes|Finite_well]] pp. 1–13
 <!-- /kurooto:seen -->
