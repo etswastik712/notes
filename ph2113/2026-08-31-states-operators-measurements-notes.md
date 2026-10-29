@@ -63,3 +63,8 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODcyNDg0MD
 - [[06-quantum-mechanics/concepts/uncertainty-of-an-observable]]: definition of $\Delta A$
 - [[06-quantum-mechanics/concepts/time-is-not-an-operator]]: section 9.3
 - [[06-quantum-mechanics/concepts/parity-operator]]: parity example
+
+<!-- kurooto:material8d55b07e -->
+## Concepts in PH2113_states_operators_notes
+[[zettel/schrodinger-equation-linearity-and-superposition]], [[zettel/linear-operator]], [[zettel/born-rule-and-expansion-postulate]], [[zettel/quantum-expectation-value]], [[zettel/macroscopic-correspondence-on-a-ring]]
+<!-- /kurooto:material8d55b07e -->
