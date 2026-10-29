@@ -16,6 +16,7 @@ A representation of a Lie algebra g is a Lie algebra homomorphism from g into gl
 Source: DG20, pp. 1–5
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/ado-s-theorem]] — Ado's Theorem states that every finite-dimensional real Lie algebra admits a faithful representation, which uses the representation notion defined here
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG20]] pp. 1–5
 <!-- /kurooto:seen -->
