@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Quiz 5 is tentatively on Friday 2026-10-30, held in the Friday tutorial (12:00-1:00 PM, about 20 minutes, up to 2 questions, 10 points); Quiz 6 is tentatively on Friday 2026-11-13 (Classroom: evaluation scheme, 2026-08-05). The dates were called very unlikely to change except under exigent circumstances, but Quiz 3 did move (11 to 18 September). Syllabus for either quiz: not announced. The final examination (30 points, 2 hours) is on a date set by the Academic Office, not yet announced. Scheme: the 4 best of 6 quizzes count (40 points), mid-semester 30, final 30. The mid-semester examination has taken place (solutions posted 2026-09-22). Quiz 1 (syllabus: up to the axiomatic definition of probability and the first week's suggested problems, announced 2026-08-11; solutions in [[introduction-to-probability/2026-08-19-solutions-quiz-1]]) and Quiz 2 (conditional probability and independence, announced 2026-08-20) are already past.
+Quiz 5 is tentatively on Friday 2026-10-30 (tomorrow), held in the Friday tutorial (12:00-1:00 PM, about 20 minutes, up to 2 questions, 10 points); Quiz 6 is tentatively on Friday 2026-11-13 (Classroom: evaluation scheme, 2026-08-05). The dates were called very unlikely to change except under exigent circumstances, but Quiz 3 did move (11 to 18 September). Syllabus for either quiz: not announced. The final examination (30 points, 2 hours) is on a date set by the Academic Office, not yet announced. Scheme: the 4 best of 6 quizzes count (40 points), mid-semester 30, final 30. The mid-semester examination has taken place (solutions posted 2026-09-22). Quiz 1 (syllabus: up to the axiomatic definition of probability and the first week's suggested problems, announced 2026-08-11; solutions in [[introduction-to-probability/2026-08-19-solutions-quiz-1]]) and Quiz 2 (conditional probability and independence, announced 2026-08-20) are already past.
 Rule for any quiz or exam: no electronic gadget, notes or paper on your person; a phone found means 0 for that quiz (Classroom, 2026-08-28), and at the mid-semester a violation cancelled the examination and was reported to the Academic Office (Classroom, 2026-09-18). No calculator was needed at the mid-semester or for Quiz 1. A missed quiz is excused (for prorating) only with a medical certificate from the IISER medical personnel (Classroom, 2026-08-13 and 2026-08-19).
 
 ## Covered so far
@@ -42,6 +42,7 @@ Rule for any quiz or exam: no electronic gadget, notes or paper on your person; 
 - [[introduction-to-probability/2026-10-08-week-1-post-mid-term-hw-and-lecture-notes]]: uniform, logistic, Rayleigh, standard normal and Gaussian; LOTUS with proof for $g\ge0$; $E(Y)=\int_0^\infty P(Y>y)\,dy$; homework of 6 problems
 - [[introduction-to-probability/2026-10-15-hw-2-problems]]: HW 2 (exponential repair time, Gumbel and the maximum of exponentials, $E[F(X)]$)
 - [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]]: median of a discrete variable (corrected definition); HW3 (median, mode, skewness, mgf, folded normal)
+- [[introduction-to-probability/2026-10-29-hw4]]: HW4 (the postponed HW3 problem 4: mgf of the sum of two dice rolls)
 - Earlier chapters in the vault: [[08-Probability/Probability - Course Map]]
 
 ## Must know
@@ -137,7 +138,7 @@ Rule for any quiz or exam: no electronic gadget, notes or paper on your person; 
 - Cdf of a transformed variable ($-\log X$, Gumbel) and convergence in distribution of $M_n-\log n$ for the maximum of i.i.d. $\text{Expo}(1)$. Practise: HW 2, problem 2.
 - $E[F(X)]$ for continuous $X$, with and without LOTUS. Practise: HW 2, problem 3.
 - Median and mode of uniform, exponential and Pareto distributions; skewness of the exponential (positive, free of $\lambda$). Practise: [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]], problems 1-3.
-- Mgf of a sum of two dice rolls; mean and variance of $\text{Geom}(p)$ from its mgf (derive the mgf first); two integral expressions for the mgf of the folded normal $|Z|$. Practise: HW3, problems 4-6.
+- Mgf of a sum of two dice rolls (now set again in HW4); mean and variance of $\text{Geom}(p)$ from its mgf (derive the mgf first); two integral expressions for the mgf of the folded normal $|Z|$. Practise: HW3, problems 4-6; [[introduction-to-probability/2026-10-29-hw4]].
 
 ## Gaps
 - The 5, 6 and 19 August class notes and the Quiz 1 solutions were filed late (in October) from the Classroom posts. The 12, 13 and 20 August class notes and the 14 and 21 August sheets are filed; the 17-18 August lectures have no class notes in the Classroom posts seen so far.
@@ -146,9 +147,9 @@ Rule for any quiz or exam: no electronic gadget, notes or paper on your person; 
 - Quiz 1 problem statements are not in the solutions file; they are reconstructed from the solutions.
 - Quiz 5 (30 October) and Quiz 6 (13 November): syllabus not announced; whether quizzes 4 and 5 took place on their tentative dates (16 and 30 October) is not stated in the posts. The final examination date and syllabus are not announced.
 - Practice problems 4 September 2026: the PDF could not be downloaded (RemoteDisconnected), so its problems are not covered.
-- Week 1 homework: due date and whether it is collected are not stated. The PDF is handwritten and was read from page images, so formulas should be checked against the file. The due dates of HW 2 and HW3 are not stated either.
+- Week 1 homework: due date and whether it is collected are not stated. The PDF is handwritten and was read from page images, so formulas should be checked against the file. The due dates of HW 2, HW3 and HW4 are not stated either.
 - The Week2_notes.pdf and Week3_notes.pdf files hold only the homework problems; the lecture notes for Weeks 2 and 3 (announced as posted on 2026-10-24) are not filed, so the exponential distribution, the median/mode/skewness lectures, the mgf definition and the folded normal "discussed in class" have no class notes here yet.
-- HW3 problem 4 is marked "postponed to next hw" in the file but listed without that remark in the post.
+- HW3 problem 4 is marked "postponed to next hw" in the file but listed without that remark in the post. HW4 (2026-10-29) now repeats it; only that one problem was readable in hw4.pdf, so any further HW4 problems are not covered.
 - Quiz 3, problem 3: statement not in the solutions file ("deduced in class in detail").
 - Whether the geometric/negative-binomial derivations and their expectations are examined: the notes say they "will be derived in class", with no written derivation in these files.
 - The variance proofs ($E[X^2]-(E[X])^2$, $\operatorname{Var}[aX+b]$) are "done in class", not written in the notes; variance of a sum of independent variables is stated not to be proved in the course.

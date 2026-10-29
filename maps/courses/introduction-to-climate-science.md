@@ -78,3 +78,4 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-10-23: For the Quiz 2 at 10 am, sit in the same room as for the previous quiz and carry calculators; a seating list by room (LHC 105, 106, 107, 108, 205) was posted as Room_arrangement.pdf (names not filed). (Classroom)
 - 2026-10-26: The third module of the course begins this week. No class on Thursday 2026-10-29 (instructor's official work); an extra class will be held later in November, to be announced in advance. (Classroom)
 - 2026-10-28: Talk by Prof. Suhas on climate modelling, LHC 103, reminder sent at 17:56 (IPLUG Club)
+- 2026-10-29: Mid-sem answer sheets shown at NLH from 11:00, in two batches to reduce crowding: 11:00–11:30 for roll numbers 20251001 to 20251215, 11:30–12:00 for all other roll numbers. (Classroom)
