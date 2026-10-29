@@ -38,3 +38,8 @@ Main Group Chemistry: Cages and Clustes
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers]]: next lecture (B–N and P–N rings)
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers]]: tutorial 4 practises boranes and Wade's rules
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-26-molecular-orbital-theory-part-2]]: MO picture behind 3c–2e⁻ bonding
+
+<!-- kurooto:materialfefd781c -->
+## Concepts in Molecular Orbital Theory_Part 2
+[[zettel/non-nearest-neighbor-interaction-in-molecular-orbitals]], [[zettel/molecular-orbital-model-of-ammonia]], [[zettel/molecular-orbital-model-of-hypervalence-in-sulfur-hexafluoride]]
+<!-- /kurooto:materialfefd781c -->
