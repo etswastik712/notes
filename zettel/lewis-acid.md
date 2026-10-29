@@ -1,0 +1,23 @@
+---
+id: zettel/lewis-acid
+aliases: ["Lewis Acid"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Lewis Acid
+
+An electron pair acceptor that can interact via incomplete octets, coordination to metal cations, valence rearrangements, valence shell expansions, or unoccupied antibonding molecular orbitals.
+
+## Links
+- contrasts-with:: [[zettel/lewis-base]] — Lewis acids accept an electron pair from Lewis bases, which act as the electron pair donors
+- generalises:: [[zettel/hard-acid]] — Hard acids constitute a qualitative subclass of Lewis acids characterized by lower polarizability and lighter donor preference
+- generalises:: [[zettel/soft-acid]] — Soft acids constitute a qualitative subclass of Lewis acids defined by high polarizability and covalent bonding tendencies
+
+---
+Source: Acids and Bases_Lecture 2_2026, pp. 1–12
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-2|Acids and Bases_Lecture 2_2026]] pp. 1–12
+<!-- /kurooto:seen -->

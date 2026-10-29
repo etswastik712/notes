@@ -43,3 +43,8 @@ trust_tier: agent_written
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-1]]: the definitions this lecture builds on
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-14-hard-and-soft-acids-and-bases]]: the hardness classification follows
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers]]: tutorial 3 questions 7–10 practise these trends
+
+<!-- kurooto:material3d8b2472 -->
+## Concepts in Acids and Bases_Lecture 2_2026
+[[zettel/aqua-acid]], [[zettel/hydroxo-acid]], [[zettel/oxo-acid]], [[zettel/substituted-oxo-acid]], [[zettel/lewis-acid]], [[zettel/lewis-base]], [[zettel/valence-shell-expansion-in-group-14-halides]], [[zettel/superacid]], [[zettel/amphoteric-lewis-character-of-sulfur-dioxide]], [[zettel/halogen-charge-transfer-complex]], [[zettel/lewis-displacement-reaction]], [[zettel/lewis-metathesis-reaction]]
+<!-- /kurooto:material3d8b2472 -->
