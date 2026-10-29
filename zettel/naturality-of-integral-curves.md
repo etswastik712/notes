@@ -16,6 +16,7 @@ A smooth map F between manifolds maps integral curves of a vector field X to int
 Source: DG22, pp. 1–4
 
 <!-- kurooto:seen -->
+- generalises:: [[zettel/naturality-of-flows]] — Naturality of Flows (Prop 9.13) extends this result from individual integral curves to the whole local flow, since a flow is the family of integral curves starting at each point
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
 <!-- /kurooto:seen -->
