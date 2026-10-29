@@ -39,3 +39,7 @@ Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Dist
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Radioactive Decay Law]] (Landscapes): the number of decays counted in a window is Poisson with relative error $1/\sqrt n$, which is why accelerator mass spectrometry (counting atoms) beat decay counting for radiocarbon.
+- [[Cosmogenic Nuclides]] (Landscapes): counting $^{10}$Be atoms by accelerator mass spectrometry is a counting experiment: the relative error is $1/\sqrt N$ plus the blank and standard uncertainties.

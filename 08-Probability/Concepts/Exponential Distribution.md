@@ -38,3 +38,6 @@ Used in: [[PR05 Continuous Random Variables]] §6, [[PR06 Moments Generating Fun
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Radioactive Decay Law]] (Landscapes): each nucleus's decay time is exponential with mean $\tau=1/\lambda$; the decay law is its survival function and $t_{1/2}=\tau\ln2$ its median.

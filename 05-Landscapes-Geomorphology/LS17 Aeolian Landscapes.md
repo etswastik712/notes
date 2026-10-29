@@ -146,3 +146,6 @@ flowchart LR
 > |---|---|---|
 > | low-$Re$ drag coefficient $24/Re$, settling velocities | A&A PDF pp.265, 332–333 (found by search) | b · primary book |
 > | Stokes values, Rouse numbers, dune speeds | my computation (`scripts/ls_depth_numbers.py`, `LS17`); real settling velocity of 100 µm sand recalled, `[verify]` | extra · beyond |
+
+## Continued in the vault (added 2026-10-29)
+- The mechanics under the dunes (entrainment, saltation, the splash, $q\propto u_*^3$, dune speed $c=q/\rho_bh$) is in [[LS24 Sediment Transport Mechanics]] §4 and §7; [[Saltation]] and [[Shields Criterion]] are the concept notes.

@@ -184,3 +184,6 @@ flowchart LR
 > |---|---|---|
 > | Eqs 16.1–16.2, constraints (0, +6 m at 120 ka, $-120$ m at LGM), Barbados corals, Peltier and Fairbanks 2006, *Acropora palmata* depth range | A&A PDF p.523 (read) | b · primary book |
 > | ice-sheet volumes and ocean area, sea-level equivalents | recalled values ($2.9$ and $26.5\times10^{6}$ km³, $3.61\times10^{14}$ m²), `[verify]`; arithmetic in `scripts/ls_depth_numbers.py` (`LS15`) | extra · beyond |
+
+## Continued in the vault (added 2026-10-29)
+- Base-level fall and rise as the boundary condition of rivers: [[LS22 Floods Planform and River Profiles]] §6 and [[LS23 Bedrock Channels and River Incision]] §6.5; moraine exposure ages: [[LSX1 Clocks in Rocks]].

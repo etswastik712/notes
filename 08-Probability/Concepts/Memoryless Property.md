@@ -36,3 +36,6 @@ Used in: [[PR05 Continuous Random Variables]] §6. Related: [[Exponential Distri
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Radioactive Decay Law]] (Landscapes): the half-life is constant, independent of the sample's age, because nuclear decay is memoryless.

@@ -255,3 +255,6 @@ flowchart LR
 > | Western Ghat escarpment, features, rifted-margin origin, debated recession, *ghat*, Sahyadri | Migoń ed., ch. 26 (Kale), PDF pp.273–274 (read) | c · other book |
 > | Deccan as flood-basalt standard | Bierman and Montgomery PDF pp.375, 470 (found by search); Thornbury PDF p.521 | c · other books |
 > | slide-versus-book number comparison | my comparison; Anai Mudi height read from a garbled figure caption | `[verify]` |
+
+## Continued in the vault (added 2026-10-29)
+- Process rules for the bedrock gorges, potholes and fracture-bound trenches (abrasion, quarrying, knickpoint retreat): [[LS23 Bedrock Channels and River Incision]] §4.

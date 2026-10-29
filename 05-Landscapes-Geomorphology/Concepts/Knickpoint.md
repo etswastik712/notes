@@ -1,0 +1,35 @@
+---
+title: Knickpoint
+aliases: [knickzone, waterfall retreat, kinematic wave]
+subject: landscapes
+type: concept
+scope: [extra-book]
+by: [book, own-notes]
+status: draft
+tags: [subject/landscapes, type/concept, extra/book, src/book, src/own-notes, status/draft]
+---
+# Knickpoint
+
+<span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **In the slides** (knickpoints as kinematic waves, [[LS16 Fluvial Landscapes]]) and 🟡 **extra · book:** A&A = Anderson and Anderson, *Geomorphology* (PDF page = printed page + 18). Ch. 13, printed pp.434–435, 438–444 ([[LS23 Bedrock Channels and River Incision]] §4.4, §6, §7).
+
+> [!intuition] In one picture
+> A step in the profile that climbs upstream carrying the news of a base-level fall or uplift.
+
+> [!key] Definition and key results
+> For $n=1$: $\partial_tz=U-KA^m\partial_sz$, celerity $C=KA^m$; tributary knickpoint distance $s_k=KA^mt$; in $\chi$-space speed $v=KA_0^m$. $n>1$: shocks (stay sharp); $n<1$: rarefactions (spread). Waterfall: Niagara $\sim1$ m/yr; rate $\propto Q^{0.83}$.
+
+> [!pitfall] Pitfall
+> A steep reach need not be a transient: resistant rock gives a stationary steep reach (slope $\propto1/k$).
+
+Used in: [[LS23 Bedrock Channels and River Incision]], [[LS16 Fluvial Landscapes]]. Related: [[Chi Transform]] · [[Stream Power Law]] · [[Strath Terrace]] · [[Base Level]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```
+
+## Across subjects
+- [[Fourier and Laplace Transforms]] (Foundations): the non-dispersive wave $\omega=ck$

@@ -37,3 +37,6 @@ Used in: [[PR05 Continuous Random Variables]] §4 (HW2 Q2). Related: [[Exponenti
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Effective Discharge]] (Landscapes): annual flood maxima are modelled by the Gumbel law; the mean annual flood is the 2.33-yr event, close to the bankfull flow that does the most sediment work.

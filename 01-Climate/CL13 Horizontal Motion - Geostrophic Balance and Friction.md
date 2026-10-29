@@ -371,3 +371,6 @@ For a system with strongly curved flow, the Rossby number is not small and the p
 > **Dropped as redundant:** the three repeats of the "modify the horizontal momentum equations" slide (22 Oct p9, 10, 12 are successive builds of one derivation); the faded duplicate of the low-pressure drawing (p21); and the pre-midsem notes' discussion of gravity which is superseded by [[CL12 Rotating Frames and the Coriolis Force]].
 
 **References.** Marshall, J. & Plumb, R. A. (2008) *Atmosphere, Ocean and Climate Dynamics*, §7.1 · Wallace, J. M. & Hobbs, P. V. (2006) *Atmospheric Science*, §7.2 · Holton, J. R. *An Introduction to Dynamic Meteorology* (scales of motion table) · Ekman, V. W. (1905) *Ark. Mat. Astron. Fys.* 2(11) · Vallis, G. K. *Atmospheric and Oceanic Fluid Dynamics*, Ch. 2 and 5.
+
+## Across subjects
+- [[Law of the Wall]] (Landscapes): the atmospheric surface layer obeys the same logarithmic profile $U=(u_*/\kappa)\ln(z/z_0)$ with a friction velocity and a roughness length.

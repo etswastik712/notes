@@ -232,3 +232,6 @@ flowchart LR
 > |---|---|---|
 > | moment magnitude relation, Gutenberg–Richter, moment per magnitude, power-law exponent $2b/3$, Gorkha-type slip estimate | standard seismology (formulas recalled, not read from a page in the repository); arithmetic in `scripts/ls_depth_numbers.py` (`LS09`) | extra · beyond, `[verify]` constants |
 > | event size and frequency argument | A&A ch. 1 (PDF p.25), via [[LS01 Landscapes as Physical Systems]] | b · primary book |
+
+## Continued in the vault (added 2026-10-29)
+- Fault scarps and bedrock rivers as recorders of slip: [[LS23 Bedrock Channels and River Incision]] (steepness $k_s\propto U^{1/n}$), and cosmogenic scarp dating: [[LSX1 Clocks in Rocks]].

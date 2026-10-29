@@ -27,3 +27,6 @@ Used in: [[Fourier and Laplace Transforms]]. Related: [[Fourier Series]] · [[Co
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Diffusion Equation]] (Thermodynamics): in Fourier space $\partial_tu=D\nabla^2u$ becomes $\dot{\hat u}=-Dk^2\hat u$: diffusion is a low-pass filter that kills short wavelengths first.

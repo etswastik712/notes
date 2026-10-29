@@ -27,3 +27,6 @@ Used in: [[Fourier and Laplace Transforms]]. Related: [[Phase and Group Velocity
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Froude Number and Hydraulic Jump]] (Landscapes): $\sqrt{gH}$ is the long-wave limit of the water-wave dispersion relation, and $Fr=U/\sqrt{gH}$ compares the flow with the wave speed.

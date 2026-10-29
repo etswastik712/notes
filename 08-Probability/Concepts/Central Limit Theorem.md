@@ -42,3 +42,6 @@ Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[No
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in the vault (added 2026-10-29)
+- Application: the displacement of a random walk and the heat kernel: [[Random Walk]], [[THX1 Diffusion Random Walks and the Heat Equation]].

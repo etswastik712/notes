@@ -251,3 +251,6 @@ Collect the amplitudes in the **scattering matrix** $S=\begin{pmatrix}r&t'\\t&r'
 > **Notes.** (1) No lecture source exists for steps, barriers or tunnelling; the instructor's QM07 formula is the only taught input. (2) $\alpha$-decay half-lives, STM work function, ammonia splitting and the Sun's $kT$ are recalled values, flagged `[verify]`; every other number is computed. (3) The $^{232}$Th and $^{212}$Po estimates miss the measured values by factors of 4.4 and 0.2; the model's two free inputs (nuclear radius, assault frequency) are not tuned.
 
 **References.** Griffiths, D. J. *Introduction to Quantum Mechanics* (1st ed.), §2.5–§2.6 · Sakurai, J. J. and Napolitano, J. *Modern Quantum Mechanics* (3rd ed.), §2.5.4 · Gamow, G. (1928) *Z. Phys.* 51, 204 · Kronig, R. de L. and Penney, W. G. (1931) *Proc. R. Soc. A* 130, 499 · Bloch, F. (1929) *Z. Phys.* 52, 555 · Binnig, G. and Rohrer, H. (1982) *Helv. Phys. Acta* 55, 726.
+
+## Across subjects
+- [[LSX1 Clocks in Rocks]] (Landscapes): tunnelling is why radioactive decay constants are fixed, and so why isotopic clocks work: the same barrier-penetration integral dates rocks.

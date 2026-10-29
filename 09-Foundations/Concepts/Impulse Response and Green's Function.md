@@ -27,3 +27,6 @@ Used in: [[Fourier and Laplace Transforms]]. Related: [[Convolution]] · [[Trans
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Diffusion Equation]] (Thermodynamics): the Gaussian heat kernel is the Green's function of $\partial_t-D\partial_x^2$: any initial profile spreads as its convolution with it.

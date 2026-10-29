@@ -29,3 +29,6 @@ Used in: [[QM08 Quantum Tunnelling]] §5. Related: [[WKB Approximation]] · [[Qu
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in the vault (added 2026-10-29)
+- Application to alpha decay and the Geiger-Nuttall law: [[Alpha Decay]] (24 decades of half-lives, computed in [[LSX1 Clocks in Rocks]] §3).

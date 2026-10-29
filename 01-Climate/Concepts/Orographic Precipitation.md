@@ -30,3 +30,6 @@ Thermodynamics: [[Dry Adiabatic Lapse Rate]], [[Clausius-Clapeyron Relation]], [
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Stream Power Law]] (Landscapes): orographic rain raises the discharge on the windward flank, so less slope is needed to incise at the uplift rate: steady relief is lower than with uniform rain (Roe et al. 2002).

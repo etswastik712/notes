@@ -245,3 +245,6 @@ flowchart LR
 > |---|---|---|
 > | concavity index $m/n$ | A&A PDF p.455 (found by search; the sentence read) | b · primary book |
 > | slope–area numbers, kinematic-wave celerity, response time, Shields depths | my computation (`scripts/ls_depth_numbers.py`, `LS16`); $K$, $U$, $\tau_{*c}$ are illustrative values | extra · beyond |
+
+## Continued in the vault (added 2026-10-29)
+- Continued in [[LS21 River Hydraulics and Hydraulic Geometry]] (law of the wall, hydraulic geometry), [[LS22 Floods Planform and River Profiles]] (floods, braiding, meanders, alluvial profiles), [[LS23 Bedrock Channels and River Incision]] (the full stream-power treatment, the $\chi$ transform, the width problem) and [[LS24 Sediment Transport Mechanics]] (Shields, saltation, Rouse). Concept notes: [[Stream Power Law]], [[Knickpoint]], [[Base Level]], [[Shields Criterion]], [[Effective Discharge]].

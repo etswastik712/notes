@@ -268,3 +268,6 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 
 ## Across subjects
 - [[CL15 Monsoons]] (Climate): the Himalaya and the Tibetan Plateau are both a tectonic product and a boundary condition of the monsoon circulation; rainfall focused on the range feeds back on erosion and isostatic uplift.
+
+## Continued in the vault (added 2026-10-29)
+- Exhumation rates from thermochronology: [[LSX1 Clocks in Rocks]] §5; river response to uplift: [[LS23 Bedrock Channels and River Incision]].

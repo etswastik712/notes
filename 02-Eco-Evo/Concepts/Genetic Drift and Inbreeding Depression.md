@@ -39,3 +39,6 @@ Used in: [[EE07 Conservation Biology]]. Related: [[Demographic Genetic and Envir
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in the vault (added 2026-10-29)
+- Quantitative treatment of drift as a diffusion (Wright-Fisher, Kimura, fixation probability $=p_0$): [[Wright-Fisher Drift as Diffusion]].

@@ -35,3 +35,6 @@ Used in: [[QM01 From Waves to Probabilities]], [[QM02 The Schrodinger Equation a
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Diffusion Equation]] (Thermodynamics): the free Schrodinger equation is the diffusion equation with imaginary diffusion constant $i\hbar/2m$; its propagator is the heat kernel with a phase, so the packet spreads without losing norm.

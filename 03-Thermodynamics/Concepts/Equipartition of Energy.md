@@ -36,3 +36,6 @@ The oscillator reaches the equipartition value $k_B$ per mode only for $T\gg\the
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in the vault (added 2026-10-29)
+- Application to Brownian motion and the Einstein relation: [[Brownian Motion and the Einstein Relation]].

@@ -233,3 +233,6 @@ Slide 144: ice flows by *viscous deformation plus sliding at the bed*. It differ
 > |---|---|---|
 > | Glen's flow law, cubic dependence on flow depth | A&A PDF pp.241 and 601 (found by search) | b · primary book |
 > | $A=2.4\times10^{-24}$, speeds, Nye parabola, $\tau_0$ values, volume time scale | the chapter's own value of $A$; computations in `scripts/ls_depth_numbers.py` (`LS14`); Nye profile derived here; $\tau_0\sim50$–$100$ kPa and the $H/\lvert b_t\rvert$ scale recalled (Cuffey and Paterson; Jóhannesson et al.), `[verify]` | extra · beyond |
+
+## Continued in the vault (added 2026-10-29)
+- Exposure dating of moraines and erosion rates under glaciers: [[LSX1 Clocks in Rocks]]; hanging valleys versus Playfair's accordant river junctions: [[LS23 Bedrock Channels and River Incision]] §1.

@@ -33,3 +33,6 @@ Used in: [[TH04 The Second Law Carnot Engines and Entropy]], [[TH05 Potentials M
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in the vault (added 2026-10-29)
+- The entropy of a spreading distribution (a diffusing Gaussian gains $\tfrac12\ln t$): [[Diffusion Equation]], [[THX1 Diffusion Random Walks and the Heat Equation]] §8.

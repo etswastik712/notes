@@ -227,3 +227,9 @@ If the system also exchanges particles with a reservoir at chemical potential $\
 > **Notes.** (1) The folder does not state whether kinetic theory or ensembles are in the course; this chapter is optional. (2) The measured entropies of the noble gases are recalled from tables (NIST-JANAF), not from a file in the folder. (3) The molecular diameter $d=3.7$ Å for air is a representative kinetic diameter; $\lambda$ scales as $1/d^2$.
 
 **References.** Kardar, M. *Statistical Physics of Particles*, Ch. 2–4 · MIT OpenCourseWare 8.333 (Fall 2013) · Maxwell, J. C. (1860) · Boltzmann, L. (1877) · Sackur, O. (1911), Tetrode, H. (1912) · Planck, M. (1900) · NIST-JANAF Thermochemical Tables.
+
+## Across subjects
+- [[Random Walk]] (Probability): molecular collisions are a random walk of the velocity and position of a molecule; the mean free path and collision time give $D=\ell^2/2\tau$.
+
+## Continued in the vault (added 2026-10-29)
+- Continued in the interdisciplinary chapter [[THX1 Diffusion Random Walks and the Heat Equation]] (random walk, Fick, Einstein relation).

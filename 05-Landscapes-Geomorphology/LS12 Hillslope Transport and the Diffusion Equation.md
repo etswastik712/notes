@@ -221,3 +221,6 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 > |---|---|---|
 > | frost-creep derivation of the linear flux law, $D\propto f\bar z^2$, Font et al. 2006 experiment | A&A PDF p.343 (read; Eq. 10.42) | b · primary book |
 > | scarp-diffusion solution and numbers | my derivation via the Fourier chapter (`scripts/ls_depth_numbers.py`, `LS12`); the diffusion-age method is recalled (Hanks et al.), `[verify]` | extra · beyond |
+
+## Continued in the vault (added 2026-10-29)
+- The same diffusion equation in other subjects and for other reasons (random walk origin, heat kernel, skin depth, genetic drift, alluvial rivers): [[THX1 Diffusion Random Walks and the Heat Equation]]; the alluvial-river version is [[LS22 Floods Planform and River Profiles]] §6.

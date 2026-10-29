@@ -245,3 +245,6 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 > |---|---|---|
 > | FS formulas, critical angles and depths | the chapter's own derivation (a/b: AI notes after A&A ch. 10); numbers computed in `scripts/ls_depth_numbers.py` (`LS13`); densities and $c$ values are illustrative | extra · beyond |
 > | landslide area exponent 2.4, event-size integral | recalled (Malamud et al. 2004); not checked against a page | not checked (`[verify]`) |
+
+## Continued in the vault (added 2026-10-29)
+- Landslide dams and their effect on bedrock-river profiles: [[LS23 Bedrock Channels and River Incision]] §8.

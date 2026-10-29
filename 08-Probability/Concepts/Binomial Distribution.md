@@ -36,3 +36,6 @@ Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Dist
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Wright-Fisher Drift as Diffusion]] (Eco-Evo): the Wright-Fisher model samples $2N$ gene copies binomially each generation; its variance $p(1-p)/2N$ is the step variance of the diffusion of drift.

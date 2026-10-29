@@ -36,3 +36,6 @@ Used in: [[PR05 Continuous Random Variables]], [[PR06 Moments Generating Functio
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Diffusion Equation]] (Thermodynamics): the normal density with variance $2Dt$ is the fundamental solution of the diffusion equation.

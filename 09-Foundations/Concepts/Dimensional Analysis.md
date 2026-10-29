@@ -37,3 +37,6 @@ Used in: [[QM01 From Waves to Probabilities]]. Related: [[Compton Wavelength]] Â
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Manning Equation]] (Landscapes): dimensional analysis gives $\langle U\rangle\propto\sqrt{gHS}$ and shows why the Chezy and Manning coefficients are not dimensionless while Darcy-Weisbach $f$ is.

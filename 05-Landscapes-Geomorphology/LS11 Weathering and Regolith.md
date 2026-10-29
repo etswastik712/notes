@@ -311,3 +311,6 @@ Physical weathering fractures rock: it (i) weakens it mechanically, (ii) makes s
 ## Across subjects
 - [[EE06 Eutrophication and Alternative Stable States]] (Eco-Evo): the phosphorus that limits lake productivity is released from apatite by weathering and delivered by erosion, so the geomorphic conveyor sets the supply side of eutrophication.
 - [[CH09 Redox]] (Chemistry): oxidation of Fe$^{2+}$ minerals and of sulfides is a redox reaction whose standard potentials decide which weathering reactions run; the rust-coloured regolith is an Fe(III) product.
+
+## Continued in the vault (added 2026-10-29)
+- Dating the surfaces and rates: [[LSX1 Clocks in Rocks]] (cosmogenic production-rate and erosion-rate inversion).

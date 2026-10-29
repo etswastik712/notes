@@ -15,6 +15,9 @@ tags: [subject/landscapes, type/moc, taught, extra/book, extra/beyond, src/slide
 > [!summary] Where this subject stands
 > **Chapters LS01–LS20 and LS99 are drafted** (LS01–LS17 now carry a **depth layer**: context, extra derivations and numbers computed in `scripts/ls_depth_numbers.py`, check-yourself problems, cross-subject links; four research papers are explained in **Further Research/**) with every slide of the pre-midsem deck (153 slides), the glacial–aeolian deck (48), the Deccan deck (37), TopoToolbox (15) and QGIS (14) shown and explained. Text of LS01–LS17 derives from the AI-written reference notes (secondary) cross-checked against sampled slides. **Still to do:** a depth layer for LS18–LS20, the Gutiérrez, Migoń, Bierman and Thornbury layers, and per-chapter concept notes beyond the 15 Deccan ones.
 
+> [!key] Added 2026-10-29: the river sequence from the primary book
+> **LS21–LS24 continue Anderson and Anderson Chapters 12–14 in order** (the fluvial lectures have not been taught, so there are no slides; all four are labelled 🟡/🔵 and should be re-labelled 🟢 when the slides arrive): [[LS21 River Hydraulics and Hydraulic Geometry]] → [[LS22 Floods Planform and River Profiles]] → [[LS23 Bedrock Channels and River Incision]] → [[LS24 Sediment Transport Mechanics]]. Each is derivation-level (law of the wall, effective discharge, sine-generated meander, alluvial diffusion, the $\chi$-space solution of the knickpoint wave, the response-time integral, the torque balance, the Rouse profile), with every number in `scripts/ls_rivers_numbers.py` checked by a second route. The interdisciplinary chapter [[LSX1 Clocks in Rocks]] (A&A Ch. 6: decay, tunnelling, cosmogenic nuclides, closure temperature) lives in `Interdisciplinary/`, and its sibling [[THX1 Diffusion Random Walks and the Heat Equation]] in Thermodynamics. 22 new concept notes (below). **Next in A&A:** Ch. 11 water in the landscape, Ch. 16 coasts, Ch. 17 big floods, Ch. 18 whole landscapes, Ch. 9 periglacial, Ch. 4 tectonic geomorphology (not yet written).
+
 ![[LS18 Deccan Map.svg]]
 
 ## Chapters
@@ -40,6 +43,11 @@ tags: [subject/landscapes, type/moc, taught, extra/book, extra/beyond, src/slide
 | 18 | [[LS18 Deccan Traps Terrain]] | taught + extra | Deccan deck (Patil) |
 | 19 | [[LS19 Glacial and Aeolian Landforms]] | taught + extra | `l_glacial_aolian.pdf` |
 | 20 | [[LS20 GIS and TopoToolbox Practicals]] | taught | QGIS and TopoToolbox decks |
+| 21 | [[LS21 River Hydraulics and Hydraulic Geometry]] | extra · book | A&A Ch. 12 (first half) |
+| 22 | [[LS22 Floods Planform and River Profiles]] | extra · book | A&A Ch. 12 (second half) |
+| 23 | [[LS23 Bedrock Channels and River Incision]] | extra · book | A&A Ch. 13 |
+| 24 | [[LS24 Sediment Transport Mechanics]] | extra · book | A&A Ch. 14 |
+| X1 | [[LSX1 Clocks in Rocks]] (interdisciplinary, in `Interdisciplinary/`) | extra · book + beyond | A&A Ch. 6 |
 | 99 | [[LS99 Landscapes Practice Problems]] | practice | pre-midsem deck |
 
 Reference: [[Landscapes Notation and Glossary]].
@@ -48,6 +56,10 @@ Reference: [[Landscapes Notation and Glossary]].
 [[Further Research - Landscapes Papers]]: [[FR01 Braided Rivers in 3D (Olsen 2021)]] · [[FR02 Secondary Currents and River Channel Patterns (Njenga 2013)]] · [[FR03 Flow at a River Bend with CCHE2D (Das and Biswal 2023)]] · [[FR04 Building the Himalaya (Dal Zilio et al 2021)]]
 
 ## Concept notes
+Rivers and sediment (16, from LS21–LS24): [[Law of the Wall]] · [[Shear Velocity]] · [[Manning Equation]] · [[Froude Number and Hydraulic Jump]] · [[Hydraulic Geometry]] · [[Effective Discharge]] · [[Meandering and Point Bars]] · [[Braided Rivers]] · [[Stream Power Law]] · [[Knickpoint]] · [[Chi Transform]] · [[Strath Terrace]] · [[Base Level]] · [[Shields Criterion]] · [[Rouse Profile]] · [[Saltation]]
+
+Clocks (6, from LSX1): [[Radioactive Decay Law]] · [[Cosmogenic Nuclides]] · [[Cosmogenic Erosion Rate]] · [[Burial Dating]] · [[Closure Temperature]] · [[Thermochronology]] (with [[Alpha Decay]] in Quantum Mechanics)
+
 Deccan Traps (15, each with its slide images): [[deccan-volcanic-province]] · [[trap-topography]] · [[massive-sheet-flow]] · [[compound-hummocky-pahoehoe]] · [[columnar-jointing]] · [[lava-flow-internal-structure]] · [[interflow-horizons]] · [[intertrappean-beds]] · [[regional-eastward-tilt]] · [[segmented-quaternary-block-faulting]] · [[bedrock-gorges-and-entrenched-meanders]] · [[fracture-bound-rock-trench]] · [[pothole-networks]] · [[planation-surfaces]] · [[laterite-cappings]]
 
 ## Reading order
@@ -58,6 +70,8 @@ flowchart LR
   C --> D["LS14-17, LS19<br/>glaciers, rivers, wind"]
   D --> E["LS18<br/>Deccan case study"]
   A --> F["LS20<br/>GIS practicals"]
+  D --> G["LS21-24 (extra)<br/>rivers, bedrock channels,<br/>sediment transport"]
+  G --> H["LSX1<br/>clocks in rocks"]
 ```
 
 ## Sources
@@ -69,11 +83,13 @@ flowchart LR
 | Deccan Traps deck (37 slides) | `Geomorphic Features of the Deccan Traps Terrain.pdf` | LS18 + 15 concepts |
 | TopoToolbox tutorial (15 slides) | `Topotoolbox_tut_shubhra.pdf` | LS20 |
 | QGIS introduction (14 slides) | `Introduction_to_QGIS_aju.pptx` | LS20 |
-| Primary books | `books/`: Anderson & Anderson (A&A), Turcotte & Schubert (two copies), Gutiérrez (LFS), Huggett | depth layer LS01–LS17 (A&A and T&S pages cited; Huggett p.36; Gutiérrez not yet used) |
+| Primary books | `books/`: Anderson & Anderson (A&A), Turcotte & Schubert (two copies), Gutiérrez (LFS), Huggett | depth layer LS01–LS17 (A&A and T&S pages cited; Huggett p.36; Gutiérrez not yet used); **A&A Ch. 6 (LSX1), Ch. 12 (LS21–LS22), Ch. 13 (LS23), Ch. 14 (LS24)**, PDF page = printed + 18, text layer (equations garbled; derivations redone) |
 | Other books | Migoń, Bierman & Montgomery, Thornbury, Goudie & Viles | not yet used |
 | Research papers | Olsen 2021, Njenga 2013, Das & Biswal 2023, Dal Zilio 2021, plus `ai-gen-notes/river_braiding` | Further Research FR01–FR04 |
 
 ## Gaps and to-do
+- [ ] A&A chapters still to write in sequence: **11 Water in the landscape** (hydrology, channel heads), **16 Coastal geomorphology** (waves: bridge to the Waves subject), **17 Geomorphology of big floods**, **18 Whole landscapes** (Santa Cruz), **9 Periglacial**, **4 Tectonic geomorphology**, **5 Atmospheric processes**, and the remaining A&A Ch. 3, 7, 8, 10 rigour layers for LS06–LS15.
+- [ ] Re-label LS21–LS24 from 🟡/🔵 to 🟢 when the fluvial slides are taught; check the slide notation against the chapter's.
 - [x] Papers in `books/` explained as chapters FR01–FR04 (guides: only the abstract, introduction, methods and conclusions were read for FR01–FR03; FR04 from abstract, introduction and key points). [ ] Upgrade them to full summaries.
 - [ ] Concept notes for LS01–LS17 and LS19 (only the Deccan set exists).
 - [ ] Verify the AI-note derivations of LS01–LS17 against the remaining slides (only slides 1–12 and 109–120 were sampled).
@@ -89,10 +105,10 @@ See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] f
 ## Atlas: every note in this subject
 The graph view draws only real links, so this block links **every** note of the subject (the map is the hub of its cluster; [[Home]] is the hub of all maps).
 
-> [!abstract]- Atlas (generated): 25 chapters · 15 concept notes · 2 other notes in the vault · 7 notes from the other tool (source layer)
-> **Chapters (25):** [[FR01 Braided Rivers in 3D (Olsen 2021)]] · [[FR02 Secondary Currents and River Channel Patterns (Njenga 2013)]] · [[FR03 Flow at a River Bend with CCHE2D (Das and Biswal 2023)]] · [[FR04 Building the Himalaya (Dal Zilio et al 2021)]] · [[LS01 Landscapes as Physical Systems]] · [[LS02 Mechanics and Mathematics Toolkit]] · [[LS03 Digital Elevation Models and Terrain Analysis]] · [[LS04 Map Projections and Reference Surfaces]] · [[LS05 Shape of Planets]] · [[LS06 Maximum Topography]] · [[LS07 Isostasy]] · [[LS08 Plate Tectonics Strain Stress and Convection]] · [[LS09 Faults and Earthquakes]] · [[LS10 Folds Flexure and Mountain Building]] · [[LS11 Weathering and Regolith]] · [[LS12 Hillslope Transport and the Diffusion Equation]] · [[LS13 Landslides]] · [[LS14 Glaciers Mass Balance and Ice Flow]] · [[LS15 Glacial Deposits Rebound and Sea Level]] · [[LS16 Fluvial Landscapes]] · [[LS17 Aeolian Landscapes]] · [[LS18 Deccan Traps Terrain]] · [[LS19 Glacial and Aeolian Landforms]] · [[LS20 GIS and TopoToolbox Practicals]] · [[LS99 Landscapes Practice Problems]]
+> [!abstract]- Atlas (generated): 30 chapters · 37 concept notes · 2 other notes in the vault · 7 notes from the other tool (source layer)
+> **Chapters (30):** [[FR01 Braided Rivers in 3D (Olsen 2021)]] · [[FR02 Secondary Currents and River Channel Patterns (Njenga 2013)]] · [[FR03 Flow at a River Bend with CCHE2D (Das and Biswal 2023)]] · [[FR04 Building the Himalaya (Dal Zilio et al 2021)]] · [[LS01 Landscapes as Physical Systems]] · [[LS02 Mechanics and Mathematics Toolkit]] · [[LS03 Digital Elevation Models and Terrain Analysis]] · [[LS04 Map Projections and Reference Surfaces]] · [[LS05 Shape of Planets]] · [[LS06 Maximum Topography]] · [[LS07 Isostasy]] · [[LS08 Plate Tectonics Strain Stress and Convection]] · [[LS09 Faults and Earthquakes]] · [[LS10 Folds Flexure and Mountain Building]] · [[LS11 Weathering and Regolith]] · [[LS12 Hillslope Transport and the Diffusion Equation]] · [[LS13 Landslides]] · [[LS14 Glaciers Mass Balance and Ice Flow]] · [[LS15 Glacial Deposits Rebound and Sea Level]] · [[LS16 Fluvial Landscapes]] · [[LS17 Aeolian Landscapes]] · [[LS18 Deccan Traps Terrain]] · [[LS19 Glacial and Aeolian Landforms]] · [[LS20 GIS and TopoToolbox Practicals]] · [[LS21 River Hydraulics and Hydraulic Geometry]] · [[LS22 Floods Planform and River Profiles]] · [[LS23 Bedrock Channels and River Incision]] · [[LS24 Sediment Transport Mechanics]] · [[LS99 Landscapes Practice Problems]] · [[LSX1 Clocks in Rocks]]
 >
-> **Concept notes (15):** [[bedrock-gorges-and-entrenched-meanders]] · [[columnar-jointing]] · [[compound-hummocky-pahoehoe]] · [[deccan-volcanic-province]] · [[fracture-bound-rock-trench]] · [[interflow-horizons]] · [[intertrappean-beds]] · [[laterite-cappings]] · [[lava-flow-internal-structure]] · [[massive-sheet-flow]] · [[planation-surfaces]] · [[pothole-networks]] · [[regional-eastward-tilt]] · [[segmented-quaternary-block-faulting]] · [[trap-topography]]
+> **Concept notes (37):** [[Base Level]] · [[bedrock-gorges-and-entrenched-meanders]] · [[Braided Rivers]] · [[Burial Dating]] · [[Chi Transform]] · [[Closure Temperature]] · [[columnar-jointing]] · [[compound-hummocky-pahoehoe]] · [[Cosmogenic Erosion Rate]] · [[Cosmogenic Nuclides]] · [[deccan-volcanic-province]] · [[Effective Discharge]] · [[fracture-bound-rock-trench]] · [[Froude Number and Hydraulic Jump]] · [[Hydraulic Geometry]] · [[interflow-horizons]] · [[intertrappean-beds]] · [[Knickpoint]] · [[laterite-cappings]] · [[lava-flow-internal-structure]] · [[Law of the Wall]] · [[Manning Equation]] · [[massive-sheet-flow]] · [[Meandering and Point Bars]] · [[planation-surfaces]] · [[pothole-networks]] · [[Radioactive Decay Law]] · [[regional-eastward-tilt]] · [[Rouse Profile]] · [[Saltation]] · [[segmented-quaternary-block-faulting]] · [[Shear Velocity]] · [[Shields Criterion]] · [[Strath Terrace]] · [[Stream Power Law]] · [[Thermochronology]] · [[trap-topography]]
 >
 > **Other notes in the vault (2):** [[Further Research - Landscapes Papers]] · [[Landscapes Notation and Glossary]]
 >
