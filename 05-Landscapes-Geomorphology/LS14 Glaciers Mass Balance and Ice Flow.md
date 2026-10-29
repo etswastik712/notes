@@ -213,6 +213,34 @@ Slide 144: ice flows by *viscous deformation plus sliding at the bed*. It differ
 > *Top left:* Newtonian viscous flow over an inclined plane: $dU/dz=\rho g\sin\theta\,(H-z)/\mu$ with parabolic profile $U(z)=(\rho g\sin\theta/\mu)(Hz-z^2/2)$ (A&A Eq. 8.8). *Below:* ice differs because it follows a power law with $n\approx3$ (Glen): $dU/dz=A\tau^n$, giving $U(z)=A[\rho g\sin\theta]^3[H^3z-\tfrac32z^2H^2+z^3H-\tfrac14z^4]$ (Eq. 8.16). *Right:* the sketch of an ice slab of thickness $H$ and width $w$ over planar bedrock with the velocity profile $u(z)$ made of a sliding part $U_s$ at the bed plus the deformation part $U_{\rm def}$, and the flux $Q_x$ into and out of the element (A&A Fig. 8.7).
 
 
+## Rigour layer: ice-sheet profiles and glacial abrasion (A&A Ch. 8; added 2026-10-29)
+> [!syllabus] Scope
+> 🟡 **Extra · book** (A&A, PDF = printed + 18): the plastic ice-sheet profile ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=252|printed pp.234–235]]) and Hallet's abrasion law ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=264|printed pp.246–248]]). 🔵 **Extra · beyond:** the Vialov (Glen-law) profile and its plastic limit, with every number in `scripts/ls_rigour_numbers.py`.
+
+> [!derivation] 🟡 Extra · book: why ice sheets are steepest at the edge (the plastic profile)
+> (The plastic profile is also derived in the depth layer above; it is repeated here with A&A's numbers because the Glen-law generalisation below needs the same notation.) To first order ice behaves as a **perfectly plastic** body: no deformation below a yield stress $Cpprox1$ bar $=10^{5}$ Pa, free flow above it. The basal shear stress of a slab of thickness $H$ and surface slope $dH/dx$ is $	au_b=\rho_igH\,dH/dx$, and the ice sheet thins itself wherever $\tau_b>C$, so it keeps $\tau_b=C$ everywhere (A&A eq. 8.25):
+>
+> $$\rho_igH\frac{dH}{dx}=C\ \Longrightarrow\ H\,dH=\frac C{\rho_ig}\,dx\ \Longrightarrow\ \boxed{H=\sqrt{\frac{2C}{\rho_ig}\,x}}\qquad(x\text{ from the margin}),$$
+>
+> a **parabola**. With $\rho_i=917$ kg/m³: $2C/\rho_ig=22.2$ m, so $H=\sqrt{22.2\ \text{m}\times x}$: **1.5 km at 100 km, 3.0 km at 400 km (Greenland's half-width and thickness), 4.1 km at 750 km**. The surface slope $dH/dx=C/\rho_igH$ is $0.11$ ($6.3^\circ$) where the ice is 100 m thick, $0.011$ ($0.6^\circ$) at 1 km and $0.004$ at 3 km: **steep margins, nearly flat centres**. Fitting the profile to a measured ice sheet gives the yield strength; with it, the *thickness of a vanished ice sheet* follows from the outline of its terminal moraines (reconstruction). The simple model overestimates large ice sheets (it gives 5.8 km at 1500 km; modelled Laurentide thicknesses are lower, `[verify]`) because it ignores accumulation, temperature and sliding over a deformable bed (A&A p.235).
+
+> [!derivation] 🔵 Extra · beyond (flux balance checked numerically): the same profile from Glen's law
+> Replace the plastic law by Glen's: for a flat bed the ice flux per unit width is $q=\Gamma H^{n+2}|H'|^{n}$ with $\Gamma=2A(\rho_ig)^n/(n+2)$ (integrate the deformation velocity of LS14 §"Glen speeds" over the depth). With uniform accumulation $a$, steady state requires $q=ax$ ($x$ from the divide). Separate variables: $-H^{(n+2)/n}H'=(ax/\Gamma)^{1/n}$; integrate from $x$ to the margin $L$ (where $H=0$):
+>
+> $$\boxed{H^{\frac{2n+2}{n}}=H_0^{\frac{2n+2}{n}}\Big[1-\Big(\frac xL\Big)^{\frac{n+1}n}\Big]},\qquad H_0=\Big[2\Big(\frac a\Gamma\Big)^{1/n}L^{\frac{n+1}n}\Big]^{\frac n{2n+2}}\propto L^{1/2}.$$
+>
+> (Vialov 1958.) Three results. **(i)** $H_0\propto\sqrt L$ for *every* $n$: the thickness of an ice sheet scales as the square root of its half-width, the same law as the plastic parabola. **(ii)** The plastic profile is the $n\to\infty$ limit: $(2n+2)/n\to2$ and $(n+1)/n\to1$ give $H=H_0\sqrt{1-x/L}$; at $x/L=0.5$ the thickness ratio is $0.827,\ 0.788,\ 0.752,\ 0.717$ for $n=3,\ 5,\ 10,\ 50$ against $0.707$ for the plastic limit (numerical check: the profile's flux residual is $10^{-5}$). **(iii)** *Numbers* ($n=3$, $A=10^{-24}$ Pa$^{-3}$s$^{-1}$, $a=0.3$ m/yr, $L=800$ km): $H_0=4.25$ km; halving the half-width to 400 km gives $3.0$ km and to 200 km $2.1$ km. The constant parameters are illustrative; the *shape* and the $\sqrt L$ scaling are not.
+
+> [!example] 🧮 Effective viscosity of ice
+> Glen's law $\dot\varepsilon=A\tau^3$ is a *shear-thinning* fluid with effective viscosity $\eta=\tau/2\dot\varepsilon=1/(2A\tau^{n-1})$: for $A=2.4\times10^{-24}$ Pa$^{-3}$s$^{-1}$, $\eta=8.3\times10^{13}$, $2.1\times10^{13}$ and $5.2\times10^{12}$ Pa s at $\tau=50,\ 100,\ 200$ kPa, about $10^{16}$ times water: a glacier is a fluid, but a very viscous one, and the viscosity drops fourfold when the stress doubles.
+
+> [!derivation] 🟡 Extra · book: Hallet's law, abrasion $\propto U_{slide}^2$
+> Rock fragments frozen into the sole of the glacier gouge striations in the bed. The abrasion rate is the number of indenters per unit area $\mathcal C$ times the cross-section $A_s$ of the groove each carves times the speed $U_c$ at which it lengthens (A&A eq. 8.29): $\dot\varepsilon=\mathcal C\,A_s\,U_c$, with $U_c\propto U_{slide}$. The groove depth increases with the contact force, and Hallet argued that this force is the **viscous drag of ice flowing past the clast** (not the weight of the overlying ice, which the ice, a fluid, does not transmit as a point load): in slow viscous flow $F_d\propto\eta D\,U_{rel}$ (Stokes, $3\pi\eta DU_{rel}$) with $U_{rel}$ a fraction of $U_{slide}$ (the ice that disappears by melting on the stoss side of a bump has to flow around the rock). Then $A_s\propto F_d\propto U_{slide}$ and
+>
+> $$\boxed{\dot\varepsilon\propto U_{slide}^{2}}.$$
+>
+> A glacier that slides **four times faster** abrades **sixteen times faster**: rates of 0.04, 1 and 16 (relative) at sliding speeds of 10, 50 and 200 m/yr. Together with the observation that sliding speed rises steeply with basal stress and water pressure, this makes valley glaciers highly nonlinear erosion machines concentrated where the ice is fast, i.e. near the equilibrium line, where ice flux peaks ([[LS14 Glaciers Mass Balance and Ice Flow]] mass-balance section), which is consistent with the position of cirques, over-deepenings and the U-shape of the long profile. A&A's Harbor model (Fig. 8.47) closes the loop: ice flow $\to$ sliding $\to$ erosion $\to$ valley shape $\to$ ice flow, and shows how a V-shaped valley evolves into a U in a time of order $10^{5}$ yr of glacial occupation (a statement of A&A's modelling result, `[verify]`).
+
 ## Map of this chapter
 > [!connection] How LS14 connects
 > **Previous:** [[LS13 Landslides]] · **Next:** [[LS15 Glacial Deposits Rebound and Sea Level]].

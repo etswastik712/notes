@@ -1,156 +1,163 @@
 {
   "collapse-filter": false,
-  "search": "-path:Assets -path:scripts -path:00-Home -path:digests -path:master -path:dailies",
+  "search": "-path:Assets -path:scripts -path:digests -path:master -path:dailies -path:00-Home/Conventions -path:00-Home/Dashboard -path:00-Home/Glossary -path:00-Home/PROGRESS -path:00-Home/Roadmap -path:00-Home/Sources -path:00-Home/Subject -path:00-Home/Tag -path:00-Home/Templates -path:00-Home/Toolkit",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
+      "query": "path:\"00-Home/Home.md\"",
+      "color": {
+        "a": 1.0,
+        "rgb": 16052702
+      }
+    },
+    {
       "query": "path:01-Climate OR tag:#subject/climate",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 3770341
       }
     },
     {
       "query": "path:03-Thermodynamics OR tag:#subject/thermo",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 15099751
       }
     },
     {
       "query": "path:06-Quantum-Mechanics OR tag:#subject/qm",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 13206784
       }
     },
     {
       "query": "path:08-Probability OR tag:#subject/probability",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 1678960
       }
     },
     {
       "query": "path:02-Eco-Evo OR tag:#subject/eco-evo",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 14244134
       }
     },
     {
       "query": "path:10-Group-Theory OR tag:#subject/group-theory",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 33536
       }
     },
     {
       "query": "path:12-Inorganic-Chemistry OR tag:#subject/chemistry",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 13980033
       }
     },
     {
       "query": "path:11-Proofs-Analysis-Topology OR tag:#subject/analysis",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 9471465
       }
     },
     {
       "query": "path:05-Landscapes-Geomorphology OR tag:#subject/landscapes",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 9522349
       }
     },
     {
       "query": "path:07-Waves OR tag:#subject/waves",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 3645880
       }
     },
     {
       "query": "path:13-Neuroscience OR tag:#subject/neuroscience",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 10507612
       }
     },
     {
       "query": "path:04-Evolution-of-Earth-and-Life OR tag:#subject/earth-evolution",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 14244134
       }
     },
     {
       "query": "path:09-Foundations OR tag:#subject/foundations",
       "color": {
-        "a": 1,
+        "a": 1.0,
         "rgb": 8750463
       }
     },
     {
       "query": "path:ph2113 OR tag:#ph2113",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 13206784
       }
     },
     {
       "query": "path:ch2113 OR tag:#ch2113-principles-of-inorganic-chemistry-august-20",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 13980033
       }
     },
     {
       "query": "path:mt3184 OR tag:#mt3184 OR tag:#mt3184-differential-geometry-and-lie-groups",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 33536
       }
     },
     {
       "query": "path:intro-to-proofs OR tag:#intro-to-proofs",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 9471465
       }
     },
     {
       "query": "path:introduction-to-probability OR tag:#introduction-to-probability OR tag:#mt2113",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 1678960
       }
     },
     {
       "query": "path:introduction-to-climate-science OR tag:#introduction-to-climate-science",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 3770341
       }
     },
     {
       "query": "path:landscape-evolution OR tag:#landscape-evolution",
       "color": {
-        "a": 1,
+        "a": 0.45,
         "rgb": 9522349
       }
     },
     {
       "query": "path:zettel OR path:maps OR path:inbox OR path:biology OR path:math",
       "color": {
-        "a": 1,
+        "a": 0.35,
         "rgb": 8750463
       }
     }
@@ -161,10 +168,10 @@
   "nodeSizeMultiplier": 1.1,
   "lineSizeMultiplier": 0.6,
   "collapse-forces": false,
-  "centerStrength": 0.25,
-  "repelStrength": 16,
+  "centerStrength": 0.2,
+  "repelStrength": 20,
   "linkStrength": 1,
-  "linkDistance": 110,
-  "scale": 0.08057787384407755,
+  "linkDistance": 100,
+  "scale": 0.06360811534201077,
   "close": false
 }
