@@ -17,6 +17,7 @@ The apparent deflection of moving air parcels relative to the rotating surface c
 Source: Basics of atmosphere
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/trade-winds]] — The trade winds note says they result from equatorward flow being deflected westward by rotation, which is the Coriolis deflection described in this note
 ## Seen in
 - [[maps/courses/introduction-to-climate-science|Basics of atmosphere]]
 <!-- /kurooto:seen -->
