@@ -66,5 +66,5 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODcyNDg0MD
 
 <!-- kurooto:material8d55b07e -->
 ## Concepts in PH2113_states_operators_notes
-[[zettel/schrodinger-equation-linearity-and-superposition]], [[zettel/linear-operator]], [[zettel/born-rule-and-expansion-postulate]], [[zettel/quantum-expectation-value]], [[zettel/macroscopic-correspondence-on-a-ring]]
+[[zettel/schrodinger-equation-linearity-and-superposition]], [[zettel/linear-operator]], [[zettel/born-rule-and-expansion-postulate]], [[zettel/quantum-expectation-value]], [[zettel/macroscopic-correspondence-on-a-ring]], [[zettel/dynamical-probability-density-from-non-degenerate-superposition]]
 <!-- /kurooto:material8d55b07e -->
