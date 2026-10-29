@@ -34,3 +34,8 @@ Problem sheet (9 questions) on posets, extremal elements, equivalence relations 
 - [[11-Proofs-Analysis-Topology/Concepts/Partially Ordered Set]]: the poset definition
 - [[11-Proofs-Analysis-Topology/Concepts/Equivalence Relation]]: Q5 to Q7
 - [[11-Proofs-Analysis-Topology/Concepts/Equivalence Class and Partition]]: Q8(c), Q9
+
+<!-- kurooto:material55fb7c7d -->
+## Concepts in Assignment-4
+[[zettel/maximal-element-in-a-poset]], [[zettel/minimum-element-in-a-poset]], [[zettel/lower-bound-in-a-poset]], [[zettel/upper-bound-in-a-poset]], [[zettel/greatest-lower-bound]], [[zettel/least-upper-bound]], [[zettel/product-order-on-z-x-z]], [[zettel/uniqueness-of-minimum-in-a-poset]], [[zettel/existence-of-extremal-elements-in-finite-posets]], [[zettel/disjointness-or-equality-of-equivalence-classes]], [[zettel/equivalence-relation-and-partition-correspondence]]
+<!-- /kurooto:material55fb7c7d -->

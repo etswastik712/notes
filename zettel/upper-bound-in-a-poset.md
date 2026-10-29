@@ -20,5 +20,9 @@ Source: Zorn's_lemma, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[intro-to-proofs/2026-09-03-assignment-4|Assignment-4]] pp. 1–2
 - [[intro-to-proofs/2026-09-15-application-of-zorn-s-lemma|Zorn's_lemma]] pp. 1–5
+
+### Added from class
+- Assignment-4 pp. 1–2: Provides exercises computing ambient upper bounds across divisibility posets, power sets, product orders on Z x Z, and subspace inclusion posets.
 <!-- /kurooto:seen -->
