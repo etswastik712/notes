@@ -497,3 +497,71 @@ print(f"For comparison: nuclear magneton mu_N = {MU_N:.4e} J/T, mu_B/mu_N = {MU_
 print(f"ratio of Larmor frequencies electron/proton = {GAMMA_E/GAMMA_P:.1f}")
 # (e) Humpty-Dumpty condition: reversing the gradient (kick -dp) restores the overlap: dp_net = 0 -> overlap 1
 print("Reverse the gradient for the same time: net kick 0, packets overlap again, coherence returns (if nothing else recorded the spin)")
+
+
+# ================================================================ 14. Numbers for the practice problems and the scale table
+sec("14. Problems and scale table")
+# classical spinning-ball estimate
+r_e = 2.8179403262e-15
+v_surf = HBAR / (2 * M_E * r_e)
+print(f"classical electron radius {r_e:.3e} m: surface speed for S=hbar/2: {v_surf:.3e} m/s = {v_surf/C_LT:.1f} c")
+# spin-1 rotation: d^1(beta)
+Jx1, Jy1, Jz1, _, _ = jmats(1)
+for bdeg in (30, 45, 90):
+    b_ = math.radians(bdeg)
+    Jn = math.sin(b_) * Jx1 + math.cos(b_) * Jz1
+    w_, v_ = np.linalg.eigh(Jn)
+    for m0, lab in ((np.array([0, 1, 0], complex), "m=0"), (np.array([1, 0, 0], complex), "m=+1")):
+        pr_ = np.abs(v_.conj().T @ m0) ** 2
+        print(f"  spin 1, beta={bdeg:3d}, start {lab}: P(m'=-1,0,+1) = {np.round(pr_[0],4)}, {np.round(pr_[1],4)}, {np.round(pr_[2],4)};  cos^2={math.cos(b_)**2:.4f}  sin^2/2={math.sin(b_)**2/2:.4f}")
+# three-stage with 60 degrees from an oven
+print(f"unpolarised oven -> z+ -> n(60 deg)+ -> z-: {0.5*math.cos(math.radians(30))**2*math.sin(math.radians(30))**2:.5f} = 3/32 = {3/32:.5f}")
+# recombination: field in one arm
+t_arm = 1e-6
+print(f"Larmor rotation of pi in {t_arm*1e6:.0f} us for an electron: B = pi/(gamma_e t) = {math.pi/(GAMMA_E*t_arm)*1e6:.2f} uT")
+# density matrix example r=(0.3,0,0.4)
+r_ = np.array([0.3, 0.0, 0.4])
+rn = np.linalg.norm(r_)
+lam1, lam2 = (1 + rn) / 2, (1 - rn) / 2
+S_ = -(lam1 * math.log(lam1) + lam2 * math.log(lam2))
+print(f"r=(0.3,0,0.4): |r|={rn:.3f}, purity={(1+rn**2)/2:.4f}, P(+z)={(1+r_[2])/2:.2f}, P(+x)={(1+r_[0])/2:.2f}, P(+y)=0.50, eigenvalues {lam1:.2f},{lam2:.2f}, S={S_:.4f} nat = {S_/math.log(2):.4f} bit")
+# polarisation 90 % of electron spins in 1 T
+x90 = math.atanh(0.9)
+print(f"P=0.9: mu B/kT = atanh(0.9) = {x90:.4f}; T = {MU_B*1.0/(K_B*x90):.4f} K at 1 T")
+print(f"P=0.5 for protons at 1.5 T needs T = {MU_P*1.5/(K_B*math.atanh(0.5))*1e3:.3f} mK")
+# Rabi detuned
+Om_e = GAMMA_E * 1e-3 / (2 * math.pi)
+Dl = Om_e / 2
+print(f"electron Omega/2pi={Om_e/1e6:.2f} MHz; detuning Omega/2: peak flip probability = {Om_e**2/(Om_e**2+Dl**2):.3f}; effective Rabi frequency sqrt(Omega^2+Delta^2)/2pi = {math.sqrt(Om_e**2+Dl**2)/1e6:.2f} MHz")
+# BB84
+print(f"BB84: 40 test bits, undetected intercept-resend probability (3/4)^40 = {0.75**40:.3e}; 64 bits: {0.75**64:.3e}")
+# hbar*omega/k scale table
+print("two-level scales: nu (Hz) -> h nu (ueV) and h nu/k_B (K)")
+for lab, nu in (("proton Larmor, 1.5 T", GAMMA_P * 1.5 / 2 / math.pi), ("hydrogen 21 cm", 1420405751.768), ("NH3 inversion", 23.87e9), ("Cs clock", 9192631770.0),
+                ("electron spin, 1 T", GAMMA_E / 2 / math.pi), ("transmon qubit", 5e9), ("visible photon 500 nm", C_LT / 500e-9)):
+    print(f"  {lab:24s} nu = {nu:.4e} Hz  h nu = {H_PL*nu/E_CH*1e6:.4g} ueV  h nu/k = {H_PL*nu/K_B:.4g} K")
+# SU(2) character
+for th in (math.pi / 2, math.pi, 2 * math.pi, 4 * math.pi):
+    print(f"  chi_1/2(theta={th/math.pi:.1f} pi) = 2 cos(theta/2) = {2*math.cos(th/2):+.4f};  chi_1(theta) = 1+2cos(theta) = {1+2*math.cos(th):+.4f}")
+# thermal two-level entropy at x
+for x in (0.01, 0.5, 1.0, 3.0):
+    p = (1 + math.tanh(x)) / 2
+    S2 = -(p * math.log(p) + (1 - p) * math.log(1 - p))
+    print(f"  x={x}: P={math.tanh(x):.4f}, S/k = {S2:.4f} (ln2 = {math.log(2):.4f})")
+# g-factor / orbital precession ratio
+print(f"orbital gamma = e/2m_e = {E_CH/(2*M_E):.4e}; spin gamma = {GAMMA_E:.4e} (ratio {GAMMA_E/(E_CH/(2*M_E)):.4f})")
+# Humpty: unchanged
+print("done")
+
+sec("15. Last checks for the 21 cm estimate and problem solutions")
+g_p = 2 * MU_P / MU_N
+mec2_eV = M_E * C_LT ** 2 / E_CH
+dE_contact = (4.0 / 3.0) * g_p * (M_E / M_P) * ALPHA_FS ** 4 * mec2_eV
+print(f"g_p = {g_p:.4f};  contact-interaction estimate (4/3) g_p (m_e/m_p) alpha^4 m_e c^2 = {dE_contact*1e6:.4f} ueV  vs measured {H_PL*1420405751.768/E_CH*1e6:.4f} ueV  (diff {100*(dE_contact/(H_PL*1420405751.768/E_CH)-1):.2f} %)")
+print(f"B needed for P=0.9 at 4 K: {math.atanh(0.9)*K_B*4/MU_B:.3f} T")
+print(f"smallest n with (3/4)^n <= 1e-9: n = {math.ceil(math.log(1e-9)/math.log(0.75))};  (3/4)^72 = {0.75**72:.4e}, (3/4)^73 = {0.75**73:.4e}")
+print(f"gradient for 1 mm separation (scales linearly with G): {G*1e-3/(2*z_tot)/100:.1f} T/cm")
+print(f"neutron dB for l = 5 cm: {dB*0.02/0.05*1e3:.3f} mT")
+print(f"gamma_e/gamma_p = {GAMMA_E/GAMMA_P:.2f} = (g_e/g_p)(mu_B/mu_N) = {(2.00231930436/g_p)*(MU_B/MU_N):.2f}")
+print(f"He 2^3S_1 vs 2^1S_0 (recalled): 19.82 vs 20.62 eV above the ground state: singlet lies {20.62-19.82:.2f} eV higher")
+print(f"intercept-resend BB84 sifted-key error: 0.25;  Eve learns half the bits")
