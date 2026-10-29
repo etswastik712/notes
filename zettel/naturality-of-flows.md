@@ -16,6 +16,8 @@ If a smooth map F intertwines two vector fields X and Y, then F intertwines thei
 Source: DG22, pp. 1–4
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/fundamental-theorem-on-flows]] — The statement that F intertwines the local flows refers to the flows of X and Y, which exist as unique maximal flows by the fundamental theorem on flows
+- needs:: [[zettel/integral-curve]] — The flows in the naturality statement are built from integral curves of X and Y, so the integral-curve concept is used directly
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
 <!-- /kurooto:seen -->
