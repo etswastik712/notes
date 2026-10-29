@@ -16,6 +16,7 @@ Every smooth vector field on a manifold generates a unique maximal flow whose tr
 Source: DG22, pp. 1–4
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/complete-vector-field]] — A complete vector field is one whose maximal flow from this theorem is defined for all real times, so the theorem supplies the object that completeness is about
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
 <!-- /kurooto:seen -->
