@@ -28,6 +28,6 @@ See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] f
 ## Atlas: every note in this subject
 The graph view draws only real links, so this block links **every** note of the subject (the map is the hub of its cluster; [[Home]] is the hub of all maps).
 
-> [!abstract]- Atlas (generated): no notes yet (stub subject)
-> Nothing to list yet; this block fills itself when `scripts/graph_spine.py --apply` is re-run after the first notes are written.
+> [!abstract]- Atlas (generated): 3 concept notes
+> **Concept notes (3):** [[Water Wave Dispersion]] · [[Wave Energy and Power]] · [[Wave Shoaling and Refraction]]
 <!-- graph-spine:end -->

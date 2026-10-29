@@ -216,7 +216,7 @@ Most hybridisations give **equivalent** orbitals (identical $s$/$p$ composition 
 ## 6. Hypervalence
 <span class="scope-taught">taught</span> *slide 23*
 
-Period-2 elements obey the octet; later ones do not: P in $\mathrm{PCl_5}$ has 10 electrons, S in $\mathrm{SF_6}$ 12 ([[Hypervalence]]). The **traditional** explanation uses low-lying $d$ orbitals (P can exceed eight electrons by using $3d$). The lecture adds two cautions: the **absence of a $2d$ shell is not the only reason** the effect is rare in period 2 (**geometric difficulty of packing more than four atoms** round a small atom matters too), and **MO theory describes hypervalent compounds without invoking $d$-orbital participation** (CH03, $\mathrm{SF_6}$ by ligand-group orbitals). The modern view is that $d$ orbitals are energetically too high to be important.
+Period-2 elements obey the octet; later ones do not: P in $\mathrm{PCl_5}$ has 10 electrons, S in $\mathrm{SF_6}$ 12 ([[12-Inorganic-Chemistry/Concepts/Hypervalence|Hypervalence]]). The **traditional** explanation uses low-lying $d$ orbitals (P can exceed eight electrons by using $3d$). The lecture adds two cautions: the **absence of a $2d$ shell is not the only reason** the effect is rare in period 2 (**geometric difficulty of packing more than four atoms** round a small atom matters too), and **MO theory describes hypervalent compounds without invoking $d$-orbital participation** (CH03, $\mathrm{SF_6}$ by ligand-group orbitals). The modern view is that $d$ orbitals are energetically too high to be important.
 
 ## 7. Bent's rule and the energy of hybridisation
 <span class="scope-taught">taught</span> *slides 24–26* · <span class="scope-extra-beyond">extra · beyond</span> *the heavy-hydride numbers*
@@ -242,7 +242,7 @@ Period-2 elements obey the octet; later ones do not: P in $\mathrm{PCl_5}$ has 1
 > [!connection] How CH01 connects
 > **Builds on:** [[QM04 The Particle in a Box]] and [[QM06 The Oscillator Toolbox]] (quantum numbers, superposition of indistinguishable outcomes, orthonormal functions), [[QM03 States Operators and Measurement]] (orthogonality).
 > **Leads to:** CH02 molecular orbital theory (delocalised alternatives, hypervalence without $d$ orbitals), then acids and bases and main-group clusters (the shapes of boranes, phosphorus cages).
-> **Concepts:** [[Octet Rule and Its Limits]] · [[VSEPR Model]] · [[Steric Number]] · [[Lone Pair Stereochemical Activity]] · [[Valence Bond Theory]] · [[Heitler-London Wavefunction]] · [[Promotion Energy]] · [[Hybridisation]] · [[Coulson's Theorem]] · [[Bent's Rule]] · [[Hypervalence]]
+> **Concepts:** [[Octet Rule and Its Limits]] · [[VSEPR Model]] · [[Steric Number]] · [[Lone Pair Stereochemical Activity]] · [[Valence Bond Theory]] · [[Heitler-London Wavefunction]] · [[Promotion Energy]] · [[Hybridisation]] · [[Coulson's Theorem]] · [[Bent's Rule]] · [[12-Inorganic-Chemistry/Concepts/Hypervalence|Hypervalence]]
 > **Other subjects:** [[QM01 From Waves to Probabilities]] (Born rule, indistinguishable outcomes), [[PA01 Logic and Methods of Proof]] (counting arguments), [[Group Theory - Course Map]] (point groups, symmetry-adapted orbitals), [[PR01 Counting and the Axioms of Probability]] (the 90° counts are a small enumeration).
 
 ## Summary

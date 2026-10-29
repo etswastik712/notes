@@ -27,3 +27,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[Dispersion Relation]] and [[Phase and Group Velocity]] (Foundations): the general theory; here the dispersion relation is $\omega^2=gk\tanh kh$
 - [[Fourier Transform and Wave Packets]] (Quantum Mechanics): a wave packet's group velocity $d\omega/dk$ and its dispersive spreading are the same mathematics
+- [[Gaussian Wave Packet]] (Quantum Mechanics): a localised packet of water waves spreads by dispersion exactly as a free-particle packet does, with the deep-water $\omega\propto\sqrt k$ in place of $\omega\propto k^2$.

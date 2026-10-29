@@ -39,3 +39,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Burnside's Lemma]] (Group Theory): Burnside's lemma counts distinct arrangements up to symmetry as the average number of fixed points, a counting tool used for isomers, colourings and necklaces.
+- [[Drainage Density and Horton's Laws]] (Landscapes): Horton's bifurcation ratio $R_b\approx4$ is what a uniformly random binary tree gives (cycle-lemma/Catalan counting), so the law reflects branching combinatorics rather than a tuned river.

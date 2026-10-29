@@ -483,3 +483,6 @@ Why do isentropes rise poleward? Because the tropical column is warm: at a given
 > **Not in the provided pages:** M&P Figs. 5.7–5.8 and the stratosphere paragraph (p.65), and M&P §12.3.5 on Milankovitch cycles. **Checked against `climate_book_notes.pdf`:** all numerical claims (435, ±2 %, 6 PW, 5.8 PW, 2.0 PW, 140 W m⁻², 29 %, 40 °C, 27 °C, 60°) agree with the book text; the notes' "cos-weighted mean ≈ 35" for Problem 5.1 is consistent with the area-weighted mean (36.5 W m⁻²) found here.
 
 **References.** Marshall, J. & Plumb, R. A. (2008) *Atmosphere, Ocean and Climate Dynamics*, §5.1 · Hartmann, D. L. *Global Physical Climatology*, §§2.8–2.9 · North, G. R. (1975) *J. Atmos. Sci.* 32, 2033 · Hays, J. D., Imbrie, J. & Shackleton, N. J. (1976) *Science* 194, 1121 · Trenberth, K. E. & Caron, J. M. (2001) *J. Climate* 14, 3433 (poleward transport) · Budyko, M. I. (1969) *Tellus* 21, 611; Sellers, W. D. (1969) *J. Appl. Meteorol.* 8, 392.
+
+## Across subjects
+- [[Water Balance]] (Landscapes): the latent-heat flux of the surface energy budget is the evapotranspiration term $ET$ of the basin water balance; the two budgets are coupled through evaporation.

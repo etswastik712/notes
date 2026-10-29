@@ -36,3 +36,5 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 - [[Free Particle]] (Quantum Mechanics): the same equation with imaginary $D=i\hbar/2m$
 - [[Closure Temperature]] (Landscapes): diffusion of helium out of a grain sets the clock
 - [[Normal Distribution]] (Probability): the normal density with variance $2Dt$ is the fundamental solution of the diffusion equation.
+- [[Dupuit Water Table]] (Landscapes): linearised about a mean thickness the Boussinesq water-table equation is $\partial_tH=D_H\partial_x^2H$ with $D_H=K\bar H/S_y$, the heat equation; a river-stage oscillation penetrates the bank with the thermal skin-depth formula.
+- [[Coastline Instability]] (Landscapes): the shoreline obeys $\partial_ty=\kappa\partial_x^2y$ with $\kappa=2Q_0\cos2\alpha_0/D$, a diffusion whose sign reverses above $45^\circ$: anti-diffusion grows capes and is ill-posed at short wavelength.

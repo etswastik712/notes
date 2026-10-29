@@ -33,3 +33,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[LS12 Hillslope Transport and the Diffusion Equation]] (Landscapes): soil creep as a Fick law
+- [[Darcy's Law and Hydraulic Conductivity]] (Landscapes): Darcy's law $q=-K\nabla h$ is a third instance of the flux-gradient law (after Fick and Fourier), with the conductivity built from a pore-scale Poiseuille flow.

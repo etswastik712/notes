@@ -460,3 +460,4 @@ The derivation chain, effective-gravity diagram (TikZ), component table and rule
 
 ## Across subjects
 - [[LS05 Shape of Planets]] (Landscapes): the same rotating-frame mechanics that gives the Coriolis force in the atmosphere gives the flattening of the planet (centrifugal term) and the tilt of the geoid.
+- [[Storm Surge]] (Landscapes): the Coriolis force deflects the wind-driven surge, making it stronger on the right of a northern-hemisphere hurricane track where wind and forward motion add.

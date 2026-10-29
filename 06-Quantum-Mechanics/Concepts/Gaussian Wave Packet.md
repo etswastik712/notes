@@ -41,3 +41,6 @@ Used in: [[QM01 From Waves to Probabilities]], [[QM05 The Harmonic Oscillator]].
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Water Wave Dispersion]] (Waves): a localised packet of water waves spreads by dispersion exactly as a free-particle packet does, with the deep-water $\omega\propto\sqrt k$ in place of $\omega\propto k^2$.

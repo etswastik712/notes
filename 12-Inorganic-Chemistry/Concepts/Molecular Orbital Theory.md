@@ -21,7 +21,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 > [!key] Definition and key results
 > Molecular orbitals are linear combinations of atomic orbitals, $\psi=\sum c_i\chi_i$; $N$ AOs give $N$ MOs; in-phase combinations are bonding, out-of-phase antibonding; electrons fill by the Aufbau, Pauli and Hund rules.
 
-It explains what valence bond theory cannot: paramagnetism of $\mathrm{O_2}$, photoelectron spectra, hypervalence without $d$ orbitals ([[Hypervalence]]), and delocalisation in solids (bands). It is the variational method of [[QM06 The Oscillator Toolbox]] applied to a molecular potential.
+It explains what valence bond theory cannot: paramagnetism of $\mathrm{O_2}$, photoelectron spectra, hypervalence without $d$ orbitals ([[12-Inorganic-Chemistry/Concepts/Hypervalence|Hypervalence]]), and delocalisation in solids (bands). It is the variational method of [[QM06 The Oscillator Toolbox]] applied to a molecular potential.
 
 Used in: [[CH02 Molecular Orbital Theory Diatomics]], [[CH03 Molecular Orbital Theory Polyatomics]]. Related: [[LCAO Approximation]] · [[Bonding and Antibonding Orbitals]] · [[Bond Order]] · [[Valence Bond Theory]].
 

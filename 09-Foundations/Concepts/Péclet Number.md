@@ -34,3 +34,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[Thermochronology]] (Landscapes): rapid exhumation advects heat upward ($Pe\gtrsim1$)
 - [[LS24 Sediment Transport Mechanics]] (Landscapes): turbulent suspension is a diffusion-settling balance
+- [[Delta Front]] (Landscapes): the delta front $z=z_0e^{-u_0x/K}$ is diffusion in a frame moving at $u_0$; its length $K/u_0$ is where the Péclet number is 1.

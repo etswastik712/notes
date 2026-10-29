@@ -27,3 +27,6 @@ Used in: [[Fourier and Laplace Transforms]]. Related: [[Dispersion Relation]].
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Water Wave Dispersion]] (Waves): $\omega^2=gk\tanh kh$ is a concrete dispersive medium: energy and swell move at $C_g=d\omega/dk=\tfrac12C$ in deep water, which sorts a storm's waves by period on arrival.

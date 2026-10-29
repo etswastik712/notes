@@ -25,9 +25,9 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 It does not account for the **noble-gas compounds**, does not give the **shape** of a molecule, and does not explain **relative stabilities** in terms of energies. VSEPR repairs the shape, valence bond theory the localised bond and its energy, molecular orbital theory the delocalised, spectroscopic and magnetic properties ([[CH01 VSEPR and Valence Bond Theory]] Diagram CH1.1).
 
 > [!pitfall] Expanded octet is a bookkeeping device
-> Drawing 10 or 12 electrons round P or S in a Lewis structure does not prove that $d$ orbitals are used ([[Hypervalence]]).
+> Drawing 10 or 12 electrons round P or S in a Lewis structure does not prove that $d$ orbitals are used ([[12-Inorganic-Chemistry/Concepts/Hypervalence|Hypervalence]]).
 
-Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[VSEPR Model]] · [[Valence Bond Theory]] · [[Hypervalence]].
+Used in: [[CH01 VSEPR and Valence Bond Theory]]. Related: [[VSEPR Model]] · [[Valence Bond Theory]] · [[12-Inorganic-Chemistry/Concepts/Hypervalence|Hypervalence]].
 
 ## Linked from
 ```dataview
