@@ -41,3 +41,8 @@ If you have simply remarked, for the second part of the question, that the numbe
 - [[08-Probability/PR02 Conditional Probability Bayes Rule and Independence]]: conditional probability and counting arguments used here.
 - [[08-Probability/PR01 Counting and the Axioms of Probability]]: multinomial arrangements and the third axiom (countable additivity).
 - [[introduction-to-probability/2026-08-26-practice-problems-28th-august-and-following-weekend]]: sampling with and without replacement practice.
+
+<!-- kurooto:material160895af -->
+## Concepts in Quiz 2 solutions
+[[zettel/first-colour-arrival-probability-under-sampling-with-replacement]], [[zettel/first-colour-arrival-probability-under-sampling-without-replacement]]
+<!-- /kurooto:material160895af -->
