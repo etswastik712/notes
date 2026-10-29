@@ -76,3 +76,8 @@ PFA today's Tutorial
 - [[introduction-to-climate-science/2026-08-27-tutorial-lorenz-model-and-simple-pendulum]]: simulation code, ODE systems, and Runge–Kutta solvers for SHM and the Lorenz model
 - [[introduction-to-climate-science/2026-09-02-study-material-moist-and-dry-air]]: Wallace and Hobbs Chapter 3 on dry air molecular weight, water vapor constants, and virtual temperature
 - [[01-Climate/Concepts/Atmospheric Composition]]: dry air composition, mole fractions, and dry air molar mass
+
+<!-- kurooto:material6db59cbf -->
+## Concepts in lorenz
+[[zettel/lorenz-system]], [[zettel/deterministic-chaos-in-the-lorenz-system]]
+<!-- /kurooto:material6db59cbf -->
