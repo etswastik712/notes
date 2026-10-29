@@ -18,6 +18,9 @@ $$S = S_0 \cos(\theta)$$
 Source: Basics of atmosphere
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/planetary-emission-temperature]] — The insolation S = S0 cos(θ) given in this note is the absorbed solar input that is equated to Stefan-Boltzmann emission to derive the planetary emission temperature Te
+- used-in:: [[zettel/top-of-atmosphere-radiation-balance]] — Incoming solar flux per unit area, varying with latitude and daylight, supplies the absorbed shortwave term Q_abs in the TOA balance R_TOA = Q_abs − OLR
+- used-in:: [[zettel/simple-greenhouse-model]] — The model's right-hand side, (1/4)(1 − α_p)S0, is built from the solar flux S0 defined in this note
 ## Seen in
 - [[maps/courses/introduction-to-climate-science|Basics of atmosphere]]
 <!-- /kurooto:seen -->
