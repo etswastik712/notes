@@ -20,6 +20,7 @@ $$A \sim B$$
 Source: Countable-Uncountable-sets, pp. 1–6
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/infinitude-of-the-natural-numbers]] — The bijection between N and the odd naturals is a concrete instance of two sets being equinumerous under this note's definition, even though one is a proper subset of the other
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 <!-- /kurooto:seen -->
