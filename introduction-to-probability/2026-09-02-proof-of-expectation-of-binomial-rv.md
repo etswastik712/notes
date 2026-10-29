@@ -27,3 +27,8 @@ Compare with the route via linearity of expectation (sum of $n$ Bernoulli($p$) i
 ## Related
 - [[08-Probability/PR03 Discrete Random Variables and Distributions]]: where the binomial expectation is derived in the vault.
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026]]: the linearity-of-expectation derivation of the same result.
+
+<!-- kurooto:material3148383a -->
+## Concepts in Class notes 2nd September 2026
+[[zettel/joint-probability-mass-function]], [[zettel/independence-of-random-variables]], [[zettel/negative-binomial-distribution-as-sum-of-geometrics]]
+<!-- /kurooto:material3148383a -->
