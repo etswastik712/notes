@@ -18,6 +18,7 @@ $$(0, 1) := \{x \in \mathbb{R} \mid 0 < x < 1\}$$
 Source: Countable-Uncountable-sets, pp. 1–6
 
 <!-- kurooto:seen -->
+- generalises:: [[zettel/uncountable-set]] — The note proves (0, 1) is uncountable by showing it is infinite and no surjection from N exists, which is the general definition of an uncountable set that the candidate states
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 <!-- /kurooto:seen -->
