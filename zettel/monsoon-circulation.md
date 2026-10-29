@@ -15,6 +15,7 @@ A large-scale seasonally reversing circulation characterized by low-level flow t
 Source: Dynamical_theory_of_Monsoon_Webster, pp. 1–14
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/atmospheric-convection-cell]] — The monsoon note describes a seasonally reversing circulation driven by heating of continental regions, which is a specific case of the differential-heating overturning loop defined in the convection-cell note
 ## Seen in
 - [[introduction-to-climate-science/2026-10-22-advanced-reading-monsoon-dynamical-theory-webster|Dynamical_theory_of_Monsoon_Webster]] pp. 1–14
 <!-- /kurooto:seen -->
