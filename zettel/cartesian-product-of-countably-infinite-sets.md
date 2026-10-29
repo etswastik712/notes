@@ -18,6 +18,7 @@ $$F(m, n) = (f(m), g(n))$$
 Source: Solutions_Assignment_7, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/cardinality-equivalence]] — The product note builds its bijection F(m, n) = (f(m), g(n)) from bijections onto A and B, and the cardinality-equivalence note defines exactly what a bijection between sets means
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Solutions_Assignment_7]] pp. 1–2
 <!-- /kurooto:seen -->
