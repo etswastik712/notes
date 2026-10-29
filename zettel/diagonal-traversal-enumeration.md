@@ -18,6 +18,7 @@ $$m + n = k$$
 Source: Countable-Uncountable-sets, pp. 1–6
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/cantor-diagonal-argument]] — Cantor's diagonal argument uses a diagonal construction to prove non-surjectivity, while diagonal traversal uses anti-diagonals to enumerate pairs, so the two share the word 'diagonal' but serve opposite purposes
 ## Seen in
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20|Countable-Uncountable-sets]] pp. 1–6
 <!-- /kurooto:seen -->
