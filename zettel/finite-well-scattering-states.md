@@ -21,6 +21,9 @@ $$\psi_{III}(x) = F e^{ikx}$$
 Source: Finite_well, pp. 1–13
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/wave-function-boundary-matching-across-discontinuities]] — The scattering solutions are built by imposing continuity of the wavefunction and its first derivative at each well boundary, which is exactly the matching rule this note states
+- generalises:: [[zettel/deep-wide-well-approximation]] — The deep wide well note is the bound-state limit of the same finite well, whereas this note covers the above-well-depth continuum solutions of that well
+- contrasts-with:: [[zettel/shallow-well-bound-state-existence]] — The shallow well note concerns bound states below the well depth, while this note concerns the continuum states above it, so they cover complementary energy ranges of the same potential
 ## Seen in
 - [[ph2113/2026-10-27-finite-well-notes|Finite_well]] pp. 1–13
 <!-- /kurooto:seen -->
