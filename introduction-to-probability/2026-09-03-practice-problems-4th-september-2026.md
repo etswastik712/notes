@@ -19,3 +19,8 @@ Dear everyone, here are some suggested problems for this week's tutorial, althou
 ## Related
 - [[08-Probability/PR04 Joint Distributions Expectation and Variance]]: the vault chapter that lists the 4 September sheet among its sources.
 - [[introduction-to-probability/2026-08-26-practice-problems-28th-august-and-following-weekend]]: the sheet this one is combined with.
+
+<!-- kurooto:materialb2bc89a1 -->
+## Concepts in Practice problems 28th August and following weekend
+[[zettel/coupon-collector-waiting-time]], [[zettel/sequential-question-answering-optimization]]
+<!-- /kurooto:materialb2bc89a1 -->
