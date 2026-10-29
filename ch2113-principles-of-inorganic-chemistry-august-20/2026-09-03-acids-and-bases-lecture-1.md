@@ -30,3 +30,8 @@ trust_tier: agent_written
 ## Related
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-2]]: the next lecture (periodic trends in acidity)
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers]]: tutorial 3 practises these definitions
+
+<!-- kurooto:material629bc203 -->
+## Concepts in Acids and Bases_Lecture 1_2026
+[[zettel/arrhenius-acid-base-concept]], [[zettel/conjugate-acid-base-pair]], [[zettel/lux-flood-acid-base-concept]], [[zettel/lewis-acid-base-concept]], [[zettel/solvent-system-acid-base-concept]], [[zettel/generalized-acid-base-concept]]
+<!-- /kurooto:material629bc203 -->

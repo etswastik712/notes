@@ -1,0 +1,24 @@
+---
+id: zettel/lewis-acid-base-concept
+aliases: ["Lewis Acid-Base Concept", "Lewis Definition", "Lewis theory of acids and bases"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Lewis Acid-Base Concept
+
+A comprehensive concept encompassing reactions where acids accept and bases donate electron pairs, covering non-ionic adducts, coordination complexes, and ion-transfer reactions without requiring solvent dissociation.
+
+## Links
+- used-in:: [[zettel/hard-and-soft-acids-and-bases-principle]] — The HSAB principle classifies donor-acceptor interactions between Lewis acids and bases based on polarizability
+- used-in:: [[zettel/hard-acid]] — Hard acids are defined as electron-pair acceptor centers with low polarizability in the Lewis formulation
+- used-in:: [[zettel/soft-acid]] — Soft acids are defined as polarizable Lewis electron-pair acceptors
+- special-case-of:: [[zettel/generalized-acid-base-concept]] — Lewis electron-pair donation/acceptance is unified as negative-species transfer decreasing the positive character of an acid
+
+---
+Source: Acids and Bases_Lecture 1_2026, pp. 1–13
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-1|Acids and Bases_Lecture 1_2026]] pp. 1–13
+<!-- /kurooto:seen -->

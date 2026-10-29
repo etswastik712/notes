@@ -1,0 +1,21 @@
+---
+id: zettel/solvent-system-acid-base-concept
+aliases: ["Solvent System Acid-Base Concept", "Solvent System Definition", "solvent system theory"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Solvent System Acid-Base Concept
+
+A operational framework that defines an acid as any chemical solute that increases the concentration of the characteristic cation of the autoionizing solvent, and a base as any solute that increases the concentration of the solvent's characteristic anion.
+
+## Links
+- generalises:: [[zettel/arrhenius-acid-base-concept]] — Solvent system theory generalizes the Arrhenius focus on aqueous H3O+/OH- to the autoionization cations and anions of any solvent
+
+---
+Source: Acids and Bases_Lecture 1_2026, pp. 1–13
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-1|Acids and Bases_Lecture 1_2026]] pp. 1–13
+<!-- /kurooto:seen -->
