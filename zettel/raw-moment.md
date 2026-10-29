@@ -1,0 +1,27 @@
+---
+id: zettel/raw-moment
+aliases: ["Raw Moment", "n-th moment", "n-th raw moment", "moment of a random variable"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Raw Moment
+
+The expectation of the n-th power of a random variable X for any positive integer n. For a discrete random variable taking values x_i, it is computed by weighting x_i^n by the corresponding probability mass function p(x_i).
+
+$$E[X^n]$$
+
+$$E[X^n] = \sum_{i=1}^\infty x_i^n p(x_i)$$
+
+## Links
+- generalises:: [[zettel/central-moment]] — The n-th central moment can be expanded as a linear combination of raw moments up to order n via the binomial theorem
+- used-in:: [[zettel/variance]] — Variance is expressed alternatively as the second raw moment minus the square of the first raw moment: Var[X] = E[X^2] - (E[X])^2
+- generalises:: [[zettel/poisson-distribution-moment-recurrence]] — The Poisson moment recurrence relates raw moments E[X^n] recursively for Poisson variables
+
+---
+Source: Class notes 9th September 2026, pp. 1–1
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-09-09-class-notes-9th-september-2026|Class notes 9th September 2026]] pp. 1–1
+<!-- /kurooto:seen -->

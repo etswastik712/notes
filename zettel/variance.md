@@ -1,0 +1,28 @@
+---
+id: zettel/variance
+aliases: ["Variance", "Var[X]", "second central moment"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Variance
+
+The second central moment of a random variable, measuring the expected squared deviation from its mean. Under affine transformation aX + b, variance scales strictly by the square of the multiplicative constant a.
+
+$$Var[X] = E[(X - E[X])^2]$$
+
+$$Var[X] = E[X^2] - (E[X])^2$$
+
+$$Var[aX + b] = a^2 Var[X]$$
+
+## Links
+- special-case-of:: [[zettel/central-moment]] — Variance is identical to the n-th central moment evaluated at n = 2
+- used-in:: [[zettel/standard-deviation]] — Standard deviation is defined directly as the square root of variance
+
+---
+Source: Class notes 9th September 2026, pp. 1–1
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-09-09-class-notes-9th-september-2026|Class notes 9th September 2026]] pp. 1–1
+<!-- /kurooto:seen -->

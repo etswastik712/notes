@@ -35,3 +35,8 @@ Dear everyone, we shall first finish our discussion on transformations of random
 - [[08-Probability/PR04 Joint Distributions Expectation and Variance]]: variance in their own chapter notes.
 - [[08-Probability/PR06 Moments Generating Functions and Limit Theorems]]: moments in their own notes.
 - [[08-Probability/PR05 Continuous Random Variables]]: where the continuous material starts.
+
+<!-- kurooto:material20276d9b -->
+## Concepts in Class notes 9th September 2026
+[[zettel/raw-moment]], [[zettel/central-moment]], [[zettel/variance]], [[zettel/standard-deviation]]
+<!-- /kurooto:material20276d9b -->
