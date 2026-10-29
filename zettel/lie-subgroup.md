@@ -16,5 +16,9 @@ Source: DG19, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-09-03-august-31-september-4|DG13]] pp. 1–4
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG19]] pp. 1–5
+
+### Added from class
+- DG13 pp. 1–4: Adds criteria regarding open Lie subgroups being closed and unions of connected components, as well as characterization of embeddedness via closedness.
 <!-- /kurooto:seen -->

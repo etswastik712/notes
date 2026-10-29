@@ -47,3 +47,8 @@ We talked about the properties of Lie group homomorphisms and Lie subgroups. Alo
 ## Concepts in DG12
 [[zettel/rank-theorem]], [[zettel/immersed-submanifold]], [[zettel/image-of-injective-immersion]]
 <!-- /kurooto:material3c5c1591 -->
+
+<!-- kurooto:material51793d1b -->
+## Concepts in DG13
+[[zettel/lie-subgroup]]
+<!-- /kurooto:material51793d1b -->
