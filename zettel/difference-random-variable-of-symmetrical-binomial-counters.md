@@ -1,6 +1,6 @@
 ---
 id: zettel/difference-random-variable-of-symmetrical-binomial-counters
-aliases: ["Difference Random Variable of Symmetrical Binomial Counters", "Coin Toss Head-Tail Difference PMF"]
+aliases: ["Difference Random Variable of Symmetrical Binomial Counters", "Coin Toss Head-Tail Difference PMF", "Simple Random Walk Position after n Steps", "One-dimensional integer lattice random walk"]
 tags: [zettel, agent-written, introduction-to-probability]
 trust_tier: agent_written
 ---
@@ -18,5 +18,19 @@ Source: Practice problems 17th September and following tutorial and weekend, pp.
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–3
 - [[introduction-to-probability/2026-09-17-practice-problems-17th-september-and-following-tutorial-and-weekend|Practice problems 17th September and following tutorial and weekend]] pp. 1–2
+
+### Added from class
+- Class notes 27th August 2026 pp. 1–3: Formulates the particle displacement on the integer line with arbitrary forward probability p as an explicit transformation Y of a Binomial(n, p) distribution.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Practice problems 17th September and following tutorial and weekend, pp. 1–2 | $X$ | difference between heads and tails |
+| Practice problems 17th September and following tutorial and weekend, pp. 1–2 | $X_H$ | number of heads |
+| Practice problems 17th September and following tutorial and weekend, pp. 1–2 | $X_T$ | number of tails |
+| Class notes 27th August 2026, pp. 1–3 | $Y$ | position of the particle after n steps starting from 0 |
+<!-- /kurooto:notation -->

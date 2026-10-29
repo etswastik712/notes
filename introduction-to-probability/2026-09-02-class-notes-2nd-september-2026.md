@@ -48,3 +48,8 @@ We shall recall these definitions one more time tomorrow, and discuss linearity 
 - [[08-Probability/PR03 Discrete Random Variables and Distributions]]: binomial, geometric and negative binomial background.
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: previous class notes (transformations are deferred from there).
 - [[introduction-to-probability/2026-09-02-proof-of-expectation-of-binomial-rv]]: alternative proof of the binomial mean posted the same day.
+
+<!-- kurooto:material3aa20daa -->
+## Concepts in Class notes 27th August 2026
+[[zettel/linearity-of-expectation]], [[zettel/poisson-distribution-as-binomial-limit]], [[zettel/sum-of-independent-bernoulli-trials-representation-of-binomial]], [[zettel/difference-random-variable-of-symmetrical-binomial-counters]], [[zettel/truncated-geometric-random-variable-for-coin-tosses]]
+<!-- /kurooto:material3aa20daa -->

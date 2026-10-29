@@ -1,6 +1,6 @@
 ---
 id: zettel/linearity-of-expectation
-aliases: ["Linearity of Expectation", "sum of expectations"]
+aliases: ["Linearity of Expectation", "sum of expectations", "Linearity of Expectation for Affine Transformations", "Affine expectation"]
 tags: [zettel, agent-written, introduction-to-probability]
 trust_tier: agent_written
 ---
@@ -18,5 +18,9 @@ Source: Class notes 10th September 2026, pp. 1–3
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–3
 - [[introduction-to-probability/2026-09-10-class-notes-10th-september-2026|Class notes 10th September 2026]] pp. 1–3
+
+### Added from class
+- Class notes 27th August 2026 pp. 1–3: Adds the single-variable affine formulation E[aX + b] = a E[X] + b derived specifically as a direct consequence of LOTUS with linear g.
 <!-- /kurooto:seen -->
