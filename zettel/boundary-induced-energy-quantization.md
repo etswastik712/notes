@@ -1,0 +1,28 @@
+---
+id: zettel/boundary-induced-energy-quantization
+aliases: ["Boundary-Induced Energy Quantization", "mechanism of energy quantization", "wave boundary condition quantization"]
+tags: [zettel, agent-written, ph2113]
+trust_tier: agent_written
+---
+
+# Boundary-Induced Energy Quantization
+
+The physical mechanism whereby discrete energy spectra emerge not from the differential Schrödinger equation itself, but exclusively from spatial boundary conditions that permit only discrete standing wavelengths.
+
+$$E = \frac{\hbar^2 k^2}{2m}$$
+
+$$p = \frac{h}{\lambda}$$
+
+$$E = \frac{p^2}{2m}$$
+
+## Links
+- contrasts-with:: [[zettel/free-particle-dispersion-relation-in-schrodinger-theory]] — Free particles without boundary constraints exhibit a completely continuous energy spectrum, unlike boundary-confined systems
+- needs:: [[zettel/time-independent-schrodinger-equation]] — Acts on the spatial solutions phi(x) of the TISE to select allowed discrete eigenvalues E
+
+---
+Source: PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1), pp. 1–10
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger|PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)]] pp. 1–10
+<!-- /kurooto:seen -->

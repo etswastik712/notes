@@ -1,6 +1,6 @@
 ---
 id: zettel/position-momentum-uncertainty-relation-from-fourier-transform
-aliases: ["Position-Momentum Uncertainty Relation from Fourier Transform", "Fourier origin of Heisenberg uncertainty", "uncertainty principle Fourier scaling"]
+aliases: ["Position-Momentum Uncertainty Relation from Fourier Transform", "Fourier origin of Heisenberg uncertainty", "uncertainty principle Fourier scaling", "uncertainty principle", "Heisenberg uncertainty relation"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -23,4 +23,8 @@ Source: PH2113_wavefunctions_potentials_schrodinger_Tutorial, pp. 1–4
 <!-- kurooto:seen -->
 ## Seen in
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger|PH2113_wavefunctions_potentials_schrodinger_Tutorial]] pp. 1–4
+- [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger|PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)]] pp. 1–10
+
+### Added from class
+- PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1) pp. 1–10: Clarifies that the relation represents an intrinsic property of the quantum state rather than experimental measurement error, and provides the explicit Fourier superposition integral over continuous wave numbers.
 <!-- /kurooto:seen -->

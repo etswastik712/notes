@@ -1,0 +1,25 @@
+---
+id: zettel/reduced-compton-wavelength-validity-threshold
+aliases: ["Reduced Compton Wavelength Validity Threshold", "Compton scale", "reduced Compton wavelength"]
+tags: [zettel, agent-written, ph2113]
+trust_tier: agent_written
+---
+
+# Reduced Compton Wavelength Validity Threshold
+
+The length scale below which single-particle non-relativistic quantum mechanics breaks down because the localization-induced momentum uncertainty becomes comparable to the relativistic rest mass momentum scale.
+
+$$\Delta p \sim \frac{\hbar}{\Delta x}$$
+
+$$\Delta x \sim \frac{\hbar}{mc}$$
+
+## Links
+- needs:: [[zettel/position-momentum-uncertainty-relation-from-fourier-transform]] — Relies on the uncertainty scaling Delta p ~ hbar / Delta x to establish the threshold Delta p ~ mc
+
+---
+Source: PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1), pp. 1–10
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger|PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)]] pp. 1–10
+<!-- /kurooto:seen -->

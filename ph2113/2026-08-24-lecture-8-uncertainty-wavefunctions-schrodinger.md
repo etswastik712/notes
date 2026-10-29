@@ -58,3 +58,8 @@ Stationary states.
 - [[ph2113/2026-08-25-lecture-9-free-particle-ring-general-properties]]: next lecture; boundary conditions and discrete spectra
 - [[ph2113/2026-08-27-tutorial-solutions-wavefunctions-uncertainty-schrodinger]]: problems 1-2 practise the Compton-scale estimate and acceptable wavefunctions
 - [[ph2113/2026-08-06-lecture-3-compton-scattering]]: where $\lambda_C=h/m_ec$ was introduced
+
+<!-- kurooto:materialcba26064 -->
+## Concepts in PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)
+[[zettel/position-momentum-uncertainty-relation-from-fourier-transform]], [[zettel/reduced-compton-wavelength-validity-threshold]], [[zettel/delocalized-plane-wave-idealization]], [[zettel/time-independent-schrodinger-equation]], [[zettel/differential-coordinate-representations-of-energy-and-momentum]], [[zettel/free-particle-dispersion-relation-in-schrodinger-theory]], [[zettel/particle-in-a-box-time-evolution]], [[zettel/boundary-induced-energy-quantization]]
+<!-- /kurooto:materialcba26064 -->

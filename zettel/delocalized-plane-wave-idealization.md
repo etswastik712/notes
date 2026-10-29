@@ -1,0 +1,26 @@
+---
+id: zettel/delocalized-plane-wave-idealization
+aliases: ["Delocalized Plane Wave Idealization", "plane wave idealization", "generalized state plane wave"]
+tags: [zettel, agent-written, ph2113]
+trust_tier: agent_written
+---
+
+# Delocalized Plane Wave Idealization
+
+An idealized, non-square-integrable quantum state possessing a single exact wavenumber and momentum, resulting in total spatial delocalization across the real line.
+
+$$\psi(x) = A e^{ikx}$$
+
+$$|\psi|^2 = |A|^2$$
+
+## Links
+- equivalent-to:: [[zettel/plane-wave-momentum-eigenstate]] — Both describe the complex exponential state characterized by definite momentum p = hbar * k and non-normalizable infinite extent
+- used-in:: [[zettel/time-independent-schrodinger-equation]] — Acts as the test state to confirm that the differential operators in the Schrödinger equation reproduce non-relativistic energy conservation
+
+---
+Source: PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1), pp. 1–10
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger|PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)]] pp. 1–10
+<!-- /kurooto:seen -->
