@@ -18,4 +18,16 @@ Source: Class notes 27th August 2026, pp. 1–3
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–3
+- [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–2
+
+### Added from class
+- Class notes 27th August 2026 pp. 1–2: Explicitly frames the Poisson distribution as the limit of Binomial(n, c/n) distributions for a fixed constant c > 0.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Class notes 27th August 2026, pp. 1–3 | $\text{Binomial}(n, c/n)$ | binomial distribution with success probability scaled inversely with n |
+| Class notes 27th August 2026, pp. 1–2 | $c/n$ | success probability of trials in the binomial sequence |
+<!-- /kurooto:notation -->

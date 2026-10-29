@@ -17,4 +17,17 @@ Source: Class notes 27th August 2026, pp. 1–3
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–3
+- [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–2
+
+### Added from class
+- Class notes 27th August 2026 pp. 1–2: Introduces the discrete random variable setup and problem formulation for finding its probability mass function under an upper cutoff n.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Class notes 27th August 2026, pp. 1–2 | $n$ | maximum total number of flips allowed |
+| Class notes 27th August 2026, pp. 1–2 | $X$ | number of times the coin is flipped |
+| Class notes 27th August 2026, pp. 1–3 | $X$ | total number of flips conducted until first head or reaching n flips |
+<!-- /kurooto:notation -->

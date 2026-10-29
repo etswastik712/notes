@@ -20,4 +20,8 @@ Source: Class notes 27th August 2026, pp. 1–3
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–3
+- [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–2
+
+### Added from class
+- Class notes 27th August 2026 pp. 1–2: Provides the formal representation of X as a sum of Bernoulli indicators X_i where X_i = 1 for success and 0 for failure.
 <!-- /kurooto:seen -->

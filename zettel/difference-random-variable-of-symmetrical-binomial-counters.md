@@ -20,9 +20,11 @@ Source: Practice problems 17th September and following tutorial and weekend, pp.
 ## Seen in
 - [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–3
 - [[introduction-to-probability/2026-09-17-practice-problems-17th-september-and-following-tutorial-and-weekend|Practice problems 17th September and following tutorial and weekend]] pp. 1–2
+- [[introduction-to-probability/2026-09-02-class-notes-2nd-september-2026|Class notes 27th August 2026]] pp. 1–2
 
 ### Added from class
 - Class notes 27th August 2026 pp. 1–3: Formulates the particle displacement on the integer line with arbitrary forward probability p as an explicit transformation Y of a Binomial(n, p) distribution.
+- Class notes 27th August 2026 pp. 1–2: Connects the random walk position on the integer line to a transformation Y = g(X) of a binomial random variable derived in class.
 <!-- /kurooto:seen -->
 
 <!-- kurooto:notation -->
@@ -32,5 +34,7 @@ Source: Practice problems 17th September and following tutorial and weekend, pp.
 | Practice problems 17th September and following tutorial and weekend, pp. 1–2 | $X$ | difference between heads and tails |
 | Practice problems 17th September and following tutorial and weekend, pp. 1–2 | $X_H$ | number of heads |
 | Practice problems 17th September and following tutorial and weekend, pp. 1–2 | $X_T$ | number of tails |
+| Class notes 27th August 2026, pp. 1–2 | $Y$ | position of the particle after n steps |
 | Class notes 27th August 2026, pp. 1–3 | $Y$ | position of the particle after n steps starting from 0 |
+| Class notes 27th August 2026, pp. 1–2 | $p$ | probability of moving 1 unit to the right |
 <!-- /kurooto:notation -->

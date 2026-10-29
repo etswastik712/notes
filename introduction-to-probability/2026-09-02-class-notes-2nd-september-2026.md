@@ -53,3 +53,8 @@ We shall recall these definitions one more time tomorrow, and discuss linearity 
 ## Concepts in Class notes 27th August 2026
 [[zettel/linearity-of-expectation]], [[zettel/poisson-distribution-as-binomial-limit]], [[zettel/sum-of-independent-bernoulli-trials-representation-of-binomial]], [[zettel/difference-random-variable-of-symmetrical-binomial-counters]], [[zettel/truncated-geometric-random-variable-for-coin-tosses]]
 <!-- /kurooto:material3aa20daa -->
+
+<!-- kurooto:materialc2318d8b -->
+## Concepts in Class notes 27th August 2026
+[[zettel/sum-of-independent-bernoulli-trials-representation-of-binomial]], [[zettel/truncated-geometric-random-variable-for-coin-tosses]], [[zettel/poisson-distribution-as-binomial-limit]], [[zettel/difference-random-variable-of-symmetrical-binomial-counters]]
+<!-- /kurooto:materialc2318d8b -->
