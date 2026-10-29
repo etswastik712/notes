@@ -16,6 +16,7 @@ If a vector field admits an epsilon greater than 0 such that its flow is defined
 Source: DG22, pp. 1–4
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/completeness-of-compactly-supported-vector-fields]] — The compactly supported note links to this lemma, which is the route to its completeness claim, though the note text itself does not spell out the argument
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
 <!-- /kurooto:seen -->
