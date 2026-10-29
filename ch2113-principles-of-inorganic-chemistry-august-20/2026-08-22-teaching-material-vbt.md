@@ -41,3 +41,8 @@ From Lecture Notes_VB_theory_2026.pdf (Classroom).
 ## Related
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2]]: VSEPR shapes that hybridization explains
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-22-teaching-material-mot]]: the MO alternative
+
+<!-- kurooto:material42dcb499 -->
+## Concepts in Lecture Notes_VB_theory_2026
+[[zettel/valence-bond-theory]], [[zettel/promotion]], [[zettel/hybridization]], [[zettel/steric-number-formula]], [[zettel/coulson-type-hybridization-bond-angle-relation]], [[zettel/non-equivalent-hybrids]], [[zettel/hypervalence]], [[zettel/bent-s-rule]]
+<!-- /kurooto:material42dcb499 -->
