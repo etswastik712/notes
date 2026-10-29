@@ -15,6 +15,9 @@ A curve gamma in a smooth manifold M whose velocity vector at every point coinci
 Source: DG22, pp. 1–4
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/fundamental-theorem-on-flows]] — The theorem's flow trajectories are defined as the maximal integral curves starting at each point, so the integral curve concept is required to state it
+- needs:: [[zettel/naturality-of-integral-curves]] — The naturality result is stated for integral curves of X and F-related vector fields Y, so it depends on this note's definition
+- needs:: [[zettel/complete-vector-field]] — A vector field is complete when its maximal integral curves are defined for all real times, which uses this note's definition
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|DG22]] pp. 1–4
 <!-- /kurooto:seen -->
