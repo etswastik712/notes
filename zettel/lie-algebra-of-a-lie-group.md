@@ -17,6 +17,7 @@ The Lie algebra consisting of all left-invariant vector fields on a Lie group G,
 Source: DG19, pp. 1–5
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/lie-group]] — Lie(G) is defined as the algebra of left-invariant vector fields on a Lie group G, so the Lie group concept is needed to state it
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|DG19]] pp. 1–5
 <!-- /kurooto:seen -->
