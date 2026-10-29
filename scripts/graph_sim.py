@@ -119,7 +119,7 @@ def metrics(vis, idx, pos, subj, is_src):
     rad = np.linalg.norm(pos - c, axis=1)
     h = idx[HOME]
     out = {"home_rank": float((rad < rad[h]).mean())}
-    mp = [idx[p] for k, p in MAPS.items() if p in idx and subj.get(p) == k and k not in ("waves", "neuro", "earth-evo")]
+    mp = [idx[p] for k, p in MAPS.items() if p in idx and subj.get(p) == k and k not in ("waves", "neuro", "earth-evo", "foundations")]
     dm = np.array([np.linalg.norm(pos[i] - pos[h]) for i in mp])
     out["ring_cv"] = float(dm.std() / dm.mean())
     ang = np.sort(np.array([math.atan2(pos[i][1] - pos[h][1], pos[i][0] - pos[h][0]) for i in mp]))

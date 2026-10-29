@@ -123,7 +123,7 @@ Heating $(\mathrm{NPCl_2})_3$ at **210–250 °C** causes **ring-opening polymer
 > [!connection] How CH08 connects
 > **Builds on:** [[CH07 Main Group Cages and Clusters]] (borazine from diborane and ammonia), [[CH03 Molecular Orbital Theory Polyatomics]] (π systems, MOs), [[CH06 Hard and Soft Acids and Bases]] (polar bond, hard N donor), [[CH05 Acid Strength Lewis Acidity and Reactions]] (Lewis adducts as the start of the ring).
 > **Leads to:** [[CH09 Redox]] (the hydrides and reductions that make the precursors).
-> **Concepts:** [[Borazine]] · [[Inorganic Heterocycle]] · [[Boron Nitride]] · [[Cyclophosphazene]] · [[Dewar Island Model]] · [[Polyphosphazene]] · [[Iminoborane]] · [[Hueckel Pi Model]]
+> **Concepts:** [[Borazine]] · [[Inorganic Heterocycle]] · [[CH08 Main Group Rings and Polymers|Boron Nitride]] · [[Cyclophosphazene]] · [[Dewar Island Model]] · [[Polyphosphazene]] · [[Iminoborane]] · [[Hueckel Pi Model]]
 > **Other subjects:** [[Group Theory - Course Map]] (the $D_{3h}$ symmetry of the rings), [[Climate - Course Map]] (hexagonal BN and phosphazene polymers have no climate role; phosphorus is a limiting nutrient: [[EE06 Eutrophication and Alternative Stable States]]), [[Probability - Course Map]] (none).
 
 ## Summary

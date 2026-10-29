@@ -825,7 +825,7 @@ $$\boxed{T=\frac{1}{1+\dfrac{(k^2-k_0^2)^2}{4k^2k_0^2}\sin^2(2k_0a)}=\frac{1}{1+
 > - **Three-Dimensional Central Potentials:** Spherical square wells, the deuteron, and the hydrogen atom.
 >
 > **Key Concepts:**
-> [[Finite Square Well]] · [[Transmission Coefficient]] · [[Reflection Coefficient]] · [[Probability Current]] · [[Logarithmic Derivative Matching]] · [[Bound State]] · [[Scattering State]] · [[Transcendental Equation]] · [[Penetration Depth]] · [[Classically Forbidden Region]] · [[Tunnelling Probability]] · [[Parity Theorem]] · [[Transmission Resonance]] · [[Delta Function Potential]] · [[Effective Well Width]]
+> [[QM07 The Finite Square Well|Finite Square Well]] · [[Transmission Coefficient]] · [[Reflection Coefficient]] · [[Probability Current]] · [[Logarithmic Derivative Matching]] · [[Bound State]] · [[Scattering State]] · [[Transcendental Equation]] · [[Penetration Depth]] · [[Classically Forbidden Region]] · [[Tunnelling Probability]] · [[Parity Theorem]] · [[Transmission Resonance]] · [[Delta Function Potential]] · [[Effective Well Width]]
 
 ## Summary
 > [!summary] Cheat-sheet of key formulas

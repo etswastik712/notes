@@ -105,7 +105,7 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 
 > [!connection] Where else this appears
 > - **Mohr–Coulomb and pore pressure:** [[LS02 Mechanics and Mathematics Toolkit]] (derivation), [[LS06 Maximum Topography]] (frictional limit), [[LS09 Faults and Earthquakes]] (earthquake triggering).
-> - **Power laws and event-size arguments:** [[Pareto]], [[Probability - Course Map]]; [[LS01 Landscapes as Physical Systems]].
+> - **Power laws and event-size arguments:** [[Pareto Distribution|Pareto]], [[Probability - Course Map]]; [[LS01 Landscapes as Physical Systems]].
 > - **Deccan terrain** as a landslide setting (weak boles, steep escarpment, monsoon): [[LS18 Deccan Traps Terrain]], [[interflow-horizons]], [[trap-topography]].
 
 

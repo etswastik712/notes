@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 
 Also B–B–B 3c-2e bonds in higher boranes, Al–C–Al in $\mathrm{Al_2Me_6}$, Be–H–Be in $\mathrm{BeH_2}$.
 
-Used in: [[CH07 Main Group Cages and Clusters]] §2.2. Related: [[Diborane]] · [[Styx Numbers]].
+Used in: [[CH07 Main Group Cages and Clusters]] §2.2. Related: [[CH07 Main Group Cages and Clusters|Diborane]] · [[Styx Numbers]].
 
 ## Linked from
 ```dataview

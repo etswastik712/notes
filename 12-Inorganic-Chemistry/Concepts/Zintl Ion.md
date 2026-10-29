@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 
 Sn is isolobal with BH (4 valence electrons, 2 used externally): Zintl ions are boranes without the hydrogen.
 
-Used in: [[CH07 Main Group Cages and Clusters]] §4. Related: [[Wade's Rules]] · [[Cryptand]].
+Used in: [[CH07 Main Group Cages and Clusters]] §4. Related: [[CH07 Main Group Cages and Clusters|Wade's Rules]] · [[Cryptand]].
 
 ## Linked from
 ```dataview

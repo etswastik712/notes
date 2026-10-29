@@ -137,7 +137,7 @@ flowchart LR
 > *Answers.* (1) $M_0=10^{1.5\times7+9.1}=3.98\times10^{19}$ N m; two units: $31.6^2=1000$. (2) $M_0=3\times10^{10}\times(10^5\times1.5\times10^4)\times2=9\times10^{19}$; $M_w=\tfrac23(\log_{10}9\times10^{19}-9.1)=\tfrac23(19.95-9.1)=7.23$. (3) $10^{2}=100$. (4) Both are Coulomb failure of a plane under $\sigma_n,\tau$ ([[LS02 Mechanics and Mathematics Toolkit]]).
 
 > [!connection] Where else this appears
-> - **Power laws and heavy tails:** [[Pareto]] and [[Gumbel]] in [[Probability - Course Map]]; the Poisson process of earthquake occurrence is [[Poisson Distribution]].
+> - **Power laws and heavy tails:** [[Pareto Distribution|Pareto]] and [[Gumbel Distribution|Gumbel]] in [[Probability - Course Map]]; the Poisson process of earthquake occurrence is [[Poisson Distribution]].
 > - **Periodic loading and the elastic cycle:** the stick-slip oscillation of a spring-block model is a relaxation oscillator: [[Fourier and Laplace Transforms]] §7.5; [[LS02 Mechanics and Mathematics Toolkit]] (Maxwell time and post-seismic relaxation).
 > - **Symmetry of the stress tensor** (torque balance) is why only 6 of its 9 components are independent: [[GT10 Symmetry Representations and Characters]] (rank-2 tensors under rotations).
 

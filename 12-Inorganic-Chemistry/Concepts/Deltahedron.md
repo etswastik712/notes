@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 
 Nido and arachno clusters are closo deltahedra with one or two vertices removed.
 
-Used in: [[CH07 Main Group Cages and Clusters]] §3. Related: [[Wade's Rules]] · [[Closo Nido Arachno]].
+Used in: [[CH07 Main Group Cages and Clusters]] §3. Related: [[CH07 Main Group Cages and Clusters|Wade's Rules]] · [[CH07 Main Group Cages and Clusters|Closo Nido Arachno]].
 
 ## Linked from
 ```dataview

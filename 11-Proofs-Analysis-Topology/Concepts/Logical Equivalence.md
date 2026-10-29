@@ -23,7 +23,7 @@ tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
 
 Use $\sim$ or $\equiv$ for equivalence of statements and $=$ only for objects. All laws in this note were verified over all assignments (11 laws, 2–3 variables). The set-theoretic images of these laws are the identities of [[Set Operations and De Morgan's Laws]].
 
-Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Tautology]] · [[Conditional Statement]] · [[Set Operations and De Morgan's Laws]].
+Used in: [[PA01 Logic and Methods of Proof]]. Related: [[11-Proofs-Analysis-Topology/Concepts/Tautology|Tautology]] · [[Conditional Statement]] · [[Set Operations and De Morgan's Laws]].
 
 ## Linked from
 ```dataview

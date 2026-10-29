@@ -23,7 +23,7 @@ tags: [subject/qm, type/concept, taught, src/slides, status/draft]
 
 Bound versus scattering is decided by the energy relative to the potential at infinity: below it (the wave must decay, only special $E$ fit) the spectrum is discrete; above it (the wave oscillates forever) it is continuous. A bound state is a **pole** of the scattering amplitude at negative energy ([[QM08 Quantum Tunnelling]] §4).
 
-Used in: [[QM07 The Finite Square Well]] §3–§5, §9. Related: [[Scattering State]] · [[Finite Square Well]] · [[Normalisation of a Wavefunction]] · [[Penetration Depth]] · [[Delta Function Potential]].
+Used in: [[QM07 The Finite Square Well]] §3–§5, §9. Related: [[Scattering State]] · [[QM07 The Finite Square Well|Finite Square Well]] · [[Normalisation of a Wavefunction]] · [[Penetration Depth]] · [[Delta Function Potential]].
 
 ## Linked from
 ```dataview

@@ -23,7 +23,7 @@ tags: [subject/probability, type/concept, extra/book, src/lecture-notes, status/
 
 Independent $\Rightarrow\mathrm{Cov}=0$ (so variances add), but $\mathrm{Cov}=0\not\Rightarrow$ independent. Two dice: $\mathrm{Cov}(\text{sum},\text{max})=\frac{35}{12}=2.917$, $\rho=0.860$.
 
-Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Variance]] · [[Independence of Random Variables]] · [[Linearity of Expectation]].
+Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[08-Probability/Concepts/Variance|Variance]] · [[Independence of Random Variables]] · [[Linearity of Expectation]].
 
 ## Linked from
 ```dataview

@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 
 Gives linkage isomers: $\mathrm{[Co(NH_3)_5(NCS)]^{2+}}$ and $\mathrm{[Co(NH_3)_5(SCN)]^{2+}}$.
 
-Used in: [[CH06 Hard and Soft Acids and Bases]] §4. Related: [[Linkage Isomerism]] · [[Hard and Soft Acids and Bases]].
+Used in: [[CH06 Hard and Soft Acids and Bases]] §4. Related: [[Linkage Isomerism]] · [[CH06 Hard and Soft Acids and Bases|Hard and Soft Acids and Bases]].
 
 ## Linked from
 ```dataview

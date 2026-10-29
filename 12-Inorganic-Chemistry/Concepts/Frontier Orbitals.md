@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 
 CO: HOMO and LUMO on C. NH$_3\to$BF$_3$: N lone pair into B $2p_z$.
 
-Used in: [[CH06 Hard and Soft Acids and Bases]] §5, [[CH04 Acid-Base Concepts]] §5. Related: [[Hard and Soft Acids and Bases]] · [[Lewis Acids and Bases]].
+Used in: [[CH06 Hard and Soft Acids and Bases]] §5, [[CH04 Acid-Base Concepts]] §5. Related: [[CH06 Hard and Soft Acids and Bases|Hard and Soft Acids and Bases]] · [[Lewis Acids and Bases]].
 
 ## Linked from
 ```dataview

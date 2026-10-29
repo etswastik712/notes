@@ -23,7 +23,7 @@ tags: [subject/qm, type/concept, taught, src/slides, status/draft]
 
 Roots are found graphically (Figure QM7.2/QM7.4) or numerically (`scripts/qm07_numbers.py`). Example: $z_0=5$ gives $k_0a=1.3064,\ 2.5957,\ 3.8375,\ 4.9063$.
 
-Used in: [[QM07 The Finite Square Well]] §3, §9, §10. Related: [[Finite Square Well]] · [[Logarithmic Derivative Matching]] · [[Bound State]].
+Used in: [[QM07 The Finite Square Well]] §3, §9, §10. Related: [[QM07 The Finite Square Well|Finite Square Well]] · [[Logarithmic Derivative Matching]] · [[Bound State]].
 
 ## Linked from
 ```dataview

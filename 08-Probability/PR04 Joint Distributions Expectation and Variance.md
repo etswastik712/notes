@@ -194,7 +194,7 @@ Unless $g$ is one-to-one, several $x_i$ map to the same $y$ and their masses add
 > [!connection] How PR04 connects
 > **Builds on:** [[PR03 Discrete Random Variables and Distributions]] (the named pmfs and their means).
 > **Leads to:** [[PR05 Continuous Random Variables]] (the same expectation and variance with integrals) → [[PR06 Moments Generating Functions and Limit Theorems]] (the moment generating function packages all moments).
-> **Concepts:** [[Joint Distribution]] · [[Marginal Distribution]] · [[Independence of Random Variables]] · [[Linearity of Expectation]] · [[Variance]] · [[Moments of a Random Variable]] · [[Factorial Moments]] · [[Covariance and Correlation]] · [[Standardisation of a Random Variable]] · [[Coupon Collector Problem]] · [[Size-Biased Sampling]]
+> **Concepts:** [[Joint Distribution]] · [[Marginal Distribution]] · [[Independence of Random Variables]] · [[Linearity of Expectation]] · [[08-Probability/Concepts/Variance|Variance]] · [[Moments of a Random Variable]] · [[Factorial Moments]] · [[Covariance and Correlation]] · [[Standardisation of a Random Variable]] · [[Coupon Collector Problem]] · [[Size-Biased Sampling]]
 > **Other subjects:** [[Probability - Course Map]], [[TH06 From Kinetic Theory to Statistical Mechanics]] (variance of the energy, $\Delta E/E\sim1/\sqrt N$), [[QM03 States Operators and Measurement]] (the variance of a measurement outcome is the uncertainty $\Delta A$), [[QM01 From Waves to Probabilities]], [[EE02 Structured Population Models]] (demographic stochasticity: $\mathrm{Var}\propto n$).
 
 ## Summary

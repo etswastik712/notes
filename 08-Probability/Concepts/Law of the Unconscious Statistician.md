@@ -30,7 +30,7 @@ Use the lemma $E[Y]=\int_0^\infty P[Y>y]\,\mathrm dy$ and swap the order of inte
 > [!example] Random circle
 > $R\sim U(0,1)$, $A=\pi R^2$: $E[A]=\int_0^1\pi r^2\mathrm dr=\frac\pi3$, $E[A^2]=\frac{\pi^2}5$, $\mathrm{Var}=\frac{4\pi^2}{45}$, without finding the density of $A$.
 
-Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR05 Continuous Random Variables]]. Related: [[Expectation]] · [[Variance]] · [[Cdf Method for Transformations]] · [[Linearity of Expectation]].
+Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR05 Continuous Random Variables]]. Related: [[Expectation]] · [[08-Probability/Concepts/Variance|Variance]] · [[Cdf Method for Transformations]] · [[Linearity of Expectation]].
 
 ## Linked from
 ```dataview

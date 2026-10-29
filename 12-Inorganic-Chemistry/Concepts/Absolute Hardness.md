@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, extra/beyond, src/own-notes, status/draf
 
 $\Delta N=(\chi_A-\chi_B)/2(\eta_A+\eta_B)$ and $\Delta E=-(\chi_A-\chi_B)^2/4(\eta_A+\eta_B)$ rank interactions: $\mathrm{Ag^+}$ with I: −1.42 eV, with F: −0.30 eV.
 
-Used in: [[CH06 Hard and Soft Acids and Bases]] §6. Related: [[Hard and Soft Acids and Bases]] · [[Frontier Orbitals]].
+Used in: [[CH06 Hard and Soft Acids and Bases]] §6. Related: [[CH06 Hard and Soft Acids and Bases|Hard and Soft Acids and Bases]] · [[Frontier Orbitals]].
 
 ## Linked from
 ```dataview

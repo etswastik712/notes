@@ -23,7 +23,7 @@ tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draf
 
 Binomial: $n(n-1)p^2$. Poisson: $\lambda^2$ (and the $r$-th is $\lambda^r$). Geometric: $\frac{2q}{p^2}$. NegBin: use $n\binom{n-1}{r-1}=r\binom nr$ to get $E[Y^2]=\frac rp(\frac{r+1}p-1)$. Poisson recursion: $E[X^n]=\lambda E[(X+1)^{n-1}]$.
 
-Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Variance]] · [[Binomial Distribution]] · [[Poisson Distribution]] · [[Geometric Distribution]].
+Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[08-Probability/Concepts/Variance|Variance]] · [[Binomial Distribution]] · [[Poisson Distribution]] · [[Geometric Distribution]].
 
 ## Linked from
 ```dataview

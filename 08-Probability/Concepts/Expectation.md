@@ -30,7 +30,7 @@ Fair die $\tfrac72$; Bernoulli$(p)$ $p$; Binomial $np$; Geometric $\frac1p$; Poi
 > [!pitfall] It may not exist
 > The Cauchy distribution has $E|X|=\infty$ ([[Cauchy Distribution]]).
 
-Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]], [[PR05 Continuous Random Variables]]. Related: [[Linearity of Expectation]] · [[Variance]] · [[Moments of a Random Variable]] · [[Law of the Unconscious Statistician]].
+Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]], [[PR05 Continuous Random Variables]]. Related: [[Linearity of Expectation]] · [[08-Probability/Concepts/Variance|Variance]] · [[Moments of a Random Variable]] · [[Law of the Unconscious Statistician]].
 
 ## Linked from
 ```dataview

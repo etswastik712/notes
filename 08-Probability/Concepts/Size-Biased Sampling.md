@@ -23,7 +23,7 @@ tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draf
 
 Buses of 36, 40, 44: random bus $40$; random student's bus $40.27$. Town of 100 families (30, 50, 20 with 1, 2, 3 children): a child's birth rank, family first: $E=1.45$; child first (190 children): $\frac{100}{190},\frac{70}{190},\frac{20}{190}$, $E=1.579$. Same effect: classes look larger to students, friends have more friends than you do.
 
-Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Expectation]] · [[Variance]] · [[Linearity of Expectation]].
+Used in: [[PR03 Discrete Random Variables and Distributions]], [[PR04 Joint Distributions Expectation and Variance]]. Related: [[Expectation]] · [[08-Probability/Concepts/Variance|Variance]] · [[Linearity of Expectation]].
 
 ## Linked from
 ```dataview

@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, extra/book, src/book, status/draft]
 
 Anhydrous H$_2$SO$_4$ $H_0\approx-12$; magic acid $\approx-23$ (recalled).
 
-Used in: [[CH04 Acid-Base Concepts]] §3, §6. Related: [[Conjugate Acid-Base Pair]] · [[Superacid]].
+Used in: [[CH04 Acid-Base Concepts]] §3, §6. Related: [[Conjugate Acid-Base Pair]] · [[12-Inorganic-Chemistry/Concepts/Superacid|Superacid]].
 
 ## Linked from
 ```dataview

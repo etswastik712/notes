@@ -23,7 +23,7 @@ tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draf
 
 $N(\mu,\sigma^2)$ is defined by $X=\sigma Z+\mu$. The CLT is a statement about the standardised sum $S_n^*=\frac{S_n-n\mu}{\sigma\sqrt n}$. It makes distributions comparable and tables universal.
 
-Used in: [[PR04 Joint Distributions Expectation and Variance]], [[PR05 Continuous Random Variables]]. Related: [[Standard Normal Distribution]] · [[Central Limit Theorem]] · [[Variance]].
+Used in: [[PR04 Joint Distributions Expectation and Variance]], [[PR05 Continuous Random Variables]]. Related: [[Standard Normal Distribution]] · [[Central Limit Theorem]] · [[08-Probability/Concepts/Variance|Variance]].
 
 ## Linked from
 ```dataview

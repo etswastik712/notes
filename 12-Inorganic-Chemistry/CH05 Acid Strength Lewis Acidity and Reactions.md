@@ -168,7 +168,7 @@ Magic acid, $\mathrm{HSO_3F+SbF_5}$: the equilibrium $\mathrm{SbF_5+HSO_3F\right
 > [!connection] How CH05 connects
 > **Builds on:** [[CH04 Acid-Base Concepts]] (definitions, conjugate pairs), [[CH03 Molecular Orbital Theory Polyatomics]] (LUMOs, $\pi$ donation), [[CH01 VSEPR and Valence Bond Theory]] (hypervalence).
 > **Leads to:** [[CH06 Hard and Soft Acids and Bases]] (what makes a Lewis acid prefer one base), [[CH07 Main Group Cages and Clusters]] ($\mathrm{BH_3}$ as a Lewis acid giving $\mathrm{B_2H_6}$).
-> **Concepts:** [[Aqua Acid]] · [[Oxo Acid]] · [[Pauling's Rules for Oxoacids]] · [[Inductive Effect on Acidity]] · [[Lewis Acidity of BX3]] · [[Back-Donation in Boron Halides]] · [[Superacid]] · [[Displacement and Metathesis]]
+> **Concepts:** [[Aqua Acid]] · [[Oxo Acid]] · [[Pauling's Rules for Oxoacids]] · [[Inductive Effect on Acidity]] · [[Lewis Acidity of BX3]] · [[Back-Donation in Boron Halides]] · [[12-Inorganic-Chemistry/Concepts/Superacid|Superacid]] · [[CH05 Acid Strength Lewis Acidity and Reactions|Displacement and Metathesis]]
 > **Other subjects:** [[Climate - Course Map]] ($\mathrm{SO_2}$ and $\mathrm{SO_3}$ in acid rain: Lewis acid hydration), [[Thermodynamics - Course Map]] ($\Delta G$ of adduct formation).
 
 ## Summary

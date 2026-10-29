@@ -234,7 +234,7 @@ An integer $p\ge2$ is **prime** if its only divisors are 1 and $p$. (a) "Wheneve
 > [!connection] How PA01 connects
 > **Builds on:** school mathematics and ordinary English.
 > **Leads to:** [[PA02 Sets Families and the ZFC Foundations]] (the logic–set dictionary: $\wedge\leftrightarrow\cap$, $\vee\leftrightarrow\cup$, $\neg\leftrightarrow{}^c$, $\Rightarrow\leftrightarrow\subseteq$); [[PA05 Induction and the Number Systems]]; the $\varepsilon$–$N$ definitions of [[PA06 The Real Numbers and Sequences]] are nested quantifiers whose negations are mechanical.
-> **Concepts:** [[Statement and Truth Table]] · [[Logical Equivalence]] · [[Tautology]] · [[Conditional Statement]] · [[Quantifiers and Their Negation]] · [[Proof Techniques]] · [[Counterexample]]
+> **Concepts:** [[Statement and Truth Table]] · [[Logical Equivalence]] · [[11-Proofs-Analysis-Topology/Concepts/Tautology|Tautology]] · [[Conditional Statement]] · [[Quantifiers and Their Negation]] · [[Proof Techniques]] · [[Counterexample]]
 > **Other subjects:** [[Proofs, Analysis and Topology - Course Map]], [[Probability - Course Map]] ([[PR01 Counting and the Axioms of Probability]]: events behave as sets, De Morgan for events), [[Jensen Inequality]] and [[Fixed Points and Linear Stability]] (proofs by cases and contradiction recur).
 
 ## Summary

@@ -200,7 +200,7 @@ $$2\mathrm{Ca_3(PO_4)_2}+6\mathrm{SiO_2}+10\mathrm C\to\mathrm P_4+10\mathrm{CO}
 > [!connection] How CH07 connects
 > **Builds on:** [[CH03 Molecular Orbital Theory Polyatomics]] (3-centre MOs, LGOs), [[CH05 Acid Strength Lewis Acidity and Reactions]] (BH$_3$ as a Lewis acid, borane adducts), [[CH06 Hard and Soft Acids and Bases]] (hard/soft bases direct the cleavage of $\mathrm{B_2H_6}$), [[CH04 Acid-Base Concepts]] (Lux–Flood in the furnace).
 > **Leads to:** [[CH08 Main Group Rings and Polymers]] (borazine from diborane and ammonia; polymers of B–N and P–N), [[CH09 Redox]] (the reductions that make P and B).
-> **Concepts:** [[Diborane]] · [[Three-Centre Two-Electron Bond]] · [[Wade's Rules]] · [[Deltahedron]] · [[Closo Nido Arachno]] · [[Zintl Ion]] · [[Cryptand]] · [[White Phosphorus]] · [[Phosphorus Oxides and Sulfides]] · [[Styx Numbers]]
+> **Concepts:** [[CH07 Main Group Cages and Clusters|Diborane]] · [[Three-Centre Two-Electron Bond]] · [[CH07 Main Group Cages and Clusters|Wade's Rules]] · [[12-Inorganic-Chemistry/Concepts/Deltahedron|Deltahedron]] · [[CH07 Main Group Cages and Clusters|Closo Nido Arachno]] · [[Zintl Ion]] · [[Cryptand]] · [[CH07 Main Group Cages and Clusters|White Phosphorus]] · [[Phosphorus Oxides and Sulfides]] · [[Styx Numbers]]
 > **Other subjects:** [[Group Theory - Course Map]] (point groups of the polyhedra: $O_h$, $I_h$, $D_{3h}$, $T_d$), [[PA04 Functions and Cardinality]] / [[PA03 Relations Equivalence and Order]] (Euler's formula $V-E+F=2$ counts), [[Climate - Course Map]] (volcanic and biogenic phosphorus cycling is in the eutrophication chapter: [[EE06 Eutrophication and Alternative Stable States]]).
 
 ## Summary

@@ -24,7 +24,7 @@ tags: [subject/analysis, type/concept, extra/book, src/ai-notes, status/draft]
 > [!example] Three classics
 > Sum of odds is even (direct); $n^2$ even $\Rightarrow n$ even (contrapositive); $\sqrt2\notin\mathbb Q$ (contradiction: lowest terms $p/q$ with $p^2=2q^2$ forces both even). Errors: affirming the consequent, proving the converse, one example "proving" a $\forall$.
 
-Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Counterexample]] · [[Principle of Mathematical Induction]] · [[Tautology]].
+Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Counterexample]] · [[Principle of Mathematical Induction]] · [[11-Proofs-Analysis-Topology/Concepts/Tautology|Tautology]].
 
 ## Linked from
 ```dataview

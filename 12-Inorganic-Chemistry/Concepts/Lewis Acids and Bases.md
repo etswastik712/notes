@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, taught, src/slides, status/draft]
 
 Includes all coordination compounds, all proton transfers and adduct formation; it is the widest definition and the one used in organic mechanisms.
 
-Used in: [[CH04 Acid-Base Concepts]] §5, [[CH05 Acid Strength Lewis Acidity and Reactions]] §3. Related: [[Frontier Orbitals]] · [[Solvent System Definition]] · [[Hard and Soft Acids and Bases]].
+Used in: [[CH04 Acid-Base Concepts]] §5, [[CH05 Acid Strength Lewis Acidity and Reactions]] §3. Related: [[Frontier Orbitals]] · [[Solvent System Definition]] · [[CH06 Hard and Soft Acids and Bases|Hard and Soft Acids and Bases]].
 
 ## Linked from
 ```dataview

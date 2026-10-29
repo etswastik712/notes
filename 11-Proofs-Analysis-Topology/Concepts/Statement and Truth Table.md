@@ -26,7 +26,7 @@ $x>0$ is a predicate, not a statement, until $x$ is given a value or quantified.
 > [!example] $(P\vee Q)\wedge(P\vee R)$
 > True in rows 1–5 (every row with $P$ true, plus $Q$ and $R$ both true): the column of $P\vee(Q\wedge R)$.
 
-Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Logical Equivalence]] · [[Tautology]] · [[Conditional Statement]].
+Used in: [[PA01 Logic and Methods of Proof]]. Related: [[Logical Equivalence]] · [[11-Proofs-Analysis-Topology/Concepts/Tautology|Tautology]] · [[Conditional Statement]].
 
 ## Linked from
 ```dataview

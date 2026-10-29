@@ -67,6 +67,9 @@ def resolve(target, by_name, by_file):
         return "self", []
     low = t.lower().replace("\\", "/")
     ext = os.path.splitext(low)[1]
+    if low.endswith(".excalidraw") and by_name.get(os.path.basename(low)):      # [[X.excalidraw]] -> X.excalidraw.md
+        hits = by_name[os.path.basename(low)]
+        return ("ok" if len(hits) == 1 else "ambiguous"), hits
     if ext in NON_MD and ext != ".md" or low.endswith(".excalidraw.md"):
         hits = by_file.get(os.path.basename(low), [])
         return ("ok" if hits else "missing"), hits
@@ -111,6 +114,9 @@ def audit(fix=False):
                     missing[base.strip()].append(rel)
             elif st == "ambiguous":
                 ambiguous[base.strip()].append((rel, hits))
+                own_hits = [h for h in hits if OWN.match(h.split(os.sep)[0])]
+                if fix and own and len(own_hits) == 1 and "/" not in base:
+                    rewrites.setdefault(rel, []).append((m.group(0), base.strip(), frag, disp, own_hits[0], "path"))
     return stats, alias_only, missing, ambiguous, rewrites, texts
 
 
@@ -137,8 +143,9 @@ def main():
         changed = 0
         for rel, items in rewrites.items():
             t = texts[rel]
-            for full, base, frag, disp, f in items:
-                fname = os.path.basename(f)[:-3]
+            for item in items:
+                full, base, frag, disp, f = item[:5]
+                fname = os.path.basename(f)[:-3] if len(item) == 5 else f[:-3]
                 new = "[[" + fname + ("#" + frag if frag else "") + "|" + (disp or base) + "]]"
                 if full in t:
                     t = t.replace(full, new)

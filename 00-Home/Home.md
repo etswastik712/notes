@@ -21,7 +21,7 @@ A connected, text-and-figure heavy knowledge base built on top of the course mat
 | Climate (EC2113) | [[Climate - Course Map]] · [[Climate Quiz Prep]] | **all 15 chapters drafted** (≈95,000 words), 84 concept notes, 66 figures, quiz hub | 1 |
 | Thermodynamics and Statistical Mechanics (parallel track) | [[Thermodynamics - Course Map]] | 5 supporting notes for climate | 1 |
 | Ecology and Evolution (BI2113) | [[Ecology and Evolution - Course Map]] | next | 1 |
-| Foundations (shared tools) | [[Foundations - Course Map]] (stability and tipping points, fixed points, rotating frames, Fourier and Laplace transforms, Dirac algebra) | grows with every subject | 1 |
+| Foundations (shared tools) | [[09-Foundations|Foundations - Course Map]] (stability and tipping points, fixed points, rotating frames, Fourier and Laplace transforms, Dirac algebra) | grows with every subject | 1 |
 | Evolution of Earth and Life · Landscapes · Waves · Probability | [[Evolution of Earth and Life - Course Map]] · [[Landscapes and Geomorphology - Course Map]] · [[Waves - Course Map]] · [[Probability - Course Map]] | planned | 2 |
 | Quantum Mechanics · Group Theory · Inorganic Chemistry · Proofs and Analysis | [[Quantum Mechanics - Course Map]] · [[Group Theory - Course Map]] · [[Inorganic Chemistry - Course Map]] · [[Proofs, Analysis and Topology - Course Map]] | planned | 3 |
 | Neuroscience | [[Neuroscience - Course Map]] | planned last | 4 |

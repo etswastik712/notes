@@ -23,7 +23,7 @@ tags: [subject/chemistry, type/concept, extra/beyond, src/own-notes, status/draf
 
 Counts bonds; Wade's rules predict shape.
 
-Used in: [[CH07 Main Group Cages and Clusters]] §2. Related: [[Three-Centre Two-Electron Bond]] · [[Wade's Rules]].
+Used in: [[CH07 Main Group Cages and Clusters]] §2. Related: [[Three-Centre Two-Electron Bond]] · [[CH07 Main Group Cages and Clusters|Wade's Rules]].
 
 ## Linked from
 ```dataview

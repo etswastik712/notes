@@ -23,7 +23,7 @@ tags: [subject/probability, type/concept, extra/book, src/lecture-notes, status/
 
 Markov follows from $a\mathbf 1\{X\ge a\}\le X$; Chebyshev is Markov applied to $(X-\mu)^2$. They are loose: $k=2$: bound $0.25$ against $0.0455$ (normal) and $0.0498$ (Exp$(1)$); Markov for Exp$(1)$, $a=3$: $\frac13$ vs $0.0498$. They are used to prove the [[Law of Large Numbers]].
 
-Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Law of Large Numbers]] · [[Variance]] · [[Expectation]].
+Used in: [[PR06 Moments Generating Functions and Limit Theorems]]. Related: [[Law of Large Numbers]] · [[08-Probability/Concepts/Variance|Variance]] · [[Expectation]].
 
 ## Linked from
 ```dataview
