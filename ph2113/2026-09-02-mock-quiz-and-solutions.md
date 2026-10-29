@@ -43,3 +43,8 @@ Posted: [Classroom](https://classroom.google.com/c/ODcxNjgzODU4NzU5/p/ODc3MDM3OD
 - [[06-quantum-mechanics/concepts/wave-particle-duality]]: photoelectric effect and photons
 - [[06-quantum-mechanics/concepts/parity-operator]]: Q5(a)
 - [[06-quantum-mechanics/qm03-states-operators-and-measurement]]: Q4 and Q5 background
+
+<!-- kurooto:material37427251 -->
+## Concepts in PH2113_Mock_Quiz_50min_15marks
+[[zettel/photoelectric-threshold-frequency]], [[zettel/compton-scattering-momentum-and-energy-transfer]], [[zettel/wave-function-physical-acceptability-conditions]], [[zettel/particle-in-a-box-time-evolution]], [[zettel/schrodinger-equation-linearity-and-superposition]], [[zettel/parity-operator-eigenvalue-action]], [[zettel/non-preservation-of-eigenstate-under-non-degenerate-superposition]]
+<!-- /kurooto:material37427251 -->

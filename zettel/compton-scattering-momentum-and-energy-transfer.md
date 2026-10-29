@@ -18,5 +18,9 @@ Source: PH2113_Quiz_Ideal_Solutions, pp. 1–3
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-09-02-mock-quiz-and-solutions|PH2113_Mock_Quiz_50min_15marks]] pp. 1–2
 - [[ph2113/2026-09-03-quiz-ideal-solutions|PH2113_Quiz_Ideal_Solutions]] pp. 1–3
+
+### Added from class
+- PH2113_Mock_Quiz_50min_15marks pp. 1–2: Adds the collision kinematic reasoning connecting observed target recoil directly to photon momentum conservation, and contrasts finite-mass recoil wavelength shifts with infinite/large mass limits resembling Thomson scattering.
 <!-- /kurooto:seen -->
