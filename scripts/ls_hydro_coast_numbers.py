@@ -425,10 +425,10 @@ def ls27():
     got = np.abs(yA[50:-50]).max() / np.abs(y[50:-50]).max()
     print(f"   finite-difference check (15 deg, 20 km wavelength, 20 yr, full nonlinear flux): amplitude ratio {got:.3f}, linear theory {pred:.3f}")
     ok("shoreline diffusion rate matches the linear prediction", abs(got - pred) < 0.03)
-    yB = run_shore(60, 3.0, y)
+    yB = run_shore(60, 20.0, y)
     growth = np.abs(yB[50:-50]).max() / np.abs(y[50:-50]).max()
-    predB = math.exp(-2 * Q0 * math.cos(math.radians(120)) / Dc * (2 * math.pi / 20e3) ** 2 * 3.0)
-    print(f"   60 deg: amplitude after 3 yr = x{growth:.3f} (linear theory x{predB:.3f}): high-angle waves amplify bumps -> capes and spits")
+    predB = math.exp(-2 * Q0 * math.cos(math.radians(120)) / Dc * (2 * math.pi / 20e3) ** 2 * 20.0)
+    print(f"   60 deg: amplitude after 20 yr = x{growth:.3f} (linear theory x{predB:.3f}): high-angle waves amplify bumps -> capes and spits")
     ok("high-angle instability grows as predicted", abs(growth - predB) / predB < 0.05 and growth > 1.1)
     # ---- delta front: Kenyon-Turcotte
     print("\nsubaqueous delta front: dz/dt = K d2z/dx2 in a frame moving at u0: z = z0 exp(-u0 x/K), length scale K/u0")
