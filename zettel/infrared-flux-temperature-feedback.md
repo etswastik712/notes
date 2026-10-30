@@ -1,6 +1,6 @@
 ---
 id: zettel/infrared-flux-temperature-feedback
-aliases: ["Infrared Flux-Temperature Feedback", "IR Flux/Temperature Feedback", "Planck feedback", "Planck Feedback Parameter", "no-atmosphere climate sensitivity", "Planck sensitivity parameter"]
+aliases: ["Infrared Flux-Temperature Feedback", "IR Flux/Temperature Feedback", "Planck feedback", "Planck Feedback Parameter", "no-atmosphere climate sensitivity", "Planck sensitivity parameter", "\\Lambda_P"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -21,10 +21,12 @@ Source: climate_intro_notes_L1_L6, pp. 2–16
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 2–16
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 34–42
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
 
 ### Added from class
 - climate_intro_notes_L1_L6 pp. 25–33: Formulates stable equilibrium stability criteria via graphical intersection analysis where outgoing longwave flux exceeds net shortwave insolation during warming perturbations.
 - climate_intro_notes_L1_L6 pp. 34–42: Formulates the Planck feedback mathematically as the differential sensitivity parameter Λ_P = dT_s/dF = 1/(4σ T_s^3), yielding ~0.28 K (W m^-2)^-1 at Earth's effective radiating temperature of 255 K.
+- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Provides the explicit analytical derivative formulation Lambda_P = dTs/dF = 1/(4 sigma Ts^3) evaluating to ~0.28 K (W m^-2)^-1 at Te = 255 K (requiring ~3.8 W/m^2 per 1 K rise).
 <!-- /kurooto:seen -->
 
 <!-- kurooto:notation -->
@@ -34,4 +36,5 @@ Source: climate_intro_notes_L1_L6, pp. 2–16
 | climate_intro_notes_L1_L6, pp. 25–33 | $SW_{net}$ | net incoming shortwave solar radiation |
 | climate_intro_notes_L1_L6, pp. 25–33 | $LW_{out}$ | outgoing longwave radiation |
 | climate_intro_notes_L1_L6, pp. 34–42 | $\Lambda_P$ | Planck climate sensitivity |
+| Lecture 4 Sensitivity & (albedo) Feedback, pp. 1–7 | $\Lambda_P$ | Planck feedback sensitivity parameter |
 <!-- /kurooto:notation -->

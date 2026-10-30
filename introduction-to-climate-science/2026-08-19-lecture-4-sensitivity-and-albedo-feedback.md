@@ -70,5 +70,5 @@ the scheduled quiz on Friday will cover the entire content up to "Lecture 5"" (C
 
 <!-- kurooto:materialc05673d9 -->
 ## Concepts in Lecture 4 Sensitivity & (albedo) Feedback
-[[zettel/parameter-sensitivity-via-logarithmic-differentiation]], [[zettel/radiative-forcing]], [[zettel/piecewise-linear-albedo-model]], [[zettel/multiple-climate-equilibria-in-energy-balance-models]], [[zettel/runaway-ice-albedo-instability]], [[zettel/snowball-earth-deglaciation-via-volcanic-outgassing]], [[zettel/cryogenian-geological-glaciation-proxies]]
+[[zettel/parameter-sensitivity-via-logarithmic-differentiation]], [[zettel/radiative-forcing]], [[zettel/infrared-flux-temperature-feedback]], [[zettel/multiple-climate-equilibria-in-energy-balance-models]], [[zettel/runaway-ice-albedo-instability]], [[zettel/snowball-earth]]
 <!-- /kurooto:materialc05673d9 -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/snowball-earth
-aliases: ["Snowball Earth", "global glaciation", "Cryogenian glaciation"]
+aliases: ["Snowball Earth", "global glaciation", "Cryogenian glaciation", "Cryogenian Period Glaciation"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -20,4 +20,8 @@ Source: climate_intro_notes_L1_L6, pp. 34–42
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 34–42
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
+
+### Added from class
+- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Integrates geological triggers (Rodinia breakup, tropical silicate weathering) and the deglaciation mechanism (~0.1 bar / 300x CO2 volcanic buildup leading to a 50–60°C hothouse aftermath).
 <!-- /kurooto:seen -->

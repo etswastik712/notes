@@ -1,6 +1,6 @@
 ---
 id: zettel/parameter-sensitivity-via-logarithmic-differentiation
-aliases: ["Parameter Sensitivity via Logarithmic Differentiation", "climate sensitivity to parameters", "logarithmic differentiation of energy balance", "sensitivity derivation"]
+aliases: ["Parameter Sensitivity via Logarithmic Differentiation", "climate sensitivity to parameters", "logarithmic differentiation of energy balance", "sensitivity derivation", "Parameter Sensitivity", "Derivation of Sensitivity"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -27,7 +27,7 @@ Source: climate_intro_notes_L1_L6, pp. 34–42
 - [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
 
 ### Added from class
-- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Adds explicit numerical evaluations: an albedo change of Δα = 0.07 yields ΔTs ≈ -6 K, and a 10% solar constant perturbation (ΔS ≈ 136 W/m²) causes a net 24 W/m² absorbed change and a 6 K shift.
+- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Adds explicit numerical evaluations: a change in albedo of 0.07 yields ΔTs ~ 6 K, and a 10% change in solar constant (ΔS ~ 136 W/m^2, net ~24 W/m^2) shifts temperature by 6 K.
 <!-- /kurooto:seen -->
 
 <!-- kurooto:notation -->
