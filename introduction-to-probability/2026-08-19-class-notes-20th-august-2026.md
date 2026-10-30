@@ -37,3 +37,8 @@ Dear everyone, we shall begin with the example on independent events that I ment
 - [[introduction-to-probability/2026-08-11-class-notes-12th-august-2026]]: continuity of probability used for the cdf properties
 - [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]]: the sheet for this week
 - [[introduction-to-probability/2026-08-26-class-notes-27th-august-2026]]: continues with binomial/Bernoulli as sums of indicators and Poisson
+
+<!-- kurooto:material955c45e1 -->
+## Concepts in Class notes 12th August 2026
+[[zettel/addition-rule-for-two-events]], [[zettel/principle-of-inclusion-and-exclusion-for-probability]]
+<!-- /kurooto:material955c45e1 -->
