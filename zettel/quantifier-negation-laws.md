@@ -23,4 +23,16 @@ Source: Mid-Sem-Exam-MT2133-solutions-students, pp. 1–4
 <!-- kurooto:seen -->
 ## Seen in
 - [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key|Mid-Sem-Exam-MT2133-solutions-students]] pp. 1–4
+- [[intro-to-proofs/2026-08-13-assignment-2|Assignment-2]] pp. 1–2
+
+### Added from class
+- Assignment-2 pp. 1–2: Provides the explicit dual forms for universal and existential quantifiers alongside conditional negation for translating and negating mathematical propositions.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Mid-Sem-Exam-MT2133-solutions-students, pp. 1–4 | $\neg$ | logical negation |
+| Assignment-2, pp. 1–2 | ¬(∀x, P (x)) ∼ (∃x, ¬P (x)) | negation of a universally quantified predicate |
+<!-- /kurooto:notation -->

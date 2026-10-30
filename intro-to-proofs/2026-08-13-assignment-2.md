@@ -35,3 +35,8 @@ Problems and what each practises:
 - [[intro-to-proofs/2026-08-06-assignment-1]]: previous sheet, truth tables and equivalences
 - [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key]]: mid-sem Q3 tests quantifier negation
 - [[11-Proofs-Analysis-Topology/PA01 Logic and Methods of Proof]]: their own chapter notes on logic
+
+<!-- kurooto:materiale771c2f0 -->
+## Concepts in Assignment-2
+[[zettel/negation-of-a-conditional]], [[zettel/quantifier-negation-laws]]
+<!-- /kurooto:materiale771c2f0 -->
