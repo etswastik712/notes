@@ -19,6 +19,8 @@ $$P[E \cup F] = \binom{2N - k}{N} \left(\frac{1}{2}\right)^{2N - k}$$
 Source: Mid-semester solutions, pp. 1–3
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/binomial-promotion-model]] — The matchbox problem's pocket choices are independent fair Bernoulli trials, so the number of draws from each box is a binomial count, which is the model this note defines
+- needs:: [[zettel/difference-random-variable-of-symmetrical-binomial-counters]] — The difference between the remaining matches in the two boxes is a symmetric random walk driven by fair coin tosses, which is exactly the X = 2X_H - n form this note gives
 ## Seen in
 - [[introduction-to-probability/2026-09-22-mid-semester-solutions|Mid-semester solutions]] pp. 1–3
 <!-- /kurooto:seen -->
