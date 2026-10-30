@@ -1,0 +1,20 @@
+---
+id: zettel/subjective-bayesian-criminal-investigation-updating
+aliases: ["Subjective Bayesian Criminal Investigation Updating", "degree-of-belief Bayesian updating", "forensic evidence characteristic updating"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Subjective Bayesian Criminal Investigation Updating
+
+The application of Bayes' theorem to update an investigator's subjective prior degree of belief regarding a suspect's guilt after incorporating evidence that the suspect shares a distinctive trait found in a fraction of the population.
+
+## Links
+
+---
+Source: Practice problems 21st August 2026, pp. 1–2
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 21st August 2026]] pp. 1–2
+<!-- /kurooto:seen -->

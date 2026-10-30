@@ -45,3 +45,8 @@ Dear everyone, here is the updated list of suggested problems for this week.
 ## Concepts in Practice problems 21st August 2026
 [[zettel/bayes-rule-for-multiple-choice-guessing]], [[zettel/self-independent-event]], [[zettel/independence-of-complements]], [[zettel/chain-rule-for-finite-intersection-probabilities]], [[zettel/gambler-s-ruin-difference-recurrence]], [[zettel/first-colour-arrival-probability-under-sampling-with-replacement]], [[zettel/weighted-urn-sampling-without-replacement]], [[zettel/hypergeometric-first-draw-posterior-probability]]
 <!-- /kurooto:materiald58afbd3 -->
+
+<!-- kurooto:materialf7d6bebe -->
+## Concepts in Practice problems 21st August 2026
+[[zettel/hypergeometric-first-draw-posterior-probability]], [[zettel/bayes-rule-for-multiple-choice-guessing]], [[zettel/accident-proneness-posterior-inference]], [[zettel/subjective-bayesian-criminal-investigation-updating]], [[zettel/weighted-urn-sampling-without-replacement]]
+<!-- /kurooto:materialf7d6bebe -->
