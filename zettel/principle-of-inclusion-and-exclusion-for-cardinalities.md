@@ -17,6 +17,7 @@ $$|P \cup M \cup C| = |P| + |M| + |C| - |P \cap C| - |M \cap C| - |M \cap P| + |
 Source: Mid-semester solutions, pp. 1–3
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/coupon-collector-waiting-time]] — The coupon collector note evaluates its tail probability P[T > n] by applying inclusion and exclusion over the coupon types, which is the identity this note states for three sets
 ## Seen in
 - [[introduction-to-probability/2026-09-22-mid-semester-solutions|Mid-semester solutions]] pp. 1–3
 <!-- /kurooto:seen -->
