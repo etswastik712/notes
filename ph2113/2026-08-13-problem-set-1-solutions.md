@@ -41,3 +41,8 @@ Worked results from the posted solutions (Classroom: PH2113_Problem_Set_1_Soluti
 ## Concepts in PH2113_Problem_Set_1_Solutions (1)
 [[zettel/double-slit-interference-from-state-superposition]], [[zettel/macroscopic-classicality-criterion-via-de-broglie-wavelength]], [[zettel/ensemble-interpretation-of-the-wavefunction]]
 <!-- /kurooto:material1d8e3e82 -->
+
+<!-- kurooto:material99027d62 -->
+## Concepts in PH2113_Problem_Set-1
+[[zettel/davisson-germer-electron-diffraction]]
+<!-- /kurooto:material99027d62 -->
