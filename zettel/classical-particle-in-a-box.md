@@ -18,6 +18,8 @@ $$|v| = \frac{p}{m}$$
 Source: Particle_in_a_box, pp. 1–10
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/particle-in-a-box-time-evolution]] — The classical note says a box particle has continuous momentum and uniform density, while the time-evolution note shows that a quantum energy eigenstate stays stationary with a static, non-uniform probability density
+- contrasts-with:: [[zettel/boundary-induced-energy-quantization]] — The classical note states energy is not quantized in the box, whereas the boundary-induced quantization note says the boundary conditions alone produce the discrete spectrum
 ## Seen in
 - [[ph2113/2026-10-12-tutorial-ii-harmonic-oscillator-ladder-operators|Particle_in_a_box]] pp. 1–10
 <!-- /kurooto:seen -->
