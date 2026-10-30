@@ -17,6 +17,8 @@ Cyclic molecular systems formed by the complete replacement of all carbon atoms 
 Source: Main_group_chemistry_rings, macrocycles and polymers_2026, pp. 1–12
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/dehydropolymerization-of-borazine]] — The dehydropolymerization note describes how heating borazine forms polymers and ultimately boron nitrogen-based material, which illustrates the note's claim that these rings serve as precursors to inorganic polymers
+- used-in:: [[zettel/ring-opening-polymerization-of-hexachlorocyclotriphosphazene]] — This note shows a cyclic inorganic heterocycle being converted into a linear polymer backbone, which is the polymer-precursor role the inorganic-heterocycle note describes
 ## Seen in
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers|Main_group_chemistry_rings, macrocycles and polymers_2026]] pp. 1–12
 <!-- /kurooto:seen -->
