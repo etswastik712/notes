@@ -57,5 +57,5 @@ PS. Textbook references include sections from The Earth System (Lee R. Kump, Jam
 
 <!-- kurooto:material8ec6b0aa -->
 ## Concepts in climate_intro_notes_L1_L6
-(none new)
+[[zettel/planetary-boundaries]], [[zettel/earth-system]], [[zettel/atlantic-meridional-overturning-circulation]], [[zettel/stommel-diagram]], [[zettel/newtonian-deterministic-climate-prediction]], [[zettel/latitudinal-energy-imbalance]], [[zettel/infrared-flux-temperature-feedback]], [[zettel/orographic-uplift]], [[zettel/ice-albedo-feedback]], [[zettel/land-ocean-thermal-contrast]], [[zettel/latent-heat-release-in-convection]], [[zettel/oceanic-gyres-and-surface-currents]], [[zettel/silicate-weathering-feedback]]
 <!-- /kurooto:material8ec6b0aa -->

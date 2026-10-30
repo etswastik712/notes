@@ -1,0 +1,22 @@
+---
+id: zettel/latitudinal-energy-imbalance
+aliases: ["Latitudinal Energy Imbalance", "equator-to-pole energy gradient", "latitudinal temperature gradient"]
+tags: [zettel, agent-written, introduction-to-climate-science]
+trust_tier: agent_written
+---
+
+# Latitudinal Energy Imbalance
+
+The differential solar radiative heating across Earth's surface caused by its spherical shape, creating an energy surplus at the tropics and an energy deficit at the poles.
+
+## Links
+- needs:: [[zettel/atmospheric-energy-transport]] — Atmospheric and oceanic circulation systems are driven by the requirement to pump excess energy from surplus tropical zones to deficit polar zones
+- part-of:: [[zettel/top-of-atmosphere-radiation-balance]] — The equator-to-pole gradient directly sets the latitudinal distribution of net TOA radiation
+
+---
+Source: climate_intro_notes_L1_L6, pp. 2–16
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 2–16
+<!-- /kurooto:seen -->
