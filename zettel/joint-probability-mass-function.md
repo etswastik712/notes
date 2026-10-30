@@ -1,6 +1,6 @@
 ---
 id: zettel/joint-probability-mass-function
-aliases: ["Joint Probability Mass Function", "joint pmf", "joint distribution of discrete random variables"]
+aliases: ["Joint Probability Mass Function", "joint pmf", "joint distribution of discrete random variables", "Probability Mass Function", "pmf"]
 tags: [zettel, agent-written, introduction-to-probability]
 trust_tier: agent_written
 ---
@@ -21,4 +21,13 @@ Source: Class notes 2nd September 2026, pp. 1–4
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-09-02-proof-of-expectation-of-binomial-rv|Class notes 2nd September 2026]] pp. 1–4
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Class notes 20th August 2026]] pp. 1–3
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Class notes 2nd September 2026, pp. 1–4 | $p(a_i, b_j)$ | joint pmf evaluated at outcomes a_i and b_j |
+| Class notes 20th August 2026, pp. 1–3 | p(x) | probability mass function evaluated at x |
+<!-- /kurooto:notation -->
