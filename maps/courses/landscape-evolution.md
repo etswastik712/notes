@@ -26,6 +26,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-10-25: Parth Sharma mailed two river-channel papers (secondary current and channel classification) as PDFs.
 - 2026-10-27: day trip being arranged; students were asked to add their name and availability for Saturday 7 Nov and/or Saturday 14 Nov in a sign-up sheet by that night ([Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk2MDQwNDk4MzI5)). Your entry in the sheet: available on both dates. Date not yet fixed.
 - 2026-10-27: glacial and aeolian slides posted: [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]].
+- 2026-10-30: day trip fixed for Sat 7 Nov (about 6:00 to 18:00). Complete the sheet's columns, sign the declaration form (last page of the safety PDF), upload that page named with your name and surname, and put "y" in the sheet's last column, all by Sunday 1 Nov or be dropped. Bring two water bottles, light snacks, sun protection (full-sleeve light clothes, hat), shoes; read Shilpa's slides. See [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]].
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)
@@ -33,5 +34,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]] QGIS and topotoolbox tutorials (2026-08-11)
 - [[landscape-evolution/2026-08-14-project-groups-and-brief]] Project groups and brief (2026-08-14)
 - [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]] Glacial and aeolian slides (2026-10-27)
+- [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] Field trip on 7 Nov: safety protocols and declaration (2026-10-30)
 
 ## Tasks
+- [ ] Field trip 7 Nov: complete the sheet, sign and upload the declaration page, mark "y" (due 2026-11-01, Sunday; time not stated) [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk2NzQ2NjcyNTcx)
