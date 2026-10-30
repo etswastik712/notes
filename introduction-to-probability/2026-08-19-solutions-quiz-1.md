@@ -35,3 +35,8 @@ Dear everyone, I forgot to post the solutions (these need not be unique) to Quiz
 - [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]]: counting, binomial coefficients
 - [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]]: axioms of probability used in problem 2
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026]]: Quiz 1 practice sheet
+
+<!-- kurooto:material1e2eca6f -->
+## Concepts in Solutions Quiz 1
+(none new)
+<!-- /kurooto:material1e2eca6f -->
