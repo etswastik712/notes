@@ -19,6 +19,9 @@ $$\langle x \rangle_n = \int_0^a \psi_n^*(x) x \psi_n(x) \, dx$$
 Source: Particle_in_a_box, pp. 1–10
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/infinite-square-well-potential]] — The position expectation value is computed for the energy eigenstates of the infinite square well, so the potential and its confined eigenfunctions are the setting the note depends on
+- example-of:: [[zettel/quantum-expectation-value]] — The note evaluates the expectation value of the position observable for a box eigenstate, which is a concrete instance of the general expectation-value definition
+- contrasts-with:: [[zettel/particle-in-a-box-momentum-expectation-value]] — Both notes compute a mean observable in the same stationary box states, but the position result follows from reflection symmetry (half the width) while the momentum result vanishes because the integrand reduces to an odd-integrating cosine
 ## Seen in
 - [[ph2113/2026-10-12-tutorial-ii-harmonic-oscillator-ladder-operators|Particle_in_a_box]] pp. 1–10
 <!-- /kurooto:seen -->
