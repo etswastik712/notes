@@ -17,6 +17,8 @@ The uncatalyzed thermal conversion of cyclic hexachlorocyclotriphosphazene at 21
 Source: Main_group_chemistry_rings, macrocycles and polymers_2026, pp. 1–12
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/inorganic-heterocycle]] — Hexachlorocyclotriphosphazene is a ring with P and N in place of carbon, so it fits the inorganic heterocycle definition as an example
+- contrasts-with:: [[zettel/dehydropolymerization-of-borazine]] — Both are thermal polymerizations of inorganic rings, but borazine's route expels hydrogen to form B-N bonds while phosphazene ring-opening is an uncatalyzed ring opening
 ## Seen in
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers|Main_group_chemistry_rings, macrocycles and polymers_2026]] pp. 1–12
 <!-- /kurooto:seen -->
