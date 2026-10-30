@@ -25,9 +25,11 @@ Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 3 Planetary Energy Balance]] pp. 1–9
 
 ### Added from class
 - climate_intro_notes_L1_L6 pp. 25–33: Quantifies Earth's natural greenhouse effect as the 33 K difference between observed mean surface temperature (288 K) and bare-rock calculated emission temperature (255 K).
+- Lecture 3 Planetary Energy Balance pp. 1–9: Explicitly frames the 33 K difference between observed surface temperature (288 K) and emission temperature (255 K) as the magnitude of Earth's greenhouse effect.
 <!-- /kurooto:seen -->
 
 <!-- kurooto:notation -->
@@ -35,7 +37,9 @@ Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 | Source | Notation | What it stands for |
 |---|---|---|
 | climate_intro_notes_L1_L6, pp. 25–33 | $T_e$ | effective radiating temperature |
+| Lecture 3 Planetary Energy Balance, pp. 1–9 | $T_e$ | effective radiating temperature (255 K for Earth) |
 | Radiative_balance_Marshall_and_Plumb, pp. 1–11 | $T_e$ | emission temperature of the planet |
 | climate_intro_notes_L1_L6, pp. 25–33 | $T_s$ | observed surface temperature |
+| Lecture 3 Planetary Energy Balance, pp. 1–9 | $T_s$ | observed surface temperature (288 K for Earth) |
 | Radiative_balance_Marshall_and_Plumb, pp. 1–11 | $\alpha_p$ | planetary albedo |
 <!-- /kurooto:notation -->

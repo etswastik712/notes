@@ -24,4 +24,17 @@ Source: climate_intro_notes_L1_L6, pp. 25–33
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 3 Planetary Energy Balance]] pp. 1–9
+
+### Added from class
+- Lecture 3 Planetary Energy Balance pp. 1–9: Details the geometric derivation of the S/4 factor from disk interception area pi*R^2 divided by sphere radiating area 4*pi*R^2.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| climate_intro_notes_L1_L6, pp. 25–33 | $S/4$ | average incoming solar flux across the planetary surface |
+| Lecture 3 Planetary Energy Balance, pp. 1–9 | $S/4$ | globally averaged incoming solar flux (~340 W/m^2 for Earth) |
+| Lecture 3 Planetary Energy Balance, pp. 1–9 | $\alpha$ | planetary albedo |
+<!-- /kurooto:notation -->

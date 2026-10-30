@@ -22,4 +22,17 @@ Source: climate_intro_notes_L1_L6, pp. 25–33
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 3 Planetary Energy Balance]] pp. 1–9
+
+### Added from class
+- Lecture 3 Planetary Energy Balance pp. 1–9: Explicitly connects Sun surface flux sigma*T_Sun^4 and solar radius R_Sun to the top-of-atmosphere insolation S via (R_Sun / R_S->E)^2.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Lecture 3 Planetary Energy Balance, pp. 1–9 | $S$ | intensity of radiation at distance r |
+| Lecture 3 Planetary Energy Balance, pp. 1–9 | $R_{S\to E}$ | radial distance from Sun to Earth |
+| climate_intro_notes_L1_L6, pp. 25–33 | $S$ | radiation intensity at distance r |
+<!-- /kurooto:notation -->

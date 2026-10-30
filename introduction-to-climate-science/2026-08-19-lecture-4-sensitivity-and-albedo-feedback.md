@@ -72,3 +72,8 @@ the scheduled quiz on Friday will cover the entire content up to "Lecture 5"" (C
 ## Concepts in Lecture 4 Sensitivity & (albedo) Feedback
 [[zettel/parameter-sensitivity-via-logarithmic-differentiation]], [[zettel/radiative-forcing]], [[zettel/infrared-flux-temperature-feedback]], [[zettel/multiple-climate-equilibria-in-energy-balance-models]], [[zettel/runaway-ice-albedo-instability]], [[zettel/snowball-earth]]
 <!-- /kurooto:materialc05673d9 -->
+
+<!-- kurooto:materiald0263f22 -->
+## Concepts in Lecture 3 Planetary Energy Balance
+[[zettel/planck-function]], [[zettel/stefan-boltzmann-law]], [[zettel/inverse-square-law-of-radiation]], [[zettel/zero-dimensional-energy-balance-model]], [[zettel/planetary-emission-temperature]], [[zettel/infrared-flux-temperature-feedback]], [[zettel/runaway-ice-albedo-instability]], [[zettel/runaway-greenhouse-effect]], [[zettel/planetary-internal-heat-sources]]
+<!-- /kurooto:materiald0263f22 -->

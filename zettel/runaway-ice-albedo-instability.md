@@ -1,6 +1,6 @@
 ---
 id: zettel/runaway-ice-albedo-instability
-aliases: ["Runaway Ice-Albedo Instability", "30° latitude instability threshold", "runaway albedo", "30° threshold instability", "The 30° Threshold"]
+aliases: ["Runaway Ice-Albedo Instability", "30° latitude instability threshold", "runaway albedo", "30° threshold instability", "The 30° Threshold", "Snowball Earth bifurcation threshold"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -20,7 +20,9 @@ Source: climate_intro_notes_L1_L6, pp. 34–42
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 34–42
 - [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 3 Planetary Energy Balance]] pp. 1–9
 
 ### Added from class
 - Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Details the exact physical threshold at 30° latitude where positive ice-albedo feedback becomes unstoppable, causing full ocean freezing down to the equator.
+- Lecture 3 Planetary Energy Balance pp. 1–9: Identifies the 30-degree critical ice latitude as an unstable steady state / bifurcation point separating runaway freeze from runaway melt.
 <!-- /kurooto:seen -->
