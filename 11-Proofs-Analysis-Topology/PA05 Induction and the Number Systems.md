@@ -15,6 +15,9 @@ tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lec
 
 ◀ [[PA04 Functions and Cardinality]] · [[PA06 The Real Numbers and Sequences]] ▶
 
+> [!info] Deeper treatments (added 2026-10-29)
+> [[PA08 Mathematical Induction]] (variants, families of problems, strengthening, failures) · [[PA09 Strong Induction and Recursion]] (strong induction, strong recursion, structural induction) · [[PA10 Well-Ordering and Well-Ordered Pairs]] (WOP and the equivalence cycle, minimal counterexamples, lexicographic well-orders, induction on pairs).
+
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
 > [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
@@ -148,6 +151,7 @@ It is equivalent to PMI.
 ## Map of this chapter
 > [!connection] How PA05 connects
 > **Builds on:** [[PA04 Functions and Cardinality]] (the black boxes of Lecture 18), [[PA03 Relations Equivalence and Order]] (quotients) and [[PA02 Sets Families and the ZFC Foundations]] (the Axiom of Infinity).
+> **Leads to (deeper):** [[PA08 Mathematical Induction]] · [[PA09 Strong Induction and Recursion]] · [[PA10 Well-Ordering and Well-Ordered Pairs]].
 > **Leads to:** [[PA06 The Real Numbers and Sequences]] (sequences are functions $\mathbb N\to\mathbb R$; the Archimedean property rests on induction), [[PA07 Metric and Topological Spaces]].
 > **Concepts:** [[Principle of Mathematical Induction]] · [[Well-Ordering Principle]] · [[Strong Induction]] · [[Recursion Theorem]] · [[Natural Numbers]] · [[Construction of Integers and Rationals]]
 > **Other subjects:** [[Proofs, Analysis and Topology - Course Map]], [[Probability - Course Map]] ([[PR01 Counting and the Axioms of Probability]]: the derivations $|\mathcal P(A)|=2^n$ and the inclusion-exclusion proof use induction; the binomial theorem is proved by induction), [[EE02 Structured Population Models]] (recursions $N_{t+1}=g(N_t)$ are definitions by recursion).

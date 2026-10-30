@@ -32,6 +32,8 @@ Let $f=(\hat A-\langle A\rangle)\psi$, $g=(\hat B-\langle B\rangle)\psi$. Cauchy
 
 Used in: [[QM03 States Operators and Measurement]]. Related: [[Heisenberg Uncertainty Principle]] · [[Commutator]] · [[Uncertainty of an Observable]] · [[Pauli Matrices]].
 
+See also: [[Cauchy-Schwarz Inequality]] (the inequality behind it; the probability version is $|\rho|\le1$ in [[PR07 Sums of Independent Variables Covariance and Correlation]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

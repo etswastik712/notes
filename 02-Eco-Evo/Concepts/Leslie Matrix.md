@@ -42,3 +42,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Eigenstate and Eigenvalue]] (Quantum Mechanics): both are matrix eigenproblems: the dominant eigenvalue of the Leslie matrix is the growth rate, and Perron-Frobenius (a positive dominant eigenvector) is the matrix analogue of a nodeless, non-degenerate ground state.
+- [[Fibonacci Numbers]] (Analysis): Fibonacci's rabbits are a two-age-class Leslie model: $N_{t+2}=N_{t+1}+N_t$ is the matrix $\begin{pmatrix}1&1\\1&0\end{pmatrix}$ whose dominant eigenvalue is the golden ratio $\varphi$, the asymptotic growth factor.

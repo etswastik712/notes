@@ -1,0 +1,29 @@
+---
+title: Minimal Counterexample
+aliases: ["infinite descent", "least counterexample", "method of descent"]
+subject: analysis
+type: concept
+scope: [taught, extra-beyond]
+by: [lecture-notes]
+status: draft
+tags: [subject/analysis, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+---
+# Minimal Counterexample
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** the least element argument in [[Assignment-7.pdf#page=1|Assignment 7 Q4]] and Lecture 18. 🔵 the examples are mine ([[PA10 Well-Ordering and Well-Ordered Pairs]] §3).
+
+> [!intuition] In one picture
+> If any counterexample exists there is a **smallest** one; show it forces a still smaller one.
+
+> [!key] Method
+> Suppose $P(n)$ fails for some $n$; by [[Well-Ordering Principle]] take the least such $n_0$; derive a contradiction or a smaller counterexample. Uses: $\sqrt2\notin\mathbb Q$ (least denominator), $a^3+2b^3+4c^3=0$ only trivially, $x^2+y^2=3z^2$ only trivially, the division algorithm, Bézout, unique factorisation. Works only in a well-ordered quantity ($\mathbb N$, not $\mathbb Q_{>0}$).
+
+Used in: [[PA10 Well-Ordering and Well-Ordered Pairs]]. Related: [[Strong Induction]] · [[Counterexample]] · [[Division Algorithm and Bezout's Identity]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

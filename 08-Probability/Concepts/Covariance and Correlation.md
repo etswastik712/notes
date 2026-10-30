@@ -25,6 +25,8 @@ Independent $\Rightarrow\mathrm{Cov}=0$ (so variances add), but $\mathrm{Cov}=0\
 
 Used in: [[PR04 Joint Distributions Expectation and Variance]]. Related: [[08-Probability/Concepts/Variance|Variance]] · [[Independence of Random Variables]] · [[Linearity of Expectation]].
 
+See also: [[Covariance Matrix]] and [[Cauchy-Schwarz Inequality]] (the proof of $|\rho|\le1$ from $\mathrm{Var}(X+tY)\ge0$ is in [[PR07 Sums of Independent Variables Covariance and Correlation]] §5).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -25,6 +25,8 @@ Every $n\ge2$ is a product of primes (checked for $n\le10^4$): $n=ab$ with $1<a,
 
 Used in: [[PA05 Induction and the Number Systems]]. Related: [[Principle of Mathematical Induction]] · [[Well-Ordering Principle]] · [[Recursion Theorem]].
 
+See also: [[PA09 Strong Induction and Recursion]] (principle, equivalence with PMI, postage, Zeckendorf, Josephus, Catalan), [[Structural Induction]], [[PA10 Well-Ordering and Well-Ordered Pairs]] (strong induction on any well-ordered set).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

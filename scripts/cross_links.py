@@ -165,6 +165,17 @@ PAIRS = [
     # ---- Thermo <-> Chemistry
     ("Gibbs Free Energy", "Standard Reduction Potential",
      "$\\Delta G^\\circ=-nFE^\\circ$ links a cell potential to the Gibbs free energy: the same quantity that decides spontaneity in thermodynamics is measured as a voltage"),
+    # ---- Proofs / Probability / Foundations (added 2026-10-29)
+    ("Catalan Numbers", "Drainage Density and Horton's Laws",
+     "the number of full binary tree shapes with $m$ internal nodes is $C_m$, from the recursion $C_{n+1}=\\sum C_kC_{n-k}$; this is the counting behind the random-topology model of stream networks, where Horton's bifurcation ratio comes out near 4"),
+    ("Cauchy-Schwarz Inequality", "Generalised Uncertainty Principle",
+     "the uncertainty relation is Cauchy-Schwarz for the vectors $(\\hat A-\\langle A\\rangle)\\psi$ and $(\\hat B-\\langle B\\rangle)\\psi$; for random variables the same inequality is $|\\rho|\\le1$"),
+    ("Sum of Independent Random Variables", "Convolution",
+     "the density of $X+Y$ for independent variables is the convolution $f_X*f_Y$: the same integral, with MGFs multiplying as Fourier transforms do"),
+    ("Maxwell-Boltzmann Distribution", "Rayleigh Distribution",
+     "the Maxwell speed density $ax^2e^{-bx^2}$ is the 3-D relative of the Rayleigh density $xe^{-x^2/2\\sigma^2}$ of the 2-D speed of Gaussian components; both normalise by $\\int x^ke^{-x^2}\\mathrm dx$ (Quiz 1, Q3)"),
+    ("Fibonacci Numbers", "Leslie Matrix",
+     "Fibonacci's rabbits are a two-age-class Leslie model: $N_{t+2}=N_{t+1}+N_t$ is the matrix $\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix}$ whose dominant eigenvalue is the golden ratio $\\varphi$, the asymptotic growth factor"),
 ]
 
 

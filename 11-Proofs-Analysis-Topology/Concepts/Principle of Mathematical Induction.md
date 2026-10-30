@@ -25,6 +25,8 @@ $\sum_{k=1}^n(2k-1)=n^2$; $\sum k\cdot k!=(n+1)!-1$; $6\mid n^3+5n$; $2^n>n^2$ f
 
 Used in: [[PA05 Induction and the Number Systems]]. Related: [[Well-Ordering Principle]] · [[Strong Induction]] · [[Recursion Theorem]].
 
+See also: [[PA08 Mathematical Induction]] (variants, families, failures), [[Strengthening the Induction Hypothesis]], [[Forward-Backward Induction]], [[Common Induction Errors]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

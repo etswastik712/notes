@@ -23,6 +23,8 @@ Sum of two $U(0,1)$ is a triangle. Diffusion is convolution with a Gaussian kern
 
 Used in: [[Fourier and Laplace Transforms]]. Related: [[Convolution Theorem]] · [[Impulse Response and Green's Function]].
 
+Also used in: [[Sum of Independent Random Variables]] (the density of $X+Y$), [[PR07 Sums of Independent Variables Covariance and Correlation]] (Homework 4: independent normals add by convolution).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

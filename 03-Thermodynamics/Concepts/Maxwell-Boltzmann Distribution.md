@@ -33,3 +33,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Kinet
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Rayleigh Distribution]] (Probability): the Maxwell speed density $ax^2e^{-bx^2}$ is the 3-D relative of the Rayleigh density $xe^{-x^2/2\sigma^2}$ of the 2-D speed of Gaussian components; both normalise by $\int x^ke^{-x^2}\mathrm dx$ (Quiz 1, Q3).

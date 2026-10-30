@@ -99,6 +99,8 @@ Files live under `math/probability/`. **Tier logic:** the instructor's typed cla
 | W1 | [[week1_mt2113.pdf]] | 9, handwritten **images** (p.1–2 homework Q1–Q6; 3–4 pdf, uniform, logistic, Rayleigh cdf; 5 expectations; 6 lemma and LOTUS; 7 LOTUS proof, variance; 8 uniform variance, SND; 9 normal moments) | taught: PR05 |
 | W2 | [[Week2_notes.pdf]] | 5, handwritten (Xournal++ vector strokes, read as images; typed HW2 on p.5) | taught: PR05 (added 2026-10-25) |
 | W3 | [[Week3_notes.pdf]] | 6, handwritten (typed HW3 on p.6; two slips found, see PR06 §3.1) | taught: PR06 §1–§3 (added) |
+| HW | [[hw2.png]], [[hw3.png]], [[hw4.pdf]] | 2 screenshots + 1 page: the instructor's **Homework 2, 3 and 4** posts (hw3.png carries the correction to the discrete median; hw4.pdf is handwritten with Q4 typed) | taught: PR05 §4, PR06 §1 and §3.3, **PR07** (added 2026-10-29) |
+| Q1 | [[quiz(somenumber).jpeg]] | photograph of **Quiz 1**, 16 Sep 2026 (header reads MT2213), 3 questions | taught: PR05 Practice 13–15 (added 2026-10-29) |
 | S | [[Practice problems 7th August 2026.pdf]], [[Practice problems 14th August 2026.pdf]], [[Practice problems 21st August 2026.pdf]], [[Practice problems 28th August and following weekend.pdf]], [[Practice problems 4th September 2026.pdf]], [[Practice problems weekend of 12th September 2026.pdf]], [[Practice problems 17th September and following tutorial and weekend.pdf]] | 2–4 each, text layer | taught: all chapters (problems 7 Aug … 17 Sep) |
 | AI | `probability_notes` (class-notes companion), `probability_moments_and_mgf_notes` (moments, skewness, kurtosis, MGFs, **MGF course policy**, CLT proof), `mt2113_week1_notes` (typed week 1), `prob_prems_problems` (rigorous problem set) | AI-written | secondary; PR06 and cross-checks |
 | BK | `A-First-Course-in-Probability-8th-ed.pdf` (Ross, text layer), `Blitzstein Hwang Probability.pdf` (**scan**, not OCR'd) | books | extra/book (cited, not read) |
@@ -107,6 +109,8 @@ Extraction text for these files was kept outside the vault (session scratchpad).
 
 ## Proofs, Analysis and Topology
 Files live under `math/proofs-analysis-topology/`. **Tier logic:** the instructor's assignments 1–8, the typed Lectures 17–20 and the three instructor notes are `taught`; the AI monographs (which say they are "based on the class notes and Assignments 1–4") and the textbooks are secondary / `extra/book`; PA06–PA07 (sequences, metric spaces, topology) have no instructor source in the folder. **Lectures 1–16 are not in the folder.**
+
+**Added 2026-10-29 (PA08–PA10, induction deep dives):** no new files. They are built from the same Assignment 8, Lecture 18, Assignment 7 Q4 and the Ordered Pairs and Zorn notes (taught) plus the textbooks already in `math/proofs-analysis-topology/books/` (Tao *Analysis I* §2.2 and §8.5, Bloch §6.2–6.3, Sundstrom Ch. 4, text layers read for the cited statements) and the AI notes `proofs-prems-topo.pdf` (Theorem 3.7, Theorem 12.13). Role: textbook = `extra/book`, my examples = `extra/beyond`; no lecture on strong induction or well-ordered sets is in the folder.
 
 | ID | File | Pages | Role |
 |---|---|---|---|

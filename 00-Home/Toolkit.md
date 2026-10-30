@@ -47,6 +47,9 @@ cd Assets/latex && latexmk -pdf -outdir=build <name>.tex && cp build/<name>.pdf 
 | `scripts/graph_colors.py` | **graph-view colour groups, filter and forces** → `.obsidian/graph.json` (one colour per subject; see [[Conventions]] §8) |
 | `scripts/graph_spine.py` | **Atlas blocks**: links every note of a subject from its map (Home → maps → everything); `--apply` rewrites the blocks ([[Conventions]] §8b) |
 | `scripts/link_audit.py` | **strict (Obsidian-faithful) link audit**: counts alias-only and ambiguous links that `check_links.py` accepts; `--fix` rewrites them in the vault's own notes |
+| `scripts/pa_numbers2.py`, `scripts/fig_pa08_induction2.py`, `fig_pa09_strong.py`, `fig_pa10_wellorder.py` | every number and the 3 figures of PA08–PA10 (induction identities, Moser, $n^2+n+41$, tromino tiling, Hanoi BFS, postage, Zeckendorf, Josephus, Catalan, Euler's cubic, lexicographic order, Ackermann), each recomputed |
+| `scripts/pr_numbers2.py`, `scripts/fig_pr07_sums.py` | numbers of PR07 and the PR05 Quiz 1 items (convolution of normals incl. the symbolic completed square, $E|X-Y|$, covariance quadratic form, $|\rho|\le1$, practice answers) |
+| `scripts/organise_books.py` | **files books** from Downloads/zips into `<subject>/<topic>/books/` (hash-deduplicated, manifest in `Assets/data/books-manifest.csv`; `--plan` then `--apply`; [[Conventions]] §10) |
 | `scripts/graph_sim.py` | **graph simulator**: builds the link graph as Obsidian draws it (real filter, strict resolution) and runs a d3-style layout, metrics and a PNG (`--png`); output to the git-ignored `scripts/_work/` |
 | `scripts/ls_hydro_coast_numbers.py`, `scripts/fig_ls_hydro_coast.py` | every number and the 7 figures of LS25-LS27 (A&A Ch. 11 and 16), each cross-checked (Monte Carlo, quadrature, finite differences, pseudo-spectral, ODE solver) |
 | `scripts/cross_links.py` | **curated cross-subject bridges** → an `## Across subjects` bullet on both notes (idempotent; `--apply`) |

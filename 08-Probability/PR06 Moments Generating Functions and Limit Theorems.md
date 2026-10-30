@@ -13,7 +13,7 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 ---
 # PR06 · Moments, Generating Functions and Limit Theorems
 
-◀ [[PR05 Continuous Random Variables]] · [[Probability - Course Map]]
+◀ [[PR05 Continuous Random Variables]] · [[Probability - Course Map]] · [[PR07 Sums of Independent Variables Covariance and Correlation]] ▶
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
@@ -63,6 +63,9 @@ flowchart LR
 > - **Continuous** $X$ with pdf $f$ and cdf $F$: $c$ is a **median** iff $F(c)=\tfrac12$; $c$ is a **mode** iff $f(c)\ge f(x)$ for all $x$ (the pdf has a global maximum at $c$).
 > - **Discrete** $X$ with values $x_1<x_2<\cdots$ and $p_i=P[X=x_i]$: there is a first $i$ with $p_1+\dots+p_{i-1}<\tfrac12$ and $p_1+\dots+p_i\ge\tfrac12$. If $p_1+\dots+p_i>\tfrac12$ then $x_i$ is the **unique** median; if $=\tfrac12$ then **every** $c\in[x_i,x_{i+1}]$ is a median (in practice $x_i$ or $\tfrac12(x_i+x_{i+1})$). The **mode** is a value $x_i$ with $p_i\ge p_j$ for all $j$.
 > - **Unified definition:** $c$ is a median iff $P[X\le c]\ge\tfrac12$ **and** $P[X\ge c]\ge\tfrac12$ (equivalently $P[X<c]\le\tfrac12$).
+
+> [!verify] The instructor's correction to the discrete median (posted with Homework 3, [[hw3.png]], 22 Oct, edited 24 Oct)
+> The board had $P[X\ge c]\le\tfrac12$ **by mistake**; the correct condition is $P[X\le c]\ge\tfrac12$ and $P[X\ge c]\ge\tfrac12$, as in the unified definition above. For values $x_1<\dots<x_n$ with $p_i=P[X=x_i]$ take the first $i$ with $p_1+\dots+p_{i-1}<\tfrac12\le p_1+\dots+p_i$. Then also $p_i+\dots+p_n=1-(p_1+\dots+p_{i-1})>\tfrac12$, so $x_i$ is a median, the **smallest** one (the instructor's "taking the smallest $c$ which works").
 
 > [!example] Examples (checked)
 > A **fair die**: $P[X\le3]=\tfrac12=P[X\ge4]$, so every $c\in[3,4]$ is a median; every face is a mode. $U(a,b)$: median $\tfrac{a+b}2$, **every** point of $[a,b]$ is a mode. Expo$(\lambda)$: median $\ln2/\lambda$ ($0.9902$ at $\lambda=0.7$), mode $0$. Pareto$(a)$ (homework 3): median $2^{1/a}$ ($\sqrt2=1.4142$ for $a=2$), mode $1$, mean $a/(a-1)=2$. For these **right-skewed** laws **mean $>$ median $>$ mode** (Expo$(1)$: $1>0.693>0$); for the normal all three coincide ($\mu$).
@@ -168,6 +171,7 @@ Write $q=1-p$.
 > With $\mu=\sigma=\frac1\lambda$ and $E[X^k]=k!/\lambda^k$: $E[(X-\mu)^3]=E[X^3]-3\mu E[X^2]+3\mu^2E[X]-\mu^3=\frac{6-6+3-1}{\lambda^3}=\frac2{\lambda^3}$, so $\gamma_1=\dfrac{2/\lambda^3}{1/\lambda^3}=\boxed{2}$. **Positive** because the density has a long right tail: rare large values dominate the cubed deviations. **Independent of $\lambda$** because $\lambda$ only rescales the axis ($X=W/\lambda$ with $W\sim\mathrm{Expo}(1)$) and the standardised variable $(X-\mu)/\sigma=W-1$ does not contain $\lambda$: skewness is invariant under positive scaling. (Checked: $2.000000$ for $\lambda=0.5,1,3$; excess kurtosis $6$.)
 
 > [!example] Q4 (postponed to the next homework) Two dice
+> *(set again as Homework 4 Q4; see also its convolution reading in [[PR07 Sums of Independent Variables Covariance and Correlation]] §6)*
 > $X,Y$ independent fair dice: $M_{X+Y}(t)=M_X(t)M_Y(t)=\Big(\frac16\sum_{k=1}^6e^{kt}\Big)^2=\frac1{36}\sum_{s=2}^{12}c_se^{st}$ with $c_s=1,2,3,4,5,6,5,4,3,2,1$ the numbers of ways to roll $s$. Check: $M'(0)=7$, $\mathrm{Var}=M''(0)-49=\tfrac{35}6=5.833$.
 
 > [!example] Q5 The geometric mean and variance via the MGF
@@ -225,7 +229,7 @@ Write $q=1-p$.
 ## Map of this chapter
 > [!connection] How PR06 connects
 > **Builds on:** [[PR04 Joint Distributions Expectation and Variance]] (variance of a sum, independence) and [[PR05 Continuous Random Variables]] (the normal and exponential densities).
-> **Leads to:** statistics and stochastic processes (confidence intervals, Poisson processes, random walks).
+> **Leads to:** [[PR07 Sums of Independent Variables Covariance and Correlation]] (convolution, the covariance matrix and $|\rho|\le1$: Homework 4), then statistics and stochastic processes (confidence intervals, Poisson processes, random walks).
 > **Concepts:** [[Median and Mode]] · [[Moment Generating Function]] · [[Skewness and Kurtosis]] · [[Moments of a Random Variable]] · [[Pareto Distribution]] · [[Folded Normal Distribution]] · [[Exponential Distribution]] · [[Markov and Chebyshev Inequalities]] · [[Law of Large Numbers]] · [[Central Limit Theorem]] · [[Normal Approximation to the Binomial]] · [[Cauchy Distribution]] · [[Poisson Limit Theorem]]
 > **Other subjects:** [[Probability - Course Map]], [[TH06 From Kinetic Theory to Statistical Mechanics]] (the partition function is a Laplace transform of the density of states, the same device as an MGF with $t=-\beta$; fluctuations $\sim1/\sqrt N$ are the CLT), [[QM01 From Waves to Probabilities]] (Fourier transform of a Gaussian is a Gaussian, the characteristic function version of the CLT), [[Akaike Information Criterion]] (large-sample normal approximations of the likelihood).
 
@@ -271,6 +275,8 @@ Write $q=1-p$.
 > | median, mode, moments, skewness, (excess) kurtosis | [[Week3_notes.pdf#page=1\|week 3 post-midterm, handwritten pp.1–2]] | taught |
 > | MGF definition, EGF remark, Taylor coefficients, affine rule; MGFs of uniform, exponential, $N(0,1)$, Bernoulli, binomial, geometric | [[Week3_notes.pdf#page=2\|handwritten pp.2–6]] | taught |
 > | homework 3 (Q1–Q6) | [[Week3_notes.pdf#page=6\|handwritten p.6]] (typed statements; solutions mine) | taught |
+> | the original post of homework 3 and the median correction | [[hw3.png]] (Oct 22, edited Oct 24) | taught |
+> | the two-dice MGF reappears as Homework 4 Q4; sums, convolution, covariance matrix | [[PR07 Sums of Independent Variables Covariance and Correlation]] | taught |
 > | existence of moments, Cauchy, Pareto, Lyapunov | `probability_moments_and_mgf_notes.pdf` §1 (AI-written) | extra/book |
 > | independent sums, uniqueness, continuity, Poisson and NegBin MGFs, normal sum, CLT proof | same file §2 (AI-written, including the course-policy remark) | extra/book |
 > | Markov, Chebyshev, WLLN, continuity correction | Ross Ch. 8 (text layer, not opened); Blitzstein and Hwang Ch. 10 | extra/book |

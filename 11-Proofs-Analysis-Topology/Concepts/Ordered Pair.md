@@ -25,6 +25,8 @@ Fails: $\{A,B\}$, $\{\{A\},\{B\}\}$, $\{A,\{B\}\}$ ($\{Z,\{X\}\}=\{Y,\{Y\}\}$ fo
 
 Used in: [[PA02 Sets Families and the ZFC Foundations]]. Related: [[Cartesian Product]] · [[ZFC Axioms]] · [[Binary Relation]].
 
+See also: [[Lexicographic Order]] and [[PA10 Well-Ordering and Well-Ordered Pairs]] §4 (ordered pairs ordered lexicographically form a well-order when the factors are).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

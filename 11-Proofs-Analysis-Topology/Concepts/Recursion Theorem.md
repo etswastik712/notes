@@ -25,6 +25,8 @@ Factorial, powers, finite sums, iterates of a map (a discrete-time population mo
 
 Used in: [[PA05 Induction and the Number Systems]]. Related: [[Principle of Mathematical Induction]] · [[Natural Numbers]] · [[Sequence and Limit]].
 
+See also: [[PA09 Strong Induction and Recursion]] §4 (definition by strong recursion), [[Fibonacci Numbers]], [[Catalan Numbers]], [[Ackermann Function]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

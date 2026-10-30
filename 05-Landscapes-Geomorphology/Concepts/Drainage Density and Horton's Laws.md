@@ -34,3 +34,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[Random Walk]] and [[Counting Principles]] (Probability): random binary trees and Catalan counting give the bifurcation ratio
 - [[Central Limit Theorem]] (Probability): many independent branchings give a regular statistical law
+- [[Catalan Numbers]] (Analysis): the number of full binary tree shapes with $m$ internal nodes is $C_m$, from the recursion $C_{n+1}=\sum C_kC_{n-k}$; this is the counting behind the random-topology model of stream networks, where Horton's bifurcation ratio comes out near 4.

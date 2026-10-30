@@ -15,3 +15,12 @@ Assets/latex/build/
 # Large lecture decks (too big for git)
 earth-and-climate/landscapes-geomorphology/lecture-notes-slides/pre_ms_landscape_26.pdf
 scripts/_work/
+
+# Book library (added 2026-10-29: ~8 GB of PDFs/DjVu/EPUB organised from Downloads as <subject>/<topic>/books/).
+# The vault is auto-committed AND pushed to GitHub by Kurooto, so new books are NOT tracked.  Books tracked before this date stay
+# tracked (gitignore never affects tracked files).  To track a book anyway: `git add -f <file>`; to track all new books, delete these lines.
+physics/*/books/
+math/*/books/
+chemistry/*/books/
+biology/*/books/
+earth-and-climate/*/books/

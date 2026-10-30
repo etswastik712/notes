@@ -25,6 +25,8 @@ WOP $\Rightarrow$ PMI: if $S$ is inductive, $1\in S$, $S\ne\mathbb N$, take the 
 
 Used in: [[PA05 Induction and the Number Systems]]. Related: [[Principle of Mathematical Induction]] · [[Countable Set]] · [[Natural Numbers]].
 
+See also: [[PA10 Well-Ordering and Well-Ordered Pairs]] (the full equivalence cycle, minimal counterexamples, well-ordered pairs), [[Well-Ordered Set]], [[Minimal Counterexample]], [[Division Algorithm and Bezout's Identity]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -26,6 +26,7 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > - §4 **week 2 homework** (repair time, the Gumbel limit of a maximum, $E[F(X)]=\tfrac12$)
 > - §5 the cdf method for $Y=g(X)$, including the **folded normal** $|Z|$ (Week 2)
 > - §6 the **exponential distribution**: pdf, cdf, moments by the recursion $I_n=\tfrac n\lambda I_{n-1}$, the limit of the geometric distribution, the memoryless property and its characterisation theorem with proof (Week 2)
+> - Practice 13–15 are the three questions of **Quiz 1** (16 Sep 2026, 20 minutes; [[quiz(somenumber).jpeg]]), added 2026-10-29: the mean of $xe^{-x}$, a normal interval probability, and the normalising constant of the **Maxwell speed density**
 >
 > 🟡 **Extra · book**
 > - the Gaussian tail (Blitzstein and Hwang Ch. 5; Ross Ch. 5)
@@ -250,7 +251,7 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 ## Map of this chapter
 > [!connection] How PR05 connects
 > **Builds on:** [[PR03 Discrete Random Variables and Distributions]] and [[PR04 Joint Distributions Expectation and Variance]] (the same definitions with integrals; the cdf).
-> **Leads to:** [[PR06 Moments Generating Functions and Limit Theorems]] (MGFs, the normal approximation, the central limit theorem).
+> **Leads to:** [[PR06 Moments Generating Functions and Limit Theorems]] (MGFs, the normal approximation, the central limit theorem). Two continuous variables at once (joint densities, convolution, $|\rho|\le1$): [[PR07 Sums of Independent Variables Covariance and Correlation]].
 > **Concepts:** [[Continuous Random Variable]] · [[Probability Density Function]] · [[Uniform Distribution]] · [[Rayleigh Distribution]] · [[Logistic Distribution]] · [[Normal Distribution]] · [[Standard Normal Distribution]] · [[Folded Normal Distribution]] · [[Exponential Distribution]] · [[Memoryless Property]] · [[Gumbel Distribution]] · [[Cdf Method for Transformations]] · [[Law of the Unconscious Statistician]] · [[Cdf Method for Transformations]] · [[Gaussian Integral]] · [[Memoryless Property]]
 > **Other subjects:** [[Probability - Course Map]], [[QM01 From Waves to Probabilities]] (the Gaussian wave packet, $|\psi|^2$ as a pdf, $\int|\psi|^2=1$), [[QM04 The Particle in a Box]] (uniform-like densities, $\langle x\rangle$ and $\Delta x$ are integrals of this chapter), [[TH06 From Kinetic Theory to Statistical Mechanics]] (a molecular speed is the length of a 3D Gaussian velocity vector; the 2D analogue of that length is exactly the Rayleigh law), [[Dimensional Analysis]].
 
@@ -276,6 +277,9 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 10. **Gaussian integral.** Use the polar-coordinate trick to evaluate $\int_{-\infty}^\infty e^{-x^2}\mathrm dx$ and deduce $\int_0^\infty x^2e^{-x^2}\mathrm dx$.
 11. **Memoryless.** A component has an exponential lifetime with mean 1000 h. Given that it has survived 1000 h, what is the probability it survives another 200 h? Why would the answer be different for a uniform lifetime on $(0,2000)$?
 12. **Folded normal.** For $X=|Z|$ find $P[X\le1]$ and the median of $X$.
+13. **Quiz 1, Q1 (5 pts).** The lifetime in hours of an electronic tube has density $f(x)=xe^{-x}$, $x\ge0$. Compute the expected lifetime.
+14. **Quiz 1, Q2 (5 pts).** $X$ is normal with mean $\mu=10$ and variance $\sigma^2=36$. Express $P(4<X<16)$ in terms of the standard normal cdf $\Phi$.
+15. **Quiz 1, Q3 (3 pts bonus).** The speed of a molecule in a uniform gas at equilibrium has density $f(x)=ax^2e^{-bx^2}$ for $x\ge0$ and $0$ for $x<0$, where $b=m/(2kT)$ ($k$ Boltzmann's constant, $T$ the absolute temperature, $m$ the mass of a molecule). Evaluate $a$ in terms of $b$.
 
 > [!example]- Solutions
 > 1. $c\cdot\tfrac83=1\Rightarrow c=\tfrac38$. $F(x)=\tfrac{x^3}8$ on $[0,2]$. $P[X>1]=1-\tfrac18=\tfrac78$. $E[X]=\tfrac38\int_0^2x^3\mathrm dx=\tfrac38\cdot4=\tfrac32$.
@@ -290,6 +294,9 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > 10. $J=\int e^{-x^2}\mathrm dx$; $J^2=\int_0^{2\pi}\!\int_0^\infty e^{-r^2}r\,\mathrm dr\,\mathrm d\theta=2\pi\cdot\tfrac12=\pi$, so $J=\sqrt\pi$. By parts with $u=x$, $\mathrm dv=xe^{-x^2}\mathrm dx$: $\int_0^\infty x^2e^{-x^2}\mathrm dx=\tfrac12\int_0^\infty e^{-x^2}\mathrm dx=\tfrac{\sqrt\pi}4$.
 > 11. $\lambda=10^{-3}$: $P[X>1200\mid X>1000]=P[X>200]=e^{-0.2}=0.8187$. For $U(0,2000)$: $P[X>1200\mid X>1000]=\tfrac{800}{1000}=0.8$ but $P[X>200]=0.9$, and the conditional probability changes with the elapsed time (not memoryless).
 > 12. $P[X\le1]=2\Phi(1)-1=0.6827$; median $m$: $2\Phi(m)-1=\tfrac12\Rightarrow\Phi(m)=0.75\Rightarrow m=0.6745$ (the upper quartile of $Z$).
+> 13. $E[X]=\int_0^\infty x\cdot xe^{-x}\mathrm dx=\int_0^\infty x^2e^{-x}\mathrm dx=\Gamma(3)=2$ hours. (The density is the Gamma$(2,1)$ law: $\int_0^\infty xe^{-x}\mathrm dx=1$, so it is normalised, and $E[X]=\text{shape}/\text{rate}=2$.)
+> 14. $\sigma=6$, so $P(4<X<16)=P\big(\tfrac{4-10}6<Z<\tfrac{16-10}6\big)=\Phi(1)-\Phi(-1)=\boxed{2\Phi(1)-1}=0.6827$ (the "one standard deviation" of the 68–95–99.7 rule).
+> 15. Normalise: $1=a\int_0^\infty x^2e^{-bx^2}\mathrm dx$. With $u=\sqrt b\,x$, $\int_0^\infty x^2e^{-bx^2}\mathrm dx=b^{-3/2}\int_0^\infty u^2e^{-u^2}\mathrm du=b^{-3/2}\dfrac{\sqrt\pi}4$ (Practice 10), so $\boxed{a=\dfrac{4b^{3/2}}{\sqrt\pi}}=\dfrac4{\sqrt\pi}\Big(\dfrac m{2kT}\Big)^{3/2}$. This is the **Maxwell speed density** ([[Maxwell-Boltzmann Distribution]], [[TH06 From Kinetic Theory to Statistical Mechanics]]). 🔵 Its mean is $\int_0^\infty ax^3e^{-bx^2}\mathrm dx=\dfrac a{2b^2}=\dfrac2{\sqrt{\pi b}}=\sqrt{\dfrac{8kT}{\pi m}}$; numerically $a=2.2568$ and mean $1.1284$ at $b=1$, and the normalisation integral equals $1$ for $b=0.5,1,2$ (`scripts/pr_numbers2.py`).
 
 ## Provenance
 > [!provenance]- Source map for this chapter
@@ -303,6 +310,8 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > | $c(1-x^2)$ | [[Practice problems 17th September and following tutorial and weekend.pdf\|sheet 17 Sep, problem 11]] | taught |
 > | folded normal, exponential (moments, geometric limit, memoryless theorem and proof) | [[Week2_notes.pdf#page=1\|week 2 post-midterm, handwritten pp.1–4]] | taught |
 > | homework 2: repair time, Gumbel, $E[F(X)]$ | [[Week2_notes.pdf#page=5\|handwritten p.5]] (typed problem statements; solutions mine) | taught |
+> | the original post of homework 2 (the same three problems; sources of the statements) | [[hw2.png]] (Oct 15, edited Oct 23) | taught |
+> | **Quiz 1** (MT2213 as printed on the paper, 16/09/2026): mean of $xe^{-x}$, $P(4<X<16)$, Maxwell constant $a$ | [[quiz(somenumber).jpeg]] (photograph; Practice 13–15, solutions mine) | taught |
 > | $\chi^2_1$, payoff integral, Rayleigh–exponential link, Gumbel moments | `scripts/pr_numbers.py`; Blitzstein and Hwang Ch. 5 (not opened) | extra/book, beyond |
 >
 > **Notes.** The handwritten pages are images (no text layer); I read them page by page. The page numbers above are the PDF page indices: p.1–2 homework, pp.3–4 definitions and examples, p.5 expectations, p.6 LOTUS lemma, p.7 LOTUS proof and variance, p.8 uniform variance and SND, p.9 normal moments. LOTUS for $g$ of either sign is left as homework Q6 (p.2); my solution is in §4.
