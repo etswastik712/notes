@@ -1,0 +1,28 @@
+---
+id: zettel/medical-screening-false-positive-inversion
+aliases: ["Medical Screening False Positive Inversion", "diagnostic test posterior probability", "medical test paradox"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Medical Screening False Positive Inversion
+
+An application of Bayes' rule showing that when disease prevalence is very low, a test with high sensitivity and specificity still yields a substantial false discovery rate.
+
+$$P[A] = \frac{1}{100}$$
+
+$$P[B \mid A] = \frac{95}{100}$$
+
+$$P[B^c \mid A^c] = \frac{95}{100}$$
+
+## Links
+- example-of:: [[zettel/bayes-rule-for-a-finite-partition]] — Calculates P[A|B] using the law of total probability across binary partition {A, A^c} with given sensitivity and specificity
+- contrasts-with:: [[zettel/accident-proneness-posterior-inference]] — Shares the binary-state Bayes updating architecture of the accident-proneness model applied to clinical diagnostic testing
+
+---
+Source: Practice problems 14th August 2026, pp. 1–2
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 14th August 2026]] pp. 1–2
+<!-- /kurooto:seen -->

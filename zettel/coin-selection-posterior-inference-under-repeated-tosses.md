@@ -1,0 +1,24 @@
+---
+id: zettel/coin-selection-posterior-inference-under-repeated-tosses
+aliases: ["Coin Selection Posterior Inference under Repeated Tosses", "fair vs biased coin posterior probability"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Coin Selection Posterior Inference under Repeated Tosses
+
+Inferring the posterior probability of having selected an unbiased coin versus a biased alternative after observing a run of identical independent toss outcomes.
+
+$$P[H \mid \text{biased}] = \frac{3}{4}$$
+
+## Links
+- example-of:: [[zettel/bayes-rule-for-a-finite-partition]] — Applies Bayes' formula across the uniform two-coin prior partition with independent Bernoulli product likelihoods
+- needs:: [[zettel/mutual-independence-of-a-finite-collection-of-events]] — Relies on trial-to-trial independence to multiply single-toss head probabilities across three consecutive flips
+
+---
+Source: Practice problems 14th August 2026, pp. 1–2
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 14th August 2026]] pp. 1–2
+<!-- /kurooto:seen -->
