@@ -54,3 +54,8 @@ PS. Textbook references include sections from The Earth System (Lee R. Kump, Jam
 - [[introduction-to-climate-science/2026-08-13-tutorial-2-energy-balance-problems]]: includes the diurnal OLR/ASR lag problem.
 - [[01-climate/cl08-greenhouse-models]]: your chapter notes on greenhouse models.
 - [[01-climate/concepts/one-layer-greenhouse-model]]: your concept note on the one-layer model.
+
+<!-- kurooto:material8ec6b0aa -->
+## Concepts in climate_intro_notes_L1_L6
+(none new)
+<!-- /kurooto:material8ec6b0aa -->
