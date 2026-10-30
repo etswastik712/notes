@@ -1,6 +1,6 @@
 ---
 id: zettel/runaway-ice-albedo-instability
-aliases: ["Runaway Ice-Albedo Instability", "30° latitude instability threshold", "runaway albedo"]
+aliases: ["Runaway Ice-Albedo Instability", "30° latitude instability threshold", "runaway albedo", "30° threshold instability"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -19,4 +19,8 @@ Source: climate_intro_notes_L1_L6, pp. 34–42
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 34–42
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
+
+### Added from class
+- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Explicitly details the runaway cycle: advancing ice past 30° latitude reflects sunlight faster than the planet can adjust, forcing global ocean freeze down to the equator.
 <!-- /kurooto:seen -->

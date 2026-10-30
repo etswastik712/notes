@@ -1,6 +1,6 @@
 ---
 id: zettel/multiple-climate-equilibria-in-energy-balance-models
-aliases: ["Multiple Climate Equilibria in Energy Balance Models", "Multiple Steady States", "climate bifurcation in EBMs"]
+aliases: ["Multiple Climate Equilibria in Energy Balance Models", "Multiple Steady States", "climate bifurcation in EBMs", "three climate equilibria"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -19,4 +19,8 @@ Source: climate_intro_notes_L1_L6, pp. 34–42
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 34–42
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
+
+### Added from class
+- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Details the three specific intersection points: Point 1 (Snowball Planet, stable at low T), Point 2 (Unstable Intermediate bifurcation point), and Point 3 (Ice-free Planet, stable at high T).
 <!-- /kurooto:seen -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/parameter-sensitivity-via-logarithmic-differentiation
-aliases: ["Parameter Sensitivity via Logarithmic Differentiation", "climate sensitivity to parameters", "logarithmic differentiation of energy balance"]
+aliases: ["Parameter Sensitivity via Logarithmic Differentiation", "climate sensitivity to parameters", "logarithmic differentiation of energy balance", "sensitivity derivation"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -24,4 +24,19 @@ Source: climate_intro_notes_L1_L6, pp. 34–42
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 34–42
+- [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 4 Sensitivity & (albedo) Feedback]] pp. 1–7
+
+### Added from class
+- Lecture 4 Sensitivity & (albedo) Feedback pp. 1–7: Adds explicit numerical evaluations: an albedo change of Δα = 0.07 yields ΔTs ≈ -6 K, and a 10% solar constant perturbation (ΔS ≈ 136 W/m²) causes a net 24 W/m² absorbed change and a 6 K shift.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| climate_intro_notes_L1_L6, pp. 34–42 | $\alpha$ | planetary albedo |
+| climate_intro_notes_L1_L6, pp. 34–42 | $S$ | solar constant / flux |
+| Lecture 4 Sensitivity & (albedo) Feedback, pp. 1–7 | $S$ | solar flux or solar constant |
+| Lecture 4 Sensitivity & (albedo) Feedback, pp. 1–7 | $T_s$ | surface temperature |
+| climate_intro_notes_L1_L6, pp. 34–42 | $T_s$ | surface temperature |
+<!-- /kurooto:notation -->

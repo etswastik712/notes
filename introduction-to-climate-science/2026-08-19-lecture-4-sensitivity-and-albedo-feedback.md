@@ -67,3 +67,8 @@ the scheduled quiz on Friday will cover the entire content up to "Lecture 5"" (C
 - [[01-climate/concepts/snowball-earth]]: Cryogenian glaciations
 - [[introduction-to-climate-science/2026-08-19-lecture-3-planetary-energy-balance]]: the energy balance this lecture differentiates
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance]]: Marshall & Plumb treatment of feedbacks (0.26 K per W m$^{-2}$ baseline)
+
+<!-- kurooto:materialc05673d9 -->
+## Concepts in Lecture 4 Sensitivity & (albedo) Feedback
+[[zettel/parameter-sensitivity-via-logarithmic-differentiation]], [[zettel/radiative-forcing]], [[zettel/piecewise-linear-albedo-model]], [[zettel/multiple-climate-equilibria-in-energy-balance-models]], [[zettel/runaway-ice-albedo-instability]], [[zettel/snowball-earth-deglaciation-via-volcanic-outgassing]], [[zettel/cryogenian-geological-glaciation-proxies]]
+<!-- /kurooto:materialc05673d9 -->
