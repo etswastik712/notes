@@ -33,3 +33,7 @@ Post (2026-08-12): "PFA tutorial codes for this week below." Post (2026-08-13): 
 - [[01-climate/concepts/effective-emission-temperature]]: $T_e$ for problem 1
 - [[01-climate/cl03-radiation-and-planetary-energy-balance]]: radiation and energy balance chapter
 - [[03-thermodynamics/concepts/stefan-boltzmann-law]]: needed for problems 1 and 3
+
+<!-- kurooto:materialbd85b039 -->
+Textbook: [[introduction-to-climate-science/books/intro-clim|intro_clim]] (its concepts are listed there).
+<!-- /kurooto:materialbd85b039 -->

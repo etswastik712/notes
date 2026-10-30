@@ -1,6 +1,6 @@
 ---
 id: zettel/area-weighted-mean-temperature
-aliases: ["Area-Weighted Mean Temperature", "area-weighted average", "global mean temperature calculation"]
+aliases: ["Area-Weighted Mean Temperature", "area-weighted average", "global mean temperature calculation", "Global Mean Temperature"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -20,4 +20,8 @@ Source: climate_intro_notes_L1_L6, pp. 17–24
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
+- [[introduction-to-climate-science/books/intro-clim|intro_clim]]
+
+### Added from class
+- intro_clim: Introduces the programmatic framework using Python libraries (NumPy, Matplotlib, SymPy) to numerically analyze and solve for global mean temperature.
 <!-- /kurooto:seen -->
