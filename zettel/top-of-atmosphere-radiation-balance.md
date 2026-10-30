@@ -21,6 +21,8 @@ $$Q_{abs} = S_{TOA} (1 - \alpha)$$
 Source: TOA_energy_balance_and_poleward_energy_transport_Hartmann, pp. 1–7
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/planetary-emission-temperature]] — The emission temperature is found by equating absorbed solar power to emitted longwave radiation, which is the global form of the TOA radiation balance solved for temperature
+- needs:: [[zettel/stefan-boltzmann-law]] — The outgoing longwave term OL in the TOA balance is the blackbody emission given by the Stefan-Boltzmann law, so that law supplies one of the terms in the balance
 ## Seen in
 - [[introduction-to-climate-science/2026-10-08-study-material-8-top-of-the-atmosphere-energy-balance-and-poleward-transport-of-energy|TOA_energy_balance_and_poleward_energy_transport_Hartmann]] pp. 1–7
 <!-- /kurooto:seen -->
