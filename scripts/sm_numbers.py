@@ -179,3 +179,40 @@ P(f"plasma density {nH:.0e} m^-3: mean spacing {rsep:.3e} m, cutoff n_max ~ sqrt
 
 sec("SM03 Gibbs canonical ensemble: volume fluctuations of an ideal gas")
 P("relative sd of V = sqrt(kT kappa_T / <V>) with kappa_T = 1/P : = 1/sqrt(N) ; N = 100 ->", 1 / 10, "; N=1e23 ->", 1e23 ** -0.5)
+
+
+# ------------------------------------------------------------------ practice-problem checks (SM01-SM03)
+def Hent(pp_, base=2):
+    pp_ = np.array([q_ for q_ in pp_ if q_ > 0]); return -(pp_ * np.log(pp_)).sum() / log(base)
+
+
+sec("PRACTICE SM01")
+n288 = atm / (kB * 288.15)
+P("P3: n(288.15 K, 1 atm) =", n288, " N(1 um^3) =", n288 * 1e-18, " rel sd =", 1 / sqrt(n288 * 1e-18), " ; 100 molecules -> V =", 100 / n288, " r =", (3 * 100 / n288 / (4 * pi)) ** (1 / 3))
+P("P4: 10^23 : N(ln N - 1) =", 1e23 * (log(1e23) - 1), " ; 0.5 ln(2 pi N) =", 0.5 * log(2 * pi * 1e23))
+P("P5a: 2^-100 =", 2.0 ** -100, " ; P5b: I(0.7) =", I(0.7), " exp(-100 I) =", exp(-100 * I(0.7)), " exact tail (>=70) =", stats.binom.sf(69, 100, .5),
+  " refined =", exp(-100 * I(0.7)) / sqrt(2 * pi * 100 * .7 * .3) / (1 - 0.3 / 0.7))
+from math import factorial
+for Nn in (10,):
+    ex = factorial(Nn) ** 2 / factorial(2 * Nn + 1); sp_ = 4.0 ** (-Nn) * sqrt(pi / (4 * Nn))
+    P(f"P6: N={Nn}: exact Beta = {ex:.4e}, saddle = {sp_:.4e}, ratio {sp_ / ex:.4f}")
+P("P7: P(|mean|>10a) =", 1 - 2 / pi * np.arctan(10))
+P("P8: H(0.1) bits =", Hent([.1, .9]), "; 1e6 flips ->", 1e6 * Hent([.1, .9]), "bits;  loaded die H =", Hent([.5, .25, .125, .125]), "D =", 2 - Hent([.5, .25, .125, .125]))
+P("P9: beta eps = ln 4 =", log(4), " kT/eps =", 1 / log(4))
+P("P10: excess kurtosis of spin sum = -2/N =", -2 / 100, " ; Gamma 6/k, k=150:", 6 / 150)
+
+sec("PRACTICE SM02")
+P("P2: ln C(100,25) =", gammaln(101) - gammaln(26) - gammaln(76), " Omega =", exp(gammaln(101) - gammaln(26) - gammaln(76)), " dS/dE discrete (n=25->26) = ln(75/26) =", log(75 / 26), " kT/eps =", 1 / log(75 / 26), " continuum =", 1 / log(3))
+P("P3: x=0.9 -> kT/eps =", 1 / log(0.1 / 0.9))
+P("P4: sigma_E/E_A, N_A=N_B=N/2:  2/sqrt(6N) with N=1e23 =", 2 / sqrt(6e23), " ; 0.816/sqrt N =", 0.816 / sqrt(1e23))
+P("P5c: mixing 0.75/0.25 : -R(sum x ln x) =", -R * (0.75 * log(.75) + .25 * log(.25)), " per mole;  x4 mol =", -4 * R * (0.75 * log(.75) + .25 * log(.25)), " ; air 0.21/0.79:", -R * (0.21 * log(.21) + .79 * log(.79)), " R ln2 =", R * log(2))
+tot = [comb(q_ + 2, 2) * comb(6 - q_ + 2, 2) for q_ in range(7)]
+P("P6: products =", tot, " sum =", sum(tot), " C(11,6) =", comb(11, 6), " P(q_A=3) =", tot[3] / sum(tot), " P(q_A>4) =", (tot[5] + tot[6]) / sum(tot), " P(q_A>=4)=", sum(tot[4:]) / sum(tot))
+NA_, NB_, qq = 300, 200, 100
+lw2 = np.array([lnW(NA_, a_) + lnW(NB_, qq - a_) for a_ in range(qq + 1)]); pp = np.exp(lw2 - lw2.max()); pp /= pp.sum()
+P("P7: exact P(q_A<=50) =", pp[:51].sum(), " Gaussian Phi(-1.77) =", stats.norm.cdf((50.5 - 60) / 5.3666), " (sigma 5.3666)")
+Nn = 1e6
+P("P9: N=1e6: P(|m-1/2|>1e-3) Gaussian two-sided =", 2 * stats.norm.sf(1e-3 * Nn / (sqrt(Nn) / 2)), " ; N=1e10: N*I =", 1e10 * 2 * (1e-3) ** 2, " log10 P ~", -1e10 * 2 * 1e-6 / log(10))
+Tn = 300.0; En = 1.5 * kB * Tn; Vn = 1e-3
+Nst = 4 * pi / 3 * Vn * (2 * m_He * En) ** 1.5 / h ** 3
+P("P10: 2mE =", 2 * m_He * En, " (2mE)^1.5 =", (2 * m_He * En) ** 1.5, " N_states =", Nst, " V/lambda^3 =", Vn / lam(m_He, Tn) ** 3, " ratio =", Nst / (Vn / lam(m_He, Tn) ** 3), " (4pi/3)(3/2pi)^1.5 =", 4 * pi / 3 * (3 / (2 * pi)) ** 1.5)

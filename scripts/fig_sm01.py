@@ -31,14 +31,22 @@ b.annotate("$N=100$: 0.89 %", (100, 3.2224 / 363.739), xytext=(150, 0.03), fonts
 b.set_xlabel("$N$"); b.set_ylabel(r"relative error of $\ln N!$"); b.legend(fontsize=8.6, loc="lower left")
 b.set_title("B  Stirling: the error of $\\ln N!$ per particle vanishes", fontsize=10)
 
-# C  Cauchy vs Gaussian running means
+# C  spread of the sample mean: Gaussian shrinks as 1/sqrt(N), Cauchy never does
 c = axes[1, 0]
 rng = np.random.default_rng(3)
-M = 3000
-for dist, col, lab in ((rng.standard_normal(M), AQUA, "Gaussian samples"), (rng.standard_cauchy(M), ORANGE, "Cauchy samples")):
-    c.plot(np.arange(1, M + 1), np.cumsum(dist) / np.arange(1, M + 1), color=col, lw=1.3, label=lab)
-c.set_xscale("log"); c.set_ylim(-3, 3); c.axhline(0, color=MUTED, lw=0.7)
-c.set_xlabel("number of samples $N$"); c.set_ylabel(r"running mean $\bar x_N$"); c.legend(fontsize=8.6, loc="upper right")
+Ns = [1, 3, 10, 30, 100, 300, 1000, 3000, 10000]
+R = 1000
+iqr = {"g": [], "c": []}
+for Nn in Ns:
+    xg = rng.standard_normal((R, Nn)).mean(axis=1)
+    xc = rng.standard_cauchy((R, Nn)).mean(axis=1)
+    iqr["g"].append(np.subtract(*np.percentile(xg, [75, 25])) / 2)
+    iqr["c"].append(np.subtract(*np.percentile(xc, [75, 25])) / 2)
+Nf = np.logspace(0, 4, 100)
+c.loglog(Nf, 0.6745 / np.sqrt(Nf), color=AQUA, lw=1.0, ls="--")
+c.loglog(Ns, iqr["g"], "o-", color=AQUA, ms=4.5, label="Gaussian: $0.6745/\\sqrt{N}$")
+c.loglog(Ns, iqr["c"], "o-", color=ORANGE, ms=4.5, label="Cauchy: stays at 1 for every $N$")
+c.set_xlabel("number of samples averaged, $N$"); c.set_ylabel("half-width of the middle 50 % of $\\bar x_N$"); c.legend(fontsize=8.4, loc="lower left")
 c.set_title("C  no finite variance, no central limit theorem", fontsize=10)
 
 # D  rate function
