@@ -37,7 +37,9 @@ Source: Mid-semester solutions, pp. 1–3
 | Mid-semester solutions, pp. 1–3 | $K$ | event that the examinee knows the answer |
 | Practice problems 21st August 2026, pp. 1–2 | $m$ | number of multiple-choice alternatives |
 | Practice problems 21st August 2026, pp. 1–3 | $m$ | number of multiple-choice alternatives |
+| Practice problems 21st August 2026, pp. 1–3 | $m$ | number of multiple-choice alternatives |
 | Mid-semester solutions, pp. 1–3 | $n$ | number of multiple-choice options |
 | Practice problems 21st August 2026, pp. 1–2 | $p$ | probability that the student knows the answer |
 | Practice problems 21st August 2026, pp. 1–3 | $p$ | probability that the student knows the answer |
+| Practice problems 21st August 2026, pp. 1–3 | $p$ | probability the student knows the answer |
 <!-- /kurooto:notation -->

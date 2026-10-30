@@ -55,3 +55,8 @@ Dear everyone, here is the updated list of suggested problems for this week.
 ## Concepts in Class notes 20th August 2026
 [[zettel/random-variable]], [[zettel/discrete-random-variable]], [[zettel/joint-probability-mass-function]], [[zettel/binomial-distribution]], [[zettel/discrete-uniform-distribution]]
 <!-- /kurooto:material8eec3958 -->
+
+<!-- kurooto:material198953b9 -->
+## Concepts in Practice problems 21st August 2026
+[[zettel/hypergeometric-first-draw-posterior-probability]], [[zettel/bayes-rule-for-multiple-choice-guessing]], [[zettel/accident-proneness-posterior-inference]], [[zettel/subjective-bayesian-criminal-investigation-updating]], [[zettel/weighted-urn-sampling-without-replacement]], [[zettel/self-independent-event]], [[zettel/independence-of-complements]], [[zettel/gambler-s-ruin-difference-recurrence]], [[zettel/bertrand-s-box-marble-paradox]]
+<!-- /kurooto:material198953b9 -->

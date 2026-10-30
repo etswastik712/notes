@@ -16,5 +16,9 @@ Source: Practice problems 21st August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 21st August 2026]] pp. 1–3
 - [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 21st August 2026]] pp. 1–2
+
+### Added from class
+- Practice problems 21st August 2026 pp. 1–3: Provides explicit hints defining event A as suspect guilt, B as possessing the characteristic, and constructing P[B|A] and P[B|A^c].
 <!-- /kurooto:seen -->

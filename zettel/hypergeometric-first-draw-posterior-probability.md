@@ -25,5 +25,6 @@ Source: Practice problems 21st August 2026, pp. 1–3
 - [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 21st August 2026]] pp. 1–2
 
 ### Added from class
+- Practice problems 21st August 2026 pp. 1–3: Introduces an alternative derivation via direct computation of P[B_k | B] and conditional probability definition alongside exchangeability.
 - Practice problems 21st August 2026 pp. 1–2: Presents an explicit alternative conditioning derivation using P[B], P[Bk], and P[Bk|B] alongside the exchangeability argument.
 <!-- /kurooto:seen -->

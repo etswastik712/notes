@@ -19,4 +19,7 @@ Source: Practice problems 21st August 2026, pp. 1–3
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 21st August 2026]] pp. 1–3
+
+### Added from class
+- Practice problems 21st August 2026 pp. 1–3: Connects self-independence as a foundational conceptual idea for Kolmogorov's zero-one law in measure theory.
 <!-- /kurooto:seen -->
