@@ -18,6 +18,8 @@ $$P[W = k] = \binom{n}{k} p^k (1-p)^{n-k}$$
 Source: Practice problems 17th September and following tutorial and weekend, pp. 1–2
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/binomial-overbooking-survival-sum]] — The overbooking note computes a cumulative sum of Binomial(N, p) probabilities for independent attendance, which is the binomial promotion model applied to seat capacity
+- equivalent-to:: [[zettel/sum-of-independent-bernoulli-trials-representation-of-binomial]] — The promotion model's count of independently selected members is the sum of n independent Bernoulli(p) indicators, which is the representation this note states for the binomial
 ## Seen in
 - [[introduction-to-probability/2026-09-17-practice-problems-17th-september-and-following-tutorial-and-weekend|Practice problems 17th September and following tutorial and weekend]] pp. 1–2
 <!-- /kurooto:seen -->
