@@ -18,7 +18,10 @@ $$E = \sigma T^4$$
 Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 
 <!-- kurooto:seen -->
-- used-in:: [[zettel/simple-greenhouse-model]] — The simple greenhouse model's energy balance is written as σT_a^4 equal to a fraction of the absorbed solar flux, so the Stefan-Boltzmann law sets the atmosphere's emitted flux in that model
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
+
+### Added from class
+- climate_intro_notes_L1_L6 pp. 17–24: Specifies total emitted energy flux denoted as F with units W/m^2, gives constant value sigma = 5.67e-8 W/m^2/K^4, and contrasts solar shortwave with Earth longwave emission budgets.
 <!-- /kurooto:seen -->
