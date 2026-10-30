@@ -18,6 +18,7 @@ $$E = \sigma T^4$$
 Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/simple-greenhouse-model]] — The simple greenhouse model's energy balance is written as σT_a^4 equal to a fraction of the absorbed solar flux, so the Stefan-Boltzmann law sets the atmosphere's emitted flux in that model
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
 <!-- /kurooto:seen -->
