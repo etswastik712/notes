@@ -39,3 +39,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - Derived from the canonical ensemble for *any* interaction (momenta are independent Gaussians of variance $mk_BT$): [[SM03 The Canonical Ensemble]] §4.2; the companion Boltzmann factor $mgz$ gives the [[Barometric Formula]].
+- Also the unique stationary solution of the Boltzmann equation ($\ln f$ a collision invariant) and the entropy maximum of the H-theorem: [[SM04 Kinetic Theory and the Boltzmann Equation]] §6, §8 ([[H-Theorem]]).

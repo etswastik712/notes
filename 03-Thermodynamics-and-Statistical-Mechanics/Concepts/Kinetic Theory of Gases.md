@@ -33,3 +33,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Maxwe
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Full theory from Liouville to Navier–Stokes: [[SM04 Kinetic Theory and the Boltzmann Equation]] ([[Boltzmann Equation]], [[H-Theorem]], [[Viscosity of a Gas]], [[Thermal Conductivity of a Gas]]).

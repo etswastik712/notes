@@ -1,0 +1,32 @@
+---
+title: Baire Category Theorem
+aliases: ["Baire", "nowhere dense", "Baire category"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Baire Category Theorem
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG11 (nowhere dense sets, Baire).
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=629|Lee Thm A.58, p. 611]]; Munkres §48.
+
+> [!intuition] In one picture
+> A nonempty complete or locally compact space is 'too big' to be a countable union of thin (nowhere dense) closed sets.
+
+> [!key] Definition
+> In a locally compact Hausdorff space or a complete metric space, a countable union of closed sets with empty interior has empty interior. $A$ is **nowhere dense** if $\operatorname{int}\bar A=\varnothing$ ($\mathbb Q\subset\mathbb R$: not; Cantor set: yes; $\mathbb R^k\times\{0\}\subset\mathbb R^n$, $k<n$: yes).
+
+Proof for complete metric spaces by nested closed balls. In DM04 it proves that a surjective constant-rank map has full rank. Also gives uncountability of $\mathbb R$-like spaces.
+
+Used in: [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Global Rank Theorem]] · [[Locally Compact Space]] · [[Cantor's Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

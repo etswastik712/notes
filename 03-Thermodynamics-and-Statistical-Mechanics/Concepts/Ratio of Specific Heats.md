@@ -33,3 +33,6 @@ Used in: [[TH03 The Ideal Gas and Adiabatic Processes]]. Related: [[Heat Capacit
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- $\gamma=\tfrac53$ appears as the adiabatic exponent of the Euler equations ($D_t(Tn^{-2/3})=0$): [[SM04 Kinetic Theory and the Boltzmann Equation]] §9.

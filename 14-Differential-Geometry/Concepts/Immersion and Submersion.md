@@ -1,0 +1,31 @@
+---
+title: Immersion and Submersion
+aliases: ["immersion", "submersion", "smooth submersion", "smooth immersion"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Immersion and Submersion
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG11–DG12 via [[mt3184-differential-geometry-and-lie-groups/2026-09-03-august-31-september-4|Aug 31–Sep 4 note]]; [[mt3184-differential-geometry-and-lie-groups/2026-09-04-hw5|HW5]] Q1.
+
+> [!intuition] In one picture
+> An immersion never squashes a direction (velocity never vanishes); a submersion reaches every direction in the target.
+
+> [!key] Definition
+> $F:M\to N$ is an **immersion** if every $dF_p$ is injective, a **submersion** if every $dF_p$ is surjective. By the Rank Theorem an immersion is locally an inclusion $(x)\mapsto(x,0)$ and a submersion locally a projection $(x,y)\mapsto x$ ([[Rank Theorem]]). Submersions are open maps with local sections.
+
+Immersion: $\dim M\le\dim N$; submersion: $\dim M\ge\dim N$. Examples: $\det:GL(n,\mathbb R)\to\mathbb R^\times$ (submersion), the cusp $t\mapsto(t^2,t^3)$ (not an immersion). Immersions need not be embeddings ([[Smooth Embedding]]).
+
+Used in: [[DM05 Immersions, Embeddings, Submersions and Coverings]], [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Smooth Embedding]] · [[Local Section Theorem]] · [[Rank Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

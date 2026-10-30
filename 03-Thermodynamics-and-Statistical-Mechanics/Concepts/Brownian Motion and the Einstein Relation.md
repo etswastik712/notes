@@ -33,3 +33,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Normal Distribution]] (Probability): the displacement is Gaussian with variance $2Dt$
+
+## Continued in Part II (added 2026-10-30)
+- The diffusive and hydrodynamic limit of the Boltzmann equation (heavy particle in a gas of light ones) leads to the Fokker–Planck equation (SM24, planned); background: [[SM04 Kinetic Theory and the Boltzmann Equation]].

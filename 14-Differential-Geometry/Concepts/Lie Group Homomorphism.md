@@ -1,0 +1,31 @@
+---
+title: Lie Group Homomorphism
+aliases: ["Lie group isomorphism", "constant rank of homomorphisms", "Theorem 7.5"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Lie Group Homomorphism
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG11 (Thm 7.5, Cor 7.6); [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=171|Lee Thm 7.5, p. 153]].
+
+> [!intuition] In one picture
+> A smooth, structure-preserving map between groups: it looks the same at every point, so its rank is constant.
+
+> [!key] Definition
+> A smooth group homomorphism $F:G\to H$. **Thm 7.5:** constant rank ($F\circ L_g=L_{F(g)}\circ F$). Hence bijective $\Rightarrow$ isomorphism; $\ker F$ is an embedded Lie subgroup of dimension $\dim G-\operatorname{rank}dF$; an injective $F$ has image a Lie subgroup.
+
+$\det:GL(n)\to\mathbb R^\times$ (rank 1, kernel $SL(n)$); $\mathbb R\to S^1$ (kernel $\mathbb Z$); $\exp:\mathbb R\cong\mathbb R_{>0}$; $\mathbb R\to T^2$ (dense, rank 1); $SU(2)\to SO(3)$ (rank 3, kernel $\pm1$). The induced map on Lie algebras: [[DM11 The Lie Algebra of a Lie Group]].
+
+Used in: [[DM08 Lie Groups]]. Related: [[Global Rank Theorem]] · [[Lie Subgroup]] · [[Left Translation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,31 @@
+---
+title: Rank Theorem
+aliases: ["constant rank theorem", "Theorem 4.12", "normal form of constant rank maps"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Rank Theorem
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG11; [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=99|Lee Thm 4.12, p. 81]].
+
+> [!intuition] In one picture
+> A map of constant rank is, in suitable coordinates on source and target, the plain map that keeps $r$ coordinates and zeroes the rest.
+
+> [!key] Definition
+> $F:M^m\to N^n$ smooth of constant rank $r$ $\Rightarrow$ around each $p$ there are charts centred at $p$ and $F(p)$ with $\psi\circ F\circ\varphi^{-1}(x^1,\dots,x^m)=(x^1,\dots,x^r,0,\dots,0)$. Submersion $\Leftrightarrow$ locally a projection; immersion $\Leftrightarrow$ locally an inclusion.
+
+Proof: apply the Euclidean theorem ([[Constant Rank Theorem (Euclidean)]]) to the coordinate representation and compose the charts with the diffeomorphisms. Normal form checked for $F(u,v)=(u+v,(u+v)^2)$: $\psi F\varphi^{-1}=(s,0)$ to $9\times10^{-16}$.
+
+Used in: [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Global Rank Theorem]] · [[Rank of a Smooth Map]] · [[Constant Rank Theorem (Euclidean)]] · [[Inverse Function Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

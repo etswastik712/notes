@@ -1,0 +1,121 @@
+---
+title: Differential Geometry - Course Map
+aliases: [Differential Geometry, MT3184, Differential Geometry and Lie Groups, smooth manifolds, manifolds and Lie groups]
+subject: diff-geometry
+type: moc
+scope: [taught, extra-book, extra-beyond]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/moc, taught, extra/book, extra/beyond, src/lecture-notes, src/book, status/draft]
+---
+# Differential Geometry: Course Map
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
+
+Fifteen chapters on **smooth manifolds, Lie groups and flows**, written 2026-10-30 on **John M. Lee, *Introduction to Smooth Manifolds* (2nd ed.)** as the primary book, with Tu, Kumaresan, Guillemin–Pollack, Milnor and Warner as companions, and aligned with the lectures of **MT3184 Differential Geometry and Lie Groups** (the lectures follow Lee's numbering: Lemma 1.35, Thm 4.12, Thm 7.5, Thm 9.12, Thm 20.1, …). The topology and analysis it needs is written in the analysis vault as **PA11–PA15** ([[Proofs, Analysis and Topology - Course Map]]), and the Lie groups are the continuous side of [[Group Theory - Course Map]] ([[GT10 Symmetry Representations and Characters]] §6).
+
+> [!warning] What is and is not in the sources
+> - **Taught (🟢)** means *covered by MT3184*, as far as the notes in the folder show. The only course material is the other tool's notes `mt3184-differential-geometry-and-lie-groups/` (OCR of the instructor's **handwritten slides DG1–DG26**, plus homework HW1–HW9, Test 1, and an exam-prep page). **DG1–DG7 are scans with no readable text** (weeks 1–3: manifolds, smooth maps, partitions of unity, tangent spaces, differentials, submanifolds), so for those chapters "taught" is inferred from the weekly post, the homework and the syllabus outline, not from the slides. The last slides of DG25 and DG26 are partly illegible. Every such gap is marked `[!verify]` in the chapter.
+> - **Extra · book (🟡)** is Lee/Tu/Kumaresan/… material that the lectures did not reach (e.g. Sard's theorem, Whitney embedding, transversality, Lie subalgebras and subgroups beyond the statement, the Lie correspondence proof). **Extra · beyond (🔵)** is my additions (numerical checks, worked examples, comparisons between books), always labelled.
+> - **Not covered at all** (by design of the user's scope: *course-aligned*): vector bundles, tensors, Riemannian metrics, differential forms, integration, de Rham cohomology, foliations, symplectic geometry (Lee Ch. 10–19, 21–22). The Frobenius theorem and Lie subalgebra–subgroup correspondence are only **stated** (DM15).
+> - **Assessments:** Test 1 (2026-09-03, HW1–HW3), mid-term (2026-09-24), **Test 2 on 2026-11-02 (HW6–HW9)**, end-sem 2026-11-23 to 12-02 (cumulative). Grading 20/40/40.
+> - The source notes are **read-only** and are the other tool's: they are listed in Sources below, never cited as primary.
+
+## The storyline
+```mermaid
+flowchart LR
+  A["DM01<br/>smooth<br/>manifolds"] --> B["DM02<br/>smooth maps,<br/>partitions of unity"]
+  B --> C["DM03<br/>tangent vectors,<br/>differential"]
+  C --> D["DM04<br/>tangent bundle,<br/>rank theorem"]
+  D --> E["DM05<br/>immersions, submersions,<br/>coverings"]
+  E --> F["DM06<br/>submanifolds"]
+  F -.-> G["DM07<br/>Sard, Whitney<br/>(extra)"]
+  D --> H["DM08<br/>Lie groups"]
+  H --> I["DM09<br/>actions,<br/>semidirect products"]
+  D --> J["DM10<br/>vector fields,<br/>brackets"]
+  J --> K["DM11<br/>Lie algebra<br/>of a Lie group"]
+  H --> K
+  J --> L["DM12<br/>integral curves,<br/>flows, flowouts"]
+  L --> M["DM13<br/>Lie derivative,<br/>commuting fields"]
+  K --> N["DM14<br/>one-parameter subgroups,<br/>exp"]
+  L --> N
+  N --> O["DM15<br/>closed subgroups,<br/>Lie correspondence"]
+  I --> O
+```
+Central thread: **a manifold is a space that looks like $\mathbb R^n$ near every point (DM01–DM02); calculus on it needs tangent vectors and differentials (DM03–DM04), whose constant-rank behaviour is governed by one theorem (the rank theorem, DM04) with consequences for immersions, submersions and submanifolds (DM05–DM06). A Lie group is a manifold with a smooth group structure (DM08–DM09); vector fields and their brackets (DM10) give each Lie group a Lie algebra (DM11); flows of vector fields (DM12–DM13) turn one-parameter families of symmetries into integral curves, giving the exponential map (DM14) and, with the Closed Subgroup Theorem, the Lie correspondence (DM15).**
+
+## Chapters
+| # | Chapter | Lee | Taught by | Status |
+|---|---|---|---|---|
+| 01 | [[DM01 Smooth Manifolds]] | Ch. 1 | DG1–DG3 (unreadable); HW1 | stub |
+| 02 | [[DM02 Smooth Maps and Partitions of Unity]] | Ch. 2 | DG1–DG3; HW1 Q3 | stub |
+| 03 | [[DM03 Tangent Vectors and the Differential]] | Ch. 3 | DG4–DG6 (unreadable); HW2–HW3 | stub |
+| 04 | [[DM04 The Tangent Bundle and the Rank Theorem]] | Ch. 3, 4 | DG8, DG11; HW3 Q2 | stub |
+| 05 | [[DM05 Immersions, Embeddings, Submersions and Coverings]] | Ch. 4 | DG11–DG12; HW5 Q1 | stub |
+| 06 | [[DM06 Submanifolds]] | Ch. 5 | DG7–DG8, DG12; HW4 Q1 | stub |
+| 07 | [[DM07 Sard Whitney and Transversality]] | Ch. 6 | none (Baire only) | stub (🟡) |
+| 08 | [[DM08 Lie Groups]] | Ch. 7 | DG10–DG13, DG19; HW4–HW5 | stub |
+| 09 | [[DM09 Group Actions and Semidirect Products]] | Ch. 7, 21 | DG14–DG16; HW6 Q1–Q3 | stub |
+| 10 | [[DM10 Vector Fields and Lie Brackets]] | Ch. 8 | DG8–DG10, DG17; HW4 Q2–Q4, HW6 Q4–Q6 | stub |
+| 11 | [[DM11 The Lie Algebra of a Lie Group]] | Ch. 8 | DG17–DG20; HW7 Q1–Q3 | stub |
+| 12 | [[DM12 Integral Curves, Flows and Flowouts]] | Ch. 9 | DG21–DG24; HW7 Q4–Q6, HW8 Q1–Q4 | stub |
+| 13 | [[DM13 Lie Derivatives and Commuting Vector Fields]] | Ch. 9 | DG24–DG25; HW8 Q5–Q6 | stub |
+| 14 | [[DM14 One-Parameter Subgroups and the Exponential Map]] | Ch. 20 | DG25–DG26; HW9 | stub |
+| 15 | [[DM15 Closed Subgroups and the Lie Correspondence]] | Ch. 19–21 | DG14, DG18–DG20; HW9 Q6 | stub |
+
+```dataview
+TABLE chapter AS "#", scope AS "Scope", status AS "Status"
+FROM #subject/diff-geometry AND #type/chapter
+SORT chapter ASC
+```
+
+## Prerequisites (analysis vault)
+| Need | Chapter |
+|---|---|
+| open sets, continuity, compactness, connectedness | [[PA07 Metric and Topological Spaces]] |
+| subspace, product, quotient topologies; $S^1$, torus, $\mathbb{RP}^n$ as quotients | [[PA11 Subspaces, Products and Quotients]] |
+| Hausdorff, second-countable, local compactness, exhaustions, paracompactness | [[PA12 Separation, Countability and Local Compactness]] |
+| derivative, inverse and implicit function theorems, Euclidean rank theorem | [[PA13 The Derivative and the Inverse Function Theorem]] |
+| ODE existence, uniqueness, smooth dependence, the flow | [[PA14 ODE Existence Uniqueness and Smooth Dependence]] |
+| homotopy, $\pi_1$, covering spaces, universal cover, $SU(2)\to SO(3)$ | [[PA15 Covering Spaces and the Fundamental Group]] |
+| groups, subgroups, normal subgroups, quotients, homomorphisms, actions | [[Group Theory - Course Map]] ([[GT01 Groups Subgroups and Cosets]], [[GT02 Homomorphisms Normal Subgroups and Quotients]], [[GT05 Actions Conjugation and Sylow Theorems]]) |
+| vector spaces, bases, linear maps, determinants | [[Basis of a Vector Space]] |
+
+## Lecture-to-chapter map (MT3184 slides DG1–DG26)
+| Week (post) | Slides | Content (as far as readable) | Chapters |
+|---|---|---|---|
+| Aug 3–7 | DG1–DG3 | smooth manifolds, smooth maps, partitions of unity | DM01, DM02 |
+| Aug 10–14 | DG4–DG6 | tangent spaces, differentials, change of coordinates | DM03 |
+| Aug 17–21 | DG7–DG8 | submanifolds, $T_pS\subset T_pM$, tangent bundle, Chart Lemma 1.35, Prop 3.18, vector fields | DM04, DM06 |
+| Aug 24–28 | DG9–DG11 | vector fields as derivations, $F$-related fields, Lie groups and homomorphisms, rank theorems (4.12, 4.14), Baire | DM10, DM08, DM04 |
+| Aug 31 – Sep 4 | DG12–DG13 | immersed submanifolds, Lie subgroups, identity component | DM05, DM06, DM08 |
+| Sep 7–12 | DG14–DG17 | Closed Subgroup Thm 20.12, actions, orbits, stabilisers, equivariant rank theorem, semidirect products, Lie algebras | DM09, DM15, DM10 |
+| Sep 14–18 | DG18 | Lie correspondence, homomorphism theorem | DM15 |
+| Oct 5–9 | DG19–DG21 | $\mathrm{Lie}(G)$, $\mathfrak{gl}(n)$, $\mathfrak{so}(n)$, representations, Ado; integral curves and flows | DM11, DM12 |
+| Oct 12–16 | DG22–DG24 | naturality, complete fields, flowout theorem, straightening, Lie derivative | DM12, DM13 |
+| Oct 19–24 | DG25–DG26 | one-parameter subgroups, matrix exponential, exp map | DM13, DM14 |
+
+## Sources and what they are
+| ID | File | What it is | Role |
+|---|---|---|---|
+| L | [[John M. Lee - Introduction to Smooth Manifolds.pdf]] | *Introduction to Smooth Manifolds*, 2nd ed., 726 pp. (printed page = PDF page − 18) | **primary**: every chapter |
+| T | [[Loring W. Tu - An Introduction to Manifolds (2011).pdf]] | Tu, *An Introduction to Manifolds*, 426 pp. | companion: intuition, tangent spaces, forms |
+| K | [[S. Kumaresan - A Course in Differential Geometry and Lie Groups (2002).pdf]] | Kumaresan, 306 pp. | companion: Lie groups, exp, Lie correspondence |
+| GP | [[Victor W. Guillemin, Alan Pollack - Differential Topology (2011).pdf]] | Guillemin–Pollack | companion: Sard, transversality (DM07) |
+| M | `Milnor - Topology from the Differentiable Viewpoint` (djvu) | Milnor | companion: Sard, degree |
+| W | `Frank W. Warner - Foundations of Differentiable Manifolds and Lie Groups` (djvu) | Warner | companion: partitions of unity, Lie groups |
+| Y | [[Ernest Yeung - J. M. Lee_s Intro to Smooth Manifolds solutions.pdf]] | solutions to Lee's exercises | practice problems and checks |
+| S | `Michael Spivak - Calculus on Manifolds` | Spivak | PA13 (analysis background) |
+| MT | `mt3184-differential-geometry-and-lie-groups/` (other tool, **read-only**) | OCR notes of DG1–DG26, HW1–HW9, Test 1, exam prep | **the taught scope** |
+
+## Gaps (to ask the instructor / supply later)
+- **Slides DG1–DG7** (weeks 1–3) are unreadable scans: confirm exactly what was proved about partitions of unity and the equivalent definitions of tangent vectors.
+- **DG25 properties (a)–(d) of the Lie derivative** and the last slide of **DG26** (presumably $F\circ\exp_G=\exp_H\circ F_*$) are cut off in the OCR; DM13–DM14 state the standard results and flag them.
+- Is the **Frobenius theorem** / Lie subalgebra–subgroup correspondence examinable (only the statements are used in the slides)? Is **Sard's theorem** (the Global Rank Theorem proof uses Baire instead)?
+- HW9 has no posted solutions; the practice solutions in DM14–DM15 are mine and are marked as such.
+
+## Cross-subject links
+- **Group theory:** Lie groups are the continuous analogue of [[GT01 Groups Subgroups and Cosets]]–[[GT05 Actions Conjugation and Sylow Theorems]]; representations in [[GT10 Symmetry Representations and Characters]] §6 (the stub bridge written before this vault).
+- **Quantum mechanics:** $\mathfrak{so}(3)\cong\mathfrak{su}(2)$ and the angular momentum algebra; $SU(2)\to SO(3)$ and spin-½ ([[QM09 The Stern-Gerlach Experiment and Spin]], [[PA15 Covering Spaces and the Fundamental Group]]); the one-parameter subgroup $e^{-i\theta L_z/\hbar}$ ([[DM14 One-Parameter Subgroups and the Exponential Map]]).
+- **Dynamics (foundations, climate, eco-evo):** flows of vector fields are the mathematics of [[Phase Plane and Isoclines]] and [[Fixed Points and Linear Stability]]; the pendulum and Lorenz notes in [[CL01 Earth as a System]] ([[DM12 Integral Curves, Flows and Flowouts]]).
+- **Thermodynamics:** implicit functions and exact differentials ([[PA13 The Derivative and the Inverse Function Theorem]]).

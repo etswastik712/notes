@@ -207,3 +207,6 @@ $$\frac{\partial\phi}{\partial t}=\frac12\frac{\partial^2}{\partial p^2}\Big[\fr
 > | all numbers, Monte Carlo and finite-difference checks | `scripts/interdisc_numbers.py` (THX1) | extra · beyond |
 >
 > **Flagged:** $\kappa_T=10^{-6}$ m²/s for rock, $D_{salt}=1.6\times10^{-9}$ m²/s, $\kappa_h=5$ m²/kyr, the water viscosity, and the neutral mean time to fixation ($\sim2N$–$4N$ generations) are recalled or illustrative values.
+
+## Continued in Part II (added 2026-10-30)
+- Where the diffusion constant comes *from* for a gas: [[SM04 Kinetic Theory and the Boltzmann Equation]] §10–§11 computes $D$, the kinematic viscosity $\nu=\eta/\rho$ and the thermal diffusivity $D_T=\kappa/\rho c_p$ from $m$, $d$, $T$ via the Boltzmann equation (all $\sim\bar v\lambda/3$; air: $1.6$–$2.2\times10^-5$ m$^2$ s$^-1$).

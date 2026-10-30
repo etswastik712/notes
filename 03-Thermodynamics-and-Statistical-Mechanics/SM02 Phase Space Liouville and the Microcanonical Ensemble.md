@@ -73,15 +73,26 @@ $$\langle\mathcal O\rangle=\int\mathrm d\Gamma\,\rho(\mu,t)\,\mathcal O(\mu).$$
 > Now use Hamilton's equations: $\sum_i\big(\partial\dot q_i/\partial q_i+\partial\dot p_i/\partial p_i\big)=\sum_i\big(\frac{\partial^2\mathcal H}{\partial q_i\partial p_i}-\frac{\partial^2\mathcal H}{\partial p_i\partial q_i}\big)=0$: **the flow field is divergence-free** (incompressible). Therefore
 > $$\frac{\partial\rho}{\partial t}+\sum_i\Big(\dot q_i\frac{\partial\rho}{\partial q_i}+\dot p_i\frac{\partial\rho}{\partial p_i}\Big)=\frac{\mathrm d\rho}{\mathrm dt}=0,$$
 > and substituting Hamilton's equations for $\dot q_i,\dot p_i$ gives the Poisson-bracket form. $\square$
-> The quantum counterpart is the von Neumann equation $\partial_t\hat\rho=-\tfrac i\hbar[\hat{\mathcal H},\hat\rho]$ (replace $\{\,,\}\to\tfrac1{i\hbar}[\,,]$): see SM07.
+> The quantum counterpart is the von Neumann equation $\partial_t\hat\rho=-\tfrac i\hbar[\hat{\mathcal H},\hat\rho]$ (replace $\{\,,\}\to\tfrac1{i\hbar}[\,,]$): see SM08.
 
 > [!example] A pendulum blob (recomputed; Fig. SM2.1A)
 > $\mathcal H=p^2/2+(1-\cos q)$ ($m=\ell=g=1$). A disc of radius 0.35 centred at $(q,p)=(1.6,0)$ is evolved with a high-accuracy integrator and its boundary (400 points) is stretched into a long thin spiral by $t=30$, because the pendulum's period depends on amplitude (points at larger $q$ rotate more slowly: **shear**). The polygon area is $0.38483,\ 0.38483,\ 0.38483,\ 0.38482,\ 0.38478$ at $t=0,4,8,16,32$ against the exact initial $\pi(0.35)^2=0.38485$ (the small deficit is the 400-gon, not the flow). **Stretching without squeezing is what makes mixing possible**: a coarse grid looking at the filament sees it fill a region of $\Gamma$ of larger area. A *harmonic* oscillator, whose period does not depend on amplitude, only rotates the blob and never mixes it.
 
 ### 2.1 Consequences
-1. **Stationarity.** $\rho$ is time-independent if $\{\rho,\mathcal H\}=0$. Any function of the Hamiltonian, $\rho=f(\mathcal H)$, qualifies, and so does any function of other conserved quantities ($\mathbf P$, $\mathbf L$). This is why the equilibrium ensembles of SM02–SM04 are functions of the energy ($\delta(E-\mathcal H)$ in §4, $e^{-\beta\mathcal H}$ in SM03).
-2. **The fine-grained entropy cannot grow.** $S_G=-k_B\int\rho\ln\rho\,\mathrm d\Gamma$ is the Gibbs entropy of SM01 §7; by Liouville it is *constant in time* under Hamiltonian flow. The entropy increase of the second law is **coarse-grained**: measured with finite resolution, the filament of the figure looks like a diffuse blob (SM05, planned, and the Boltzmann equation of SM22, planned).
+1. **Stationarity.** $\rho$ is time-independent if $\{\rho,\mathcal H\}=0$. Any function of the Hamiltonian, $\rho=f(\mathcal H)$, qualifies, and so does any function of other conserved quantities ($\mathbf P$, $\mathbf L$). This is why the equilibrium ensembles of SM02–SM05 are functions of the energy ($\delta(E-\mathcal H)$ in §4, $e^{-\beta\mathcal H}$ in SM03).
+2. **The fine-grained entropy cannot grow.** $S_G=-k_B\int\rho\ln\rho\,\mathrm d\Gamma$ is the Gibbs entropy of SM01 §7; by Liouville it is *constant in time* under Hamiltonian flow. The entropy increase of the second law is **coarse-grained**: measured with finite resolution, the filament of the figure looks like a diffuse blob (SM06, planned, and the Boltzmann equation of [[SM04 Kinetic Theory and the Boltzmann Equation]]).
 3. **Poincaré recurrence.** In a bounded phase space of finite volume an incompressible flow returns arbitrarily close to its starting point. The *time* is the point: to return within 10 % in each of the $6N$ coordinates takes of the order of $10^{6N}$ times a molecular time, $10^{600}$ for $N=100$, a number that has no meaning for $N=10^{23}$ (an *estimate*, not a theorem). Recurrence is not forbidden, it is astronomically improbable, which is how the "reversibility paradox" (Loschmidt) and the "recurrence paradox" (Zermelo) are answered: the second law is probabilistic, with probabilities $e^{-N\cdot\text{something}}$ (SM01 §1, §6).
+
+### 2.2 The sharper statement: the flow is symplectic
+Let $\phi_t:\Gamma\to\Gamma$ be the Hamiltonian flow with vector field $X=(\partial\mathcal H/\partial\mathbf p,\,-\partial\mathcal H/\partial\mathbf q)$. Its Jacobian obeys Liouville's formula $\frac{\mathrm d}{\mathrm dt}\det D\phi_t=\big[(\nabla\cdot X)\circ\phi_t\big]\det D\phi_t$ (from $\frac{\mathrm d}{\mathrm dt}D\phi_t=DX\,D\phi_t$), and $\nabla\cdot X=0$ (§2). Hence $\det D\phi_t\equiv1$: **the volume of every set is preserved**, the integral form of Liouville's theorem. A Hamiltonian flow is in fact **symplectic**, $(D\phi_t)^{\!\top}J\,D\phi_t=J$ with $J=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$, which preserves much more than the $6N$-volume: all the **Poincaré integral invariants** (the areas of the projections onto each $(q_i,p_i)$ plane, summed over any surface). One consequence matters conceptually: **a Hamiltonian flow has no attractors** (an asymptotically stable fixed point or limit cycle would contract volume). "The system approaches equilibrium" can therefore never mean that *trajectories* converge; it can only mean that *coarse-grained observables* do (§3.1).
+
+### 2.3 Poincaré recurrence and Kac's lemma
+**Theorem (Poincaré).** If $\phi$ preserves a finite measure $\mu$ (Liouville measure on a compact energy shell) then for every $A$ with $\mu(A)>0$, almost every point of $A$ returns to $A$ infinitely often. *Proof (time-$\tau$ map).* The sets $A,\phi^{-1}A,\phi^{-2}A,\dots$ all have measure $\mu(A)>0$ in a space of finite measure, so they cannot be pairwise disjoint: some $\phi^{-j}A\cap\phi^{-k}A$ has positive measure ($j<k$); applying the measure-preserving $\phi^j$ gives $\mu\big(A\cap\phi^{-(k-j)}A\big)>0$, a positive fraction of $A$ returns after $k-j$ steps; iterate on the remainder. $\square$
+
+The theorem says *that* the system returns, not *when*. **Kac's lemma** (quoted) gives the mean return time exactly for an ergodic flow: $\langle T_A\rangle=\tau\,\mu(\Gamma)/\mu(A)$, the time scale divided by the fraction of the shell occupied by $A$. Applied to the macrostate "all $N$ molecules in the left half" ($\mu(A)/\mu(\Gamma)=2^{-N}$):
+
+> [!example] Recurrence of a macroscopic fluctuation (recomputed)
+> $\langle T\rangle=2^N\tau$. With $\tau\sim10^{-13}$ s: $N=100$: $1.3\times10^{17}$ s, about $0.3$ of the age of the Universe ($4.4\times10^{17}$ s); $N=200$: $1.6\times10^{47}$ s; $N=10^3$: $10^{288}$ s; for a mole, $\log_{10}$ of the time is $1.8\times10^{23}$ ([[Loschmidt and Zermelo Paradoxes]]). *A few dozen molecules fluctuate visibly; a hundred do so on cosmological time scales; a mole never does.* This replaces the cruder $10^{6N}$ estimate of §2.1 by an exact statement about the macrostate that matters.
 
 ## 3. Equilibrium, ergodicity and the postulate
 
@@ -96,6 +107,25 @@ $$\langle\mathcal O\rangle=\int\mathrm d\Gamma\,\rho(\mu,t)\,\mathcal O(\mu).$$
 >
 > It is justified by consistency (it is stationary by Liouville, §2.1(1), and no other normalisable choice treats all microstates alike) and by results (it gives thermodynamics, §4–§8). The deeper justification is one of the open problems of mathematical physics.
 
+### 3.1 Ergodic, mixing, and what the cat map shows
+**Birkhoff's theorem** (quoted): for an ergodic flow the time average of an integrable function equals its microcanonical average for almost every initial condition. **Mixing** is stronger: $\mu(A\cap\phi_t^{-1}B)\to\mu(A)\mu(B)$; every region spreads evenly through the shell and correlations decay. Mixing is what makes *relaxation* happen. The simplest mixing system with a closed form is **Arnold's cat map** on the unit torus,
+$$\begin{pmatrix}x\\y\end{pmatrix}\longmapsto\begin{pmatrix}2&1\\1&1\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}\bmod1,\qquad\det=1,\qquad\text{eigenvalues }\frac{3\pm\sqrt5}2 .$$
+It is area preserving, stretches along the unstable direction by $e^{\lambda}=2.618$ per step ($\lambda=\ln\frac{3+\sqrt5}2=0.9624$, the **Lyapunov exponent**) and contracts by the inverse in the other; a small square is drawn out into a filament that winds ever more densely round the torus (Fig. SM2.2A).
+
+![[fig_sm02b_ergodic.png]]
+*Figure SM2.2. A: the cat map applied to a $0.05\times0.05$ square at $t=0,2,4,7$. B: the **coarse-grained** entropy (40×40 cells) rises at about the Lyapunov rate and saturates at $\ln1600$, while the fine-grained entropy stays constant. C: the marginal of one momentum component on the $3N$-sphere against the Gaussian (§3.2).*
+
+> [!example] Fine-grained versus coarse-grained entropy (recomputed; Fig. SM2.2B)
+> $2\times10^5$ points uniform in the square; cells of side $1/40$ (1600 cells). The Gibbs entropy of the density is constant (area is preserved), but $S_{cg}=-\sum_cp_c\ln p_c$ ($p_c$ the fraction in cell $c$) is $1.386,\ 2.186,\ 2.963,\ 3.885,\ 4.838,\ 5.799,\ 6.753,\ 7.337,\ 7.373$ for $t=0\ldots8$: **linear growth with slope $\approx\lambda$** ($0.956$ between $t=3$ and $6$) until saturation at $\ln1600=7.378$. The saturation time is $\ln(1600/4)/\lambda=6.2$ steps (4 cells are occupied initially). In general the rate of coarse-grained entropy production of a mixing system is the **Kolmogorov–Sinai entropy**, the sum of the positive Lyapunov exponents (Pesin; quoted). For hard spheres this is $\sim1/\tau_\times$ per molecule: the physical origin of the H-theorem ([[SM04 Kinetic Theory and the Boltzmann Equation]] §6).
+
+### 3.2 Why the postulate is plausible: the Maxwell distribution from the sphere
+Apply the postulate to $N$ free particles: the momenta are uniformly distributed on the sphere $\sum_{i=1}^{3N}p_i^2=2mE$ of radius $R=\sqrt{2mE}$ in $n=3N$ dimensions. Slicing the sphere at a given value of one coordinate (the remaining coordinates lie on an $(n-1)$-sphere of radius $\sqrt{R^2-p_x^2}$, with the factor $R/\sqrt{R^2-p_x^2}$ from the slope of the surface) gives the marginal density
+$$p(p_x)\propto\Big(1-\frac{p_x^2}{R^2}\Big)^{(n-3)/2}\ \xrightarrow{\ n\to\infty\ }\ \exp\Big(-\frac{p_x^2}{2mk_BT}\Big),\qquad k_BT\equiv\frac{2E}{3N}\ \ \big(R^2=n\,mk_BT\big),$$
+because $(1-z^2/n)^{(n-3)/2}\to e^{-z^2/2}$ in the variable $z=p_x/\sqrt{mk_BT}$. **The Maxwell distribution of one molecule follows from the microcanonical postulate for the whole gas**: equivalence of ensembles in the momentum sector ([[SM03 The Canonical Ensemble]] §3; [[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=110|K §4.2]]), an instance of *concentration of measure* (almost all of the sphere looks the same from the point of view of any one coordinate).
+
+> [!example] How fast (recomputed; Fig. SM2.2C)
+> Ratio of the exact marginal to the Gaussian at $z=0,1,2,3,5,7$: $N=10$: $0.975,\ 1.017,\ 1.044,\ 0.711,\ 0,\ 0$ (the support ends at $z=\sqrt{30}=5.48$: *one molecule cannot carry more energy than the whole system*); $N=100$: $0.9975,\ 1.0017,\ 1.0042,\ 0.9746,\ 0.655,\ 0.138$; $N=1000$: $0.9997,\ 1.0002,\ 1.0004,\ 0.9975,\ 0.961,\ 0.837$. The Gaussian is excellent to $\sim3\sigma$ already at $N=100$; the far-tail deviation is the finite-energy constraint, the microcanonical analogue of the Gamma law of SM03 §3.2.
+
 ## 4. The microcanonical ensemble and the entropy
 
 ### 4.1 Definitions
@@ -107,6 +137,9 @@ In a quantum system $\Omega$ is the number of eigenstates with energy in the she
 
 > [!key] The shell thickness does not matter
 > $\ln(\Omega\delta E)$, $\ln\Sigma$ and $\ln\Omega$ differ by terms of order $\ln N$, against $S\sim N$. For an energy $E\sim N\epsilon$ and any shell width between $\delta E\sim E$ and, say, $\delta E\sim E/N^{10}$, the term $\ln\delta E$ changes $S$ by at most $O(\ln N)$. This is the "largest term" argument of SM01 §5.1: volume in $6N$ dimensions is concentrated at the *outer surface*, so the whole ball below $E$ and its outermost shell have the same logarithm. (Exact check for the ideal gas in §6.)
+
+> [!example] The volume lives on the surface (recomputed)
+> In $n$ dimensions the fraction of a ball's volume within an outer shell of relative thickness $\epsilon$ is $1-(1-\epsilon)^n$: for $n=30$ it is $0.26$ ($\epsilon=0.01$) and $0.96$ ($\epsilon=0.1$); for $n=300$, $0.951$ and $1.0000$. For $n=3N$ with $N=10^{23}$ a shell of $\epsilon=10^{-20}$ already contains $1-e^{-3000}$ of the ball. That is why $\ln\Sigma$ and $\ln(\Omega\,\delta E)$ agree.
 
 ### 4.2 Temperature, pressure and chemical potential from $S$
 Define, for the isolated system, the three derivatives of $S(E,V,N)$:
@@ -120,6 +153,16 @@ which is the **fundamental relation** of thermodynamics ([[Fundamental Thermodyn
 
 > [!derivation] The second law as a counting statement
 > Removing a constraint (a partition, an insulating wall, a valve) can only *enlarge* the set of accessible microstates: $\Omega_{\rm after}\ge\Omega_{\rm before}$, so $\Delta S=k_B\ln(\Omega_{\rm after}/\Omega_{\rm before})\ge0$. If the volume available to $N$ ideal-gas molecules doubles, $\Omega$ grows by $2^N$ and $\Delta S=Nk_B\ln2$ (compare TH06 §5: $5.763$ J K$^{-1}$ per mole). The reverse is not impossible, only improbable by $2^{-N}$.
+
+### 4.3 Entropy is extensive and concave
+**Superadditivity.** Bring two identical systems $(V,N)$ with energies $E_1,E_2$ into thermal contact. The combined system has at least the microstates in which the energies are still $(E_1,E_2)$: $\Omega_{12}(E_1+E_2)\ge\Omega(E_1)\Omega(E_2)$, so $S(E_1+E_2;2V,2N)\ge S(E_1;V,N)+S(E_2;V,N)$. With **extensivity** the left side is $2S\big(\tfrac{E_1+E_2}2;V,N\big)$, hence
+$$S\Big(\frac{E_1+E_2}2\Big)\ge\tfrac12\big[S(E_1)+S(E_2)\big]\qquad\Longrightarrow\qquad\frac{\partial^2S}{\partial E^2}\le0\ \ \Longleftrightarrow\ \ C_V=-\frac1{T^2\,\partial^2S/\partial E^2}\ge0 .$$
+**Thermodynamic stability follows from counting** (it needs no assumption beyond additivity and extensivity: [[Thermodynamic Stability]]). It holds even for negative temperatures ($C>0$ for the two-level system: $S''=-\frac1{N\varepsilon^2x(1-x)}<0$), and fails when additivity fails: long-range forces and first-order transitions (SM03 §3.1).
+
+### 4.4 The ground state and residual entropy
+As $T\to0$, $S\to k_B\ln g_0$ with $g_0$ the ground-state degeneracy: the third law $S(0)=0$ holds when $g_0=1$ (or $\ln g_0=o(N)$). **Ice** is the classic exception ($g_0\sim(3/2)^N$, Pauling 1935): each O atom has two near and two far H atoms (the "ice rules"). Of the $2^{2N}$ ways to place the $2N$ H atoms on the $2N$ O–O bonds, the fraction obeying the rule at every O is $\big(\binom42/2^4\big)^N=(6/16)^N$, so $W=4^N(3/8)^N=(3/2)^N$ and
+$$S_0=k_B\ln W=Nk_B\ln\tfrac32\ \ \Rightarrow\ \ R\ln\tfrac32=3.371\ \mathrm{J\,mol^{-1}K^{-1}},$$
+against the calorimetric residual of about $3.4$ J mol$^{-1}$K$^{-1}$ (recalled: Giauque and Stout 1936; Pauling's estimate is excellent). A macroscopic residual entropy at $T\to0$ is the signature of a system frozen into one of $e^{S_0/k_B}$ states.
 
 ## 5. The two-level system and negative temperatures
 
@@ -168,7 +211,7 @@ the **Sackur–Tetrode entropy** ([[Sackur-Tetrode Equation]]; the same formula 
 > The shell gives $\ln\Omega\,\delta E=\ln\Sigma+\ln(3N\delta E/2E)$; for $\delta E=E$ this adds $\ln(3N/2)$ and the net difference from $S_{ST}/k_B$ is the **constant** $\ln\frac3{2\pi\sqrt6}=-1.635$ for every $N$. All three definitions of the entropy agree to $O(1)$ out of $\sim10^3$ to $10^{23}$.
 
 > [!connection] $\lambda$ and the classical criterion
-> $S_{ST}$ is meaningful only if $V/N\lambda^3\gg1$, the *classical* regime. Recomputed: $n\lambda^3=1.7\times10^{-7}$ for N$_2$ at 300 K and 1 atm; $0.13$ for He gas at 4.2 K; $4.5$ for liquid He-4 at 2.17 K; $6.8\times10^{3}$ for conduction electrons in copper at 300 K. When $n\lambda^3\gtrsim1$ the formula fails (it would give a negative entropy) and quantum statistics must be used (SM07, SM11, SM12). The third law ($S\to0$ as $T\to0$) is violated by the classical result for the same reason.
+> $S_{ST}$ is meaningful only if $V/N\lambda^3\gg1$, the *classical* regime. Recomputed: $n\lambda^3=1.7\times10^{-7}$ for N$_2$ at 300 K and 1 atm; $0.13$ for He gas at 4.2 K; $4.5$ for liquid He-4 at 2.17 K; $6.8\times10^{3}$ for conduction electrons in copper at 300 K. When $n\lambda^3\gtrsim1$ the formula fails (it would give a negative entropy) and quantum statistics must be used (SM08, SM12, SM13). The third law ($S\to0$ as $T\to0$) is violated by the classical result for the same reason.
 
 ## 7. Mixing, indistinguishability and the Gibbs paradox
 
@@ -179,13 +222,13 @@ If the gases are the **same**, nothing macroscopic happens and thermodynamics sa
 > [!derivation] Resolution
 > Identical particles are *indistinguishable*: swapping two of them is not a new microstate. The phase space volume $\int\mathrm d^{3N}p\,\mathrm d^{3N}q$ counts each physical state $N!$ times (one for each permutation of the labels), so the correct count is the raw volume divided by $N!$. With $\ln N!=N\ln N-N$ the $N\ln V$ becomes $N\ln(V/N)$; the entropy depends on $V/N$ only and is **extensive**: $S(2V,2N)=2S(V,N)$, and for identical gases $\Delta S_{\rm mix}=0$. For two *different* gases at the same $T,P$ in volumes $V_1,V_2$ (so $N_i/V_i=n$):
 > $$\Delta S_{\rm mix}=-k_B\sum_iN_i\ln\frac{N_i}{N}=-Nk_B\sum_ix_i\ln x_i,\qquad x_i=\frac{N_i}N .$$
-> This is $N$ times the **Shannon entropy of the composition** (SM01 §7.2). $\square$ (Classically $1/N!$ must be put in by hand; in quantum mechanics it follows from the symmetrisation postulate, SM07.)
+> This is $N$ times the **Shannon entropy of the composition** (SM01 §7.2). $\square$ (Classically $1/N!$ must be put in by hand; in quantum mechanics it follows from the symmetrisation postulate, SM08.)
 
 > [!example] The entropy of mixing air (recomputed)
 > $0.21$ O$_2$ + $0.79$ N$_2$ per mole of mixture: $\Delta S_{\rm mix}=-R(0.21\ln0.21+0.79\ln0.79)=0.514\,R=4.27$ J mol$^{-1}$K$^{-1}$ (the $x_i=\tfrac12$ maximum is $R\ln2=5.76$). The same formula with $x_i$ the mole fractions of any ideal-gas mixture is the origin of the "$RT\ln x_i$" term of chemical potentials in [[TH05 Potentials Maxwell Relations Stability and the Third Law]] and of the atmospheric partial pressures of [[CL05 Thermodynamic State of the Atmosphere]].
 
 > [!pitfall] Is the mixing entropy discontinuous?
-> Molecules that differ by an *arbitrarily small* property (isotopes, nuclear-spin states) are still "different" if you can separate them, giving $2Nk_B\ln2$; molecules that are exactly the same give 0. There is no continuous interpolation in the formula. The resolution (Jaynes) is that the entropy depends on **which macroscopic variables you are able to measure or control**; if you cannot tell the two gases apart, they are the same gas for you. Entropy is a property of the system *and* the description (SM05, planned).
+> Molecules that differ by an *arbitrarily small* property (isotopes, nuclear-spin states) are still "different" if you can separate them, giving $2Nk_B\ln2$; molecules that are exactly the same give 0. There is no continuous interpolation in the formula. The resolution (Jaynes) is that the entropy depends on **which macroscopic variables you are able to measure or control**; if you cannot tell the two gases apart, they are the same gas for you. Entropy is a property of the system *and* the description (SM06, planned).
 
 ## 8. Quantum counting and the Einstein solid
 
@@ -214,7 +257,7 @@ $$\Omega(N,q)=\binom{q+N-1}{q}$$
 > Put all the quanta in A: only one arrangement of "where in B" but huge numbers of arrangements within A. The macrostate "the quanta are shared 60:40" has $\sim10^{35}$ times more microstates than "all in A". Nothing pushes the energy across; there is simply almost nowhere else for the system to be. This is the content of "heat flows from hot to cold".
 
 > [!pitfall] Four traps
-> 1. **$S$ is defined up to a constant** in classical mechanics ($h$, $N!$ fix it; the third law needs quantum mechanics to say that it vanishes at $T=0$). Only *differences* are physical until SM07.
+> 1. **$S$ is defined up to a constant** in classical mechanics ($h$, $N!$ fix it; the third law needs quantum mechanics to say that it vanishes at $T=0$). Only *differences* are physical until SM08.
 > 2. **Negative temperature is hotter, not colder**; $T=0^-$ is the hottest state. Use $\beta$ to avoid confusion.
 > 3. **Do not drop $N!$ because "it is only a constant".** It changes $S$ by $-k_B(N\ln N-N)$, which is of the order of $S$, and destroys extensivity (§7).
 > 4. **The microcanonical ensemble is a fiction for real systems.** No real system is perfectly isolated, and $\delta(E-\mathcal H)$ is hard to integrate. SM03 replaces it by contact with a bath, with identical thermodynamics (equivalence of ensembles).
@@ -222,8 +265,9 @@ $$\Omega(N,q)=\binom{q+N-1}{q}$$
 ## Map of this chapter
 > [!connection] How SM02 connects
 > **Builds on:** [[SM01 Probability Large Numbers and Information]] (largest-term, Stirling, multinomial), [[TH04 The Second Law Carnot Engines and Entropy]], [[TH05 Potentials Maxwell Relations Stability and the Third Law]] (the thermodynamic $T,P,\mu$), [[TH06 From Kinetic Theory to Statistical Mechanics]] §5 (the earlier sketch of the same results).
-> **Leads to:** [[SM03 The Canonical Ensemble]] (bath instead of isolation), SM05 (entropy and information, planned), SM07 (quantum counting, $N!$ from symmetrisation), SM22 (the Boltzmann equation: the coarse-grained route to the arrow of time).
+> **Leads to:** [[SM03 The Canonical Ensemble]] (bath instead of isolation), SM06 (entropy and information, planned), SM08 (quantum counting, $N!$ from symmetrisation), [[SM04 Kinetic Theory and the Boltzmann Equation]] (the Boltzmann equation: the coarse-grained route to the arrow of time, the H-theorem and the Kac ring).
 > **Concepts:** [[Liouville's Theorem]] · [[Phase Space]] · [[Ergodic Hypothesis]] · [[Microcanonical Ensemble]] · [[Density of States]] · [[Negative Temperature]] · [[Gibbs Paradox]] · [[Einstein Solid]] · [[Sackur-Tetrode Equation]] · [[Statistical Entropy]] · [[Stirling's Approximation]] · [[Thermal Wavelength]]
+> **More concepts (added with the deepening, 2026-10-30):** [[Poincare Recurrence]] · [[Arnold Cat Map]] · [[Residual Entropy of Ice]] · [[Loschmidt and Zermelo Paradoxes]]; the next step: [[SM04 Kinetic Theory and the Boltzmann Equation]]
 > **Other subjects:** [[Phase Space Picture of the Oscillator]] (Quantum Mechanics), [[QM05 The Harmonic Oscillator]], [[CL05 Thermodynamic State of the Atmosphere]] (mixtures).
 
 ## Summary
@@ -248,6 +292,11 @@ $$\Omega(N,q)=\binom{q+N-1}{q}$$
 8. **Exact vs Stirling.** Derive $\ln\Sigma=S_{ST}/k_B-\ln(\pi\sqrt6\,N)$ and evaluate it for $N=1000$ He atoms ($T=300$ K, 1 atm).
 9. **Certainty.** For $N$ molecules in a box, the probability that the left half holds a fraction $m$ with $|m-\tfrac12|>10^{-3}$: find it for $N=10^6$ (Gaussian) and estimate it for $N=10^{10}$ (large deviation).
 10. **Counting quantum states.** For one He atom in a cube of 1 L, how many standing-wave states have energy below $\tfrac32k_BT$ at 300 K? Compare with $V/\lambda^3$.
+11. **Cat map.** (a) Show that the cat map has determinant 1 and eigenvalues $(3\pm\sqrt5)/2$. (b) How many steps until a $0.05\times0.05$ square occupies all $40\times40$ cells? (c) What is the mean return time to one cell, and how does it compare?
+12. **The sphere.** Derive the marginal density of one coordinate on the sphere in $n$ dimensions, its Gaussian limit, and the ratio to the Gaussian at $z=3$ for $N=100$.
+13. **Concavity.** From superadditivity derive $S''\le0$ and $C_V\ge0$; show that the two-level system has $C>0$ even when $T<0$.
+14. **Ice.** Derive the Pauling estimate $W=(3/2)^N$ and the residual molar entropy.
+15. **Recurrence.** Using Kac's lemma find the mean time for $N=50,100,200$ molecules to return to "all in the left half" if $\tau=10^{-13}$ s, and compare with the age of the Universe $4.4\times10^{17}$ s.
 
 > [!example]- Solutions
 > 1. $\dot q=p/m$, $\dot p=-m\omega^2q$. With $X=\sqrt{m\omega}\,q$ and $Y=p/\sqrt{m\omega}$: $\dot X=\omega Y$, $\dot Y=-\omega X$, a rotation at angular velocity $\omega$; areas ($\mathrm dq\,\mathrm dp=\mathrm dX\,\mathrm dY$) are preserved. The energy curve is $X^2+Y^2=2E/\omega$, a circle of area $2\pi E/\omega$; $\Sigma=\dfrac{2\pi E/\omega}{2\pi\hbar}=\dfrac E{\hbar\omega}$: **one quantum state per $\hbar\omega$ of energy** (the oscillator ladder of [[QM05 The Harmonic Oscillator]]).
@@ -260,6 +309,11 @@ $$\Omega(N,q)=\binom{q+N-1}{q}$$
 > 8. Stirling for $\ln N!$ adds $\tfrac12\ln2\pi N$, for $\ln\Gamma(\tfrac{3N}2+1)$ adds $\tfrac12\ln3\pi N$; their sum $=\tfrac12\ln(6\pi^2N^2)=\ln(\pi\sqrt6N)$ is subtracted from $\ln\Sigma$. $N=1000$: $S_{ST}/k_B=15175.003$ (He, 300 K, 1 atm), $\ln\Sigma=15166.054$, difference $-8.949=-\ln(7694.6)$ ✓.
 > 9. $N=10^6$: $\sigma=\sqrt N/2=500$ molecules, while $|m-\tfrac12|>10^{-3}$ means $|n-N/2|>1000$, i.e. $2\sigma$: $P=\operatorname{erfc}(2/\sqrt2)=0.0455$ (two-sided). $N=10^{10}$: $I\approx2(10^{-3})^2=2\times10^{-6}$, $NI=2\times10^4$, $P\sim e^{-20000}=10^{-8686}$ (the Gaussian would give the same exponent here, since $m$ is near $\tfrac12$). No observer will ever see it.
 > 10. $N_{\rm states}=\frac{4\pi}3\frac{V(2mE)^{3/2}}{h^3}$ with $E=\tfrac32k_BT=6.21\times10^{-21}$ J, $m=6.646\times10^{-27}$ kg: $2mE=8.26\times10^{-47}$ kg J, $(2mE)^{3/2}=7.51\times10^{-70}$, so $N_{\rm states}=\frac{4.189\times10^{-3}\times7.51\times10^{-70}}{2.91\times10^{-100}}=1.08\times10^{28}$. And $V/\lambda^3=10^{-3}/(0.0504\ \mathrm{nm})^3=7.8\times10^{27}$. The ratio is a pure number, $\tfrac{4\pi}3\big(\tfrac3{2\pi}\big)^{3/2}=1.38$ (put $E=\tfrac32k_BT$ and $\lambda=h/\sqrt{2\pi mk_BT}$ into the two expressions). **One** atom in a litre has about $10^{28}$ states below $\tfrac32k_BT$, while a litre at 1 atm and 300 K holds $N=2.45\times10^{22}$ atoms: the mean occupation per state is $\approx2\times10^{-6}\ll1$, the dilute regime in which counting states classically (and treating the atoms as distinguishable up to $N!$) is accurate.
+> 11. (a) $\det\begin{pmatrix}2&1\\1&1\end{pmatrix}=1$; characteristic polynomial $\mu^2-3\mu+1=0$, $\mu=(3\pm\sqrt5)/2=2.618,\ 0.382$. (b) Four cells are occupied at $t=0$; the number of occupied cells grows like $4e^{\lambda t}$ until it reaches 1600: $t=\ln400/0.9624=6.2$ steps (measured: saturation at $t\approx7$). (c) Kac's lemma: the mean return time to a cell occupying $1/1600$ of the torus is $1600$ steps: $260$ times the relaxation time.
+> 12. Fix $p_x=x$; the other $n-1$ coordinates lie on a sphere of radius $r=\sqrt{R^2-x^2}$ (area $\propto r^{n-2}$), and the surface element of the sphere has the extra factor $R/r$: density $\propto r^{n-2}/r=(R^2-x^2)^{(n-3)/2}\propto(1-x^2/R^2)^{(n-3)/2}$. With $R^2=n\sigma^2$, $x=z\sigma$: $(1-z^2/n)^{(n-3)/2}\to e^{-z^2/2}$. At $N=100$ ($n=300$), $z=3$: exact/Gaussian $=0.9746$.
+> 13. From §4.3: $S''(E)\le0$. With $\beta=S'(E)$: $C=\mathrm dE/\mathrm dT=-\beta^2\,\mathrm dE/\mathrm d\beta=-1/(T^2S'')>0$ for either sign of $T$. For two levels $S''=-1/[N\varepsilon^2x(1-x)]<0$ for all $0<x<1$ so $C>0$ also in the inverted branch ($T<0$): $C=Nk_B(\varepsilon/k_BT)^2e^{\varepsilon/k_BT}/(e^{\varepsilon/k_BT}+1)^2$, even in $1/T$.
+> 14. Each of the $2N$ bonds has its H near one of its two O atoms: $2^{2N}$ configurations. At one O the 4 adjacent bonds have $2^4=16$ near/far patterns of which $\binom42=6$ obey "two near, two far"; treating the $N$ oxygens as independent: $W=4^N(6/16)^N=(3/2)^N$. $S_0=R\ln\frac32=8.3145\times0.40547=3.371$ J mol$^{-1}$K$^{-1}$.
+> 15. $\langle T\rangle=2^N\tau$: $N=50$: $1.1\times10^{15}\times10^{-13}=113$ s; $N=100$: $1.3\times10^{17}$ s ($0.29$ of the age of the Universe); $N=200$: $1.6\times10^{47}$ s ($4\times10^{29}$ ages).
 
 ## Provenance
 > [!provenance]- Source map for this chapter
@@ -271,7 +325,7 @@ $$\Omega(N,q)=\binom{q+N-1}{q}$$
 > | equal-$T$ derivation, Gaussian widths, exact-vs-Stirling identity $\ln\Sigma=S_{ST}-\ln(\pi\sqrt6N)$ | my own derivations | mine |
 > | all numbers and figures | `scripts/sm_numbers.py`, `scripts/fig_sm02.py` | mine |
 >
-> **Flags.** (1) The Purcell–Pound LiF experiment and Jaynes's resolution of the mixing discontinuity are quoted from memory. (2) Problem 10: the ratio $1.38=\tfrac{4\pi}3(\tfrac3{2\pi})^{3/2}$ is exact and was confirmed numerically. (3) PB's printed page numbers were read by OCR from the scan; the section numbers are certain, the page numbers are good to ±1. (4) The recurrence estimate $10^{6N}$ is a rough scaling, not a theorem.
+> **Flags.** (1) The Purcell–Pound LiF experiment and Jaynes's resolution of the mixing discontinuity are quoted from memory. (2) Problem 10: the ratio $1.38=\tfrac{4\pi}3(\tfrac3{2\pi})^{3/2}$ is exact and was confirmed numerically. (3) PB's printed page numbers were read by OCR from the scan; the section numbers are certain, the page numbers are good to ±1. (4) The recurrence estimate $10^{6N}$ of §2.1 is a rough scaling, not a theorem; §2.3 gives the exact statement (Kac's lemma, quoted). (5) **Deepening of 2026-10-30:** §2.2–2.3, §3.1–3.2, the shell-volume example, §4.3–4.4 and Problems 11–15 added (numbers in `scripts/sm_deepen_numbers.py`, figure `fig_sm02b.py`); Birkhoff's theorem, Pesin's formula, Kac's lemma, Pauling's ice entropy and the calorimetric value are quoted from standard sources.
 
 **References.** Kardar, M. *Statistical Physics of Particles* (2007), Ch. 3–4 · Pathria, R. K. and Beale, P. D. *Statistical Mechanics*, 3rd ed. (2011), Ch. 1–2 · Gibbs, J. W. *Elementary Principles in Statistical Mechanics* (1902) · Purcell, E. M. and Pound, R. V. (1951) *Phys. Rev.* 81, 279 · Jaynes, E. T. (1992) *The Gibbs paradox*.
 

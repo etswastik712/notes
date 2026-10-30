@@ -1,0 +1,31 @@
+---
+title: Lie Group
+aliases: ["Lie groups", "smooth group", "topological group"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Lie Group
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG10–DG11 via [[mt3184-differential-geometry-and-lie-groups/2026-08-27-august-24-28|Aug 24–28 note]]; HW4 Q5–Q6, HW5 Q2.
+
+> [!intuition] In one picture
+> A group of symmetries that can be varied continuously: a manifold in which multiplication and inversion are smooth maps.
+
+> [!key] Definition
+> A smooth manifold $G$ with a group structure such that $m(g,h)=gh$ and $i(g)=g^{-1}$ are smooth. (Smoothness of $m$ alone suffices: $F(g,h)=(g,gh)$ is a bijective local diffeomorphism.) $dm_{(e,e)}(X,Y)=X+Y$, $di_e=-\mathrm{id}$.
+
+$\mathbb R^n$, $S^1$, $T^n$, $S^3=SU(2)$, $GL(n,\mathbb R)$, $SL$, $O(n)$, $SO(n)$, $U(n)$; not $S^2$ (not parallelizable). Every Lie group is parallelizable (left-invariant frame, [[DM11 The Lie Algebra of a Lie Group]]). Homogeneous: $L_g$ moves any point to any other ([[Left Translation]]).
+
+Used in: [[DM08 Lie Groups]], [[DM09 Group Actions and Semidirect Products]]. Related: [[Left Translation]] · [[Lie Group Homomorphism]] · [[Lie Subgroup]] · [[General Linear Group]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

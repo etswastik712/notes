@@ -39,3 +39,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in the vault (added 2026-10-29)
 - Application to Brownian motion and the Einstein relation: [[Brownian Motion and the Einstein Relation]].
+
+## Continued in Part II (added 2026-10-30)
+- In kinetic theory the three translational degrees of freedom give $\gamma=\tfrac53$ and $\kappa/(\eta c_v)=\tfrac52$; internal degrees of freedom modify it (modified Eucken): [[SM04 Kinetic Theory and the Boltzmann Equation]] §10.

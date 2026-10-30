@@ -68,6 +68,14 @@ Other scalings are not forbidden but rare in practice: the Coulomb energy of $N$
 > [!example] A first exponential (recomputed)
 > $N$ molecules, each equally likely to be in the left or right half of a box. The probability that **all** are in the left half is $2^{-N}$: $2^{-20}=9.5\times10^{-7}$; $2^{-100}=7.9\times10^{-31}$; for $N=N_A$ it is $e^{-4.2\times10^{23}}$. The *forbidden* in the second law is not forbidden by dynamics; it is forbidden by $e^{-N}$ (compare [[TH06 From Kinetic Theory to Statistical Mechanics]] §5).
 
+### 1.1 What "probability" means here, and why it hardly matters at large $N$
+Statistical mechanics uses three readings of "probability", and textbooks slide between them:
+- **Frequency (Boltzmann).** The probability of a macrostate is the fraction of *time* the one system spends in it. This is the reading behind the ergodic hypothesis ([[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §3).
+- **Ensemble (Gibbs).** The probability is the fraction of an imagined ensemble of identical copies; averages are ensemble averages.
+- **Inference (Jaynes).** The probability is a rational degree of belief, constrained by what is known; the Boltzmann distribution is the one that assumes *least* beyond the energy (§7.7).
+
+For a macroscopic observable all three give the same number, because its relative fluctuation is $1/\sqrt N\approx10^{-12}$: the distribution is a delta function to twelve digits whatever its interpretation. The readings differ only (i) in the **tails** (large deviations, §6), where "never observed" and "probability $e^{-10^{23}}$" are equivalent in practice, and (ii) for **small systems** (a colloidal particle, a single molecule in an optical trap, a few hundred atoms), where the time average of one system is what you measure and whether it equals the ensemble average is a real, testable question (it does for an ergodic system, SM02 §3). Throughout Part II the working rule is: *use ensembles to compute, time averages to measure, and remember that the two agree because $N$ is large.*
+
 ## 2. Random variables, cumulants and Wick's theorem
 
 Let $x$ be a random variable with density $p(x)$. Two generating functions package all its moments.
@@ -87,7 +95,7 @@ The coefficients $\kappa_n=\langle x^n\rangle_c$ are the **cumulants** (or conne
 > $$\boxed{\ \kappa_n(x+y)=\kappa_n(x)+\kappa_n(y)\ }$$
 > for every $n$. For $N$ independent copies of one variable, $\kappa_n(\textstyle\sum x_i)=N\kappa_n(x)$. Moments do not do this (the variance does, the fourth moment does not).
 
-For *dependent* variables the cross cumulants $\langle x_ix_j\rangle_c=\langle x_ix_j\rangle-\langle x_i\rangle\langle x_j\rangle$ (and higher analogues) measure the correlation that is left over; they vanish when the variables are independent ([[Covariance Matrix]]). This is the form in which correlations enter every later chapter (the virial and cluster expansions of SM13 (planned) are cumulant expansions of the same kind).
+For *dependent* variables the cross cumulants $\langle x_ix_j\rangle_c=\langle x_ix_j\rangle-\langle x_i\rangle\langle x_j\rangle$ (and higher analogues) measure the correlation that is left over; they vanish when the variables are independent ([[Covariance Matrix]]). This is the form in which correlations enter every later chapter (the virial and cluster expansions of SM14 (planned) are cumulant expansions of the same kind).
 
 ### 2.2 Examples
 > [!example] Poisson and binomial (recomputed; all exact)
@@ -102,6 +110,13 @@ For *dependent* variables the cross cumulants $\langle x_ix_j\rangle_c=\langle x
 Because all connected moments beyond the second vanish, every moment of a zero-mean Gaussian is built from pairings of the variance. This is **Wick's theorem** ([[Wick's Theorem]]):
 $$\langle x^{2k}\rangle=(2k-1)!!\,\sigma^{2k},\qquad\langle x^4\rangle=3\sigma^4,\qquad\langle x^6\rangle=15\sigma^6 ,$$
 and for several zero-mean jointly Gaussian variables $\langle x_ax_bx_cx_d\rangle=C_{ab}C_{cd}+C_{ac}C_{bd}+C_{ad}C_{bc}$ ([[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=57|K §2.4, p.45]]). *Proof for one variable:* from $M(t)=e^{\sigma^2t^2/2}=\sum_k\frac{(\sigma^2t^2/2)^k}{k!}$ the coefficient of $t^{2k}/(2k)!$ is $\frac{(2k)!}{2^kk!}\sigma^{2k}=(2k-1)!!\,\sigma^{2k}$ because $\frac{(2k)!}{2^kk!}$ is the number of ways to split $2k$ objects into $k$ pairs. In field theory the same statement is the rule that all Feynman diagrams of a free field are products of propagators.
+
+### 2.4 Moments from cumulants: the sum over partitions
+Expanding $M(t)=e^{K(t)}$ with $K=\sum_k\kappa_kt^k/k!$ gives the **moment–cumulant formula**
+$$\langle x^n\rangle=\sum_{\pi\in\Pi_n}\ \prod_{B\in\pi}\kappa_{|B|},$$
+a sum over all **set partitions** $\pi$ of $\{1,\dots,n\}$, one factor $\kappa_{|B|}$ for each block $B$. *Why:* the coefficient of $t^n/n!$ in $\sum_mK^m/m!$ counts the ways to split $n$ labelled objects into unlabelled blocks (the $1/m!$ removes the ordering of the blocks; the $1/k!$ in each $K$ is absorbed by the labelled counting). The fourth moment has $B_4=15$ partitions:
+$$\langle x^4\rangle=\underbrace{\kappa_4}_{\{1234\}}+\underbrace{4\kappa_3\kappa_1}_{\{123\}\{4\}}+\underbrace{3\kappa_2^2}_{\{12\}\{34\}}+\underbrace{6\kappa_2\kappa_1^2}_{\{12\}\{3\}\{4\}}+\underbrace{\kappa_1^4}_{\text{singletons}}\qquad(1+4+3+6+1=15).$$
+For a zero-mean Gaussian only blocks of size 2 survive and the $3$ pairings of Wick's theorem remain. *Check:* an exponential variable of rate 1 has $\kappa_n=(n-1)!$, so $\langle x^4\rangle=6+4\cdot2\cdot1+3+6+1=24=4!$ ✓; a Poisson variable has $\kappa_n=\lambda$ and $\langle x^4\rangle=\lambda^4+6\lambda^3+7\lambda^2+\lambda$. **Cumulants are the *connected* parts** of the moments: a block is a cluster of variables that cannot be factorised. This is the origin of the connected diagrams (Mayer clusters) in the virial expansion of interacting gases (SM14, planned) and of the Feynman diagrams of field theory.
 
 ## 3. The three distributions of statistical mechanics: binomial, Poisson, Gaussian
 
@@ -123,10 +138,10 @@ $N$ independent two-state objects (spins, molecules in left/right half, bits) ha
 > | $(10\ \text{nm})^3$ | 27 | 0.19 |
 > | $(1\ \text{nm})^3$ | 0.027 | 6.1 (Poisson with mean $\ll1$) |
 >
-> For a *thermodynamic* sub-volume the same result reads $\sigma_N^2/\langle N\rangle^2=k_BT\kappa_T/V$ with the isothermal compressibility $\kappa_T=1/P$ of an ideal gas ($=1/(nV)$ again: check $k_BT/(PV)=1/N$). The divergence of $\kappa_T$ at a critical point is why fluctuations become macroscopic there (SM18 (planned)).
+> For a *thermodynamic* sub-volume the same result reads $\sigma_N^2/\langle N\rangle^2=k_BT\kappa_T/V$ with the isothermal compressibility $\kappa_T=1/P$ of an ideal gas ($=1/(nV)$ again: check $k_BT/(PV)=1/N$). The divergence of $\kappa_T$ at a critical point is why fluctuations become macroscopic there (SM19 (planned)).
 
 > [!connection] Why the sky is blue (and not a coherent mirror)
-> Light scattered by the molecules in a dilute gas adds with *random* phases, so the scattered intensity is $\propto N$ and not $N^2$: that is the Poisson variance again, and it is the statistical-mechanics basis of Rayleigh scattering ([[CL07 Optical Properties of the Atmosphere]]). In a dense medium the scattering that remains after destructive interference is exactly the density fluctuation $\sigma_N^2$ above (Smoluchowski and Einstein; stated here, derived in SM18 (planned)).
+> Light scattered by the molecules in a dilute gas adds with *random* phases, so the scattered intensity is $\propto N$ and not $N^2$: that is the Poisson variance again, and it is the statistical-mechanics basis of Rayleigh scattering ([[CL07 Optical Properties of the Atmosphere]]). In a dense medium the scattering that remains after destructive interference is exactly the density fluctuation $\sigma_N^2$ above (Smoluchowski and Einstein; stated here, derived in SM19 (planned)).
 
 ## 4. Sums of random variables and the central limit theorem
 
@@ -139,7 +154,7 @@ $$\boxed{\ p(y)\to\frac1{\sqrt{2\pi\kappa_2}}\,e^{-y^2/2\kappa_2}\ }\qquad(N\to\
 
 Three facts to keep:
 1. The mean of the sum grows as $N$, its **standard deviation only as $\sqrt N$**: the relative fluctuation is $1/\sqrt N$ ($3\times10^{-12}$ for $N=10^{23}$). That *is* the reason thermodynamics is deterministic.
-2. Independence is not necessary: the theorem holds as long as the sums of connected correlations satisfy $\sum_{i_1\cdots i_m}\langle x_{i_1}\cdots x_{i_m}\rangle_c\ll N^{m/2}$ ([[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=58|K p.46]]), i.e. correlations have a finite range. At a critical point they do not, and the theorem fails (SM18).
+2. Independence is not necessary: the theorem holds as long as the sums of connected correlations satisfy $\sum_{i_1\cdots i_m}\langle x_{i_1}\cdots x_{i_m}\rangle_c\ll N^{m/2}$ ([[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=58|K p.46]]), i.e. correlations have a finite range. At a critical point they do not, and the theorem fails (SM19).
 3. The first correction is controlled by the third and fourth cumulants: skewness falls as $N^{-1/2}$ and excess kurtosis as $N^{-1}$ (Problem 10). Tails are *always* non-Gaussian at large enough distance (§6).
 
 > [!example] 100 spins (recomputed)
@@ -163,6 +178,32 @@ a **Lévy stable law** ([[Mehran Kardar - Statistical Physics of Particles (2007
 
 > [!connection] Heavy tails in physics (stated, not derived)
 > The gravitational force on a point from stars scattered at random is a Lévy variable with $\alpha=\tfrac32$ (the **Holtsmark distribution**, Chandrasekhar 1943): the force is dominated by the *nearest* star, not by the average over many. The same dominance of rare large events appears in avalanches, earthquake energies and sediment fluxes ([[LS24 Sediment Transport Mechanics]]).
+
+### 4.4 How fast, and how wrong: Berry–Esseen and Edgeworth
+The CLT is a limit; how good is it at finite $N$?
+
+**A rigorous bound (Berry–Esseen, quoted).** For i.i.d. variables with $\rho=\langle|x-\mu|^3\rangle<\infty$, $\ \sup_y|F_N(y)-\Phi(y)|\le C\,\rho/(\sigma^3\sqrt N)$ with $C<0.48$. The error is **$O(N^{-1/2})$** and is controlled by the *third* cumulant. For fair coins $\rho/\sigma^3=1$: at $N=100$ the bound is $0.048$ and the true supremum is $0.040$ (half the largest atom of the discrete distribution, $\tfrac12P(n=50)$).
+
+**An asymptotic series (Edgeworth).** Keep the next terms of $K_y(t)=\tfrac12t^2+\frac{\gamma_1t^3}{6\sqrt N}+\frac{\gamma_2t^4}{24N}+\cdots$ (with $\gamma_1=\kappa_3/\kappa_2^{3/2}$ the skewness and $\gamma_2=\kappa_4/\kappa_2^2$ the excess kurtosis of *one* variable) and invert term by term; $t^n\leftrightarrow(-\partial_y)^n$ acting on $\phi(y)$ gives the (probabilists') Hermite polynomials $He_n$ ([[Probabilists' Hermite Polynomials]]):
+$$p(y)=\phi(y)\Big[1+\frac{\gamma_1}{6\sqrt N}He_3(y)+\frac1N\Big(\frac{\gamma_2}{24}He_4(y)+\frac{\gamma_1^2}{72}He_6(y)\Big)+O(N^{-3/2})\Big],\qquad F(y)\simeq\Phi(y)-\frac{\gamma_1}{6\sqrt N}(y^2-1)\phi(y)+\dots$$
+So the skewness corrects the CLT at order $N^{-1/2}$ and the kurtosis and the squared skewness at order $N^{-1}$ (the pattern $N^{1-n/2}$ of §4.1).
+
+> [!example] Poisson($\lambda=10$), a sum of ten Poisson(1) (recomputed; Fig. SM1.2A)
+> Skewness of the sum $\gamma_1=\lambda^{-1/2}=0.316$. $P(X\le k)$:
+>
+> | $k$ | exact | Gaussian (continuity-corrected) | + skewness (Edgeworth) |
+> |---|---|---|---|
+> | 3 | 0.0103 | 0.0199 | 0.0117 |
+> | 5 | 0.0671 | 0.0774 | 0.0695 |
+> | 7 | 0.2202 | 0.2146 | 0.2204 |
+> | 10 | 0.5830 | 0.5628 | 0.5831 |
+> | 13 | 0.8645 | 0.8658 | 0.8633 |
+> | 15 | 0.9513 | 0.9590 | 0.9496 |
+>
+> The largest error over the table drops from $0.020$ (Gaussian) to $0.0025$ (Edgeworth). This is the quantitative content of "a thousand-particle system is Gaussian": the corrections are $\sim\gamma_1/(6\sqrt N)$ in the bulk.
+
+> [!pitfall] Asymptotic, not convergent
+> The Edgeworth series is asymptotic: adding terms at fixed $N$ eventually makes things worse, and it can give negative "probabilities" in the far tails. Its natural domain is $|y|\lesssim\sqrt N$; beyond that use large deviations (§6).
 
 ## 5. Large numbers: the largest term and the saddle point
 
@@ -205,6 +246,13 @@ This is the first place where the **entropy of a binary distribution** $s(x)$ ap
 > [!example] Check at $N=100$, $n=25$ (recomputed)
 > $\ln\binom{100}{25}=53.845$; $Ns(\tfrac14)=100\times0.5623=56.234$; difference $-2.388$; the correction $-\tfrac12\ln(2\pi\cdot100\cdot\tfrac14\cdot\tfrac34)=-2.385$. The crude entropy overshoots the count by a factor $e^{2.4}\approx11$, yet $\ln$ per particle is off by only $0.024$.
 
+### 5.5 The next order of the saddle point: where $1/12N$ comes from
+Expand the exponent one order further, $N\varphi(x)=N\varphi^*-\tfrac12Na\delta^2+\tfrac16N\varphi'''\delta^3+\tfrac1{24}N\varphi^{(4)}\delta^4+\dots$ ($a=-\varphi''>0$, $\delta=x-x^*$) and expand the non-Gaussian factors, $e^{u}\simeq1+u+\tfrac12u^2$: to first order in the quartic term and second order in the cubic term, with the Gaussian moments $\langle\delta^4\rangle=3/(Na)^2$ and $\langle\delta^6\rangle=15/(Na)^3$,
+$$\int e^{N\varphi}\mathrm dx=e^{N\varphi^*}\sqrt{\frac{2\pi}{Na}}\Big[1+\frac1N\Big(\frac{\varphi^{(4)}}{8a^2}+\frac{5\varphi'''^2}{24a^3}\Big)+O(N^{-2})\Big].$$
+For $N!=N^{N+1}\int_0^\infty e^{N(\ln t-t)}\mathrm dt$: $\varphi=\ln t-t$, $t^*=1$, $a=1$, $\varphi'''=2$, $\varphi^{(4)}=-6$, so the bracket is $1+\frac1N\big(-\tfrac68+\tfrac{20}{24}\big)=1+\frac1{12N}$ ✓. The full series is
+$$N!=\sqrt{2\pi N}\Big(\frac Ne\Big)^N\Big[1+\frac1{12N}+\frac1{288N^2}-\dots\Big]=\sqrt{2\pi N}\Big(\frac Ne\Big)^Ne^{\frac1{12N}-\frac1{360N^3}+\dots}.$$
+(For $N=10$: $\sqrt{2\pi N}(N/e)^N=3\,598\,696$; times $e^{1/120}=1.008368$ gives $3\,628\,807$ against the exact $3\,628\,800$.) The corrections are $O(1/N)$ per particle and therefore invisible in intensive quantities: they are the sub-extensive terms of the entropy ([[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §6, $-\ln(\pi\sqrt6N)$).
+
 ## 6. Large deviations
 
 ### 6.1 The coin
@@ -234,7 +282,22 @@ The **rate function** $I(m)$ is $\ge0$, zero only at $m=\tfrac12$, and $\to\ln2$
 So **$I$ is the Legendre transform of the cumulant generating function** ([[Legendre Transform]], [[TH05 Potentials Maxwell Relations Stability and the Third Law]]). The same structure returns twice more: the entropy $S(E)$ is the Legendre transform of $\ln Z(\beta)$ (SM03), and a thermodynamic potential is the transform of another ([[Helmholtz Free Energy]]). The theorem (Cramér) holds whenever $K(t)$ exists in a neighbourhood of zero, which excludes the heavy tails of §4.3.
 
 > [!connection] The rate function is an entropy deficit
-> For $N$ particles in two halves the macrostate "fraction $m$ on the left" has $\Omega\propto e^{Ns(m)}$ microstates, out of $2^N=e^{N\ln2}$ in total, so $P(m)=\Omega/2^N=e^{-N[\ln2-s(m)]}=e^{-N[S_{\max}-S(m)]/N}$. **Probability of a fluctuation $=e^{-\Delta S/k_B}$ with $\Delta S$ the entropy deficit**: Einstein's fluctuation formula (SM02, SM18). The numbers of §1 ($2^{-N}$) are the case $m=1$.
+> For $N$ particles in two halves the macrostate "fraction $m$ on the left" has $\Omega\propto e^{Ns(m)}$ microstates, out of $2^N=e^{N\ln2}$ in total, so $P(m)=\Omega/2^N=e^{-N[\ln2-s(m)]}=e^{-N[S_{\max}-S(m)]/N}$. **Probability of a fluctuation $=e^{-\Delta S/k_B}$ with $\Delta S$ the entropy deficit**: Einstein's fluctuation formula (SM02, SM19). The numbers of §1 ($2^{-N}$) are the case $m=1$.
+
+### 6.3 A rigorous bound (Chernoff) and Sanov's theorem
+The exponent is not just an estimate; it is a **bound valid at every $N$**. For $s>\langle x\rangle$ and any $t>0$, Markov's inequality applied to $e^{tN\bar x}$ gives
+$$P(\bar x\ge s)=P\big(e^{tN\bar x}\ge e^{tNs}\big)\le e^{-tNs}\langle e^{tN\bar x}\rangle=e^{-N[ts-K(t)]}\ \Longrightarrow\ \boxed{\ P(\bar x\ge s)\le e^{-NI(s)}\ }$$
+after optimising over $t$ ([[Large Deviation Principle]]). The matching *lower* bound $e^{-NI-o(N)}$ comes from the tilted distribution $p_{t^*}\propto p\,e^{t^*x}$, whose mean is $s$ so that the CLT applies to it (Cramér's theorem; quoted).
+
+![[fig_sm01b_rigour.png]]
+*Figure SM1.2. A: for Poisson(10) the skewness term cuts the CDF error from $0.020$ to $0.0025$ (§4.4). B: the Chernoff bound $e^{-NI(0.6)}$ lies above the exact tail for every $N$ and runs parallel to it, the ratio growing like $\sqrt N$ (the missing prefactor); the Gaussian is wrong by orders of magnitude at large $N$ (§6.3). C: maximum-entropy distributions of a die for mean $2.5$, $3.5$, $4.5$ (§7.7).*
+
+> [!example] The bound against exact values (recomputed)
+> $P(\bar x\ge0.6)$ for a fair coin, $N=10,20,50,100,1000$: exact $0.377,\ 0.252,\ 0.101,\ 0.0284,\ 1.36\times10^{-10}$; bound $0.818,\ 0.669,\ 0.365,\ 0.134,\ 1.80\times10^{-9}$ (ratios $2.2,\ 2.7,\ 3.6,\ 4.7,\ 13$). Poisson tail $P(X\ge20)$, $\lambda=10$: exact $3.45\times10^{-3}$, bound $e^{-\lambda}(e\lambda/k)^k=2.10\times10^{-2}$.
+
+**Sanov's theorem (quoted, finite alphabet).** For $N$ i.i.d. draws from $p$, the probability that the *empirical distribution* is $q$ is
+$$P(\hat p\approx q)\asymp e^{-N\,D(q\|p)}\qquad(D\text{ the relative entropy of §7.3}),$$
+a rate function on the space of distributions. For the coin it reproduces $I(m)$: $D\big((0.6,0.4)\|(\tfrac12,\tfrac12)\big)=0.02014=I(0.6)$ ✓. **The relative entropy is the large-deviation rate function for sampling**: it appears again as the free-energy excess $F[q]-F=k_BT\,D(q\|p)$ ([[SM03 The Canonical Ensemble]] §2.2) and as the Lyapunov function of the Boltzmann equation ($H-H_{\rm eq}$, [[SM04 Kinetic Theory and the Boltzmann Equation]] §6).
 
 ## 7. Information, entropy and the Boltzmann factor in embryo
 
@@ -266,10 +329,35 @@ It measures how badly you do by assuming $q$ when the truth is $p$ (the extra bi
 ### 7.4 Maximum entropy: the Boltzmann factor appears
 Suppose all we know is $\langle F\rangle=f$. The least-biased assignment maximises $S$ subject to this and to normalisation (Lagrange multipliers $\lambda_0,\lambda_1$; [[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=63|K p.51]]):
 $$\frac{\partial}{\partial p_i}\Big[-\sum p\ln p-\lambda_0\sum p-\lambda_1\sum pF\Big]=-\ln p_i-1-\lambda_0-\lambda_1F_i=0\ \Longrightarrow\ \boxed{\ p_i=\frac{e^{-\lambda_1F_i}}{\sum_je^{-\lambda_1F_j}}\ }.$$
-With no constraint beyond normalisation $p_i=1/M$. With $F_i=E_i$ the energy, this **is the Boltzmann distribution** and $\lambda_1=\beta=1/k_BT$: SM03 derives it from a bath, SM05 develops the whole maximum-entropy programme (Jaynes) and its limits. The second derivative $-1/p_i<0$ shows that the stationary point is a **maximum**.
+With no constraint beyond normalisation $p_i=1/M$. With $F_i=E_i$ the energy, this **is the Boltzmann distribution** and $\lambda_1=\beta=1/k_BT$: SM03 derives it from a bath, SM06 develops the whole maximum-entropy programme (Jaynes) and its limits. The second derivative $-1/p_i<0$ shows that the stationary point is a **maximum**.
 
 > [!example] Two levels with a known mean (recomputed)
 > Energies $0$ and $\varepsilon$, with $\langle E\rangle=0.2\,\varepsilon$ known. Then $p_1=0.2$ and $e^{-\beta\varepsilon}=p_1/p_0=0.25$, i.e. $\beta\varepsilon=\ln4=1.386$, $k_BT=0.721\,\varepsilon$ ✓: **temperature is the Lagrange multiplier that enforces the energy constraint** (compare the two-level system in [[TH06 From Kinetic Theory to Statistical Mechanics]] §6).
+
+### 7.5 Joint entropy, mutual information and subadditivity
+For two variables with joint law $p(x,y)$: $S(X,Y)=-\sum p\ln p(x,y)$ and the **chain rule** $S(X,Y)=S(X)+S(Y|X)$, $S(Y|X)=-\sum p(x,y)\ln p(y|x)$. The **mutual information**
+$$I(X;Y)=S(X)+S(Y)-S(X,Y)=D\big(p(x,y)\,\big\|\,p(x)p(y)\big)\ \ge0$$
+is the relative entropy of the joint law to the product of its marginals. Hence **subadditivity** $S(X,Y)\le S(X)+S(Y)$, with equality iff $X,Y$ are independent; for $N$ variables, $S(\text{joint})\le\sum_iS(\text{marginal}_i)$, the gap being the *total correlation*. This is the inequality used in [[SM04 Kinetic Theory and the Boltzmann Equation]] §6: the Boltzmann entropy of $f_1$ (a sum of one-particle entropies) is at least the Gibbs entropy of the full $N$-body density, and the difference is the information stored in molecular correlations. **Data processing:** $I(X;g(Y))\le I(X;Y)$ for any function $g$ (coarse-graining cannot create information).
+
+> [!example] A noisy channel (recomputed)
+> Binary symmetric channel, flip probability $\varepsilon=0.1$, uniform input: $I(X;Y)=\ln2-H(0.1)=0.368$ nats $=0.531$ bit per use, which equals the **channel capacity** $1-H_2(0.1)$ (Shannon: reliable communication is possible at any rate below it).
+
+### 7.6 Typical sets and Shannon's source-coding theorem
+For i.i.d. symbols $-\tfrac1N\ln p(x_1\dots x_N)=\tfrac1N\sum_i(-\ln p(x_i))$ is a sample mean of i.i.d. variables with mean $S$ and finite variance; by Chebyshev it converges to $S$ (the **asymptotic equipartition property**, AEP). Define the **typical set** $T_\epsilon=\{x:|-\tfrac1N\ln p(x)-S|<\epsilon\}$. Then (i) $P(T_\epsilon)\to1$; (ii) every member has probability between $e^{-N(S+\epsilon)}$ and $e^{-N(S-\epsilon)}$, so $|T_\epsilon|\le e^{N(S+\epsilon)}$ and, for large $N$, $|T_\epsilon|\ge\tfrac12e^{N(S-\epsilon)}$. **Source-coding theorem:** $NS/\ln2$ bits suffice to name a typical sequence, and no scheme does asymptotically better.
+
+> [!example] $p=0.1$, $N=1000$, $\epsilon=0.05$ (recomputed)
+> $S=0.3251$ nats. Typical sequences have $78\le k\le122$ ones; $P(T_\epsilon)=0.982$; $\ln|T_\epsilon|=367.8\le N(S+\epsilon)=375.1$, against $N\ln2=693.1$ for all sequences. **Statistical mechanics is the same statement**: the microcanonical entropy counts the typical microstates, and $S=k_B\ln\Omega$ and $S=-k_B\sum p\ln p$ agree for the same reason that the shell and the ball have the same logarithm ([[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §4.1).
+
+### 7.7 Maximum entropy in full
+Maximise $S[p]$ subject to $\sum_ip_i=1$ and $\sum_ip_if_a(i)=F_a$, $a=1\dots m$. Since $-p\ln p$ is strictly concave, the stationary point is the **unique global maximum** (the Hessian is $-\mathrm{diag}(1/p_i)\prec0$). It is
+$$p_i=\frac{e^{-\sum_a\lambda_af_a(i)}}{Z(\boldsymbol\lambda)},\qquad Z=\sum_ie^{-\boldsymbol\lambda\cdot\mathbf f(i)},\qquad F_a=-\frac{\partial\ln Z}{\partial\lambda_a},\qquad S_{\max}=\ln Z+\sum_a\lambda_aF_a .$$
+The last relation is a **Legendre transform**, and the one before it has the form of $\langle E\rangle=-\partial_\beta\ln Z$: *the structure of thermodynamics* ($S=\ln Z+\beta E$, [[SM03 The Canonical Ensemble]] §2.1) is the structure of maximum entropy, with $\beta$ the Lagrange multiplier of the energy and, for a gas that also constrains $N$ and $V$, $\beta\mu$ and $\beta P$.
+
+> [!example] Jaynes' die with mean 4.5 (recomputed; Fig. SM1.2C)
+> A six-sided die is known to average $4.5$ instead of $3.5$. Maximum entropy gives $p_i\propto e^{-\lambda i}$ with $\lambda=-0.3710$, i.e. $p=(0.054,\,0.079,\,0.114,\,0.165,\,0.240,\,0.348)$ and $S=1.6136$ nats against $\ln6=1.7918$ for the unbiased die; for mean $5.5$, $\lambda=-1.087$. Nothing else is assumed: no other distribution with that mean has a larger entropy.
+
+> [!pitfall] What maximum entropy does and does not say
+> It is a rule for *assigning* probabilities from constraints, not a theorem about dynamics. The physics lies in **which constraints are declared** ($E$, $N$, $V$: the conserved quantities), and that it suffices to constrain only those is a *dynamical* statement (mixing, SM02 §3). A different constraint set gives a different "equilibrium" (a generalised Gibbs ensemble for integrable systems).
 
 > [!pitfall] Four traps
 > 1. **Moments are not additive, cumulants are.** The variance of a sum of independent variables adds; the fourth moment does not.
@@ -280,8 +368,9 @@ With no constraint beyond normalisation $p_i=1/M$. With $F_i=E_i$ the energy, th
 ## Map of this chapter
 > [!connection] How SM01 connects
 > **Builds on:** [[PR06 Moments Generating Functions and Limit Theorems]], [[PR07 Sums of Independent Variables Covariance and Correlation]], [[TH06 From Kinetic Theory to Statistical Mechanics]] (where $2^{-N}$, the canonical distribution and the Boltzmann factor first appear).
-> **Leads to:** [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] (entropy as $\ln\Omega$, equal-probability postulate), [[SM03 The Canonical Ensemble]] (cumulants of $E$ from $\ln Z$, equivalence of ensembles by saddle point), SM05 (maximum entropy), SM18 (fluctuations, the CLT at criticality), SM24 (the Gaussian propagator of Brownian motion).
+> **Leads to:** [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] (entropy as $\ln\Omega$, equal-probability postulate), [[SM03 The Canonical Ensemble]] (cumulants of $E$ from $\ln Z$, equivalence of ensembles by saddle point), SM06 (maximum entropy), SM19 (fluctuations, the CLT at criticality), SM24 (the Gaussian propagator of Brownian motion).
 > **Concepts:** [[Cumulant]] · [[Wick's Theorem]] · [[Stirling's Approximation]] · [[Saddle Point Method]] · [[Large Deviation Principle]] · [[Shannon Entropy]] · [[Relative Entropy]] · [[Cauchy Distribution]] · [[Central Limit Theorem]] · [[Characteristic Function]] · [[Moment Generating Function]] · [[Multinomial Coefficient]] · [[Jensen Inequality]] · [[Legendre Transform]]
+> **More concepts (added with the deepening, 2026-10-30):** [[Maximum Entropy Principle]] · [[Mutual Information]] · [[Typical Set]] · [[Chernoff Bound]] · [[Edgeworth Expansion]]; kinetic-theory use of §7.5 and §6.3: [[SM04 Kinetic Theory and the Boltzmann Equation]]
 > **Other subjects:** [[CL07 Optical Properties of the Atmosphere]] (Rayleigh scattering), [[Random Walk]] (the sum of $N$ steps), [[Normal Approximation to the Binomial]].
 
 ## Summary
@@ -304,6 +393,13 @@ With no constraint beyond normalisation $p_i=1/M$. With $F_i=E_i$ the energy, th
 8. **Entropy.** (a) $S$ in bits of a coin with $p=0.1$; how many bits to store $10^6$ flips? (b) $D(p\|q)$ for $p=(\tfrac12,\tfrac14,\tfrac18,\tfrac18)$, $q$ uniform.
 9. **Maximum entropy.** Two levels $0,\varepsilon$ with known mean energy $0.2\varepsilon$: find $\beta$ and the temperature. What would $\langle E\rangle=\varepsilon/2$ give?
 10. **Kurtosis.** Find the excess kurtosis of the sum of $N$ independent $\pm1$ spins and evaluate it at $N=100$; compare with the Gamma-distribution value $6/k$ found in SM03 for $k=3N/2$ degrees of freedom.
+11. **Chernoff for the Poisson law.** Show that $P(X\ge k)\le e^{-\lambda}(e\lambda/k)^k$ for $k>\lambda$ and evaluate it for $\lambda=10$, $k=20$ against the exact $3.45\times10^{-3}$.
+12. **Partition formula.** Use the moment–cumulant formula to show that the fourth moment of a Poisson variable is $\lambda^4+6\lambda^3+7\lambda^2+\lambda$ and evaluate it at $\lambda=10$.
+13. **Edgeworth.** Compute the Poisson($\lambda=10$) CDF at $k=5$ by the continuity-corrected Gaussian and by the Edgeworth skewness term, and compare with the exact $0.0671$.
+14. **Maximum entropy.** Find the maximum-entropy distribution of a six-sided die with mean 4.5: write the equation for $\lambda$ and give $p_i$ and $S$.
+15. **Channel.** A binary symmetric channel flips each bit with probability $0.1$. Find $I(X;Y)$ for uniform input in bits and say what it means for sending $10^6$ bits.
+16. **Typical set.** For $p=0.1$, $N=1000$ give the number of typical sequences (to the exponential) and the bits needed per flip.
+17. **Next order of Stirling.** Evaluate $\sqrt{2\pi N}(N/e)^N$ for $N=10$, apply the factors $1+\frac1{12N}$ and $e^{1/12N}$, and compare with $10!$.
 
 > [!example]- Solutions
 > 1. (a) $K=\lambda(e^t-1)$, so $\kappa_n=\partial_t^nK|_0=\lambda$ for all $n$. (b) $K=\ln(q+pe^t)$: $K'=\frac{pe^t}{q+pe^t}\to p$; $K''=\frac{pqe^t}{(q+pe^t)^2}\to pq$; $K'''|_0=pq(q-p)$. (c) $N=100$, $p=\tfrac12$: skewness $0$ (since $q=p$); the number up is $n=(N+S)/2$ with $S$ the sum of $\pm1$ spins, so $\kappa_4(n)=\kappa_4(S)/16=-2N/16$ and $\kappa_2(n)=N/4$: excess kurtosis $=\kappa_4/\kappa_2^2=-2/N=-0.02$.
@@ -316,6 +412,13 @@ With no constraint beyond normalisation $p_i=1/M$. With $F_i=E_i$ the energy, th
 > 8. (a) $H=-0.1\log_20.1-0.9\log_20.9=0.469$ bit; $10^6$ flips need $469{,}000$ bits (not $10^6$). (b) $D=\log_24-S=2-1.75=0.25$ bit.
 > 9. $e^{-\beta\varepsilon}=p_1/p_0=0.2/0.8=0.25$, $\beta\varepsilon=\ln4=1.386$, $k_BT=0.721\varepsilon$. $\langle E\rangle=\varepsilon/2$ gives $p_1=p_0$, $\beta=0$, $T=\infty$ (the maximum-entropy point).
 > 10. $\kappa_4(\text{one spin})=-2$, so $\kappa_4(\text{sum})=-2N$ and the excess kurtosis is $\kappa_4/\kappa_2^2=-2N/N^2=-2/N=-0.02$ at $N=100$. The *energy* of an ideal gas (SM03) is Gamma with positive $+6/k=+0.04$ at $N=100$; the signs differ because spins have bounded support while energies have a one-sided tail.
+> 11. Markov on $e^{tX}$: $P(X\ge k)\le e^{-tk}e^{\lambda(e^t-1)}$; minimising over $t$ gives $e^t=k/\lambda$ and the bound $e^{-\lambda}(e\lambda/k)^k$. For $\lambda=10$, $k=20$: $e^{-10}\times(1.359)^{20}=2.10\times10^{-2}$, **6 times** the exact $3.45\times10^{-3}$ (the prefactor $\sim1/\sqrt{2\pi k}\,(1-\lambda/k)^{-1}$ is missing).
+> 12. Partitions of $\{1,2,3,4\}$ with $\kappa_n=\lambda$: $\kappa_4=\lambda$; $4\kappa_3\kappa_1=4\lambda^2$; $3\kappa_2^2=3\lambda^2$; $6\kappa_2\kappa_1^2=6\lambda^3$; $\kappa_1^4=\lambda^4$. Total $\lambda^4+6\lambda^3+7\lambda^2+\lambda$; at $\lambda=10$: $10000+6000+700+10=16710$.
+> 13. $z=(5.5-10)/\sqrt{10}=-1.423$: $\Phi=0.0774$; $\phi(z)=0.1455$, $z^2-1=1.025$, $\gamma_1=0.3162$: correction $\frac{0.3162}{6}\times1.025\times0.1455=0.0079$; Edgeworth $0.0774-0.0079=0.0695$. Exact $0.0671$: error $0.0024$ (against $0.0103$ for the Gaussian).
+> 14. $\sum_i(i-4.5)e^{-\lambda i}=0$ gives $\lambda=-0.37105$; $p=(0.0544,0.0788,0.1142,0.1654,0.2398,0.3475)$; $\ln Z=3.2833$, $S=\ln Z+\lambda\cdot4.5=1.6136$ nats ($<\ln6=1.7918$).
+> 15. $I=1-H_2(0.1)=1-0.469=0.531$ bit per bit sent: $10^6$ bits can carry at most $5.31\times10^5$ information bits reliably (the rest of the capacity is spent on redundancy).
+> 16. $|T|\approx e^{NS}=e^{325.1}=2^{469}$: $469$ bits per $1000$ flips ($0.469$ bit per flip) against $1$ bit per flip uncoded. With the window $\epsilon=0.05$, $\ln|T|=367.8\le375.1$.
+> 17. $\sqrt{2\pi\cdot10}(10/e)^{10}=3\,598\,696$; times $1+\frac1{120}$: $3\,628\,685$ (error $3\times10^{-5}$); times $e^{1/120}=1.008368$: $3\,628\,807$ (error $2\times10^{-6}$). The factor $e^{1/12N}$ includes the next term $1/288N^2$.
 
 ## Provenance
 > [!provenance]- Source map for this chapter
@@ -328,7 +431,7 @@ With no constraint beyond normalisation $p_i=1/M$. With $F_i=E_i$ the energy, th
 > | cumulant generating function convention; rate function as Legendre transform (Cramér) | my own derivation (standard result; checked on the spin example) | mine |
 > | all numbers and figures | `scripts/sm_numbers.py`, `scripts/fig_sm01.py` | mine |
 >
-> **Flags.** (1) Kardar's printed equation numbers were lost in the text layer (Greek letters are missing), so page numbers are cited instead of equation numbers. (2) Holtsmark's $\alpha=\tfrac32$ and the Marcinkiewicz theorem are quoted from memory, not from a file in the folder. (3) The Rayleigh/Smoluchowski remark in §3 is a pointer; the derivation belongs to SM18. (4) The chapter intentionally repeats the central limit theorem of the probability course: here the proof is by cumulants and the failure case is Cauchy; the formal statement is in [[PR06 Moments Generating Functions and Limit Theorems]].
+> **Flags.** (1) Kardar's printed equation numbers were lost in the text layer (Greek letters are missing), so page numbers are cited instead of equation numbers. (2) Holtsmark's $\alpha=\tfrac32$ and the Marcinkiewicz theorem are quoted from memory, not from a file in the folder. (3) The Rayleigh/Smoluchowski remark in §3 is a pointer; the derivation belongs to SM19. (5) **Deepening of 2026-10-30:** §1.1, §2.4, §4.4, §5.5, §6.3, §7.5–7.7 and Problems 11–17 added (numbers in `scripts/sm_deepen_numbers.py`, figure `fig_sm01b.py`); the Berry–Esseen constant, Cramér's lower bound, Sanov's theorem, the channel-capacity theorem, Jaynes's die and the Edgeworth series are quoted from standard texts (not in the folder). (4) The chapter intentionally repeats the central limit theorem of the probability course: here the proof is by cumulants and the failure case is Cauchy; the formal statement is in [[PR06 Moments Generating Functions and Limit Theorems]].
 
 **References.** Kardar, M. *Statistical Physics of Particles* (CUP 2007), Ch. 2 · Pathria, R. K. and Beale, P. D. *Statistical Mechanics*, 3rd ed. (2011), §1.1 · Shannon, C. E. (1948) *A mathematical theory of communication* · Cramér, H. (1938) · Chandrasekhar, S. (1943) *Rev. Mod. Phys.* 15, 1 (Holtsmark distribution).
 

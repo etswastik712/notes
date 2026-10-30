@@ -33,3 +33,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Kinet
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- The mean free path as the expansion parameter ($\mathrm{Kn}=\lambda/L$), $\tau_c/\tau_\times\sim nd^3$, and its role in $\eta=nk_BT\tau$: [[SM04 Kinetic Theory and the Boltzmann Equation]] §3, §10–§11 ([[Knudsen Number]]).

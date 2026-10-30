@@ -236,3 +236,4 @@ If the system also exchanges particles with a reservoir at chemical potential $\
 
 ## Continued in Part II (added 2026-10-30)
 - Statistical mechanics proper continues in Part II: [[SM01 Probability Large Numbers and Information]] (cumulants, Stirling, large deviations, entropy), [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] (Liouville, $\Omega$, Gibbs paradox, Einstein solids) and [[SM03 The Canonical Ensemble]] (the Boltzmann distribution derived, equivalence of ensembles, barometric formula, paramagnet, the divergent hydrogen sum). §5–§6 above are the sketch; those chapters are the derivation.
+- The kinetic theory of §1–§4 here is the elementary (mean-free-path) account; the **equation behind it** (BBGKY hierarchy, Boltzmann equation, H-theorem, Euler and Navier–Stokes equations, exact $\eta$, $\kappa$, Prandtl number, Kac ring) is the separate chapter [[SM04 Kinetic Theory and the Boltzmann Equation]].

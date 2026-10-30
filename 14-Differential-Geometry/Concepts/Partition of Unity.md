@@ -1,0 +1,32 @@
+---
+title: Partition of Unity
+aliases: ["subordinate partition of unity", "partitions of unity"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Partition of Unity
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[mt3184-differential-geometry-and-lie-groups/2026-08-07-august-3-7|week 1 post]]: partitions of unity discussed (proof not confirmed).
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=61|Lee Thm 2.23, p. 43]].
+
+> [!intuition] In one picture
+> Smooth weights $\psi_\alpha\ge0$, each living in one patch, that sum to $1$ everywhere: a way to blend local constructions into a global one.
+
+> [!key] Definition
+> A family $\{\psi_\alpha\}$ of smooth $[0,1]$-valued functions with locally finite supports and $\sum\psi_\alpha=1$; subordinate to $\{U_\alpha\}$ if $\operatorname{supp}\psi_\alpha\subseteq U_\alpha$. Exists for every open cover of a smooth manifold (compact exhaustion + bumps, [[Compact Exhaustion]]).
+
+Example on $\mathbb R$ subordinate to $\{(-\infty,1),(0,\infty)\}$: $\psi_2=h(3x-1)$, $\psi_1=1-\psi_2$. Supports are closures: check them, not zero sets. Used for extension, smooth Urysohn, Riemannian metrics, integration.
+
+Used in: [[DM02 Smooth Maps and Partitions of Unity]]. Related: [[Bump Function]] · [[Locally Finite Family]] · [[Paracompact Space]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

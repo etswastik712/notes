@@ -1,0 +1,32 @@
+---
+title: Embedded Submanifold
+aliases: ["submanifold", "regular submanifold", "embedded submanifold"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Embedded Submanifold
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG8 (submanifolds and tangent spaces) via [[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21|Aug 17–21 note]]; HW5 Q1.
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=117|Lee Props. 5.1–5.7, pp. 99–101]].
+
+> [!intuition] In one picture
+> A subset that is a manifold in its own right with the inherited topology, sitting inside the big manifold like a flat coordinate plane in suitable coordinates.
+
+> [!key] Definition
+> $S\subseteq M$ with the subspace topology and a smooth structure making $\iota:S\hookrightarrow M$ a smooth embedding. Equivalent: slice charts around every point ([[Slice Chart]]). Examples: open subsets, graphs, slices $M\times\{q\}$, regular level sets, images of embeddings, spheres, $O(n)$, $SL(n)$.
+
+Maps into $S$ that are smooth into $M$ are smooth into $S$ (Cor. 5.30); the smooth structure of $S$ is unique (Thm 5.31). Non-examples: figure-eight, cross. Looser notion: [[Immersed Submanifold]].
+
+Used in: [[DM06 Submanifolds]]. Related: [[Slice Chart]] · [[Regular Level Set Theorem]] · [[Immersed Submanifold]] · [[Smooth Embedding]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

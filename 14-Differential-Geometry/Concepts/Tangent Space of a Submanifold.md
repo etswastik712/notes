@@ -1,0 +1,31 @@
+---
+title: Tangent Space of a Submanifold
+aliases: ["T_pS", "tangent space of a level set", "Proposition 5.37"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Tangent Space of a Submanifold
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG8, DG10 (Prop 5.37, converse set as homework) via [[mt3184-differential-geometry-and-lie-groups/2026-08-27-august-24-28|Aug 24–28 note]]; [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=134|Lee Prop. 5.37, p. 116]].
+
+> [!intuition] In one picture
+> The directions you can move without leaving the submanifold, seen inside the ambient tangent space.
+
+> [!key] Definition
+> $T_pS\subseteq T_pM$ equals the image of $d\iota_p$, equals $\ker dF_p$ for a regular level set, and equals $\{v\in T_pM:vf=0\ \text{whenever}\ f|_S\equiv0\}$ (Prop. 5.37).
+
+$T_pS^n=p^\perp$ (checked: $dF_p\alpha'(\tfrac14)=0$); $T_IO(n)=\{B+B^T=0\}$; $T_ISL(n)=\ker\operatorname{tr}$. A vector field is tangent to $S$ iff $Xf|_S=0$ for all $f|_S=0$ ([[DM10 Vector Fields and Lie Brackets]]).
+
+Used in: [[DM06 Submanifolds]]. Related: [[Embedded Submanifold]] · [[Regular Level Set Theorem]] · [[Tangent Space]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

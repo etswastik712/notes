@@ -1,0 +1,31 @@
+---
+title: Tangent Bundle
+aliases: ["TM", "tangent bundle of a manifold", "natural chart on TM"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Tangent Bundle
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG8 via [[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21|Aug 17–21 note]]; [[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3|HW3]] Q2; [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=84|Lee Prop. 3.18, p. 66]].
+
+> [!intuition] In one picture
+> All tangent spaces glued into one space: a point of $TM$ is a position together with a velocity at that position (phase space of motion on $M$).
+
+> [!key] Definition
+> $TM=\bigsqcup_{p}T_pM$ with $\pi:TM\to M$. It is a smooth $2n$-manifold with natural charts $\tilde\varphi(\sum v^i\partial_i|_p)=(\varphi(p);v^1,\dots,v^n)$ and transitions $(x;v)\mapsto(\tau(x);D\tau(x)v)$ (Chart Lemma); $\pi$ is smooth.
+
+$TS^1\cong S^1\times\mathbb R$ ($(w,v)\mapsto(1/w,-v/w^2)$); $T\mathbb R^n=\mathbb R^{2n}$; $TS^2$ is not trivial (Hairy Ball). Vector fields are sections of $\pi$ ([[DM10 Vector Fields and Lie Brackets]]). Built with the [[Smooth Manifold Chart Lemma]].
+
+Used in: [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Global Differential]] · [[Local Frame]] · [[Smooth Manifold Chart Lemma]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

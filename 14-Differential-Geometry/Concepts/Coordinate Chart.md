@@ -1,0 +1,31 @@
+---
+title: Coordinate Chart
+aliases: ["chart", "local coordinates", "coordinate map", "coordinate domain"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Coordinate Chart
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1|HW1]] (smooth atlases of $S^2$); slide DG8.
+
+> [!intuition] In one picture
+> A page of a map-book: it assigns coordinates $(x^1,\dots,x^n)$ to the points of a patch of the space.
+
+> [!key] Definition
+> A **chart** $(U,\varphi)$ is a homeomorphism $\varphi:U\to\widehat U\subseteq\mathbb R^n$ from an open $U\subseteq M$. $\varphi=(x^1,\dots,x^n)$ gives the **local coordinates** of points of $U$.
+
+The sphere has no global chart (it is compact), but two charts cover it. A **smooth chart** is a chart of the maximal atlas ([[Smooth Structure]]).
+
+Used in: [[DM01 Smooth Manifolds]]. Related: [[Transition Map]] · [[Smooth Atlas]] · [[Topological Manifold]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

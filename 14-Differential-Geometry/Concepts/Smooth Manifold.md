@@ -1,0 +1,31 @@
+---
+title: Smooth Manifold
+aliases: ["differentiable manifold", "smooth n-manifold", "manifold"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Smooth Manifold
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** [[mt3184-differential-geometry-and-lie-groups/2026-08-07-august-3-7|week 1]]; every later chapter.
+
+> [!intuition] In one picture
+> A space on which one can do calculus: coordinates that overlap smoothly, so that 'smooth function', 'tangent vector' and 'flow' make sense without choosing coordinates.
+
+> [!key] Definition
+> A **smooth manifold** is a topological manifold together with a smooth structure (maximal smooth atlas). Examples: $\mathbb R^n$, open subsets, $S^n$, $\mathbb{RP}^n$, $T^n$, $GL(n,\mathbb R)$, products, level sets of regular values ([[DM06 Submanifolds]]), all Lie groups ([[DM08 Lie Groups]]).
+
+Maps between manifolds are smooth when their coordinate expressions are ([[DM02 Smooth Maps and Partitions of Unity]]).
+
+Used in: [[DM01 Smooth Manifolds]], [[DM02 Smooth Maps and Partitions of Unity]]. Related: [[Topological Manifold]] · [[Smooth Structure]] · [[Smooth Manifold Chart Lemma]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

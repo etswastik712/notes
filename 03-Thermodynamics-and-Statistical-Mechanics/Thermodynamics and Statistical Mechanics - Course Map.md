@@ -12,7 +12,7 @@ tags: [subject/thermo, type/moc, taught, extra/book, src/lecture-notes, src/book
 
 > [!info] Two parts, two kinds of provenance (2026-10-30)
 > **Part I, thermodynamics (TH01–TH06, THX1):** built from the MIT 8.333 lectures and Zemansky, so it carries the green/yellow/blue scope labels below (<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>).
-> **Part II, statistical mechanics and statistical physics (SM01 onward):** the user's **own self-study**, written from the books in `physics/thermodynamics-stat-mech/books/` with **no course behind it**, so Part II chapters carry **no taught/extra labels**, only a Provenance table. Part I is untouched; Part II builds on it. See [[#Part II: statistical mechanics (self-study, from the books)]].
+> **Part II, statistical mechanics and statistical physics (SM01 onward):** the user's **own self-study**, written from the books in `physics/thermodynamics-stat-mech/books/` with **no course behind it**, so Part II chapters carry **no taught/extra labels**, only a Provenance table. Part I is untouched; Part II builds on it. **Written so far: SM01–SM04** (SM04, kinetic theory, added on request 2026-10-30; SM01–SM03 deepened the same day). See [[#Part II: statistical mechanics (self-study, from the books)]].
 
 Six chapters: temperature and the zeroth law; work, heat and the first law; the ideal gas and adiabats; the second law, Carnot engines and entropy; thermodynamic potentials, Maxwell relations, stability and the third law; and an optional bridge from kinetic theory to statistical mechanics. The main line follows the **MIT 8.333 lectures 1–4** (Kardar's Chapter I), with Zemansky's *Heat and Thermodynamics* Ch. 1–5 for the more elementary ground (thermometers, simple systems, work, ideal-gas experiments).
 
@@ -52,10 +52,10 @@ SORT chapter ASC
 
 ```mermaid
 flowchart LR
-  T["Part I<br/>TH01–TH06<br/>thermodynamics"] --> A["II-A<br/>SM01–SM06<br/>probability,<br/>ensembles"]
-  A --> B["II-B<br/>SM07–SM12<br/>quantum<br/>statistics"]
-  A --> C["II-C<br/>SM13–SM21<br/>interactions,<br/>phase transitions"]
-  A --> D["II-D<br/>SM22–SM26<br/>non-equilibrium"]
+  T["Part I<br/>TH01–TH06<br/>thermodynamics"] --> A["II-A<br/>SM01–SM07<br/>probability, ensembles,<br/>kinetic theory"]
+  A --> B["II-B<br/>SM08–SM13<br/>quantum<br/>statistics"]
+  A --> C["II-C<br/>SM14–SM22<br/>interactions,<br/>phase transitions"]
+  A --> D["II-D<br/>SM04, SM23–SM26<br/>non-equilibrium"]
   B --> E["II-E<br/>SM27–SM31<br/>applications"]
   C --> E
   D --> E
@@ -63,46 +63,46 @@ flowchart LR
 
 **Source keys** (book pages are the *printed* pages): **K** = Kardar 2007 (PDF page = printed + 12) · **PB** = Pathria and Beale, 3rd ed. 2011 (PDF page = printed + 27; text layer absent, read by OCR) · **R** = Reif, *Fundamentals of Statistical and Thermal Physics* (djvu) · **RB** = Reif, Berkeley Physics Course Vol. 5 · **L5, L9, L10** = Landau and Lifshitz Vols. 5, 9, 10 · **Hu** = Huang · **Sw** = Schwabl · **Sc** = Schroeder · **Bl** = Blundell and Blundell · **Ta** = Tanaka · **Hi** = Hill · **Go** = Goodstein.
 
-### II-A Foundations and ensembles
+### II-A Foundations, ensembles and kinetic theory
 | # | Chapter | Main sources | Status |
 |---|---|---|---|
-| SM01 | [[SM01 Probability Large Numbers and Information]] | K Ch. 2 pp. 35–56; PB §1.1; RB Ch. 1–2 | **draft (pilot)** |
-| SM02 | [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] | K §3.1–3.2, §4.1–4.5; PB Ch. 1–2; Sc Ch. 2 | **draft (pilot)** |
-| SM03 | [[SM03 The Canonical Ensemble]] | K §4.6–4.8 pp. 110–118; PB Ch. 3 pp. 39–90; Sc Ch. 6 | **draft (pilot)** |
-| SM04 | The grand canonical ensemble and chemical equilibrium | K §4.9; PB Ch. 4, §6.6; Sc Ch. 7 | planned |
-| SM05 | Entropy, information and maximum entropy | K §2.7, §4.5; PB §1.5–1.6; R Ch. 3 | planned |
-| SM06 | Equipartition, the virial theorem, paramagnetism and magnetic work | PB §3.7–3.10 pp. 61–90; K §4.7 | planned |
+| SM01 | [[SM01 Probability Large Numbers and Information]] | K Ch. 2 pp. 35–56; PB §1.1; RB Ch. 1–2 | **draft (deepened)** |
+| SM02 | [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] | K §3.1–3.2, §4.1–4.5; PB Ch. 1–2; Sc Ch. 2 | **draft (deepened)** |
+| SM03 | [[SM03 The Canonical Ensemble]] | K §4.6–4.8 pp. 110–118; PB Ch. 3 pp. 39–90; Sc Ch. 6 | **draft (deepened)** |
+| SM04 | [[SM04 Kinetic Theory and the Boltzmann Equation]] (opens II-D as well) | K Ch. 3 pp. 57–97; Hu Ch. 3–5; R §12.2–12.3; Landau Vol. 10 (unread) | **draft** |
+| SM05 | The grand canonical ensemble and chemical equilibrium (Saha) | K §4.9; PB Ch. 4, §6.6; Sc Ch. 7 | planned |
+| SM06 | Entropy, information and maximum entropy | K §2.7, §4.5; PB §1.5–1.6; R Ch. 3 | planned |
+| SM07 | Equipartition, the virial theorem, paramagnetism and magnetic work | PB §3.7–3.10 pp. 61–90; K §4.7 | planned |
 
 ### II-B Quantum statistical mechanics
 | # | Chapter | Main sources | Status |
 |---|---|---|---|
-| SM07 | Quantum ensembles, the density matrix, identical particles | K §6.4–6.5, §7.1–7.3; PB Ch. 5 | planned |
-| SM08 | Molecular gases: rotation, vibration, nuclear spin | K §6.1; PB §6.5 | planned |
-| SM09 | Phonons and the specific heat of solids (Einstein, Debye) | K §6.2; PB §7.4–7.5 | planned |
-| SM10 | The photon gas and blackbody radiation | K §6.3; PB §7.3 | planned |
-| SM11 | The ideal Fermi gas | K §7.4–7.5; PB Ch. 8 | planned |
-| SM12 | The ideal Bose gas and Bose–Einstein condensation | K §7.6; PB §7.1–7.2, §13.6 | planned |
+| SM08 | Quantum ensembles, the density matrix, identical particles (quantum Boltzmann equation) | K §6.4–6.5, §7.1–7.3; PB Ch. 5 | planned |
+| SM09 | Molecular gases: rotation, vibration, nuclear spin | K §6.1; PB §6.5 | planned |
+| SM10 | Phonons and the specific heat of solids (Einstein, Debye) | K §6.2; PB §7.4–7.5 | planned |
+| SM11 | The photon gas and blackbody radiation | K §6.3; PB §7.3 | planned |
+| SM12 | The ideal Fermi gas | K §7.4–7.5; PB Ch. 8 | planned |
+| SM13 | The ideal Bose gas and Bose–Einstein condensation | K §7.6; PB §7.1–7.2, §13.6 | planned |
 
 ### II-C Interacting systems and phase transitions
 | # | Chapter | Main sources | Status |
 |---|---|---|---|
-| SM13 | Cumulant and cluster expansions: the virial series | K §5.1–5.2; PB Ch. 10 | planned |
-| SM14 | van der Waals, condensation and corresponding states | K §5.3–5.8; PB §12.1–12.2, §4.6–4.7 | planned |
-| SM15 | The Ising model in one dimension and the lattice gas | PB §12.4, §13.1–13.2; Hu; Sw | planned |
-| SM16 | Mean-field theory and variational methods | K §5.6; PB §12.5–12.7; Hu Ch. 17 | planned |
-| SM17 | Landau theory and symmetry breaking | PB §12.8–12.9, §12.13; L5 Ch. 14 | planned |
-| SM18 | Fluctuations, correlations, scaling and universality | PB §12.10–12.12; L5; Hu | planned |
-| SM19 | The two-dimensional Ising model | PB §13.4; Hu Ch. 15; Sw | planned |
-| SM20 | The renormalisation group | PB Ch. 14; Hu Ch. 18; Sw | planned |
-| SM21 | Spin waves, Goldstone modes and low dimensions | PB §13.3, §13.5; Sw; Ta | planned |
+| SM14 | Cumulant and cluster expansions: the virial series | K §5.1–5.2; PB Ch. 10 | planned |
+| SM15 | van der Waals, condensation and corresponding states | K §5.3–5.8; PB §12.1–12.2, §4.6–4.7 | planned |
+| SM16 | The Ising model in one dimension and the lattice gas | PB §12.4, §13.1–13.2; Hu; Sw | planned |
+| SM17 | Mean-field theory and variational methods | K §5.6; PB §12.5–12.7; Hu Ch. 17 | planned |
+| SM18 | Landau theory and symmetry breaking | PB §12.8–12.9, §12.13; L5 Ch. 14 | planned |
+| SM19 | Fluctuations, correlations, scaling and universality | PB §12.10–12.12; L5; Hu | planned |
+| SM20 | The two-dimensional Ising model | PB §13.4; Hu Ch. 15; Sw | planned |
+| SM21 | The renormalisation group | PB Ch. 14; Hu Ch. 18; Sw | planned |
+| SM22 | Spin waves, Goldstone modes and low dimensions | PB §13.3, §13.5; Sw; Ta | planned |
 
-### II-D Non-equilibrium
+### II-D Non-equilibrium (SM04 is the entry point)
 | # | Chapter | Main sources | Status |
 |---|---|---|---|
-| SM22 | The Boltzmann equation and the H-theorem | K Ch. 3 pp. 57–81; PB §6.4; R Ch. 14; L10 | planned |
-| SM23 | Transport coefficients and hydrodynamics | K §3.6–3.9; R Ch. 12; L10 | planned |
+| SM23 | Transport beyond the single-time approximation: Drude and Wiedemann–Franz, phonon conduction, Vlasov and plasmas | R Ch. 13–14; L10; Hermann; PB §6.4 | planned |
 | SM24 | Brownian motion, the Langevin and Fokker–Planck equations | PB §15.2–15.4; R Ch. 15; builds on [[THX1 Diffusion Random Walks and the Heat Equation]] | planned |
-| SM25 | Linear response, fluctuation–dissipation, Onsager relations | PB §15.5–15.7; L9 | planned |
+| SM25 | Linear response, fluctuation–dissipation, Onsager relations (Green–Kubo for SM04's $\eta,\kappa$) | PB §15.5–15.7; L9 | planned |
 | SM26 | Master equations, detailed balance and Monte Carlo | PB Ch. 16; R | planned |
 
 ### II-E Applications and extras
@@ -121,7 +121,7 @@ SORT chapter ASC
 ```
 
 > [!note] Order and numbering
-> The numbering is the *teaching* order, not the order of the books: Kardar puts kinetic theory (Boltzmann equation) before ensembles; here ensembles come first and Liouville's theorem is taken up in SM02 where it is needed, with the Boltzmann equation and H-theorem returning in SM22 (Part II-D). The unwritten chapters appear as plain text until they exist, so that the graph has no empty nodes. The `.djvu` books (Reif's *Fundamentals*, Huang, Schwabl, Landau Vol. 9, Callen, Schroeder, Hill, Tolman, Goodstein, Pathria 1996) need `djvulibre`, which is **not installed yet** (`sudo pacman -S djvulibre`); until it is, those keys mean "to be read".
+> The numbering is the *teaching* order, not the order of the books: Kardar puts kinetic theory (Boltzmann equation) before ensembles; here ensembles come first (SM02–SM03) and the kinetic theory chapter SM04 follows, needing only Liouville's theorem from SM02 (user request 2026-10-30: "add a kinetic theory chapter separately and link properly"; the old plan had it as SM22–SM23, so everything after it moved up by one and the old SM23 was redefined as the transport chapter beyond the single-time approximation). The unwritten chapters appear as plain text until they exist, so that the graph has no empty nodes. The `.djvu` books (Reif's *Fundamentals*, Huang, Schwabl, Landau Vol. 9, Callen, Schroeder, Hill, Tolman, Goodstein, Pathria 1996) became readable on 2026-10-30 (`djvulibre` installed; `djvutxt book.djvu out.txt`): Huang djvu page = printed + 9, Reif = printed + 17; Kardar and Huang equations are garbled in the text layer, so cite sections and pages, not equation numbers. Landau–Lifshitz Vol. 10 and Chapman–Cowling remain unread.
 
 ## Sources and what they are
 | ID | File | What it is | Role |
@@ -168,8 +168,8 @@ See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] f
 ## Atlas: every note in this subject
 The graph view draws only real links, so this block links **every** note of the subject (the map is the hub of its cluster; [[Home]] is the hub of all maps).
 
-> [!abstract]- Atlas (generated): 10 chapters · 84 concept notes
-> **Chapters (10):** [[SM01 Probability Large Numbers and Information]] · [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] · [[SM03 The Canonical Ensemble]] · [[TH01 Temperature and the Zeroth Law]] · [[TH02 Work Heat and the First Law]] · [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] · [[THX1 Diffusion Random Walks and the Heat Equation]]
+> [!abstract]- Atlas (generated): 11 chapters · 114 concept notes
+> **Chapters (11):** [[SM01 Probability Large Numbers and Information]] · [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] · [[SM03 The Canonical Ensemble]] · [[SM04 Kinetic Theory and the Boltzmann Equation]] · [[TH01 Temperature and the Zeroth Law]] · [[TH02 Work Heat and the First Law]] · [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] · [[THX1 Diffusion Random Walks and the Heat Equation]]
 >
-> **Concept notes (84):** [[Adiabatic Demagnetisation]] · [[Adiabatic Process and Potential Temperature]] · [[Barometric Formula]] · [[Blackbody Radiation]] · [[Boltzmann Distribution]] · [[Brownian Motion and the Einstein Relation]] · [[Canonical Ensemble]] · [[Carnot Engine]] · [[Carnot Theorem]] · [[Chemical Potential]] · [[Clausius Theorem]] · [[Clausius-Clapeyron Relation]] · [[Cumulant]] · [[Curie Law]] · [[Density of States]] · [[Diffusion Equation]] · [[Einstein Solid]] · [[Empirical Temperature]] · [[Enthalpy]] · [[Entropy]] · [[Equation of State]] · [[Equipartition of Energy]] · [[Equivalence of Ensembles]] · [[Ergodic Hypothesis]] · [[Exact Differential]] · [[Fick's and Fourier's Laws]] · [[First Law of Thermodynamics]] · [[Fundamental Thermodynamic Relation]] · [[Generalised Force and Displacement]] · [[Gibbs Canonical Ensemble]] · [[Gibbs Free Energy]] · [[Gibbs Paradox]] · [[Gibbs-Duhem Relation]] · [[Grand Potential]] · [[Heat and Work]] · [[Heat Capacity]] · [[Heat Engine]] · [[Helmholtz Free Energy]] · [[Ideal Gas Law]] · [[Ideal Gas Temperature Scale]] · [[Internal Energy]] · [[Irreversibility]] · [[Joule Expansion]] · [[Kelvin and Clausius Statements]] · [[Kinetic Theory of Gases]] · [[Large Deviation Principle]] · [[Legendre Transform]] · [[Liouville's Theorem]] · [[Maxwell Relations]] · [[Maxwell-Boltzmann Distribution]] · [[Mayer Relation]] · [[Mean Free Path]] · [[Microcanonical Ensemble]] · [[Negative Temperature]] · [[Partition Function of the Hydrogen Atom]] · [[Partition Function]] · [[Phase Space]] · [[Planck Law]] · [[Planck Mean Energy]] · [[Quasi-Static Process]] · [[Ratio of Specific Heats]] · [[Refrigerator and Heat Pump]] · [[Relative Entropy]] · [[Response Functions]] · [[Reversible Adiabatic Process]] · [[Ruchhardt Method]] · [[Sackur-Tetrode Equation]] · [[Saddle Point Method]] · [[Schottky Anomaly]] · [[Second Law of Thermodynamics]] · [[Shannon Entropy]] · [[Speed of Sound]] · [[State Function]] · [[Statistical Entropy]] · [[Stefan-Boltzmann Law]] · [[Stirling's Approximation]] · [[Thermal Wavelength]] · [[Thermodynamic Equilibrium]] · [[Thermodynamic Stability]] · [[Thermodynamic Temperature]] · [[Third Law of Thermodynamics]] · [[Wick's Theorem]] · [[Wien Displacement Law]] · [[Zeroth Law]]
+> **Concept notes (114):** [[Adiabatic Demagnetisation]] · [[Adiabatic Process and Potential Temperature]] · [[Arnold Cat Map]] · [[Barometric Formula]] · [[BBGKY Hierarchy]] · [[Blackbody Radiation]] · [[Boltzmann Distribution]] · [[Boltzmann Equation]] · [[Brillouin Function]] · [[Brownian Motion and the Einstein Relation]] · [[Canonical Ensemble]] · [[Carnot Engine]] · [[Carnot Theorem]] · [[Chapman-Enskog Expansion]] · [[Chemical Potential]] · [[Chernoff Bound]] · [[Clausius Theorem]] · [[Clausius-Clapeyron Relation]] · [[Collision Invariants]] · [[Cumulant]] · [[Curie Law]] · [[Density of States]] · [[Diffusion Equation]] · [[Dulong-Petit Law]] · [[Edgeworth Expansion]] · [[Einstein Solid]] · [[Empirical Temperature]] · [[Enthalpy]] · [[Entropy]] · [[Equation of State]] · [[Equipartition of Energy]] · [[Equivalence of Ensembles]] · [[Ergodic Hypothesis]] · [[Euler Equations]] · [[Exact Differential]] · [[Fick's and Fourier's Laws]] · [[First Law of Thermodynamics]] · [[Fluctuation-Response Relation]] · [[Fundamental Thermodynamic Relation]] · [[Generalised Force and Displacement]] · [[Gibbs Canonical Ensemble]] · [[Gibbs Free Energy]] · [[Gibbs Paradox]] · [[Gibbs-Duhem Relation]] · [[Grand Potential]] · [[H-Theorem]] · [[Heat and Work]] · [[Heat Capacity]] · [[Heat Engine]] · [[Helmholtz Free Energy]] · [[Hydrodynamic Modes]] · [[Ideal Gas Law]] · [[Ideal Gas Temperature Scale]] · [[Internal Energy]] · [[Irreversibility]] · [[Joule Expansion]] · [[Kac Ring]] · [[Kelvin and Clausius Statements]] · [[Kinetic Theory of Gases]] · [[Knudsen Number]] · [[Langevin Function]] · [[Large Deviation Principle]] · [[Legendre Transform]] · [[Liouville's Theorem]] · [[Loschmidt and Zermelo Paradoxes]] · [[Maximum Entropy Principle]] · [[Maxwell Relations]] · [[Maxwell-Boltzmann Distribution]] · [[Mayer Relation]] · [[Mean Free Path]] · [[Microcanonical Ensemble]] · [[Molecular Chaos]] · [[Mutual Information]] · [[Navier-Stokes Equations]] · [[Negative Temperature]] · [[One-Particle Distribution Function]] · [[Partition Function of the Hydrogen Atom]] · [[Partition Function]] · [[Phase Space]] · [[Planck Law]] · [[Planck Mean Energy]] · [[Poincare Recurrence]] · [[Prandtl Number]] · [[Quasi-Static Process]] · [[Ratio of Specific Heats]] · [[Refrigerator and Heat Pump]] · [[Relative Entropy]] · [[Relaxation Time Approximation]] · [[Residual Entropy of Ice]] · [[Response Functions]] · [[Reversible Adiabatic Process]] · [[Ruchhardt Method]] · [[Sackur-Tetrode Equation]] · [[Saddle Point Method]] · [[Scattering Cross Section]] · [[Schottky Anomaly]] · [[Second Law of Thermodynamics]] · [[Shannon Entropy]] · [[Speed of Sound]] · [[State Function]] · [[Statistical Entropy]] · [[Stefan-Boltzmann Law]] · [[Stirling's Approximation]] · [[Thermal Conductivity of a Gas]] · [[Thermal Wavelength]] · [[Thermodynamic Equilibrium]] · [[Thermodynamic Stability]] · [[Thermodynamic Temperature]] · [[Third Law of Thermodynamics]] · [[Typical Set]] · [[Viscosity of a Gas]] · [[Wick's Theorem]] · [[Wien Displacement Law]] · [[Zeroth Law]]
 <!-- graph-spine:end -->

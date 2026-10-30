@@ -1,0 +1,31 @@
+---
+title: Global Rank Theorem
+aliases: ["Theorem 4.14", "constant rank global consequences"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Global Rank Theorem
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG11, DG12; [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=101|Lee Thm 4.14, p. 83]].
+
+> [!intuition] In one picture
+> A constant-rank map that is onto must have full rank in the target; one that is one-to-one must have full rank in the source.
+
+> [!key] Definition
+> $F:M\to N$ smooth of **constant rank**: (a) surjective $\Rightarrow$ submersion; (b) injective $\Rightarrow$ immersion; (c) bijective $\Rightarrow$ diffeomorphism.
+
+(a) uses the Rank Theorem + [[Baire Category Theorem]] ($N$ would be a countable union of nowhere dense sets). Consequence: a bijective Lie group homomorphism is an isomorphism ([[DM08 Lie Groups]]). Fails without constant rank: $x\mapsto x^3$.
+
+Used in: [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Rank Theorem]] · [[Baire Category Theorem]] · [[Diffeomorphism]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,32 @@
+---
+title: Slice Chart
+aliases: ["slice", "local slice criterion", "k-slice"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Slice Chart
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG8 (proof of injectivity of $di_p$ uses a slice chart).
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=119|Lee Thm 5.8 (Local Slice Criterion), p. 101]].
+
+> [!intuition] In one picture
+> Coordinates on $M$ in which the submanifold becomes a flat coordinate plane.
+
+> [!key] Definition
+> A chart $(U,\varphi)$ of $M^n$ with $\varphi(S\cap U)=\{x^{k+1}=\dots=x^n=0\}$. $S$ is an embedded $k$-submanifold iff such a chart exists around each point of $S$ (proof: rank theorem + subspace topology).
+
+Circle near $(0,1)$: $\varphi(x,y)=(x,y-\sqrt{1-x^2})$. Graph of $f$: $(x,y)\mapsto(x,y-f(x))$. Sphere near $N$: $(x,y,z-\sqrt{1-x^2-y^2})$. In a slice chart $T_pS=\operatorname{span}\{\partial_1,\dots,\partial_k\}$.
+
+Used in: [[DM06 Submanifolds]]. Related: [[Embedded Submanifold]] · [[Rank Theorem]] · [[Tangent Space of a Submanifold]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

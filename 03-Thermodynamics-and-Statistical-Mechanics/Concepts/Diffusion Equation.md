@@ -38,3 +38,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 - [[Normal Distribution]] (Probability): the normal density with variance $2Dt$ is the fundamental solution of the diffusion equation.
 - [[Dupuit Water Table]] (Landscapes): linearised about a mean thickness the Boussinesq water-table equation is $\partial_tH=D_H\partial_x^2H$ with $D_H=K\bar H/S_y$, the heat equation; a river-stage oscillation penetrates the bank with the thermal skin-depth formula.
 - [[Coastline Instability]] (Landscapes): the shoreline obeys $\partial_ty=\kappa\partial_x^2y$ with $\kappa=2Q_0\cos2\alpha_0/D$, a diffusion whose sign reverses above $45^\circ$: anti-diffusion grows capes and is ill-posed at short wavelength.
+
+## Continued in Part II (added 2026-10-30)
+- The shear and heat modes of a gas obey $\partial_t\delta=\nu\nabla^2\delta$ with $\nu=\eta/\rho$, $D_T=\kappa/\rho c_p$ computed from molecular properties: [[SM04 Kinetic Theory and the Boltzmann Equation]] §11 ([[Hydrodynamic Modes]]).

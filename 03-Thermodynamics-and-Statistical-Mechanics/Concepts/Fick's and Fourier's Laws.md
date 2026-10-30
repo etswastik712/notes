@@ -34,3 +34,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[LS12 Hillslope Transport and the Diffusion Equation]] (Landscapes): soil creep as a Fick law
 - [[Darcy's Law and Hydraulic Conductivity]] (Landscapes): Darcy's law $q=-K\nabla h$ is a third instance of the flux-gradient law (after Fick and Fourier), with the conductivity built from a pore-scale Poiseuille flow.
+
+## Continued in Part II (added 2026-10-30)
+- Derived from the Boltzmann equation: $\mathbf h=-\kappa\nabla T$ with $\kappa=\tfrac{15}4\tfrac{k_B}m\eta$ (exact first approximation), diffusion $D\sim\bar v\lambda/3$; tests against five noble gases: [[SM04 Kinetic Theory and the Boltzmann Equation]] §10 ([[Thermal Conductivity of a Gas]]).

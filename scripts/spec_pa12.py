@@ -1,0 +1,66 @@
+"""Concept notes for PA12 (Separation, Countability and Local Compactness).  .venv/bin/python -W ignore scripts/spec_pa12.py"""
+from mkconcept import write
+
+LEE = "John M. Lee - Introduction to Smooth Manifolds.pdf"
+CH = "PA12 Separation, Countability and Local Compactness"
+EB = ["extra-book"]
+
+ITEMS = [
+    dict(title="Hausdorff Space", aliases=["T2", "T2 space", "Hausdorff"], scope=EB,
+         syl=f"Munkres §17; [[{LEE}#page=21|Lee Ch. 1, p. 3]].",
+         intuition="Any two distinct points can be put in separate open 'rooms': disjoint neighbourhoods.",
+         key="$X$ is **Hausdorff** if for $x\\neq y$ there are disjoint open sets $U\\ni x$, $V\\ni y$. Equivalent: the diagonal $\\Delta\\subseteq X\\times X$ is closed.",
+         body="Consequences: limits of sequences are unique, compact sets are closed, continuous maps into $X$ have closed graphs. Metric spaces and compact subsets of Hausdorff spaces are Hausdorff. Fails for the cofinite topology and the [[Line with Two Origins]]; the manifold definition requires it ([[DM01 Smooth Manifolds]]).",
+         used=[CH], related=["Separation Axioms", "Compact Space", "Quotient Topology"]),
+    dict(title="Separation Axioms", aliases=["T1", "regular space", "normal space", "Urysohn's lemma", "T3", "T4"], scope=EB,
+         syl="Munkres §§17, 31–33.",
+         intuition="A ladder grading how well open sets separate points and closed sets: $T_1$, Hausdorff, regular, normal.",
+         key="$T_1$: points are closed. Regular: a point and a closed set it avoids have disjoint neighbourhoods. Normal: so do two disjoint closed sets. Normal $\\Rightarrow$ regular $\\Rightarrow$ Hausdorff $\\Rightarrow T_1$.",
+         body="Metric spaces and compact Hausdorff spaces are normal. **Urysohn's lemma:** in a normal space disjoint closed $A,B$ admit continuous $f:X\\to[0,1]$ with $f|_A=0$, $f|_B=1$ (in a metric space $f=d(x,A)/(d(x,A)+d(x,B))$). Second-countable regular spaces are metrisable (Urysohn), so every manifold is.",
+         used=[CH], related=["Hausdorff Space", "Second-Countable Space", "Compact Space"]),
+    dict(title="First-Countable Space", aliases=["first countable", "neighbourhood basis", "sequence lemma"], scope=EB,
+         syl=f"[[{LEE}#page=618|Lee Lemma A.12 (Sequence Lemma), p. 600]]; Munkres §30.",
+         intuition="Near each point countably many shrinking neighbourhoods are enough, as the balls $B(x,1/n)$ in a metric space.",
+         key="$X$ is **first-countable** if every point has a countable neighbourhood basis. Then closures and continuity are detected by sequences: $x\\in\\overline A$ iff some sequence in $A$ converges to $x$.",
+         body="Metric spaces and manifolds are first-countable. An uncountable discrete space and the lower-limit line $\\mathbb R_\\ell$ are first-countable but not second-countable.",
+         used=[CH], related=["Second-Countable Space", "Basis for a Topology"]),
+    dict(title="Second-Countable Space", aliases=["second countable", "Lindelof", "Lindelöf space", "separable"], scope=EB,
+         syl=f"[[{LEE}#page=619|Lee Prop. A.16, p. 601]]; Munkres §30.",
+         intuition="A countable list of open sets describes the whole topology (rational balls in $\\mathbb R^n$).",
+         key="$X$ is **second-countable** if the topology has a countable basis. Then $X$ is first-countable, separable and **Lindelöf**: every open cover of every open subset has a countable subcover.",
+         body="$\\mathbb R^n$ is; an uncountable discrete space, $\\mathbb R_\\ell$ and the long line are not. A second-countable locally connected space has countably many components. The manifold definition requires it ([[DM01 Smooth Manifolds]]): it gives a countable atlas, exhaustions and partitions of unity.",
+         used=[CH], related=["First-Countable Space", "Compact Exhaustion", "Paracompact Space", "Basis for a Topology"]),
+    dict(title="Locally Compact Space", aliases=["locally compact", "precompact", "relatively compact"], scope=EB,
+         syl=f"[[{LEE}#page=630|Lee App. A, p. 612]]; Munkres §29.",
+         intuition="Every point has a small closed neighbourhood that is compact, like closed balls in $\\mathbb R^n$.",
+         key="$X$ is **locally compact** if every point has a neighbourhood contained in a compact set. For Hausdorff $X$ this means: a basis of open sets with compact closure (**precompact** open sets).",
+         body="$\\mathbb R^n$ and all manifolds are; $\\mathbb Q$ and infinite-dimensional normed spaces are not. Open and closed subsets of a locally compact Hausdorff space are locally compact.",
+         used=[CH], related=["One-Point Compactification", "Compact Exhaustion", "Compact Space"]),
+    dict(title="One-Point Compactification", aliases=["Alexandroff compactification", "point at infinity"], scope=EB,
+         syl="Munkres §29.",
+         intuition="Add a single point at infinity whose neighbourhoods are complements of compact sets: the plane becomes a sphere, an open interval a circle.",
+         key="For $X$ locally compact Hausdorff, $X^*=X\\cup\\{\\infty\\}$ with open sets the open sets of $X$ and the sets $X^*\\setminus K$, $K\\subseteq X$ compact, is compact Hausdorff.",
+         body="$(\\mathbb R^n)^*\\cong S^n$ by stereographic projection: $|\\sigma^{-1}(w)-N|=2/\\sqrt{1+|w|^2}$ (for $|w|=1000$: $2.0\\times10^{-3}$). $(0,1)^*\\cong S^1$; $\\mathbb N^*$ is a convergent sequence.",
+         used=[CH], related=["Locally Compact Space", "Compact Space"]),
+    dict(title="Compact Exhaustion", aliases=["exhaustion by compact sets", "exhaustion function"], scope=EB,
+         syl=f"[[{LEE}#page=630|Lee Prop. A.60, p. 612]].",
+         intuition="Fill the space by an increasing sequence of compact sets, each inside the interior of the next (balls of radius $j$ in $\\mathbb R^n$).",
+         key="A sequence of compact sets $K_j\\subseteq\\operatorname{int}K_{j+1}$ with $\\bigcup K_j=X$. Every second-countable locally compact Hausdorff space (in particular every manifold) has one.",
+         body="Proof idea: a countable basis of precompact open sets $B_i$; let $K_{j+1}$ be the closure of $B_1\\cup\\dots\\cup B_m$ for $m$ large enough to cover $K_j$. Used to build locally finite refinements and, on manifolds, smooth exhaustion functions.",
+         used=[CH], related=["Locally Finite Family", "Paracompact Space", "Second-Countable Space"]),
+    dict(title="Locally Finite Family", aliases=["locally finite", "refinement of a cover"], scope=EB,
+         syl="Munkres §39.",
+         intuition="Zooming in anywhere, you only ever see finitely many of the sets.",
+         key="A family of subsets is **locally finite** if every point has a neighbourhood meeting only finitely many members. A **refinement** of a cover $\\mathcal U$ is a cover each of whose members lies in a member of $\\mathcal U$.",
+         body="It depends on the ambient space: $\\{(\\tfrac1{n+2},\\tfrac1n)\\}$ is locally finite in $(0,1)$ but not in $[0,1)$ (every ball around $0$ meets infinitely many). Locally finite sums are the reason partitions of unity can be added up ([[DM02 Smooth Maps and Partitions of Unity]]).",
+         used=[CH], related=["Paracompact Space", "Compact Exhaustion"]),
+    dict(title="Paracompact Space", aliases=["paracompact", "paracompactness"], scope=EB,
+         syl="Munkres §39.",
+         intuition="Every open cover can be traded for a finer one that is locally finite.",
+         key="A Hausdorff space is **paracompact** if every open cover has a locally finite open refinement. Second-countable locally compact Hausdorff spaces (all manifolds) are paracompact.",
+         body="Proof: refine over the annuli $A_j=K_j\\setminus\\operatorname{int}K_{j-1}$ of a compact exhaustion. Paracompactness is exactly what partitions of unity need; the long line is a connected, locally Euclidean, Hausdorff space that is not paracompact.",
+         used=[CH], related=["Locally Finite Family", "Compact Exhaustion", "Second-Countable Space"]),
+]
+
+if __name__ == "__main__":
+    write("11-Proofs-Analysis-Topology", "analysis", ITEMS)

@@ -21,7 +21,7 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 > [!example] Numbers (recomputed)
 > 1 mol He + 1 mol Ar: $2R\ln2=11.53$ J K$^{-1}$; air ($0.21$ O$_2$, $0.79$ N$_2$): $4.27$ J mol$^{-1}$K$^{-1}$ per mole; $x_i=\tfrac12$ gives $R\ln2=5.76$.
 
-*Subtlety (Jaynes):* the mixing entropy is a step function of "different or not"; it depends on whether you can *measure* the difference. Quantum mechanics derives $1/N!$ from symmetrisation (SM07).
+*Subtlety (Jaynes):* the mixing entropy is a step function of "different or not"; it depends on whether you can *measure* the difference. Quantum mechanics derives $1/N!$ from symmetrisation (SM08).
 
 Used in: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]. Related: [[Sackur-Tetrode Equation]] · [[Statistical Entropy]] · [[Shannon Entropy]] · [[Chemical Potential]].
 

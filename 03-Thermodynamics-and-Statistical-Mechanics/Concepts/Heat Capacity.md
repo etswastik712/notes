@@ -36,3 +36,6 @@ Used in: [[TH02 Work Heat and the First Law]], [[TH03 The Ideal Gas and Adiabati
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Heat conduction through a gas: the thermal diffusivity $\kappa/\rho c_p$ and the Prandtl number: [[SM04 Kinetic Theory and the Boltzmann Equation]] §10–§11 ([[Prandtl Number]]).
