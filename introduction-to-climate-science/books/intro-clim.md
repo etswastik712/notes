@@ -13,4 +13,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 
 ## Concepts in this book
 - (1/32): [[zettel/area-weighted-mean-temperature|Area-Weighted Mean Temperature]]
+- (2/32): (none new)
 <!-- /kurooto:source -->
