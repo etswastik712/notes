@@ -1,0 +1,24 @@
+---
+id: zettel/law-of-total-probability-and-bayes-formula
+aliases: ["Law of Total Probability and Bayes Formula", "Bayes formula for two events", "total probability expansion"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Law of Total Probability and Bayes Formula
+
+The partition of an event E into disjoint intersections with an event F and its complement, expressing P[E] as a weighted sum of conditional probabilities.
+
+$$P[E] = P[E \mid F] P[F] + P[E \mid F^c](1 - P[F])$$
+
+## Links
+- special-case-of:: [[zettel/bayes-rule-for-a-finite-partition]] — Forms the binary two-event partition case of the general n-partition Bayes' rule
+- needs:: [[zettel/conditional-probability-measure]] — Replaces P[E \cap F] and P[E \cap F^c] with product expansions using conditional probabilities
+
+---
+Source: Class notes 13th August 2026, pp. 1–3
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Class notes 13th August 2026]] pp. 1–3
+<!-- /kurooto:seen -->

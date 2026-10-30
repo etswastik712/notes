@@ -1,0 +1,24 @@
+---
+id: zettel/exchangeability-in-sequential-sampling-without-replacement
+aliases: ["Exchangeability in Sequential Sampling Without Replacement", "exchangeability of urn draws", "order invariance of sequential draws"]
+tags: [zettel, agent-written, introduction-to-probability]
+trust_tier: agent_written
+---
+
+# Exchangeability in Sequential Sampling Without Replacement
+
+The property that in sequential sampling without replacement from an urn containing black and white balls, any specific sequence containing a fixed count of black and white balls occurs with identical probability regardless of the extraction order.
+
+$$\frac{b(b-1)\cdots(b-\ell+1)w(w-1)\cdots(w-k+\ell+1)}{(b+w)(b+w-1)\cdots(b+w-k+1)}$$
+
+## Links
+- generalises:: [[zettel/hypergeometric-first-draw-posterior-probability]] — Establishes the general order-invariance of draw sequences that directly yields the first-draw posterior probability in sampling without replacement
+- needs:: [[zettel/multiplication-rule-for-conditional-probability]] — The sequence probability formula is constructed by multiplying successive draw probabilities conditioned on previous draw outcomes
+
+---
+Source: Class notes 13th August 2026, pp. 1–3
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Class notes 13th August 2026]] pp. 1–3
+<!-- /kurooto:seen -->

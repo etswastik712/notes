@@ -1,6 +1,6 @@
 ---
 id: zettel/multiplication-rule-for-conditional-probability
-aliases: ["Multiplication Rule for Conditional Probability", "general chain rule for conditional probabilities", "multiplication rule for n events"]
+aliases: ["Multiplication Rule for Conditional Probability", "general chain rule for conditional probabilities", "multiplication rule for n events", "Multiplication Rule", "chain rule of probability"]
 tags: [zettel, agent-written, introduction-to-probability]
 trust_tier: agent_written
 ---
@@ -20,4 +20,8 @@ Source: Class notes 19th August 2026, pp. 1–2
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-08-19-class-notes-19th-august-2026|Class notes 19th August 2026]] pp. 1–2
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Class notes 13th August 2026]] pp. 1–3
+
+### Added from class
+- Class notes 13th August 2026 pp. 1–3: Provides the explicit chain product formula expressing joint intersection probability as successive conditional factors.
 <!-- /kurooto:seen -->

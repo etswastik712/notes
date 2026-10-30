@@ -65,3 +65,8 @@ Dear everyone, here is the updated list of suggested problems for this week.
 ## Concepts in Practice problems 14th August 2026
 [[zettel/bayesian-smoking-and-lung-cancer-updating]], [[zettel/monty-hall-problem]], [[zettel/medical-screening-false-positive-inversion]], [[zettel/coin-selection-posterior-inference-under-repeated-tosses]]
 <!-- /kurooto:materialde71cd6f -->
+
+<!-- kurooto:materiale6b37409 -->
+## Concepts in Class notes 13th August 2026
+[[zettel/conditional-probability-measure]], [[zettel/reduced-sample-space-method]], [[zettel/exchangeability-in-sequential-sampling-without-replacement]], [[zettel/multiplication-rule-for-conditional-probability]], [[zettel/law-of-total-probability-and-bayes-formula]]
+<!-- /kurooto:materiale6b37409 -->

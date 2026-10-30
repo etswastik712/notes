@@ -1,6 +1,6 @@
 ---
 id: zettel/conditional-probability-measure
-aliases: ["Conditional Probability Measure", "conditional probability as a probability function", "P given F"]
+aliases: ["Conditional Probability Measure", "conditional probability as a probability function", "P given F", "Conditional Probability", "conditional probability definition", "P[E|F]"]
 tags: [zettel, agent-written, introduction-to-probability]
 trust_tier: agent_written
 ---
@@ -19,4 +19,8 @@ Source: Class notes 19th August 2026, pp. 1–2
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-08-19-class-notes-19th-august-2026|Class notes 19th August 2026]] pp. 1–2
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Class notes 13th August 2026]] pp. 1–3
+
+### Added from class
+- Class notes 13th August 2026 pp. 1–3: Adds the foundational intuitive motivation of updating beliefs via partial information from prior experiments and the formal definition before axiomatic development.
 <!-- /kurooto:seen -->
