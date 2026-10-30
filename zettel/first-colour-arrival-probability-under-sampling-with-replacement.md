@@ -1,6 +1,6 @@
 ---
 id: zettel/first-colour-arrival-probability-under-sampling-with-replacement
-aliases: ["First Colour Arrival Probability under Sampling with Replacement", "First Arrival Order with Replacement", "Geometric First Arrival Probability"]
+aliases: ["First Colour Arrival Probability under Sampling with Replacement", "First Arrival Order with Replacement", "Geometric First Arrival Probability", "First Occurrence of One Event Before Another in Independent Trials", "event arrival precedence"]
 tags: [zettel, agent-written, introduction-to-probability]
 trust_tier: agent_written
 ---
@@ -22,4 +22,8 @@ Source: Quiz 2 solutions, pp. 1–2
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-09-04-quiz-2-solutions|Quiz 2 solutions]] pp. 1–2
+- [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026|Practice problems 21st August 2026]] pp. 1–3
+
+### Added from class
+- Practice problems 21st August 2026 pp. 1–3: Applies the geometric waiting sum approach specifically to dice rolls where event A (sum 5) is tested for precedence before event B (sum 7).
 <!-- /kurooto:seen -->

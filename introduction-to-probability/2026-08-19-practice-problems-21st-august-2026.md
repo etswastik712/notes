@@ -40,3 +40,8 @@ Dear everyone, here is the updated list of suggested problems for this week.
 - [[introduction-to-probability/2026-08-11-class-notes-13th-august-2026]]: urn model, exchangeability, Bayes formula for problems 1-5
 - [[introduction-to-probability/2026-08-13-practice-problems-14th-august-2026]]: previous sheet of Bayes problems
 - [[introduction-to-probability/2026-08-19-class-notes-20th-august-2026]]: that week's lecture on random variables
+
+<!-- kurooto:materiald58afbd3 -->
+## Concepts in Practice problems 21st August 2026
+[[zettel/bayes-rule-for-multiple-choice-guessing]], [[zettel/self-independent-event]], [[zettel/independence-of-complements]], [[zettel/chain-rule-for-finite-intersection-probabilities]], [[zettel/gambler-s-ruin-difference-recurrence]], [[zettel/first-colour-arrival-probability-under-sampling-with-replacement]], [[zettel/weighted-urn-sampling-without-replacement]], [[zettel/hypergeometric-first-draw-posterior-probability]]
+<!-- /kurooto:materiald58afbd3 -->
