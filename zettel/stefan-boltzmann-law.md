@@ -21,7 +21,9 @@ Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
 
 ### Added from class
 - climate_intro_notes_L1_L6 pp. 17–24: Specifies total emitted energy flux denoted as F with units W/m^2, gives constant value sigma = 5.67e-8 W/m^2/K^4, and contrasts solar shortwave with Earth longwave emission budgets.
+- climate_intro_notes_L1_L6 pp. 25–33: Introduces the 16-fold flux scaling for doubled temperature and applies the fourth-power nonlinearity to explain Mercury's lower mean temperature via the inequality of average fourth-power temperature versus fourth power of average temperature.
 <!-- /kurooto:seen -->

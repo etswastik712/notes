@@ -1,6 +1,6 @@
 ---
 id: zettel/planetary-emission-temperature
-aliases: ["Planetary Emission Temperature", "emission temperature", "effective planetary temperature", "Te"]
+aliases: ["Planetary Emission Temperature", "emission temperature", "effective planetary temperature", "Te", "effective radiating temperature"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -22,7 +22,20 @@ $$4\pi a^2 \sigma T_e^4 = (1 - \alpha_p) S_0 \pi a^2$$
 Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 
 <!-- kurooto:seen -->
-- needs:: [[zettel/stefan-boltzmann-law]] — The emission temperature is obtained by setting the integrated outgoing flux equal to sigma T^4, so the Stefan-Boltzmann law supplies the emission side of the balance
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+
+### Added from class
+- climate_intro_notes_L1_L6 pp. 25–33: Quantifies Earth's natural greenhouse effect as the 33 K difference between observed mean surface temperature (288 K) and bare-rock calculated emission temperature (255 K).
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| climate_intro_notes_L1_L6, pp. 25–33 | $T_e$ | effective radiating temperature |
+| Radiative_balance_Marshall_and_Plumb, pp. 1–11 | $T_e$ | emission temperature of the planet |
+| climate_intro_notes_L1_L6, pp. 25–33 | $T_s$ | observed surface temperature |
+| Radiative_balance_Marshall_and_Plumb, pp. 1–11 | $\alpha_p$ | planetary albedo |
+<!-- /kurooto:notation -->

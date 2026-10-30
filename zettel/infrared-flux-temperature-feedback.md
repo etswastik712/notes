@@ -19,4 +19,8 @@ Source: climate_intro_notes_L1_L6, pp. 2–16
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 2–16
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+
+### Added from class
+- climate_intro_notes_L1_L6 pp. 25–33: Formulates stable equilibrium stability criteria via graphical intersection analysis where outgoing longwave flux exceeds net shortwave insolation during warming perturbations.
 <!-- /kurooto:seen -->

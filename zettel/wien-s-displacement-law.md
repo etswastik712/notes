@@ -21,4 +21,8 @@ Source: climate_intro_notes_L1_L6, pp. 17–24
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+
+### Added from class
+- climate_intro_notes_L1_L6 pp. 25–33: Contrasts solar shortwave peak emission in the visible spectrum against terrestrial longwave emission peaking in the thermal infrared near 10 μm.
 <!-- /kurooto:seen -->

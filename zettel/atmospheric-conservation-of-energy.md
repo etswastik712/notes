@@ -1,0 +1,24 @@
+---
+id: zettel/atmospheric-conservation-of-energy
+aliases: ["Atmospheric Conservation of Energy", "conservation of energy equation", "atmospheric thermodynamic energy equation"]
+tags: [zettel, agent-written, introduction-to-climate-science]
+trust_tier: agent_written
+---
+
+# Atmospheric Conservation of Energy
+
+The thermodynamic governing equation expressing the time rate of change of atmospheric enthalpy as the sum of net heat advection by fluid circulation and local diabatic heating terms.
+
+$$c_p \frac{\partial T}{\partial t} = \text{rate of (net heat supply by winds} + \text{heating from condensation, absorption, ...)}$$
+
+## Links
+- needs:: [[zettel/latent-heat-release-in-convection]] — Condensation heating from water phase changes constitutes a key source term in the atmospheric energy budget
+- used-in:: [[zettel/zero-dimensional-energy-balance-model]] — Setting the time derivative of temperature to zero in this equation establishes the steady-state assumption of the zero-dimensional model
+
+---
+Source: climate_intro_notes_L1_L6, pp. 25–33
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+<!-- /kurooto:seen -->
