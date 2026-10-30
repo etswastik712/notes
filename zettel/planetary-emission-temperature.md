@@ -22,6 +22,7 @@ $$4\pi a^2 \sigma T_e^4 = (1 - \alpha_p) S_0 \pi a^2$$
 Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/stefan-boltzmann-law]] — The emission temperature is obtained by setting the integrated outgoing flux equal to sigma T^4, so the Stefan-Boltzmann law supplies the emission side of the balance
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
 <!-- /kurooto:seen -->
