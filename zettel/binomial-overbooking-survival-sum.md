@@ -18,6 +18,7 @@ $$P[S \leqslant C] = \sum_{k=0}^C \binom{N}{k} p^k (1-p)^{N-k}$$
 Source: Practice problems 17th September and following tutorial and weekend, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/sum-of-independent-bernoulli-trials-representation-of-binomial]] — The survival sum P[S ≤ C] treats S as a count of independent show-up indicators, which is the Binomial(N, p) = sum of independent Bernoulli(p) representation
 ## Seen in
 - [[introduction-to-probability/2026-09-17-practice-problems-17th-september-and-following-tutorial-and-weekend|Practice problems 17th September and following tutorial and weekend]] pp. 1–2
 <!-- /kurooto:seen -->
