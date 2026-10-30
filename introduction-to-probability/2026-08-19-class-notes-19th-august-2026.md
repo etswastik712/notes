@@ -48,3 +48,8 @@ Dear everyone, here are the class notes for today's class.
 - [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]]: problems 2-10 practise this material
 - [[introduction-to-probability/2026-08-19-class-notes-20th-august-2026]]: next class, random variables
 - [[08-Probability/Probability - Course Map]]: their own probability chapters
+
+<!-- kurooto:materialbbf3fd0f -->
+## Concepts in Class notes 19th August 2026
+[[zettel/multiplication-rule-for-conditional-probability]], [[zettel/bayes-rule-for-a-finite-partition]], [[zettel/partition-of-the-sample-space]], [[zettel/conditional-probability-measure]], [[zettel/independence-of-events]], [[zettel/mutual-independence-of-a-finite-collection-of-events]]
+<!-- /kurooto:materialbbf3fd0f -->
