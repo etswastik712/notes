@@ -1,6 +1,6 @@
 ---
 id: zettel/deterministic-chaos-in-the-lorenz-system
-aliases: ["Deterministic Chaos in the Lorenz System", "chaotic behavior", "Lorenz chaos"]
+aliases: ["Deterministic Chaos in the Lorenz System", "chaotic behavior", "Lorenz chaos", "Lorenz System", "Lorenz Attractor", "Lorenz equations"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -19,4 +19,8 @@ Source: lorenz
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-09-04-tutorial-2-model-experiments-and-molecular-weights|lorenz]]
+- [[introduction-to-climate-science/books/intro-clim|intro_clim]]
+
+### Added from class
+- intro_clim: Provides the explicit canonical differential equations of the Lorenz system along with standard numerical parameters (Prandtl number P=10, Rayleigh ratio r=28, geometric factor b=8/3) and integration implementation.
 <!-- /kurooto:seen -->

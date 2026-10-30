@@ -43,4 +43,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (29/32): (none new)
 - (30/32): (none new)
 - (31/32): (none new)
+- (32/32): [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]], [[zettel/temperature-dependent-ice-albedo-feedback|Temperature-Dependent Ice-Albedo Feedback]], [[zettel/deterministic-chaos-in-the-lorenz-system|Deterministic Chaos in the Lorenz System]]
 <!-- /kurooto:source -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/stefan-boltzmann-law
-aliases: ["Stefan-Boltzmann Law", "Stefan-Boltzmann radiation law", "Planetary Radiative Equilibrium Temperature", "equilibrium temperature", "planetary equilibrium temperature", "T_sol"]
+aliases: ["Stefan-Boltzmann Law", "Stefan-Boltzmann radiation law", "Planetary Radiative Equilibrium Temperature", "equilibrium temperature", "planetary equilibrium temperature", "T_sol", "effective radiating temperature"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
