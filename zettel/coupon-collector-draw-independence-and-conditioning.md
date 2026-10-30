@@ -23,6 +23,7 @@ $$P[A_i|A_j] = \frac{1 - (1 - p_i)^k - (1 - p_j)^k + (1 - p_i - p_j)^k}{1 - (1 -
 Source: Mid-semester solutions, pp. 1–3
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/coupon-collector-waiting-time]] — The waiting-time tail P[T > n] for coupon collecting is built from the same complement-of-absence probabilities over types that this note formalises, so the two share the underlying draw-independence and conditioning setup
 ## Seen in
 - [[introduction-to-probability/2026-09-22-mid-semester-solutions|Mid-semester solutions]] pp. 1–3
 <!-- /kurooto:seen -->
