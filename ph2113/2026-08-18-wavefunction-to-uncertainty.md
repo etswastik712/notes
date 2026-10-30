@@ -49,3 +49,8 @@ $dE/dr=0\Rightarrow r_{\min}=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}=a_0=5.292\t
 - [[ph2113/2026-08-31-states-operators-measurements-notes]]: operator and commutator form of the uncertainty relation
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty]]: Gaussian $\Delta x\Delta p$ and uncertainty estimates
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]]: Fourier/Gaussian primer
+
+<!-- kurooto:material85d80ce9 -->
+## Concepts in PH2113_Wavefunction_to_Uncertainty (1)
+[[zettel/delocalized-plane-wave-idealization]], [[zettel/single-slit-diffraction-localization]], [[zettel/two-wave-superposition-envelope-modulation]], [[zettel/fourier-band-limited-wave-packet-localization]], [[zettel/dirac-delta-wavefunction-limit]], [[zettel/gaussian-wave-packet-minimum-uncertainty]], [[zettel/position-momentum-uncertainty-relation-from-fourier-transform]], [[zettel/hydrogen-ground-state-scale-from-uncertainty]]
+<!-- /kurooto:material85d80ce9 -->

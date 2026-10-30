@@ -1,6 +1,6 @@
 ---
 id: zettel/position-momentum-uncertainty-relation-from-fourier-transform
-aliases: ["Position-Momentum Uncertainty Relation from Fourier Transform", "Fourier origin of Heisenberg uncertainty", "uncertainty principle Fourier scaling", "uncertainty principle", "Heisenberg uncertainty relation", "Heisenberg Position-Momentum Uncertainty Relation", "position-momentum uncertainty relation", "Heisenberg uncertainty principle"]
+aliases: ["Position-Momentum Uncertainty Relation from Fourier Transform", "Fourier origin of Heisenberg uncertainty", "uncertainty principle Fourier scaling", "uncertainty principle", "Heisenberg uncertainty relation", "Heisenberg Position-Momentum Uncertainty Relation", "position-momentum uncertainty relation", "Heisenberg uncertainty principle", "position-momentum uncertainty bound", "quantum trade-off relation"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -23,10 +23,21 @@ Source: PH2113_wavefunctions_potentials_schrodinger_Tutorial, pp. 1–4
 <!-- kurooto:seen -->
 ## Seen in
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger|PH2113_wavefunctions_potentials_schrodinger_Tutorial]] pp. 1–4
+- [[ph2113/2026-08-18-wavefunction-to-uncertainty|PH2113_Wavefunction_to_Uncertainty (1)]] pp. 1–4
 - [[ph2113/2026-08-20-lecture-6-7-fourier-synthesis-to-schrodinger|PH2113_Lecture6-7]] pp. 1–6
 - [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger|PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)]] pp. 1–10
 
 ### Added from class
+- PH2113_Wavefunction_to_Uncertainty (1) pp. 1–4: Contextualises the bound against three concrete canonical benchmarks: plane waves (∞ · 0), delta functions (0 · ∞), and Gaussian packets which saturate the lower limit.
 - PH2113_Lecture6-7 pp. 1–6: Details the explicit conceptual transition from the wave Fourier trade-off Delta x Delta k >= 1/2 to quantum momentum spreads via probabilistic Fourier transform amplitudes and p = hbar k.
 - PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1) pp. 1–10: Clarifies that the relation represents an intrinsic property of the quantum state rather than experimental measurement error, and provides the explicit Fourier superposition integral over continuous wave numbers.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $\Delta p$ | root-mean-square momentum uncertainty |
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $\Delta x$ | root-mean-square spatial uncertainty (standard deviation) |
+| PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1), pp. 1–10 | $\Delta p$ | standard deviation of momentum outcomes |
+<!-- /kurooto:notation -->

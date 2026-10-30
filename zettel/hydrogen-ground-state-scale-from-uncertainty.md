@@ -1,6 +1,6 @@
 ---
 id: zettel/hydrogen-ground-state-scale-from-uncertainty
-aliases: ["Hydrogen Ground-State Scale from Uncertainty", "hydrogen ground state stability estimate", "Bohr radius from uncertainty principle"]
+aliases: ["Hydrogen Ground-State Scale from Uncertainty", "hydrogen ground state stability estimate", "Bohr radius from uncertainty principle", "uncertainty estimate of hydrogen radius and energy", "Coulomb collapse prevention"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -23,5 +23,18 @@ Source: PH2113_Lecture6-7, pp. 1–6
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-08-18-wavefunction-to-uncertainty|PH2113_Wavefunction_to_Uncertainty (1)]] pp. 1–4
 - [[ph2113/2026-08-20-lecture-6-7-fourier-synthesis-to-schrodinger|PH2113_Lecture6-7]] pp. 1–6
+
+### Added from class
+- PH2113_Wavefunction_to_Uncertainty (1) pp. 1–4: Provides explicit arithmetic substitution steps with SI physical constants (me, e, ℏ, 4πε0) yielding a0 = 0.529 Å and Emin = -13.61 eV, while cautioning that using strict ℏ/(2r) scales the energy by a factor of 4 (-54.4 eV).
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $a_0$ | Bohr radius defining hydrogen ground-state radial scale |
+| PH2113_Lecture6-7, pp. 1–6 | $r$ | characteristic size of electron cloud |
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $E_{\min}$ | minimum ground-state binding energy |
+<!-- /kurooto:notation -->

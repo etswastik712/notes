@@ -24,5 +24,18 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-08-18-wavefunction-to-uncertainty|PH2113_Wavefunction_to_Uncertainty (1)]] pp. 1–4
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+
+### Added from class
+- PH2113_Wavefunction_to_Uncertainty (1) pp. 1–4: Provides the explicit Fourier transform derivation demonstrating that φ(k) remains Gaussian with variance 1/(4σ²), proving exact cancellation of the width parameter σ to produce Δx Δp = ℏ/2.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| PH2113_tutorial_solutions, pp. 1–5 | $[\hat{x}, \hat{p}] = i\hbar$ | canonical commutation relation |
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $\sigma$ | spatial standard deviation parameter of the Gaussian wave packet |
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $\phi(k)$ | wavenumber-space wavefunction obtained by Fourier transformation |
+<!-- /kurooto:notation -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/delocalized-plane-wave-idealization
-aliases: ["Delocalized Plane Wave Idealization", "plane wave idealization", "generalized state plane wave"]
+aliases: ["Delocalized Plane Wave Idealization", "plane wave idealization", "generalized state plane wave", "plane wave state", "free particle plane wave"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -22,5 +22,18 @@ Source: PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1), pp. 1–10
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-08-18-wavefunction-to-uncertainty|PH2113_Wavefunction_to_Uncertainty (1)]] pp. 1–4
 - [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger|PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1)]] pp. 1–10
+
+### Added from class
+- PH2113_Wavefunction_to_Uncertainty (1) pp. 1–4: Emphasises the failure of real cosines due to counter-propagating momentum mixtures and explicitly computes the spatial probability density P(x,t) = |A|² showing time-invariance and non-normalisability.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1), pp. 1–10 | $A e^{ikx}$ | ideal single-frequency spatial plane wave |
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $A$ | plane wave amplitude factor |
+| PH2113_Wavefunction_to_Uncertainty (1), pp. 1–4 | $k$ | wavenumber carrying momentum p = ℏk |
+<!-- /kurooto:notation -->
