@@ -29,7 +29,7 @@ tags: [subject/thermo, type/concept, taught, extra/beyond, src/suhas-pre, src/ar
 - **Kinetic origin** (🔵): $p=\tfrac13n_0m\langle v^2\rangle$ and $\tfrac12m\langle v_x^2\rangle=\tfrac12k_BT$ give $p=n_0k_BT$; rms speed of N₂ at 288 K is 507 m s⁻¹, mean free path ~65 nm.
 - **Accuracy** (🔵): molecules occupy ~0.07 % of the volume, so deviations from ideality are ~0.1 % at sea level.
 
-Chapters: [[CL05 Thermodynamic State of the Atmosphere]] (full treatment) and [[CL06 Hydrostatic Balance and Vertical Structure]] (with gravity: $p=p_0e^{-z/H}$, [[Scale Height]], [[Hypsometric Equation]]). Related: [[Atmospheric Composition]], [[Mixing Ratio and Humidity]], [[Thermodynamics - Course Map]] (kinetic theory, statistical mechanics).
+Chapters: [[CL05 Thermodynamic State of the Atmosphere]] (full treatment) and [[CL06 Hydrostatic Balance and Vertical Structure]] (with gravity: $p=p_0e^{-z/H}$, [[Scale Height]], [[Hypsometric Equation]]). Related: [[Atmospheric Composition]], [[Mixing Ratio and Humidity]], [[Thermodynamics and Statistical Mechanics - Course Map]] (kinetic theory, statistical mechanics).
 
 ## Linked from
 ```dataview

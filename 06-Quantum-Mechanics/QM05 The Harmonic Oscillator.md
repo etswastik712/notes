@@ -227,7 +227,7 @@ For the normalised packet $\psi=(2\pi\sigma_x^2)^{-1/4}e^{-x^2/4\sigma_x^2}$ (Tu
 > **Why this matters for climate.** The CO$_2$ bending mode ($667$ cm$^{-1}$, $15.0$ µm; [[CL07 Optical Properties of the Atmosphere]]) has $\hbar\omega=h c\tilde\nu=0.0827$ eV, comparable to $k_BT=0.0248$ eV at 288 K: the Boltzmann factor for $n=1$ is $0.036$, so a few per cent of molecules are excited and the mode is **active** in absorbing and emitting around the peak of Earth's thermal spectrum. Equal level spacing means a single absorption frequency per mode; the selection rule $\Delta n=\pm1$ is stated here without proof (it is not in the course notes).
 
 > [!connection] Same equation, many places
-> The quantised mode of frequency $\omega$ with energies $(n+\tfrac12)\hbar\omega$ is the building block of **photons** (a field mode) and of **phonons** in a crystal; the equally spaced ladder is why heat capacities of solids and the Planck law follow from the same algebra ([[Thermodynamics - Course Map]], [[Planck Law]]). The damped classical cousin of the oscillator appears in [[Relaxation Time]].
+> The quantised mode of frequency $\omega$ with energies $(n+\tfrac12)\hbar\omega$ is the building block of **photons** (a field mode) and of **phonons** in a crystal; the equally spaced ladder is why heat capacities of solids and the Planck law follow from the same algebra ([[Thermodynamics and Statistical Mechanics - Course Map]], [[Planck Law]]). The damped classical cousin of the oscillator appears in [[Relaxation Time]].
 
 ## 10. Tutorial III: three computations
 <span class="scope-taught">taught</span> *[[Tutorial3.pdf#page=1|Tutorial III]] (a 2-page TeX sheet; it quotes the relations of §2–§3 as eqs. 1–6)*
@@ -270,7 +270,7 @@ For the normalised packet $\psi=(2\pi\sigma_x^2)^{-1/4}e^{-x^2/4\sigma_x^2}$ (Tu
 > **Leads to:** the topics announced but not in the folder: tunnelling and step potentials, hydrogen, angular momentum (see the [[Quantum Mechanics - Course Map]]).
 > **Concepts:** [[Harmonic Oscillator]] · [[Ladder Operators]] · [[Number Operator]] · [[Hermite Polynomials]] · [[Zero-Point Energy]] · [[Ground State Uniqueness]] · [[Orthonormality of Eigenfunctions]] · [[Classical Probability Density of the Oscillator]] · [[Gaussian Integral]] · [[Fourier Transform and Wave Packets]] · [[Gaussian Wave Packet]] · [[Commutator]] · [[Correspondence Principle]]
 > **Continues in:** [[QM06 The Oscillator Toolbox]] (matrix elements in the number basis, Hermite functions in full, normalisation, Ehrenfest and virial, the oscillator in momentum space, coherent states, the thermal oscillator).
-> **Other subjects:** [[CL07 Optical Properties of the Atmosphere]] (CO$_2$ modes), [[Thermodynamics - Course Map]] (equipartition and the quantum oscillator), [[Group Theory - Course Map]] (the algebra of $\hat a_\pm$ is the Heisenberg algebra).
+> **Other subjects:** [[CL07 Optical Properties of the Atmosphere]] (CO$_2$ modes), [[Thermodynamics and Statistical Mechanics - Course Map]] (equipartition and the quantum oscillator), [[Group Theory - Course Map]] (the algebra of $\hat a_\pm$ is the Heisenberg algebra).
 
 ## Summary
 > [!summary] Cheat-sheet

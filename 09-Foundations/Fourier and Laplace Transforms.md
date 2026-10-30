@@ -11,7 +11,7 @@ tags: [subject/foundations, type/chapter, src/own-notes, status/draft]
 
 # Fourier and Laplace Transforms
 
-[[09-Foundations|Foundations]] · used by [[Quantum Mechanics - Course Map|QM]], [[Waves - Course Map|Waves]], [[Probability - Course Map|Probability]], [[Climate - Course Map|Climate]], [[Landscapes and Geomorphology - Course Map|Landscapes]], [[Thermodynamics - Course Map|Thermodynamics]], [[Group Theory - Course Map|Group Theory]]
+[[09-Foundations|Foundations]] · used by [[Quantum Mechanics - Course Map|QM]], [[Waves - Course Map|Waves]], [[Probability - Course Map|Probability]], [[Climate - Course Map|Climate]], [[Landscapes and Geomorphology - Course Map|Landscapes]], [[Thermodynamics and Statistical Mechanics - Course Map|Thermodynamics]], [[Group Theory - Course Map|Group Theory]]
 
 > [!summary] What this chapter is
 > A self-contained, beginner-accessible but rigorous account of the two transforms that appear in almost every subject of this vault: **Fourier** (waves, spectra, diffusion, uncertainty, sampling) and **Laplace** (initial-value problems, relaxation, stability, transfer functions). Nothing here is a course of its own; it exists so that every other chapter can say "Fourier" or "Laplace" and point to one place. There is **no lecture source** for this material in the repository; it is standard mathematics written out in the vault's style, and *every number quoted was checked by computation* (`scripts/ft_numbers.py`, 20 checks; figures from `scripts/fig_ft.py`).
@@ -276,7 +276,7 @@ flowchart LR
 > [!derivation] The heat/hillslope equation $\partial_tu=D\,\partial_x^2u$
 > Transform in $x$: $\partial_t\tilde u=-Dk^2\tilde u$, so $\tilde u(k,t)=\tilde u(k,0)\,e^{-Dk^2t}$: **every mode decays at its own rate $Dk^2$, short wavelengths first.** Multiplying by $e^{-Dk^2t}$ is convolving with the transform of that Gaussian, which is again a Gaussian,
 > $$u(x,t)=\int G(x-y,t)\,u(y,0)\,\mathrm dy,\qquad G=\frac1{\sqrt{4\pi Dt}}\,e^{-x^2/4Dt}\qquad(\sigma^2=2Dt).$$
-> A delta-function initial condition spreads into this **Gaussian kernel**; any initial shape is a superposition of such spreading spikes. *Numbers:* a sinusoidal hillslope of wavelength $\lambda$ decays with time constant $\tau=1/Dk^2=\lambda^2/4\pi^2D$; for $D=0.01\ \mathrm{m^2yr^{-1}}$: $\lambda=10$ m: $253$ yr; $\lambda=100$ m: **$2.5\times10^4$ yr**; $\lambda=1$ km: $2.5\times10^6$ yr (computed). A Gaussian ridge of initial width $5$ m spreads to $15$ m after $10^4$ yr ($\sigma^2=\sigma_0^2+2Dt$); a spectral (FFT) solution reproduced the analytic Gaussian to $10^{-16}$. **This is the quantitative content of "diffusion smooths short wavelengths faster"** used for hillslopes in [[LS12 Hillslope Transport and the Diffusion Equation]], for heat in [[Thermodynamics - Course Map]] (the erf solution of half-space cooling is the integral of this kernel) and for the relaxation time of [[Relaxation Time]] ($\tau\propto\lambda^2$).
+> A delta-function initial condition spreads into this **Gaussian kernel**; any initial shape is a superposition of such spreading spikes. *Numbers:* a sinusoidal hillslope of wavelength $\lambda$ decays with time constant $\tau=1/Dk^2=\lambda^2/4\pi^2D$; for $D=0.01\ \mathrm{m^2yr^{-1}}$: $\lambda=10$ m: $253$ yr; $\lambda=100$ m: **$2.5\times10^4$ yr**; $\lambda=1$ km: $2.5\times10^6$ yr (computed). A Gaussian ridge of initial width $5$ m spreads to $15$ m after $10^4$ yr ($\sigma^2=\sigma_0^2+2Dt$); a spectral (FFT) solution reproduced the analytic Gaussian to $10^{-16}$. **This is the quantitative content of "diffusion smooths short wavelengths faster"** used for hillslopes in [[LS12 Hillslope Transport and the Diffusion Equation]], for heat in [[Thermodynamics and Statistical Mechanics - Course Map]] (the erf solution of half-space cooling is the integral of this kernel) and for the relaxation time of [[Relaxation Time]] ($\tau\propto\lambda^2$).
 
 ### 6.2 Waves and dispersion
 > [!derivation] Phase and group velocity
@@ -404,7 +404,7 @@ flowchart LR
 | | [[QM08 Quantum Tunnelling]] | Fourier transform of the barrier; the Kronig–Penney bands are the Fourier (Bloch) decomposition of a periodic potential |
 | **Waves** | [[Waves - Course Map]] | dispersion relations, group/phase velocity, normal modes |
 | **Probability** | [[PR06 Moments Generating Functions and Limit Theorems]], [[Central Limit Theorem]], [[Moment Generating Function]] | MGF $=$ Laplace, characteristic function $=$ Fourier, CLT (§9) |
-| **Thermodynamics** | [[Thermodynamics - Course Map]] | heat equation: modes decay as $e^{-Dk^2t}$, Gaussian kernel (§6.1) |
+| **Thermodynamics** | [[Thermodynamics and Statistical Mechanics - Course Map]] | heat equation: modes decay as $e^{-Dk^2t}$, Gaussian kernel (§6.1) |
 | **Climate** | [[Climate - Course Map]] | spectra of temperature records and orbital (Milankovitch) periods; energy-balance relaxation $\tau=C/\lambda$ is a first-order low-pass filter (§1, §7.5a); critical slowing down for tipping points (§7.6) |
 | **Landscapes** | [[LS01 Landscapes as Physical Systems]] | landscape as a low-pass filter: $H=1/(1+i\omega\tau)$ |
 | | [[LS02 Mechanics and Mathematics Toolkit]] | Maxwell model solved by Laplace (§7.5b) |

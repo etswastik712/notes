@@ -187,7 +187,7 @@ so $\mathrm F^-$ is the hardest and $\mathrm I^-$ the softest halide, the empiri
 > **Builds on:** [[CH05 Acid Strength Lewis Acidity and Reactions]] (Lewis acids and bases, $\pi$ donation), [[CH02 Molecular Orbital Theory Diatomics]] (HOMO and LUMO, energy mismatch, CO), [[CH04 Acid-Base Concepts]].
 > **Leads to:** [[CH07 Main Group Cages and Clusters]] (boranes prepared with hard and soft bases: slide 97), [[CH09 Redox]] (complexation shifts potentials: S&A 5.10).
 > **Concepts:** [[CH06 Hard and Soft Acids and Bases|Hard and Soft Acids and Bases]] · [[Absolute Hardness]] · [[CH06 Hard and Soft Acids and Bases|Goldschmidt Classification]] · [[Ambidentate Ligand]] · [[Madelung Energy]] · [[London Dispersion]] · [[Linkage Isomerism]] · [[Frontier Orbitals]]
-> **Other subjects:** [[Climate - Course Map]] (the mineral and ore distribution, chalcophile sulfides, volcanic $\mathrm{SO_2}$), [[Landscapes and Geomorphology - Course Map]] (rock weathering: hard silicates versus soft sulfides), [[Thermodynamics - Course Map]] (Gibbs energy of complex formation).
+> **Other subjects:** [[Climate - Course Map]] (the mineral and ore distribution, chalcophile sulfides, volcanic $\mathrm{SO_2}$), [[Landscapes and Geomorphology - Course Map]] (rock weathering: hard silicates versus soft sulfides), [[Thermodynamics and Statistical Mechanics - Course Map]] (Gibbs energy of complex formation).
 
 ## Summary
 > [!summary] Cheat-sheet

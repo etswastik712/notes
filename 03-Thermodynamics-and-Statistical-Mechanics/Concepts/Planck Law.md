@@ -31,7 +31,7 @@ tags: [subject/thermo, type/concept, taught, extra/beyond, src/argha, status/dra
 > $$u_\nu=\frac{8\pi h\nu^{3}}{c^{3}}\frac{1}{e^{h\nu/k_BT}-1},$$
 > and the radiance is $B_\nu=uc/4\pi$.
 
-Consequences: [[Wien Displacement Law]], [[Stefan-Boltzmann Law]]. Applied in [[CL03 Radiation and Planetary Energy Balance]]. Statistical foundations: [[Thermodynamics - Course Map]].
+Consequences: [[Wien Displacement Law]], [[Stefan-Boltzmann Law]]. Applied in [[CL03 Radiation and Planetary Energy Balance]]. Statistical foundations: [[Thermodynamics and Statistical Mechanics - Course Map]].
 
 ## Linked from
 ```dataview

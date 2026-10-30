@@ -14,7 +14,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SUBJECTS = {
     "climate":    ("Climate", "Climate - Course Map", "4", "Phase 1 · pilot drafted"),
     "eco":        ("Ecology and Evolution", "Ecology and Evolution - Course Map", "4", "Phase 1 · next"),
-    "thermo":     ("Thermodynamics and Stat. Mech.", "Thermodynamics - Course Map", "4", "Phase 1 · parallel track"),
+    "thermo":     ("Thermodynamics and Stat. Mech.", "Thermodynamics and Statistical Mechanics - Course Map", "4", "Phase 1 · parallel track"),
     "earthevo":   ("Evolution of Earth and Life", "Evolution of Earth and Life - Course Map", "5", "Phase 2"),
     "landscapes": ("Landscapes and Geomorphology", "Landscapes and Geomorphology - Course Map", "5", "Phase 2"),
     "waves":      ("Waves", "Waves - Course Map", "5", "Phase 2"),

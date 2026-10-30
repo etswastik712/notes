@@ -228,7 +228,7 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 ## Map of this chapter
 > [!connection] How LS13 connects
 > **Previous:** [[LS12 Hillslope Transport and the Diffusion Equation]] · **Next:** [[LS14 Glaciers Mass Balance and Ice Flow]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 ## Provenance
 > [!provenance]- Source map for this chapter

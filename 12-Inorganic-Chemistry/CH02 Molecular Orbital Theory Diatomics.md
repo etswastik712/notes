@@ -183,7 +183,7 @@ The slide shows the AO energies I 5s/5p (higher, less electronegative) against C
 > **Builds on:** [[CH01 VSEPR and Valence Bond Theory]] (σ/π language, hypervalence), [[QM04 The Particle in a Box]] and [[QM06 The Oscillator Toolbox]] (variational idea, orthonormality), [[Dirac Algebra]] (Hermitian operators, overlap).
 > **Leads to:** [[CH03 Molecular Orbital Theory Polyatomics]] (LGOs, $\mathrm H_3$, $\mathrm{NH_3}$, $\mathrm{SF_6}$, $\mathrm{H_2O}$), [[CH06 Hard and Soft Acids and Bases]] (frontier orbitals, CO as a soft base).
 > **Concepts:** [[Molecular Orbital Theory]] · [[LCAO Approximation]] · [[Bonding and Antibonding Orbitals]] · [[Bond Order]] · [[sp Mixing]] · [[Heteronuclear Diatomic MOs]] · [[CO Back-Donation]]
-> **Other subjects:** [[QM08 Quantum Tunnelling]] §8 (bands: $N\to\infty$ MOs), [[Thermodynamics - Course Map]] (paramagnetism and heat capacity of O$_2$), [[Climate - Course Map]] (O$_2$ and N$_2$ do not absorb in the IR because they have no dipole; CO does: [[Greenhouse Gases and Absorption Bands]]).
+> **Other subjects:** [[QM08 Quantum Tunnelling]] §8 (bands: $N\to\infty$ MOs), [[Thermodynamics and Statistical Mechanics - Course Map]] (paramagnetism and heat capacity of O$_2$), [[Climate - Course Map]] (O$_2$ and N$_2$ do not absorb in the IR because they have no dipole; CO does: [[Greenhouse Gases and Absorption Bands]]).
 
 ## Summary
 > [!summary] Cheat-sheet

@@ -290,13 +290,13 @@ Three features of the monsoon are the signature of a **threshold system** ([[Bis
 > **Leads to:** the course closes here; for quiz preparation use the checklists at the end of CL09–CL12.
 > **Concepts (new in this chapter):** [[Monsoon]] · [[Land-Sea Thermal Circulation]] · [[Orographic Precipitation]] · [[Cross-Equatorial Flow]] · [[Tibetan Plateau and Monsoon Heating]]
 > **Concepts (used):** [[Intertropical Convergence Zone]] · [[Hadley Cell]] · [[Trade Winds and Westerlies]] · [[Coriolis Force]] · [[Coriolis Parameter]] · [[Dry Adiabatic Lapse Rate]] · [[Clausius-Clapeyron Relation]] · [[Atmospheric Stability]] · [[Relaxation Time]] · [[Insolation]] · [[Poleward Energy Transport]] · [[Outgoing Longwave Radiation]]
-> **Other subjects:** [[Waves - Course Map]] (ENSO and equatorial waves) · [[Thermodynamics - Course Map]] (adiabats, Clausius–Clapeyron) · [[Landscapes and Geomorphology - Course Map]] (orography, erosion by monsoon rain) · [[Ecology and Evolution - Course Map]] (regime shifts) · [[Probability - Course Map]] (rainfall statistics)
+> **Other subjects:** [[Waves - Course Map]] (ENSO and equatorial waves) · [[Thermodynamics and Statistical Mechanics - Course Map]] (adiabats, Clausius–Clapeyron) · [[Landscapes and Geomorphology - Course Map]] (orography, erosion by monsoon rain) · [[Ecology and Evolution - Course Map]] (regime shifts) · [[Probability - Course Map]] (rainfall statistics)
 
 > [!connection] Landscapes
 > Monsoon rain on steep, uplifted terrain is one of the strongest erosive agents on Earth, tying climate to landscape evolution ([[Landscapes and Geomorphology - Course Map]]): orographic rain feeds the rivers that carve the Himalayan front.
 
 > [!connection] Thermodynamics
-> Hydrostatic columns, adiabatic cooling and latent heating are applications of the ideal gas law, the first law and the Clausius–Clapeyron relation ([[Thermodynamics - Course Map]]; [[First Law of Thermodynamics]], [[Adiabatic Process and Potential Temperature]]).
+> Hydrostatic columns, adiabatic cooling and latent heating are applications of the ideal gas law, the first law and the Clausius–Clapeyron relation ([[Thermodynamics and Statistical Mechanics - Course Map]]; [[First Law of Thermodynamics]], [[Adiabatic Process and Potential Temperature]]).
 
 ## Summary
 > [!summary] Cheat-sheet

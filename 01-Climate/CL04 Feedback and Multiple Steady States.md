@@ -236,7 +236,7 @@ The slide links the review by Hoffman et al. (2017, *Science Advances* 3, e16009
 > **Builds on:** [[CL03 Radiation and Planetary Energy Balance]]
 > **Leads to:** [[CL05 Thermodynamic State of the Atmosphere]] → [[CL08 Greenhouse Models]] (what $\varepsilon$ is) · [[CL09 Radiative-Convective Equilibrium]] (lapse-rate and water-vapour feedbacks) · [[CL10 Global Energy Balance and Meridional Structure]] (ice line and latitude)
 > **Concepts:** [[Planck Sensitivity]] · [[Climate Feedback Factor]] · [[Ice-Albedo Feedback]] · [[Albedo]] · [[Snowball Earth]] · [[Zero-Dimensional Energy Balance Model]] · [[Relaxation Time]] · [[Fixed Points and Linear Stability]] · [[Linearisation and Sensitivity]] · [[Bistability and Tipping Points]]
-> **Other subjects:** [[Ecology and Evolution - Course Map]] (regime shifts, Daisyworld) · [[Evolution of Earth and Life - Course Map]] (Cryogenian, carbonate–silicate cycle) · [[Landscapes and Geomorphology - Course Map]] (weathering) · [[Thermodynamics - Course Map]] (Clausius–Clapeyron)
+> **Other subjects:** [[Ecology and Evolution - Course Map]] (regime shifts, Daisyworld) · [[Evolution of Earth and Life - Course Map]] (Cryogenian, carbonate–silicate cycle) · [[Landscapes and Geomorphology - Course Map]] (weathering) · [[Thermodynamics and Statistical Mechanics - Course Map]] (Clausius–Clapeyron)
 
 > [!connection] Dynamical systems and ecology
 > A steady state with $N'<0$ is a **stable fixed point**; $N'>0$ an unstable one; two stable points separated by an unstable one is **bistability**. The mathematics is [[Fixed Points and Linear Stability]]; the same S-shaped curve describes clear vs turbid shallow lakes and the Allee effect ([[Bistability and Tipping Points]]).

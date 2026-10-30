@@ -221,7 +221,7 @@ Isostasy describes a mantle-supported *equilibrium*. Plate tectonics is the smal
 ## Map of this chapter
 > [!connection] How LS08 connects
 > **Previous:** [[LS07 Isostasy]] · **Next:** [[LS09 Faults and Earthquakes]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 ## Provenance
 > [!provenance]- Source map for this chapter

@@ -194,14 +194,14 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 > *Answers.* (1) $S_{max}=h/\sqrt{4\pi Dt}\Rightarrow Dt=h^2/(4\pi S_{max}^2)=25/(4\pi\times0.01)=199$ m², $t=199/0.005=3.98\times10^4$ yr. (2) Width $\propto\sqrt t$: factor 2. (3) $D\propto\bar z^2$: nine times larger. (4) The longest: decay time $\lambda^2/4\pi^2D$ grows as $\lambda^2$, so diffusion smooths short wavelengths first and leaves broad convex ridges.
 
 > [!connection] Where else this appears
-> - **Same equation, other subjects:** heat conduction ([[Thermodynamics - Course Map]]), the Gaussian kernel and Fourier modes ([[Fourier and Laplace Transforms]]), random walks and the normal distribution ([[Normal Distribution]], [[Probability - Course Map]]; $\sigma^2=2Dt$ is the variance of a random walk); the half-space cooling solution of [[LS07 Isostasy]].
+> - **Same equation, other subjects:** heat conduction ([[Thermodynamics and Statistical Mechanics - Course Map]]), the Gaussian kernel and Fourier modes ([[Fourier and Laplace Transforms]]), random walks and the normal distribution ([[Normal Distribution]], [[Probability - Course Map]]; $\sigma^2=2Dt$ is the variance of a random walk); the half-space cooling solution of [[LS07 Isostasy]].
 > - **Event size and rates:** [[LS01 Landscapes as Physical Systems]] (response time $L^2/D$).
 
 
 ## Map of this chapter
 > [!connection] How LS12 connects
 > **Previous:** [[LS11 Weathering and Regolith]] · **Next:** [[LS13 Landslides]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 > [!connection] Fourier view
 > Modes of the diffusion equation decay as $e^{-Dk^2t}$; the Gaussian kernel; decay time $\lambda^2/4\pi^2D$: [[Fourier and Laplace Transforms]] §6.1.

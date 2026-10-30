@@ -25,7 +25,7 @@ tags: [subject/climate, type/concept, taught, extra/book, src/argha, src/suhas-p
 - Pressure **halves every $H\ln2\approx5.5$ km**; falls by 10 every 17 km. Half the mass is below 5.5 km (500 hPa), 63 % within the first scale height.
 - It is not the "height of the atmosphere": there is no top.
 - Check: Argha's slide uses $m=5\times10^{-26}$ kg, which gives 7.2 km rather than 7.5 km (see [[CL06 Hydrostatic Balance and Vertical Structure]]).
-- The same exponent is the Boltzmann factor $e^{-mgz/k_BT}$ ([[Thermodynamics - Course Map]]); above the turbopause each species has its own $H_i=R^*T/(M_ig_0)$.
+- The same exponent is the Boltzmann factor $e^{-mgz/k_BT}$ ([[Thermodynamics and Statistical Mechanics - Course Map]]); above the turbopause each species has its own $H_i=R^*T/(M_ig_0)$.
 
 Related: [[Hydrostatic Balance]], [[Standard Atmosphere]], [[Ideal Gas Law]], [[Atmospheric Composition]].
 

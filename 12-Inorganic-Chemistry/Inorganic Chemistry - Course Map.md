@@ -73,7 +73,7 @@ SORT chapter ASC
 ## Why this subject is linked to the others
 - **Quantum mechanics:** LCAO and the variational idea are the particle-in-a-box and oscillator ideas applied to molecules; the $\mathrm{H_2}$ valence-bond function uses indistinguishability and orthonormality ([[Quantum Mechanics - Course Map]], [[QM06 The Oscillator Toolbox]]).
 - **Group theory:** ligand-group orbitals ($a_{1g}$, $e_g$, $t_{1u}$), point groups and character tables carry the MO diagrams of polyatomics ([[Group Theory - Course Map]]).
-- **Thermodynamics:** redox potentials, $\Delta G=-nFE$, the Nernst equation ([[Thermodynamics - Course Map]]).
+- **Thermodynamics:** redox potentials, $\Delta G=-nFE$, the Nernst equation ([[Thermodynamics and Statistical Mechanics - Course Map]]).
 - **Climate:** oxidation states of N, S and C in the atmosphere, acid rain (acid–base chemistry), the carbonate system ([[Climate - Course Map]], [[Greenhouse Gases and Absorption Bands]] for vibrations).
 - **Probability and counting:** the 90° repulsion counts of VSEPR are small enumerations ([[Probability - Course Map]]).
 

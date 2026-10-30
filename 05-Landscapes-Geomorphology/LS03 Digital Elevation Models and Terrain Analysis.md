@@ -286,7 +286,7 @@ Drainage area is the variable through which rivers connect to discharge and stre
 ## Map of this chapter
 > [!connection] How LS03 connects
 > **Previous:** [[LS02 Mechanics and Mathematics Toolkit]] · **Next:** [[LS04 Map Projections and Reference Surfaces]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 > [!connection] Fourier view
 > Nyquist limit and aliasing of a gridded surface, and the $\mathrm{sinc}(k\Delta)$ transfer function of finite differences: [[Fourier and Laplace Transforms]] §5.1.

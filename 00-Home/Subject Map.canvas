@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"climate","type":"text","x":-169,"y":-1070,"width":340,"height":140,"text":"## [[Climate - Course Map|Climate]]\nPhase 1 · pilot drafted","color":"4"},
 		{"id":"eco","type":"text","x":294,"y":-955,"width":340,"height":140,"text":"## [[Ecology and Evolution - Course Map|Ecology and Evolution]]\nPhase 1 · next","color":"4"},
-		{"id":"thermo","type":"text","x":652,"y":-638,"width":340,"height":140,"text":"## [[Thermodynamics - Course Map|Thermodynamics and Stat. Mech.]]\nPhase 1 · parallel track","color":"4"},
+		{"id":"thermo","type":"text","x":652,"y":-638,"width":340,"height":140,"text":"## [[Thermodynamics and Statistical Mechanics - Course Map|Thermodynamics and Stat. Mech.]]\nPhase 1 · parallel track","color":"4"},
 		{"id":"earthevo","type":"text","x":822,"y":-190,"width":340,"height":140,"text":"## [[Evolution of Earth and Life - Course Map|Evolution of Earth and Life]]\nPhase 2","color":"5"},
 		{"id":"landscapes","type":"text","x":765,"y":284,"width":340,"height":140,"text":"## [[Landscapes and Geomorphology - Course Map|Landscapes and Geomorphology]]\nPhase 2","color":"5"},
 		{"id":"waves","type":"text","x":493,"y":678,"width":340,"height":140,"text":"## [[Waves - Course Map|Waves]]\nPhase 2","color":"5"},

@@ -22,7 +22,7 @@ Suhas (14 Oct): the tropics are *defined by the dynamics of the air*, and the IT
 - **Why convergence:** the near-surface equatorward flow of each Hadley cell meets at the equator; mass must go up.
 
 > [!extra-beyond]- Extra (beyond)
-> Over the Asian sector the seasonal migration is so large that the ITCZ becomes the **monsoon trough** ([[CL15 Monsoons]]). Heating by latent release in the ITCZ is what drives the Hadley circulation ([[Thermodynamics - Course Map]]: heat engine).
+> Over the Asian sector the seasonal migration is so large that the ITCZ becomes the **monsoon trough** ([[CL15 Monsoons]]). Heating by latent release in the ITCZ is what drives the Hadley circulation ([[Thermodynamics and Statistical Mechanics - Course Map]]: heat engine).
 
 See [[Hadley Cell]], [[Trade Winds and Westerlies]], [[CL11 Mean Meridional Circulation and Angular Momentum]].
 

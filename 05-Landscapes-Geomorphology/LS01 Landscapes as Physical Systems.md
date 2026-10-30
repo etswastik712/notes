@@ -290,7 +290,7 @@ Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sah
 > *Answers.* (1) $\partial_tz_s=0.6$ mm/yr; $1000\,\mathrm m/0.6\times10^{-3}\ \mathrm{m\,yr^{-1}}\approx1.7$ Myr. (2) Yes for the 41 kyr cycle ($\omega\tau=2\pi\cdot2000/41000\approx0.31$, amplitude $0.96$); no for 100 yr ($\omega\tau\approx126$, amplitude $0.008$: it ignores the spell). (3) (a) $q=0$, $P=-\lambda c$; (b) $q=-k\,\partial_xT$ (with $c\propto T$), $P=0$. (4) $W\propto q^b$ weights large events more; the peak of $q^bf$ moves to $\ln q^*=b\sigma^2$. (5) The slope of an *alluvial* channel ($\tau\sim10^2$–$10^3$ yr) is close to steady with respect to ice-age forcing; a *bedrock* river ($\sim0.6$ Myr), a 100 m hillslope ($\sim10^6$ yr) and an orogen ($10^6$–$10^7$ yr) are not.
 
 > [!connection] Where else these ideas turn up in the vault
-> - The **master equation** is the continuity equation of [[Thermodynamics - Course Map]] (heat), [[Waves - Course Map]] (diffusion versus wave propagation) and [[Climate - Course Map]] (energy balance: $c\,\mathrm dT/\mathrm dt=$ in $-$ out, the same relaxation law as above with $\tau=c/\lambda$).
+> - The **master equation** is the continuity equation of [[Thermodynamics and Statistical Mechanics - Course Map]] (heat), [[Waves - Course Map]] (diffusion versus wave propagation) and [[Climate - Course Map]] (energy balance: $c\,\mathrm dT/\mathrm dt=$ in $-$ out, the same relaxation law as above with $\tau=c/\lambda$).
 > - **Response time and forcing frequency** is the same filter as the ocean's thermal inertia in climate and the damped driven oscillator in [[QM06 The Oscillator Toolbox]] (resonance versus lag).
 > - **Event size and frequency** is the probability toolbox of [[Probability - Course Map]] (log-normal, Pareto, extremes).
 
@@ -298,7 +298,7 @@ Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sah
 ## Map of this chapter
 > [!connection] How LS01 connects
 > **Previous:** [[Landscapes and Geomorphology - Course Map|Course Map]] · **Next:** [[LS02 Mechanics and Mathematics Toolkit]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 > [!connection] Fourier and Laplace view
 > The response-time filter of this chapter is the transfer function $1/(1+\tau s)$ with one pole at $-1/\tau$: [[Fourier and Laplace Transforms]] §1, §7.5.

@@ -24,7 +24,7 @@ tags: [subject/thermo, type/concept, extra/book, extra/beyond, src/book, status/
 > [!intuition] The air's holding capacity
 > Warm air has a much bigger "vapour budget" than cold air, and the budget grows exponentially, not linearly. Cool a parcel and it quickly hits its limit; the excess condenses and releases latent heat. A 1 K warmer atmosphere holds ~7 % more water vapour, which is why a warming climate gets both a stronger greenhouse feedback (water vapour is a greenhouse gas) and heavier downpours.
 
-Used in: the saturated adiabatic lapse rate and the moist tropical troposphere ([[CL09 Radiative-Convective Equilibrium]], [[Dry Adiabatic Lapse Rate]] vs $\Gamma_s$), the water-vapour feedback with $f\approx0.5$ ([[Climate Feedback Factor]], [[CL04 Feedback and Multiple Steady States]]), runaway greenhouse on Venus ([[Evolution of Earth and Life - Course Map]]). Thermodynamic setting: first-order phase transitions in [[Thermodynamics - Course Map]]; the sharply nonlinear $e_s(T)$ is also a source of tipping behaviour ([[Bistability and Tipping Points]]).
+Used in: the saturated adiabatic lapse rate and the moist tropical troposphere ([[CL09 Radiative-Convective Equilibrium]], [[Dry Adiabatic Lapse Rate]] vs $\Gamma_s$), the water-vapour feedback with $f\approx0.5$ ([[Climate Feedback Factor]], [[CL04 Feedback and Multiple Steady States]]), runaway greenhouse on Venus ([[Evolution of Earth and Life - Course Map]]). Thermodynamic setting: first-order phase transitions in [[Thermodynamics and Statistical Mechanics - Course Map]]; the sharply nonlinear $e_s(T)$ is also a source of tipping behaviour ([[Bistability and Tipping Points]]).
 
 ## Linked from
 ```dataview

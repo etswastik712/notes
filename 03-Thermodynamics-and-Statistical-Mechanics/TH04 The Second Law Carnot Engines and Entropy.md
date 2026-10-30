@@ -13,7 +13,7 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 ---
 # TH04 · The Second Law, Carnot Engines and Entropy
 
-◀ [[TH03 The Ideal Gas and Adiabatic Processes]] · [[Thermodynamics - Course Map|Course Map]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] ▶
+◀ [[TH03 The Ideal Gas and Adiabatic Processes]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] ▶
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
 

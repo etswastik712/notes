@@ -19,7 +19,7 @@ tags: [subject/thermo, type/concept, extra/book, src/book, status/draft]
 
 **Derivation.** From the [[First Law of Thermodynamics]] with $\mathrm dq=0$: $c_p\,\mathrm dT=\alpha\,\mathrm dp=RT\,\mathrm dp/p$, so $\mathrm d\ln T=\kappa\,\mathrm d\ln p$, hence $T\propto p^\kappa$ along an adiabat and $\theta$ is constant.
 
-**Entropy link.** Since $\mathrm ds=\mathrm dq/T$, a reversible adiabatic process is **isentropic**, and $s=c_p\ln\theta+\text{const}$. So $\theta$ is *entropy in temperature units*; "mixed layer with uniform $\theta$" means uniform entropy: a statement from the second law ([[Thermodynamics - Course Map]]).
+**Entropy link.** Since $\mathrm ds=\mathrm dq/T$, a reversible adiabatic process is **isentropic**, and $s=c_p\ln\theta+\text{const}$. So $\theta$ is *entropy in temperature units*; "mixed layer with uniform $\theta$" means uniform entropy: a statement from the second law ([[Thermodynamics and Statistical Mechanics - Course Map]]).
 
 **Examples.** $T=280$ K at 800 hPa ⇒ $\theta=298.4$ K. $T=255$ K at 500 hPa ⇒ $\theta=310.9$ K.
 

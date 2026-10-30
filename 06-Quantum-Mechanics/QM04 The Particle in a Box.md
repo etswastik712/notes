@@ -192,7 +192,7 @@ The density oscillates with period $2\pi\hbar/3E_1$; the **full** wavefunction (
 > **Builds on:** [[QM02 The Schrodinger Equation and Stationary States]] (TISE, boundary conditions) and [[QM03 States Operators and Measurement]] (expectation values, uncertainty, superposition).
 > **Leads to:** [[QM05 The Harmonic Oscillator]] (a different potential, and the algebraic method) and [[QM07 The Finite Square Well]] (relaxing the infinite walls: bound-state penetration and the delta potential).
 > **Concepts:** [[Particle in a Box]] · [[Particle in a Box|Infinite Square Well]] · [[Energy Quantisation]] · [[Normalisation of a Wavefunction]] · [[Orthonormality of Eigenfunctions]] · [[Zero-Point Energy]] · [[Node of a Wavefunction]] · [[Parity Operator]] · [[Expectation Value]] · [[Uncertainty of an Observable]] · [[Correspondence Principle]] · [[Time Evolution of a Superposition]]
-> **Other subjects:** [[Waves - Course Map]] (standing waves), [[Inorganic Chemistry - Course Map]] (particle-in-a-box for conjugated systems), [[Thermodynamics - Course Map]] (the density of states of a box is the start of statistical mechanics).
+> **Other subjects:** [[Waves - Course Map]] (standing waves), [[Inorganic Chemistry - Course Map]] (particle-in-a-box for conjugated systems), [[Thermodynamics and Statistical Mechanics - Course Map]] (the density of states of a box is the start of statistical mechanics).
 
 ## Summary
 > [!summary] Cheat-sheet

@@ -157,7 +157,7 @@ Problems are grouped by chapter; each states what is given and asks for a specif
 ## Map of this chapter
 > [!connection] How LS99 connects
 > **Previous:** [[LS17 Aeolian Landscapes]] · **Next:** (end).
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 ## Provenance
 > [!provenance]- Source map for this chapter

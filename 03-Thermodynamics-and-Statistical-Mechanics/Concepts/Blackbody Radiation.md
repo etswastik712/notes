@@ -28,7 +28,7 @@ Laws: [[Planck Law]] (spectrum) → [[Wien Displacement Law]] (peak) and [[Stefa
 
 Climate use: the Sun ($T\approx5772$ K) and Earth (255–288 K) are approximate blackbodies, which separates shortwave from longwave ([[CL03 Radiation and Planetary Energy Balance]]). Planets are *not* perfect: gases are selective absorbers ([[CL07 Optical Properties of the Atmosphere]]).
 
-Connections: [[Quantum Mechanics - Course Map]] · [[Thermodynamics - Course Map]].
+Connections: [[Quantum Mechanics - Course Map]] · [[Thermodynamics and Statistical Mechanics - Course Map]].
 
 ## Emission by a layer: Kirchhoff and optical depth
 <span class="scope-extra-beyond">extra · beyond</span> *derived in [[CL07 Optical Properties of the Atmosphere]]*

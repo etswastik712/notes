@@ -25,7 +25,7 @@ tags: [subject/climate, type/concept, taught, extra/book, extra/beyond, src/suha
 - **Nonlinearity:** the feedback strengthens with temperature (Clausius–Clapeyron is exponential); if tropical SST passed ~60 °C the factor would approach 1: **runaway greenhouse** (possibly Venus).
 - Fast (days): vapour responds almost instantly, so it acts even in transient responses. Controlled by evaporation and condensation, hence a **feedback**, unlike the long-lived gases that set the temperature ([[Greenhouse Gases and Absorption Bands]]).
 
-See [[CL04 Feedback and Multiple Steady States]], [[CL07 Optical Properties of the Atmosphere]], [[Greenhouse Effect]]; thermodynamics: [[Thermodynamics - Course Map]].
+See [[CL04 Feedback and Multiple Steady States]], [[CL07 Optical Properties of the Atmosphere]], [[Greenhouse Effect]]; thermodynamics: [[Thermodynamics and Statistical Mechanics - Course Map]].
 
 ## Linked from
 ```dataview

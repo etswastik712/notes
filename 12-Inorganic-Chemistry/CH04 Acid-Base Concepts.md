@@ -156,7 +156,7 @@ All the definitions describe the acid as **donating a positive species** (hydrog
 > **Builds on:** [[CH03 Molecular Orbital Theory Polyatomics]] (lone pair = HOMO, empty orbitals = LUMO), [[CH01 VSEPR and Valence Bond Theory]] (shapes of $\mathrm{H_3O^+}$, $\mathrm{NH_3}$).
 > **Leads to:** [[CH05 Acid Strength Lewis Acidity and Reactions]] (strength trends, Lewis acid periodic trends), [[CH06 Hard and Soft Acids and Bases]].
 > **Concepts:** [[Arrhenius Acid-Base Definition]] · [[Bronsted-Lowry Acids and Bases]] · [[Conjugate Acid-Base Pair]] · [[Amphoterism]] · [[Lux-Flood Definition]] · [[Lewis Acids and Bases]] · [[Solvent System Definition]] · [[Autoprotolysis of Water]] · [[Levelling Effect]]
-> **Other subjects:** [[Climate - Course Map]] (acid rain, the carbonate system and ocean acidification are Brønsted equilibria that start with $\mathrm{CO_2}$ acting as a Lewis acid toward water/$\mathrm{OH^-}$), [[Thermodynamics - Course Map]] ($K_w(T)$ and $\Delta H$ by van't Hoff), [[Eco-Evo Exam Prep]] (lake pH and eutrophication, EE06).
+> **Other subjects:** [[Climate - Course Map]] (acid rain, the carbonate system and ocean acidification are Brønsted equilibria that start with $\mathrm{CO_2}$ acting as a Lewis acid toward water/$\mathrm{OH^-}$), [[Thermodynamics and Statistical Mechanics - Course Map]] ($K_w(T)$ and $\Delta H$ by van't Hoff), [[Eco-Evo Exam Prep]] (lake pH and eutrophication, EE06).
 
 ## Summary
 > [!summary] Cheat-sheet

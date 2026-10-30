@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "path:03-Thermodynamics OR tag:#subject/thermo",
+      "query": "path:03-Thermodynamics-and-Statistical-Mechanics OR tag:#subject/thermo",
       "color": {
         "a": 1,
         "rgb": 15099751

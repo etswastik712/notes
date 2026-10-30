@@ -179,7 +179,7 @@ A **chain** is a subset $C\subseteq P$ in which any two elements are comparable.
 > **Builds on:** [[PA02 Sets Families and the ZFC Foundations]] (a relation is a subset of $A\times A$; the ordered pair underlies everything).
 > **Leads to:** [[PA04 Functions and Cardinality]] (a function is a relation; $\sim$ of "same cardinality" is an equivalence relation; kernels of functions), [[PA05 Induction and the Number Systems]] ($\mathbb Z$ and $\mathbb Q$ are quotients by equivalence relations; well-orders), [[PA06 The Real Numbers and Sequences]] (sup and inf are lub and glb in the poset $(\mathbb R,\le)$).
 > **Concepts:** [[Binary Relation]] · [[Equivalence Relation]] · [[Equivalence Class and Partition]] · [[Congruence Modulo n]] · [[Partially Ordered Set]] · [[Extremal Elements and Bounds]] · [[Zorn's Lemma]] · [[Basis of a Vector Space]]
-> **Other subjects:** [[Proofs, Analysis and Topology - Course Map]], [[Probability - Course Map]] (a partition of $\Omega$ is the setting of the law of total probability, [[Law of Total Probability]]), [[Thermodynamics - Course Map]] (thermal equilibrium is an equivalence relation: the content of the zeroth law, [[TH01 Temperature and the Zeroth Law]]; temperature labels the classes).
+> **Other subjects:** [[Proofs, Analysis and Topology - Course Map]], [[Probability - Course Map]] (a partition of $\Omega$ is the setting of the law of total probability, [[Law of Total Probability]]), [[Thermodynamics and Statistical Mechanics - Course Map]] (thermal equilibrium is an equivalence relation: the content of the zeroth law, [[TH01 Temperature and the Zeroth Law]]; temperature labels the classes).
 
 ## Summary
 > [!summary] Cheat-sheet

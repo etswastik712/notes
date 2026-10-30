@@ -166,7 +166,7 @@ A sequence of events is **increasing** if $E_1\subset E_2\subset\cdots$ (limit $
 > **Builds on:** school counting and set theory.
 > **Leads to:** [[PR02 Conditional Probability Bayes Rule and Independence]] (conditioning restricts the sample space) → [[PR03 Discrete Random Variables and Distributions]] (counting arguments give the binomial and hypergeometric pmfs).
 > **Concepts:** [[Sample Space and Events]] · [[Axioms of Probability]] · [[Naive Definition of Probability]] · [[Inclusion-Exclusion Principle]] · [[Counting Principles]] · [[Multinomial Coefficient]] · [[Matching Problem]] · [[Continuity of Probability]]
-> **Other subjects:** [[Probability - Course Map]], [[EE07 Conservation Biology]] (extinction probabilities use the same axioms), [[Quantum Mechanics - Course Map]] ($|\psi|^2$ is a probability density), [[Thermodynamics - Course Map]] (counting microstates: entropy as $\ln\Omega$, [[TH06 From Kinetic Theory to Statistical Mechanics]]).
+> **Other subjects:** [[Probability - Course Map]], [[EE07 Conservation Biology]] (extinction probabilities use the same axioms), [[Quantum Mechanics - Course Map]] ($|\psi|^2$ is a probability density), [[Thermodynamics and Statistical Mechanics - Course Map]] (counting microstates: entropy as $\ln\Omega$, [[TH06 From Kinetic Theory to Statistical Mechanics]]).
 
 ## Summary
 > [!summary] Cheat-sheet

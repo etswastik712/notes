@@ -13,7 +13,7 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 ---
 # TH03 · The Ideal Gas and Adiabatic Processes
 
-◀ [[TH02 Work Heat and the First Law]] · [[Thermodynamics - Course Map|Course Map]] · [[TH04 The Second Law Carnot Engines and Entropy]] ▶
+◀ [[TH02 Work Heat and the First Law]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · [[TH04 The Second Law Carnot Engines and Entropy]] ▶
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

@@ -188,7 +188,7 @@ flowchart LR
 ## Map of this chapter
 > [!connection] How LS19 connects
 > **Builds on:** [[LS14 Glaciers Mass Balance and Ice Flow]], [[LS15 Glacial Deposits Rebound and Sea Level]], [[LS11 Weathering and Regolith]] (frost cracking), [[LS07 Isostasy]] (rebound), [[LS17 Aeolian Landscapes]].
-> **Other subjects:** [[Climate - Course Map]] (ice ages, ELA and temperature, Milankovitch), [[Thermodynamics - Course Map]] (Clausius–Clapeyron for frost heave), [[Waves - Course Map]].
+> **Other subjects:** [[Climate - Course Map]] (ice ages, ELA and temperature, Milankovitch), [[Thermodynamics and Statistical Mechanics - Course Map]] (Clausius–Clapeyron for frost heave), [[Waves - Course Map]].
 
 ## Provenance
 > [!provenance]- Source map for this chapter

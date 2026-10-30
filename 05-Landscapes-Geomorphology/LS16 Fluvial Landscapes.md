@@ -228,7 +228,7 @@ flowchart LR
 ## Map of this chapter
 > [!connection] How LS16 connects
 > **Previous:** [[LS15 Glacial Deposits Rebound and Sea Level]] · **Next:** [[LS17 Aeolian Landscapes]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 ## Provenance
 > [!provenance]- Source map for this chapter

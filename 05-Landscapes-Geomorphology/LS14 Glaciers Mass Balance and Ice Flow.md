@@ -244,7 +244,7 @@ Slide 144: ice flows by *viscous deformation plus sliding at the bed*. It differ
 ## Map of this chapter
 > [!connection] How LS14 connects
 > **Previous:** [[LS13 Landslides]] · **Next:** [[LS15 Glacial Deposits Rebound and Sea Level]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 ## Provenance
 > [!provenance]- Source map for this chapter

@@ -54,7 +54,7 @@ Course map: [[Ecology and Evolution - Course Map]].
 | Step | Work | Status |
 |---|---|---|
 | 1 | [[TH01 Temperature and the Zeroth Law]] · [[TH02 Work Heat and the First Law]] · [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] (7 figures + 1 diagram, `th_numbers.py`) | **done (draft)**, 2026-10-25 |
-| 2 | 50 concept notes (`03-Thermodynamics/Concepts/`), course map, 2-page formula sheet ([[th-formula-sheet.pdf]]) | **done (draft)** |
+| 2 | 50 concept notes (`03-Thermodynamics-and-Statistical-Mechanics/Concepts/`), course map, 2-page formula sheet ([[th-formula-sheet.pdf]]) | **done (draft)** |
 | 3 | confirm the syllabus (which lectures are examinable); MIT Lectures 5+; exam prep and problem bank | todo |
 
 ## Phase 3c: Probability (MT2113)
@@ -79,7 +79,7 @@ Course map: [[Ecology and Evolution - Course Map]].
 | 2 | CH02–CH03 molecular orbital theory (slides 27–52, MOT Part 2); CH04–CH06 acids, bases and HSAB (53–82); CH07–CH08 main-group clusters, rings, polymers (83–119); CH09 redox (S&A Ch. 5) | todo, **after the user's review of the pilot** |
 
 ## Parallel topics added alongside climate
-- **Thermodynamics** ([[Thermodynamics - Course Map]]): done: blackbody laws, ideal gas law. To add: first law and adiabats, moist thermodynamics (Clausius–Clapeyron), entropy and heat engines, kinetic theory, statistical mechanics of photons.
+- **Thermodynamics** ([[Thermodynamics and Statistical Mechanics - Course Map]]): done: blackbody laws, ideal gas law. To add: first law and adiabats, moist thermodynamics (Clausius–Clapeyron), entropy and heat engines, kinetic theory, statistical mechanics of photons.
 - **Foundations**: done: stability, linearisation, bistability, Jensen, relaxation, rotating frames. To add: ODE/PDE basics, vector calculus identities, dimensional analysis, Fourier series, dynamical systems (bifurcations, chaos for eco-evo).
 - **Climate extras** (out of syllabus, labelled `extra/beyond`): paleoclimate proxies, carbonate–silicate cycle, AMOC/Stommel box model (an existing AI note has figures), ENSO, climate models hierarchy.
 

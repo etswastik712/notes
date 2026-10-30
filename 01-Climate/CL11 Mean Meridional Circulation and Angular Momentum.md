@@ -315,7 +315,7 @@ The theory so far assumed an **axisymmetric** atmosphere responding to an axisym
 > The conservation of angular momentum that rules the Hadley cell is the same law as the figure skater's spin and, in quantum mechanics, the reason why electrons in atoms have conserved angular momentum: [[Quantum Mechanics - Course Map]]. In a rotating frame it becomes the Coriolis force: [[Rotating Reference Frames]].
 
 > [!connection] Thermodynamics and waves
-> The Hadley cell is a heat engine (heat in at the warm surface, out by radiation aloft): [[Thermodynamics - Course Map]]; sinking air warms by compression ([[Ideal Gas Law]]). Mid-latitude eddies are baroclinic waves; Rossby waves and the thermal wind belong to [[Waves - Course Map]].
+> The Hadley cell is a heat engine (heat in at the warm surface, out by radiation aloft): [[Thermodynamics and Statistical Mechanics - Course Map]]; sinking air warms by compression ([[Ideal Gas Law]]). Mid-latitude eddies are baroclinic waves; Rossby waves and the thermal wind belong to [[Waves - Course Map]].
 
 > [!connection] Landscapes, deep time, ecology
 > Desert belts at ±30°, rain shadows and dust sources shape landscapes: [[Landscapes and Geomorphology - Course Map]]. The position of the ITCZ and the deserts shifts with climate in deep time: [[Evolution of Earth and Life - Course Map]]. In a globally frozen [[Snowball Earth]], the small thermal inertia of the surface is argued to reverse the annual-mean tropical circulation and produce an equatorial desert (Hoffman et al. 2017). Rainforest under the ITCZ, savanna and desert under the sinking branch are the template for the world's biomes: [[Ecology and Evolution - Course Map]].

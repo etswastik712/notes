@@ -13,7 +13,7 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 ---
 # TH05 · Potentials, Maxwell Relations, Stability and the Third Law
 
-◀ [[TH04 The Second Law Carnot Engines and Entropy]] · [[Thermodynamics - Course Map|Course Map]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] ▶
+◀ [[TH04 The Second Law Carnot Engines and Entropy]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] ▶
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
 

@@ -77,7 +77,7 @@ flowchart LR
 ```
 
 > [!connection] Same idea, other subjects
-> "Balanced overall, unbalanced locally, so something must flow" is a **conservation law with a source term**. The same logic gives heat conduction in a rod ([[Thermodynamics - Course Map]]), current flow when charge piles up, and the movement of nutrients between habitats ([[Ecology and Evolution - Course Map]]).
+> "Balanced overall, unbalanced locally, so something must flow" is a **conservation law with a source term**. The same logic gives heat conduction in a rod ([[Thermodynamics and Statistical Mechanics - Course Map]]), current flow when charge piles up, and the movement of nutrients between habitats ([[Ecology and Evolution - Course Map]]).
 
 ## 2. Incoming sunlight and the geometry of insolation
 <span class="scope-taught">taught</span> *Suhas 7 Oct p3–9; handwritten notes p.1; M&P §5.1.1 (pp.62–63)*
@@ -386,14 +386,14 @@ Why do isentropes rise poleward? Because the tropical column is warm: at a given
 
 - **To the circulation (CL11).** We now know *how much* energy must go poleward (≈ 6 PW per hemisphere) and *that* both atmosphere and ocean carry it, but not *how*. Suhas ends the lecture with the mean meridional circulation and its mass stream function $\psi(\varphi,p)=\frac{2\pi a\cos\varphi}{g}\int_0^p[v]\,\mathrm dp$ ([[7th Oct.pdf#page=20|7 Oct p20]]); [[CL11 Mean Meridional Circulation and Angular Momentum]] picks up there.
 - **To the zero-D model (CL03/CL04).** The global-mean balance $\tfrac S4(1-\alpha)=\sigma T_e^4$ is the *integral* of the budget of §3 over the sphere; the latitude-dependent version with a flux term is the one-dimensional energy-balance model, with the ice-albedo feedback acting on the **ice line**, the origin of Budyko's and Sellers's 1969 results ([[CL04 Feedback and Multiple Steady States]]).
-- **To thermodynamics.** Stefan–Boltzmann emission, potential temperature and entropy ([[Thermodynamics - Course Map]]); sensitivity of OLR to $T$ via [[Linearisation and Sensitivity]].
+- **To thermodynamics.** Stefan–Boltzmann emission, potential temperature and entropy ([[Thermodynamics and Statistical Mechanics - Course Map]]); sensitivity of OLR to $T$ via [[Linearisation and Sensitivity]].
 
 ## Map of this chapter
 > [!connection] How CL10 connects
 > **Builds on:** [[CL03 Radiation and Planetary Energy Balance]] (zero-D balance, $S/4$, albedo, $T_e$) · [[CL04 Feedback and Multiple Steady States]] (ice-albedo, sensitivity) · [[CL06 Hydrostatic Balance and Vertical Structure]] (hypsometric) · [[CL09 Radiative-Convective Equilibrium]] (stability, $\theta$, OLR from cloud tops).
 > **Leads to:** [[CL11 Mean Meridional Circulation and Angular Momentum]] (who carries 5.8 PW) · [[CL12 Rotating Frames and the Coriolis Force]] · [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] (pressure gradient → geostrophic wind) · [[CL14 Observed Winds - Jets, Trades and the ITCZ]].
 > **Concepts:** [[Insolation]] · [[Seasons and Earth's Orbit]] · [[Top-of-Atmosphere Radiation Budget]] · [[Outgoing Longwave Radiation]] · [[Poleward Energy Transport]] · [[Meridional Temperature Structure]] · [[Albedo]] · [[Solar Constant]] · [[Ice-Albedo Feedback]] · [[Effective Emission Temperature]] · [[Stefan-Boltzmann Law]] · [[Absolute Angular Momentum of Air]].
-> **Other subjects:** [[Thermodynamics - Course Map]] · [[Probability - Course Map]] · [[Evolution of Earth and Life - Course Map]] · [[Ecology and Evolution - Course Map]] · [[Landscapes and Geomorphology - Course Map]] · [[Waves - Course Map]].
+> **Other subjects:** [[Thermodynamics and Statistical Mechanics - Course Map]] · [[Probability - Course Map]] · [[Evolution of Earth and Life - Course Map]] · [[Ecology and Evolution - Course Map]] · [[Landscapes and Geomorphology - Course Map]] · [[Waves - Course Map]].
 
 > [!connection] Probability and geometry
 > $x=\sin\varphi$ is **uniformly distributed over the sphere** (Archimedes' hat-box theorem: the area between two latitude circles is $2\pi a^2\Delta\sin\varphi$). Every global mean in this chapter is therefore an *expectation* with respect to the uniform measure on $x\in[-1,1]$, and the Legendre expansion of §2.4 is the expansion of a function of the random variable $x$ in orthogonal polynomials: [[Probability - Course Map]].

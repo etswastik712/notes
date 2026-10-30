@@ -79,7 +79,7 @@ SORT chapter ASC
 
 ## Why this subject is tightly linked to the others
 - **Quantum mechanics:** $|\psi|^2$ is a pdf, expectation values and uncertainties are $E$ and $\sqrt{\mathrm{Var}}$, a measurement is conditioning ([[Quantum Mechanics - Course Map]], [[QM01 From Waves to Probabilities]], [[QM03 States Operators and Measurement]]).
-- **Thermodynamics and statistical mechanics:** counting microstates, the Boltzmann factor, Gaussian fluctuations $\sim1/\sqrt N$, the Poisson number of molecules in a volume ([[Thermodynamics - Course Map]], [[TH06 From Kinetic Theory to Statistical Mechanics]]).
+- **Thermodynamics and statistical mechanics:** counting microstates, the Boltzmann factor, Gaussian fluctuations $\sim1/\sqrt N$, the Poisson number of molecules in a volume ([[Thermodynamics and Statistical Mechanics - Course Map]], [[TH06 From Kinetic Theory to Statistical Mechanics]]).
 - **Ecology and evolution:** demographic stochasticity (binomial and Poisson births and deaths), extinction probabilities, Bayesian inference and model selection ([[Ecology and Evolution - Course Map]], [[Bayes' Theorem]], [[Akaike Information Criterion]], [[EE02 Structured Population Models]], [[EE07 Conservation Biology]]).
 - **Climate:** extremes, return periods, sampling error of means, ensemble averages ([[Climate - Course Map]] where present).
 - **Foundations:** [[Gaussian Integral]] (the polar-coordinate trick), [[Dimensional Analysis]].

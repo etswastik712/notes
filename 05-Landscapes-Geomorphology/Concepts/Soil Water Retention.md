@@ -32,4 +32,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
 
 ## Across subjects
-- [[Heat Capacity]] and [[Thermodynamics - Course Map]] (Thermodynamics): surface tension and the pressure jump across a curved interface are equilibrium thermodynamics
+- [[Heat Capacity]] and [[Thermodynamics and Statistical Mechanics - Course Map]] (Thermodynamics): surface tension and the pressure jump across a curved interface are equilibrium thermodynamics

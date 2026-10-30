@@ -200,7 +200,7 @@ The rate at which a landscape lowers can be limited in two ways (slide 96): **we
 
 > [!connection] Where else this appears
 > - **Climate:** the long-term carbon cycle and the weathering thermostat ([[Climate - Course Map]]); a negative feedback with the relaxation-time and pole picture of [[Fourier and Laplace Transforms]] §7.6 (stable, one pole in the left half-plane).
-> - **Thermodynamics and chemistry:** Arrhenius rates, activation energy ([[Thermodynamics - Course Map]], [[Inorganic Chemistry - Course Map]]); acid–base chemistry of carbonic acid ([[CH04 Acid-Base Concepts]]).
+> - **Thermodynamics and chemistry:** Arrhenius rates, activation energy ([[Thermodynamics and Statistical Mechanics - Course Map]], [[Inorganic Chemistry - Course Map]]); acid–base chemistry of carbonic acid ([[CH04 Acid-Base Concepts]]).
 > - **Evolution of Earth and life:** long-term CO$_2$ and the faint young Sun ([[Evolution of Earth and Life - Course Map]]).
 
 
@@ -289,7 +289,7 @@ Physical weathering fractures rock: it (i) weakens it mechanically, (ii) makes s
 ## Map of this chapter
 > [!connection] How LS11 connects
 > **Previous:** [[LS10 Folds Flexure and Mountain Building]] · **Next:** [[LS12 Hillslope Transport and the Diffusion Equation]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 ## Provenance
 > [!provenance]- Source map for this chapter

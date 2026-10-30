@@ -1,5 +1,5 @@
 ---
-title: Thermodynamics - Course Map
+title: Thermodynamics and Statistical Mechanics - Course Map
 aliases: [Thermodynamics and Statistical Mechanics, Thermodynamics]
 subject: thermo
 type: moc

@@ -113,7 +113,7 @@ The Sun ($T\approx5800$ K) peaks in the visible, Earth ($\sim255$–$288$ K) in 
 > [!extra-book]+ 🟡 Extra (book): emissivity and Kirchhoff's law
 > A real surface emits $\varepsilon\sigma T^4$ with emissivity $0<\varepsilon\le1$; **Kirchhoff's law** says emissivity equals absorptivity at each wavelength, $\varepsilon_\lambda=a_\lambda$ (Wallace & Hobbs §4.3.5, [[Atmospheric Science - An Introductory Surv - John M. Wallace.pdf#page=138|p.121]]). The Argha deck only uses it implicitly when the atmosphere is "not an ideal blackbody, $\epsilon<1$" ([[climate_intro_L1_L6.pdf#page=68|slide 68]], [[CL08 Greenhouse Models]]).
 >
-> **Intuition:** whatever is good at absorbing a colour is good at emitting it. A black pot heats and cools quickly; a polished thermos is slow both ways. Without this symmetry thermal equilibrium would be impossible: a black object next to a shiny one would end up at different temperatures, violating the second law ([[Thermodynamics - Course Map]]).
+> **Intuition:** whatever is good at absorbing a colour is good at emitting it. A black pot heats and cools quickly; a polished thermos is slow both ways. Without this symmetry thermal equilibrium would be impossible: a black object next to a shiny one would end up at different temperatures, violating the second law ([[Thermodynamics and Statistical Mechanics - Course Map]]).
 
 ## 3. The solar constant and the geometry factor 4
 <span class="scope-taught">taught</span> *Argha L3, slide 35; Suhas pre-midsem notes p.14*
@@ -266,10 +266,10 @@ A quick analytic check explains both numbers:
 > **Builds on:** [[CL01 Earth as a System]] · [[CL02 Observing Global Temperature]]
 > **Leads to:** [[CL04 Feedback and Multiple Steady States]] (sensitivity, stability) · [[CL07 Optical Properties of the Atmosphere]] and [[CL08 Greenhouse Models]] (the 33 K) · [[CL10 Global Energy Balance and Meridional Structure]] (latitude)
 > **Concepts:** [[Blackbody Radiation]] · [[Planck Law]] · [[Wien Displacement Law]] · [[Stefan-Boltzmann Law]] · [[Solar Constant]] · [[Albedo]] · [[Effective Emission Temperature]] · [[Zero-Dimensional Energy Balance Model]] · [[Greenhouse Effect]] · [[Jensen Inequality]] · [[Relaxation Time]] · [[Faint Young Sun Paradox]]
-> **Other subjects:** [[Thermodynamics - Course Map]] (blackbody, Kirchhoff) · [[Quantum Mechanics - Course Map]] (quantisation, photon statistics) · [[Fixed Points and Linear Stability]] (stability) · [[Evolution of Earth and Life - Course Map]] (young Sun) · [[Probability - Course Map]] (Jensen)
+> **Other subjects:** [[Thermodynamics and Statistical Mechanics - Course Map]] (blackbody, Kirchhoff) · [[Quantum Mechanics - Course Map]] (quantisation, photon statistics) · [[Fixed Points and Linear Stability]] (stability) · [[Evolution of Earth and Life - Course Map]] (young Sun) · [[Probability - Course Map]] (Jensen)
 
 > [!connection] Thermodynamics and quantum mechanics
-> Planck's law is the founding result of quantum theory and the standard application of Bose–Einstein statistics to photons. The underlying quantisation is the subject of [[Quantum Mechanics - Course Map]]; the thermodynamic side (Kirchhoff, entropy of radiation, $u\propto T^4$) is in [[Thermodynamics - Course Map]].
+> Planck's law is the founding result of quantum theory and the standard application of Bose–Einstein statistics to photons. The underlying quantisation is the subject of [[Quantum Mechanics - Course Map]]; the thermodynamic side (Kirchhoff, entropy of radiation, $u\propto T^4$) is in [[Thermodynamics and Statistical Mechanics - Course Map]].
 
 > [!connection] Dynamical systems
 > "Is this steady state stable? Perturb and see" is the linear stability analysis of [[Fixed Points and Linear Stability]], the same mathematics that decides whether a population settles at its carrying capacity ([[Ecology and Evolution - Course Map]]). The sensitivity $\partial T/\partial F$ computed in the next chapter is [[Linearisation and Sensitivity]].

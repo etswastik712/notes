@@ -13,7 +13,7 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 ---
 # TH02 · Work, Heat and the First Law
 
-◀ [[TH01 Temperature and the Zeroth Law]] · [[Thermodynamics - Course Map|Course Map]] · [[TH03 The Ideal Gas and Adiabatic Processes]] ▶
+◀ [[TH01 Temperature and the Zeroth Law]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · [[TH03 The Ideal Gas and Adiabatic Processes]] ▶
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

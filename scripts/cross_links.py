@@ -17,7 +17,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import graph_colors as gc  # noqa: E402
 
-SUBJ = {"01-Climate": "Climate", "02-Eco-Evo": "Eco-Evo", "03-Thermodynamics": "Thermodynamics",
+SUBJ = {"01-Climate": "Climate", "02-Eco-Evo": "Eco-Evo", "03-Thermodynamics-and-Statistical-Mechanics": "Thermodynamics",
         "04-Evolution-of-Earth-and-Life": "Earth and Life", "05-Landscapes-Geomorphology": "Landscapes",
         "06-Quantum-Mechanics": "Quantum Mechanics", "07-Waves": "Waves", "08-Probability": "Probability",
         "09-Foundations": "Foundations", "10-Group-Theory": "Group Theory", "11-Proofs-Analysis-Topology": "Analysis",

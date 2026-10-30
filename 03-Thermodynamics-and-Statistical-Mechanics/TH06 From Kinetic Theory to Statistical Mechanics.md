@@ -13,7 +13,7 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 ---
 # TH06 · From Kinetic Theory to Statistical Mechanics
 
-◀ [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[Thermodynamics - Course Map|Course Map]]
+◀ [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]]
 
 <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span> <span class="scope-taught">taught · in syllabus (only the pointers)</span>
 

@@ -32,7 +32,7 @@ ROOT = gc.ROOT
 HOME = "00-Home/Home.md"
 MAPS = {
     "climate": "01-Climate/Climate - Course Map.md", "eco-evo": "02-Eco-Evo/Ecology and Evolution - Course Map.md",
-    "thermo": "03-Thermodynamics/Thermodynamics - Course Map.md", "earth-evo": "04-Evolution-of-Earth-and-Life/Evolution of Earth and Life - Course Map.md",
+    "thermo": "03-Thermodynamics-and-Statistical-Mechanics/Thermodynamics and Statistical Mechanics - Course Map.md", "earth-evo": "04-Evolution-of-Earth-and-Life/Evolution of Earth and Life - Course Map.md",
     "landscapes": "05-Landscapes-Geomorphology/Landscapes and Geomorphology - Course Map.md", "qm": "06-Quantum-Mechanics/Quantum Mechanics - Course Map.md",
     "waves": "07-Waves/Waves - Course Map.md", "probability": "08-Probability/Probability - Course Map.md", "foundations": "09-Foundations/09-Foundations.md",
     "group": "10-Group-Theory/Group Theory - Course Map.md", "analysis": "11-Proofs-Analysis-Topology/Proofs, Analysis and Topology - Course Map.md",

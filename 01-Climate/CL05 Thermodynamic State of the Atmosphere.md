@@ -239,10 +239,10 @@ We now have $p=\rho R_dT_v$: pressure, density and (virtual) temperature are tie
 > **Builds on:** [[CL03 Radiation and Planetary Energy Balance]] (state variables, energy budget) · [[CL04 Feedback and Multiple Steady States]] (water-vapour feedback needs $e_s(T)$)
 > **Leads to:** [[CL06 Hydrostatic Balance and Vertical Structure]] (gas law + gravity) · [[CL07 Optical Properties of the Atmosphere]] (absorbers from the composition) · [[CL09 Radiative-Convective Equilibrium]] ($T_v$ and moist convection) · [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] (density in the pressure-gradient force)
 > **Concepts:** [[Ideal Gas Law]] · [[Atmospheric Composition]] · [[Virtual Temperature]] · [[Mixing Ratio and Humidity]] · [[Clausius-Clapeyron Relation]] · [[Hydrostatic Balance]] · [[Standard Atmosphere]] · [[Atmospheric Stability]] · [[Convection]]
-> **Other subjects:** [[Thermodynamics - Course Map]] (kinetic theory, equations of state) · [[Quantum Mechanics - Course Map]] and [[Group Theory - Course Map]] (why triatomics absorb) · [[Probability - Course Map]] (the Maxwell–Boltzmann speed distribution behind the kinetic derivation)
+> **Other subjects:** [[Thermodynamics and Statistical Mechanics - Course Map]] (kinetic theory, equations of state) · [[Quantum Mechanics - Course Map]] and [[Group Theory - Course Map]] (why triatomics absorb) · [[Probability - Course Map]] (the Maxwell–Boltzmann speed distribution behind the kinetic derivation)
 
 > [!connection] Statistical mechanics
-> The kinetic derivation of $p=n_0k_BT$ is the simplest piece of statistical mechanics: macroscopic $p$ and $T$ as averages over a huge number of molecules. The distribution of molecular speeds (Maxwell–Boltzmann) and the equipartition theorem belong to [[Thermodynamics - Course Map]] and [[Probability - Course Map]].
+> The kinetic derivation of $p=n_0k_BT$ is the simplest piece of statistical mechanics: macroscopic $p$ and $T$ as averages over a huge number of molecules. The distribution of molecular speeds (Maxwell–Boltzmann) and the equipartition theorem belong to [[Thermodynamics and Statistical Mechanics - Course Map]] and [[Probability - Course Map]].
 
 ## Summary
 > [!summary] Cheat-sheet

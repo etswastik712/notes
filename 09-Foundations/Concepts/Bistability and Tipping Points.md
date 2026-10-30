@@ -31,7 +31,7 @@ Normal form: $\dot x=\mu+x-x^{3}$ (S-shaped equilibrium curve), or at the fold i
 | **Population with Allee effect** | density $N$ | growth/mortality | extinct / persisting | positive density dependence | [[Ecology and Evolution - Course Map]] |
 | **Daisyworld** | daisy cover | solar luminosity | regulated / dead | albedo of daisies | *The Earth System* Ch. 2 |
 
-The mathematics is [[Fixed Points and Linear Stability]]. The same S-curve appears in chemical kinetics (autocatalysis), in neural populations and perception (see [[Neuroscience - Course Map]]) and in phase transitions of matter ([[Thermodynamics - Course Map]]).
+The mathematics is [[Fixed Points and Linear Stability]]. The same S-curve appears in chemical kinetics (autocatalysis), in neural populations and perception (see [[Neuroscience - Course Map]]) and in phase transitions of matter ([[Thermodynamics and Statistical Mechanics - Course Map]]).
 
 > [!connection] See also
 > Critical slowing down as a pole approaching the origin: [[Fourier and Laplace Transforms]] §7.6.

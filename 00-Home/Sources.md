@@ -80,7 +80,7 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 Page anchors for the typed notes were found from section headings (script in the session, not kept); they are accurate to the page.
 
 ## Thermodynamics (and a little statistical mechanics)
-Files live under `physics/thermodynamics-stat-mech/`. **The folder does not state which course or syllabus.** The only lecture material is MIT OpenCourseWare 8.333 Lectures 1–4 (Kardar, Chapter I, 7 pp. each with a text layer; printed page = PDF page + 6, + 12, + 18 for L2, L3, L4); treated as `taught`. Details and gaps: [[Thermodynamics - Course Map]].
+Files live under `physics/thermodynamics-stat-mech/`. **The folder does not state which course or syllabus.** The only lecture material is MIT OpenCourseWare 8.333 Lectures 1–4 (Kardar, Chapter I, 7 pp. each with a text layer; printed page = PDF page + 6, + 12, + 18 for L2, L3, L4); treated as `taught`. Details and gaps: [[Thermodynamics and Statistical Mechanics - Course Map]].
 
 | ID | File | Pages | Role |
 |---|---|---|---|

@@ -24,7 +24,7 @@ tags: [subject/thermo, type/concept, extra/book, src/book, status/draft]
 
 Used in the atmosphere: the dry adiabatic lapse rate ([[Dry Adiabatic Lapse Rate]], derived from this law and hydrostatic balance in [[CL09 Radiative-Convective Equilibrium]]), latent-heat effects on parcels ([[Clausius-Clapeyron Relation]]), moist static energy and the energy budget of the column ([[Poleward Energy Transport]]).
 
-Connections: [[Thermodynamics - Course Map]] (full treatment: the first law as the energy form of the conservation principle, the second law adding the arrow of time); [[Ideal Gas Law]] (the other half of every parcel calculation).
+Connections: [[Thermodynamics and Statistical Mechanics - Course Map]] (full treatment: the first law as the energy form of the conservation principle, the second law adding the arrow of time); [[Ideal Gas Law]] (the other half of every parcel calculation).
 
 ## Linked from
 ```dataview

@@ -195,7 +195,7 @@ Collect the amplitudes in the **scattering matrix** $S=\begin{pmatrix}r&t'\\t&r'
 > [!connection] How QM08 connects
 > **Builds on:** [[QM07 The Finite Square Well]] (the formula for $T$ and the matching algebra), [[QM02 The Schrodinger Equation and Stationary States]] (matching conditions), [[QM03 States Operators and Measurement]], [[Dirac Algebra]] (translation operator, unitarity).
 > **Concepts:** [[Probability Current]] · [[Transmission Coefficient]] · [[Reflection Coefficient]] · [[Step Potential]] · [[Rectangular Barrier]] · [[Quantum Tunnelling]] · [[Evanescent Wave]] · [[WKB Approximation]] · [[Gamow Factor]] · [[Resonant Tunnelling]] · [[Transfer Matrix]] · [[Bloch Theorem]] · [[Kronig-Penney Model]] · [[Delta Function Potential]]
-> **Other subjects:** [[Inorganic Chemistry - Course Map]] (bands from MOs, STM of surfaces), [[Thermodynamics - Course Map]] (nuclear lifetimes, solar fusion rates), [[Waves - Course Map]] (frustrated total internal reflection, band gaps for waves), [[Climate - Course Map]] (the Sun's luminosity, CL03, rests on tunnelling in proton fusion).
+> **Other subjects:** [[Inorganic Chemistry - Course Map]] (bands from MOs, STM of surfaces), [[Thermodynamics and Statistical Mechanics - Course Map]] (nuclear lifetimes, solar fusion rates), [[Waves - Course Map]] (frustrated total internal reflection, band gaps for waves), [[Climate - Course Map]] (the Sun's luminosity, CL03, rests on tunnelling in proton fusion).
 
 ## Summary
 > [!summary] Cheat-sheet

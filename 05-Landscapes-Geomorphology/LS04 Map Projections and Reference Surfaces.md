@@ -170,7 +170,7 @@ meaning $a=6 378 137$ m and inverse flattening $1/f=298.257223563$. Thus $f=0.00
 ## Map of this chapter
 > [!connection] How LS04 connects
 > **Previous:** [[LS03 Digital Elevation Models and Terrain Analysis]] · **Next:** [[LS05 Shape of Planets]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 > [!connection] Group theory used here
 > $SO(3)$ as the isometry group of the sphere and $SO(2)$ rotations of the map: [[GT10 Symmetry Representations and Characters]] §6; see [[Where Groups Appear in the Vault]].

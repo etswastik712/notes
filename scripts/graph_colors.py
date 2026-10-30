@@ -47,7 +47,7 @@ NEUTRAL = "#85857f"                                          # Foundations: shar
 # and AIC (folder 08, tagged probability AND eco-evo) take the probability colour.
 SUBJECTS = [
     ("climate",     "Climate",                   "path:01-Climate OR tag:#subject/climate",                         BLUE),
-    ("thermo",      "Thermodynamics",            "path:03-Thermodynamics OR tag:#subject/thermo",                   RED),
+    ("thermo",      "Thermodynamics",            "path:03-Thermodynamics-and-Statistical-Mechanics OR tag:#subject/thermo",                   RED),
     ("qm",          "Quantum Mechanics",         "path:06-Quantum-Mechanics OR tag:#subject/qm",                    YELLOW),
     ("probability", "Probability",               "path:08-Probability OR tag:#subject/probability",                 AQUA),
     ("eco-evo",     "Eco-Evo",                   "path:02-Eco-Evo OR tag:#subject/eco-evo",                         ORANGE),

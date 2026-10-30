@@ -244,7 +244,7 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 ## Map of this chapter
 > [!connection] How LS10 connects
 > **Previous:** [[LS09 Faults and Earthquakes]] · **Next:** [[LS11 Weathering and Regolith]].
-> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
+> **Other subjects:** [[Climate - Course Map]] (weathering and the carbon cycle, glaciation, orographic rainfall), [[Thermodynamics and Statistical Mechanics - Course Map]] (heat conduction and diffusion), [[Evolution of Earth and Life - Course Map]] (plate tectonics and landscapes through geological time), [[Waves - Course Map]] (diffusion and wave equations).
 
 > [!connection] Fourier view
 > Flexure as a wavelength filter, $1/(1+(k/k_c)^4)$ (degree of compensation): [[Fourier and Laplace Transforms]] §6.3.
