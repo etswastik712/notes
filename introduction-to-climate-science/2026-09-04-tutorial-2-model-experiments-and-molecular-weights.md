@@ -81,3 +81,8 @@ PFA today's Tutorial
 ## Concepts in lorenz
 [[zettel/lorenz-system]], [[zettel/deterministic-chaos-in-the-lorenz-system]]
 <!-- /kurooto:material6db59cbf -->
+
+<!-- kurooto:material9cb1e85c -->
+## Concepts in Tutorial 2
+[[zettel/diurnal-thermal-inertia-model]], [[zettel/greenhouse-effect-temperature-increment]], [[zettel/zero-shadow-day]], [[zettel/infrared-thermometry-shading-discrepancy]]
+<!-- /kurooto:material9cb1e85c -->
