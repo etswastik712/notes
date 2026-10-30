@@ -39,3 +39,6 @@ Used in: [[QM06 The Oscillator Toolbox]] ยง5. Related: [[Harmonic Oscillator]] ย
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- The classical phase space and Liouville's theorem for the oscillator (one state per $\hbar\omega$ of area $h$): [[Phase Space]], [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] (Problem 1).

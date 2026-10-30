@@ -45,3 +45,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in the vault (added 2026-10-29)
 - Application: the displacement of a random walk and the heat kernel: [[Random Walk]], [[THX1 Diffusion Random Walks and the Heat Equation]].
+
+## Continued in Part II (added 2026-10-30)
+- A proof by cumulant scaling ($\kappa_n(y)\propto N^{1-n/2}$), the Lévy/Cauchy failure case, and the energy of $N$ ideal-gas atoms as an exact Gamma law (skewness $\sqrt{8/3N}$): [[SM01 Probability Large Numbers and Information]] §4, [[SM03 The Canonical Ensemble]] §3.2 ([[Cumulant]], [[Cauchy Distribution]]).

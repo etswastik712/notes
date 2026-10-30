@@ -36,3 +36,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Rayleigh Distribution]] (Probability): the Maxwell speed density $ax^2e^{-bx^2}$ is the 3-D relative of the Rayleigh density $xe^{-x^2/2\sigma^2}$ of the 2-D speed of Gaussian components; both normalise by $\int x^ke^{-x^2}\mathrm dx$ (Quiz 1, Q3).
+
+## Continued in Part II (added 2026-10-30)
+- Derived from the canonical ensemble for *any* interaction (momenta are independent Gaussians of variance $mk_BT$): [[SM03 The Canonical Ensemble]] §4.2; the companion Boltzmann factor $mgz$ gives the [[Barometric Formula]].

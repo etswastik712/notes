@@ -33,3 +33,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Entro
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Phase-space counting, the shell-width independence, the Gibbs paradox and Einstein solids: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]; Shannon's form $-\sum p\ln p$ and typical sequences: [[SM01 Probability Large Numbers and Information]] ([[Shannon Entropy]]).

@@ -42,3 +42,6 @@ Moments used by the oscillator: $\int x^2e^{-ax^2}\mathrm dx=\dfrac{\sqrt\pi}{2a
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- The momentum integral behind $\lambda=h/\sqrt{2\pi mk_BT}$ and the saddle-point method: [[SM03 The Canonical Ensemble]] §4.1, [[Saddle Point Method]].

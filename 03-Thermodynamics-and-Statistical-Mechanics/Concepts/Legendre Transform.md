@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Rela
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Two statistical-mechanics appearances: the rate function $I(s)=\sup_t[ts-K(t)]$ ([[Large Deviation Principle]], [[SM01 Probability Large Numbers and Information]] §6.2) and $F=\min_E(E-TS)$ ([[Equivalence of Ensembles]], [[SM03 The Canonical Ensemble]] §3.1).

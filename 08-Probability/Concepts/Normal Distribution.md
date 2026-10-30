@@ -40,3 +40,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[Diffusion Equation]] (Thermodynamics): the normal density with variance $2Dt$ is the fundamental solution of the diffusion equation.
 - [[Wave Energy and Power]] (Waves): the surface elevation of a narrow-band sea is Gaussian, so wave heights are Rayleigh distributed ($H_{1/3}=2\sigma$) and the largest 10% of waves carry 33% of the energy.
+
+## Continued in Part II (added 2026-10-30)
+- The only distribution with two cumulants; Wick's theorem; the joint Gaussian of momenta: [[Wick's Theorem]], [[SM01 Probability Large Numbers and Information]] §2.3.

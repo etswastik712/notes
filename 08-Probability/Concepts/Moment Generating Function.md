@@ -48,3 +48,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[Partition Function]] (Thermodynamics): $Z(\beta)=\sum_i e^{-\beta E_i}$ is the moment generating function of the energy at $t=-\beta$ (up to normalisation); $\langle E\rangle=-\partial_\beta\ln Z$ and $\mathrm{Var}\,E=\partial_\beta^2\ln Z$ are the first two cumulants.
 - [[Hermite Generating Function and Recurrences]] (Quantum Mechanics): the generating function $e^{xt-t^2/2}=\sum He_n(x)t^n/n!$ is the exponential kernel $e^{tx}$ divided by the moment generating function of the standard normal, $E[e^{tZ}]=e^{t^2/2}$.
+
+## Continued in Part II (added 2026-10-30)
+- $\ln M$ is the cumulant generating function; $\ln Z(\beta)$ is the same object for the energy, so $\kappa_n(E)=(-1)^n\partial_\beta^n\ln Z$: [[Cumulant]], [[SM03 The Canonical Ensemble]] §2.1.

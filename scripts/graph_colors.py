@@ -87,7 +87,7 @@ SEARCH_BASE = ("-path:Assets -path:scripts -path:digests -path:master -path:dail
 # them back (they keep their colour groups, dimmed).
 SOURCE_FOLDERS = ["ph2113/", "ch2113-principles-of-inorganic-chemistry-august-20/", "mt3184-differential-geometry-and-lie-groups/",
                   "intro-to-proofs/", "introduction-to-probability/", "introduction-to-climate-science/", "landscape-evolution/",
-                  "zettel/", "maps/", "inbox/"]
+                  "maps/", "inbox/"]    # not "zettel/": since 2026-10-30 its notes live in <vault>/Concepts/zettel/ (scripts/sort_zettel.py)
 SEARCH_NO_SOURCES = SEARCH_BASE + " " + " ".join("-path:" + f for f in SOURCE_FOLDERS)
 SEARCH = SEARCH_NO_SOURCES
 HOME_GROUP = ("home", "Home (the centre)", 'path:"00-Home/Home.md"', "#f4f1de")

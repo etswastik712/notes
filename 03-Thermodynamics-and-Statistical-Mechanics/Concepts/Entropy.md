@@ -36,3 +36,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in the vault (added 2026-10-29)
 - The entropy of a spreading distribution (a diffusing Gaussian gains $\tfrac12\ln t$): [[Diffusion Equation]], [[THX1 Diffusion Random Walks and the Heat Equation]] §8.
+
+## Continued in Part II (added 2026-10-30)
+- Microscopic definitions and numbers: [[SM01 Probability Large Numbers and Information]] §7, [[SM02 Phase Space Liouville and the Microcanonical Ensemble]], [[SM03 The Canonical Ensemble]]; see [[Shannon Entropy]] and [[Relative Entropy]].

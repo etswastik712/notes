@@ -40,3 +40,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[Moment Generating Function]] (Probability): $Z(\beta)=\sum_i e^{-\beta E_i}$ is the moment generating function of the energy at $t=-\beta$ (up to normalisation); $\langle E\rangle=-\partial_\beta\ln Z$ and $\mathrm{Var}\,E=\partial_\beta^2\ln Z$ are the first two cumulants.
 - [[Closure Temperature]] (Landscapes): the Boltzmann factor $e^{-E/RT}$ is the Arrhenius activation law behind $D=D_0e^{-E/RT}$ and hence the closure temperature of a mineral.
+
+## Continued in Part II (added 2026-10-30)
+- $\ln Z$ as the cumulant generating function of $E$, degeneracy, the hydrogen-atom divergence and the paramagnet: [[SM03 The Canonical Ensemble]] §2, §5–§6 ([[Partition Function of the Hydrogen Atom]], [[Curie Law]]).

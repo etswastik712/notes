@@ -233,3 +233,6 @@ If the system also exchanges particles with a reservoir at chemical potential $\
 
 ## Continued in the vault (added 2026-10-29)
 - Continued in the interdisciplinary chapter [[THX1 Diffusion Random Walks and the Heat Equation]] (random walk, Fick, Einstein relation).
+
+## Continued in Part II (added 2026-10-30)
+- Statistical mechanics proper continues in Part II: [[SM01 Probability Large Numbers and Information]] (cumulants, Stirling, large deviations, entropy), [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] (Liouville, $\Omega$, Gibbs paradox, Einstein solids) and [[SM03 The Canonical Ensemble]] (the Boltzmann distribution derived, equivalence of ensembles, barometric formula, paramagnet, the divergent hydrogen sum). §5–§6 above are the sketch; those chapters are the derivation.

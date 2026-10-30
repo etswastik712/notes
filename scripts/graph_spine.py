@@ -76,6 +76,8 @@ def classify(rel, tags):
     t = set(tags)
     if "type/chapter" in t:
         return "chapters"
+    if "/Concepts/zettel/" in rel:        # the other tool's concept notes, filed in the vault by scripts/sort_zettel.py
+        return "zettel"
     if "type/concept" in t or "/Concepts/" in rel:
         return "concepts"
     return "other"
@@ -105,7 +107,8 @@ def build():
 def block(title, groups, basenames, intro):
     total = sum(len(v) for v in groups.values())
     parts = []
-    labels = [("chapters", "Chapters"), ("concepts", "Concept notes"), ("other", "Other notes in the vault"),
+    labels = [("chapters", "Chapters"), ("concepts", "Concept notes"), ("zettel", "Zettel notes (the other tool's, filed in the vault)"),
+              ("other", "Other notes in the vault"),
               ("source", "Notes from the other tool (source layer)")]
     summary = " · ".join(f"{len(groups[k])} {lab.lower()}" for k, lab in labels if groups.get(k))
     for k, lab in labels:
@@ -158,10 +161,10 @@ def main():
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
     notes, basenames, by_subject, stray = build()
-    print(f"{'subject':12s} {'chapters':>8} {'concepts':>8} {'other':>6} {'source':>7}")
+    print(f"{'subject':12s} {'chapters':>8} {'concepts':>8} {'zettel':>6} {'other':>6} {'source':>7}")
     for sub, m in MAPS.items():
         g = by_subject[sub]
-        print(f"{sub:12s} {len(g['chapters']):8d} {len(g['concepts']):8d} {len(g['other']):6d} {len(g['source']):7d}")
+        print(f"{sub:12s} {len(g['chapters']):8d} {len(g['concepts']):8d} {len(g['zettel']):6d} {len(g['other']):6d} {len(g['source']):7d}")
         text, _ = block("Atlas: every note in this subject", g, basenames,
                         "The graph view draws only real links, so this block links **every** note of the subject "
                         "(the map is the hub of its cluster; [[Home]] is the hub of all maps).")

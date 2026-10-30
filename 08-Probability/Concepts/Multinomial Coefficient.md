@@ -33,3 +33,6 @@ Used in: [[PR01 Counting and the Axioms of Probability]]. Related: [[Counting Pr
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- $\ln g\approx-N\sum p_i\ln p_i$ and typical sequences: [[SM01 Probability Large Numbers and Information]] §7.1 ([[Shannon Entropy]], [[Stirling's Approximation]]).

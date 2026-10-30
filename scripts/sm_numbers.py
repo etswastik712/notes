@@ -216,3 +216,17 @@ P("P9: N=1e6: P(|m-1/2|>1e-3) Gaussian two-sided =", 2 * stats.norm.sf(1e-3 * Nn
 Tn = 300.0; En = 1.5 * kB * Tn; Vn = 1e-3
 Nst = 4 * pi / 3 * Vn * (2 * m_He * En) ** 1.5 / h ** 3
 P("P10: 2mE =", 2 * m_He * En, " (2mE)^1.5 =", (2 * m_He * En) ** 1.5, " N_states =", Nst, " V/lambda^3 =", Vn / lam(m_He, Tn) ** 3, " ratio =", Nst / (Vn / lam(m_He, Tn) ** 3), " (4pi/3)(3/2pi)^1.5 =", 4 * pi / 3 * (3 / (2 * pi)) ** 1.5)
+
+sec("PRACTICE SM03")
+x = 0.5
+P("P1: paramagnet x=0.5: tanh =", np.tanh(x), " S/Nk =", log(2 * np.cosh(x)) - x * np.tanh(x), " C/Nk = x^2 sech^2 =", x ** 2 / np.cosh(x) ** 2, " ; two-level at eps/kT=1: S =", log(1 + exp(-1)) + 1 / (np.e + 1), " C =", np.e / (np.e + 1) ** 2)
+P("P3: Everest 8849 m, isothermal 255 K: p/p0 =", exp(-8849 / (kB * 255 / (m_air * g))), " -> ", 101.325 * exp(-8849 / (kB * 255 / (m_air * g))), "kPa ; 288.15 K:", 101.325 * exp(-8849 / (kB * 288.15 / (m_air * g))), " ; standard atm:", p_std(8849) / 1e3, "; H(N2, 288.15 K) =", kB * 288.15 / (28.0134 * u * g))
+nl3 = (atm / (kB * 300)) * lam(28.0134 * u, 300) ** 3
+P("P4: n lambda^3 (N2, 300 K, 1 atm) =", nl3, " mu/kT =", log(nl3), " mu = ", kB * 300 * log(nl3) / eV, "eV =", kB * 300 * log(nl3) * NA / 1e3, "kJ/mol")
+P("P5: Gibbs ensemble rel sd of V, N=1000: 1/sqrt(N+1) =", 1 / sqrt(1001))
+kT_ = kB * 10000 / eV
+Zc = Zn(10000.0, 45); p2 = 8 * exp(-10.2 / kT_) / Zc
+P("P6: kT(1e4 K) =", kT_, " eV ; Z_cut(45) =", Zc, " ; p(n=2) =", p2, " ; ground-state fraction =", 2 / Zc)
+P("P7: Schottky peak in T for B=1 T (eps=2 mu_B B): T* =", 2 * muB * 1.0 / kB / 2.3994, "K ; for B=5 T:", 2 * muB * 5.0 / kB / 2.3994)
+P("P9: 1-D classical oscillator energy is exponential: P(E>3kT) =", exp(-3), " ; 3-D (Gamma(3)) P(E>3kT) =", stats.gamma.sf(3, 3))
+P("P10: Gamma(3N/2) : ln Gamma(k) vs k ln k - k + 0.5 ln(2 pi/k), k=150:", gammaln(150), 150 * log(150) - 150 + 0.5 * log(2 * pi / 150))

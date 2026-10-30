@@ -36,10 +36,10 @@ x = np.linspace(0, 4, 300)
 c.plot(x, np.tanh(x), color=BLUE, label=r"$\tanh x$")
 c.plot(x, x, color=MUTED, ls="--", lw=1.1, label=r"Curie: $x$")
 c.axhline(1, color=MUTED, lw=0.7, ls=":")
-for B, T, off in ((1, 300, (0.9, -0.12)), (1, 4.2, (0.5, -0.20)), (1, 1.0, (0.7, -0.24))):
+for B, T, pos in ((1, 300, (1.5, 0.08)), (1, 4.2, (1.5, 0.22)), (1, 1.0, (1.5, 0.36))):
     xx = 9.2740100783e-24 * B / (1.380649e-23 * T)
     c.plot([xx], [np.tanh(xx)], "o", color=ORANGE, ms=5)
-    c.annotate(f"$B=1$ T, $T={T:g}$ K", (xx, np.tanh(xx)), xytext=(xx + off[0], np.tanh(xx) + off[1]), fontsize=8.2, arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.7))
+    c.annotate(f"$B=1$ T, $T={T:g}$ K", (xx, np.tanh(xx)), xytext=pos, fontsize=8.2, va="center", arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.7))
 c.set_xlim(0, 4); c.set_ylim(0, 1.15); c.set_xlabel(r"$x=\mu_BB/k_BT$"); c.set_ylabel(r"$M/N\mu_B$"); c.legend(fontsize=8.4, loc="lower right")
 c.set_title("C  spin-½ paramagnet: Curie law to saturation", fontsize=10)
 

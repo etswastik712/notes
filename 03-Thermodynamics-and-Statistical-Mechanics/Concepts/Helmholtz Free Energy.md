@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]], [[TH
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- $F[q]-F=k_BT\,D(q\|p)\ge0$ (a minimum principle with relative entropy) and $F$ as the Legendre transform of $E-TS$ by the saddle point: [[SM03 The Canonical Ensemble]] §2.2, §3.1.

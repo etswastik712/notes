@@ -57,7 +57,58 @@ V_END = "<!-- vault:links end -->"
 
 # Hand decisions after reviewing the plan: slug -> {"chapter": chapter file name without .md or None (course map only),
 #                                                   "concepts": [...], "related": [...]}   (names of vault concept notes)
+def _pin(code, *slugs):
+    return {s: {"chapter": code} for s in slugs}
+
+
 OVERRIDES = {}
+# Climate: the lecture each note comes from, and where the vault chapter treats the idea
+OVERRIDES.update(_pin("CL01", "simple-pendulum-differential-equation", "state-space-reduction-for-pendulum-simulation",
+                      "atlantic-meridional-overturning-circulation"))
+OVERRIDES.update(_pin("CL03", "infrared-thermometry-shading-discrepancy", "inverse-square-law-of-radiation", "planetary-emission-temperature",
+                      "shortwave-and-longwave-radiative-boundary", "zero-dimensional-energy-balance-model", "planetary-radiative-equilibrium"))
+OVERRIDES.update(_pin("CL04", "multiple-climate-equilibria-in-energy-balance-models", "runaway-ice-albedo-instability"))
+OVERRIDES.update(_pin("CL05", "atmospheric-conservation-of-energy"))
+OVERRIDES.update(_pin("CL06", "atmospheric-thermal-stratification"))
+OVERRIDES.update(_pin("CL08", "radiative-forcing", "runaway-greenhouse-effect"))
+OVERRIDES.update(_pin("CL10", "atmospheric-energy-transport", "latitudinal-energy-imbalance"))
+OVERRIDES.update(_pin("CL11", "zonal-average"))
+OVERRIDES.update(_pin("CL12", "coriolis-deflection-on-planetary-circulation"))
+OVERRIDES.update(_pin("CL14", "trade-winds", "intertropical-convergence-zone"))
+# Quantum mechanics
+OVERRIDES.update(_pin("QM01", "dynamical-amplification-of-quantum-uncertainty", "ensemble-interpretation-of-the-wavefunction"))
+OVERRIDES.update(_pin("QM02", "macroscopic-correspondence-on-a-ring"))
+OVERRIDES.update(_pin("QM03", "linear-operator", "position-dependent-phase-and-momentum-content", "orthogonality-of-energy-eigenstates"))
+# Probability
+OVERRIDES.update(_pin("PR02", "independence-of-complements", "partition-of-the-sample-space"))
+OVERRIDES.update(_pin("PR03", "binomial-overbooking-survival-sum", "mode-of-the-binomial-distribution", "sequential-question-answering-optimization",
+                      "consecutive-comparison-win-count-in-random-permutations", "order-statistic-of-first-rank-in-uniform-random-permutations",
+                      "sum-of-independent-bernoulli-trials-representation-of-binomial"))
+OVERRIDES.update(_pin("PR06", "raw-moment", "central-moment"))
+# Proofs
+OVERRIDES.update(_pin("PA03", "least-upper-bound"))
+# Inorganic chemistry (the lecture names map straight onto chapters)
+OVERRIDES.update(_pin("CH01", "construction-of-lewis-structures", "formal-charge", "resonance", "lewis-theory-of-covalent-bonding"))
+OVERRIDES.update(_pin("CH02", "molecular-orbital-model-of-carbon-monoxide", "molecular-orbital-model-of-hydrogen-fluoride"))
+OVERRIDES.update(_pin("CH05", "lewis-base"))
+OVERRIDES.update(_pin("CH09", "oxidation-number"))
+# Landscapes: the DEM chapter owns the note; the field-trip safety notes have no chapter (course map only)
+OVERRIDES.update(_pin("LS03", "digital-elevation-model"))
+OVERRIDES.update(_pin(None, "field-trip-coordinator-pre-departure-verification", "field-trip-emergency-response-chain",
+                      "field-trip-head-count-protocol", "participant-indemnity-and-health-self-certification"))
+# Group theory: MT3184 is manifold and Lie-group material.  GT10 section 6 ("the bridge to Lie groups") is the only chapter that
+# treats it, so the Lie-group notes go there; the differential-geometry prerequisites have no chapter yet (course map only).
+OVERRIDES.update(_pin("GT10", "lie-group", "lie-algebra", "lie-algebra-of-a-lie-group", "lie-algebra-representation", "faithful-representation",
+                      "ado-s-theorem", "lie-group-homomorphism", "lie-subgroup", "left-invariant-vector-field", "one-parameter-subgroup",
+                      "euclidean-group", "semidirect-product-of-lie-groups", "smooth-group-action", "orbit-map", "left-translation-map",
+                      "constant-rank-of-lie-group-homomorphisms"))
+OVERRIDES.update(_pin(None, "vector-field", "complete-vector-field", "completeness-of-compactly-supported-vector-fields", "integral-curve",
+                      "naturality-of-flows", "naturality-of-integral-curves", "fundamental-theorem-on-flows", "flowout-theorem",
+                      "uniform-time-lemma", "singular-and-regular-points-of-a-vector-field", "lie-bracket-of-vector-fields",
+                      "locality-of-derivations", "rank-theorem", "global-rank-theorem", "immersed-submanifold", "image-of-injective-immersion",
+                      "submanifold-tangent-space-via-slice-chart", "tangent-bundle-as-a-smooth-manifold",
+                      "product-manifold-tangent-space-isomorphism", "antipodal-map-on-s2", "vector-field-on-s2-with-a-single-zero",
+                      "baire-category-theorem"))
 
 STOP = set("""a an the of in on at to for from by with without and or nor but as is are was were be been being it its this that these
 those into onto over under via per than then so such can may might will would should could not no any each every both either
@@ -97,7 +148,13 @@ def plain(text):
     return text
 
 
+UK = (("ization", "isation"), ("izing", "ising"), ("ized", "ised"), ("izes", "ises"), ("ize", "ise"), ("yze", "yse"),
+      ("center", "centre"), ("color", "colour"), ("neighbor", "neighbour"), ("behavior", "behaviour"))
+
+
 def stem(w):
+    for a, b in UK:
+        w = w.replace(a, b)
     if len(w) > 4 and w.endswith("ies"):
         return w[:-3] + "y"
     if len(w) > 4 and w.endswith("sses"):
@@ -223,6 +280,7 @@ class Matcher:
                 cnames = {norm(c["title"]), norm(cn)} | {norm(a) for a in c["aliases"]}
                 if names & cnames:
                     same.append((fold, cn))
+        same.sort(key=lambda fc: norm(all_concepts[fc[0]]["concepts"][fc[1]]["title"]) not in names)
         zv = tf_vector([(z["title"], 3), (" ".join(z["aliases"]), 2), (z["defn"], 1)])
         rel = []
         for cn, c in self.v["concepts"].items():
@@ -230,11 +288,11 @@ class Matcher:
                 continue
             cv = tf_vector([(c["title"], 3), (" ".join(c["aliases"]), 2), (c["body"][:900], 1)])
             s = cosine(zv, cv, {})
-            # the concept's own title words must appear in the note's title/aliases/definition: avoids generic overlaps
+            # related = the concept's whole title occurs in the note's title or aliases, or the overlap is strong on its own
             ct = set(tokens(c["title"]))
-            zt = set(tokens(z["title"] + " " + " ".join(z["aliases"]) + " " + z["defn"]))
+            zt = set(tokens(z["title"] + " " + " ".join(z["aliases"])))
             if ct and ct <= zt:
-                s += 0.25
+                s += 0.5
             rel.append((s, cn))
         rel.sort(reverse=True)
         return same, rel
@@ -271,26 +329,32 @@ def assign_all(zs, vaults):
         folder, subj = COURSES[z["course"]]
         m = matchers[folder]
         same, rel = m.concept_candidates(z, all_concepts)
-        same_here = [cn for f, cn in same if f == folder]
+        same_here = [cn for f, cn in same if f == folder][:2]
         same_other = []        # cross-vault name matches are coincidences (aliases like "D", "phi"): never linked automatically
         sc = m.chapter_scores(z, same_here)
         ranked = sorted(sc.items(), key=lambda kv: -kv[1][0])
         top = ranked[0] if ranked else None
         plan[z["slug"]] = {"z": z, "vault": folder, "subject": subj, "same": same_here, "same_other": same_other,
-                           "related": [(round(s, 2), n) for s, n in rel[:3] if s >= 0.18],
+                           "related": [(round(s, 2), n) for s, n in rel[:3] if s >= 0.5][:2],
                            "ranked": [(n, round(v[0], 2)) for n, v in ranked[:3]],
                            "chapter": top[0] if top else None, "score": round(top[1][0], 2) if top else 0.0,
                            "margin": round(top[1][0] - ranked[1][1][0], 2) if len(ranked) > 1 else 9}
     return plan
 
 
-def apply_overrides(plan):
+def apply_overrides(plan, vaults):
     for slug, o in OVERRIDES.items():
         p = plan.get(slug)
         if not p:
             continue
         if "chapter" in o:
-            p["chapter"] = o["chapter"]
+            code = o["chapter"]
+            if code is None:
+                p["chapter"] = None
+            else:
+                hit = [n for n in vaults[p["vault"]]["chapters"] if n.startswith(code + " ")]
+                assert len(hit) == 1, (slug, code, hit)
+                p["chapter"] = hit[0]
             p["pinned"] = True
         if "concepts" in o:
             p["same"] = list(o["concepts"])
@@ -317,17 +381,186 @@ def report(plan, vaults, only=None):
             print(f"{slug[:46]:46} | {ch:34} {p['score']:.2f}/{p['margin']:.2f}{flag} alt:{alt:12} | ={sa} {('x:' + so) if so else ''} ~{rl}")
 
 
+# ------------------------------------------------------------------------------------------------------------------- apply
+def basename_counts():
+    c = collections.Counter()
+    for dp, dn, fn in os.walk(ROOT):
+        dn[:] = [d for d in dn if d not in (".git", ".obsidian", ".venv", "node_modules", "__pycache__")]
+        c.update(f[:-3].lower() for f in fn if f.endswith(".md"))
+    return c
+
+
+def find_zettel():
+    """Every note whose id is zettel/...: the loose ones in zettel/, and any already filed in a vault (also off Concepts/zettel)."""
+    found = [os.path.join(ZDIR, f) for f in sorted(os.listdir(ZDIR)) if f.endswith(".md")]
+    for folder, _ in sorted(set(COURSES.values())):
+        for dp, dn, fn in os.walk(os.path.join(ROOT, folder)):
+            for f in fn:
+                if f.endswith(".md"):
+                    with open(os.path.join(dp, f), encoding="utf-8") as fh:
+                        if re.search(r"^id: zettel/", fh.read(400), re.M):
+                            found.append(os.path.join(dp, f))
+    return found
+
+
+def replace_block(text, start, end, block, anchor_re):
+    """Swap the generated block between its markers (trailing newlines are kept, so a re-run changes nothing); a new block goes
+    before the first line matching anchor_re, or at the end of the note when anchor_re is None.  block None removes it."""
+    pat = re.compile("(" + re.escape(start) + r".*?" + re.escape(end) + r")(\n*)", re.S)
+    if pat.search(text):
+        return pat.sub(lambda m: (block + m.group(2)) if block else "", text, count=1)
+    if not block:
+        return text
+    m = re.search(anchor_re, text, re.M) if anchor_re else None
+    if m:
+        return text[:m.start()] + block + "\n\n" + text[m.start():]
+    return text.rstrip("\n") + "\n\n" + block + "\n"
+
+
+def add_subject_tag(text, subj):
+    m = re.match(r"(---\n)(.*?)(\n---\n?)", text, re.S)
+    if not m:
+        return text
+    head = re.sub(r"^(tags:\s*\[)(.*?)(\])\s*$",
+                  lambda t: t.group(0) if f"subject/{subj}" in t.group(2) else f"{t.group(1)}{t.group(2)}, subject/{subj}{t.group(3)}",
+                  m.group(2), count=1, flags=re.M)
+    return m.group(1) + head + m.group(3) + text[m.end():]
+
+
+def do_apply(plan, vaults):
+    names = basename_counts()
+
+    def link(folder, kind, name, label=None):
+        """Shortest unambiguous wiki-link for a chapter/concept (path-qualified when its file name is shared)."""
+        sub = "" if kind == "chapter" else "Concepts/"
+        if names[name.lower()] > 1:
+            return f"[[{folder}/{sub}{name}|{label or name}]]"
+        return f"[[{name}|{label}]]" if label and label != name else f"[[{name}]]"
+
+    def zlink(slug, title):
+        return f"[[zettel/{slug}|{title}]]"
+
+    stats = collections.Counter()
+    moved, manifest = {}, {}
+    # 1. move, tag, and write the links inside each note
+    for slug, p in plan.items():
+        z, folder = p["z"], p["vault"]
+        dst = os.path.join(ROOT, folder, SUB, slug + ".md")
+        if os.path.abspath(z["path"]) != dst:
+            if os.path.exists(dst):
+                print(f"DUPLICATE (left alone): {os.path.relpath(z['path'], ROOT)} - {os.path.relpath(dst, ROOT)} exists")
+                stats["duplicates"] += 1
+                continue
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            shutil.move(z["path"], dst)
+            stats["moved"] += 1
+        moved[slug] = dst
+        text = open(dst, encoding="utf-8").read()
+        v = vaults[folder]
+        lines = [V_START, "## In the vault"]
+        if p["chapter"]:
+            lines.append(f"- chapter:: {link(folder, 'chapter', p['chapter'])} — the chapter that covers it")
+        else:
+            lines.append(f"- map:: [[{v['map']}]] — no chapter covers it yet")
+        for c in p["same"]:
+            lines.append(f"- concept:: {link(folder, 'concept', c)} — the vault's concept note on the same idea")
+        for c in [n for _, n in p["related"] if n not in p["same"]]:
+            lines.append(f"- related-concept:: {link(folder, 'concept', c)} — a closely related concept note")
+        lines.append(V_END)
+        new = add_subject_tag(text, p["subject"])
+        new = replace_block(new, V_START, V_END, "\n".join(lines), None)
+        if new != text:
+            open(dst, "w", encoding="utf-8").write(new)
+            stats["notes written"] += 1
+        manifest[slug] = {"from": os.path.relpath(z["path"], ROOT), "to": os.path.relpath(dst, ROOT), "vault": folder,
+                          "chapter": p["chapter"], "concepts": p["same"], "related": [n for _, n in p["related"]]}
+
+    # 2. chapters and concept notes: the generated list of zettel notes
+    for folder, v in vaults.items():
+        by_ch, by_co = collections.defaultdict(list), collections.defaultdict(list)
+        for slug, p in plan.items():
+            if p["vault"] != folder or slug not in moved:
+                continue
+            t = p["z"]["title"]
+            if p["chapter"]:
+                by_ch[p["chapter"]].append((t, slug))
+            for c in p["same"]:
+                by_co[c].append((t, slug, "same"))
+            for c in [n for _, n in p["related"] if n not in p["same"]]:
+                by_co[c].append((t, slug, "related"))
+        for name, ch in v["chapters"].items():
+            items = sorted(by_ch.get(name, []), key=lambda x: x[0].lower())
+            block = None
+            if items:
+                block = (f"{Z_START}\n## Zettel notes\n\n> [!abstract]- Zettel notes filed under this chapter ({len(items)}): the other tool's concept notes "
+                         f"from the lectures, unreviewed\n> " + " · ".join(zlink(s, t) for t, s in items) + f"\n{Z_END}")
+            text = open(ch["path"], encoding="utf-8").read()
+            new = replace_block(text, Z_START, Z_END, block, r"^## Provenance\b")
+            if new != text:
+                open(ch["path"], "w", encoding="utf-8").write(new)
+                stats["chapters written"] += 1
+        for name, co in v["concepts"].items():
+            items = sorted(by_co.get(name, []), key=lambda x: (x[2] != "same", x[0].lower()))
+            block = None
+            if items:
+                same = [zlink(s, t) for t, s, k in items if k == "same"]
+                rel = [zlink(s, t) for t, s, k in items if k == "related"]
+                parts = (["Class zettel on this idea: " + " · ".join(same)] if same else []) + (["Related zettel: " + " · ".join(rel)] if rel else [])
+                block = f"{Z_START}\n## Zettel notes\n\n" + "\n\n".join(parts) + f"\n{Z_END}"
+            text = open(co["path"], encoding="utf-8").read()
+            new = replace_block(text, Z_START, Z_END, block, r"^## Linked from\b")
+            if new != text:
+                open(co["path"], "w", encoding="utf-8").write(new)
+                stats["concept notes written"] += 1
+    os.makedirs(os.path.join(ROOT, "scripts", "_work"), exist_ok=True)
+    with open(os.path.join(ROOT, "scripts", "_work", "zettel_sort.json"), "w", encoding="utf-8") as fh:
+        json.dump(manifest, fh, indent=1, ensure_ascii=False, sort_keys=True)
+    print("applied:", dict(stats), "-> scripts/_work/zettel_sort.json")
+
+
+def summary(plan):
+    by = collections.defaultdict(lambda: collections.Counter())
+    for p in plan.values():
+        c = by[p["vault"]]
+        c["notes"] += 1
+        c["with chapter"] += bool(p["chapter"])
+        c["map only"] += not p["chapter"]
+        c["with concept link"] += bool(p["same"] or p["related"])
+        c["same-concept"] += bool(p["same"])
+    print("\nsummary:")
+    for f, c in sorted(by.items()):
+        print(f"  {f:34} " + ", ".join(f"{k} {v}" for k, v in c.items()))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--only", help="report only vaults whose folder contains this text")
+    ap.add_argument("--quiet", action="store_true", help="skip the per-note listing")
     a = ap.parse_args()
-    zs = [load_zettel(os.path.join(ZDIR, f)) for f in sorted(os.listdir(ZDIR)) if f.endswith(".md")]
+    zs = [load_zettel(p) for p in find_zettel()]
+    seen, dupes = {}, []
+    for z in sorted(zs, key=lambda z: SUB not in z["path"].replace(os.sep, "/")):     # the note already filed in a vault wins
+        if z["slug"] in seen:
+            dupes.append((z, seen[z["slug"]]))
+        else:
+            seen[z["slug"]] = z
+    zs = list(seen.values())
+    for z, kept in dupes:
+        print(f"DUPLICATE slug {z['slug']}: {os.path.relpath(z['path'], ROOT)} left alone (the filed copy {os.path.relpath(kept['path'], ROOT)} is kept)"
+              " - merge the two by hand, then delete the loose one")
+    skipped = [z["slug"] for z in zs if not z["course"]]
     zs = [z for z in zs if z["course"]]
     vaults = {f: load_vault(f) for f, _ in set(COURSES.values())}
     plan = assign_all(zs, vaults)
-    apply_overrides(plan)
-    report(plan, vaults, a.only)
+    apply_overrides(plan, vaults)
+    if not a.quiet:
+        report(plan, vaults, a.only)
+    summary(plan)
+    if skipped:
+        print("no course tag (left alone):", ", ".join(skipped))
+    if a.apply:
+        do_apply(plan, vaults)
 
 
 if __name__ == "__main__":

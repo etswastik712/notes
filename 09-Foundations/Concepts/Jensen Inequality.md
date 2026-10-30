@@ -34,3 +34,6 @@ Used in [[CL03 Radiation and Planetary Energy Balance]].
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Proof of Gibbs' inequality $D(p\|q)\ge0$ and hence of $S\le\ln M$ and $F[q]\ge F$: [[Relative Entropy]], [[SM01 Probability Large Numbers and Information]] §7.3.

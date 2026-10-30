@@ -27,3 +27,6 @@ Used in: [[Fourier and Laplace Transforms]]. Related: [[Convolution Theorem]] ·
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Kardar's convention $\tilde p(k)=\langle e^{-ikx}\rangle$ and the cumulants via $\ln\tilde p$: [[SM01 Probability Large Numbers and Information]] §2 ([[Cumulant]]).

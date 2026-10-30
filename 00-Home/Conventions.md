@@ -21,6 +21,13 @@ Folders only separate subjects (`01-Climate/`, `02-Eco-Evo/`, ...). **Global rul
 
 A note carries every scope tag that appears in it. A chapter that is mostly taught but contains a boxed extra has both `taught` and `extra/beyond`.
 
+### Zettel notes (the other tool's concept notes), filed 2026-10-30
+Kurooto writes one small concept note per idea into `zettel/` (`id: zettel/<slug>`, tags `zettel`, `agent-written`, the source course). **User request 2026-10-30: sort them into the respective vaults.** `scripts/sort_zettel.py --apply` files each note by its course tag into `<subject folder>/Concepts/zettel/` (climate → `01-`, landscape-evolution → `05-`, ph2113 → `06-`, introduction-to-probability → `08-`, mt3184 → `10-`, intro-to-proofs → `11-`, ch2113 → `12-`), adds the tag `subject/<x>`, and writes a generated `vault:links` block at the end of the note: `chapter::` (the chapter that covers it), `concept::` (the vault's concept note on the same idea), `related-concept::`, or `map::` when no chapter covers it. The other direction is generated too: every chapter gets a `## Zettel notes` block before `## Provenance`, every concept note one before `## Linked from`.
+- **File names and `id:` are unchanged**, so every `[[zettel/<slug>]]` link (the notes' own, and the source layer's) still resolves: Obsidian matches a path link by suffix (`scripts/link_audit.py` checks it).
+- **They are agent-written and unreviewed.** Never cite a zettel note in a Provenance table; the sources stay the un-numbered folders. Do not edit between the generated markers; hand decisions on which chapter owns a note live in `OVERRIDES` in the script (the lecture named in the note's `Source:` line is the best guide).
+- **Kurooto only scans `zettel/`** (`core/conceptgraph.py: concept_dirs`), so it no longer sees the filed notes: after each ingest run `.venv/bin/python -W ignore scripts/sort_zettel.py --apply`. If Kurooto re-created a slug that is already filed the script prints `DUPLICATE` and leaves the loose copy alone (merge by hand). `scripts/_work/zettel_sort.json` records every old and new path.
+- **Without a chapter:** the 22 MT3184 differential-geometry prerequisites (vector fields, flows, rank theorem, submanifolds, Baire) and the 4 Landscapes field-trip safety notes link to their course map. A GT11 on Lie groups would absorb the former (GT10 §6 is the only place MT3184 is treated now).
+
 ### Scope labels inside a note (v2)
 Three layers, so that you always know *what is in the syllabus and what is extra, for this chapter and for this paragraph*:
 

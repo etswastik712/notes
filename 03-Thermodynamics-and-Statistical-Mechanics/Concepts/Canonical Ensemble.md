@@ -33,3 +33,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Parti
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Derivation from a reservoir, $Z$ as a generating function of all energy cumulants, equivalence of ensembles, $F[q]-F=k_BT\,D(q\|p)$, and the exact Gamma law of the ideal-gas energy: [[SM03 The Canonical Ensemble]]; see [[Boltzmann Distribution]] and [[Equivalence of Ensembles]].

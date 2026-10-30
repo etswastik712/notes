@@ -33,3 +33,6 @@ Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Stati
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Derived from the volume of a $3N$-ball with the exact identity $\ln\Sigma=S_{ST}/k_B-\ln(\pi\sqrt6N)$ in [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §6, and again from $Z=(V/\lambda^3)^N/N!$ in [[SM03 The Canonical Ensemble]] §4.1 ([[Thermal Wavelength]], [[Gibbs Paradox]]).
