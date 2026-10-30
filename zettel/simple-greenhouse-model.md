@@ -22,6 +22,7 @@ $$T_s = 2^{1/4} T_e$$
 Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/stefan-boltzmann-law]] — The greenhouse model's energy balance is written as sigma T_a^4 equals a fraction of the absorbed solar flux, which is the Stefan-Boltzmann emission relation applied to the atmospheric layer
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
 <!-- /kurooto:seen -->
