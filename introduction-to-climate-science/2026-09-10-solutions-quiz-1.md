@@ -126,3 +126,8 @@ As some of you were trying to visualize that I am sending this to help you under
 ## Concepts in Solutions_Quiz1
 [[zettel/atmospheric-scale-height]]
 <!-- /kurooto:material34a6e136 -->
+
+<!-- kurooto:material84c52cf5 -->
+## Concepts in announcement
+(none new)
+<!-- /kurooto:material84c52cf5 -->
