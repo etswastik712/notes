@@ -17,6 +17,7 @@ Persistent low-level surface winds blowing from east to west between roughly thi
 Source: Basics of atmosphere
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/coriolis-deflection-on-planetary-circulation]] — The Trade Winds note says the westward direction comes from equatorward flow deflected by rotation, and the Coriolis note gives that deflection mechanism
 ## Seen in
 - [[maps/courses/introduction-to-climate-science|Basics of atmosphere]]
 <!-- /kurooto:seen -->
