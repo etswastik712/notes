@@ -17,6 +17,7 @@ $$E[X^n] = \lambda E[(X + 1)^{n-1}]$$
 Source: Mid-semester solutions, pp. 1–3
 
 <!-- kurooto:seen -->
+- special-case-of:: [[zettel/raw-moment]] — The note gives a recurrence for the n-th moment of a Poisson variable, and the raw moment is the general quantity E[X^n] that this recurrence computes for the Poisson case
 ## Seen in
 - [[introduction-to-probability/2026-09-22-mid-semester-solutions|Mid-semester solutions]] pp. 1–3
 <!-- /kurooto:seen -->
