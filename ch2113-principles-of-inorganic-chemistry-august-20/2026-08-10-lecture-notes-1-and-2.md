@@ -53,3 +53,8 @@ Lewis Struture and VSEPR concepts (posted 2026-08-10)
 ## Concepts in Lecture 1a_Lewis_structures_2026
 [[zettel/lewis-theory-of-covalent-bonding]], [[zettel/octet-rule]], [[zettel/construction-of-lewis-structures]], [[zettel/resonance]], [[zettel/formal-charge]], [[zettel/oxidation-number]]
 <!-- /kurooto:material45b59d7f -->
+
+<!-- kurooto:materialf652ec1a -->
+## Concepts in Lecture notes_VSEPR_2026
+[[zettel/electron-pair-repulsion-hierarchy]], [[zettel/stereochemically-inert-lone-pair]]
+<!-- /kurooto:materialf652ec1a -->
