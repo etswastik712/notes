@@ -59,3 +59,8 @@ Hi, Find below the notes of lecture 5 : Atmosphere & Greenhouse gases. (Classroo
 - [[01-climate/concepts/beer-lambert-law-and-optical-depth]]: your concept note on Beer's law and optical depth.
 - [[01-climate/concepts/greenhouse-gases-and-absorption-bands]]: your concept note on absorption bands.
 - [[01-climate/concepts/atmospheric-window]]: your concept note on the 8–12 µm window.
+
+<!-- kurooto:materialb8c71803 -->
+## Concepts in Lecture 5: Atmosphere & Green house gases
+[[zettel/hydrostatic-balance]], [[zettel/atmospheric-scale-height]], [[zettel/vertical-pressure-gradient]], [[zettel/atmospheric-thermal-stratification]], [[zettel/homosphere-and-heterosphere]], [[zettel/atmospheric-gas-lifetime]], [[zettel/beer-s-law]], [[zettel/optical-depth]], [[zettel/radiative-extinction]], [[zettel/rayleigh-and-mie-scattering]], [[zettel/shortwave-and-longwave-radiative-boundary]], [[zettel/greenhouse-gas-absorption-mechanisms]], [[zettel/shortwave-radiation-partitioning]], [[zettel/atmospheric-window]]
+<!-- /kurooto:materialb8c71803 -->

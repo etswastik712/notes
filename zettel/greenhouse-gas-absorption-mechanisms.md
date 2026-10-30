@@ -1,6 +1,6 @@
 ---
 id: zettel/greenhouse-gas-absorption-mechanisms
-aliases: ["Greenhouse Gas Absorption Mechanisms", "molecular infrared absorption", "vibrational-rotational transitions"]
+aliases: ["Greenhouse Gas Absorption Mechanisms", "molecular infrared absorption", "vibrational-rotational transitions", "Greenhouse Gas Molecular Dipole Transitions", "Molecular Mechanics of Greenhouse Effect"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -18,4 +18,8 @@ Source: climate_intro_notes_L1_L6, pp. 43–52
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 43–52
+- [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases|Lecture 5: Atmosphere & Green house gases]] pp. 1–10
+
+### Added from class
+- Lecture 5: Atmosphere & Green house gases pp. 1–10: Specifies the precise spectroscopic transition regimes: rotational transitions at lambda > 12 micrometers (e.g. H2O), vibrational bending mode of CO2 at 15 micrometers, and vibrational-rotational modes of O3 at 9.6 micrometers.
 <!-- /kurooto:seen -->

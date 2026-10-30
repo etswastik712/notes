@@ -23,4 +23,19 @@ Source: climate_intro_notes_L1_L6, pp. 43–52
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 43–52
+- [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases|Lecture 5: Atmosphere & Green house gases]] pp. 1–10
+
+### Added from class
+- Lecture 5: Atmosphere & Green house gases pp. 1–10: Adds the derivation from a differential slab of thickness dz and area dA balancing weight dW = ρg dA dz.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Lecture 5: Atmosphere & Green house gases, pp. 1–10 | $dA$ | area of an air slab |
+| Lecture 5: Atmosphere & Green house gases, pp. 1–10 | $g$ | gravitational acceleration |
+| climate_intro_notes_L1_L6, pp. 43–52 | $dA$ | horizontal cross-sectional area of the air slab |
+| Lecture 5: Atmosphere & Green house gases, pp. 1–10 | $dz$ | thickness of an air slab |
+| climate_intro_notes_L1_L6, pp. 43–52 | $dz$ | thickness of the air slab |
+<!-- /kurooto:notation -->

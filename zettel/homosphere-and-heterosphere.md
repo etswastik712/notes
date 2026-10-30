@@ -1,0 +1,21 @@
+---
+id: zettel/homosphere-and-heterosphere
+aliases: ["Homosphere and Heterosphere", "Chemical Mixing Layers"]
+tags: [zettel, agent-written, introduction-to-climate-science]
+trust_tier: agent_written
+---
+
+# Homosphere and Heterosphere
+
+The chemical classification of atmospheric layers where turbulent mixing below ~100 km maintains uniform major gas ratios (homosphere), contrasted with the region above 100 km where molecular diffusion separates gases by molecular weight (heterosphere).
+
+## Links
+- used-in:: [[zettel/atmospheric-gas-lifetime]] — Uniform composition in the homosphere depends on whether gas lifetimes exceed the global turbulent mixing time
+
+---
+Source: Lecture 5: Atmosphere & Green house gases, pp. 1–10
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases|Lecture 5: Atmosphere & Green house gases]] pp. 1–10
+<!-- /kurooto:seen -->

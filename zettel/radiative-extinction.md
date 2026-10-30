@@ -19,4 +19,8 @@ Source: climate_intro_notes_L1_L6, pp. 43–52
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 43–52
+- [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases|Lecture 5: Atmosphere & Green house gases]] pp. 1–10
+
+### Added from class
+- Lecture 5: Atmosphere & Green house gases pp. 1–10: Formulates extinction via the spectral partition K_lambda(extinction) = K_lambda(scattering) + K_lambda(absorption) and connects it directly to the Rayleigh and Mie scattering regimes.
 <!-- /kurooto:seen -->

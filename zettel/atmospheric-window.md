@@ -1,6 +1,6 @@
 ---
 id: zettel/atmospheric-window
-aliases: ["Atmospheric Window", "infrared atmospheric window", "thermal window"]
+aliases: ["Atmospheric Window", "infrared atmospheric window", "thermal window", "infrared window"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -18,4 +18,8 @@ Source: climate_intro_notes_L1_L6, pp. 53–63
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 53–63
+- [[introduction-to-climate-science/2026-08-20-lecture-5-atmosphere-and-greenhouse-gases|Lecture 5: Atmosphere & Green house gases]] pp. 1–10
+
+### Added from class
+- Lecture 5: Atmosphere & Green house gases pp. 1–10: Highlights that trace gases (CH4, N2O, CFCs) have vibrational absorption modes precisely inside the 8–12 micrometer window, closing Earth's direct surface radiator vent.
 <!-- /kurooto:seen -->
