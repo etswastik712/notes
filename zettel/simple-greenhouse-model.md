@@ -1,6 +1,6 @@
 ---
 id: zettel/simple-greenhouse-model
-aliases: ["Simple Greenhouse Model", "single-layer opaque greenhouse model", "slab atmosphere model"]
+aliases: ["Simple Greenhouse Model", "single-layer opaque greenhouse model", "slab atmosphere model", "One-Layer Semi-Transparent Greenhouse Model", "1-layer semi-transparent greenhouse model", "single-layer semi-transparent atmosphere model", "semi-transparent greenhouse model"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -22,7 +22,10 @@ $$T_s = 2^{1/4} T_e$$
 Source: Radiative_balance_Marshall_and_Plumb, pp. 1–11
 
 <!-- kurooto:seen -->
-- used-in:: [[zettel/stefan-boltzmann-law]] — The greenhouse model's energy balance is written as sigma T_a^4 equals a fraction of the absorbed solar flux, which is the Stefan-Boltzmann emission relation applied to the atmospheric layer
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
+- [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 53–63
+
+### Added from class
+- climate_intro_notes_L1_L6 pp. 53–63: Generalises the opaque slab atmosphere (\epsilon = 1) to semi-transparent emissivity (0 < \epsilon < 1), deriving T_s = (2 / (2 - \epsilon))^{1/4} T_e and evaluating empirical planetary emissivities (e.g., \epsilon \approx 0.77 for Earth).
 <!-- /kurooto:seen -->
