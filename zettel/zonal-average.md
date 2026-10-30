@@ -17,6 +17,7 @@ $$\overline{X}(\phi, z) = \frac{1}{2\pi} \int_0^{2\pi} X(\lambda, \phi, z) \, d\
 Source: Meridional_circulation_Marshall_and_Plumb, pp. 1–4
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/atmospheric-angular-momentum-balance]] — The angular momentum balance note links to the zonal average note, and the zonal average is the averaging step that makes the poleward transport of westerly momentum between latitude bands well defined
 ## Seen in
 - [[introduction-to-climate-science/2026-10-14-study-material-10-meridional-circulation-and-angular-momentum-balance|Meridional_circulation_Marshall_and_Plumb]] pp. 1–4
 <!-- /kurooto:seen -->
