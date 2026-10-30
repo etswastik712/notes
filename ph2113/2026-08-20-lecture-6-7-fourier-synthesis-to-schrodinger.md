@@ -63,3 +63,8 @@ Then $\frac d{dt}\int|\psi|^2dx=-[j]_{-\infty}^{\infty}=0$ for a normalisable st
 - [[ph2113/2026-08-24-lecture-8-uncertainty-wavefunctions-schrodinger]]: next lecture; the same TDSE motivation plus acceptable wavefunctions
 - [[ph2113/2026-08-27-tutorial-solutions-wavefunctions-uncertainty-schrodinger]]: probability conservation (problem 4) and uncertainty estimates
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger]]: Fourier/Gaussian primer on the same transform pair
+
+<!-- kurooto:materialac3d64ba -->
+## Concepts in PH2113_Lecture6-7
+[[zettel/position-momentum-uncertainty-relation-from-fourier-transform]], [[zettel/hydrogen-ground-state-scale-from-uncertainty]], [[zettel/time-independent-schrodinger-equation]], [[zettel/schrodinger-equation-probability-conservation]]
+<!-- /kurooto:materialac3d64ba -->

@@ -1,6 +1,6 @@
 ---
 id: zettel/schrodinger-equation-probability-conservation
-aliases: ["Schrödinger Equation Probability Conservation", "unitarity of time evolution"]
+aliases: ["Schrödinger Equation Probability Conservation", "unitarity of time evolution", "Probability Continuity Equation in Wave Mechanics", "local probability conservation", "quantum probability current density"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -17,4 +17,8 @@ Source: PH2113_wavefunctions_potentials_schrodinger_Tutorial, pp. 1–4
 <!-- kurooto:seen -->
 ## Seen in
 - [[ph2113/2026-09-13-tutorial-wavefunctions-potentials-schrodinger|PH2113_wavefunctions_potentials_schrodinger_Tutorial]] pp. 1–4
+- [[ph2113/2026-08-20-lecture-6-7-fourier-synthesis-to-schrodinger|PH2113_Lecture6-7]] pp. 1–6
+
+### Added from class
+- PH2113_Lecture6-7 pp. 1–6: Provides the explicit differential form ∂P/∂t + ∂j/∂x = 0 and defines the exact probability current density formula j(x,t) alongside the integrated boundary-flux vanishing condition.
 <!-- /kurooto:seen -->
