@@ -1,0 +1,25 @@
+---
+id: zettel/product-manifold-tangent-space-isomorphism
+aliases: ["Product Manifold Tangent Space Isomorphism", "tangent space of product manifold", "T_(p,q)(M x N) isomorphism"]
+tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
+trust_tier: agent_written
+---
+
+# Product Manifold Tangent Space Isomorphism
+
+The tangent space of a smooth product manifold M x N at a point (p, q) is canonically isomorphic to the direct sum of the tangent spaces T_p M and T_q N via the differential of the canonical coordinate projections.
+
+$$\alpha : T_{(p,q)} (M \times N) \to T_p M \oplus T_q N$$
+
+$$\alpha(v) = (d(\pi_1)_{(p,q)}(v), d(\pi_2)_{(p,q)}(v))$$
+
+## Links
+- used-in:: [[zettel/tangent-bundle-as-a-smooth-manifold]] — The direct sum decomposition of tangent spaces of product charts provides local trivializations for tangent bundles
+
+---
+Source: HW2, pp. 1–1
+
+<!-- kurooto:seen -->
+## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-08-14-hw2|HW2]] pp. 1–1
+<!-- /kurooto:seen -->
