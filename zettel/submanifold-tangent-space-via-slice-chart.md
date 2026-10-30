@@ -1,0 +1,25 @@
+---
+id: zettel/submanifold-tangent-space-via-slice-chart
+aliases: ["Submanifold Tangent Space via Slice Chart", "Tangent space of a submanifold", "T_p S"]
+tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
+trust_tier: agent_written
+---
+
+# Submanifold Tangent Space via Slice Chart
+
+For a k-dimensional submanifold S of an n-dimensional manifold M, the inclusion map induces an injective differential di_p: T_p S -> T_p M. A tangent vector v in T_p M belongs to T_p S if and only if there is a smooth curve in S through p whose velocity is v, which can be verified in a slice chart.
+
+$$d i_p : T_p S \to T_p M$$
+
+$$v = \sum v^i \frac{\partial}{\partial x^i}\Big|_p$$
+
+## Links
+- needs:: [[zettel/immersed-submanifold]] — The slice chart definition of submanifolds provides the ambient coordinate context in which the inclusion differential is shown to be injective
+
+---
+Source: DG8, pp. 1–5
+
+<!-- kurooto:seen -->
+## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21|DG8]] pp. 1–5
+<!-- /kurooto:seen -->
