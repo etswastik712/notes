@@ -42,3 +42,8 @@ Dear everyone, we shall begin with the example on independent events that I ment
 ## Concepts in Class notes 12th August 2026
 [[zettel/addition-rule-for-two-events]], [[zettel/principle-of-inclusion-and-exclusion-for-probability]]
 <!-- /kurooto:material955c45e1 -->
+
+<!-- kurooto:material3f4f1a12 -->
+## Concepts in Class notes 12th August 2026
+[[zettel/addition-rule-for-two-events]]
+<!-- /kurooto:material3f4f1a12 -->
