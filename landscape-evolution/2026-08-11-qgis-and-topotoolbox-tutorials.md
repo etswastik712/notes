@@ -49,3 +49,8 @@ Student demos from the week-1 tutorials, plus the tutorial-prep posts of 4 and 5
 ## Related
 - [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain]]: the Bhima, Krishna and Godavari headwaters there are the kind of drainage you can extract from a DEM with `FLOWobj`/`STREAMobj`.
 - [[landscape-evolution/2026-08-14-project-groups-and-brief]]: the project is expected to use freely available data such as DEMs.
+
+<!-- kurooto:materialabd559df -->
+## Concepts in Topotoolbox_tut_shubhra
+[[zettel/digital-elevation-model]], [[zettel/gridobj]], [[zettel/inpaintnans]], [[zettel/flowobj]], [[zettel/streamobj]]
+<!-- /kurooto:materialabd559df -->
