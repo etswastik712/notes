@@ -1,6 +1,6 @@
 ---
 id: zettel/planck-function
-aliases: ["Planck Function", "spectral radiance", "Planck's law"]
+aliases: ["Planck Function", "spectral radiance", "Planck's law", "Planck's Law of Blackbody Radiation", "Planck radiation law", "Planck blackbody spectrum"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -22,6 +22,7 @@ Source: climate_intro_notes_L1_L6, pp. 17–24
 ## Seen in
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
+- [[introduction-to-climate-science/books/intro-clim|intro_clim]]
 - [[introduction-to-climate-science/2026-08-19-lecture-4-sensitivity-and-albedo-feedback|Lecture 3 Planetary Energy Balance]] pp. 1–9
 
 ### Added from class
@@ -33,10 +34,14 @@ Source: climate_intro_notes_L1_L6, pp. 17–24
 ## Notation
 | Source | Notation | What it stands for |
 |---|---|---|
+| intro_clim | $k$ | Boltzmann constant |
 | Lecture 3 Planetary Energy Balance, pp. 1–9 | $k_B$ | Boltzmann constant (1.38×10^-23 J/K) |
 | climate_intro_notes_L1_L6, pp. 17–24 | $k_B$ | Boltzmann's constant (1.38e-23 J/K) |
+| intro_clim | $h$ | Planck constant |
 | climate_intro_notes_L1_L6, pp. 17–24 | $h$ | Planck's constant (6.626e-34 J s) |
 | climate_intro_notes_L1_L6, pp. 25–33 | $I(\lambda, T)$ | spectral radiance |
+| intro_clim | $B_\lambda$ | spectral radiance |
 | Lecture 3 Planetary Energy Balance, pp. 1–9 | $I(\lambda, T)$ | spectral radiance in W m^-2 sr^-1 m^-1 |
+| intro_clim | $c$ | speed of light |
 | climate_intro_notes_L1_L6, pp. 17–24 | $c$ | Speed of light (2.998e8 m/s) |
 <!-- /kurooto:notation -->

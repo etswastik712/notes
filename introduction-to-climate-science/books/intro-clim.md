@@ -24,4 +24,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (10/32): (none new)
 - (11/32): (none new)
 - (12/32): (none new)
+- (13/32): [[zettel/planck-function|Planck Function]], [[zettel/wien-s-displacement-law|Wien's Displacement Law]], [[zettel/rayleigh-jeans-law|Rayleigh-Jeans Law]], [[zettel/wien-s-displacement-law|Wien's Displacement Law]], [[zettel/planetary-radiative-equilibrium|Planetary Radiative Equilibrium]]
 <!-- /kurooto:source -->

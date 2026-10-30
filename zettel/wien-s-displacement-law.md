@@ -1,6 +1,6 @@
 ---
 id: zettel/wien-s-displacement-law
-aliases: ["Wien's Displacement Law", "Wien's law"]
+aliases: ["Wien's Displacement Law", "Wien's law", "Wien's Approximation", "Wien approximation", "Wien displacement law"]
 tags: [zettel, agent-written, introduction-to-climate-science]
 trust_tier: agent_written
 ---
@@ -23,7 +23,17 @@ Source: climate_intro_notes_L1_L6, pp. 17–24
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 25–33
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 43–52
+- [[introduction-to-climate-science/books/intro-clim|intro_clim]]
 
 ### Added from class
 - climate_intro_notes_L1_L6 pp. 25–33: Contrasts solar shortwave peak emission in the visible spectrum against terrestrial longwave emission peaking in the thermal infrared near 10 μm.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| climate_intro_notes_L1_L6, pp. 17–24 | $T$ | Absolute temperature in Kelvins |
+| climate_intro_notes_L1_L6, pp. 17–24 | $\lambda_{\max}$ | Wavelength of maximum radiation in micrometers |
+| intro_clim | $\lambda_{\max}$ | wavelength of maximum spectral radiance |
+<!-- /kurooto:notation -->
