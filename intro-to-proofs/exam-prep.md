@@ -25,6 +25,7 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - [[intro-to-proofs/2026-10-19-solutions-assignment-7]]: instructor solutions for Assignment 7 Q4 (subsets of countable sets) and Q5 (bijections on $A \times B$)
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20]]: Lectures 17 to 20: countability of $\mathbb{Q}$, subset of countable is countable, Cantor's diagonal argument for uncountability of $(0, 1)$ and $\mathbb{R}$, continuum hypothesis
 - [[intro-to-proofs/2026-10-22-assignment-8]]: Assignment 8: countability of unions, irrational numbers $\mathbb{R} \setminus \mathbb{Q}$, $\{0, 1\}^\mathbb{N}$, Cantor's theorem $|A| < |\mathcal{P}(A)|$, interval bijections $[0, 1) \sim (0, 1) \sim \mathbb{R}$, induction (PMI) identities and scope
+- [[intro-to-proofs/2026-10-30-assignment-9]]: Assignment 9: strong induction, Well-Ordering Principle, equivalence of PMI/strong induction/WOP, WOP proofs (prime divisor, $\sqrt3$ irrational), $n^2+n$ even by WOP vs induction
 
 ## Must know
 - Logical equivalence $\sim$ is not equality $=$; De Morgan: $\lnot(P\lor Q)\sim\lnot P\land\lnot Q$ and $\lnot(P\land Q)\sim\lnot P\lor\lnot Q$; $(P\Rightarrow Q)\sim(\lnot P\lor Q)$; $P\lor Q\sim\lnot(\lnot P\land\lnot Q)$ (Classroom: Assignment 1 Q3).
@@ -60,6 +61,10 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Cantor's Theorem: for every set $A$, $|A| < |\mathcal{P}(A)|$; no function $f: A \to \mathcal{P}(A)$ is surjective, because $B = \{a \in A : a \notin f(a)\} \notin \operatorname{Im}(f)$ (Classroom: Lecture 20, Assignment 8 Q4).
 - Continuum Hypothesis (CH): there is no set $X$ with $\aleph_0 < |X| < \mathfrak{c}$; independent of ZFC (Gödel 1940, Cohen 1963) (Classroom: Lecture 20).
 - Inductive sets and PMI: $S \subseteq \mathbb{N}$ is inductive if $k \in S \implies k+1 \in S$. If $1 \in S$ and $S$ is inductive, $S = \mathbb{N}$. Every induction proof requires: (1) predicate $P(n)$, (2) base case, (3) inductive hypothesis $P(k) \implies P(k+1)$, (4) conclusion by PMI (Classroom: Assignment 8).
+- Strong induction: if (i) $P(1)$ is true and (ii) for every $k\in\mathbb N$, $P(1),\dots,P(k)$ all true implies $P(k+1)$ true, then $P(n)$ holds for every $n\in\mathbb N$ (Classroom: Assignment 9).
+- Least element: $m\in S$ is a least element of $S\subseteq\mathbb N$ if $m\le s$ for all $s\in S$; it is unique, written $m=\min S$. Well-Ordering Principle (WOP): every nonempty subset of $\mathbb N$ has a least element; it also holds for $\mathbb N\cup\{0\}$ and $\{n\in\mathbb Z:n\ge m\}$ (Classroom: Assignment 9).
+- PMI, strong induction and WOP are equivalent statements about $\mathbb N$ (Classroom: Assignment 9).
+- WOP proof template: let $S$ be the set of counterexamples, suppose $S\ne\emptyset$, take $m=\min S$ and produce a counterexample smaller than $m$; always say which set the least element is taken from and why it is nonempty (Classroom: Assignment 9).
 
 ## Typical questions
 - Build truth tables (up to three variables), verify equivalences such as De Morgan, classify as tautology/contradiction/contingency: [[intro-to-proofs/2026-08-06-assignment-1]] Q1-Q5.
@@ -85,11 +90,17 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Construct bijections between intervals with differing boundary points ($[0, 1) \sim (0, 1) \sim [0, 1] \sim \mathbb{R}$): [[intro-to-proofs/2026-10-22-assignment-8]] Q5, [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20]].
 - Mathematical induction proofs: summations, factorials, divisibility ($6 \mid n^3 + 5n$), and inequalities ($2^n > n^2$ for $n \ge 5$): [[intro-to-proofs/2026-10-22-assignment-8]] Q6.
 - Conceptual analysis of PMI: explaining why inductive step without base case is insufficient, and why PMI cannot prove statements on $\mathbb{Q}$: [[intro-to-proofs/2026-10-22-assignment-8]] Q7.
+- Strong induction on recurrences (bound a sequence, guess and prove a closed form) and on representability ($n=3x+5y$ for $n\ge8$, how many base cases, why $n=7$ fails): [[intro-to-proofs/2026-10-30-assignment-9]] Q1.
+- Prove WOP implies strong induction via $\min$ of the set of failures: [[intro-to-proofs/2026-10-30-assignment-9]] Q2.
+- WOP proofs: every $n\ge2$ has a prime divisor, nonempty subsets of $\mathbb Z$ bounded below have a least element, no rational has square 3: [[intro-to-proofs/2026-10-30-assignment-9]] Q3.
+- Prove $n^2+n$ is even by WOP and by ordinary induction, and compare the two: [[intro-to-proofs/2026-10-30-assignment-9]] Q4.
 
 ## Gaps
 - Assignments 3, 5, and 6: files could not be downloaded, so their problem statements are not in the notes.
 - Assignment 7: Questions 1 to 3 are not in the notes (only solutions for Questions 4 and 5 were posted).
-- No due dates were given in Classroom for Assignments 1, 2, 4, 5, 6, 7 and 8, and no end-sem or future quiz dates have been announced.
-- Assignments 1 and 2 are filed as problem lists only; no solutions were posted, so worked answers are not in the notes.
-- The syllabus for the end-sem has not been announced; presumably it covers material after the mid-sem (functions, cardinality, induction) but this is not confirmed.
+- Assignment 9 Q1(a): the PDF text is garbled ($a_1$ and the bound are not legible); check the original.
+- No due dates were given in Classroom for Assignments 1, 2, 4, 5, 6, 7, 8 and 9, and no end-sem or future quiz dates have been announced.
+- Assignments 1, 2 and 9 are filed as problem lists only; no solutions were posted, so worked answers are not in the notes.
+- The syllabus for the end-sem has not been announced; presumably it covers material after the mid-sem (functions, cardinality, induction, WOP) but this is not confirmed.
+- Their own chapters on this material ([[11-Proofs-Analysis-Topology/PA08 Mathematical Induction]], [[11-Proofs-Analysis-Topology/PA09 Strong Induction and Recursion]], [[11-Proofs-Analysis-Topology/PA10 Well-Ordering and Well-Ordered Pairs]]) are not yet cross-checked with the class notation.
 <!-- /kurooto:exam-prep -->
