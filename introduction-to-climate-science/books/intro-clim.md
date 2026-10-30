@@ -37,4 +37,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (23/32): (none new)
 - (24/32): [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]], [[zettel/planetary-albedo-and-distance-scaling|Planetary Albedo and Distance Scaling]]
 - (25/32): (none new)
+- (26/32): (none new)
 <!-- /kurooto:source -->
