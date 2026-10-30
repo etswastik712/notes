@@ -1,6 +1,6 @@
 ---
 id: zettel/double-slit-interference-from-state-superposition
-aliases: ["Double-Slit Interference from State Superposition", "quantum double-slit interference", "relative phase interference"]
+aliases: ["Double-Slit Interference from State Superposition", "quantum double-slit interference", "relative phase interference", "amplitude superposition interference"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -23,5 +23,9 @@ Source: PH2113_tutorial_solutions, pp. 1–5
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-08-13-problem-set-1-solutions|PH2113_Problem_Set_1_Solutions (1)]] pp. 1–3
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty|PH2113_tutorial_solutions]] pp. 1–5
+
+### Added from class
+- PH2113_Problem_Set_1_Solutions (1) pp. 1–3: Quantifies probability bounds (0 <= P <= 0.80) for equal real amplitudes, demonstrates exact destructive cancellation at phase phi = pi, and proves global particle conservation (NAB = NA + NB) via the spatial integration of the cross-term.
 <!-- /kurooto:seen -->

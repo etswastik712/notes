@@ -36,3 +36,8 @@ Worked results from the posted solutions (Classroom: PH2113_Problem_Set_1_Soluti
 - [[ph2113/2026-08-11-problem-set-1]]: the problem statements
 - [[ph2113/2026-08-06-lecture-3-compton-scattering]]: shift law and Thomson limit used in Q3
 - [[ph2113/2026-09-24-midsem-solutions]]: later de Broglie and normalisation questions
+
+<!-- kurooto:material1d8e3e82 -->
+## Concepts in PH2113_Problem_Set_1_Solutions (1)
+[[zettel/double-slit-interference-from-state-superposition]], [[zettel/macroscopic-classicality-criterion-via-de-broglie-wavelength]], [[zettel/ensemble-interpretation-of-the-wavefunction]]
+<!-- /kurooto:material1d8e3e82 -->
