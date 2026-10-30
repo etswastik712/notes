@@ -1,0 +1,21 @@
+---
+id: zettel/oxidation-number
+aliases: ["Oxidation Number", "Oxidation state", "Formal oxidation state"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Oxidation Number
+
+An electron-accounting parameter derived by exaggerating the ionic character of chemical bonds, assigning all bonding electron pairs completely to the more electronegative bonding partner. Under this formalism, the more electropositive element bears a net positive charge equal to its valency.
+
+## Links
+- contrasts-with:: [[zettel/formal-charge]] — Oxidation state completely polarizes electron pairs toward the more electronegative atom, whereas formal charge assumes equal sharing across all bonds
+
+---
+Source: Lecture 1a_Lewis_structures_2026, pp. 1–9
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2|Lecture 1a_Lewis_structures_2026]] pp. 1–9
+<!-- /kurooto:seen -->

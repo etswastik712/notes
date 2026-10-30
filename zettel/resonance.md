@@ -1,0 +1,22 @@
+---
+id: zettel/resonance
+aliases: ["Resonance", "Resonance hybrid", "Resonance structures"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Resonance
+
+A framework addressing the inadequacy of a single Lewis structure by averaging bond characteristics across multiple contributing canonical forms. The true resonance hybrid structure possesses an energy lower than that of any individual contributing Lewis representation.
+
+## Links
+- needs:: [[zettel/construction-of-lewis-structures]] — Resonance requires generating multiple valid individual Lewis structures to average bond characteristics over the molecule
+- used-in:: [[zettel/formal-charge]] — Formal charges are calculated on competing resonance contributors to establish which form contributes predominantly to the hybrid
+
+---
+Source: Lecture 1a_Lewis_structures_2026, pp. 1–9
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2|Lecture 1a_Lewis_structures_2026]] pp. 1–9
+<!-- /kurooto:seen -->

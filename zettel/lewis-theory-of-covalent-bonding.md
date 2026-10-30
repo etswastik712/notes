@@ -1,0 +1,21 @@
+---
+id: zettel/lewis-theory-of-covalent-bonding
+aliases: ["Lewis Theory of Covalent Bonding", "Lewis Theory", "Lewis model of bonding"]
+tags: [zettel, agent-written, ch2113-principles-of-inorganic-chemistry-august-20]
+trust_tier: agent_written
+---
+
+# Lewis Theory of Covalent Bonding
+
+A qualitative pictorial model that describes covalent chemical bonding primarily through the sharing of electron pairs between adjacent atoms. Unshared valence electron pairs reside as non-bonding lone pairs that govern molecular geometry and chemical reactivity.
+
+## Links
+- contrasts-with:: [[zettel/valence-bond-theory]] — Lewis theory is a qualitative pictorial description of pair-sharing, whereas Valence Bond Theory is a semi-quantitative quantum mechanical treatment using atomic orbital wavefunctions
+
+---
+Source: Lecture 1a_Lewis_structures_2026, pp. 1–9
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2|Lecture 1a_Lewis_structures_2026]] pp. 1–9
+<!-- /kurooto:seen -->
