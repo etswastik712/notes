@@ -41,3 +41,8 @@ Coursework sheet on strong induction and the Well-Ordering Principle (Classroom 
 - [[intro-to-proofs/2026-10-19-solutions-assignment-7]]: Q4 there uses induction and a WOP minimum extraction
 - [[11-Proofs-Analysis-Topology/PA09 Strong Induction and Recursion]]: their chapter on strong induction
 - [[11-Proofs-Analysis-Topology/PA10 Well-Ordering and Well-Ordered Pairs]]: their chapter on WOP
+
+<!-- kurooto:materialf2fe7a14 -->
+## Concepts in Assignment-9
+[[zettel/principle-of-strong-induction]], [[zettel/well-ordering-principle]], [[zettel/method-of-minimal-counterexample]]
+<!-- /kurooto:materialf2fe7a14 -->
