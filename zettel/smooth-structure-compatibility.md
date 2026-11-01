@@ -1,0 +1,23 @@
+---
+id: zettel/smooth-structure-compatibility
+aliases: ["Smooth Structure Compatibility", "atlas compatibility", "equivalent atlases"]
+tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
+trust_tier: agent_written
+---
+
+# Smooth Structure Compatibility
+
+The condition determining when two smooth atlases define the same differential topology on a manifold. Two atlases induce identical smooth structures if and only if their union is also a valid smooth atlas.
+
+$$\mathcal{A}_1 \cup \mathcal{A}_2$$
+
+## Links
+- needs:: [[zettel/maximal-smooth-atlas]] — A smooth structure is formalized as a maximal smooth atlas containing the compatible atlases
+
+---
+Source: HW1, pp. 1–1
+
+<!-- kurooto:seen -->
+## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1|HW1]] pp. 1–1
+<!-- /kurooto:seen -->
