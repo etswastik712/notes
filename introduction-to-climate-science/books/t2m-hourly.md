@@ -72,4 +72,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (58/626): (none new)
 - (59/626): (none new)
 - (60/626): (none new)
+- (61/626): (none new)
 <!-- /kurooto:source -->
