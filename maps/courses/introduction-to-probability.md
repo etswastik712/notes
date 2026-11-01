@@ -106,3 +106,4 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-08-20: One more problem (dice, 5 before 7) added to the suggested list for 21 August, because there were few examples on independence. See [[introduction-to-probability/2026-08-19-practice-problems-21st-august-2026]]. (Classroom)
 - 2026-10-29: HW4 posted ("Please attend the tutorial sincerely"). See [[introduction-to-probability/2026-10-29-hw4]]. (Classroom)
 - 2026-10-30: Remedial class this week on Sunday (2026-11-01), starting 10:00 AM, Madhava Hall, 3rd floor, Main Building. (Classroom)
+- 2026-11-13: Probability quiz (MT2113) at 12:00 clashes with other quizzes that day; batch asked to move the Thermodynamics quiz (mail of 2026-10-31).

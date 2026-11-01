@@ -38,6 +38,7 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - [[introduction-to-climate-science/2026-10-22-study-material-13-geostrophic-motion]] Study material 13: Geostrophic motion (Marshall and Plumb Ch 7) (2026-10-22)
 - [[introduction-to-climate-science/2026-10-22-advanced-reading-monsoon-dynamical-theory-webster]] Advanced reading: Monsoon dynamical theory, Webster and Fasullo (2026-10-22)
 - [[introduction-to-climate-science/2026-10-30-tutorial-daisyworld-land-and-ocean]] Tutorial: Daisyworld, land and ocean (2026-10-30)
+- [[introduction-to-climate-science/2026-10-31-tutorial-ceres-earths-energy-budget]] Tutorial: CERES, Earth's energy budget (self-study) (2026-10-31)
 
 ## Tasks
 
@@ -81,3 +82,4 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-10-28: Talk by Prof. Suhas on climate modelling, LHC 103, reminder sent at 17:56 (IPLUG Club)
 - 2026-10-29: Mid-sem answer sheets shown at NLH from 11:00, in two batches to reduce crowding: 11:00–11:30 for roll numbers 20251001 to 20251215, 11:30–12:00 for all other roll numbers. (Classroom)
 - 2026-10-30: Tutorial on Daisyworld (land and ocean), held in NLH; bring a phone or laptop to run the web app. Handout shared. See [[introduction-to-climate-science/2026-10-30-tutorial-daisyworld-land-and-ocean]]. (Classroom)
+- 2026-10-31: Second ocean-module tutorial and handout (CERES data on Earth's energy budget, CSV download) posted on the course website; purely self-study, no TA sessions. See [[introduction-to-climate-science/2026-10-31-tutorial-ceres-earths-energy-budget]]. (Classroom)

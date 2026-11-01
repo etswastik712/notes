@@ -40,6 +40,7 @@ Not announced yet. Quiz 2 was held on Friday 23 October 2026 at 10:00 (seating b
 - [[introduction-to-climate-science/2026-10-22-study-material-13-geostrophic-motion]]: Marshall & Plumb Ch 7: Rossby number, geostrophic balance and wind, Buys-Ballot's law, non-divergence, geostrophic wind in pressure coordinates ($\mathbf u_g=\frac gf\hat{\mathbf z}_p\times\nabla_pz$), worked 500 mb estimates.
 - [[introduction-to-climate-science/2026-10-22-advanced-reading-monsoon-dynamical-theory-webster]]: advanced reading (Webster & Fasullo): land–ocean heat capacity, mixing and storage of ocean heat, reversal of pressure gradient with height and the onset threshold, moist processes (first third read).
 - [[introduction-to-climate-science/2026-10-30-tutorial-daisyworld-land-and-ocean]]: Daisyworld with land and ocean (handout and web app): albedo feedback regulation by black and white daisies, patch temperatures, ocean darkness and leverage ($A=f\,A_{\text{land}}+(1-f)\,0.1$), surviving vs regulating, hysteresis (first half of the handout read).
+- [[introduction-to-climate-science/2026-10-31-tutorial-ceres-earths-energy-budget]]: self-study ocean-module tutorial on CERES data of Earth's energy budget (where Earth gains or loses energy, effect of clouds, atmosphere and El Niño; CSV download); handout not read.
 
 ## Must know
 - **Planetary boundaries:** nine boundaries define a "safe operating space"; 6 of 9 are transgressed (climate change, biosphere integrity, land-system change, freshwater change, biogeochemical flows, novel entities); ocean acidification, aerosol loading (breached regionally) and stratospheric ozone are within limits. Climate boundaries: CO$_2$ 350 ppm (now >417 ppm), radiative forcing 1.0 W m$^{-2}$ (now ~2.91 W m$^{-2}$); HANPP <10 % (now ~30 %) (Classroom: Lecture 1 notes, after Richardson et al. 2023).
@@ -188,3 +189,4 @@ Not announced yet. Quiz 2 was held on Friday 23 October 2026 at 10:00 (seating b
 - The Webster & Fasullo monsoon monograph (advanced reading) was read only through its first third (~35,000 of ~97,000 characters); the remaining moist-process transitions, ocean transport and regional effects are unfiled. It may not be examined.
 - The Quiz 2 room list (Room_arrangement.pdf) was not filed because it contains classmates' names and roll numbers.
 <!-- /kurooto:exam-prep -->
+- The CERES tutorial (posted 2026-10-31, self-study, no TA sessions) is filed from its landing page only: the handout PDF and data tool were not reachable, so its exercises are unknown. Whether it is examined is not stated.
