@@ -176,6 +176,17 @@ PAIRS = [
      "the Maxwell speed density $ax^2e^{-bx^2}$ is the 3-D relative of the Rayleigh density $xe^{-x^2/2\\sigma^2}$ of the 2-D speed of Gaussian components; both normalise by $\\int x^ke^{-x^2}\\mathrm dx$ (Quiz 1, Q3)"),
     ("Fibonacci Numbers", "Leslie Matrix",
      "Fibonacci's rabbits are a two-age-class Leslie model: $N_{t+2}=N_{t+1}+N_t$ is the matrix $\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix}$ whose dominant eigenvalue is the golden ratio $\\varphi$, the asymptotic growth factor"),
+    # ---- Statistical mechanics (SM01-SM07) added 2026-11-02
+    ("Fermi-Dirac Distribution", "Logistic Distribution",
+     "the Fermi function $1/(e^{x}+1)$ is the logistic function $\\sigma(-x)$, the CDF of the logistic distribution: the same sigmoid describes the occupation of a fermion level, the polarisation $\\tfrac12(1+\\tanh)$ of a spin-1/2 paramagnet and a logistic response curve"),
+    ("Fermi-Dirac Distribution", "Logistic Growth",
+     "the solution of logistic growth, $N(t)=K/(1+e^{-r(t-t_0)})$, is a Fermi function of time: carrying capacity plays the role of the single available state and $r$ of the inverse temperature"),
+    ("Relative Entropy", "Akaike Information Criterion",
+     "AIC estimates the expected Kullback-Leibler divergence $D(p_{\\rm true}\\|p_{\\rm model})$ up to a constant; the same functional is the free-energy excess $F[q]-F=k_BT\\,D(q\\|p)$ of a trial distribution in statistical mechanics"),
+    ("Entropy of Radiation", "Effective Emission Temperature",
+     "the effective emission temperature $T_e=255$ K fixes the entropy flux $\\tfrac43J/T_e$ carried by the Earth's infrared emission, 22.7 times the entropy flux $\\tfrac43J/T_\\odot$ of the absorbed sunlight"),
+    ("Viscosity of a Gas", "Péclet Number",
+     "the kinematic viscosity $\\nu=\\eta/\\rho$ computed from kinetic theory is the diffusivity of momentum, so the Reynolds number $UL/\\nu$ is a Péclet number for momentum transport and the Prandtl number $\\nu/D_T$ compares the two diffusivities"),
 ]
 
 

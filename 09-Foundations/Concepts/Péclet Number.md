@@ -35,3 +35,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 - [[Thermochronology]] (Landscapes): rapid exhumation advects heat upward ($Pe\gtrsim1$)
 - [[LS24 Sediment Transport Mechanics]] (Landscapes): turbulent suspension is a diffusion-settling balance
 - [[Delta Front]] (Landscapes): the delta front $z=z_0e^{-u_0x/K}$ is diffusion in a frame moving at $u_0$; its length $K/u_0$ is where the Péclet number is 1.
+- [[Viscosity of a Gas]] (Thermodynamics): the kinematic viscosity $\nu=\eta/\rho$ computed from kinetic theory is the diffusivity of momentum, so the Reynolds number $UL/\nu$ is a Péclet number for momentum transport and the Prandtl number $\nu/D_T$ compares the two diffusivities.

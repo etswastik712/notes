@@ -27,3 +27,6 @@ Used in: [[SM03 The Canonical Ensemble]]. Related: [[Schottky Anomaly]] · [[Adi
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Magnetic thermodynamics, the magnetocaloric effect and why classical orbital magnetism vanishes: [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §5 ([[Bohr-van Leeuwen Theorem]], [[Langevin Diamagnetism]]).

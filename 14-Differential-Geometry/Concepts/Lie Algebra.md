@@ -1,0 +1,31 @@
+---
+title: Lie Algebra
+aliases: ["Lie algebras", "Lie subalgebra", "Lie algebra homomorphism", "abelian Lie algebra", "gl(n)"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Lie Algebra
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG17 via [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|Sep 7–12 note]]; HW7 Q1.
+
+> [!intuition] In one picture
+> A vector space with a commutator-like product: the infinitesimal multiplication table of a Lie group.
+
+> [!key] Definition
+> A real vector space $\mathfrak g$ with a bilinear, **antisymmetric** bracket satisfying the **Jacobi identity** ([[Jacobi Identity]]). A subalgebra is a bracket-closed subspace; a homomorphism is a linear map with $A[X,Y]=[AX,AY]$. Examples: $\mathfrak X(M)$, $\mathfrak{gl}(n)$ with $AB-BA$, $(\mathbb R^3,\times)$, any abelian $\mathbb R^n$.
+
+Dimension 1: abelian only; dimension 2: abelian $\mathbb R^2$ or $[f_1,f_2]=f_2$ (the algebra of $\mathrm{Aff}(1)$) (HW7 Q1). Ado's theorem: every finite-dimensional real Lie algebra embeds in some $\mathfrak{gl}(n,\mathbb R)$. The Lie algebra of a Lie group: [[Lie Algebra of a Lie Group]].
+
+Used in: [[DM11 The Lie Algebra of a Lie Group]], [[DM10 Vector Fields and Lie Brackets]]. Related: [[Lie Algebra of a Lie Group]] · [[Jacobi Identity]] · [[Lie Bracket of Vector Fields]] · [[Lie Algebra Representation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

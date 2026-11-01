@@ -1,0 +1,31 @@
+---
+title: Equivariant Map
+aliases: ["equivariant", "G-equivariant map", "intertwining map"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Equivariant Map
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG15 via [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|Sep 7–12 note]].
+
+> [!intuition] In one picture
+> A map that commutes with the group action: moving first and then mapping equals mapping first and then moving.
+
+> [!key] Definition
+> $F:M\to N$ smooth with $F(g\cdot p)=g\cdot F(p)$, i.e. $F\circ\theta_g=\varphi_g\circ F$. Examples: a homomorphism $F:G\to H$ (left multiplication on $G$, $g\cdot h=F(g)h$ on $H$), every orbit map, the radial projection $\mathbb R^n\setminus\{0\}\to S^{n-1}$ for $O(n)$.
+
+With a transitive action on the source, an equivariant map has constant rank ([[Equivariant Rank Theorem]]). On Lie algebras the analogue is the induced map $F_*$ ([[DM11 The Lie Algebra of a Lie Group]]).
+
+Used in: [[DM09 Group Actions and Semidirect Products]]. Related: [[Smooth Action]] · [[Equivariant Rank Theorem]] · [[Lie Group Homomorphism]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,32 @@
+---
+title: Escape Lemma
+aliases: ["Lemma 9.19", "escape to infinity in finite time"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Escape Lemma
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** HW8 Q3 via [[mt3184-differential-geometry-and-lie-groups/2026-10-16-hw8|HW8]].
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=235|Lee Lemma 9.19, p. 217]].
+
+> [!intuition] In one picture
+> A maximal integral curve that stops at a finite time must have run out of every compact set: it cannot be caught in a bounded region.
+
+> [!key] Definition
+> If $\gamma:J\to M$ is a maximal integral curve with $b=\sup J<\infty$ then for every $t_0\in J$ the set $\gamma([t_0,b))$ is **not** contained in any compact subset of $M$. (Otherwise a uniform time $\varepsilon$ on the compact set would extend $\gamma$ past $b$.)
+
+$x^2\partial_x$ from $x_0=2$: $x\to\infty$ as $t\to\tfrac12$. The same idea gives Thm 9.16: bounded support $\Rightarrow$ complete. Compare the ODE statement in [[PA14 ODE Existence Uniqueness and Smooth Dependence]].
+
+Used in: [[DM12 Integral Curves, Flows and Flowouts]]. Related: [[Complete Vector Field]] · [[Integral Curve]] · [[Flow of a Vector Field]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

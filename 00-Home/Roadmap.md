@@ -59,7 +59,7 @@ Course map: [[Ecology and Evolution - Course Map]].
 
 
 ### Phase 3b-II: Statistical mechanics (self-study, from the books; added 2026-10-30)
-Part II of the same subject: 31 chapters planned in five parts (foundations and ensembles; quantum statistics; interacting systems and phase transitions; non-equilibrium; applications), Kardar as the spine, Pathria and Beale and others for what Kardar's particle volume lacks. **SM01–SM04 done (draft; SM01–SM03 deepened and SM04 kinetic theory added 2026-10-30)**, awaiting review; SM05–SM07 close Part II-A. Plan and source map: [[Thermodynamics and Statistical Mechanics - Course Map]]; handoff: [[PROGRESS]].
+Part II of the same subject: 31 chapters planned in five parts (foundations and ensembles; quantum statistics; interacting systems and phase transitions; non-equilibrium; applications), Kardar as the spine, Pathria and Beale and others for what Kardar's particle volume lacks. **SM01–SM07 done (draft): Part II-A (foundations, ensembles, kinetic theory, grand canonical, entropy and information, equipartition and magnetism) is complete (2026-11-02)**, awaiting review; next: formula sheet and quiz prep, then Part II-B (quantum statistics, SM08–SM13). Plan and source map: [[Thermodynamics and Statistical Mechanics - Course Map]]; handoff: [[PROGRESS]].
 
 ## Phase 3c: Probability (MT2113)
 | Step | Work | Status |

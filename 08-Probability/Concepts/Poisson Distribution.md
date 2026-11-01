@@ -52,3 +52,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - Counting molecules in a sub-volume: $\sigma_N^2=\langle N\rangle$, relative fluctuation $1/\sqrt{nV}$ ($1.9\times10^{-4}$ for 1 µm³ of air): [[SM01 Probability Large Numbers and Information]] §3.
+- The number of molecules in an open region of an ideal gas is exactly Poisson (grand ensemble), and Langmuir sites are binomial: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] §4–§6.

@@ -1,0 +1,32 @@
+---
+title: Flow of a Vector Field
+aliases: ["flow", "maximal flow", "Fundamental Theorem on Flows", "Theorem 9.12", "infinitesimal generator", "flow domain", "one-parameter group of diffeomorphisms"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Flow of a Vector Field
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG21–DG22 via [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|Oct 5–9 note]].
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=230|Lee Thm 9.12, p. 212]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=233|Lee Prop. 9.13, p. 215]].
+
+> [!intuition] In one picture
+> Let every point move along its integral curve for time $t$: the result is a diffeomorphism $\theta_t$, and $t\mapsto\theta_t$ is a homomorphism from $(\mathbb R,+)$ into the diffeomorphism group.
+
+> [!key] Definition
+> Every $V$ has a unique smooth **maximal flow** $\theta:\mathcal D\to M$ ($\mathcal D$ open, $\mathcal D^{(p)}$ intervals): $\theta^{(p)}$ is the maximal integral curve from $p$; $\mathcal D^{(\theta(s,p))}=\mathcal D^{(p)}-s$; $\theta_t:M_t\to M_{-t}$ diffeo with $\theta_s\theta_t=\theta_{s+t}$. A global flow is a smooth $\mathbb R$-action ([[Smooth Action]]); its generator is $V_p=\partial_t\theta|_{t=0}$. Naturality: $X\sim_FY\Rightarrow\eta_t\circ F=F\circ\theta_t$.
+
+Flow of $y\partial_x+\partial_y$ maps the unit square to parallelograms of equal area. Irrational flow on $T^2$: flow of $\partial_x+\sqrt2\partial_y$ (dense orbits). Smoothness of $\theta$ is smooth dependence of ODE solutions. The derivative of $\theta_t$ along itself defines $\mathcal L_VW$ ([[DM13 Lie Derivatives and Commuting Vector Fields]]).
+
+Used in: [[DM12 Integral Curves, Flows and Flowouts]], [[DM13 Lie Derivatives and Commuting Vector Fields]], [[DM14 One-Parameter Subgroups and the Exponential Map]]. Related: [[Integral Curve]] · [[Complete Vector Field]] · [[Smooth Action]] · [[Vector Field]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -37,3 +37,6 @@ Connections: [[Bayes' Theorem]] (Akaike weights can be read as approximate poste
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Relative Entropy]] (Thermodynamics): AIC estimates the expected Kullback-Leibler divergence $D(p_{\rm true}\|p_{\rm model})$ up to a constant; the same functional is the free-energy excess $F[q]-F=k_BT\,D(q\|p)$ of a trial distribution in statistical mechanics.

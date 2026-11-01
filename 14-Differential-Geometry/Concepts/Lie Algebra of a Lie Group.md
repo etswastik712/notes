@@ -1,0 +1,31 @@
+---
+title: Lie Algebra of a Lie Group
+aliases: ["Lie(G)", "tangent space at the identity", "g = Lie(G)", "Lie algebra of G"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Lie Algebra of a Lie Group
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG17–DG19 via [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|Sep 7–12]] and [[mt3184-differential-geometry-and-lie-groups/2026-09-15-september-14-18|Sep 14–18]] notes.
+
+> [!intuition] In one picture
+> The group seen at the identity: $T_eG$ with the bracket of left-invariant fields.
+
+> [!key] Definition
+> $\mathrm{Lie}(G)=$ the left-invariant fields, a subalgebra of $\mathfrak X(G)$ (naturality of the bracket), identified with $T_eG$ by $\varepsilon$ so that $\dim\mathfrak g=\dim G$. $\mathrm{Lie}(GL(n,\mathbb R))=\mathfrak{gl}(n,\mathbb R)$ with $[A,B]=AB-BA$ (Prop 8.41).
+
+$\mathfrak{sl}(n)=\{\operatorname{tr}=0\}$, $\mathfrak{so}(n)=\{A+A^T=0\}$, $\mathfrak u(n)=\{A+A^*=0\}$, $\mathfrak{su}(n)=\mathfrak u(n)\cap\{\operatorname{tr}=0\}$ ([[Matrix Lie Algebras]]). $\mathfrak{so}(3)\cong\mathfrak{su}(2)\cong(\mathbb R^3,\times)$. Abelian group $\Rightarrow$ abelian algebra (HW6 Q6). The group is recovered from $\mathfrak g$ only for simply connected $G$ ([[DM15 Closed Subgroups and the Lie Correspondence]]).
+
+Used in: [[DM11 The Lie Algebra of a Lie Group]], [[DM14 One-Parameter Subgroups and the Exponential Map]], [[DM15 Closed Subgroups and the Lie Correspondence]]. Related: [[Lie Algebra]] · [[Left-Invariant Vector Field]] · [[Matrix Lie Algebras]] · [[Induced Lie Algebra Homomorphism]] · [[Lie Group]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

@@ -1,0 +1,32 @@
+---
+title: Equivariant Rank Theorem
+aliases: ["Theorem 7.25", "constant rank of equivariant maps"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Equivariant Rank Theorem
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG15 via [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|Sep 7–12 note]].
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=183|Lee Thm 7.25, p. 165]].
+
+> [!intuition] In one picture
+> If the group can carry any point to any other and the map respects the action, the map looks the same everywhere, so its rank is constant.
+
+> [!key] Definition
+> $F:M\to N$ equivariant for a **transitive** action on $M$ and any action on $N$ $\Rightarrow$ $F$ has constant rank. Surjective $\Rightarrow$ submersion, injective $\Rightarrow$ immersion, bijective $\Rightarrow$ diffeomorphism. Proof: $d(\varphi_g)\circ dF_p=dF_{g\cdot p}\circ d(\theta_g)_p$ with isomorphic vertical maps.
+
+Special case $M=G$: Theorem 7.5 (homomorphisms). Applied to orbit maps: stabilisers are embedded Lie subgroups, and $O(n)$, $U(n)$ get their dimensions from one rank computation. Used in [[Homogeneous Space]] (transitive $\Rightarrow$ surjective submersion).
+
+Used in: [[DM09 Group Actions and Semidirect Products]]. Related: [[Equivariant Map]] · [[Orbit Map and Stabiliser]] · [[Lie Group Homomorphism]] · [[Global Rank Theorem]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

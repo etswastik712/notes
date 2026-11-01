@@ -1,0 +1,32 @@
+---
+title: Flowout Theorem
+aliases: ["flowout", "Theorem 9.20", "flow out of a submanifold"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Flowout Theorem
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG22–DG23 via [[mt3184-differential-geometry-and-lie-groups/2026-10-16-october-12-16|Oct 12–16 note]]; HW8 Q4.
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=235|Lee Thm 9.20, p. 217]].
+
+> [!intuition] In one picture
+> Push a submanifold along a transverse vector field: the swept-out set is a submanifold one dimension higher.
+
+> [!key] Definition
+> $S$ embedded, $V$ nowhere tangent to $S$, $\Phi=\theta|_{\mathbb R\times S}$. (a) $\Phi$ is an immersion; (b) $\partial_t\sim_\Phi V$; (c) injective on $|t|<\delta(p)$ for a smooth $\delta>0$ (partition of unity), so $\Phi(\mathcal O_\delta)$ is an immersed $(\dim S+1)$-submanifold containing $S$, tangent to $V$; (d) codimension $1$: a diffeomorphism onto an open set. For compact $S$ a uniform $\varepsilon$ gives an embedding (HW8 Q4).
+
+Polar coordinates: $S$ = positive $x$-axis, $W=-y\partial_x+x\partial_y$, $\Phi(t,s)=(s\cos t,s\sin t)$ ($\det=-s$). Helicoid: $S$ = half-axis in $\mathbb R^3$, $V$ helical, $\Phi(t,s)=(s\cos t,s\sin t,t)$ (immersion with $\sigma_{\min}(d\Phi)=1$). Proves the canonical form near a regular point and underlies Frobenius ([[DM15 Closed Subgroups and the Lie Correspondence]]).
+
+Used in: [[DM12 Integral Curves, Flows and Flowouts]], [[DM15 Closed Subgroups and the Lie Correspondence]]. Related: [[Regular and Singular Points]] · [[Flow of a Vector Field]] · [[Immersion and Submersion]] · [[Embedded Submanifold]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

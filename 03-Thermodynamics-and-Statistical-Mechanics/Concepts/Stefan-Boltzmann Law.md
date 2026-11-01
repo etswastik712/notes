@@ -36,3 +36,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Across subjects
 - [[One-Layer Greenhouse Model]] (Climate): the model closes its energy balance with $\sigma T^4$ for the surface and for the single absorbing layer.
 - [[Effective Emission Temperature]] (Climate): $T_e=[(1-\alpha)S/4\sigma]^{1/4}$ is the Stefan-Boltzmann law inverted for the planet's absorbed flux.
+
+## Continued in Part II (added 2026-10-30)
+- Entropy flux $\tfrac43\sigma T^3$ of a blackbody surface and the Earth's entropy export (1.19 W m$^{-2}$K$^{-1}$): [[SM06 Entropy Information and the Arrow of Time]] §4.

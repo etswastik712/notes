@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]], [[TH
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- $\Phi=-k_BT\ln\mathcal Z=-PV$, number cumulants and equivalence with the canonical ensemble: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] ([[Grand Canonical Ensemble]]).

@@ -30,3 +30,6 @@ Used in: the saturated adiabatic lapse rate and the moist tropical troposphere (
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Equal chemical potential in coexisting phases and the grand-ensemble view of coexistence (bimodal $P(N)$, Maxwell construction): [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] §8.

@@ -29,3 +29,6 @@ Used in: [[SM01 Probability Large Numbers and Information]], [[SM03 The Canonica
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Akaike Information Criterion]] (Probability): AIC estimates the expected Kullback-Leibler divergence $D(p_{\rm true}\|p_{\rm model})$ up to a constant; the same functional is the free-energy excess $F[q]-F=k_BT\,D(q\|p)$ of a trial distribution in statistical mechanics.

@@ -36,3 +36,6 @@ Related zettel: [[zettel/planetary-emission-temperature|Planetary Emission Tempe
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Entropy of Radiation]] (Thermodynamics): the effective emission temperature $T_e=255$ K fixes the entropy flux $\tfrac43J/T_e$ carried by the Earth's infrared emission, 22.7 times the entropy flux $\tfrac43J/T_\odot$ of the absorbed sunlight.

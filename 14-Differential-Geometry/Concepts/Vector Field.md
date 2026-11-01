@@ -1,0 +1,32 @@
+---
+title: Vector Field
+aliases: ["smooth vector field", "vector fields", "derivation of C^infty(M)", "derivation of the algebra of smooth functions", "X(M)", "rough vector field"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Vector Field
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG8–DG10 via [[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21|Aug 17–21]] and [[mt3184-differential-geometry-and-lie-groups/2026-08-27-august-24-28|Aug 24–28]] notes; HW3 Q3, HW4 Q2.
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=198|Lee Prop. 8.14, p. 180]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=199|Lee Prop. 8.15, p. 181]].
+
+> [!intuition] In one picture
+> An arrow attached to every point of the manifold, varying smoothly: equivalently, a rule $f\mapsto Xf$ that differentiates functions.
+
+> [!key] Definition
+> A smooth section $X:M\to TM$ of $\pi:TM\to M$; in a chart $X=\sum X^i\partial/\partial x^i$ with $X^i$ smooth. A rough field is smooth iff $Xf\in C^\infty(M)$ for all $f\in C^\infty(M)$ (Prop 8.14). **Vector fields = derivations of $C^\infty(M)$** ($\mathbb R$-linear, $D(fg)=fDg+gDf$; Prop 8.15). $\mathfrak X(M)$ is a $C^\infty(M)$-module and, with the bracket, a Lie algebra.
+
+Examples: coordinate fields, Euler field $\sum x^i\partial_i$, rotation fields $x\partial_y-y\partial_x$, $\partial_\theta$ on $S^1$ and $T^n$; a vector $v\in T_pM$ extends to a global field (bump function, HW4 Q2). $|x|\partial_x$ is not smooth. The Hairy Ball Theorem forbids a non-vanishing field on $S^{2k}$ ([[Hairy Ball Theorem]]); Lie groups have global frames ([[DM11 The Lie Algebra of a Lie Group]]).
+
+Used in: [[DM10 Vector Fields and Lie Brackets]], [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Tangent Bundle]] · [[Local Frame]] · [[Lie Bracket of Vector Fields]] · [[F-Related Vector Fields]] · [[Tangent Vector]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

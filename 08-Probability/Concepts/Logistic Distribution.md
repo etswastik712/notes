@@ -33,3 +33,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Logistic Growth]] (Eco-Evo): the solution $N(t)=K/(1+e^{-r(t-t_0)})$ of logistic growth is $K$ times the cdf of a logistic distribution with location $t_0$ and scale $1/r$, so growth quantiles are logistic quantiles.
+- [[Fermi-Dirac Distribution]] (Thermodynamics): the Fermi function $1/(e^{x}+1)$ is the logistic function $\sigma(-x)$, the CDF of the logistic distribution: the same sigmoid describes the occupation of a fermion level, the polarisation $\tfrac12(1+\tanh)$ of a spin-1/2 paramagnet and a logistic response curve.

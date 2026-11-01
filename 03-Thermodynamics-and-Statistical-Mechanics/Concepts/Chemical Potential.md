@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Rela
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- $\mu=-T\partial_NS$ as the entropy price of a particle, the Gibbs factor, $\sum\nu_i\mu_i=0$ and Widom's insertion formula: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] ([[Fugacity]], [[Law of Mass Action]], [[Widom Insertion Method]]).

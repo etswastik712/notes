@@ -36,3 +36,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - Derived from the linearised Euler equations of kinetic theory, $c=\sqrt{5k_BT/3m}$ for a monatomic gas ($\gamma=\tfrac53$), with viscous and thermal damping at first order: [[SM04 Kinetic Theory and the Boltzmann Equation]] §9, §11 ([[Hydrodynamic Modes]]).
+- With temperature-dependent $\gamma$ (hot N$_2$: 1.304 at 2000 K): [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §2.

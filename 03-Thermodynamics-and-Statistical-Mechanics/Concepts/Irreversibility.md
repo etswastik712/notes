@@ -36,3 +36,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - A quantitative resolution of the reversibility and recurrence paradoxes with an exactly solvable model: [[Loschmidt and Zermelo Paradoxes]], [[Kac Ring]], [[SM04 Kinetic Theory and the Boltzmann Equation]] §6–§7.
+- The Past Hypothesis, Landauer erasure and Maxwell's demon: [[SM06 Entropy Information and the Arrow of Time]] §3, §7 ([[Past Hypothesis]], [[Maxwell's Demon]]).

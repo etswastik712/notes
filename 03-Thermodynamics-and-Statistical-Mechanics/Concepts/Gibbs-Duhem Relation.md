@@ -33,3 +33,6 @@ Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Rela
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Continued in Part II (added 2026-10-30)
+- Used to derive $\mathrm{Var}N=\langle N\rangle nk_BT\kappa_T$ from $(\partial n/\partial\mu)_T=n^2\kappa_T$: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] §3 ([[Number Fluctuations]]).

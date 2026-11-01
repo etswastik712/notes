@@ -39,3 +39,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - Microscopic definitions and numbers: [[SM01 Probability Large Numbers and Information]] §7, [[SM02 Phase Space Liouville and the Microcanonical Ensemble]], [[SM03 The Canonical Ensemble]]; see [[Shannon Entropy]] and [[Relative Entropy]].
+- Boltzmann, Gibbs, coarse-grained, von Neumann and Shannon entropies, Landauer and the arrow of time: [[SM06 Entropy Information and the Arrow of Time]].

@@ -37,3 +37,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Continued in Part II (added 2026-10-30)
 - Phase-space counting, the shell-width independence, the Gibbs paradox and Einstein solids: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]; Shannon's form $-\sum p\ln p$ and typical sequences: [[SM01 Probability Large Numbers and Information]] ([[Shannon Entropy]]).
 - The Boltzmann entropy $S_B=-k_B\int f(\ln h^3f-1)$ of a non-equilibrium gas and its increase (H-theorem), equal to Sackur–Tetrode at equilibrium: [[SM04 Kinetic Theory and the Boltzmann Equation]] §6 ([[H-Theorem]]).
+- Coarse-grained decomposition $S_{cg}=\langle S_B\rangle+H[p_M]$ and the five entropies: [[SM06 Entropy Information and the Arrow of Time]] §1 ([[Boltzmann Entropy]], [[Gibbs Entropy]]).

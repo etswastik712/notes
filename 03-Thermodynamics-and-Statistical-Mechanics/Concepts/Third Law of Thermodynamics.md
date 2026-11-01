@@ -36,3 +36,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Einstein Heat Capacity]] (Quantum Mechanics): the gapped oscillator spectrum makes $C_V\to0$ exponentially as $T\to0$, which is how quantum mechanics delivers the third law for solids.
+
+## Continued in Part II (added 2026-10-30)
+- Residual entropy of ice $R\ln\tfrac32$ and demagnetisation limits: [[Residual Entropy of Ice]], [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §5.2.

@@ -42,3 +42,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - In kinetic theory the three translational degrees of freedom give $\gamma=\tfrac53$ and $\kappa/(\eta c_v)=\tfrac52$; internal degrees of freedom modify it (modified Eucken): [[SM04 Kinetic Theory and the Boltzmann Equation]] §10.
+- Proved in general ($\langle x_i\partial_j\mathcal H\rangle=\delta_{ij}kT$), with heat capacities of gases tested on N$_2$ and the quantum rotor: [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §1–§2 ([[Generalised Equipartition Theorem]]).

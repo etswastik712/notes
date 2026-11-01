@@ -454,8 +454,455 @@ def dm09():
     law = E(th1 + th2, t1 + R(th1) @ t2)
     print("  E(2) = R^2 x| SO(2): matrix product vs (t1 + R(th1) t2, th1 + th2): max error %.1e" % np.abs(prod - law).max())
 
+
+# ------------------------------------------------------------------------------------------------------------------ DM10
+def dm10():
+    print("== DM10 Vector Fields and Lie Brackets")
+    x, y, z = sp.symbols("x y z", real=True)
+    u, v = sp.symbols("u v", positive=True)
+
+    def vf(comps, coords):
+        return sp.Matrix(comps)
+
+    def apply(X, f, coords):
+        return sum(X[i] * sp.diff(f, coords[i]) for i in range(len(coords)))
+
+    def bracket(X, Y, coords):
+        return sp.Matrix([sp.simplify(apply(X, Y[i], coords) - apply(Y, X[i], coords)) for i in range(len(coords))])
+
+    c3 = (x, y, z)
+    # 1. HW4 Q3: F(x,y) = (xy, y/x) on the open quadrant; X = x d_x + y d_y; Y = dF(X) o F^-1
+    c2 = (x, y)
+    Fm = sp.Matrix([x * y, y / x])
+    DF = Fm.jacobian(sp.Matrix(c2))
+    Xe = sp.Matrix([x, y])
+    Yxy = sp.simplify(DF * Xe)
+    inv = {x: sp.sqrt(u / v), y: sp.sqrt(u * v)}
+    Yuv = sp.simplify(Yxy.subs(inv, simultaneous=True))
+    print("  HW4 Q3: det DF = %s (nonzero on the quadrant); F^-1(u,v) = (sqrt(u/v), sqrt(uv)); dF(X) in (x,y): %s -> Y(u,v) = %s" % (sp.simplify(DF.det()), list(Yxy), list(Yuv)))
+    rr = np.random.default_rng(3)
+    err = 0.0
+    for _ in range(200):
+        a, b = rr.uniform(0.2, 3, 2)
+        q = np.array([a * b, b / a])
+        step = 1e-6
+        Fnum = lambda t: np.array([(a + t * a) * (b + t * b), (b + t * b) / (a + t * a)])     # curve through (a,b) with velocity X = (a, b)
+        d = (Fnum(step) - Fnum(-step)) / (2 * step)
+        err = max(err, np.abs(d - np.array([2 * q[0], 0.0])).max())
+    print("      finite-difference check of Y = (2u, 0) along the flow lines of X at 200 random points: max error %.1e" % err)
+    # 2. HW6 Q5
+    X5 = sp.Matrix([-y, x, 0])
+    Y5 = sp.Matrix([0, -z, y])
+    print("  HW6 Q5: [x d_y - y d_x, y d_z - z d_y] = %s  (i.e. x d_z - z d_x)" % list(bracket(X5, Y5, c3)))
+    # rotation generators and the sign
+    Lx, Ly, Lz = sp.Matrix([0, -z, y]), sp.Matrix([z, 0, -x]), sp.Matrix([-y, x, 0])
+    print("      [Lx, Ly] + Lz = %s ; [Ly, Lz] + Lx = %s ; [Lz, Lx] + Ly = %s  (vector-field bracket of rotation generators is MINUS the matrix commutator)"
+          % (list(bracket(Lx, Ly, c3) + Lz), list(bracket(Ly, Lz, c3) + Lx), list(bracket(Lz, Lx, c3) + Ly)))
+    # 3. Jacobi, product rule (Lee Prop 8.28)
+    A = sp.Matrix([x * y, z, x ** 2 - y])
+    B = sp.Matrix([sp.sin(x), y * z, 1 + x * z])
+    C = sp.Matrix([y, x * z, x * y * z])
+    jac = bracket(A, bracket(B, C, c3), c3) + bracket(B, bracket(C, A, c3), c3) + bracket(C, bracket(A, B, c3), c3)
+    print("  Jacobi identity for three polynomial/trigonometric fields on R^3: [A,[B,C]] + [B,[C,A]] + [C,[A,B]] = %s" % [sp.simplify(t) for t in jac])
+    f, g = x ** 2 * y + z, sp.exp(y) + x * z
+    lhs = bracket(f * A, g * B, c3)
+    rhs = f * g * bracket(A, B, c3) + apply(A, g, c3) * f * B - apply(B, f, c3) * g * A
+    print("      [fA, gB] - (fg [A,B] + f (A g) B - g (B f) A) = %s" % [sp.simplify(t) for t in (lhs - rhs)])
+    # 4. XY is not a derivation: X = d_x, Y = x d_y, f = x, g = y (Lee Ex. 8.24); [X,Y] = d_y
+    Xa, Ya = sp.Matrix([1, 0]), sp.Matrix([0, x])
+    fa, ga = x, y
+    XY = lambda h: apply(Xa, apply(Ya, h, c2), c2)
+    print("  X = d_x, Y = x d_y, f = x, g = y: XY(fg) = %s but f XY(g) + g XY(f) = %s (XY is not a derivation); [X,Y] = %s" % (sp.simplify(XY(fa * ga)), sp.simplify(fa * XY(ga) + ga * XY(fa)), list(bracket(Xa, Ya, c2))))
+    # 5. naturality under the diffeomorphism F of HW4 Q3: F_*[X1,X2] = [F_*X1, F_*X2]
+    X1 = sp.Matrix([x, y])
+    X2 = sp.Matrix([y, x ** 2])
+    br = bracket(X1, X2, c2)
+    push = lambda W: sp.simplify((DF * W).subs(inv, simultaneous=True))
+    lhs = push(br)
+    rhs = bracket(push(X1), push(X2), (u, v))
+    print("  naturality (Lee Cor 8.31), F = (xy, y/x): F_*[X1,X2] = %s ; [F_*X1, F_*X2] = %s ; difference %s" % (list(lhs), list(rhs), [sp.simplify(t) for t in (lhs - rhs)]))
+    # 6. Euler and rotation fields on R^2: coordinate fields in polar coordinates commute
+    E2, R2 = sp.Matrix([x, y]), sp.Matrix([-y, x])
+    print("  Euler E = x d_x + y d_y, rotation R = -y d_x + x d_y: [E,R] = %s (E = r d_r, R = d_theta, [r d_r, d_theta] = 0); [E, d_x] = %s" % (list(bracket(E2, R2, c2)), list(bracket(E2, sp.Matrix([1, 0]), c2))))
+    # 7. coordinate formula versus the definition on a random test function, finite-difference-free: apply to f
+    ftest = sp.sin(x * y) + z ** 2
+    lhs = apply(A, apply(B, ftest, c3), c3) - apply(B, apply(A, ftest, c3), c3)
+    rhs = apply(bracket(A, B, c3), ftest, c3)
+    print("  [A,B] f = A(Bf) - B(Af) agrees with the coordinate formula: %s" % sp.simplify(lhs - rhs))
+
+
+# ------------------------------------------------------------------------------------------------------------------ DM11
+def _apply(X, f, coords):
+    return sum(X[i] * sp.diff(f, coords[i]) for i in range(len(coords)))
+
+
+def _bracket(X, Y, coords):
+    return sp.Matrix([sp.simplify(_apply(X, Y[i], coords) - _apply(Y, X[i], coords)) for i in range(len(coords))])
+
+
+def dm11():
+    print("== DM11 The Lie Algebra of a Lie Group")
+    # 1. Lie(GL(n)): the left-invariant field with value A at I is X |-> XA; its bracket is the field of AB - BA
+    for n in (2,):
+        xs = sp.symbols("x1:%d" % (n * n + 1))
+        X = sp.Matrix(n, n, xs)
+        A = sp.Matrix(n, n, sp.symbols("a1:%d" % (n * n + 1)))
+        B = sp.Matrix(n, n, sp.symbols("b1:%d" % (n * n + 1)))
+        fA = list(X * A)
+        fB = list(X * B)
+        br = _bracket(sp.Matrix(fA), sp.Matrix(fB), xs)
+        target = list(X * (A * B - B * A))
+        print("  GL(%d): [A~, B~] - (X(AB-BA)) = %s  (A~_X = XA with symbolic entries a_ij, b_ij)" % (n, [sp.simplify(br[i] - target[i]) for i in range(n * n)]))
+    # the same for n = 3 with fixed integer matrices
+    n = 3
+    xs = sp.symbols("y1:10")
+    X = sp.Matrix(3, 3, xs)
+    A = sp.Matrix([[1, 2, 0], [0, -1, 3], [2, 1, 1]])
+    B = sp.Matrix([[0, 1, 1], [1, 0, -2], [3, 1, 0]])
+    br = _bracket(sp.Matrix(list(X * A)), sp.Matrix(list(X * B)), xs)
+    print("  GL(3): [A~, B~] - X(AB-BA) = zero field: %s" % (sp.simplify(br - sp.Matrix(list(X * (A * B - B * A)))) == sp.zeros(9, 1)))
+    # 2. dimensions of the Lie algebras as kernels of the differentials at I
+    def nulldim(rows_fn, n_unknown):
+        M = np.array([rows_fn(e) for e in np.eye(n_unknown)]).T
+        return n_unknown - np.linalg.matrix_rank(M, tol=1e-10)
+    out = []
+    for n in (2, 3, 4):
+        # real matrices: so(n) = {A + A^T = 0}; sl(n) = {tr A = 0}
+        so = nulldim(lambda e, n=n: (e.reshape(n, n) + e.reshape(n, n).T).ravel(), n * n)
+        sl = nulldim(lambda e, n=n: [np.trace(e.reshape(n, n))], n * n)
+        # complex matrices as 2 n^2 real unknowns (real, imag parts): u(n) = {A + A^* = 0}; su(n) adds tr A = 0
+        def cplx(e, n=n):
+            return (e[:n * n] + 1j * e[n * n:]).reshape(n, n)
+        un = nulldim(lambda e, n=n: np.concatenate([(cplx(e) + cplx(e).conj().T).real.ravel(), (cplx(e) + cplx(e).conj().T).imag.ravel()]), 2 * n * n)
+        su = nulldim(lambda e, n=n: np.concatenate([(cplx(e) + cplx(e).conj().T).real.ravel(), (cplx(e) + cplx(e).conj().T).imag.ravel(), [np.trace(cplx(e)).real, np.trace(cplx(e)).imag]]), 2 * n * n)
+        out.append("n=%d: dim so=%d (n(n-1)/2=%d), sl=%d (n^2-1=%d), u=%d (n^2=%d), su=%d (n^2-1=%d)" % (n, so, n * (n - 1) // 2, sl, n * n - 1, un, n * n, su, n * n - 1))
+    print("  dimensions of the Lie algebras as kernels (real dimension):\n    " + "\n    ".join(out))
+    # 3. tr is the induced map of det (HW6 Q7) and tr[A,B] = 0
+    r = np.random.default_rng(5)
+    A4, B4 = r.normal(size=(4, 4)), r.normal(size=(4, 4))
+    t = 1e-6
+    print("  HW6 Q7: d/dt det(I + tA)|0 = %.6f (central difference) vs tr A = %.6f; tr[A,B] = %.1e" % ((np.linalg.det(np.eye(4) + t * A4) - np.linalg.det(np.eye(4) - t * A4)) / (2 * t), np.trace(A4), np.trace(A4 @ B4 - B4 @ A4)))
+    # 4. so(3) = (R^3, x): the hat map
+    hat = lambda w: np.array([[0, -w[2], w[1]], [w[2], 0, -w[0]], [-w[1], w[0], 0]])
+    e = np.eye(3)
+    Ex, Ey, Ez = hat(e[0]), hat(e[1]), hat(e[2])
+    comm = lambda P, Q: P @ Q - Q @ P
+    print("  [E_x,E_y] - E_z = %.1e, [E_y,E_z] - E_x = %.1e, [E_z,E_x] - E_y = %.1e (matrix commutators of the skew generators: plus signs)"
+          % (np.abs(comm(Ex, Ey) - Ez).max(), np.abs(comm(Ey, Ez) - Ex).max(), np.abs(comm(Ez, Ex) - Ey).max()))
+    err = 0.0
+    for _ in range(1000):
+        w, v = r.normal(size=3), r.normal(size=3)
+        err = max(err, np.abs(comm(hat(w), hat(v)) - hat(np.cross(w, v))).max())
+        assert np.abs(comm(hat(w), hat(v)) + comm(hat(w), hat(v)).T).max() < 1e-12
+    print("  hat map: [hat(w), hat(v)] = hat(w x v) at 1000 random pairs: max error %.1e; commutators of skew matrices are skew (checked)" % err)
+    # 5. su(2) = so(3): tau_k = -i sigma_k / 2 and the differential of Ad: SU(2) -> SO(3) at the identity
+    sg = [np.array([[0, 1], [1, 0]], complex), np.array([[0, -1j], [1j, 0]]), np.array([[1, 0], [0, -1]], complex)]
+    tau = [-0.5j * s_ for s_ in sg]
+    cc = lambda P, Q: P @ Q - Q @ P
+    print("  su(2): [tau_1,tau_2] - tau_3 = %.1e, [tau_2,tau_3] - tau_1 = %.1e, [tau_3,tau_1] - tau_2 = %.1e" % (np.abs(cc(tau[0], tau[1]) - tau[2]).max(), np.abs(cc(tau[1], tau[2]) - tau[0]).max(), np.abs(cc(tau[2], tau[0]) - tau[1]).max()))
+    from scipy.linalg import expm
+    def Ad(U):
+        return np.array([[0.5 * np.trace(sg[j] @ U @ sg[k] @ U.conj().T).real for k in range(3)] for j in range(3)])
+    errs = []
+    for k in range(3):
+        dAd = (Ad(expm(1e-6 * tau[k])) - Ad(expm(-1e-6 * tau[k]))) / 2e-6
+        errs.append(np.abs(dAd - [Ex, Ey, Ez][k]).max())
+    print("      differential at I of Ad: SU(2) -> SO(3), R(U)_jk = (1/2) tr(sigma_j U sigma_k U*): d R(tau_k) = E_k with errors %s; so F_* is the isomorphism tau_k -> E_k (kernel {+-1} is discrete)" % ", ".join("%.1e" % q for q in errs))
+    # 6. two-dimensional non-abelian Lie algebras: [e1,e2] = w, normal form [f1,f2] = f2
+    ok = 0
+    for _ in range(100):
+        a, b = r.normal(size=2)
+        w = np.array([a, b])                                        # [e1, e2] = a e1 + b e2
+        f2 = w
+        f1 = np.array([1.0, 0.0]) if abs(b) > 1e-3 else np.array([0.0, 1.0])
+        c = f1[0] * f2[1] - f1[1] * f2[0]                          # f1 ^ f2 = c e1 ^ e2, so [f1, f2] = c w = c f2
+        f1n = f1 / c                                               # [f1/c, f2] = f2
+        ok += abs((f1n[0] * f2[1] - f1n[1] * f2[0]) - 1.0) < 1e-9
+    E11 = np.array([[1, 0], [0, 0.0]]); E12 = np.array([[0, 1], [0, 0.0]])
+    print("  HW7 Q1: normal form [f1,f2] = f2 reached for %d/100 random non-abelian structure constants; matrix realisation [E_11, E_12] = E_12: error %.1e (Lie algebra of Aff(1))" % (ok, np.abs(cc(E11, E12) - E12).max()))
+
+    # 7. Aff(1) = {(b, a): a > 0} with (b1, a1)(b2, a2) = (b1 + a1 b2, a1 a2): left-invariant fields and their bracket
+    b_, a_ = sp.symbols("b a", positive=True)
+    b1, a1 = sp.symbols("b1 a1", positive=True)
+    Lg = sp.Matrix([b1 + a1 * b_, a1 * a_])
+    JL = Lg.jacobian(sp.Matrix([b_, a_]))
+    e0 = {b_: 0, a_: 1}
+    Xl1 = sp.simplify((JL * sp.Matrix([1, 0])).subs(e0)); Xl2 = sp.simplify((JL * sp.Matrix([0, 1])).subs(e0))
+    X1 = sp.Matrix([a_, 0]); X2 = sp.Matrix([0, a_])
+    brk = _bracket(X1, X2, (b_, a_))
+    print("  Aff(1): d(L_g)_e e_b = %s and d(L_g)_e e_a = %s at g = (b1,a1), i.e. left-invariant fields X1 = a d_b, X2 = a d_a; [X1,X2] = %s = -X1; so [X2,X1] = X1 (normal form [f1,f2] = f2 with f1 = X2, f2 = X1)" % (list(Xl1), list(Xl2), list(brk)))
+
+
+# ------------------------------------------------------------------------------------------------------------------ DM12
+def dm12():
+    from scipy.integrate import solve_ivp
+    print("== DM12 Integral Curves, Flows and Flowouts")
+    r = np.random.default_rng(12)
+    # 1. HW7 Q5: V = y d_x + d_y: theta_t(x0, y0) = (x0 + y0 t + t^2/2, y0 + t)
+    th = lambda t, p: np.array([p[0] + p[1] * t + t * t / 2, p[1] + t])
+    err = 0.0
+    gerr = 0.0
+    for _ in range(50):
+        p0 = r.normal(size=2) * 2
+        T = r.uniform(-2, 2)
+        sol = solve_ivp(lambda t, q: [q[1], 1.0], [0, T], p0, rtol=1e-11, atol=1e-12)
+        err = max(err, np.abs(sol.y[:, -1] - th(T, p0)).max())
+        s_, t_ = r.uniform(-2, 2, 2)
+        gerr = max(gerr, np.abs(th(s_, th(t_, p0)) - th(s_ + t_, p0)).max())
+    print("  HW7 Q5: V = y d_x + d_y has flow (x0 + y0 t + t^2/2, y0 + t): RK vs formula over 50 random (p, t): max error %.1e; group law theta_s theta_t = theta_{s+t}: max error %.1e" % (err, gerr))
+    # 2. blow-up: W = x^2 d_x, x(t) = x0/(1 - x0 t); D^(p) = (-inf, 1/x0) for x0 > 0, (1/x0... ) for x0 < 0
+    for x0 in (2.0, 0.5, -2.0):
+        ev = lambda t, q: abs(q[0]) - 1e6
+        ev.terminal = True
+        sol = solve_ivp(lambda t, q: [q[0] ** 2], [0, 10], [x0], rtol=1e-12, atol=1e-12, events=ev)
+        te = sol.t_events[0][0] if len(sol.t_events[0]) else None
+        print("  W = x^2 d_x from x0 = %5.2f: |x| reaches 10^6 at t = %s; exact blow-up time 1/x0 = %s" % (x0, ("%.7f" % te) if te is not None else "never (t <= 10)", ("%.7f" % (1 / x0)) if x0 > 0 else "none for t > 0 (D = (-1/2, inf))"))
+    # 3. rescaling lemma and periodicity for V = -y d_x + x d_y
+    R = lambda t, p: np.array([p[0] * np.cos(t) - p[1] * np.sin(t), p[0] * np.sin(t) + p[1] * np.cos(t)])
+    p0 = np.array([0.7, -1.3])
+    a, t = 2.5, 0.37
+    e = 1e-6
+    d = (R(a * (t + e), p0) - R(a * (t - e), p0)) / (2 * e)
+    Vf = lambda q: np.array([-q[1], q[0]])
+    print("  rescaling lemma: d/dt gamma(a t) - a V(gamma(a t)) at a = 2.5: %.1e; period: |gamma(2 pi) - gamma(0)| = %.1e, |gamma(pi) - gamma(0)| = %.3f (so the minimal period is 2 pi)" % (np.abs(d - a * Vf(R(a * t, p0))).max(), np.abs(R(2 * np.pi, p0) - p0).max(), np.abs(R(np.pi, p0) - p0).max()))
+    # 4. left-invariant fields are complete: the integral curve of A~ through X0 in GL(2) is X0 exp(tA), det = det X0 e^{t tr A} never 0
+    from scipy.linalg import expm
+    A = r.normal(size=(2, 2))
+    X0 = r.normal(size=(2, 2))
+    T = 3.0
+    sol = solve_ivp(lambda t, y: (y.reshape(2, 2) @ A).ravel(), [0, T], X0.ravel(), rtol=1e-12, atol=1e-12)
+    Xend = sol.y[:, -1].reshape(2, 2)
+    print("  GL(2): integral curve of the left-invariant field A~ (A~_X = XA) through X0: RK at t = 3 vs X0 expm(3A): error %.1e; det X(3) = %.5f vs det X0 e^{3 tr A} = %.5f (never zero: the curve stays in GL(2))"
+          % (np.abs(Xend - X0 @ expm(T * A)).max(), np.linalg.det(Xend), np.linalg.det(X0) * np.exp(T * np.trace(A))))
+    # 5. flowout of S = {(s,0,0): s>0} along the helical field V = -y d_x + x d_y + d_z: Phi(t,s) = (s cos t, s sin t, t)
+    Phi = lambda t, s: np.array([s * np.cos(t), s * np.sin(t), t])
+    Vh = lambda q: np.array([-q[1], q[0], 1.0])
+    mins = []
+    err = 0.0
+    for t_ in np.linspace(-12, 12, 97):
+        for s_ in np.linspace(0.1, 3, 30):
+            dPt = np.array([-s_ * np.sin(t_), s_ * np.cos(t_), 1.0])            # dPhi(d_t)
+            dPs = np.array([np.cos(t_), np.sin(t_), 0.0])                       # dPhi(d_s)
+            mins.append(np.linalg.svd(np.column_stack([dPt, dPs]), compute_uv=False).min())
+            err = max(err, np.abs(dPt - Vh(Phi(t_, s_))).max())
+    print("  flowout of the half-axis along the helical field: dPhi(d_t) = V o Phi (error %.1e), smallest singular value of dPhi over a grid = %.3f > 0 (Phi is an immersion; the image is a helicoid)" % (err, min(mins)))
+    # 6. Example 9.23: S = positive x-axis, W = -y d_x + x d_y: Phi(t,s) = (s cos t, s sin t), det dPhi = s
+    dets = [np.linalg.det(np.array([[-s_ * np.sin(t_), np.cos(t_)], [s_ * np.cos(t_), np.sin(t_)]])) for t_ in np.linspace(-3, 3, 13) for s_ in np.linspace(0.2, 4, 10)]
+    print("  codimension 1: Phi(t,s) = (s cos t, s sin t) on (-pi,pi) x (0,inf) has det dPhi = -s: range %.2f .. %.2f (never 0); image = plane minus the closed negative x-axis; W = d_t in these polar coordinates" % (min(dets), max(dets)))
+    # 7. HW7 Q6: minimal period on the torus T^2 for the field d_theta1 + d_theta2 (nowhere zero): theta_t has fixed points only for t in 2 pi Z
+    print("  HW7 Q6: on T^2 the flow of d_1 + d_2 is theta_t(a, b) = (a + t, b + t) mod 2 pi; for 0 < t < 2 pi it has no fixed point (a + t = a mod 2 pi forces t in 2 pi Z): F = theta_t is homotopic to the identity (via theta_{st}) without fixed points")
+
+
+# ------------------------------------------------------------------------------------------------------------------ DM13
+def dm13():
+    print("== DM13 Lie Derivatives and Commuting Vector Fields")
+    r = np.random.default_rng(13)
+    x, y, z = sp.symbols("x y z", real=True)
+    c2 = (x, y)
+    # 1. L_V W = [V, W] checked through the flow: V = y d_x + d_y (flow (x + y t + t^2/2, y + t)), W = x d_y
+    th = lambda t, p: np.array([p[0] + p[1] * t + t * t / 2, p[1] + t])
+    dth = lambda t: np.array([[1.0, t], [0.0, 1.0]])                              # d theta_t (constant in p for this shear)
+    W = lambda q: np.array([0.0, q[0]])
+    def LVW(p, h=1e-6):
+        f = lambda t: np.linalg.inv(dth(t)) @ W(th(t, p))                          # d(theta_{-t})_{theta_t p} W_{theta_t p}
+        return (f(h) - f(-h)) / (2 * h)
+    br = _bracket(sp.Matrix([y, 1]), sp.Matrix([0, x]), c2)
+    err = 0.0
+    for _ in range(100):
+        p0 = r.normal(size=2) * 2
+        err = max(err, np.abs(LVW(p0) - np.array([float(br[0].subs({x: p0[0], y: p0[1]})), float(br[1].subs({x: p0[0], y: p0[1]}))])).max())
+    print("  V = y d_x + d_y, W = x d_y: [V,W] = %s; (L_V W)_p from the definition (central difference) agrees at 100 random points: max error %.1e" % (list(br), err))
+    # rotation field and d_x: L_V d_x = [V, d_x] = -d_y
+    Rm = lambda t: np.array([[np.cos(t), -np.sin(t)], [np.sin(t), np.cos(t)]])
+    f = lambda t: Rm(-t) @ np.array([1.0, 0.0])
+    h = 1e-6
+    print("  V = -y d_x + x d_y, W = d_x: (L_V W) = d/dt R(-t) e_1 = %s (central difference); [V, d_x] = %s" % (np.round((f(h) - f(-h)) / (2 * h), 8).tolist(), list(_bracket(sp.Matrix([-y, x]), sp.Matrix([1, 0]), c2))))
+    # 2. Exercise 9.37: constant field V = v: L_V W = D_v W
+    Wf = lambda q: np.array([np.sin(q[0] * q[1]), q[0] ** 2 + q[1]])
+    v = np.array([0.6, -1.1])
+    p0 = np.array([0.4, 0.9])
+    Dv = (Wf(p0 + h * v) - Wf(p0 - h * v)) / (2 * h)
+    Ws = sp.Matrix([sp.sin(x * y), x ** 2 + y])
+    brv = _bracket(sp.Matrix([0.6, -1.1]), Ws, c2)
+    print("  Exercise 9.37: V = (0.6, -1.1) constant: D_v W = %s, [V,W] at p = %s" % (np.round(Dv, 6).tolist(), [round(float(t.subs({x: 0.4, y: 0.9})), 6) for t in brv]))
+    # 3. Cor 9.39 identities on R^3 with symbolic fields
+    c3 = (x, y, z)
+    A = sp.Matrix([x * y, z, x ** 2 - y]); B = sp.Matrix([sp.sin(x), y * z, 1 + x * z]); C = sp.Matrix([y, x * z, x * y * z])
+    g = x ** 2 * y + sp.cos(z)
+    LV = lambda Vv, Ww: _bracket(Vv, Ww, c3)
+    zero = lambda M: [sp.simplify(t) for t in M]
+    print("  Cor 9.39: (a) L_V W + L_W V = %s; (b) L_V[W,X] - [L_V W, X] - [W, L_V X] = %s; (c) L_[V,W] X - (L_V L_W X - L_W L_V X) = %s; (d) L_V(gW) - ((Vg) W + g L_V W) = %s"
+          % (zero(LV(A, B) + LV(B, A)), zero(LV(A, LV(B, C)) - LV(LV(A, B), C) - LV(B, LV(A, C))), zero(LV(LV(A, B), C) - (LV(A, LV(B, C)) - LV(B, LV(A, C)))),
+             zero(LV(A, g * B) - (_apply(A, g, c3) * B + g * LV(A, B)))))
+    # 4. flows of d_x and x d_y do not commute: theta_t psi_s vs psi_s theta_t differ by s t d_y
+    TH = lambda t, p: np.array([p[0] + t, p[1]])                                  # flow of V = d_x
+    PS = lambda s_, p: np.array([p[0], p[1] + s_ * p[0]])                         # flow of W = x d_y
+    err = 0.0
+    for _ in range(100):
+        p0 = r.normal(size=2)
+        t_, s_ = r.uniform(-2, 2, 2)
+        d = TH(t_, PS(s_, p0)) - PS(s_, TH(t_, p0))
+        err = max(err, np.abs(d - np.array([0.0, -s_ * t_])).max())
+    print("  V = d_x, W = x d_y: theta_t(psi_s(p)) - psi_s(theta_t(p)) = (0, -s t) at 100 random (p, s, t): max deviation %.1e; [V,W] = d_y (the flows fail to commute by -st [V,W])" % err)
+    # Euler and rotation: flows commute
+    Dl = lambda t, p: np.exp(t) * p
+    err = 0.0
+    for _ in range(100):
+        p0 = r.normal(size=2); t_, s_ = r.uniform(-1.5, 1.5, 2)
+        err = max(err, np.abs(Dl(t_, Rm(s_) @ p0) - Rm(s_) @ Dl(t_, p0)).max())
+    print("  Euler field (dilations e^t) and rotation field (R(s)): flows commute, max error %.1e; [E,R] = %s" % (err, list(_bracket(sp.Matrix([x, y]), sp.Matrix([-y, x]), c2))))
+    # 5. HW8 Q6: V = d_x, V~ = d_x + y d_y agree on the x-axis, W = d_y
+    Vv, Vt, Wv = sp.Matrix([1, 0]), sp.Matrix([1, y]), sp.Matrix([0, 1])
+    print("  HW8 Q6: V = d_x and V~ = d_x + y d_y agree on {y = 0}, W = d_y: L_V W = %s, L_V~ W = %s (at the origin: %s)" % (list(_bracket(Vv, Wv, c2)), list(_bracket(Vt, Wv, c2)), list(_bracket(Vt, Wv, c2).subs({x: 0, y: 0}))))
+    # 6. canonical form for the commuting pair E, R: Phi(s1, s2) = (e^{s1} cos s2, e^{s1} sin s2)
+    err = 0.0
+    for _ in range(100):
+        s1, s2 = r.uniform(-2, 2), r.uniform(-3, 3)
+        P = np.array([np.exp(s1) * np.cos(s2), np.exp(s1) * np.sin(s2)])
+        d1 = np.array([np.exp(s1) * np.cos(s2), np.exp(s1) * np.sin(s2)])           # d Phi / d s1
+        d2 = np.array([-np.exp(s1) * np.sin(s2), np.exp(s1) * np.cos(s2)])          # d Phi / d s2
+        err = max(err, np.abs(d1 - P).max(), np.abs(d2 - np.array([-P[1], P[0]])).max())
+    print("  commuting E = x d_x + y d_y, R = -y d_x + x d_y are coordinate fields d/ds1, d/ds2 for Phi(s1,s2) = (e^{s1} cos s2, e^{s1} sin s2): dPhi(d_s1) = E, dPhi(d_s2) = R, error %.1e (log-polar coordinates)" % err)
+
+
+# ------------------------------------------------------------------------------------------------------------------ DM14
+def dm14():
+    from scipy.linalg import expm, logm
+    print("== DM14 One-Parameter Subgroups and the Exponential Map")
+    r = np.random.default_rng(14)
+    # 1. matrix exponential: series, group law, det e^A = e^{tr A}
+    A = r.normal(size=(4, 4))
+    S = np.zeros((4, 4)); term = np.eye(4)
+    for k in range(1, 60):
+        S += term
+        term = term @ A / k
+    print("  e^A: partial sums of the series (60 terms) vs expm: %.1e; (e^{sA} e^{tA}) vs e^{(s+t)A}: %.1e; det e^A = %.8f, e^{tr A} = %.8f" % (np.abs(S - expm(A)).max(), np.abs(expm(0.3 * A) @ expm(0.9 * A) - expm(1.2 * A)).max(), np.linalg.det(expm(A)), np.exp(np.trace(A))))
+    # 2. so(2): e^{tA} = R(t), kernel 2 pi Z
+    J = np.array([[0.0, -1.0], [1.0, 0.0]])
+    t = 0.83
+    print("  A = [[0,-1],[1,0]]: e^{tA} - R(t) = %.1e; e^{2 pi A} - I = %.1e; e^{pi A} = -I: %.1e" % (np.abs(expm(t * J) - np.array([[np.cos(t), -np.sin(t)], [np.sin(t), np.cos(t)]])).max(), np.abs(expm(2 * np.pi * J) - np.eye(2)).max(), np.abs(expm(np.pi * J) + np.eye(2)).max()))
+    # 3. so(3): Rodrigues and surjectivity of exp
+    hat = lambda w: np.array([[0, -w[2], w[1]], [w[2], 0, -w[0]], [-w[1], w[0], 0]])
+    err = 0.0
+    for _ in range(500):
+        w = r.normal(size=3) * 2
+        n = np.linalg.norm(w); K = hat(w)
+        rod = np.eye(3) + np.sin(n) / n * K + (1 - np.cos(n)) / n ** 2 * K @ K
+        err = max(err, np.abs(expm(K) - rod).max())
+    print("  so(3): expm(hat(w)) vs the Rodrigues formula I + sin|w|/|w| W + (1-cos|w|)/|w|^2 W^2 at 500 random w: max error %.1e" % err)
+    err = 0.0; skew = 0.0; cnt = 0
+    for _ in range(500):
+        Q, Rr = np.linalg.qr(r.normal(size=(3, 3)))
+        Q = Q * np.sign(np.diag(Rr))
+        if np.linalg.det(Q) < 0:
+            Q[:, 0] *= -1
+        L = logm(Q)
+        if np.abs(L.imag).max() > 1e-8:
+            continue
+        L = L.real
+        cnt += 1
+        err = max(err, np.abs(expm(L) - Q).max()); skew = max(skew, np.abs(L + L.T).max())
+    print("      %d/500 random rotations have a real logarithm: expm(log R) = R to %.1e and log R is skew to %.1e (exp: so(3) -> SO(3) is onto; Euler: every rotation is a rotation about an axis)" % (cnt, err, skew))
+    # 4. su(2) formula
+    sg = [np.array([[0, 1], [1, 0]], complex), np.array([[0, -1j], [1j, 0]]), np.array([[1, 0], [0, -1]], complex)]
+    err = 0.0
+    for _ in range(200):
+        w = r.normal(size=3) * 3
+        n = np.linalg.norm(w)
+        Aw = sum(-0.5j * w[k] * sg[k] for k in range(3))
+        U = np.cos(n / 2) * np.eye(2) - 1j * np.sin(n / 2) * sum(w[k] / n * sg[k] for k in range(3))
+        err = max(err, np.abs(expm(Aw) - U).max(), abs(np.linalg.det(U) - 1), np.abs(U @ U.conj().T - np.eye(2)).max())
+    print("  su(2): expm(sum w_k tau_k) = cos(|w|/2) I - i sin(|w|/2) (w/|w|).sigma, unitary with det 1: max error %.1e at 200 random w" % err)
+    # 5. exp: sl(2,R) -> SL(2,R) is not onto: tr e^A >= -2
+    a_, b_, c_ = r.normal(size=(3, 200000)) * r.uniform(0.2, 4, size=200000)
+    mu2 = a_ ** 2 + b_ * c_
+    tr = np.where(mu2 > 0, 2 * np.cosh(np.sqrt(np.abs(mu2))), 2 * np.cos(np.sqrt(np.abs(mu2))))
+    trs = np.array([np.trace(expm(np.array([[x_, y_], [z_, -x_]]))) for x_, y_, z_ in zip(a_[:300], b_[:300], c_[:300])])
+    print("  sl(2,R): closed form tr e^A = 2 cosh(mu) or 2 cos(omega) matches expm at 300 random A (max error %.1e); over 200000 random A the smallest trace is %.5f >= -2; yet diag(-2,-1/2) in SL(2,R) has trace -2.5: not in the image of exp"
+          % (np.abs(trs - tr[:300]).max(), tr.min()))
+    # 6. Trotter product formula (Lee Cor 20.11)
+    X, Y = r.normal(size=(3, 3)), r.normal(size=(3, 3))
+    out = []
+    for n in (10, 100, 1000, 10000):
+        P = np.linalg.matrix_power(expm(X / n) @ expm(Y / n), n)
+        out.append(np.abs(P - expm(X + Y)).max())
+    print("  Trotter: |(e^{X/n} e^{Y/n})^n - e^{X+Y}| for n = 10, 100, 1000, 10000: %s (decays like 1/n); e^X e^Y - e^{X+Y} = %.3f for non-commuting X, Y but %.1e for diagonal X, Y"
+          % (", ".join("%.2e" % q for q in out), np.abs(expm(X) @ expm(Y) - expm(X + Y)).max(), np.abs(expm(np.diag([0.3, -1.0, 0.5])) @ expm(np.diag([1.1, 0.2, -0.4])) - expm(np.diag([1.4, -0.8, 0.1]))).max()))
+    # 7. HW9 Q3: Phi(X, Y) = e^X e^Y on gl(2) = so(2) + Sym(2): dPhi at 0 is (X, Y) -> X + Y
+    basis_A = [np.array([[0, -1.0], [1.0, 0]])]
+    basis_B = [np.array([[1.0, 0], [0, 0]]), np.array([[0, 0], [0, 1.0]]), np.array([[0, 1.0], [1.0, 0]])]
+    allb = basis_A + basis_B
+    h = 1e-6
+    Jm = np.zeros((4, 4))
+    for j, Bj in enumerate(allb):
+        if j < 1:
+            f = lambda e: (expm(e * Bj) @ np.eye(2)).ravel()
+        else:
+            f = lambda e: (np.eye(2) @ expm(e * Bj)).ravel()
+        Jm[:, j] = (f(h) - f(-h)) / (2 * h)
+    print("  HW9 Q3: gl(2) = so(2) + Sym(2): Jacobian of (X,Y) -> e^X e^Y at (0,0) in the basis (J) + (E11, E22, E12+E21): rank %d, |det| = %.4f (equals the matrix of X+Y, so Phi is a local diffeomorphism)" % (np.linalg.matrix_rank(Jm, tol=1e-6), abs(np.linalg.det(Jm))))
+    # 8. HW9 Q1, Q2: one-parameter subgroups of T^2 = R^2/Z^2: t -> (a t, b t) mod 1
+    dist = lambda t, a, b: np.hypot(*[min(abs(((q * t) + 0.5) % 1 - 0.5), 1) for q in (a, b)])
+    ts = np.linspace(0.001, 2000, 4000001)
+    out = []
+    for (a, b) in ((2, 3), (1, np.sqrt(2)), (0, 0)):
+        d = np.hypot(np.abs((a * ts + 0.5) % 1 - 0.5), np.abs((b * ts + 0.5) % 1 - 0.5))
+        out.append("(a,b) = (%g, %.4f): min over 0.001 <= t <= 2000 of the distance to the identity = %.1e" % (a, b, d.min()))
+    print("  HW9 Q1 on T^2 = R^2/Z^2, gamma(t) = (a t, b t) mod 1:\n    " + "\n    ".join(out) + "\n    (a,b) = (2,3): gamma(1) = gamma(0), minimal period 1 (circle); (1, sqrt2): never exactly returns but comes arbitrarily close (injective, dense); (0,0): constant")
+
+
+# ------------------------------------------------------------------------------------------------------------------ DM15
+def dm15():
+    print("== DM15 Closed Subgroups and the Lie Correspondence")
+    r = np.random.default_rng(15)
+    # 1. the dense line H = {(t, sqrt2 t)} in T^2 = R^2/Z^2 is not closed: its closure is T^2 (HW9 Q6)
+    targets = r.uniform(0, 1, size=(6, 2))
+    out = []
+    for T in (10, 100, 1000, 10000, 1000000):
+        m = np.arange(0, T + 1, dtype=float)
+        worst = 0.0
+        for tg in targets:
+            # at t = a + m the first coordinate equals the target's exactly; the second is sqrt2 (a + m) mod 1
+            y = (np.sqrt(2) * (tg[0] + m)) % 1.0
+            dy = np.abs(y - tg[1]); dy = np.minimum(dy, 1 - dy)
+            worst = max(worst, dy.min())
+        out.append("T = %7d: %.1e" % (T, worst))
+    print("  H = {(t, sqrt2 t)} in T^2: for 6 random targets (a, b) the point of the arc 0 <= t <= T whose first coordinate is a (t = a + m) comes within  %s  of the target in the second coordinate (worst target); the distance -> 0 like 1/T, so the closure of H is all of T^2: H is a Lie subgroup that is not closed, hence not embedded, and its closure is the embedded subgroup T^2" % "; ".join(out))
+    # 2. a distribution that is not involutive: D = span{d_x, d_y + x d_z} on R^3
+    x, y, z = sp.symbols("x y z", real=True)
+    c3 = (x, y, z)
+    X1, X2 = sp.Matrix([1, 0, 0]), sp.Matrix([0, 1, x])
+    br = _bracket(X1, X2, c3)
+    M = sp.Matrix.hstack(X1, X2, br)
+    print("  Frobenius: D = span{d_x, d_y + x d_z}: [X1, X2] = %s; det[X1, X2, [X1,X2]] = %s (non-zero everywhere), so [X1,X2] is not in D: D is not involutive (a contact distribution; no surface has D as its tangent plane)" % (list(br), sp.simplify(M.det())))
+    Y1, Y2 = sp.Matrix([1, 0, 0]), sp.Matrix([0, 1, 0])
+    print("      D' = span{d_x, d_y}: [d_x, d_y] = %s in D': involutive; integral manifolds {z = const}. Left-invariant distribution of a subalgebra on Aff(1): span{X1} = span{a d_b} has integral curves a = const (the cosets of the subgroup {(b,1)})" % list(_bracket(Y1, Y2, c3)))
+    # 3. graph of a Lie algebra homomorphism is a subalgebra of g x h: phi = (su(2) -> so(3), tau_k -> E_k)
+    sg = [np.array([[0, 1], [1, 0]], complex), np.array([[0, -1j], [1j, 0]]), np.array([[1, 0], [0, -1]], complex)]
+    tau = [-0.5j * s_ for s_ in sg]
+    hat = lambda w: np.array([[0, -w[2], w[1]], [w[2], 0, -w[0]], [-w[1], w[0], 0]])
+    comm = lambda P, Q: P @ Q - Q @ P
+    phi = lambda a: hat(a)                                                    # coordinates a in R^3 <-> sum a_k tau_k  ->  sum a_k E_k
+    su = lambda a: sum(a[k] * tau[k] for k in range(3))
+    err = 0.0
+    for _ in range(500):
+        a, b = r.normal(size=3), r.normal(size=3)
+        c = comm(su(a), su(b))                                                # [X, Y] in su(2) = su(a x b)?  coordinates of [sum a tau, sum b tau] = a x b
+        err = max(err, np.abs(c - su(np.cross(a, b))).max(), np.abs(comm(phi(a), phi(b)) - phi(np.cross(a, b))).max())
+    print("  graph of phi: su(2) -> so(3), sum a_k tau_k -> sum a_k E_k: [(X, phi X), (Y, phi Y)] = ([X,Y], phi[X,Y]) at 500 random pairs: max error %.1e (so the graph is a Lie subalgebra of su(2) x so(3))" % err)
+    # 4. Ad: SU(2) -> SO(3) has kernel {+-I} = the centre; SU(2) is simply connected, SO(3) = SU(2)/{+-I}
+    from scipy.linalg import expm
+    Ad = lambda U: np.array([[0.5 * np.trace(sg[j] @ U @ sg[k] @ U.conj().T).real for k in range(3)] for j in range(3)])
+    err1 = err2 = err3 = 0.0
+    for _ in range(300):
+        U = expm(su(r.normal(size=3) * 2)); V = expm(su(r.normal(size=3) * 2))
+        err1 = max(err1, np.abs(Ad(U) - Ad(-U)).max())
+        err2 = max(err2, np.abs(U @ (-np.eye(2)) - (-np.eye(2)) @ U).max())
+        err3 = max(err3, np.abs(Ad(U @ V) - Ad(U) @ Ad(V)).max())
+    print("  Ad: SU(2) -> SO(3): Ad(U) = Ad(-U) (error %.1e), -I central (error %.1e), Ad(UV) = Ad(U)Ad(V) (error %.1e): the kernel {+-I} is the discrete centre, SO(3) = SU(2)/{+-I}" % (err1, err2, err3))
+
 # ------------------------------------------------------------------------------------------------------------------ driver
-CHAPTERS = {"DM01": dm01, "DM02": dm02, "DM03": dm03, "DM04": dm04, "DM05": dm05, "DM06": dm06, "DM07": dm07, "DM08": dm08, "DM09": dm09}
+CHAPTERS = {"DM01": dm01, "DM02": dm02, "DM03": dm03, "DM04": dm04, "DM05": dm05, "DM06": dm06, "DM07": dm07, "DM08": dm08, "DM09": dm09, "DM10": dm10, "DM11": dm11, "DM12": dm12, "DM13": dm13, "DM14": dm14, "DM15": dm15}
 
 if __name__ == "__main__":
     which = sys.argv[1:] or sorted(CHAPTERS)

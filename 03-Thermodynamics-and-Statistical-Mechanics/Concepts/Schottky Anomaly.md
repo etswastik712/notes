@@ -36,3 +36,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - The two-level system derived by pure counting (with [[Negative Temperature]]) in [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §5 and as the spin-½ paramagnet (peak at $T=0.56$ K for $B=1$ T) in [[SM03 The Canonical Ensemble]] §5 ([[Curie Law]]).
+- Negative temperature by field reversal (Purcell–Pound): [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §5.5.

@@ -1,0 +1,31 @@
+---
+title: Euclidean Group
+aliases: ["E(n)", "rigid motions", "SE(n)", "group of isometries of R^n"]
+subject: diff-geometry
+type: concept
+scope: [extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Euclidean Group
+
+<span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=186|Lee Ex. 7.32, p. 168]].
+
+> [!intuition] In one picture
+> All rigid motions of space: rotate/reflect, then translate.
+
+> [!key] Definition
+> $E(n)=\mathbb R^n\rtimes O(n)$ with $(b,A)(b',A')=(b+Ab',AA')$, acting on $\mathbb R^n$ by $x\mapsto b+Ax$; as matrices $\begin{pmatrix}A&b\\0&1\end{pmatrix}$, so $E(n)\hookrightarrow GL(n+1,\mathbb R)$. $\dim E(n)=n+n(n-1)/2$; $\mathbb R^n=E(n)/O(n)$. It preserves lines, distances and angles.
+
+$E(2)$: matrix product agrees with the semidirect law to $10^{-16}$; not a direct product ($\mathbb R^2\times SO(2)$ is abelian). The Lie-algebra version in [[DM11 The Lie Algebra of a Lie Group]]. Related: [[Affine Group]].
+
+Used in: [[DM09 Group Actions and Semidirect Products]]. Related: [[Semidirect Product of Lie Groups]] · [[Orthogonal Group]] · [[Homogeneous Space]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

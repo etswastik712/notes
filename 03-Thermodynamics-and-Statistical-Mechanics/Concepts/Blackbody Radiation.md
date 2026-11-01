@@ -42,3 +42,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Greenhouse Effect]] (Climate): the emission temperature and every greenhouse model start from blackbody emission $\sigma T^4$; the greenhouse effect is the gap between that balance and the observed surface flux.
+
+## Continued in Part II (added 2026-10-30)
+- The entropy of blackbody radiation $s=\tfrac43aT^3$, $3.60k_B$ per photon, and the Earth's entropy budget: [[SM06 Entropy Information and the Arrow of Time]] §4 ([[Entropy of Radiation]]).

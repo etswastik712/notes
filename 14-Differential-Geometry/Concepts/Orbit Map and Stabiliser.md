@@ -1,0 +1,31 @@
+---
+title: Orbit Map and Stabiliser
+aliases: ["orbit map", "stabiliser", "stabilizer", "isotropy group", "orbit", "isotropy subgroup"]
+subject: diff-geometry
+type: concept
+scope: [taught]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, src/lecture-notes, src/book, status/draft]
+---
+# Orbit Map and Stabiliser
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG15–DG16 via [[mt3184-differential-geometry-and-lie-groups/2026-09-10-september-7-12|Sep 7–12 note]]; HW6 Q1.
+
+> [!intuition] In one picture
+> Push one point around with the whole group (the orbit map) and record which group elements leave it fixed (the stabiliser).
+
+> [!key] Definition
+> $\theta^{(p)}(g)=g\cdot p$ is smooth and equivariant for left translation, so has **constant rank** (Thm 7.25). Hence $G_p=(\theta^{(p)})^{-1}(p)$ is a properly embedded Lie subgroup of dimension $\dim G-\operatorname{rank}d\theta^{(p)}_e$ (HW6 Q1; [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=184|Lee Prop. 7.26, p. 166]]); $G_{g\cdot p}=gG_pg^{-1}$; free $\Rightarrow$ orbit is an immersed submanifold.
+
+$O(n)$ = stabiliser of $I$ under congruence ($\dim n^2-n(n+1)/2$), $U(n)$ = stabiliser of $I$ under $AXA^*$ ($\dim n^2$), $SO(2)$ = stabiliser of $e_3$ in $SO(3)$ acting on $S^2$. Finite case: [[Orbit-Stabiliser Theorem]]. An orbit is immersed, not necessarily embedded: the irrational flow on $T^2$.
+
+Used in: [[DM09 Group Actions and Semidirect Products]]. Related: [[Smooth Action]] · [[Equivariant Rank Theorem]] · [[Orthogonal Group]] · [[Unitary Group]] · [[Homogeneous Space]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

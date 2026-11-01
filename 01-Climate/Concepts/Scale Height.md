@@ -42,3 +42,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - Derived from the Boltzmann factor $e^{-mgz/k_BT}$: $H=k_BT/mg$ ([[Barometric Formula]], [[SM03 The Canonical Ensemble]] §4.2), with each gas at its own $H$ (CO$_2$ 5.55 km, He 61 km).
+- $\langle z\rangle=k_BT/mg$ from one line of the general equipartition theorem: [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §1.

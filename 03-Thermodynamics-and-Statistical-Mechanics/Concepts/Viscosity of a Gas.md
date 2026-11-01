@@ -27,3 +27,6 @@ Used in: [[SM04 Kinetic Theory and the Boltzmann Equation]]. Related: [[Navier-S
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Péclet Number]] (Foundations): the kinematic viscosity $\nu=\eta/\rho$ computed from kinetic theory is the diffusivity of momentum, so the Reynolds number $UL/\nu$ is a Péclet number for momentum transport and the Prandtl number $\nu/D_T$ compares the two diffusivities.
