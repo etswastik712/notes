@@ -83,5 +83,5 @@ Post 3 (2026-08-05), a curiosity question, not an assignment: a photo of droplet
 
 <!-- kurooto:material4e3d2ded -->
 ## Concepts in climate_intro_notes
-[[zettel/planetary-boundaries]], [[zettel/earth-system-science]], [[zettel/atlantic-meridional-overturning-circulation]], [[zettel/stommel-diagram]], [[zettel/infrared-flux-temperature-feedback]], [[zettel/ice-albedo-feedback]], [[zettel/intertropical-convergence-zone]], [[zettel/monsoon-dynamics]], [[zettel/ocean-surface-currents]], [[zettel/silicate-weathering-feedback]]
+[[zettel/planetary-boundaries]], [[zettel/earth-system-science]], [[zettel/atlantic-meridional-overturning-circulation]], [[zettel/stommel-diagram]], [[zettel/infrared-flux-temperature-feedback]], [[zettel/ice-albedo-feedback]], [[zettel/intertropical-convergence-zone]], [[zettel/monsoon-dynamics]], [[zettel/ocean-surface-currents]], [[zettel/silicate-weathering-feedback]], [[zettel/area-weighted-mean-temperature]], [[zettel/blackbody]], [[zettel/planck-function]], [[zettel/wien-s-displacement-law]], [[zettel/stefan-boltzmann-law]], [[zettel/stevenson-screen-standard-measurement]]
 <!-- /kurooto:material4e3d2ded -->
