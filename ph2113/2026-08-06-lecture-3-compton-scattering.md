@@ -63,3 +63,8 @@ With $E=hc/\lambda$, $E'=hc/\lambda'$: $\lambda'-\lambda=\frac h{m_ec}(1-\cos\th
 - [[ph2113/2026-08-11-problem-set-1]]: Problem 3 applies the shift law
 - [[ph2113/2026-09-03-quiz-ideal-solutions]]: quiz Compton question
 - [[ph2113/2026-09-02-mock-quiz-and-solutions]]: mock quiz Compton question
+
+<!-- kurooto:material77e10cbf -->
+## Concepts in PH2113_Lecture3_Compton_Scattering_Particle_Picture-
+[[zettel/thomson-scattering-classical-limit]], [[zettel/breakdown-of-classical-thomson-scattering]]
+<!-- /kurooto:material77e10cbf -->

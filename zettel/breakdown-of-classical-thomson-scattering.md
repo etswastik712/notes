@@ -1,0 +1,23 @@
+---
+id: zettel/breakdown-of-classical-thomson-scattering
+aliases: ["Breakdown of Classical Thomson Scattering", "insufficiency of classical scattering"]
+tags: [zettel, agent-written, ph2113]
+trust_tier: agent_written
+---
+
+# Breakdown of Classical Thomson Scattering
+
+The failure of the classical driven-charge model to account for the shifted spectral component observed when radiation interacts with electrons at high photon energies. The classical continuous-wave model lacks single-collision energy and momentum quantization, rendering it insufficient whenever recoil energy is non-negligible.
+
+$$\frac{h\nu}{m_e c^2} \ll 1$$
+
+## Links
+- needs:: [[zettel/thomson-scattering-classical-limit]] — It identifies the breakdown criteria by contrasting with the fundamental assumptions of the Thomson model
+
+---
+Source: PH2113_Lecture3_Compton_Scattering_Particle_Picture-, pp. 1–8
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ph2113/2026-08-06-lecture-3-compton-scattering|PH2113_Lecture3_Compton_Scattering_Particle_Picture-]] pp. 1–8
+<!-- /kurooto:seen -->
