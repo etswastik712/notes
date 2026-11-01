@@ -37,3 +37,7 @@ Announcement from 2026-08-14: the shared sheet has about 3k data points. The nex
 Sheet columns: entry number, datetime, latitude, longitude, temperature (°C), surface, name and roll number, zone and group. Entries show mixed date formats and some outliers (e.g. readings of ~46–50 °C on cloth or exposed ground), worth cleaning before analysis.
 
 Sheet: [Thermometer experiment](https://docs.google.com/spreadsheets/d/14-UPf0TqnfOTakDOcd3KgBgfLTc9UOFzj1qkON_J1Eg/edit?usp=drive_web) (only the first ~20,000 of ~375,000 characters were read).
+
+<!-- kurooto:material243db97d -->
+Textbook: [[introduction-to-climate-science/books/thermometer-experiment|Thermometer experiment]] (its concepts are listed there).
+<!-- /kurooto:material243db97d -->
