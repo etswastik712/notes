@@ -21,4 +21,5 @@ Source: Thermometer experiment
 ### Added from class
 - Thermometer experiment: Adds extensive multi-observer field datasets across Zones 8, 9, and 15, recording diurnal temperature fluctuations, sunlight versus shade contrasts, and material-specific responses such as pond water, granite, coir, and asphalt.
 - Thermometer experiment: Adds empirical field survey records covering campus zones 5 through 15 across morning, afternoon, and night time intervals, documenting surface temperature variations between shade, soil, vegetation, asphalt, and concrete.
+- Thermometer experiment: Adds empirical field survey records from student groups across campus zones 5, 13, and 15, documenting microclimate thermal contrasts between shaded/wet/dry surfaces, artificial vs vegetative targets, and active light sources.
 <!-- /kurooto:seen -->
