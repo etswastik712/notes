@@ -14,4 +14,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 ## Concepts in this book
 - (1/626): (none new)
 - (2/626): (none new)
+- (3/626): (none new)
 <!-- /kurooto:source -->
