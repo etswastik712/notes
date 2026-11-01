@@ -80,3 +80,8 @@ Post 3 (2026-08-05), a curiosity question, not an assignment: a photo of droplet
 - [[09-foundations/concepts/bistability-and-tipping-points]]: tipping points
 - [[03-thermodynamics/concepts/stefan-boltzmann-law]]: $F=\sigma T^4$
 - [[03-thermodynamics/concepts/blackbody-radiation]]: Planck function and Wien's law
+
+<!-- kurooto:material4e3d2ded -->
+## Concepts in climate_intro_notes
+(none new)
+<!-- /kurooto:material4e3d2ded -->
