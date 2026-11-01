@@ -23,4 +23,5 @@ Source: Thermometer experiment
 - Thermometer experiment: Adds empirical field survey records covering campus zones 5 through 15 across morning, afternoon, and night time intervals, documenting surface temperature variations between shade, soil, vegetation, asphalt, and concrete.
 - Thermometer experiment: Adds empirical field survey records from student groups across campus zones 5, 13, and 15, documenting microclimate thermal contrasts between shaded/wet/dry surfaces, artificial vs vegetative targets, and active light sources.
 - Thermometer experiment: Adds empirical field survey records from Zone 5 tracking diurnal thermal variations across afternoon (14:12–14:55), night (20:19–20:55), and morning (07:20–07:42) intervals for diverse surfaces such as brick footpaths, soil, vegetation surfaces, and building materials.
+- Thermometer experiment: Adds empirical field survey records across zones showing contrast between exposed artificial substrates (such as sunny roads and metal covers reaching over 40°C) versus vegetative cover and shaded microenvironments.
 <!-- /kurooto:seen -->

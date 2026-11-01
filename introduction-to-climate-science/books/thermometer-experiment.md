@@ -17,4 +17,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (3/11): [[zettel/surface-temperature-field-survey|Surface Temperature Field Survey]]
 - (4/11): [[zettel/surface-temperature-field-survey|Surface Temperature Field Survey]]
 - (5/11): [[zettel/surface-temperature-field-survey|Surface Temperature Field Survey]]
+- (6/11): [[zettel/surface-temperature-field-survey|Surface Temperature Field Survey]]
 <!-- /kurooto:source -->
