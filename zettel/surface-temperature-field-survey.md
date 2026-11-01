@@ -25,4 +25,5 @@ Source: Thermometer experiment
 - Thermometer experiment: Adds empirical field survey records from Zone 5 tracking diurnal thermal variations across afternoon (14:12–14:55), night (20:19–20:55), and morning (07:20–07:42) intervals for diverse surfaces such as brick footpaths, soil, vegetation surfaces, and building materials.
 - Thermometer experiment: Adds empirical field survey records across zones showing contrast between exposed artificial substrates (such as sunny roads and metal covers reaching over 40°C) versus vegetative cover and shaded microenvironments.
 - Thermometer experiment: Adds extensive empirical fieldwork data logs documenting diurnal and nocturnal surface temperature variations across diverse materials including soils, vegetation, concrete pavements, and metals at specific microclimate coordinates.
+- Thermometer experiment: Adds empirical field survey records contrasting surface temperatures across urban materials (granite, asphalt, concrete, tiles) against vegetative canopy shade and ambient room/air temperatures across IISER Pune campus zones.
 <!-- /kurooto:seen -->
