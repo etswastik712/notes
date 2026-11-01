@@ -35,3 +35,8 @@ See [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-m
 - [[01-climate/concepts/isotopic-thermometers]]: background for Q4
 - [[01-climate/cl02-observing-global-temperature]]: thermometer and isotope material
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature]]: lecture notes the problems are based on
+
+<!-- kurooto:materialb2c040b3 -->
+## Concepts in problem_set_1
+[[zettel/solar-constant]], [[zettel/thermal-volume-expansion]], [[zettel/liquid-in-glass-thermometer-calibration]], [[zettel/oxygen-isotope-ratio]], [[zettel/glacial-ice-volume-effect-on-seawater-isotopes]]
+<!-- /kurooto:materialb2c040b3 -->

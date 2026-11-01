@@ -1,0 +1,21 @@
+---
+id: zettel/oxygen-isotope-ratio
+aliases: ["Oxygen Isotope Ratio", "δ18O", "delta-O-18"]
+tags: [zettel, agent-written, introduction-to-climate-science]
+trust_tier: agent_written
+---
+
+# Oxygen Isotope Ratio
+
+A normalized measure of the ratio of stable oxygen isotopes 18O to 16O expressed in per mil relative to a standard, tracking paleoclimate temperature and ice sheet volume.
+
+## Links
+- used-in:: [[zettel/glacial-ice-volume-effect-on-seawater-isotopes]] — Fractionation between ocean water and continental ice mass drives seawater delta-18O variations during glacial cycles
+
+---
+Source: problem_set_1, pp. 1–1
+
+<!-- kurooto:seen -->
+## Seen in
+- [[introduction-to-climate-science/2026-08-05-problem-set-1|problem_set_1]] pp. 1–1
+<!-- /kurooto:seen -->
