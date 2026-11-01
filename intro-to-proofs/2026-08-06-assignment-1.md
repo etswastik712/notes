@@ -33,3 +33,8 @@ Problems and what each practises:
 - [[intro-to-proofs/2026-09-15-tautology]]: tautology versus merely true statement
 - [[11-Proofs-Analysis-Topology/PA01 Logic and Methods of Proof]]: their own chapter notes on logic
 - [[intro-to-proofs/2026-08-13-assignment-2]]: next sheet, conditionals and quantifiers
+
+<!-- kurooto:materialb9c1fdd2 -->
+## Concepts in Assignment1
+[[zettel/negation]], [[zettel/conjunction]], [[zettel/disjunction]], [[zettel/conditional-statement]], [[zettel/biconditional-statement]], [[zettel/logical-equivalence]], [[zettel/de-morgan-s-laws]], [[zettel/tautology]], [[zettel/contradiction]], [[zettel/truth-table]], [[zettel/prime-number]]
+<!-- /kurooto:materialb9c1fdd2 -->
