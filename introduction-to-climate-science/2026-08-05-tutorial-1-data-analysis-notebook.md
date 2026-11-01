@@ -31,3 +31,7 @@ Post (2026-08-05): "Uploading 1. the problem set, 2. data-analysis exercise (a p
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature]]: Lecture 2 methods (folding, smoothing, isotopic thermometers)
 - [[01-climate/cl02-observing-global-temperature]]: their chapter on observing temperature
 - [[01-climate/concepts/isotopic-thermometers]]: ice-core temperature proxy
+
+<!-- kurooto:materialb8712e40 -->
+Textbook: [[introduction-to-climate-science/books/t2m-hourly|t2m_hourly]] (its concepts are listed there).
+<!-- /kurooto:materialb8712e40 -->
