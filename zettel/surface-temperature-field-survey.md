@@ -28,4 +28,5 @@ Source: Thermometer experiment
 - Thermometer experiment: Adds empirical field survey records contrasting surface temperatures across urban materials (granite, asphalt, concrete, tiles) against vegetative canopy shade and ambient room/air temperatures across IISER Pune campus zones.
 - Thermometer experiment: Provides extensive empirical field survey logs from Zone 6 (Aishik's group) across August 9–13, capturing substrate temperatures for materials like concrete, granite, tile, soil, leaves, and ambient air.
 - Thermometer experiment: Adds empirical field data across outdoor campus landmarks, structural features, and vegetative targets logged across zones 1 through 14.
+- Thermometer experiment: Adds raw observational survey logs covering campus microenvironments such as cricket grounds, guest houses, and calisthenics areas, contrasting shaded versus sunlit surfaces across flora, metals, and soils.
 <!-- /kurooto:seen -->
