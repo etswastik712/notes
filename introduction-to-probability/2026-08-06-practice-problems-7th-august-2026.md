@@ -42,3 +42,8 @@ Dear everyone, here is the update practice problem set. Feel free to work out ot
 - [[introduction-to-probability/2026-08-05-class-notes-5th-august-2026]]: counting rules for problems 1, 4-8
 - [[introduction-to-probability/2026-08-05-class-notes-6th-august-2026]]: naive definition and axioms for problems 2, 3, 10-12
 - [[08-Probability/PR01 Counting and the Axioms of Probability]]: vault chapter covering the same ground
+
+<!-- kurooto:material3372933a -->
+## Concepts in Practice problems 7th August 2026
+[[zettel/naive-definition-of-probability]], [[zettel/sample-space]], [[zettel/event]], [[zettel/probability-difference-formula-for-subsets]], [[zettel/pascal-s-identity]]
+<!-- /kurooto:material3372933a -->
