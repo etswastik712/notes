@@ -17,4 +17,7 @@ Source: Thermometer experiment
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-climate-science/books/thermometer-experiment|Thermometer experiment]]
+
+### Added from class
+- Thermometer experiment: Adds extensive multi-observer field datasets across Zones 8, 9, and 15, recording diurnal temperature fluctuations, sunlight versus shade contrasts, and material-specific responses such as pond water, granite, coir, and asphalt.
 <!-- /kurooto:seen -->

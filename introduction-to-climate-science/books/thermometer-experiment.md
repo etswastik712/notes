@@ -13,4 +13,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 
 ## Concepts in this book
 - (1/11): [[zettel/surface-temperature-field-survey|Surface Temperature Field Survey]]
+- (2/11): [[zettel/surface-temperature-field-survey|Surface Temperature Field Survey]]
 <!-- /kurooto:source -->
