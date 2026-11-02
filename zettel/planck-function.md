@@ -19,6 +19,8 @@ $$I(\lambda, T) = \frac{2hc^2}{\lambda^5 \left( e^{\frac{hc}{\lambda k_B T}} - 1
 Source: climate_intro_notes, pp. 17–23
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/blackbody]] — The Planck function specifies the spectral radiance of an ideal blackbody, so the blackbody concept is its object of description
+- used-in:: [[zettel/infrared-flux-temperature-feedback]] — The note's alias 'Planck Feedback' indicates that the feedback's outgoing infrared increase with temperature is governed by Planck emission, though the notes do not spell out the link
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature|climate_intro_notes]] pp. 17–23
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
