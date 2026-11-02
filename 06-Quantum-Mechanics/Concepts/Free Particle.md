@@ -37,6 +37,9 @@ Used in: [[QM01 From Waves to Probabilities]], [[QM02 The Schrodinger Equation a
 Related zettel: [[zettel/delocalized-plane-wave-idealization|Delocalized Plane Wave Idealization]] · [[zettel/free-particle-dispersion-relation-in-schrodinger-theory|Free Particle Dispersion Relation in Schrödinger Theory]] · [[zettel/free-particle-on-an-infinite-line|Free Particle on an Infinite Line]] · [[zettel/free-particle-periodic-boundary-condition|Free Particle Periodic Boundary Condition]]
 <!-- zettel:end -->
 
+## Continued in Part II (added 2026-11-02)
+- The thermal density matrix of a free particle is a Gaussian of width $\lambda$: $\langle\mathbf r|e^{-\beta\hat p^2/2m}|\mathbf r'\rangle=\lambda^{-3}e^{-\pi|\mathbf r-\mathbf r'|^2/\lambda^2}$ ([[SM08 Quantum Ensembles and Identical Particles]] §3.1).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

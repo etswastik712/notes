@@ -12,7 +12,7 @@ tags: [subject/thermo, type/moc, taught, extra/book, src/lecture-notes, src/book
 
 > [!info] Two parts, two kinds of provenance (2026-10-30)
 > **Part I, thermodynamics (TH01–TH06, THX1):** built from the MIT 8.333 lectures and Zemansky, so it carries the green/yellow/blue scope labels below (<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>).
-> **Part II, statistical mechanics and statistical physics (SM01 onward):** the user's **own self-study**, written from the books in `physics/thermodynamics-stat-mech/books/` with **no course behind it**, so Part II chapters carry **no taught/extra labels**, only a Provenance table. Part I is untouched; Part II builds on it. **Written so far: SM01–SM07, i.e. Part II-A is complete** (SM04, kinetic theory, added on request 2026-10-30 and SM01–SM03 deepened the same day; SM05–SM07 written 2026-11-02). See [[#Part II: statistical mechanics (self-study, from the books)]].
+> **Part II, statistical mechanics and statistical physics (SM01 onward):** the user's **own self-study**, written from the books in `physics/thermodynamics-stat-mech/books/` with **no course behind it**, so Part II chapters carry **no taught/extra labels**, only a Provenance table. Part I is untouched; Part II builds on it. **Written so far: SM01–SM08** (Part II-A is complete; Part II-B opened with SM08 on 2026-11-02; SM04, kinetic theory, added on request 2026-10-30 and SM01–SM03 deepened the same day; SM05–SM07 written 2026-11-02). See [[#Part II: statistical mechanics (self-study, from the books)]].
 
 Six chapters: temperature and the zeroth law; work, heat and the first law; the ideal gas and adiabats; the second law, Carnot engines and entropy; thermodynamic potentials, Maxwell relations, stability and the third law; and an optional bridge from kinetic theory to statistical mechanics. The main line follows the **MIT 8.333 lectures 1–4** (Kardar's Chapter I), with Zemansky's *Heat and Thermodynamics* Ch. 1–5 for the more elementary ground (thermometers, simple systems, work, ideal-gas experiments).
 
@@ -77,7 +77,7 @@ flowchart LR
 ### II-B Quantum statistical mechanics
 | # | Chapter | Main sources | Status |
 |---|---|---|---|
-| SM08 | Quantum ensembles, the density matrix, identical particles (quantum Boltzmann equation) | K §6.4–6.5, §7.1–7.3; PB Ch. 5 | planned |
+| SM08 | [[SM08 Quantum Ensembles and Identical Particles]] | K §6.4–6.5, §7.1–7.3; PB Ch. 5 pp. 115–138; Hu §8.2–8.6 | **draft** |
 | SM09 | Molecular gases: rotation, vibration, nuclear spin | K §6.1; PB §6.5 | planned |
 | SM10 | Phonons and the specific heat of solids (Einstein, Debye) | K §6.2; PB §7.4–7.5 | planned |
 | SM11 | The photon gas and blackbody radiation | K §6.3; PB §7.3 | planned |

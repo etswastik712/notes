@@ -32,6 +32,9 @@ An energy measurement gives $E_n=(n+\tfrac12)\hbar\omega$ with probability $|c_n
 
 Used in: [[QM06 The Oscillator Toolbox]] §2. Related: [[Ladder Operators]] · [[Number Operator]] · [[Dirac Notation]] · [[Completeness Relation]] · [[Coherent State]].
 
+## Continued in Part II (added 2026-11-02)
+- Identical bosons and fermions are labelled by occupation numbers; normalisation $\sqrt{N!\prod n_k!}$: [[SM08 Quantum Ensembles and Identical Particles]] §4 ([[Identical Particles]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

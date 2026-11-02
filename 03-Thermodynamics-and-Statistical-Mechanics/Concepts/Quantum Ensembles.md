@@ -27,3 +27,6 @@ Used in: [[SM08 Quantum Ensembles and Identical Particles]]. Related: [[Density 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Pure and Mixed States]] (Quantum Mechanics): the canonical density matrix $e^{-\beta\hat H}/Z$ is the thermal mixed state: purity $\mathrm{Tr}\hat\rho^2$ falls from 1 at $T=0$ to $1/d$ at infinite temperature, the Bloch vector of a spin-1/2 shrinking as $\tanh(\mu B/k_BT)$.

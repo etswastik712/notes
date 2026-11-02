@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]]. Related: [[Fermi-Dirac Distribution]] · [[Grand Canonical Ensemble]] · [[Planck Law]] · [[Maxwell-Boltzmann Distribution]].
 
+## Continued in Part II (added 2026-11-02)
+- As the equilibrium of the Bose-enhanced collision integral and from the grand canonical ensemble of identical bosons: [[SM08 Quantum Ensembles and Identical Particles]] §5.2 and §6 ([[Ideal Quantum Gas]], [[Quantum Boltzmann Equation]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

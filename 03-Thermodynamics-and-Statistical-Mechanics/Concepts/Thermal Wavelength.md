@@ -29,6 +29,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]], [[SM03 The Canonical Ensemble]]. Related: [[Sackur-Tetrode Equation]] · [[Maxwell-Boltzmann Distribution]] · [[Partition Function]] · [[Kinetic Theory of Gases]].
 
+## Continued in Part II (added 2026-11-02)
+- The scale of the exchange hole, $g(r)=1\pm e^{-2\pi r^2/\lambda^2}$, and the degeneracy criterion $n\lambda^3/g_s\gtrsim1$ with numbers for gases, liquid He and metals ([[SM08 Quantum Ensembles and Identical Particles]] §1, §5.1).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

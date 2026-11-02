@@ -28,6 +28,9 @@ The oven beam is maximally mixed (every analyser sees 50:50, whatever its axis).
 
 Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §6. Related: [[Density Matrix]] · [[Superposition Principle]] · [[Measurement Postulate]] · [[Entanglement]].
 
+## Continued in Part II (added 2026-11-02)
+- Purity of a thermal spin-½ and the Bloch vector $\tanh(\mu B/k_BT)$: [[SM08 Quantum Ensembles and Identical Particles]] §2.1 ([[Quantum Ensembles]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

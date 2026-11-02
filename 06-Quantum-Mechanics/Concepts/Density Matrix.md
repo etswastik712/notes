@@ -28,6 +28,9 @@ Thermal: $\rho=e^{-H/k_BT}/Z$, giving $P=\tanh(\mu B/k_BT)$ ([[Canonical Ensembl
 
 Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §6, §8, §11. Related: [[Pure and Mixed States]] · [[Bloch Sphere]] · [[Entanglement]] · [[Statistical Entropy]] · [[Expectation Value]].
 
+## Continued in Part II (added 2026-11-02)
+- The thermal and many-body version: $\hat\rho=e^{-\beta\hat H}/Z$, grand canonical $\hat\rho$ on Fock space and the exact recursion for identical particles ([[Quantum Ensembles]], [[SM08 Quantum Ensembles and Identical Particles]] §2).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

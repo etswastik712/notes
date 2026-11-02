@@ -32,7 +32,13 @@ Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: 
 Related zettel: [[zettel/exchangeability-in-sequential-sampling-without-replacement|Exchangeability in Sequential Sampling Without Replacement]] · [[zettel/hypergeometric-first-draw-posterior-probability|Hypergeometric First-Draw Posterior Probability]]
 <!-- zettel:end -->
 
+## Continued in Part II (added 2026-11-02)
+- Physical counterpart: identical bosons have exchangeable (symmetric) many-body laws; the statistical correlation $g(r)=1\pm e^{-2\pi r^2/\lambda^2}$ is what exchange symmetry does to independence ([[SM08 Quantum Ensembles and Identical Particles]] §5.1, [[Exchange Correlation of the Ideal Gas]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Identical Particles]] (Thermodynamics): exchangeable random variables have a joint law invariant under every permutation, the probabilistic analogue of a symmetric many-boson wave function; de Finetti's theorem (mixtures of i.i.d. laws) has the quantum de Finetti theorem as counterpart.

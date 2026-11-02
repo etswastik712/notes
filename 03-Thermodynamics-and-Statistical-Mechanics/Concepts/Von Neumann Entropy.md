@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM06 Entropy Information and the Arrow of Time]]. Related: [[Entanglement Entropy]] · [[Gibbs Entropy]] · [[Shannon Entropy]] · [[Canonical Ensemble]].
 
+## Continued in Part II (added 2026-11-02)
+- The density-matrix formalism, canonical $\hat\rho$, and the Bloch-vector entropy of a spin-½: [[SM08 Quantum Ensembles and Identical Particles]] §2 ([[Quantum Ensembles]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

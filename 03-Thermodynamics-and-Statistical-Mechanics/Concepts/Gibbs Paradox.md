@@ -25,6 +25,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]. Related: [[Sackur-Tetrode Equation]] · [[Statistical Entropy]] · [[Shannon Entropy]] · [[Chemical Potential]].
 
+## Continued in Part II (added 2026-11-02)
+- The quantum resolution: $1/N!$ is the identity term of the sum over $N!$ permutations in $Z_N$, and exchange terms give the first quantum correction ([[SM08 Quantum Ensembles and Identical Particles]] §5.1).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

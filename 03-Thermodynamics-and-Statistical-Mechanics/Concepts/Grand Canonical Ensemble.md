@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]]. Related: [[Grand Potential]] · [[Chemical Potential]] · [[Fugacity]] · [[Number Fluctuations]] · [[Canonical Ensemble]] · [[Equivalence of Ensembles]].
 
+## Continued in Part II (added 2026-11-02)
+- Quantum version: trace over Fock space; $\ln\mathcal Z=-\epsilon\sum\ln(1-\epsilon ze^{-\beta\varepsilon_k})$ and $PV=\tfrac23E$ for any statistics: [[SM08 Quantum Ensembles and Identical Particles]] §5.2 ([[Ideal Quantum Gas]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

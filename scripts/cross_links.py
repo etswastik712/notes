@@ -188,6 +188,12 @@ PAIRS = [
      "the effective emission temperature $T_e=255$ K fixes the entropy flux $\\tfrac43J/T_e$ carried by the Earth's infrared emission, 22.7 times the entropy flux $\\tfrac43J/T_\\odot$ of the absorbed sunlight"),
     ("Viscosity of a Gas", "Péclet Number",
      "the kinematic viscosity $\\nu=\\eta/\\rho$ computed from kinetic theory is the diffusivity of momentum, so the Reynolds number $UL/\\nu$ is a Péclet number for momentum transport and the Prandtl number $\\nu/D_T$ compares the two diffusivities"),
+    ("Identical Particles", "Exchangeability",
+     "exchangeable random variables have a joint law invariant under every permutation, the probabilistic analogue of a symmetric many-boson wave function; de Finetti's theorem (mixtures of i.i.d. laws) has the quantum de Finetti theorem as counterpart"),
+    ("Identical Particles", "Symmetric Group",
+     "the exchange symmetry of $N$ identical particles is a representation of $S_N$: bosons carry the trivial representation, fermions the sign representation, and the other irreducible representations (parastatistics) are excluded in three dimensions"),
+    ("Quantum Ensembles", "Pure and Mixed States",
+     "the canonical density matrix $e^{-\\beta\\hat H}/Z$ is the thermal mixed state: purity $\\mathrm{Tr}\\hat\\rho^2$ falls from 1 at $T=0$ to $1/d$ at infinite temperature, the Bloch vector of a spin-1/2 shrinking as $\\tanh(\\mu B/k_BT)$"),
     # ---- Differential Geometry <-> Group Theory <-> Analysis <-> QM <-> Foundations (added 2026-11-02)
     ("Smooth Action", "Group Action",
      "a smooth action is a group action by diffeomorphisms of a manifold; the orbit and stabiliser are the same objects, now carrying dimensions $\\dim G=\\dim G_p+\\dim(G\\cdot p)$"),

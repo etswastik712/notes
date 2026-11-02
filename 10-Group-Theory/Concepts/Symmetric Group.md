@@ -22,6 +22,9 @@ tags: [subject/group-theory, type/concept, status/draft]
 
 Used in: [[GT01 Groups Subgroups and Cosets]]. Related: [[Alternating Group]] · [[Conjugacy Class]].
 
+## Continued in Part II (added 2026-11-02)
+- Exchange symmetry of identical particles: bosons (trivial representation), fermions (sign representation), the counting $\binom{N+g-1}N$ and $\binom gN$ and the permutation expansion of $Z_N$ ([[SM08 Quantum Ensembles and Identical Particles]] §4–§5, [[Identical Particles]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

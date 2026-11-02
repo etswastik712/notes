@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM04 Kinetic Theory and the Boltzmann Equation]]. Related: [[Molecular Chaos]] · [[Collision Invariants]] · [[H-Theorem]] · [[Scattering Cross Section]] · [[Relaxation Time Approximation]] · [[Kinetic Theory of Gases]].
 
+## Continued in Part II (added 2026-11-02)
+- With quantum statistics the collision integral acquires $(1+\epsilon f)$ factors (Uehling–Uhlenbeck): [[SM08 Quantum Ensembles and Identical Particles]] §6 ([[Quantum Boltzmann Equation]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

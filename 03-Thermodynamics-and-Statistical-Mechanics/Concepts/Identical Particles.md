@@ -27,3 +27,6 @@ Used in: [[SM08 Quantum Ensembles and Identical Particles]]. Related: [[Spin-Sta
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Exchangeability]] (Probability): exchangeable random variables have a joint law invariant under every permutation, the probabilistic analogue of a symmetric many-boson wave function; de Finetti's theorem (mixtures of i.i.d. laws) has the quantum de Finetti theorem as counterpart.
