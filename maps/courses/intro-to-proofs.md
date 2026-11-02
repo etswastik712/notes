@@ -47,6 +47,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - 2026-08-04: lectures Monday and Thursday 2:00-3:00 PM in LHC 101; tutorials Friday 2:00-3:00 PM (LHC 205, 206, 101); quizzes are held during tutorials. Evaluation: internal 20%, mid-sem 40%, end-sem 40%.
 - 2026-08-06: tutorials split into three batches by roll number (Batch 1 LHC 101, Batch 2 LHC 205, Batch 3 LHC 206); venues later changed, see 2026-08-26.
 - 2026-08-25: Batch 1 office hours (Ekta, Akanksha) shifted to Thursday 4-5 PM, room 461, main building; otherwise email the instructor to arrange a time.
+- 2026-11-02: that day's class was cancelled due to an unavoidable circumstance (no make-up date posted) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk3MDI2MzE2MTUy)).
 
 ## Concepts
 - [[zettel/well-ordering-principle]] Well-Ordering Principle
