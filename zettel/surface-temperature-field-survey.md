@@ -15,6 +15,9 @@ An observational sampling methodology where surface temperatures across varied m
 Source: Thermometer experiment
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/stevenson-screen-standard-measurement]] — The survey's ground-level temperature readings are contrasted with, and calibrated against, the standardised Stevenson screen protocol that shields sensors from direct radiation, which is the reference method for air temperature
+- needs:: [[zettel/liquid-in-glass-thermometer-calibration]] — Each thermometer used in the surface survey must be calibrated using the bulb-volume and capillary relationship before its readings can be trusted
+- used-in:: [[zettel/area-weighted-mean-temperature]] — Survey readings taken across varied surfaces are gridded and area-weighted to avoid spatial bias before they are averaged into a mean temperature
 ## Seen in
 - [[introduction-to-climate-science/books/thermometer-experiment|Thermometer experiment]]
 
