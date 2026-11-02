@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated in Classroom) and project presentations on 5 and 6 Oct 2026. Upcoming, not an assessment: day trip on Sat 7 Nov 2026 (about 6:00 to 18:00; sheet, signed declaration and upload due Sunday 1 Nov). See [[maps/courses/landscape-evolution]] and [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]].
+Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated in Classroom) and project presentations on 5 and 6 Oct 2026. Upcoming, not an assessment: day trip on Sat 7 Nov 2026 (about 6:00 to 18:00); the final list was posted 2026-11-02 and you are on it. The teacher wants the Deccan slides and the field guide (northern leg only) read before the trip. See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
 
 ## Covered so far
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]: GIS/DEM basics, QGIS with SAGA, topotoolbox workflow (GRIDobj, inpaintnans, FLOWobj, STREAMobj)
@@ -18,6 +18,8 @@ Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator
 - [[landscape-evolution/2026-10-24-geomorphic-features-of-the-deccan-traps-terrain]]: Deccan Traps terrain: Konkan belt, Western Ghats escarpment, plateaus, and the four controls (eruptive style, lithology, tectonics, monsoon erosion)
 - [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]]: glacial and aeolian slides (90 MB file, not read)
 - [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]]: logistics and safety rules for the 7 Nov trip (no exam content)
+- [[landscape-evolution/2026-11-02-deccan-next-field-guide]]: field guide for the trip: lava flow internal structure, Sahyadri Group stratigraphy and GPB markers, northern-leg stops NL1 to NL4
+- [[landscape-evolution/2026-11-02-field-trip-final-list]]: final participant list (logistics only)
 
 ## Must know
 - GIS: a computer system to collect, manage, analyse and visualise geographic data. DEM: raster of elevations; in topotoolbox `DEM.Z` holds the value of each cell. (Classroom: QGIS and topotoolbox tutorial slides)
@@ -32,18 +34,23 @@ Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator
 - Columnar jointing comes from thermal contraction on cooling and controls cliff collapse and scarp retreat.
 - Boles (interflow horizons) form either as paleosols from in-situ weathering of flow tops, or as ash-fall deposits. Intertrappean beds are 1 to over 20 m of sediment between flows.
 - Eastward tilt gives an asymmetric divide: Godavari, Krishna and Bhima start near the Ghats crest and flow over 700 km east to the Bay of Bengal.
-- Planation surfaces at about 1,330, 1,225, 1,000, 920, 700 and 600 m amsl, produced by etchplanation, scarp-retreat pediplanation, differential erosion and Quaternary block displacement.
+- Planation surfaces at about 1,330, 1,225, 1,000, 920, 700 and 600 m amsl, produced by etchplanation, scarp-retreat pediplanation, differential erosion and Quaternary block displacement. (The field guide gives three surfaces: Pune-Indore 550 ± 50 m, Ahmednagar 700 ± 50 m, highland about 1000 m in the north and about 1200 m in the south.)
+- A frozen lava lobe has three layers: crust (vesicular, glassy tachylitic rind), core (crystallinity highest toward the medial cooling isotherm) and base (often with pipe vesicles). A lava flow consists of many lobes; a vent's many flows form a flow-field. Flow-field architecture is braided, ponded or tabular, set by emplacement rate, substrate topography and viscosity/strain. (Classroom: Deccan Next field guide)
+- Lobe morphology (pāhoehoe, ʻaʻā, hummocky, sheet, slabby, rubbly) is a continuous variation of emplacement rate, vapour loss, lateral movement and cooling, not different "lava types"; lateral transitions are normal. Most flood-basalt lavas are pāhoehoe types. (Classroom: Deccan Next field guide)
+- Field markers: the four giant plagioclase basalt (GPB, megacryst) horizons Thalghat (M1), Ghoti (M2), Giravali (M3) and Rajgad (M4) are regionally traceable. Giravali separates the Kalsubai and Lonavala subgroups where the Bhimashankar Member pinches out. (Classroom: Deccan Next field guide)
+- Sahyadri Group order, bottom to top: Kalsubai (Salher, Nashik, Malshej), Lonavala (Indrayani, Bushe), Wai (Poladpur, Purandargarh, Mahabaleshwar). Ages about 66.4 Ma (Salher) to 65.4 Ma (Mahabaleshwar). (Classroom: Deccan Next field guide)
+- Northern leg stops: NL1 Rajgurunagar Ghat (tabular sheet flow, FTB, trapped lobe, fracture zones versus cooling joints); NL2 Ane Ghat (braided lobate flows; Giravali megacryst flow; natural arch on a knick zone of an entrenched meander); NL3 Mandhol Dam (rejuvenated entrenched channel, fracture-controlled rectilinear drainage, hanging tributaries, taken as evidence of recent uplift of the Kanhoor block); NL4 Kukdi river bed at Nighoj (potholes over 10 m wide, channel along the Ghod Fault of the Kurduwadi Lineament, rejuvenation). (Classroom: Deccan Next field guide)
 - Project reasoning pointers (2026-10-06): conserve mass and energy; balance forces and torques.
 
 ## Typical questions
-Not known yet; no problem sheets or past papers have been posted. The Deccan lecture suggests identification questions (recognise flow types, jointing, boles, knickpoints, potholes, planation surfaces in the field or in photos) and cause-to-landform questions; the teacher's 2026-10-24 post stresses applying concepts in the field, and the 2026-10-30 trip post asks students to read Shilpa's slides carefully before the 7 Nov trip. The tutorials suggest practical DEM tasks (extract a stream network from the Bhima DEM and explain the effect of `minarea`); practise with [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]].
+Not known yet; no problem sheets or past papers have been posted. The Deccan lecture and the field guide suggest identification questions (recognise flow types, crust/core/base, flow-top breccia, columnar jointing, boles, GPB marker flows, knickpoints, natural arches, potholes, fracture-controlled drainage, planation surfaces in the field or in photos) and cause-to-landform questions; the teacher's 2026-10-24 post stresses applying concepts in the field, and the 2026-10-30 and 2026-11-02 posts ask students to read Shilpa's slides and the field guide's northern leg before the 7 Nov trip. The tutorials suggest practical DEM tasks (extract a stream network from the Bhima DEM and explain the effect of `minarea`); practise with [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]. For the field side practise with [[landscape-evolution/2026-11-02-deccan-next-field-guide]].
 
 ## Gaps
 - Glacial and aeolian slides (l_glacial_aolian.pdf, 90 MB, posted 2026-10-27) not read: no definitions or landforms recorded yet. See [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]].
 - Slides pre_ms_landscape_26.pdf (217 MB) not read. Week-1 slides (4 Aug), updated lecture slides (11 and 22 Aug) not accessible (Drive 404), so the lecture content of August is not in the notes.
 - QGIS slides had mostly pictures: the basin-analysis steps (SAGA tools used) are not recorded. The Bhima DEM and campus-hills photo not viewed.
 - The two linked papers (Himalayan mountain building review, Chamoli flood reconstruction) not read.
-- Deccan slides: figures, maps and photos were not in the extracted text; the area/volume labels (380,000 vs 500,000 km²; 193,000 vs 439,000 km³) and the Kalsubai height (1642 vs 1646-1660 m) are inconsistent or unlabelled. Laterite capping slide has only a figure. Papers cited (Kale et al., Sheth 2020) not read.
-- No notes yet on what was taught in the field trip of 2026-10-24, and the destination of the 7 Nov trip is not stated in the post.
+- Deccan slides: figures, maps and photos were not in the extracted text; the area/volume labels (380,000 vs 500,000 km²; 193,000 vs 439,000 km³) and the Kalsubai height (1642 vs 1646-1660 m; the field guide says 1648 m) are inconsistent or unlabelled. Laterite capping slide has only a figure. Papers cited (Kale et al., Sheth 2020) not read.
+- Field guide: it was written for a 2023 event; the teacher says only the northern leg applies, but the exact stops and route for 7 Nov are not stated (the post only says "northern leg"). Maps, photos and the morphology occurrence table symbols were not in the extracted text. The southern leg (Poladpur, Rajgad GPB, Mahabaleshwar sections) is not summarised.
 - Final exam date and syllabus not announced.
 <!-- /kurooto:exam-prep -->
