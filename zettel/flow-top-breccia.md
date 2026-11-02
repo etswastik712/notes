@@ -1,6 +1,6 @@
 ---
 id: zettel/flow-top-breccia
-aliases: ["Flow-Top Breccia", "FTB"]
+aliases: ["Flow-Top Breccia", "FTB", "incipient flow-top breccia"]
 tags: [zettel, agent-written, landscape-evolution]
 trust_tier: agent_written
 ---
@@ -17,4 +17,5 @@ Source: Deccan Next_Field Guide, pp. 12–22
 <!-- kurooto:seen -->
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 12–22
+- [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
 <!-- /kurooto:seen -->

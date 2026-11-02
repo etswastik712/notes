@@ -1,6 +1,6 @@
 ---
 id: zettel/lava-lobe
-aliases: ["Lava Lobe", "lobe"]
+aliases: ["Lava Lobe", "lobe", "sheet lobe", "hummocky lobe"]
 tags: [zettel, agent-written, landscape-evolution]
 trust_tier: agent_written
 ---
@@ -17,4 +17,8 @@ Source: Deccan Next_Field Guide, pp. 1–11
 <!-- kurooto:seen -->
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 1–11
+- [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
+
+### Added from class
+- Deccan Next_Field Guide pp. 23–33: Adds field descriptions of compound sheet flows showing internal gas escape features, trapped vesicular lobes inside the core, terminal pinching-out terminations, and hummocky lobe axial clefts.
 <!-- /kurooto:seen -->

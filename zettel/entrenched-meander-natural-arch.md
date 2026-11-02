@@ -1,0 +1,22 @@
+---
+id: zettel/entrenched-meander-natural-arch
+aliases: ["Entrenched Meander Natural Arch", "stone bridge", "basaltic natural arch"]
+tags: [zettel, agent-written, landscape-evolution]
+trust_tier: agent_written
+---
+
+# Entrenched Meander Natural Arch
+
+A bedrock natural bridge formed at a knick zone along an incised, entrenched meander loop where differential hydraulic weathering and erosion undercut and remove an entire basal lava lobe while leaving the overlying resistant roof intact.
+
+## Links
+- part-of:: [[zettel/fluvial-rejuvenation]] — A knick zone on an entrenched meander acts as the erosional setting driving natural arch formation
+- needs:: [[zettel/lava-lobe]] — Arch creation relies on differential weathering exploiting weak lobe boundaries and plucking out an entire discrete lobe
+
+---
+Source: Deccan Next_Field Guide, pp. 23–33
+
+<!-- kurooto:seen -->
+## Seen in
+- [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
+<!-- /kurooto:seen -->
