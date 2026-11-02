@@ -18,6 +18,9 @@ $$P \land Q$$
 Source: Assignment1, pp. 1–2
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/disjunction]] — Conjunction is true only when both statements are true, whereas disjunction is true when at least one is true
+- example-of:: [[zettel/contradiction]] — The contradiction P ∧ ¬P is a conjunction of a statement with its negation, which is false under every truth assignment
+- used-in:: [[zettel/truth-table]] — The truth-table method is the way the notes evaluate the truth value of a conjunction for each assignment of its components
 ## Seen in
 - [[intro-to-proofs/2026-08-06-assignment-1|Assignment1]] pp. 1–2
 <!-- /kurooto:seen -->
