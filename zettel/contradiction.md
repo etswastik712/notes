@@ -18,6 +18,9 @@ $$P \land \neg P$$
 Source: Assignment1, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/negation]] — The defining example P ∧ ¬P cannot be formed without the negation operator, which supplies the second conjunct that makes the statement always false
+- example-of:: [[zettel/conjunction]] — A contradiction P ∧ ¬P is a conjunction of a statement with its negation, and it is false because a conjunction requires both parts to be true
+- used-in:: [[zettel/truth-table]] — The note defines a contradiction by its falsity under every valuation, which is the check a truth table performs over all assignments of the component variables
 ## Seen in
 - [[intro-to-proofs/2026-08-06-assignment-1|Assignment1]] pp. 1–2
 <!-- /kurooto:seen -->
