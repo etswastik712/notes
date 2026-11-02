@@ -18,6 +18,7 @@ $$\mathcal{A}_1 \cup \mathcal{A}_2$$
 Source: HW1, pp. 1–1
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/existence-of-infinitely-many-smooth-structures]] — Compatibility characterises when two atlases give the same smooth structure, while this result produces infinitely many pairwise non-diffeomorphic structures, i.e. atlases that are not compatible
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1|HW1]] pp. 1–1
 <!-- /kurooto:seen -->
