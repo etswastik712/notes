@@ -20,6 +20,9 @@ $$(P \Rightarrow Q) \sim (\neg P \lor Q)$$
 Source: Assignment1, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/biconditional-statement]] — The biconditional P ⇔ Q is the pair of conditionals in both directions, so this note's conditional is the building block the biconditional requires
+- needs:: [[zettel/disjunction]] — The equivalent form ¬P ∨ Q given in this note's summary is built from the disjunction connective
+- needs:: [[zettel/negation]] — The equivalent form ¬P ∨ Q given in this note's summary uses negation of the hypothesis P
 ## Seen in
 - [[intro-to-proofs/2026-08-06-assignment-1|Assignment1]] pp. 1–2
 <!-- /kurooto:seen -->
