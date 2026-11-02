@@ -18,6 +18,8 @@ $$F = \sigma T^4$$
 Source: climate_intro_notes, pp. 17–23
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/blackbody]] — The law gives the emitted flux F = σT⁴ for a blackbody, so the blackbody idealisation is the object it applies to
+- contrasts-with:: [[zettel/wien-s-displacement-law]] — Wien's law locates the peak wavelength of blackbody emission as T rises, while Stefan-Boltzmann gives the total emitted flux, which also rises with T but as T⁴
 ## Seen in
 - [[introduction-to-climate-science/2026-09-17-study-material-5-radiative-balance|Radiative_balance_Marshall_and_Plumb]] pp. 1–11
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature|climate_intro_notes]] pp. 17–23
