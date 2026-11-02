@@ -29,3 +29,6 @@ Used in: [[PA13 The Derivative and the Inverse Function Theorem]], [[DM04 The Ta
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Rank Theorem]] (Differential Geometry): the rank theorem generalises the inverse function theorem (rank $n$) and the implicit function theorem (rank $m$) to maps of constant rank.

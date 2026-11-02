@@ -30,3 +30,6 @@ Used in: [[DM14 One-Parameter Subgroups and the Exponential Map]], [[DM15 Closed
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Spinor]] (Quantum Mechanics): $\exp\big(-\tfrac i2\theta\,\hat n\!\cdot\!\sigma\big)\in SU(2)$ rotates spinors by $\theta$ about $\hat n$, and $\theta=2\pi$ gives $-I$: $SU(2)\to SO(3)$ is $2:1$.

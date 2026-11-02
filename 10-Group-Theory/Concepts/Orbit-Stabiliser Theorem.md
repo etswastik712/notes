@@ -28,3 +28,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Equivalence Class and Partition]] (Analysis): the orbits of a group action are the equivalence classes of $x\sim y\iff y=gx$; counting each class gives the orbit-stabiliser formula.
+- [[Orbit Map and Stabiliser]] (Differential Geometry): $|G|=|G\cdot\omega|\,|G_\omega|$ for finite groups becomes a dimension count for Lie group actions, via the orbit map $g\mapsto g\cdot p$ and the Equivariant Rank Theorem.

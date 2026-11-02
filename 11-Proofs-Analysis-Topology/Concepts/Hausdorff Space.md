@@ -29,3 +29,6 @@ Used in: [[PA12 Separation, Countability and Local Compactness]]. Related: [[Sep
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Topological Manifold]] (Differential Geometry): Hausdorff and second countable are the axioms that rule out pathologies: the line with two origins is locally Euclidean but not Hausdorff, and has no partitions of unity.

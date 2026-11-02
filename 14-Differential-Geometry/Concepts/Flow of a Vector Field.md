@@ -36,3 +36,6 @@ Class zettel on this idea: [[zettel/fundamental-theorem-on-flows|Fundamental The
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Fixed Points and Linear Stability]] (Foundations): equilibria of $\dot x=V(x)$ are the singular points of $V$ (Prop 9.21) and the linearised flow near one is $e^{tA}$ with $A=DV$.

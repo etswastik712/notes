@@ -36,3 +36,6 @@ Class zettel on this idea: [[zettel/integral-curve|Integral Curve]] · [[zettel/
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Maximal Solution of an ODE]] (Analysis): an integral curve of $V$ is a solution of $\dot x^i=V^i(x)$ in a chart; the maximal integral curve is the maximal ODE solution (Picard-Lindelof, Escape Lemma).

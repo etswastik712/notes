@@ -29,3 +29,6 @@ Used in: [[PA15 Covering Spaces and the Fundamental Group]], [[DM05 Immersions, 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Smooth Covering Map]] (Differential Geometry): a smooth covering is a covering space whose projection is a local diffeomorphism: $\mathbb R\to S^1$, $SU(2)\to SO(3)$, $\mathbb R^n\to T^n$.

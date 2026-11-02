@@ -29,3 +29,6 @@ Used in: [[PA12 Separation, Countability and Local Compactness]]. Related: [[Loc
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Partition of Unity]] (Differential Geometry): a smooth manifold (Hausdorff, second countable) is paracompact and has smooth partitions of unity subordinate to every open cover.

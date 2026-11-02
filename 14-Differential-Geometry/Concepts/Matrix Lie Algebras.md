@@ -30,3 +30,7 @@ Used in: [[DM11 The Lie Algebra of a Lie Group]]. Related: [[Lie Algebra of a Li
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Angular Momentum Algebra]] (Quantum Mechanics): $[E_j,E_k]=\epsilon_{jkl}E_l$ in $\mathfrak{so}(3)\cong\mathfrak{su}(2)$ is the angular-momentum commutation relation $[L_j,L_k]=i\hbar\epsilon_{jkl}L_l$ up to the factor $i\hbar$.
+- [[Pauli Matrices]] (Quantum Mechanics): $\tau_k=-\tfrac i2\sigma_k$ is a basis of $\mathfrak{su}(2)$ with $[\tau_1,\tau_2]=\tau_3$.

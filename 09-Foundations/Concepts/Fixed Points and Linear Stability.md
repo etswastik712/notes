@@ -39,3 +39,7 @@ Applications of the same ideas: [[Bistability and Tipping Points]]; see also [[L
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Flow of a Vector Field]] (Differential Geometry): equilibria of $\dot x=V(x)$ are the singular points of $V$ (Prop 9.21) and the linearised flow near one is $e^{tA}$ with $A=DV$.
+- [[Matrix Exponential]] (Differential Geometry): solutions of the linear system $\dot x=Ax$ are $x(t)=e^{tA}x_0$, the one-parameter subgroup of $GL(n)$ with velocity $A$; the eigenvalues of $A$ decide stability.

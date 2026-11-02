@@ -32,3 +32,6 @@ Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §4, §7.2–§7.3.
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Exponential Map]] (Differential Geometry): $\exp\big(-\tfrac i2\theta\,\hat n\!\cdot\!\sigma\big)\in SU(2)$ rotates spinors by $\theta$ about $\hat n$, and $\theta=2\pi$ gives $-I$: $SU(2)\to SO(3)$ is $2:1$.

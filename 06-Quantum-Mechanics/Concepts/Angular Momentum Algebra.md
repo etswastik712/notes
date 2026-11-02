@@ -32,3 +32,6 @@ Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §9.1. Related: [[S
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Matrix Lie Algebras]] (Differential Geometry): $[E_j,E_k]=\epsilon_{jkl}E_l$ in $\mathfrak{so}(3)\cong\mathfrak{su}(2)$ is the angular-momentum commutation relation $[L_j,L_k]=i\hbar\epsilon_{jkl}L_l$ up to the factor $i\hbar$.

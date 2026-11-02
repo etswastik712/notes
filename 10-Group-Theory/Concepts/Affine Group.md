@@ -25,3 +25,6 @@ Used in: [[GT-A3 Primitive Maximal Subgroups]]. Related: [[Frobenius Group]] · 
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Euclidean Group]] (Differential Geometry): $E(n)=\mathbb R^n\rtimes O(n)\subset\mathrm{Aff}(n)=\mathbb R^n\rtimes GL(n)$: rigid motions inside affine maps, both semidirect products acting by $x\mapsto b+Ax$.

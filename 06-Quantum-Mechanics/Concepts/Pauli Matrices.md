@@ -44,3 +44,6 @@ Related zettel: [[zettel/robertson-uncertainty-relation-for-pauli-matrices|Rober
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Matrix Lie Algebras]] (Differential Geometry): $\tau_k=-\tfrac i2\sigma_k$ is a basis of $\mathfrak{su}(2)$ with $[\tau_1,\tau_2]=\tau_3$.

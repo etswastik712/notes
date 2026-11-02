@@ -30,3 +30,6 @@ Used in: [[DM14 One-Parameter Subgroups and the Exponential Map]]. Related: [[Ex
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Fixed Points and Linear Stability]] (Foundations): solutions of the linear system $\dot x=Ax$ are $x(t)=e^{tA}x_0$, the one-parameter subgroup of $GL(n)$ with velocity $A$; the eigenvalues of $A$ decide stability.
