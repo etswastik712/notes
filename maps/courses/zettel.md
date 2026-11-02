@@ -24,3 +24,6 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 - [[zettel/smooth-structure-compatibility|Smooth Structure Compatibility]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
 <!-- /kurooto:course-overview -->
+
+<!-- kurooto:hubs -->
+Home: [[maps/index|Home]] · Research: [[maps/research|Research]]

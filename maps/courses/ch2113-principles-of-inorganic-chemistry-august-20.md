@@ -27,6 +27,7 @@ Instructor: R. Boomi Shankar. Classroom: https://classroom.google.com/c/ODcxOTI3
 - 2026-09-08: Quiz 1, 12:00, in the tutorial classrooms; topics from the beginning up to and including molecular orbital theory (announced 2026-09-03). Already past.
 - 2026-10-21: Quiz 2 (announced 2026-10-07). Syllabus: redox chemistry taught up to 2026-10-14 and covered in the TA session of 2026-10-13; study Shriver & Atkins, Inorganic Chemistry, 5th ed., Chapter 5 (Oxidation and reduction), pp. 147–161 only. Typo on p. 161, eq. 5.11: the signs should be minus (first term), plus (second), plus (third), minus (fourth) (announced 2026-10-15). Already past.
 - 2026-08-22: Quiz 1 announced for Tuesday 2026-09-08 (second Tuesday of September); portion: Structure and Bonding up to MOT (MOT to be completed the following week). Already past.
+- 2026-11-10: Quiz 3, Tuesday 12:00–1:00 pm during the TA session (announced 2026-11-02). Syllabus: Crystal Field Theory and related topics (not molecular orbital theory), covering what is taught in class on 2 Nov, in the TA session on 3 Nov, and in class on 4 Nov and 9 Nov. Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., pp. 394–413.
 
 ## Announcements
 - 2026-10-05: Quiz 1 and midsem answer papers shown by the TAs in the NLH classroom from 12:00 on 2026-10-06; no tutorials that day.

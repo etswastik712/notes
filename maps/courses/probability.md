@@ -15,3 +15,6 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 ### Timeline
 - **2026-11-13** | exam — Introduction to Probability: quiz 6 at 12:00
 <!-- /kurooto:course-overview -->
+
+<!-- kurooto:hubs -->
+Home: [[maps/index|Home]] · Research: [[maps/research|Research]]

@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins 5th ed. Ch. 5, pp. 147–161). Check Classroom for the end-semester date.
+Quiz 3 on Tuesday 2026-11-10, 12:00–1:00 pm, during the TA session (announced 2026-11-02). Syllabus: Crystal Field Theory and related topics, not molecular orbital theory. It covers what is taught in class on 2 Nov, in the TA session on 3 Nov, and in class on 4 Nov and 9 Nov. Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., pp. 394–413. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins 5th ed. Ch. 5, pp. 147–161). The end-semester date is not announced yet.
 
 ## Covered so far
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2]]: Lewis structures (resonance, formal charge, oxidation number) and VSEPR
@@ -63,9 +63,11 @@ Not announced yet. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and inc
 - Wade's rules classification and electron counting: Tutorial 4 Q4.
 - Borazine synthesis and reactions: Tutorial 4 Q5, Q6, Q7.
 - Phosphazenes: Tutorial 4 Q8, Q9, Q10.
-- Redox (Quiz 2 scope): practise from Shriver & Atkins Ch. 5, pp. 147–161; no notes yet.
+- Crystal Field Theory (Quiz 3 scope): practise from Shriver & Atkins 5th ed. pp. 473–483 and Huheey et al. 4th ed. pp. 394–413; no class notes yet.
+- Redox (Quiz 2 scope, past): Shriver & Atkins Ch. 5, pp. 147–161; no notes yet.
 
 ## Gaps
+- Crystal Field Theory (Quiz 3, 2026-11-10) has no notes yet; lectures of 2, 4 and 9 Nov and the TA session of 3 Nov are not yet filed. Reading: Shriver & Atkins 5th ed. pp. 473–483; Huheey, Keiter & Keiter 4th ed. pp. 394–413. MOT is explicitly excluded from this quiz.
 - Redox chemistry (Quiz 2 scope, Shriver & Atkins Ch. 5, pp. 147–161, TA session of 2026-10-13) has no notes yet. Note the sign typo in eq. 5.11 on p. 161 (signs should be −, +, +, −).
 - The MO diagrams (H2, N2, O2/F2, HF, CO, H2O), Lewis/VSEPR drawings and hybrid orbital pictures are images only; they are not captured in the notes.
 - The SF4 angle triplets (179°/178.5°/170° axial, 103°/110°/97° equatorial) are unlabelled in the slides; confirm which structures they belong to.

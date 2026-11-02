@@ -14,3 +14,5 @@ anywhere, it's never changed.
 - [[maps/research|Research]]
 
 ## Courses
+- [[maps/courses/probability|probability]]
+- [[maps/courses/zettel|zettel]]
