@@ -18,6 +18,8 @@ $$\lambda_{\max} \approx \frac{2898}{T}$$
 Source: climate_intro_notes, pp. 17–23
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/blackbody]] — Wien's law describes the wavelength of maximum emission of a blackbody, so the idealised blackbody concept it relies on must be understood first
+- contrasts-with:: [[zettel/stefan-boltzmann-law]] — Both are blackbody radiation laws, but Wien's law gives the wavelength of peak emission (scaling as 1/T) while Stefan-Boltzmann gives the total emitted flux (scaling as T^4)
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature|climate_intro_notes]] pp. 17–23
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 17–24
