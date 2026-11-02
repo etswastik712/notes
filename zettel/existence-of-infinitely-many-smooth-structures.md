@@ -18,6 +18,8 @@ $$F_n(x) = |x|^{n-1} x$$
 Source: HW1, pp. 1–1
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/maximal-smooth-atlas]] — The theorem's distinct smooth structures are distinct maximal atlases, since a smooth structure is defined as a maximal smooth atlas on the underlying topological manifold
+- needs:: [[zettel/smooth-structure-compatibility]] — Showing two smooth structures are different relies on the compatibility condition: two atlases give the same smooth structure exactly when their union is still a smooth atlas
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1|HW1]] pp. 1–1
 <!-- /kurooto:seen -->
