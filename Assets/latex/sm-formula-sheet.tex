@@ -1,0 +1,114 @@
+\documentclass[9pt]{article}
+\input{preamble-brain.tex}
+\geometry{margin=14mm}
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\title{Statistical Mechanics, Part II-A (Kardar spine; Pathria--Beale, Huang, Schroeder, Blundell)\\\large formula sheet, key numbers and traps}
+\author{second brain $\cdot$ chapters SM01--SM07}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\begin{keybox}[Conventions]
+$\beta=1/k_BT$; $Z=\sum e^{-\beta E}$; $z=e^{\beta\mu}$; $\lambda=h/\sqrt{2\pi mk_BT}$; classical measure $\dd\Gamma=\prod\dd^3p\,\dd^3q/(N!\,h^{3N})$. No course is behind Part II: every number was recomputed (\texttt{scripts/sm*\_numbers.py}); recalled inputs are flagged in the chapters.
+\end{keybox}
+
+\section*{SM01 Probability, large numbers, information}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+cumulants & $K(t)=\ln\langle e^{tx}\rangle=\sum\kappa_nt^n/n!$; $\kappa_4=\langle(x-\mu)^4\rangle-3\sigma^4$; independent: $\kappa_n$ add & Poisson all $\kappa_n=\lambda$\\
+moments & $\langle x^n\rangle=\sum_{\rm partitions}\prod\kappa_{|B|}$; Gaussian (Wick): $\langle x^{2k}\rangle=(2k-1)!!\sigma^{2k}$ & $m_4=\lambda^4+6\lambda^3+7\lambda^2+\lambda$\\
+CLT & $\kappa_n(y)\propto N^{1-n/2}$; Edgeworth $\Phi-\tfrac{\gamma_1}{6\sqrt N}(y^2-1)\phi$; Berry--Esseen $0.48\rho/\sigma^3\sqrt N$ & Poisson(10), $P(\le5)$: $0.0671$, G $0.0774$, E $0.0695$\\
+failure & Cauchy: $\tilde p=e^{-a|k|}$, mean of $N$ has the same law & IQR/2 stays $1$\\
+Stirling & $\ln N!=N\ln N-N+\tfrac12\ln2\pi N+\tfrac1{12N}$; saddle $\int e^{N\varphi}=e^{N\varphi^*}\sqrt{2\pi/N|\varphi''|}$ & $N=100$: $363.739$; error $0.89\%$ crude\\
+large dev. & $P\sim e^{-NI}$; $I(s)=\sup_t[ts-K(t)]$; Chernoff $P\le e^{-NI}$ for all $N$; Sanov $e^{-ND(q\|p)}$ & coin $I(m)=\ln2+m\ln m+(1-m)\ln(1-m)$\\
+information & $S=-\sum p\ln p$; $D(p\|q)\ge0$; $I(X;Y)=D(p_{XY}\|p_Xp_Y)$; typical set $e^{NS}$; MaxEnt $p\propto e^{-\lambda f}$, $S=\ln Z+\lambda F$ & $p=0.1$: $0.469$ bit; Jaynes die $\lambda=-0.371$\\
+\bottomrule
+\end{tabular}
+
+\section*{SM02 Phase space, microcanonical}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+Liouville & $\partial_t\rho=-\{\rho,\mathcal H\}$; flow symplectic, $\det D\phi_t=1$; no attractors; $S_G$ constant & pendulum blob area $0.3848$\\
+recurrence & Poincar\'e; Kac $\langle T\rangle=\tau\mu(\Gamma)/\mu(A)$; all in left half: $2^N\tau$ & $N=100$, $\tau=10^{-13}$ s: $1.3\times10^{17}$ s\\
+postulate & $\rho=1/\Omega$ on the shell; one momentum on the $3N$-sphere $\to$ Gaussian $(1-z^2/n)^{(n-3)/2}$ & $N=100$, $z=3$: $0.975$ of Gaussian\\
+entropy & $S=k_B\ln\Omega$; $\tfrac1T=\partial_ES$, $\tfrac PT=\partial_VS$, $\tfrac\mu T=-\partial_NS$; $S$ concave $\Rightarrow C_V\ge0$ & equal $T$ at the maximum\\
+two-level & $x=\tfrac1{e^{\varepsilon/kT}+1}$, $S/Nk=-x\ln x-(1-x)\ln(1-x)$; $T<0$ for $x>\tfrac12$ & $x=0.25$: $0.5623$, $kT/\varepsilon=0.910$\\
+ideal gas & $\Sigma=\tfrac{V^N(2\pi mE)^{3N/2}}{N!h^{3N}\Gamma(3N/2+1)}$; $\ln\Sigma=S_{ST}/k-\ln(\pi\sqrt6N)$; $S=Nk[\ln\tfrac V{N\lambda^3}+\tfrac52]$ & He $126.15$ J/mol/K\\
+Gibbs paradox & divide by $N!$; $\Delta S_{\rm mix}=-Nk\sum x_i\ln x_i$ (different), $0$ (same) & $2R\ln2=11.53$; air $4.27$ J/mol/K\\
+Einstein solids & $\Omega=\binom{q+N-1}q$; peak $q_A=qN_A/N$; $\sigma/q_A\sim1/\sqrt N$ & $300/200/100$: $60$, $\sigma=5.4$\\
+ice & $S_0=R\ln\tfrac32$ & $3.371$ J/mol/K\\
+\bottomrule
+\end{tabular}
+
+\section*{SM03 Canonical ensemble}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+distribution & $p_i=e^{-\beta E_i}/Z$; $F=-kT\ln Z$; $E=-\partial_\beta\ln Z$; $\kappa_n(E)=(-1)^n\partial_\beta^n\ln Z$; $S=k\ln Z+E/T$ & $Z=\mathrm{Tr}\,e^{-\beta\hat H}$\\
+variational & $F[q]-F=kT\,D(q\|p)\ge0$; MaxEnt gives $p$; $\mathrm{Var}E=kT^2C_V$ & equivalence: $Z=\int\Omega e^{-\beta E}$\\
+response & $\partial\langle B\rangle/\partial\lambda=\beta\,\mathrm{Var}B\ge0$ ($C_V$, $\chi$, $\kappa_T\ge0$) & $\chi=\beta\mathrm{Var}M/V$\\
+ideal gas & $Z=\tfrac1{N!}(V/\lambda^3)^N$; $\mu=kT\ln n\lambda^3$; $E\sim\mathrm{Gamma}(\tfrac{3N}2,kT)$: skew $\sqrt{8/3N}$ & N$_2$: $\mu=-0.403$ eV\\
+atmosphere & $n(z)=n_0e^{-z/H}$, $H=kT/mg$ & $8.43$ km (288 K); CO$_2$ $5.55$\\
+paramagnet & $M=N\mu\tanh x$; $S/Nk=\ln2\cosh x-x\tanh x$; Brillouin $\mathcal B_J$; Langevin $\coth y-1/y$ & Gd$^{3+}$ 5 T, 2 K: $0.990$\\
+solid & Dulong--Petit $3R=24.94$; Einstein $\tfrac{x^2e^x}{(e^x-1)^2}$, $x=\theta_E/T$ & $0.171$ at $\theta_E/5$; $0.724$ at $\theta_E/2$\\
+hydrogen & $Z=\sum2n^2e^{-\beta(E_n-E_1)}\to\infty$ as $n_{\max}^3$; cutoff $\sqrt{r/2a_0}$ & $n_{\max}=45$ at $10^{20}$ m$^{-3}$\\
+$(T,P)$ & $\mathcal Z_G=\int\dd V\,e^{-\beta PV}Z$; $\mathrm{Var}V=kTV\kappa_T$ & ideal: $1/\sqrt{N+1}$\\
+\bottomrule
+\end{tabular}
+
+\section*{SM04 Kinetic theory}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+scales & $\tau_c=d/\bar v\ll\tau_\times=\lambda/\bar v\ll\tau_U$; $\tau_c/\tau_\times\sim nd^3$; BBGKY $\partial_tf_s-\{\mathcal H_s,f_s\}=\sum\int\nabla V\cdot\partial_pf_{s+1}$ & air: $0.78$ ps, $141$ ps\\
+Boltzmann & $[\partial_t+\mathbf v\!\cdot\!\nabla+\tfrac{\mathbf F}m\!\cdot\!\nabla_{\mathbf v}]f=\int\dd^3p_2\dd\Omega\,\sigma_\Omega|\mathbf v_{12}|(f_1'f_2'-f_1f_2)$; molecular chaos for incoming pairs & invariants $1,\mathbf p,p^2/2m$\\
+H-theorem & $H=\int f\ln f$, $\dot H=-\tfrac14\int(f_1'f_2'-f_1f_2)\ln\tfrac{f_1'f_2'}{f_1f_2}\le0$; $S_B=-k\int f(\ln h^3f-1)$ & = Sackur--Tetrode; Kac: $\kappa_4\propto e^{-t/4}$\\
+Euler & $P=nkT$, $\mathbf h=0$, $D_t(Tn^{-2/3})=0$; $c=\sqrt{5kT/3m}$ & He $1007$, air $343$ m/s\\
+RTA & $\eta=nkT\tau$, $\kappa=\tfrac52nk^2T\tau_K/m$; exact $\eta=\tfrac5{16}\sqrt{mkT/\pi}/d^2$, $\kappa=\tfrac{15}4\tfrac km\eta$, $\mathrm{Pr}=\tfrac23$, $D=\tfrac65\eta/\rho$ & He/Ne/Ar/Kr/Xe: $\kappa$ to $0.3$--$3\%$\\
+modes & shear $\nu k^2$, heat $D_Tk^2$, sound $\pm ck-i\Gamma k^2$; $\mathrm{Kn}=\lambda/L$: continuum $<0.01$ & air $\nu=1.57\times10^{-5}$ m$^2$/s\\
+\bottomrule
+\end{tabular}
+
+\section*{SM05 Grand canonical, chemical equilibrium}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+ensemble & $p=e^{-\beta(E-\mu N)}/\mathcal Z$; $\Phi=-kT\ln\mathcal Z=-PV$; $\langle N\rangle=kT\partial_\mu\ln\mathcal Z$ & $z=e^{\beta\mu}$\\
+fluctuations & $\mathrm{Var}N=kT\partial_\mu N=\langle N\rangle nkT\kappa_T$; GC $\mathrm{Var}E=kT^2C_V+(\partial_NE)^2\mathrm{Var}N$ & water $0.062\langle N\rangle$; ideal $\tfrac{15}4N(kT)^2$\\
+ideal gas & $\mathcal Z=e^{zV/\lambda^3}$; $N$ Poisson & $P(0)=e^{-\langle N\rangle}$\\
+one mode & FD $\tfrac1{e^x+1}$, BE $\tfrac1{e^x-1}$, MB $e^{-x}$; variances $\langle n\rangle(1\mp\langle n\rangle)$, $\langle n\rangle$ & agree for $x\gtrsim5$\\
+Langmuir & $\theta=\tfrac P{P+P_0}$, $P_0=\tfrac{kT}{\lambda^3}e^{-\epsilon/kT}$ & $0.5$ eV: $2.4\times10^3$ Pa (300 K)\\
+mass action & $\sum\nu_i\mu_i=0\Rightarrow\prod n_i^{\nu_i}=\prod(z_i^{\rm int}/\lambda_i^3)^{\nu_i}$; $K_p=e^{-\Delta G^\circ/RT}$ & N$_2$O$_4$: $K_p=0.148$, $\alpha=0.19$\\
+Saha & $\tfrac{n_en_p}{n_H}=(\tfrac{2\pi m_ekT}{h^2})^{3/2}e^{-I/kT}$; $x=2/(1+\sqrt{1+4n/K})$ & Sun $8\times10^{-5}$; $T_{1/2}\approx9000$ K ($10^{20}$)\\
+Widom & $\mu_{\rm ex}=-kT\ln\langle e^{-\beta\Delta U}\rangle$ & hard spheres $-kT\ln p_{\rm fit}$\\
+\bottomrule
+\end{tabular}
+
+\section*{SM06 Entropy, information, arrow of time}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+entropies & $S_B=k\ln|\Gamma_M|$; $S_G=-k\!\int\!\rho\ln\rho$ (constant); $S_{\rm cg}=\langle S_B\rangle+H[p_M]\ge S_G$ & $P(\Delta S)\sim e^{\Delta S/k}$\\
+mixing & $W_{\max}=-NkT\sum x_i\ln x_i$ with membranes & He+Ar: $3.44$ kJ; air $1.27$ kJ/mol\\
+Szilard, Landauer & $W=kT\ln2$; erasure $\ge kT\ln2$; $W\le-\Delta F+kTI$ & $2.87\times10^{-21}$ J (300 K)\\
+radiation & $s=\tfrac43aT^3$; $3.60k$ and $2.70kT$ per photon; surface flux $\tfrac43\sigma T^3$ & Earth: in $0.055$, out $1.247$ W/m$^2$K\\
+availability & $\Delta S_{\rm tot}=kD(p\|p_{\rm eq})$; $W=kT\,D$; lost work $T_0\dot S$ & $RT\ln2=1.72$ kJ/mol\\
+von Neumann & $S=-k\mathrm{Tr}\rho\ln\rho$; Page $\ln d_A-d_A/2d_B$ & $N=12$, $m=6$: $3.659$\\
+\bottomrule
+\end{tabular}
+
+\section*{SM07 Equipartition, virial, magnetism}
+\begin{tabular}{@{}p{2.9cm}p{8.9cm}p{5.6cm}@{}}
+\toprule
+equipartition & $\langle x_i\partial_j\mathcal H\rangle=\delta_{ij}kT$; $\langle V\rangle=kT/s$ for $|q|^s$; $\langle\varepsilon\rangle=3kT$ ultrarelativistic & $\langle z\rangle=kT/mg$\\
+gases & $C_V=\tfrac f2R$, $\gamma=1+\tfrac2f$; freeze-out below $\theta_r,\theta_v$; rotor max $1.098k$ at $0.81\theta_r$ & N$_2$ $C_p$ $29.11$--$35.68$ vs JANAF\\
+virial & $2\langle K\rangle=s\langle V\rangle$; $PV=NkT-\tfrac13\langle\sum ru'\rangle$ & H atom: $13.6$, $-27.2$ eV\\
+gravity & $E=-K$, $C=-\tfrac32Nk$; $\bar T=GM\mu m_H/5kR$; $t_{KH}=GM^2/RL$ & Sun $2.8\times10^6$ K; $3.1\times10^7$ yr\\
+magnetic & $\dd F=-S\dd T-M\dd B$; $(\partial_BS)_T=(\partial_TM)_B$; $S=S(B/T)$, $T_f=T_iB_f/B_i$ & 1 K, 1 T $\to$ 0.01 T: $0.01$ K\\
+Bohr--van Leeuwen & $\mathbf p\to\mathbf p-q\mathbf A$: $Z$ indep.\ of $B$, $M=0$; $\chi_{\rm mol}^{\rm dia}=-N_Ar_e\langle\sum r^2\rangle/6$ & He $-1.89$ vs $-1.9\times10^{-6}$ cm$^3$/mol\\
+\bottomrule
+\end{tabular}
+
+\vspace{3pt}
+\begin{verifybox}{recalled inputs}
+Measured $\eta,\kappa$ of noble gases, JANAF $C_p(\mathrm N_2)$, $\kappa_T$(water), $\Delta G^\circ(\mathrm N_2\mathrm O_4)$, $\eta_B=6.1\times10^{-10}$, solar $M,R,L$, $\langle r^2\rangle_{\rm He}$ and the CMOS switching energies are recalled, not looked up. The Chapman--Enskog coefficients $\tfrac5{16},\tfrac{15}4,\tfrac65$ are quoted (tested only through $\kappa/\eta$).
+\end{verifybox}
+\end{document}

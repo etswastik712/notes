@@ -1,0 +1,32 @@
+---
+title: Lie Correspondence
+aliases: ["Theorem 20.21", "Lie's third theorem", "Lie's fundamental theorems", "simply connected Lie groups and Lie algebras"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Lie Correspondence
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG17–DG20 via [[mt3184-differential-geometry-and-lie-groups/2026-09-15-september-14-18|Sep 14–18]] and [[mt3184-differential-geometry-and-lie-groups/2026-10-10-october-5-9|Oct 5–9]] notes.
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=549|Lee Thm 20.21, p. 531]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=550|Lee Thm 20.22, p. 532]].
+
+> [!intuition] In one picture
+> Up to topology, groups and algebras are the same thing: the Lie algebra remembers the group exactly when the group is simply connected.
+
+> [!key] Definition
+> $G\mapsto\mathrm{Lie}(G)$ is a **bijection** between isomorphism classes of simply connected Lie groups and finite-dimensional real Lie algebras. Injective: [[Homomorphism Theorem for Lie Groups]]. Surjective (**Lie's third theorem**): Ado $\Rightarrow\mathfrak g\subseteq\mathfrak{gl}(n)$, Thm 19.26 gives a connected subgroup, take the universal cover. All connected groups with algebra $\mathfrak g$: $\tilde G/\Gamma$, $\Gamma$ discrete central (Thm 21.32).
+
+$\mathbb R^n$ and $T^n$ share an abelian algebra; $SU(2)=S^3$ and $SO(3)=SU(2)/\{\pm I\}$ share $\mathfrak{su}(2)\cong\mathfrak{so}(3)\cong(\mathbb R^3,\times)$; $\mathrm{Aff}(1)^+\cong\mathbb R^2$ has $\mathfrak{aff}(1)$; Heisenberg group $\cong\mathbb R^3$. Local versions are Lie's fundamental theorems.
+
+Used in: [[DM15 Closed Subgroups and the Lie Correspondence]]. Related: [[Homomorphism Theorem for Lie Groups]] · [[Universal Covering Group]] · [[Lie Algebra of a Lie Group]] · [[Lie Algebra Representation]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

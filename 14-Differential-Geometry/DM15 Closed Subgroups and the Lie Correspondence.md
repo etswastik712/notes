@@ -85,7 +85,7 @@ flowchart LR
 <span class="scope-taught">taught</span> *Source: DG17–DG20* · <span class="scope-extra-book">extra · book</span> *[[John M. Lee - Introduction to Smooth Manifolds.pdf#page=548|Lee Thm 20.19, p. 530]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=549|Lee Cor. 20.20, Thm 20.21, p. 531]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=550|Lee Thm 20.22, p. 532]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=575|Lee Thm 21.32, p. 557]]*
 
 > [!key] Lie subgroups $\leftrightarrow$ Lie subalgebras (Lee Thm 19.26; uses Frobenius, §3)
-> If $\mathfrak h$ is a Lie subalgebra of $\mathfrak g=\mathrm{Lie}(G)$ there is a **unique connected Lie subgroup** $H\le G$ with $\mathrm{Lie}(H)=\mathfrak h$ (an immersed subgroup in general): the left-invariant distribution $D_g=\{X_g:X\in\mathfrak h\}$ is involutive ([[Lee Lemma 19.24]]) and $H$ is the leaf through $e$.
+> If $\mathfrak h$ is a Lie subalgebra of $\mathfrak g=\mathrm{Lie}(G)$ there is a **unique connected Lie subgroup** $H\le G$ with $\mathrm{Lie}(H)=\mathfrak h$ (an immersed subgroup in general): the left-invariant distribution $D_g=\{X_g:X\in\mathfrak h\}$ is involutive (Lee Lemma 19.24) and $H$ is the leaf through $e$.
 
 > [!key] The Homomorphism Theorem (DG18; Lee Thm 20.19)
 > Let $G$, $H$ be Lie groups with **$G$ simply connected** and $\varphi:\mathfrak g\to\mathfrak h$ a Lie algebra homomorphism. Then there is a **unique** Lie group homomorphism $\Phi:G\to H$ with $\Phi_*=\varphi$.
