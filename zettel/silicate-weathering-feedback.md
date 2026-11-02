@@ -16,6 +16,7 @@ A long-term geochemical mechanism wherein atmospheric carbon dioxide dissolved i
 Source: climate_intro_notes, pp. 2–16
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/infrared-flux-temperature-feedback]] — Silicate weathering is a slow carbon-cycle feedback, while the infrared flux-temperature (Planck) feedback is a fast, stabilizing radiative response, so the two operate on different timescales and mechanisms
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature|climate_intro_notes]] pp. 2–16
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 2–16
