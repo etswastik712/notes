@@ -17,6 +17,9 @@ A stabilizing negative climate feedback mechanism whereby an increase in surface
 Source: climate_intro_notes, pp. 2–16
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/stefan-boltzmann-law]] — The outgoing longwave radiation whose increase with surface temperature drives this feedback is governed by the fourth-power dependence in the Stefan-Boltzmann law
+- needs:: [[zettel/planck-function]] — The spectral distribution of outgoing infrared emission that the feedback depends on is specified by the Planck function, which the notes list among the blackbody emission relations
+- needs:: [[zettel/blackbody]] — The feedback concerns thermal emission to space from the Earth's surface, which the notes model using the blackbody radiator idealization
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature|climate_intro_notes]] pp. 2–16
 - [[introduction-to-climate-science/2026-08-21-lecture-6-planetary-energy-balance-with-ghgs|climate_intro_notes_L1_L6]] pp. 2–16
