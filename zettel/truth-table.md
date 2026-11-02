@@ -16,6 +16,8 @@ A tabular computation method used to list all possible truth valuations of eleme
 Source: Assignment1, pp. 1–2
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/tautology]] — A truth table lists every valuation of the propositions, and a tautology is a compound statement true under all of them, so the table is how one is checked
+- used-in:: [[zettel/contradiction]] — A contradiction is false under every assignment of truth values, which a truth table lists exhaustively to confirm
 ## Seen in
 - [[intro-to-proofs/2026-08-06-assignment-1|Assignment1]] pp. 1–2
 <!-- /kurooto:seen -->
