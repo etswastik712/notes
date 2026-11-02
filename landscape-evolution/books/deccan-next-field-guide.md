@@ -13,4 +13,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 
 ## Concepts in this book
 - pp. 1–11 (1/4): [[zettel/lava-lobe|Lava Lobe]], [[zettel/flow-field|Flow-Field]], [[zettel/flow-field-stacking-architecture|Flow-Field Stacking Architecture]], [[zettel/deccan-traps-planation-surfaces|Deccan Traps Planation Surfaces]], [[zettel/sahyadri-group-stratigraphy|Sahyadri Group Stratigraphy]]
+- pp. 12–22 (2/4): [[zettel/sahyadri-group-stratigraphy|Sahyadri Group Stratigraphy]], [[zettel/flow-top-breccia|Flow-Top Breccia]]
 <!-- /kurooto:source -->

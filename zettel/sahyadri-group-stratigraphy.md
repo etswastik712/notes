@@ -17,4 +17,5 @@ Source: Deccan Next_Field Guide, pp. 1–11
 <!-- kurooto:seen -->
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 1–11
+- [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 12–22
 <!-- /kurooto:seen -->
