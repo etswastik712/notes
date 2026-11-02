@@ -16,6 +16,7 @@ A smooth atlas on a topological manifold that is not strictly contained in any l
 Source: HW1, pp. 1–1
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/graph-coordinate-atlas-of-the-2-sphere]] — The six-chart hemisphere atlas of S^2 is a concrete smooth atlas, and it is contained in the unique maximal smooth atlas that defines the sphere's smooth structure
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1|HW1]] pp. 1–1
 <!-- /kurooto:seen -->
