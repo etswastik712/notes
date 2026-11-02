@@ -44,7 +44,7 @@ COURSES = {
     "landscape-evolution": ("05-Landscapes-Geomorphology", "landscapes"),
     "ph2113": ("06-Quantum-Mechanics", "qm"),
     "introduction-to-probability": ("08-Probability", "probability"),
-    "mt3184-differential-geometry-and-lie-groups": ("10-Group-Theory", "group-theory"),
+    "mt3184-differential-geometry-and-lie-groups": ("14-Differential-Geometry", "diff-geometry"),
     "intro-to-proofs": ("11-Proofs-Analysis-Topology", "analysis"),
     "ch2113-principles-of-inorganic-chemistry-august-20": ("12-Inorganic-Chemistry", "chemistry"),
 }
@@ -96,19 +96,42 @@ OVERRIDES.update(_pin("CH09", "oxidation-number"))
 OVERRIDES.update(_pin("LS03", "digital-elevation-model"))
 OVERRIDES.update(_pin(None, "field-trip-coordinator-pre-departure-verification", "field-trip-emergency-response-chain",
                       "field-trip-head-count-protocol", "participant-indemnity-and-health-self-certification"))
-# Group theory: MT3184 is manifold and Lie-group material.  GT10 section 6 ("the bridge to Lie groups") is the only chapter that
-# treats it, so the Lie-group notes go there; the differential-geometry prerequisites have no chapter yet (course map only).
-OVERRIDES.update(_pin("GT10", "lie-group", "lie-algebra", "lie-algebra-of-a-lie-group", "lie-algebra-representation", "faithful-representation",
-                      "ado-s-theorem", "lie-group-homomorphism", "lie-subgroup", "left-invariant-vector-field", "one-parameter-subgroup",
-                      "euclidean-group", "semidirect-product-of-lie-groups", "smooth-group-action", "orbit-map", "left-translation-map",
-                      "constant-rank-of-lie-group-homomorphisms"))
-OVERRIDES.update(_pin(None, "vector-field", "complete-vector-field", "completeness-of-compactly-supported-vector-fields", "integral-curve",
-                      "naturality-of-flows", "naturality-of-integral-curves", "fundamental-theorem-on-flows", "flowout-theorem",
-                      "uniform-time-lemma", "singular-and-regular-points-of-a-vector-field", "lie-bracket-of-vector-fields",
-                      "locality-of-derivations", "rank-theorem", "global-rank-theorem", "immersed-submanifold", "image-of-injective-immersion",
-                      "submanifold-tangent-space-via-slice-chart", "tangent-bundle-as-a-smooth-manifold",
-                      "product-manifold-tangent-space-isomorphism", "antipodal-map-on-s2", "vector-field-on-s2-with-a-single-zero",
-                      "baire-category-theorem"))
+# Differential geometry (14-Differential-Geometry, written 2026-11-02): MT3184 has its own vault now, so the 38 notes that used to sit in
+# 10-Group-Theory (GT10 section 6 and the course map) are re-filed under the DM chapters.  Hand decisions by slug.
+MT_CHAPTERS = {
+    "DM02": ("antipodal-map-on-s2",),
+    "DM03": ("locality-of-derivations", "product-manifold-tangent-space-isomorphism"),
+    "DM04": ("rank-theorem", "global-rank-theorem", "tangent-bundle-as-a-smooth-manifold", "vector-field-on-s2-with-a-single-zero",
+             "baire-category-theorem"),
+    "DM05": ("immersed-submanifold", "image-of-injective-immersion"),
+    "DM06": ("submanifold-tangent-space-via-slice-chart",),
+    "DM08": ("lie-group", "lie-group-homomorphism", "lie-subgroup", "left-translation-map", "constant-rank-of-lie-group-homomorphisms"),
+    "DM09": ("smooth-group-action", "orbit-map", "euclidean-group", "semidirect-product-of-lie-groups"),
+    "DM10": ("vector-field", "lie-bracket-of-vector-fields"),
+    "DM11": ("lie-algebra", "lie-algebra-of-a-lie-group", "left-invariant-vector-field", "lie-algebra-representation",
+             "faithful-representation", "ado-s-theorem"),
+    "DM12": ("integral-curve", "naturality-of-integral-curves", "fundamental-theorem-on-flows", "naturality-of-flows", "complete-vector-field",
+             "completeness-of-compactly-supported-vector-fields", "uniform-time-lemma", "flowout-theorem",
+             "singular-and-regular-points-of-a-vector-field"),
+    "DM14": ("one-parameter-subgroup",),
+}
+for _code, _slugs in MT_CHAPTERS.items():
+    OVERRIDES.update(_pin(_code, *_slugs))
+MT_CONCEPTS = {
+    "naturality-of-flows": {"concepts": ["Flow of a Vector Field"]},
+    "naturality-of-integral-curves": {"concepts": ["Integral Curve"]},
+    "uniform-time-lemma": {"concepts": ["Complete Vector Field"], "related": ["Escape Lemma"]},
+    "singular-and-regular-points-of-a-vector-field": {"concepts": ["Regular and Singular Points"], "related": ["Vector Field"]},
+    "constant-rank-of-lie-group-homomorphisms": {"concepts": ["Lie Group Homomorphism"], "related": ["Lie Group"]},
+    "tangent-bundle-as-a-smooth-manifold": {"concepts": ["Tangent Bundle"]},
+    "image-of-injective-immersion": {"related": ["Immersion and Submersion", "Immersed Submanifold"]},
+    "antipodal-map-on-s2": {"related": ["Stereographic Projection", "Smooth Map"]},
+}
+for _slug, _o in MT_CONCEPTS.items():
+    OVERRIDES.setdefault(_slug, {}).update(_o)
+# Vault folders that used to receive notes (now empty of a course): their generated zettel blocks are retired by do_apply.
+LEGACY_VAULTS = ["10-Group-Theory"]
+STALE_SUBJECT_TAGS = {"14-Differential-Geometry": ["subject/group-theory"]}
 
 STOP = set("""a an the of in on at to for from by with without and or nor but as is are was were be been being it its this that these
 those into onto over under via per than then so such can may might will would should could not no any each every both either
@@ -393,7 +416,7 @@ def basename_counts():
 def find_zettel():
     """Every note whose id is zettel/...: the loose ones in zettel/, and any already filed in a vault (also off Concepts/zettel)."""
     found = [os.path.join(ZDIR, f) for f in sorted(os.listdir(ZDIR)) if f.endswith(".md")]
-    for folder, _ in sorted(set(COURSES.values())):
+    for folder in sorted({f for f, _ in COURSES.values()} | set(LEGACY_VAULTS)):
         for dp, dn, fn in os.walk(os.path.join(ROOT, folder)):
             for f in fn:
                 if f.endswith(".md"):
@@ -468,6 +491,8 @@ def do_apply(plan, vaults):
             lines.append(f"- related-concept:: {link(folder, 'concept', c)} — a closely related concept note")
         lines.append(V_END)
         new = add_subject_tag(text, p["subject"])
+        for stale in STALE_SUBJECT_TAGS.get(folder, ()):                  # tag of the vault the note used to sit in
+            new = re.sub(r"(^tags:\s*\[.*?)(, )?" + re.escape(stale) + r"(?=[,\]])(, )?", lambda m: m.group(1) + (m.group(2) or "" if m.group(3) else ""), new, count=1, flags=re.M)
         new = replace_block(new, V_START, V_END, "\n".join(lines), None)
         if new != text:
             open(dst, "w", encoding="utf-8").write(new)
@@ -512,6 +537,22 @@ def do_apply(plan, vaults):
             if new != text:
                 open(co["path"], "w", encoding="utf-8").write(new)
                 stats["concept notes written"] += 1
+    # 3. vaults that no longer receive notes of any course (LEGACY_VAULTS): retire their generated zettel blocks
+    for folder in LEGACY_VAULTS:
+        for dp, dn, fn in os.walk(os.path.join(ROOT, folder)):
+            if os.path.join(folder, SUB).replace(os.sep, "/") in dp.replace(os.sep, "/"):
+                continue
+            for f in fn:
+                if not f.endswith(".md"):
+                    continue
+                path = os.path.join(dp, f)
+                text = open(path, encoding="utf-8").read()
+                if Z_START not in text:
+                    continue
+                new = replace_block(text, Z_START, Z_END, None, None)
+                if new != text:
+                    open(path, "w", encoding="utf-8").write(new)
+                    stats["legacy blocks retired"] += 1
     os.makedirs(os.path.join(ROOT, "scripts", "_work"), exist_ok=True)
     with open(os.path.join(ROOT, "scripts", "_work", "zettel_sort.json"), "w", encoding="utf-8") as fh:
         json.dump(manifest, fh, indent=1, ensure_ascii=False, sort_keys=True)
@@ -537,6 +578,7 @@ def main():
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--only", help="report only vaults whose folder contains this text")
     ap.add_argument("--quiet", action="store_true", help="skip the per-note listing")
+    ap.add_argument("--vault", help="restrict --apply to vault folders containing this text (e.g. 14-Diff); the legacy-vault clean-up always runs")
     a = ap.parse_args()
     zs = [load_zettel(p) for p in find_zettel()]
     seen, dupes = {}, []
@@ -560,6 +602,9 @@ def main():
     if skipped:
         print("no course tag (left alone):", ", ".join(skipped))
     if a.apply:
+        if a.vault:
+            plan = {k: v for k, v in plan.items() if a.vault in v["vault"]}
+            vaults = {f: v for f, v in vaults.items() if a.vault in f}
         do_apply(plan, vaults)
 
 

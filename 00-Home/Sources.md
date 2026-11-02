@@ -140,6 +140,21 @@ Files live under `chemistry/inorganic-chemistry/`. **Tier logic:** the instructo
 | SA | [[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf]] | 1363 (text layer; **book page = PDF page − 27**; Ch. 2 starts PDF p.61, VSEPR pp.63–66, VB pp.66–69) and the redox excerpt [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf]] (Ch. 5, pp.147–161) | extra/book (excerpt = taught for Quiz 2) |
 | AI | `inorganic-chemistry-notes*.pdf`, `inorganicchemmaster/*`, `redox_notes.pdf` | 8–80 | secondary |
 
+## Differential Geometry (MT3184)
+Files live under `math/differential-geometry/books/` (page numbers below are printed pages; **Lee: printed page = PDF page − 18**). **Tier logic:** the only course material is the other tool's `mt3184-differential-geometry-and-lie-groups/` (OCR of the handwritten slides DG1–DG26, HW1–HW9, Test 1, exam prep; read-only, `agent_written`): it decides what is `taught`; **DG1–DG7 are unreadable scans**. The books are `extra/book`.
+
+| ID | File | Pages | Role |
+|---|---|---|---|
+| L | [[John M. Lee - Introduction to Smooth Manifolds.pdf]] | 726 (text layer; used: Ch. 1–9, 19–21 and Appendix A) | **primary**: DM01–DM15; the lectures follow its numbering |
+| Y | [[Ernest Yeung - J. M. Lee_s Intro to Smooth Manifolds solutions.pdf]] | solutions to Lee's exercises | practice problems and checks |
+| T | [[Loring W. Tu - An Introduction to Manifolds (2011).pdf]] | 426 | companion: tangent spaces, Lie groups |
+| K | Kumaresan, *A Course in Differential Geometry and Lie Groups* | 306 | companion: Lie groups, exp, correspondence |
+| GP, M | Guillemin–Pollack *Differential Topology*; Milnor *Topology from the Differentiable Viewpoint* | books | companion: Sard, transversality (DM07) |
+| W | Warner, *Foundations of Differentiable Manifolds and Lie Groups* (djvu) | book | companion: partitions of unity, Lie groups |
+| MT | `mt3184-differential-geometry-and-lie-groups/` (21 notes) | OCR | **taught scope** |
+
+The prerequisites PA11–PA15 cite Lee's Appendix A (point-set topology) and the Ch. 4–6 and 9 theorems that rest on it. Every Lee citation in the vault is machine-checked by `scripts/check_lee_cites.py`.
+
 ## How "taught" was decided (climate)
 1. List what a lecture shows (Argha: slide text; Suhas post-midsem: photographs triaged page by page).
 2. Compare each assigned book passage with that list: shown or derived in class ⇒ `taught`; present only in the book ⇒ `extra/book`.

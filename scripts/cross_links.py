@@ -21,7 +21,8 @@ SUBJ = {"01-Climate": "Climate", "02-Eco-Evo": "Eco-Evo", "03-Thermodynamics-and
         "04-Evolution-of-Earth-and-Life": "Earth and Life", "05-Landscapes-Geomorphology": "Landscapes",
         "06-Quantum-Mechanics": "Quantum Mechanics", "07-Waves": "Waves", "08-Probability": "Probability",
         "09-Foundations": "Foundations", "10-Group-Theory": "Group Theory", "11-Proofs-Analysis-Topology": "Analysis",
-        "12-Inorganic-Chemistry": "Chemistry", "13-Neuroscience": "Neuroscience"}
+        "12-Inorganic-Chemistry": "Chemistry", "13-Neuroscience": "Neuroscience",
+        "14-Differential-Geometry": "Differential Geometry"}
 
 PAIRS = [
     # ---- Climate <-> Thermodynamics <-> QM

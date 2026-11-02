@@ -36,8 +36,9 @@ MAPS = {
     "landscapes": "05-Landscapes-Geomorphology/Landscapes and Geomorphology - Course Map.md", "qm": "06-Quantum-Mechanics/Quantum Mechanics - Course Map.md",
     "waves": "07-Waves/Waves - Course Map.md", "probability": "08-Probability/Probability - Course Map.md", "foundations": "09-Foundations/09-Foundations.md",
     "group": "10-Group-Theory/Group Theory - Course Map.md", "analysis": "11-Proofs-Analysis-Topology/Proofs, Analysis and Topology - Course Map.md",
-    "chem": "12-Inorganic-Chemistry/Inorganic Chemistry - Course Map.md", "neuro": "13-Neuroscience/Neuroscience - Course Map.md"}
-SRC_TO_SUBJECT = {"src-qm": "qm", "src-chem": "chem", "src-group": "group", "src-analysis": "analysis", "src-probability": "probability",
+    "chem": "12-Inorganic-Chemistry/Inorganic Chemistry - Course Map.md", "neuro": "13-Neuroscience/Neuroscience - Course Map.md",
+    "diffgeo": "14-Differential-Geometry/Differential Geometry - Course Map.md"}
+SRC_TO_SUBJECT = {"src-qm": "qm", "src-chem": "chem", "src-diffgeo": "diffgeo", "src-analysis": "analysis", "src-probability": "probability",
                   "src-climate": "climate", "src-landscapes": "landscapes"}
 
 

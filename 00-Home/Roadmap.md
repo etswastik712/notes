@@ -82,6 +82,14 @@ Part II of the same subject: 31 chapters planned in five parts (foundations and 
 | 1 | [[Inorganic Chemistry - Course Map]] (real), [[CH01 VSEPR and Valence Bond Theory]] + 13 concept notes + 1 figure + 1 diagram | **done (draft pilot)**, 2026-10-25 |
 | 2 | CH02–CH03 molecular orbital theory (slides 27–52, MOT Part 2); CH04–CH06 acids, bases and HSAB (53–82); CH07–CH08 main-group clusters, rings, polymers (83–119); CH09 redox (S&A Ch. 5) | todo, **after the user's review of the pilot** |
 
+## Phase 3f: Differential Geometry (MT3184)
+| Step | Work | Status |
+|---|---|---|
+| 1 | prerequisites in the analysis vault: [[PA11 Subspaces, Products and Quotients]] · [[PA12 Separation, Countability and Local Compactness]] · [[PA13 The Derivative and the Inverse Function Theorem]] · [[PA14 ODE Existence Uniqueness and Smooth Dependence]] · [[PA15 Covering Spaces and the Fundamental Group]] + 40 concept notes + 5 figures | **done (draft)**, 2026-10-30 to 11-01 |
+| 2 | [[Differential Geometry - Course Map]] and [[DM01 Smooth Manifolds]] … [[DM15 Closed Subgroups and the Lie Correspondence]] (Lee, *Introduction to Smooth Manifolds*, primary; 🟢/🟡/🔵 by MT3184 coverage) + 98 concept notes + 15 figures + `scripts/dm_numbers.py` (every number recomputed) + `scripts/check_lee_cites.py` (every Lee citation checked against the PDF) | **done (draft)**, 2026-11-02 |
+| 3 | the 38 MT3184 zettel notes moved from `10-Group-Theory/Concepts/zettel/` to `14-Differential-Geometry/Concepts/zettel/` and filed under the DM chapters (+5 new from HW1) | **done**, 2026-11-02 |
+| 4 | read the scans DG1–DG7 (weeks 1–3), confirm whether Frobenius/Sard are examinable, formula sheet, exam prep and problem bank (Test 2 on 2026-11-02, end-sem 11-23 to 12-02) | todo |
+
 ## Parallel topics added alongside climate
 - **Thermodynamics** ([[Thermodynamics and Statistical Mechanics - Course Map]]): done: blackbody laws, ideal gas law. To add: first law and adiabats, moist thermodynamics (Clausius–Clapeyron), entropy and heat engines, kinetic theory, statistical mechanics of photons.
 - **Foundations**: done: stability, linearisation, bistability, Jensen, relaxation, rotating frames. To add: ODE/PDE basics, vector calculus identities, dimensional analysis, Fourier series, dynamical systems (bifurcations, chaos for eco-evo).

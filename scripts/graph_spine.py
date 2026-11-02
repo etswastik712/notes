@@ -46,9 +46,10 @@ MAPS = {
     "analysis": "11-Proofs-Analysis-Topology/Proofs, Analysis and Topology - Course Map.md",
     "chem": "12-Inorganic-Chemistry/Inorganic Chemistry - Course Map.md",
     "neuro": "13-Neuroscience/Neuroscience - Course Map.md",
+    "diffgeo": "14-Differential-Geometry/Differential Geometry - Course Map.md",
 }
 # source-layer group key -> subject key
-SRC_TO_SUBJECT = {"src-qm": "qm", "src-chem": "chem", "src-group": "group", "src-analysis": "analysis",
+SRC_TO_SUBJECT = {"src-qm": "qm", "src-chem": "chem", "src-diffgeo": "diffgeo", "src-analysis": "analysis",
                   "src-probability": "probability", "src-climate": "climate", "src-landscapes": "landscapes"}
 FOLDER_TO_SUBJECT = {os.path.dirname(m).split("/")[0]: k for k, m in MAPS.items()}
 
@@ -135,7 +136,8 @@ def write_block(path, text, start=None, end=None):
 
 MAP_LABEL = {"climate": "Climate", "eco-evo": "Ecology and Evolution", "thermo": "Thermodynamics", "earth-evo": "Evolution of Earth and Life",
              "landscapes": "Landscapes", "qm": "Quantum Mechanics", "waves": "Waves", "probability": "Probability", "foundations": "Foundations",
-             "group": "Group Theory", "analysis": "Proofs, Analysis and Topology", "chem": "Inorganic Chemistry", "neuro": "Neuroscience"}
+             "group": "Group Theory", "analysis": "Proofs, Analysis and Topology", "chem": "Inorganic Chemistry", "neuro": "Neuroscience",
+             "diffgeo": "Differential Geometry"}
 
 
 def chapters_block(by_subject, basenames):

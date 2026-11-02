@@ -37,6 +37,7 @@ GRAPH = os.path.join(ROOT, ".obsidian", "graph.json")
 BLUE, ORANGE, AQUA, YELLOW, MAGENTA, GREEN, VIOLET, RED = (
     "#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767")
 PURPLE, CYAN, BRICK = "#914cad", "#37a1b8", "#a0555c"     # extension hues (greedy OKLab search)
+TEAL = "#0b7491"                                             # Differential Geometry (2026-11-02): contrast >= 3:1 on both surfaces, min dE 13.7 to the others
 NEUTRAL = "#85857f"                                          # Foundations: shared toolkit, deliberately achromatic
 
 # ASSIGNMENT (hue -> subject) came from an exhaustive search over the 8! permutations maximising the worst
@@ -52,6 +53,7 @@ SUBJECTS = [
     ("probability", "Probability",               "path:08-Probability OR tag:#subject/probability",                 AQUA),
     ("eco-evo",     "Eco-Evo",                   "path:02-Eco-Evo OR tag:#subject/eco-evo",                         ORANGE),
     ("group",       "Group Theory",              "path:10-Group-Theory OR tag:#subject/group-theory",               GREEN),
+    ("diffgeo",     "Differential Geometry",     "path:14-Differential-Geometry OR tag:#subject/diff-geometry",     TEAL),
     ("chem",        "Inorganic Chemistry",       "path:12-Inorganic-Chemistry OR tag:#subject/chemistry",           MAGENTA),
     ("analysis",    "Proofs, Analysis, Topology", "path:11-Proofs-Analysis-Topology OR tag:#subject/analysis",      VIOLET),
     ("landscapes",  "Landscapes",                "path:05-Landscapes-Geomorphology OR tag:#subject/landscapes",     PURPLE),
@@ -67,7 +69,7 @@ SRC_ALPHA, MISC_ALPHA = 0.45, 0.35
 SOURCES = [
     ("src-qm",          "sources: PH2113",        "path:ph2113 OR tag:#ph2113",                                                        COLOR_OF["qm"]),
     ("src-chem",        "sources: CH2113",        "path:ch2113 OR tag:#ch2113-principles-of-inorganic-chemistry-august-20",           COLOR_OF["chem"]),
-    ("src-group",       "sources: MT3184",        "path:mt3184 OR tag:#mt3184 OR tag:#mt3184-differential-geometry-and-lie-groups",   COLOR_OF["group"]),
+    ("src-diffgeo",     "sources: MT3184",        "path:mt3184 OR tag:#mt3184 OR tag:#mt3184-differential-geometry-and-lie-groups",   COLOR_OF["diffgeo"]),
     ("src-analysis",    "sources: intro to proofs", "path:intro-to-proofs OR tag:#intro-to-proofs",                                    COLOR_OF["analysis"]),
     ("src-probability", "sources: MT2113",        "path:introduction-to-probability OR tag:#introduction-to-probability OR tag:#mt2113", COLOR_OF["probability"]),
     ("src-climate",     "sources: climate",       "path:introduction-to-climate-science OR tag:#introduction-to-climate-science",     COLOR_OF["climate"]),

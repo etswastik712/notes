@@ -1,6 +1,6 @@
 ---
 title: DM13 Lie Derivatives and Commuting Vector Fields
-aliases: [DM13, Lie derivative, Lie derivative of a vector field, L_V W = [V,W], invariant vector field, commuting vector fields, commuting flows, commuting frame, canonical form for commuting vector fields, MT3184 weeks 11-12]
+aliases: [DM13, Lie derivative, Lie derivative of a vector field, "L_V W = [V,W]", invariant vector field, commuting vector fields, commuting flows, commuting frame, canonical form for commuting vector fields, MT3184 weeks 11-12]
 subject: diff-geometry
 type: chapter
 chapter: 13

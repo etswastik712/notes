@@ -33,6 +33,11 @@ How the subjects in this repository relate, and why. Interactive version: [[Subj
 | [[Ecology and Evolution - Course Map\|Ecology and Evolution]] | [[Proofs, Analysis and Topology - Course Map\|Proofs, Analysis and Topology]] | 2 | chaos and bifurcations in discrete maps (May 1976) |
 | [[Bistability and Tipping Points\|Foundations (shared tools)]] | [[Proofs, Analysis and Topology - Course Map\|Proofs, Analysis and Topology]] | 2 | rigour behind calculus and dynamical systems |
 | [[Group Theory - Course Map\|Group Theory]] | [[Proofs, Analysis and Topology - Course Map\|Proofs, Analysis and Topology]] | 2 | abstract algebra and proof technique |
+| [[Differential Geometry - Course Map\|Differential Geometry]] | [[Proofs, Analysis and Topology - Course Map\|Proofs, Analysis and Topology]] | 3 | manifolds need point-set topology (PA11–PA12), the inverse function theorem (PA13), ODE flows (PA14) and covering spaces (PA15) |
+| [[Differential Geometry - Course Map\|Differential Geometry]] | [[Group Theory - Course Map\|Group Theory]] | 3 | Lie groups are groups with a smooth structure: actions, orbit–stabiliser, semidirect products, $SO(3)$ and $SU(2)$ |
+| [[Differential Geometry - Course Map\|Differential Geometry]] | [[Quantum Mechanics - Course Map\|Quantum Mechanics]] | 2 | $\mathfrak{su}(2)\cong\mathfrak{so}(3)$, spin, angular momentum, unitary one-parameter groups $e^{-iHt/\hbar}$ |
+| [[Differential Geometry - Course Map\|Differential Geometry]] | [[Bistability and Tipping Points\|Foundations (shared tools)]] | 2 | flows, fixed points and linearisation as the geometry of vector fields |
+| [[Differential Geometry - Course Map\|Differential Geometry]] | [[Thermodynamics and Statistical Mechanics - Course Map\|Thermodynamics and Stat. Mech.]] | 1 | Hamiltonian flows and Poisson brackets (beyond the course) |
 | [[Neuroscience - Course Map\|Neuroscience]] | [[Probability - Course Map\|Probability]] | 2 | neural coding, signal detection |
 | [[Thermodynamics and Statistical Mechanics - Course Map\|Thermodynamics and Stat. Mech.]] | [[Inorganic Chemistry - Course Map\|Inorganic Chemistry]] | 2 | chemical equilibrium, redox potentials, free energy |
 | [[Climate - Course Map\|Climate]] | [[Group Theory - Course Map\|Group Theory]] | 1 | IR selection rules via molecular symmetry |
