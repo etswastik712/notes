@@ -17,6 +17,7 @@ An idealized physical body that completely absorbs all incident electromagnetic 
 Source: climate_intro_notes, pp. 17–23
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/wien-s-displacement-law]] — Wien's law locates the peak wavelength of a blackbody's spectrum from its temperature, a property used when characterising the blackbody emitter
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature|climate_intro_notes]] pp. 17–23
 <!-- /kurooto:seen -->
