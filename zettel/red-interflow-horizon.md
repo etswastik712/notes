@@ -1,6 +1,6 @@
 ---
 id: zettel/red-interflow-horizon
-aliases: ["Red Interflow Horizon", "red bole", "interflow horizon"]
+aliases: ["Red Interflow Horizon", "red bole", "interflow horizon", "interflow bed"]
 tags: [zettel, agent-written, landscape-evolution]
 trust_tier: agent_written
 ---
@@ -19,4 +19,5 @@ Source: Deccan Next_Field Guide, pp. 23–33
 <!-- kurooto:seen -->
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
+- [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 34–43
 <!-- /kurooto:seen -->
