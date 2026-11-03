@@ -17,6 +17,7 @@ A distinct reddish, weathered sedimentary or palaeosol layer separating successi
 Source: Deccan Next_Field Guide, pp. 23–33
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/flow-field-stacking-architecture]] — The horizon marks the quiescent gap between successive lava pulses, and the stacking architecture is the pattern produced by the accumulation of those pulses within a flow field
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 34–43
