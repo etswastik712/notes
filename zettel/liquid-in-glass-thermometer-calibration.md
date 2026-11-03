@@ -16,6 +16,7 @@ The geometric and physical relationship converting linear expansion along a capi
 Source: problem_set_1, pp. 1–1
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/thermal-volume-expansion]] — The calibration note's temperature scale is set by the expansion coefficient, and the thermal volume expansion note defines that coefficient beta as the fractional volume change per degree
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-problem-set-1|problem_set_1]] pp. 1–1
 <!-- /kurooto:seen -->
