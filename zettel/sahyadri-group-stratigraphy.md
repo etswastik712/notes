@@ -15,6 +15,8 @@ The formal stratigraphic scheme established for the Western Deccan Volcanic Prov
 Source: Deccan Next_Field Guide, pp. 1–11
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/giant-plagioclase-basalt]] — The Giant Plagioclase Basalt is described as a regional stratigraphic marker flow that delineates formation boundaries, which is the kind of unit the Sahyadri Group stratigraphic scheme uses for correlation
+- used-in:: [[zettel/red-interflow-horizon]] — The red interflow horizon separates successive lava flows and is linked to the Sahyadri Group stratigraphy note, so it plausibly serves as a field marker in that lithostratigraphic scheme, though the note's summary is truncated
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 1–11
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 12–22
