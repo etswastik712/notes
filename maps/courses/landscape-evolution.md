@@ -29,6 +29,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-10-30: day trip fixed for Sat 7 Nov (about 6:00 to 18:00). Complete the sheet's columns, sign the declaration form (last page of the safety PDF), upload that page named with your name and surname, and put "y" in the sheet's last column, all by Sunday 1 Nov or be dropped. Bring two water bottles, light snacks, sun protection (full-sleeve light clothes, hat), shoes; read Shilpa's slides. See [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]].
 - 2026-11-02: field guide for the trip posted (made for a 2023 event, so some of it is irrelevant; only the northern leg applies: Rajgurunagar Ghat, Ane Ghat, Mandhol Dam/Kanhoor, Kukdi river bed at Nighoj). Read the relevant parts carefully. See [[landscape-evolution/2026-11-02-deccan-next-field-guide]].
 - 2026-11-02: final list for the field trip posted, based on the sheet's y/n entries; you are on it. If a name is missing, email the teacher. See [[landscape-evolution/2026-11-02-field-trip-final-list]].
+- 2026-11-03: reading posted on whether global erosion rates rose in the late Cenozoic: Herman and others (thermochronology compilation), the opposing view (Schildgen et al. 2018, https://www.nature.com/articles/s41586-018-0260-6) and a paper on time-scale-dependent glacial erosion estimates (https://www.science.org/doi/10.1126/sciadv.1600204). See [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]].
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)
@@ -39,6 +40,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] Field trip on 7 Nov: safety protocols and declaration (2026-10-30)
 - [[landscape-evolution/2026-11-02-deccan-next-field-guide]] Deccan Next field guide, northern leg (2026-11-02)
 - [[landscape-evolution/2026-11-02-field-trip-final-list]] Field trip final list (2026-11-02)
+- [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]] Erosion-rate debate reading (2026-11-03)
 
 ## Tasks
 - [ ] Field trip 7 Nov: complete the sheet, sign and upload the declaration page, mark "y" (due 2026-11-01, Sunday; time not stated) [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk2NzQ2NjcyNTcx)
