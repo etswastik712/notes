@@ -15,6 +15,7 @@ A frozen discrete volume of basaltic lava exhibiting three fundamental interior 
 Source: Deccan Next_Field Guide, pp. 1–11
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/rubbly-tabular-flow]] — The rubbly tabular flow's compound core is made of flattened, bun-shaped lobes, so a lava lobe is one of the components that make up this flow type
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 1–11
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
