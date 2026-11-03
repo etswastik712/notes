@@ -16,6 +16,7 @@ The complete assemblage of multiple individual lava flows discharged across a la
 Source: Deccan Next_Field Guide, pp. 1–11
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/rubbly-tabular-flow]] — The rubbly tabular flow is a thick basaltic sheet flow, which fits the tabular end-member geometry that the flow-field stacking architecture grades into
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 1–11
 <!-- /kurooto:seen -->
