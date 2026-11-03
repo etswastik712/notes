@@ -15,6 +15,8 @@ A fragmented, rubbly or clastic zone capping a lava flow, produced by autobrecci
 Source: Deccan Next_Field Guide, pp. 12–22
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/rubbly-tabular-flow]] — The rubbly tabular flow summary says it is overlain by a vesicular crust with flow-top breccia, so flow-top breccia is a component of that flow type
+- used-in:: [[zettel/breccia-cored-rosette]] — The rosette summary says radial columnar jointing nucleates around entrained clasts of flow-top breccia, so the breccia supplies the nuclei for that structure
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 12–22
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 23–33
