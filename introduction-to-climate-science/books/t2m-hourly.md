@@ -289,4 +289,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (275/626): (none new)
 - (276/626): (none new)
 - (277/626): (none new)
+- (278/626): (none new)
 <!-- /kurooto:source -->
