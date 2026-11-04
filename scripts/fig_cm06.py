@@ -10,7 +10,7 @@ f=lambda t,y:[y[2],y[3],-w0**2*y[0]+a*y[1],-w0**2*y[1]+a*y[0]]
 s=solve_ivp(f,[0,80],[1,0,0,0],rtol=1e-11,atol=1e-12,dense_output=True); t=np.linspace(0,80,4000); x,y=s.sol(t)[:2]
 A.plot(t,x,color=BLUE,label="$x(t)$",lw=1.2); A.plot(t,y,color=ORANGE,label="$y(t)$",lw=1.2)
 env=np.cos((np.sqrt(1.1)-np.sqrt(0.9))*t/2); A.plot(t,env,color=MUTED,ls=":"); A.plot(t,-env,color=MUTED,ls=":")
-A.set_xlabel("$t$"); A.legend(fontsize=8,loc="lower left"); A.set_title("A  Coupled oscillators: beats, full transfer at $\\pi/(\\omega_2-\\omega_1)=31.4$")
+A.set_xlabel("$t$"); A.legend(fontsize=8,loc="lower left"); A.set_title("A  Coupled oscillators: beats")
 B=ax[1]; g=np.linspace(0.3,1.7,4000)
 w1s,w2s=0.9,1.1
 xa=0.5*(1/(w2s-g**2)+1/(w1s-g**2)); ya=0.5*(1/(w2s-g**2)-1/(w1s-g**2))
