@@ -36,3 +36,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - $\ln g\approx-N\sum p_i\ln p_i$ and typical sequences: [[SM01 Probability Large Numbers and Information]] §7.1 ([[Shannon Entropy]], [[Stirling's Approximation]]).
+
+## Across subjects
+- [[Multiplicity]] (Thermodynamics): the number of ways to distribute $N$ distinguishable particles over levels with occupations $N_i$ is the multinomial coefficient $N!/\prod N_i!$, whose maximisation under constraints gives the Boltzmann distribution.

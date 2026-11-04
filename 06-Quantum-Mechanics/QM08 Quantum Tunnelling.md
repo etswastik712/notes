@@ -18,7 +18,8 @@ tags: [subject/qm, type/chapter, extra/book, extra/beyond, src/book, src/own-not
 <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
 > [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
-> **No lecture source.** The Lecture 9 notes announce *tunnelling and step potentials* as the next topic ([[Quantum Mechanics - Course Map]], Gaps) and the instructor's finite-well lecture ends with the scattering formula for $E>V_0$ ([[Finite_well.pdf#page=13|p.13]]); nothing later is in the folder. This chapter therefore **extends QM07 §11** to the cases that follow naturally and labels everything 🟡/🔵.
+> **Update 2026-11-04:** the instructor's barrier lecture ([[Barrier.pdf]]) is now written up in [[QM10 The Finite Barrier and Tutorial V]] (barrier on $[-a,a]$, $E<V_0$, taught); §3 here agrees with it ($L=2a$, $T=0.0235$ for the 0.5 nm example).
+> **No lecture source for the rest.** The Lecture 9 notes announce *tunnelling and step potentials* as the next topic ([[Quantum Mechanics - Course Map]], Gaps) and the instructor's finite-well lecture ends with the scattering formula for $E>V_0$ ([[Finite_well.pdf#page=13|p.13]]); nothing later is in the folder. This chapter therefore **extends QM07 §11** to the cases that follow naturally and labels everything 🟡/🔵.
 > 🟡 **Extra · book**
 > - §1–§3 step, probability current, rectangular barrier: Griffiths §2.5–§2.6 (delta-function scattering and the finite well/barrier; book p.65 onward = [[Griffiths - Introduction to quantum mechanics.pdf#page=80|PDF p.80 ff.]]); the transmission coefficients themselves are the *analytic continuation* of the lecture's formula (QM07 §11)
 > - §5 WKB approximation and the connection formulas: Sakurai and Napolitano §2.5.4 (printed pp.104–108, [[modern-quantum-mechanics-3nbsped-9781108473224-1108473229_compress.pdf#page=124|PDF pp.124–128]])

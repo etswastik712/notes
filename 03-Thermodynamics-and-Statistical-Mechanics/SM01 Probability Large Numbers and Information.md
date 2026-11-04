@@ -14,6 +14,8 @@ tags: [subject/thermo, type/chapter, src/book, src/own-notes, status/draft]
 
 ◀ [[TH06 From Kinetic Theory to Statistical Mechanics]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · next ▶ [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]
 
+*Elementary on-ramp (counting microstates, the postulate of equal a priori probabilities, simulations): [[TH09 Microstates Macrostates and Multiplicity]]; read it first if the large-number machinery below feels abstract.*
+
 > [!info] Source and approach
 > Follows **Kardar, *Statistical Physics of Particles*, Ch. 2** (printed pp. 35–56; PDF page = printed + 12: [[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=47|PDF p.47 ff.]]), with the thermodynamic motivation from **Pathria and Beale §1.1** and the information theory from **Kardar §2.7**. The material overlaps the probability course ([[PR06 Moments Generating Functions and Limit Theorems]]) on purpose: here the point is not the theorem but **what happens to a probability when $N\sim10^{23}$**. Every number is recomputed in `scripts/sm_numbers.py`; figure `scripts/fig_sm01.py`. No course is behind this chapter, so there are no taught/extra labels, only the Provenance table at the end.
 

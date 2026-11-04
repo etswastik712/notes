@@ -80,16 +80,17 @@ Files live under `physics/quantum-mechanics/`. **No instructor slides**; Lecture
 Page anchors for the typed notes were found from section headings (script in the session, not kept); they are accurate to the page.
 
 ## Thermodynamics (and a little statistical mechanics)
-Files live under `physics/thermodynamics-stat-mech/`. **The folder does not state which course or syllabus.** The only lecture material is MIT OpenCourseWare 8.333 Lectures 1–4 (Kardar, Chapter I, 7 pp. each with a text layer; printed page = PDF page + 6, + 12, + 18 for L2, L3, L4); treated as `taught`. Details and gaps: [[Thermodynamics and Statistical Mechanics - Course Map]].
+Files live under `physics/thermodynamics-stat-mech/`. **The folder does not state a syllabus, but two tutorial sheets (2026-11-04) name the course TD2213 and show a chemical-thermodynamics flavour.** The only lecture material is MIT OpenCourseWare 8.333 Lectures 1–4 (Kardar, Chapter I, 7 pp. each with a text layer; printed page = PDF page + 6, + 12, + 18 for L2, L3, L4); treated as `taught`. Details and gaps: [[Thermodynamics and Statistical Mechanics - Course Map]].
 
 | ID | File | Pages | Role |
 |---|---|---|---|
 | L1–L4 | [[0d0ec730e8e02ed0399d39ff05054a72_MIT8_333F13_Lec1.pdf]], [[1a131e225246d9749a298f49675c5fe5_MIT8_333F13_Lec2.pdf]], [[df0c4e121858c0be246b496dd8c39d2c_MIT8_333F13_Lec3.pdf]], [[97dcd8dee3d3301cd7c27745b17b10b5_MIT8_333F13_Lec4.pdf]] | 7 each | taught: TH01–TH05 |
+| TD1 / TD2 | [[TD2213_Tutorial1.pdf]] / [[Thermodynamics_Tutorial_2_Questions.pdf]] | 1 / 2 (TD2's text layer is garbled: read from page images) | taught: TH07 (T1 Q1; T2 Q1, Q3–Q6), TH08 (T1 Q2–Q4; T2 Q2), TH04 Practice 11 (T1 Q4); T2 Q4 gives no data (Schroeder's table used) |
 | Z | [[Heat and thermodynamics an intermediate textbook (Mark Waldo Zemansky Richard Dittman) (z-library.sk, 1lib.sk, z-lib.sk).pdf]] | 508, **scan** (OCR'd PDF pp.14–150; book page = PDF − 20; Ch.1 PDF 23, Ch.2 49, Ch.3 69, Ch.4 92, Ch.5 126; §5.6 Rüchhardt p.138; §5.7 sound pp.141–146) | extra/book |
 | AI | `Thermodynamics_Ch1-5_Notes` (38), `Zemansky_Thermodynamics_Overview` (8), `Thermo_ConceptSummary_FormulaSheet` (5), `StatMech_Thermodynamics_Kardar_Ch1` (32), `KTG_Chapter` (20 + `.tex`), `Thermo_StatMech_Notes` (83) | AI-written | secondary; TH06 re-derived from the last two |
 | K | [[Mehran Kardar - Statistical Physics of Particles (2007).pdf]] (+ [[Mehran Kardar - Statistical Physics of Particles, Solution Manual.pdf\|solution manual]]) | 332, text layer (Greek letters missing); **PDF = printed + 12**; Ch.2 probability p.35, Ch.3 kinetic theory p.57, Ch.4 classical statistical mechanics p.98, Ch.5 interacting p.126, Ch.6 quantum p.156, Ch.7 ideal quantum gases p.181, solutions p.211 | **Part II spine** (SM01–SM03 so far) |
 | PB | [[R. K. Pathria, Paul D. Beale - Statistical Mechanics (2011).pdf]] (also 2021 and 1996 editions and the instructor's manual in the same folder) | 733, **scan, no text layer (OCR)**; **PDF = printed + 27**; Ch.1 p.1, 2 p.25, 3 p.39, 4 p.91, 5 p.115, 6 p.141, 7 p.179, 8 p.231, 9 p.275, 10 p.299, 11 p.345, 12 p.401, 13 p.471, 14 p.539, 15 p.583, 16 p.637 | Part II: ensembles, phase transitions, non-equilibrium |
-| other stat-mech books | Reif ×2, Landau–Lifshitz Vols. 5, 9, 10, Huang (+ solutions), Schwabl, Tanaka, Hermann, Yoshioka, Schroeder (+ solutions), Blundell, Callen, Hill, Tolman, Goodstein, Koks, Fuchs, Zemansky 1996 | `.djvu` ones are readable since 2026-10-30 (`djvutxt`, text layers present; **Huang djvu page = printed + 9, Reif *Fundamentals* djvu page = printed + 17**; equations in the text layers are garbled, use them for structure and page numbers) | Part II: cross-checks and intuition; new books are git-ignored |
+| other stat-mech books | Reif ×2, Landau–Lifshitz Vols. 5, 9, 10, Huang (+ solutions), Schwabl, Tanaka, Hermann, Yoshioka, Schroeder (+ solutions), Blundell, Koks (*Microstates, Entropy and Quanta*, PDF with text layer, **PDF page = printed + 20**; used for TH09), Callen, Hill, Tolman, Goodstein, Koks, Fuchs, Zemansky 1996 | `.djvu` ones are readable since 2026-10-30 (`djvutxt`, text layers present; **Huang djvu page = printed + 9, Reif *Fundamentals* djvu page = printed + 17**; equations in the text layers are garbled, use them for structure and page numbers) | Part II: cross-checks and intuition; new books are git-ignored |
 | Blundell | [[Concepts in Thermal Physics by Stephen J. Blundell, Katherine M. Blundell.pdf]] | 512, text layer; **PDF = printed + 19**; Ch. 14 entropy (mixing p.147, Maxwell's demon p.149), Ch. 15 information theory (Landauer p.160) | Part II (SM06) |
 
 Sign-convention warning: MIT counts work **on** the system, Zemansky and the climate notes work **by** it.
@@ -138,6 +139,7 @@ Files live under `chemistry/inorganic-chemistry/`. **Tier logic:** the instructo
 | OL | [[1-4.pdf]] | 4 (OneNote export, 133 characters of text; not yet read as images) | unknown |
 | KR | the 8 notes in `ch2113-principles-of-inorganic-chemistry-august-20/` (7 dated lecture/tutorial summaries + `exam-prep`) | 321–794 words each | secondary |
 | SA | [[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf]] | 1363 (text layer; **book page = PDF page − 27**; Ch. 2 starts PDF p.61, VSEPR pp.63–66, VB pp.66–69) and the redox excerpt [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf]] (Ch. 5, pp.147–161) | extra/book (excerpt = taught for Quiz 2) |
+| HK | [[7_Inorganic_Chemistry_by_Huheey_E_Keiter_and_R_Keiter.pdf]] | 1049 (**scanned, no text layer**: OCR with Tesseract at 200 dpi; **printed page = PDF − 17**; Ch. 11 CFT pp.394–413 = PDF 411–430) | taught: CH10 (Quiz 3 reading) |
 | AI | `inorganic-chemistry-notes*.pdf`, `inorganicchemmaster/*`, `redox_notes.pdf` | 8–80 | secondary |
 
 ## Differential Geometry (MT3184)
@@ -169,3 +171,6 @@ The prerequisites PA11–PA15 cite Lee's Appendix A (point-set topology) and the
 - Forster et al. (2023), *ESSD* 15, 2295 and IPCC AR6 WGI SPM (linked from Argha slides 41–42)
 - Wikipedia: *Planetary equilibrium temperature* (formula check)
 - *Eco-evo (EE01):* Curtin et al. (2018), *Nature* 563, 393 (abstract; Royal Veterinary College news summary) · Subalusky et al. (2017), *PNAS* 114, 7647 (Cary Institute release; Pringle's commentary) · Holdo et al. (2009), *PLoS Biol.* 7, e1000210 (abstract, PMC2740867) · Burnham & Anderson (2002) for Akaike weights and the Δ rules of thumb
+
+
+**QM additions 2026-11-04:** `physics/quantum-mechanics/lecture-notes-slides/Barrier.pdf` (handwritten, 7 pp.) and `Tutorial5.pdf` → [[QM10 The Finite Barrier and Tutorial V]].

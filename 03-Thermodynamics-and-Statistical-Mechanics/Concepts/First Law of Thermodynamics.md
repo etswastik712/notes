@@ -26,6 +26,9 @@ Used in the atmosphere: the dry adiabatic lapse rate ([[Dry Adiabatic Lapse Rate
 
 Connections: [[Thermodynamics and Statistical Mechanics - Course Map]] (full treatment: the first law as the energy form of the conservation principle, the second law adding the arrow of time); [[Ideal Gas Law]] (the other half of every parcel calculation).
 
+## Continued in the vault (added 2026-11-04)
+- Enthalpy bookkeeping for reactions and calorimeters: [[TH07 Enthalpy Thermochemistry and Calorimetry]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

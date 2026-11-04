@@ -228,3 +228,6 @@ whose cross derivatives are both zero: **exact**. So $1/T$ is an **integrating f
 > **Notes.** (1) The sign convention differs from the climate notes and from Zemansky (table in §2). (2) The vdW result $E=C_VT-a/V$ and the CO$_2$ $C_V\approx28.8$ J mol$^{-1}$K$^{-1}$ are standard values, not checked in the folder.
 
 **References.** Kardar, M. *Statistical Physics of Particles*, Ch. 1 · MIT OpenCourseWare 8.333 (Fall 2013), Lecture 1 · Zemansky and Dittman, *Heat and Thermodynamics*, Ch. 3–4 · Wallace, J. M. and Hobbs, P. V. *Atmospheric Science*, §3.
+
+## Continued in the vault (added 2026-11-04)
+- Enthalpy as heat at constant pressure, $\Delta H$ against $\Delta U$ for reactions, Hess's law, Kirchhoff's law and calorimetry (the tutorial material) continue in [[TH07 Enthalpy Thermochemistry and Calorimetry]].

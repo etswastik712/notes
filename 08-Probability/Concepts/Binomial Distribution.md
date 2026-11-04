@@ -47,6 +47,7 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Wright-Fisher Drift as Diffusion]] (Eco-Evo): the Wright-Fisher model samples $2N$ gene copies binomially each generation; its variance $p(1-p)/2N$ is the step variance of the diffusion of drift.
+- [[Two-State System]] (Thermodynamics): the multiplicity of the macrostate "$k$ of $N$ up" is the binomial coefficient, so the probability of the macrostate is a binomial law whose Gaussian limit has relative width $1/\sqrt N$.
 
 ## Continued in Part II (added 2026-10-30)
 - $N$ spins/molecules as a binomial, cumulants $\kappa_n=N\kappa_n(\text{one})$, large deviations $e^{-NI(m)}$: [[SM01 Probability Large Numbers and Information]] §2–§6 ([[Large Deviation Principle]]).

@@ -32,3 +32,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Gibbs Free Energy]] (Thermodynamics): $\Delta G^\circ=-nFE^\circ$ links a cell potential to the Gibbs free energy: the same quantity that decides spontaneity in thermodynamics is measured as a voltage.
+- [[Equilibrium Constant]] (Thermodynamics): $\Delta G^\circ=-RT\ln K=-nFE^\circ$: a standard reduction potential is a standard Gibbs energy per unit charge, so a cell's $E^\circ$ gives the equilibrium constant of its overall reaction (and its temperature dependence follows from the van 't Hoff equation).

@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM06 Entropy Information and the Arrow of Time]], [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]. Related: [[Gibbs Entropy]] · [[Statistical Entropy]] · [[Microcanonical Ensemble]] · [[Large Deviation Principle]].
 
+## Continued in the vault (added 2026-11-04)
+- Microstates, macrostates and multiplicity from first principles: [[TH09 Microstates Macrostates and Multiplicity]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

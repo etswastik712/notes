@@ -53,7 +53,7 @@ Course map: [[Ecology and Evolution - Course Map]].
 ## Phase 3b: Thermodynamics
 | Step | Work | Status |
 |---|---|---|
-| 1 | [[TH01 Temperature and the Zeroth Law]] · [[TH02 Work Heat and the First Law]] · [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] (7 figures + 1 diagram, `th_numbers.py`) | **done (draft)**, 2026-10-25 |
+| 1 | [[TH01 Temperature and the Zeroth Law]] · [[TH02 Work Heat and the First Law]] · [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] · [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] (7 figures + 1 diagram, `th_numbers.py`) · **added 2026-11-04:** [[TH07 Enthalpy Thermochemistry and Calorimetry]] · [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] (from the TD2213 tutorials) · [[TH09 Microstates Macrostates and Multiplicity]] (requested elaboration) | **done (draft)**, 2026-10-25; TH07–TH09 2026-11-04 |
 | 2 | 50 concept notes (`03-Thermodynamics-and-Statistical-Mechanics/Concepts/`), course map, 2-page formula sheet ([[th-formula-sheet.pdf]]) | **done (draft)** |
 | 3 | confirm the syllabus (which lectures are examinable); MIT Lectures 5+; exam prep and problem bank | todo |
 

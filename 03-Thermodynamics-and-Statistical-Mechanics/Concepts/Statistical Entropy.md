@@ -29,6 +29,9 @@ Free expansion $V\to2V$: $\Omega\to2^N\Omega$, $\Delta S=Nk_B\ln2=5.763$ J K$^{-
 
 Used in: [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Entropy]] · [[Third Law of Thermodynamics]] · [[Sackur-Tetrode Equation]] · [[Canonical Ensemble]].
 
+## Continued in the vault (added 2026-11-04)
+- Elementary counting treatment and simulations: [[TH09 Microstates Macrostates and Multiplicity]] ([[Fundamental Postulate of Statistical Mechanics]], [[Statistical Temperature]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

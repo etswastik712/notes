@@ -778,6 +778,9 @@ $$\boxed{T=\frac{1}{1+\dfrac{(k^2-k_0^2)^2}{4k^2k_0^2}\sin^2(2k_0a)}=\frac{1}{1+
 > [!example] Numbers: an electron through a thin well
 > Take $2a=0.5$ nm (a few atoms) and $V_0=1$ eV. The resonance energies from the floor are $E_n=n^2\pi^2\hbar^2/2m(2a)^2=1.50,\,6.01,\,13.5\ \mathrm{eV}$ for $n=1,2,3$ ($1.50\,n^2$ eV); only those above $V_0=1$ eV count, so all three are resonances; at $E=6.01$ eV the electron crosses the well with 100 % transmission, while at the worst neighbouring energy the formula gives $T\ge1/(1+1/(4\cdot4\cdot3))=0.98$ near 4 eV, i.e. at most about 2 % reflection: with a weak step the resonances are shallow. (For $2a=0.2$ nm the first resonance moves to 9.40 eV.)
 
+> [!note] Tutorial V
+> Tutorial V (three bound states, double well, $F/A$ for $E>V_0$) and the barrier lecture are solved in [[QM10 The Finite Barrier and Tutorial V]].
+
 ## 12. Visual revision sheet
 <span class="scope-taught">taught</span> · <span class="scope-extra-book">extra · book</span> *one page for revision; every item points to a figure above*
 

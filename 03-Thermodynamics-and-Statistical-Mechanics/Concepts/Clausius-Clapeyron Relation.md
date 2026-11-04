@@ -26,6 +26,9 @@ tags: [subject/thermo, type/concept, extra/book, extra/beyond, src/book, status/
 
 Used in: the saturated adiabatic lapse rate and the moist tropical troposphere ([[CL09 Radiative-Convective Equilibrium]], [[Dry Adiabatic Lapse Rate]] vs $\Gamma_s$), the water-vapour feedback with $f\approx0.5$ ([[Climate Feedback Factor]], [[CL04 Feedback and Multiple Steady States]]), runaway greenhouse on Venus ([[Evolution of Earth and Life - Course Map]]). Thermodynamic setting: first-order phase transitions in [[Thermodynamics and Statistical Mechanics - Course Map]]; the sharply nonlinear $e_s(T)$ is also a source of tipping behaviour ([[Bistability and Tipping Points]]).
 
+## Continued in the vault (added 2026-11-04)
+- Molar form, boiling point at another pressure (Tutorial 1 Q3), the link to the van 't Hoff equation and Trouton's rule: [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] §5 ([[Trouton's Rule]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
@@ -33,3 +36,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Continued in Part II (added 2026-10-30)
 - Equal chemical potential in coexisting phases and the grand-ensemble view of coexistence (bimodal $P(N)$, Maxwell construction): [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] §8.
+
+## Across subjects
+- [[Water-Vapour Feedback]] (Climate): the Clausius-Clapeyron equation $\mathrm d\ln P_s/\mathrm dT=L/R_vT^2$ (about $6.3\%$ per K near 288 K) is the thermodynamic reason that warmer air holds more water vapour, the origin of the water-vapour feedback.

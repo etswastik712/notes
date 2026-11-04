@@ -29,6 +29,9 @@ $(\partial G/\partial P)_T=V$, so ideal-gas $G=G_0(T)+Nk_BT\ln(P/P_0)$. Phase eq
 
 Used in: [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Related: [[Chemical Potential]] · [[Gibbs-Duhem Relation]] · [[Maxwell Relations]] · [[Clausius-Clapeyron Relation]].
 
+## Continued in the vault (added 2026-11-04)
+- Gibbs energy of reactions, $\Delta G^\circ=-RT\ln K$, Gibbs–Helmholtz, van 't Hoff, $\Delta S_{\rm univ}=-\Delta G/T$: [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] ([[Equilibrium Constant]], [[Gibbs-Helmholtz Equation]], [[Van 't Hoff Equation]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

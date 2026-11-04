@@ -29,6 +29,9 @@ A temperature scale independent of any substance ($\eta=1-T_C/T_H$), the entropy
 
 Used in: [[TH04 The Second Law Carnot Engines and Entropy]]. Related: [[Kelvin and Clausius Statements]] · [[Carnot Theorem]] · [[Entropy]] · [[Irreversibility]].
 
+## Continued in the vault (added 2026-11-04)
+- Entropy generation of heat flow, proof and microscopic counting: [[Entropy Production]]; [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] §2; [[TH09 Microstates Macrostates and Multiplicity]] §4.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

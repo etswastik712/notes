@@ -29,6 +29,9 @@ At constant $P$, $Q=\Delta H$ (e.g. $2910$ J for 1 mol N$_2$, 300 → 400 K). At
 
 Used in: [[TH02 Work Heat and the First Law]], [[TH05 Potentials Maxwell Relations Stability and the Third Law]]. Related: [[Heat Capacity]] · [[Legendre Transform]] · [[Helmholtz Free Energy]] · [[Gibbs Free Energy]].
 
+## Continued in the vault (added 2026-11-04)
+- Reaction enthalpies, Hess's law, Kirchhoff's law and calorimetry (with the tutorial questions solved): [[TH07 Enthalpy Thermochemistry and Calorimetry]] ([[Hess's Law]], [[Kirchhoff's Law]], [[Calorimetry]], [[Reaction Enthalpy]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -39,6 +39,7 @@ Central thread: **how electrons are shared (models of bonding) $\to$ which speci
 | 07 | [[CH07 Main Group Cages and Clusters]] | slides 90–108 (boranes, Wade, Zintl, P cages); Tutorial 4 Q1–Q4 | **draft** |
 | 08 | [[CH08 Main Group Rings and Polymers]] | slides 109–119 (borazine, B–N polymers, phosphazenes); Tutorial 4 Q5–Q10 | **draft** |
 | 09 | [[CH09 Redox]] | Shriver and Atkins Ch. 5, pp.147–161 (excerpt PDF pp.174–188): Quiz 2 scope | **draft** (book tier; no slides) |
+| 10 | [[CH10 Crystal Field Theory]] + [[Crystal Field Theory Quiz Prep]] | S&A §20.1 pp.473–483; Huheey Ch. 11 pp.394–413 (Quiz 3 scope); lectures 2, 4, 9 Nov and TA 3 Nov **not yet in the folder** | **draft** (book tier; 2026-11-04) |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"
@@ -49,6 +50,7 @@ SORT chapter ASC
 ## Assessments (from the Classroom summaries, `agent_written`)
 - **Quiz 1:** 2026-09-08, 12:00, topics up to and including molecular orbital theory.
 - **Midsem:** date not stated; Q2(i): when HSAB was not mentioned in the question, CH$_3$NH$_2$ also earned 1 mark (announcement 2026-10-08).
+- **Quiz 3:** **2026-11-10 (Tuesday), 12–1 pm, TA session**: crystal field theory and related, **not** MOT; lectures 2 Nov, 4 Nov, 9 Nov and TA session 3 Nov; reading S&A pp.473–483 and Huheey (4th ed.) pp.394–413 (announcement of 2026-11-04). Revision: [[Crystal Field Theory Quiz Prep]].
 - **Quiz 2:** 2026-10-21, redox up to 2026-10-14, Shriver and Atkins Ch. 5 **pp.147–161 only**; sign typo in eq. 5.11 on p.161 (signs should be −, +, +, −).
 - **End-semester:** not announced. Source: [[ch2113-principles-of-inorganic-chemistry-august-20/exam-prep|exam-prep]].
 
@@ -59,10 +61,12 @@ SORT chapter ASC
 | OL | [[1-4.pdf]] | 4 pp. OneNote export, no usable text layer; not read yet | unknown |
 | KR | [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-26-molecular-orbital-theory-part-2\|MOT Part 2]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-1\|Acids and bases 1]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-03-acids-and-bases-lecture-2\|2]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-14-hard-and-soft-acids-and-bases\|HSAB]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-16-main-group-chemistry-cages-and-clusters\|cages]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-17-main-group-chemistry-rings-and-polymers\|rings]], [[ch2113-principles-of-inorganic-chemistry-august-20/2026-09-19-tutorial-questions-and-answers\|Tutorials 3–4]] | summaries of Classroom lecture posts and tutorials by another tool (`agent_written`) | secondary: dates, tutorial answers |
 | SA | [[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf]] and the excerpt [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf]] | the course textbook (book page = PDF − 27) | extra/book; redox excerpt = taught |
-| BK | `Lee`, `Huheey`, `Cotton and Wilkinson`, `B.Sc. 1st year` | other textbooks | extra/book (not opened) |
+| HK | [[7_Inorganic_Chemistry_by_Huheey_E_Keiter_and_R_Keiter.pdf]] (**scanned**, OCR; printed page = PDF − 17; pp.394–413 = PDF 411–430) | Quiz 3 reading with S&A pp.473–483 (PDF 500–510) | taught (CH10) |
+| BK | `Lee`, `Huheey` (other chapters), `Cotton and Wilkinson`, `B.Sc. 1st year` | other textbooks | extra/book (not opened) |
 | AI | `inorganic-chemistry-notes*.pdf`, `inorganicchemmaster/*` (MOT group theory, structural diagrams), `redox_notes.pdf` | AI-written notes | secondary, cross-check only |
 
 ## Gaps (to ask the instructor / supply later)
+- **CH10 (crystal field theory):** no slides or notes of the 2, 3, 4, 9 Nov sessions; built from the assigned book pages. Book slips found: Huheey p.399 "338 kJ/mol" should be 389; Huheey VCl$_4$ 7900 vs S&A 9010 cm$^{-1}$.
 - **Redox** has no lecture material; only the book excerpt (S&A Ch.5 pp.147–161) and AI notes.
 - **Slides that are images:** the $\mathrm{H_2O}$ MO sequence (slides 46–52), the $\mathrm{H_3}$ and $\mathrm{NH_3}$ diagrams, the three trigonal-bipyramid structures on slide 6 (unlabelled): **now read from contact sheets** and written up in CH03; the HSAB table (slide 80), the reaction wheels of $\mathrm{P_4O_6}$/$\mathrm{P_4S_{10}}$ (slides 106–107) and the borazine reaction schemes (slide 114) remain pictures read in outline.
 - **Slide statements to verify:** MOT rule 1 reads "the greater the number of nodes in a M.O., the greater the anti-bonding character and **higher the symmetry**" (more nodes means higher energy; "higher symmetry" is not generally true); the $\mathrm{SF_6}$ orbital labels ($1a_1$, $1t_1$, $1e$ for $a_{1g}$, $t_{1u}$, $e_g$); the hybrid-set table on slide 15 ("angular" with $sp$, "trigonal pyramidal" with $sp^2$).

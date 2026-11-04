@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM03 The Canonical Ensemble]]. Related: [[Canonical Ensemble]] · [[Partition Function]] · [[Maxwell-Boltzmann Distribution]] · [[Shannon Entropy]].
 
+## Continued in the vault (added 2026-11-04)
+- Derivation from equal a priori probabilities by the method of the most probable distribution, with exact enumeration: [[Method of the Most Probable Distribution]], [[TH09 Microstates Macrostates and Multiplicity]] §6.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

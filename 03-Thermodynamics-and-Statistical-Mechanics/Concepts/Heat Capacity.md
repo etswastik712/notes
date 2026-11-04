@@ -32,6 +32,9 @@ Used in: [[TH02 Work Heat and the First Law]], [[TH03 The Ideal Gas and Adiabati
 ## Added with QM06 (oscillator toolbox)
 **Quantum oscillator:** $C=k_B\,x^2e^x/(e^x-1)^2$, $x=\theta_v/T$; frozen for CO ($\theta_v=3083$ K), partly active for the CO$_2$ bend ($\theta_v=960$ K, $C/k=0.43$ at 288 K) ([[Einstein Heat Capacity]]).
 
+## Continued in the vault (added 2026-11-04)
+- $\Delta_rC_p$ and the temperature dependence of reaction enthalpies (Kirchhoff): [[TH07 Enthalpy Thermochemistry and Calorimetry]] §4; $C_p(T)$ of graphite integrated there.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

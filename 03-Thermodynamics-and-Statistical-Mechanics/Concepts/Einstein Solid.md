@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]. Related: [[Microcanonical Ensemble]] · [[Multinomial Coefficient]] · [[QM05 The Harmonic Oscillator]] · [[Heat Capacity]].
 
+## Continued in the vault (added 2026-11-04)
+- The two-solid example (300 and 200 oscillators, 100 quanta: peak 60, $\sigma=5.36$), temperature from the slope of $S$ and the random-exchange simulation: [[TH09 Microstates Macrostates and Multiplicity]] §3.2, §4–§5.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -25,6 +25,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]. Related: [[Statistical Entropy]] · [[Density of States]] · [[Canonical Ensemble]] · [[Gibbs Paradox]].
 
+## Continued in the vault (added 2026-11-04)
+- Elementary introduction (accessible states, equal a priori probabilities): [[TH09 Microstates Macrostates and Multiplicity]] §1–§2 ([[Accessible States]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -257,3 +257,6 @@ agrees with $S_A(0)=S_B(0)=0$ in the experiments.
 > **Notes.** (1) Kardar's potentials use $J\cdot x$ with $J=-P$ for fluids, so $H=E+PV$ and $G=E-TS+PV$ in the usual fluid notation. (2) The lecture warns that Taylor-expanding the critical isotherm is "usually not justified" (real critical points are non-analytic); the inequality $-\delta P\,\delta V\ge0$ remains valid, and the mean-field (van der Waals) conditions $\partial_VP=\partial_V^2P=0$ are what locate the critical point there. (3) The saturation-pressure "tabulated" values and the water coefficients are recalled, not checked in the folder.
 
 **References.** Kardar, M. *Statistical Physics of Particles*, §1.6–1.10 · MIT OpenCourseWare 8.333 (Fall 2013), Lectures 3–4 · Gibbs, J. W. (1876) · Nernst, W. (1906) · Clapeyron, É. (1834).
+
+## Continued in the vault (added 2026-11-04)
+- The chemical-thermodynamics applications of $G$ (spontaneity, $\Delta G^\circ=-RT\ln K$, Gibbs–Helmholtz, van 't Hoff, the molar Clausius–Clapeyron equation and boiling points, Trouton's rule, entropy generation) are worked in [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]]; enthalpy numbers and calorimetry in [[TH07 Enthalpy Thermochemistry and Calorimetry]].

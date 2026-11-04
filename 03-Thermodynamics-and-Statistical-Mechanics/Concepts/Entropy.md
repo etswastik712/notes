@@ -29,6 +29,9 @@ Heat flow $1000$ J, $500\to300$ K: $\Delta S=+1.333$ J K$^{-1}$. Free expansion 
 
 Used in: [[TH04 The Second Law Carnot Engines and Entropy]], [[TH05 Potentials Maxwell Relations Stability and the Third Law]], [[TH06 From Kinetic Theory to Statistical Mechanics]]. Related: [[Clausius Theorem]] · [[Fundamental Thermodynamic Relation]] · [[Statistical Entropy]] · [[Third Law of Thermodynamics]].
 
+## Continued in the vault (added 2026-11-04)
+- Entropy as the logarithm of the number of microstates, with worked counting (coins, Einstein solids, gas): [[TH09 Microstates Macrostates and Multiplicity]] ([[Microstate]], [[Macrostate]], [[Multiplicity]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

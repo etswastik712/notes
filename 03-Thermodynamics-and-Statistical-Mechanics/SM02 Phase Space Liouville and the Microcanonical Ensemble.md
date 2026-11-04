@@ -14,6 +14,8 @@ tags: [subject/thermo, type/chapter, src/book, src/own-notes, status/draft]
 
 ◀ [[SM01 Probability Large Numbers and Information]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · next ▶ [[SM03 The Canonical Ensemble]]
 
+*Elementary version of §1–§4 (coins, Einstein solids, a gas in a box, temperature from $\partial S/\partial U$, with simulations): [[TH09 Microstates Macrostates and Multiplicity]].*
+
 > [!info] Source and approach
 > Follows **Kardar Ch. 3 §3.1–3.2 (pp. 57–62) and Ch. 4 §4.1–4.5 (pp. 98–110)** ([[Mehran Kardar - Statistical Physics of Particles (2007).pdf#page=69|PDF p.69 ff.]]; PDF = printed + 12) and **Pathria and Beale Ch. 1–2** (printed pp. 1–38, PDF = printed + 27; read by OCR: [[R. K. Pathria, Paul D. Beale - Statistical Mechanics (2011).pdf#page=28|PDF p.28 ff.]]). The Einstein-solid example is in the spirit of Schroeder Ch. 2 (not reread); every number is recomputed in `scripts/sm_numbers.py`, figure `scripts/fig_sm02.py`. No course is behind this chapter: no taught/extra labels, only the Provenance table.
 

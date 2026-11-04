@@ -13,7 +13,7 @@ tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lectu
 ---
 # TH06 · From Kinetic Theory to Statistical Mechanics
 
-◀ [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]]
+◀ [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[Thermodynamics and Statistical Mechanics - Course Map|Course Map]] · [[TH07 Enthalpy Thermochemistry and Calorimetry]] ▶
 
 <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span> <span class="scope-taught">taught · in syllabus (only the pointers)</span>
 
@@ -238,3 +238,6 @@ If the system also exchanges particles with a reservoir at chemical potential $\
 - Statistical mechanics proper continues in Part II: [[SM01 Probability Large Numbers and Information]] (cumulants, Stirling, large deviations, entropy), [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] (Liouville, $\Omega$, Gibbs paradox, Einstein solids) and [[SM03 The Canonical Ensemble]] (the Boltzmann distribution derived, equivalence of ensembles, barometric formula, paramagnet, the divergent hydrogen sum). §5–§6 above are the sketch; those chapters are the derivation.
 - The kinetic theory of §1–§4 here is the elementary (mean-free-path) account; the **equation behind it** (BBGKY hierarchy, Boltzmann equation, H-theorem, Euler and Navier–Stokes equations, exact $\eta$, $\kappa$, Prandtl number, Kac ring) is the separate chapter [[SM04 Kinetic Theory and the Boltzmann Equation]].
 - §8 above only states the grand canonical ensemble; it is derived, with the Poisson law, Langmuir isotherm, mass action and Saha equation, in [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]]. The entropy bookkeeping (Boltzmann/Gibbs/von Neumann, Landauer, the Earth's entropy budget) is [[SM06 Entropy Information and the Arrow of Time]]; equipartition proved in general, the virial theorem and magnetism are [[SM07 Equipartition the Virial Theorem and Magnetic Systems]].
+
+## Continued in the vault (added 2026-11-04)
+- A longer, book-based treatment of microstates, macrostates, multiplicity, the postulate of equal a priori probabilities, Einstein solids, the ideal-gas counting, temperature from $\partial S/\partial U$ and the Boltzmann law from counting is [[TH09 Microstates Macrostates and Multiplicity]] (the bridge from §5 here to Part II).

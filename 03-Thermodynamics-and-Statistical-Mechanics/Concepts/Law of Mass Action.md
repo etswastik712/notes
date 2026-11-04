@@ -23,6 +23,9 @@ tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
 
 Used in: [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]]. Related: [[Saha Equation]] · [[Chemical Potential]] · [[Gibbs Free Energy]] · [[Partition Function]].
 
+## Continued in the vault (added 2026-11-04)
+- Thermodynamic form $\Delta G^\circ=-RT\ln K$ and the temperature dependence of $K$ with tutorial examples: [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] §3–§4.
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

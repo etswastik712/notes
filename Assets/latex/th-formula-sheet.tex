@@ -4,7 +4,7 @@
 \setlength{\parskip}{2pt}
 \renewcommand{\arraystretch}{1.25}
 \title{Thermodynamics (MIT 8.333 Ch.~I, Zemansky)\\\large formula sheet, key numbers and traps}
-\author{second brain $\cdot$ chapters TH01--TH06}
+\author{second brain $\cdot$ chapters TH01--TH09 (TH07--TH09 added 2026-11-04 from the TD2213 tutorials)}
 \date{}
 \begin{document}
 \maketitle
@@ -71,8 +71,36 @@ radiation & $u=\tfrac{\hbar\omega^3}{\pi^2c^3}\tfrac1{e^x-1}$; $a=7.566\times10^
 \bottomrule
 \end{tabular}
 
+\section*{TH07--TH08 Chemical thermodynamics (TD2213 tutorials 1 and 2)}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+enthalpy & $H=U+PV$; $\Delta H=Q_P$; $\Delta H=\Delta U+P\Delta V$; reactions $\Delta H=\Delta U+\Delta n_gRT$ & T1 Q1: $2.50+1.00=3.50$ kJ; $RT=2.479$ kJ/mol\\
+Hess, formation & $\Delta_rH^\circ=\sum\nu\Delta_fH^\circ$ (elements $0$); cycles sum to $0$ & MgCl$_2$: $-155=2526+x+2(-381)$, $x=-1919$\\
+Kirchhoff & $\dd\Delta_rH/\dd T=\Delta_rC_p$; $\Delta_rH(T_2)=\Delta_rH(T_1)+\Delta_rC_p(T_2-T_1)$ & HCl: $-118.70$; C+H$_2$O(g): $131.29\to132.56$ kJ/mol\\
+calorimetry & $q=C\Delta T$; bomb: $\Delta_cU=-q/n$; cup: $\Delta H=-q/n$, $q=mc\Delta T$ & $15.0$ kJ, $-3.66\times10^3$ kJ/mol; $2.80$ kJ, $-56.0$\\
+Gibbs & $\Delta G=\Delta H-T\Delta S$; $\Delta S_{\rm univ}=-\Delta G/T$; $T^*=\Delta H/\Delta S$ & water-gas: $981$ K ($931$ K with $\Delta C_p$)\\
+entropy generation & $\delta S_{\rm gen}=\delta Q(1/T_B-1/T_A)>0$; bodies: $C_A\ln\frac{T_f}{T_A}+C_B\ln\frac{T_f}{T_B}\ge0$ & $1000$ J, 500$\to$300 K: $1.333$ J/K; bodies: $64.5$\\
+equilibrium & $\Delta G=\Delta G^\circ+RT\ln Q$; $\Delta G^\circ=-RT\ln K$ & $-5.71$ kJ $\Leftrightarrow K=10$; ATPase $\Delta H^\circ=-10.4$ kJ/mol\\
+Gibbs--Helmholtz & $\partial(G/T)/\partial T=-H/T^2$; $\Delta G/T|_2=\Delta G/T|_1+\Delta H(\tfrac1{T_2}-\tfrac1{T_1})$ & T1 Q2: $-2.85$ J/K/mol; $\Delta G=-2.2$ kJ\\
+van 't Hoff & $\dd\ln K/\dd T=\Delta H^\circ/RT^2$; $\ln K$ vs $1/T$ slope $-\Delta H^\circ/R$ & NH$_3$: $5.8\times10^5\to6.9\times10^{-5}$ (298$\to$773 K)\\
+Clausius--Clapeyron & $\ln\frac{P_2}{P_1}=-\frac{\Delta_{\rm vap}H}{R}(\frac1{T_2}-\frac1{T_1})$; Trouton $\Delta S_{\rm vap}\approx85$--$88$ & T1 Q3: $85.9$ °C ($+5.88$ K); Everest $71.1$ °C\\
+\bottomrule
+\end{tabular}
+
+\section*{TH09 Microstates and macrostates (extra)}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+postulate & isolated, equilibrium: all accessible microstates equally likely; $P(M)=\Omega(M)/\Omega_{\rm tot}$; $S=k_B\ln\Omega$ & dice $36/11$; $100$ coins $2^{100}=1.27\times10^{30}$\\
+two-state & $\Omega=\binom Nk$; width $\sigma_k=\sqrt N/2$ (relative $1/\sqrt N$) & $\binom{100}{50}=1.01\times10^{29}$; $2^{-100}=7.9\times10^{-31}$\\
+Einstein solid & $\Omega=\binom{q+N-1}q$; $k_BT/\varepsilon=1/\ln(1+N/q)$ & $N_A,N_B,q=300,200,100$: peak $60$, $\sigma=5.36$\\
+contact & $\partial S_A/\partial U_A=\partial S_B/\partial U_B$; $1/T=\partial S/\partial U$, $P/T=\partial S/\partial V$ & $P(q_A=100)=1.8\times10^{-20}$\\
+ideal gas & $\Omega\propto V^NU^{3N/2}$; free expansion $\Delta S=Nk_B\ln2$; all in half: $2^{-N}$ & mol: $5.763$ J/K\\
+distributions & $W=N!\prod g_i^{N_i}/N_i!\Rightarrow N_i\propto g_ie^{-\beta\varepsilon_i}$; $\binom{g}{n}\to$ FD; $\binom{n+g-1}n\to$ BE & enumeration agrees to $1/N$\\
+\bottomrule
+\end{tabular}
+
 \vspace{3pt}
 \begin{verifybox}{scope}
-The MIT lectures are the only lecture material in the folder; TH06 comes from AI notes and is optional. Confirm the course syllabus with the instructor.
+TH01--TH05 follow the MIT lectures; TH06 and TH09 are optional extras; TH07--TH08 follow the TD2213 tutorials (T2 Q4 supplies no data: Schroeder's table was used). Confirm the syllabus with the instructor.
 \end{verifybox}
 \end{document}

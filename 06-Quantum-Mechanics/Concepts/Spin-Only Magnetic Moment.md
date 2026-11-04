@@ -26,6 +26,9 @@ $\mathrm{O_2}$ (two unpaired $\pi^*$ electrons): $2.83\ \mu_B$; high-spin Fe$^{3
 > [!pitfall] Pitfall
 > Orbital contributions and spin–orbit coupling shift real moments (heavier metals); the formula is a first estimate.
 
+> [!connection] In crystal field theory (added 2026-11-04, [[CH10 Crystal Field Theory]] §5; S&A pp.478–479, Table 20.3)
+> A measured moment fixes the number of unpaired electrons $N$ and hence the **spin state** of an octahedral complex: high-spin $d^6$ gives $4.90\ \mu_B$ ($N=4$), low-spin $d^6$ is diamagnetic; octahedral Co(II) with $\mu=4.0\ \mu_B$ is high spin ($3.87$, not $1.73$). Orbital angular momentum is quenched in most complexes but **not** for low-spin $d^5$ ($\mathrm{K_3[Fe(CN)_6]}$: $2.3\ \mu_B$, between $N=1$ and $N=2$) and high-spin $d^6$, $d^7$, where a degenerate orbital lets the field circulate the electrons (S&A Fig. 20.6). Revision: [[Crystal Field Theory Quiz Prep]]. Related: [[High-Spin and Low-Spin Complexes]].
+
 Used in: [[QM09 The Stern-Gerlach Experiment and Spin|QM09]] §12.4. Related: [[Bohr Magneton]] · [[Spin]] · [[Pauli Matrices]] · [[Inorganic Chemistry - Course Map]] · [[Zeeman Effect]].
 
 ## Linked from

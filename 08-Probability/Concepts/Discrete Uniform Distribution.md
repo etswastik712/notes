@@ -35,3 +35,6 @@ Class zettel on this idea: [[zettel/discrete-uniform-distribution|Discrete Unifo
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Fundamental Postulate of Statistical Mechanics]] (Thermodynamics): equal a priori probabilities say that the distribution over the accessible microstates is the discrete uniform distribution (the maximum-entropy distribution on a finite set).
