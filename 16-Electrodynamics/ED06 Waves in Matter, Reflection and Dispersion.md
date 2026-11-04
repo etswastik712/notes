@@ -13,7 +13,7 @@ tags: [subject/electrodynamics, type/chapter, taught, extra/book, extra/beyond, 
 ---
 # ED06 · Waves in Matter, Reflection and Dispersion
 
-◀ [[ED05 Electromagnetic Waves in Vacuum]] · [[Electrodynamics - Course Map]]
+◀ [[ED05 Electromagnetic Waves in Vacuum]] · [[Electrodynamics - Course Map]] · [[ED07 Guided Waves]] ▶
 
 <span class="scope-taught">in course overview</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

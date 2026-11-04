@@ -12,7 +12,7 @@ B=ax[1]
 a,b=2.28e-2,1.01e-2
 modes=sorted([(np.hypot(m/a,n/b)*c/2/1e9,m,n) for m in range(0,4) for n in range(0,4) if (m,n)!=(0,0)])[:8]
 for i,(f,m,n) in enumerate(modes):
-    B.hlines(f,0.1,0.9,color=BLUE if i==0 else ORANGE if i<4 else MUTED,lw=2.5); B.text(0.95,f,f"TE{m}{n}  {f:.2f} GHz",va="center",fontsize=8)
+    B.hlines(f,0.1,0.9,color=BLUE if i==0 else ORANGE if i<4 else MUTED,lw=2.5); B.text(0.95,f+(0.9 if (i>0 and abs(f-modes[i-1][0])<0.3) else 0),f"TE{m}{n}  {f:.2f} GHz",va="center",fontsize=8)
 B.axhspan(modes[0][0],modes[1][0],color=AQUA,alpha=0.25); B.text(0.12,(modes[0][0]+modes[1][0])/2-0.3,"TE$_{10}$ only",fontsize=8,color=INK)
 B.set_xlim(0,1.8); B.set_xticks([]); B.set_ylabel("cutoff frequency (GHz)"); B.grid(False); B.set_title("B  Cutoff ladder, $2.28\\times1.01$ cm guide")
 C=ax[2]

@@ -13,7 +13,7 @@ tags: [subject/classical-mechanics, type/chapter, taught, extra/book, extra/beyo
 ---
 # CM04 · Central Forces and Effective One-Dimensional Motion
 
-◀ [[CM03 Symmetries, Noether's Theorem and Conservation Laws]] · [[Classical Mechanics - Course Map]]
+◀ [[CM03 Symmetries, Noether's Theorem and Conservation Laws]] · [[Classical Mechanics - Course Map]] · [[CM05 Scattering]] ▶
 
 <span class="scope-taught">in course overview</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

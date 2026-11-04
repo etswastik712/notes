@@ -52,7 +52,7 @@ Griffiths and Jackson section columns for unwritten chapters are *tbc*: they are
 | 04 | [[ED04 Conservation Laws - Energy, Momentum, Angular Momentum]] | conservation laws | §8.1-8.2 | §6.7 | draft |
 | 05 | [[ED05 Electromagnetic Waves in Vacuum]] | waves | §9.1.4, §9.2 | §7.1-7.2 | draft |
 | 06 | [[ED06 Waves in Matter, Reflection and Dispersion]] | waves in matter | §9.3-9.4 | §7.3-7.5 | draft |
-| 07 | ED07 Guided Waves | guided waves | tbc | tbc | todo |
+| 07 | [[ED07 Guided Waves]] | guided waves | §9.5 | Ch. 8 (§8.2-8.5) | draft |
 | 08 | ED08 Potentials and Gauge Transformations | potentials, gauge | tbc | tbc | todo |
 | 09 | ED09 Retarded Potentials and Liénard-Wiechert Fields | retarded potentials | tbc | tbc | todo |
 | 10 | ED10 Dipole Radiation | dipole radiation | tbc | tbc | todo |
