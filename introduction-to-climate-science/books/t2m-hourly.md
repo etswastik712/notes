@@ -323,4 +323,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (309/626): (none new)
 - (310/626): (none new)
 - (311/626): (none new)
+- (312/626): (none new)
 <!-- /kurooto:source -->
