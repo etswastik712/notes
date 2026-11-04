@@ -13,7 +13,7 @@ B=ax[1]
 g=np.linspace(-1,1,9); X,Y=np.meshgrid(g,g)
 B.quiver(X-0.02,Y,0*X,2*X,color=BLUE,angles="xy",scale=30,width=0.004,label="Landau $A_1=(0,Bx,0)$")
 B.quiver(X+0.02,Y,-Y,X,color=ORANGE,angles="xy",scale=30,width=0.004,label="symmetric $A_2=\\frac{B}{2}(-y,x,0)$")
-B.set_aspect("equal"); B.legend(fontsize=8,loc="upper right"); B.set_xlabel("$x$"); B.set_ylabel("$y$"); B.set_title("B  Same $B=2\\hat z$, different $A$ (differ by $\\nabla\\lambda$)")
+B.set_aspect("equal"); B.set_ylim(-1.2,1.7); B.legend(fontsize=8,loc="upper right"); B.set_xlabel("$x$"); B.set_ylabel("$y$"); B.set_title("B  Same $B=2\\hat z$, different $A$ (differ by $\\nabla\\lambda$)")
 C=ax[2]
 r=np.linspace(0.3,3,300)
 for tt,col in ((1,BLUE),(2,ORANGE),(3,AQUA)): C.plot(r,tt/r**2,color=col,label=f"gauge 1: $|A|\\propto t/r^2$, $t={tt}$")
