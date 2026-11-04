@@ -13,7 +13,7 @@ tags: [subject/electrodynamics, type/chapter, taught, extra/book, extra/beyond, 
 ---
 # ED07 · Guided Waves
 
-◀ [[ED06 Waves in Matter, Reflection and Dispersion]] · [[Electrodynamics - Course Map]]
+◀ [[ED06 Waves in Matter, Reflection and Dispersion]] · [[Electrodynamics - Course Map]] · [[ED08 Potentials and Gauge Transformations]] ▶
 
 <span class="scope-taught">in course overview</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

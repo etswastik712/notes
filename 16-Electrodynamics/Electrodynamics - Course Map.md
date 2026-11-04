@@ -53,7 +53,7 @@ Griffiths and Jackson section columns for unwritten chapters are *tbc*: they are
 | 05 | [[ED05 Electromagnetic Waves in Vacuum]] | waves | §9.1.4, §9.2 | §7.1-7.2 | draft |
 | 06 | [[ED06 Waves in Matter, Reflection and Dispersion]] | waves in matter | §9.3-9.4 | §7.3-7.5 | draft |
 | 07 | [[ED07 Guided Waves]] | guided waves | §9.5 | Ch. 8 (§8.2-8.5) | draft |
-| 08 | ED08 Potentials and Gauge Transformations | potentials, gauge | tbc | tbc | todo |
+| 08 | [[ED08 Potentials and Gauge Transformations]] | potentials, gauge | §10.1 | §6.2-6.3 | draft |
 | 09 | ED09 Retarded Potentials and Liénard-Wiechert Fields | retarded potentials | tbc | tbc | todo |
 | 10 | ED10 Dipole Radiation | dipole radiation | tbc | tbc | todo |
 | 11 | ED11 Relativistic Electrodynamics | relativistic ED | tbc | tbc | todo |

@@ -13,7 +13,7 @@ tags: [subject/classical-mechanics, type/chapter, taught, extra/book, extra/beyo
 ---
 # CM05 · Scattering
 
-◀ [[CM04 Central Forces and Effective One-Dimensional Motion]] · [[Classical Mechanics - Course Map]]
+◀ [[CM04 Central Forces and Effective One-Dimensional Motion]] · [[Classical Mechanics - Course Map]] · [[CM06 Small Oscillations and Normal Modes]] ▶
 
 <span class="scope-taught">in course overview</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

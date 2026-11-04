@@ -49,7 +49,7 @@ Source columns for unwritten chapters are *tbc*: under the vault rule (cite only
 | 03 | [[CM03 Symmetries, Noether's Theorem and Conservation Laws]] | 2 | LL §6-9; Goldstein §2.6-2.7; Arnold §20 | draft |
 | 04 | [[CM04 Central Forces and Effective One-Dimensional Motion]] | 2 | LL §10-11, §13-15; Goldstein §3.4, §3.6-3.7 | draft |
 | 05 | [[CM05 Scattering]] | 2 | LL §16-20 | draft |
-| 06 | CM06 Small Oscillations and Normal Modes | 2 | tbc (sources chosen and read before writing) | todo |
+| 06 | [[CM06 Small Oscillations and Normal Modes]] | 2 | LL §21-23; Alam §1.3 | draft |
 | 07 | CM07 Rigid Bodies | 3 | tbc (sources chosen and read before writing) | todo |
 | 08 | CM08 Non-Inertial Frames | 3 | tbc (sources chosen and read before writing) | todo |
 | 09 | CM09 Hamilton's Equations and Poisson Brackets | 4 | tbc (sources chosen and read before writing) | todo |
