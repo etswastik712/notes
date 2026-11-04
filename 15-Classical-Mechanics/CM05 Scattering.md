@@ -65,7 +65,7 @@ $$\sin\theta_{\max}=\frac{v_0}{V}\qquad(16.4),$$
 
 the tangent from $A$. The angles are related by $\tan\theta=v_0\sin\theta_0/(v_0\cos\theta_0+V)$ (16.5); for $V<v_0$ the relation is one-to-one, for $V>v_0$ each $\theta$ corresponds to two C-angles (16.6).
 
-For many identical parents with random orientations, the C-frame distribution is isotropic: the fraction into $\mathrm d\Omega_0$ is $\mathrm d\Omega_0/4\pi$, i.e. $\tfrac12\sin\theta_0\,\mathrm d\theta_0$ (16.7). Because $v^2=v_0^2+V^2+2v_0V\cos\theta_0$ implies $\mathrm d(\cos\theta_0)=\mathrm d(v^2)/2v_0V$, the L-frame kinetic energy $T=\tfrac12mv^2$ is **uniformly distributed** between $T_{\min}=\tfrac12m(v_0-V)^2$ and $T_{\max}=\tfrac12m(v_0+V)^2$ (16.8): $\mathrm dN=\mathrm dT/(m v_0V)$. For a decay into more than two parts the energies in the C frame are not fixed, but there is an upper limit: with $m_1$ singled out and the rest treated as one system of internal energy $E_1'$, $T_{10}=(M-m_1)(E_i-E_{1i}-E_1')/M$ is greatest when $E_1'$ is least, i.e. when all the others move with the same velocity.
+For many identical parents with random orientations, the C-frame distribution is isotropic: the fraction into $\mathrm d\Omega_0$ is $\mathrm d\Omega_0/4\pi$, i.e. $\tfrac12\sin\theta_0\,\mathrm d\theta_0$ (16.7). Because $v^2=v_0^2+V^2+2v_0V\cos\theta_0$ implies $\mathrm d(\cos\theta_0)=\mathrm d(v^2)/2v_0V$, the L-frame kinetic energy $T=\tfrac12mv^2$ is **uniformly distributed** between $T_{\min}=\tfrac12m(v_0-V)^2$ and $T_{\max}=\tfrac12m(v_0+V)^2$ (16.8): the fraction per unit energy is $\mathrm dT/(2mv_0V)$, which integrates to $1$ over a range of width $2mv_0V$. For a decay into more than two parts the energies in the C frame are not fixed, but there is an upper limit: with $m_1$ singled out and the rest treated as one system of internal energy $E_1'$, $T_{10}=(M-m_1)(E_i-E_{1i}-E_1')/M$ is greatest when $E_1'$ is least, i.e. when all the others move with the same velocity.
 
 > [!example] Worked example 1: a decay with $V>v_0$ (🔵 numerics)
 > $m=1$, $v_0=1$ (C frame), parent speed $V=2$: $\sin\theta_{\max}=0.5$, $\theta_{\max}=30^\circ$, and $T$ is uniform on $[\tfrac12(1-2)^2,\tfrac12(1+2)^2]=[0.5,\,4.5]$. A Monte-Carlo with $2\times10^6$ isotropic C-frame emissions reproduces both the angular limit ($30.000^\circ$) and the energy range exactly, with the histogram flat to $0.2\%$ (relative spread of ten bins).
@@ -173,7 +173,7 @@ When the impact parameter is large the field is weak and the deflection small, a
 
 $$\theta_1=-\frac{2p}{m_1v_\infty^2}\int_p^\infty\frac{\mathrm dU}{\mathrm dr}\frac{\mathrm dr}{\sqrt{r^2-p^2}}\qquad(20.3)$$
 
-(LL write it with the sign absorbed for a repulsive potential), and the cross-section is $\mathrm d\sigma=\dfrac p{\theta_1}\Bigl|\dfrac{\mathrm dp}{\mathrm d\theta_1}\Bigr|\mathrm d\Omega_1$ (20.4).
+(my sign: $\theta_1>0$ for a repulsive potential, $\mathrm dU/\mathrm dr<0$, fixed by the direction of $F_y$; the scan's text layer does not show LL's sign), and the cross-section is $\mathrm d\sigma=\dfrac p{\theta_1}\Bigl|\dfrac{\mathrm dp}{\mathrm d\theta_1}\Bigr|\mathrm d\Omega_1$ (20.4).
 
 > [!example] Worked example 7: small-angle Coulomb (🔵 consistency check)
 > $U=\alpha/r$: $\mathrm dU/\mathrm dr=-\alpha/r^2$ and $\int_p^\infty r^{-2}(r^2-p^2)^{-1/2}\mathrm dr=1/p^2$, so $\theta_1=2\alpha/(m_1v_\infty^2p)$, i.e. $p=2\alpha/(m_1v_\infty^2\theta_1)$. This is the small-angle limit of the exact $p=(\alpha/mv_\infty^2)\cot\tfrac\chi2$ (19.1) with $m=m_1$ for a heavy target. The ratio of the small-angle to the exact $p$ (with $\alpha/mv^2=1$) is $1.0002$ at $\theta=0.05$ rad, $1.0008$ at $0.1$, $1.021$ at $0.5$, $1.093$ at $1$ rad: the approximation is good to $\lesssim1\%$ for $\theta\lesssim0.15$ rad.
@@ -217,8 +217,8 @@ flowchart TD
 > **Solution.** $\theta_1=30^\circ$, $\theta_2=60^\circ$; $v_1=v\cos30^\circ=0.866v$, $v_2=v\sin30^\circ=0.5v$; sum of squares $=1$ ✓.
 
 > [!question]- P3. Energy transfer
-> A neutron ($m_1=1$) hits a carbon nucleus ($m_2=12$) head-on: fraction of energy transferred and energy per collision in the C and L frames?
-> **Solution.** $\epsilon_{\max}/E_1=4\cdot12/13^2=0.284$.
+> A neutron ($m_1=1$) hits a carbon nucleus ($m_2=12$) head-on: what fraction of its energy can it lose?
+> **Solution.** $\epsilon_{\max}/E_1=4\cdot12/13^2=0.284$ (17.7).
 
 > [!question]- P4. Maximum deflection
 > A projectile of mass $4m$ hits a stationary mass $m$: maximum deflection?
