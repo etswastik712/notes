@@ -40,6 +40,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-08-19-class-notes-19th-august-2026]] Class notes 19 August: Bayes' rule for several events, multiplication rule, independence of events (2026-08-19)
 - [[introduction-to-probability/2026-08-19-solutions-quiz-1]] Solutions to Quiz 1: committee with exactly j couples, symmetric difference (2026-08-19)
 - [[introduction-to-probability/2026-10-29-hw4]] HW4: mgf of the sum of two dice rolls (2026-10-29)
+- [[introduction-to-probability/2026-11-05-hw5]] HW5: order statistics (joint pdf of min and max), exponential order statistics, multinomial covariance (2026-11-05)
 
 ## Tasks
 
@@ -107,3 +108,4 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-10-29: HW4 posted ("Please attend the tutorial sincerely"). See [[introduction-to-probability/2026-10-29-hw4]]. (Classroom)
 - 2026-10-30: Remedial class this week on Sunday (2026-11-01), starting 10:00 AM, Madhava Hall, 3rd floor, Main Building. (Classroom)
 - 2026-11-13: Probability quiz (MT2113) at 12:00 clashes with other quizzes that day; batch asked to move the Thermodynamics quiz (mail of 2026-10-31).
+- 2026-11-05: HW5 uploaded; the instructor will add lecture notes over the weekend. See [[introduction-to-probability/2026-11-05-hw5]]. (Classroom)
