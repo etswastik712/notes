@@ -83,6 +83,8 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-10-29: Mid-sem answer sheets shown at NLH from 11:00, in two batches to reduce crowding: 11:00–11:30 for roll numbers 20251001 to 20251215, 11:30–12:00 for all other roll numbers. (Classroom)
 - 2026-10-30: Tutorial on Daisyworld (land and ocean), held in NLH; bring a phone or laptop to run the web app. Handout shared. See [[introduction-to-climate-science/2026-10-30-tutorial-daisyworld-land-and-ocean]]. (Classroom)
 - 2026-10-31: Second ocean-module tutorial and handout (CERES data on Earth's energy budget, CSV download) posted on the course website; purely self-study, no TA sessions. See [[introduction-to-climate-science/2026-10-31-tutorial-ceres-earths-energy-budget]]. (Classroom)
+- 2026-11-05: Extra mid-sem answer-sheet viewing and doubt clearing for those who missed the earlier slot, at NLH, 18:00 (TAs). (Classroom)
+- 2026-11-05: Class room changed because NLH was not free: the class that day was in LHC 105. (Classroom)
 
 ## Concepts
 - [[zettel/surface-temperature-field-survey]] Surface Temperature Field Survey

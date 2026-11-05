@@ -49,6 +49,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - 2026-08-25: Batch 1 office hours (Ekta, Akanksha) shifted to Thursday 4-5 PM, room 461, main building; otherwise email the instructor to arrange a time.
 - 2026-11-02: that day's class was cancelled due to an unavoidable circumstance (no make-up date posted) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk3MDI2MzE2MTUy)).
 - 2026-11-05: Classmate emailed the professor asking to cancel the 2 Nov class (cancelled in Classroom) on the attendance portal, as most students are marked absent.
+- 2026-11-05: Batch 3 tutorial on 2026-11-06 is held together with Batch 1 in LHC 101 (not the usual Batch 3 room) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk3Nzc0OTU5MTk0)).
 
 ## Concepts
 - [[zettel/well-ordering-principle]] Well-Ordering Principle
