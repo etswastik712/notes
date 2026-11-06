@@ -85,6 +85,8 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-10-31: Second ocean-module tutorial and handout (CERES data on Earth's energy budget, CSV download) posted on the course website; purely self-study, no TA sessions. See [[introduction-to-climate-science/2026-10-31-tutorial-ceres-earths-energy-budget]]. (Classroom)
 - 2026-11-05: Extra mid-sem answer-sheet viewing and doubt clearing for those who missed the earlier slot, at NLH, 18:00 (TAs). (Classroom)
 - 2026-11-05: Class room changed because NLH was not free: the class that day was in LHC 105. (Classroom)
+- 2026-11-06: The course website has been updated with the classroom discussions; all readings will be updated in a shared Dropbox folder: [readings folder](https://www.dropbox.com/scl/fo/uw84t3sp1zx7kbzjev9x0/AIN0jARQ3T72r6SksVpWaA8?rlkey=0yjl3km5lpvkowexkuo2e5iw4&dl=0) (folder contents not opened). (Classroom)
+- 2026-11-06: Tutorial that day held in NLH; bring laptops. (Classroom)
 
 ## Concepts
 - [[zettel/surface-temperature-field-survey]] Surface Temperature Field Survey
