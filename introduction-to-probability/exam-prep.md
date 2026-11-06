@@ -44,6 +44,7 @@ Rule for any quiz or exam: no electronic gadget, notes or paper on your person; 
 - [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]]: median of a discrete variable (corrected definition); HW3 (median, mode, skewness, mgf, folded normal)
 - [[introduction-to-probability/2026-10-29-hw4]]: HW4 (the postponed HW3 problem 4: mgf of the sum of two dice rolls)
 - [[introduction-to-probability/2026-11-05-hw5]]: HW5 (joint pdf of min and max of i.i.d. variables, exponential order statistics, multinomial covariance matrix)
+- [[introduction-to-probability/2026-11-06-hw-5-q1-solution]]: solution image for HW5 Q.1 (joint pdf of min and max), not read
 - Earlier chapters in the vault: [[08-Probability/Probability - Course Map]]
 
 ## Must know
@@ -143,7 +144,7 @@ Rule for any quiz or exam: no electronic gadget, notes or paper on your person; 
 - $E[F(X)]$ for continuous $X$, with and without LOTUS. Practise: HW 2, problem 3.
 - Median and mode of uniform, exponential and Pareto distributions; skewness of the exponential (positive, free of $\lambda$). Practise: [[introduction-to-probability/2026-10-22-hw3-problems-and-median-clarification]], problems 1-3.
 - Mgf of a sum of two dice rolls (now set again in HW4); mean and variance of $\text{Geom}(p)$ from its mgf (derive the mgf first); two integral expressions for the mgf of the folded normal $|Z|$. Practise: HW3, problems 4-6; [[introduction-to-probability/2026-10-29-hw4]].
-- Joint density of the min and max of two i.i.d. continuous variables (change of variables, factor 2 from the two preimages), and its $n$-variable version $n!\prod f(y_i)$. Practise: [[introduction-to-probability/2026-11-05-hw5]], problem 1.
+- Joint density of the min and max of two i.i.d. continuous variables (change of variables, factor 2 from the two preimages), and its $n$-variable version $n!\prod f(y_i)$. Practise: [[introduction-to-probability/2026-11-05-hw5]], problem 1; the instructor's worked solution is the image in [[introduction-to-probability/2026-11-06-hw-5-q1-solution]] (open the link, not read here).
 - Exponential order statistics: joint pdf of $(Y_1,Y_2-Y_1)$, marginal of $Y_2-Y_1$, independence from $Y_1$, variance and correlation of min and max. Practise: HW5, problem 2.
 - Multinomial means, variances and covariances from indicator variables, and the covariance matrix. Practise: HW5, problem 3; vault chapter [[08-Probability/PR07 Sums of Independent Variables Covariance and Correlation]].
 
@@ -158,6 +159,7 @@ Rule for any quiz or exam: no electronic gadget, notes or paper on your person; 
 - The Week2_notes.pdf and Week3_notes.pdf files hold only the homework problems; the lecture notes for Weeks 2 and 3 (announced as posted on 2026-10-24) are not filed, so the exponential distribution, the median/mode/skewness lectures, the mgf definition and the folded normal "discussed in class" have no class notes here yet.
 - HW3 problem 4 is marked "postponed to next hw" in the file but listed without that remark in the post. HW4 (2026-10-29) now repeats it; only that one problem was readable in hw4.pdf, so any further HW4 problems are not covered.
 - HW5 (2026-11-05): handwritten, read from page images; the reading "$\operatorname{Var}(Y_1)=5/(4\lambda^2)$" in problem 2(e) is inconsistent with $Y_1\sim\text{Expo}(2\lambda)$ (which gives $1/(4\lambda^2)$), so check it against the file. The instructor said lecture notes would be added over the weekend (not yet posted): order statistics, change of variables for joint densities and the multinomial have no class notes here yet.
+- The solution to HW5 Q.1 (posted 2026-11-06 as an image, HW-5, Q.1.jpg) could not be read, so its argument is not in the notes; open the link in [[introduction-to-probability/2026-11-06-hw-5-q1-solution]].
 - Quiz 3, problem 3: statement not in the solutions file ("deduced in class in detail").
 - Whether the geometric/negative-binomial derivations and their expectations are examined: the notes say they "will be derived in class", with no written derivation in these files.
 - The variance proofs ($E[X^2]-(E[X])^2$, $\operatorname{Var}[aX+b]$) are "done in class", not written in the notes; variance of a sum of independent variables is stated not to be proved in the course.
