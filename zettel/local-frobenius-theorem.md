@@ -1,0 +1,21 @@
+---
+id: zettel/local-frobenius-theorem
+aliases: ["Local Frobenius Theorem", "Frobenius theorem (local)"]
+tags: [zettel, agent-written, mt3184-differential-geometry-and-lie-groups]
+trust_tier: agent_written
+---
+
+# Local Frobenius Theorem
+
+States that every involutive distribution on a smooth manifold is completely integrable, thereby admitting flat coordinates locally around each point.
+
+## Links
+- needs:: [[zettel/completely-integrable-distribution]] — Complete integrability is the conclusion asserting the existence of local flat charts
+
+---
+Source: DG29, pp. 1–4
+
+<!-- kurooto:seen -->
+## Seen in
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|DG29]] pp. 1–4
+<!-- /kurooto:seen -->
