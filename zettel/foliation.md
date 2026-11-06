@@ -15,6 +15,9 @@ A $k$-dimensional foliation $\mathcal{F}$ of a manifold $M$ is a decomposition o
 Source: DG29, pp. 1–4
 
 <!-- kurooto:seen -->
+- [[zettel/distribution]] — a distribution D induces a foliation when D_p = T_pL for the leaf L through each p (November 2-6 note)
+- [[zettel/integral-manifold]] — the leaves are the integral manifolds of the induced distribution
+- [[zettel/slice-chart]] — flat charts for a foliation have leaves meeting them in slices x^{k+1}, …, x^n = const, as in a slice chart
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|DG29]] pp. 1–4
 <!-- /kurooto:seen -->

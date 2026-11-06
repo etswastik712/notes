@@ -21,6 +21,8 @@ $$\theta_t(g) = g \exp(tX) = R_{\exp(tX)}(g)$$
 Source: DG28, pp. 1–5
 
 <!-- kurooto:seen -->
+- [[zettel/weakly-embedded-submanifold]] — needed to show that exp(tX) ∈ H for all t implies X lies in the Lie algebra of the Lie subgroup H
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-06-hw10]] — Problem 1 uses naturality Φ∘exp = exp∘Φ_*
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-october-26-30|DG28]] pp. 1–5
 <!-- /kurooto:seen -->
