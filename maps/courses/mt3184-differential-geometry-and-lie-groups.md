@@ -21,6 +21,9 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-20-august-17-21]] August 17-21 (2026-08-20)
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]] HW3 (2026-08-20)
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-26-hw9]] HW9 (2026-10-26)
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-06-october-26-30]] October 26-30 (2026-11-06)
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6]] November 2-6 (2026-11-06)
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-06-hw10]] HW10 (2026-11-06)
 
 ## Tasks
 - [ ] HW4 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODc2MTEzMjkzNTYz/details) — [[mt3184-differential-geometry-and-lie-groups/2026-08-27-hw4]]
@@ -32,6 +35,7 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - [ ] HW2 (due date not given; not graded) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODc0NTUxNjk1MTk1/details) — [[mt3184-differential-geometry-and-lie-groups/2026-08-14-hw2]]
 - [ ] HW3 (due date not given; not graded) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODc1MjQ2NDI0Mjg1/details) — [[mt3184-differential-geometry-and-lie-groups/2026-08-20-hw3]]
 - [ ] HW9 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODk1Nzc4Njk0MzAx/details) — [[mt3184-differential-geometry-and-lie-groups/2026-10-26-hw9]]
+- [ ] HW10 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODkwOTA3MDA4NjMz/details) — [[mt3184-differential-geometry-and-lie-groups/2026-11-06-hw10]]
 
 ## Exams
 - 2026-09-03: Test 1 (based on Homework 1, 2 and 3), see [[mt3184-differential-geometry-and-lie-groups/2026-09-03-test-i]]
