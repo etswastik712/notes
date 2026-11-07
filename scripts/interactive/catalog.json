@@ -487,13 +487,23 @@
  },
  {
   "title": "The oscillating electric dipole: from the static near field to the radiation zone",
-  "desc": "The exact field of a point electric dipole p = p\u2080\u1e91 oscillating at frequency \u03c9 (Jackson 9.18, valid at every distance): E = (1/4\u03c0\u03b5\u2080){k\u00b2(n\u00d7p)\u00d7n e^{ikr}/r + [3n(n\u00b7p) \u2212 p](1/r\u00b3 \u2212 ik/r\u00b2)e^{ikr}}. The picture shows the electric field vectors in a plane containing the axis, in units where \u03bb = 1, as they evolve in time: close to the dipole the field looks like a static dipole field that simply oscillates; beyond r \u2248 \u03bb/2\u03c0 the field detaches and moves outward as a transverse wave whose amplitude falls as 1/r. Colours show |E| on a log scale; the polar plot is the radiation pattern sin\u00b2\u03b8.",
+  "desc": "The exact field of a point electric dipole p = p\u2080\u1e91 oscillating at frequency \u03c9 (Jackson 9.18, valid at every distance): E = (1/4\u03c0\u03b5\u2080){k\u00b2(n\u00d7p)\u00d7n e^{ikr}/r + [3n(n\u00b7p) \u2212 p](1/r\u00b3 \u2212 ik/r\u00b2)e^{ikr}}. The picture shows the electric field vectors in a plane containing the axis, in units where \u03bb = 1, as they evolve in time: close to the dipole the arrows follow the static dipole pattern and simply flip sign together; beyond r \u2248 \u03bb/2\u03c0 they form bands of transverse arrows that travel outward with amplitude falling as 1/r. Arrow opacity shows |E| on a log scale; the polar plot is the radiation pattern sin\u00b2\u03b8.",
   "vault": "ED",
   "chapters": [
    "ED10 Dipole Radiation"
   ],
-  "tryit": "Zoom the window to \u00b10.5\u03bb: static dipole lines breathing in and out. Zoom out to \u00b14\u03bb: closed loops of field lines pinch off and travel outward; along the axis (\u03b8 = 0) the field is purely longitudinal and never radiates, in the equatorial plane it is transverse and strongest. Click a point to read E_r, E_\u03b8 and the zone (kr < 1 near zone).",
+  "tryit": "Set the window to \u00b10.3\u03bb: the arrows have the static-dipole pattern and flip sign together, with no outward travel. Set it to \u00b14\u03bb: bands of transverse arrows move outward at one wavelength per period; along the axis (\u03b8 = 0) the field is purely longitudinal (E_\u03b8 \u221d sin\u03b8 = 0, so nothing radiates), in the equatorial plane it is purely transverse and strongest. Click a point to read E_r, E_\u03b8 and the zone (kr < 1 is the near zone).",
   "id": "ed10_dipole_field"
+ },
+ {
+  "title": "The field of a moving charge: Lorentz contraction of the Coulomb field",
+  "desc": "A point charge moves along +x at speed \u03b2. In its rest frame the field is the isotropic Coulomb field. In the lab frame the field lines still point away from the charge's present position, but are crowded toward the plane perpendicular to the motion: along the motion the field is smaller by 1/\u03b3\u00b2, across it larger by \u03b3 (Griffiths 12.93, Jackson 11.154). The right panel shows either the angular pattern |E|(\u03c8)/E_Coulomb = (1\u2212\u03b2\u00b2)/(1\u2212\u03b2\u00b2 sin\u00b2\u03c8)^{3/2}, or what a fixed observer at distance b sees as the charge flies past: a pulse of height \u03b3 and duration b/\u03b3v, with a magnetic field B = \u03b2E\u2082 equal in size to E\u2082 as \u03b2 \u2192 1 (Jackson 11.152).",
+  "vault": "ED",
+  "chapters": [
+   "ED11 Relativistic Electrodynamics"
+  ],
+  "tryit": "Drag \u03b2 from 0 to 0.99 and watch the field lines bunch toward the equatorial plane. In the time view, the peak of E\u2082 grows as \u03b3 while the pulse narrows as 1/\u03b3 so that the area stays 2q/(bv); at \u03b2 = 0.99 the transverse E and B are nearly equal and perpendicular, like a short light pulse.",
+  "id": "ed11_boosted_fields"
  },
  {
   "title": "Two competitors: isoclines decide who wins",
