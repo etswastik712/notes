@@ -20,6 +20,9 @@ $$\mathcal{D}_p \le T_p M, \quad \dim(\mathcal{D}_p) = k$$
 Source: DG30, pp. 1–4
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/integral-manifold]] — A distribution defines the tangent subspaces that an integral manifold must match at every point
+- special-case-of:: [[zettel/completely-integrable-distribution]] — A completely integrable distribution is a distribution that locally admits flat coordinate charts
+- used-in:: [[zettel/foliation]] — The tangent spaces to the leaves of a foliation form a distribution on the manifold
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|DG30]] pp. 1–4
 <!-- /kurooto:seen -->
