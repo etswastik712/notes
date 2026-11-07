@@ -30,3 +30,8 @@ HW 2 problems
 - [[introduction-to-probability/2026-10-08-week-1-post-mid-term-hw-and-lecture-notes]]: LOTUS and cdf/pdf background for problems 2 and 3.
 - [[introduction-to-probability/2026-09-18-quiz-3-solutions]]: memorylessness of the geometric, the discrete counterpart of problem 1(b).
 - [[08-Probability/PR05 Continuous Random Variables]]: their chapter on continuous densities, including the exponential.
+
+<!-- kurooto:materialebf94e67 -->
+## Concepts in announcement
+(none new)
+<!-- /kurooto:materialebf94e67 -->
