@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated in Classroom) and project presentations on 5 and 6 Oct 2026. Upcoming, not an assessment: day trip on Sat 7 Nov 2026 (about 6:00 to 18:00); the final list was posted 2026-11-02 and you are on it. The teacher wants the Deccan slides and the field guide (northern leg only) read before the trip. See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
+Not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated in Classroom) and project presentations on 5 and 6 Oct 2026. Upcoming, not an assessment: day trip on Sat 7 Nov 2026 (assemble by 06:15 am at the guest house; bring field guide, notebook, pencil/pen, scale, shoes, water, and strike & dip app); the final list was posted 2026-11-02 and you are on it. The teacher wants the Deccan slides and the field guide (northern leg only) read before the trip. See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
 
 ## Covered so far
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]: GIS/DEM basics, QGIS with SAGA, topotoolbox workflow (GRIDobj, inpaintnans, FLOWobj, STREAMobj)
