@@ -19,4 +19,17 @@ Source: Practice problems 7th August 2026, pp. 1–2
 <!-- kurooto:seen -->
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Practice problems 7th August 2026]] pp. 1–2
+- [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 6th August 2026]] pp. 1–4
+
+### Added from class
+- Class notes 6th August 2026 pp. 1–4: Adds explicit formula notation P[A] = |A| / |S| using set cardinality bars.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Class notes 6th August 2026, pp. 1–4 | $\|S\|$ | cardinality of the sample space S |
+| Class notes 6th August 2026, pp. 1–4 | P[A] | probability of event A |
+| Practice problems 7th August 2026, pp. 1–2 | P[A] | probability of event A |
+<!-- /kurooto:notation -->

@@ -16,8 +16,19 @@ A subset of the sample space representing a collection of outcomes that satisfy 
 Source: Practice problems 7th August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
-- used-in:: [[zettel/naive-definition-of-probability]] — The naive definition assigns probabilities to events on a finite sample space as the ratio of favourable outcomes to total outcomes, so events are the objects it applies to
-- used-in:: [[zettel/probability-difference-formula-for-subsets]] — The subset difference formula is stated for events A and B with A contained in B, so it operates on events as defined in this note
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Practice problems 7th August 2026]] pp. 1–2
+- [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 6th August 2026]] pp. 1–4
+
+### Added from class
+- Class notes 6th August 2026 pp. 1–4: Details set algebraic properties on events, including commutativity, associativity, distributivity, and De Morgan's laws for finite collections.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Class notes 6th August 2026, pp. 1–4 | $E^c$ | complement of an event with respect to sample space S |
+| Practice problems 7th August 2026, pp. 1–2 | $A \cap B$ | intersection of two events |
+| Practice problems 7th August 2026, pp. 1–2 | $A \cup B$ | union of two events |
+<!-- /kurooto:notation -->

@@ -52,3 +52,8 @@ Dear everyone, here is the update practice problem set. Feel free to work out ot
 ## Concepts in Practice problems 7th August 2026
 [[zettel/full-house]], [[zettel/straight-flush]]
 <!-- /kurooto:materialc3a73f0b -->
+
+<!-- kurooto:material85fd16a9 -->
+## Concepts in Class notes 6th August 2026
+[[zettel/random-experiment]], [[zettel/sample-space]], [[zettel/event]], [[zettel/de-morgan-s-laws]], [[zettel/naive-definition-of-probability]], [[zettel/axiomatic-definition-of-probability]]
+<!-- /kurooto:material85fd16a9 -->
