@@ -427,6 +427,10 @@ Everything above is in the lectures; the book surrounds it with two laboratory e
 8. **Inertial oscillation.** Period and radius for a 20 m s⁻¹ current at 60° N. At what latitude does the inertial period equal 24 h?
 9. **Conceptual.** Why does the *force-balance* argument of §4.2 give east–west deflection but not north–south, while the angular-momentum argument gives both? Why does $f$ vanish at the equator although the Coriolis force does not?
 10. **Rossby number.** Compute $\mathrm{Ro}=U/fL$ for (i) the synoptic scale ($U=10$ m s⁻¹, $L=10^6$ m, 45° N), (ii) a hurricane ($50$ m s⁻¹, $10^5$ m, 20° N), (iii) a tornado ($50$ m s⁻¹, $100$ m). For which is rotation of the Earth unimportant?
+11. **Jupiter (Neena Tutorial 6, Q1).** Rotation period $9$ h $50$ min, radius $11.194173$ Earth radii ($6378$ km): angular velocity and equatorial speed.
+12. **Westward parcel on the equator (T6 Q2).** A parcel moves west at $20$ m s⁻¹: the acceleration towards the Earth's centre (a) seen from an inertial frame, (b) in the rotating frame, (c) the vertical Coriolis acceleration and its direction ($\Omega=7.29\times10^{-5}$ s⁻¹).
+13. **A car at $65^\circ$N (T6 Q3).** Horizontal Coriolis force on $1300$ kg moving at $100$ km/h.
+14. **A thrown ball (T6 Q4).** A ball thrown $100$ m in $4$ s at $30^\circ$N: horizontal deflection due to the Earth's rotation.
 
 > [!example]- Solutions
 > 1. From (CL12.2) with $\mathbf A=\mathbf u_I$: five terms, see §2.4; terms (3) and (4) equal. For the triple product use $\mathbf a\times(\mathbf b\times\mathbf c)=\mathbf b(\mathbf a\!\cdot\!\mathbf c)-\mathbf c(\mathbf a\!\cdot\!\mathbf b)$ with $\mathbf a=\mathbf b=\boldsymbol\Omega$: $\boldsymbol\Omega(\boldsymbol\Omega\!\cdot\!\mathbf R)-\Omega^2\mathbf R=-\Omega^2\mathbf R_\perp$. Work: $\mathbf u\cdot(\boldsymbol\Omega\times\mathbf u)=0$.
@@ -439,6 +443,10 @@ Everything above is in the lectures; the book surrounds it with two laboratory e
 > 8. $f(60^\circ)=1.263\times10^{-4}$ s⁻¹: $T=2\pi/f=13.8$ h, $r=U/f=158$ km. For $T=24$ h (sidereal day 23.93 h): $f=\Omega\Rightarrow\sin\varphi=1/2$, $\varphi=30^\circ$.
 > 9. East–west: moving along a latitude circle changes the centrifugal term, which has a *meridional* horizontal component; moving north–south changes $R$ but neither $\mathbf g_{\rm eff}$ nor the (zonally symmetric) centrifugal force has an east–west component, so the balance of forces says nothing: the deflection arises from conservation of angular momentum (equivalently the $\boldsymbol\Omega\times\mathbf u$ term). The *horizontal* deflecting component $2\Omega\sin\varphi$ vanishes at the equator because $\boldsymbol\Omega$ is horizontal there; the Coriolis force is $2\Omega\cos\varphi$ times $u$ *vertically*, so it still exists.
 > 10. (i) $10/(1.03\times10^{-4}\cdot10^6)=0.1$. (ii) $f(20^\circ)=5.0\times10^{-5}$: $\mathrm{Ro}=50/(5.0\times10^{-5}\cdot10^5)=10$. (iii) $50/(1.03\times10^{-4}\cdot100)\approx4800$ (with $f$ at 45°). Rotation is unimportant when $\mathrm{Ro}\gg1$: tornado (and bathtub); important for synoptic systems; hurricanes are intermediate.
+> 11. $\Omega=2\pi/35{,}400\ \text{s}=1.775\times10^{-4}$ s⁻¹; $v=\Omega R=12{,}672$ m s⁻¹ (sheet 12,677).
+> 12. Inertial-frame speed $\Omega R-20=444.96$ m s⁻¹: (a) $v^2/R=0.0310$ m s⁻² (sheet 0.0308: [!verify] a rounding of $\Omega R$); (b) $u^2/R=6.27\times10^{-5}$ m s⁻²; (c) $2\Omega u=2.92\times10^{-3}$ m s⁻² **downward** (toward the ground) for westward motion (sheet $-29.1\times10^{-4}$: the sign; eastward motion is lifted).
+> 13. $f=2\Omega\sin65^\circ=1.321\times10^{-4}$ s⁻¹, $v=27.78$ m s⁻¹: $a=0.00367$ m s⁻², $F=4.77$ N (sheet 0.00366, 4.758 N).
+> 14. $v=25$ m s⁻¹, $f=7.29\times10^{-5}$: deflection $\tfrac12fvt^2=0.0146$ m $=1.5$ cm to the right.
 
 ## PDF handout
 The derivation chain, effective-gravity diagram (TikZ), component table and rules as a printable two-page LaTeX sheet: [[climate-rotating-frames-handout.pdf]].

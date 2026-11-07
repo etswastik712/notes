@@ -30,3 +30,6 @@ Used in: [[PR08 Order Statistics and the Multinomial Distribution]], [[PR01 Coun
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Microstate]] (Thermodynamics): occupation numbers of microstates are multinomial; the constraint sum n_i = N is why the counts are negatively correlated.

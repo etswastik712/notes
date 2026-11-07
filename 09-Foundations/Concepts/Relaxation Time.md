@@ -38,3 +38,6 @@ Hence the observed climate lags its equilibrium response ([[CL04 Feedback and Mu
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Greenhouse Gas Lifetime and Potency]] (Climate): a pulse decays as exp(-t/tau): the same first-order relaxation as the planetary temperature.

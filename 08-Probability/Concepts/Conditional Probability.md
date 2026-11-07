@@ -37,7 +37,7 @@ Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: 
 
 Class zettel on this idea: [[zettel/conditional-probability-measure|Conditional Probability Measure]] · [[zettel/reduced-sample-space-method|Reduced Sample Space Method]]
 
-Related zettel: [[zettel/bertrand-s-box-marble-paradox|Bertrand's Box Marble Paradox]] · [[zettel/coupon-collector-draw-independence-and-conditioning|Coupon Collector Draw Independence and Conditioning]] · [[zettel/hypergeometric-first-draw-posterior-probability|Hypergeometric First-Draw Posterior Probability]] · [[zettel/multiplication-rule-for-conditional-probability|Multiplication Rule for Conditional Probability]]
+Related zettel: [[zettel/bertrand-s-box-marble-paradox|Bertrand's Box Marble Paradox]] · [[zettel/coupon-collector-draw-independence-and-conditioning|Coupon Collector Draw Independence and Conditioning]] · [[zettel/hypergeometric-first-draw-posterior-probability|Hypergeometric First-Draw Posterior Probability]] · [[zettel/language-model-conditional-probability-generation|Language Model Conditional Probability Generation]] · [[zettel/multiplication-rule-for-conditional-probability|Multiplication Rule for Conditional Probability]]
 <!-- zettel:end -->
 
 ## Linked from

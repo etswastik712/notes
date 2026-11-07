@@ -32,3 +32,6 @@ Used in: [[SM02 Phase Space Liouville and the Microcanonical Ensemble]]. Related
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ```
+
+## Across subjects
+- [[Brine Rejection]] (Climate): mixing and unmixing of salt and water: salinity and density bookkeeping by entropy and mass balance (recalled link).

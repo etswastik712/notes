@@ -43,3 +43,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Continued in Part II (added 2026-10-30)
 - Heat conduction through a gas: the thermal diffusivity $\kappa/\rho c_p$ and the Prandtl number: [[SM04 Kinetic Theory and the Boltzmann Equation]] §10–§11 ([[Prandtl Number]]).
 - Negative heat capacity of self-gravitating systems ($C=-\tfrac32Nk_B$): [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §4 ([[Negative Heat Capacity]]); rotor overshoot: [[Rigid Rotor]].
+
+## Across subjects
+- [[Ocean Heat Capacity and Seasonal Storage]] (Climate): the same quantity: the ocean's large heat capacity damps and delays the seasonal cycle.

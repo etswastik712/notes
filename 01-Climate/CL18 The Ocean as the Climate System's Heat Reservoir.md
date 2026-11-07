@@ -45,7 +45,7 @@ tags: [subject/climate, type/chapter, taught, extra/book, extra/beyond, src/neen
 *A: Beer–Lambert transmittance for water of different clarity (§2). B: heat capacity per m² of surface: rock layer, atmosphere, mixed layer, whole ocean (§5). C: the global-mean surface budget of Stewart Fig. 5.6: $168+324=390+78+24=492$ W m⁻² (§3). Numbers: `scripts/cl_neena_numbers.py` (cl18), `scripts/fig_cl16_21.py`.*
 
 > [!tip] 🔬 Interactive: a slab ocean and the seasons
-> Open [[Assets/interactive/cl_slab_ocean.html|▶ cl_slab_ocean.html]] (self-contained, works offline). A mixed layer of depth $h$ forced by $Q_0\cos\omega t$ and damped by $\lambda$: amplitude $Q_0/\sqrt{(C\omega)^2+\lambda^2}$ and lag $\arctan(C\omega/\lambda)$. $h=50$ m, $Q_0=100$ W m⁻², $\lambda=20$: **2.16 K, 64°** (about 2.2 months); $h=100$ m: $1.2$ K, $76^\circ$; $h=1$ m (land-like): $5.0$ K, $2^\circ$.
+> Open [▶ cl_slab_ocean.html](../Assets/interactive/cl_slab_ocean.html) (self-contained, works offline). A mixed layer of depth $h$ forced by $Q_0\cos\omega t$ and damped by $\lambda$: amplitude $Q_0/\sqrt{(C\omega)^2+\lambda^2}$ and lag $\arctan(C\omega/\lambda)$. $h=50$ m, $Q_0=100$ W m⁻², $\lambda=20$: **2.16 K, 64°** (about 2.2 months); $h=100$ m: $1.2$ K, $76^\circ$; $h=1$ m (land-like): $5.0$ K, $2^\circ$.
 
 ## 1. The world ocean
 <span class="scope-extra-book">extra · book</span> *Hartmann 2016 §1.7: [[03_Optional_Hartmann2016_The-World-Ocean_pp17-19.pdf#page=2|pp. 17–18]]*; <span class="scope-taught">taught</span> *Neena L20 pp. 7–10*
@@ -149,7 +149,7 @@ The Earth gains heat at the top of the tropical atmosphere and loses it at the t
 > **Builds on:** [[CL10 Global Energy Balance and Meridional Structure]] (TOA budget, poleward transport), [[CL03 Radiation and Planetary Energy Balance]] (relaxation time, diurnal slab), [[CL06 Hydrostatic Balance and Vertical Structure]] (heat capacity $c_pp_s/g$), [[CL07 Optical Properties of the Atmosphere]] (Beer–Lambert).
 > **Leads to:** [[CL19 Wind-Driven Ocean Circulation]] (the currents that carry the heat), [[CL20 ENSO and the Walker Circulation]], [[CL21 Thermohaline Circulation Water Masses and Sea Ice]].
 > **Concepts:** [[Mixed Layer]] · [[Thermocline and Pycnocline]] · [[Sea Surface Energy Budget]] · [[Bulk Aerodynamic Formulas]] · [[Light Attenuation in the Ocean]] · [[Ocean Heat Capacity and Seasonal Storage]] · [[Seawater Salinity]]
-> **Other subjects:** [[Thermodynamics and Statistical Mechanics - Course Map]] ([[TH07 Enthalpy Thermochemistry and Calorimetry]]: heat capacity and latent heat; [[THX1 Diffusion Random Walks and the Heat Equation]]: soil conduction and the $\sqrt{D\tau}$ penetration depth), [[Landscapes and Geomorphology - Course Map]] ([[LS25 Water in the Landscape]], [[LS26 Sea Level and Ocean Waves]]), [[Eco-Evo - Course Map]] ([[EE06 Lakes Stratification and Alternative Stable States]]: stratified water bodies, light and the mixed layer), [[Waves - Course Map]], [[Probability - Course Map]] (error budgets).
+> **Other subjects:** [[Thermodynamics and Statistical Mechanics - Course Map]] ([[TH07 Enthalpy Thermochemistry and Calorimetry]]: heat capacity and latent heat; [[THX1 Diffusion Random Walks and the Heat Equation]]: soil conduction and the $\sqrt{D\tau}$ penetration depth), [[Landscapes and Geomorphology - Course Map]] ([[LS25 Water in the Landscape]], [[LS26 Sea Level and Ocean Waves]]), [[Ecology and Evolution - Course Map]] ([[EE06 Eutrophication and Alternative Stable States]]: stratified water bodies, light and the mixed layer), [[Waves - Course Map]], [[Probability - Course Map]] (error budgets).
 
 ## Summary
 > [!summary] Cheat-sheet
@@ -189,7 +189,7 @@ The Earth gains heat at the top of the tropical atmosphere and loses it at the t
 > [!provenance]- Source map for this chapter
 > | Topic | Source | Scope |
 > |---|---|---|
-> | solar absorption, surface heat balance, SST, composition, E−P, density stratification, pycnocline, convection, mid-latitude cycle, western boundary currents ($10^{15}$ W) | [[Lecture20_Ocean_stratification_251113_133828 (1).pdf]] pp. 2–24; [[Lecture22_Ocean_wind_driven_circulation-2_251113_133827 (1).pdf]] p. 15; L7 for the percentage budget | taught (2025) |
+> | solar absorption, surface heat balance, SST, composition, E−P, density stratification, pycnocline, convection, mid-latitude cycle, western boundary currents ($10^{15}$ W) | [[Lecture20_Ocean_stratification_251113_133828 (1).pdf]] pp. 2–24; [[Lecture22_Ocean_wind driven circulation-2_251113_133827 (1).pdf]] p. 15; L7 for the percentage budget | taught (2025) |
 > | light in the ocean (reflectivity, Beer–Lambert, water types, chlorophyll) | [[01_Core_Stewart2008_Light-in-the-Ocean_pp97-100.pdf]] (Core; read) | taught (2026, Joy) |
 > | surface energy budget, heat storage, soil penetration, radiative heating | [[02_Core_Hartmann2016_Surface-Energy-Budget-and-Heat-Storage_pp96-101.pdf]] (Core; OCR garbled equations) | taught (2026) |
 > | geographic variation of the surface balance | [[03_Core_Hartmann2016_Geographic-Variation-of-the-Surface-Energy-Balance_pp126-129.pdf]] (Core) | taught (2026) |

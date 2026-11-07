@@ -20,6 +20,7 @@ tags: [subject/landscapes, type/moc, extra/book, src/papers, status/draft]
 | [[FR02 Secondary Currents and River Channel Patterns (Njenga 2013)]] | Njenga et al., *Applied Mathematics* 4 (2013) | analytic stability theory: secondary current phase shift separates straight, meandering, braided | abstract, introduction, conclusions |
 | [[FR03 Flow at a River Bend with CCHE2D (Das and Biswal 2023)]] | Das and Biswal, *Sci. Res. Commun.* 3 (2023) | 2D flow model of a bend of the Gomati River, Tripura; Manning calibration | abstract, introduction, methods, conclusions |
 | [[FR04 Building the Himalaya (Dal Zilio et al 2021)]] | Dal Zilio et al., *Nat. Rev. Earth Environ.* 2 (2021) | Himalayan seismic cycle and mountain building | abstract, introduction, key points, glossary |
+| [[FR05 Did Erosion Accelerate in the Late Cenozoic (Schildgen et al 2018)]] | Schildgen et al., *Nature* 559 (2018) 89–93 (against Herman et al. 2013; Ganti et al. 2016) | spatial correlation bias in thermochronology erosion rates | abstract only (+ reading-list post); the other two papers not read |
 
 ## How the papers connect
 ```mermaid

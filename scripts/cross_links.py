@@ -236,6 +236,25 @@ PAIRS = [
      "a smooth manifold (Hausdorff, second countable) is paracompact and has smooth partitions of unity subordinate to every open cover"),
     ("Topological Manifold", "Hausdorff Space",
      "Hausdorff and second countable are the axioms that rule out pathologies: the line with two origins is locally Euclidean but not Hausdorff, and has no partitions of unity"),
+    # ---- added 2026-11-07 (DM16-17, PR08, CL16-21)
+    ("Integrating Factor", "Entropy",
+     "the heat form dU + P dV is not closed but has the integrating factor 1/T (Lee Problem 19-3 in two variables); entropy is the potential"),
+    ("Holonomy of a Plane Field", "Lie Bracket of Vector Fields",
+     "the height gap of a lifted loop is the Lie bracket at second order (the flow-rectangle picture of DM10)"),
+    ("Multinomial Distribution", "Microstate",
+     "occupation numbers of microstates are multinomial; the constraint sum n_i = N is why the counts are negatively correlated"),
+    ("Multinomial Covariance Matrix", "Covariance Matrix",
+     "a singular covariance matrix: the all-ones direction has zero variance"),
+    ("Atmospheric Escape", "Maxwell-Boltzmann Distribution",
+     "escape is the fast tail of the Maxwell speed distribution beyond one sixth of the escape speed"),
+    ("Greenhouse Gas Lifetime and Potency", "Relaxation Time",
+     "a pulse decays as exp(-t/tau): the same first-order relaxation as the planetary temperature"),
+    ("Brine Rejection", "Gibbs Paradox",
+     "mixing and unmixing of salt and water: salinity and density bookkeeping by entropy and mass balance (recalled link)"),
+    ("Ocean Heat Capacity and Seasonal Storage", "Heat Capacity",
+     "the same quantity: the ocean's large heat capacity damps and delays the seasonal cycle"),
+    ("Ekman Spiral", "Coriolis Force",
+     "Coriolis force in a rotating frame, here with viscous friction"),
 ]
 
 

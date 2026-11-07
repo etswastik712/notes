@@ -43,3 +43,6 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 ## Continued in Part II (added 2026-10-30)
 - Microscopic definitions and numbers: [[SM01 Probability Large Numbers and Information]] §7, [[SM02 Phase Space Liouville and the Microcanonical Ensemble]], [[SM03 The Canonical Ensemble]]; see [[Shannon Entropy]] and [[Relative Entropy]].
 - Boltzmann, Gibbs, coarse-grained, von Neumann and Shannon entropies, Landauer and the arrow of time: [[SM06 Entropy Information and the Arrow of Time]].
+
+## Across subjects
+- [[Integrating Factor]] (Differential Geometry): the heat form dU + P dV is not closed but has the integrating factor 1/T (Lee Problem 19-3 in two variables); entropy is the potential.

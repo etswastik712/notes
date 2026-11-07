@@ -73,7 +73,7 @@ tags: [subject/climate, type/chapter, taught, extra/beyond, src/neena, status/dr
 > **Builds on:** [[CL19 Wind-Driven Ocean Circulation]] (equatorial upwelling, thermocline), [[CL18 The Ocean as the Climate System's Heat Reservoir]] (mixed layer, heat flux, bulk stress), [[CL14 Observed Winds - Jets, Trades and the ITCZ]] (trades, ITCZ), [[CL04 Feedback and Multiple Steady States]] (positive feedbacks).
 > **Leads to:** [[CL21 Thermohaline Circulation Water Masses and Sea Ice]] (the slow part of the ocean).
 > **Concepts:** [[Walker Circulation]] · [[Bjerknes Feedback]] · [[El Nino and La Nina]] · [[Southern Oscillation Index]] · [[ENSO]]
-> **Other subjects:** [[Eco-Evo - Course Map]] (El Niño and fisheries/population crashes; recalled), [[Probability - Course Map]] ([[PR08 Order Statistics and the Multinomial Distribution]]: ranking events; indices as standardised variables), [[Waves - Course Map]] (equatorial waves, recalled), [[Thermodynamics and Statistical Mechanics - Course Map]] (positive feedback and instability).
+> **Other subjects:** [[Ecology and Evolution - Course Map]] (El Niño and fisheries/population crashes; recalled), [[Probability - Course Map]] ([[PR08 Order Statistics and the Multinomial Distribution]]: ranking events; indices as standardised variables), [[Waves - Course Map]] (equatorial waves, recalled), [[Thermodynamics and Statistical Mechanics - Course Map]] (positive feedback and instability).
 
 ## Summary
 > [!summary] Cheat-sheet

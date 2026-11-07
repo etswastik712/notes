@@ -30,7 +30,7 @@ Used in: [[DM08 Lie Groups]], [[DM09 Group Actions and Semidirect Products]]. Re
 
 Class zettel on this idea: [[zettel/lie-group|Lie Group]]
 
-Related zettel: [[zettel/constant-rank-of-lie-group-homomorphisms|Constant Rank of Lie Group Homomorphisms]] · [[zettel/lie-algebra-of-a-lie-group|Lie Algebra of a Lie Group]] · [[zettel/lie-group-homomorphism|Lie Group Homomorphism]] · [[zettel/semidirect-product-of-lie-groups|Semidirect Product of Lie Groups]]
+Related zettel: [[zettel/constant-rank-of-lie-group-homomorphisms|Constant Rank of Lie Group Homomorphisms]] · [[zettel/exponential-map|Exponential Map]] · [[zettel/lie-algebra-of-a-lie-group|Lie Algebra of a Lie Group]] · [[zettel/lie-group-homomorphism|Lie Group Homomorphism]] · [[zettel/semidirect-product-of-lie-groups|Semidirect Product of Lie Groups]]
 <!-- zettel:end -->
 
 ## Linked from

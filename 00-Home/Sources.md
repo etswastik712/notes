@@ -174,3 +174,14 @@ The prerequisites PA11–PA15 cite Lee's Appendix A (point-set topology) and the
 
 
 **QM additions 2026-11-04:** `physics/quantum-mechanics/lecture-notes-slides/Barrier.pdf` (handwritten, 7 pp.) and `Tutorial5.pdf` → [[QM10 The Finite Barrier and Tutorial V]].
+
+## Sources added 2026-11-07 (new-source sweep)
+| Source (un-numbered folders) | What it is | Used in |
+|---|---|---|
+| `mt3184-…/2026-11-06-october-26-30.md`, `…-november-2-6.md`, `…-hw10.md` (the other tool's OCR notes of slides DG27–DG30 and Homework 10) | distributions, foliations, Frobenius, weakly embedded submanifolds, Lie subgroups from subalgebras, Closed Subgroup proof | [[DM16 Distributions, Involutivity and the Frobenius Theorem]], [[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]] |
+| `math/probability/lecture-notes-slides/hw5.pdf`, `HW-5, Q.1.jpg` | Homework 5 (order statistics, exponential order statistics, multinomial moments) and the instructor's Q1 solution | [[PR08 Order Statistics and the Multinomial Distribution]] |
+| `earth-and-climate/climate/lecture-notes-slides/ec2113_neena/` (27 PDFs) and `instructors info.txt` | the **2025 course** (Neena): Lectures 2–24 and tutorials 1, 2, 5, 6 | [[CL16 Atmospheric Evolution Greenhouse Gases and the Carbon Cycle]] … [[CL21 Thermohaline Circulation Water Masses and Sea Ice]]; Practice of CL03, CL08, CL10, CL12 |
+| `earth-and-climate/climate/books/joy_lecture_readings/O1–O3` (14 PDFs: Hartmann 2016, Stewart 2008; tier in the file name) | Joy's ocean readings (this year) | [[CL18 The Ocean as the Climate System's Heat Reservoir]], [[CL19 Wind-Driven Ocean Circulation]], [[CL21 Thermohaline Circulation Water Masses and Sea Ice]] |
+| `landscape-evolution/books/deccan-next-field-guide.md` + `2026-11-02-deccan-next-field-guide.md` (the PDF itself is not in the repo) | field guide for the 7 Nov trip | [[LS28 Deccan Field Guide Lava Architecture and Sahyadri Stratigraphy]] |
+| `landscape-evolution/2026-11-03-erosion-rate-debate-reading.md` | reading list (Herman 2013, Schildgen 2018, Ganti 2016) | [[FR05 Did Erosion Accelerate in the Late Cenozoic (Schildgen et al 2018)]] |
+| 56 loose notes in `zettel/` | the other tool's concept notes | filed by `scripts/sort_zettel.py` (70 moved; 12 duplicate slugs left for a hand merge) |

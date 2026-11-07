@@ -33,7 +33,7 @@ Used in: [[PR02 Conditional Probability Bayes Rule and Independence]]. Related: 
 
 Class zettel on this idea: [[zettel/multiplication-rule-for-conditional-probability|Multiplication Rule for Conditional Probability]]
 
-Related zettel: [[zettel/chain-rule-for-finite-intersection-probabilities|Chain Rule for Finite Intersection Probabilities]]
+Related zettel: [[zettel/basic-principle-of-counting|Basic Principle of Counting]] · [[zettel/chain-rule-for-finite-intersection-probabilities|Chain Rule for Finite Intersection Probabilities]]
 <!-- zettel:end -->
 
 ## Linked from

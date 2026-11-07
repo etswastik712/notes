@@ -346,7 +346,7 @@ Three features of the monsoon are the signature of a **threshold system** ([[Bis
 ## Zettel notes
 
 > [!abstract]- Zettel notes filed under this chapter (3): the other tool's concept notes from the lectures, unreviewed
-> [[zettel/land-ocean-thermal-contrast|Land-Ocean Thermal Contrast]] · [[zettel/monsoon-circulation|Monsoon Circulation]] · [[zettel/orographic-uplift|Orographic Uplift]]
+> [[zettel/monsoon-circulation|Monsoon Circulation]] · [[zettel/monsoon-dynamics|Monsoon Dynamics]] · [[zettel/orographic-uplift|Orographic Uplift]]
 <!-- zettel:end -->
 
 ## Provenance

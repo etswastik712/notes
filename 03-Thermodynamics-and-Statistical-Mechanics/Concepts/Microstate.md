@@ -34,3 +34,4 @@ LIST FROM [[]] AND -#type/moc SORT file.name ASC
 
 ## Across subjects
 - [[Counting Principles]] (Probability): multiplicities are obtained from the counting principles (product rule for independent parts, permutations and combinations for identical particles and occupation numbers).
+- [[Multinomial Distribution]] (Probability): occupation numbers of microstates are multinomial; the constraint sum n_i = N is why the counts are negatively correlated.
