@@ -19,6 +19,7 @@ $$|\psi_A + \psi_B|^2 = |\psi_A|^2 + |\psi_B|^2 + 2\operatorname{Re}(\psi_A^* \p
 Source: PH2113_Lecture1, pp. 1–8
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/axiomatic-definition-of-probability]] — Quantum superposition of probability amplitudes yields interference terms |psi_A + psi_B|^2 != |psi_A|^2 + |psi_B|^2, contrasting directly with classical countable additivity over mutually exclusive alternatives
 ## Seen in
 - [[ph2113/2026-08-04-lectures-1-2-double-slit-and-compton|PH2113_Lecture1]] pp. 1–8
 <!-- /kurooto:seen -->
