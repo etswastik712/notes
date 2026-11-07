@@ -18,6 +18,8 @@ $$\binom{n}{r} = \frac{n!}{(n - r)! r!} = \frac{n(n - 1) \dots (n - r + 1)}{r!}$
 Source: Class notes 5th August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/permutations-of-distinguishable-objects]] — Combinations are evaluated directly by dividing the number of length-r permutations of distinct items by r! to remove order dependence
+- used-in:: [[zettel/full-house]] — Counting the unordered 5-card combinations that constitute a full house hand relies directly on combinations of card denominations and suits
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 5th August 2026]] pp. 1–2
 <!-- /kurooto:seen -->
