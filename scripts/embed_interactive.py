@@ -73,8 +73,7 @@ def hub(cat,per,dry):
        "## All tools by subject",""]
     for v in ORDER:
         if v not in by: continue
-        folder,name=VAULTS[v]; L+= [f"### {name} ({len(by[v])})",""," | Tool | What it shows | Chapters |","|---|---|---|"]
-        L[-3]=L[-3].lstrip()
+        folder,name=VAULTS[v]; L+= [f"### {name} ({len(by[v])})","","| Tool | What it shows | Chapters |","|---|---|---|"]
         for t in by[v]:
             chs=" · ".join(f"[[{c}]]" for c in t["chapters"])
             L.append(f"| **{t['title']}**<br>[open `{t['id']}`](../Assets/interactive/{t['id']}.html) | {first_sentence(t['desc'])} *Try:* {t['tryit']} | {chs} |")
@@ -84,8 +83,8 @@ def hub(cat,per,dry):
     for v in ORDER:
         if v in("SM",): continue
         folder,name=VAULTS[v]
-        if v=="TH": chs=chapters_of("TH")+chapters_of("SM")
-        else: chs=chapters_of(v)
+        chs=chapters_of(v)
+        if v=="TH": chs=[c for c in chs if c[:2] in ("TH","SM")]
         if not chs: L.append(f"| {name} | (course map only) | no chapters written yet |"); continue
         have=[c for c in chs if c in covered]; miss=[c for c in chs if c not in covered]
         nm=name if v!="TH" else "Thermodynamics and Statistical Mechanics"

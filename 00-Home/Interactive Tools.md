@@ -21,7 +21,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Classical Mechanics (10)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Brachistochrone: which path is fastest?**<br>[open `cm01_brachistochrone`](../Assets/interactive/cm01_brachistochrone.html) | A bead slides from rest from the origin to the end point under gravity along four paths. *Try:* Drag the exponent p of the power-law path (p = 1 is the straight line) and watch its time exceed the cycloid's; then increase the depth Y beyond X to make the cycloid dip below the end point. | [[CM01 Variational Calculus and Hamilton's Principle]] |
 | **Is the action a minimum? The second variation**<br>[open `cm01_second_variation`](../Assets/interactive/cm01_second_variation.html) | Oscillator with ω = 2 between fixed endpoints x(0)=0, x(T)=1. *Try:* Move T through π/ω = 1.571: for n = 1 the curvature of S(ε) changes sign exactly there. Raise n and see that higher modes stay stabilising until ωT > nπ. | [[CM01 Variational Calculus and Hamilton's Principle]] |
@@ -36,7 +36,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Electrodynamics (7)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Displacement current: charging a capacitor**<br>[open `ed03_capacitor`](../Assets/interactive/ed03_capacitor.html) | A circular parallel-plate capacitor (plate radius R) is charged by a steady current I. *Try:* Drag r across the plate radius R: B grows linearly inside the gap (only the part of the displacement current enclosed counts) and falls as 1/r outside, joining the wire's field. Untick 'include displacement current' to see Ampère's law fail (B = 0 in the gap). | [[ED03 Maxwell's Equations and Boundary Conditions]] |
 | **Where does the energy flow? The Poynting vector**<br>[open `ed04_poynting`](../Assets/interactive/ed04_poynting.html) | S = E × B/μ₀ shows the path of electromagnetic energy. *Try:* Wire: raise the current I and watch the inward flux keep equalling I²R. Capacitor: let the plates charge and compare the Poynting flux through the rim with dU/dt. Wave: check that S = c u for any polarisation. | [[ED04 Conservation Laws - Energy, Momentum, Angular Momentum]] |
@@ -48,7 +48,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Quantum Mechanics (6)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Particle in a box: build a state from energy eigenstates**<br>[open `qm_box`](../Assets/interactive/qm_box.html) | Infinite well of width 1 (ħ = m = 1), E_n = n²π²/2. *Try:* Put equal weight on n = 1 and 2: the packet bounces with period 2π/(E₂−E₁) = 0.85. Add n = 3 and the motion is no longer a simple oscillation. Notice ⟨E⟩ never moves. | [[QM04 The Particle in a Box]] · [[QM03 States Operators and Measurement]] |
 | **Finite square well: graphical solution of the bound states**<br>[open `qm_finite_well`](../Assets/interactive/qm_finite_well.html) | For a well of depth V₀ and width 2a, define z₀ = a√(2mV₀)/ħ. *Try:* Shrink z₀ below π/2: only the ground state remains, even for a very shallow well. Increase z₀ to 10 and compare the lowest energies with the infinite well values (n π/2)². | [[QM07 The Finite Square Well]] |
@@ -59,7 +59,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Waves (3)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Wave packets: phase velocity versus group velocity**<br>[open `wave_dispersion_packet`](../Assets/interactive/wave_dispersion_packet.html) | A packet is a superposition of plane waves ψ(x,t) = ∫ A(k) e^{i(kx − ω(k)t)} dk with a Gaussian A(k) centred on k₀. *Try:* Deep water: v_g = v_p/2 (ripples run through the packet). Waveguide/plasma: v_p·v_g = c², ripples faster than c but the packet slower. Schrödinger: ω = k²/2, v_g = 2v_p. Non-dispersive: nothing spreads. | [[ED06 Waves in Matter, Reflection and Dispersion]] · [[ED07 Guided Waves]] · [[QM01 From Waves to Probabilities]] · [[LS26 Sea Level and Ocean Waves]] · [[Waves - Course Map]] · [[Fourier and Laplace Transforms]] |
 | **Fourier synthesis: build a waveform from harmonics**<br>[open `wave_fourier`](../Assets/interactive/wave_fourier.html) | A periodic function is a sum of sines. *Try:* Square wave with N = 1, 3, 9, 49: watch the Gibbs ears sharpen but not shrink (overshoot 8.95 %). Triangle waves converge much faster (1/n² coefficients). | [[ED05 Electromagnetic Waves in Vacuum]] · [[QM01 From Waves to Probabilities]] · [[PR06 Moments Generating Functions and Limit Theorems]] · [[Waves - Course Map]] · [[Fourier and Laplace Transforms]] |
@@ -67,13 +67,13 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Thermodynamics (1)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Ideal gas processes and the Carnot cycle on a P–V diagram**<br>[open `th_carnot`](../Assets/interactive/th_carnot.html) | One mole of ideal gas (choose monatomic γ = 5/3 or diatomic γ = 7/5) goes around a Carnot cycle: isothermal expansion at T_h, adiabatic expansion, isothermal compression at T_c, adiabatic compression. *Try:* Increase T_h: the cycle widens and η rises. Change the volume ratio: Q_h and W change but η does not. Compare γ = 5/3 and 7/5: different adiabat steepness, same efficiency. | [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] |
 
 ### Statistical Mechanics (5)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **The Boltzmann distribution: populations, energy, entropy and heat capacity**<br>[open `sm_boltzmann`](../Assets/interactive/sm_boltzmann.html) | A system with energy levels ε_i in contact with a heat bath at temperature T occupies level i with probability p_i = e^{−ε_i/kT}/Z. *Try:* Two-level: C peaks near kT ≈ 0.42Δ (Schottky anomaly) and falls to zero at both low and high T. Harmonic ladder: C → k only for kT ≫ ħω (equipartition), exponentially frozen below. Watch populations of 'frozen' modes. | [[SM03 The Canonical Ensemble]] · [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] |
 | **A gas relaxing to the Maxwell–Boltzmann distribution**<br>[open `sm_gas_box`](../Assets/interactive/sm_gas_box.html) | Hard disks bounce in a box and collide elastically. *Try:* Press 'all same speed' and watch the histogram (blue) broaden into the dashed Maxwell–Boltzmann curve within a few collisions per particle. Press 'one fast particle' to see the energy spread out. Turn collisions off and the distribution never changes. | [[SM04 Kinetic Theory and the Boltzmann Equation]] · [[TH06 From Kinetic Theory to Statistical Mechanics]] · [[SM06 Entropy Information and the Arrow of Time]] |
@@ -83,7 +83,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Climate (5)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Why the Hadley cell stops: angular momentum and the ring of air**<br>[open `cl_angular_momentum`](../Assets/interactive/cl_angular_momentum.html) | A ring of air conserves its absolute angular momentum per unit mass A = Ωa² cos²φ + u a cos φ as it drifts poleward. *Try:* Slide φ to 30°: u = 134 m/s (the observed subtropical jet is weaker, because eddies and friction break the conservation); at 60°: 697 m/s, at 80° more than 2500 m/s. Start the ring at 10° instead of the equator to see the wind it picks up. Switch to 'surface (friction)' to see the trade-wind sign. | [[CL11 Mean Meridional Circulation and Angular Momentum]] · [[CL14 Observed Winds - Jets, Trades and the ITCZ]] |
 | **Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance**<br>[open `cl_coriolis`](../Assets/interactive/cl_coriolis.html) | On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2π/f, f = 2Ω sin φ (left panel, in the rotating frame). *Try:* Move the latitude from 45° N to the equator: f → 0 and the inertial radius diverges (no rotation felt). Go to the Southern Hemisphere: the circles reverse and the geostrophic wind flips. Slide friction up: the wind crosses the isobars. | [[CL12 Rotating Frames and the Coriolis Force]] · [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] |
@@ -93,7 +93,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Ecology and Evolution (5)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Two competitors: isoclines decide who wins**<br>[open `ee_competition`](../Assets/interactive/ee_competition.html) | Lotka–Volterra competition: dN₁/dt = r₁N₁(K₁ − N₁ − α₁₂N₂)/K₁ and the mirror equation for species 2. *Try:* K₁ = 100, K₂ = 80, α₁₂ = 0.5, α₂₁ = 0.6 → stable coexistence at (85.7, 28.6). Set both α = 1.5 → saddle at (16, 56): click on either side of the separatrix and watch the winner change. | [[EE04 Competition and Invasions]] |
 | **Shallow lakes: alternative stable states and hysteresis**<br>[open `ee_lake_hysteresis`](../Assets/interactive/ee_lake_hysteresis.html) | A single variable x (phosphorus / turbidity) obeys dx/dt = a − b x + r f(x), f(x) = xᵖ/(xᵖ + hᵖ): loading a, removal b, a sigmoidal internal recycling term. *Try:* b = 1, r = 1.4, h = 1, p = 8: bistable for 0.050 < a < 0.626. Press 'sweep loading up and down' and see the jump up at a = 0.626 and the jump down only at a = 0.050. Reduce r (or p) until the S-curve disappears: no hysteresis. | [[EE06 Eutrophication and Alternative Stable States]] |
@@ -103,7 +103,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Landscapes and Geomorphology (9)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Elastic plates: flexure under a load, and the plate as a low-pass filter**<br>[open `ls_flexure`](../Assets/interactive/ls_flexure.html) | A lithospheric plate of elastic thickness T_e and flexural rigidity D = E T_e³/12(1−ν²) floating on the mantle bends under a line load: w(x) = w₀ e^(−x/α)[cos(x/α) + sin(x/α)] with flexural parameter α = (4D/Δρg)^(1/4), a depression with a small forebulge. *Try:* T_e = 25 km, Δρ = 3300: D ≈ 9.7×10²² N m and half-compensation at λ ≈ 262 km (D = 10²³ N m gives 263 km). Increase T_e (10, 30, 50, 70 km): the depression widens and shallows and the forebulge moves outward. Fill the basin with sediment (Δρ smaller) and α grows. | [[LS10 Folds Flexure and Mountain Building]] · [[LS07 Isostasy]] |
 | **Ice sheets and valley glaciers: profiles from flow and mass balance**<br>[open `ls_glacier`](../Assets/interactive/ls_glacier.html) | Left: the steady ice-sheet profile from Glen's law (Vialov): H^((2n+2)/n) = H₀^((2n+2)/n)[1 − (x/L)^((n+1)/n)], compared with the perfectly plastic parabola H = √(2Cx/ρ_i g) (the n → ∞ limit); the thickness scales as √L either way. *Try:* Plastic panel: x = 400 km gives H = √(22.2 m × 400 km) = 3.0 km (Greenland). Raise n: the Vialov curve approaches the plastic one. Right: γ = 2 m/yr per km, x_E = 3 km, W = 1 km → Q_max = 9×10⁶ m³/yr, terminus 6 km, 90 m/yr at the ELA if H = 100 m. | [[LS14 Glaciers Mass Balance and Ice Flow]] |
@@ -117,13 +117,13 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Neuroscience (1)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **The Hodgkin–Huxley neuron: threshold, all-or-none spikes and repetitive firing**<br>[open `ns_hodgkin_huxley`](../Assets/interactive/ns_hodgkin_huxley.html) | The squid-axon membrane model: C dV/dt = I − g_Na m³h (V − E_Na) − g_K n⁴ (V − E_K) − g_L (V − E_L), with three gating variables m, h, n relaxing toward voltage-dependent targets. *Try:* Rest is −65 mV. A kick of 6 mV decays, 7 mV fires a spike peaking near +37 mV; 15 mV peaks at +40 mV, hardly higher. Constant current: no spikes below about 6 µA/cm², then a steady train (≈ 60 Hz at 7, 87 Hz at 20). Block Na⁺ (TTX) and no spike is possible; block K⁺ (TEA) and the spike will not repolarise properly. | [[Neuroscience - Course Map]] |
 
 ### Probability (4)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Bayes' rule as a picture: why a positive test is often a false alarm**<br>[open `pr_bayes`](../Assets/interactive/pr_bayes.html) | 10 000 people, drawn as dots in four blocks: ill and positive (true positives), ill and negative, healthy and positive (false positives), healthy and negative. *Try:* Defaults 0.5 %, 95 %, 1 %: 47.5 true positives vs 99.5 false positives, posterior 0.323. Set prevalence 1 %, sensitivity 95 %, false-positive 5 %: posterior 0.161. Press 'second positive test' and the posterior becomes the new prior. | [[PR02 Conditional Probability Bayes Rule and Independence]] |
 | **Binomial → Poisson and binomial → normal**<br>[open `pr_binom_limits`](../Assets/interactive/pr_binom_limits.html) | Bars: the exact Binomial(n, p) probabilities. *Try:* n = 100, p = 0.02: Poisson(2) is superb, the normal is poor (skewed, negative values). n = 100, p = 0.5: normal superb, Poisson terrible. Fix np = 5 and increase n: binomial → Poisson(5). | [[PR03 Discrete Random Variables and Distributions]] · [[PR06 Moments Generating Functions and Limit Theorems]] |
@@ -132,14 +132,14 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Group Theory (2)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **The dihedral group D_n: symmetries, the Cayley table and cosets**<br>[open `gt_dihedral`](../Assets/interactive/gt_dihedral.html) | Act on a labelled regular n-gon with the rotation r (by 2π/n) and the reflection s. *Try:* n = 3 gives D₃ ≅ S₃: press r, then s, and compare with s then r (a different state). Choose g = s: the cosets are {1,s}, {r, rs}, {r², r²s} (3 cosets of size 2). Choose g = r in D₄: ⟨r⟩ has order 4, index 2: a normal subgroup. | [[GT01 Groups Subgroups and Cosets]] · [[GT06 Permutation Groups]] |
 | **Permutations: cycles, order and sign**<br>[open `gt_permutation`](../Assets/interactive/gt_permutation.html) | A permutation of {1..n} drawn as arrows i → σ(i) on a circle. *Try:* Build a 3-cycle (1 2 3): order 3, sign +. Multiply by a transposition: sign flips. The preset (1 2)(3 4 5) has order lcm(2,3) = 6 and sign −1 (odd). Swap two values and watch the cycle structure merge or split and the sign flip. Press 'random' repeatedly to see typical cycle types. | [[GT06 Permutation Groups]] · [[GT04 Commutators Simple Groups and Composition Series]] |
 
 ### Proofs, Analysis and Topology (5)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Covering spaces: lifting loops from the circle to the line**<br>[open `pa_covering`](../Assets/interactive/pa_covering.html) | The real line covers the circle by t ↦ (cos t, sin t). *Try:* Set w = 2: the point goes twice round the circle and the lift climbs two floors of the helix, ending at 4π. Turn up the wobble: the loop is a different path, but the lift still ends at 2πw (homotopy invariance). w = 0 gives a null-homotopic loop whose lift returns to 0. | [[PA15 Covering Spaces and the Fundamental Group]] |
 | **The ε–δ game: continuity and limits made visible**<br>[open `pa_epsilon_delta`](../Assets/interactive/pa_epsilon_delta.html) | For a function f and a point a, an adversary picks a tolerance ε around f(a) (horizontal band); you must answer with a δ so that every x within δ of a lands inside the band. *Try:* f(x) = x² at a = 1, ε = 0.1: δ = √1.1 − 1 or 1 − √0.9, the smaller is 0.0488. Move a toward 3: δ shrinks (the same ε needs smaller δ where the graph is steeper). Choose the step function: ε = 0.3 fails for every δ. | [[PA06 The Real Numbers and Sequences]] · [[PA13 The Derivative and the Inverse Function Theorem]] |
@@ -149,7 +149,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Inorganic Chemistry (4)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **Crystal field theory: d-orbital splitting, spin state and LFSE**<br>[open `ch_cft`](../Assets/interactive/ch_cft.html) | Ligands split the five d orbitals: octahedral complexes into t₂g (−0.4Δ_o) and e_g (+0.6Δ_o); tetrahedral ones into e (−0.6Δ_t) and t₂ (+0.4Δ_t) with Δ_t = (4/9)Δ_o. *Try:* d⁶ octahedral: with Δ_o < P it is high spin (4 unpaired, LFSE = −0.4Δ_o, μ = 4.90 μ_B); with Δ_o > P it is low spin (0 unpaired, LFSE = −2.4Δ_o, μ = 0). d³ has the same answer for any Δ (−1.2Δ_o, μ = 3.87). Tetrahedral: Δ_t is small so almost always high spin. | [[CH10 Crystal Field Theory]] |
 | **Molecular orbital diagrams for homonuclear diatomics**<br>[open `ch_mo_diatomic`](../Assets/interactive/ch_mo_diatomic.html) | Fill the valence molecular orbitals of Li₂ … Ne₂ following the aufbau principle and Hund's rule. *Try:* N₂: bond order 3, diamagnetic; O₂: bond order 2 with two unpaired electrons in π* (paramagnetic, which the Lewis picture cannot explain); B₂: bond order 1 with two unpaired electrons: this needs the σ₂p-above-π₂p ordering. Remove or add one electron to see the ions O₂⁺, O₂⁻, N₂⁺. | [[CH02 Molecular Orbital Theory Diatomics]] |
@@ -158,7 +158,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ### Differential Geometry (3)
 
- | Tool | What it shows | Chapters |
+| Tool | What it shows | Chapters |
 |---|---|---|
 | **The Lie bracket as the failure of flows to commute**<br>[open `dm_lie_bracket`](../Assets/interactive/dm_lie_bracket.html) | Flow along X for time t, then along Y for t, then back along X for −t and back along Y for −t. *Try:* X = ∂ₓ, Y = x∂ᵧ: [X, Y] = ∂ᵧ, the rectangle fails to close by exactly t² vertically. X = ∂ₓ, Y = ∂ᵧ commute: the path closes (that is the criterion of DM13). Halve t and the gap quarters. | [[DM10 Vector Fields and Lie Brackets]] · [[DM13 Lie Derivatives and Commuting Vector Fields]] · [[DM12 Integral Curves, Flows and Flowouts]] |
 | **The exponential map: one-parameter subgroups e^{tA} of GL(2,R)**<br>[open `dm_matrix_exp`](../Assets/interactive/dm_matrix_exp.html) | For a 2×2 matrix A, the curve t ↦ e^{tA} is a one-parameter subgroup (e^{(s+t)A} = e^{sA}e^{tA}) and x(t) = e^{tA}x₀ solves x′ = Ax. *Try:* Rotation generator [[0,−1],[1,0]]: e^{tA} is rotation by t (a closed circle subgroup ≅ S¹). Trace-zero A, e.g. [[1,0],[0,−1]]: the area stays 1 (the subgroup lies in SL(2,R)). Nilpotent [[0,1],[0,0]]: e^{tA} = [[1,t],[0,1]]. Move t and check area = e^{t·tr A}. | [[DM14 One-Parameter Subgroups and the Exponential Map]] · [[DM11 The Lie Algebra of a Lie Group]] · [[DM08 Lie Groups]] |
@@ -174,7 +174,7 @@ A chapter counts as covered if at least one tool is embedded in it. ✓ = at lea
 | Electrodynamics | 6/6: ED03, ED04, ED05, ED06, ED07, ED08 | none |
 | Quantum Mechanics | 10/10: QM01, QM02, QM03, QM04, QM05, QM06, QM07, QM08, QM09, QM10 | none |
 | Waves | (course map only) | no chapters written yet |
-| Thermodynamics and Statistical Mechanics | 22/34: SM01, SM03, SM04, SM05, SM06, SM07, SM08, TH03, TH04, TH06, TH09, SM01, SM03, SM04, SM05, SM06, SM07, SM08, TH03, TH04, TH06, TH09 | SM02, TH01, TH02, TH05, TH07, TH08, SM02, TH01, TH02, TH05, TH07, TH08 |
+| Thermodynamics and Statistical Mechanics | 11/17: SM01, SM03, SM04, SM05, SM06, SM07, SM08, TH03, TH04, TH06, TH09 | SM02, TH01, TH02, TH05, TH07, TH08 |
 | Climate | 9/15: CL03, CL04, CL07, CL08, CL09, CL11, CL12, CL13, CL14 | CL01, CL02, CL05, CL06, CL10, CL15 |
 | Ecology and Evolution | 5/7: EE02, EE03, EE04, EE05, EE06 | EE01, EE07 |
 | Landscapes and Geomorphology | 14/28: LS02, LS07, LS09, LS10, LS12, LS13, LS14, LS15, LS16, LS22, LS23, LS24, LS26, LS27 | LS01, LS03, LS04, LS05, LS06, LS08, LS11, LS17, LS18, LS19, LS20, LS21, LS25, LS99 |
