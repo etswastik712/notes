@@ -604,4 +604,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 - (590/626): (none new)
 - (591/626): (none new)
 - (592/626): (none new)
+- (593/626): (none new)
 <!-- /kurooto:source -->
