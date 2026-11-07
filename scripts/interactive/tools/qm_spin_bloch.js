@@ -1,0 +1,21 @@
+//META {"title":"Spin ½ on the Bloch sphere: Stern–Gerlach and precession","desc":"The spin state of a spin-½ particle is a point on the Bloch sphere. A Stern–Gerlach analyser along axis n̂ gives 'up' with probability (1 + n̂·b)/2 and leaves the spin pointing along ±n̂. Run sequential measurements to see the key quantum surprise: z, then x, then z again gives 50 % up at the end. A magnetic field makes the Bloch vector precess at the Larmor frequency.","vault":"QM","chapters":["QM09 The Stern-Gerlach Experiment and Spin"],"tryit":"Prepare ↑z, measure x (random), then z: the original ↑z is lost, 50 % each. Turn on the field (B along z) and watch the vector precess at constant polar angle."}
+ui.gridOf(2);const P1=ui.canvas(360,{xmin:-1.5,xmax:1.5,ymin:-1.5,ymax:1.5,axes:false,equal:true});const P2=ui.canvas(360,{xmin:0,xmax:1,ymin:0,ymax:1,axes:false});
+const sth=ui.slider('polar angle θ (deg)',0,180,1,60,()=>{b=fromAng();draw()}),sph=ui.slider('azimuth φ (deg)',0,360,1,40,()=>{b=fromAng();draw()}),sv=ui.slider('view azimuth (deg)',0,360,1,30,draw),sel=ui.slider('view elevation (deg)',-80,80,1,25,draw),sB=ui.slider('field strength (Larmor ω about B)',0,3,0.05,0,()=>{});
+let b=[0,0,1],log=[];
+function fromAng(){const t=sth.value*Math.PI/180,p=sph.value*Math.PI/180;return[Math.sin(t)*Math.cos(p),Math.sin(t)*Math.sin(p),Math.cos(t)]}
+b=fromAng();
+function meas(ax,name){const n=ax,pu=(1+b[0]*n[0]+b[1]*n[1]+b[2]*n[2])/2;const up=Math.random()<pu;b=up?n.slice():n.map(x=>-x);log.push(`SG${name}: P(up)=${M.fmt(pu,3)} → ${up?'UP':'DOWN'}`);if(log.length>6)log.shift();draw()}
+ui.button('measure along z',()=>meas([0,0,1],'z'));ui.button('measure along x',()=>meas([1,0,0],'x'));ui.button('measure along y',()=>meas([0,1,0],'y'));ui.button('prepare ↑z',()=>{b=[0,0,1];log=[];draw()});ui.button('prepare ↑x',()=>{b=[1,0,0];log=[];draw()});
+function sim(v,n){const p=(1+v[0]*n[0]+v[1]*n[1]+v[2]*n[2])/2;return Math.random()<p?n.slice():n.map(x=>-x)}
+ui.button('repeat z–x–z ×1000',()=>{let u=0;for(let i=0;i<1000;i++){let v=[0,0,1];v=sim(v,[1,0,0]);v=sim(v,[0,0,1]);if(v[2]>0)u++}log.push(`start ↑z, measure x, measure z (1000 runs): up fraction = ${u/1000} (quantum: 0.5; a classical filter would keep 1.0)`);if(log.length>6)log.shift();draw()});
+const out=ui.readout();
+function proj(v){const a=sv.value*Math.PI/180,e=sel.value*Math.PI/180;const x=v[0]*Math.cos(a)-v[1]*Math.sin(a),y0=v[0]*Math.sin(a)+v[1]*Math.cos(a);const y=y0*Math.sin(e)+v[2]*Math.cos(e),d=y0*Math.cos(e)-v[2]*Math.sin(e);return[x,y,d]}
+function draw(){P1.clear();const g=P1.g,cx=P1.X(0),cy=P1.Y(0),R=P1.X(1)-P1.X(0);g.strokeStyle=C.muted;g.lineWidth=1.5;g.beginPath();g.arc(cx,cy,R,0,7);g.stroke();
+ for(const lat of [-60,-30,0,30,60]){const ph=M.linspace(0,2*Math.PI,100);const z=Math.sin(lat*Math.PI/180),rr=Math.cos(lat*Math.PI/180);const pts=ph.map(p=>proj([rr*Math.cos(p),rr*Math.sin(p),z]));g.strokeStyle=C.grid;g.beginPath();pts.forEach((q,i)=>g[i?'lineTo':'moveTo'](cx+q[0]*R,cy-q[1]*R));g.stroke()}
+ const ax=[[[1,0,0],'x',C.red],[[0,1,0],'y',C.aqua],[[0,0,1],'z',C.blue]];for(const [v,n,c] of ax){const q=proj(v);P1.arrow(0,0,q[0]*1.15,q[1]*1.15,c,1.8,7);P1.ptext(n,cx+q[0]*R*1.25,cy-q[1]*R*1.25,c,'center','13px system-ui')}
+ const q=proj(b);P1.arrow(0,0,q[0],q[1],C.orange,4,12);P1.circle(q[0],q[1],6,C.orange,C.ink);
+ P2.clear();const g2=P2.g;const pz=(1+b[2])/2,px=(1+b[0])/2,py=(1+b[1])/2;const bars=[['↑z',pz,C.blue],['↑x',px,C.red],['↑y',py,C.aqua]];bars.forEach(([n,p,c],i)=>{const x=0.12+i*0.28;g2.fillStyle=c;const w=P2.X(0.18)-P2.X(0),h=(P2.Y(0)-P2.Y(1))*0.6*p;g2.fillRect(P2.X(x),P2.Y(0)-h-20,w,h);P2.ptext(n+'  '+M.fmt(p,3),P2.X(x)+w/2,P2.Y(0)-5,C.ink,'center')});P2.ptext('probability of "up" along each axis',P2.w/2,14,C.muted,'center');
+ P2.ptext('Bloch vector b = ('+b.map(v=>M.fmt(v,3)).join(', ')+')',P2.w/2,34,C.ink,'center');
+ out.textContent=log.length?log.join('\n'):'Prepare a state with the sliders or buttons, then use the measurement buttons.';}
+loop((dt)=>{const w=sB.value;if(w>0){const c=Math.cos(w*dt),s=Math.sin(w*dt);b=[b[0]*c-b[1]*s,b[0]*s+b[1]*c,b[2]];draw()}});
+draw();ui.note('Probabilities: P(↑n̂) = (1 + n̂·b)/2 = cos²(χ/2) with χ the angle between n̂ and b. Larmor precession: db/dt = ω B̂ × b, here about z. QM09: the z–x–z sequence returns 50 %.');

@@ -1,0 +1,12 @@
+//META {"title":"Superposition: standing waves and beats","desc":"Two sinusoidal waves added together. Equal frequencies travelling in opposite directions give a standing wave with fixed nodes; slightly different frequencies in the same direction give beats whose envelope moves at the group velocity. Change the frequency difference and the relative amplitude and watch the nodes (or the beats) respond.","vault":"Waves","chapters":["CM06 Small Oscillations and Normal Modes","ED05 Electromagnetic Waves in Vacuum","ED07 Guided Waves"],"tryit":"Mode 'opposite directions' with amplitude ratio 1: perfect standing wave with nodes every λ/2. Lower the ratio: nodes fill in (partial standing wave, a travelling part remains). Mode 'beats': the envelope period is 2π/(k₂ − k₁)."}
+ui.gridOf(1);const P=ui.canvas(300,{xmin:0,xmax:30,ymin:-2.2,ymax:2.2,xlabel:'x',ylabel:'y(x,t)'});
+const mode=ui.select('superposition',[['st','opposite directions: standing wave'],['bt','same direction: beats']],draw,'st'),sk=ui.slider('wave number k₁',0.5,3,0.05,1.5,draw),sd=ui.slider('wave-number difference Δk (beats)',0.02,0.6,0.01,0.15,draw),sr=ui.slider('amplitude ratio A₂/A₁',0,1,0.01,1,draw);
+const out=ui.readout();let t=0;
+function draw(){const k=sk.value,dk=sd.value,r=sr.value;P.clear();const xs=M.linspace(0,30,800);let ys,env=null;
+ if(mode.value==='st'){ys=xs.map(x=>Math.cos(k*x-k*t)+r*Math.cos(k*x+k*t));env=xs.map(x=>Math.hypot(1+r*Math.cos(2*k*x),r*Math.sin(2*k*x)));
+  P.line(xs,env,C.orange,1.5,[4,3]);P.line(xs,env.map(e=>-e),C.orange,1.5,[4,3]);
+  out.textContent=`y = cos(kx − ωt) + ${M.fmt(r,3)}cos(kx + ωt), ω = k (c = 1)   λ = 2π/k = ${M.fmt(2*Math.PI/k,4)}   node spacing λ/2 = ${M.fmt(Math.PI/k,4)} ${r<0.999?'  (amplitude ratio < 1: the nodes fill in; minimum envelope |1−r| = '+M.fmt(1-r,3)+', maximum 1+r)':'  (perfect standing wave: fixed nodes)'}`}
+ else{const k2=k+dk;ys=xs.map(x=>Math.cos(k*x-k*t)+r*Math.cos(k2*x-k2*t));env=xs.map(x=>Math.sqrt(1+r*r+2*r*Math.cos(dk*(x-t))));P.line(xs,env,C.orange,1.5,[4,3]);P.line(xs,env.map(e=>-e),C.orange,1.5,[4,3]);
+  out.textContent=`k₁ = ${M.fmt(k,3)}, k₂ = ${M.fmt(k2,3)} (non-dispersive ω = ck): envelope period 2π/Δk = ${M.fmt(2*Math.PI/dk,4)}; both travel together at c, so the pattern keeps its shape. In a dispersive medium the envelope moves at dω/dk (see the packet tool).`}
+ P.line(xs,ys,C.blue,2.5)}
+loop((dt)=>{t+=dt*1.5;draw()});draw();

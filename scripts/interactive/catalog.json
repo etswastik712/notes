@@ -1,0 +1,387 @@
+[
+ {
+  "title": "Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance",
+  "desc": "On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2\u03c0/f, f = 2\u03a9 sin \u03c6 (left panel, in the rotating frame). Right: a steady wind in balance between the pressure-gradient force and the Coriolis force blows along the isobars (geostrophic), with low pressure on its left in the Northern Hemisphere; friction turns it across the isobars toward low pressure.",
+  "vault": "CL",
+  "chapters": [
+   "CL12 Rotating Frames and the Coriolis Force",
+   "CL13 Horizontal Motion - Geostrophic Balance and Friction"
+  ],
+  "tryit": "Move the latitude from 45\u00b0 N to the equator: f \u2192 0 and the inertial radius diverges (no rotation felt). Go to the Southern Hemisphere: the circles reverse and the geostrophic wind flips. Slide friction up: the wind crosses the isobars.",
+  "id": "cl_coriolis"
+ },
+ {
+  "title": "Ice\u2013albedo feedback: multiple climates from one Sun",
+  "desc": "Zero-dimensional energy balance: absorbed sunlight S(1 \u2212 \u03b1(T))/4 against emitted radiation \u03b5\u03c3T\u2074, with the planetary albedo \u03b1 rising when the surface freezes. Where the curves cross the climate is in equilibrium: stable (the slope of absorbed \u2212 emitted is negative) or unstable. For some solar constants there are three equilibria (warm, unstable, snowball Earth) and the climate shows hysteresis when S is slowly changed.",
+  "vault": "CL",
+  "chapters": [
+   "CL04 Feedback and Multiple Steady States",
+   "CL03 Radiation and Planetary Energy Balance"
+  ],
+  "tryit": "Set S/S\u2080 = 1: warm climate near 288 K and a snowball near 230 K, separated by an unstable state. Reduce S/S\u2080 until the warm state vanishes (jump to snowball); raise it back: the return jump happens at a much higher S/S\u2080.",
+  "id": "cl_ebm_albedo"
+ },
+ {
+  "title": "The layer greenhouse model",
+  "desc": "Absorbed sunlight S(1 \u2212 \u03b1)/4 is balanced by outgoing longwave radiation. Put N atmospheric layers above the surface, each absorbing a fraction \u03b5 of the infrared passing through and re-emitting up and down. For black layers (\u03b5 = 1) the surface is (N+1)^{1/4} times the emission temperature (255 K): more layers or more absorption, a warmer surface and a colder top of the atmosphere.",
+  "vault": "CL",
+  "chapters": [
+   "CL08 Greenhouse Models",
+   "CL09 Radiative-Convective Equilibrium"
+  ],
+  "tryit": "N = 1, \u03b5 = 1: surface 303 K (= 255\u00b72^{1/4}). N = 0 gives 255 K, no greenhouse effect. Reduce \u03b5 to see the real, partly transparent atmosphere (the actual 288 K needs \u03b5_eff \u2248 0.78 for one layer).",
+  "id": "cl_greenhouse_layers"
+ },
+ {
+  "title": "Blackbody spectra: why sunlight is shortwave and Earth glows in the infrared",
+  "desc": "Planck's law B_\u03bb(T) on a log wavelength axis for any temperature, with the visible band shaded. The Sun (\u22485772 K) peaks in the visible near 0.5 \u00b5m; the Earth (\u2248288 K) peaks near 10 \u00b5m. Wien's displacement law \u03bb_max T = 2898 \u00b5m K and the Stefan\u2013Boltzmann law F = \u03c3T\u2074 are read off live. The overlap of the two curves is tiny, which is what lets us treat shortwave and longwave separately.",
+  "vault": "CL",
+  "chapters": [
+   "CL03 Radiation and Planetary Energy Balance",
+   "CL07 Optical Properties of the Atmosphere"
+  ],
+  "tryit": "Drag T from 288 K to 5772 K and watch the peak slide through the visible; compare the areas (T\u2074).",
+  "id": "cl_planck"
+ },
+ {
+  "title": "Brachistochrone: which path is fastest?",
+  "desc": "A bead slides from rest from the origin to the end point under gravity along four paths. Drag the end point or change the exponent of the trial path; the cycloid always wins. Press race to watch the beads.",
+  "vault": "CM",
+  "chapters": [
+   "CM01 Variational Calculus and Hamilton's Principle"
+  ],
+  "tryit": "Drag the exponent p of the power-law path (p = 1 is the straight line) and watch its time exceed the cycloid's; then increase the depth Y beyond X to make the cycloid dip below the end point.",
+  "id": "cm01_brachistochrone"
+ },
+ {
+  "title": "Is the action a minimum? The second variation",
+  "desc": "Oscillator with \u03c9 = 2 between fixed endpoints x(0)=0, x(T)=1. The true path makes the action stationary; adding a wiggle \u03b5\u00b7sin(n\u03c0t/T) changes S by (mT/4)\u03b5\u00b2[(n\u03c0/T)\u00b2 \u2212 \u03c9\u00b2]. Slide the duration T past \u03c0/\u03c9 and watch the parabola flip from a minimum to a saddle.",
+  "vault": "CM",
+  "chapters": [
+   "CM01 Variational Calculus and Hamilton's Principle"
+  ],
+  "tryit": "Move T through \u03c0/\u03c9 = 1.571: for n = 1 the curvature of S(\u03b5) changes sign exactly there. Raise n and see that higher modes stay stabilising until \u03c9T > n\u03c0.",
+  "id": "cm01_second_variation"
+ },
+ {
+  "title": "Leaving the hemisphere: the Lagrange multiplier is the normal force",
+  "desc": "A mass slides without friction from near the top of a hemisphere. While it stays on the surface, the multiplier gives the normal force N = Mg(3cos \u03b8 \u2212 2); it leaves where N = 0, at cos \u03b8 = 2/3 (\u03b8 = 48.19\u00b0) with v\u00b2 = (2/3)ga, and flies off as a projectile.",
+  "vault": "CM",
+  "chapters": [
+   "CM02 Lagrange's Equations, Constraints and Generalised Coordinates"
+  ],
+  "tryit": "Change the tiny initial push: the leaving angle does not depend on it (for a start from rest at the top). Watch N/Mg fall to zero as the bead reaches 48.19\u00b0 and see the parabola take over.",
+  "id": "cm02_hemisphere"
+ },
+ {
+  "title": "Bead on a rotating hoop: a pitchfork bifurcation",
+  "desc": "A smooth bead on a hoop of radius R that spins about its vertical diameter at \u03a9. The effective potential U(\u03b8) = \u2212gR cos \u03b8 \u2212 \u00bdR\u00b2\u03a9\u00b2 sin\u00b2\u03b8 has one minimum at the bottom for \u03a9 below \u221a(g/R) and two off-centre minima above it. Drop the bead and watch it settle (with a little friction) or oscillate.",
+  "vault": "CM",
+  "chapters": [
+   "CM02 Lagrange's Equations, Constraints and Generalised Coordinates",
+   "CM03 Symmetries, Noether's Theorem and Conservation Laws"
+  ],
+  "tryit": "Sweep \u03a9 through \u221a(g/R) = 4.43 rad/s and watch the bottom of the hoop become a maximum while two new minima appear at cos \u03b8\u2080 = g/(\u03a9\u00b2R).",
+  "id": "cm02_hoop"
+ },
+ {
+  "title": "Noether in action: which symmetry conserves what?",
+  "desc": "A particle moves in the plane in one of three potentials. Watch the four candidate conserved quantities p_x, p_y, L_z = x p_y \u2212 y p_x and E over time: only those that match a symmetry of the potential stay flat. Isotropic well \u2192 L_z and E; well depending on x only (translation symmetry in y) \u2192 p_y and E; anisotropic well \u2192 only E.",
+  "vault": "CM",
+  "chapters": [
+   "CM03 Symmetries, Noether's Theorem and Conservation Laws"
+  ],
+  "tryit": "Cycle through the three potentials with the same initial condition and see which curves become flat lines.",
+  "id": "cm03_noether_rotor"
+ },
+ {
+  "title": "Orbits in a central force: precession and the effective potential",
+  "desc": "A particle of unit mass moves in F = \u2212r^n toward the centre. The orbit (left) and the effective potential U_eff = M\u00b2/2r\u00b2 + U(r) with the energy line (right) are shown together. n = \u22122 is Kepler; n = 1 is the harmonic oscillator. Any other n gives a precessing rosette with apsidal angle \u03c0/\u03b2, \u03b2\u00b2 = 3 + n.",
+  "vault": "CM",
+  "chapters": [
+   "CM04 Central Forces and Effective One-Dimensional Motion"
+  ],
+  "tryit": "Set n = \u22122: closed ellipse. Change to \u22122.1: the perihelion advances 19.5\u00b0 per orbit. Try n = \u22123 (marginal), and speeds above \u221a2 \u00d7 circular for escape when n = \u22122.",
+  "id": "cm04_orbits"
+ },
+ {
+  "title": "Scattering: from impact parameter to cross-section",
+  "desc": "A uniform beam of unit-mass particles with equally spaced impact parameters hits a fixed repulsive Coulomb centre (or a hard sphere). Each trajectory is integrated; the lower panel shows the deflection angle \u03c7(p) and the histogram of how many particles land in each angle against Rutherford's d\u03c3/d\u03a9 \u221d 1/sin\u2074(\u03c7/2).",
+  "vault": "CM",
+  "chapters": [
+   "CM05 Scattering"
+  ],
+  "tryit": "Increase the strength \u03b1/mv\u00b2: the deflections grow and the curve p = (\u03b1/mv\u00b2)cot(\u03c7/2) steepens. Switch to hard sphere and see the isotropic (flat) d\u03c3/d\u03a9 = a\u00b2/4.",
+  "id": "cm05_scattering"
+ },
+ {
+  "title": "Two coupled oscillators: normal modes and beats",
+  "desc": "Two equal masses on springs with a coupling spring. Choose how much of the in-phase mode (frequency \u03c9\u2081 = \u221a(\u03c9\u2080\u00b2 \u2212 \u03b1)) and the anti-phase mode (\u03c9\u2082 = \u221a(\u03c9\u2080\u00b2 + \u03b1)) you start with. Pure modes oscillate rigidly; a mixture beats, passing energy back and forth with period 2\u03c0/(\u03c9\u2082 \u2212 \u03c9\u2081).",
+  "vault": "CM",
+  "chapters": [
+   "CM06 Small Oscillations and Normal Modes"
+  ],
+  "tryit": "Start with all of the motion in the in-phase mode, then all in the anti-phase mode, then 50/50 (x=1, y=0): that is the full-transfer beat. Increase the coupling \u03b1 to speed the beats.",
+  "id": "cm06_coupled"
+ },
+ {
+  "title": "Double pendulum: linear normal modes versus the real thing",
+  "desc": "Equal masses and rods. For small angles the motion is a superposition of two normal modes with \u03c9\u00b2 = (2 \u2213 \u221a2) g/l and mode shapes (1, \u00b1\u221a2). Pick a mode and a starting amplitude: at small amplitude the real nonlinear pendulum follows the linear prediction; at large amplitude, or from a generic start, it becomes chaotic: two nearly identical starts (blue and orange) soon disagree completely.",
+  "vault": "CM",
+  "chapters": [
+   "CM06 Small Oscillations and Normal Modes"
+  ],
+  "tryit": "Choose 'slow mode' at amplitude 0.05 rad: clean periodic motion with period 2.621 s. Raise the amplitude to 1.5 rad or choose 'generic' and watch the two copies diverge.",
+  "id": "cm06_double_pendulum"
+ },
+ {
+  "title": "Driven damped oscillator: resonance curve, phase and transient",
+  "desc": "x'' + b x' + \u03c9\u2080\u00b2x = cos(\u03b3t), \u03c9\u2080 = 2. Left: the steady-state amplitude and phase lag as a function of the driving frequency \u03b3, with the current \u03b3 marked. Right: the actual motion from rest, which is the steady state plus a decaying transient (beats when damping is small, linear growth at resonance with b = 0).",
+  "vault": "CM",
+  "chapters": [
+   "CM06 Small Oscillations and Normal Modes"
+  ],
+  "tryit": "Set b = 0 and \u03b3 = \u03c9\u2080: the amplitude grows \u221d t sin \u03c9\u2080t. Put \u03b3 = 2.1 for beats with period 62.8. Then add damping and see the peak height ~ 1/(b\u03c9\u2080).",
+  "id": "cm06_resonance"
+ },
+ {
+  "title": "Displacement current: charging a capacitor",
+  "desc": "A circular parallel-plate capacitor (plate radius R) is charged by a steady current I. Amp\u00e8re's law needs both the conduction current through a loop and the displacement current \u03b5\u2080 d\u03a6_E/dt: with the flat disc surface the whole answer comes from the displacement term, with the balloon surface through the wire from the conduction current. Move the Amperian loop and compare B(r) with and without the displacement term.",
+  "vault": "ED",
+  "chapters": [
+   "ED03 Maxwell's Equations and Boundary Conditions"
+  ],
+  "tryit": "Drag r across the plate radius R: B grows linearly inside the gap (only the part of the displacement current enclosed counts) and falls as 1/r outside, joining the wire's field. Untick 'include displacement current' to see Amp\u00e8re's law fail (B = 0 in the gap).",
+  "id": "ed03_capacitor"
+ },
+ {
+  "title": "Where does the energy flow? The Poynting vector",
+  "desc": "S = E \u00d7 B/\u03bc\u2080 shows the path of electromagnetic energy. In a current-carrying resistive wire the energy enters through the side, radially inward; in a charging capacitor it enters through the rim of the gap; in a plane wave it travels along k. Pick a scenario and adjust the numbers: the integral of S through the surface always equals the power delivered (VI, or dU/dt).",
+  "vault": "ED",
+  "chapters": [
+   "ED04 Conservation Laws - Energy, Momentum, Angular Momentum"
+  ],
+  "tryit": "Wire: raise the current I and watch the inward flux keep equalling I\u00b2R. Capacitor: let the plates charge and compare the Poynting flux through the rim with dU/dt. Wave: check that S = c u for any polarisation.",
+  "id": "ed04_poynting"
+ },
+ {
+  "title": "Polarization of light: from linear through elliptical to circular",
+  "desc": "E = (a\u2081 cos(\u03c9t), a\u2082 cos(\u03c9t + \u03b4)) for a wave travelling along z. The tip of E traces a straight line, an ellipse or a circle. Change the two amplitudes and the phase lag \u03b4; the Stokes parameters, the sense of rotation (helicity) and the ellipse axes are shown live. Right: the instantaneous wave along z as a spiral.",
+  "vault": "ED",
+  "chapters": [
+   "ED05 Electromagnetic Waves in Vacuum"
+  ],
+  "tryit": "\u03b4 = 0: linear. \u03b4 = 90\u00b0 with a\u2081 = a\u2082: circular. Keep \u03b4 = 90\u00b0 and shrink a\u2082: elliptical with axes along x and y. Choose \u03b4 = 60\u00b0, a\u2081 = 3, a\u2082 = 4 for the Stokes numbers in ED05.",
+  "id": "ed05_polarization"
+ },
+ {
+  "title": "Reflection and refraction: Snell, Fresnel, Brewster, total internal reflection",
+  "desc": "A plane wave meets a flat interface between media of index n\u2081 and n\u2082. Set the angle of incidence: the rays show the reflected and transmitted directions (Snell), the curves show the reflected fraction for E parallel and perpendicular to the plane of incidence (Fresnel), with the Brewster and critical angles marked. Beyond the critical angle the transmitted wave becomes an evanescent field with the decay length shown.",
+  "vault": "ED",
+  "chapters": [
+   "ED06 Waves in Matter, Reflection and Dispersion"
+  ],
+  "tryit": "n\u2081 = 1, n\u2082 = 1.5: the parallel curve touches zero at the Brewster angle 56.3\u00b0. Swap to n\u2081 = 1.5, n\u2082 = 1: total internal reflection beyond 41.8\u00b0, with an evanescent decay length ~\u03bb/(2\u03c0\u221a(sin\u00b2\u03b8 \u2212 sin\u00b2\u03b8_c)).",
+  "id": "ed06_fresnel"
+ },
+ {
+  "title": "Dispersion and absorption: the Lorentz oscillator and the plasma",
+  "desc": "Electrons modelled as damped springs give \u03b5(\u03c9) = 1 + \u03c9_P\u00b2/(\u03c9\u2080\u00b2 \u2212 \u03c9\u00b2 \u2212 i\u03b3\u03c9). Top: refractive index n(\u03c9) and absorption \u03b1(\u03c9) near one resonance. Below the resonance n rises with frequency (normal dispersion, blue bends more than red); inside the absorption line n falls (anomalous dispersion). Bottom: a free-electron plasma \u03c9\u00b2 = \u03c9_p\u00b2 + c\u00b2k\u00b2, with phase velocity above c and group velocity below c.",
+  "vault": "ED",
+  "chapters": [
+   "ED06 Waves in Matter, Reflection and Dispersion"
+  ],
+  "tryit": "Narrow the damping \u03b3 and watch the anomalous region shrink onto the absorption peak. Move the probe frequency in the plasma panel below \u03c9_p: k becomes imaginary and the wave cannot propagate.",
+  "id": "ed06_lorentz_dispersion"
+ },
+ {
+  "title": "Rectangular waveguide: cutoff, modes and the bouncing wave",
+  "desc": "A hollow metal pipe of cross-section a \u00d7 b. Each TE_mn mode has a cutoff frequency f_mn = (c/2)\u221a((m/a)\u00b2 + (n/b)\u00b2); below it the wave is evanescent. Choose the guide size, the mode and the frequency: left, the transverse electric field pattern; right, the cutoff ladder with your operating frequency, and the zig-zag path of the equivalent bouncing plane wave with phase velocity above c and group velocity below c.",
+  "vault": "ED",
+  "chapters": [
+   "ED07 Guided Waves"
+  ],
+  "tryit": "With a = 2.28 cm, b = 1.01 cm sweep the frequency from 5 to 18 GHz and count the modes that switch on (TE10 at 6.57, TE20 at 13.15, TE01 at 14.84, TE11 at 16.23 GHz). At 10 GHz the bounce angle is 41.1\u00b0.",
+  "id": "ed07_waveguide"
+ },
+ {
+  "title": "Gauge freedom: change A, keep the fields",
+  "desc": "A gauge transformation A \u2192 A + \u2207\u03bb, V \u2192 V \u2212 \u2202\u03bb/\u2202t changes the potentials but not E or B. Left: a uniform magnetic field B \u1e91 drawn with the Landau potential A = (0, Bx) plus \u2207\u03bb for \u03bb = c\u2081xy + c\u2082(x\u00b2 \u2212 y\u00b2)/2: the arrow field of A changes wildly while the curl (colour) stays exactly B. Right: a uniform electric field E\u2080 represented either by V = \u2212E\u2080x with A = 0, or by V = 0 with A = \u2212E\u2080t x\u0302, and everything in between.",
+  "vault": "ED",
+  "chapters": [
+   "ED08 Potentials and Gauge Transformations"
+  ],
+  "tryit": "Move c\u2081: the arrows rotate toward the symmetric gauge (c\u2081 = \u2212B/2 gives A = (B/2)(\u2212y, x)) yet the colour map of B does not change. On the right drag the mixing slider from the static V picture to the time-dependent A picture: E = \u2212\u2207V \u2212 \u2202A/\u2202t is identical.",
+  "id": "ed08_gauge"
+ },
+ {
+  "title": "Particle in a box: build a state from energy eigenstates",
+  "desc": "Infinite well of width 1 (\u0127 = m = 1), E_n = n\u00b2\u03c0\u00b2/2. Choose the amplitudes of the first four eigenstates: a single eigenstate has a frozen |\u03c8|\u00b2; a superposition has |\u03c8|\u00b2 that sloshes back and forth at the Bohr frequencies E_m \u2212 E_n, and the energy expectation value stays constant. The probability of each energy is |c_n|\u00b2.",
+  "vault": "QM",
+  "chapters": [
+   "QM04 The Particle in a Box",
+   "QM03 States Operators and Measurement"
+  ],
+  "tryit": "Put equal weight on n = 1 and 2: the packet bounces with period 2\u03c0/(E\u2082\u2212E\u2081) = 0.85. Add n = 3 and the motion is no longer a simple oscillation. Notice \u27e8E\u27e9 never moves.",
+  "id": "qm_box"
+ },
+ {
+  "title": "Finite square well: graphical solution of the bound states",
+  "desc": "For a well of depth V\u2080 and width 2a, define z\u2080 = a\u221a(2mV\u2080)/\u0127. Bound states sit where \u221a(z\u2080\u00b2 \u2212 \u03be\u00b2) crosses \u03be tan \u03be (even states) or \u2212\u03be cot \u03be (odd states). Slide z\u2080: new bound states appear each time z\u2080 passes a multiple of \u03c0/2, and there is always at least one (even) state. The wavefunctions are drawn at their energies, leaking into the forbidden region.",
+  "vault": "QM",
+  "chapters": [
+   "QM07 The Finite Square Well"
+  ],
+  "tryit": "Shrink z\u2080 below \u03c0/2: only the ground state remains, even for a very shallow well. Increase z\u2080 to 10 and compare the lowest energies with the infinite well values (n \u03c0/2)\u00b2.",
+  "id": "qm_finite_well"
+ },
+ {
+  "title": "The harmonic oscillator: eigenstates and a coherent state",
+  "desc": "\u0127 = m = \u03c9 = 1. Left: the eigenstate \u03c8_n(x) on the parabolic potential, drawn at height E_n with its probability density, with the classical turning points; note the tunnelling into the forbidden region and n nodes. Right: a coherent state |\u03b1\u27e9, a Gaussian that oscillates like a classical particle without changing shape; or an n/n+1 superposition.",
+  "vault": "QM",
+  "chapters": [
+   "QM05 The Harmonic Oscillator",
+   "QM06 The Oscillator Toolbox"
+  ],
+  "tryit": "Increase n: the density approaches the classical 1/\u221a(E\u2212V) distribution. Switch to coherent state: \u27e8x\u27e9 follows x_c cos t exactly, and the width stays 1/\u221a2 forever.",
+  "id": "qm_oscillator"
+ },
+ {
+  "title": "Spin \u00bd on the Bloch sphere: Stern\u2013Gerlach and precession",
+  "desc": "The spin state of a spin-\u00bd particle is a point on the Bloch sphere. A Stern\u2013Gerlach analyser along axis n\u0302 gives 'up' with probability (1 + n\u0302\u00b7b)/2 and leaves the spin pointing along \u00b1n\u0302. Run sequential measurements to see the key quantum surprise: z, then x, then z again gives 50 % up at the end. A magnetic field makes the Bloch vector precess at the Larmor frequency.",
+  "vault": "QM",
+  "chapters": [
+   "QM09 The Stern-Gerlach Experiment and Spin"
+  ],
+  "tryit": "Prepare \u2191z, measure x (random), then z: the original \u2191z is lost, 50 % each. Turn on the field (B along z) and watch the vector precess at constant polar angle.",
+  "id": "qm_spin_bloch"
+ },
+ {
+  "title": "Tunnelling through a barrier: transmission and the standing-wave pattern",
+  "desc": "A plane wave of energy E hits a rectangular barrier of height V\u2080 and width 2a (units \u0127\u00b2/2m = 1). The wavefunction |\u03c8|\u00b2 is built from the exact matching solution: standing-wave ripples on the left (interference of incident and reflected waves), exponential decay inside the barrier for E < V\u2080, and a transmitted wave on the right. T(E) is plotted with your E marked, including the resonances (T = 1) above the barrier.",
+  "vault": "QM",
+  "chapters": [
+   "QM08 Quantum Tunnelling",
+   "QM10 The Finite Barrier and Tutorial V"
+  ],
+  "tryit": "Make the barrier wider: T falls like e^{\u22124\u03baa}. Raise E above V\u2080: T oscillates and reaches 1 when 2qa = n\u03c0.",
+  "id": "qm_tunnelling"
+ },
+ {
+  "title": "A free Gaussian wave packet: spreading and the uncertainty principle",
+  "desc": "A packet \u03c8(x,0) \u221d exp(\u2212x\u00b2/4\u03c3\u2080\u00b2 + ik\u2080x) evolves freely (\u0127 = m = 1). The real part (oscillating carrier), the probability density |\u03c8|\u00b2 and the momentum-space density |\u03c6(k)|\u00b2 are shown. The centre moves at the group velocity k\u2080, the width grows as \u03c3(t) = \u03c3\u2080\u221a(1 + (t/2\u03c3\u2080\u00b2)\u00b2), while the momentum spread 1/(2\u03c3\u2080) never changes: \u0394x\u00b7\u0394p \u2265 \u00bd.",
+  "vault": "QM",
+  "chapters": [
+   "QM01 From Waves to Probabilities",
+   "QM02 The Schrodinger Equation and Stationary States"
+  ],
+  "tryit": "Make \u03c3\u2080 small: it spreads fast (large momentum spread). Make \u03c3\u2080 large: nearly rigid. Change k\u2080 and see the packet move without changing shape.",
+  "id": "qm_wavepacket"
+ },
+ {
+  "title": "The Boltzmann distribution: populations, energy, entropy and heat capacity",
+  "desc": "A system with energy levels \u03b5_i in contact with a heat bath at temperature T occupies level i with probability p_i = e^{\u2212\u03b5_i/kT}/Z. Pick a level structure (two-level, evenly spaced harmonic ladder, or a rotor-like \u03b5_J = J(J+1)) and sweep the temperature: the populations spread out, U and S rise, and the heat capacity shows its characteristic shape (a Schottky bump for two levels, saturation at k for the oscillator).",
+  "vault": "SM",
+  "chapters": [
+   "SM03 The Canonical Ensemble",
+   "SM07 Equipartition the Virial Theorem and Magnetic Systems",
+   "TH06 From Kinetic Theory to Statistical Mechanics"
+  ],
+  "tryit": "Two-level: C peaks near kT \u2248 0.42\u0394 (Schottky anomaly) and falls to zero at both low and high T. Harmonic ladder: C \u2192 k only for kT \u226b \u0127\u03c9 (equipartition), exponentially frozen below. Watch populations of 'frozen' modes.",
+  "id": "sm_boltzmann"
+ },
+ {
+  "title": "A gas relaxing to the Maxwell\u2013Boltzmann distribution",
+  "desc": "Hard disks bounce in a box and collide elastically. Start with every particle at the same speed (a very non-equilibrium state): collisions redistribute the energy and the speed histogram relaxes to the 2D Maxwell\u2013Boltzmann form f(v) = (m v/kT) e^{\u2212mv\u00b2/2kT}, the picture behind the H-theorem and the approach to equilibrium. The temperature is set by the total kinetic energy.",
+  "vault": "SM",
+  "chapters": [
+   "SM04 Kinetic Theory and the Boltzmann Equation",
+   "TH06 From Kinetic Theory to Statistical Mechanics",
+   "SM06 Entropy Information and the Arrow of Time"
+  ],
+  "tryit": "Press 'all same speed' and watch the histogram (blue) broaden into the dashed Maxwell\u2013Boltzmann curve within a few collisions per particle. Press 'one fast particle' to see the energy spread out. Turn collisions off and the distribution never changes.",
+  "id": "sm_gas_box"
+ },
+ {
+  "title": "The 2D Ising model: a phase transition you can see",
+  "desc": "A square lattice of spins s = \u00b11 with nearest-neighbour coupling J (set to 1) and an external field h, simulated with the Metropolis algorithm. At low temperature the lattice orders (magnetisation \u00b11); at high temperature it is disordered; at the critical temperature T_c = 2/ln(1 + \u221a2) \u2248 2.269 there are fluctuations on all length scales. Onsager's exact T_c and spontaneous magnetisation are shown for comparison.",
+  "vault": "SM",
+  "chapters": [
+   "SM07 Equipartition the Virial Theorem and Magnetic Systems",
+   "SM03 The Canonical Ensemble"
+  ],
+  "tryit": "Quench from T = 5 to T = 1: domains coarsen. Sit at T \u2248 2.27 and watch clusters of every size. Apply a field h \u2260 0 below T_c to see the first-order flip of the magnetisation at h = 0.",
+  "id": "sm_ising"
+ },
+ {
+  "title": "Why equilibrium is overwhelmingly likely: multiplicity and entropy",
+  "desc": "Two Einstein solids exchange q_tot quanta of energy. The number of microstates for a given split is \u03a9_A(q_A)\u00b7\u03a9_B(q_tot \u2212 q_A); the total is sharply peaked at the split that maximises S = k ln \u03a9. Increase the solid sizes and the peak (relative width ~ 1/\u221aN) becomes a spike. Also: the coin-flip binomial distribution showing the law of large numbers.",
+  "vault": "SM",
+  "chapters": [
+   "TH09 Microstates Macrostates and Multiplicity",
+   "SM01 Probability Large Numbers and Information",
+   "SM06 Entropy Information and the Arrow of Time"
+  ],
+  "tryit": "With N_A = N_B and q_tot = 100: peak at q_A = 50. Grow N to 300: the relative width shrinks ~1/\u221aN. Make N_A larger than N_B: the energy is shared in proportion to the sizes (equal temperatures).",
+  "id": "sm_multiplicity"
+ },
+ {
+  "title": "Fermions, bosons and classical particles: occupation numbers",
+  "desc": "Mean occupation of a single-particle level of energy \u03b5: Fermi\u2013Dirac n = 1/(e^{(\u03b5\u2212\u03bc)/kT}+1), Bose\u2013Einstein n = 1/(e^{(\u03b5\u2212\u03bc)/kT}\u22121), Maxwell\u2013Boltzmann n = e^{\u2212(\u03b5\u2212\u03bc)/kT}. Fermions never exceed 1 (Pauli), bosons pile up near the chemical potential (and diverge as \u03b5 \u2192 \u03bc), and all three coincide when n \u226a 1. Lower panel: the Fermi function sharpening into a step as T \u2192 0, and Planck's law from Bose\u2013Einstein statistics with \u03bc = 0.",
+  "vault": "SM",
+  "chapters": [
+   "SM08 Quantum Ensembles and Identical Particles",
+   "SM05 The Grand Canonical Ensemble and Chemical Equilibrium"
+  ],
+  "tryit": "Move (\u03b5\u2212\u03bc)/kT through 0: the Bose curve blows up, the Fermi curve passes through \u00bd, the classical curve through 1. For large positive x the three agree. In the Planck panel raise T and watch the peak move as T (Wien) while the area grows as T\u2074.",
+  "id": "sm_quantum_stats"
+ },
+ {
+  "title": "Ideal gas processes and the Carnot cycle on a P\u2013V diagram",
+  "desc": "One mole of ideal gas (choose monatomic \u03b3 = 5/3 or diatomic \u03b3 = 7/5) goes around a Carnot cycle: isothermal expansion at T_h, adiabatic expansion, isothermal compression at T_c, adiabatic compression. The enclosed area is the net work; the efficiency is 1 \u2212 T_c/T_h whatever the gas or the volumes. Watch the state point travel and the heat and work tally.",
+  "vault": "TH",
+  "chapters": [
+   "TH03 The Ideal Gas and Adiabatic Processes",
+   "TH04 The Second Law Carnot Engines and Entropy"
+  ],
+  "tryit": "Increase T_h: the cycle widens and \u03b7 rises. Change the volume ratio: Q_h and W change but \u03b7 does not. Compare \u03b3 = 5/3 and 7/5: different adiabat steepness, same efficiency.",
+  "id": "th_carnot"
+ },
+ {
+  "title": "Wave packets: phase velocity versus group velocity",
+  "desc": "A packet is a superposition of plane waves \u03c8(x,t) = \u222b A(k) e^{i(kx \u2212 \u03c9(k)t)} dk with a Gaussian A(k) centred on k\u2080. Choose the medium (dispersion relation \u03c9(k)): the carrier ripples move at the phase velocity \u03c9/k, the envelope (and the energy) at the group velocity d\u03c9/dk, and with dispersion the packet spreads. Markers show both velocities.",
+  "vault": "Waves",
+  "chapters": [
+   "ED06 Waves in Matter, Reflection and Dispersion",
+   "ED07 Guided Waves",
+   "QM01 From Waves to Probabilities",
+   "LS26 Sea Level and Ocean Waves"
+  ],
+  "tryit": "Deep water: v_g = v_p/2 (ripples run through the packet). Waveguide/plasma: v_p\u00b7v_g = c\u00b2, ripples faster than c but the packet slower. Schr\u00f6dinger: \u03c9 = k\u00b2/2, v_g = 2v_p. Non-dispersive: nothing spreads.",
+  "id": "wave_dispersion_packet"
+ },
+ {
+  "title": "Fourier synthesis: build a waveform from harmonics",
+  "desc": "A periodic function is a sum of sines. Choose a target (square, triangle, sawtooth) and add harmonics one at a time: the partial sum converges, with the Gibbs overshoot of about 9 % at the jumps of the square and sawtooth waves that never goes away. Below, the harmonic amplitudes b_n.",
+  "vault": "Waves",
+  "chapters": [
+   "ED05 Electromagnetic Waves in Vacuum",
+   "QM01 From Waves to Probabilities",
+   "PR06 Moments Generating Functions and Limit Theorems"
+  ],
+  "tryit": "Square wave with N = 1, 3, 9, 49: watch the Gibbs ears sharpen but not shrink (overshoot 8.95 %). Triangle waves converge much faster (1/n\u00b2 coefficients).",
+  "id": "wave_fourier"
+ },
+ {
+  "title": "Superposition: standing waves and beats",
+  "desc": "Two sinusoidal waves added together. Equal frequencies travelling in opposite directions give a standing wave with fixed nodes; slightly different frequencies in the same direction give beats whose envelope moves at the group velocity. Change the frequency difference and the relative amplitude and watch the nodes (or the beats) respond.",
+  "vault": "Waves",
+  "chapters": [
+   "CM06 Small Oscillations and Normal Modes",
+   "ED05 Electromagnetic Waves in Vacuum",
+   "ED07 Guided Waves"
+  ],
+  "tryit": "Mode 'opposite directions' with amplitude ratio 1: perfect standing wave with nodes every \u03bb/2. Lower the ratio: nodes fill in (partial standing wave, a travelling part remains). Mode 'beats': the envelope period is 2\u03c0/(k\u2082 \u2212 k\u2081).",
+  "id": "wave_standing_beats"
+ }
+]

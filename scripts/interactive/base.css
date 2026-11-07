@@ -1,0 +1,22 @@
+:root{--bg:#fcfcfb;--ink:#0b0b0b;--muted:#52514e;--grid:#e4e3df;--panel:#f3f2ee;--blue:#2a78d6;--orange:#eb6834;--aqua:#1baf7a;--red:#e34948;--violet:#6250d6;--gold:#c8961e}
+@media (prefers-color-scheme:dark){:root{--bg:#161616;--ink:#ececea;--muted:#a3a29d;--grid:#2e2e2c;--panel:#222221;--blue:#5aa0f0;--orange:#f58a5c;--aqua:#3fd09a;--red:#f26b6a;--violet:#8d7df0;--gold:#e3b445}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#app{max-width:1060px;margin:0 auto;padding:14px 16px 24px}
+h1{font-size:18px;margin:0 0 2px;font-weight:650}
+.desc{color:var(--muted);margin:0 0 10px;max-width:880px}
+.grid{display:grid;gap:10px}
+.cvw{position:relative;background:var(--bg);border:1px solid var(--grid);border-radius:8px;overflow:hidden}
+canvas{display:block;width:100%}
+.ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:6px 18px;margin:10px 0;padding:10px 12px;background:var(--panel);border-radius:8px}
+.row{display:grid;grid-template-columns:minmax(80px,38%) 1fr 64px;align-items:center;gap:8px}
+.row label{color:var(--muted);font-size:13px}
+.row .v{font:12px ui-monospace,Menlo,Consolas,monospace;text-align:right}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select,button{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--grid);border-radius:6px;padding:3px 8px}
+button{cursor:pointer}button:hover{border-color:var(--blue)}
+.sep{grid-column:1/-1;font-weight:600;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.out{margin-top:8px;padding:8px 12px;border-left:3px solid var(--blue);background:var(--panel);border-radius:0 6px 6px 0;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+.note{color:var(--muted);font-size:12px;margin-top:6px}
+.err{background:#fde;color:#900;padding:8px;border:1px solid #c00;border-radius:6px;margin:8px 0;font:12px monospace;white-space:pre-wrap}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}

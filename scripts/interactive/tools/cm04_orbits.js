@@ -1,0 +1,16 @@
+//META {"title":"Orbits in a central force: precession and the effective potential","desc":"A particle of unit mass moves in F = −r^n toward the centre. The orbit (left) and the effective potential U_eff = M²/2r² + U(r) with the energy line (right) are shown together. n = −2 is Kepler; n = 1 is the harmonic oscillator. Any other n gives a precessing rosette with apsidal angle π/β, β² = 3 + n.","vault":"CM","chapters":["CM04 Central Forces and Effective One-Dimensional Motion"],"tryit":"Set n = −2: closed ellipse. Change to −2.1: the perihelion advances 19.5° per orbit. Try n = −3 (marginal), and speeds above √2 × circular for escape when n = −2."}
+ui.gridOf(2);const P1=ui.canvas(380,{xmin:-2.2,xmax:2.2,ymin:-2.2,ymax:2.2,axes:false,equal:true});
+const P2=ui.canvas(380,{xmin:0,xmax:3,ymin:-1.5,ymax:2,xlabel:'r',ylabel:'energy',title:'effective potential and energy'});
+const sn=ui.slider('force exponent n (F = −rⁿ)',-2.9,1.5,0.01,-2,reset),sv=ui.slider('initial speed / circular speed',0.5,1.5,0.01,0.8,reset),sr=ui.slider('animation speed',0.2,3,0.1,1,()=>{});
+const out=ui.readout();let st,trail,t,area=[],peri=[],rprev,rr2;
+const Uf=(r,n)=>Math.abs(n+1)<1e-6?Math.log(r):Math.pow(r,n+1)/(n+1);
+function reset(){const n=sn.value;st=[1,0,0,sv.value*1];trail=[];t=0;peri=[];rprev=[1,1];for(let i=0;i<5000;i++){st=M.rk4((tt,y)=>[y[2],y[3],...acc(y[0],y[1],n)],st,0,0.002);t+=0.002;const r=Math.hypot(st[0],st[1]);if(rprev[1]<rprev[0]&&r>=rprev[1]&&t>0.05)peri.push(Math.atan2(st[1],st[0]));rprev=[rprev[1],r];if(i%3==0)trail.push([st[0],st[1]])}draw()}
+function acc(x,y,n){const r=Math.hypot(x,y);return [-Math.pow(r,n-1)*x,-Math.pow(r,n-1)*y]}
+function draw(){const n=sn.value,[x,y,vx,vy]=st,r=Math.hypot(x,y),L=x*vy-y*vx;
+ P1.clear();P1.set({});P1.line(trail.map(p=>p[0]),trail.map(p=>p[1]),C.blue,1.5);P1.circle(0,0,5,C.ink);P1.circle(x,y,6,C.orange);
+ P1.line([0,x],[0,y],C.muted,1,[3,3]);P1.ptext('1 unit = starting radius',P1.w-10,P1.h-10,C.muted,'right','11px system-ui');
+ const E=0.5*(vx*vx+vy*vy)+Uf(r,n);const rs=M.linspace(0.12,3,300);
+ P2.set({ymin:-1.2,ymax:1.6});P2.clear();P2.line(rs,rs.map(q=>Uf(q,n)+L*L/(2*q*q)),C.ink,3);P2.line(rs,rs.map(q=>Uf(q,n)),C.muted,1.5,[4,3]);P2.hline(E,C.orange,[6,3]);P2.dot(r,E-0.5*(x*vx+y*vy)**2/(r*r),C.orange,5);
+ const beta2=3+n;out.textContent=`n = ${M.fmt(n,3)}   L = ${M.fmt(L,4)}   E = ${M.fmt(E,5)}   r = ${M.fmt(r,3)}\nβ² = 3 + n = ${M.fmt(beta2,3)} → ${beta2>0?'apsidal angle π/β = '+M.fmt(180/Math.sqrt(beta2),4)+'°, advance per orbit 2π(1/β−1) = '+M.fmt(360*(1/Math.sqrt(beta2)-1),3)+'° (small-eccentricity theory)':'no stable circular orbits (n ≤ −3)'}\nmeasured perihelion angles: ${peri.slice(-4).map(a=>M.fmt(a*180/Math.PI,5)+'°').join(', ')||'—'}`}
+loop((dt)=>{const n=sn.value,h=0.002,steps=Math.round(dt*sr.value/h*1);for(let i=0;i<steps;i++){st=M.rk4((tt,y)=>[y[2],y[3],...acc(y[0],y[1],n)],st,0,h);t+=h;const r=Math.hypot(st[0],st[1]);if(rprev[1]<rprev[0]&&r>=rprev[1]&&t>0.05)peri.push(Math.atan2(st[1],st[0]));rprev=[rprev[1],r];if(i%3==0)trail.push([st[0],st[1]])}if(trail.length>6000)trail.splice(0,trail.length-6000);draw()});
+reset();ui.note('Check vs CM04 Worked example 3: n = −2.1, speed 1.02× circular, successive perihelia 6.623 rad apart (advance 19.5° per orbit for small eccentricity). Kepler case n = −2 closes.');
