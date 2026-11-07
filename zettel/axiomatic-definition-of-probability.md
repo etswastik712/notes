@@ -22,6 +22,9 @@ $$P\left(\bigcup_{i=1}^\infty E_i\right) = \sum_{i=1}^\infty P(E_i)$$
 Source: Class notes 6th August 2026, pp. 1–4
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/event]] — The axiomatic definition defines probability as a real-valued function whose domain consists of events
+- needs:: [[zettel/sample-space]] — The axioms explicitly require the unit measure property P(S) = 1 defined on the sample space S
+- used-in:: [[zettel/probability-difference-formula-for-subsets]] — The difference formula for nested subsets is derived directly from the countable additivity and non-negativity axioms of probability
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 6th August 2026]] pp. 1–4
 <!-- /kurooto:seen -->
