@@ -40,3 +40,8 @@ Textbook: [[introduction-to-climate-science/books/t2m-hourly|t2m_hourly]] (its c
 ## Concepts in Intro_to_climate_T1
 [[zettel/multi-scale-temperature-variability]], [[zettel/secular-temperature-trend-estimation]]
 <!-- /kurooto:materialf1cd16da -->
+
+<!-- kurooto:material9710f5f3 -->
+## Concepts in t_ice_core
+(none new)
+<!-- /kurooto:material9710f5f3 -->
