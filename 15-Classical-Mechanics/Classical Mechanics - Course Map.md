@@ -52,9 +52,9 @@ Source columns for unwritten chapters are *tbc*: under the vault rule (cite only
 | 06 | [[CM06 Small Oscillations and Normal Modes]] | 2 | LL §21-23; Alam §1.3 | draft |
 | 07 | [[CM07 Rigid Bodies]] | 3 | LL §31-§37 (incl. §35 Problems 1-3, §37 Problem 1) | draft |
 | 08 | [[CM08 Non-Inertial Frames]] | 3 | LL §39 (incl. Problems 1-3) | draft |
-| 09 | CM09 Hamilton's Equations and Poisson Brackets | 4 | tbc (sources chosen and read before writing) | todo |
-| 10 | CM10 Liouville's Theorem and Canonical Transformations | 4 | tbc (sources chosen and read before writing) | todo |
-| 11 | CM11 Hamilton-Jacobi Theory and Action-Angle Variables | 4 | tbc (sources chosen and read before writing) | todo |
+| 09 | [[CM09 Hamilton's Equations and Poisson Brackets]] | 4 | LL §40-§42 (incl. Problems) | draft |
+| 10 | [[CM10 Liouville's Theorem and Canonical Transformations]] | 4 | LL §45-§46 (end of §44) | draft |
+| 11 | [[CM11 Hamilton-Jacobi Theory and Action-Angle Variables]] | 4 | LL §43, §47-§50 (from p. 155 of §49) | draft |
 | X1 | CMX1 Geometric Mechanics (🟡) | extra | tbc (sources chosen and read before writing) | todo |
 | X2 | CMX2 The Electromagnetic Lagrangian and Gauge Symmetry (🟡) | extra | tbc (sources chosen and read before writing) | todo |
 

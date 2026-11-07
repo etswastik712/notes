@@ -306,6 +306,26 @@
   "id": "cm09_hamiltonian_flow"
  },
  {
+  "title": "Canonical transformations: which maps of phase space keep Hamilton's equations?",
+  "desc": "A change of variables (q, p) \u2192 (Q, P) is canonical when the Poisson bracket [P, Q] = 1 (Landau\u2013Lifshitz convention (45.10)), equivalently when its Jacobian determinant is 1 and it preserves areas of every region. Choose a map: rotations, the swap Q = p, P = \u2212q, scalings Q = aq, P = p/a, shears, the action\u2013angle map of the oscillator, and two non-canonical examples. The left grid and blob are the old variables; the right ones are their images, with the numerical Jacobian and bracket at the chosen point.",
+  "vault": "CM",
+  "chapters": [
+   "CM10 Liouville's Theorem and Canonical Transformations"
+  ],
+  "tryit": "Q = q\u00b2, P = p is not canonical (Jacobian 2q, [P,Q] = 2q): the square's area changes. Q = q\u00b2, P = p/(2q) is canonical: the square is distorted but its area stays 1. Oscillator action\u2013angle map: circles become horizontal lines P = const (so H\u2032 = \u03c9P depends only on P).",
+  "id": "cm10_canonical_map"
+ },
+ {
+  "title": "Adiabatic invariants and the action variable: the energy changes, the phase-space area does not",
+  "desc": "An oscillator whose frequency \u03c9(t) is slowly ramped from \u03c9\u2081 to \u03c9\u2082. The energy E changes (it follows the frequency), but the action I = E/\u03c9, the area of the orbit in phase space divided by 2\u03c0, stays constant when the ramp is slow compared with the oscillation period (Landau\u2013Lifshitz \u00a749). Make the ramp fast and I wobbles and changes. The right panel shows the phase-space orbit: its area (shaded) is 2\u03c0I.",
+  "vault": "CM",
+  "chapters": [
+   "CM11 Hamilton-Jacobi Theory and Action-Angle Variables"
+  ],
+  "tryit": "\u03c9: 1 \u2192 2. Ramp time \u03c4 = 300: E ends at 2.0000 E\u2080 and I/I\u2080 stays within \u00b10.2 % of 1. \u03c4 = 2 (a fast ramp): I/I\u2080 ranges over about 0.87\u20131.16 depending on the phase at which the ramp starts. The orbit keeps the same area while it changes shape (it becomes a thinner ellipse).",
+  "id": "cm11_adiabatic_action"
+ },
+ {
   "title": "Holonomy of a plane field: why some plane fields have no integral surface",
   "desc": "A plane field D = ker(dz \u2212 A) on R\u00b3 with A = A\u2081dx + A\u2082dy. Walk once round a closed loop in the (x, y)-plane and lift it to a curve tangent to D: z changes by \u222eA = \u222c dA = (signed area) \u00d7 (curl of A). If the plane field has integral surfaces (z = const + f(x, y)) the lifted loop must close up for <b>every</b> loop; otherwise the lift ends at a different height. Pick a plane field, a loop and its size: the height gap \u0394z is the obstruction to Frobenius integrability (the bracket [X, Y] leaves D).",
   "vault": "DM",
@@ -981,7 +1001,8 @@
   "desc": "A blob of initial conditions in the (q, p) phase space of a pendulum (or harmonic oscillator) is carried by Hamilton's equations. Its fine-grained area is exactly conserved (Liouville): the boundary stretches and shears into thin filaments, but the area stays the same. The coarse-grained area (number of occupied cells) grows as the filaments spread, which is the microscopic picture of entropy increase. Switch on friction and the flow contracts: dissipative systems are not Hamiltonian and the area shrinks.",
   "vault": "SM",
   "chapters": [
-   "SM02 Phase Space Liouville and the Microcanonical Ensemble"
+   "SM02 Phase Space Liouville and the Microcanonical Ensemble",
+   "CM09 Hamilton's Equations and Poisson Brackets"
   ],
   "tryit": "Harmonic oscillator: the blob rotates rigidly (area and shape unchanged). Pendulum from a blob near the separatrix: it stretches into a spiral; boundary area stays at its initial value while the coarse-grained (occupied-cells) area keeps growing. Friction 0.1: area shrinks like e^{\u2212\u03b3t}.",
   "id": "sm_liouville"
