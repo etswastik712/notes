@@ -449,6 +449,16 @@
   "id": "ls_glacier"
  },
  {
+  "title": "Reading terrain: slope, aspect and hillshade from a DEM",
+  "desc": "A synthetic digital elevation model (hills, a ridge and a valley). For every cell the slope s and aspect a are computed from the 3\u00d73 stencil of neighbouring heights (finite differences \u2202z/\u2202x, \u2202z/\u2202y), and the hillshade (the lit relief map) is I = cos Z cos s + sin Z sin s cos(A_z \u2212 a) for a sun at zenith angle Z and azimuth A_z. Move the sun: slopes facing it are bright, flat ground has I = cos Z. Click the map to read the stencil of one cell.",
+  "vault": "LS",
+  "chapters": [
+   "LS03 Digital Elevation Models and Terrain Analysis"
+  ],
+  "tryit": "Sun azimuth 315\u00b0 (north-west), elevation 45\u00b0: the classic cartographic lighting. Rotate the sun by 180\u00b0 and ridges turn into valleys visually (relief inversion illusion). Click a hillside: the slope and aspect printed are those of the 3\u00d73 stencil.",
+  "id": "ls_hillshade"
+ },
+ {
   "title": "Hillslope diffusion: scarp degradation and the steady convex hillslope",
   "desc": "Soil creep makes the downslope sediment flux proportional to slope, q = \u2212\u03ba \u2202z/\u2202x, so topography obeys \u2202z/\u2202t = U + \u03ba \u2202\u00b2z/\u2202x\u00b2. Left: an initially vertical scarp of height h smooths into z = \u2212(h/2) erf(x/2\u221a(\u03bat)); its steepest slope falls as t^(\u22121/2), which lets you date it from \u03bat = h\u00b2/(4\u03c0 S_max\u00b2). Right: a ridge under steady uplift grows from flat into the parabola z = (U/2\u03ba)(L\u00b2 \u2212 x\u00b2), relief UL\u00b2/2\u03ba, on a time scale L\u00b2/\u03ba (finite-difference simulation).",
   "vault": "LS",
@@ -457,6 +467,17 @@
   ],
   "tryit": "Left: h = 4 m, \u03ba = 0.005 m\u00b2/yr, t = 6400 yr gives S_max = 0.2 and \u03bat = 32 m\u00b2. Right: \u03ba = 0.005 m\u00b2/yr, U = 30 m/Myr, L = 100 m: relief 30 m, base slope 0.6, response time 2 Myr.",
   "id": "ls_hillslope"
+ },
+ {
+  "title": "Open-channel flow: Manning's equation and hydraulic geometry",
+  "desc": "Left: a rectangular channel carrying discharge Q with bed slope S and roughness n. Manning's equation U = (1/n)R^{2/3}S^{1/2} gives the depth H and mean velocity U (solved numerically), the Froude number and the bed shear stress \u03c4_b = \u03c1 g H S. Right: hydraulic geometry W \u221d Q^b, H \u221d Q^f, U \u221d Q^m with b + f + m = 1 (continuity Q = WHU): rivers respond to a larger flood mainly by widening and deepening, much less by speeding up.",
+  "vault": "LS",
+  "chapters": [
+   "LS21 River Hydraulics and Hydraulic Geometry",
+   "LS24 Sediment Transport Mechanics"
+  ],
+  "tryit": "W = 20 m, S = 0.001, n = 0.03, Q = 50 m\u00b3/s gives depth 1.79 m, U = 1.39 m/s, bed shear \u03c4_b = 17.6 Pa, Froude number 0.33 (subcritical). Steepen S (or lower n): Fr rises toward 1. In the right panel (b, f, m) = (0.5, 0.4, 0.1): doubling Q widens the channel by 41 %, deepens it by 32 % and speeds the flow up by only 7 %.",
+  "id": "ls_hydraulics"
  },
  {
   "title": "Airy isostasy: why mountains have roots, and glacial rebound",
@@ -534,6 +555,27 @@
   ],
   "tryit": "\u03c1 = 2000, \u03c6 = 30\u00b0, C = 0, water table at the surface (wetness 1): \u03b8_c = 16.1\u00b0 versus 30\u00b0 when dry (the monsoon-landslide mechanism). With \u03c1 = 1800, \u03c6 = 30\u00b0, C = 5 kPa, dry: z_c = 3.4 m at 35\u00b0, 1.8 m at 40\u00b0, 1.3 m at 45\u00b0.",
   "id": "ls_slope_stability"
+ },
+ {
+  "title": "Soil production and the thickness of regolith: feedback and bistability",
+  "desc": "Bedrock is converted to regolith at the production rate P(H), which falls as the cover thickens (exponential function P = P\u2080e^{\u2212H/h\u2080}) or is humped (little production on bare rock, maximum under a moderate wet cover). Erosion strips regolith at rate E. Steady thickness requires P(H) = E: the exponential law gives one stable thickness H_s = h\u2080 ln(P\u2080/E) with relaxation time h\u2080/E; the humped law gives two (thin = unstable, thick = stable): bistability between bare rock and soil-mantled slopes. Watch dH/dt play out for different starting thicknesses.",
+  "vault": "LS",
+  "chapters": [
+   "LS11 Weathering and Regolith",
+   "LS12 Hillslope Transport and the Diffusion Equation"
+  ],
+  "tryit": "Exponential, P\u2080 = 90 m/Myr, h\u2080 = 0.45 m, E = 30 m/Myr: H_s = 0.45 ln 3 = 0.49 m and \u03c4 = h\u2080/E = 15 kyr. Switch to the humped law with E between the bare-rock rate and P_max: two steady thicknesses; start below the unstable one and the soil is stripped to bare rock. Raise E above P\u2080 (exponential): no steady regolith.",
+  "id": "ls_soil_production"
+ },
+ {
+  "title": "Finite strain: how a circle becomes an ellipse",
+  "desc": "A homogeneous deformation maps every point x to F x. A unit circle becomes the strain ellipse whose semi-axes \u03bb\u2081 \u2265 \u03bb\u2082 are the singular values of F (principal stretches) and whose long axis is the direction of maximum extension. Pure shear stretches in one direction and shortens in the perpendicular one with no rotation of the principal axes; simple shear (a deck of cards sliding) rotates them and gradually aligns the long axis with the shear plane. Area change is det F.",
+  "vault": "LS",
+  "chapters": [
+   "LS08 Plate Tectonics Strain Stress and Convection"
+  ],
+  "tryit": "Simple shear \u03b3 = 1: \u03bb\u2081 = 1.618, \u03bb\u2082 = 0.618, long axis at 31.7\u00b0 from the shear direction; as \u03b3 \u2192 \u221e the axis aligns with the shear plane. Pure shear a = 1.5: stretch 1.5 and 0.667 along the axes, area unchanged. Add dilation to see det F \u2260 1.",
+  "id": "ls_strain"
  },
  {
   "title": "The Hodgkin\u2013Huxley neuron: threshold, all-or-none spikes and repetitive firing",
@@ -621,6 +663,16 @@
   "id": "pr_binom_limits"
  },
  {
+  "title": "The birthday problem: coincidences are likelier than intuition says",
+  "desc": "The probability that among k people (or k objects in N slots) at least two coincide is P(k) = 1 \u2212 \u220f\u1d62\u208c\u2080^{k\u22121}(1 \u2212 i/N). With N = 365 it passes 50 % at k = 23 and 99.9 % at k = 70, because the number of pairs grows as k\u00b2/2. The tool plots P(k) for any N (hash collisions, lottery draws, \u2026), the \u221aN scaling of the 50 % point (\u2248 1.1774\u221aN), and a Monte-Carlo estimate from random groups.",
+  "vault": "PR",
+  "chapters": [
+   "PR01 Counting and the Axioms of Probability"
+  ],
+  "tryit": "N = 365: P(23) = 0.5073, P(50) = 0.9704, P(70) = 0.9992. Press 'simulate' to draw 2000 random groups and compare with the formula. Change N to 10 000: the 50 % point moves to \u2248 119 (\u2248 1.1774\u221aN); N = 10\u2076: \u2248 1178.",
+  "id": "pr_birthday"
+ },
+ {
   "title": "The central limit theorem in action",
   "desc": "Draw n independent values from a distribution (uniform, exponential, a very skewed Bernoulli, a two-point distribution or a heavy-tailed log-normal), average them, standardise, and repeat 4000 times. The histogram of the standardised mean approaches the standard normal curve as n grows, whatever the starting shape, with skewness shrinking like \u03b3/\u221an. The single-draw distribution is shown on the left for comparison.",
   "vault": "PR",
@@ -639,6 +691,27 @@
   ],
   "tryit": "Bivariate normal, \u03c1 = 0.8: R\u00b2 = 0.64. Switch to the parabola: correlation \u2248 0 despite y being a function of x. Add an outlier at (6, 6) to uncorrelated normal data and the correlation jumps.",
   "id": "pr_correlation"
+ },
+ {
+  "title": "Joint, marginal and conditional distributions",
+  "desc": "A scatter of 4000 pairs (X, Y) from a chosen joint law, with the marginal histograms on the axes and the conditional distribution of Y given X in a narrow slice around x\u2080 (click or slide x\u2080). Independent normals: the conditional equals the marginal. Correlated normals: the conditional mean E[Y|X] is the regression line and the conditional spread is smaller by \u221a(1\u2212\u03c1\u00b2). Uniform on a disk: uncorrelated but strongly dependent (the conditional range depends on x\u2080).",
+  "vault": "PR",
+  "chapters": [
+   "PR04 Joint Distributions Expectation and Variance",
+   "PR07 Sums of Independent Variables Covariance and Correlation"
+  ],
+  "tryit": "Correlated normal \u03c1 = 0.8: slice at x\u2080 = 1.5: E[Y|X] = \u03c1x\u2080 = 1.2, conditional s.d. \u221a(1\u2212\u03c1\u00b2) = 0.6. Switch to the disk: E[Y|X] = 0 for every x\u2080 but the conditional range shrinks to \u00b1\u221a(1\u2212x\u2080\u00b2): dependence without correlation.",
+  "id": "pr_joint"
+ },
+ {
+  "title": "Functions of a random variable: the change-of-variables formula",
+  "desc": "If X has density f_X and Y = g(X), the density of Y is f_Y(y) = \u03a3 f_X(x\u1d62)/|g\u2032(x\u1d62)| summed over the roots of g(x) = y. Pick the distribution of X and the transformation g (square, exponential, reciprocal, sine, absolute value) and compare a histogram of 50 000 simulated values of Y with the formula. Non-monotone maps (x\u00b2, sin, |x|) have two or more roots, so the formula has two or more terms; g\u2032 = 0 produces spikes.",
+  "vault": "PR",
+  "chapters": [
+   "PR05 Continuous Random Variables"
+  ],
+  "tryit": "X ~ N(0,1) and Y = X\u00b2: the formula gives the chi-square(1) density f_Y(y) = e^{\u2212y/2}/\u221a(2\u03c0y) (two roots \u00b1\u221ay, divergent at 0). X ~ U(0,1) and Y = \u2212ln X is exponential. X ~ N(0,1) and Y = e^X is log-normal.",
+  "id": "pr_transform"
  },
  {
   "title": "Particle in a box: build a state from energy eigenstates",

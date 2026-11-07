@@ -1,0 +1,32 @@
+---
+title: Weakly Embedded Submanifold
+aliases: ["initial submanifold", "weakly embedded", "figure-eight counterexample", "Theorem 19.17"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Weakly Embedded Submanifold
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slides DG28, DG30 via the [[mt3184-differential-geometry-and-lie-groups/2026-11-06-october-26-30|Oct 26–30 note (DG27–28)]] and the [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|Nov 2–6 note (DG29–30)]].
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=132|Lee p. 114]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=133|Thm 5.33, p. 115]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=518|Thm 19.17, p. 500]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=524|Thm 19.25, p. 506]].
+
+> [!intuition] In one picture
+> An immersed submanifold that is honest about maps: anything smooth that lands in it is smooth into it, even though its topology may differ from the subspace topology.
+
+> [!key] Definition
+> $S\subseteq M$ immersed is **weakly embedded** if every smooth $F:N\to M$ with $F(N)\subseteq S$ is smooth as a map $N\to S$. Embedded ⇒ weakly embedded (slice charts); the figure eight is not (Lee Ex. 5.28); **integral manifolds of involutive distributions** (Thm 19.17) and **Lie subgroups** (Thm 19.25) are. A weakly embedded submanifold has a unique topology and smooth structure (Thm 5.33).
+
+Why it matters: it makes $H\times H\to H$ smooth for a subgroup $H$ built from a leaf, and gives $\mathrm{Lie}(H)=\{X:\exp tX\in H\ \forall t\}$. Dense line on $T^2$: weakly embedded, not embedded.
+
+Used in: [[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]], [[DM06 Submanifolds]]. Related: [[Embedded Submanifold]] · [[Immersed Submanifold]] · [[Dense Line on the Torus]] · [[Lie Subgroup]] · [[Integral Manifold]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

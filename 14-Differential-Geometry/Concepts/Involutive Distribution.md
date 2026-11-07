@@ -1,0 +1,32 @@
+---
+title: Involutive Distribution
+aliases: ["involutivity", "Prop 19.3", "Frobenius condition", "Lie subalgebra of sections"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Involutive Distribution
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG29 via the [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|Nov 2–6 note (DG29–30)]].
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=510|Props 19.2–19.3, p. 492]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=511|Lemma 19.4, p. 493]].
+
+> [!intuition] In one picture
+> Moving along $X$ then $Y$ must land where moving along $Y$ then $X$ does, to first order: the bracket of two fields in the planes stays in the planes.
+
+> [!key] Definition
+> $D$ is **involutive** if $[X,Y]$ is a section of $D$ whenever $X,Y$ are local sections. Equivalent: $\Gamma(D)$ is a Lie subalgebra of $\mathfrak X(M)$ (Prop 19.2); the brackets of a local frame lie in $D$ (Lemma 19.4); for defining forms, $d\omega^i=\sum_j\omega^j\wedge\alpha^i_j$ (Prop 19.8). **Integrable ⇒ involutive** (Prop 19.3, via Cor 8.32); **Frobenius**: the converse holds.
+
+Involutive: $\mathrm{span}\{\partial_x,\partial_y\}$, Lee 19.14 ($[X,Y]=-Y$), the octant example ($[X,Y]=\frac xzX+\frac yzY$). Not involutive: $\mathrm{span}\{\partial_x+y\partial_z,\partial_y\}$ ($[X,Y]=-\partial_z$), the contact distribution $\mathrm{span}\{\partial_x,\partial_y+x\partial_z\}$. A random rank-2 distribution on $\mathbb R^3$ is never involutive (400 of 400 tested).
+
+Used in: [[DM16 Distributions, Involutivity and the Frobenius Theorem]]. Related: [[Distribution]] · [[Frobenius Theorem]] · [[Lie Bracket of Vector Fields]] · [[Naturality of the Lie Bracket]] · [[Holonomy of a Plane Field]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

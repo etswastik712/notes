@@ -1,0 +1,32 @@
+---
+title: Lie Subgroup of a Subalgebra
+aliases: ["Theorem 19.26", "Lie subgroup associated with a Lie subalgebra", "subalgebra gives subgroup"]
+subject: diff-geometry
+type: concept
+scope: [taught, extra-book]
+by: [lecture-notes, book]
+status: draft
+tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+---
+# Lie Subgroup of a Subalgebra
+
+<span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** slide DG30 via the [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|Nov 2–6 note (DG29–30)]]; HW10 Q4.
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=524|Lee Thms 19.25–19.26, p. 506]], [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=525|p. 507]].
+
+> [!intuition] In one picture
+> Every Lie subalgebra of $\mathfrak g$ is the Lie algebra of exactly one connected Lie subgroup (generally immersed, not closed).
+
+> [!key] Definition
+> *If $\mathfrak h\subseteq\mathfrak g=\mathrm{Lie}(G)$ is a Lie subalgebra there is a **unique connected Lie subgroup** $H\le G$ with $\mathrm{Lie}(H)=\mathfrak h$.* Existence: $H$ = leaf through $e$ of the foliation of the left-invariant distribution; subgroup because $L_g$ permutes leaves; Lie group because $H$ is weakly embedded; $T_eH=\mathfrak h$. Uniqueness: another connected $\tilde H$ is a connected integral manifold through $e$, so $\tilde H\subseteq H$, and contains a neighbourhood of $e$ in $H$, which generates $H$.
+
+$\mathrm{Aff}(1)^+$, $\mathfrak h=\mathrm{span}\{X_1+X_2\}$: $H=\{b=a-1\}$. $T^2$, $\mathfrak h=\mathrm{span}(1,\sqrt2)$: the dense line. This is the step of the Lie correspondence (DM15) that produces a subgroup from a subalgebra.
+
+Used in: [[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]], [[DM15 Closed Subgroups and the Lie Correspondence]]. Related: [[Left-Invariant Distribution of a Subalgebra]] · [[Lie Subgroup]] · [[Weakly Embedded Submanifold]] · [[Closed Subgroup Theorem]] · [[Lie Correspondence]] · [[Dense Line on the Torus]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```
