@@ -1,5 +1,15 @@
 [
  {
+  "title": "Crystal field theory: d-orbital splitting, spin state and LFSE",
+  "desc": "Ligands split the five d orbitals: octahedral complexes into t\u2082g (\u22120.4\u0394_o) and e_g (+0.6\u0394_o); tetrahedral ones into e (\u22120.6\u0394_t) and t\u2082 (+0.4\u0394_t) with \u0394_t = (4/9)\u0394_o. Choose the electron count d^n, the splitting \u0394 and the pairing energy P: the lowest-energy occupation (minimising orbital energy plus P per spin pair) decides high spin versus low spin (low spin when \u0394_o > P). The tool counts unpaired electrons, the crystal-field stabilisation energy and the spin-only magnetic moment.",
+  "vault": "CH",
+  "chapters": [
+   "CH10 Crystal Field Theory"
+  ],
+  "tryit": "d\u2076 octahedral: with \u0394_o < P it is high spin (4 unpaired, LFSE = \u22120.4\u0394_o, \u03bc = 4.90 \u03bc_B); with \u0394_o > P it is low spin (0 unpaired, LFSE = \u22122.4\u0394_o, \u03bc = 0). d\u00b3 has the same answer for any \u0394 (\u22121.2\u0394_o, \u03bc = 3.87). Tetrahedral: \u0394_t is small so almost always high spin.",
+  "id": "ch_cft"
+ },
+ {
   "title": "Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance",
   "desc": "On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2\u03c0/f, f = 2\u03a9 sin \u03c6 (left panel, in the rotating frame). Right: a steady wind in balance between the pressure-gradient force and the Coriolis force blows along the isobars (geostrophic), with low pressure on its left in the Northern Hemisphere; friction turns it across the isobars toward low pressure.",
   "vault": "CL",
@@ -372,6 +382,16 @@
   "id": "ns_hodgkin_huxley"
  },
  {
+  "title": "Covering spaces: lifting loops from the circle to the line",
+  "desc": "The real line covers the circle by t \u21a6 (cos t, sin t). A loop in the circle lifts (uniquely, once a starting point is chosen) to a path in the line; the loop closes up in the circle but its lift ends at 2\u03c0\u00b7w, where w is the winding number. Homotopic loops have lifts with the same endpoint, so the endpoint of the lift is the homotopy invariant that identifies \u03c0\u2081(S\u00b9) with Z.",
+  "vault": "PA",
+  "chapters": [
+   "PA15 Covering Spaces and the Fundamental Group"
+  ],
+  "tryit": "Set w = 2: the point goes twice round the circle and the lift climbs two floors of the helix, ending at 4\u03c0. Turn up the wobble: the loop is a different path, but the lift still ends at 2\u03c0w (homotopy invariance). w = 0 gives a null-homotopic loop whose lift returns to 0.",
+  "id": "pa_covering"
+ },
+ {
   "title": "The \u03b5\u2013\u03b4 game: continuity and limits made visible",
   "desc": "For a function f and a point a, an adversary picks a tolerance \u03b5 around f(a) (horizontal band); you must answer with a \u03b4 so that every x within \u03b4 of a lands inside the band. Choose the function: smooth ones always have an answer (shown as the largest \u03b4 that works), the jump discontinuity has none once \u03b5 is below the jump, sin(1/x) near 0 has none for any small \u03b5, and 1/x shows how \u03b4 depends on the point a (continuous but not uniformly continuous).",
   "vault": "PA",
@@ -381,6 +401,18 @@
   ],
   "tryit": "f(x) = x\u00b2 at a = 1, \u03b5 = 0.1: \u03b4 = \u221a1.1 \u2212 1 or 1 \u2212 \u221a0.9, the smaller is 0.0488. Move a toward 3: \u03b4 shrinks (the same \u03b5 needs smaller \u03b4 where the graph is steeper). Choose the step function: \u03b5 = 0.3 fails for every \u03b4.",
   "id": "pa_epsilon_delta"
+ },
+ {
+  "title": "The inverse function theorem: when a smooth map is locally invertible",
+  "desc": "A smooth map F: R\u00b2 \u2192 R\u00b2 and a point p. Near p, F looks like its derivative: a small neighbourhood is carried to something close to the parallelogram spanned by the columns of the Jacobian J = DF(p). If det J \u2260 0 the map is locally invertible (the grid image is a smooth, non-folded patch); where det J = 0 the map folds or collapses and no local inverse exists. The domain is tinted blue where det J > 0 (orientation preserved) and red where det J < 0 (orientation reversed).",
+  "vault": "PA",
+  "chapters": [
+   "PA13 The Derivative and the Inverse Function Theorem",
+   "DM03 Tangent Vectors and the Differential",
+   "DM05 Immersions, Embeddings, Submersions and Coverings"
+  ],
+  "tryit": "Squaring map z \u21a6 z\u00b2: invertible away from 0, but 2-to-1 (points z and \u2212z share an image), so only a LOCAL inverse exists. Fold map (x, y\u00b2): drag p across the line y = 0 and watch the image fold over itself. Polar map (r, \u03b8): singular at r = 0.",
+  "id": "pa_inverse_function"
  },
  {
   "title": "Metric balls: the same plane, different geometries",
