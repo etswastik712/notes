@@ -47,7 +47,7 @@ Griffiths and Jackson section columns for unwritten chapters are *tbc*: they are
 | # | Chapter | Overview item | Griffiths | Jackson | Status |
 |---|---|---|---|---|---|
 | 01 | [[ED01 Electrostatics - Review]] | review | §2.2-2.5, §3.1-3.4, §4.2-4.4 (parts read, see chapter) | §1.3-1.11, §2.1-2.2, §4.1, §4.3-4.4 | draft |
-| 02 | ED02 Magnetostatics: Review | review | tbc | tbc | todo |
+| 02 | [[ED02 Magnetostatics - Review]] | review | §5.1-5.4, §6.1-6.4 (parts read, see chapter) | §5.1-5.6, §5.8, §5.10 | draft |
 | 03 | [[ED03 Maxwell's Equations and Boundary Conditions]] | Maxwell's equations | §7.3 | Ch. 6.1-6.6 | **pilot draft** |
 | 04 | [[ED04 Conservation Laws - Energy, Momentum, Angular Momentum]] | conservation laws | §8.1-8.2 | §6.7 | draft |
 | 05 | [[ED05 Electromagnetic Waves in Vacuum]] | waves | §9.1.4, §9.2 | §7.1-7.2 | draft |

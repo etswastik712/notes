@@ -13,7 +13,7 @@ tags: [subject/electrodynamics, type/chapter, taught, extra/book, extra/beyond, 
 ---
 # ED03 · Maxwell's Equations and Boundary Conditions
 
-◀ ED02 Magnetostatics: Review · [[Electrodynamics - Course Map]] · [[ED04 Conservation Laws - Energy, Momentum, Angular Momentum]] ▶
+◀ [[ED02 Magnetostatics - Review]] · [[Electrodynamics - Course Map]] · [[ED04 Conservation Laws - Energy, Momentum, Angular Momentum]] ▶
 
 <span class="scope-taught">in course overview</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 

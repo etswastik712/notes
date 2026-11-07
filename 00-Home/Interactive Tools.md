@@ -7,7 +7,7 @@ tags: [type/hub, tool/interactive, status/draft]
 ---
 # Interactive Tools
 
-> [!abstract] 106 self-contained interactive visualisations across 15 subject groups
+> [!abstract] 108 self-contained interactive visualisations across 15 subject groups
 > Each tool is one HTML file in `Assets/interactive/` (no internet, no install): sliders, live plots, animations and step-through explorers built to give a *picture* of the idea. Open in a browser; every chapter that uses a tool shows its preview image and a link in an *Interactive* callout.
 
 > [!tip] How to open them
@@ -40,10 +40,12 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Canonical transformations: which maps of phase space keep Hamilton's equations?**<br>[open `cm10_canonical_map`](../Assets/interactive/cm10_canonical_map.html) | A change of variables (q, p) → (Q, P) is canonical when the Poisson bracket [P, Q] = 1 (Landau–Lifshitz convention (45.10)), equivalently when its Jacobian determinant is 1 and it preserves areas of every region. *Try:* Q = q², P = p is not canonical (Jacobian 2q, [P,Q] = 2q): the square's area changes. Q = q², P = p/(2q) is canonical: the square is distorted but its area stays 1. Oscillator action–angle map: circles become horizontal lines P = const (so H′ = ωP depends only on P). | [[CM10 Liouville's Theorem and Canonical Transformations]] |
 | **Adiabatic invariants and the action variable: the energy changes, the phase-space area does not**<br>[open `cm11_adiabatic_action`](../Assets/interactive/cm11_adiabatic_action.html) | An oscillator whose frequency ω(t) is slowly ramped from ω₁ to ω₂. *Try:* ω: 1 → 2. Ramp time τ = 300: E ends at 2.0000 E₀ and I/I₀ stays within ±0.2 % of 1. τ = 2 (a fast ramp): I/I₀ ranges over about 0.87–1.16 depending on the phase at which the ramp starts. The orbit keeps the same area while it changes shape (it becomes a thinner ellipse). | [[CM11 Hamilton-Jacobi Theory and Action-Angle Variables]] |
 
-### Electrodynamics (10)
+### Electrodynamics (12)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
+| **Method of images: a point charge near a conductor or a dielectric**<br>[open `ed01_image_charges`](../Assets/interactive/ed01_image_charges.html) | One point charge q in the presence of (a) a grounded conducting plane, (b) a grounded conducting sphere, (c) a dielectric half-space. *Try:* Plane: move the charge down and watch the induced charge concentrate under it; its integral stays −q. Sphere: push y toward 1 (touching) and the image charge → −q and sits at the sphere surface; pull y far away and q′ ≈ −a/y → 0. Dielectric: raise εr from 1 to 80 and the picture approaches the conductor (q′ → −q) but the lines still enter the dielectric, bending toward the normal. | [[ED01 Electrostatics - Review]] |
+| **Fields of current loops: single loop, Helmholtz pair, anti-Helmholtz pair and solenoid**<br>[open `ed02_biot_savart`](../Assets/interactive/ed02_biot_savart.html) | The magnetic field of circular current loops of radius a, computed exactly from the Biot–Savart law (elliptic integrals). *Try:* Single loop: compare the axis curve with the dipole curve far away. Pair: set the separation to exactly 1 and watch the central part of the B_z curve go flat (this is the Helmholtz condition). Solenoid: raise the number of turns at fixed length (more current per length, field up) and lengthen it at fixed n to see B at the centre → μ₀nI and the field outside → 0. | [[ED02 Magnetostatics - Review]] |
 | **Displacement current: charging a capacitor**<br>[open `ed03_capacitor`](../Assets/interactive/ed03_capacitor.html) | A circular parallel-plate capacitor (plate radius R) is charged by a steady current I. *Try:* Drag r across the plate radius R: B grows linearly inside the gap (only the part of the displacement current enclosed counts) and falls as 1/r outside, joining the wire's field. Untick 'include displacement current' to see Ampère's law fail (B = 0 in the gap). | [[ED03 Maxwell's Equations and Boundary Conditions]] |
 | **Where does the energy flow? The Poynting vector**<br>[open `ed04_poynting`](../Assets/interactive/ed04_poynting.html) | S = E × B/μ₀ shows the path of electromagnetic energy. *Try:* Wire: raise the current I and watch the inward flux keep equalling I²R. Capacitor: let the plates charge and compare the Poynting flux through the rim with dU/dt. Wave: check that S = c u for any polarisation. | [[ED04 Conservation Laws - Energy, Momentum, Angular Momentum]] |
 | **Polarization of light: from linear through elliptical to circular**<br>[open `ed05_polarization`](../Assets/interactive/ed05_polarization.html) | E = (a₁ cos(ωt), a₂ cos(ωt + δ)) for a wave travelling along z. *Try:* δ = 0: linear. δ = 90° with a₁ = a₂: circular. Keep δ = 90° and shrink a₂: elliptical with axes along x and y. Choose δ = 60°, a₁ = 3, a₂ = 4 for the Stokes numbers in ED05. | [[ED05 Electromagnetic Waves in Vacuum]] |
@@ -207,7 +209,7 @@ A chapter counts as covered if at least one tool is embedded in it. ✓ = at lea
 | Vault | Chapters with a tool | Chapters without a tool yet |
 |---|---|---|
 | Classical Mechanics | 11/11: CM01, CM02, CM03, CM04, CM05, CM06, CM07, CM08, CM09, CM10, CM11 | none |
-| Electrodynamics | 9/9: ED03, ED04, ED05, ED06, ED07, ED08, ED09, ED10, ED11 | none |
+| Electrodynamics | 11/11: ED01, ED02, ED03, ED04, ED05, ED06, ED07, ED08, ED09, ED10, ED11 | none |
 | Quantum Mechanics | 10/10: QM01, QM02, QM03, QM04, QM05, QM06, QM07, QM08, QM09, QM10 | none |
 | Waves | (course map only) | no chapters written yet |
 | Thermodynamics and Statistical Mechanics | 15/17: SM01, SM02, SM03, SM04, SM05, SM06, SM07, SM08, TH02, TH03, TH04, TH05, TH06, TH08, TH09 | TH01, TH07 |
