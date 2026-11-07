@@ -29,6 +29,10 @@ Choose which $m_1$ items go in group 1 ($\binom n{m_1}$), then which $m_2$ of th
 
 Used in: [[PR01 Counting and the Axioms of Probability]]. Related: [[Counting Principles]] · [[Binomial Distribution]].
 
+
+## Continued in the vault (added 2026-11-07)
+- The multinomial *distribution* built on this coefficient: [[Multinomial Distribution]], [[Multinomial Covariance Matrix]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

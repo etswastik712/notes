@@ -19,6 +19,7 @@ Seven chapters. PR01–PR05 follow the instructor's **typed class notes** (5 Aug
 > - **Not formally in the syllabus (the instructor says so)**: continuity of probability (§2 of 12 Aug), the proofs of the cdf properties (right-continuity), gambler's ruin, the variance of a sum of independent variables ("not proved in class, possibly not in this course").
 > - **Taught in Weeks 2–3 (🟢, added 2026-10-25)**: the folded normal, the exponential distribution (moments, geometric limit, memoryless characterisation), median and mode, moments, skewness, (excess) kurtosis, the MGF with its EGF remark, and the MGFs of the uniform, exponential, normal, Bernoulli, binomial and geometric laws (each derived from first principles, in line with the AI notes' **course policy**).
 > - **Added 2026-10-29 (🟢):** **Homework 4** ([[hw4.pdf]]: convolution of normals, $E|X-Y|$, the covariance matrix and $|\rho|\le1$, the two-dice MGF) → new chapter [[PR07 Sums of Independent Variables Covariance and Correlation]]; **Quiz 1** of 16 Sep ([[quiz(somenumber).jpeg]]) → Practice 13–15 of PR05; screenshots of the Homework 2 and 3 posts ([[hw2.png]], [[hw3.png]]), whose problems were already in PR05 and PR06, with the instructor's **correction to the discrete median** (now a `[!verify]` in PR06 §1).
+> - **Added 2026-11-07 (🟢):** **Homework 5** ([[hw5.pdf]] and the instructor's solution of Q1, [[HW-5, Q.1.jpg]]: order statistics, exponential order statistics, multinomial moments) → new chapter [[PR08 Order Statistics and the Multinomial Distribution]] (no chapter covered order statistics or the multinomial vector). The notes the sheet announces for the weekend are not in the folder yet.
 > - **Still no lecture source (🟡)**: existence of moments (Cauchy), the Poisson and negative-binomial MGFs, sums of independent variables (beyond the convolution questions of Homework 4), Markov, Chebyshev, the law of large numbers, the CLT. **Ask the instructor** whether these are examinable.
 > - **Two slips on the handwritten Week 3 pages** (the uniform Taylor denominator $m\to m+1$; the sign in the $N(\mu,\sigma^2)$ exponent) and a **convention clash** (the lectures' geometric counts failures, PR03's counts trials) are flagged with `[!verify]` in PR06 §3.
 > - The 9 Sep notes refer to "updated class notes of 27 Aug" on transformations of random variables; the version in the folder is the earlier one. The cdf method for a transformation is covered from the 9 Sep remark, the homework (random circle) and the sheets.
@@ -50,6 +51,7 @@ Central thread: **probability is counting with a consistent set of rules (PR01) 
 | 05 | [[PR05 Continuous Random Variables]] | class notes 10 Sep; handwritten week 1 and **week 2** (post midterm); sheet 17 Sep | draft |
 | 06 | [[PR06 Moments Generating Functions and Limit Theorems]] | handwritten **week 3** (median, mode, moments, MGF); AI notes (limit theorems); Ross, Blitzstein–Hwang | draft (🟢 §1–§3, 🟡 §4–§5) |
 | 07 | [[PR07 Sums of Independent Variables Covariance and Correlation]] | **Homework 4** (instructor, added 2026-10-29); Ross §6.1–6.3, §7.4 | draft (🟢 §2–§6, 🟡 §1) |
+| 08 | [[PR08 Order Statistics and the Multinomial Distribution]] | **Homework 5** (instructor, added 2026-11-07) and the instructor's Q1 solution | draft (🟢 §1, §3, §4, 🔵 §2) |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"
@@ -65,6 +67,7 @@ SORT chapter ASC
 | W2 | [[Week2_notes.pdf]] | handwritten post-midterm Week 2 (5 pp, Xournal++, created 23 Oct 2026): folded normal, exponential, geometric limit, memoryless theorem (pp.1–4); Homework 2 typed on p.5 | taught: PR05 §4–§6 |
 | W3 | [[Week3_notes.pdf]] | handwritten post-midterm Week 3 (6 pp, Xournal++, created 24 Oct 2026): median, mode, moments, skewness, kurtosis, MGF, six MGFs (pp.1–5); Homework 3 typed on p.6 | taught: PR06 §1–§3 |
 | HW | [[hw2.png]], [[hw3.png]], [[hw4.pdf]] | the instructor's homework posts: screenshots of Homework 2 and 3 (with the median correction) and the handwritten Homework 4 page (1 p.) | taught: PR05 §4, PR06 §3.3, **PR07** |
+| HW5 | [[hw5.pdf]], [[HW-5, Q.1.jpg]] | Homework 5 (handwritten, 2 pp: order statistics, exponential order statistics, multinomial moments) and the instructor's handwritten solution of Q1 (the joint cdf route) | taught: **PR08** |
 | Q1 | [[quiz(somenumber).jpeg]] | photograph of **Quiz 1**, 16 Sep 2026 (20 min; the paper header reads MT2213), three questions | taught: PR05 Practice 13–15 |
 | S7–S17 | [[Practice problems 7th August 2026.pdf]], [[Practice problems 14th August 2026.pdf]], [[Practice problems 21st August 2026.pdf]], [[Practice problems 28th August and following weekend.pdf]], [[Practice problems 4th September 2026.pdf]], [[Practice problems weekend of 12th September 2026.pdf]], [[Practice problems 17th September and following tutorial and weekend.pdf]] | weekly practice sheets with hints | taught: all chapters |
 | AI | `probability_notes.pdf`, `probability_moments_and_mgf_notes.pdf`, `mt2113_week1_notes.pdf`, `prob_prems_problems.pdf` (+ `.tex`) | AI-written notes: class-notes companion, moments and MGFs (with the MGF policy), a typed version of week 1, a rigorous problem set | secondary; PR06 and cross-checks |
@@ -72,6 +75,7 @@ SORT chapter ASC
 
 ## Gaps (to ask the instructor / supply later)
 - Whether **joint densities, convolution and the covariance matrix** (the content of Homework 4) have a lecture note; PR07 §1 is built from Ross, not from a class note.
+- **Homework 5 (added 2026-11-07):** the weekend lecture notes it announces are not in the folder; the instructor's solution is only for Q1. The sheet's "$\mathrm{Var}(Y_\cdot)=5/(4\lambda^2)$" in Q2(e) is $\mathrm{Var}(Y_2)$ (PR08 §3 `[!verify]`). Are **order statistics** beyond $n=2$ and the **multinomial** examinable?
 - Are the **LLN, Chebyshev, CLT** (the remainder of PR06) examinable? Is there a Week 4 lecture on them? (The Week 2–3 notes settled the exponential distribution, median, mode, moments and the MGF.)
 - The "updated 27 Aug class notes" on transformations of random variables; the typed notes after 10 Sep (continuous joint distributions, conditional densities?), if they exist.
 - Whether **gambler's ruin**, the **continuity of probability** and the **variance of a sum** are to be examined or are background only.

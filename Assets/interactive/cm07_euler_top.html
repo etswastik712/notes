@@ -1,0 +1,132 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Free rotation of a rigid body: polhodes and the unstable intermediate axis</title><style>:root{--bg:#fcfcfb;--ink:#0b0b0b;--muted:#52514e;--grid:#e4e3df;--panel:#f3f2ee;--blue:#2a78d6;--orange:#eb6834;--aqua:#1baf7a;--red:#e34948;--violet:#6250d6;--gold:#c8961e}
+@media (prefers-color-scheme:dark){:root{--bg:#161616;--ink:#ececea;--muted:#a3a29d;--grid:#2e2e2c;--panel:#222221;--blue:#5aa0f0;--orange:#f58a5c;--aqua:#3fd09a;--red:#f26b6a;--violet:#8d7df0;--gold:#e3b445}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#app{max-width:1060px;margin:0 auto;padding:14px 16px 24px}
+h1{font-size:18px;margin:0 0 2px;font-weight:650}
+.desc{color:var(--muted);margin:0 0 10px;max-width:880px}
+.grid{display:grid;gap:10px}
+.cvw{position:relative;background:var(--bg);border:1px solid var(--grid);border-radius:8px;overflow:hidden}
+canvas{display:block;width:100%}
+.ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:6px 18px;margin:10px 0;padding:10px 12px;background:var(--panel);border-radius:8px}
+.row{display:grid;grid-template-columns:minmax(80px,38%) 1fr 64px;align-items:center;gap:8px}
+.row label{color:var(--muted);font-size:13px}
+.row .v{font:12px ui-monospace,Menlo,Consolas,monospace;text-align:right}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select,button{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--grid);border-radius:6px;padding:3px 8px}
+button{cursor:pointer}button:hover{border-color:var(--blue)}
+.sep{grid-column:1/-1;font-weight:600;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.out{margin-top:8px;padding:8px 12px;border-left:3px solid var(--blue);background:var(--panel);border-radius:0 6px 6px 0;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+.note{color:var(--muted);font-size:12px;margin-top:6px}
+.err{background:#fde;color:#900;padding:8px;border:1px solid #c00;border-radius:6px;margin:8px 0;font:12px monospace;white-space:pre-wrap}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+</style></head><body><div id=app></div><script>
+/* shared helpers for the vault's interactive tools: no external dependencies */
+const $=(s,r=document)=>r.querySelector(s);
+const M={
+  linspace(a,b,n){const o=new Array(n);for(let i=0;i<n;i++)o[i]=a+(b-a)*i/(n-1);return o},
+  range(n){return Array.from({length:n},(_,i)=>i)},
+  clamp(x,a,b){return Math.min(b,Math.max(a,x))},
+  sum(a){let s=0;for(const x of a)s+=x;return s},
+  rk4(f,y,t,dt){const n=y.length,k1=f(t,y),y2=y.map((v,i)=>v+.5*dt*k1[i]),k2=f(t+.5*dt,y2),y3=y.map((v,i)=>v+.5*dt*k2[i]),k3=f(t+.5*dt,y3),y4=y.map((v,i)=>v+dt*k3[i]),k4=f(t+dt,y4);return y.map((v,i)=>v+dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]))},
+  rng(seed){let a=seed>>>0||1;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}},
+  gauss(r){let u=0,v=0;while(!u)u=r();v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)},
+  erf(x){const s=Math.sign(x);x=Math.abs(x);const t=1/(1+0.3275911*x);const y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y},
+  fmt(x,d=3){if(!isFinite(x))return String(x);const a=Math.abs(x);if(a!==0&&(a>=1e5||a<1e-3))return x.toExponential(2);return Number(x.toPrecision(d)).toString()},
+  hypot:Math.hypot,
+  // complex numbers as [re,im]
+  cadd(a,b){return[a[0]+b[0],a[1]+b[1]]},cmul(a,b){return[a[0]*b[0]-a[1]*b[1],a[0]*b[1]+a[1]*b[0]]},cexp(t){return[Math.cos(t),Math.sin(t)]},
+  // eigen of symmetric 2x2
+  sym2(a,b,d){const m=(a+d)/2,r=Math.hypot((a-d)/2,b);return[m-r,m+r]},
+};
+function col(n){return getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim()}
+const C={get ink(){return col('ink')},get muted(){return col('muted')},get grid(){return col('grid')},get bg(){return col('bg')},get panel(){return col('panel')},
+ get blue(){return col('blue')},get orange(){return col('orange')},get aqua(){return col('aqua')},get red(){return col('red')},get violet(){return col('violet')},get gold(){return col('gold')}};
+class Plot{
+  constructor(canvas,o={}){this.c=canvas;this.o=Object.assign({xmin:0,xmax:1,ymin:0,ymax:1,xlabel:'',ylabel:'',title:'',grid:true,ml:54,mr:14,mt:24,mb:38,equal:false,axes:true},o);if(this.o.equal&&!o.ml){this.o.ml=this.o.mr=10;this.o.mt=this.o.mb=10}this.base={xmin:this.o.xmin,xmax:this.o.xmax,ymin:this.o.ymin,ymax:this.o.ymax};this.resize()}
+  equalize(){const o=this.o,b=this.base,pw=this.w-o.ml-o.mr,ph=this.h-o.mt-o.mb,sx=pw/(b.xmax-b.xmin),sy=ph/(b.ymax-b.ymin),s=Math.min(sx,sy),cx=(b.xmin+b.xmax)/2,cy=(b.ymin+b.ymax)/2;o.xmin=cx-pw/2/s;o.xmax=cx+pw/2/s;o.ymin=cy-ph/2/s;o.ymax=cy+ph/2/s}
+  set(o){Object.assign(this.o,o)}
+  resize(){const d=window.devicePixelRatio||1,w=this.c.clientWidth||600,h=this.c.clientHeight||320;this.c.width=Math.round(w*d);this.c.height=Math.round(h*d);this.g=this.c.getContext('2d');this.g.setTransform(d,0,0,d,0,0);this.w=w;this.h=h;if(this.o.equal)this.equalize()}
+  X(x){const o=this.o,pw=this.w-o.ml-o.mr;return o.ml+(x-o.xmin)/(o.xmax-o.xmin)*pw}
+  Y(y){const o=this.o,ph=this.h-o.mt-o.mb;return this.h-o.mb-(y-o.ymin)/(o.ymax-o.ymin)*ph}
+  ix(px){const o=this.o;return o.xmin+(px-o.ml)/(this.w-o.ml-o.mr)*(o.xmax-o.xmin)}
+  iy(py){const o=this.o;return o.ymin+(this.h-o.mb-py)/(this.h-o.mt-o.mb)*(o.ymax-o.ymin)}
+  clear(){const g=this.g;g.save();g.setTransform(1,0,0,1,0,0);g.clearRect(0,0,this.c.width,this.c.height);g.restore();g.fillStyle=C.bg;g.fillRect(0,0,this.w,this.h);if(this.o.axes)this.drawAxes()}
+  ticks(a,b,n=6){const span=b-a,raw=span/n,p=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/p,st=(f<1.5?1:f<3?2:f<7?5:10)*p,out=[];for(let v=Math.ceil(a/st-1e-9)*st;v<=b+1e-9;v+=st)out.push(Math.abs(v)<st*1e-9?0:v);return out}
+  drawAxes(){const g=this.g,o=this.o;g.save();g.font='11px system-ui,sans-serif';g.lineWidth=1;
+    const xt=this.ticks(Math.min(o.xmin,o.xmax),Math.max(o.xmin,o.xmax)),yt=this.ticks(Math.min(o.ymin,o.ymax),Math.max(o.ymin,o.ymax));
+    if(o.grid){g.strokeStyle=C.grid;g.beginPath();for(const v of xt){const x=this.X(v);g.moveTo(x,o.mt);g.lineTo(x,this.h-o.mb)}for(const v of yt){const y=this.Y(v);g.moveTo(o.ml,y);g.lineTo(this.w-o.mr,y)}g.stroke()}
+    g.strokeStyle=C.muted;g.fillStyle=C.muted;g.beginPath();g.moveTo(o.ml,o.mt);g.lineTo(o.ml,this.h-o.mb);g.lineTo(this.w-o.mr,this.h-o.mb);g.stroke();
+    g.textAlign='center';g.textBaseline='top';for(const v of xt)g.fillText(M.fmt(v,3),this.X(v),this.h-o.mb+4);
+    g.textAlign='right';g.textBaseline='middle';for(const v of yt)g.fillText(M.fmt(v,3),o.ml-5,this.Y(v));
+    g.fillStyle=C.ink;g.textAlign='center';g.textBaseline='bottom';if(o.xlabel)g.fillText(o.xlabel,o.ml+(this.w-o.ml-o.mr)/2,this.h-3);
+    if(o.ylabel){g.save();g.translate(12,o.mt+(this.h-o.mt-o.mb)/2);g.rotate(-Math.PI/2);g.textBaseline='top';g.fillText(o.ylabel,0,0);g.restore()}
+    if(o.title){g.font='600 12px system-ui,sans-serif';g.textAlign='left';g.textBaseline='top';g.fillText(o.title,o.ml+4,4)}g.restore()}
+  clip(){const g=this.g,o=this.o;g.save();g.beginPath();g.rect(o.ml,o.mt,this.w-o.ml-o.mr,this.h-o.mt-o.mb);g.clip()}
+  unclip(){this.g.restore()}
+  line(xs,ys,color=C.blue,lw=2,dash=null){const g=this.g;this.clip();g.strokeStyle=color;g.lineWidth=lw;g.setLineDash(dash||[]);g.beginPath();let st=false;for(let i=0;i<xs.length;i++){const y=ys[i];if(!isFinite(y)){st=false;continue}const px=this.X(xs[i]),py=this.Y(y);if(!st){g.moveTo(px,py);st=true}else g.lineTo(px,py)}g.stroke();g.setLineDash([]);this.unclip()}
+  fn(f,color,lw,dash,n=400){const xs=M.linspace(this.o.xmin,this.o.xmax,n);this.line(xs,xs.map(f),color,lw,dash)}
+  dots(xs,ys,color=C.orange,r=3){const g=this.g;this.clip();g.fillStyle=color;for(let i=0;i<xs.length;i++){g.beginPath();g.arc(this.X(xs[i]),this.Y(ys[i]),r,0,7);g.fill()}this.unclip()}
+  dot(x,y,color=C.orange,r=5){this.dots([x],[y],color,r)}
+  vline(x,color=C.muted,dash=[4,3]){const g=this.g;g.save();g.strokeStyle=color;g.setLineDash(dash);g.beginPath();g.moveTo(this.X(x),this.o.mt);g.lineTo(this.X(x),this.h-this.o.mb);g.stroke();g.restore()}
+  hline(y,color=C.muted,dash=[4,3]){const g=this.g;g.save();g.strokeStyle=color;g.setLineDash(dash);g.beginPath();g.moveTo(this.o.ml,this.Y(y));g.lineTo(this.w-this.o.mr,this.Y(y));g.stroke();g.restore()}
+  text(s,x,y,color=C.ink,align='left',font='12px system-ui,sans-serif'){const g=this.g;g.save();g.fillStyle=color;g.font=font;g.textAlign=align;g.textBaseline='middle';g.fillText(s,this.X(x),this.Y(y));g.restore()}
+  ptext(s,px,py,color=C.ink,align='left',font='12px system-ui,sans-serif'){const g=this.g;g.save();g.fillStyle=color;g.font=font;g.textAlign=align;g.textBaseline='middle';g.fillText(s,px,py);g.restore()}
+  arrow(x0,y0,x1,y1,color=C.ink,lw=2,head=8){const g=this.g,a=this.X(x0),b=this.Y(y0),c=this.X(x1),d=this.Y(y1),th=Math.atan2(d-b,c-a);g.save();g.strokeStyle=color;g.fillStyle=color;g.lineWidth=lw;g.beginPath();g.moveTo(a,b);g.lineTo(c,d);g.stroke();g.beginPath();g.moveTo(c,d);g.lineTo(c-head*Math.cos(th-.4),d-head*Math.sin(th-.4));g.lineTo(c-head*Math.cos(th+.4),d-head*Math.sin(th+.4));g.closePath();g.fill();g.restore()}
+  area(xs,y1,y2,color){const g=this.g;this.clip();g.fillStyle=color;g.beginPath();for(let i=0;i<xs.length;i++)g[i?'lineTo':'moveTo'](this.X(xs[i]),this.Y(y1[i]));for(let i=xs.length-1;i>=0;i--)g.lineTo(this.X(xs[i]),this.Y(y2[i]));g.closePath();g.fill();this.unclip()}
+  poly(pts,fill,stroke,lw=1.5){const g=this.g;g.save();g.beginPath();pts.forEach((p,i)=>g[i?'lineTo':'moveTo'](this.X(p[0]),this.Y(p[1])));g.closePath();if(fill){g.fillStyle=fill;g.fill()}if(stroke){g.strokeStyle=stroke;g.lineWidth=lw;g.stroke()}g.restore()}
+  circle(x,y,rPix,fill,stroke,lw=1.5){const g=this.g;g.save();g.beginPath();g.arc(this.X(x),this.Y(y),rPix,0,7);if(fill){g.fillStyle=fill;g.fill()}if(stroke){g.strokeStyle=stroke;g.lineWidth=lw;g.stroke()}g.restore()}
+  legend(items,px,py){const g=this.g;g.save();g.font='12px system-ui,sans-serif';g.textBaseline='middle';let y=py;for(const [t,c,d] of items){g.strokeStyle=c;g.lineWidth=2.5;g.setLineDash(d||[]);g.beginPath();g.moveTo(px,y);g.lineTo(px+22,y);g.stroke();g.setLineDash([]);g.fillStyle=C.ink;g.textAlign='left';g.fillText(t,px+28,y);y+=16}g.restore()}
+  heat(f,nx,ny,cmap){const g=this.g,o=this.o;const w=(this.w-o.ml-o.mr)/nx,h=(this.h-o.mt-o.mb)/ny;for(let i=0;i<nx;i++)for(let j=0;j<ny;j++){const x=o.xmin+(i+.5)/nx*(o.xmax-o.xmin),y=o.ymin+(j+.5)/ny*(o.ymax-o.ymin);g.fillStyle=cmap(f(x,y));g.fillRect(o.ml+i*w,this.h-o.mb-(j+1)*h,w+1,h+1)}}
+}
+const cmaps={
+  div(v){v=M.clamp(v,-1,1);const t=Math.abs(v);if(v<0)return`rgb(${255-Math.round(190*t)},${255-Math.round(140*t)},255)`;return`rgb(255,${255-Math.round(150*t)},${255-Math.round(200*t)})`},
+  seq(v){v=M.clamp(v,0,1);return`rgb(${Math.round(250-200*v)},${Math.round(250-150*v*v)},${Math.round(255-120*v)})`},
+};
+const ui={
+  root:null,ctl:null,out:null,
+  init(title,desc){const a=document.getElementById('app');a.innerHTML='';const h=document.createElement('h1');h.textContent=title;const p=document.createElement('p');p.className='desc';p.innerHTML=desc||'';a.append(h,p);this.root=a;this.grid=null;this.ctl=null;this.out=null;this.plots=[];this.redraws=[];},
+  gridOf(cols,heights){const g=document.createElement('div');g.className='grid';g.style.gridTemplateColumns=`repeat(${cols},minmax(0,1fr))`;this.root.append(g);this.grid=g;return g},
+  canvas(h=320,opts={}){if(!this.grid)this.gridOf(1);const w=document.createElement('div');w.className='cvw';const c=document.createElement('canvas');c.style.height=h+'px';w.append(c);this.grid.append(w);const P=new Plot(c,opts);this.plots.push(P);return P},
+  controls(){if(!this.ctl){const d=document.createElement('div');d.className='ctl';this.root.append(d);this.ctl=d}return this.ctl},
+  sep(t){const d=document.createElement('div');d.className='sep';d.textContent=t;this.controls().append(d)},
+  slider(label,min,max,step,val,cb,fmt){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='range';i.min=min;i.max=max;i.step=step;i.value=val;const v=document.createElement('span');v.className='v';const o={get value(){return parseFloat(i.value)},set value(x){i.value=x;show()},el:i};const show=()=>{v.textContent=fmt?fmt(o.value):M.fmt(o.value,4)};i.addEventListener('input',()=>{show();cb&&cb(o.value)});show();r.append(l,i,v);this.controls().append(r);return o},
+  select(label,opts,cb,val){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const s=document.createElement('select');opts.forEach(([k,t])=>{const e=document.createElement('option');e.value=k;e.textContent=t;s.append(e)});if(val!==undefined)s.value=val;s.addEventListener('change',()=>cb&&cb(s.value));const sp=document.createElement('span');r.append(l,s,sp);this.controls().append(r);return{get value(){return s.value},set value(x){s.value=x},el:s}},
+  check(label,val,cb){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='checkbox';i.checked=!!val;i.addEventListener('change',()=>cb&&cb(i.checked));const sp=document.createElement('span');r.append(l,i,sp);this.controls().append(r);return{get value(){return i.checked},el:i}},
+  button(label,cb){let b=this.btns;if(!b){b=document.createElement('div');b.className='btns';this.root.append(b);this.btns=b}const e=document.createElement('button');e.textContent=label;e.addEventListener('click',cb);b.append(e);return e},
+  readout(){if(!this.out){const o=document.createElement('div');o.className='out';this.root.append(o);this.out=o}return this.out},
+  note(t){const n=document.createElement('div');n.className='note';n.innerHTML=t;this.root.append(n)},
+  onresize(f){this.redraws.push(f)},
+};
+window.addEventListener('resize',()=>{for(const P of ui.plots)P.resize();for(const f of ui.redraws)f()});
+function loop(step){let run=true,last=performance.now(),b=ui.button('pause',()=>{run=!run;b.textContent=run?'pause':'▶ play';if(run){last=performance.now();req()}});let id;function f(t){if(!run)return;const dt=Math.min(.05,Math.max(0,(t-last)/1000));last=t;step(dt,t/1000);id=requestAnimationFrame(f)}function req(){id=requestAnimationFrame(f)}req();return{toggle(){b.click()}}}
+window.addEventListener('error',e=>{const d=document.createElement('div');d.className='err';d.textContent='JS error: '+e.message+' ('+(e.filename||'').split('/').pop()+':'+e.lineno+')';(document.getElementById('app')||document.body).prepend(d)});
+
+(function(){
+const META={"title": "Free rotation of a rigid body: polhodes and the unstable intermediate axis", "desc": "Euler's equations for a torque-free body with principal moments I\u2081 < I\u2082 < I\u2083. The angular momentum M has fixed length in space, so in the body frame its tip moves on the intersection of the sphere |M| = const with the energy ellipsoid \u03a3M_i\u00b2/2I_i = E (a polhode). Near the axes of smallest and largest moment the curves are small closed loops (stable rotation); near the intermediate axis they run far away (unstable): the tennis-racket effect. Drag the sphere to rotate it; choose where the motion starts and how far it is from an axis; the period is compared with Landau\u2013Lifshitz (37.12) in terms of the complete elliptic integral K.", "vault": "CM", "chapters": ["CM07 Rigid Bodies"], "tryit": "I = (1, 2, 3), start near x\u2082 with perturbation 0.02: the motion first stays near the axis, then flips to the opposite side and back (period \u2248 4K\u221a\u2026 printed). Start near x\u2081 or x\u2083: only a small loop. Move I\u2082 toward I\u2081 or I\u2083: the body becomes a symmetric top and all polhodes are circles about its axis.", "id": "cm07_euler_top"};ui.init(META.title,META.desc);
+ui.gridOf(2);const P1=ui.canvas(380,{xmin:-1.25,xmax:1.25,ymin:-1.25,ymax:1.25,axes:false,title:'body frame: polhodes of M (|M| = 1); drag to rotate'});const P2=ui.canvas(380,{xmin:0,xmax:40,ymin:-1.2,ymax:1.2,xlabel:'time',ylabel:'M_i / |M|',title:'components of M in the body'});
+const s2=ui.slider('intermediate moment I₂ (I₁ = 1, I₃ = 3)',1,3,0.01,2,restart),sa=ui.select('start near',[['2','intermediate axis x₂'],['1','smallest-moment axis x₁'],['3','largest-moment axis x₃'],['g','a general direction']],restart,'2'),se=ui.slider('distance from the axis (perturbation)',0.005,0.8,0.005,0.03,restart),ssp=ui.slider('speed',0.2,3,0.05,1,()=>{});ui.button('restart',()=>restart());
+const out=ui.readout();let rx=0.5,ry=0.7,drag=null,M0,Mt,t=0,tr=[],pol=[],ts=[],zc=[];const I=[1,2,3];
+function eul(m,I){return[(1/I[2]-1/I[1])*m[1]*m[2],(1/I[0]-1/I[2])*m[2]*m[0],(1/I[1]-1/I[0])*m[0]*m[1]]}
+function rk(m,I,h){const k1=eul(m,I),m2=m.map((v,i)=>v+h/2*k1[i]),k2=eul(m2,I),m3=m.map((v,i)=>v+h/2*k2[i]),k3=eul(m3,I),m4=m.map((v,i)=>v+h*k3[i]),k4=eul(m4,I);return m.map((v,i)=>v+h/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]))}
+function nrm(v){const n=Math.hypot(...v);return v.map(x=>x/n)}
+function K(k2){let a=1,b=Math.sqrt(1-k2);for(let i=0;i<30;i++){const c=(a+b)/2;b=Math.sqrt(a*b);a=c}return Math.PI/(2*a)}
+function restart(){I[1]=s2.value;const e=se.value,ax=sa.value;M0=ax==='1'?[1,e,0]:ax==='2'?[e,1,0.0]:ax==='3'?[0,e,1]:[0.45,0.6,0.66];if(ax==='2')M0=[e*0.7,1,e*0.7];M0=nrm(M0);Mt=M0.slice();t=0;tr=[M0.slice()];zc=[];
+ pol=[];const starts=[];for(let a=0.08;a<Math.PI;a+=0.2){starts.push([Math.cos(a),0.015,Math.sin(a)]);starts.push([-Math.cos(a),-0.015,-Math.sin(a)])}for(let a=0.05;a<0.5;a+=0.12){starts.push([Math.sin(a)*0.0,Math.cos(a),Math.sin(a)]);starts.push([Math.sin(a),Math.cos(a),0]);starts.push([-Math.sin(a),-Math.cos(a),0.001])}
+ starts.forEach(s=>{let m=nrm(s),pts=[m.slice()];for(let i=0;i<5200;i++){m=rk(m,I,0.01);if(i%4===0)pts.push(m.slice())}pol.push(pts)});draw()}
+function proj(v){const cx=Math.cos(rx),sx=Math.sin(rx),cy=Math.cos(ry),sy=Math.sin(ry);let x=v[0]*cy+v[2]*sy,z=-v[0]*sy+v[2]*cy,y=v[1]*cx-z*sx,z2=v[1]*sx+z*cx;return[x,y,z2]}
+P1.c.addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY];P1.c.setPointerCapture(e.pointerId)});P1.c.addEventListener('pointermove',e=>{if(!drag)return;ry+=(e.clientX-drag[0])*0.01;rx=Math.max(-1.4,Math.min(1.4,rx+(e.clientY-drag[1])*0.01));drag=[e.clientX,e.clientY];draw()});P1.c.addEventListener('pointerup',()=>{drag=null});
+function draw(){P1.clear();const circ=M.linspace(0,2*Math.PI,120);P1.line(circ.map(Math.cos),circ.map(Math.sin),C.grid,1.5);
+ pol.forEach(pts=>{const q=pts.map(proj);P1.line(q.map(a=>a[0]),q.map(a=>a[1]),'rgba(42,120,214,0.35)',1.2)});
+ const q=tr.map(proj);P1.line(q.map(a=>a[0]),q.map(a=>a[1]),C.orange,2.8);const c=proj(Mt);P1.dot(c[0],c[1],C.red,7);
+ [[1,0,0,'x₁'],[0,1,0,'x₂'],[0,0,1,'x₃']].forEach(([a,b,c_,n])=>{[1,-1].forEach(sg=>{const p=proj([a*sg,b*sg,c_*sg]);P1.dot(p[0],p[1],C.ink,4);if(sg>0)P1.text(n,p[0]*1.12,p[1]*1.12,C.ink,'center','bold 13px system-ui')})});
+ P2.set({xmax:Math.max(40,t)});P2.clear();[[0,C.blue],[1,C.red],[2,C.aqua]].forEach(([i,col])=>P2.line(ts.map(r=>r[0]),ts.map(r=>r[i+1]),col,2));P2.legend([['M₁',C.blue],['M₂',C.red],['M₃',C.aqua]],P2.o.ml+8,P2.o.mt+14);
+ const O=[Mt[0]/I[0],Mt[1]/I[1],Mt[2]/I[2]];const E=0.5*(Mt[0]**2/I[0]+Mt[1]**2/I[1]+Mt[2]**2/I[2]);const M2=1;const [I1,I2,I3]=I;let Tf=NaN,k2=NaN;if(I2>I1+1e-3&&I3>I2+1e-3){if(M2>2*E*I2){k2=(I2-I1)*(2*E*I3-M2)/((I3-I2)*(M2-2*E*I1));Tf=4*K(k2)*Math.sqrt(I1*I2*I3/((I3-I2)*(M2-2*E*I1)))}else{k2=(I2-I3)*(2*E*I1-M2)/((I1-I2)*(M2-2*E*I3));Tf=4*K(k2)*Math.sqrt(I1*I2*I3/((I1-I2)*(M2-2*E*I3)))}}
+ const Tn=zc.length>2?(zc[zc.length-1]-zc[0])/(zc.length-1):NaN;
+ out.textContent=`I = (1, ${M.fmt(I[1],3)}, 3)   E = ${M.fmt(E,5)} (in units M²=1)   2EI₁ = ${M.fmt(2*E*I[0],4)}, 2EI₂ = ${M.fmt(2*E*I[1],4)}, 2EI₃ = ${M.fmt(2*E*I[2],4)} (must have 2EI₁ ≤ M² ≤ 2EI₃, (37.5)): M² ${1>2*E*I[1]?'>':'<'} 2EI₂\nΩ = (${O.map(v=>M.fmt(v,3)).join(', ')})   ${isNaN(Tf)?'symmetric top: M and Ω precess uniformly (33.5), ω = Ω₃(I₃−I₁)/I₁':'LL (37.12): k² = '+M.fmt(k2,4)+', period T = 4K(k)√(…) = '+M.fmt(Tf,5)+'   measured period of M₂(t): '+(isNaN(Tn)?'…':M.fmt(Tn,5))}`}
+function step(dt){const n=Math.ceil(dt/0.01),h=dt/n;for(let i=0;i<n;i++){const old=Mt[1];Mt=rk(Mt,I,h);t+=h;if(old<0&&Mt[1]>=0)zc.push(t);}ts.push([t,...Mt]);if(ts.length>1200)ts.shift();tr.push(Mt.slice());if(tr.length>900)tr.shift()}
+loop((dt)=>{step(dt*ssp.value*2);draw()});restart();for(let i=0;i<60;i++)step(0.2);draw();
+ui.note('CM07 / LL §36–§37: dM₁/dt = (1/I₃ − 1/I₂)M₂M₃ etc. (Euler (36.5) in terms of M_i = I_iΩ_i); energy ellipsoid ΣM_i²/2I_i = E and momentum sphere ΣM_i² = M² (37.3)–(37.4); (37.5) 2EI₁ ≤ M² ≤ 2EI₃; period (37.12) T = 4K√(I₁I₂I₃/((I₃−I₂)(M²−2EI₁))) for M² > 2EI₂ (suffixes 1 ↔ 3 interchanged otherwise); both branches agree with a numerical integration to 5 digits. Rotation about x₂ has growth rate Ω₂√((I₂−I₁)(I₃−I₂)/(I₁I₃)).');
+
+})();
+</script></body></html>

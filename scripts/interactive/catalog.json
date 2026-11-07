@@ -230,6 +230,26 @@
   "id": "cm06_resonance"
  },
  {
+  "title": "Free rotation of a rigid body: polhodes and the unstable intermediate axis",
+  "desc": "Euler's equations for a torque-free body with principal moments I\u2081 < I\u2082 < I\u2083. The angular momentum M has fixed length in space, so in the body frame its tip moves on the intersection of the sphere |M| = const with the energy ellipsoid \u03a3M_i\u00b2/2I_i = E (a polhode). Near the axes of smallest and largest moment the curves are small closed loops (stable rotation); near the intermediate axis they run far away (unstable): the tennis-racket effect. Drag the sphere to rotate it; choose where the motion starts and how far it is from an axis; the period is compared with Landau\u2013Lifshitz (37.12) in terms of the complete elliptic integral K.",
+  "vault": "CM",
+  "chapters": [
+   "CM07 Rigid Bodies"
+  ],
+  "tryit": "I = (1, 2, 3), start near x\u2082 with perturbation 0.02: the motion first stays near the axis, then flips to the opposite side and back (period \u2248 4K\u221a\u2026 printed). Start near x\u2081 or x\u2083: only a small loop. Move I\u2082 toward I\u2081 or I\u2083: the body becomes a symmetric top and all polhodes are circles about its axis.",
+  "id": "cm07_euler_top"
+ },
+ {
+  "title": "The heavy symmetric top: effective potential, nutation and precession",
+  "desc": "A symmetric top with a fixed point and its centre of mass at distance l above it. The angles \u03c6 and \u03c8 are cyclic, so M_z and M\u2083 are conserved, and the polar angle \u03b8 moves in the effective potential U_eff(\u03b8) = (M_z \u2212 M\u2083 cos \u03b8)\u00b2/(2I\u2032\u2081 sin\u00b2\u03b8) \u2212 \u03bcgl(1 \u2212 cos \u03b8) at fixed E\u2032: it oscillates between two turning angles (nutation) while the axis precesses at \u03c6\u0307 = (M_z \u2212 M\u2083cos \u03b8)/(I\u2032\u2081 sin\u00b2\u03b8). The tip path is a smooth curve, loops or cusps depending on whether \u03c6\u0307 changes sign. A fast top precesses slowly, at \u03bcgl/M, and the vertical (sleeping) top is stable only above M\u2083\u00b2 = 4I\u2032\u2081\u03bcgl.",
+  "vault": "CM",
+  "chapters": [
+   "CM07 Rigid Bodies"
+  ],
+  "tryit": "Defaults (I\u2032\u2081 = 1, \u03bcgl = 1, M\u2083 = 3.2, \u03b8\u2080 = 60\u00b0): \u03c6\u0307\u2080 = 2.5 gives precession with nutation, \u03c6\u0307\u2080 = \u22120.9 loops, \u03c6\u0307\u2080 = 0 cusps. Raise M\u2083 to 20 (fast top): precession rate \u2248 \u03bcgl/M\u2083 = 0.05, nutation period 2\u03c0I\u2032\u2081/M\u2083 = 0.31. Set \u03b8\u2080 near 0 and M\u2083 below/above 2: the sleeping top falls/stands.",
+  "id": "cm07_heavy_top"
+ },
+ {
   "title": "Holonomy of a plane field: why some plane fields have no integral surface",
   "desc": "A plane field D = ker(dz \u2212 A) on R\u00b3 with A = A\u2081dx + A\u2082dy. Walk once round a closed loop in the (x, y)-plane and lift it to a curve tangent to D: z changes by \u222eA = \u222c dA = (signed area) \u00d7 (curl of A). If the plane field has integral surfaces (z = const + f(x, y)) the lifted loop must close up for <b>every</b> loop; otherwise the lift ends at a different height. Pick a plane field, a loop and its size: the height gap \u0394z is the obstruction to Frobenius integrability (the bracket [X, Y] leaves D).",
   "vault": "DM",
@@ -779,6 +799,16 @@
   ],
   "tryit": "Correlated normal \u03c1 = 0.8: slice at x\u2080 = 1.5: E[Y|X] = \u03c1x\u2080 = 1.2, conditional s.d. \u221a(1\u2212\u03c1\u00b2) = 0.6. Switch to the disk: E[Y|X] = 0 for every x\u2080 but the conditional range shrinks to \u00b1\u221a(1\u2212x\u2080\u00b2): dependence without correlation.",
   "id": "pr_joint"
+ },
+ {
+  "title": "Order statistics: the density of the k-th smallest of n",
+  "desc": "Draw n independent values from a distribution and sort them: Y\u208d\u2081\u208e \u2264 \u2026 \u2264 Y\u208d\u2099\u208e. The k-th smallest has density n!/((k\u22121)!(n\u2212k)!) \u00b7 F(y)^(k\u22121) \u00b7 (1 \u2212 F(y))^(n\u2212k) \u00b7 f(y). Pick a distribution, n and k: the thin curves are the exact densities of all n order statistics, the thick curve is your k, and the histogram comes from 4000 simulated samples. On the right, the mean spacing between consecutive order statistics: for the exponential distribution the gap before the k-th point is Expo((n\u2212k+1)\u03bb) (the R\u00e9nyi representation, which contains the HW5 result Y\u208d\u2082\u208e \u2212 Y\u208d\u2081\u208e ~ Expo(\u03bb)).",
+  "vault": "PR",
+  "chapters": [
+   "PR08 Order Statistics and the Multinomial Distribution"
+  ],
+  "tryit": "Uniform, n = 5: the k-th order statistic is Beta(k, n \u2212 k + 1) with mean k/6 (k = 2: 0.3333). Exponential with n = 2: the minimum has mean 1/2 (rate 2) and the second gap has mean 1: the gaps are 1/(n\u2212k+1) = 1/2, 1. Increase n for the exponential: the first gap shrinks like 1/n while the last stays 1, so the maximum grows like the harmonic number H_n \u2248 ln n.",
+  "id": "pr_order_statistics"
  },
  {
   "title": "Functions of a random variable: the change-of-variables formula",

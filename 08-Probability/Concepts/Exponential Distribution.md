@@ -34,6 +34,10 @@ $-\ln U\sim\mathrm{Expo}(1)$ for $U\sim U(0,1)$; if $R$ is Rayleigh then $R^2/2\
 
 Used in: [[PR05 Continuous Random Variables]] §6, [[PR06 Moments Generating Functions and Limit Theorems]] §3. Related: [[Memoryless Property]] · [[Geometric Distribution]] · [[Rayleigh Distribution]] · [[Gumbel Distribution]] · [[Probability Integral Transform]] · [[Moment Generating Function]].
 
+
+## Continued in the vault (added 2026-11-07)
+- Minimum and gaps of several exponentials: [[Exponential Order Statistics]] ([[PR08 Order Statistics and the Multinomial Distribution]]).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

@@ -267,3 +267,6 @@ Unless $g$ is one-to-one, several $x_i$ map to the same $y$ and their masses add
 > The sheet asks for the variance of NegBin$(r,p)$ **without** the sum rule. The derivation in §4 uses only $n\binom{n-1}{r-1}=r\binom nr$.
 
 **References.** Blitzstein, J. K. and Hwang, J. *Introduction to Probability*, Ch. 7 · Ross, S. *A First Course in Probability* (8th ed.), Ch. 4 and 6–7.
+
+## Continued in the vault (added 2026-11-07)
+- Multinomial counts built from trial indicators, with their negative covariances: [[PR08 Order Statistics and the Multinomial Distribution]] §4, [[Multinomial Distribution]].

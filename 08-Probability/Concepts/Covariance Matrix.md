@@ -25,6 +25,10 @@ Example: $\mathrm{Var}X=4$, $\mathrm{Var}Y=9$, $\mathrm{Var}Z=1$, $\mathrm{Cov}(
 
 Used in: [[PR07 Sums of Independent Variables Covariance and Correlation]]. Related: [[Covariance and Correlation]] · [[Cauchy-Schwarz Inequality]] · [[08-Probability/Concepts/Variance|Variance]] · [[Linearity of Expectation]] · [[Independence of Random Variables]].
 
+
+## Continued in the vault (added 2026-11-07)
+- A singular example: [[Multinomial Covariance Matrix]] ($n(\mathrm{diag}\,p-pp^{\mathsf T})$, rank $k-1$).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

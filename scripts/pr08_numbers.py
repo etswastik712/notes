@@ -101,3 +101,12 @@ print("  Var(X_i) = n p (1-p) = %.5f, Cov(X_i,X_k) = -n p^2 = %.5f, Corr = -1/5 
 pall = math.factorial(12) / (math.factorial(2) ** 6) / 6 ** 12
 print("  P(every face exactly twice) = 12!/(2!^6 6^12) = %.6f (= 1 in %.0f)" % (pall, 1 / pall))
 print("  P(no face missing) via inclusion-exclusion: %.6f" % sum((-1) ** j * math.comb(6, j) * ((6 - j) / 6) ** 12 for j in range(7)))
+
+section("Poissonisation: independent Poisson(mu p_i) counts conditioned on their sum n are multinomial (n = 4, mu = 3, p = (0.2, 0.3, 0.5))")
+mu, n = 3.0, 4
+p = np.array([0.2, 0.3, 0.5])
+sup = [x for x in itertools.product(range(n + 1), repeat=3) if sum(x) == n]
+joint = {x: np.prod([stats.poisson(mu * p[i]).pmf(x[i]) for i in range(3)]) for x in sup}
+Z = sum(joint.values())
+mult = {x: math.factorial(n) / np.prod([math.factorial(v) for v in x]) * np.prod(p ** np.array(x)) for x in sup}
+print("  P(sum = 4) for Poisson(3) = %.6f (= total of the joint over the slice %.6f); max |conditional - multinomial| = %.1e" % (stats.poisson(mu).pmf(n), Z, max(abs(joint[x] / Z - mult[x]) for x in sup)))

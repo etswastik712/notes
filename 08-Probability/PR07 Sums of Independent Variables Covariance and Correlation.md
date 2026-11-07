@@ -240,3 +240,6 @@ flowchart LR
 > **Notes.** Homework 4 Q4 repeats Homework 3 Q4 (the sheet says "From HW3"). The Gaussian Q1 hint "we showed using MGF" refers to PR06 §4 (the MGF lecture). The sheet's Q3 writes $A_{ij}=\mathrm{Cov}(X_i,X_j)$ and "Using $\mathrm{Var}(X+tY)\ge0\ \forall t$"; the equality case and the positive semi-definiteness remark are mine.
 
 **References.** Ross, S. *A First Course in Probability*, 8th ed., Ch. 6–7 · Blitzstein, J. and Hwang, J. *Introduction to Probability*, Ch. 7 · Feller, W. *An Introduction to Probability Theory and Its Applications*, Vol. 2, Ch. III (convolutions).
+
+## Continued in the vault (added 2026-11-07)
+- Order statistics, exponential order statistics and the multinomial covariance matrix (Homework 5): [[PR08 Order Statistics and the Multinomial Distribution]].

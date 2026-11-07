@@ -32,6 +32,10 @@ Exponential: $P[T\ge10\mid T>9]=e^{-1/2}$ (HW2 Q1). Geometric ($q=0.6$): $P[G\ge
 
 Used in: [[PR05 Continuous Random Variables]] §6. Related: [[Exponential Distribution]] · [[Geometric Distribution]] · [[Conditional Probability]] · [[Pareto Distribution]].
 
+
+## Continued in the vault (added 2026-11-07)
+- Repeated memorylessness gives the Rényi gaps of exponential order statistics: [[Exponential Order Statistics]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

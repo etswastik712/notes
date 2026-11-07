@@ -339,3 +339,6 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 > The Week 2 notes (added 2026-10-25) teach the exponential distribution, so §6 is now 🟢. The $\chi^2_1$ density of $Z^2$ (§5, a 🔵 extra) still appears in no lecture note. **Week 2 page 5** shows the problem statements typed in a monospaced font and the lecture summary handwritten (Xournal++); authorship of the lecture is not stated and is treated as the instructor's.
 
 **References.** Blitzstein, J. K. and Hwang, J. *Introduction to Probability*, Ch. 5 · Ross, S. *A First Course in Probability* (8th ed.), Ch. 5 · Gauss, C. F. (1809) *Theoria motus corporum coelestium*.
+
+## Continued in the vault (added 2026-11-07)
+- The minimum of independent exponentials and the independent exponential gaps (memoryless property used repeatedly): [[PR08 Order Statistics and the Multinomial Distribution]] §3, [[Exponential Order Statistics]].
