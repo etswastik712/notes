@@ -36,6 +36,8 @@ Core plugins on: file explorer, search, graph, backlinks, outgoing links, tags, 
 .venv/bin/python -W ignore scripts/diagrams.py                # Excalidraw + SVG diagrams (specs inside)
 .venv/bin/python -W ignore scripts/build_canvases.py          # Subject Map (canvas + note) and Climate canvas
 .venv/bin/python -W ignore scripts/contact_sheet.py in.pdf out_prefix 5 3 480   # triage a PDF of page images
+.venv/bin/python -W ignore scripts/build_interactive.py [--only id1,id2] [--no-shots] [--sheet N]  # interactive tools: scripts/interactive/tools/*.js -> Assets/interactive/*.html + previews (syntax check + headless-Firefox PNGs)
+.venv/bin/python -W ignore scripts/embed_interactive.py [--dry]   # put the Interactive callouts into the chapters and regenerate [[Interactive Tools]] (hub + coverage table)
 cd Assets/latex && latexmk -pdf -outdir=build <name>.tex && cp build/<name>.pdf ../pdf/
 ```
 | Script | Purpose |

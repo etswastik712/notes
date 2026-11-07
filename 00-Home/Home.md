@@ -10,6 +10,7 @@ A connected, text-and-figure heavy knowledge base built on top of the course mat
 > - Where things stand: [[PROGRESS]] · what comes next: [[Roadmap]] · live lists: [[Dashboard]] · all concepts: [[Glossary]]
 > - How notes are written and labelled: [[Conventions]] · tools and scripts: [[Toolkit]] · sources: [[Sources]]
 > - How the subjects relate: [[Subject Map]] ([[Subject Map.canvas|canvas]])
+> - **See it, don't just read it:** [[Interactive Tools]], interactive visualisations (sliders, simulations, step-through explorers) for most chapters, one HTML file each, embedded as previews in the chapters
 > - **First subject, mapped:** [[Climate - Course Map]] · **quiz material:** [[Climate Quiz Prep]]
 
 ## Scope labels (everywhere)
