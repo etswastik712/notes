@@ -57,3 +57,8 @@ Dear everyone, here is the update practice problem set. Feel free to work out ot
 ## Concepts in Class notes 6th August 2026
 [[zettel/random-experiment]], [[zettel/sample-space]], [[zettel/event]], [[zettel/de-morgan-s-laws]], [[zettel/naive-definition-of-probability]], [[zettel/axiomatic-definition-of-probability]]
 <!-- /kurooto:material85fd16a9 -->
+
+<!-- kurooto:material08bccc93 -->
+## Concepts in Class notes 5th August 2026
+[[zettel/basic-principle-of-counting]], [[zettel/permutations-of-distinguishable-objects]], [[zettel/combinations]]
+<!-- /kurooto:material08bccc93 -->
