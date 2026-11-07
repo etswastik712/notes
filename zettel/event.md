@@ -16,6 +16,9 @@ A subset of the sample space representing a collection of outcomes that satisfy 
 Source: Practice problems 7th August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/axiomatic-definition-of-probability]] — Probability is defined as a real-valued function that assigns measures to events
+- used-in:: [[zettel/naive-definition-of-probability]] — The naive definition calculates probability as the ratio of outcomes favorable to an event over the total sample space
+- used-in:: [[zettel/probability-difference-formula-for-subsets]] — The formula specifically evaluates the probability of set differences between nested events
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Practice problems 7th August 2026]] pp. 1–2
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 6th August 2026]] pp. 1–4
