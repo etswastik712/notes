@@ -18,6 +18,7 @@ Source: DG29, pp. 1–4
 - [[zettel/distribution]] — a distribution D induces a foliation when D_p = T_pL for the leaf L through each p (November 2-6 note)
 - [[zettel/integral-manifold]] — the leaves are the integral manifolds of the induced distribution
 - [[zettel/slice-chart]] — flat charts for a foliation have leaves meeting them in slices x^{k+1}, …, x^n = const, as in a slice chart
+- equivalent-to:: [[zettel/completely-integrable-distribution]] — A foliation is the geometric realisation of a completely integrable distribution whose flat charts coincide with the foliation charts
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|DG29]] pp. 1–4
 <!-- /kurooto:seen -->
