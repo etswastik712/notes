@@ -1,0 +1,21 @@
+//META {"title":"Airy isostasy: why mountains have roots, and glacial rebound","desc":"Columns of crust float on the denser mantle like blocks of wood in water. Equal mass above a compensation depth fixes the root under a mountain, b₁ = ρ_c h₁/(ρ_m − ρ_c), and the thinning under an ocean basin, b₂ = (ρ_c − ρ_w)h₂/(ρ_m − ρ_c). Change the densities and heights and the three columns re-float. Right: after a load (ice) is removed the crust rebounds exponentially with relaxation time τ = 4πμ/(ρ g λ).","vault":"LS","chapters":["LS07 Isostasy","LS15 Glacial Deposits Rebound and Sea Level"],"tryit":"With ρ_c = 2800, ρ_m = 3300 the root is 5.6 × the height: a 5 km plateau has a 28 km root and a 68 km crust. Raise ρ_c toward ρ_m and the roots get enormous; lower it and they shrink. In the rebound panel, make the mantle less viscous and watch τ shrink."}
+ui.gridOf(2);const P1=ui.canvas(360,{xmin:0,xmax:3,ymin:-75,ymax:12,xlabel:'',ylabel:'height / depth (km)',title:'three floating columns (reference crust 35 km)'});const P2=ui.canvas(360,{xmin:0,xmax:30,ymin:0,ymax:1.05,xlabel:'time after unloading (kyr)',ylabel:'remaining uplift w/w₀',title:'glacial rebound: exponential relaxation'});
+const sh=ui.slider('mountain height h₁ (km)',0,9,0.1,5,draw),sw=ui.slider('ocean water depth h₂ (km)',0,6,0.1,4,draw),sc=ui.slider('crust density ρ_c (kg/m³)',2500,3200,10,2800,draw),sm=ui.slider('mantle density ρ_m (kg/m³)',3250,3500,10,3300,draw),sref=ui.slider('reference crust thickness c (km)',20,50,1,35,draw),smu=ui.slider('mantle viscosity: log₁₀ μ (Pa s)',19.5,22.5,0.05,21,draw),sl=ui.slider('load wavelength λ (km)',500,6000,50,3000,draw);
+const out=ui.readout();const rw=1000,g=9.81;
+function draw(){const h1=sh.value,h2=sw.value,rc=sc.value,rm=Math.max(sm.value,rc+50),c=sref.value;const b1=rc/(rm-rc)*h1,b2=(rc-rw)/(rm-rc)*h2;P1.set({ymin:-(c+b1+8),ymax:Math.max(12,h1+4)});P1.clear();const G=P1.g;
+ const col=(x0,x1,top,bot,fill)=>{G.fillStyle=fill;G.fillRect(P1.X(x0),P1.Y(top),P1.X(x1)-P1.X(x0),P1.Y(bot)-P1.Y(top))};
+ // mantle
+ col(0,3,-(c+b1+8),-c+0.0,'rgba(235,104,52,0.28)');
+ // reference column x 1.0..2.0 ; mountain 0.05..0.95? use three columns: mountain [0.1,0.9], reference [1.1,1.9], basin [2.1,2.9]
+ col(0.1,0.9,h1,-(c+b1),'rgba(120,120,120,0.55)');col(1.1,1.9,0,-c,'rgba(120,120,120,0.55)');
+ col(2.1,2.9,-h2,-(c-b2),'rgba(120,120,120,0.55)');col(2.1,2.9,0,-h2,'rgba(42,120,214,0.45)');
+ // mantle fill beneath each column to the compensation depth for clarity: draw mantle under crust is background colour above
+ col(0,3,-(c+b1+8),-(c+b1),'rgba(235,104,52,0.28)');
+ P1.hline(0,C.blue,[6,3]);P1.hline(-(c+b1),C.red,[3,3]);
+ P1.text('mountain',0.5,h1+1.2,C.ink,'center');P1.text('reference',1.5,1.2,C.ink,'center');P1.text('ocean basin',2.5,1.2,C.ink,'center');
+ P1.text('root b₁ = '+M.fmt(b1,3)+' km',0.5,-(c+b1)/1.0+(b1/2)+0.0-0.0,C.ink,'center');P1.text('crust '+M.fmt(h1+c+b1,3)+' km',0.5,-c/2+h1/2-2,C.ink,'center');P1.text('crust '+M.fmt(c,3)+' km',1.5,-c/2,C.ink,'center');P1.text('crust '+M.fmt(c-b2-h2,3)+' km',2.5,-(c+h2-b2)/2,C.ink,'center');
+ P1.text('compensation depth',1.5,-(c+b1)+2,C.red,'center');P1.text('mantle',2.5,-(c+b1+4),C.orange,'center');
+ // rebound
+ const mu=Math.pow(10,smu.value),lam=sl.value*1e3,tau=4*Math.PI*mu/(3300*g*lam);const tyr=tau/3.156e7;P2.set({xmax:Math.max(10,5*tyr/1000)});P2.clear();P2.fn(t=>Math.exp(-t*1000/tyr),C.blue,3);P2.vline(tyr/1000,C.muted);P2.hline(Math.exp(-1),C.muted,[3,3]);P2.text('τ = '+M.fmt(tyr,3)+' yr',tyr/1000*1.05,0.9,C.blue);
+ out.textContent=`mountain: b₁ = ρ_c h₁/(ρ_m−ρ_c) = ${M.fmt(rc/(rm-rc),3)} h₁ = ${M.fmt(b1,4)} km → total crust ${M.fmt(h1+c+b1,4)} km   ocean basin: b₂ = (ρ_c−ρ_w)h₂/(ρ_m−ρ_c) = ${M.fmt((rc-rw)/(rm-rc),3)} h₂ = ${M.fmt(b2,4)} km\nrebound: τ = 4πμ/(ρ g λ) = ${M.fmt(tyr,4)} yr  (μ = 10^${M.fmt(smu.value,3)} Pa s, λ = ${sl.value} km, ρ = 3300);  half the uplift is recovered after τ ln 2 = ${M.fmt(tyr*Math.LN2,4)} yr`}
+draw();ui.note('LS07: ρ_c = 2800, ρ_m = 3300 give b₁ = 5.6 h₁ (a 5 km plateau → 28 km root → 35 + 5 + 28 ≈ 68 km crust, as under Tibet) and b₂ = 3.6 h₂ for the ocean basin. The densities and the viscosity are the only inputs; the root is independent of the reference thickness.');

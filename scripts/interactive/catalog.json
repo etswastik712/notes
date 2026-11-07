@@ -251,7 +251,7 @@
   "chapters": [
    "EE05 Predation"
   ],
-  "tryit": "Defaults r=1, p=0.02, a=0.5, m=0.5 give (H*,P*) = (50,50) and period 8.9 for small cycles; the large orbit from (30,30) has period 9.25. Set K = 200: the equilibrium moves to (50, 37.5), eigenvalues \u22120.125 \u00b1 0.60i. Double r: predators double, prey unchanged.",
+  "tryit": "Defaults r=1, p=0.02, a=0.5, m=0.5 give (H*,P*) = (50,50) and period 8.9 for small cycles; the large orbit from (30,30) has period 9.26. Set K = 200: the equilibrium moves to (50, 37.5), eigenvalues \u22120.125 \u00b1 0.60i. Double r: predators double, prey unchanged.",
   "id": "ee_predator_prey"
  },
  {
@@ -263,6 +263,49 @@
   ],
   "tryit": "r = 1.3 (damped), 2.3 (2-cycle 159.2/40.8), 2.6 (4-cycle), 3.0 (chaos, \u039b = +0.39), 3.6 (periodic window, \u039b < 0). With the second run on at r = 3.0 the two series part after ~35 steps.",
   "id": "ee_ricker_chaos"
+ },
+ {
+  "title": "Ice sheets and valley glaciers: profiles from flow and mass balance",
+  "desc": "Left: the steady ice-sheet profile from Glen's law (Vialov): H^((2n+2)/n) = H\u2080^((2n+2)/n)[1 \u2212 (x/L)^((n+1)/n)], compared with the perfectly plastic parabola H = \u221a(2Cx/\u03c1_i g) (the n \u2192 \u221e limit); the thickness scales as \u221aL either way. Right: a valley glacier with mass-balance profile b(x) = \u03b3(x_E \u2212 x): the ice flux Q(x) = W\u03b3(x_E x \u2212 x\u00b2/2) is maximal at the equilibrium line and returns to zero at the terminus x = 2x_E.",
+  "vault": "LS",
+  "chapters": [
+   "LS14 Glaciers Mass Balance and Ice Flow"
+  ],
+  "tryit": "Plastic panel: x = 400 km gives H = \u221a(22.2 m \u00d7 400 km) = 3.0 km (Greenland). Raise n: the Vialov curve approaches the plastic one. Right: \u03b3 = 2 m/yr per km, x_E = 3 km, W = 1 km \u2192 Q_max = 9\u00d710\u2076 m\u00b3/yr, terminus 6 km, 90 m/yr at the ELA if H = 100 m.",
+  "id": "ls_glacier"
+ },
+ {
+  "title": "Hillslope diffusion: scarp degradation and the steady convex hillslope",
+  "desc": "Soil creep makes the downslope sediment flux proportional to slope, q = \u2212\u03ba \u2202z/\u2202x, so topography obeys \u2202z/\u2202t = U + \u03ba \u2202\u00b2z/\u2202x\u00b2. Left: an initially vertical scarp of height h smooths into z = \u2212(h/2) erf(x/2\u221a(\u03bat)); its steepest slope falls as t^(\u22121/2), which lets you date it from \u03bat = h\u00b2/(4\u03c0 S_max\u00b2). Right: a ridge under steady uplift grows from flat into the parabola z = (U/2\u03ba)(L\u00b2 \u2212 x\u00b2), relief UL\u00b2/2\u03ba, on a time scale L\u00b2/\u03ba (finite-difference simulation).",
+  "vault": "LS",
+  "chapters": [
+   "LS12 Hillslope Transport and the Diffusion Equation"
+  ],
+  "tryit": "Left: h = 4 m, \u03ba = 0.005 m\u00b2/yr, t = 6400 yr gives S_max = 0.2 and \u03bat = 32 m\u00b2. Right: \u03ba = 0.005 m\u00b2/yr, U = 30 m/Myr, L = 100 m: relief 30 m, base slope 0.6, response time 2 Myr.",
+  "id": "ls_hillslope"
+ },
+ {
+  "title": "Airy isostasy: why mountains have roots, and glacial rebound",
+  "desc": "Columns of crust float on the denser mantle like blocks of wood in water. Equal mass above a compensation depth fixes the root under a mountain, b\u2081 = \u03c1_c h\u2081/(\u03c1_m \u2212 \u03c1_c), and the thinning under an ocean basin, b\u2082 = (\u03c1_c \u2212 \u03c1_w)h\u2082/(\u03c1_m \u2212 \u03c1_c). Change the densities and heights and the three columns re-float. Right: after a load (ice) is removed the crust rebounds exponentially with relaxation time \u03c4 = 4\u03c0\u03bc/(\u03c1 g \u03bb).",
+  "vault": "LS",
+  "chapters": [
+   "LS07 Isostasy",
+   "LS15 Glacial Deposits Rebound and Sea Level"
+  ],
+  "tryit": "With \u03c1_c = 2800, \u03c1_m = 3300 the root is 5.6 \u00d7 the height: a 5 km plateau has a 28 km root and a 68 km crust. Raise \u03c1_c toward \u03c1_m and the roots get enormous; lower it and they shrink. In the rebound panel, make the mantle less viscous and watch \u03c4 shrink.",
+  "id": "ls_isostasy"
+ },
+ {
+  "title": "Bedrock rivers: steady profile, slope\u2013area scaling and the knickpoint wave",
+  "desc": "Stream-power incision E = K A\u1d50 S\u207f balanced against rock uplift U gives the steady slope S = (U/K)^(1/n) A^(\u2212m/n) = k_s A^(\u2212\u03b8), concavity \u03b8 = m/n. With Hack's law A \u221d x^1.67 this is a concave-up profile. Press 'step uplift': the river is out of balance, a knickpoint (steepened reach) travels upstream at speed K A\u1d50 (n = 1) and the whole profile steepens to the new steady state. Right: the slope\u2013area plot (log\u2013log), parallel lines for different U.",
+  "vault": "LS",
+  "chapters": [
+   "LS23 Bedrock Channels and River Incision",
+   "LS22 Floods Planform and River Profiles",
+   "LS16 Fluvial Landscapes"
+  ],
+  "tryit": "m = 0.5, n = 1, K = 5\u00d710\u207b\u2076 yr\u207b\u00b9 and U = 0.5 mm/yr give S = 100 A^(\u22121/2): S = 0.1 at 1 km\u00b2 and 0.01 at 100 km\u00b2. Step U by \u00d74: at n = 1 every slope quadruples (steady state), at n = 19/16 only 4^(16/19) = 3.2. Watch the knickpoint reach the divide.",
+  "id": "ls_river_profile"
  },
  {
   "title": "Particle in a box: build a state from energy eigenstates",
