@@ -398,6 +398,15 @@ Why do isentropes rise poleward? Because the tropical column is warm: at a given
 >
 > [▶ Open the tool in your browser](../Assets/interactive/cl_ebm_latitude.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_ebm_latitude.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: Orbital forcing: how obliquity, eccentricity and precession change the insolation
+> Exact daily-mean top-of-atmosphere insolation Q = S (a/r)² /π · [h₀ sin φ sin δ + cos φ cos δ sin h₀] as a function of the <b>solar longitude</b> λ (0° = March equinox, 90° = June solstice), for a chosen latitude and orbit.
+>
+> ![[cl_milankovitch.png|720]]
+>
+> **Try:** Latitude 65°, e = 0.0167, ε = 23.44°, ϖ = 283°: the June solstice (λ = 90°) value is 478 W m⁻². Raise ε to 24.5° (495.8) or move perihelion to the June solstice (ϖ = 90°: 510.5). With e = 0.05 and ϖ = 90° the June value is 547 W m⁻², with ϖ = 270° it is 447.7: precession matters only when the eccentricity is large (Lecture 10). At the equator the tilt barely changes the annual mean (it falls 3.5 W m⁻² from ε = 22.1° to 24.5°); at the pole it rises by 16.7.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cl_milankovitch.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_milankovitch.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

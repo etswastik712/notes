@@ -107,6 +107,17 @@
   "id": "cl_ebm_latitude"
  },
  {
+  "title": "The Ekman spiral and Ekman transport",
+  "desc": "A steady wind stress \u03c4 drags the surface water; friction (constant eddy viscosity A_z) and the Coriolis force turn the current with depth: the Ekman spiral. The surface current is 45\u00b0 to the right of the wind in the northern hemisphere (left in the southern), the speed decays as e^(z/D_E) with D_E = \u221a(2A_z/|f|), the current reverses at z = \u2212\u03c0D_E where it is only e^(\u2212\u03c0) = 4.3 % of the surface value, and the depth-integrated (Ekman) transport is <b>exactly perpendicular</b> to the wind and equal to \u03c4/f, whatever A_z is. Choose latitude, stress and eddy viscosity.",
+  "vault": "CL",
+  "chapters": [
+   "CL19 Wind-Driven Ocean Circulation",
+   "CL13 Horizontal Motion - Geostrophic Balance and Friction"
+  ],
+  "tryit": "A_z = 0.1 m\u00b2 s\u207b\u00b9 at f = 10\u207b\u2074 s\u207b\u00b9 (about 43\u00b0 latitude): D_E = 44.7 m and the surface current is 3.1 cm/s for \u03c4 = 0.1 N m\u207b\u00b2. Change A_z: D_E and the surface speed change but the transport arrow does not. Move to the southern hemisphere: everything mirrors. Latitude 11\u00b0, \u03c4 = 0.063 N m\u207b\u00b2 gives the 8.8 Sv-type transport of the Chereskin\u2013Roemmich section over ~4000 km.",
+  "id": "cl_ekman_spiral"
+ },
+ {
   "title": "The layer greenhouse model",
   "desc": "Absorbed sunlight S(1 \u2212 \u03b1)/4 is balanced by outgoing longwave radiation. Put N atmospheric layers above the surface, each absorbing a fraction \u03b5 of the infrared passing through and re-emitting up and down. For black layers (\u03b5 = 1) the surface is (N+1)^{1/4} times the emission temperature (255 K): more layers or more absorption, a warmer surface and a colder top of the atmosphere.",
   "vault": "CL",
@@ -118,6 +129,17 @@
   "id": "cl_greenhouse_layers"
  },
  {
+  "title": "Orbital forcing: how obliquity, eccentricity and precession change the insolation",
+  "desc": "Exact daily-mean top-of-atmosphere insolation Q = S (a/r)\u00b2 /\u03c0 \u00b7 [h\u2080 sin \u03c6 sin \u03b4 + cos \u03c6 cos \u03b4 sin h\u2080] as a function of the <b>solar longitude</b> \u03bb (0\u00b0 = March equinox, 90\u00b0 = June solstice), for a chosen latitude and orbit. Set the obliquity \u03b5 (22.1\u00b0\u201324.5\u00b0, 41 kyr cycle), the eccentricity e (0.005\u20130.0607, ~100 kyr) and the longitude of perihelion \u03d6 (the precession of the equinoxes, ~26 kyr; today \u03d6 \u2248 283\u00b0, perihelion in early January). The grey curve is today's orbit. The right panel sweeps \u03d6 and shows what the classic 'summer insolation at 65\u00b0N' does.",
+  "vault": "CL",
+  "chapters": [
+   "CL17 Orbital Forcing and Glacial Cycles",
+   "CL10 Global Energy Balance and Meridional Structure"
+  ],
+  "tryit": "Latitude 65\u00b0, e = 0.0167, \u03b5 = 23.44\u00b0, \u03d6 = 283\u00b0: the June solstice (\u03bb = 90\u00b0) value is 478 W m\u207b\u00b2. Raise \u03b5 to 24.5\u00b0 (495.8) or move perihelion to the June solstice (\u03d6 = 90\u00b0: 510.5). With e = 0.05 and \u03d6 = 90\u00b0 the June value is 547 W m\u207b\u00b2, with \u03d6 = 270\u00b0 it is 447.7: precession matters only when the eccentricity is large (Lecture 10). At the equator the tilt barely changes the annual mean (it falls 3.5 W m\u207b\u00b2 from \u03b5 = 22.1\u00b0 to 24.5\u00b0); at the pole it rises by 16.7.",
+  "id": "cl_milankovitch"
+ },
+ {
   "title": "Blackbody spectra: why sunlight is shortwave and Earth glows in the infrared",
   "desc": "Planck's law B_\u03bb(T) on a log wavelength axis for any temperature, with the visible band shaded. The Sun (\u22485772 K) peaks in the visible near 0.5 \u00b5m; the Earth (\u2248288 K) peaks near 10 \u00b5m. Wien's displacement law \u03bb_max T = 2898 \u00b5m K and the Stefan\u2013Boltzmann law F = \u03c3T\u2074 are read off live. The overlap of the two curves is tiny, which is what lets us treat shortwave and longwave separately.",
   "vault": "CL",
@@ -127,6 +149,17 @@
   ],
   "tryit": "Drag T from 288 K to 5772 K and watch the peak slide through the visible; compare the areas (T\u2074).",
   "id": "cl_planck"
+ },
+ {
+  "title": "Why the ocean damps and delays the seasons: a slab mixed layer",
+  "desc": "Take a mixed layer of depth h (heat capacity C = \u03c1 c_w h per m\u00b2, with \u03c1 c_w = 4.2\u00d710\u2076 J m\u207b\u00b3 K\u207b\u00b9) forced by a seasonal net surface heating Q\u2080 cos(\u03c9t) and relaxed to equilibrium by a feedback \u03bb: C dT/dt = Q\u2080 cos \u03c9t \u2212 \u03bbT. The seasonal temperature has amplitude Q\u2080/\u221a((C\u03c9)\u00b2 + \u03bb\u00b2) and lags the forcing by arctan(C\u03c9/\u03bb). Make h small (land-like: 1 m of rock has C = 2.4\u00d710\u2076 J m\u207b\u00b2 K\u207b\u00b9, about that of 0.6 m of water) or large (ocean): a thick layer has a small seasonal temperature range and a long lag. This is the mathematics behind 'oceans moderate climate' and the 'about 30 times the atmosphere' of Hartmann \u00a77.3.",
+  "vault": "CL",
+  "chapters": [
+   "CL18 The Ocean as the Climate System's Heat Reservoir",
+   "CL03 Radiation and Planetary Energy Balance"
+  ],
+  "tryit": "Q\u2080 = 100 W m\u207b\u00b2, \u03bb = 20 W m\u207b\u00b2 K\u207b\u00b9, h = 50 m: amplitude 2.15 K and lag 64.5\u00b0 (about 2.2 months after the heating peak). For h = 1 m of water (land-like) the amplitude is 5.0 K and the lag only 2.4\u00b0: the temperature follows the forcing. For h = 100 m the amplitude is 1.2 K and the lag is 76\u00b0.",
+  "id": "cl_slab_ocean"
  },
  {
   "title": "Brachistochrone: which path is fastest?",
@@ -248,6 +281,18 @@
   ],
   "tryit": "Defaults (I\u2032\u2081 = 1, \u03bcgl = 1, M\u2083 = 3.2, \u03b8\u2080 = 60\u00b0): \u03c6\u0307\u2080 = 2.5 gives precession with nutation, \u03c6\u0307\u2080 = \u22120.9 loops, \u03c6\u0307\u2080 = 0 cusps. Raise M\u2083 to 20 (fast top): precession rate \u2248 \u03bcgl/M\u2083 = 0.05, nutation period 2\u03c0I\u2032\u2081/M\u2083 = 0.31. Set \u03b8\u2080 near 0 and M\u2083 below/above 2: the sleeping top falls/stands.",
   "id": "cm07_heavy_top"
+ },
+ {
+  "title": "Rotating frames: Coriolis and centrifugal forces, and the Foucault pendulum",
+  "desc": "The same motion in two descriptions. Left: the inertial frame, where a free particle moves in a straight line (or a pendulum swings in a fixed plane). Right: the frame rotating at \u03a9, where the same motion is a curve and the particle seems to feel the centrifugal force m\u03a9\u00b2\u03c1 (outward), the Coriolis force 2m v\u00d7\u03a9 (perpendicular to the velocity) and, if \u03a9 varies, the Euler force m r\u00d7\u03a9\u0307 (LL 39.7). Choose a free particle, a particle at rest in the inertial frame, or a Foucault pendulum at a chosen latitude (the oscillation plane rotates at \u2212\u03a9 sin \u03bb).",
+  "vault": "CM",
+  "chapters": [
+   "CM08 Non-Inertial Frames",
+   "CL12 Rotating Frames and the Coriolis Force",
+   "CL13 Horizontal Motion - Geostrophic Balance and Friction"
+  ],
+  "tryit": "Free particle: change \u03a9 and watch the straight inertial path become a spiral-like curve in the rotating view, with the Coriolis force always perpendicular to the velocity. 'At rest in the inertial frame' appears as a clockwise circle for \u03a9 > 0. Foucault: at latitude 45\u00b0 the plane turns once in 23.93 h / sin 45\u00b0 = 33.85 h; at the poles once per sidereal day, at the equator not at all.",
+  "id": "cm08_rotating_frame"
  },
  {
   "title": "Holonomy of a plane field: why some plane fields have no integral surface",

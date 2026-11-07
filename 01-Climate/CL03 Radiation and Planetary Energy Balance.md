@@ -280,6 +280,15 @@ A quick analytic check explains both numbers:
 >
 > [▶ Open the tool in your browser](../Assets/interactive/cl_planck.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_planck.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: Why the ocean damps and delays the seasons: a slab mixed layer
+> Take a mixed layer of depth h (heat capacity C = ρ c_w h per m², with ρ c_w = 4.2×10⁶ J m⁻³ K⁻¹) forced by a seasonal net surface heating Q₀ cos(ωt) and relaxed to equilibrium by a feedback λ: C dT/dt = Q₀ cos ωt − λT.
+>
+> ![[cl_slab_ocean.png|720]]
+>
+> **Try:** Q₀ = 100 W m⁻², λ = 20 W m⁻² K⁻¹, h = 50 m: amplitude 2.15 K and lag 64.5° (about 2.2 months after the heating peak). For h = 1 m of water (land-like) the amplitude is 5.0 K and the lag only 2.4°: the temperature follows the forcing. For h = 100 m the amplitude is 1.2 K and the lag is 76°.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cl_slab_ocean.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_slab_ocean.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

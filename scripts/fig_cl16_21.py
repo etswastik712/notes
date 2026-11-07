@@ -152,7 +152,7 @@ for zk, (txt, off, ha) in labs.items():
     a.annotate("", xy=(w[i].real * 100, w[i].imag * 100), xytext=(0, 0), arrowprops=dict(arrowstyle="->", color=ORANGE if zk == 0 else MUTED, lw=1.8 if zk == 0 else 1.1))
     a.text(w[i].real * 100 + off[0], w[i].imag * 100 + off[1], txt, fontsize=7.8, color=INK, ha=ha)
 a.annotate("wind stress", xy=(1.1, 0.35), xytext=(0.15, 0.35), arrowprops=dict(arrowstyle="-|>", color=RED, lw=2.0), fontsize=8, color=RED, va="center")
-a.set_aspect("equal"); a.set_xlabel("u (cm/s)"); a.set_ylabel("v (cm/s)"); a.set_xlim(-0.8, 2.6); a.set_ylim(-2.6, 0.7)
+a.set_aspect("equal"); a.set_xlabel("u (cm/s)"); a.set_ylabel("v (cm/s)"); a.set_xlim(-1.5, 2.6); a.set_ylim(-2.6, 0.7)
 a.set_title("A  Ekman spiral (northern hemisphere)", fontsize=9.8)
 
 b = ax[1]

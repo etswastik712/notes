@@ -7,7 +7,7 @@ tags: [type/hub, tool/interactive, status/draft]
 ---
 # Interactive Tools
 
-> [!abstract] 93 self-contained interactive visualisations across 15 subject groups
+> [!abstract] 100 self-contained interactive visualisations across 15 subject groups
 > Each tool is one HTML file in `Assets/interactive/` (no internet, no install): sliders, live plots, animations and step-through explorers built to give a *picture* of the idea. Open in a browser; every chapter that uses a tool shows its preview image and a link in an *Interactive* callout.
 
 > [!tip] How to open them
@@ -19,7 +19,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ## All tools by subject
 
-### Classical Mechanics (10)
+### Classical Mechanics (13)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
@@ -33,6 +33,9 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Two coupled oscillators: normal modes and beats**<br>[open `cm06_coupled`](../Assets/interactive/cm06_coupled.html) | Two equal masses on springs with a coupling spring. *Try:* Start with all of the motion in the in-phase mode, then all in the anti-phase mode, then 50/50 (x=1, y=0): that is the full-transfer beat. Increase the coupling α to speed the beats. | [[CM06 Small Oscillations and Normal Modes]] |
 | **Double pendulum: linear normal modes versus the real thing**<br>[open `cm06_double_pendulum`](../Assets/interactive/cm06_double_pendulum.html) | Equal masses and rods. *Try:* Choose 'slow mode' at amplitude 0.05 rad: clean periodic motion with period 2.621 s. Raise the amplitude to 1.5 rad or choose 'generic' and watch the two copies diverge. | [[CM06 Small Oscillations and Normal Modes]] |
 | **Driven damped oscillator: resonance curve, phase and transient**<br>[open `cm06_resonance`](../Assets/interactive/cm06_resonance.html) | x'' + b x' + ω₀²x = cos(γt), ω₀ = 2. *Try:* Set b = 0 and γ = ω₀: the amplitude grows ∝ t sin ω₀t. Put γ = 2.1 for beats with period 62.8. Then add damping and see the peak height ~ 1/(bω₀). | [[CM06 Small Oscillations and Normal Modes]] |
+| **Free rotation of a rigid body: polhodes and the unstable intermediate axis**<br>[open `cm07_euler_top`](../Assets/interactive/cm07_euler_top.html) | Euler's equations for a torque-free body with principal moments I₁ < I₂ < I₃. *Try:* I = (1, 2, 3), start near x₂ with perturbation 0.02: the motion first stays near the axis, then flips to the opposite side and back (period ≈ 4K√… printed). Start near x₁ or x₃: only a small loop. Move I₂ toward I₁ or I₃: the body becomes a symmetric top and all polhodes are circles about its axis. | [[CM07 Rigid Bodies]] |
+| **The heavy symmetric top: effective potential, nutation and precession**<br>[open `cm07_heavy_top`](../Assets/interactive/cm07_heavy_top.html) | A symmetric top with a fixed point and its centre of mass at distance l above it. *Try:* Defaults (I′₁ = 1, μgl = 1, M₃ = 3.2, θ₀ = 60°): φ̇₀ = 2.5 gives precession with nutation, φ̇₀ = −0.9 loops, φ̇₀ = 0 cusps. Raise M₃ to 20 (fast top): precession rate ≈ μgl/M₃ = 0.05, nutation period 2πI′₁/M₃ = 0.31. Set θ₀ near 0 and M₃ below/above 2: the sleeping top falls/stands. | [[CM07 Rigid Bodies]] |
+| **Rotating frames: Coriolis and centrifugal forces, and the Foucault pendulum**<br>[open `cm08_rotating_frame`](../Assets/interactive/cm08_rotating_frame.html) | The same motion in two descriptions. *Try:* Free particle: change Ω and watch the straight inertial path become a spiral-like curve in the rotating view, with the Coriolis force always perpendicular to the velocity. 'At rest in the inertial frame' appears as a clockwise circle for Ω > 0. Foucault: at latitude 45° the plane turns once in 23.93 h / sin 45° = 33.85 h; at the poles once per sidereal day, at the equator not at all. | [[CM08 Non-Inertial Frames]] · [[CL12 Rotating Frames and the Coriolis Force]] · [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] |
 
 ### Electrodynamics (7)
 
@@ -84,7 +87,7 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Why equilibrium is overwhelmingly likely: multiplicity and entropy**<br>[open `sm_multiplicity`](../Assets/interactive/sm_multiplicity.html) | Two Einstein solids exchange q_tot quanta of energy. *Try:* With N_A = N_B and q_tot = 100: peak at q_A = 50. Grow N to 300: the relative width shrinks ~1/√N. Make N_A larger than N_B: the energy is shared in proportion to the sizes (equal temperatures). | [[TH09 Microstates Macrostates and Multiplicity]] · [[SM01 Probability Large Numbers and Information]] · [[SM06 Entropy Information and the Arrow of Time]] |
 | **Fermions, bosons and classical particles: occupation numbers**<br>[open `sm_quantum_stats`](../Assets/interactive/sm_quantum_stats.html) | Mean occupation of a single-particle level of energy ε: Fermi–Dirac n = 1/(e^{(ε−μ)/kT}+1), Bose–Einstein n = 1/(e^{(ε−μ)/kT}−1), Maxwell–Boltzmann n = e^{−(ε−μ)/kT}. *Try:* Move (ε−μ)/kT through 0: the Bose curve blows up, the Fermi curve passes through ½, the classical curve through 1. For large positive x the three agree. In the Planck panel raise T and watch the peak move as T (Wien) while the area grows as T⁴. | [[SM08 Quantum Ensembles and Identical Particles]] · [[SM05 The Grand Canonical Ensemble and Chemical Equilibrium]] |
 
-### Climate (7)
+### Climate (10)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
@@ -93,8 +96,11 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance**<br>[open `cl_coriolis`](../Assets/interactive/cl_coriolis.html) | On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2π/f, f = 2Ω sin φ (left panel, in the rotating frame). *Try:* Move the latitude from 45° N to the equator: f → 0 and the inertial radius diverges (no rotation felt). Go to the Southern Hemisphere: the circles reverse and the geostrophic wind flips. Slide friction up: the wind crosses the isobars. | [[CL12 Rotating Frames and the Coriolis Force]] · [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] |
 | **Ice–albedo feedback: multiple climates from one Sun**<br>[open `cl_ebm_albedo`](../Assets/interactive/cl_ebm_albedo.html) | Zero-dimensional energy balance: absorbed sunlight S(1 − α(T))/4 against emitted radiation εσT⁴, with the planetary albedo α rising when the surface freezes. *Try:* Set S/S₀ = 1: warm climate near 290 K and a cold, ice-covered state near 247 K, separated by an unstable state. Reduce S/S₀ until the warm state vanishes (jump to snowball); raise it back: the return jump happens at a much higher S/S₀. | [[CL04 Feedback and Multiple Steady States]] · [[CL03 Radiation and Planetary Energy Balance]] |
 | **A one-dimensional energy-balance model: heat transport and the ice line**<br>[open `cl_ebm_latitude`](../Assets/interactive/cl_ebm_latitude.html) | Each latitude band balances absorbed sunlight (with the annual-mean insolation Q(φ) = (S/4)[1 − 0.477 P₂(sin φ)]), outgoing infrared A + BT and the diffusive transport of heat D ∂²T/∂φ²: C ∂T/∂t = Q(φ)(1 − α(T)) − (A + BT) + D∇²T. *Try:* At S/S₀ = 1 two steady states coexist: warm (global mean 16.6 °C, equator 26 °C, pole −2 °C, ice-free) and frozen (−35.5 °C). From the warm state lower S/S₀: the ice cap appears near 0.92 and by 0.90 the planet is frozen (−41.6 °C). From frozen you must raise S/S₀ above about 1.24–1.26 to melt it: hysteresis. Diffusion D = 0, 0.3, 0.65, 1.5 gives an equator–pole contrast of 109, 62, 28.5, 15.3 K. | [[CL10 Global Energy Balance and Meridional Structure]] · [[CL04 Feedback and Multiple Steady States]] |
+| **The Ekman spiral and Ekman transport**<br>[open `cl_ekman_spiral`](../Assets/interactive/cl_ekman_spiral.html) | A steady wind stress τ drags the surface water; friction (constant eddy viscosity A_z) and the Coriolis force turn the current with depth: the Ekman spiral. *Try:* A_z = 0.1 m² s⁻¹ at f = 10⁻⁴ s⁻¹ (about 43° latitude): D_E = 44.7 m and the surface current is 3.1 cm/s for τ = 0.1 N m⁻². Change A_z: D_E and the surface speed change but the transport arrow does not. Move to the southern hemisphere: everything mirrors. Latitude 11°, τ = 0.063 N m⁻² gives the 8.8 Sv-type transport of the Chereskin–Roemmich section over ~4000 km. | [[CL19 Wind-Driven Ocean Circulation]] · [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] |
 | **The layer greenhouse model**<br>[open `cl_greenhouse_layers`](../Assets/interactive/cl_greenhouse_layers.html) | Absorbed sunlight S(1 − α)/4 is balanced by outgoing longwave radiation. *Try:* N = 1, ε = 1: surface 303 K (= 255·2^{1/4}). N = 0 gives 255 K, no greenhouse effect. Reduce ε to see the real, partly transparent atmosphere (for one layer σT_s⁴(1 − ε/2) = S(1−α)/4, so T_s = 288 K needs ε = 0.78). | [[CL08 Greenhouse Models]] · [[CL09 Radiative-Convective Equilibrium]] |
+| **Orbital forcing: how obliquity, eccentricity and precession change the insolation**<br>[open `cl_milankovitch`](../Assets/interactive/cl_milankovitch.html) | Exact daily-mean top-of-atmosphere insolation Q = S (a/r)² /π · [h₀ sin φ sin δ + cos φ cos δ sin h₀] as a function of the <b>solar longitude</b> λ (0° = March equinox, 90° = June solstice), for a chosen latitude and orbit. *Try:* Latitude 65°, e = 0.0167, ε = 23.44°, ϖ = 283°: the June solstice (λ = 90°) value is 478 W m⁻². Raise ε to 24.5° (495.8) or move perihelion to the June solstice (ϖ = 90°: 510.5). With e = 0.05 and ϖ = 90° the June value is 547 W m⁻², with ϖ = 270° it is 447.7: precession matters only when the eccentricity is large (Lecture 10). At the equator the tilt barely changes the annual mean (it falls 3.5 W m⁻² from ε = 22.1° to 24.5°); at the pole it rises by 16.7. | [[CL17 Orbital Forcing and Glacial Cycles]] · [[CL10 Global Energy Balance and Meridional Structure]] |
 | **Blackbody spectra: why sunlight is shortwave and Earth glows in the infrared**<br>[open `cl_planck`](../Assets/interactive/cl_planck.html) | Planck's law B_λ(T) on a log wavelength axis for any temperature, with the visible band shaded. *Try:* Drag T from 288 K to 5772 K and watch the peak slide through the visible; compare the areas (T⁴). | [[CL03 Radiation and Planetary Energy Balance]] · [[CL07 Optical Properties of the Atmosphere]] |
+| **Why the ocean damps and delays the seasons: a slab mixed layer**<br>[open `cl_slab_ocean`](../Assets/interactive/cl_slab_ocean.html) | Take a mixed layer of depth h (heat capacity C = ρ c_w h per m², with ρ c_w = 4.2×10⁶ J m⁻³ K⁻¹) forced by a seasonal net surface heating Q₀ cos(ωt) and relaxed to equilibrium by a feedback λ: C dT/dt = Q₀ cos ωt − λT. *Try:* Q₀ = 100 W m⁻², λ = 20 W m⁻² K⁻¹, h = 50 m: amplitude 2.15 K and lag 64.5° (about 2.2 months after the heating peak). For h = 1 m of water (land-like) the amplitude is 5.0 K and the lag only 2.4°: the temperature follows the forcing. For h = 100 m the amplitude is 1.2 K and the lag is 76°. | [[CL18 The Ocean as the Climate System's Heat Reservoir]] · [[CL03 Radiation and Planetary Energy Balance]] |
 
 ### Ecology and Evolution (6)
 
@@ -132,7 +138,7 @@ tags: [type/hub, tool/interactive, status/draft]
 |---|---|---|
 | **The Hodgkin–Huxley neuron: threshold, all-or-none spikes and repetitive firing**<br>[open `ns_hodgkin_huxley`](../Assets/interactive/ns_hodgkin_huxley.html) | The squid-axon membrane model: C dV/dt = I − g_Na m³h (V − E_Na) − g_K n⁴ (V − E_K) − g_L (V − E_L), with three gating variables m, h, n relaxing toward voltage-dependent targets. *Try:* Rest is −65 mV. A kick of 6 mV decays, 7 mV fires a spike peaking near +37 mV; 15 mV peaks at +40 mV, hardly higher. Constant current: no spikes below about 6 µA/cm², then a steady train (≈ 60 Hz at 7, 87 Hz at 20). Block Na⁺ (TTX) and no spike is possible; block K⁺ (TEA) and the spike will not repolarise properly. | [[Neuroscience - Course Map]] |
 
-### Probability (7)
+### Probability (8)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
@@ -142,6 +148,7 @@ tags: [type/hub, tool/interactive, status/draft]
 | **The central limit theorem in action**<br>[open `pr_clt`](../Assets/interactive/pr_clt.html) | Draw n independent values from a distribution (uniform, exponential, a very skewed Bernoulli, a two-point distribution or a heavy-tailed log-normal), average them, standardise, and repeat 4000 times. *Try:* Exponential (skewness 2): n = 1 is a one-sided exponential curve; n = 4 is already lump-shaped; n = 30 is close to normal, skewness 2/√n = 0.37. The log-normal needs a much larger n. Bernoulli(0.05) needs n around 100 before the normal shape appears (the usual rule np ≥ 10). | [[PR06 Moments Generating Functions and Limit Theorems]] |
 | **Covariance, correlation and what they miss**<br>[open `pr_correlation`](../Assets/interactive/pr_correlation.html) | A cloud of 300 points with a chosen shape. *Try:* Bivariate normal, ρ = 0.8: R² = 0.64. Switch to the parabola: correlation ≈ 0 despite y being a function of x. Add an outlier at (6, 6) to uncorrelated normal data and the correlation jumps. | [[PR07 Sums of Independent Variables Covariance and Correlation]] |
 | **Joint, marginal and conditional distributions**<br>[open `pr_joint`](../Assets/interactive/pr_joint.html) | A scatter of 4000 pairs (X, Y) from a chosen joint law, with the marginal histograms on the axes and the conditional distribution of Y given X in a narrow slice around x₀ (click or slide x₀). *Try:* Correlated normal ρ = 0.8: slice at x₀ = 1.5: E[Y|X] = ρx₀ = 1.2, conditional s.d. √(1−ρ²) = 0.6. Switch to the disk: E[Y|X] = 0 for every x₀ but the conditional range shrinks to ±√(1−x₀²): dependence without correlation. | [[PR04 Joint Distributions Expectation and Variance]] · [[PR07 Sums of Independent Variables Covariance and Correlation]] |
+| **Order statistics: the density of the k-th smallest of n**<br>[open `pr_order_statistics`](../Assets/interactive/pr_order_statistics.html) | Draw n independent values from a distribution and sort them: Y₍₁₎ ≤ … ≤ Y₍ₙ₎. *Try:* Uniform, n = 5: the k-th order statistic is Beta(k, n − k + 1) with mean k/6 (k = 2: 0.3333). Exponential with n = 2: the minimum has mean 1/2 (rate 2) and the second gap has mean 1: the gaps are 1/(n−k+1) = 1/2, 1. Increase n for the exponential: the first gap shrinks like 1/n while the last stays 1, so the maximum grows like the harmonic number H_n ≈ ln n. | [[PR08 Order Statistics and the Multinomial Distribution]] |
 | **Functions of a random variable: the change-of-variables formula**<br>[open `pr_transform`](../Assets/interactive/pr_transform.html) | If X has density f_X and Y = g(X), the density of Y is f_Y(y) = Σ f_X(xᵢ)/|g′(xᵢ)| summed over the roots of g(x) = y. *Try:* X ~ N(0,1) and Y = X²: the formula gives the chi-square(1) density f_Y(y) = e^{−y/2}/√(2πy) (two roots ±√y, divergent at 0). X ~ U(0,1) and Y = −ln X is exponential. X ~ N(0,1) and Y = e^X is log-normal. | [[PR05 Continuous Random Variables]] |
 
 ### Group Theory (4)
@@ -193,16 +200,16 @@ A chapter counts as covered if at least one tool is embedded in it. ✓ = at lea
 
 | Vault | Chapters with a tool | Chapters without a tool yet |
 |---|---|---|
-| Classical Mechanics | 6/6: CM01, CM02, CM03, CM04, CM05, CM06 | none |
+| Classical Mechanics | 8/8: CM01, CM02, CM03, CM04, CM05, CM06, CM07, CM08 | none |
 | Electrodynamics | 6/6: ED03, ED04, ED05, ED06, ED07, ED08 | none |
 | Quantum Mechanics | 10/10: QM01, QM02, QM03, QM04, QM05, QM06, QM07, QM08, QM09, QM10 | none |
 | Waves | (course map only) | no chapters written yet |
 | Thermodynamics and Statistical Mechanics | 15/17: SM01, SM02, SM03, SM04, SM05, SM06, SM07, SM08, TH02, TH03, TH04, TH05, TH06, TH08, TH09 | TH01, TH07 |
-| Climate | 12/15: CL03, CL04, CL05, CL06, CL07, CL08, CL09, CL10, CL11, CL12, CL13, CL14 | CL01, CL02, CL15 |
+| Climate | 12/16: CL03, CL04, CL05, CL06, CL07, CL08, CL09, CL10, CL11, CL12, CL13, CL14 | CL01, CL02, CL15, CL16 |
 | Ecology and Evolution | 6/7: EE02, EE03, EE04, EE05, EE06, EE07 | EE01 |
 | Landscapes and Geomorphology | 19/28: LS02, LS03, LS04, LS07, LS08, LS09, LS10, LS11, LS12, LS13, LS14, LS15, LS16, LS21, LS22, LS23, LS24, LS26, LS27 | LS01, LS05, LS06, LS17, LS18, LS19, LS20, LS25, LS99 |
 | Neuroscience | (course map only) | no chapters written yet |
-| Probability | 7/7: PR01, PR02, PR03, PR04, PR05, PR06, PR07 | none |
+| Probability | 8/8: PR01, PR02, PR03, PR04, PR05, PR06, PR07, PR08 | none |
 | Group Theory | 6/10: GT01, GT02, GT03, GT04, GT05, GT06 | GT07, GT08, GT09, GT10 |
 | Proofs, Analysis and Topology | 8/15: PA04, PA06, PA07, PA11, PA12, PA13, PA14, PA15 | PA01, PA02, PA03, PA05, PA08, PA09, PA10 |
 | Inorganic Chemistry | 6/10: CH01, CH02, CH04, CH05, CH09, CH10 | CH03, CH06, CH07, CH08 |

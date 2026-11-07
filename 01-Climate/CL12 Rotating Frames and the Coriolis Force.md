@@ -371,6 +371,15 @@ Everything above is in the lectures; the book surrounds it with two laboratory e
 >
 > [▶ Open the tool in your browser](../Assets/interactive/cl_coriolis.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_coriolis.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: Rotating frames: Coriolis and centrifugal forces, and the Foucault pendulum
+> The same motion in two descriptions.
+>
+> ![[cm08_rotating_frame.png|720]]
+>
+> **Try:** Free particle: change Ω and watch the straight inertial path become a spiral-like curve in the rotating view, with the Coriolis force always perpendicular to the velocity. 'At rest in the inertial frame' appears as a clockwise circle for Ω > 0. Foucault: at latitude 45° the plane turns once in 23.93 h / sin 45° = 33.85 h; at the poles once per sidereal day, at the equator not at all.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cm08_rotating_frame.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cm08_rotating_frame.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

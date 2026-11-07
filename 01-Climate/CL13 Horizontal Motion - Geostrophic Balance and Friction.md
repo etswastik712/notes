@@ -311,6 +311,24 @@ For a system with strongly curved flow, the Rossby number is not small and the p
 >
 > [▶ Open the tool in your browser](../Assets/interactive/cl_coriolis.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_coriolis.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: The Ekman spiral and Ekman transport
+> A steady wind stress τ drags the surface water; friction (constant eddy viscosity A_z) and the Coriolis force turn the current with depth: the Ekman spiral.
+>
+> ![[cl_ekman_spiral.png|720]]
+>
+> **Try:** A_z = 0.1 m² s⁻¹ at f = 10⁻⁴ s⁻¹ (about 43° latitude): D_E = 44.7 m and the surface current is 3.1 cm/s for τ = 0.1 N m⁻². Change A_z: D_E and the surface speed change but the transport arrow does not. Move to the southern hemisphere: everything mirrors. Latitude 11°, τ = 0.063 N m⁻² gives the 8.8 Sv-type transport of the Chereskin–Roemmich section over ~4000 km.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cl_ekman_spiral.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_ekman_spiral.html) · all tools and coverage: [[Interactive Tools]]
+
+> [!interactive]+ Interactive: Rotating frames: Coriolis and centrifugal forces, and the Foucault pendulum
+> The same motion in two descriptions.
+>
+> ![[cm08_rotating_frame.png|720]]
+>
+> **Try:** Free particle: change Ω and watch the straight inertial path become a spiral-like curve in the rotating view, with the Coriolis force always perpendicular to the velocity. 'At rest in the inertial frame' appears as a clockwise circle for Ω > 0. Foucault: at latitude 45° the plane turns once in 23.93 h / sin 45° = 33.85 h; at the poles once per sidereal day, at the equator not at all.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cm08_rotating_frame.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cm08_rotating_frame.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter
