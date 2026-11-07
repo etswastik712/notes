@@ -18,6 +18,8 @@ $$T_p S = \mathcal{D}_p \quad \forall p \in S$$
 Source: DG29, pp. 1–4
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/distribution]] — An integral manifold is defined specifically with respect to a distribution whose tangent spaces it must match at each point
+- used-in:: [[zettel/foliation]] — The leaves forming a foliation are immersed submanifolds that serve as integral manifolds for the underlying distribution
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|DG29]] pp. 1–4
 <!-- /kurooto:seen -->
