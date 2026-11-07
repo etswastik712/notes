@@ -10,6 +10,36 @@
   "id": "ch_cft"
  },
  {
+  "title": "Molecular orbital diagrams for homonuclear diatomics",
+  "desc": "Fill the valence molecular orbitals of Li\u2082 \u2026 Ne\u2082 following the aufbau principle and Hund's rule. For Li\u2082\u2013N\u2082 the 2s\u20132p mixing pushes \u03c3\u2082p above \u03c0\u2082p; for O\u2082 and F\u2082 the order flips. The bond order (bonding \u2212 antibonding)/2 and the number of unpaired electrons (paramagnetism) are read off: B\u2082 and O\u2082 are paramagnetic, C\u2082 and N\u2082 diamagnetic, Be\u2082 and Ne\u2082 have bond order 0.",
+  "vault": "CH",
+  "chapters": [
+   "CH02 Molecular Orbital Theory Diatomics"
+  ],
+  "tryit": "N\u2082: bond order 3, diamagnetic; O\u2082: bond order 2 with two unpaired electrons in \u03c0* (paramagnetic, which the Lewis picture cannot explain); B\u2082: bond order 1 with two unpaired electrons: this needs the \u03c3\u2082p-above-\u03c0\u2082p ordering. Remove or add one electron to see the ions O\u2082\u207a, O\u2082\u207b, N\u2082\u207a.",
+  "id": "ch_mo_diatomic"
+ },
+ {
+  "title": "The Nernst equation: how a cell's voltage depends on concentrations",
+  "desc": "For the Daniell cell Zn | Zn\u00b2\u207a \u2016 Cu\u00b2\u207a | Cu the cell potential E = E\u00b0 \u2212 (RT/nF) ln Q with Q = [Zn\u00b2\u207a]/[Cu\u00b2\u207a], E\u00b0 = 1.10 V and n = 2. Slide the concentrations and the temperature: E falls by 29.6 mV (at 25 \u00b0C) per tenfold increase in Q, reaches 0 when Q = K (equilibrium; the 'dead battery') and the free energy \u0394G = \u2212nFE tracks it. Right: a discharge curve as the cell reacts.",
+  "vault": "CH",
+  "chapters": [
+   "CH09 Redox"
+  ],
+  "tryit": "Standard conditions (both 1 M): E = 1.10 V. Make [Zn\u00b2\u207a] 10\u207b\u00b3 M with 1 M Cu\u00b2\u207a: E = 1.10 + 3\u00d70.02958 = 1.189 V. Press 'discharge': Q grows toward K = 10^37.2 and E drops to 0. For n = 1 the slope is twice as large (59.2 mV per decade).",
+  "id": "ch_nernst"
+ },
+ {
+  "title": "VSEPR in 3D: electron domains, lone pairs and molecular shape",
+  "desc": "Electron domains (bonds and lone pairs) around a central atom arrange themselves as far apart as possible: 2 \u2192 linear, 3 \u2192 trigonal planar, 4 \u2192 tetrahedron, 5 \u2192 trigonal bipyramid, 6 \u2192 octahedron. Lone pairs take up room but are not part of the 'molecular shape': choose the number of domains and lone pairs and drag to rotate the 3D model. Lone pairs sit in the equatorial sites of a trigonal bipyramid and mutually trans in an octahedron. Idealised bond angles are computed from the geometry.",
+  "vault": "CH",
+  "chapters": [
+   "CH01 VSEPR and Valence Bond Theory"
+  ],
+  "tryit": "Four domains, 0 \u2192 2 lone pairs: CH\u2084 (tetrahedral) \u2192 NH\u2083 (pyramidal) \u2192 H\u2082O (bent). Five domains, 0 \u2192 3 lone pairs: PCl\u2085 \u2192 SF\u2084 (seesaw) \u2192 ClF\u2083 (T-shaped) \u2192 XeF\u2082 (linear). Six domains: SF\u2086 \u2192 BrF\u2085 (square pyramidal) \u2192 XeF\u2084 (square planar). Drag the picture to rotate.",
+  "id": "ch_vsepr"
+ },
+ {
   "title": "Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance",
   "desc": "On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2\u03c0/f, f = 2\u03a9 sin \u03c6 (left panel, in the rotating frame). Right: a steady wind in balance between the pressure-gradient force and the Coriolis force blows along the isobars (geostrophic), with low pressure on its left in the Northern Hemisphere; friction turns it across the isobars toward low pressure.",
   "vault": "CL",
@@ -153,6 +183,41 @@
   ],
   "tryit": "Set b = 0 and \u03b3 = \u03c9\u2080: the amplitude grows \u221d t sin \u03c9\u2080t. Put \u03b3 = 2.1 for beats with period 62.8. Then add damping and see the peak height ~ 1/(b\u03c9\u2080).",
   "id": "cm06_resonance"
+ },
+ {
+  "title": "The Lie bracket as the failure of flows to commute",
+  "desc": "Flow along X for time t, then along Y for t, then back along X for \u2212t and back along Y for \u2212t. If the vector fields commute the path closes up; otherwise it ends at p + t\u00b2[X, Y](p) + O(t\u00b3), where [X, Y] = DY\u00b7X \u2212 DX\u00b7Y. Pick a pair of vector fields on the plane, a base point p and a time t: the gap shrinks like t\u00b2 and its direction is the bracket.",
+  "vault": "DM",
+  "chapters": [
+   "DM10 Vector Fields and Lie Brackets",
+   "DM13 Lie Derivatives and Commuting Vector Fields",
+   "DM12 Integral Curves, Flows and Flowouts"
+  ],
+  "tryit": "X = \u2202\u2093, Y = x\u2202\u1d67: [X, Y] = \u2202\u1d67, the rectangle fails to close by exactly t\u00b2 vertically. X = \u2202\u2093, Y = \u2202\u1d67 commute: the path closes (that is the criterion of DM13). Halve t and the gap quarters.",
+  "id": "dm_lie_bracket"
+ },
+ {
+  "title": "The exponential map: one-parameter subgroups e^{tA} of GL(2,R)",
+  "desc": "For a 2\u00d72 matrix A, the curve t \u21a6 e^{tA} is a one-parameter subgroup (e^{(s+t)A} = e^{sA}e^{tA}) and x(t) = e^{tA}x\u2080 solves x\u2032 = Ax. Set the entries of A: the phase portrait shows the flow lines; the unit square is carried to a parallelogram whose area grows as e^{t\u00b7tr A} = det e^{tA}. Presets: rotation (so(2), a circle subgroup), diagonal (hyperbolic), nilpotent (shear), and spirals.",
+  "vault": "DM",
+  "chapters": [
+   "DM14 One-Parameter Subgroups and the Exponential Map",
+   "DM11 The Lie Algebra of a Lie Group",
+   "DM08 Lie Groups"
+  ],
+  "tryit": "Rotation generator [[0,\u22121],[1,0]]: e^{tA} is rotation by t (a closed circle subgroup \u2245 S\u00b9). Trace-zero A, e.g. [[1,0],[0,\u22121]]: the area stays 1 (the subgroup lies in SL(2,R)). Nilpotent [[0,1],[0,0]]: e^{tA} = [[1,t],[0,1]]. Move t and check area = e^{t\u00b7tr A}.",
+  "id": "dm_matrix_exp"
+ },
+ {
+  "title": "Charts on the sphere: stereographic projection and the transition map",
+  "desc": "The 2-sphere cannot be covered by a single chart, but two stereographic charts do it: \u03c6_N projects from the north pole onto the equatorial plane, \u03c6_S from the south pole. The point p = (x, y, z) goes to u = (x, y)/(1 \u2212 z) in the north chart and to v = (x, y)/(1 + z) in the south chart. On the overlap the transition map is v = u/|u|\u00b2: an inversion in the unit circle, smooth (even real-analytic) but not defined at the origin. Drag the sphere to rotate; move the point with the sliders.",
+  "vault": "DM",
+  "chapters": [
+   "DM01 Smooth Manifolds",
+   "DM02 Smooth Maps and Partitions of Unity"
+  ],
+  "tryit": "Move p toward the north pole: its north-chart coordinate u runs off to infinity while the south-chart coordinate v \u2192 0. At the equator (z = 0) the two charts agree (|u| = |v| = 1). Check |u||v| = 1 and that u and v point in the same direction.",
+  "id": "dm_stereographic"
  },
  {
   "title": "Displacement current: charging a capacitor",
