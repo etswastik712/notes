@@ -16,6 +16,8 @@ A stepped-profile, steep-sided, flat-bottomed valley formed by denudational slop
 Source: Deccan Next_Field Guide, pp. 34–43
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/rubbly-tabular-flow]] — The stepped profile of a box-shaped valley develops through denudational slope retreat across layered basalt sequences such as rubbly tabular sheet flows
+- used-in:: [[zettel/fluvial-rejuvenation]] — Valley morphology and incisional relief across plateau basalts are directly shaped by the base-level fall and rejuvenation of river systems
 ## Seen in
 - [[landscape-evolution/books/deccan-next-field-guide|Deccan Next_Field Guide]] pp. 34–43
 <!-- /kurooto:seen -->
