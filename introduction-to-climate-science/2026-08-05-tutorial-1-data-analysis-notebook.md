@@ -35,3 +35,8 @@ Post (2026-08-05): "Uploading 1. the problem set, 2. data-analysis exercise (a p
 <!-- kurooto:materialb8712e40 -->
 Textbook: [[introduction-to-climate-science/books/t2m-hourly|t2m_hourly]] (its concepts are listed there).
 <!-- /kurooto:materialb8712e40 -->
+
+<!-- kurooto:materialf1cd16da -->
+## Concepts in Intro_to_climate_T1
+[[zettel/multi-scale-temperature-variability]], [[zettel/secular-temperature-trend-estimation]]
+<!-- /kurooto:materialf1cd16da -->
