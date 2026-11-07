@@ -15,6 +15,8 @@ A climate modeling approach where stochastic noise and stochastic calculus are a
 Source: Why study probability, pp. 1–3
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/stommel-diagram]] — Stochastic parametrization adds stochastic noise to physical fluid dynamical equations across unresolved micro-scale to planetary processes classified on a Stommel diagram
+- part-of:: [[zettel/earth-system-science]] — Stochastic parametrization is a modeling technique applied directly within climate and Earth system models to eliminate systematic deterministic biases
 ## Seen in
 - [[introduction-to-probability/2026-08-05-why-study-probability|Why study probability]] pp. 1–3
 <!-- /kurooto:seen -->
