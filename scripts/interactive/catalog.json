@@ -295,6 +295,17 @@
   "id": "cm08_rotating_frame"
  },
  {
+  "title": "Hamiltonian flow in phase space: portraits, conservation and integrators",
+  "desc": "Hamilton's equations q\u0307 = \u2202H/\u2202p, \u1e57 = \u2212\u2202H/\u2202q turn the dynamics into a flow on the (q, p) plane along the level curves of H. Choose a system (oscillator, pendulum, double well), click to launch a trajectory and a small blob of initial conditions, and integrate with a numerical method: the exact flow conserves H and the blob's area (Liouville); the symplectic leapfrog conserves the area exactly and the energy up to a bounded error; RK4 loses energy slowly; explicit Euler gains it and inflates the blob.",
+  "vault": "CM",
+  "chapters": [
+   "CM09 Hamilton's Equations and Poisson Brackets",
+   "SM02 Phase Space Liouville and the Microcanonical Ensemble"
+  ],
+  "tryit": "Oscillator, h = 0.3: explicit Euler spirals outward and the blob's area grows by (1+h\u00b2) per step; leapfrog keeps a closed orbit and area ratio 1.0000; RK4 is accurate but slowly shrinks. Pendulum: start just inside and just outside the separatrix H = 1 to see libration vs rotation.",
+  "id": "cm09_hamiltonian_flow"
+ },
+ {
   "title": "Holonomy of a plane field: why some plane fields have no integral surface",
   "desc": "A plane field D = ker(dz \u2212 A) on R\u00b3 with A = A\u2081dx + A\u2082dy. Walk once round a closed loop in the (x, y)-plane and lift it to a curve tangent to D: z changes by \u222eA = \u222c dA = (signed area) \u00d7 (curl of A). If the plane field has integral surfaces (z = const + f(x, y)) the lifted loop must close up for <b>every</b> loop; otherwise the lift ends at a different height. Pick a plane field, a loop and its size: the height gap \u0394z is the obstruction to Frobenius integrability (the bracket [X, Y] leaves D).",
   "vault": "DM",

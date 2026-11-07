@@ -31,5 +31,5 @@ for name,st,col in (("explicit Euler",step_euler,RED),("RK4",step_rk4,ORANGE),("
     b=b0.copy()
     for i in range(n): b=np.array([st(x,y,h) for x,y in b])
     C.plot(b[:,0],b[:,1],color=col,lw=1.6,label="%s, area %.3f"%(name,area(b)))
-C.set_aspect("equal");C.legend(fontsize=8,loc="lower left");C.set_xlabel("$q$");C.set_ylabel("$p$");C.set_title("C  A blob after %d steps ($h=0.3$): area is conserved\nonly by the symplectic map (Liouville)"%n,fontsize=10)
+C.set_aspect("equal");C.legend(fontsize=8,loc="lower left");C.set_xlabel("$q$");C.set_ylabel("$p$");C.set_title("C  A blob after %d steps ($h=0.3$): explicit Euler inflates it;\nRK4 and leapfrog keep the area (leapfrog exactly)"%n,fontsize=10)
 fig.tight_layout();save(fig,"fig_cm09_hamilton")
