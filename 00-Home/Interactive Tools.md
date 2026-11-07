@@ -7,7 +7,7 @@ tags: [type/hub, tool/interactive, status/draft]
 ---
 # Interactive Tools
 
-> [!abstract] 105 self-contained interactive visualisations across 15 subject groups
+> [!abstract] 106 self-contained interactive visualisations across 15 subject groups
 > Each tool is one HTML file in `Assets/interactive/` (no internet, no install): sliders, live plots, animations and step-through explorers built to give a *picture* of the idea. Open in a browser; every chapter that uses a tool shows its preview image and a link in an *Interactive* callout.
 
 > [!tip] How to open them
@@ -40,7 +40,7 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Canonical transformations: which maps of phase space keep Hamilton's equations?**<br>[open `cm10_canonical_map`](../Assets/interactive/cm10_canonical_map.html) | A change of variables (q, p) → (Q, P) is canonical when the Poisson bracket [P, Q] = 1 (Landau–Lifshitz convention (45.10)), equivalently when its Jacobian determinant is 1 and it preserves areas of every region. *Try:* Q = q², P = p is not canonical (Jacobian 2q, [P,Q] = 2q): the square's area changes. Q = q², P = p/(2q) is canonical: the square is distorted but its area stays 1. Oscillator action–angle map: circles become horizontal lines P = const (so H′ = ωP depends only on P). | [[CM10 Liouville's Theorem and Canonical Transformations]] |
 | **Adiabatic invariants and the action variable: the energy changes, the phase-space area does not**<br>[open `cm11_adiabatic_action`](../Assets/interactive/cm11_adiabatic_action.html) | An oscillator whose frequency ω(t) is slowly ramped from ω₁ to ω₂. *Try:* ω: 1 → 2. Ramp time τ = 300: E ends at 2.0000 E₀ and I/I₀ stays within ±0.2 % of 1. τ = 2 (a fast ramp): I/I₀ ranges over about 0.87–1.16 depending on the phase at which the ramp starts. The orbit keeps the same area while it changes shape (it becomes a thinner ellipse). | [[CM11 Hamilton-Jacobi Theory and Action-Angle Variables]] |
 
-### Electrodynamics (9)
+### Electrodynamics (10)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
@@ -53,6 +53,7 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Gauge freedom: change A, keep the fields**<br>[open `ed08_gauge`](../Assets/interactive/ed08_gauge.html) | A gauge transformation A → A + ∇λ, V → V − ∂λ/∂t changes the potentials but not E or B. *Try:* Move c₁: the arrows rotate toward the symmetric gauge (c₁ = −B/2 gives A = (B/2)(−y, x)) yet the colour map of B does not change. On the right drag the mixing slider from the static V picture to the time-dependent A picture: E = −∇V − ∂A/∂t is identical. | [[ED08 Potentials and Gauge Transformations]] |
 | **Fields of a moving point charge: the retarded position and the Liénard–Wiechert field**<br>[open `ed09_retarded_charge`](../Assets/interactive/ed09_retarded_charge.html) | Choose a trajectory (uniform motion, circular motion or a linear oscillation) and click to place an observer. *Try:* Uniform motion at v = 0.9c: the arrows all point from the present position (blue), although the news came from the retarded one (orange); the field is flattened into a pancake perpendicular to v. Circular motion: far from the charge the radiation field takes over (ratio accel/velocity ∝ r, crossing near r* ≈ 7.8 orbit radii for v = 0.4c). | [[ED09 Retarded Potentials and Liénard-Wiechert Fields]] |
 | **The oscillating electric dipole: from the static near field to the radiation zone**<br>[open `ed10_dipole_field`](../Assets/interactive/ed10_dipole_field.html) | The exact field of a point electric dipole p = p₀ẑ oscillating at frequency ω (Jackson 9.18, valid at every distance): E = (1/4πε₀){k²(n×p)×n e^{ikr}/r + [3n(n·p) − p](1/r³ − ik/r²)e^{ikr}}. *Try:* Set the window to ±0.3λ: the arrows have the static-dipole pattern and flip sign together, with no outward travel. Set it to ±4λ: bands of transverse arrows move outward at one wavelength per period; along the axis (θ = 0) the field is purely longitudinal (E_θ ∝ sinθ = 0, so nothing radiates), in the equatorial plane it is purely transverse and strongest. Click a point to read E_r, E_θ and the zone (kr < 1 is the near zone). | [[ED10 Dipole Radiation]] |
+| **The field of a moving charge: Lorentz contraction of the Coulomb field**<br>[open `ed11_boosted_fields`](../Assets/interactive/ed11_boosted_fields.html) | A point charge moves along +x at speed β. *Try:* Drag β from 0 to 0.99 and watch the field lines bunch toward the equatorial plane. In the time view, the peak of E₂ grows as γ while the pulse narrows as 1/γ so that the area stays 2q/(bv); at β = 0.99 the transverse E and B are nearly equal and perpendicular, like a short light pulse. | [[ED11 Relativistic Electrodynamics]] |
 
 ### Quantum Mechanics (6)
 
@@ -206,7 +207,7 @@ A chapter counts as covered if at least one tool is embedded in it. ✓ = at lea
 | Vault | Chapters with a tool | Chapters without a tool yet |
 |---|---|---|
 | Classical Mechanics | 11/11: CM01, CM02, CM03, CM04, CM05, CM06, CM07, CM08, CM09, CM10, CM11 | none |
-| Electrodynamics | 8/8: ED03, ED04, ED05, ED06, ED07, ED08, ED09, ED10 | none |
+| Electrodynamics | 9/9: ED03, ED04, ED05, ED06, ED07, ED08, ED09, ED10, ED11 | none |
 | Quantum Mechanics | 10/10: QM01, QM02, QM03, QM04, QM05, QM06, QM07, QM08, QM09, QM10 | none |
 | Waves | (course map only) | no chapters written yet |
 | Thermodynamics and Statistical Mechanics | 15/17: SM01, SM02, SM03, SM04, SM05, SM06, SM07, SM08, TH02, TH03, TH04, TH05, TH06, TH08, TH09 | TH01, TH07 |

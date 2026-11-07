@@ -17,7 +17,7 @@ Planned as **eleven core chapters and two extras** on classical electrodynamics,
 > [!warning] What is and is not in the sources
 > - **"In course overview" (🟢)** means *listed in the PH3114 content page* (`physics/electromagnetism/PH3114.pdf`, one page): review of electro- and magnetostatics, Maxwell's equations, conservation laws, EM waves in vacuum and matter, guided waves, scalar and vector potentials, retarded potentials, gauge transformations, dipole radiation, relativistic electrodynamics. There are **no lecture notes, slides or problem sets** for this course in the folder; ordering and chapter splits are mine.
 > - **Prerequisite:** Griffiths Ch. 1-6, so ED01-ED02 are deliberately short reviews.
-> - **Units.** Griffiths (4th ed.) is SI. Jackson 3rd ed. states in §6.1 that its Maxwell equations are SI (the Chapter 6, 8 and 9 running headers say "-SI", the last two confirmed while writing ED10); **Chapters 13 and 14 are Gaussian** (running headers "-G", confirmed while writing ED09; ED09 converts to SI); whether Chapters 11-12 are Gaussian is to be confirmed before ED11 (Jackson's Appendix Tables 2-4 give the dictionary). All chapters here use SI unless a Gaussian formula is quoted and flagged.
+> - **Units.** Griffiths (4th ed.) is SI. Jackson 3rd ed. states in §6.1 that its Maxwell equations are SI (the Chapter 6, 8 and 9 running headers say "-SI", the last two confirmed while writing ED10); **Chapters 13 and 14 are Gaussian** (running headers "-G", confirmed while writing ED09; ED09 converts to SI); **Chapters 11 and 12 are Gaussian as well** (running headers "-G", confirmed while writing ED11) (Jackson's Appendix Tables 2-4 give the dictionary; the SI/Gaussian status of his other chapters is checked when each is used). All chapters here use SI unless a Gaussian formula is quoted and flagged.
 > - **Extra · book (🟡)**: Zangwill, Wald, Hehl-Obukhov, Landau Vol. 2, Magyar's companion to Jackson; **extra · beyond (🔵)**: mine.
 > - **Assessment (overview):** end-sem 40 %, mid-sem 30 %, others 30 %.
 
@@ -56,7 +56,7 @@ Griffiths and Jackson section columns for unwritten chapters are *tbc*: they are
 | 08 | [[ED08 Potentials and Gauge Transformations]] | potentials, gauge | §10.1 | §6.2-6.3 | draft |
 | 09 | [[ED09 Retarded Potentials and Liénard-Wiechert Fields]] | retarded potentials | §10.2-10.3 | §6.4-6.5, §14.1 | draft |
 | 10 | [[ED10 Dipole Radiation]] | dipole radiation | §11.1, §11.2.1 (opening) | §9.1-9.3, §14.2 | draft |
-| 11 | ED11 Relativistic Electrodynamics | relativistic ED | tbc | tbc | todo |
+| 11 | [[ED11 Relativistic Electrodynamics]] | relativistic ED | §12.3 (§12.1.3-12.1.4, §12.2 lines used) | §11.9-11.10 | draft |
 | X1 | EDX1 Electromagnetism in Differential Forms (🟡) | extra | tbc | tbc | todo |
 | X2 | EDX2 Macroscopic Electromagnetism and Kramers-Kronig (🟡) | extra | tbc | tbc | todo |
 

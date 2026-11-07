@@ -11,7 +11,7 @@ function draw(){const b=sb.value,g=1/Math.sqrt(1-b*b),N=Math.round(n.value);P1.c
   const r=ps.map(a=>(1-b*b)/Math.pow(1-b*b*Math.sin(a)**2,1.5));P2.line(ps.map((a,i)=>r[i]*Math.cos(a)),ps.map((a,i)=>r[i]*Math.sin(a)),C.blue,2.5);P2.arrow(0,0,R*0.9,0,C.red,1.5,7);P2.text('v',R*0.93,0.05*R,C.red);
   s=`β = ${M.fmt(b,3)}, γ = ${M.fmt(g,4)}\nalong the motion (ψ = 0, π): E/E_C = 1/γ² = ${M.fmt(1/(g*g),4)}\nacross the motion (ψ = π/2): E/E_C = γ = ${M.fmt(g,4)}\nmagnetic field B = (v × E)/c² has maximum β·γ = ${M.fmt(b*g,4)} in Coulomb units (cB/E_C)`}
  else{const T=3,ts=M.linspace(-T,T,1201);const E2=ts.map(t=>g/Math.pow(1+g*g*b*b*t*t,1.5)),E1=ts.map(t=>-g*b*t/Math.pow(1+g*g*b*b*t*t,1.5)),B3=E2.map(e=>b*e);const top=Math.max(1.1,g*1.1);P2.set({xmin:-T,xmax:T,ymin:-0.5*top,ymax:top,title:'fixed observer at distance b: fields vs c t/b (units q/b²)',xlabel:'c t / b',ylabel:'field'});P2.clear();
-  P2.line(ts,E2,C.blue,2.5);P2.line(ts,E1,C.orange,2);P2.line(ts,B3,C.red,2,[5,4]);P2.hline(0,'#999');P2.legend([['E₂ (transverse)',C.blue],['E₁ (longitudinal)',C.orange],['B₃ = βE₂',C.red]]);
+  P2.line(ts,E2,C.blue,2.5);P2.line(ts,E1,C.orange,2);P2.line(ts,B3,C.red,2,[5,4]);P2.hline(0,'#999');P2.legend([['E₂ (transverse)',C.blue],['E₁ (longitudinal)',C.orange],['B₃ = βE₂',C.red,[5,4]]],70,40);
   const dur=b>0.01?1/(g*b):Infinity;s=`β = ${M.fmt(b,3)}, γ = ${M.fmt(g,4)}\npeak E₂ = γ q/b² = ${M.fmt(g,4)} q/b²;  duration ≈ b/(γ v) = ${isFinite(dur)?M.fmt(dur,4):'∞'} (b/c units)\nB₃/E₂ = β = ${M.fmt(b,3)}  (→ 1: equal transverse E and B, like a light pulse)\nb v ∫E₂ dt / q = 2 for every β (the area does not change)`}
  out.textContent=s}
 draw();
