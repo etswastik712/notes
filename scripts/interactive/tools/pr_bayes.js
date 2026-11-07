@@ -1,0 +1,20 @@
+//META {"title":"Bayes' rule as a picture: why a positive test is often a false alarm","desc":"10 000 people, drawn as dots in four blocks: ill and positive (true positives), ill and negative, healthy and positive (false positives), healthy and negative. The posterior P(ill | +) is the red block's share of all positive dots. Move the prevalence, the sensitivity and the false-positive rate: when the disease is rare the false-positive block swamps the true positives even for an accurate test. A second panel plots the posterior against the prevalence, and a button repeats the test.","vault":"PR","chapters":["PR02 Conditional Probability Bayes Rule and Independence"],"tryit":"Defaults 0.5 %, 95 %, 1 %: 47.5 true positives vs 99.5 false positives, posterior 0.323. Set prevalence 1 %, sensitivity 95 %, false-positive 5 %: posterior 0.161. Press 'second positive test' and the posterior becomes the new prior."}
+ui.gridOf(2);const P1=ui.canvas(360,{xmin:0,xmax:100,ymin:0,ymax:100,axes:false,title:'10 000 people'});const P2=ui.canvas(360,{xmin:0,xmax:50,ymin:0,ymax:1,xlabel:'prevalence (%)',ylabel:'P(ill | positive test)',title:'posterior against prevalence'});
+const sp=ui.slider('prevalence (%)',0.1,50,0.1,0.5,()=>{prior=null;draw()}),ss=ui.slider('sensitivity P(+ | ill) (%)',50,100,0.5,95,()=>{prior=null;draw()}),sf=ui.slider('false-positive rate P(+ | healthy) (%)',0.1,30,0.1,1,()=>{prior=null;draw()});
+ui.button('second positive test (posterior → prior)',()=>{const p=post();prior=p;draw()});ui.button('reset prior',()=>{prior=null;draw()});
+const out=ui.readout();let prior=null;
+function post(){const pr=prior!==null?prior:sp.value/100,se=ss.value/100,fp=sf.value/100;return se*pr/(se*pr+fp*(1-pr))}
+function draw(){const pr=prior!==null?prior:sp.value/100,se=ss.value/100,fp=sf.value/100,N=10000;const ill=Math.round(N*pr),tp=Math.round(ill*se),fn=ill-tp,fpn=Math.round((N-ill)*fp),tn=N-ill-fpn;
+ P1.clear();const g=P1.g,W=P1.w,H=P1.h,m=10;
+ // top: everyone (100 x 100 dots) in a strip
+ const cw=(W-2*m)/100,topH=H*0.30,ch=topH/100;const blocks=[[tp,C.red],[fn,C.orange],[fpn,C.violet],[tn,C.grid]];let idx=0;for(const [cnt,col] of blocks){g.fillStyle=col;for(let k=0;k<cnt;k++,idx++){const r=Math.floor(idx/100),c=idx%100;g.fillRect(m+c*cw,22+r*ch,Math.max(1,cw-0.4),Math.max(0.6,ch))}}
+ P1.ptext('everyone: 10 000 dots (red + violet row at the top = the positives)',m,12,C.muted,'left','11px system-ui');
+ // bottom: zoom on the positive tests only
+ const pos=tp+fpn,cols=Math.max(10,Math.ceil(Math.sqrt(pos*1.6))),rows=Math.max(1,Math.ceil(pos/cols)),gy=22+topH+34,gh=H-gy-70,s_=Math.min((W-2*m)/cols,gh/rows);
+ P1.ptext('zoom: the '+pos+' people who tested positive ('+tp+' ill, '+fpn+' healthy)',m,22+topH+16,C.ink,'left','12px system-ui');
+ for(let i=0;i<pos;i++){const r=Math.floor(i/cols),c=i%cols;g.fillStyle=i<tp?C.red:C.violet;g.beginPath();g.arc(m+c*s_+s_/2,gy+r*s_+s_/2,Math.max(1,s_*0.38),0,7);g.fill()}
+ P1.legend([['ill, positive (TP) '+tp,C.red],['ill, negative (FN) '+fn,C.orange],['healthy, positive (FP) '+fpn,C.violet],['healthy, negative (TN) '+tn,C.muted]],4,H-52);
+ P2.clear();const ps=M.linspace(0.05,50,300);P2.line(ps,ps.map(x=>{const q=x/100;return se*q/(se*q+fp*(1-q))}),C.blue,3);P2.dot(pr*100,post(),C.orange,7);P2.vline(pr*100,C.muted);
+ const posterior=tp/(tp+fpn),LR=se/fp,priorOdds=pr/(1-pr);
+ out.textContent=`P(ill | +) = TP/(TP+FP) = ${tp}/${tp+fpn} = ${M.fmt(posterior,4)}   (exact Bayes: ${M.fmt(se*pr/(se*pr+fp*(1-pr)),5)})\nodds form: posterior odds = LR × prior odds = ${M.fmt(LR,4)} × ${M.fmt(priorOdds,4)} = ${M.fmt(LR*priorOdds,4)}   (LR = sensitivity/false-positive rate)   ${prior!==null?'(prior has been updated by one or more positive tests)':''}\nP(ill | negative) = FN/(FN+TN) = ${M.fmt(fn/(fn+tn),5)}`}
+draw();ui.note('PR02: 0.5 % prevalence, 95 % sensitivity, 1 % false positives → 0.95·0.005/(0.95·0.005 + 0.01·0.995) = 0.323 (47.5 TP vs 99.5 FP per 10 000). 1 % prevalence with a 95 %/95 % test gives 0.161. Counts are rounded to whole people.');

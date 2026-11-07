@@ -265,6 +265,28 @@
   "id": "ee_ricker_chaos"
  },
  {
+  "title": "The dihedral group D_n: symmetries, the Cayley table and cosets",
+  "desc": "Act on a labelled regular n-gon with the rotation r (by 2\u03c0/n) and the reflection s. Every state is r^a s^b, the group has 2n elements, and rs \u2260 sr (the group is non-abelian for n \u2265 3, with srs = r\u207b\u00b9). The Cayley table is coloured by element, so every row and column is a permutation of the colours (cancellation). Pick any element g: the cyclic subgroup \u27e8g\u27e9 is found and the left cosets aH are shown (they partition the group into equal blocks, Lagrange).",
+  "vault": "GT",
+  "chapters": [
+   "GT01 Groups Subgroups and Cosets",
+   "GT06 Permutation Groups"
+  ],
+  "tryit": "n = 3 gives D\u2083 \u2245 S\u2083: press r, then s, and compare with s then r (a different state). Choose g = s: the cosets are {1,s}, {r, rs}, {r\u00b2, r\u00b2s} (3 cosets of size 2). Choose g = r in D\u2084: \u27e8r\u27e9 has order 4, index 2: a normal subgroup.",
+  "id": "gt_dihedral"
+ },
+ {
+  "title": "Permutations: cycles, order and sign",
+  "desc": "A permutation of {1..n} drawn as arrows i \u2192 \u03c3(i) on a circle. Its disjoint cycle decomposition, cycle type (the conjugacy class in S_n), order (lcm of the cycle lengths) and sign (\u22121)^{n \u2212 #cycles} are read off live. Multiply by a transposition (swap two entries) and the sign flips; the number of even permutations is exactly half of n!. Random permutations show the typical cycle structure.",
+  "vault": "GT",
+  "chapters": [
+   "GT06 Permutation Groups",
+   "GT04 Commutators Simple Groups and Composition Series"
+  ],
+  "tryit": "Build a 3-cycle (1 2 3): order 3, sign +. Multiply by a transposition: sign flips. The preset (1 2)(3 4 5) has order lcm(2,3) = 6 and sign \u22121 (odd). Swap two values and watch the cycle structure merge or split and the sign flip. Press 'random' repeatedly to see typical cycle types.",
+  "id": "gt_permutation"
+ },
+ {
   "title": "Elastic plates: flexure under a load, and the plate as a low-pass filter",
   "desc": "A lithospheric plate of elastic thickness T_e and flexural rigidity D = E T_e\u00b3/12(1\u2212\u03bd\u00b2) floating on the mantle bends under a line load: w(x) = w\u2080 e^(\u2212x/\u03b1)[cos(x/\u03b1) + sin(x/\u03b1)] with flexural parameter \u03b1 = (4D/\u0394\u03c1g)^(1/4), a depression with a small forebulge. Right: how much of a surface load of wavelength \u03bb is compensated by the plate: 1/(1+(k/k_c)\u2074), half at \u03bb = 2\u03c0(D/\u0394\u03c1g)^(1/4). Thin plates follow topography locally (Airy), thick plates carry short loads.",
   "vault": "LS",
@@ -348,6 +370,79 @@
   ],
   "tryit": "Rest is \u221265 mV. A kick of 6 mV decays, 7 mV fires a spike peaking near +37 mV; 15 mV peaks at +40 mV, hardly higher. Constant current: no spikes below about 6 \u00b5A/cm\u00b2, then a steady train (\u2248 60 Hz at 7, 87 Hz at 20). Block Na\u207a (TTX) and no spike is possible; block K\u207a (TEA) and the spike will not repolarise properly.",
   "id": "ns_hodgkin_huxley"
+ },
+ {
+  "title": "The \u03b5\u2013\u03b4 game: continuity and limits made visible",
+  "desc": "For a function f and a point a, an adversary picks a tolerance \u03b5 around f(a) (horizontal band); you must answer with a \u03b4 so that every x within \u03b4 of a lands inside the band. Choose the function: smooth ones always have an answer (shown as the largest \u03b4 that works), the jump discontinuity has none once \u03b5 is below the jump, sin(1/x) near 0 has none for any small \u03b5, and 1/x shows how \u03b4 depends on the point a (continuous but not uniformly continuous).",
+  "vault": "PA",
+  "chapters": [
+   "PA06 The Real Numbers and Sequences",
+   "PA13 The Derivative and the Inverse Function Theorem"
+  ],
+  "tryit": "f(x) = x\u00b2 at a = 1, \u03b5 = 0.1: \u03b4 = \u221a1.1 \u2212 1 or 1 \u2212 \u221a0.9, the smaller is 0.0488. Move a toward 3: \u03b4 shrinks (the same \u03b5 needs smaller \u03b4 where the graph is steeper). Choose the step function: \u03b5 = 0.3 fails for every \u03b4.",
+  "id": "pa_epsilon_delta"
+ },
+ {
+  "title": "Metric balls: the same plane, different geometries",
+  "desc": "The ball B(p, r) = {x : d(x,p) < r} for the \u2113\u1d56 metric d_p(x,y) = (|x\u2081\u2212y\u2081|\u1d56 + |x\u2082\u2212y\u2082|\u1d56)^{1/p}: a diamond for p = 1 (taxicab), a disc for p = 2, a square for p = \u221e. Move the centre, radius and p; click a point to test membership. Also: the discrete metric (every ball of radius \u2264 1 is a single point), the 'river' (British Rail / SNCF) metric, and a check that every point of an open ball has a smaller ball inside it (open sets).",
+  "vault": "PA",
+  "chapters": [
+   "PA07 Metric and Topological Spaces",
+   "PA11 Subspaces, Products and Quotients"
+  ],
+  "tryit": "p = 1, 2, \u221e with r = 1: area 2, \u03c0, 4. Slide p between 1 and \u221e and the diamond bulges into a square. In the discrete metric the ball B(p, 1) is {p} and B(p, 1.01) is everything. Click a point and watch the triangle inequality hold.",
+  "id": "pa_metric_balls"
+ },
+ {
+  "title": "Picard iteration: building the solution of an ODE step by step",
+  "desc": "For y\u2032 = f(t, y), y(0) = y\u2080, the Picard iterates y\u2096\u208a\u2081(t) = y\u2080 + \u222b\u2080\u1d57 f(s, y\u2096(s)) ds converge to the solution when f is Lipschitz in y (contraction mapping). Choose an ODE and step through the iterates: y\u2032 = y gives the partial sums of e\u1d57; y\u2032 = y\u00b2 gives partial sums of the geometric series 1/(1\u2212t) and the true solution blows up at t = 1 (existence only locally); y\u2032 = 3y^{2/3} from y(0) = 0 is not Lipschitz and has more than one solution.",
+  "vault": "PA",
+  "chapters": [
+   "PA14 ODE Existence Uniqueness and Smooth Dependence"
+  ],
+  "tryit": "y\u2032 = y: the k-th iterate is 1 + t + \u2026 + t\u1d4f/k!. y\u2032 = y\u00b2: iterates 1, 1 + t, 1 + t + t\u00b2 + \u2026; they only converge for |t| < 1, even though f is smooth (a finite escape time). y\u2032 = 3y^{2/3}, y(0) = 0: both y = 0 and y = t\u00b3 solve it.",
+  "id": "pa_picard"
+ },
+ {
+  "title": "Bayes' rule as a picture: why a positive test is often a false alarm",
+  "desc": "10 000 people, drawn as dots in four blocks: ill and positive (true positives), ill and negative, healthy and positive (false positives), healthy and negative. The posterior P(ill | +) is the red block's share of all positive dots. Move the prevalence, the sensitivity and the false-positive rate: when the disease is rare the false-positive block swamps the true positives even for an accurate test. A second panel plots the posterior against the prevalence, and a button repeats the test.",
+  "vault": "PR",
+  "chapters": [
+   "PR02 Conditional Probability Bayes Rule and Independence"
+  ],
+  "tryit": "Defaults 0.5 %, 95 %, 1 %: 47.5 true positives vs 99.5 false positives, posterior 0.323. Set prevalence 1 %, sensitivity 95 %, false-positive 5 %: posterior 0.161. Press 'second positive test' and the posterior becomes the new prior.",
+  "id": "pr_bayes"
+ },
+ {
+  "title": "Binomial \u2192 Poisson and binomial \u2192 normal",
+  "desc": "Bars: the exact Binomial(n, p) probabilities. Dots: the Poisson(np) approximation (good when n is large and p small). Curve: the normal N(np, np(1\u2212p)) approximation (good when np(1\u2212p) is large). The total-variation distances to each approximation are computed live, so you can see where each limit works and where it fails.",
+  "vault": "PR",
+  "chapters": [
+   "PR03 Discrete Random Variables and Distributions",
+   "PR06 Moments Generating Functions and Limit Theorems"
+  ],
+  "tryit": "n = 100, p = 0.02: Poisson(2) is superb, the normal is poor (skewed, negative values). n = 100, p = 0.5: normal superb, Poisson terrible. Fix np = 5 and increase n: binomial \u2192 Poisson(5).",
+  "id": "pr_binom_limits"
+ },
+ {
+  "title": "The central limit theorem in action",
+  "desc": "Draw n independent values from a distribution (uniform, exponential, a very skewed Bernoulli, a two-point distribution or a heavy-tailed log-normal), average them, standardise, and repeat 4000 times. The histogram of the standardised mean approaches the standard normal curve as n grows, whatever the starting shape, with skewness shrinking like \u03b3/\u221an. The single-draw distribution is shown on the left for comparison.",
+  "vault": "PR",
+  "chapters": [
+   "PR06 Moments Generating Functions and Limit Theorems"
+  ],
+  "tryit": "Exponential (skewness 2): n = 1 is a one-sided exponential curve; n = 4 is already lump-shaped; n = 30 is close to normal, skewness 2/\u221an = 0.37. The log-normal needs a much larger n. Bernoulli(0.05) needs n around 100 before the normal shape appears (the usual rule np \u2265 10).",
+  "id": "pr_clt"
+ },
+ {
+  "title": "Covariance, correlation and what they miss",
+  "desc": "A cloud of 300 points with a chosen shape. For a bivariate normal the correlation \u03c1 controls the tilt and the regression line; \u03c1 = 0 means independent. But zero correlation does not imply independence: y = x\u00b2 and a circle are completely dependent yet uncorrelated (symmetry kills the linear term). An outlier slider shows how fragile the sample correlation is. The regression line y = \u03c1(\u03c3_y/\u03c3_x)x and R\u00b2 = \u03c1\u00b2 are drawn.",
+  "vault": "PR",
+  "chapters": [
+   "PR07 Sums of Independent Variables Covariance and Correlation"
+  ],
+  "tryit": "Bivariate normal, \u03c1 = 0.8: R\u00b2 = 0.64. Switch to the parabola: correlation \u2248 0 despite y being a function of x. Add an outlier at (6, 6) to uncorrelated normal data and the correlation jumps.",
+  "id": "pr_correlation"
  },
  {
   "title": "Particle in a box: build a state from energy eigenstates",
