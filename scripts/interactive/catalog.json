@@ -18,7 +18,7 @@
    "CL04 Feedback and Multiple Steady States",
    "CL03 Radiation and Planetary Energy Balance"
   ],
-  "tryit": "Set S/S\u2080 = 1: warm climate near 288 K and a snowball near 230 K, separated by an unstable state. Reduce S/S\u2080 until the warm state vanishes (jump to snowball); raise it back: the return jump happens at a much higher S/S\u2080.",
+  "tryit": "Set S/S\u2080 = 1: warm climate near 290 K and a cold, ice-covered state near 247 K, separated by an unstable state. Reduce S/S\u2080 until the warm state vanishes (jump to snowball); raise it back: the return jump happens at a much higher S/S\u2080.",
   "id": "cl_ebm_albedo"
  },
  {
@@ -29,7 +29,7 @@
    "CL08 Greenhouse Models",
    "CL09 Radiative-Convective Equilibrium"
   ],
-  "tryit": "N = 1, \u03b5 = 1: surface 303 K (= 255\u00b72^{1/4}). N = 0 gives 255 K, no greenhouse effect. Reduce \u03b5 to see the real, partly transparent atmosphere (the actual 288 K needs \u03b5_eff \u2248 0.78 for one layer).",
+  "tryit": "N = 1, \u03b5 = 1: surface 303 K (= 255\u00b72^{1/4}). N = 0 gives 255 K, no greenhouse effect. Reduce \u03b5 to see the real, partly transparent atmosphere (for one layer \u03c3T_s\u2074(1 \u2212 \u03b5/2) = S(1\u2212\u03b1)/4, so T_s = 288 K needs \u03b5 = 0.78).",
   "id": "cl_greenhouse_layers"
  },
  {
@@ -213,6 +213,56 @@
   ],
   "tryit": "Move c\u2081: the arrows rotate toward the symmetric gauge (c\u2081 = \u2212B/2 gives A = (B/2)(\u2212y, x)) yet the colour map of B does not change. On the right drag the mixing slider from the static V picture to the time-dependent A picture: E = \u2212\u2207V \u2212 \u2202A/\u2202t is identical.",
   "id": "ed08_gauge"
+ },
+ {
+  "title": "Two competitors: isoclines decide who wins",
+  "desc": "Lotka\u2013Volterra competition: dN\u2081/dt = r\u2081N\u2081(K\u2081 \u2212 N\u2081 \u2212 \u03b1\u2081\u2082N\u2082)/K\u2081 and the mirror equation for species 2. The zero-growth isoclines are straight lines; which one lies outside the other fixes the outcome: species 1 wins, species 2 wins, stable coexistence (each limits itself more than the other, \u03b1\u2081\u2082\u03b1\u2082\u2081 < 1 with the K conditions) or an unstable equilibrium (priority effect). Click anywhere in the plane to start a trajectory.",
+  "vault": "EE",
+  "chapters": [
+   "EE04 Competition and Invasions"
+  ],
+  "tryit": "K\u2081 = 100, K\u2082 = 80, \u03b1\u2081\u2082 = 0.5, \u03b1\u2082\u2081 = 0.6 \u2192 stable coexistence at (85.7, 28.6). Set both \u03b1 = 1.5 \u2192 saddle at (16, 56): click on either side of the separatrix and watch the winner change.",
+  "id": "ee_competition"
+ },
+ {
+  "title": "Shallow lakes: alternative stable states and hysteresis",
+  "desc": "A single variable x (phosphorus / turbidity) obeys dx/dt = a \u2212 b x + r f(x), f(x) = x\u1d56/(x\u1d56 + h\u1d56): loading a, removal b, a sigmoidal internal recycling term. When the recycling is steep enough (max r f\u2032 > b) the equilibrium curve folds over: for a between the two fold points a lake can be clear or turbid. Slowly raise and then lower the loading to see the lake jump at one fold and return only at the other (hysteresis). Left: the balance diagram; right: the equilibrium curve with the lake's state.",
+  "vault": "EE",
+  "chapters": [
+   "EE06 Eutrophication and Alternative Stable States"
+  ],
+  "tryit": "b = 1, r = 1.4, h = 1, p = 8: bistable for 0.050 < a < 0.626. Press 'sweep loading up and down' and see the jump up at a = 0.626 and the jump down only at a = 0.050. Reduce r (or p) until the S-curve disappears: no hysteresis.",
+  "id": "ee_lake_hysteresis"
+ },
+ {
+  "title": "Age-structured growth: the Leslie matrix settles into a stable age distribution",
+  "desc": "Four age classes with fecundities F and survivals P: n_{t+1} = L n_t. Start from any age mix and watch the oscillations die away: the total grows like \u03bb\u1d57 and the proportions in each class converge to the same stable age distribution, the dominant eigenvector. The Euler\u2013Lotka equation \u03a3 F_x l_x \u03bb^{\u2212x} = 1 gives \u03bb, and \u03bb > 1 exactly when the net reproductive rate R\u2080 > 1.",
+  "vault": "EE",
+  "chapters": [
+   "EE02 Structured Population Models"
+  ],
+  "tryit": "Defaults P = (0.5, 0.2, 0.1), F = (0, 2, 1, 1) and 200 newborns reproduce the slide: \u03bb = 1.05082, SAD (0.635, 0.302, 0.057, 0.005). Lower F\u2082 until R\u2080 < 1 and the population dies out. Start with all adults instead of newborns to change the transient, not the limit.",
+  "id": "ee_leslie"
+ },
+ {
+  "title": "Predator\u2013prey cycles: closed orbits and damped spirals",
+  "desc": "Lotka\u2013Volterra: dH/dt = rH(1 \u2212 H/K) \u2212 pHP, dP/dt = apHP \u2212 mP. With K = \u221e (prey growth exponential) every orbit is a closed curve around (H*, P*) = (m/ap, r/p); a conserved quantity V labels them. Turn on a finite carrying capacity K and the centre becomes a stable spiral: the cycles damp. Left: phase plane with isoclines and the vector field; right: time series, with the predator peak lagging the prey peak.",
+  "vault": "EE",
+  "chapters": [
+   "EE05 Predation"
+  ],
+  "tryit": "Defaults r=1, p=0.02, a=0.5, m=0.5 give (H*,P*) = (50,50) and period 8.9 for small cycles; the large orbit from (30,30) has period 9.25. Set K = 200: the equilibrium moves to (50, 37.5), eigenvalues \u22120.125 \u00b1 0.60i. Double r: predators double, prey unchanged.",
+  "id": "ee_predator_prey"
+ },
+ {
+  "title": "From a stable point to chaos: the Ricker map",
+  "desc": "n_{t+1} = n_t exp[r(1 \u2212 n_t/K)] with K = 100. The time series, the cobweb diagram (vertical to the curve, horizontal to the 45\u00b0 line) and the bifurcation diagram are linked to one slider r. The fixed point K loses stability at r = 2 (slope 1 \u2212 r reaches \u22121), then 2-, 4-, 8-cycles, chaos from r \u2248 2.69, with periodic windows. Switch on the second run started 10\u207b\u2076 away to see sensitive dependence on initial conditions, and read off the Lyapunov exponent.",
+  "vault": "EE",
+  "chapters": [
+   "EE03 Population Dynamics and Chaos"
+  ],
+  "tryit": "r = 1.3 (damped), 2.3 (2-cycle 159.2/40.8), 2.6 (4-cycle), 3.0 (chaos, \u039b = +0.39), 3.6 (periodic window, \u039b < 0). With the second run on at r = 3.0 the two series part after ~35 steps.",
+  "id": "ee_ricker_chaos"
  },
  {
   "title": "Particle in a box: build a state from energy eigenstates",

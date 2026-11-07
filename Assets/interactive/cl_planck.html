@@ -104,15 +104,15 @@ window.addEventListener('error',e=>{const d=document.createElement('div');d.clas
 
 (function(){
 const META={"title": "Blackbody spectra: why sunlight is shortwave and Earth glows in the infrared", "desc": "Planck's law B_\u03bb(T) on a log wavelength axis for any temperature, with the visible band shaded. The Sun (\u22485772 K) peaks in the visible near 0.5 \u00b5m; the Earth (\u2248288 K) peaks near 10 \u00b5m. Wien's displacement law \u03bb_max T = 2898 \u00b5m K and the Stefan\u2013Boltzmann law F = \u03c3T\u2074 are read off live. The overlap of the two curves is tiny, which is what lets us treat shortwave and longwave separately.", "vault": "CL", "chapters": ["CL03 Radiation and Planetary Energy Balance", "CL07 Optical Properties of the Atmosphere"], "tryit": "Drag T from 288 K to 5772 K and watch the peak slide through the visible; compare the areas (T\u2074).", "id": "cl_planck"};ui.init(META.title,META.desc);
-ui.gridOf(1);const P=ui.canvas(340,{xmin:-1,xmax:2.2,ymin:0,ymax:1.1,xlabel:'wavelength λ (µm), log scale',ylabel:'B_λ, each curve normalised to its own peak'});
-const sT=ui.slider('temperature of body 2 (K)',100,8000,10,288,draw);const out=ui.readout();
+ui.gridOf(1);const P=ui.canvas(340,{xmin:-1,xmax:2.2,ymin:0,ymax:1.1,xlabel:'log₁₀ [ λ / µm ]',ylabel:'B_λ, each curve normalised to its own peak'});
+const sT=ui.slider('temperature of body 2 (K)',100,8000,1,288,draw);const out=ui.readout();
 const h=6.62607e-34,c=2.99792e8,k=1.380649e-23,sig=5.670374e-8;
 function B(l,T){const L=l*1e-6;return 2*h*c*c/Math.pow(L,5)/(Math.exp(h*c/(L*k*T))-1)}
 function draw(){const T2=sT.value,Ts=5772;P.clear();const xs=M.linspace(-1,2.2,500),ls=xs.map(x=>Math.pow(10,x));
  P.poly([[Math.log10(0.4),0],[Math.log10(0.4),1.1],[Math.log10(0.7),1.1],[Math.log10(0.7),0]],'rgba(240,200,60,0.20)',null);
  for(const [T,col,nm] of [[Ts,C.gold,'Sun 5772 K'],[T2,C.red,'body 2: '+M.fmt(T2,4)+' K']]){const y=ls.map(l=>B(l,T)),m=Math.max(...y);P.line(xs,y.map(v=>v/m),col,3);const lm=2898/T;P.dot(Math.log10(lm),1,col,5);P.text(nm+'  (peak '+M.fmt(lm,3)+' µm)',Math.log10(lm)+0.05,0.97-(col===C.gold?0:0.07),col)}
  // tick labels in µm
- [0.1,0.4,1,10,100].forEach(v=>P.ptext(v+' µm',P.X(Math.log10(v)),P.h-20,C.muted,'center','10px system-ui'));
+ [0.1,1,10,100].forEach(v=>{P.vline(Math.log10(v),C.grid);P.text(v+' µm',Math.log10(v)+0.03,0.04,C.muted,'left','11px system-ui')});
  // overlap fraction of Earth emission below 4 µm
  let tot=0,sw=0;const lg=M.linspace(-1,3,2000);for(let i=0;i<lg.length-1;i++){const l=Math.pow(10,lg[i]),dl=Math.pow(10,lg[i+1])-l,v=B(l,T2)*dl;tot+=v;if(l<4)sw+=v}
  let tots=0,sws=0;for(let i=0;i<lg.length-1;i++){const l=Math.pow(10,lg[i]),dl=Math.pow(10,lg[i+1])-l,v=B(l,Ts)*dl;tots+=v;if(l>4)sws+=v}
