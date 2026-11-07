@@ -17,6 +17,8 @@ A 5-card hand dealt from a standard deck consisting of five consecutive cards be
 Source: Practice problems 7th August 2026, pp. 1–1
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/combinations]] — Evaluating the total possible 5-card hands and counting straight flush configurations relies on combinations since deal order is immaterial
+- contrasts-with:: [[zettel/full-house]] — Both represent distinct, mutually exclusive 5-card poker hand outcomes evaluated under the same deal experiment
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Practice problems 7th August 2026]] pp. 1–1
 <!-- /kurooto:seen -->
