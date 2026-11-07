@@ -26,7 +26,7 @@ A connected, text-and-figure heavy knowledge base built on top of the course mat
 | Evolution of Earth and Life · Landscapes · Waves · Probability | [[Evolution of Earth and Life - Course Map]] · [[Landscapes and Geomorphology - Course Map]] · [[Waves - Course Map]] · [[Probability - Course Map]] | planned | 2 |
 | Quantum Mechanics · Group Theory · Inorganic Chemistry · Proofs and Analysis | [[Quantum Mechanics - Course Map]] · [[Group Theory - Course Map]] · [[Inorganic Chemistry - Course Map]] · [[Proofs, Analysis and Topology - Course Map]] | planned | 3 |
 | Differential Geometry (MT3184) | [[Differential Geometry - Course Map]] | **all 15 chapters drafted** (DM01–DM15 on Lee's *Introduction to Smooth Manifolds*; 98 concept notes, 43 zettel notes, 15 figures) with the prerequisites PA11–PA15 in the analysis vault | 3 |
-| Classical Mechanics (PH2213) | [[Classical Mechanics - Course Map]] | **course map + CM01–CM11 written** (CM01–CM06 on 2026-11-04, CM07–CM11 on 2026-11-07); CMX1–CMX2 planned | 3 |
+| Classical Mechanics (PH2213) | [[Classical Mechanics - Course Map]] | **course map + CM01–CM11 written** (CM01–CM06 on 2026-11-04, CM07–CM11 on 2026-11-07); CMX2 written 2026-11-07; CMX1 planned | 3 |
 | Electrodynamics (PH3114) | [[Electrodynamics - Course Map]] | **course map + ED01–ED11 written** (ED03–ED08 on 2026-11-04, ED01–ED02 and ED09–ED11 on 2026-11-07); Griffiths and Jackson equal priority; EDX1–EDX2 planned | 3 |
 | Neuroscience | [[Neuroscience - Course Map]] | planned last | 4 |
 

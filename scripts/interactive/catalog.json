@@ -326,6 +326,16 @@
   "id": "cm11_adiabatic_action"
  },
  {
+  "title": "Gauge freedom: one orbit, many canonical momenta",
+  "desc": "A charge in a uniform magnetic field B (and optionally an electric field E along y), described with the Hamiltonian H = (P \u2212 qA)\u00b2/2m + q\u03c6 in three different gauges (Landau-x: A = (\u2212By, 0), Landau-y: A = (0, Bx), symmetric: A = \u00bdB(\u2212y, x)) plus an extra gauge term A \u2192 A + \u03bb\u2207(xy). The motion is integrated in the canonical variables (x, y, P_x, P_y) with Hamilton's equations for each gauge, and compared with the Landau-x reference orbit: they coincide, because the gauge changes L by a total time derivative. The canonical momenta P_x, P_y and L_z = xP_y \u2212 yP_x, however, differ from gauge to gauge, and which of them is conserved depends on the gauge (translation symmetry in x for Landau-x, rotation symmetry for the symmetric gauge).",
+  "vault": "CM",
+  "chapters": [
+   "CMX2 The Electromagnetic Lagrangian and Gauge Symmetry"
+  ],
+  "tryit": "Keep E = 0 and switch gauges: the grey and blue orbits stay on top of each other, but the readout shows P_x conserved only for Landau-x, P_y only for Landau-y and L_z only for the symmetric gauge. Drag \u03bb: the orbit does not move at all while P_x(t) and P_y(t) change shape. Then switch E on: the orbit becomes a trochoid drifting with speed E/B, still gauge independent.",
+  "id": "cmx2_gauge_orbit"
+ },
+ {
   "title": "Holonomy of a plane field: why some plane fields have no integral surface",
   "desc": "A plane field D = ker(dz \u2212 A) on R\u00b3 with A = A\u2081dx + A\u2082dy. Walk once round a closed loop in the (x, y)-plane and lift it to a curve tangent to D: z changes by \u222eA = \u222c dA = (signed area) \u00d7 (curl of A). If the plane field has integral surfaces (z = const + f(x, y)) the lifted loop must close up for <b>every</b> loop; otherwise the lift ends at a different height. Pick a plane field, a loop and its size: the height gap \u0394z is the obstruction to Frobenius integrability (the bracket [X, Y] leaves D).",
   "vault": "DM",

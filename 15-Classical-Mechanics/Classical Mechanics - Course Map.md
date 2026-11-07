@@ -56,7 +56,7 @@ Source columns for unwritten chapters are *tbc*: under the vault rule (cite only
 | 10 | [[CM10 Liouville's Theorem and Canonical Transformations]] | 4 | LL §45-§46 (end of §44) | draft |
 | 11 | [[CM11 Hamilton-Jacobi Theory and Action-Angle Variables]] | 4 | LL §43, §47-§50 (from p. 155 of §49) | draft |
 | X1 | CMX1 Geometric Mechanics (🟡) | extra | tbc (sources chosen and read before writing) | todo |
-| X2 | CMX2 The Electromagnetic Lagrangian and Gauge Symmetry (🟡) | extra | tbc (sources chosen and read before writing) | todo |
+| X2 | [[CMX2 The Electromagnetic Lagrangian and Gauge Symmetry]] (🟡) | extra | Goldstein §1.5, §7.9-7.10, §8.1, §8.4; LL1 §2; LL2 §16-§18; Jackson §12.1; Alam §1.5 (supplement) | draft |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"

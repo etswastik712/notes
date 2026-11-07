@@ -7,7 +7,7 @@ tags: [type/hub, tool/interactive, status/draft]
 ---
 # Interactive Tools
 
-> [!abstract] 108 self-contained interactive visualisations across 15 subject groups
+> [!abstract] 109 self-contained interactive visualisations across 15 subject groups
 > Each tool is one HTML file in `Assets/interactive/` (no internet, no install): sliders, live plots, animations and step-through explorers built to give a *picture* of the idea. Open in a browser; every chapter that uses a tool shows its preview image and a link in an *Interactive* callout.
 
 > [!tip] How to open them
@@ -19,7 +19,7 @@ tags: [type/hub, tool/interactive, status/draft]
 
 ## All tools by subject
 
-### Classical Mechanics (16)
+### Classical Mechanics (17)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
@@ -39,6 +39,7 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Hamiltonian flow in phase space: portraits, conservation and integrators**<br>[open `cm09_hamiltonian_flow`](../Assets/interactive/cm09_hamiltonian_flow.html) | Hamilton's equations q̇ = ∂H/∂p, ṗ = −∂H/∂q turn the dynamics into a flow on the (q, p) plane along the level curves of H. *Try:* Oscillator, h = 0.3: explicit Euler spirals outward and the blob's area grows by (1+h²) per step; leapfrog keeps a closed orbit and area ratio 1.0000; RK4 is accurate but slowly shrinks. Pendulum: start just inside and just outside the separatrix H = 1 to see libration vs rotation. | [[CM09 Hamilton's Equations and Poisson Brackets]] · [[SM02 Phase Space Liouville and the Microcanonical Ensemble]] |
 | **Canonical transformations: which maps of phase space keep Hamilton's equations?**<br>[open `cm10_canonical_map`](../Assets/interactive/cm10_canonical_map.html) | A change of variables (q, p) → (Q, P) is canonical when the Poisson bracket [P, Q] = 1 (Landau–Lifshitz convention (45.10)), equivalently when its Jacobian determinant is 1 and it preserves areas of every region. *Try:* Q = q², P = p is not canonical (Jacobian 2q, [P,Q] = 2q): the square's area changes. Q = q², P = p/(2q) is canonical: the square is distorted but its area stays 1. Oscillator action–angle map: circles become horizontal lines P = const (so H′ = ωP depends only on P). | [[CM10 Liouville's Theorem and Canonical Transformations]] |
 | **Adiabatic invariants and the action variable: the energy changes, the phase-space area does not**<br>[open `cm11_adiabatic_action`](../Assets/interactive/cm11_adiabatic_action.html) | An oscillator whose frequency ω(t) is slowly ramped from ω₁ to ω₂. *Try:* ω: 1 → 2. Ramp time τ = 300: E ends at 2.0000 E₀ and I/I₀ stays within ±0.2 % of 1. τ = 2 (a fast ramp): I/I₀ ranges over about 0.87–1.16 depending on the phase at which the ramp starts. The orbit keeps the same area while it changes shape (it becomes a thinner ellipse). | [[CM11 Hamilton-Jacobi Theory and Action-Angle Variables]] |
+| **Gauge freedom: one orbit, many canonical momenta**<br>[open `cmx2_gauge_orbit`](../Assets/interactive/cmx2_gauge_orbit.html) | A charge in a uniform magnetic field B (and optionally an electric field E along y), described with the Hamiltonian H = (P − qA)²/2m + qφ in three different gauges (Landau-x: A = (−By, 0), Landau-y: A = (0, Bx), symmetric: A = ½B(−y, x)) plus an extra gauge term A → A + λ∇(xy). *Try:* Keep E = 0 and switch gauges: the grey and blue orbits stay on top of each other, but the readout shows P_x conserved only for Landau-x, P_y only for Landau-y and L_z only for the symmetric gauge. Drag λ: the orbit does not move at all while P_x(t) and P_y(t) change shape. Then switch E on: the orbit becomes a trochoid drifting with speed E/B, still gauge independent. | [[CMX2 The Electromagnetic Lagrangian and Gauge Symmetry]] |
 
 ### Electrodynamics (12)
 
@@ -223,7 +224,7 @@ A chapter counts as covered if at least one tool is embedded in it. ✓ = at lea
 | Inorganic Chemistry | 6/10: CH01, CH02, CH04, CH05, CH09, CH10 | CH03, CH06, CH07, CH08 |
 | Differential Geometry | 17/17: DM01, DM02, DM03, DM04, DM05, DM06, DM07, DM08, DM09, DM10, DM11, DM12, DM13, DM14, DM15, DM16, DM17 | none |
 
-Chapters not yet written (Classical Mechanics CM07–CM11, CMX1–CMX2; Electrodynamics ED01–ED02, ED09–ED11, EDX1–EDX2) get their tool when the chapter is written.
+Chapters not yet written (Classical Mechanics CMX1; Electrodynamics EDX1–EDX2; see the course maps for the current list) get their tool when the chapter is written.
 
 ## Conventions for new tools
 
