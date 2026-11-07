@@ -406,6 +406,26 @@
   "id": "dm_torus_foliation"
  },
  {
+  "title": "Method of images: a point charge near a conductor or a dielectric",
+  "desc": "One point charge q in the presence of (a) a grounded conducting plane, (b) a grounded conducting sphere, (c) a dielectric half-space. In each case the field outside is that of q plus one image charge placed behind the surface, and the uniqueness theorem guarantees that this is the answer: plane q\u2032 = \u2212q at the mirror point, sphere (radius a) q\u2032 = \u2212(a/y)q at a\u00b2/y (Jackson 2.4), dielectric q\u2032 = \u2212(\u03c7e/(\u03c7e+2))q with the field below being that of q\u2033 = 2\u03b5r q/(\u03b5r+1). Field lines are traced from the real charge; the right panel shows the induced surface charge.",
+  "vault": "ED",
+  "chapters": [
+   "ED01 Electrostatics - Review"
+  ],
+  "tryit": "Plane: move the charge down and watch the induced charge concentrate under it; its integral stays \u2212q. Sphere: push y toward 1 (touching) and the image charge \u2192 \u2212q and sits at the sphere surface; pull y far away and q\u2032 \u2248 \u2212a/y \u2192 0. Dielectric: raise \u03b5r from 1 to 80 and the picture approaches the conductor (q\u2032 \u2192 \u2212q) but the lines still enter the dielectric, bending toward the normal.",
+  "id": "ed01_image_charges"
+ },
+ {
+  "title": "Fields of current loops: single loop, Helmholtz pair, anti-Helmholtz pair and solenoid",
+  "desc": "The magnetic field of circular current loops of radius a, computed exactly from the Biot\u2013Savart law (elliptic integrals). The field lines of B are always closed (\u2207\u00b7B = 0). Choose a single loop (far away its field is that of a dipole, \u03bc\u2080m/2\u03c0z\u00b3 on the axis with m = I\u03c0a\u00b2), a pair of loops with the same current (a Helmholtz pair at separation a has a uniform centre: the second derivative of B_z vanishes there), a pair with opposite currents (a field zero at the centre), or a solenoid of N turns whose interior field approaches \u03bc\u2080nI as it gets long (Griffiths 5.59). The right panel shows B_z on the axis.",
+  "vault": "ED",
+  "chapters": [
+   "ED02 Magnetostatics - Review"
+  ],
+  "tryit": "Single loop: compare the axis curve with the dipole curve far away. Pair: set the separation to exactly 1 and watch the central part of the B_z curve go flat (this is the Helmholtz condition). Solenoid: raise the number of turns at fixed length (more current per length, field up) and lengthen it at fixed n to see B at the centre \u2192 \u03bc\u2080nI and the field outside \u2192 0.",
+  "id": "ed02_biot_savart"
+ },
+ {
   "title": "Displacement current: charging a capacitor",
   "desc": "A circular parallel-plate capacitor (plate radius R) is charged by a steady current I. Amp\u00e8re's law needs both the conduction current through a loop and the displacement current \u03b5\u2080 d\u03a6_E/dt: with the flat disc surface the whole answer comes from the displacement term, with the balloon surface through the wire from the conduction current. Move the Amperian loop and compare B(r) with and without the displacement term.",
   "vault": "ED",

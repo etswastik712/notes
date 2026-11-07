@@ -121,3 +121,10 @@ for i,(V,h) in enumerate(res):print("   start %d: V(center) at iterations 10/100
 print("   max difference between the three converged solutions: %.2e ; exact V(center)=V0/4 (symmetry) = 0.25"%max(np.abs(res[0][0]-res[1][0]).max(),np.abs(res[0][0]-res[2][0]).max()))
 ser=lambda x,y,n=801:sum(4/(m*np.pi)*np.sin(m*np.pi*x)*np.exp(m*np.pi*(y-1))*(1-np.exp(-2*m*np.pi*y))/(1-np.exp(-2*m*np.pi)) for m in range(1,n,2))   # = sinh(m pi y)/sinh(m pi), overflow-safe
 print("   Fourier series (separation of variables, G 3.3.1) V(0.5,0.5) = %.8f ; at (0.5,0.25) = %.6f vs relaxation %.6f"%(ser(0.5,0.5),ser(0.5,0.25),res[0][0][N//4,N//2]))
+
+print("\n== 7. numbers for the problems")
+print("   P: field of a ball at its surface for q=1 nC, R=10 cm: E = %.1f V/m ; potential at the surface %.1f V ; at the centre %.1f V (= 3/2 of the surface value)"%(k*q/R**2,k*q/R,1.5*k*q/R))
+print("   P: capacitor energy E=Q^2/2C, A=1 cm^2,d=1 mm: C0=%.4e F"%(eps0*1e-4/1e-3))
+print("   P: Debye-like: potential energy of hydrogen-like pair in eV: k e^2/a0 = %.3f eV"%(k*(1.602176634e-19)**2/5.29177e-11/1.602176634e-19))
+print("   P: water sphere eps_r=80 in field E0=1e5 V/m: inside field %.4e V/m (fraction %.4f); bound surface charge density at the pole sigma_b = 3 eps0 (eps_r-1)/(eps_r+2) E0 = %.4e C/m^2"%(3*1e5/82,3/82,3*eps0*79/82*1e5))
+print("   P: dielectric slab image force, eps_r=4: F/F_conductor-plane = %.4f (= (eps_r-1)/(eps_r+1))"%(3/5))

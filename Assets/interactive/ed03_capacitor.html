@@ -45,7 +45,7 @@ const C={get ink(){return col('ink')},get muted(){return col('muted')},get grid(
 class Plot{
   constructor(canvas,o={}){this.c=canvas;this.o=Object.assign({xmin:0,xmax:1,ymin:0,ymax:1,xlabel:'',ylabel:'',title:'',grid:true,ml:54,mr:14,mt:24,mb:38,equal:false,axes:true},o);if(this.o.equal&&!o.ml){this.o.ml=this.o.mr=10;this.o.mt=this.o.mb=10}this.base={xmin:this.o.xmin,xmax:this.o.xmax,ymin:this.o.ymin,ymax:this.o.ymax};this.resize()}
   equalize(){const o=this.o,b=this.base,pw=this.w-o.ml-o.mr,ph=this.h-o.mt-o.mb,sx=pw/(b.xmax-b.xmin),sy=ph/(b.ymax-b.ymin),s=Math.min(sx,sy),cx=(b.xmin+b.xmax)/2,cy=(b.ymin+b.ymax)/2;o.xmin=cx-pw/2/s;o.xmax=cx+pw/2/s;o.ymin=cy-ph/2/s;o.ymax=cy+ph/2/s}
-  set(o){Object.assign(this.o,o)}
+  set(o){Object.assign(this.o,o);let ch=false;for(const k of ['xmin','xmax','ymin','ymax'])if(k in o){this.base[k]=o[k];ch=true}if(ch&&this.o.equal)this.equalize()}
   resize(){const d=window.devicePixelRatio||1,w=this.c.clientWidth||600,h=this.c.clientHeight||320;this.c.width=Math.round(w*d);this.c.height=Math.round(h*d);this.g=this.c.getContext('2d');this.g.setTransform(d,0,0,d,0,0);this.w=w;this.h=h;if(this.o.equal)this.equalize()}
   X(x){const o=this.o,pw=this.w-o.ml-o.mr;return o.ml+(x-o.xmin)/(o.xmax-o.xmin)*pw}
   Y(y){const o=this.o,ph=this.h-o.mt-o.mb;return this.h-o.mb-(y-o.ymin)/(o.ymax-o.ymin)*ph}
