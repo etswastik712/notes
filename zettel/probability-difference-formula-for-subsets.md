@@ -18,6 +18,7 @@ $$P[B \setminus A] = P[B] - P[A]$$
 Source: Practice problems 7th August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/axiomatic-definition-of-probability]] — The difference formula for nested events is explicitly derived from the probability axioms, in particular countable additivity on disjoint sets
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Practice problems 7th August 2026]] pp. 1–2
 <!-- /kurooto:seen -->
