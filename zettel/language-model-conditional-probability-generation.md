@@ -15,6 +15,7 @@ The operational mechanism of large language models wherein prompt response gener
 Source: Why study probability, pp. 1–3
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/axiomatic-definition-of-probability]] — Language model token generation evaluates high-dimensional conditional probability distributions defined under the mathematical axioms of probability
 ## Seen in
 - [[introduction-to-probability/2026-08-05-why-study-probability|Why study probability]] pp. 1–3
 <!-- /kurooto:seen -->
