@@ -86,3 +86,8 @@ Small numeric inconsistency between the lecture notes: Lecture 2 tabulates 4.852
 - [[ph2113/2026-08-11-problem-set-1]]: problems on exactly this material
 - [[ph2113/2026-09-03-quiz-ideal-solutions]]: quiz asking photoelectric and Compton in words
 - [[ph2113/2026-09-10-tutorial-solutions-states-interference-uncertainty]]: later double-slit intensity and fringe spacing
+
+<!-- kurooto:materialbb239bcc -->
+## Concepts in PH2113_Lecture1
+[[zettel/quantum-probability-amplitude-superposition]]
+<!-- /kurooto:materialbb239bcc -->
