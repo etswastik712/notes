@@ -36,3 +36,8 @@ Dear everyone, here are some notes I prepared regarding the various applications
 - [[08-Probability/Probability - Course Map]]: your map of the probability course
 - [[08-Probability/Concepts/Poisson Distribution]]: Poisson processes are used in the earthquake model
 - [[08-Probability/Concepts/Normal Distribution]]: the Gaussian family behind the confidence-interval remark
+
+<!-- kurooto:materialab5cdead -->
+## Concepts in Why study probability
+[[zettel/quantum-tunneling]], [[zettel/maxwell-boltzmann-distribution-in-reaction-kinetics]], [[zettel/stochastic-parametrization]], [[zettel/language-model-conditional-probability-generation]]
+<!-- /kurooto:materialab5cdead -->
