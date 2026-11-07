@@ -17,6 +17,7 @@ A probability assignment on a finite sample space where all basic outcomes are a
 Source: Practice problems 7th August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
+- special-case-of:: [[zettel/axiomatic-definition-of-probability]] — The naive definition is a specific, restricted instance of probability measure applicable only to finite sample spaces with equally likely outcomes
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Practice problems 7th August 2026]] pp. 1–2
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 6th August 2026]] pp. 1–4
