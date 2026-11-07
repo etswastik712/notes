@@ -17,6 +17,7 @@ $$\psi(x) \propto e^{-\alpha x}$$
 Source: Why study probability, pp. 1–3
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/quantum-probability-amplitude-superposition]] — Quantum tunneling relies fundamentally on the wave function ψ(x) and probability amplitude formalism where the spatial penetration of the barrier yields a non-zero probability density upon transmission
 ## Seen in
 - [[introduction-to-probability/2026-08-05-why-study-probability|Why study probability]] pp. 1–3
 <!-- /kurooto:seen -->
