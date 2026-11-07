@@ -16,6 +16,7 @@ A statistical procedure fitting an ordinary least squares linear regression mode
 Source: Intro_to_climate_T1
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/multi-scale-temperature-variability]] — Secular temperature trend estimation isolates the multi-decadal linear warming component out of the broader spectrum of multi-scale temperature variability
 ## Seen in
 - [[introduction-to-climate-science/2026-08-05-tutorial-1-data-analysis-notebook|Intro_to_climate_T1]]
 <!-- /kurooto:seen -->
