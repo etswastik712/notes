@@ -51,6 +51,18 @@
   "id": "cl_angular_momentum"
  },
  {
+  "title": "Atmospheric pressure, scale height and the lapse rate",
+  "desc": "Hydrostatic balance dp/dz = \u2212\u03c1g with the ideal-gas law gives p(z) = p\u2080 exp(\u2212z/H) for an isothermal atmosphere, with scale height H = R_d T/g (7.5 km at 255 K); a constant lapse rate \u0393 gives p = p\u2080(T/T\u2080)^{g/(R_d \u0393)}. Left: the pressure profile (log axis) with the reference heights of the chapter (5 km camp, 11 km tropopause, Everest). Right: temperature profile and the stability of a lifted dry parcel: it cools at \u0393_d = g/c_p = 9.8 K/km and is stable if the environment cools more slowly.",
+  "vault": "CL",
+  "chapters": [
+   "CL06 Hydrostatic Balance and Vertical Structure",
+   "CL05 Thermodynamic State of the Atmosphere",
+   "CL09 Radiative-Convective Equilibrium"
+  ],
+  "tryit": "Isothermal 255 K: H = 7.46 km, p(5 km) = 520 hPa, 77 % of the mass below 11 km, Everest 311 hPa. Set lapse rate 6.5 K/km (mean tropospheric): the pressure at 5 km rises to 540 hPa. Raise the lapse rate above 9.8 K/km: a lifted parcel accelerates upward (absolutely unstable).",
+  "id": "cl_atmosphere"
+ },
+ {
   "title": "Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance",
   "desc": "On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2\u03c0/f, f = 2\u03a9 sin \u03c6 (left panel, in the rotating frame). Right: a steady wind in balance between the pressure-gradient force and the Coriolis force blows along the isobars (geostrophic), with low pressure on its left in the Northern Hemisphere; friction turns it across the isobars toward low pressure.",
   "vault": "CL",
@@ -71,6 +83,17 @@
   ],
   "tryit": "Set S/S\u2080 = 1: warm climate near 290 K and a cold, ice-covered state near 247 K, separated by an unstable state. Reduce S/S\u2080 until the warm state vanishes (jump to snowball); raise it back: the return jump happens at a much higher S/S\u2080.",
   "id": "cl_ebm_albedo"
+ },
+ {
+  "title": "A one-dimensional energy-balance model: heat transport and the ice line",
+  "desc": "Each latitude band balances absorbed sunlight (with the annual-mean insolation Q(\u03c6) = (S/4)[1 \u2212 0.477 P\u2082(sin \u03c6)]), outgoing infrared A + BT and the diffusive transport of heat D \u2202\u00b2T/\u2202\u03c6\u00b2: C \u2202T/\u2202t = Q(\u03c6)(1 \u2212 \u03b1(T)) \u2212 (A + BT) + D\u2207\u00b2T. The albedo jumps to the ice value where T < \u221210 \u00b0C. Increase the diffusion D and the equator\u2013pole contrast shrinks; lower the solar constant and the ice line advances until the planet falls into a snowball. Start from a warm or a cold state to see two different steady states for the same S.",
+  "vault": "CL",
+  "chapters": [
+   "CL10 Global Energy Balance and Meridional Structure",
+   "CL04 Feedback and Multiple Steady States"
+  ],
+  "tryit": "S/S\u2080 = 1, D = 0.65: warm state with polar ice cap. Lower S/S\u2080 below ~0.93 from a warm start and the ice line runs away; raise it back and the planet stays frozen until S/S\u2080 \u2248 1.08 (hysteresis). D = 0 gives independent bands; large D flattens the temperature profile.",
+  "id": "cl_ebm_latitude"
  },
  {
   "title": "The layer greenhouse model",
@@ -196,6 +219,17 @@
   "id": "cm06_resonance"
  },
  {
+  "title": "Holonomy of a plane field: why some plane fields have no integral surface",
+  "desc": "A plane field D = ker(dz \u2212 A) on R\u00b3 with A = A\u2081dx + A\u2082dy. Walk once round a closed loop in the (x, y)-plane and lift it to a curve tangent to D: z changes by \u222eA = \u222c dA = (signed area) \u00d7 (curl of A). If the plane field has integral surfaces (z = const + f(x, y)) the lifted loop must close up for <b>every</b> loop; otherwise the lift ends at a different height. Pick a plane field, a loop and its size: the height gap \u0394z is the obstruction to Frobenius integrability (the bracket [X, Y] leaves D).",
+  "vault": "DM",
+  "chapters": [
+   "DM16 Distributions, Involutivity and the Frobenius Theorem",
+   "DM15 Closed Subgroups and the Lie Correspondence"
+  ],
+  "tryit": "Option 1 with c = 1: \u0394z = area exactly (for any position of the loop). Set c = 0 and \u0394z = 0: D = span{\u2202\u2093, \u2202\u1d67} has the integral planes z = const. Option 3 (the Lee 19.14 distribution with leaves z \u2212 xy = const) gives \u0394z = 0 for every loop even though the planes are tilted. The figure-eight loop has signed area 0, so even the non-integrable fields close up for it: the obstruction is the signed area.",
+  "id": "dm_contact_holonomy"
+ },
+ {
   "title": "The Lie bracket as the failure of flows to commute",
   "desc": "Flow along X for time t, then along Y for t, then back along X for \u2212t and back along Y for \u2212t. If the vector fields commute the path closes up; otherwise it ends at p + t\u00b2[X, Y](p) + O(t\u00b3), where [X, Y] = DY\u00b7X \u2212 DX\u00b7Y. Pick a pair of vector fields on the plane, a base point p and a time t: the gap shrinks like t\u00b2 and its direction is the bracket.",
   "vault": "DM",
@@ -229,6 +263,17 @@
   ],
   "tryit": "Move p toward the north pole: its north-chart coordinate u runs off to infinity while the south-chart coordinate v \u2192 0. At the equator (z = 0) the two charts agree (|u| = |v| = 1). Check |u||v| = 1 and that u and v point in the same direction.",
   "id": "dm_stereographic"
+ },
+ {
+  "title": "Leaves of a linear foliation of the torus: closed or dense?",
+  "desc": "The torus T\u00b2 = \u211d\u00b2/\u2124\u00b2 is foliated by the lines of slope \u03b8: the leaf through a point is t \u21a6 (t, \u03b8t) mod 1. In a flat chart (a small square) each leaf appears as a <b>countable union of parallel slices</b>. For rational \u03b8 = p/q the leaf closes up after q turns and is an embedded circle; for irrational \u03b8 it never closes and is dense: an immersed, weakly embedded but not embedded submanifold (Lee Ex. 19.18(e)). Choose a slope and the number of turns: the right panel shows the successive crossings of the transversal circle x = \u00bd and how fast the gaps shrink.",
+  "vault": "DM",
+  "chapters": [
+   "DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups",
+   "DM15 Closed Subgroups and the Lie Correspondence"
+  ],
+  "tryit": "Slope 3/5: after 5 turns the leaf closes (exactly 5 distinct crossing points, spacing 0.2). Slope \u221a2: after N turns there are N distinct crossings and the largest gap is about 1.2\u20131.5 / N (the gaps take only three sizes). Compare with slope 0.6 + 10\u207b\u2076: it looks closed for ~10\u2075 turns and then changes: density is a limit statement.",
+  "id": "dm_torus_foliation"
  },
  {
   "title": "Displacement current: charging a capacitor",
@@ -351,6 +396,16 @@
   "id": "ee_ricker_chaos"
  },
  {
+  "title": "Demographic stochasticity: small populations go extinct",
+  "desc": "A stochastic logistic birth\u2013death process: each individual gives birth at rate b and dies at rate d + (b\u2212d)N/K, so the deterministic limit is logistic growth to K but every individual event is random. Many replicate populations are run side by side: for small K a lucky chain of deaths reaches N = 0 (absorbing) in finite time even though the deterministic model never goes extinct; the persistence time grows roughly exponentially with K. An optional Allee effect makes extinction certain below a threshold.",
+  "vault": "EE",
+  "chapters": [
+   "EE07 Conservation Biology"
+  ],
+  "tryit": "K = 15: most replicates go extinct within 100 time units. K = 60: nearly all persist. With the Allee effect on and a starting population below the threshold, extinction is deterministic. The fraction extinct and the mean time to extinction are printed live.",
+  "id": "ee_stochastic_extinction"
+ },
+ {
   "title": "The dihedral group D_n: symmetries, the Cayley table and cosets",
   "desc": "Act on a labelled regular n-gon with the rotation r (by 2\u03c0/n) and the reflection s. Every state is r^a s^b, the group has 2n elements, and rs \u2260 sr (the group is non-abelian for n \u2265 3, with srs = r\u207b\u00b9). The Cayley table is coloured by element, so every row and column is a permutation of the colours (cancellation). Pick any element g: the cyclic subgroup \u27e8g\u27e9 is found and the left cosets aH are shown (they partition the group into equal blocks, Lagrange).",
   "vault": "GT",
@@ -436,6 +491,16 @@
   ],
   "tryit": "T = 12 s, H\u2080 = 2 m, \u03b1\u2080 = 30\u00b0: at 100 m depth C = 18.6 m/s, K_s = 0.984; at 10 m C = 9.4, K_s = 1.044, K_r = 0.946, \u03b1 = 14.6\u00b0. T = 8 s, H\u2080 = 1 m, normal incidence breaks at 1.64 m depth with H_b = 1.28 m. Steeper beach: the same waves, nearer the shore.",
   "id": "ls_ocean_waves"
+ },
+ {
+  "title": "Map projections: why Greenland looks as big as Africa",
+  "desc": "A sphere cannot be flattened without distortion. Choose a projection of the globe (Mercator, equirectangular, sinusoidal equal-area, Lambert cylindrical equal-area) and see small circles of equal size (Tissot indicatrices) turn into ellipses: conformal maps (Mercator) keep angles (circles stay circles) but blow up area by sec\u00b2\u03c6, equal-area maps keep area but shear shapes. The principal scale factors and area ratio at any latitude are computed from the Jacobian.",
+  "vault": "LS",
+  "chapters": [
+   "LS04 Map Projections and Reference Surfaces"
+  ],
+  "tryit": "Mercator at 72\u00b0 N (Greenland): area scale sec\u00b272\u00b0 = 10.5 \u2014 Greenland appears ~10\u00d7 too big relative to the equator. Sinusoidal: every circle has area ratio 1 but is sheared toward the edges. Switch projections and compare the ellipse shapes at 60\u00b0 latitude.",
+  "id": "ls_projections"
  },
  {
   "title": "Bedrock rivers: steady profile, slope\u2013area scaling and the knickpoint wave",
@@ -676,6 +741,17 @@
   "id": "sm_ising"
  },
  {
+  "title": "Liouville's theorem: a cloud of states flows like an incompressible fluid",
+  "desc": "A blob of initial conditions in the (q, p) phase space of a pendulum (or harmonic oscillator) is carried by Hamilton's equations. Its fine-grained area is exactly conserved (Liouville): the boundary stretches and shears into thin filaments, but the area stays the same. The coarse-grained area (number of occupied cells) grows as the filaments spread, which is the microscopic picture of entropy increase. Switch on friction and the flow contracts: dissipative systems are not Hamiltonian and the area shrinks.",
+  "vault": "SM",
+  "chapters": [
+   "SM02 Phase Space Liouville and the Microcanonical Ensemble",
+   "CM09 Hamilton's Equations and Poisson Brackets"
+  ],
+  "tryit": "Harmonic oscillator: the blob rotates rigidly (area and shape unchanged). Pendulum from a blob near the separatrix: it stretches into a spiral; boundary area stays at its initial value while the coarse-grained (occupied-cells) area keeps growing. Friction 0.1: area shrinks like e^{\u2212\u03b3t}.",
+  "id": "sm_liouville"
+ },
+ {
   "title": "Why equilibrium is overwhelmingly likely: multiplicity and entropy",
   "desc": "Two Einstein solids exchange q_tot quanta of energy. The number of microstates for a given split is \u03a9_A(q_A)\u00b7\u03a9_B(q_tot \u2212 q_A); the total is sharply peaked at the split that maximises S = k ln \u03a9. Increase the solid sizes and the peak (relative width ~ 1/\u221aN) becomes a spike. Also: the coin-flip binomial distribution showing the law of large numbers.",
   "vault": "SM",
@@ -708,6 +784,28 @@
   ],
   "tryit": "Increase T_h: the cycle widens and \u03b7 rises. Change the volume ratio: Q_h and W change but \u03b7 does not. Compare \u03b3 = 5/3 and 7/5: different adiabat steepness, same efficiency.",
   "id": "th_carnot"
+ },
+ {
+  "title": "First law on a P\u2013V diagram: work, heat and internal energy for four processes",
+  "desc": "One mole of ideal gas taken from state A to a new volume by an isothermal, isobaric, isochoric or adiabatic process. The work done by the gas is the area under the curve, \u0394U = nC_V \u0394T, and the first law \u0394U = Q \u2212 W gives the heat. Compare how the same change of volume costs different work and heat for different paths (state functions vs path functions).",
+  "vault": "TH",
+  "chapters": [
+   "TH02 Work Heat and the First Law",
+   "TH03 The Ideal Gas and Adiabatic Processes"
+  ],
+  "tryit": "Expand from V = 10 L to 20 L at T = 300 K: isothermal W = RT ln2 = 1.729 kJ, Q = W, \u0394U = 0. Adiabatic: Q = 0 and W = \u2212\u0394U (the gas cools). The isobaric W = P \u0394V is the area of a rectangle. Compare the four areas.",
+  "id": "th_pv_processes"
+ },
+ {
+  "title": "van der Waals isotherms and the Maxwell construction",
+  "desc": "The van der Waals equation (P + a/V\u00b2)(V \u2212 b) = RT for CO\u2082. Above T_c the isotherm is monotonic; below it develops an S-shaped loop whose middle part (\u2202P/\u2202V > 0, between the spinodal volumes) is thermodynamically unstable. Real systems avoid the loop by phase separating along a horizontal tie line at the vapour pressure P_sat, fixed by the Maxwell equal-area construction (equal areas above and below). Slide the temperature to see the loop open at T_c = 304 K, the spinodal region and the liquid/vapour volumes.",
+  "vault": "TH",
+  "chapters": [
+   "TH05 Potentials Maxwell Relations Stability and the Third Law",
+   "TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries"
+  ],
+  "tryit": "T = 300 K: the unstable region is 112.7 < V < 147.1 cm\u00b3/mol (TH05). T = 304 K: the loop has closed to the critical point V_c = 128 cm\u00b3/mol. Below ~290 K watch the equal-area tie line drop to lower pressures; the two shaded lobes have equal area.",
+  "id": "th_vdw_maxwell"
  },
  {
   "title": "Wave packets: phase velocity versus group velocity",

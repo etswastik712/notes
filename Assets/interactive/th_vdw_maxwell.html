@@ -1,0 +1,127 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>van der Waals isotherms and the Maxwell construction</title><style>:root{--bg:#fcfcfb;--ink:#0b0b0b;--muted:#52514e;--grid:#e4e3df;--panel:#f3f2ee;--blue:#2a78d6;--orange:#eb6834;--aqua:#1baf7a;--red:#e34948;--violet:#6250d6;--gold:#c8961e}
+@media (prefers-color-scheme:dark){:root{--bg:#161616;--ink:#ececea;--muted:#a3a29d;--grid:#2e2e2c;--panel:#222221;--blue:#5aa0f0;--orange:#f58a5c;--aqua:#3fd09a;--red:#f26b6a;--violet:#8d7df0;--gold:#e3b445}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#app{max-width:1060px;margin:0 auto;padding:14px 16px 24px}
+h1{font-size:18px;margin:0 0 2px;font-weight:650}
+.desc{color:var(--muted);margin:0 0 10px;max-width:880px}
+.grid{display:grid;gap:10px}
+.cvw{position:relative;background:var(--bg);border:1px solid var(--grid);border-radius:8px;overflow:hidden}
+canvas{display:block;width:100%}
+.ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:6px 18px;margin:10px 0;padding:10px 12px;background:var(--panel);border-radius:8px}
+.row{display:grid;grid-template-columns:minmax(80px,38%) 1fr 64px;align-items:center;gap:8px}
+.row label{color:var(--muted);font-size:13px}
+.row .v{font:12px ui-monospace,Menlo,Consolas,monospace;text-align:right}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select,button{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--grid);border-radius:6px;padding:3px 8px}
+button{cursor:pointer}button:hover{border-color:var(--blue)}
+.sep{grid-column:1/-1;font-weight:600;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.out{margin-top:8px;padding:8px 12px;border-left:3px solid var(--blue);background:var(--panel);border-radius:0 6px 6px 0;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+.note{color:var(--muted);font-size:12px;margin-top:6px}
+.err{background:#fde;color:#900;padding:8px;border:1px solid #c00;border-radius:6px;margin:8px 0;font:12px monospace;white-space:pre-wrap}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+</style></head><body><div id=app></div><script>
+/* shared helpers for the vault's interactive tools: no external dependencies */
+const $=(s,r=document)=>r.querySelector(s);
+const M={
+  linspace(a,b,n){const o=new Array(n);for(let i=0;i<n;i++)o[i]=a+(b-a)*i/(n-1);return o},
+  range(n){return Array.from({length:n},(_,i)=>i)},
+  clamp(x,a,b){return Math.min(b,Math.max(a,x))},
+  sum(a){let s=0;for(const x of a)s+=x;return s},
+  rk4(f,y,t,dt){const n=y.length,k1=f(t,y),y2=y.map((v,i)=>v+.5*dt*k1[i]),k2=f(t+.5*dt,y2),y3=y.map((v,i)=>v+.5*dt*k2[i]),k3=f(t+.5*dt,y3),y4=y.map((v,i)=>v+dt*k3[i]),k4=f(t+dt,y4);return y.map((v,i)=>v+dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]))},
+  rng(seed){let a=seed>>>0||1;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}},
+  gauss(r){let u=0,v=0;while(!u)u=r();v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)},
+  erf(x){const s=Math.sign(x);x=Math.abs(x);const t=1/(1+0.3275911*x);const y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y},
+  fmt(x,d=3){if(!isFinite(x))return String(x);const a=Math.abs(x);if(a!==0&&(a>=1e5||a<1e-3))return x.toExponential(2);return Number(x.toPrecision(d)).toString()},
+  hypot:Math.hypot,
+  // complex numbers as [re,im]
+  cadd(a,b){return[a[0]+b[0],a[1]+b[1]]},cmul(a,b){return[a[0]*b[0]-a[1]*b[1],a[0]*b[1]+a[1]*b[0]]},cexp(t){return[Math.cos(t),Math.sin(t)]},
+  // eigen of symmetric 2x2
+  sym2(a,b,d){const m=(a+d)/2,r=Math.hypot((a-d)/2,b);return[m-r,m+r]},
+};
+function col(n){return getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim()}
+const C={get ink(){return col('ink')},get muted(){return col('muted')},get grid(){return col('grid')},get bg(){return col('bg')},get panel(){return col('panel')},
+ get blue(){return col('blue')},get orange(){return col('orange')},get aqua(){return col('aqua')},get red(){return col('red')},get violet(){return col('violet')},get gold(){return col('gold')}};
+class Plot{
+  constructor(canvas,o={}){this.c=canvas;this.o=Object.assign({xmin:0,xmax:1,ymin:0,ymax:1,xlabel:'',ylabel:'',title:'',grid:true,ml:54,mr:14,mt:24,mb:38,equal:false,axes:true},o);if(this.o.equal&&!o.ml){this.o.ml=this.o.mr=10;this.o.mt=this.o.mb=10}this.base={xmin:this.o.xmin,xmax:this.o.xmax,ymin:this.o.ymin,ymax:this.o.ymax};this.resize()}
+  equalize(){const o=this.o,b=this.base,pw=this.w-o.ml-o.mr,ph=this.h-o.mt-o.mb,sx=pw/(b.xmax-b.xmin),sy=ph/(b.ymax-b.ymin),s=Math.min(sx,sy),cx=(b.xmin+b.xmax)/2,cy=(b.ymin+b.ymax)/2;o.xmin=cx-pw/2/s;o.xmax=cx+pw/2/s;o.ymin=cy-ph/2/s;o.ymax=cy+ph/2/s}
+  set(o){Object.assign(this.o,o)}
+  resize(){const d=window.devicePixelRatio||1,w=this.c.clientWidth||600,h=this.c.clientHeight||320;this.c.width=Math.round(w*d);this.c.height=Math.round(h*d);this.g=this.c.getContext('2d');this.g.setTransform(d,0,0,d,0,0);this.w=w;this.h=h;if(this.o.equal)this.equalize()}
+  X(x){const o=this.o,pw=this.w-o.ml-o.mr;return o.ml+(x-o.xmin)/(o.xmax-o.xmin)*pw}
+  Y(y){const o=this.o,ph=this.h-o.mt-o.mb;return this.h-o.mb-(y-o.ymin)/(o.ymax-o.ymin)*ph}
+  ix(px){const o=this.o;return o.xmin+(px-o.ml)/(this.w-o.ml-o.mr)*(o.xmax-o.xmin)}
+  iy(py){const o=this.o;return o.ymin+(this.h-o.mb-py)/(this.h-o.mt-o.mb)*(o.ymax-o.ymin)}
+  clear(){const g=this.g;g.save();g.setTransform(1,0,0,1,0,0);g.clearRect(0,0,this.c.width,this.c.height);g.restore();g.fillStyle=C.bg;g.fillRect(0,0,this.w,this.h);if(this.o.axes)this.drawAxes()}
+  ticks(a,b,n=6){const span=b-a,raw=span/n,p=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/p,st=(f<1.5?1:f<3?2:f<7?5:10)*p,out=[];for(let v=Math.ceil(a/st-1e-9)*st;v<=b+1e-9;v+=st)out.push(Math.abs(v)<st*1e-9?0:v);return out}
+  drawAxes(){const g=this.g,o=this.o;g.save();g.font='11px system-ui,sans-serif';g.lineWidth=1;
+    const xt=this.ticks(Math.min(o.xmin,o.xmax),Math.max(o.xmin,o.xmax)),yt=this.ticks(Math.min(o.ymin,o.ymax),Math.max(o.ymin,o.ymax));
+    if(o.grid){g.strokeStyle=C.grid;g.beginPath();for(const v of xt){const x=this.X(v);g.moveTo(x,o.mt);g.lineTo(x,this.h-o.mb)}for(const v of yt){const y=this.Y(v);g.moveTo(o.ml,y);g.lineTo(this.w-o.mr,y)}g.stroke()}
+    g.strokeStyle=C.muted;g.fillStyle=C.muted;g.beginPath();g.moveTo(o.ml,o.mt);g.lineTo(o.ml,this.h-o.mb);g.lineTo(this.w-o.mr,this.h-o.mb);g.stroke();
+    g.textAlign='center';g.textBaseline='top';for(const v of xt)g.fillText(M.fmt(v,3),this.X(v),this.h-o.mb+4);
+    g.textAlign='right';g.textBaseline='middle';for(const v of yt)g.fillText(M.fmt(v,3),o.ml-5,this.Y(v));
+    g.fillStyle=C.ink;g.textAlign='center';g.textBaseline='bottom';if(o.xlabel)g.fillText(o.xlabel,o.ml+(this.w-o.ml-o.mr)/2,this.h-3);
+    if(o.ylabel){g.save();g.translate(12,o.mt+(this.h-o.mt-o.mb)/2);g.rotate(-Math.PI/2);g.textBaseline='top';g.fillText(o.ylabel,0,0);g.restore()}
+    if(o.title){g.font='600 12px system-ui,sans-serif';g.textAlign='left';g.textBaseline='top';g.fillText(o.title,o.ml+4,4)}g.restore()}
+  clip(){const g=this.g,o=this.o;g.save();g.beginPath();g.rect(o.ml,o.mt,this.w-o.ml-o.mr,this.h-o.mt-o.mb);g.clip()}
+  unclip(){this.g.restore()}
+  line(xs,ys,color=C.blue,lw=2,dash=null){const g=this.g;this.clip();g.strokeStyle=color;g.lineWidth=lw;g.setLineDash(dash||[]);g.beginPath();let st=false;for(let i=0;i<xs.length;i++){const y=ys[i];if(!isFinite(y)){st=false;continue}const px=this.X(xs[i]),py=this.Y(y);if(!st){g.moveTo(px,py);st=true}else g.lineTo(px,py)}g.stroke();g.setLineDash([]);this.unclip()}
+  fn(f,color,lw,dash,n=400){const xs=M.linspace(this.o.xmin,this.o.xmax,n);this.line(xs,xs.map(f),color,lw,dash)}
+  dots(xs,ys,color=C.orange,r=3){const g=this.g;this.clip();g.fillStyle=color;for(let i=0;i<xs.length;i++){g.beginPath();g.arc(this.X(xs[i]),this.Y(ys[i]),r,0,7);g.fill()}this.unclip()}
+  dot(x,y,color=C.orange,r=5){this.dots([x],[y],color,r)}
+  vline(x,color=C.muted,dash=[4,3]){const g=this.g;g.save();g.strokeStyle=color;g.setLineDash(dash);g.beginPath();g.moveTo(this.X(x),this.o.mt);g.lineTo(this.X(x),this.h-this.o.mb);g.stroke();g.restore()}
+  hline(y,color=C.muted,dash=[4,3]){const g=this.g;g.save();g.strokeStyle=color;g.setLineDash(dash);g.beginPath();g.moveTo(this.o.ml,this.Y(y));g.lineTo(this.w-this.o.mr,this.Y(y));g.stroke();g.restore()}
+  text(s,x,y,color=C.ink,align='left',font='12px system-ui,sans-serif'){const g=this.g;g.save();g.fillStyle=color;g.font=font;g.textAlign=align;g.textBaseline='middle';g.fillText(s,this.X(x),this.Y(y));g.restore()}
+  ptext(s,px,py,color=C.ink,align='left',font='12px system-ui,sans-serif'){const g=this.g;g.save();g.fillStyle=color;g.font=font;g.textAlign=align;g.textBaseline='middle';g.fillText(s,px,py);g.restore()}
+  arrow(x0,y0,x1,y1,color=C.ink,lw=2,head=8){const g=this.g,a=this.X(x0),b=this.Y(y0),c=this.X(x1),d=this.Y(y1),th=Math.atan2(d-b,c-a);g.save();g.strokeStyle=color;g.fillStyle=color;g.lineWidth=lw;g.beginPath();g.moveTo(a,b);g.lineTo(c,d);g.stroke();g.beginPath();g.moveTo(c,d);g.lineTo(c-head*Math.cos(th-.4),d-head*Math.sin(th-.4));g.lineTo(c-head*Math.cos(th+.4),d-head*Math.sin(th+.4));g.closePath();g.fill();g.restore()}
+  area(xs,y1,y2,color){const g=this.g;this.clip();g.fillStyle=color;g.beginPath();for(let i=0;i<xs.length;i++)g[i?'lineTo':'moveTo'](this.X(xs[i]),this.Y(y1[i]));for(let i=xs.length-1;i>=0;i--)g.lineTo(this.X(xs[i]),this.Y(y2[i]));g.closePath();g.fill();this.unclip()}
+  poly(pts,fill,stroke,lw=1.5){const g=this.g;g.save();g.beginPath();pts.forEach((p,i)=>g[i?'lineTo':'moveTo'](this.X(p[0]),this.Y(p[1])));g.closePath();if(fill){g.fillStyle=fill;g.fill()}if(stroke){g.strokeStyle=stroke;g.lineWidth=lw;g.stroke()}g.restore()}
+  circle(x,y,rPix,fill,stroke,lw=1.5){const g=this.g;g.save();g.beginPath();g.arc(this.X(x),this.Y(y),rPix,0,7);if(fill){g.fillStyle=fill;g.fill()}if(stroke){g.strokeStyle=stroke;g.lineWidth=lw;g.stroke()}g.restore()}
+  legend(items,px,py){const g=this.g;g.save();g.font='12px system-ui,sans-serif';g.textBaseline='middle';let y=py;for(const [t,c,d] of items){g.strokeStyle=c;g.lineWidth=2.5;g.setLineDash(d||[]);g.beginPath();g.moveTo(px,y);g.lineTo(px+22,y);g.stroke();g.setLineDash([]);g.fillStyle=C.ink;g.textAlign='left';g.fillText(t,px+28,y);y+=16}g.restore()}
+  heat(f,nx,ny,cmap){const g=this.g,o=this.o;const w=(this.w-o.ml-o.mr)/nx,h=(this.h-o.mt-o.mb)/ny;for(let i=0;i<nx;i++)for(let j=0;j<ny;j++){const x=o.xmin+(i+.5)/nx*(o.xmax-o.xmin),y=o.ymin+(j+.5)/ny*(o.ymax-o.ymin);g.fillStyle=cmap(f(x,y));g.fillRect(o.ml+i*w,this.h-o.mb-(j+1)*h,w+1,h+1)}}
+}
+const cmaps={
+  div(v){v=M.clamp(v,-1,1);const t=Math.abs(v);if(v<0)return`rgb(${255-Math.round(190*t)},${255-Math.round(140*t)},255)`;return`rgb(255,${255-Math.round(150*t)},${255-Math.round(200*t)})`},
+  seq(v){v=M.clamp(v,0,1);return`rgb(${Math.round(250-200*v)},${Math.round(250-150*v*v)},${Math.round(255-120*v)})`},
+};
+const ui={
+  root:null,ctl:null,out:null,
+  init(title,desc){const a=document.getElementById('app');a.innerHTML='';const h=document.createElement('h1');h.textContent=title;const p=document.createElement('p');p.className='desc';p.innerHTML=desc||'';a.append(h,p);this.root=a;this.grid=null;this.ctl=null;this.out=null;this.plots=[];this.redraws=[];},
+  gridOf(cols,heights){const g=document.createElement('div');g.className='grid';g.style.gridTemplateColumns=`repeat(${cols},minmax(0,1fr))`;this.root.append(g);this.grid=g;return g},
+  canvas(h=320,opts={}){if(!this.grid)this.gridOf(1);const w=document.createElement('div');w.className='cvw';const c=document.createElement('canvas');c.style.height=h+'px';w.append(c);this.grid.append(w);const P=new Plot(c,opts);this.plots.push(P);return P},
+  controls(){if(!this.ctl){const d=document.createElement('div');d.className='ctl';this.root.append(d);this.ctl=d}return this.ctl},
+  sep(t){const d=document.createElement('div');d.className='sep';d.textContent=t;this.controls().append(d)},
+  slider(label,min,max,step,val,cb,fmt){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='range';i.min=min;i.max=max;i.step=step;i.value=val;const v=document.createElement('span');v.className='v';const o={get value(){return parseFloat(i.value)},set value(x){i.value=x;show()},el:i};const show=()=>{v.textContent=fmt?fmt(o.value):M.fmt(o.value,4)};i.addEventListener('input',()=>{show();cb&&cb(o.value)});show();r.append(l,i,v);this.controls().append(r);return o},
+  select(label,opts,cb,val){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const s=document.createElement('select');opts.forEach(([k,t])=>{const e=document.createElement('option');e.value=k;e.textContent=t;s.append(e)});if(val!==undefined)s.value=val;s.addEventListener('change',()=>cb&&cb(s.value));const sp=document.createElement('span');r.append(l,s,sp);this.controls().append(r);return{get value(){return s.value},set value(x){s.value=x},el:s}},
+  check(label,val,cb){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='checkbox';i.checked=!!val;i.addEventListener('change',()=>cb&&cb(i.checked));const sp=document.createElement('span');r.append(l,i,sp);this.controls().append(r);return{get value(){return i.checked},el:i}},
+  button(label,cb){let b=this.btns;if(!b){b=document.createElement('div');b.className='btns';this.root.append(b);this.btns=b}const e=document.createElement('button');e.textContent=label;e.addEventListener('click',cb);b.append(e);return e},
+  readout(){if(!this.out){const o=document.createElement('div');o.className='out';this.root.append(o);this.out=o}return this.out},
+  note(t){const n=document.createElement('div');n.className='note';n.innerHTML=t;this.root.append(n)},
+  onresize(f){this.redraws.push(f)},
+};
+window.addEventListener('resize',()=>{for(const P of ui.plots)P.resize();for(const f of ui.redraws)f()});
+function loop(step){let run=true,last=performance.now(),b=ui.button('pause',()=>{run=!run;b.textContent=run?'pause':'▶ play';if(run){last=performance.now();req()}});let id;function f(t){if(!run)return;const dt=Math.min(.05,Math.max(0,(t-last)/1000));last=t;step(dt,t/1000);id=requestAnimationFrame(f)}function req(){id=requestAnimationFrame(f)}req();return{toggle(){b.click()}}}
+window.addEventListener('error',e=>{const d=document.createElement('div');d.className='err';d.textContent='JS error: '+e.message+' ('+(e.filename||'').split('/').pop()+':'+e.lineno+')';(document.getElementById('app')||document.body).prepend(d)});
+
+(function(){
+const META={"title": "van der Waals isotherms and the Maxwell construction", "desc": "The van der Waals equation (P + a/V\u00b2)(V \u2212 b) = RT for CO\u2082. Above T_c the isotherm is monotonic; below it develops an S-shaped loop whose middle part (\u2202P/\u2202V > 0, between the spinodal volumes) is thermodynamically unstable. Real systems avoid the loop by phase separating along a horizontal tie line at the vapour pressure P_sat, fixed by the Maxwell equal-area construction (equal areas above and below). Slide the temperature to see the loop open at T_c = 304 K, the spinodal region and the liquid/vapour volumes.", "vault": "TH", "chapters": ["TH05 Potentials Maxwell Relations Stability and the Third Law", "TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries"], "tryit": "T = 300 K: the unstable region is 112.7 < V < 147.1 cm\u00b3/mol (TH05). T = 304 K: the loop has closed to the critical point V_c = 128 cm\u00b3/mol. Below ~290 K watch the equal-area tie line drop to lower pressures; the two shaded lobes have equal area.", "id": "th_vdw_maxwell"};ui.init(META.title,META.desc);
+ui.gridOf(1);const P=ui.canvas(360,{xmin:40,xmax:400,ymin:0,ymax:12,xlabel:'molar volume V (cm³/mol)',ylabel:'pressure P (MPa)'});
+const sT=ui.slider('temperature T (K)',240,330,0.5,285,draw);const out=ui.readout();
+const a=0.364,b=4.267e-5,R=8.314462;
+const Pf=(V,T)=>R*T/(V-b)-a/(V*V);// V in m3/mol -> Pa
+function spin(T){const f=V=>-R*T/((V-b)**2)+2*a/(V**3);const roots=[];let prev=f(b*1.02);for(let V=b*1.02;V<8e-4;V+=2e-8){const c=f(V);if(prev*c<0){let lo=V-2e-8,hi=V;for(let i=0;i<60;i++){const m=(lo+hi)/2;if(f(lo)*f(m)<=0)hi=m;else lo=m}roots.push((lo+hi)/2)}prev=c}return roots}
+function maxwell(T){const sp=spin(T);if(sp.length<2)return null;const Vmin=sp[0],Vmax=sp[1];const pmax=Pf(Vmax,T),pmin=Pf(Vmin,T);let lo=Math.max(pmin,1e3),hi=pmax;const vols=Ps=>{// roots of Pf(V)=Ps on three branches
+  const g=V=>Pf(V,T)-Ps;let vl=null,vg=null;let l=b*1.001,h=Vmin;for(let i=0;i<60;i++){const m=(l+h)/2;if(g(l)*g(m)<=0)h=m;else l=m}vl=(l+h)/2;l=Vmax;h=1e-2;for(let i=0;i<80;i++){const m=(l+h)/2;if(g(l)*g(m)<=0)h=m;else l=m}vg=(l+h)/2;return[vl,vg]};
+ const area=Ps=>{const [vl,vg]=vols(Ps);const n=2000;let s=0;for(let i=0;i<n;i++){const V=vl+(vg-vl)*(i+0.5)/n;s+=(Pf(V,T)-Ps)*(vg-vl)/n}return s};// zero at Maxwell
+ let l=lo,h=hi;if(area(l)*area(h)>0)return null;for(let i=0;i<80;i++){const m=(l+h)/2;if(area(l)*area(m)<=0)h=m;else l=m}const Ps=(l+h)/2;const [vl,vg]=vols(Ps);return{Ps,vl,vg,sp}}
+function draw(){const T=sT.value;P.clear();const Tc=8*a/(27*R*b);const Vs=M.linspace(b*1.08,4.5e-4,800);
+ [[Tc*0.92,C.muted],[Tc*0.97,C.muted],[Tc,C.red],[Tc*1.05,C.muted]].forEach(([t,c])=>{P.line(Vs.map(v=>v*1e6),Vs.map(v=>Pf(v,t)/1e6),c,1.3,[3,3])});
+ const mw=maxwell(T);const ys=Vs.map(v=>Pf(v,T)/1e6);P.line(Vs.map(v=>v*1e6),ys,C.blue,3);
+ if(mw){P.line([mw.vl*1e6,mw.vg*1e6],[mw.Ps/1e6,mw.Ps/1e6],C.orange,3.5);P.dot(mw.vl*1e6,mw.Ps/1e6,C.aqua,6);P.dot(mw.vg*1e6,mw.Ps/1e6,C.aqua,6);const n=200;const up=[],dn=[];for(let i=0;i<=n;i++){const V=mw.vl+(mw.vg-mw.vl)*i/n;up.push([V*1e6,Math.max(Pf(V,T),mw.Ps)/1e6]);dn.push([V*1e6,Math.min(Pf(V,T),mw.Ps)/1e6])}P.poly(up.concat([[mw.vg*1e6,mw.Ps/1e6],[mw.vl*1e6,mw.Ps/1e6]]),'rgba(214,69,61,0.22)',null);P.poly(dn.concat([[mw.vg*1e6,mw.Ps/1e6],[mw.vl*1e6,mw.Ps/1e6]]),'rgba(27,175,122,0.22)',null);
+  const sp=mw.sp;P.vline(sp[0]*1e6,C.violet,[3,3]);P.vline(sp[1]*1e6,C.violet,[3,3])}
+ P.dot(3*b*1e6,(a/(27*b*b))/1e6,C.red,7);P.text('critical point',3*b*1e6+10,(a/(27*b*b))/1e6+0.5,C.red);P.set({ymax:Math.max(8,a/(27*b*b)/1e6*1.35)});
+ const sp=spin(T);
+ out.textContent=`T_c = 8a/27Rb = ${M.fmt(Tc,5)} K   V_c = 3b = ${M.fmt(3*b*1e6,4)} cm³/mol   P_c = a/27b² = ${M.fmt(a/(27*b*b)/1e6,4)} MPa    T = ${T} K (T/T_c = ${M.fmt(T/Tc,3)})\n${sp.length>=2?'spinodal (∂P/∂V = 0): V = '+M.fmt(sp[0]*1e6,4)+' and '+M.fmt(sp[1]*1e6,4)+' cm³/mol (unstable between, violet lines)':'T ≥ T_c: no unstable region, the isotherm is monotonic'}\n${mw?'Maxwell construction: P_sat = '+M.fmt(mw.Ps/1e6,4)+' MPa,  V_liquid = '+M.fmt(mw.vl*1e6,4)+',  V_vapour = '+M.fmt(mw.vg*1e6,4)+' cm³/mol (equal-area tie line, orange)':''}`}
+draw();ui.note('TH05: CO₂ with a = 0.364 Pa m⁶/mol², b = 4.267×10⁻⁵ m³/mol; spinodal 112.7–147.1 cm³/mol at 300 K, closing at T_c = 304 K, V_c = 128 cm³/mol. The Maxwell construction (equal areas) follows from equality of the Gibbs energies of the two phases (TH08): ∫P dV from V_liq to V_gas = P_sat (V_gas − V_liq).');
+
+})();
+</script></body></html>
