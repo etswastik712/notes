@@ -16,6 +16,8 @@ States that every involutive distribution on a smooth manifold is completely int
 Source: DG29, pp. 1–4
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/integrable-distribution]] — Complete integrability guaranteed locally by the Frobenius Theorem implies that the distribution is integrable through integral manifolds
+- needs:: [[zettel/distribution]] — The Local Frobenius Theorem specifically characterizes properties of involutive distributions on smooth manifolds
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|DG29]] pp. 1–4
 <!-- /kurooto:seen -->
