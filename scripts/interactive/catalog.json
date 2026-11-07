@@ -40,6 +40,17 @@
   "id": "ch_vsepr"
  },
  {
+  "title": "Why the Hadley cell stops: angular momentum and the ring of air",
+  "desc": "A ring of air conserves its absolute angular momentum per unit mass A = \u03a9a\u00b2 cos\u00b2\u03c6 + u a cos \u03c6 as it drifts poleward. Starting at rest relative to the ground at latitude \u03c6\u2080, it must acquire the westerly wind u(\u03c6) = \u03a9a (cos\u00b2\u03c6\u2080 \u2212 cos\u00b2\u03c6)/cos \u03c6 (from the equator: u = \u03a9a sin\u00b2\u03c6/cos \u03c6) which reaches 134 m/s at 30\u00b0 and diverges at the pole: no overturning cell can reach from equator to pole without friction. The curve shows the wind, the second panel the ring and the wind arrow on the globe.",
+  "vault": "CL",
+  "chapters": [
+   "CL11 Mean Meridional Circulation and Angular Momentum",
+   "CL14 Observed Winds - Jets, Trades and the ITCZ"
+  ],
+  "tryit": "Slide \u03c6 to 30\u00b0: u = 134 m/s (the observed subtropical jet is weaker, because eddies and friction break the conservation); at 60\u00b0: 697 m/s, at 80\u00b0 more than 2500 m/s. Start the ring at 10\u00b0 instead of the equator to see the wind it picks up. Switch to 'surface (friction)' to see the trade-wind sign.",
+  "id": "cl_angular_momentum"
+ },
+ {
   "title": "Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance",
   "desc": "On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2\u03c0/f, f = 2\u03a9 sin \u03c6 (left panel, in the rotating frame). Right: a steady wind in balance between the pressure-gradient force and the Coriolis force blows along the isobars (geostrophic), with low pressure on its left in the Northern Hemisphere; friction turns it across the isobars toward low pressure.",
   "vault": "CL",
@@ -404,6 +415,18 @@
   "id": "ls_isostasy"
  },
  {
+  "title": "Mohr's circle and Coulomb failure: why faults dip at about 60\u00b0",
+  "desc": "Principal stresses \u03c3\u2081 > \u03c3\u2083 define a circle of all possible (normal stress, shear stress) pairs on planes through a point. Pore-fluid pressure P shifts the circle toward lower effective normal stress. The rock fails on a plane when the circle touches the Coulomb envelope \u03c4 = C + f \u03c3_n (f = tan \u03c6) and the first plane to fail has its normal at 45\u00b0 + \u03c6/2 from \u03c3\u2081, i.e. the plane itself is 45\u00b0 \u2212 \u03c6/2 from \u03c3\u2081 (\u2248 30\u00b0 for f = 0.6). Left: the circle and the envelope; right: the sample with the failure plane.",
+  "vault": "LS",
+  "chapters": [
+   "LS09 Faults and Earthquakes",
+   "LS02 Mechanics and Mathematics Toolkit",
+   "LS13 Landslides"
+  ],
+  "tryit": "C = 0.3, f = 0.6 and \u03c3\u2083 = 1: increase \u03c3\u2081 until the circle touches the line; the failure plane is 29.5\u00b0 from \u03c3\u2081 (\u03c6 = 31\u00b0). Increase the pore pressure and the circle slides left into failure without changing \u03c3\u2081 \u2212 \u03c3\u2083: the mechanism of injection-induced earthquakes. C = 0: \u03c3\u2081/\u03c3\u2083 at failure = 3.1.",
+  "id": "ls_mohr"
+ },
+ {
   "title": "Waves coming ashore: dispersion, shoaling, refraction and breaking",
   "desc": "Linear water waves obey \u03c9\u00b2 = g k tanh(kh): in deep water the phase speed is gT/2\u03c0, in shallow water \u221a(gh). A swell of period T and deep-water height H\u2080 arriving at angle \u03b1\u2080 over a sloping bed shortens, slows, turns toward the beach (Snell), and grows (energy flux conservation: H = H\u2080 K_s K_r) until it breaks when H reaches about 0.78h. Animated cross-section with the wavelength and height computed from the exact dispersion relation at each depth.",
   "vault": "LS",
@@ -435,6 +458,17 @@
   ],
   "tryit": "S = 0.003, H = 1.2 m: \u03c4_b = 35 Pa and the largest mobile grain is 48 mm gravel (Shields number 0.045). Then set H = 3 m, S = 10\u207b\u00b3 (u_* = 0.172 m/s) and move D from 0.05 to 5 mm: P goes 0.03 \u2192 4.7, and C(0.5H)/C_a drops from 0.91 to 10\u207b\u2076.",
   "id": "ls_sediment"
+ },
+ {
+  "title": "Will the slope fail? The infinite-slope factor of safety",
+  "desc": "A slab of soil of thickness h on a slope \u03b8 is held by friction (angle \u03c6), cohesion C and the effective normal stress, and driven by the downslope weight component: FS = [C + (\u03c1 g h cos\u00b2\u03b8 \u2212 P_w) tan \u03c6] / (\u03c1 g h sin \u03b8 cos \u03b8), failure when FS \u2264 1. Raise the water table (pore pressure P_w) and FS collapses: for a cohesionless slope with water at the surface the stable angle roughly halves, tan \u03b8_c = (1 \u2212 \u03c1_w/\u03c1) tan \u03c6. The right panel shows FS against slope angle for dry and wet soil and the critical depth z_c.",
+  "vault": "LS",
+  "chapters": [
+   "LS13 Landslides",
+   "LS02 Mechanics and Mathematics Toolkit"
+  ],
+  "tryit": "\u03c1 = 2000, \u03c6 = 30\u00b0, C = 0, water table at the surface (wetness 1): \u03b8_c = 16.1\u00b0 versus 30\u00b0 when dry (the monsoon-landslide mechanism). With \u03c1 = 1800, \u03c6 = 30\u00b0, C = 5 kPa, dry: z_c = 3.4 m at 35\u00b0, 1.8 m at 40\u00b0, 1.3 m at 45\u00b0.",
+  "id": "ls_slope_stability"
  },
  {
   "title": "The Hodgkin\u2013Huxley neuron: threshold, all-or-none spikes and repetitive firing",
@@ -600,7 +634,8 @@
   "vault": "QM",
   "chapters": [
    "QM01 From Waves to Probabilities",
-   "QM02 The Schrodinger Equation and Stationary States"
+   "QM02 The Schrodinger Equation and Stationary States",
+   "Fourier and Laplace Transforms"
   ],
   "tryit": "Make \u03c3\u2080 small: it spreads fast (large momentum spread). Make \u03c3\u2080 large: nearly rigid. Change k\u2080 and see the packet move without changing shape.",
   "id": "qm_wavepacket"
@@ -682,7 +717,9 @@
    "ED06 Waves in Matter, Reflection and Dispersion",
    "ED07 Guided Waves",
    "QM01 From Waves to Probabilities",
-   "LS26 Sea Level and Ocean Waves"
+   "LS26 Sea Level and Ocean Waves",
+   "Waves - Course Map",
+   "Fourier and Laplace Transforms"
   ],
   "tryit": "Deep water: v_g = v_p/2 (ripples run through the packet). Waveguide/plasma: v_p\u00b7v_g = c\u00b2, ripples faster than c but the packet slower. Schr\u00f6dinger: \u03c9 = k\u00b2/2, v_g = 2v_p. Non-dispersive: nothing spreads.",
   "id": "wave_dispersion_packet"
@@ -694,7 +731,9 @@
   "chapters": [
    "ED05 Electromagnetic Waves in Vacuum",
    "QM01 From Waves to Probabilities",
-   "PR06 Moments Generating Functions and Limit Theorems"
+   "PR06 Moments Generating Functions and Limit Theorems",
+   "Waves - Course Map",
+   "Fourier and Laplace Transforms"
   ],
   "tryit": "Square wave with N = 1, 3, 9, 49: watch the Gibbs ears sharpen but not shrink (overshoot 8.95 %). Triangle waves converge much faster (1/n\u00b2 coefficients).",
   "id": "wave_fourier"
@@ -706,7 +745,8 @@
   "chapters": [
    "CM06 Small Oscillations and Normal Modes",
    "ED05 Electromagnetic Waves in Vacuum",
-   "ED07 Guided Waves"
+   "ED07 Guided Waves",
+   "Waves - Course Map"
   ],
   "tryit": "Mode 'opposite directions' with amplitude ratio 1: perfect standing wave with nodes every \u03bb/2. Lower the ratio: nodes fill in (partial standing wave, a travelling part remains). Mode 'beats': the envelope period is 2\u03c0/(k\u2082 \u2212 k\u2081).",
   "id": "wave_standing_beats"

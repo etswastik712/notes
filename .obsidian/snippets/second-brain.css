@@ -101,3 +101,10 @@
   font-size: 0.88em;
   margin-top: -0.4em;
 }
+
+/* interactive tools (added with scripts/embed_interactive.py) */
+.callout[data-callout="interactive"] {
+  --callout-color: 168, 85, 247;
+  --callout-icon: lucide-mouse-pointer-click;
+}
+.callout[data-callout="interactive"] img { border-radius: 6px; border: 1px solid var(--background-modifier-border); }
