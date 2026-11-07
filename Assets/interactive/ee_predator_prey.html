@@ -110,12 +110,11 @@ const out=ui.readout();let traj=[],tmax=0,y,t;
 function f(t_,y_){const r=sr.value,p=sp.value,a=sa.value,m=sm.value,K=sK.value;const H=y_[0],P=y_[1];return[r*H*(K>0?1-H/K:1)-p*H*P,a*p*H*P-m*P]}
 function restart(){y=[sH.value,sP.value];t=0;traj=[[0,y[0],y[1]]]}
 restart();
-function draw(){const r=sr.value,p=sp.value,a=sa.value,m=sm.value,K=sK.value;const Hs=m/(a*p),Ps=K>0?r/p*(1-Hs/K):r/p;const mx=Math.max(140,Hs*2.2,...traj.map(q=>q[1])*1)*1.0,my=Math.max(140,Ps*2.2,...traj.map(q=>q[2]));
- P1.set({xmax:Math.max(140,Math.max(...traj.map(q=>q[1]))*1.1,Hs*2),ymax:Math.max(140,Math.max(...traj.map(q=>q[2]))*1.1,Ps*2)});P1.clear();
+function draw(){const r=sr.value,p=sp.value,a=sa.value,m=sm.value,K=sK.value;const Hs=m/(a*p),Ps=K>0?r/p*(1-Hs/K):r/p; P1.set({xmax:Math.max(140,Math.max(...traj.map(q=>q[1]))*1.1,Hs*2),ymax:Math.max(140,Math.max(...traj.map(q=>q[2]))*1.1,Ps*2)});P1.clear();
  // vector field
  const nx=14,ny=14;for(let i=1;i<nx;i++)for(let j=1;j<ny;j++){const H=P1.o.xmax*i/nx,P=P1.o.ymax*j/ny;const d=f(0,[H,P]);const n=Math.hypot(d[0]/P1.o.xmax,d[1]/P1.o.ymax)||1;const L=0.018;P1.arrow(H,P,H+d[0]/P1.o.xmax/n*L*P1.o.xmax,P+d[1]/P1.o.ymax/n*L*P1.o.ymax,C.grid,1.2,4)}
  // isoclines
- P1.vline(Hs,C.violet);if(K>0)P1.line([0,K],[r/p,0],C.aqua,2.2);else P1.hline(r/p,C.aqua,2.2);
+ P1.vline(Hs,C.violet);if(K>0)P1.line([0,K],[r/p,0],C.aqua,2.2);else P1.line([0,P1.o.xmax],[r/p,r/p],C.aqua,2.2);
  P1.line(traj.map(q=>q[1]),traj.map(q=>q[2]),C.blue,2.2);const e=traj[traj.length-1];P1.dot(e[1],e[2],C.orange,6);P1.dot(Hs,Ps,C.red,6);
  P1.legend([['predator isocline H = m/ap',C.violet],['prey isocline',C.aqua],['trajectory',C.blue]],P1.o.ml+8,P1.o.mt+14);
  P2.set({xmax:Math.max(40,t),ymax:Math.max(100,Math.max(...traj.map(q=>Math.max(q[1],q[2])))*1.1)});P2.clear();P2.line(traj.map(q=>q[0]),traj.map(q=>q[1]),C.blue,2.4);P2.line(traj.map(q=>q[0]),traj.map(q=>q[2]),C.orange,2.4);P2.legend([['prey H',C.blue],['predators P',C.orange]],P2.o.ml+8,P2.o.mt+14);
