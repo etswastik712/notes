@@ -92,7 +92,7 @@
    "CL10 Global Energy Balance and Meridional Structure",
    "CL04 Feedback and Multiple Steady States"
   ],
-  "tryit": "S/S\u2080 = 1, D = 0.65: warm state with polar ice cap. Lower S/S\u2080 below ~0.93 from a warm start and the ice line runs away; raise it back and the planet stays frozen until S/S\u2080 \u2248 1.08 (hysteresis). D = 0 gives independent bands; large D flattens the temperature profile.",
+  "tryit": "At S/S\u2080 = 1 two steady states coexist: warm (global mean 16.6 \u00b0C, equator 26 \u00b0C, pole \u22122 \u00b0C, ice-free) and frozen (\u221235.5 \u00b0C). From the warm state lower S/S\u2080: the ice cap appears near 0.92 and by 0.90 the planet is frozen (\u221241.6 \u00b0C). From frozen you must raise S/S\u2080 above about 1.24\u20131.26 to melt it: hysteresis. Diffusion D = 0, 0.3, 0.65, 1.5 gives an equator\u2013pole contrast of 109, 62, 28.5, 15.3 K.",
   "id": "cl_ebm_latitude"
  },
  {
@@ -402,7 +402,7 @@
   "chapters": [
    "EE07 Conservation Biology"
   ],
-  "tryit": "K = 15: most replicates go extinct within 100 time units. K = 60: nearly all persist. With the Allee effect on and a starting population below the threshold, extinction is deterministic. The fraction extinct and the mean time to extinction are printed live.",
+  "tryit": "With b = 0.5, d = 0.4 (net growth 0.1) and N\u2080 = K/2, 300 simulated replicates per K (measured while building): K = 8 \u2192 all go extinct (mean time \u2248 27); K = 20 \u2192 93 % extinct by t = 300; K = 30 \u2192 59 %; K = 45 \u2192 22 %. Persistence grows steeply with K. Switch the Allee effect on and start below K/5: extinction becomes nearly certain.",
   "id": "ee_stochastic_extinction"
  },
  {
