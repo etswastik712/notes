@@ -21,6 +21,7 @@ $$\theta_t(g) = g \exp(tX) = R_{\exp(tX)}(g)$$
 Source: DG28, pp. 1–5
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/weakly-embedded-submanifold]] — The candidate explicitly links to the exponential map in its discussion of immersed submanifolds arising in Lie theory
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-october-26-30|DG28]] pp. 1–5
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-14-august-10-14|DG Syllabus]] pp. 1–3
