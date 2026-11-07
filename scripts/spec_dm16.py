@@ -73,7 +73,7 @@ ITEMS = [
          body="The leaves are immersed, not embedded in general (irrational torus). Leaves of a *left-invariant* $D$ on a Lie group are permuted by left translations (Prop 19.23): this gives Thm 19.26.",
          used=[C17], related=["Foliation", "Frobenius Theorem", "Invariant Distribution", "Weakly Embedded Submanifold"]),
     dict(title="Invariant Distribution", aliases=["Phi-invariant distribution", "Phi-invariant foliation", "Proposition 19.23"], scope=[T, EB], by=BY,
-         syl={T: f"slide DG30 via the {N29}; HW10 Q3.", EB: f"[[{LEE}#page=521|Lee Prop 19.23, p. 503]]."},
+         syl={T: f"slide DG30 via the {N29}; HW10 Q3.", EB: f"[[{LEE}#page=523|Lee Prop 19.23, p. 505]]."},
          intuition="A symmetry preserves the plane field exactly when it maps leaves onto leaves.",
          key="For a diffeomorphism $\\Phi$: $D$ is **$\\Phi$-invariant** if $d\\Phi_p(D_p)=D_{\\Phi(p)}$; a foliation is $\\Phi$-invariant if $\\Phi(L)$ is a leaf for every leaf $L$. For involutive $D$ with induced $\\mathcal F$: **$D$ is $\\Phi$-invariant iff $\\mathcal F$ is** (⇒ $\\Phi(L)$ is an integral manifold, maximal by applying $\\Phi^{-1}$; ⇐ compare tangent spaces of $\\Phi(L)$).",
          body="Horizontal-line foliation of $\\mathbb R^2$: invariant under $(x,y)\\mapsto(2x,y+1)$ and the shear $(x+y,y)$, not under the swap $(y,x)$. Left-invariant $D$: $L_g$ permutes leaves.",

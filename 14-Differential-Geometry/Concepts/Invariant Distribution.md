@@ -14,7 +14,7 @@ tags: [subject/diff-geometry, type/concept, taught, extra/book, src/lecture-note
 
 > [!syllabus] In the syllabus vs extra
 > 🟢 **taught:** slide DG30 via the [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6|Nov 2–6 note (DG29–30)]]; HW10 Q3.
-> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=521|Lee Prop 19.23, p. 503]].
+> 🟡 **extra · book:** [[John M. Lee - Introduction to Smooth Manifolds.pdf#page=523|Lee Prop 19.23, p. 505]].
 
 > [!intuition] In one picture
 > A symmetry preserves the plane field exactly when it maps leaves onto leaves.

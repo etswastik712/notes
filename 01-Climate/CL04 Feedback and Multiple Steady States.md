@@ -241,6 +241,15 @@ The slide links the review by Hoffman et al. (2017, *Science Advances* 3, e16009
 >
 > [▶ Open the tool in your browser](../Assets/interactive/cl_ebm_albedo.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_ebm_albedo.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: A one-dimensional energy-balance model: heat transport and the ice line
+> Each latitude band balances absorbed sunlight (with the annual-mean insolation Q(φ) = (S/4)[1 − 0.477 P₂(sin φ)]), outgoing infrared A + BT and the diffusive transport of heat D ∂²T/∂φ²: C ∂T/∂t = Q(φ)(1 − α(T)) − (A + BT) + D∇²T.
+>
+> ![[cl_ebm_latitude.png|720]]
+>
+> **Try:** At S/S₀ = 1 two steady states coexist: warm (global mean 16.6 °C, equator 26 °C, pole −2 °C, ice-free) and frozen (−35.5 °C). From the warm state lower S/S₀: the ice cap appears near 0.92 and by 0.90 the planet is frozen (−41.6 °C). From frozen you must raise S/S₀ above about 1.24–1.26 to melt it: hysteresis. Diffusion D = 0, 0.3, 0.65, 1.5 gives an equator–pole contrast of 109, 62, 28.5, 15.3 K.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cl_ebm_latitude.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_ebm_latitude.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

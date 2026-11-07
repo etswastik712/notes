@@ -30,6 +30,17 @@
   "id": "ch_nernst"
  },
  {
+  "title": "Acid\u2013base titration curves: buffers, equivalence points and indicators",
+  "desc": "The exact pH curve for titrating V_a mL of a weak (or strong) acid of concentration C_a with a strong base C_b, from the charge balance [Na\u207a] + [H\u207a] = [OH\u207b] + [A\u207b] with [A\u207b] = C_aV_a/(V_a + V_b) \u00b7 K_a/(K_a + [H\u207a]). Slide pK_a, the concentrations and the volume added: the buffer region is flat around pH = pK_a (half-equivalence), the steep jump marks the equivalence point whose pH lies above 7 for a weak acid, and an indicator changes colour where the curve is steep.",
+  "vault": "CH",
+  "chapters": [
+   "CH04 Acid-Base Concepts",
+   "CH05 Acid Strength Lewis Acidity and Reactions"
+  ],
+  "tryit": "Acetic acid pK_a = 4.76, 0.1 M, 25 mL, titrated with 0.1 M NaOH: pH 2.88 at the start, 4.76 at 12.5 mL (half-equivalence), 8.73 at 25 mL (equivalence), 11.96 at 30 mL. Choose pK_a < 0 (strong acid): the equivalence point is exactly at pH 7.",
+  "id": "ch_titration"
+ },
+ {
   "title": "VSEPR in 3D: electron domains, lone pairs and molecular shape",
   "desc": "Electron domains (bonds and lone pairs) around a central atom arrange themselves as far apart as possible: 2 \u2192 linear, 3 \u2192 trigonal planar, 4 \u2192 tetrahedron, 5 \u2192 trigonal bipyramid, 6 \u2192 octahedron. Lone pairs take up room but are not part of the 'molecular shape': choose the number of domains and lone pairs and drag to rotate the 3D model. Lone pairs sit in the equatorial sites of a trigonal bipyramid and mutually trans in an octahedron. Idealised bond angles are computed from the geometry.",
   "vault": "CH",
@@ -230,6 +241,29 @@
   "id": "dm_contact_holonomy"
  },
  {
+  "title": "The Euclidean group as a semidirect product: rotations and translations",
+  "desc": "Rigid motions of the plane form the group E(2) = SO(2) \u22c9 R\u00b2: an element g = (R_\u03b8, t) acts by x \u21a6 R_\u03b8 x + t and (R\u2081, t\u2081)(R\u2082, t\u2082) = (R\u2081R\u2082, t\u2081 + R\u2081t\u2082). Apply g\u2082 then g\u2081 to a polygon and compare with g\u2081 then g\u2082 (different: the group is non-abelian); the commutator of two rigid motions is always a pure translation (R\u00b2 is a normal subgroup). The composition law and the 3\u00d73 homogeneous matrices are displayed live.",
+  "vault": "DM",
+  "chapters": [
+   "DM09 Group Actions and Semidirect Products",
+   "DM08 Lie Groups"
+  ],
+  "tryit": "Take g\u2081 = rotation by 90\u00b0 about the origin, g\u2082 = translation by (1, 0): g\u2081g\u2082 \u2260 g\u2082g\u2081 (the first sends the polygon to x = 0 line shifted, the second shifts it elsewhere). Set both rotations to 0: only translations: the motions commute. The commutator g\u2081g\u2082g\u2081\u207b\u00b9g\u2082\u207b\u00b9 is a translation whenever the rotation parts commute (always, for SO(2)).",
+  "id": "dm_euclidean_group"
+ },
+ {
+  "title": "Regular level sets: when f = c is a submanifold",
+  "desc": "For a smooth function f: R\u00b2 \u2192 R, the level set f\u207b\u00b9(c) is an embedded 1-dimensional submanifold whenever c is a regular value, i.e. \u2207f \u2260 0 at every point of the level set (the regular level set theorem). At a critical value the level set can acquire a singular point (a node or an isolated point) and the topology can change. Choose a function and slide c: the contour is drawn (marching squares), critical points are marked, and the number of components is reported.",
+  "vault": "DM",
+  "chapters": [
+   "DM06 Submanifolds",
+   "DM07 Sard Whitney and Transversality",
+   "DM04 The Tangent Bundle and the Rank Theorem"
+  ],
+  "tryit": "f = x\u00b3 \u2212 3x + y\u00b2: critical points (\u00b11, 0) with critical values f = \u22122 and f = 2. For |c| < 2 the level set has two components (an oval and an unbounded branch); at c = 2 it pinches into a figure with a node; for c > 2 it is one connected curve. f = x\u00b2 \u2212 y\u00b2: c = 0 is a cross (not a manifold). f = x\u00b2 + y\u00b2: c = 0 is a single point (dimension drop).",
+  "id": "dm_level_sets"
+ },
+ {
   "title": "The Lie bracket as the failure of flows to commute",
   "desc": "Flow along X for time t, then along Y for t, then back along X for \u2212t and back along Y for \u2212t. If the vector fields commute the path closes up; otherwise it ends at p + t\u00b2[X, Y](p) + O(t\u00b3), where [X, Y] = DY\u00b7X \u2212 DX\u00b7Y. Pick a pair of vector fields on the plane, a base point p and a time t: the gap shrinks like t\u00b2 and its direction is the bracket.",
   "vault": "DM",
@@ -406,6 +440,17 @@
   "id": "ee_stochastic_extinction"
  },
  {
+  "title": "Counting with symmetry: Burnside's lemma on necklaces and bracelets",
+  "desc": "How many different n-bead necklaces with k colours are there if rotations (and reflections, for bracelets) of the same pattern count as one? Burnside's lemma: the number of orbits of a group G acting on the colourings is (1/|G|) \u03a3_g |Fix(g)| = (1/|G|) \u03a3_g k^{c(g)}, where c(g) is the number of cycles of g acting on the beads. Choose n, k and the group (cyclic C_n or dihedral D_n): the tool lists the cycle structure of every group element and the resulting orbit count, and shows one orbit of colourings.",
+  "vault": "GT",
+  "chapters": [
+   "GT05 Actions Conjugation and Sylow Theorems",
+   "GT01 Groups Subgroups and Cosets"
+  ],
+  "tryit": "n = 6, k = 2: 14 necklaces (rotations only), 13 bracelets (D\u2086). n = 5, k = 3: 51 necklaces, 39 bracelets. n = 8, k = 2: 36 and 30. Check against the sum over group elements of k^{cycles}/|G|; press 'show an orbit' to see the colourings Burnside identifies.",
+  "id": "gt_burnside"
+ },
+ {
   "title": "The dihedral group D_n: symmetries, the Cayley table and cosets",
   "desc": "Act on a labelled regular n-gon with the rotation r (by 2\u03c0/n) and the reflection s. Every state is r^a s^b, the group has 2n elements, and rs \u2260 sr (the group is non-abelian for n \u2265 3, with srs = r\u207b\u00b9). The Cayley table is coloured by element, so every row and column is a permutation of the colours (cancellation). Pick any element g: the cyclic subgroup \u27e8g\u27e9 is found and the left cosets aH are shown (they partition the group into equal blocks, Lagrange).",
   "vault": "GT",
@@ -426,6 +471,17 @@
   ],
   "tryit": "Build a 3-cycle (1 2 3): order 3, sign +. Multiply by a transposition: sign flips. The preset (1 2)(3 4 5) has order lcm(2,3) = 6 and sign \u22121 (odd). Swap two values and watch the cycle structure merge or split and the sign flip. Press 'random' repeatedly to see typical cycle types.",
   "id": "gt_permutation"
+ },
+ {
+  "title": "Cyclic groups, Z_n and quotients: clock arithmetic and cosets",
+  "desc": "Z_n is the clock with n hours; the subgroup \u27e8d\u27e9 generated by a divisor d of n has n/d elements and the quotient Z_n/\u27e8d\u27e9 \u2245 Z_d. Pick n and a generator g: the cyclic subgroup \u27e8g\u27e9, its order n/gcd(g, n) and the cosets are drawn on the clock (each coset a colour). The second panel is the direct product Z_m \u00d7 Z_n as a grid on a torus: it is cyclic exactly when gcd(m, n) = 1 (then Z_m \u00d7 Z_n \u2245 Z_{mn}), and the element orders are coloured.",
+  "vault": "GT",
+  "chapters": [
+   "GT02 Homomorphisms Normal Subgroups and Quotients",
+   "GT03 Cyclic and Abelian Groups and Direct Products"
+  ],
+  "tryit": "n = 12, g = 4: the subgroup {0, 4, 8} has order 3 and index 4 (four cosets). The quotient has 4 elements: Z\u2081\u2082/\u27e84\u27e9 \u2245 Z\u2084. Product: Z\u2083 \u00d7 Z\u2084 (gcd 1) has an element of order 12 so it is cyclic \u2245 Z\u2081\u2082; Z\u2082 \u00d7 Z\u2084 (gcd 2) has no element of order 8: not cyclic.",
+  "id": "gt_zn_quotient"
  },
  {
   "title": "Elastic plates: flexure under a load, and the plate as a low-pass filter",
@@ -586,6 +642,27 @@
   ],
   "tryit": "Rest is \u221265 mV. A kick of 6 mV decays, 7 mV fires a spike peaking near +37 mV; 15 mV peaks at +40 mV, hardly higher. Constant current: no spikes below about 6 \u00b5A/cm\u00b2, then a steady train (\u2248 60 Hz at 7, 87 Hz at 20). Block Na\u207a (TTX) and no spike is possible; block K\u207a (TEA) and the spike will not repolarise properly.",
   "id": "ns_hodgkin_huxley"
+ },
+ {
+  "title": "Cantor's diagonal argument: there are more reals than integers",
+  "desc": "Suppose every infinite binary sequence appears in a list s\u2081, s\u2082, s\u2083, \u2026 (here the first 12 digits of the first 12 sequences are shown). Build a new sequence d by flipping the n-th digit of the n-th sequence: d differs from every s\u2099 in at least one place, so it is missing from the list. Edit the digits (click a cell) or re-randomise the list: the diagonal sequence always escapes. Hence the set of binary sequences (\u2245 the reals in [0, 1]) is uncountable.",
+  "vault": "PA",
+  "chapters": [
+   "PA04 Functions and Cardinality"
+  ],
+  "tryit": "Click any cell to flip a digit and watch the diagonal (red) and the new sequence d (bottom row) change. Try making the list a 'clever' enumeration (all zeros except a diagonal of ones): d is still not in the list. Press 'randomise' for many examples.",
+  "id": "pa_cantor"
+ },
+ {
+  "title": "Compactness: when every open cover has a finite subcover",
+  "desc": "A set is compact if from every cover by open sets one can pick finitely many that still cover it. On the real line, a closed bounded interval [0, 1] is compact (Heine\u2013Borel) while (0, 1] is not: the open cover U\u2099 = (1/n, 2) has no finite subcover because every finite union (1/N, 2) misses the points in (0, 1/N]. Choose the set and a number N of sets from the cover and see which points are left uncovered; for [0, 1] a finite subcover always exists (e.g., by Lebesgue-number reasoning).",
+  "vault": "PA",
+  "chapters": [
+   "PA12 Separation, Countability and Local Compactness",
+   "PA07 Metric and Topological Spaces"
+  ],
+  "tryit": "Set (0, 1] with cover U\u2099 = (1/n, 2): for any N, the uncovered gap (0, 1/N] never disappears. Switch to [0, 1] with the cover by balls of radius r = 0.1 around every point: a finite subcover of about 5\u20136 balls suffices (the chosen finite subcover is highlighted). The point 0 is where the open-cover trick for (0, 1] fails.",
+  "id": "pa_compactness"
  },
  {
   "title": "Covering spaces: lifting loops from the circle to the line",
@@ -818,8 +895,7 @@
   "desc": "A blob of initial conditions in the (q, p) phase space of a pendulum (or harmonic oscillator) is carried by Hamilton's equations. Its fine-grained area is exactly conserved (Liouville): the boundary stretches and shears into thin filaments, but the area stays the same. The coarse-grained area (number of occupied cells) grows as the filaments spread, which is the microscopic picture of entropy increase. Switch on friction and the flow contracts: dissipative systems are not Hamiltonian and the area shrinks.",
   "vault": "SM",
   "chapters": [
-   "SM02 Phase Space Liouville and the Microcanonical Ensemble",
-   "CM09 Hamilton's Equations and Poisson Brackets"
+   "SM02 Phase Space Liouville and the Microcanonical Ensemble"
   ],
   "tryit": "Harmonic oscillator: the blob rotates rigidly (area and shape unchanged). Pendulum from a blob near the separatrix: it stretches into a spiral; boundary area stays at its initial value while the coarse-grained (occupied-cells) area keeps growing. Friction 0.1: area shrinks like e^{\u2212\u03b3t}.",
   "id": "sm_liouville"

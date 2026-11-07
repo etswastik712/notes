@@ -14,10 +14,14 @@ tags: [subject/diff-geometry, type/moc, taught, extra/book, extra/beyond, src/le
 
 Fifteen chapters on **smooth manifolds, Lie groups and flows**, written 2026-10-30 to 2026-11-02 on **John M. Lee, *Introduction to Smooth Manifolds* (2nd ed.)** as the primary book, with Tu, Kumaresan, Guillemin–Pollack, Milnor and Warner as companions, and aligned with the lectures of **MT3184 Differential Geometry and Lie Groups** (the lectures follow Lee's numbering: Lemma 1.35, Thm 4.12, Thm 7.5, Thm 9.12, Thm 20.1, …). The topology and analysis it needs is written in the analysis vault as **PA11–PA15** ([[Proofs, Analysis and Topology - Course Map]]), and the Lie groups are the continuous side of [[Group Theory - Course Map]] ([[GT10 Symmetry Representations and Characters]] §6).
 
+> [!note] Update 2026-11-07: two chapters added
+> The lectures of **26 Oct–6 Nov (slides DG27–DG30) and Homework 10** reached **distributions, foliations, the Frobenius theorem and Lie subgroups from Lie subalgebras**, which DM15 had only stated. They are now written up as **[[DM16 Distributions, Involutivity and the Frobenius Theorem]]** and **[[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]]** (17 chapters in all); DM15 is unchanged and points to them. Reading order for the end of the course: DM14 → DM16 → DM17 → DM15 (DM15 §2–3 uses the Frobenius theorem).
+
 > [!warning] What is and is not in the sources
 > - **Taught (🟢)** means *covered by MT3184*, as far as the notes in the folder show. The only course material is the other tool's notes `mt3184-differential-geometry-and-lie-groups/` (OCR of the instructor's **handwritten slides DG1–DG26**, plus homework HW1–HW9, Test 1, and an exam-prep page). **DG1–DG7 are scans with no readable text** (weeks 1–3: manifolds, smooth maps, partitions of unity, tangent spaces, differentials, submanifolds), so for those chapters "taught" is inferred from the weekly post, the homework and the syllabus outline, not from the slides. The last slides of DG25 and DG26 are partly illegible. Every such gap is marked `[!verify]` in the chapter.
 > - **Extra · book (🟡)** is Lee/Tu/Kumaresan/… material that the lectures did not reach (e.g. Sard's theorem, Whitney embedding, transversality, Lie subalgebras and subgroups beyond the statement, the Lie correspondence proof). **Extra · beyond (🔵)** is my additions (numerical checks, worked examples, comparisons between books), always labelled.
 > - **Not covered at all** (by design of the user's scope: *course-aligned*): vector bundles, tensors, Riemannian metrics, differential forms, integration, de Rham cohomology, foliations, symplectic geometry (Lee Ch. 10–19, 21–22). The Frobenius theorem and Lie subalgebra–subgroup correspondence are only **stated** (DM15).
+> - **Update 2026-11-07:** the sentence above is no longer true for **foliations** and the **Frobenius theorem**: they were taught in weeks 13–14 (DG29–DG30) and are the subject of [[DM16 Distributions, Involutivity and the Frobenius Theorem]] and [[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]]; differential forms, tensors, Riemannian metrics and integration remain uncovered (forms appear in DM16 §5 only as a tool for the Frobenius criterion).
 > - **Assessments:** Test 1 (2026-09-03, HW1–HW3), mid-term (2026-09-24), **Test 2 on 2026-11-02 (HW6–HW9)**, end-sem 2026-11-23 to 12-02 (cumulative). Grading 20/40/40.
 > - The source notes are **read-only** and are the other tool's: they are listed in Sources below, never cited as primary.
 
@@ -62,6 +66,8 @@ Central thread: **a manifold is a space that looks like $\mathbb R^n$ near every
 | 13 | [[DM13 Lie Derivatives and Commuting Vector Fields]] | Ch. 9 | DG24–DG25; HW8 Q5–Q6 (HW9 Q4 in DM14) | draft |
 | 14 | [[DM14 One-Parameter Subgroups and the Exponential Map]] | Ch. 20 | DG25–DG26; HW9 Q1–Q5 | draft |
 | 15 | [[DM15 Closed Subgroups and the Lie Correspondence]] | Ch. 19–21 | DG14, DG18–DG20; HW9 Q6 | draft |
+| 16 | [[DM16 Distributions, Involutivity and the Frobenius Theorem]] | Ch. 19 | DG29; HW10 (Q2 partly) | draft |
+| 17 | [[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]] | Ch. 5, 19, 20 | DG27–DG30; HW10 Q1–Q5 | draft |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"
@@ -94,6 +100,8 @@ SORT chapter ASC
 | Oct 5–9 | DG19–DG21 | $\mathrm{Lie}(G)$, $\mathfrak{gl}(n)$, $\mathfrak{so}(n)$, representations, Ado; integral curves and flows | DM11, DM12 |
 | Oct 12–16 | DG22–DG24 | naturality, complete fields, flowout theorem, straightening, Lie derivative | DM12, DM13 |
 | Oct 19–24 | DG25–DG26 | end of the Lie derivative, one-parameter subgroups, matrix exponential, exp map | DM13, DM14 |
+| Oct 26–30 | DG27–DG28 | properties of exp (Prop 20.10, Cor 20.11, naturality), $\mathrm{Lie}(H)=\{X:\exp tX\in H\}$, smooth maps into embedded submanifolds, figure eight, weakly embedded, **Closed Subgroup Theorem proved** | DM14, DM15, DM17 |
+| Nov 2–6 | DG29–DG30 | distributions, integral manifolds, involutive, flat charts, Local Frobenius (statement), foliations, global Frobenius, $\Phi$-invariance, Thm 19.17, Lemma 19.24, Thms 19.25–19.26 | DM16, DM17 |
 
 ## Sources and what they are
 | ID | File | What it is | Role |
@@ -107,6 +115,7 @@ SORT chapter ASC
 | Y | [[Ernest Yeung - J. M. Lee_s Intro to Smooth Manifolds solutions.pdf]] | solutions to Lee's exercises | practice problems and checks |
 | S | `Michael Spivak - Calculus on Manifolds` | Spivak | PA13 (analysis background) |
 | MT | `mt3184-differential-geometry-and-lie-groups/` (other tool, **read-only**) | OCR notes of DG1–DG26, HW1–HW9, Test 1, exam prep | **the taught scope** |
+| MT2 | `mt3184-…/2026-11-06-october-26-30.md`, `…-november-2-6.md`, `…-hw10.md` (added 2026-11-07) | OCR notes of DG27–DG30 and HW10 | **taught scope of weeks 13–14** (DM16–DM17) |
 
 ## Concept notes and zettel notes
 - **Concept notes** (`Concepts/`, 98): one per idea, with scope chips, a syllabus line, intuition, key facts and a Dataview "Linked from" block; every chapter lists its own in its *Map of this chapter*.
@@ -117,6 +126,7 @@ SORT chapter ASC
 - **DG25 properties (a)–(d) of the Lie derivative** and the last slide of **DG26** (presumably $F\circ\exp_G=\exp_H\circ F_*$) are cut off in the OCR; DM13–DM14 state the standard results and flag them.
 - Is the **Frobenius theorem** / Lie subalgebra–subgroup correspondence examinable (only the statements are used in the slides)? Is **Sard's theorem** (the Global Rank Theorem proof uses Baire instead)?
 - HW9 has no posted solutions; the practice solutions in DM14–DM15 are mine and are marked as such.
+- **DG29–DG30 and HW10 (added 2026-11-07):** the slides are OCR; the example (iii) of DG29 and the proof of Thm 19.26 (DG30) are partly illegible; **HW10 has no posted solutions**, so the solutions in DM17 §8 are mine. Is the **proof** of the Local Frobenius Theorem examinable (DG29 states it only)? The end-semester covers all of DM01–DM17.
 
 ## Cross-subject links
 - **Group theory:** Lie groups are the continuous analogue of [[GT01 Groups Subgroups and Cosets]]–[[GT05 Actions Conjugation and Sylow Theorems]]; representations in [[GT10 Symmetry Representations and Characters]] §6 (the stub bridge written before this vault).

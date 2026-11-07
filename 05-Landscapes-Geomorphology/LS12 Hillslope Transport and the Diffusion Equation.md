@@ -208,6 +208,15 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 >
 > [▶ Open the tool in your browser](../Assets/interactive/ls_hillslope.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/ls_hillslope.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: Soil production and the thickness of regolith: feedback and bistability
+> Bedrock is converted to regolith at the production rate P(H), which falls as the cover thickens (exponential function P = P₀e^{−H/h₀}) or is humped (little production on bare rock, maximum under a moderate wet cover).
+>
+> ![[ls_soil_production.png|720]]
+>
+> **Try:** Exponential, P₀ = 90 m/Myr, h₀ = 0.45 m, E = 30 m/Myr: H_s = 0.45 ln 3 = 0.49 m and τ = h₀/E = 15 kyr. Switch to the humped law with E between the bare-rock rate and P_max: two steady thicknesses; start below the unstable one and the soil is stripped to bare rock. Raise E above P₀ (exponential): no steady regolith.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/ls_soil_production.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/ls_soil_production.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

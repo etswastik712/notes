@@ -159,6 +159,15 @@ the **dry adiabatic lapse rate** (with $g=9.807$ m s$^{-2}$, $c_p=1004$ J kg$^{-
 >
 > [▶ Open the tool in your browser](../Assets/interactive/th_carnot.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/th_carnot.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: First law on a P–V diagram: work, heat and internal energy for four processes
+> One mole of ideal gas taken from state A to a new volume by an isothermal, isobaric, isochoric or adiabatic process.
+>
+> ![[th_pv_processes.png|720]]
+>
+> **Try:** Expand from V = 10 L to 20 L at T = 300 K: isothermal W = RT ln2 = 1.729 kJ, Q = W, ΔU = 0. Adiabatic: Q = 0 and W = −ΔU (the gas cools). The isobaric W = P ΔV is the area of a rectangle. Compare the four areas.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/th_pv_processes.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/th_pv_processes.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

@@ -25,6 +25,8 @@ $\mathrm{span}\{\partial_x,\partial_y\}$ is involutive (planes $z=$ const); $\ma
 
 Used in: [[DM15 Closed Subgroups and the Lie Correspondence]]. Related: [[Commuting Frame]] · [[Lie Bracket of Vector Fields]] · [[Lie Subgroup]] · [[Lie Correspondence]].
 
+**Continued (2026-11-07):** now taught (slides DG29–DG30): the full treatment with the proof is [[DM16 Distributions, Involutivity and the Frobenius Theorem]] (local theorem, flat charts, forms) and [[DM17 Foliations, Weakly Embedded Submanifolds and Lie Subgroups]] (global theorem, foliations, Lie subgroups). Concept notes: [[Distribution]] · [[Integral Manifold]] · [[Involutive Distribution]] · [[Flat Chart for a Distribution]] · [[Global Frobenius Theorem]] · [[Foliation]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

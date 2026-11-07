@@ -173,6 +173,15 @@ flowchart LR
 >
 > [▶ Open the tool in your browser](../Assets/interactive/pr_correlation.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/pr_correlation.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: Joint, marginal and conditional distributions
+> A scatter of 4000 pairs (X, Y) from a chosen joint law, with the marginal histograms on the axes and the conditional distribution of Y given X in a narrow slice around x₀ (click or slide x₀).
+>
+> ![[pr_joint.png|720]]
+>
+> **Try:** Correlated normal ρ = 0.8: slice at x₀ = 1.5: E[Y|X] = ρx₀ = 1.2, conditional s.d. √(1−ρ²) = 0.6. Switch to the disk: E[Y|X] = 0 for every x₀ but the conditional range shrinks to ±√(1−x₀²): dependence without correlation.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/pr_joint.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/pr_joint.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter
