@@ -27,7 +27,7 @@ A connected, text-and-figure heavy knowledge base built on top of the course mat
 | Quantum Mechanics · Group Theory · Inorganic Chemistry · Proofs and Analysis | [[Quantum Mechanics - Course Map]] · [[Group Theory - Course Map]] · [[Inorganic Chemistry - Course Map]] · [[Proofs, Analysis and Topology - Course Map]] | planned | 3 |
 | Differential Geometry (MT3184) | [[Differential Geometry - Course Map]] | **all 15 chapters drafted** (DM01–DM15 on Lee's *Introduction to Smooth Manifolds*; 98 concept notes, 43 zettel notes, 15 figures) with the prerequisites PA11–PA15 in the analysis vault | 3 |
 | Classical Mechanics (PH2213) | [[Classical Mechanics - Course Map]] | **course map + CM01–CM11 written** (CM01–CM06 on 2026-11-04, CM07–CM11 on 2026-11-07); CMX1–CMX2 planned | 3 |
-| Electrodynamics (PH3114) | [[Electrodynamics - Course Map]] | **course map + ED03–ED08 written** (2026-11-04); Griffiths and Jackson equal priority; ED01–ED02, ED09–ED11, EDX1–EDX2 planned | 3 |
+| Electrodynamics (PH3114) | [[Electrodynamics - Course Map]] | **course map + ED03–ED09 written** (ED03–ED08 on 2026-11-04, ED09 on 2026-11-07); Griffiths and Jackson equal priority; ED01–ED02, ED10–ED11, EDX1–EDX2 planned | 3 |
 | Neuroscience | [[Neuroscience - Course Map]] | planned last | 4 |
 
 ## The big picture

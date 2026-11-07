@@ -476,6 +476,26 @@
   "id": "ed08_gauge"
  },
  {
+  "title": "Fields of a moving point charge: the retarded position and the Li\u00e9nard\u2013Wiechert field",
+  "desc": "Choose a trajectory (uniform motion, circular motion or a linear oscillation) and click to place an observer. The tool solves the retardation condition |r \u2212 w(t_r)| = c(t \u2212 t_r) for the unique retarded time (the light cone of the observer meets the world line once), draws the retarded and present positions, and evaluates the Li\u00e9nard\u2013Wiechert field E = (q/4\u03c0\u03b5\u2080) r/(r\u00b7u)\u00b3 [(c\u00b2 \u2212 v\u00b2)u + r \u00d7 (u \u00d7 a)], u = c r\u0302 \u2212 v, split into the velocity field (\u221d 1/r\u00b2) and the acceleration or radiation field (\u221d 1/r). Arrows over the plane show E (normalised) for the whole region; for uniform motion E points away from the PRESENT position.",
+  "vault": "ED",
+  "chapters": [
+   "ED09 Retarded Potentials and Li\u00e9nard-Wiechert Fields"
+  ],
+  "tryit": "Uniform motion at v = 0.9c: the arrows all point from the present position (blue), although the news came from the retarded one (orange); the field is flattened into a pancake perpendicular to v. Circular motion: far from the charge the radiation field takes over (ratio accel/velocity \u221d r, crossing near r* \u2248 7.8 orbit radii for v = 0.4c).",
+  "id": "ed09_retarded_charge"
+ },
+ {
+  "title": "The oscillating electric dipole: from the static near field to the radiation zone",
+  "desc": "The exact field of a point electric dipole p = p\u2080\u1e91 oscillating at frequency \u03c9 (Jackson 9.18, valid at every distance): E = (1/4\u03c0\u03b5\u2080){k\u00b2(n\u00d7p)\u00d7n e^{ikr}/r + [3n(n\u00b7p) \u2212 p](1/r\u00b3 \u2212 ik/r\u00b2)e^{ikr}}. The picture shows the electric field vectors in a plane containing the axis, in units where \u03bb = 1, as they evolve in time: close to the dipole the field looks like a static dipole field that simply oscillates; beyond r \u2248 \u03bb/2\u03c0 the field detaches and moves outward as a transverse wave whose amplitude falls as 1/r. Colours show |E| on a log scale; the polar plot is the radiation pattern sin\u00b2\u03b8.",
+  "vault": "ED",
+  "chapters": [
+   "ED10 Dipole Radiation"
+  ],
+  "tryit": "Zoom the window to \u00b10.5\u03bb: static dipole lines breathing in and out. Zoom out to \u00b14\u03bb: closed loops of field lines pinch off and travel outward; along the axis (\u03b8 = 0) the field is purely longitudinal and never radiates, in the equatorial plane it is transverse and strongest. Click a point to read E_r, E_\u03b8 and the zone (kr < 1 near zone).",
+  "id": "ed10_dipole_field"
+ },
+ {
   "title": "Two competitors: isoclines decide who wins",
   "desc": "Lotka\u2013Volterra competition: dN\u2081/dt = r\u2081N\u2081(K\u2081 \u2212 N\u2081 \u2212 \u03b1\u2081\u2082N\u2082)/K\u2081 and the mirror equation for species 2. The zero-growth isoclines are straight lines; which one lies outside the other fixes the outcome: species 1 wins, species 2 wins, stable coexistence (each limits itself more than the other, \u03b1\u2081\u2082\u03b1\u2082\u2081 < 1 with the K conditions) or an unstable equilibrium (priority effect). Click anywhere in the plane to start a trajectory.",
   "vault": "EE",
