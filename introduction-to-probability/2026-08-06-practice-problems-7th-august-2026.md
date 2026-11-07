@@ -47,3 +47,8 @@ Dear everyone, here is the update practice problem set. Feel free to work out ot
 ## Concepts in Practice problems 7th August 2026
 [[zettel/naive-definition-of-probability]], [[zettel/sample-space]], [[zettel/event]], [[zettel/probability-difference-formula-for-subsets]], [[zettel/pascal-s-identity]]
 <!-- /kurooto:material3372933a -->
+
+<!-- kurooto:materialc3a73f0b -->
+## Concepts in Practice problems 7th August 2026
+[[zettel/full-house]], [[zettel/straight-flush]]
+<!-- /kurooto:materialc3a73f0b -->
