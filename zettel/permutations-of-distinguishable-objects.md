@@ -18,6 +18,7 @@ $$n!$$
 Source: Class notes 5th August 2026, pp. 1–2
 
 <!-- kurooto:seen -->
+- special-case-of:: [[zettel/basic-principle-of-counting]] — Arranging n distinguishable objects in sequence is a direct application of the generalized multiplication principle with successive choices decreasing from n down to 1
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 5th August 2026]] pp. 1–2
 <!-- /kurooto:seen -->
