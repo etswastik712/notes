@@ -112,3 +112,4 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-11-05: HW5 uploaded; the instructor will add lecture notes over the weekend. See [[introduction-to-probability/2026-11-05-hw5]]. (Classroom)
 - 2026-11-06: Solution to HW-5 Q.1 posted by Sooraj M as an image. See [[introduction-to-probability/2026-11-06-hw-5-q1-solution]]. (Classroom)
 - 2026-11-06: Remedial class on Saturday 2026-11-07, 2:00 PM, Madhava Hall, 3rd floor, Main Building. (Classroom)
+- 2026-11-06: Remedial class on Saturday 2026-11-07: time changed to 9:00 PM, Madhava Hall, 3rd floor main building. (Classroom)
