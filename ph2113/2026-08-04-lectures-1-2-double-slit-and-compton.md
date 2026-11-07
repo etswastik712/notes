@@ -91,3 +91,8 @@ Small numeric inconsistency between the lecture notes: Lecture 2 tabulates 4.852
 ## Concepts in PH2113_Lecture1
 [[zettel/quantum-probability-amplitude-superposition]]
 <!-- /kurooto:materialbb239bcc -->
+
+<!-- kurooto:materiald86edb2d -->
+## Concepts in PH2113_Lecture2
+[[zettel/compton-scattering]]
+<!-- /kurooto:materiald86edb2d -->
