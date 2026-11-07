@@ -16,6 +16,7 @@ An experiment where the full set of possible observable outcomes is known before
 Source: Class notes 6th August 2026, pp. 1–4
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/basic-principle-of-counting]] — The basic principle of counting determines the total number of composite outcomes when multiple experiments are performed successively
 ## Seen in
 - [[introduction-to-probability/2026-08-06-practice-problems-7th-august-2026|Class notes 6th August 2026]] pp. 1–4
 <!-- /kurooto:seen -->
