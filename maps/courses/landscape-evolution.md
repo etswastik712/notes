@@ -32,6 +32,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-11-03: reading posted on whether global erosion rates rose in the late Cenozoic: Herman and others (thermochronology compilation), the opposing view (Schildgen et al. 2018, https://www.nature.com/articles/s41586-018-0260-6) and a paper on time-scale-dependent glacial erosion estimates (https://www.science.org/doi/10.1126/sciadv.1600204). See [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]].
 - 2026-11-04: ECS seminar 4 pm, Seminar Room 32, Dr Dnyanesh Borse on self-organization in fluvial landscapes
 - 2026-11-06: field trip reminders for 7 Nov: assemble at guest house by 06:15 am; bring soft copy of field guide, notebook, pencil/pen, scale, shoes, 2 L water, and mobile app installed for measuring strike & dip and lat-long ([Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkwOTE3MzgwODcw)).
+- 2026-11-07: after the day trip the teacher thanked everyone and said a Google Sheet for pothole-related data and a Drive folder for trip photos would be added around Monday 9 Nov (not posted yet). One photo attached ([image](https://drive.google.com/file/d/1L26GEbdDLwvDrMyrDYwfVsmczINNFfkN/view?usp=drive_web), not viewed). [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4MjMzOTgxMTEz)
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)
