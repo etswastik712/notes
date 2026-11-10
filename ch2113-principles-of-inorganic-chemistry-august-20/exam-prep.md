@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Quiz 3 on Tuesday 2026-11-17 (postponed from 2026-11-10; announced 2026-11-03 on behalf of Prof. Ballav). The post only says "the quiz"; it is taken to be Quiz 3. Time (12:00–1:00 pm, during the TA session) is assumed unchanged. Syllabus as announced 2026-11-02: Crystal Field Theory and related topics, not molecular orbital theory, covering what is taught in class on 2 Nov, in the TA session on 3 Nov, and in class on 4 Nov and 9 Nov (check whether the syllabus is extended now the date moved). Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., pp. 394–413. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins 5th ed. Ch. 5, pp. 147–161). The end-semester date is not announced yet.
+Quiz 3 on Tuesday 2026-11-17 (postponed from 2026-11-10; announced 2026-11-03 on behalf of Prof. Ballav). The post only says "the quiz"; it is taken to be Quiz 3. Time (12:00–1:00 pm, during the TA session) is assumed unchanged. Syllabus as announced 2026-11-02: Crystal Field Theory and related topics, not molecular orbital theory, covering what is taught in class on 2 Nov, in the TA session on 3 Nov, and in class on 4 Nov and 9 Nov (check whether the syllabus is extended now the date moved). Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., pp. 394–413. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins 5th ed. Ch. 5, pp. 147–161). The Quiz 2 paper is to be distributed at NLH in class on 2026-11-10 (announced 2026-11-09). The end-semester date is not announced yet.
 
 ## Covered so far
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2]]: Lewis structures (resonance, formal charge, oxidation number) and VSEPR
@@ -79,4 +79,5 @@ Quiz 3 on Tuesday 2026-11-17 (postponed from 2026-11-10; announced 2026-11-03 on
 - Slide statements to verify against the textbook: "more nodes, higher symmetry" (MOT rule 1) and the SF6 orbital labels.
 - The RMgX product in Tutorial 4 Q9 is drawn unclearly on the answer sheet.
 - Midsem and end-semester dates are not in the notes.
+- The "tomorrow's class" announcement of 2026-11-09 is read as the class on 2026-11-10 at NLH; the time is not given.
 <!-- /kurooto:exam-prep -->
