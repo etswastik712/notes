@@ -23,6 +23,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [[intro-to-proofs/2026-08-06-assignment-1]] Assignment 1 (2026-08-06)
 - [[intro-to-proofs/2026-08-13-assignment-2]] Assignment-2 (2026-08-13)
 - [[intro-to-proofs/2026-10-30-assignment-9]] Assignment-9 (2026-10-30)
+- [[intro-to-proofs/2026-11-10-peano-s-axioms]] Peano's axioms (2026-11-10)
 
 ## Tasks
 - [ ] Assignment-3 (due date not given; file Assignment-3.pdf could not be downloaded) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc2MTE0MTQwMDE0/details)

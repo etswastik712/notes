@@ -12,6 +12,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 ## Exams
 - 2026-09-17: mid-sem exam is open-notes (own handwriting; if class notes were taken on a device, email for permission to use printed, handwritten notes), calculator allowed, no sharing of notes or calculator, forgotten formulas or constants can be asked from the teacher (their call). Exam date not stated in the post.
 - 2026-10-05 and 2026-10-06: project presentations (5+5 min, 5 slides: problem statement, data source/method, preliminary results if any).
+- 2026-11-10: final project presentations on Monday 16 Nov 2026 (the post says "16th Oct", which doesn't match a Monday; read as 16 Nov), 4:15 PM, Seminar Room 32. Be there by 4 pm, check that your slides work (setup time is cut from your slot). 9 minutes, strictly under 10 slides, then 5 minutes of Q&A. Order is in a shared sheet; your group's problem there: meandering and braiding rivers in the IGP. Talks will be announced to the whole ECS department. [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4NTk3MTMyMTE5)
 
 ## Announcements
 - 2026-09-03: reading posted: Himalayan mountain building review (https://www.nature.com/articles/s43017-021-00143-1) and a detailed reconstruction of the Chamoli flood (https://www.science.org/doi/10.1126/science.abh4455). Slides: [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]].
@@ -33,6 +34,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-11-04: ECS seminar 4 pm, Seminar Room 32, Dr Dnyanesh Borse on self-organization in fluvial landscapes
 - 2026-11-06: field trip reminders for 7 Nov: assemble at guest house by 06:15 am; bring soft copy of field guide, notebook, pencil/pen, scale, shoes, 2 L water, and mobile app installed for measuring strike & dip and lat-long ([Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkwOTE3MzgwODcw)).
 - 2026-11-07: after the day trip the teacher thanked everyone and said a Google Sheet for pothole-related data and a Drive folder for trip photos would be added around Monday 9 Nov (not posted yet). One photo attached ([image](https://drive.google.com/file/d/1L26GEbdDLwvDrMyrDYwfVsmczINNFfkN/view?usp=drive_web), not viewed). [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4MjMzOTgxMTEz)
+- 2026-11-10: project presentation logistics posted (Mon 16 Nov, 4:15 PM, Seminar Room 32; 9 min + 5 min Q&A, under 10 slides; chai and chocolates provided). Details under Exams. Group sheet listing the project problems was attached (names left out here).
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)

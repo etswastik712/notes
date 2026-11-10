@@ -26,6 +26,7 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - [[intro-to-proofs/2026-10-20-countable-and-uncountable-sets-lectures-17-to-20]]: Lectures 17 to 20: countability of $\mathbb{Q}$, subset of countable is countable, Cantor's diagonal argument for uncountability of $(0, 1)$ and $\mathbb{R}$, continuum hypothesis
 - [[intro-to-proofs/2026-10-22-assignment-8]]: Assignment 8: countability of unions, irrational numbers $\mathbb{R} \setminus \mathbb{Q}$, $\{0, 1\}^\mathbb{N}$, Cantor's theorem $|A| < |\mathcal{P}(A)|$, interval bijections $[0, 1) \sim (0, 1) \sim \mathbb{R}$, induction (PMI) identities and scope
 - [[intro-to-proofs/2026-10-30-assignment-9]]: Assignment 9: strong induction, Well-Ordering Principle, equivalence of PMI/strong induction/WOP, WOP proofs (prime divisor, $\sqrt3$ irrational), $n^2+n$ even by WOP vs induction
+- [[intro-to-proofs/2026-11-10-peano-s-axioms]]: Lecture 25: Peano axioms (P1)-(P3), predecessor lemma, addition defined from the successor, associativity, order, multiplication, isomorphism of Peano systems
 
 ## Must know
 - Logical equivalence $\sim$ is not equality $=$; De Morgan: $\lnot(P\lor Q)\sim\lnot P\land\lnot Q$ and $\lnot(P\land Q)\sim\lnot P\lor\lnot Q$; $(P\Rightarrow Q)\sim(\lnot P\lor Q)$; $P\lor Q\sim\lnot(\lnot P\land\lnot Q)$ (Classroom: Assignment 1 Q3).
@@ -65,6 +66,12 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Least element: $m\in S$ is a least element of $S\subseteq\mathbb N$ if $m\le s$ for all $s\in S$; it is unique, written $m=\min S$. Well-Ordering Principle (WOP): every nonempty subset of $\mathbb N$ has a least element; it also holds for $\mathbb N\cup\{0\}$ and $\{n\in\mathbb Z:n\ge m\}$ (Classroom: Assignment 9).
 - PMI, strong induction and WOP are equivalent statements about $\mathbb N$ (Classroom: Assignment 9).
 - WOP proof template: let $S$ be the set of counterexamples, suppose $S\ne\emptyset$, take $m=\min S$ and produce a counterexample smaller than $m$; always say which set the least element is taken from and why it is nonempty (Classroom: Assignment 9).
+- Peano system: a set $N$ with a distinguished element $1$ and a function $s:N\to N$ such that (P1) $1\notin\operatorname{Im}(s)$; (P2) $s$ is injective; (P3) if $S\subseteq N$, $1\in S$ and $s(S)\subseteq S$, then $S=N$. (P3) is PMI written with $s(k)$ for $k+1$ (Classroom: L-25, Lecture 25).
+- Each Peano axiom is independent: $X=\{1\}$, $s(1)=1$ violates only (P1); $X=\{1,2\}$, $s(1)=s(2)=2$ violates only (P2); $\mathbb N\cup\mathbb N'$ (disjoint copy) violates only (P3) (Classroom: L-25).
+- Predecessor lemma: every $n\ne1$ equals $s(m)$ for exactly one $m$; proof by (P3) on $S=\{1\}\cup\operatorname{Im}(s)$, uniqueness by (P2) (Classroom: L-25).
+- Addition is defined by $n+1:=s(n)$ and $n+s(m):=s(n+m)$, i.e. $n+(m+1)=(n+m)+1$; this rule is a definition, not associativity. Multiplication: $n\cdot1:=n$, $n\cdot(m+1):=n\cdot m+n$ (Classroom: L-25).
+- From the Peano axioms: $1+n=n+1$ (Theorem 3); $(a+b)+c=a+(b+c)$ by induction on $c$ (Theorem 4); with $a<b$ meaning $b=a+x$ for some $x$, $a<b\Rightarrow a+1\le b$ (Theorem 5). Lemma 1 and Theorem 5 are the two facts behind PMI $\Rightarrow$ WOP (Classroom: L-25).
+- Any two Peano systems are isomorphic (bijection taking $1\mapsto1$ and commuting with successors); ZFC supplies a model via $0=\emptyset$, $s(x)=x\cup\{x\}$ and the Axiom of Infinity (Classroom: L-25).
 
 ## Typical questions
 - Build truth tables (up to three variables), verify equivalences such as De Morgan, classify as tautology/contradiction/contingency: [[intro-to-proofs/2026-08-06-assignment-1]] Q1-Q5.
@@ -94,6 +101,7 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Prove WOP implies strong induction via $\min$ of the set of failures: [[intro-to-proofs/2026-10-30-assignment-9]] Q2.
 - WOP proofs: every $n\ge2$ has a prime divisor, nonempty subsets of $\mathbb Z$ bounded below have a least element, no rational has square 3: [[intro-to-proofs/2026-10-30-assignment-9]] Q3.
 - Prove $n^2+n$ is even by WOP and by ordinary induction, and compare the two: [[intro-to-proofs/2026-10-30-assignment-9]] Q4.
+- Check which Peano axioms a given structure satisfies; prove cancellation, $n\cdot1=1\cdot n$, distributivity, "no $n<1$", and antisymmetry of $<$ from (P1)-(P3): exercises (a)-(e) in [[intro-to-proofs/2026-11-10-peano-s-axioms]].
 
 ## Gaps
 - Assignments 3, 5, and 6: files could not be downloaded, so their problem statements are not in the notes.
@@ -101,6 +109,7 @@ Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-pr
 - Assignment 9 Q1(a): the PDF text is garbled ($a_1$ and the bound are not legible); check the original.
 - No due dates were given in Classroom for Assignments 1, 2, 4, 5, 6, 7, 8 and 9, and no end-sem or future quiz dates have been announced.
 - Assignments 1, 2 and 9 are filed as problem lists only; no solutions were posted, so worked answers are not in the notes.
-- The syllabus for the end-sem has not been announced; presumably it covers material after the mid-sem (functions, cardinality, induction, WOP) but this is not confirmed.
-- Their own chapters on this material ([[11-Proofs-Analysis-Topology/PA08 Mathematical Induction]], [[11-Proofs-Analysis-Topology/PA09 Strong Induction and Recursion]], [[11-Proofs-Analysis-Topology/PA10 Well-Ordering and Well-Ordered Pairs]]) are not yet cross-checked with the class notation.
+- The syllabus for the end-sem has not been announced; presumably it covers material after the mid-sem (functions, cardinality, induction, WOP, now Peano axioms) but this is not confirmed.
+- Lecture 24 (PMI $\Rightarrow$ WOP, Theorem 1) is referred to by Lecture 25 but is not in the notes. The Recursion Theorem (that the recursive definitions of $+$ and $\cdot$ give well-defined functions) was taken as given, and the "further results" in Lecture 25 (commutativity, cancellation, trichotomy, distributivity) were stated without full proofs.
+- Their own chapters on this material ([[11-Proofs-Analysis-Topology/PA05 Induction and the Number Systems]], [[11-Proofs-Analysis-Topology/PA08 Mathematical Induction]], [[11-Proofs-Analysis-Topology/PA09 Strong Induction and Recursion]], [[11-Proofs-Analysis-Topology/PA10 Well-Ordering and Well-Ordered Pairs]]) are not yet cross-checked with the class notation.
 <!-- /kurooto:exam-prep -->
