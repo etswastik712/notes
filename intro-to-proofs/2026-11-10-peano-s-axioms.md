@@ -62,3 +62,8 @@ Theorem 5 and Lemma 1 are exactly the two facts used in Lecture 24 to prove WOP 
 - [[11-Proofs-Analysis-Topology/PA08 Mathematical Induction]]: their chapter on PMI
 - [[11-Proofs-Analysis-Topology/PA10 Well-Ordering and Well-Ordered Pairs]]: their chapter on WOP
 - [[zettel/well-ordering-principle]]: WOP, proved from PMI using Lemma 1 and Theorem 5 here
+
+<!-- kurooto:material75d65193 -->
+## Concepts in L-25
+[[zettel/peano-system]], [[zettel/successor-function-predecessor-property]], [[zettel/recursive-definition-of-addition]], [[zettel/commutativity-with-one]], [[zettel/associativity-of-addition]], [[zettel/natural-number-order]], [[zettel/discrete-order-step-property]], [[zettel/recursive-definition-of-multiplication]]
+<!-- /kurooto:material75d65193 -->
