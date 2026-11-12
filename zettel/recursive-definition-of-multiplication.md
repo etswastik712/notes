@@ -20,6 +20,7 @@ $$n \cdot (m + 1) := n \cdot m + n$$
 Source: L-25, pp. 1–3
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/peano-system]] — The summary defines multiplication as a binary operation on a Peano system, so the Peano system's set, distinguished element 1 and successor function are the setting for the definition
 ## Seen in
 - [[intro-to-proofs/2026-11-10-peano-s-axioms|L-25]] pp. 1–3
 <!-- /kurooto:seen -->
