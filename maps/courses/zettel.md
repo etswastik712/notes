@@ -13,16 +13,16 @@ trust_tier: agent_written
 Kept up to date by jarvis each night; the rest of the page is yours.
 
 ### Key concepts
+- [[zettel/recursive-definition-of-addition|Recursive Definition of Addition]]
+- [[zettel/discrete-order-step-property|Discrete Order Step Property]]
 - [[zettel/infrared-flux-temperature-feedback|Infrared Flux-Temperature Feedback]]
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
 - [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
+- [[zettel/associativity-of-addition|Associativity of Addition]]
+- [[zettel/commutativity-with-one|Commutativity with One]]
 - [[zettel/ice-albedo-feedback|Ice-Albedo Feedback]]
-- [[zettel/area-weighted-mean-temperature|Area-Weighted Mean Temperature]]
-- [[zettel/atlantic-meridional-overturning-circulation|Atlantic Meridional Overturning Circulation]]
-- [[zettel/intertropical-convergence-zone|Intertropical Convergence Zone]]
-- [[zettel/planetary-boundaries|Planetary Boundaries]]
-- [[zettel/silicate-weathering-feedback|Silicate Weathering Feedback]]
+- [[zettel/peano-system|Peano System]]
 <!-- /kurooto:course-overview -->
 
 <!-- kurooto:hubs -->
