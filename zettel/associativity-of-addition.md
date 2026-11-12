@@ -19,6 +19,7 @@ $$(a + b) + c = a + (b + c)$$
 Source: L-25, pp. 1–3
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/peano-system]] — The associativity note states the law for addition on a Peano system, and the Peano system note defines the set, distinguished element 1 and successor function on which addition is built
 ## Seen in
 - [[intro-to-proofs/2026-11-10-peano-s-axioms|L-25]] pp. 1–3
 <!-- /kurooto:seen -->
