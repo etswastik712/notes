@@ -35,6 +35,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-11-06: field trip reminders for 7 Nov: assemble at guest house by 06:15 am; bring soft copy of field guide, notebook, pencil/pen, scale, shoes, 2 L water, and mobile app installed for measuring strike & dip and lat-long ([Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkwOTE3MzgwODcw)).
 - 2026-11-07: after the day trip the teacher thanked everyone and said a Google Sheet for pothole-related data and a Drive folder for trip photos would be added around Monday 9 Nov (not posted yet). One photo attached ([image](https://drive.google.com/file/d/1L26GEbdDLwvDrMyrDYwfVsmczINNFfkN/view?usp=drive_web), not viewed). [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4MjMzOTgxMTEz)
 - 2026-11-10: project presentation logistics posted (Mon 16 Nov, 4:15 PM, Seminar Room 32; 9 min + 5 min Q&A, under 10 slides; chai and chocolates provided). Details under Exams. Group sheet listing the project problems was attached (names left out here).
+- 2026-11-10: teacher pointed one group (named in the post) to a topotoolbox blog post and GIF animating upstream knickpoint migration under the stream power model. See [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]].
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)
@@ -46,6 +47,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - [[landscape-evolution/2026-11-02-deccan-next-field-guide]] Deccan Next field guide, northern leg (2026-11-02)
 - [[landscape-evolution/2026-11-02-field-trip-final-list]] Field trip final list (2026-11-02)
 - [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]] Erosion-rate debate reading (2026-11-03)
+- [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]] Knickpoint animation and topotoolbox getlocation (2026-11-10)
 
 ## Tasks
 - [ ] Field trip 7 Nov: complete the sheet, sign and upload the declaration page, mark "y" (due 2026-11-01, Sunday; time not stated) [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk2NzQ2NjcyNTcx)
