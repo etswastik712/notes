@@ -23,6 +23,7 @@ $$S \subseteq \mathbb{N}, 1 \in S, s(S) \subseteq S \implies S = \mathbb{N}$$
 Source: L-25, pp. 1–3
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/recursive-definition-of-multiplication]] — The recursive multiplication rules n · 1 := n and n · (m + 1) := n · m + n are defined on the same Peano system, using the addition that the system's successor function generates
 ## Seen in
 - [[intro-to-proofs/2026-11-10-peano-s-axioms|L-25]] pp. 1–3
 <!-- /kurooto:seen -->
