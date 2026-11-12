@@ -21,6 +21,7 @@ $$a < b \implies a + 1 \leq b$$
 Source: L-25, pp. 1–3
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/recursive-definition-of-addition]] — The statement uses a + 1, and that sum is only defined by the recursive definition n + 1 := s(n) given in the addition note
 ## Seen in
 - [[intro-to-proofs/2026-11-10-peano-s-axioms|L-25]] pp. 1–3
 <!-- /kurooto:seen -->
