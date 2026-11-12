@@ -22,6 +22,8 @@ $$n + s(m) := s(n + m)$$
 Source: L-25, pp. 1–3
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/recursive-definition-of-multiplication]] — The multiplication note defines n · (m + 1) as n · m + n, which relies on the addition defined here
+- used-in:: [[zettel/natural-number-order]] — The order relation is defined by a < b iff b = a + x for some natural x, so it depends on the addition defined here
 ## Seen in
 - [[intro-to-proofs/2026-11-10-peano-s-axioms|L-25]] pp. 1–3
 <!-- /kurooto:seen -->
