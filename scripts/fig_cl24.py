@@ -22,17 +22,19 @@ fig, ax = plt.subplots(1, 3, figsize=(14.2, 4.5))
 # A: idealised wind stress -> transport -> pumping
 lat = np.linspace(-60, 60, 601); phi = np.deg2rad(lat); f = 2 * 7.292e-5 * np.sin(phi)
 tx = -0.1 * np.cos(3 * phi)                                  # idealised: trades (-) and westerlies (+), zero at 30 degrees
-My = np.where(abs(lat) > 6, -tx / (rho * f), np.nan)          # m2/s
+My = np.where(abs(lat) > 10, -tx / (rho * f), np.nan)          # m2/s
 dy = np.deg2rad(lat[1] - lat[0]) * 6.371e6
 q = tx / (rho * np.where(abs(f) > 1e-5, f, np.nan))
 wv = -np.gradient(q, dy) * YR                                 # m/yr, w at base of Ekman layer = curl_z(tau/rho f)
+wv = np.where(abs(lat) > 12, wv, np.nan)
 a1 = ax[0]
 a1.plot(lat, tx * 10, color=BLUE, lw=2, label="zonal wind stress τₓ (×10, N m⁻²)")
-a1.plot(lat, np.clip(My, -4, 4), color=ORANGE, lw=2, label="northward Ekman transport M_y (m² s⁻¹)")
-a1.set_ylim(-4, 4); a1.axhline(0, color="#888", lw=.6); a1.set_xlabel("latitude (°)")
-a2 = a1.twinx(); a2.plot(lat, np.clip(wv, -80, 80), color=AQUA, lw=2, label="Ekman pumping w (m yr⁻¹)"); a2.set_ylim(-80, 80); a2.set_ylabel("w (m yr⁻¹)", color=AQUA)
-h1, l1 = a1.get_legend_handles_labels(); h2, l2 = a2.get_legend_handles_labels(); a1.legend(h1 + h2, l1 + l2, fontsize=7.2, frameon=False, loc="upper left")
+a1.plot(lat, My, color=ORANGE, lw=2, label="northward Ekman transport M_y (m² s⁻¹)")
+a1.set_ylim(-3, 3); a1.axhline(0, color="#888", lw=.6); a1.set_xlabel("latitude (°)")
+a2 = a1.twinx(); a2.plot(lat, wv, color=AQUA, lw=2, label="Ekman pumping w (m yr⁻¹)"); a2.set_ylim(-60, 60)
+h1, l1 = a1.get_legend_handles_labels(); h2, l2 = a2.get_legend_handles_labels(); a1.legend(h1 + h2, l1 + l2, fontsize=7.0, frameon=False, loc="upper center")
 a1.set_title("A  idealised winds → transport → pumping", fontsize=9.8)
+a1.set_ylabel("τₓ ×10 (N m⁻²) and M_y (m² s⁻¹)", fontsize=8)
 # B: Ekman spiral hodograph
 b = ax[1]
 Dz = 1.0; az = math.pi / Dz
@@ -44,20 +46,20 @@ for k in (0, 100, 200, 300):
 Mx, My_ = np.trapezoid(u, z) * az, np.trapezoid(v, z) * az   # M a / V0
 b.annotate("", xy=(Mx * 1.0, My_ * 1.0), xytext=(0, 0), arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=2.2))
 b.annotate("", xy=(0, 1.0), xytext=(0, 0), arrowprops=dict(arrowstyle="-|>", color=INK, lw=2.0))
-b.text(0.03, 0.93, "wind stress", fontsize=8.5); b.text(Mx * 0.55, -0.12, "net transport (90° right)", fontsize=8.5, color=ORANGE, ha="center")
+b.text(0.03, 0.93, "wind stress", fontsize=8.5); b.text(0.85, -0.22, "net transport\n(90° right)", fontsize=8.5, color=ORANGE, ha="center")
 b.text(0.5, 0.78, "surface current,\n45° right of wind", fontsize=8.2, color=BLUE)
-b.text(0.55, 0.10, "turns right,\nweakens with depth", fontsize=8, color=BLUE)
-b.set_aspect("equal"); b.set_xlim(-0.35, 1.0); b.set_ylim(-0.15, 1.1); b.set_xlabel("eastward"); b.set_ylabel("northward")
-b.set_title("B  Ekman spiral (constant viscosity), N. hemisphere", fontsize=9.8)
+b.text(-0.33, 0.30, "turns right,\nweakens with depth", fontsize=8, color=BLUE)
+b.set_aspect("equal"); b.set_xlim(-0.35, 1.15); b.set_ylim(-0.32, 1.1); b.set_xlabel("eastward"); b.set_ylabel("northward")
+b.set_title("B  Ekman spiral (constant viscosity)", fontsize=9.8)
 print("hodograph check: net transport angle from wind = %.1f deg to the right; |M| = %.3f V0/a (exact value over the full depth 1/sqrt2 = 0.707; the 0.03 excess is the cut-off at D_E)" % (math.degrees(math.atan2(Mx, My_)), math.hypot(Mx, My_)))
 # C: geostrophic speed
 c = ax[2]
 s = np.logspace(-8.2, -3.3, 200)
 for lat0, col in ((15, AQUA), (35, BLUE), (60, ORANGE)):
     c.loglog(s, g / (2 * 7.292e-5 * math.sin(math.radians(lat0))) * s, color=col, lw=2, label="%d° latitude" % lat0)
-c.plot([1 / 1.5e6], [g / f0 / 1.5e6], "o", color=INK); c.text(1.2 / 1.5e6, g / f0 / 1.5e6 * 0.55, "1 m over 1,500 km\n≈ 7 cm/s (gyre interior)", fontsize=8)
+c.plot([1 / 1.5e6], [g / f0 / 1.5e6], "o", color=INK); c.text(1.8 / 1.5e6, g / f0 / 1.5e6 * 0.28, "1 m over 1,500 km\n≈ 7 cm/s (gyre interior)", fontsize=8)
 c.plot([1 / 1e5], [g / f0 / 1e5], "o", color=INK); c.text(0.25 / 1e5, g / f0 / 1e5 * 1.5, "1 m over 100 km\n≈ 1 m/s (Gulf Stream)", fontsize=8)
 c.set_xlabel("sea-surface slope"); c.set_ylabel("surface geostrophic speed u = (g/f) slope  (m s⁻¹)"); c.legend(fontsize=8, frameon=False, loc="upper left")
 c.set_title("C  steep slopes ⇒ fast, narrow currents", fontsize=9.8)
-fig.subplots_adjust(wspace=0.32)
+fig.subplots_adjust(wspace=0.38)
 save(fig, "fig_cl24_momentum")
