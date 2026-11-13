@@ -44,6 +44,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-11-06-hw-5-q1-solution]] HW-5 Q.1 solution (image, not read): joint pdf of min and max (2026-11-06)
 - [[introduction-to-probability/2026-10-29-week-4-notes]] Week 4 notes (includes HW4); only the dice-mgf problem was readable (2026-10-29)
 - [[introduction-to-probability/2026-11-05-week-5-notes]] Week 5 notes: covariance matrix, |corr| ≤ 1, min/max lemma, multinomial, change of variables (2026-11-05)
+- [[introduction-to-probability/2026-11-12-hw-6]] HW 6 (Q1 modified): multivariate normal diagonalisation, -ln of uniforms, tangent line for Jensen (2026-11-12)
 
 ## Tasks
 
@@ -117,3 +118,6 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-11-06: Remedial class on Saturday 2026-11-07: time changed to 9:00 PM, Madhava Hall, 3rd floor main building. (Classroom)
 - 2026-10-29: Week 4 notes posted (includes HW4); week 5 notes to follow later. See [[introduction-to-probability/2026-10-29-week-4-notes]]. (Classroom)
 - 2026-11-05: Week 5 notes (summary of the week's lectures) appended to HW5. See [[introduction-to-probability/2026-11-05-week-5-notes]]. (Classroom)
+- 2026-11-13: Quiz rule reminder: taking the quiz in another batch is not acceptable unless the teachers ask for it; no mobile phones are permitted, yet some students are using them ("dangerous"). The post says "Quiz 3" but appears to refer to the current quiz round (Quiz 6 was tentatively 2026-11-13); unclear. (Classroom)
+- 2026-11-13: Remedial class on Sunday 2026-11-15, starting 9:00 AM (time changed), Madhava Hall, 3rd floor, Main Building. (Classroom)
+- 2026-11-12: HW 6 posted with Q1 modified. See [[introduction-to-probability/2026-11-12-hw-6]]. (Classroom)
