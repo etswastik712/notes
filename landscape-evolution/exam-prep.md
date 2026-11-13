@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Final project presentation: Monday 16 Nov 2026, 4:15 PM, Seminar Room 32 (the post says "16th Oct", which isn't a Monday; read as 16 Nov, please confirm). Be there by 4 pm and test your slides (setup time is cut from your slot). 9 minutes, strictly under 10 slides, then 5 minutes of Q&A. Your group's problem in the order sheet: meandering and braiding rivers in the IGP. The talks are announced to the whole ECS department. Final exam: not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated), first project presentations on 5 and 6 Oct 2026, and the day trip on Sat 7 Nov 2026 (northern leg). The teacher said a Google Sheet for pothole data and a Drive folder for photos would be added around Mon 9 Nov; neither is posted yet. See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-08-14-project-groups-and-brief]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
+Final project presentation: Monday 16 Nov 2026, 4:15 PM, now in Seminar Room 33, main building (changed on 2026-11-13; earlier posts said Seminar Room 32). The posts say "16th Oct", which isn't a Monday; read as 16 Nov, please confirm. Be there by 4 pm and test your slides (setup time is cut from your slot). 9 minutes, strictly under 10 slides, then 5 minutes of Q&A. Your group's problem in the order sheet: meandering and braiding rivers in the IGP. The teacher edited the titles in the sheet (screenshot posted 2026-11-13, not viewed) and says the order in it stands over any earlier order, so check your slot there. The regular 9 am class also runs on Monday 16 Nov. The talks are announced to the whole ECS department. Final exam: not announced yet. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated), first project presentations on 5 and 6 Oct 2026, and the day trip on Sat 7 Nov 2026 (northern leg). The teacher said a Google Sheet for pothole data and a Drive folder for photos would be added around Mon 9 Nov; neither is posted yet. See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-08-14-project-groups-and-brief]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
 
 ## Covered so far
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]: GIS/DEM basics, QGIS with SAGA, topotoolbox workflow (GRIDobj, inpaintnans, FLOWobj, STREAMobj)
@@ -22,7 +22,7 @@ Final project presentation: Monday 16 Nov 2026, 4:15 PM, Seminar Room 32 (the po
 - [[landscape-evolution/2026-11-02-field-trip-final-list]]: final participant list (logistics only)
 - [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]]: reading list on late-Cenozoic erosion-rate change: Herman et al. (thermochronology), Schildgen et al. 2018 (spatial correlation bias), glacial erosion time-scale bias
 - [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]]: topotoolbox blog post and GIF on knickpoint migration under the stream power model (chi, getlocation)
-- 2026-11-10 announcement (presentation logistics): no separate note, see Next assessment above.
+- 2026-11-10 and 2026-11-13 announcements (presentation logistics, venue change): no separate note, see Next assessment above.
 
 ## Must know
 - GIS: a computer system to collect, manage, analyse and visualise geographic data. DEM: raster of elevations; in topotoolbox `DEM.Z` holds the value of each cell. (Classroom: QGIS and topotoolbox tutorial slides)
@@ -59,16 +59,11 @@ Final project presentation: Monday 16 Nov 2026, 4:15 PM, Seminar Room 32 (the po
 - The 2026-11-03 reading suggests discussion questions on whether erosion rates can be compared across time scales and sampling, and how to judge the two sides of the debate; practise with [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]].
 
 ## Gaps
-- Date of the project presentation: the 2026-11-10 post says "16th Oct" but also "next Monday"; read as Mon 16 Nov. Confirm with the teacher or the order sheet.
-- The order sheet (spreadsheet of groups and slots) lists project problems only; the time slot for your group is not in the text that was read.
-- Glacial and aeolian slides (l_glacial_aolian.pdf, 90 MB, posted 2026-10-27) not read: no definitions or landforms recorded yet. See [[landscape-evolution/2026-10-27-glacial-and-aeolian-slides]].
-- Slides pre_ms_landscape_26.pdf (217 MB) not read. Week-1 slides (4 Aug), updated lecture slides (11 and 22 Aug) not accessible (Drive 404), so the lecture content of August is not in the notes.
-- QGIS slides had mostly pictures: the basin-analysis steps (SAGA tools used) are not recorded. The Bhima DEM and campus-hills photo not viewed.
-- The two linked papers (Himalayan mountain building review, Chamoli flood reconstruction) not read.
-- Erosion-rate reading (2026-11-03): only the Schildgen et al. abstract was read (full text paywalled). The Herman et al. paper is not named or linked in the post (the 2013 Nature paper is my inference from Schildgen's reference list). The Science Advances paper on time-scale-dependent glacial erosion could not be opened (Forbidden), so its findings are not recorded.
-- Deccan slides: figures, maps and photos were not in the extracted text; the area/volume labels (380,000 vs 500,000 km²; 193,000 vs 439,000 km³) and the Kalsubai height (1642 vs 1646-1660 m; the field guide says 1648 m) are inconsistent or unlabelled. Laterite capping slide has only a figure. Papers cited (Kale et al., Sheth 2020) not read.
-- Field guide: it was written for a 2023 event; the teacher says only the northern leg applies, but the exact stops and route for 7 Nov are not stated. Maps, photos and the morphology occurrence table symbols were not in the extracted text. The southern leg (Poladpur, Rajgad GPB, Mahabaleshwar sections) is not summarised.
-- Post-trip material: the pothole data sheet and the photo Drive folder promised for about 9 Nov are not posted yet; the one attached photo (WhatsApp image, 7 Nov) was not viewed. Add your own field observations from the trip to the notes once you have them.
-- Knickpoint GIF (visualfun.gif, 2026-11-10) not viewed. The post is addressed to "soumil, deep and their group", so it may not be meant for your group; it is filed anyway as course material.
-- Final exam date and syllabus not announced.
+- Date of the project presentation: the posts say "16th Oct" but also "Monday"; read as Mon 16 Nov. Confirm with the teacher or the order sheet.
+- The 2026-11-13 screenshot (corrected talk order, edited titles with locations) was not viewed: open it to find your group's slot.
+- Venue: Seminar Room 33 (2026-11-13) replaces Seminar Room 32 (2026-11-10).
+- The order sheet lists project problems only; the time slot of your group is not in the notes.
+- The pothole Google Sheet and trip photo Drive folder promised for about 9 Nov are not posted yet.
+- Himalaya reading, glacial and aeolian slides (90 MB) and the two river-channel papers mailed on 2026-10-25 are not summarised in the notes yet.
+- Final exam date and format: not announced.
 <!-- /kurooto:exam-prep -->

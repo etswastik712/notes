@@ -24,6 +24,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [[intro-to-proofs/2026-08-13-assignment-2]] Assignment-2 (2026-08-13)
 - [[intro-to-proofs/2026-10-30-assignment-9]] Assignment-9 (2026-10-30)
 - [[intro-to-proofs/2026-11-10-peano-s-axioms]] Peano's axioms (2026-11-10)
+- [[intro-to-proofs/2026-11-12-assignment-10]] Assignment 10 (2026-11-12)
 
 ## Tasks
 - [ ] Assignment-3 (due date not given; file Assignment-3.pdf could not be downloaded) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc2MTE0MTQwMDE0/details)
@@ -35,6 +36,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [ ] Assignment 1 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODcxODQ5NTM3MDk2/details)
 - [ ] Assignment-2 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc0NDM1ODM0MTYx/details)
 - [ ] Assignment-9 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODk2NzcwOTExODIx/details)
+- [ ] Assignment 10 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODk5MDQwMTAzODk1/details)
 
 ## Exams
 - 2026-09-19: mid-sem portion announced: everything covered in class till 18 Sept, excluding the proof that every vector space over a field has a basis. Topics: logical statements, truth tables, conditionals, quantifiers, converse, contrapositive, negation, Venn diagrams, union/intersection/Cartesian product of indexed families, posets, minimal/maximal and minimum/maximum elements, upper/lower bounds, glb, lub, chains, Zorn's lemma, definition of vector space and basis, equivalence relations, partitions, congruence mod n and congruence classes.

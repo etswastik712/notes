@@ -71,6 +71,14 @@ Central question: **given sunlight, what is the temperature of the planet, how i
 | 20 | [[CL20 ENSO and the Walker Circulation]] | Neena (L23) | **draft** |
 | 21 | [[CL21 Thermohaline Circulation Water Masses and Sea Ice]] | Neena (L24); Joy (optional) | **draft** |
 
+### Part VI · The ocean's ledger (Joy Monteiro, 2026; **primary source for Joy's part**; added 2026-11-13)
+| # | Chapter | Source | Status |
+|---|---|---|---|
+| 22 | [[CL22 The Ocean's Ledger I - Accounting for Energy]] | Joy (O1 deck/handout, O2/O3 heat transport, CERES tutorial) | **draft** |
+| 23–28 | planned: heat capacity and inertia (O2/O3), momentum ledger (O3/O4), salt ledger (O5), mass ledger and the overturning (O6), Daisyworld tutorials, CERES tutorial worked in full | Joy | **not yet written** (see `00-Home/PROGRESS.md`, addendum 2026-11-13) |
+
+> PDFs of Joy's HTML slide decks (slides only, and slides with speaker notes): `earth-and-climate/climate/lecture-notes-slides/joy_slides_pdf/` (O1, O2-O3, O4, O5, O6); built by `scripts/joy_slides_pdf.py`.
+
 Live status (Dataview):
 ```dataview
 TABLE chapter AS "#", part AS "Part", by AS "Taught by", scope AS "Scope", status AS "Status"
