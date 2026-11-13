@@ -4,7 +4,7 @@
 \setlength{\parskip}{2pt}
 \renewcommand{\arraystretch}{1.25}
 \title{Thermodynamics (MIT 8.333 Ch.~I, Zemansky)\\\large formula sheet, key numbers and traps}
-\author{second brain $\cdot$ chapters TH01--TH09 (TH07--TH09 added 2026-11-04 from the TD2213 tutorials)}
+\author{second brain $\cdot$ chapters TH01--TH10 (TH07--TH09 added 2026-11-04 from the TD2213 tutorials; TH10 and the Tutorial 3 rows added 2026-11-12)}
 \date{}
 \begin{document}
 \maketitle
@@ -96,11 +96,25 @@ Einstein solid & $\Omega=\binom{q+N-1}q$; $k_BT/\varepsilon=1/\ln(1+N/q)$ & $N_A
 contact & $\partial S_A/\partial U_A=\partial S_B/\partial U_B$; $1/T=\partial S/\partial U$, $P/T=\partial S/\partial V$ & $P(q_A=100)=1.8\times10^{-20}$\\
 ideal gas & $\Omega\propto V^NU^{3N/2}$; free expansion $\Delta S=Nk_B\ln2$; all in half: $2^{-N}$ & mol: $5.763$ J/K\\
 distributions & $W=N!\prod g_i^{N_i}/N_i!\Rightarrow N_i\propto g_ie^{-\beta\varepsilon_i}$; $\binom{g}{n}\to$ FD; $\binom{n+g-1}n\to$ BE & enumeration agrees to $1/N$\\
+$M$ levels (T3) & $W_{\rm MPD}=N!/[(N/M)!]^M$, $\ln W_{\rm MPD}\simeq N\ln M$ but $W_{\rm MPD}/M^N\to0$; $N$ divisible by $M$ & $3$ particles, levels $0..4$, $E=5$: $W=6+6+3+3=18$\\
+\bottomrule
+\end{tabular}
+
+\section*{TH10 Open systems, mixing, reacting gases (class notes, 2026-11-12)}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+energy balance & $\dfrac{\mathrm dU^{\rm t}}{\mathrm dt}=\dot Q-P\dfrac{\mathrm dV^{\rm t}}{\mathrm dt}+\dot n(U+PV)+\dot W$; steady: $\sum\dot nH_{\rm in}-\sum\dot nH_{\rm out}+\dot Q+\dot W=0$ & heater $300\to600$ K: $8730$ W per mol/s\\
+entropy balance & $\dfrac{\mathrm dS^{\rm t}}{\mathrm dt}=\dfrac{\dot Q}T+\dot nS+\dot S_{\rm gen}$; const $T,P$: $\mathrm dG=-T\,\mathrm dS_{\rm gen}\le0$ & throttle $10\to1$ bar: $\dot S_{\rm gen}=\dot nR\ln10=19.15$ W/K\\
+tank filling & $U_{\rm final}=NH_{\rm line}\Rightarrow T_f=\gamma T_{\rm line}$ & $420$ K from $300$ K ($\gamma=7/5$)\\
+mixing (ideal) & $\Delta S=-R\sum n_i\ln x_i$, $\Delta H=0$, $\Delta G=RT\sum n_i\ln x_i$; $\mu_i=\mu_i^\circ+RT\ln(x_iP/P^\circ)$ & air: $4.27$ J/mol/K, $-1.27$ kJ/mol; max $R\ln N$\\
+reaction & $n_i=n_i^0+\nu_i\varepsilon$; $\partial G/\partial\varepsilon=\sum\nu_i\mu_i=RT\ln(Q/K)$; $K=\prod x_i^{\nu_i}(P/P^\circ)^{\Sigma\nu}$ & SO$_2$/SO$_3$, $K=10$ (illustr.): $\varepsilon=0.764$ (1 bar), $0.882$ (10 bar)\\
+Le Chatelier (P) & $\Sigma\nu<0$: higher $P$ $\to$ products; $\Sigma\nu>0$: reactants; $\Sigma\nu=0$: none; inert at const $P$ = lower $P$, at const $V$: none & $3$ mol inert at 1 bar: $0.667$\\
+liquid--vapour & $\mathrm dG^{\rm t}=(G^v-G^l)\mathrm dn^v$; equilibrium $G^v=G^l$ & water, $373.15$ K, $90$ kPa: $\Delta\mu=-367.5$ J/mol\\
 \bottomrule
 \end{tabular}
 
 \vspace{3pt}
 \begin{verifybox}{scope}
-TH01--TH05 follow the MIT lectures; TH06 and TH09 are optional extras; TH07--TH08 follow the TD2213 tutorials (T2 Q4 supplies no data: Schroeder's table was used). Confirm the syllabus with the instructor.
+TH01--TH05 follow the MIT lectures; TH06 and TH09 are optional extras; TH07--TH08 follow the TD2213 tutorials (the instructor's answer sheets agree, except two arithmetic slips in T1 Q2 and Q3 flagged in TH08); TH10 is from a classmate's post-midsem notes. Confirm the syllabus with the instructor.
 \end{verifybox}
 \end{document}

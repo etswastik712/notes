@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, book, own-notes]
 status: draft
 prereq: ["[[TH04 The Second Law Carnot Engines and Entropy]]", "[[TH05 Potentials Maxwell Relations Stability and the Third Law]]", "[[TH07 Enthalpy Thermochemistry and Calorimetry]]"]
-tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/book, src/own-notes, status/draft]
+tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/book, src/own-notes, status/draft, quiz/thermo, quiz/th-tut1, quiz/th-tut2]
 ---
 # TH08 · Gibbs Energy, Equilibrium Constants and Phase Boundaries
 
@@ -54,7 +54,7 @@ flowchart LR
 ![[fig_th08_gibbs_equilibrium.png]]
 *Figure TH8.1. A: $\Delta_rG^\circ(T)$ of C + H$_2$O(g) → CO + H$_2$ with constant $\Delta H^\circ,\Delta S^\circ$ (981 K) and with $\Delta C_p=+15.85$ J K$^{-1}$ (931 K). B: van 't Hoff plot of N$_2$ + 3H$_2$ → 2NH$_3$ (constant $\Delta H^\circ$, solid; with $\Delta C_p$, dashed). C: vapour-pressure curves; the Tutorial 1 Q3 liquid (+25% pressure raises $T_b$ by 5.88 K) and water (Everest: 71.1 °C). D: $G(\xi)$ for A ⇌ B at three values of $K$: the minimum is the equilibrium, its slope is $\Delta G$.*
 
-## 1. Gibbs energy: the second law with the surroundings included
+## 1. Gibbs energy: the second law with the surroundings included #quiz/th-tut1 #quiz/th-tut2
 
 For a system in contact with a reservoir at $T$ and at constant pressure $P$, doing only $PV$ work, the Clausius inequality (TH04 §5) states $\delta Q\le T\,\mathrm dS$ for the system. At constant $P$, $\delta Q=\mathrm dH$ (TH07 §1). Hence $\mathrm dH-T\mathrm dS\le0$, i.e.
 $$\mathrm dG\le0\ \ \text{at constant }T,P,\qquad G\equiv H-TS,\qquad\Delta G=\Delta H-T\Delta S.$$
@@ -62,9 +62,9 @@ The system's $G$ can only decrease; equilibrium is the minimum of $G$ ([[Gibbs F
 $$\boxed{\ \Delta S_{\rm universe}=\Delta S_{\rm sys}-\frac{\Delta H}{T}=-\frac{\Delta G}{T}\ \ge0\ }.$$
 *So $\Delta G<0$ means the universe's entropy increases*: $-\Delta G/T$ is the **entropy generated** by the process ([[Entropy Production]]). A process with $\Delta H<0$ and $\Delta S<0$ is driven by the surroundings' gain at low $T$ and opposed at high $T$; one with $\Delta H>0$ and $\Delta S>0$ (vaporisation, the water-gas reaction) is driven by the system's own entropy gain at high $T$. The sign changes at **$T^*=\Delta H/\Delta S$** (if both are taken constant).
 
-## 2. Entropy generation: heat flowing between two bodies
+## 2. Entropy generation: heat flowing between two bodies #quiz/th-tut1
 
-> [!example] Tutorial 1, Q4 (taught): "If body A is losing heat to body B, then entropy generation will always be positive. Prove."
+> [!example] Tutorial 1, Q4 (taught): "If body A is losing heat to body B, then entropy generation will always be positive. Prove." #quiz/th-tut1
 > **Setting.** A and B exchange heat only with each other; the pair is isolated. A loses $\delta Q>0$ to B while at temperatures $T_A$, $T_B$.
 > **Step 1: bookkeeping.** $\mathrm dS_A=-\delta Q/T_A$, $\mathrm dS_B=+\delta Q/T_B$, so the total entropy change, which is the *entropy generated* because no entropy flows in from outside, is
 > $$\delta S_{\rm gen}=\delta Q\Big(\frac1{T_B}-\frac1{T_A}\Big)=\delta Q\,\frac{T_A-T_B}{T_AT_B}.$$
@@ -73,44 +73,52 @@ $$\boxed{\ \Delta S_{\rm universe}=\Delta S_{\rm sys}-\frac{\Delta H}{T}=-\frac{
 > $$S_{\rm gen}=C_A\ln\frac{T_f}{T_A}+C_B\ln\frac{T_f}{T_B}=(C_A+C_B)\Big[\ln\big(w_AT_A+w_BT_B\big)-w_A\ln T_A-w_B\ln T_B\Big],\quad w_i=\frac{C_i}{C_A+C_B}.$$
 > Because $\ln$ is concave, **Jensen's inequality** $\ln(\sum w_iT_i)\ge\sum w_i\ln T_i$ gives $S_{\rm gen}\ge0$, with equality iff $T_A=T_B$. *Numbers (recomputed):* two bodies of $1000$ J K$^{-1}$ at $500$ K and $300$ K: $T_f=400$ K, $S_{\rm gen}=1000\ln\frac{400^2}{500\cdot300}=64.5$ J K$^{-1}$; with $C_B=3000$ J K$^{-1}$: $T_f=350$ K, $S_{\rm gen}=105.8$ J K$^{-1}$. Two reservoirs at $500$ K and $300$ K passing $1000$ J: $S_{\rm gen}=1000(1/300-1/500)=1.333$ J K$^{-1}$, and the work lost is $T_CS_{\rm gen}=400$ J (the Carnot work of TH04 §7).
 
+> [!example] The instructor's version of Q4: Newton's law of heat transfer (added 2026-11-12) #quiz/th-tut1
+> The answer file writes the heat flow as proportional to the temperature difference, $\dot Q=h(T_A-T_B)$ from A to B ($h$ the heat-transfer coefficient), and balances entropy for each body *without internal generation* ($\mathrm dS_A/\mathrm dt=-h(T_A-T_B)/T_A$, $\mathrm dS_B/\mathrm dt=+h(T_A-T_B)/T_B$). For the isolated pair $\mathrm dS^{\rm t}/\mathrm dt=\dot S_{\rm gen}$ and
+> $$\dot S_{\rm gen}=h(T_A-T_B)\Big(\frac1{T_B}-\frac1{T_A}\Big)=\frac{h\,(T_A-T_B)^2}{T_AT_B}\ \ge0 .$$
+> This is the **same** $\delta S_{\rm gen}=\delta Q(1/T_B-1/T_A)$ as Step 1 above with $\delta Q=h(T_A-T_B)\,\mathrm dt$; the gain of the rate form is that **positivity is algebraic**: the square is $\ge0$ whichever body is hotter, because the *direction* of the flow is already built into the sign of $h(T_A-T_B)$ (Step 2's appeal to the Clausius statement is not needed). *Numbers (recomputed):* $h=10$ W K$^{-1}$, $T_A=500$ K, $T_B=300$ K: $\dot Q=2000$ W, $\dot S_{\rm gen}=10\cdot200^2/(500\cdot300)=2.667$ W K$^{-1}$ $=2000(1/300-1/500)$.
+
 > [!pitfall] What is being proved, logically
 > The second law (heat does not flow from cold to hot by itself) is what fixes the **direction** $T_A>T_B$; the entropy statement follows by algebra. Conversely, $S_{\rm gen}\ge0$ *is* the Clausius statement rewritten: if heat flowed from the colder to the hotter body, $S_{\rm gen}$ would be negative. So the "proof" does not derive the second law, it shows that the entropy form and the heat-flow form say the same thing. The microscopic reason why the direction is overwhelmingly probable is counting (TH09 §4).
 
-## 3. The equilibrium constant
+## 3. The equilibrium constant #quiz/th-tut2
 
-### 3.1 From chemical potentials to $K$
+### 3.1 From chemical potentials to $K$ #quiz/th-tut2
 For a reaction $\sum_i\nu_iA_i=0$ at constant $T$, $P$, the Gibbs energy changes with the extent of reaction $\xi$ as $\left(\partial G/\partial\xi\right)_{T,P}=\sum_i\nu_i\mu_i\equiv\Delta_rG$ (TH05 §2: $\mathrm dG=\sum_i\mu_i\mathrm dN_i$). For an ideal gas $\mu_i=\mu_i^\circ+RT\ln(P_i/P^\circ)$ (TH05 §3; SM05 §7), and similarly with activities for solutions, so
 $$\Delta_rG=\Delta_rG^\circ+RT\ln Q,\qquad Q=\prod_i a_i^{\nu_i}\ (\text{reaction quotient}),\qquad\Delta_rG^\circ=\sum_i\nu_i\mu_i^\circ.$$
 $\Delta_rG<0$: the reaction runs forward ($\xi$ increases); $>0$: backwards. At equilibrium $\Delta_rG=0$, $Q=K$:
 $$\boxed{\ \Delta_rG^\circ=-RT\ln K,\qquad K=e^{-\Delta_rG^\circ/RT}\ },\qquad\Delta_rG=RT\ln\frac QK.$$
 $K$ is dimensionless (pressures divided by $P^\circ=1$ bar, concentrations by $1$ mol L$^{-1}$ or mol kg$^{-1}$). Fig. TH8.1D shows $G(\xi)$ for $A\rightleftharpoons B$ ideal gases: $G/RT=\xi\ln\xi+(1-\xi)\ln(1-\xi)+\xi\Delta G^\circ/RT$ (the first two terms are the entropy of mixing), whose minimum is at $\xi_{\rm eq}=K/(1+K)=0.0909,\ 0.5,\ 0.909$ for $K=0.1,\ 1,\ 10$. A small $\Delta G^\circ$ moves $K$ by a lot: $\Delta G^\circ=-5.71$ kJ mol$^{-1}$ at 298.15 K is exactly $K=10$; $-50$ kJ mol$^{-1}$ is $K=5.7\times10^8$.
 
-### 3.2 Using $\Delta H^\circ$, $\Delta S^\circ$ and $K$ together
+### 3.2 Using $\Delta H^\circ$, $\Delta S^\circ$ and $K$ together #quiz/th-tut2
 Since $\Delta_rG^\circ=\Delta_rH^\circ-T\Delta_rS^\circ$ and $\Delta_rG^\circ=-RT\ln K$, any two of $\{K,\Delta H^\circ,\Delta S^\circ\}$ (at one temperature) give the third.
 
-> [!example] Tutorial 2, Q2 (taught): the ATPase reaction
+> [!example] Tutorial 2, Q2 (taught): the ATPase reaction #quiz/th-tut2
 > $\mathrm{ATP^{4-}(aq)}+\mathrm H_2\mathrm O(\mathrm l)\rightleftharpoons\mathrm{ADP^{3-}(aq)}+\mathrm{HPO_4^{2-}(aq)}+\mathrm H^+(\mathrm{aq})$; $K=0.295$ at 298 K and $\Delta_rS^\circ=-45.0$ J K$^{-1}$mol$^{-1}$. Find $\Delta_rH^\circ$.
 > $$\Delta_rG^\circ=-RT\ln K=-(8.314)(298)\ln0.295=+3.02\ \text{kJ mol}^{-1}\quad(\ln0.295=-1.2208),$$
 > $$\Delta_rH^\circ=\Delta_rG^\circ+T\Delta_rS^\circ=3.02+(298)(-45.0\times10^{-3})=3.02-13.41=\boxed{-10.4\ \text{kJ mol}^{-1}}.$$
 > *Reading it:* $K<1$ means $\Delta G^\circ>0$ at these (standard-state, $\mathrm H^+$ at unit activity) conditions, even though the reaction is **exothermic** ($-10.4$ kJ): the entropy of the system *falls* ($-45$ J K$^{-1}$), costing $T\Delta S=13.4$ kJ, more than the heat gives back. (A fall in $S$ when ions are produced is typical: charged products order the surrounding water; recalled.)
 
-### 3.3 The biochemical standard state (a check that $K=0.295$ is sensible)
+### 3.3 The biochemical standard state (a check that $K=0.295$ is sensible) #quiz/th-tut2
 Biochemists quote $\Delta G^{\circ\prime}$ at pH 7, where $a_{\mathrm H^+}=10^{-7}$ instead of 1. Absorbing the $\mathrm H^+$ factor, $K'=K/a_{\mathrm H^+}=0.295/10^{-7}=2.95\times10^6$ and $\Delta G^{\circ\prime}=-RT\ln K'=-2.479\times14.90=-36.9$ kJ mol$^{-1}$ (recomputed; the commonly quoted $-30$ to $-37$ kJ mol$^{-1}$ for ATP hydrolysis is recalled): at pH 7 the hydrolysis is strongly favoured, which is why ATP is a store of free energy. The *same* reaction has $\Delta G^\circ=+3.0$ kJ at pH 0 and $\Delta G^{\circ\prime}=-36.9$ kJ at pH 7; the difference is $RT\ln10^7=40.0$ kJ mol$^{-1}$: **the standard state is part of the question.**
 
-## 4. Temperature dependence: Gibbs–Helmholtz and van 't Hoff
+## 4. Temperature dependence: Gibbs–Helmholtz and van 't Hoff #quiz/th-tut1 #quiz/th-tut2
 
-### 4.1 The Gibbs–Helmholtz equation
+### 4.1 The Gibbs–Helmholtz equation #quiz/th-tut1 #quiz/th-tut2
 From $G=H-TS$ and $S=-(\partial G/\partial T)_P$ (TH05 §1):
 $$\frac{\partial}{\partial T}\Big(\frac GT\Big)_P=\frac1T\frac{\partial G}{\partial T}-\frac G{T^2}=-\frac{S}{T}-\frac{G}{T^2}=-\frac{TS+G}{T^2}=\boxed{-\frac H{T^2}}.$$
 For a reaction, $\mathrm d(\Delta_rG/T)/\mathrm dT=-\Delta_rH/T^2$, or, with $\mathrm d(1/T)=-\mathrm dT/T^2$, $\ \mathrm d(\Delta_rG/T)=\Delta_rH\,\mathrm d(1/T)$. If $\Delta_rH$ is constant between $T_1$ and $T_2$,
 $$\frac{\Delta_rG(T_2)}{T_2}=\frac{\Delta_rG(T_1)}{T_1}+\Delta_rH\Big(\frac1{T_2}-\frac1{T_1}\Big).$$
 
-> [!example] Tutorial 1, Q2 (taught)
+> [!example] Tutorial 1, Q2 (taught) #quiz/th-tut1
 > $\Delta G^\circ(25\ ^\circ\mathrm C)=-50$ kJ mol$^{-1}$, $\Delta H^\circ=-80$ kJ mol$^{-1}$ (constant). $T_1=298.15$ K, $T_2=773.15$ K (500 °C).
 > $$\frac{\Delta G^\circ}{T}\Big|_{773}=\frac{-50\,000}{298.15}+(-80\,000)\Big(\frac1{773.15}-\frac1{298.15}\Big)=-167.70+164.85=\boxed{-2.85\ \text{J K}^{-1}\text{mol}^{-1}}.$$
 > So $\Delta G^\circ(773\ \mathrm K)=-2.85\times773.15=-2.2$ kJ mol$^{-1}$ (with $298$ K and $773$ K as the temperatures the answer is $-2.82$ J K$^{-1}$mol$^{-1}$, $-2.18$ kJ mol$^{-1}$: three significant figures depend on the $273.15$ convention). *Check:* constant $\Delta H$ and $\Delta G$ at 298 K give $\Delta S^\circ=(\Delta H-\Delta G)/T=-100.6$ J K$^{-1}$mol$^{-1}$, and $\Delta G(773)=-80\,000+773.15\times100.6=-2.2$ kJ: the same, as it must be (Gibbs–Helmholtz with constant $\Delta H$ *is* $\Delta G=\Delta H-T\Delta S$ with constant $\Delta S$). *Chemistry:* the equilibrium constant falls from $K=5.7\times10^8$ at 25 °C to $K=1.41$ at 500 °C: a strongly exothermic reaction loses its driving force on heating.
 
-### 4.2 The van 't Hoff equation
+> [!verify] Instructor's answer sheet for Tutorial 1 Q2 gives $-3.1$ J K$^{-1}$mol$^{-1}$ (added 2026-11-12) #quiz/th-tut1
+> [[TD2213_Tutorial1_Questions_Answers.pdf#page=2|The answer file]] (read in full) uses the same method (integrated Gibbs–Helmholtz at constant $\Delta H^\circ$) but with $T_1=298$ K, $T_2=773$ K and rounds the two terms to $-0.1678+0.1647=-0.0031$ kJ K$^{-1}$mol$^{-1}$, hence "$-3.1$ J K$^{-1}$mol$^{-1}$". The unrounded terms are $-0.167785+0.164963=-0.002822$ kJ K$^{-1}$mol$^{-1}$, i.e. $\boxed{-2.82}$ J K$^{-1}$mol$^{-1}$ with the sheet's own temperatures ($-2.85$ with $298.15$ and $773.15$ K, as above): the sheet's $-3.1$ is a **rounding slip** (the second term, $0.164963$, is rounded to $0.1647$ rather than $0.1650$). Recomputed in `scripts/th_tutorial_numbers.py`-style arithmetic this session; the method and the sign agree.
+
+### 4.2 The van 't Hoff equation #quiz/th-tut1 #quiz/th-tut2
 Put $\Delta_rG^\circ=-RT\ln K$ into Gibbs–Helmholtz:
 $$\boxed{\ \frac{\mathrm d\ln K}{\mathrm dT}=\frac{\Delta_rH^\circ}{RT^2}\ },\qquad\ln\frac{K_2}{K_1}=-\frac{\Delta_rH^\circ}{R}\Big(\frac1{T_2}-\frac1{T_1}\Big)\ \ (\text{constant }\Delta H^\circ).$$
 A plot of $\ln K$ against $1/T$ is a line of slope $-\Delta_rH^\circ/R$ and intercept $\Delta_rS^\circ/R$ (Fig. TH8.1B): the way $\Delta H^\circ$ and $\Delta S^\circ$ are measured. **Le Chatelier:** $\Delta H^\circ>0$ (endothermic): $K$ rises with $T$; $\Delta H^\circ<0$: $K$ falls.
@@ -121,18 +129,21 @@ A plot of $\ln K$ against $1/T$ is a line of slope $-\Delta_rH^\circ/R$ and inte
 > [!extra-beyond]- 🔵 Extra (beyond): $T^*$ and the role of $\Delta C_p$
 > For C(graphite) + H$_2$O(g) → CO + H$_2$: $\Delta_rH^\circ=+131.29$ kJ, $\Delta_rS^\circ=+133.78$ J K$^{-1}$ (data of Schroeder's table; $\Delta_rG^\circ(298)=91.40$ kJ, in agreement with $\Delta_fG^\circ$: $-137.17+228.57=91.40$). With constant $\Delta H,\Delta S$ the sign of $\Delta_rG^\circ$ changes at $T^*=\Delta H/\Delta S=981$ K (Fig. TH8.1A); with $\Delta C_p=+15.85$ J K$^{-1}$ inserted into $\Delta H(T)=\Delta H_{298}+\Delta C_p(T-298.15)$ and $\Delta S(T)=\Delta S_{298}+\Delta C_p\ln(T/298.15)$, $T^*=931$ K ($-5\%$). $K$: $9.7\times10^{-17}$ (298 K), $3.6\times10^{-5}$ (600 K, constant) against $5.3\times10^{-5}$ (corrected), $1.35$ against $3.56$ (1000 K), $18.8$ against $63.6$ (1200 K). *Constant $\Delta H$ is a good approximation when $|\Delta C_p|(T_2-T_1)\ll|\Delta H|$ and a poor one over several hundred kelvin.*
 
-## 5. Phase boundaries: Clausius–Clapeyron as a van 't Hoff equation
+## 5. Phase boundaries: Clausius–Clapeyron as a van 't Hoff equation #quiz/th-tut1
 
 On the coexistence curve of a liquid and its vapour $\mu_l(T,P)=\mu_g(T,P)$ (TH05 §2), which gives the **Clapeyron equation** $\mathrm dP/\mathrm dT=\Delta_{\rm vap}H/(T\,\Delta_{\rm vap}V)$ (TH05, extra-beyond box, with $L=T\Delta s$ per unit mass). Neglect the liquid volume and treat the vapour as an ideal gas, $\Delta V\simeq RT/P$ per mole:
 $$\frac{\mathrm d\ln P}{\mathrm dT}=\frac{\Delta_{\rm vap}H}{RT^2},\qquad\ln\frac{P_2}{P_1}=-\frac{\Delta_{\rm vap}H}{R}\Big(\frac1{T_2}-\frac1{T_1}\Big)\ \ (\text{constant }\Delta_{\rm vap}H).$$
 This is **exactly the van 't Hoff equation** for the "reaction" $\mathrm{A(l)}\rightleftharpoons\mathrm{A(g)}$ with $K=P/P^\circ$ (the liquid has unit activity): boiling is a chemical equilibrium, and the boiling point at pressure $P$ is the temperature at which $K=P/P^\circ$, i.e. $\Delta G^\circ=-RT\ln(P/P^\circ)$.
 
-> [!example] Tutorial 1, Q3 (taught): a new boiling point
+> [!example] Tutorial 1, Q3 (taught): a new boiling point #quiz/th-tut1
 > Normal boiling point $T_1=80\ ^\circ\mathrm C=353.15$ K at $P_1=1$ atm; $\Delta_{\rm vap}H=40$ kJ mol$^{-1}$ (constant); ideal vapour; the pressure rises by $25\%$: $P_2/P_1=1.25$. Then
 > $$\frac1{T_2}=\frac1{T_1}-\frac R{\Delta_{\rm vap}H}\ln\frac{P_2}{P_1}=\frac1{353.15}-\frac{8.314}{40\,000}(0.22314)=0.0028316-4.638\times10^{-5}=0.0027852\ \mathrm K^{-1},$$
 > $$T_2=359.03\ \text{K}=\boxed{85.9\ ^\circ\text{C}}\qquad(\text{a rise of }5.88\ \text{K}).$$
 > *Check by linearising:* $\Delta T\simeq RT_1^2\ln(P_2/P_1)/\Delta H=25.9\ \mathrm K\times0.2231=5.79$ K ($1.5\%$ low, since $T$ also changes).
 > *Meaning:* the boiling point rises with pressure (pressure cooker). **Trouton's rule:** $\Delta_{\rm vap}S=\Delta_{\rm vap}H/T_b=40\,000/353.15=113.3$ J K$^{-1}$mol$^{-1}$ ($\approx13.6R$), against the $85$–$88$ J K$^{-1}$mol$^{-1}$ of simple liquids (recalled) and $109.0$ for water ($40.66$ kJ mol$^{-1}$ at 373.15 K): a liquid above the Trouton value is more ordered than a simple liquid at its boiling point (hydrogen bonding, association), so more entropy is gained on vaporising.
+
+> [!verify] Instructor's answer sheet for Tutorial 1 Q3 gives $88.2$ °C (added 2026-11-12) #quiz/th-tut1
+> The answer file writes the correct integrated Clausius–Clapeyron relation, $\frac1{T_2}=\frac1{T_1}-\frac R{\Delta H_{\rm vap}}\ln\frac{P_2}{P_1}$, with $T_1=353.15$ K, $\Delta H_{\rm vap}=40\,000$ J mol$^{-1}$, $P_2/P_1=1.25$, and then states $T_2\approx361.3$ K $=88.2$ °C. Those inputs give $1/T_2=0.0027853$ K$^{-1}$, i.e. $T_2=359.03$ K $=85.9$ °C (as above); $361.3$ K ($1/T_2=0.0027678$) would need $\Delta H_{\rm vap}\approx29$ kJ mol$^{-1}$, so $88.2$ °C is an **arithmetic slip** on the sheet, not a different assumption. (The sheet's last displayed line before the substitution, eq. (17), also writes $\mathrm dT$ inside the integrated form; the final formula (18)–(19) is right.)
 
 > [!example] Water at altitude (recomputed; pressures recalled)
 > With $\Delta_{\rm vap}H=40.66$ kJ mol$^{-1}$ and $T_1=373.15$ K at 101.325 kPa: at **3000 m** ($P\approx70$ kPa) water boils at **89.8 °C**; on the **summit of Everest** ($P\approx33.7$ kPa) at **71.1 °C**: tea made at the summit is made with water 29 K cooler than at sea level.
@@ -145,6 +156,15 @@ This is **exactly the van 't Hoff equation** for the "reaction" $\mathrm{A(l)}\r
 At fixed $T$, $P$ the universe's entropy rises by $-\Delta_rG/T$ per mole of reaction (§1). The water-gas reaction at 1000 K, with the corrected $\Delta_rG=-10.55$ kJ, generates $10.55$ J K$^{-1}$ per mole of forward reaction, and $\Delta S_{\rm sys}-\Delta H/T$ is the same number: $\Delta S(1000\ \mathrm K)=133.78+15.85\ln(1000/298.15)=152.96$ J K$^{-1}$, $\Delta H(1000)/T=142.41$ J K$^{-1}$, difference $10.55$ J K$^{-1}$. At 800 K, $\Delta_rG>0$: the reaction runs *backwards* (CO + H$_2$ → C + H$_2$O), and the entropy generated per mole of reverse reaction is $24.6$ J K$^{-1}$. The **maximum non-$PV$ work** obtainable from a reaction at fixed $T,P$ is $-\Delta G$ (fuel cells, Schroeder §5.1): the part of $-\Delta H$ not so extracted is $T\,S_{\rm gen}$ plus $T\Delta S$, the "lost work" of TH04 §7. The microscopic origin of all these inequalities is the subject of TH09.
 
 <!-- interactive:start (generated by scripts/embed_interactive.py; edit the tool in scripts/interactive/tools/, not this block) -->
+> [!interactive]+ Interactive: Reacting ideal gases: the minimum of G(ε), and how pressure and inert gas shift it
+> Pick a gas reaction (A ⇌ B, N₂O₄ ⇌ 2NO₂, 2A ⇌ B, SO₂ + ½O₂ ⇌ SO₃, N₂ + 3H₂ ⇌ 2NH₃), the equilibrium constant K, the total pressure P and the amount of inert gas.
+>
+> ![[th_reacting_equilibrium.png|720]]
+>
+> **Try:** Choose SO₂ + ½O₂ ⇌ SO₃ with K = 10 and P = 1 bar: ε_eq = 0.7645. Raise P to 10 bar: 0.8819 (Σν = −½, so K = [x-product](P/P°)^(−½)). Add 3 mol of inert gas at 1 bar: ε_eq falls to 0.6667. Switch to A ⇌ B (Σν = 0): the right-hand curve is flat, ε_eq = K/(1+K) whatever P and the inert gas. Switch to N₂O₄ ⇌ 2NO₂ (Σν = +1): ε_eq falls as P rises.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/th_reacting_equilibrium.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/th_reacting_equilibrium.html) · all tools and coverage: [[Interactive Tools]]
+
 > [!interactive]+ Interactive: van der Waals isotherms and the Maxwell construction
 > The van der Waals equation (P + a/V²)(V − b) = RT for CO₂.
 >
@@ -173,10 +193,10 @@ At fixed $T$, $P$ the universe's entropy rises by $-\Delta_rG/T$ per mole of rea
 > - **Clausius–Clapeyron:** $\ln(P_2/P_1)=-(\Delta_{\rm vap}H/R)(1/T_2-1/T_1)$; Tutorial 1 Q3: $T_b=85.9$ °C ($+5.88$ K); water on Everest $71.1$ °C; Trouton $\Delta S_{\rm vap}\approx85$–$88$ J K$^{-1}$mol$^{-1}$.
 
 ## Practice
-1. **[Tutorial 1, Q2]** For a reaction, $\Delta G^\circ(25\ ^\circ\mathrm C)=-50$ kJ mol$^{-1}$ and $\Delta H^\circ=-80$ kJ mol$^{-1}$ (constant). Find $\Delta G^\circ/T$ at 500 °C. Also find $\Delta G^\circ$ and $K$ there.
-2. **[Tutorial 1, Q3]** A liquid has $T_b=80\ ^\circ$C at 1 atm and $\Delta_{\rm vap}H=40$ kJ mol$^{-1}$ (constant). Find the new boiling point if the pressure increases by $25\%$ (ideal vapour; $R=8.314$ J mol$^{-1}$K$^{-1}$).
-3. **[Tutorial 1, Q4]** Prove that when body A loses heat to body B the entropy generation is positive. Do it for two reservoirs and for two finite bodies of heat capacities $C_A$, $C_B$.
-4. **[Tutorial 2, Q2]** For ATP$^{4-}$ + H$_2$O ⇌ ADP$^{3-}$ + HPO$_4^{2-}$ + H$^+$, $K=0.295$ at 298 K and $\Delta_rS^\circ=-45.0$ J K$^{-1}$mol$^{-1}$. Find $\Delta_rH^\circ$.
+1. **[Tutorial 1, Q2]** For a reaction, $\Delta G^\circ(25\ ^\circ\mathrm C)=-50$ kJ mol$^{-1}$ and $\Delta H^\circ=-80$ kJ mol$^{-1}$ (constant). Find $\Delta G^\circ/T$ at 500 °C. Also find $\Delta G^\circ$ and $K$ there. #quiz/th-tut1
+2. **[Tutorial 1, Q3]** A liquid has $T_b=80\ ^\circ$C at 1 atm and $\Delta_{\rm vap}H=40$ kJ mol$^{-1}$ (constant). Find the new boiling point if the pressure increases by $25\%$ (ideal vapour; $R=8.314$ J mol$^{-1}$K$^{-1}$). #quiz/th-tut1
+3. **[Tutorial 1, Q4]** Prove that when body A loses heat to body B the entropy generation is positive. Do it for two reservoirs and for two finite bodies of heat capacities $C_A$, $C_B$. #quiz/th-tut1
+4. **[Tutorial 2, Q2]** For ATP$^{4-}$ + H$_2$O ⇌ ADP$^{3-}$ + HPO$_4^{2-}$ + H$^+$, $K=0.295$ at 298 K and $\Delta_rS^\circ=-45.0$ J K$^{-1}$mol$^{-1}$. Find $\Delta_rH^\circ$. #quiz/th-tut2
 5. **$K$ from $\Delta G^\circ$.** Find $K$ at 298.15 K for $\Delta G^\circ=-50$ kJ mol$^{-1}$ and the value of $\Delta G^\circ$ that gives $K=10$. What is $\Delta G$ at 298.15 K if $Q=0.1K$ and $Q=10K$?
 6. **van 't Hoff.** For N$_2$ + 3H$_2$ → 2NH$_3$, $\Delta_rH^\circ=-92.22$ kJ, $\Delta_rG^\circ(298)=-32.90$ kJ. Estimate $K$ at 500 °C with constant $\Delta H^\circ$ and with $\Delta C_p=-5.48$ J K$^{-1}$.
 7. **Water-gas.** Using $\Delta H=+131.29$ kJ, $\Delta S=+133.78$ J K$^{-1}$ and $\Delta C_p=+15.85$ J K$^{-1}$, find the temperature at which $\Delta_rG^\circ$ changes sign with and without $\Delta C_p$, and $K(1000\ \mathrm K)$ for both.
@@ -207,6 +227,7 @@ At fixed $T$, $P$ the universe's entropy rises by $-\Delta_rG/T$ per mole of rea
 > | Topic | Source | Scope |
 > |---|---|---|
 > | Gibbs–Helmholtz, $\Delta G^\circ/T$ at 500 °C (Q2); boiling point at $+25\%$ pressure (Q3); entropy generation of heat flow (Q4) | [[TD2213_Tutorial1.pdf#page=1\|Tutorial 1]] (questions only; solutions mine) | taught |
+> | the instructor's answers to Tutorial 1 Q1–Q4 (Q1 $\Delta H=3.5$ kJ agrees; Q2 and Q3 carry the two slips flagged above; Q4 is the rate form) | [[TD2213_Tutorial1_Questions_Answers.pdf]] (5 pp., read in full 2026-11-12) | taught |
 > | $K$ and $\Delta S^\circ$ to $\Delta H^\circ$ (ATPase, Q2) | [[Thermodynamics_Tutorial_2_Questions.pdf#page=1\|Tutorial 2, Q2]] (question only; solution mine) | taught |
 > | free energy as available work, phase transformations, Clausius–Clapeyron, chemical equilibrium, van 't Hoff (Problem 5.85–5.86) | Schroeder §5.1 (p. 149), §5.3 (p. 166), §5.6 (p. 208), p. 213–214 (djvu page = printed + 10) | extra/book |
 > | data for the water-gas and NH$_3$ examples | Schroeder, *Thermodynamic Properties of Selected Substances*, pp. 404–405 | extra/book |
@@ -219,3 +240,6 @@ At fixed $T$, $P$ the universe's entropy rises by $-\Delta_rG/T$ per mole of rea
 ## Across subjects
 - [[CL05 Thermodynamic State of the Atmosphere]] (Climate): the Clausius–Clapeyron equation sets the saturation vapour pressure, $\approx6.3\%$ per K, the feedback that amplifies warming.
 - [[Inorganic Chemistry - Course Map|Inorganic Chemistry]] (redox, Ch. 5 of Shriver and Atkins): $\Delta G^\circ=-nFE^\circ$ and $E^\circ=(RT/nF)\ln K$ are the same Gibbs energy expressed electrically.
+
+## Continued in the vault (added 2026-11-12)
+- The **open-system** entropy balance $\mathrm dS^{\rm t}/\mathrm dt=\dot Q/T+\dot nS+\dot S_{\rm gen}$ (with the heater, throttle and tank-filling examples), the **mixing** of ideal gases ($\Delta G_{\rm mix}=RT\sum n_i\ln x_i$), the **extent of reaction** and the **pressure and inert-gas dependence** of the equilibrium composition ($K=\prod x_i^{\nu_i}(P/P^\circ)^{\Sigma\nu}$) are in [[TH10 Open Systems Mixing and Reacting Gases]]; the §3.1 relation $(\partial G/\partial\xi)=\sum\nu_i\mu_i$ is the same as its $\varepsilon$.

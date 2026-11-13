@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes]
 status: draft
 prereq: ["[[TH01 Temperature and the Zeroth Law]]"]
-tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/book, src/own-notes, status/draft]
+tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/book, src/own-notes, status/draft, quiz/thermo, quiz/th-background]
 ---
 # TH02 · Work, Heat and the First Law
 

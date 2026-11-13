@@ -1,0 +1,139 @@
+                   7.5 THEORIES FOR WIND-DRIVEN CIRCULATIONS               219
+
+on the wind stress is more complex, but wind stress near boundaries can
+produce large upwelling, even without significant wind stress curl.
+
+
+7.5.2 Sverdrup Flow and Western Boundary Currents
+   To understand the large-scale response of the ocean to wind stress forc-
+ing it is useful to consider the balance of vorticity in the ocean. Vorticity is
+the curl of the velocity vector and is a measure of the local rotation of the
+fluid. For the large-scale motions of the atmosphere and the ocean it is
+the vertical component of absolute vorticity that is of most interest.
+
+                       6, =2Qsind+k-VxV= f+,                              (7.12)
+   The absolute vorticity is the sum of planetary vorticity (f), which is
+associated with the rotation of Earth, and relative vorticity (,), which
+is associated with the fluid motion relative to the surface of Earth. For
+flow without friction, the absolute vorticity remains constant, unless a
+parcel of fluid changes its shape. If a parcel of fluid maintains its shape
+while moving equatorward to a latitude where Earth’s rotation is less,
+then the fluid parcel must exhibit a change in relative vorticity in order
+to maintain a constant absolute vorticity. Stretching of fluid parcels along
+the direction of the rotation vector will cause the absolute rotation rate to
+increase.
+   The famous oceanographer Harald Ulrik Sverdrup showed that in the
+interior of the ocean, an approximate balance exists between the meridional
+advection of planetary vorticity and the stretching of planetary vorticity
+by divergent motions,
+
+                                         aw                               (7.13)
+                                  ti      Oz
+
+where B=d0f/dy =2Qcos@/a. If we integrate (7.13) from the bottom of
+the ocean to the bottom of the Ekman layer and use (7.11), we obtain
+
+
+                              Y= fk-Vx t
+                             Beef     i0 hia                              (7.14)
+where
+
+
+                                 is        Bee                            (7.15)
+and it has been assumed that the Ekman layer is thin compared to the
+depth of the ocean, and that the vertical velocity is zero at the bottom of
+the ocean, where z = —D,.
+Re          a                                 ee
+Fag AB)      7, THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+    If we add the interior meridional transport velocity (7.14) to the Ekman
+layer meridional transport in (7.8) we obtain,
+
+
+                           Ve     eeee        z                        (7.16)
+                            ee    Ly         [=]
+so that the total meridional mass transport is proportional to the curl of
+the wind stress.
+   If we consider the ocean circulation between the tropics and mid-
+latitudes, the wind stress varies from westward in the tropical easterlies to
+eastward in the mid-latitude westerlies (Fig. 7.7). Thus a wind stress curl
+opposite to the rotation of the Earth is applied to the ocean, and according
+to (7.16), we should expect the water transport in the ocean to be equator-
+ward. Physically, the wind stresses are causing the water to rotate about
+a vertical axis in a direction that is opposite to the rotation of Earth. To
+maintain a steady state in the face of this application of anticyclonic rota-
+tion, water must drift toward lower latitudes. The reduction in absolute
+vorticity applied by the wind stress is thus expressed as a decrease in the
+planetary vorticity of fluid parcels as they drift equatorward, and a steady
+state with constant relative vorticity can be maintained.
+   According to (7.16), the meridional transport in the ocean will be equa-
+torward everywhere, so long as the wind stress curl is opposite to Earth’s
+rotation. How, then, can the conservation of mass and vorticity be jointly
+satisfied if the wind stress curl is everywhere negative? How does the
+water-transported equatorward return to high latitudes and close the cir-
+culation of mass and vorticity? The western boundary currents observed
+in the mid-latitude oceans are the solution to this dilemma.
+   A simple model can be constructed by adding a lateral diffusion term to
+the vorticity equation (7.13) that produces a steady gyre circulation with
+the northward flowing return current intensified along the western mar-
+gin of the ocean basin, much like the observed northward flow is intensi-
+fied in the western boundary currents. As the water flows poleward along
+this western margin, the planetary component of vorticity (f) increases
+because of its dependence on latitude. If the absolute vorticity of the fluid
+parcels were to be conserved, then their relative vorticity would have to
+change to compensate for the increase in planetary vorticity. By flowing
+along the western margin of the ocean basin in a narrow current, the pole-
+ward return flow of the wind-driven circulation is able to collect enough
+vorticity in the same sense as Earth’s rotation to arrive at middle latitudes
+with a vertical component of absolute vorticity, near that of the planetary
+vorticity at these latitudes, so that the magnitude of the relative vorticity
+remains reasonably small and steady. In a simple linear model with lateral
+diffusion of momentum, the mechanism for collecting the necessary vor-
+ticity is through the lateral friction stresses, which generates vorticity of
+                    7.6 THE DEEP THERMOHALINE CIRCULATION                22s
+
+the proper sign, only along the western boundary of the ocean basin. Thus
+the warm, rapidly flowing western boundary currents of the Atlantic and
+Pacific Oceans are seen to be a response to the wind stress driving the
+bounded oceans of the Northern Hemisphere.
+
+
+     7.6 THE DEEP THERMOHALINE CIRCULATION
+
+   The term thermohaline circulation is used to denote that part of the
+oceanic circulation that is driven by water density variations, which are
+in turn related to sources and sinks of heat (thermo) and salt (haline). It
+is traditional in oceanography to organize the discussion of the oceanic
+circulation into separate wind-driven and density-driven components,
+although the circulation of the ocean is not a simple addition of the effects
+of these two types of forcing. Wind driving influences the sources and
+sinks of heat and salt for the ocean by transporting surface water from the
+tropics to latitudes where cooling and evaporation can increase its density
+to very large values. The heat transport associated with the thermoha-
+line circulation affects the SST gradients that help to drive atmospheric
+winds. Therefore, wind driving and density driving of the oceanic circula-
+tion are very closely coupled and cannot be easily separated. However,
+it is generally true from a diagnostic perspective that wind driving is the
+strongest influence on currents near the surface, and variations in density
+are important for the flow at depth.
+    Slow circulations below the thermocline are driven primarily by den-
+sity gradients in the deep ocean. These circulations are difficult to measure
+directly, since the currents associated with them are very weak, but their
+nature can be inferred from the distributions of trace constituents of sea-
+water. Away from the surface, temperature and salinity of water masses
+change very slowly, so that the water masses and their origins can be
+inferred from the particular combination of temperature and salinity that
+characterizes them. These layers are often deep and the characteristics
+within them quite uniform, so that oceanographers refer to them as mode
+water (McCartney, 1982).
+   Most gases are soluble in water, so that the concentrations of particu-
+lar gases can also be used to characterize water sources. The saturation
+concentration of a gas in seawater is the amount that would exist in solu-
+tion at equilibrium, if seawater at a particular temperature and salinity
+were exposed to the gas. Saturation concentrations of gases in seawater
+increase as the water gets colder. For example, the saturation concentra-
+tions of oxygen and carbon dioxide in seawater at 0°C are about 1.6 and
+2.2 times their values at 24°C, respectively. The concentration of oxygen
+in surface water is always slightly greater than its saturation value, prob-
+ably as a result of efficient mixing of bubbles of air into the surface water
+

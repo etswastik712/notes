@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes]
 status: draft
 prereq: ["[[TH03 The Ideal Gas and Adiabatic Processes]]"]
-tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/thermo, quiz/th-tut1, quiz/th-background]
 ---
 # TH04 · The Second Law, Carnot Engines and Entropy
 
@@ -210,7 +210,7 @@ a relation between state functions that holds **generally** (not just for revers
 8. **Ideal-gas entropy.** Show $\mathrm dS=C_V\mathrm dT/T+R\mathrm dV/V$ is exact and integrate it from $(300\text{ K},V)$ to $(450\text{ K},3V)$ for a monatomic gas.
 9. **Carnot cycle.** For a monatomic gas between 400 K and 250 K with $V_1=2$ L and $V_2=6$ L, find $V_3$, $V_4$, $Q_H$ per mole and $\eta$.
 10. **Negative temperature.** Explain why a negative thermodynamic temperature would violate the Kelvin statement.
-11. **[Tutorial 1, Q4]** If body A is losing heat to body B, entropy generation is always positive. Prove it, first for two reservoirs and then for two finite bodies of heat capacities $C_A$, $C_B$; evaluate for $C_A=C_B=1000$ J K$^{-1}$ at 500 K and 300 K.
+11. **[Tutorial 1, Q4]** If body A is losing heat to body B, entropy generation is always positive. Prove it, first for two reservoirs and then for two finite bodies of heat capacities $C_A$, $C_B$; evaluate for $C_A=C_B=1000$ J K$^{-1}$ at 500 K and 300 K. #quiz/th-tut1
 
 > [!example]- Solutions
 > 1. $\eta=(1000-700)/1000=0.30$; Carnot bound $1-300/600=0.50$. Allowed ($0.30<0.50$). Rejecting 400 J gives $\eta=0.60>0.50$: **impossible** (violates Carnot's theorem).

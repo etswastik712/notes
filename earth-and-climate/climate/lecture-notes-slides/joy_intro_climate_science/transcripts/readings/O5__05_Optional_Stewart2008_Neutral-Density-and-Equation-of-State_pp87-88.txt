@@ -1,0 +1,94 @@
+6.5. DENSITY                                                                     87
+
+where p is pressure, and pr is pressure at some reference level. In (6.8) the level
+is pr = 0 decibars, and in (6.9) pr = 4000 decibars.
+    The use of σr leads to problems. If we wish to follow parcels of water deep
+in the ocean, we might use σ3 in some areas, and σ4 in others. But what
+happens when a parcel moves from a depth of 3 km in one area to a depth
+of 4 km in another? There is a small discontinuity between the density of the
+parcel expressed as σ3 compared with density expressed as σ4 . To avoid this
+diﬀiculty, Jackett and McDougall (1997) proposed a new variable they called
+neutral density.
+Neutral Surfaces and Density A parcel of water moves locally along a path
+of constant density so that it is always below less dense water and above more
+dense water. More precisely, it moves along a path of constant potential density
+σr referenced to the local depth r. Such a path is called a neutral path (Eden
+and Willebrand, 1999). A neutral surface element is the surface tangent to the
+neutral paths through a point in the water. No work is required to move a
+parcel on this surface because there is no buoyancy force acting on the parcel
+as it moves (if we ignore friction).
+    Now let’s follow the parcel as it moves away from a local region. At first we
+might think that because we know the tangents to the surface everywhere, we
+can define a surface that is the envelope of the tangents. But an exact surface is
+not mathematically possible in the real ocean, although we can come very close.
+    Jackett and McDougall (1997) developed a practical neutral density variable
+γ n and surface that stays within a few tens meters of an ideal surface anywhere
+in the world. They constructed their variables using data in the Levitus (1982)
+atlas. The neutral density values were then used to label the data in the Levitus
+atlas. This prelabeled data set is used to calculate γ n at new locations where t, S
+are measured as a function of depth by interpolation to the four closest points
+in the Levitus atlas. Through this practice, neutral density γ n is a function of
+salinity S, in situ temperature t, pressure p, longitude, and latitude.
+    The neutral surface defined above differs only slightly from an ideal neutral
+surface. If a parcel moves around a gyre on the neutral surface and returns to
+its starting location, its depth at the end will differ by around 10 meters from
+the depth at the start. If potential density surfaces are used, the difference can
+be hundreds of meters, a far larger error.
+Equation of state of sea water Density of sea water is rarely measured.
+Density is calculated from measurements of temperature, conductivity, or salin-
+ity, and pressure using the equation of state of sea water. The equation of state
+is an equation relating density to temperature, salinity, and pressure.
+    The equation is derived by fitting curves through laboratory measurements
+of density as a function of temperature, pressure, and salinity, chlorinity, or
+conductivity. The International Equation of State (1980) published by the Joint
+Panel on Oceanographic Tables and Standards (1981) is now used. See also
+Millero and Poisson (1981) and Millero et al (1980). The equation has an
+accuracy of 10 parts per million, which is 0.01 units of σ(Θ).
+    I have not actually written out the equation of state because it consists of
+88             CHAPTER 6. TEMPERATURE, SALINITY, AND DENSITY
+
+three polynomials with 41 constants (jpots, 1991).
+Accuracy of Temperature, Salinity, and Density If we want to distin-
+guish between different water masses in the ocean, and if the total range of
+temperature and salinity is as small as the range in figure 6.1, then we must
+measure temperature, salinity, and pressure very carefully. We will need an
+accuracy of a few parts per million.
+    Such accuracy can be achieved only if all quantities are carefully defined, if
+all measurements are made with great care, if all instruments are carefully cali-
+brated, and if all work is done according to internationally accepted standards.
+The standards are laid out in Processing of Oceanographic Station Data (jpots,
+1991) published by unesco. The book contains internationally accepted defini-
+tions of primary variables such as temperature and salinity and methods for the
+measuring the primary variables. It also describes accepted methods for calcu-
+lating quantities derived from primary variables, such as potential temperature,
+density, and stability.
+
+6.6   Measurement of Temperature
+    Temperature in the ocean is measured many ways. Thermistors and mercury
+thermometers are commonly used on ships and buoys. These are calibrated in
+the laboratory before being used, and after use if possible, using mercury or plat-
+inum thermometers with accuracy traceable to national standards laboratories.
+Infrared radiometers on satellites measure the ocean’s surface temperature.
+Mercury Thermometer This is the most widely used, non-electronic ther-
+mometer. It was widely used in buckets dropped over the side of a ship to mea-
+sure the temperature of surface waters, on Nansen bottles to measure sub-sea
+temperatures, and in the laboratory to calibrate other thermometers. Accuracy
+of the best thermometers is about ±0.001◦ C with very careful calibration.
+    One very important mercury thermometer is the reversing thermometer (fig-
+ure 6.11) carried on Nansen bottles, which are described in the next section. It
+is a thermometer that has a constriction in the mercury capillary that causes
+the thread of mercury to break at a precisely determined point when the ther-
+mometer is turned upside down. The thermometer is lowered deep into the
+ocean in the normal position, and it is allowed to come to equilibrium with
+the water. Mercury expands into the capillary, and the amount of mercury in
+the capillary is proportional to temperature. The thermometer is then flipped
+upside down, the thread of mercury breaks trapping the mercury in the capil-
+lary, and the thermometer is brought back. The mercury in the capillary of the
+reversed thermometer is read on deck along with the temperature of a normal
+thermometer, which gives the temperature at which the reversed thermometer
+is read. The two readings give the temperature of the water at the depth where
+the thermometer was reversed.
+    The reversing thermometer is carried inside a glass tube which protects the
+thermometer from the ocean’s pressure because high pressure can squeeze ad-
+ditional mercury into the capillary. If the thermometer is unprotected, the
+

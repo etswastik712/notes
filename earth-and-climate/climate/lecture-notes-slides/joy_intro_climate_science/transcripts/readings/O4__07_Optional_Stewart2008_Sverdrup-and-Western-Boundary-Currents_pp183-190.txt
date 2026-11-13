@@ -1,0 +1,434 @@
+Chapter 11
+
+Wind Driven Ocean
+Circulation
+
+What drives the ocean currents? At first, we might answer, the winds. But if
+we think more carefully about the question, we might not be so sure. We might
+notice, for example, that strong currents, such as the North Equatorial Coun-
+tercurrents in the Atlantic and Pacific Ocean go upwind. Spanish navigators
+in the 16th century noticed strong northward currents along the Florida coast
+that seemed to be unrelated to the wind. How can this happen? And, why are
+strong currents found offshore of east coasts but not offshore of west coasts?
+    Answers to the questions can be found in a series of three remarkable papers
+published from 1947 to 1951. In the first, Harald Sverdrup (1947) showed that
+the circulation in the upper kilometer or so of the ocean is directly related to
+the curl of the wind stress if the Coriolis force varies with latitude. Henry
+Stommel (1948) showed that the circulation in oceanic gyres is asymmetric also
+because the Coriolis force varies with latitude. Finally, Walter Munk (1950)
+added eddy viscosity and calculated the circulation of the upper layers of the
+Pacific. Together the three oceanographers laid the foundations for a modern
+theory of ocean circulation.
+
+11.1 Sverdrup’s Theory of the Oceanic Circulation
+    While Sverdrup was analyzing observations of equatorial currents, he came
+upon (11.6) below relating the curl of the wind stress to mass transport within
+the upper ocean. To derive the relationship, Sverdrup assumed that the flow is
+stationary, that lateral friction and molecular viscosity are small, that non-linear
+terms such as u ∂u/∂x are small, and that turbulence near the sea surface can be
+described using a vertical eddy viscosity. He also assumed that the wind-driven
+circulation vanishes at some depth of no motion. With these assumptions, the
+horizontal components of the momentum equation from 8.9 and 8.12 become:
+
+                                ∂p          ∂Txz
+                                   = f ρv +                                 (11.1a)
+                                ∂x           ∂z
+
+                                        183
+184                CHAPTER 11. WIND DRIVEN OCEAN CIRCULATION
+
+                                ∂p            ∂Tyz
+                                   = −f ρ u +                              (11.1b)
+                                ∂y             ∂z
+    Sverdrup integrated these equations from the surface to a depth −D equal
+to or greater than the depth at which the horizontal pressure gradient becomes
+zero. He defined:
+                          Z0                       Z0
+                   ∂P          ∂p           ∂P          ∂p
+                      =           dz,          =           dz,             (11.2a)
+                   ∂x          ∂x           ∂y          ∂y
+                          −D                       −D
+                          Z0                       Z0
+                   Mx ≡        ρ u(z) dz,   My ≡        ρ v(z) dz,         (11.2b)
+                          −D                       −D
+
+where Mx , My are the mass transports in the wind-driven layer extending down
+to an assumed depth of no motion.
+    The horizontal boundary condition at the sea surface is the wind stress. At
+depth −D the stress is zero because the currents go to zero:
+
+                          Txz (0) = Tx      Txz (−D) = 0
+                          Tyz (0) = Ty      Tyz (−D) = 0                    (11.3)
+
+where Tx and Ty are the components of the wind stress.
+   Using these definitions and boundary conditions, (11.1) become:
+
+                                 ∂P
+                                    = f M y + Tx                           (11.4a)
+                                 ∂x
+                                 ∂P
+                                    = −f Mx + Ty                           (11.4b)
+                                 ∂y
+
+   In a similar way, Sverdrup integrated the continuity equation (7.19) over the
+same vertical depth, assuming the vertical velocity at the surface and at depth
+−D are zero, to obtain:
+                               ∂Mx     ∂My
+                                     +       =0                           (11.5)
+                                ∂x      ∂y
+   Differentiating (11.4a) with respect to y and (11.4b) with respect to x, sub-
+tracting, and using (11.5) gives:
+
+                                       ∂Ty      ∂Tx
+                                β My =       −
+                                        ∂x       ∂y
+                                β My = curlz (T )                           (11.6)
+
+where β ≡ ∂f /∂y is the rate of change of Coriolis parameter with latitude, and
+where curlz (T ) is the vertical component of the curl of the wind stress.
+    This is an important and fundamental result—the northward mass transport
+of wind driven currents is equal to the curl of the wind stress. Note that Sverdrup
+allowed f to vary with latitude. We will see later that this is essential.
+11.1. SVERDRUP’S THEORY OF THE OCEANIC CIRCULATION                                                                        185
+
+
+
+30 o                                                                                          Streamlines of Mass
+                     -10                        -5                                                 Transport
+                                                                                              Boundaries of Counter
+                                                                                                    Current
+
+                                                                                         Values of stream function, Ψ,
+20 o                                                 0                                given in units of 10 metric tons/sec
+                                        5
+          15                10
+
+
+
+          -15
+10 o                       10
+                                         5
+                                                     0                                         0
+                           -10         -5
+          15
+                                 -20
+  0o
+          -15
+                           -10         -5
+                                                     0                                         0
+
+-10 o
+                25                       20                   15                10                 5
+
+   -160 o              -150 o          -140 o        -130 o        -120 o   -110 o   -100 o            -90 o      -80 o
+                Figure 11.1 Streamlines of mass transport in the eastern Pacific calculated
+                from Sverdrup’s theory using mean annual wind stress. After Reid (1948).
+
+        We calculate β from
+                                                              ∂f   2 Ω cos φ
+                                                         β≡      =                                                    (11.7)
+                                                              ∂y       R
+where R is earth’s radius and φ is latitude.
+   Over much of the open ocean, especially in the tropics, the wind is zonal
+and ∂Ty /∂x is suﬀiciently small that
+
+                                                                       1 ∂Tx
+                                                          My ≈ −                                                      (11.8)
+                                                                       β ∂y
+
+Substituting (11.8) into (11.5), assuming β varies with latitude, Sverdrup ob-
+tained:                                                     
+                  ∂Mx            1      ∂Tx         ∂ 2 Tx
+                        =−                  tan φ +        R             (11.9)
+                   ∂x        2 Ω cos φ ∂y            ∂y 2
+   Sverdrup integrated this equation from a north-south eastern boundary at
+x = 0, assuming no flow into the boundary. This requires Mx = 0 at x = 0.
+Then                                            2  
+                          ∆x        ∂Tx            ∂ Tx
+               Mx = −                     tan φ +         R         (11.10)
+                       2 Ω cos φ    ∂y              ∂y 2
+where ∆x is the distance from the eastern boundary of the ocean basin, and
+brackets indicate zonal averages of the wind stress (figure 11.1).
+   To test his theory, Sverdrup compared transports calculated from known
+winds in the eastern tropical Pacific with transports calculated from hydro-
+graphic data collected by the Carnegie and Bushnell in October and November
+1928, 1929, and 1939 between 34◦ N and 10◦ S and between 80◦ W and 160◦ W.
+186                      CHAPTER 11. WIND DRIVEN OCEAN CIRCULATION
+
+                          Latitude                                 Latitude
+                          25                                       25
+
+                                          North Equatorial
+                          20                                       20
+                                              Current
+
+                          15                                       15
+
+
+                          10                                       10
+                                          North Equatorial
+                                          Counter Current
+                          5                                         5
+
+
+                                                 My                                           Mx
+        -7   -5     -3   -1     1     3      5        -50    -30   -10   10   30    50   70
+        Southward                    Northward          Westward                   Eastward
+                          -5                                        -5
+                                          South Equatorial
+                                              Current
+                         -10                                       -10
+Figure 11.2 Mass transport in the eastern Pacific calculated from Sverdrup’s theory using
+observed winds with 11.8 and 11.10 (solid lines) and pressure calculated from hydrographic
+data from ships with 11.4 (dots). Transport is in tons per second through a section one meter
+wide extending from the sea surface to a depth of one kilometer. Note the difference in scale
+between My and Mx . After Reid (1948).
+
+The hydrographic data were used to compute P by integrating from a depth
+of D = −1000 m. The comparison, figures 11.2, showed not only that the
+transports can be accurately calculated from the wind, but also that the theory
+predicts wind-driven currents going upwind.
+Comments on Sverdrup’s Solutions
+   1. Sverdrup assumed i) The internal flow in the ocean is geostrophic; ii) there
+      is a uniform depth of no motion; and iii) Ekman’s transport is correct. I
+      examined Ekman’s theory in Chapter 9, and the geostrophic balance in
+      Chapter 10. We know little about the depth of no motion in the tropical
+      Pacific.
+   2. The solutions are limited to the east side of the ocean because Mx grows
+      with x. The result comes from neglecting friction which would eventually
+      balance the wind-driven flow. Nevertheless, Sverdrup solutions have been
+      used for describing the global system of surface currents. The solutions
+      are applied throughout each basin all the way to the western limit of the
+      basin. There, conservation of mass is forced by including north-south
+      currents confined to a thin, horizontal boundary layer (figure 11.3).
+   3. Only one boundary condition can be satisfied, no flow through the eastern
+      boundary. More complete descriptions of the flow require more complete
+      equations.
+   4. The solutions do not give the vertical distribution of the current.
+   5. Results were based on data from two cruises plus average wind data as-
+      suming a steady state. Later calculations by Leetmaa, McCreary, and
+11.1. SVERDRUP’S THEORY OF THE OCEANIC CIRCULATION                                                                           187
+
+                                                                                                                         0
+                                                                            0
+     o
+40                                                                                                    20
+
+                                                            20
+20 o                                                                                                         0
+                                                                                         0
+                                                           20                            0                        0
+  0o
+                            10
+                                  0
+                                                                                         0
+-20 o                                                                                                                 20
+                                       20
+                                                             30
+                 60                                                                                          40
+                                                                                  20
+-40 o
+
+
+          30 o        60o        90o        120o   150 o   180 o   -150 o       -120 o       -90 o   -60 o       -30 o       0o
+Figure 11.3 Depth-integrated Sverdrup transport applied globally using the wind stress from
+Hellerman and Rosenstein (1983). Contour interval is 10 Sverdrups. After Tomczak and
+Godfrey (1994: 46).
+
+           Moore (1981) using more recent wind data produces solutions with sea-
+           sonal variability that agrees well with observations provided the level of
+           no motion is at 500 m. If another depth were chosen, the results are not
+           as good.
+         6. Wunsch (1996: §2.2.3) after carefully examining the evidence for a Sver-
+            drup balance in the ocean concluded we do not have suﬀicient information
+            to test the theory. He writes
+
+                      The purpose of this extended discussion has not been to disapprove
+                      the validity of Sverdrup balance. Rather, it was to emphasize the gap
+                      commonly existing in oceanography between a plausible and attrac-
+                      tive theoretical idea and the ability to demonstrate its quantitative
+                      applicability to actual oceanic flow fields.—Wunsch (1996).
+
+           Wunsch, however, notes
+
+                      Sverdrup’s relationship is so central to theories of the ocean circu-
+                      lation that almost all discussions assume it to be valid without any
+                      comment at all and proceed to calculate its consequences for higher-
+                      order dynamics…it is diﬀicult to overestimate the importance of Sver-
+                      drup balance.—Wunsch (1996).
+
+           But the gap is shrinking. Measurements of mean stress in the equatorial
+           Pacific (Yu and McPhaden, 1999) show that the flow there is in Sverdrup
+           balance.
+Stream Lines, Path Lines, and the Stream Function Before discussing
+more about the ocean’s wind-driven circulation, we need to introduce the con-
+cept of stream lines and the stream function (see Kundu, 1990: 51 & 66).
+   At each instant in time, we can represent a flow field by a vector velocity at
+each point in space. The instantaneous curves that are everywhere tangent to
+188                 CHAPTER 11. WIND DRIVEN OCEAN CIRCULATION
+
+                    y
+
+
+                                         x + dx
+
+
+
+                                            -u dy
+                                                          ψ
+                                                              +
+                              x      v dx
+                                                               dψ
+
+
+                                                    ψ
+
+
+
+
+                                                                    x
+                Figure 11.4 Volume transport between stream lines in a
+                two-dimensional, steady flow. After Kundu (1990: 68).
+
+the direction of the vectors are called the stream lines of the flow. If the flow is
+unsteady, the pattern of stream lines change with time.
+    The trajectory of a fluid particle, the path followed by a Lagrangian drifter,
+is called the path line in fluid mechanics. The path line is the same as the stream
+line for steady flow, and they are different for an unsteady flow.
+    We can simplify the description of two-dimensional, incompressible flows by
+using the stream function ψ defined by:
+                                  ∂ψ                    ∂ψ
+                             u≡      ,          v≡−        ,                 (11.11)
+                                  ∂y                    ∂x
+    The stream function is often used because it is a scalar from which the vector
+velocity field can be calculated. This leads to simpler equations for some flows.
+    Stream functions are also useful for visualizing the flow. At each instant,
+the flow is parallel to lines of constant ψ. Thus if the flow is steady, the lines of
+constant stream function are the paths followed by water parcels.
+    The volume rate of flow between any two stream lines of a steady flow is
+dψ, and the volume rate of flow between two stream lines ψ1 and ψ2 is equal
+to ψ1 − ψ2 . To see this, consider an arbitrary line dx = (dx, dy) between two
+stream lines (figure 11.4). The volume rate of flow between the stream lines is:
+                                            ∂ψ      ∂ψ
+                   v dx + (−u) dy = −          dx −    dy = −dψ              (11.12)
+                                            ∂x      ∂y
+and the volume rate of flow between the two stream lines is numerically equal
+to the difference in their values of ψ.
+    Now, lets apply the concepts to satellite-altimeter maps of the oceanic to-
+pography. In §10.3 I wrote (10.10)
+                                          g ∂ζ
+                                   us = −
+                                          f ∂y
+                                        g ∂ζ
+                                   vs =                                 (11.13)
+                                        f ∂x
+11.2. WESTERN BOUNDARY CURRENTS                                                 189
+
+Comparing (11.13) with (11.11) it is clear that
+                                           g
+                                    ψ=−      ζ                              (11.14)
+                                           f
+and the sea surface is a stream function scaled by g/f . Turning to figure 10.5, the
+lines of constant height are stream lines, and flow is along the lines. The surface
+geostrophic transport is proportional to the difference in height, independent of
+distance between the stream lines. The same statements apply to figure 10.9,
+except that the transport is relative to transport at the 1000 decibars surface,
+which is roughly one kilometer deep.
+    In addition to the stream function, oceanographers use the mass-transport
+stream function Ψ defined by:
+                                  ∂Ψ                 ∂Ψ
+                           Mx ≡      ,      My ≡ −                          (11.15)
+                                  ∂y                 ∂x
+This is the function shown in figures 11.2 and 11.3.
+
+11.2 Stommel’s Theory of Western Boundary Currents
+   At the same time Sverdrup was beginning to understand circulation in the
+eastern Pacific, Stommel was beginning to understand why western boundary
+currents occur in ocean basins. To study the circulation in the north Atlantic,
+Stommel (1948) used essentially the same equations used by Sverdrup (11.1,
+11.2, and 11.3) but he added a bottom stress proportional to velocity to (11.3):
+
+                                                      
+           ∂u                                         ∂u
+       Az       = −Tx = −F cos(π y/b)             Az       = −R u          (11.16a)
+           ∂z 0                                       ∂z D
+                                                      
+           ∂v                                         ∂v
+        Az      = −Ty = 0                          Az      = −R v          (11.16b)
+           ∂z 0                                       ∂z D
+where F and R are constants.
+    Stommel calculated steady-state solutions for flow in a rectangular basin
+0 ≤ y ≤ b, 0 ≤ x ≤ λ of constant depth D filled with water of constant density.
+His first solution was for a non-rotating earth. This solution had a symmet-
+ric flow pattern with no western boundary current (figure 11.5, left). Next,
+Stommel assumed a constant rotation, which again led to a symmetric solution
+with no western boundary current. Finally, he assumed that the Coriolis force
+varies with latitude. This led to a solution with western intensification (figure
+11.5, right). Stommel suggested that the crowding of stream lines in the west
+indicated that the variation of Coriolis force with latitude may explain why the
+Gulf Stream is found in the ocean. We now know that the variation of Coriolis
+force with latitude is required for the existence of the western boundary current,
+and that other models for the flow which use different formulations for friction,
+lead to western boundary currents with different structure. Pedlosky (1987,
+Chapter 5) gives a very useful, succinct, and mathematically clear description
+of the various theories for western boundary currents.
+190                   CHAPTER 11. WIND DRIVEN OCEAN CIRCULATION
+
+    In the next chapter, we will see that Stommel’s results can also be explained
+in terms of vorticity—wind produces clockwise torque (vorticity), which must
+be balanced by a counterclockwise torque produced at the western boundary.
+
+                              -20                             -10           y
+                              -40                           -20
+                              -60                         -30                       x
+                              -80
+                                                    -40
+
+
+
+
+                                         1000 km                                1000 km
+      Wind
+      Stress
+Figure 11.5 Stream function for flow in a basin as calculated by Stommel (1948). Left: Flow
+for non-rotating basin or flow for a basin with constant rotation. Right: Flow when rotation
+varies linearly with y.
+
+
+11.3 Munk’s Solution
+    Sverdrup’s and Stommel’s work suggested the dominant processes producing
+a basin-wide, wind-driven circulation. Munk (1950) built upon this foundation,
+adding information from Rossby (1936) on lateral eddy viscosity, to obtain a
+solution for the circulation within an ocean basin. Munk used Sverdrup’s idea
+of a vertically integrated mass transport flowing over a motionless deeper layer.
+This simplified the mathematical problem, and it is more realistic. The ocean
+currents are concentrated in the upper kilometer of the ocean, they are not
+barotropic and independent of depth. To include friction, Munk used lateral
+eddy friction with constant AH = Ax = Ay . Equations (11.1) become:
+
+                                       
+               1 ∂p          ∂       ∂u        ∂2u       ∂2u
+                    = fv+         Az      + AH    2
+                                                    + AH                            (11.17a)
+               ρ ∂x          ∂z      ∂z        ∂x        ∂y 2
+                                       
+               1 ∂p           ∂      ∂v        ∂2v       ∂2v
+                    = −f u +      Az      + AH    2
+                                                    + AH                            (11.17b)
+               ρ ∂y          ∂z      ∂z        ∂x        ∂y 2
+
+    Munk integrated the equations from a depth −D to the surface at z = z0
+which is similar to Sverdrup’s integration except that the surface is not at z = 0.
+Munk assumed that currents at the depth −D vanish, that (11.3) apply at
+the horizontal boundaries at the top and bottom of the layer, and that AH is
+constant.
+    To simplify the equations, Munk used the mass-transport stream function
+(11.15), and he proceeded along the lines of Sverdrup. He eliminated the pres-
+sure term by taking the y derivative of (11.17a) and the x derivative of (11.17b)
+to obtain the equation for mass transport:
+
+                                          ∂Ψ
+                             AH ∇ 4 Ψ − β    = − curlz T                             (11.18)
+                             | {z }     | ∂x {z         }
+                              Friction      Sverdrup Balance
+

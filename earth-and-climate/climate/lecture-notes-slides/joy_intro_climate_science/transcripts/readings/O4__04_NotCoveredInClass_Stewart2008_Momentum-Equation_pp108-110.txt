@@ -1,0 +1,154 @@
+108                           CHAPTER 7. THE EQUATIONS OF MOTION
+
+The rate of change of the quantity q within the volume is:
+                        Dq   qout − qin   ∂q   ∂q δx
+                           =            =    +                               (7.6)
+                        Dt       δt       ∂t   ∂x δt
+But δx/δt is the velocity u, and therefore:
+                                Dq   ∂q    ∂q
+                                   =    +u
+                                Dt   ∂t    ∂x
+In three dimensions, the total derivative becomes:
+                         D    ∂      ∂      ∂     ∂
+                            =    +u     +v     +w                          (7.7a)
+                         Dt   dt    ∂x      ∂y    ∂z
+                         D    ∂
+                            =    + u · ∇( )                                (7.7b)
+                         Dt   dt
+where u is the vector velocity and ∇ is the operator del of vector field theory
+(See Feynman, Leighton, and Sands 1964: 2–6).
+    This is an amazing result. Transforming coordinates from one following a
+particle to one fixed in space converts a simple linear derivative into a non-
+linear partial derivative. Now let’s use the equation to calculate the change of
+momentum of a parcel of fluid.
+
+7.6  Momentum Equation
+   Newton’s Second Law relates the change of the momentum of a fluid mass
+due to an applied force. The change is:
+                                  D(mv)
+                                        =F                                   (7.8)
+                                   Dt
+where F is force, m is mass, and v is velocity. I have emphasized the need to
+use the total derivative because we are calculating the force on a particle. We
+can assume that the mass is constant, and (7.8) can be written:
+                                 Dv   F
+                                    =   = fm                                 (7.9)
+                                 Dt   m
+where fm is force per unit mass.
+    Four forces are important: pressure gradients, Coriolis force, gravity, and
+friction. Without deriving the form of these forces (the derivations are given in
+the next section), we can write (7.9) in the following form.
+                       Dv    1
+                          = − ∇ p − 2Ω × v + g + Fr                        (7.10)
+                       Dt    ρ
+Acceleration equals the negative pressure gradient minus the Coriolis force plus
+gravity plus other forces. Here g is acceleration of gravity, Fr is friction, and
+the magnitude Ω of Ω is the Rotation Rate of earth, 2π radians per sidereal day
+or
+                          Ω = 7.292 × 10−5 radians/s                        (7.11)
+7.6. MOMENTUM EQUATION                                                               109
+
+Momentum Equation in Cartesian coordinates: Expanding the derivative
+in (7.10) and writing the components in a Cartesian coordinate system gives the
+Momentum Equation:
+       ∂u    ∂u     ∂u    ∂u    1 ∂p
+          +u    +v     +w    =−      + 2 Ω v sin φ + Fx                          (7.12a)
+       ∂t    ∂x     ∂y    ∂z    ρ ∂x
+       ∂v    ∂v     ∂v    ∂v    1 ∂p
+          +u    +v     +w    =−      − 2 Ω u sin φ + Fy                          (7.12b)
+       ∂t    ∂x     ∂y    ∂z    ρ ∂y
+      ∂w    ∂w     ∂w     ∂w    1 ∂p
+         +u     +v     +w    =−      + 2 Ω u cos φ − g + Fz                      (7.12c)
+      ∂t    ∂x     ∂y     ∂z    ρ ∂z
+where Fi are the components of any frictional force per unit mass, and φ is
+latitude. In addition, we have assumed that w << v, so the 2 Ω w cos φ has
+been dropped from equation in (7.12a).
+    Equation (7.12) appears under various names. Leonhard Euler (1707–1783)
+first wrote out the general form for fluid flow with external forces, and the
+equation is sometimes called the Euler equation or the acceleration equation.
+Louis Marie Henri Navier (1785–1836) added the frictional terms, and so the
+equation is sometimes called the Navier-Stokes equation.
+    The term 2 Ω u cos φ in (7.12c) is small compared with g, and it can be
+ignored in ocean dynamics. It cannot be ignored, however, for gravity surveys
+made with gravimeters on moving ships.
+                             z
+
+
+
+
+                                  p                       p + δp
+
+                                  δz
+                                                  δy
+                                  y      δx
+
+                                                      x
+ Figure 7.3 Sketch of flow used for deriving the pressure term in the momentum equation.
+
+Derivation of Pressure Term Consider the forces acting on the sides of a
+small cube of fluid (figure 7.3). The net force δFx in the x direction is
+
+                           δFx = p δy δz − (p + δp) δy δz
+                           δFx = −δp δy δz
+
+But
+                                              ∂p
+                                       δp =      δx
+                                              ∂x
+and therefore
+                                         ∂p
+                                 δFx = −    δx δy δz
+                                         ∂x
+                                         ∂p
+                                 δFx = −    δV
+                                         ∂x
+110                           CHAPTER 7. THE EQUATIONS OF MOTION
+
+Dividing by the mass of the fluid δm in the box, the acceleration of the fluid in
+the x direction is:
+                                   δFx     ∂p δV
+                            ax =       =−
+                                   δm      ∂x δm
+                                           1 ∂p
+                                  ax = −                                   (7.13)
+                                           ρ ∂x
+The pressure forces and the acceleration due to the pressure forces in the y and
+z directions are derived in the same way.
+The Coriolis Term in the Momentum Equation The Coriolis term exists
+because we describe currents in a reference frame fixed on earth. The derivation
+of the Coriolis terms is not easy. Henry Stommel, the noted oceanographer at
+the Woods Hole Oceanographic Institution even wrote a book on the subject
+with Dennis Moore (Stommel & Moore, 1989).
+    Usually, we just state that the force per unit mass, the acceleration of a
+parcel of fluid in a rotating system, can be written:
+                                
+                Dv              Dv
+    af ixed =              =                + (2Ω × v) + Ω × (Ω × R)      (7.14)
+                Dt f ixed       Dt rotating
+
+where R is the vector distance from the center of earth, Ω is the angular velocity
+vector of earth, and v is the velocity of the fluid parcel in coordinates fixed to
+earth. The term 2Ω × v is the Coriolis force, and the term Ω × (Ω × R) is the
+centrifugal acceleration. The latter term is included in gravity (figure 7.4).
+The Gravity Term in the Momentum Equation The gravitational attrac-
+tion of two masses M1 and m is:
+                                        G M1 m
+                                 Fg =
+                                          R2
+where R is the distance between the masses, and G is the gravitational constant.
+The vector force Fg is along the line connecting the two masses.
+   The force per unit mass due to gravity is:
+                               Fg        G ME
+                                  = gf =                                   (7.15)
+                               m          R2
+where ME is the mass of earth. Adding the centrifugal acceleration to (7.15)
+gives gravity g (figure 7.4):
+
+                             g = gf − Ω × (Ω × R)                          (7.16)
+
+    Note that gravity does not point toward earth’s center of mass. The cen-
+trifugal acceleration causes a plumb bob to point at a small angle to the line
+directed to earth’s center of mass. As a result, earth’s surface including the
+ocean’s surface is not spherical but it is a oblate ellipsoid. A rotating fluid
+planet has an equatorial bulge.
+

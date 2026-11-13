@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, ai-notes]
 status: draft
 prereq: [PA04 Functions and Cardinality]
-tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/proofs, quiz/pa-induction, quiz/pa-wop]
 ---
 # PA05 · Induction and the Number Systems
 
@@ -52,7 +52,7 @@ flowchart LR
 ```
 *Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
 
-## 1. The Principle of Mathematical Induction
+## 1. The Principle of Mathematical Induction #quiz/pa-induction #quiz/pa-wop
 <span class="scope-taught">taught</span> *Assignment 8, Definition 2, Examples and Remark*
 
 > [!intuition] Dominoes
@@ -71,7 +71,7 @@ Throughout $\mathbb N=\{1,2,3,\dots\}$.
 > [!intuition] Dominoes
 > The step is "if domino $k$ falls then domino $k+1$ falls"; the base case pushes the first domino. Without the push nothing falls; without the step only the first does.
 
-## 2. The four exercises and the two warnings
+## 2. The four exercises and the two warnings #quiz/pa-induction #quiz/pa-wop
 <span class="scope-taught">taught</span> *Assignment 8, questions 6–7*
 
 > [!example] Q6(a) $1+3+5+\dots+(2n-1)=n^2$
@@ -98,7 +98,7 @@ Throughout $\mathbb N=\{1,2,3,\dots\}$.
 > [!example] 🔵 The horses fallacy
 > "All horses have the same colour": $P(n)$ = "any $n$ horses have one colour". $P(1)$ is true. The step takes $k+1$ horses, removes one, removes another, and uses the overlap of the two groups of $k$. For $k=1$ the two groups $\{h_1\}$, $\{h_2\}$ **do not overlap**, so the step fails from $P(1)$ to $P(2)$. An inductive step must hold for **every** $k\ge$ base, including the first.
 
-## 3. The well-ordering principle
+## 3. The well-ordering principle #quiz/pa-induction #quiz/pa-wop
 <span class="scope-taught">taught</span> *used in Lecture 18 (black box 3) and Assignment 7 Q4 (the least $n_1$ with $f(n_1)\in S$)*
 
 > [!intuition] 'Every nonempty set of naturals has a least element'
@@ -115,7 +115,7 @@ It is equivalent to PMI.
 > [!example] 🔵 $\sqrt2$ is irrational by well-ordering
 > If $\sqrt2=p/q$ with positive integers, let $q$ be the **least** positive integer for which $q\sqrt2$ is an integer (it exists by WOP). Then $p=q\sqrt2$ and $\sqrt2=\dfrac{2q-p}{p-q}$ (indeed $q\sqrt2(\sqrt2+1)=p(1+\sqrt2)$). Since $1<\sqrt2<2$ we have $0<p-q<q$, and $(p-q)\sqrt2=2q-p$ is an integer: a smaller denominator, contradiction.
 
-## 4. Strong induction and the finite-set black boxes
+## 4. Strong induction and the finite-set black boxes #quiz/pa-induction #quiz/pa-wop
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 12–13; Sundstrom Ch. 4*
 
 > [!intuition] Strong induction lets you use *all* smaller cases

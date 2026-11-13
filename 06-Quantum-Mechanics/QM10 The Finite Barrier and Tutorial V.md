@@ -180,3 +180,30 @@ Two wells of width $w$ ($V=0$) separated by a barrier of width $d$ and height $V
 > **Notes.** (1) Lecture p.7 leaves "$R=1-T=|B/A|^2$ (verify)" open: verified here. (2) The lecture's $B$ in terms of $F$ (p.6) is correct as written (checked numerically). (3) Tutorial V's wells: the picture shows $V_0$ also outside both wells; $d$ and $w$ are widths. (4) The page-5 box for $C$ and $D$ uses the same $e^{\mp(\kappa\mp ik)a}$ phases as here.
 
 **References.** Griffiths, D. J. *Introduction to Quantum Mechanics* §2.5–§2.6 · [[QM07 The Finite Square Well]] · [[QM08 Quantum Tunnelling]].
+
+## Continued in the vault (added 2026-11-12): Tutorial VI, Problem 2: the barrier for $E>V_0$
+*Source: [[Tutorial6.pdf]] (1 p., read in full). The problem statement only; the solution is mine (no key in the folder). It is the **same algebra** as §5 above (the well with $E>V_0$) with the roles of the two wavenumbers exchanged, and the $E>V_0$ limit of the tunnelling formula of [[QM08 Quantum Tunnelling]] §3. Numbers: `scripts/qm_tutorial6_numbers.py` (the four matching equations solved exactly).*
+
+**Set-up.** $V=V_0$ for $-a<x<a$, $0$ elsewhere, $E>V_0$, particle incident from the left:
+$$\psi_I=Ae^{ik_0x}+Be^{-ik_0x}\ (x<-a),\quad\psi_{II}=Ce^{ikx}+De^{-ikx}\ (-a<x<a),\quad\psi_{III}=Fe^{ik_0x}\ (x>a),$$
+$k_0=\sqrt{2mE}/\hbar$, $k=\sqrt{2m(E-V_0)}/\hbar$.
+
+**(a) The four matching conditions** ($\psi$ and $\psi'$ continuous at $x=\mp a$, because $V$ has a finite jump):
+$$\begin{aligned}x=-a:&\quad Ae^{-ik_0a}+Be^{ik_0a}=Ce^{-ika}+De^{ika},\\&\quad k_0\big(Ae^{-ik_0a}-Be^{ik_0a}\big)=k\big(Ce^{-ika}-De^{ika}\big),\\x=+a:&\quad Ce^{ika}+De^{-ika}=Fe^{ik_0a},\\&\quad k\big(Ce^{ika}-De^{-ika}\big)=k_0Fe^{ik_0a}.\end{aligned}$$
+The last two give $C=\tfrac12\big(1+\tfrac{k_0}k\big)Fe^{i(k_0-k)a}$ and $D=\tfrac12\big(1-\tfrac{k_0}k\big)Fe^{i(k_0+k)a}$ (checked: $E=2V_0$, $V_0=a=1$, $\hbar^2/2m=1$: $C=1.105026+0.485824\,i$ and $D=0.154692-0.137708\,i$ both from these formulas and from solving the four equations). Substituting into the first two gives $A$ and $B$ in terms of $F$, hence (as in §5 with $k\leftrightarrow k_0$)
+$$\boxed{T=\frac{|F|^2}{|A|^2}=\frac1{1+\dfrac{V_0^2}{4E(E-V_0)}\sin^2(2ka)}},\qquad R=1-T.$$
+**Numbers** ($V_0=a=1$, $\hbar^2/2m=1$):
+
+| $E/V_0$ | $k_0$ | $k$ | $T$ (matching) | $T$ (formula) | $R=\lvert B/A\rvert^2$ |
+|---|---|---|---|---|---|
+| 1.001 | 1.0005 | 0.0316 | 0.500583 | 0.500583 | 0.499417 |
+| 1.5 | 1.2247 | 0.7071 | 0.754588 | 0.754588 | 0.245412 |
+| 2 | 1.4142 | 1.0000 | 0.906328 | 0.906328 | 0.093672 |
+| 4 | 2.0000 | 1.7321 | 0.997912 | 0.997912 | 0.002088 |
+| 10 | 3.1623 | 3.0000 | 0.999783 | 0.999783 | 0.000217 |
+
+$R+T=1$ to $10^{-12}$ in every row. **Resonances** ($T=1$, no reflection) at $2ka=n\pi$, i.e. $E/V_0=1+(n\pi/2a)^2/V_0=3.467,\ 10.870$ for $n=1,2$ ($a=V_0=1$): the wave fits a whole number of half-wavelengths into the barrier width (the optical analogue is a transparent film of thickness $n\lambda/2$); between them $T$ dips, and $T\to1$ for $a\to0$ or $E\gg V_0$.
+
+**(b) Sketch of $\mathrm{Re}\,\psi$ and which wavenumber is larger.** $k^2=k_0^2-2mV_0/\hbar^2<k_0^2$, so **$k<k_0$**: the **wavelength inside the barrier, $2\pi/k$, is longer than outside, $2\pi/k_0$** (the particle is slower there: kinetic energy $E-V_0$). $E\to V_0^+$: $k\to0$, the inner wavelength $\to\infty$ and $\psi_{II}$ flattens (at $E=1.001V_0$: $k_0/k=31.6$) while $T\to\tfrac12$ for this $a$ (not $0$: unlike tunnelling, a wave is still partially transmitted); $E\gg V_0$: $k/k_0\to1$ ($E=100V_0$: $1.005$), both wavelengths agree and the barrier is invisible ($T\to1$). Drawing: region I a cosine of wavenumber $k_0$ whose envelope oscillates between $|A|-|B|$ and $|A|+|B|$ (incident plus reflected: a partial standing wave, minima of $|\psi|^2$ equal to $(1-\sqrt R)^2|A|^2$); region II a stretched cosine of wavenumber $k$; region III a pure travelling wave of constant amplitude $|F|$ and wavenumber $k_0$; value and slope continuous at $\pm a$.
+
+**Check (Tutorial VI Q2, numbers).** For $E=2V_0$, $a=1$: with $V_0=1$ in units $\hbar^2/2m=1$, $k_0=\sqrt2$, $k=1$, $a=1$: $2ka=2$, $\sin^2 2=0.8268$, $V_0^2/4E(E-V_0)=1/8$, $T=1/(1+0.1034)=0.9063$ (table above).

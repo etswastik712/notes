@@ -3,5 +3,6 @@
     "second-brain"
   ],
   "baseFontSize": 17,
-  "nativeMenus": false
+  "nativeMenus": false,
+  "accentColor": "#971c3a"
 }

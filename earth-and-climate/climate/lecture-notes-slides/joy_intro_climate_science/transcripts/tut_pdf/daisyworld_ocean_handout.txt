@@ -1,0 +1,259 @@
+Daisyworld with an Ocean: a guide to exploring the app
+EC2113 Intro to Climate · Ocean module · app: joymonteiro.github.io/intro_climate_science/tutorials/daisyworld-
+ocean
+This handout goes with the app "Daisyworld with an Ocean". Open the app next to it. The app runs in any
+browser, including on a phone, and needs no installation.
+        Part 1 explains what the model is and how to use the app.
+        Part 2 walks through six runs. For each one it says what to set, asks you to predict what will happen, and
+        then explains what you see. Try to answer each "Before you look" question before you read on.
+        Part 3 sums up what to take away, and says what the model leaves out.
+        An extension at the end adds daisies and grazers, if you have time.
+You need no maths beyond the lecture's slab equation.
+
+   The point in two sentences. Weather pushes on every surface of a planet, and the surface responds
+   according to how much heat it can lean on. A deep, stirred ocean takes out the fast swings and turns
+   weather into slow wandering, but it doesn't change the size of the slowest swings: depth sets the
+   timescale, not the size of the slow swings.
+
+
+Part 1. The model and the app
+1.1 What is in the model, in words
+The first three presets are a bare planet: no life, just physics.
+        Land. One temperature for all the land. It stores little heat, so it responds within weeks.
+        A mixed layer. One temperature for the stirred top of the ocean, 75 m deep, covering 70% of the planet. It
+        has about 30 times the land's heat capacity.
+        A deep ocean. One temperature for all the water below. It holds 13 times as much heat as the mixed layer
+        and exchanges heat with it slowly.
+        The sun. Sunlight rises and sets every day, and through the year swings 30% above and below its
+        average, highest on 21 June (the Day and seasons box, ticked in presets 1 to 3).
+        The weather. A random push of energy, in or out, that lasts a few days, like a weather system passing. A
+        day's push has a spread of 30 W/m². Nothing in the weather swings slowly. The same push falls on land
+        and ocean.
+        Heat loss to space. A warmer surface radiates more. Every part of the model that touches the air feels
+        this pull back toward balance.
+There are no places, no map and no currents. No water moves sideways. All the ocean does here is store heat,
+and mixing up and down decides how much of it the surface can use.
+
+1.2 The lecture's equation, and the app's numbers
+Each part of the planet obeys the slab equation from the lecture:
+C dT′/dt = F′(t) − λT′
+Here C is the heat capacity, F′ is the weather and λ says how fast a warmer surface loses heat. The response
+time is τ = C/λ.
+The app's numbers differ a little from the lecture's, for good reasons:
+
+
+
+
+Daisyworld with an Ocean                                                                                       1 / 12
+                  Lecture        App        Why they differ
+ Mixed-layer      50 m           75 m       Both are typical. You can change it with a slider.
+ depth
+ λ                3.8 W m⁻²      2.09 W     The lecture's value is the Planck response alone. The app's includes other
+                  K⁻¹            m⁻² K⁻¹    feedbacks, such as water vapour, so a warm surface loses heat more slowly.
+ Land             about 1 m of   2.4 m of   The app's land box carries the air above it. The lecture's estimate is the soil
+                  water          water      alone.
+ Mixed layer      ~1.7 years     ~5 years   Both of the differences above.
+ τ
+ Land τ           ~12 days       ~2 months The same.
+
+The physics is the same in both. Don't worry about the exact numbers; watch the patterns.
+
+
+
+
+Daisyworld with an Ocean                                                                                                 2 / 12
+1.3 A tour of the screen
+
+
+
+
+        Presets run along the top. Use 1 to 3 for this handout: Land only, Add a mixed layer, Add a deep ocean. A
+        preset runs by itself as soon as you press it.
+        Keep this run keeps the current run on the charts, dashed, so you can compare the next run with it. Tick it
+        before you load the next preset.
+        Temperatures over time shows each part of the planet. The switch gives yearly averages or monthly
+        values. To see the seasons, press Monthly and show 10 years.
+        How much does temperature vary at each timescale? has two views. Bars shows the spread of the
+        planet's temperature after averaging over a month, a year, 10 years and 100 years. Spectrum shows the
+        same thing in finer detail. On both, a dashed line shows what weather alone would give, if each month
+        were independent of the last. Both take the seasons out first: they use each month's departure from the
+        run's average month of its kind (its average January, and so on), because the seasons repeat every year
+        and would swamp everything else.
+        New weather runs again with a different random sequence. Use it to check that something isn't luck.
+The "How it works" tab explains the model in plain language.
+
+
+Daisyworld with an Ocean                                                                                      3 / 12
+Part 2. Six runs to explore
+Run 1. Land only
+Set: preset 1, Land only.
+Before you look: the weather is random, and forgets within a few days. What should a planet of bare land do?
+Sketch the temperature you expect over 300 years. If you average over a whole year, then 10 years, how fast
+should the wiggles shrink?
+
+
+
+
+What to look for. First press Monthly and show 10 years: the seasons are huge, from about −5 °C in February to
+44 °C in August.
+
+
+
+
+Daisyworld with an Ocean                                                                                   4 / 12
+Then go back to Yearly averages: the temperature jitters with no pattern you can see. Each bar is smaller than
+the last: about 3.2 K for monthly values, 1.8 K for yearly averages, 0.6 K over 10 years and about 0.2 K over 100
+years.
+Why. Land forgets within about two months. After that, each push has faded, so averaging over longer periods
+mostly cancels pushes against each other. The bars fall close to the dashed line. The seasons are big for the
+same reason: land holds so little heat that it nearly catches up with the sun each season.
+
+Run 2. Add a mixed layer
+Set: tick Keep this run, then preset 2, Add a mixed layer. Same weather.
+Before you look: you are about to give 70% of the planet 30 times the heat capacity. What happens to the
+seasons? Will the planet vary more, less or the same from month to month? From century to century? Write
+down your answers.
+
+
+
+
+Daisyworld with an Ocean                                                                                      5 / 12
+What to look for.
+ Spread of the planet's temperature                        Land only             With a mixed layer
+ over 1 month                                              3.20–3.26 K           0.74–0.80 K
+ over 1 year                                               1.75–1.83 K           0.67–0.74 K
+ over 10 years                                             0.55–0.67 K           0.45–0.54 K
+ over 100 years                                            0.14–0.28 K           0.14–0.26 K
+
+(Ranges cover weather numbers 1 to 20. Your numbers should fall in or near them.)
+The fast bars shrink a lot and the century bar doesn't change. Now look at the yearly bar next to the monthly
+one: with the mixed layer, it hardly drops. On Monthly, the seasons shrink too: the mixed layer swings only about
+3 K through the year, warmest in September, nearly three months after the sun, and the land next to it about 9 K.
+
+
+
+
+Daisyworld with an Ocean                                                                                     6 / 12
+Why. A month of warm weather warms the mixed layer only a little, but it hasn't forgotten that warmth when the
+next month comes. It adds up the kicks. So its temperature barely registers one month, then wanders over years.
+Over a century, what matters is only how strongly heat is lost to space, and that didn't change. A season is a
+slow push too, but not slow enough for a layer that takes about 5 years to respond: it never catches up, so its
+seasons are small and late.
+The ocean doesn't calm the planet evenly. It moves variation from the fast end to the slow end.
+
+Run 3. Sort it by timescale
+Set: stay on the same two runs and press Spectrum.
+Before you look: the curve for the land-only run and the curve for the mixed layer should be far apart
+somewhere and together somewhere else. On which side of the chart will each happen?
+
+
+
+
+Daisyworld with an Ocean                                                                                  7 / 12
+What to look for. On the left, at periods of months to a couple of years, the mixed-layer curve sits about 100
+times below land's (each gridline is a factor of 10). On the right, past about 30 to 50 years, the two curves lie on
+top of each other.
+Why. For fast swings, the push doesn't have time to be balanced by heat loss, so C alone sets the response. For
+slow swings, the surface has time to reach balance, F′ ≈ λT′, and C drops out of the equation.
+Two details. The dotted lines mark each part's response time τ. A curve bends at a period of about 2π × τ,
+because a swing of period P varies at a rate ω = 2π/P, so the bends sit somewhat to the right of the dotted lines.
+And this chart shows the temperature of the whole planet, which is 30% land. The mixed layer on its own would
+be several hundred times below land.
+
+Run 4. Change the depth
+Set: preset 2, then move Mixed-layer depth to 25 m. Tick Keep this run, then move it to 150 m.
+Before you look: a mixed layer six times deeper. What happens to the month bar? What happens to the century
+bar?
+What to look for.
+
+ Spread of the planet's temperature                     25 m                75 m                 150 m
+ over 1 year                                            1.08–1.14 K         0.67–0.74 K          0.48–0.54 K
+ over 10 years                                          0.51–0.62 K         0.45–0.54 K          0.37–0.45 K
+ over 100 years                                         0.14–0.28 K         0.14–0.26 K          0.13–0.24 K
+
+Why. This is the main result. Depth sets the timescale, not the size of the slow swings. A deeper layer holds on
+for longer, so the fast swings shrink and the wander gets slower. The size of the slowest swings stays put,
+because λ sets it, and λ doesn't care how deep the water is.
+
+
+
+Daisyworld with an Ocean                                                                                        8 / 12
+Think about it: depth here means how far the stirring reaches. The monsoon stirs the Arabian Sea from about 20
+m in April to about 60 m in July. What does that do to the sea's memory during the year?
+
+Run 5. Add a deep ocean
+Set: preset 2, tick Keep this run, then preset 3, Add a deep ocean.
+Before you look: a deep ocean holds 13 times more heat than the mixed layer. Do you expect more slow variation
+or less?
+
+
+
+
+What to look for. The century bar falls, from 0.14–0.26 K to 0.12–0.22 K. On the spectrum, power at 100 to 1,000
+years falls by about a third.
+Why. Many people expect a slower part to add slow variation. Here it soaks up heat instead: when the mixed
+layer wanders warm, some of that warmth leaks down, and the leak acts like extra heat loss on long timescales.
+The deep ocean calms the slowest swings a little.
+
+Run 6. Brighten the sun
+Set: preset 3. Move Weather size to 0, then press Brighten the sun. Note what happens on Yearly averages,
+which hide the seasons. Then untick Deep ocean and do it again.
+Before you look: the sun brightens by 5% and stays there. How long until the planet stops warming? A year?
+Ten? Does the deep ocean change your answer?
+
+
+
+
+Daisyworld with an Ocean                                                                                     9 / 12
+What to look for.
+ Share of the final warming (5.8 K) reached after              1 year    10 years     100 years   500 years
+ With a deep ocean                                             35%       80%          87%         98%
+ Without a deep ocean                                          37%       95%          100%        100%
+
+The planet warms in two stages: most of it within 10 years, and the last fifth over centuries.
+Why. The mixed layer catches up within a few of its response times. But it keeps leaking heat into the deep
+ocean, which takes centuries to fill. This is the shape of the warming we are living through: more than 91% of
+Earth's extra heat is going into the ocean, and the surface hasn't finished responding to today's imbalance.
+
+
+
+
+Daisyworld with an Ocean                                                                                   10 / 12
+Part 3. What to take away
+     1. How much heat a surface can lean on depends on how heat gets below it. Land has only conduction, so
+        its slab is always thin. The ocean is stirred, so its slab is tens to hundreds of metres.
+     2. The ocean adds up weather. Fast, random pushes become slow wandering, with nothing slow driving it.
+     3. Depth sets the timescale, not the size of the slow swings.
+     4. A deep ocean adds a slower stage. It calms the slowest swings a little, and it makes warming arrive in
+        two stages.
+     5. All of this happens with no water moving sideways. Mixing up and down is enough.
+What the model leaves out. Currents, so heat can't be carried anywhere. Geography: its day and seasons are
+one place's, every day lasts 12 hours, and its land is one block sized for the year's swing, so it swings only about
+1 K between day and night (real bare ground, warmed only in its top 10 cm or so by a day, swings far more). Any
+change of mixed-layer depth through the year. Feedbacks that change with the ocean's temperature, such as
+those behind El Niño, which is why real ocean swings can be stronger than this model's.
+Questions to take to the discussion.
+        Whose temperature next month would you rather forecast, Delhi's or the Arabian Sea's? Why, and what
+        would make you less sure?
+        The Arabian Sea cools from about 30 °C in May to about 27 °C in August, while the sun is still high. What
+        in the lectures could explain that, and what in this model couldn't?
+
+
+
+
+Daisyworld with an Ocean                                                                                       11 / 12
+Extension. Add life
+Set: preset 4, Add life, then Compare: grazers, no weather.
+Daisies now set how much sunlight the land reflects, and grazers eat the daisies. The life presets run without day
+and seasons, with weather that forgets from one quarter-day to the next, as they were designed. For a fair
+comparison, load preset 3 and untick Day and seasons: its century bar is 0.05–0.08 K. Now load preset 4 and
+look at the century bar: it is two or three times as tall (0.11–0.28 K). With no weather at all, the same planet cycles
+every 8 years. Nothing outside is cycling: the ocean's delay makes the daisies and grazers overshoot, and the
+weather then decides how deep each bust goes. Find three busts of different sizes in the grazer chart and read
+the ocean's temperature just before each. What do you notice?
+
+
+
+
+Daisyworld with an Ocean                                                                                         12 / 12
+

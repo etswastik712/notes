@@ -1,7 +1,7 @@
 ---
 id: zettel/method-of-minimal-counterexample
 aliases: ["Method of Minimal Counterexample", "proof by minimal counterexample"]
-tags: [zettel, agent-written, intro-to-proofs, subject/analysis]
+tags: [zettel, agent-written, intro-to-proofs, subject/analysis, quiz/proofs, quiz/pa-wop]
 trust_tier: agent_written
 ---
 

@@ -1,0 +1,668 @@
+Earth's energy budget from space: a guide to the CERES
+explorer
+Ocean module · app: joymonteiro.github.io/intro_climate_science/tutorials/ceres-energy-budget
+This handout goes with the app "CERES energy budget explorer". Open the app next to it. It runs in any browser,
+including on a phone, and needs no installation. You need only what lecture O1 covered: the Earth gains energy
+as sunlight and loses it as infrared radiation, and the difference is what heats or cools the planet.
+        Sections 1–3 explain where the data come from, what they can and can't tell you, and why scientists use
+        them.
+        Section 4 is a tour of the app's five views.
+        Section 5 has eight exercises. Each one asks you to predict something before you look, tells you exactly
+        what to set in the app, lists what to look for, and then explains why. Write your prediction down before
+        you read on. The exercises follow the app's views, from the top of the atmosphere down to the surface
+        and then to El Niño.
+        Section 6 gives the data sources and further reading.
+
+   The point in two sentences. The Earth takes in more sunlight than it gives back as infrared radiation in the
+   tropics, and gives back more than it takes in near the poles, so the atmosphere and ocean must carry
+   energy poleward. Overall the planet is gaining a little energy every year, and most of that ends up in the
+   ocean.
+
+
+1. What CERES is
+CERES stands for Clouds and the Earth's Radiant Energy System. It is a set of identical instruments that NASA
+has flown on several satellites: Terra, Aqua and, more recently, NOAA-20. Each instrument is a broadband
+scanning radiometer. It sweeps across the Earth below and measures how much radiation comes up from each
+spot. On Terra and Aqua it has three channels: a shortwave channel for reflected sunlight, a total channel for all
+wavelengths, and a narrow infrared "window" channel. The longwave, the infrared emitted by the Earth, is the
+total minus the shortwave. The newer instrument on NOAA-20 measures the longwave in a channel of its own.
+"Broadband" is the important word. Most satellite instruments measure a few narrow colours, which is good for
+spotting clouds or measuring temperature. CERES instead catches all the energy, at every wavelength, because
+energy is what the budget is about.
+Why do we need satellites at all? The top of the atmosphere is the only place where the Earth's energy budget is
+simple: energy can cross it only as radiation. Sunlight comes in, and reflected sunlight and infrared go out. No
+ground station can see that boundary. A satellite looks down on it from above, and a few satellites together see
+every part of the globe at many times of day.
+The app uses monthly mean maps. Each map gives, for every box of the latitude–longitude grid, the average
+flux over one calendar month, counting day and night. The source data are on a 1° grid. The app averages them
+onto a 2° grid (a grid of 90 × 180 cells), weighting each 1° box by its area, to keep the download small. The
+record runs from January 2010 to January 2025, which is 181 months.
+
+2. What EBAF is, and its honest caveats
+The product in the app is CERES EBAF, which stands for Energy Balanced and Filled.
+"Filled" refers to the clear-sky maps. To know what clouds do, we need the fluxes for clear skies (see below),
+but in many places and months CERES never sees a cloud-free scene, and a clear-sky map built from CERES
+alone has holes. EBAF fills them, using the clear parts of scenes seen by a finer-resolution imager (MODIS) and
+
+
+Earth's energy budget from space                                                                              1 / 17
+radiative-transfer calculations. Separately, the CERES satellites pass over each place only a few times a day, and
+the hours in between are filled in using geostationary weather satellites.
+"Energy Balanced" needs more care. Each CERES instrument is very stable, so it detects changes very well, but
+its absolute calibration is uncertain by a few W m⁻². That is more than the planet's whole imbalance. So the EBAF
+team adjusts the shortwave and the longwave fluxes, each within its own uncertainty, so that the long-term
+global mean of the net flux matches the rate at which the ocean is measured to be gaining heat. In practice this
+means:
+        the size of the global-mean imbalance is anchored to ocean measurements, not measured by CERES
+        alone;
+        the patterns (where the Earth gains and loses), and the changes from month to month and year to year,
+        come from CERES itself.
+Surface fluxes are computed, not measured. No satellite can measure the radiation at the ground directly,
+because the atmosphere is in the way. The surface fields in EBAF come from a radiative-transfer model: a
+program that calculates how radiation passes through the atmosphere. The model is fed clouds and aerosols
+seen by satellite instruments, and air temperature and humidity from a weather-forecast reanalysis. Its results
+are then nudged so that, at the top of the atmosphere, they agree with what CERES measured. The surface
+numbers are therefore less certain than the top-of-atmosphere numbers, and anything computed from them (the
+"column" in view 3) inherits that uncertainty.
+Clear-sky fluxes and the cloud radiative effect. To ask what clouds do, we need to know what the fluxes would
+be without the clouds. EBAF provides clear-sky fluxes. The app uses EBAF's clear-sky for the total region (the
+variables called clr_t ). For each grid box and month, this is the flux that the whole box would have if its clouds
+were removed. Over the clear parts of a box it comes from measurements. Over the cloudy parts it comes from
+the radiative-transfer model with the clouds taken out. This is the same definition that climate models use, so the
+two can be compared.
+The cloud radiative effect (CRE), called "Cloud effect" in the app, is then
+
+   cloud effect = (net flux, all skies) − (net flux, clear skies)
+
+
+computed separately for the shortwave, the longwave and their sum. With the app's sign convention, a negative
+cloud effect means the clouds make the Earth (or the surface) lose energy compared with clear skies; a positive
+one means they make it gain energy.
+
+3. Why it's used
+        It is the benchmark for climate models. A climate model has to get the top-of-atmosphere budget right,
+        both the global numbers and the maps. CERES is what modellers compare against.
+        Clouds. How clouds will change as the planet warms is the largest source of uncertainty in how much
+        warming a given amount of CO₂ will cause. Clouds both reflect sunlight and trap infrared. CERES
+        measures both effects, everywhere, every month.
+        Monitoring Earth's energy imbalance. CERES shows how the imbalance changes from year to year, and
+        whether it is growing.
+        The link to the ocean. Most of the energy the Earth gains ends up in the ocean, because water stores far
+        more heat than air or land. The ocean is where the imbalance shows up as warming. EBAF's anchoring to
+        ocean heat measurements is this same link, run in the other direction.
+
+
+
+
+Earth's energy budget from space                                                                              2 / 17
+4. Reading the app
+The app has five views, chosen with the numbered tabs at the top. Each view opens with a question in bold at
+the top. The question is there for you to think about; the app never answers it. The settings are your own: change
+any of them and look again.
+Sign convention. Everywhere in the app, positive means energy going into the thing named: into the Earth at
+the top of the atmosphere (TOA), into the surface at the surface, and into the atmosphere for the column.
+Outgoing longwave (OLR) and incoming or absorbed sunlight are plain amounts, always positive; the field's note
+under the field menu says which is a gain and which a loss.
+Mean and anomaly. A mean is the average of a field over the months you choose. An anomaly is the difference
+from the 2010–2024 average of the same calendar months. A January anomaly is measured against the average
+January, so the seasonal cycle drops out and what is left is how unusual that month was.
+Seasons. DJF is December–January–February, MAM is March–May, JJA is June–August, SON is September–
+November. "DJF 2015–16" means December 2015 plus January and February 2016. In view 4, the Jul–Jun year
+runs from July of one year to June of the next, which matches the way El Niño events grow and decay. In views
+1–3 the period is always the 2010–2024 average: either the Annual mean or one average month (for example,
+the average of all fifteen Julys).
+On every map you can hover (or tap, on a phone) to read the value, latitude and longitude of a cell. The colour
+bar gives the units. Diverging colour scales (blue–white–red) are centred on zero. For net radiation, the cloud
+effect and the column, blue means energy lost and red energy gained. On anomaly and A − B maps, red means
+higher than the average (or than B) and blue lower; for outgoing longwave, higher means more energy leaving,
+so red there is a loss. Sequential scales (dark purple to yellow) are used for plain amounts such as OLR. Grey
+cells have no value (for example, albedo during the polar night).
+Every time series is shaded red during El Niño spells and blue during La Niña spells, from the Niño-3.4 index
+(section 6): a spell is at least 5 months with the 3-month mean index at or beyond ±0.5 °C.
+
+View 1: Top of atmosphere
+
+
+
+
+                                   View 1 with its default settings. The mouse is over the Sahara.
+
+
+
+
+Earth's energy budget from space                                                                                3 / 17
+     1. The tabs for the five views. The address bar keeps 6. Global mean of the map.
+        the view ( #view=1 to #view=5 ).                   7. The map. Hover over it to read a value.
+     2. About the data: sources, the sign convention and 8. Colour bar with units.
+        a link to this handout.                            9. Readout: the value under the pointer, and where it
+     3. Field: net radiation, absorbed sunlight, outgoing     is.
+        longwave, planetary albedo or incoming sunlight. 10. Zonal mean: absorbed sunlight and outgoing
+        The note under the menu says what a positive          longwave averaged around each latitude circle, for
+        value means.                                          the period shown.
+     4. Period: the annual mean or one average month of 11. The global-mean net radiation, month by month
+        2010–2024.                                            from 2010 to 2024, with its 12-month running
+     5. Play the months steps through the twelve average      mean, its trend, and a readout of both.
+        months.
+
+View 2: Clouds
+
+
+
+
+   View 2 with its default settings: the net cloud effect at the top of the atmosphere. The mouse is over the ocean off Peru.
+
+     1. Field: the cloud effect (shortwave, longwave or      3. Sky: all-sky or clear-sky. It works only for
+        net) at the top of the atmosphere or at the surface;    outgoing longwave and absorbed sunlight, and is
+        cloud fraction; cloud-top temperature; and              greyed out otherwise.
+        outgoing longwave and absorbed sunlight.             4. Global mean of the map.
+     2. Period, as in view 1.                                5. The map, with its colour bar and readout below.
+                                                             6. Zonal mean of the field shown.
+
+
+
+
+Earth's energy budget from space                                                                                           4 / 17
+View 3: Surface and column
+
+
+
+
+                                   View 3 with the point 1°N, 151°E picked (the circle on each map).
+
+                                                                      3. Readout and global mean under each map. Click
+     1. Controls: the period; Column, which shows the                    any map to pick a point.
+        column's net radiation or splits it into its
+        shortwave and longwave parts; and Same colour                 4. Time-series controls: values or anomalies, the 12-
+        range on every map (on by default, so the maps                   month running mean, and Download CSV, which
+        can be compared by eye).                                         saves the series at the picked point (with the Niño-
+                                                                         3.4 index) for a spreadsheet or Python.
+     2. Three maps: net radiation at the top of the
+        atmosphere, at the surface, and for the column, 5. Bars: the TOA, surface and column numbers at the
+        the whole depth of the atmosphere between them.    picked point, for the period shown.
+        The column gains whatever enters at the top and
+        does not reach the surface:                     6. Time series of the same numbers at the picked
+                                                           point, 2010 to January 2025.
+           column = TOA net − surface net
+
+
+View 4: El Niño vs La Niña
+
+
+
+
+             View 4 with its default settings: outgoing longwave, DJF 2015–16 against DJF 2010–11, over the Pacific.
+
+
+
+Earth's energy budget from space                                                                                        5 / 17
+     1. Controls: any field; the season; Year A and Year B 2. The Niño-3.4 strip. Bars are the monthly index; El
+        (only complete seasons are offered); Area (the           Niño spells are shaded red and La Niña spells
+        whole globe or the tropical Pacific); The strip sets,    blue. The boxes marked A and B show the months
+        which chooses whether a click on the Niño-3.4            chosen. Click a month to set year A, shift-click to
+        strip sets year A or year B; and Fix the colour          set year B.
+        range.                                                3. Three maps: the anomaly in A, the anomaly in B,
+                                                                 and A − B. All three share one colour scale.
+                                                              4. A − B is where the difference between the two
+                                                                 events shows best.
+                                                              5. Global-mean anomaly of each map.
+
+View 5: Free explore
+
+
+
+
+                                   View 5 with its default settings. The circle marks the picked point.
+
+     1. Field: any of the app's fields, grouped by where  4. Centre the map on 180° or 0°, and show the whole
+        they are measured.                                   Globe or zoom to the Pacific. Below them, Fix the
+     2. Show: Mean, Anomaly, or A − B (period A minus        colour range keeps the colours fixed while you
+        period B).                                           change the period.
+     3. Period: an average month or year, one month, one 5. Mean over the whole globe of the field shown. It
+        season, or a run of calendar years. In A − B mode    is always the whole-globe mean, even when the
+        a second period, B, appears.                         map is zoomed to the Pacific.
+                                                          6. The map. Click to pick a point.
+
+
+Earth's energy budget from space                                                                                6 / 17
+     7. Zonal mean (over the Pacific only, when zoomed). 9. The series at the picked point, 2010 to January
+     8. Time-series controls, as in view 3. Here            2025.
+        Download CSV saves the picked point's series, 10. The global-mean series, with its trend.
+        the global-mean series and the Niño-3.4 index.  11. The Niño-3.4 strip. Click a month to map that
+                                                            month.
+
+5. Exercises
+The numbers below are 2010–2024 averages unless the exercise says otherwise. They are what the app shows,
+rounded. A point such as "19°S, 81°W" is the centre of a 2° cell. Hover over that spot to read the same value.
+
+Exercise 1. The pattern of the net budget at the top of the atmosphere
+Before you look: where on Earth do you expect a net gain of energy by radiation, and where a net loss? Is the
+boundary between them at the same latitude in both hemispheres? Would a hot desert gain or lose?
+In the app: view 1, Top of atmosphere, with its defaults: Field Net radiation (TOA), Period Annual mean. Hover
+over the Sahara (23°N, 11°E) and over the western Pacific warm pool (1°N, 151°E). Then switch the Field to
+Absorbed sunlight and to Outgoing longwave, and compare.
+
+
+
+
+ Annual-mean net radiation, 2010–2024, with the zonal means of absorbed sunlight and outgoing longwave. The readout is
+                                                    for the Sahara.
+
+What to look for
+      A red band of gain across the tropics and blue loss toward both poles. The largest zonal-mean gain is
+      +72 W m⁻², at 1°S. The zonal mean near the poles is −126 W m⁻² at 89°N and −91 W m⁻² at 89°S.
+      In the zonal-mean panel, absorbed sunlight (ASR) and outgoing longwave (OLR) cross near 37°S and
+      36°N. Equatorward of the crossings the Earth gains; poleward of them it loses.
+      ASR changes enormously with latitude: about 322 W m⁻² at the equator against 68 W m⁻² at 89°N. OLR
+      changes much less: about 251 W m⁻² at the equator against 195 W m⁻² at 89°N.
+      The Sahara loses energy (−28 W m⁻²), even though it is hot and sunny. It absorbs 255 W m⁻² of sunlight
+      but emits 283 W m⁻². Its bright sand gives it an albedo of 0.34. The warm pool, under heavy cloud, gains
+      +85 W m⁻² (ASR 315, OLR 230 W m⁻², albedo 0.24).
+
+
+
+
+Earth's energy budget from space                                                                                  7 / 17
+Why
+Sunlight arrives almost head-on in the tropics and at a glancing angle near the poles, so the tropics absorb far
+more of it. Outgoing longwave depends on temperature, and the tropics are only somewhat warmer than the
+poles, so it varies much less with latitude. The two curves must cross somewhere, and in our climate they cross
+near 37°S and 36°N.
+A region that gains energy every year should keep warming, and one that loses should keep cooling. They don't,
+so the atmosphere and the ocean must carry energy from the tropics toward the poles. Adding up the gains
+equatorward of each latitude, the TOA map implies that the atmosphere and ocean together carry about 5.8 PW
+(petawatts, 10¹⁵ W) northward across 36°N, and about 5.7 PW southward across 36°S. Those are the latitudes
+where the gains stop and the losses begin, so that is where the poleward flow is largest. Weather systems in the
+atmosphere and currents in the ocean do this carrying.
+The Sahara shows that the budget is not just about temperature. Its sand is bright, so it reflects much of the
+sunlight. Its air is dry and almost cloudless, so its hot surface radiates freely to space. Its atmosphere is kept
+warm by air that sinks over it and is warmed by compression. That air has brought energy from the rainy tropics.
+
+Exercise 2. Seasons
+Before you look: the Earth's tilt moves the Sun north and south through the year. Where will the band of energy
+gain be in January and in July? In midsummer the Sun never sets at the pole. Could the summer pole take in
+more energy than it gives off?
+In the app: view 1, Field Net radiation (TOA). Click Play the months and watch, then pause. Set Period to
+January, then to July. In each case, find the latitudes where the zonal-mean absorbed sunlight (purple) is above
+the outgoing longwave (orange). Then set Field to Incoming sunlight for June and compare the North Pole with
+the equator.
+
+
+
+
+               Net radiation at the top of the atmosphere in the average January (left) and July (right), 2010–2024.
+
+What to look for
+      In January the zonal mean shows a gain from 67°S to 13°N. In July it runs from 7°S all the way to 81°N.
+      The band of gain follows the Sun into the summer hemisphere and spreads far toward the summer pole.
+      The winter pole loses heavily: −171 W m⁻² at 89°N in January and −113 W m⁻² at 89°S in July.
+      Near the summer pole the Earth is close to balance. At 89°N the net is −23 W m⁻² in June and −11 W m⁻²
+      in July. At 89°S it is −21 W m⁻² in December.
+      Incoming sunlight in June is 517 W m⁻² at 89°N, but only 386 W m⁻² at the equator. In December it is 549
+      W m⁻² at 89°S against 412 W m⁻² at the equator.
+Why
+The incoming sunlight on these maps is a 24-hour average. At the summer solstice the polar Sun is low, but it
+shines all day and all night. Added up over the day, the pole receives more sunlight than the equator, where it is
+dark half the time.
+
+
+
+
+Earth's energy budget from space                                                                                       8 / 17
+The pole does not absorb most of that sunlight, though. Snow, sea ice and summer clouds make it bright: in
+June the albedo at 89°N is 0.61, so it absorbs 201 W m⁻². That is close to what the pole emits, and the result is a
+small loss at the pole itself and a gain over most of the summer high latitudes, up to 81°N in July. Antarctica is
+brighter still (an albedo of 0.70 at 89°S in December, absorbing 166 W m⁻²), so the southern summer gain stops
+at 67°S, over the ocean around the ice sheet.
+In winter the polar night gets no sunlight at all, but the air and surface keep radiating. The energy carried in from
+lower latitudes keeps them from getting colder and colder. That is why the poleward carrying of energy from
+exercise 1 is strongest in winter.
+
+Exercise 3. The planetary imbalance
+Before you look: if the Earth were in balance, the global-mean net radiation would be zero. Is it? How large is any
+imbalance compared with the sunlight the Earth absorbs? Has it changed since 2010?
+In the app: view 1 with its defaults. Read the Global mean in the control panel, then switch the Field to Absorbed
+sunlight and Outgoing longwave and read their global means too. Look at the chart below the map and its
+readout. For a closer look, use view 5 (Free explore): Field Net radiation (TOA), Time series Anomaly.
+
+
+
+
+    Global-mean net radiation, month by month. The thick line is the 12-month running mean; the dashed line is the trend.
+
+What to look for
+      The global mean is +1.26 W m⁻²: absorbed sunlight 241.95 minus outgoing longwave 240.69 W m⁻². The
+      difference is only 0.5% of the absorbed sunlight.
+      The monthly values swing through the year, from about −9 W m⁻² in the average June to +9 W m⁻² in the
+      average February, far more than the mean. The 12-month running mean stays positive throughout.
+      The readout gives a trend of +0.61 W m⁻² per decade. The 2010–2014 average is +0.93 W m⁻²; the 2020–
+      2024 average is +1.50 W m⁻².
+      Among calendar years, 2010 had the smallest imbalance (+0.24 W m⁻²) and 2023 the largest (+2.06 W
+      m⁻²).
+Why
+The Earth is gaining energy. Over the whole planet, +1.26 W m⁻² adds up to about 2.0 × 10²² J every year:
+multiply by the Earth's surface area, 5.1 × 10¹⁴ m², and by the number of seconds in a year. Most of this energy
+goes into the ocean, which is why the ocean heat content keeps rising. Remember the caveat from section 2: the
+size of the mean imbalance is anchored to the ocean heat measurements, but the change since 2010 comes
+from CERES itself.
+The imbalance exists because greenhouse gases keep accumulating. Each increase makes the atmosphere a
+little more opaque to infrared, so the Earth emits a little less than it absorbs until it warms enough to catch up.
+The trend shows the gap has grown. Part of that comes from the Earth absorbing more sunlight, as low clouds,
+snow and sea ice have decreased and some kinds of air pollution have been cleaned up.
+The seasonal swing has nothing to do with this. The Earth is closest to the Sun in early January, and the
+hemispheres differ (the Southern Hemisphere is mostly ocean). The trend is therefore fitted allowing for a
+different average for each calendar month, so the seasonal cycle cannot tilt it. In view 5 the same trend reads
+
+
+Earth's energy budget from space                                                                                        9 / 17
++0.63 W m⁻² per decade, because that series also includes January 2025.
+
+Exercise 4. Clouds cool the planet
+Before you look: clouds reflect sunlight back to space, and they also absorb infrared from below and emit less
+of it to space from their cold tops. Which effect wins, globally? Where do you expect clouds to cool most
+strongly? Is there anywhere they warm?
+In the app: view 2, Clouds, with its defaults: Field Cloud effect, net (under "Cloud effect (TOA)"), Period Annual
+mean. Read the global mean. Hover over the ocean off Peru (19°S, 81°W), off Namibia (17°S, 7°E) and off
+California (27°N, 125°W), and over the western Pacific warm pool (1°N, 151°E). Then switch to Cloud effect,
+shortwave and Cloud effect, longwave and hover over the same places.
+
+
+
+
+       The net cloud effect at the top of the atmosphere, annual mean 2010–2024. The readout is for the ocean off Peru.
+
+What to look for
+        Globally the net cloud effect is −19.6 W m⁻²: the shortwave effect is −45.0 W m⁻² and the longwave effect
+        +25.4 W m⁻². Without clouds, the Earth would gain +20.9 W m⁻² instead of +1.26 W m⁻².
+        Dark blue patches off the west coasts of the Americas and southern Africa:
+
+          Place                           Net     Shortwave      Longwave       Cloud cover     Cloud-top temperature
+          Off Peru, 19°S, 81°W            −69     −84            +15            87%             279 K
+          Off Namibia, 17°S, 7°E          −48     −57            +9             78%             284 K
+          Off California, 27°N, 125°W     −48     −64            +16            78%             276 K
+          Warm pool, 1°N, 151°E           −9      −59            +50            83%             239 K
+
+        (cloud effects in W m⁻²)
+        Over the warm pool the two effects are both large and nearly cancel.
+        The net effect is positive (red) over Greenland and Antarctica, up to +39 W m⁻² at 61°N, 45°W.
+Why
+The shortwave cloud effect depends on how much brighter the cloud is than what lies below it. The longwave
+effect depends on how much colder the cloud top is than the surface, because a cold top emits less infrared to
+space than the warm surface it hides.
+
+
+Earth's energy budget from space                                                                                          10 / 17
+      Left: the shortwave cloud effect. Right: the longwave cloud effect. Both readouts are for the warm pool, 1°N, 151°E.
+
+The clouds off Peru, Namibia and California are stratocumulus: low, flat sheets of cloud over cold ocean water,
+under air that sinks from above. They are bright and cover most of the sky, so they reflect a great deal of
+sunlight. Their tops are low and nearly as warm as the sea (279 K off Peru), so they hide very little infrared. The
+shortwave wins and they cool strongly.
+Over the warm pool, the clouds are deep convective towers and the anvils that spread from them. They also
+reflect a lot of sunlight (a shortwave effect of −59 W m⁻², though less than the −84 W m⁻² off Peru), but their
+tops are high and cold (239 K, about −34 °C), so they trap a lot of infrared. The two effects nearly cancel.
+Over Greenland and Antarctica the surface is snow, already as bright as a cloud, so clouds add little reflection;
+but they still trap infrared, so there they warm.
+Across the whole globe, the cooling wins, and by a lot: the cloud effect is many times the planet's imbalance.
+This is why a small change in clouds as the climate warms matters so much.
+
+Exercise 5. Clear-sky and all-sky outgoing longwave: the warm pool and the Sahara
+Before you look: the warm pool's sea surface is about as warm as any on Earth, and the Sahara is hot. Which of
+the two sends more infrared to space? Would the answer change if you could remove the clouds?
+In the app: view 2. Field Outgoing longwave, Sky All-sky, then Clear-sky. Hover over the warm pool (1°N, 151°E)
+and the Sahara (23°N, 11°E) each time. Then look at Cloud fraction and Cloud-top temperature at the same two
+places.
+
+
+
+
+             Outgoing longwave with the clouds (left) and without them (right). Both readouts are for the warm pool.
+
+What to look for
+      Warm pool: 230 W m⁻² with clouds, 280 W m⁻² without them. The clouds hold back +50 W m⁻². Cloud
+      covers 83% of the sky there, with tops at 239 K (−34 °C).
+
+
+
+Earth's energy budget from space                                                                                             11 / 17
+        Sahara: 283 W m⁻² with clouds, 293 W m⁻² without them. The difference is only +10 W m⁻², because
+        cloud covers just 17% of the sky.
+        With the clouds removed, the two differ by only about 13 W m⁻². With the clouds, the warm pool sends out
+        about 53 W m⁻² less.
+        On the all-sky map, the lowest tropical values (darkest) mark the rainy places: the warm pool, the
+        Amazon, central Africa, and a thin line north of the equator across the Pacific and Atlantic.
+Why
+A surface or a cloud emits about σT⁴, where σ is the Stefan–Boltzmann constant and T its temperature in kelvin.
+A cloud top at 239 K emits about 186 W m⁻², far less than the warm sea below it. Where deep clouds cover most
+of the sky, as over the warm pool, the planet "shows" space mostly its cold cloud tops, and the outgoing
+longwave drops.
+Even without clouds, the warm pool emits less than the Sahara, although its surface is just as warm. Its air is full
+of water vapour, a greenhouse gas, which absorbs the surface's infrared and re-emits it from higher, colder
+levels. The Sahara's air is dry, so more of its hot surface's infrared escapes directly.
+This is why weather forecasters use low outgoing longwave to find tropical rain: low OLR in the tropics means
+high, cold cloud tops, and those come from deep, raining convection. You will use this in exercise 7.
+
+Exercise 6. The column puzzle
+Before you look: the atmosphere absorbs some sunlight, absorbs infrared from the surface, and emits infrared
+both up to space and down to the surface. Does it gain or lose energy by radiation overall? If it loses, why
+doesn't it get colder every year?
+In the app: view 3, Surface and column, with its defaults. Read the three global means. Click the warm pool (1°N,
+151°E), then the ocean off Peru (19°S, 81°W), then the Sahara (23°N, 11°E), and read the bars. Then set Column
+to Shortwave and longwave.
+
+
+
+
+          Net radiation at the top of the atmosphere, at the surface and in the column. The bars are for the warm pool.
+
+
+
+
+Earth's energy budget from space                                                                                          12 / 17
+                           The column split into shortwave and longwave, with the ocean off Peru picked.
+What to look for
+      The global means: +1.26 W m⁻² at the top of the atmosphere, +111.6 W m⁻² at the surface, and −110.4 W
+      m⁻² for the column.
+      The column loses energy by radiation everywhere, in every one of the 16200 cells of the annual-mean
+      map. The loss ranges from −54 W m⁻² (3°N, 97°E) to −158 W m⁻² (23°S, 75°W).
+      Split into parts, the column absorbs +77.9 W m⁻² of sunlight but loses −188.3 W m⁻² in the longwave.
+      Over the oceans, the loss is smaller in the rainy places (−81 W m⁻² over the warm pool) than over the dry
+      subtropical oceans (−157 W m⁻² off Peru). Over the Sahara, dry as it is, the loss is only −69 W m⁻².
+      At the surface the warm pool gains +166 W m⁻² by radiation, and the ocean off Peru +151 W m⁻². The
+      Sahara's surface gains only +42 W m⁻².
+Why
+The atmosphere really does lose about 110 W m⁻² by radiation. With nothing else heating it, the whole
+atmosphere would cool by about 0.9 °C every day. It doesn't, so something other than radiation must heat it, by
+the same amount. The surface tells you where to look: it gains +111.6 W m⁻² by radiation, yet it doesn't keep
+warming either. The surface hands its excess energy to the atmosphere, without radiation, in two ways.
+     1. Latent heat. Water evaporates from the surface, mostly from the ocean. Evaporation takes energy: it is
+        why sweat cools you. The water vapour carries that energy up into the atmosphere. When the vapour
+        condenses into cloud droplets and falls as rain, the energy is released into the air.
+     2. Sensible heat. Air touching a warmer surface is heated by it, and turbulence carries the warmed air
+        upward.
+Estimates of the global means, from many observations put together, are roughly 80 W m⁻² of latent heat and
+roughly 20 W m⁻² of sensible heat. Trenberth and colleagues (2009) gave 80 and 17 W m⁻²; Stephens and
+colleagues (2012) gave 88 and 24 W m⁻². Their sums, 97 and 112 W m⁻², bracket the column's radiative loss of
+110 W m⁻². These estimates, and the computed surface fluxes in EBAF, are each uncertain by several W m⁻², so
+this is as close an agreement as we can expect.
+Rain is the latent heat you can see. Condensing enough water to give 1 mm of rain a day releases about 29 W
+m⁻². So 80 W m⁻² of latent heating means that, averaged over the globe, about 2.8 mm of rain falls each day.
+This is how the ocean hands energy to the atmosphere: sunlight warms the sea surface, the sea evaporates, and
+the energy is released in the air, in clouds and rain.
+
+
+
+Earth's energy budget from space                                                                            13 / 17
+But the map has a twist. If the rain balanced the radiation in each place, the rainiest places should show the
+biggest radiative loss. Over the oceans they show the opposite. The warm pool loses only −81 W m⁻²: its high,
+thick clouds trap infrared inside the column (the column's cloud effect there is +40 W m⁻²). The biggest losses
+are over dry subtropical oceans like the one off Peru (−157 W m⁻²), where it hardly ever rains. (Dry land is
+different. The Sahara's ground gets very hot and loses −130 W m⁻² as infrared, much of which the air above
+absorbs, and the hot ground also heats the air directly as sensible heat. A cool ocean surface can do neither, so
+the Sahara's column loses only −69 W m⁻².) So rain cannot balance the budget place by place. The atmosphere
+also moves energy sideways. In the rain belts, condensation releases far more heat than the column loses by
+radiation, and the air rises. That air spreads toward the subtropics and sinks there, warming by compression as it
+sinks. The sinking warms the dry columns that lose the most. The water vapour that feeds the rain belts was
+mostly evaporated over the warm subtropical oceans under the trade winds, and the trade winds carried it
+toward the equator. (Off Peru the sea also gains a lot by radiation, +151 W m⁻², but much of that warms cold
+water that wells up from below along the coast, rather than evaporating it: another place where the ocean stores
+and moves the energy.) This circulation, rising in the deep tropics and sinking in the subtropics, is the Hadley
+circulation. Its east–west cousin along the equatorial Pacific, the Walker circulation, is the one El Niño disturbs
+(exercise 7).
+
+Exercise 7. El Niño vs La Niña
+Before you look: during El Niño, the warmest water spreads east from the western Pacific into the central and
+eastern Pacific. Where do you expect more deep cloud and rain during El Niño than during La Niña, and where
+less? What will that do to the outgoing longwave there? And to the net radiation?
+In the app: view 4, El Niño vs La Niña, with its defaults: Field Outgoing longwave, Season DJF, Year A 2015–16
+(a strong El Niño), Year B 2010–11 (a strong La Niña), Area Pacific. Hover over the A − B map at 1°S, 161°W and at
+1°S, 119°E. Then change the Field to Cloud effect, shortwave, Cloud effect, longwave and Net radiation (TOA).
+Finally set Year A to 2023–24 and Year B to 2020–21, and repeat.
+
+
+
+
+    Outgoing longwave anomalies over the Pacific in DJF 2015–16 (El Niño), DJF 2010–11 (La Niña), and the difference. The
+                                                 readout is for 1°S, 161°W.
+
+What to look for
+      In DJF the Niño-3.4 index averaged +2.5 °C in 2015–16 and −1.4 °C in 2010–11.
+      A − B for outgoing longwave is a dipole. It is strongly negative along the equator in the central Pacific:
+      −92 W m⁻² at 1°S, 161°W, and −104 W m⁻² at its strongest, at 1°N, 173°W. It is positive over the maritime
+      continent (Indonesia and the seas around it): +30 W m⁻² at 1°S, 119°E.
+      At 1°S, 161°W the cloud effects change a lot but in opposite directions: shortwave −81, longwave +71 W
+      m⁻². The net cloud effect changes by only −10 W m⁻².
+
+
+
+
+Earth's energy budget from space                                                                                      14 / 17
+        Net radiation changes far less than outgoing longwave: +7 W m⁻² at 1°S, 161°W and +11 W m⁻² at 1°S,
+        119°E. Absorbed sunlight changes almost as much as OLR (−84 W m⁻² at 1°S, 161°W), and the two nearly
+        cancel.
+        2023–24 minus 2020–21 (Niño-3.4 +1.8 °C against −1.1 °C) shows the same dipole, but weaker and
+        further west: the largest drop in OLR is −67 W m⁻², at 3°N, 177°E, while at 1°S, 161°W it is only −16 W m⁻².
+
+
+
+
+ The same two seasons for net radiation at the top of the atmosphere. Note the much smaller colour range than for outgoing
+                                                          longwave.
+
+
+
+
+                                    The 2023–24 El Niño against the 2020–21 La Niña.
+
+Why
+Deep convection, the tall rain clouds of exercise 5, sits over the warmest water. Normally that is the western
+Pacific warm pool. During El Niño the warm water and the convection shift east to the central Pacific, and during
+La Niña they are pushed further west than usual. So El Niño minus La Niña gives more high, cold cloud in the
+central Pacific (much lower OLR) and less over the maritime continent (higher OLR). The Walker circulation
+weakens and shifts with them.
+The net radiation hardly changes, for the reason you found in exercise 4: deep convective clouds reflect about
+as much sunlight as the infrared they trap. Moving the clouds east moves both effects together. El Niño
+rearranges the clouds and the rain far more than it changes the energy gained at the top of the atmosphere.
+Its effect on the energy budget is mainly at the surface and inside the ocean and atmosphere: the ocean
+releases heat to the atmosphere in the central and eastern Pacific.
+No two El Niños are alike. In 2023–24 the warming peaked further west, and the cloud changes followed it.
+
+Exercise 8. Does El Niño change the global budget?
+Before you look: in exercise 7 the Pacific changed a lot. Will the global-mean net radiation be higher or lower
+during El Niño? Will the change happen at the same time as the Niño-3.4 peak, or later?
+
+
+
+
+Earth's energy budget from space                                                                                     15 / 17
+In the app: view 4 again, with the defaults: read the global-mean anomalies under the maps, first for Outgoing
+longwave and then for Net radiation (TOA). Then go to view 5, Free explore: Field Net radiation (TOA), Time
+series Anomaly. Compare the global-mean anomaly with the Niño-3.4 strip below it. If you want to go further,
+click Download CSV. The file has columns time , the series at the picked point, toa_net_anom_global and
+ nino34_anom . In a spreadsheet or Python, compute the correlation between nino34_anom and
+ toa_net_anom_global , then shift the global column one month later at a time and recompute it. Repeat with Field
+Outgoing longwave.
+
+
+
+
+                 Free explore, net radiation, anomaly series. Right: the global mean. Bottom: the Niño-3.4 index.
+
+What to look for
+        In view 4, DJF 2015–16 against DJF 2010–11: the global-mean outgoing longwave anomaly is +0.61 W m⁻²
+        in A and −0.60 W m⁻² in B, so A − B is +1.22 W m⁻². The global-mean net radiation anomaly is −0.69 W
+        m⁻² in A and −0.25 W m⁻² in B, so A − B is −0.44 W m⁻².
+        For 2023–24 against 2020–21, the outgoing longwave A − B is +0.76 W m⁻², but the net radiation A − B is
+        +0.39 W m⁻²: the opposite sign, because the absorbed sunlight rose even more (+1.15 W m⁻²).
+        The monthly global net anomaly has a standard deviation of 0.7 W m⁻² and runs from −1.7 to +1.7 W m⁻².
+        The Niño-3.4 index explains little of that:
+
+          Correlation of Niño-3.4 with the global anomaly of…                   Same month         Strongest
+          Net radiation (TOA)                                                   +0.03              −0.23, 6 months later
+          Outgoing longwave                                                     +0.32              +0.41, 2 months later
+          Absorbed sunlight                                                     +0.27              +0.27, same month
+
+        Averaged over all El Niño months, the global outgoing longwave anomaly is +0.39 W m⁻²; over all La Niña
+        months, −0.20 W m⁻².
+Why
+During El Niño the ocean releases heat into the atmosphere over the central and eastern Pacific. The
+atmosphere warms, and a warmer atmosphere emits more infrared to space: the global OLR rises, peaking a
+couple of months after Niño-3.4 does. On its own, that would make the Earth lose energy during El Niño. But the
+absorbed sunlight changes too, because the clouds rearrange (exercise 7), and in these years it rose with the
+OLR. The two largely cancel. Only about half a year after the Niño-3.4 peak does the global net show a small
+loss (the correlation of −0.23). La Niña does the reverse: the ocean stores heat and the planet emits a little less.
+
+
+
+
+Earth's energy budget from space                                                                                           16 / 17
+So the answer is: a little, and late. El Niño mainly moves energy between the ocean and the atmosphere, and
+from place to place, rather than adding energy to the planet or removing it. Months of El Niño and La Niña make
+the global-mean surface temperature jump about, because heat moves out of or into the ocean. But the long-
+term imbalance of exercise 3 is set by the greenhouse gases and the planet's reflectivity, and El Niño only adds
+wiggles to it. 2023 shows how much else matters. An El Niño year would be expected to lose energy, yet in 2023
+the Earth gained more energy than in any other year of the record, mostly because it absorbed more sunlight.
+
+6. Data credit and further reading
+Data in the app
+       CERES radiation: NASA Langley Research Center, CERES Science Team. CERES Energy Balanced and
+       Filled (EBAF) TOA and Surface Monthly means data in netCDF, Edition 4.2.1. NASA Langley Atmospheric
+       Science Data Center. doi:10.5067/TERRA-AQUA-NOAA20/CERES/EBAF_L3B004.2.1. Months used:
+       January 2010 to January 2025; the app averages the 1° grid onto a 2° grid.
+       Niño-3.4 index: NOAA Climate Prediction Center, monthly Niño-3.4 sea-surface temperature anomaly
+       from ERSSTv5, relative to the 1991–2020 base period,
+       www.cpc.ncep.noaa.gov/data/indices/ersst5.nino.mth.91-20.ascii. The sea-surface temperature data set
+       is described by Huang, B., and co-authors (2017), Extended Reconstructed Sea Surface Temperature,
+       Version 5 (ERSSTv5), Journal of Climate 30, 8179–8205, doi:10.1175/JCLI-D-16-0836.1.
+       Coastlines: Natural Earth, 1:110 million coastline, public domain, naturalearthdata.com.
+The CERES instruments and EBAF
+     Wielicki, B. A., and co-authors (1996). Clouds and the Earth's Radiant Energy System (CERES): An Earth
+     Observing System experiment. Bulletin of the American Meteorological Society 77, 853–868.
+     doi:10.1175/1520-0477(1996)077<0853:CATERE>2.0.CO;2
+     Loeb, N. G., and co-authors (2018). Clouds and the Earth's Radiant Energy System (CERES) Energy
+     Balanced and Filled (EBAF) Top-of-Atmosphere (TOA) Edition-4.0 data product. Journal of Climate 31,
+     895–918. doi:10.1175/JCLI-D-17-0208.1. How the TOA fluxes are made and energy-balanced.
+     Kato, S., and co-authors (2018). Surface irradiances of Edition 4.0 Clouds and the Earth's Radiant Energy
+     System (CERES) Energy Balanced and Filled (EBAF) data product. Journal of Climate 31, 4501–4527.
+     doi:10.1175/JCLI-D-17-0523.1. How the surface fluxes are computed, and how uncertain they are.
+     Loeb, N. G., and co-authors (2020). Toward a consistent definition between satellite and model clear-sky
+     radiative fluxes. Journal of Climate 33, 61–75. doi:10.1175/JCLI-D-19-0381.1. The "total region" clear-sky
+     fluxes used in this app.
+The surface energy budget (exercise 6)
+      Trenberth, K. E., J. T. Fasullo and J. Kiehl (2009). Earth's global energy budget. Bulletin of the American
+      Meteorological Society 90, 311–323. doi:10.1175/2008BAMS2634.1. Latent heat 80 W m⁻², sensible heat 17
+      W m⁻².
+      Stephens, G. L., and co-authors (2012). An update on Earth's energy balance in light of the latest global
+      observations. Nature Geoscience 5, 691–696. doi:10.1038/ngeo1580. Latent heat 88 ± 10 W m⁻², sensible
+      heat 24 ± 7 W m⁻².
+The growing imbalance (exercise 3)
+      Loeb, N. G., and co-authors (2021). Satellite and ocean data reveal marked increase in Earth's heating
+      rate. Geophysical Research Letters 48, e2021GL093047. doi:10.1029/2021GL093047.
+Every number in sections 1–5 that comes from the data was computed by docs/handout_numbers.mjs , which
+reads the app's own data files with the app's own code; the results are in docs/handout_numbers.txt . The
+screenshots were made with docs/handout_shots.mjs .
+
+
+
+
+Earth's energy budget from space                                                                            17 / 17
+

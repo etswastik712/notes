@@ -31,6 +31,8 @@ tags: [subject/qm, type/concept, extra/book, extra/beyond, src/book, src/own-not
 
 Used in: [[QM06 The Oscillator Toolbox]] §6.1. Related: [[Heisenberg Picture]] · [[Commutator]] · [[Expectation Value]] · [[Stationary State]] · [[Correspondence Principle]].
 
+**Direct derivation (added 2026-11-12).** The lecture's route (and Tutorial VI Q1) derives both equations straight from the TDSE by integration by parts, without commutators: the $V$ terms cancel in $\mathrm d\langle x\rangle/\mathrm dt$, the kinetic terms form a total derivative in $\mathrm d\langle p\rangle/\mathrm dt$, and the potential terms leave $-\langle V'\rangle$; checked numerically on the quartic oscillator ($\langle x^3\rangle=4.5$ against $\langle x\rangle^3=3.375$ at $t=0$): see [[QM06 The Oscillator Toolbox]] (Continued in the vault).
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

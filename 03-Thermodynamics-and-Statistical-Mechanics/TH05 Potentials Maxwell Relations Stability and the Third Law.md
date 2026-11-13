@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes]
 status: draft
 prereq: ["[[TH04 The Second Law Carnot Engines and Entropy]]"]
-tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/thermo, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/thermo, quiz/th-background]
 ---
 # TH05 · Potentials, Maxwell Relations, Stability and the Third Law
 
@@ -272,3 +272,7 @@ agrees with $S_A(0)=S_B(0)=0$ in the experiments.
 
 ## Continued in the vault (added 2026-11-04)
 - The chemical-thermodynamics applications of $G$ (spontaneity, $\Delta G^\circ=-RT\ln K$, Gibbs–Helmholtz, van 't Hoff, the molar Clausius–Clapeyron equation and boiling points, Trouton's rule, entropy generation) are worked in [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]]; enthalpy numbers and calorimetry in [[TH07 Enthalpy Thermochemistry and Calorimetry]].
+
+## Continued in the vault (added 2026-11-12)
+- **Two derivations of $(\partial\mu/\partial P)_T=V/N$** (from the Kardar-based class notes, [[Kardar - bhagwat.pdf#page=3|pp. 3–4]]; read in full this session). (a) *Gibbs–Duhem at $\mathrm dT=0$:* $0=-V\mathrm dP+N\mathrm d\mu$ gives $\mathrm d\mu/\mathrm dP=V/N$. (b) *Maxwell relation from $\mathrm dG=V\mathrm dP-S\mathrm dT+\mu\mathrm dN$:* $(\partial\mu/\partial P)_{N,T}=\partial^2G/\partial N\partial P=(\partial V/\partial N)_{P,T}$, and **extensivity** (double the box at fixed $P,T$ and $V$ and $N$ both double) gives $(\partial V/\partial N)_{P,T}=V/N$. The notes ask "why are they not the same?": they **are** the same; the second route only looks different because $\mu$ is first differentiated in $P$ at fixed $N$ and the extensivity argument is applied afterwards. Ideal gas check: $\mu=\mu^\circ+k_BT\ln(P/P^\circ)$, $\partial\mu/\partial P=k_BT/P=V/N$ ($4.142\times10^{-26}$ m$^3$ at 300 K and 1 bar, both ways). The notes also state the generalised-work forms $\mathrm dE=T\mathrm dS+\sum J_i\mathrm dx_i+\sum\mu_\alpha\mathrm dN_\alpha$, the Euler relation $E=TS+J\cdot x+\mu\cdot N$ and the generalised Maxwell relations $(\partial T/\partial x_i)_S=(\partial J_i/\partial S)_x$, $(\partial S/\partial J_i)_T=(\partial x_i/\partial T)_J$, which are the content of §3–§4 above.
+- Mixing of ideal gases, open-system balances and the pressure dependence of chemical equilibrium: [[TH10 Open Systems Mixing and Reacting Gases]].

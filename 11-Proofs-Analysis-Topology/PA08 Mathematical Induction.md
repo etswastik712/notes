@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, ai-notes]
 status: draft
 prereq: [PA05 Induction and the Number Systems]
-tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/proofs, quiz/pa-induction]
 ---
 # PA08 · Mathematical Induction
 
@@ -49,7 +49,7 @@ flowchart LR
 ```
 *Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
 
-## 1. The principle and how to write a proof
+## 1. The principle and how to write a proof #quiz/pa-induction
 <span class="scope-taught">taught</span> *Assignment 8, Definition 2, Example 1, Remark*
 
 > [!key] PMI and its logical form ([[Principle of Mathematical Induction]])
@@ -72,7 +72,7 @@ flowchart LR
 > [!derivation] The extended form from the basic form
 > Suppose $P(m)$ holds and $P(k)\Rightarrow P(k+1)$ for every integer $k\ge m$ ($m\in\mathbb Z$). Let $S=\{n\in\mathbb N:P(m-1+n)\}$. Then $1\in S$ because $P(m)$ holds, and if $n\in S$, i.e. $P(m-1+n)$, then $k=m-1+n\ge m$ and the step gives $P(k+1)=P(m-1+(n+1))$, so $n+1\in S$. By PMI $S=\mathbb N$, i.e. $P(j)$ for all $j\ge m$. (Bloch's PMI-V1, Theorem 6.3.6, with $k_0=m$.)
 
-## 2. Variants, all reducible to PMI
+## 2. Variants, all reducible to PMI #quiz/pa-induction
 <span class="scope-extra-book">extra · book</span> *Bloch Theorems 6.3.6–6.3.9; Tao Exercise 2.2.6; Sundstrom §4.2*
 
 > [!key] A map of the variants
@@ -101,7 +101,7 @@ flowchart LR
 > [!connection] Induction on something other than a number
 > The "$n$" of PMI need not be the obvious one. Induct on the **degree** of a polynomial ("a nonzero polynomial of degree $n$ has at most $n$ roots": factor out a root, apply the case $n-1$), on the **number of elements** of a set ($|\mathcal P(A)|=2^n$, PR01), on the **number of vertices** of a graph, on **dimension**, on the **length** of a formula (PA01). Choosing what to induct on is half the proof.
 
-## 3. The main families of problems
+## 3. The main families of problems #quiz/pa-induction
 <span class="scope-extra-book">extra · book</span> *Sundstrom §4.1; AI notes §3.4* · <span class="scope-extra-beyond">extra · beyond</span> *the examples marked 🔵*
 
 > [!example] Sums and identities: $\sum_{k=1}^nk^3=\Big(\dfrac{n(n+1)}2\Big)^2$
@@ -125,7 +125,7 @@ flowchart LR
 ![[fig_pa08_induction2.png]]
 *Figure PA8.1. A: the number of regions cut out by chords of a circle starts $1,2,4,8,16$ and then **breaks** the pattern $2^{n-1}$ ($31$, $57$, $99$). B: the partial sums $s_n$ against the provable bound $2-1/n$ and the bound $2$, which a direct induction cannot reach. C: $n^2+n+41$ is prime for $n=0,\dots,39$ and composite at $n=40$.*
 
-## 4. When induction fails: patterns, fallacies and a checklist
+## 4. When induction fails: patterns, fallacies and a checklist #quiz/pa-induction
 <span class="scope-taught">taught</span> *Assignment 8 Q7* · <span class="scope-extra-beyond">extra · beyond</span> *the numerical examples*
 
 > [!pitfall] A pattern is not a proof, however many cases agree
@@ -207,3 +207,21 @@ flowchart LR
 > **Notes.** Assignment 8 uses $\mathbb N=\{1,2,\dots\}$, as here; the AI notes use $\{0,1,\dots\}$ and write $P(0)$ for the base case. Bloch's textbook text layer and Tao's were read for the cited statements; Sundstrom's section numbers were taken from its text layer.
 
 **References.** Bloch, E. D. *Proofs and Fundamentals*, §6.3 · Sundstrom, T. *Mathematical Reasoning: Writing and Proof*, Ch. 4 · Tao, T. *Analysis I*, §2.2 · Cauchy, A.-L. (1821) *Cours d'analyse* (the forward–backward proof of AM–GM).
+
+## Continued in the vault (added 2026-11-12): Assignment 8, Problems 6 and 7, solved in full
+*Source: [[Assignment-8.pdf#page=2|Assignment 8]] Problems 6 and 7 (statements from the other tool's note [[intro-to-proofs/2026-10-22-assignment-8]]; Problems 1–5 of that sheet are cardinality, see [[PA04 Functions and Cardinality]]). Each proof follows the sheet's **four mandatory parts**: say what $P(n)$ is, prove the base case, assume $P(k)$ for an arbitrary $k\ge m$ and prove $P(k+1)$, state the conclusion by PMI. All identities were checked by machine (`scripts/quiz_numbers.py`).* #quiz/pa-induction
+
+> [!example] Problem 6(a): $\sum_{i=1}^n(2i-1)=n^2$
+> $P(n)$: that equality. **Base** $n=1$: $1=1^2$. **Step:** assume $P(k)$. Then $\sum_{i=1}^{k+1}(2i-1)=k^2+(2k+1)=(k+1)^2$. **Conclusion:** $P(n)$ for all $n\in\mathbb N$ by PMI.
+
+> [!example] Problem 6(b): $\sum_{i=1}^ni\cdot i!=(n+1)!-1$
+> **Base** $n=1$: $1\cdot1!=1=2!-1$. **Step:** $\sum_{i=1}^{k+1}i\cdot i!=\big((k+1)!-1\big)+(k+1)(k+1)!=(k+1)!\,(1+k+1)-1=(k+2)!-1$.
+
+> [!example] Problem 6(c): $6\mid n^3+5n$
+> **Base** $n=1$: $6$. **Step:** $(k+1)^3+5(k+1)=\big(k^3+5k\big)+3k(k+1)+6$. The first bracket is divisible by $6$ (hypothesis), $k(k+1)$ is even so $3k(k+1)$ is divisible by $6$, and $6$ is. *(The other tool's note writes this identity without the final $+6$; with $k=1$ the left side is $18$ and "$k^3+5k+3k(k+1)$" is $12$, so the $+6$ is needed. It does not affect the conclusion because $6\mid6$.)*
+
+> [!example] Problem 6(d): $2^n>n^2$ for every integer $n\ge5$ (extended PMI, base $m=5$)
+> **Base** $n=5$: $32>25$. (The base cannot be earlier: $2^2=4=2^2$, $2^3=8<9$, $2^4=16=4^2$, so $P(2),P(3),P(4)$ are false.) **Step** ($k\ge5$): $2^{k+1}=2\cdot2^k>2k^2$, and $2k^2\ge(k+1)^2\iff k^2-2k-1\ge0$, which holds for $k\ge3$ (at $k=5$: $14>0$). So $2^{k+1}>(k+1)^2$.
+
+> [!example] Problem 7: what induction does *not* prove
+> **(a)** "Theorem": $n=n+1$ for all $n$. The **step is valid**: if $k=k+1$ then adding $1$ gives $k+1=(k+1)+1$. But $P(1)$: $1=2$ is false, so no base case, and the induction proves nothing. *Lesson: the step alone is worthless.* **(b)** For $x\in\mathbb Q$ let $P(x)$ be "$x\ge1$": $P(1)$ is true and $P(x)\Rightarrow P(x+1)$ for every $x\in\mathbb Q$. This does **not** show every rational is $\ge1$: PMI is a statement about subsets of $\mathbb N$ ("if $1\in S$ and $k\in S\Rightarrow k+1\in S$ then $S=\mathbb N$"); starting from $1$ and adding $1$ reaches only $\{1,2,3,\dots\}$, never $\tfrac12$ or $0$. The set $\{x\in\mathbb Q:x\ge1\}$ is closed under $+1$ and contains $1$, and it is not $\mathbb Q$: **$\mathbb Q$ has no "successor from a start" structure** (it is dense and has no first element; see [[PA16 Peano's Axioms and the Natural Numbers]], axiom P3).

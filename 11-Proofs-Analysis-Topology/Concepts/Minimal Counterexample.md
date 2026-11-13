@@ -6,7 +6,7 @@ type: concept
 scope: [taught, extra-beyond]
 by: [lecture-notes]
 status: draft
-tags: [subject/analysis, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/analysis, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/proofs, quiz/pa-wop, quiz/pa-strong]
 ---
 # Minimal Counterexample
 

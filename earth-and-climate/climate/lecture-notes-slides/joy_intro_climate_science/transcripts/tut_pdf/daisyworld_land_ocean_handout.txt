@@ -1,0 +1,586 @@
+Daisyworld, land and ocean: a guide to exploring the app
+EC2113 Intro to Climate · Ocean module · app: joymonteiro.github.io/intro_climate_science/tutorials/daisyworld-
+land-ocean
+This handout goes with the app "Daisyworld, land and ocean". Open the app next to it. The app runs in any
+browser, including on a phone, and needs no installation.
+        Part 1 explains what the model is and how to use the app. It has no equations.
+        Part 2 walks through ten runs. For each one it says what to set, shows the screen, asks you to predict
+        what will happen, and then explains what you see. The equations come in here, one at a time, where they
+        explain something on the screen. Try to answer each "Before you look" question before you read on.
+        Part 3 sums up what to take away, and says what the model leaves out.
+You need no maths beyond the energy balance from earlier in the course.
+
+   The point in two sentences. The ocean does two things to a planet: it makes it darker, and it makes it
+   slower. Neither one gives the planet control over its temperature: more ocean means the daisies have less
+   to work with, and the planet takes longer to respond to any change.
+
+
+Part 1. The model and the app
+1.1 Daisyworld in one paragraph
+Daisyworld is a thought experiment by James Lovelock and Andrew Watson (1983). An imaginary planet circles a
+sun that slowly brightens, as our own sun has over billions of years. The only life is two kinds of daisy, black and
+white. Black daisies absorb sunlight and warm their surroundings; white daisies reflect it and cool theirs. Neither
+daisy "aims" to control anything. Each simply grows where it is comfortable. Yet together they hold the planet
+near the temperature they like over a wide range of sun, while a planet without them heats steadily. The model
+was built to show that life and climate can steer each other without anyone planning it. It is now a standard way
+to teach feedbacks.
+
+1.2 What this version adds: an ocean
+This app gives the planet an ocean, and the ocean does two jobs.
+     1. It takes away the daisies' room, and it is dark. Daisies can't grow on water, so they can only change the
+        colour of the land. The ocean reflects little sunlight, less than anything on land, and its colour never
+        changes. The more ocean, the less of the planet's colour the daisies control.
+     2. It stores a lot of heat. Warming water takes far more energy than warming land and air. The more ocean,
+        the more slowly the planet warms or cools when the sun changes.
+Those two jobs give the two questions this handout explores: how much control can the daisies have, and how
+fast does the planet respond?
+
+1.3 What is in the model, in words
+        One temperature for the whole planet. There are no places, no map and no seasons. Land and ocean
+        share the same temperature.
+        The sun. Its brightness is called L. L = 1 is the reference sun of the original model. The planet absorbs part
+        of the sunlight and radiates heat to space. Its temperature settles where the two balance.
+        The surface. It is made of four kinds of surface. Each has its own albedo, the fraction of sunlight it
+        reflects:
+
+
+
+Daisyworld, land and ocean                                                                                       1 / 19
+         Surface                     Albedo                       Effect
+         White daisies               0.75                         reflect most sunlight: cool the planet
+         Bare ground                 0.50                         in between
+         Black daisies               0.25                         absorb most sunlight: warm the planet
+         Ocean                       0.10 (adjustable)            darker than anything on land, and fixed
+
+        The daisies. They live only on land and spread into bare ground. They grow best at 22.5 °C and cannot
+        grow below 5 °C or above 40 °C. A fixed share of them dies every year. They need years to spread or to
+        die back.
+        Patches. This is the trick that makes Daisyworld work. A black patch is warmer than the planet's average
+        and a white patch is cooler, by up to about 10 °C. Under a dim sun, the black patches are the ones warm
+        enough to grow in. Black daisies spread, the planet darkens and it warms. Under a bright sun, the white
+        patches are the comfortable ones. White daisies spread, the planet brightens and it cools. That is the
+        whole regulating mechanism.
+        The heat store. This is how much heat the planet must take in to warm by one degree. Land and air store
+        little, so an all-land planet responds in weeks. The ocean's top layer, the mixed layer (50 m deep by
+        default), stores about 20 times more, so the planet responds in months. Deeper settings stand in for slow
+        mixing into the deep ocean, and the response takes years.
+        The bare planet. A twin planet runs alongside, with the same land, ocean and sun but no daisies. It is the
+        control experiment. Any difference between the two is the daisies' doing.
+
+1.4 What the app does: four kinds of sun
+ Kind of sun                 What happens                                              Question it answers
+ (button)
+ Slow brightening            The sun brightens from L = 0.4 to 1.8 over 600 years,     Over what range of sun can the daisies
+ (the default)               slowly enough that the planet stays close to balance.     keep the planet comfortable?
+ Brighten, then dim          The same, then back down again.                           Once the daisies die, do they come
+                                                                                       back at the same sun?
+ Sudden change               The planet settles under one sun (L = 0.78). At year 0    How fast does the planet respond, and
+                             the sun jumps (to 0.86), and the next 40 years are        what do the daisies do meanwhile?
+                             shown.
+ Steady                      The sun is fixed and the daisies start from a few seeds. How the daisies take over. This handout
+                                                                                      doesn't use it, but try it.
+
+In the first two, the horizontal axis of the charts is the brightness of the sun. In a sudden change it is time.
+
+
+
+
+Daisyworld, land and ocean                                                                                                  2 / 19
+1.5 A tour of the screen
+
+
+
+
+                       The app with 30% ocean under slow brightening. The numbers match the list below.
+
+     1. Planet buttons: all land, 30% ocean or 70% ocean.
+     2. Planet sliders: ocean fraction, ocean albedo and mixed-layer depth. The last two are dimmed when there
+        is no ocean.
+     3. Heat stored and response time. These update as soon as you move a planet slider. They say how much
+        heat the planet stores compared with an all-land planet, and how long it takes to go two-thirds of the way
+        after a sudden change of sun.
+     4. Kind of sun: the four experiments in section 1.4.
+     5. Sun controls. These change with the kind of sun (pictures below). For the sweeps, they set the starting
+        and final brightness and the run length. A short run is a fast change of sun.
+
+
+Daisyworld, land and ocean                                                                                    3 / 19
+    6. More settings: daisies and albedos. This opens the daisies' death rate, how much heat the patches
+       share, their favourite temperature and the albedos. It also holds Reset everything.
+    7. Summary line. It puts the main result in words. For a sweep, it gives where the daisies survive and where
+       each planet stays within 5 °C of the daisies' favourite. For a sudden change, it gives how far and how fast
+       each planet changes.
+    8. Keep this run to compare. It draws the current run faintly, so that after you change the planet both runs
+       show. A kept run shows only while the kind of sun stays the same. Clear kept run removes it.
+    9. Planet temperature. The daisy planet is the solid orange line and the bare planet is the dashed grey line.
+       The shaded band is where daisies can grow (5–40 °C), and the dotted line is their favourite, 22.5 °C.
+   10. Who covers the land. White daisies (teal) and black daisies (dark) as fractions of the land, not of the
+       whole planet.
+   11. The planet at the cursor. Move over either chart, or tap it, to pick a moment. The strip shows how the
+       whole planet is shared out: ocean, bare ground, white and black. Underneath are the planet's
+       temperature, the temperatures of the white and black patches, the bare planet's temperature and the
+       albedo. Without a pick, it shows the moment of most daisies in a sweep, or the end of a sudden change.
+   12. Download data (CSV) saves every recorded moment for a spreadsheet or Python. "Download settings"
+       saves the parameters and a link that reopens the run.
+
+
+
+
+  Left: the sun controls for Sudden change: brightness before and after, the log time axis box and the years to show. Right:
+                                                   More settings opened.
+
+Three more things worth knowing:
+        The address bar holds the settings. Copy the link to save or share a run. Each run in Part 2 has a link that
+        opens it.
+        Below the charts are "Things to try" and "How the model works", the equations in one box.
+        On a phone the controls come first and the charts sit below them.
+
+
+
+
+Daisyworld, land and ocean                                                                                               4 / 19
+Part 2. Ten runs to explore
+Each run says what to set, shows the screen, and asks a question for you to think about before you look. Then it
+lists what to look for and explains why it happens. Start from the defaults: Reset everything is under More
+settings, or just reload the page. The "open in the app" links set everything for you, except a kept run, which you
+have to make by hand.
+Runs 1–5 ask how much control the daisies have. Runs 6–10 ask how fast the planet responds.
+
+Run 1. All land, slow brightening: the classic Daisyworld
+Set: All land · Slow brightening. (open in the app)
+Before you look: the sun brightens steadily. Should the planet's temperature rise steadily too? What would the
+daisies do to it?
+
+
+
+
+                    All land, slow brightening. The planet strip shows the moment of most daisies, at L = 1.47.
+
+What to look for
+        The bare planet (dashed) heats steadily as the sun brightens. It is within 5 °C of 22.5 °C only between L =
+        0.88 and 1.01.
+
+
+
+Daisyworld, land and ocean                                                                                        5 / 19
+        The daisy planet (solid) jumps up at L ≈ 0.75, when daisies first grow. It then stays close to 22.5 °C from L
+        = 0.76 to 1.52, a range of sun about six times wider than the bare planet manages. Over the middle of that
+        range it even cools slightly as the sun brightens, from 23.4 to 20.9 °C between L = 0.95 and 1.33, while
+        the bare planet heats from 22.9 to 48.8 °C.
+        The cover chart tells the story. Black daisies come first, under the dim sun. White daisies take over as the
+        sun brightens. At L ≈ 1.59 the white daisies collapse and the daisy planet's temperature jumps up onto the
+        bare planet's line.
+        At the moment of most daisies (L = 1.47) white daisies cover 69% of the land. The planet is at 24.3 °C,
+        while the bare planet is at 56.8 °C.
+Why it happens
+The balance. With the sun steady, the planet settles where the sunlight it absorbs equals the heat it radiates:
+
+   S · L · (1 − A) = σ T⁴
+
+
+Here S = 917 W/m², A is the planet's albedo and σ is the Stefan–Boltzmann constant. A higher albedo means a
+cooler planet. The daisies' only lever on the climate is A.
+The albedo of an all-land planet is the area-weighted average of its surfaces:
+
+   A = a_w · 0.75 + a_b · 0.25 + x · 0.5
+
+
+Here a_w and a_b are the fractions of land covered by white and black daisies, and x = 1 − a_w − a_b is bare
+ground.
+The patches. Each colour of patch has its own temperature:
+
+   T_white = T + 20 · (A − 0.75)
+   T_black = T + 20 · (A − 0.25)
+
+
+The 20 K (called q′) sets how little heat the patches share with each other. On a planet of albedo 0.5, a black
+patch sits 5 °C above the planet's temperature and a white patch 5 °C below it. Under a dim sun, the black
+patches reach the growing range first. Black daisies spread, A falls and T rises, which helps more black daisies
+grow. That is the jump at L ≈ 0.75. As the sun brightens, the white patches become the comfortable ones. White
+daisies spread, A rises and the planet cools. The two colours pull in opposite directions and hold T where both
+can grow.
+The growth. Each kind of daisy grows into bare ground at a rate set by its own patch's temperature, and dies at a
+fixed rate:
+
+   da_i/dt = a_i · [ x · β(T_i) − γ ]
+   β(T) = 1 − 0.003265 · (22.5 − T)²             (zero below 5 °C and above 40 °C)
+
+
+Here γ = 0.3 per year. Daisies can never cover more than 70% of the land: when growth balances death, x · β =
+γ, and β is at most 1, so bare ground x stays at 0.3 or more. At L ≈ 1.5 the white daisies are near that limit. The
+dial has reached its end stop. A little more sun warms the white patches beyond what the daisies can stand.
+Some die, the albedo falls, the planet warms, and more die. This runaway ends on the bare planet's line.
+
+Run 2. Add ocean: 30% and 70%
+Set: Run 1, then press Keep this run to compare. Then choose 30% ocean (open in the app), and then 70%
+ocean (open in the app).
+Before you look: daisies can't grow on the ocean, and the ocean is dark. Will the range of sun over which the
+daisies keep the planet comfortable get wider, get narrower, or move?
+
+
+Daisyworld, land and ocean                                                                                        6 / 19
+                             30% ocean (solid) against the kept all-land run (faint).
+
+
+
+
+Daisyworld, land and ocean                                                              7 / 19
+                             70% ocean against the kept all-land run. The cursor is at L = 0.85: see Run 4.
+
+What to look for
+
+ Slow brightening                                              All land                 30% ocean             70% ocean
+ Daisies survive                                               L = 0.75–1.59            0.63–1.15             0.52–0.89
+ Daisy planet within 5 °C of 22.5 °C                           0.76–1.52                0.64–1.01             0.55–0.61
+ Bare planet within 5 °C of 22.5 °C                            0.88–1.01                0.71–0.82             0.57–0.65
+
+        The window moves to a dimmer sun. The ocean planets are warmer under the same sun.
+        The window narrows. With 30% ocean, the regulated range is less than half as wide (0.36 against 0.76 in
+        L). The regulated temperature also runs warmer, around 25–30 °C instead of 21–24 °C.
+        With 70% ocean the two curves nearly overlap. The daisies grow over L = 0.52–0.89, but the daisy
+        planet stays comfortable only over 0.55–0.61, which is no wider than the bare planet's range. The daisies
+        live on this planet; they don't run it.
+Why it happens
+With a fraction f of the planet as land and 1 − f as ocean, the albedo becomes:
+
+   A = f · (a_w · 0.75 + a_b · 0.25 + x · 0.5) + (1 − f) · 0.1
+
+
+
+
+Daisyworld, land and ocean                                                                                                8 / 19
+This one line is the whole story of leverage. On land, daisies can move the albedo anywhere between 0.25 (all
+black) and 0.75 (all white), a swing of 0.5. On the whole planet that swing is 0.5 × f: 0.5 with all land, 0.35 with
+30% ocean and only 0.15 with 70% ocean. The ocean's share is fixed, and it is dark. More ocean gives the
+daisies a smaller dial, and it sets the planet warmer to begin with.
+
+Run 3. Two reasons, pulled apart: a bright ocean
+More ocean changes two things at once: there is less land to recolour, and the planet gets darker. The ocean-
+albedo slider separates them.
+Set: 70% ocean, then Keep. Then set the ocean albedo to 0.5, the same as bare ground. (open in the app)
+Before you look: of the two changes in Run 2 (the window moving and the window narrowing), which one should
+disappear when the ocean is as bright as bare ground?
+
+
+
+
+                    70% ocean with a bright ocean (albedo 0.5, solid) against the real, dark ocean (0.1, faint).
+
+ Ocean albedo 0.5                                    All land               30% ocean                   70% ocean
+ Daisies survive                                     0.75–1.59              0.75–1.44                   0.75–1.30
+ Daisy planet within 5 °C                            0.76–1.52              0.77–1.32                   0.80–1.13
+
+        The window no longer moves: it starts at L ≈ 0.75 every time. So the shift to a dimmer sun came from the
+        ocean being dark.
+        The window still narrows: its top end falls from 1.59 to 1.30. That narrowing is leverage alone.
+The real ocean is the darkest large surface on Earth, which is why it takes in about half of all the sunlight Earth
+absorbs. In the model, that darkness warms the planet and moves life's window.
+
+
+
+
+Daisyworld, land and ocean                                                                                          9 / 19
+Run 4. Surviving is not regulating
+Set: the 70% ocean run from Run 2. Put the cursor at L = 0.85, near the hot end of the daisies' range (see the
+second picture in Run 2).
+Before you look: the readout says the planet is at 44.8 °C, above the 40 °C limit for daisies. Yet white daisies
+cover 47% of the land. How can they?
+
+ Near the hot edge                 L           Planet          White patches               Planet albedo
+ All land                          1.55        30.4 °C         28.6 °C                     0.66
+ 30% ocean                         1.10        35.8 °C         30.6 °C                     0.49
+ 70% ocean                         0.85        44.8 °C         34.9 °C                     0.25
+
+Why. Look again at T_white = T + 20 · (A − 0.75). On a dark ocean planet (A ≈ 0.25), white patches sit 10 °C
+below the planet's temperature. The white daisies have found a cool niche and keep growing in it. But land is
+only 30% of this planet, and white daisies cover less than half of it (14% of the planet), so they can't cool the
+rest. Life can find a habitable spot on a planet it can't make habitable.
+
+Run 5. Brighten, then dim: the daisies don't come straight back
+Set: All land · Brighten, then dim. (open in the app)
+Before you look: once the daisies have died under a bright sun, will they come back as soon as the sun dims to
+where they died?
+
+
+
+
+Daisyworld, land and ocean                                                                                      10 / 19
+                                All land, brighten then dim. The dotted lines are the way down.
+
+What to look for. On the way up the daisies die at L ≈ 1.63. On the way down (dotted) they come back only at L =
+1.17. Between those two values the same sun gives two different planets, one with daisies and one without. That
+is hysteresis. The numbers on the way up differ slightly from Run 1 (0.76–1.63 rather than 0.75–1.59) because
+this sweep is twice as fast: 300 years up and 300 down. That is a first hint that how fast the sun changes
+matters (Runs 6–10).
+
+ Brighten, then dim                                                All land        30% ocean      70% ocean
+ Daisies die on the way up at                                      1.63            1.18           0.91
+ Daisies come back on the way down at                              1.17            0.97           0.80
+ Width of the loop                                                 0.45            0.21           0.11
+
+Why. A planet without daisies is darker than one covered in white daisies, so it is hotter. The sun has to dim a
+long way before even the white patches are cool enough for seeds to take hold. With less land, the daisies
+change the planet less, so the planet with daisies and the planet without them differ less, and the loop shrinks.
+That is one more sign of less control.
+
+Run 6. Sudden change, all land: a spike, then a correction
+Set: All land · Sudden change · tick the log time axis. (open in the app)
+
+
+
+Daisyworld, land and ocean                                                                                    11 / 19
+Before you look: the sun jumps. How long will the bare planet take to warm: days, months or years? Will the
+daisy planet warm as much?
+
+
+
+
+      All land: the sun jumps from L = 0.78 to 0.86 at year 0. On the log axis, days, months and decades get equal room.
+
+What to look for
+        Before the change, black daisies cover 59% of the land and hold the daisy planet at 25.0 °C, while the
+        bare planet sits at 8.7 °C.
+        The bare planet warms by 7.0 °C. It gets two-thirds of the way in 22 days and is flat after a few months.
+        The daisy planet does just what the bare planet does for the first two months: it jumps by 7 °C. Then, over
+        years, the white daisies spread (from 8% to 22% of the land) and the black daisies thin out (from 59% to
+        45%). The planet comes back, and settles after about 18 years at 1.4 °C cooler than before.
+Why it happens
+The energy budget, with storage. When the planet is out of balance, the difference goes into (or comes out of)
+its heat store, C:
+
+   C · dT/dt = S · L · (1 − A) − σ T⁴
+
+
+Absorbed minus emitted equals the rate at which heat is stored. At the jump, the absorbed sunlight rises by 46
+W/m² at once, but the emitted heat catches up only as the planet warms. The planet in this model has no
+greenhouse: it radiates straight from its surface.
+
+
+Daisyworld, land and ocean                                                                                             12 / 19
+The heat store is shared between land and ocean:
+
+   C = f · C_land + (1 − f) · ρc · h
+
+
+Here C_land = 10⁷ J m⁻² K⁻¹ stands for land plus the air above it, about 2.5 m of water's worth. ρc = 4.1 × 10⁶ J
+m⁻³ K⁻¹ is for sea water, and h is the mixed-layer depth. At 50 m, the ocean stores about 20 times as much heat
+per square metre as land.
+The response time. After a small sudden change, a planet goes about two-thirds of the way to its new
+temperature in
+
+   τ = C / λ,            λ = 4σT³ ≈ 5.4 W m⁻² K⁻¹
+
+
+Here λ is how much more heat the planet emits for each degree it warms. For all land, τ ≈ 21 days, and the run
+measures 22 days. In lecture, λ was the Planck feedback for Earth, 3.8 W m⁻² K⁻¹, which includes the
+greenhouse effect. This model has no greenhouse, so λ is larger and τ is shorter: 50 m of water gives about 1.2
+years here against 1.7 years in lecture.
+Heat capacity doesn't change where the planet ends up. Set dT/dt = 0 and C drops out. It changes only how
+fast the planet gets there.
+The spike. The temperature responds in weeks and the daisies in years. So for the first months the daisies are
+effectively frozen, and the daisy planet warms just like the bare one. Fast physics plus slow biology gives an
+overshoot. Ending cooler under a brighter sun is not a bug. Run 1 showed it already: in the middle of its
+regulated range, the daisy planet cools slightly as the sun brightens.
+
+Run 7. Sudden change, 30% ocean: the same push, a bigger store
+Set: Run 6 and press Keep. Then choose 30% ocean. (open in the app)
+Before you look: the response-time readout (item 3 of the tour) now says about 5 months. Will the daisy planet's
+spike be bigger or smaller than on the all-land planet?
+
+
+
+
+Daisyworld, land and ocean                                                                                   13 / 19
+                             30% ocean with a 50 m mixed layer (solid) against all land (faint).
+
+What to look for. The bare planet now warms by 7.3 °C, two-thirds of the way after about 4 months (127 days)
+instead of 22 days. The daisy planet peaks later (after about a year) and lower (+6.5 °C). It then settles at −1.3
+°C after about 20 years.
+Why: an accountant's view. The sun jumps, and the planet suddenly absorbs 46 W/m² more than it emits, the
+same surplus on both planets. That surplus has to fill the store until the planet is warm enough to emit it away.
+Both bare planets end up about 7 °C warmer, but the energy needed to get there is C × ΔT: about 7 × 10⁷ J/m²
+for all land against 5 × 10⁸ J/m² with 30% ocean. The bigger store takes longer to fill.
+
+ Planet                           Heat stored (× all land)                  τ
+ All land                         1.0                                       21 days
+ 30% ocean, 10 m                  1.9                                       41 days
+ 30% ocean, 50 m                  6.8                                       146 days (about 5 months)
+ 30% ocean, 200 m                 25                                        1.5 years
+ 30% ocean, 500 m                 62                                        3.6 years
+ 70% ocean, 50 m                  15                                        0.85 years (about 10 months)
+ 70% ocean, 200 m                 58                                        3.4 years
+
+The measured times come out a little shorter than τ (127 days against 146 days here), because a planet emits
+more steeply as it warms than the straight-line λ assumes.
+
+
+
+
+Daisyworld, land and ocean                                                                                     14 / 19
+Run 8. A deeper ocean buys the daisies time
+Set: Run 7 (30% ocean, 50 m) and press Keep. Then set the mixed-layer depth to 500 m. (open in the app)
+Before you look: with ten times the water, will the daisy planet's peak warming be bigger or smaller? Will it end
+up somewhere different?
+
+
+
+
+                                30% ocean with a 500 m mixed layer (solid) against 50 m (faint).
+
+ 30% ocean         Bare planet: two-thirds of the way after      Daisy planet peak                 Daisy planet at the end
+ 50 m              about 4 months                                +6.5 °C after about 1 year        −1.3 °C
+ 200 m             about 15 months                               +5.6 °C after about 2.7 years     −1.3 °C
+ 500 m             about 3 years                                 +4.7 °C after about 5 years       −1.4 °C
+
+Why. The deeper ocean slows the warming, so the heat arrives over years rather than months. That gives the
+daisies, which also work over years, time to respond before the heat has arrived, and the peak is lower. The end
+point doesn't move: about −1.3 °C after about 20 years, whatever the depth. Heat capacity changes the path,
+not the destination.
+
+Run 9. Sudden change, 70% ocean: a slow feedback takes over
+Set: 70% ocean · Sudden change · log time axis. (open in the app)
+
+
+Daisyworld, land and ocean                                                                                             15 / 19
+Before you look: the response-time readout says about 10 months. When will this planet's warming be over?
+
+
+
+
+              70% ocean, sudden change. The bare planet is done within a couple of years; the daisy planet isn't.
+
+What to look for
+        Before the change this planet is already hot. The daisy planet is at 36.7 °C and survives only through
+        white daisies (67% of the land) in their cool patches. The bare planet is at 41.8 °C.
+        The bare planet does what you'd now expect: +7.8 °C, two-thirds of the way in about 8 months.
+        The daisy planet keeps warming for decades. The brighter sun pushes the white patches past their limit,
+        and the white daisies die back over the next 10–20 years. As they go, the planet darkens and warms
+        further. It ends 12.9 °C warmer, at 49.6 °C, which is exactly the bare planet's temperature, because no
+        daisies are left: the daisy planet has become a bare planet.
+Why. The heat from the sun arrives within a year, but the warming lasts decades, because a slow feedback (the
+daisies dying back) sets the pace, not the ocean. With a 200 m ocean the end point is the same (+12.8 °C); only
+the path differs.
+Try next: a gentle change inside this planet's narrow comfortable window, brightness before 0.58 and after 0.62
+(open in the app). The daisy planet then warms by 4.8 °C, the same as the bare planet (4.9 °C). The daisies
+make no difference, and all that's left is the ocean's delay: about 10 months with 50 m, about 3 years with 200 m.
+
+
+
+
+Daisyworld, land and ocean                                                                                          16 / 19
+Run 10. Too fast to follow
+Set: 30% ocean · mixed layer 300 m · Brighten, then dim · run length 600 years, and press Keep. Then set the
+run length to 30 years. (open in the app)
+Before you look: the response time for this planet is a few years. If the sun brightens and dims over 30 years,
+can the planet keep up?
+
+
+
+
+                 30% ocean, 300 m: brighten and dim over 30 years (solid and dotted) against 600 years (faint).
+
+What to look for. On the fast run, the planet on the way up (solid) runs far colder than on the slow run, and on
+the way down (dotted) far hotter: the temperature trails the sun. The daisies appear only at L = 1.02 on the way
+up, and on the way down they hang on all the way to L = 0.4.
+
+ Brighten, then dim, over 30          Bare planet lags its balance by     Daisies alive on the way   Return on the way
+ years                                up to                               up                         down
+ All land                             1.3 °C                              0.95–1.44                  0.96
+ 30% ocean, 50 m                      6.2 °C                              0.86–1.16                  0.75
+ 30% ocean, 300 m                     21 °C                               1.02–1.28                  0.63
+ 30% ocean, 300 m, over 600           2.1 °C                              0.65–1.20                  0.96
+ years
+
+Why. With all land, the temperature keeps up (it lags by 1.3 °C at most), but the daisies don't: they start at L =
+0.95 instead of 0.76, because they need years to spread. With a 300 m ocean the temperature itself falls 21 °C
+behind its balance. This is the transient version of hysteresis: the faster the forcing, the more the planet's state
+depends on its history.
+
+
+
+Daisyworld, land and ocean                                                                                           17 / 19
+Putting the runs together: three clocks
+The log time axis shows the model's three clocks:
+
+ Part                 Responds in         Set by
+ Land and air         weeks               a small heat capacity
+ Ocean mixed          months to           heat capacity: each metre of water stores 0.4 times what land and air do, so 50 m
+ layer                years               stores 20 times as much
+ Daisies              years to            growth and death rates
+                      decades
+
+Most of what happens after a sudden change comes from how these clocks compare. When the temperature
+clock is much faster than the daisy clock, you get a spike (Run 6). When the two get closer, the spike shrinks
+(Run 8). When the daisy clock runs the show, the planet responds as slowly as the biology (Run 9).
+
+The model in full
+For reference, here is everything the app computes:
+
+     albedo        A = f · (a_w · A_w + a_b · A_b + x · A_g) + (1 − f) · A_o
+     energy        C · dT/dt = S · L · (1 − A) − σ T⁴
+     storage       C = f · C_land + (1 − f) · ρc · h
+     patches       T_w = T + q′ · (A − A_w),   T_b = T + q′ · (A − A_b)
+     growth        β(T) = 1 − 0.003265 · (T_opt − T)²   (zero outside T_opt ± 17.5 °C)
+     daisies       da_i/dt = a_i · [ x · β(T_i) − γ ],   x = 1 − a_w − a_b
+
+
+ Symbol                      Meaning                                                              Default
+ f                           land fraction (1 − ocean fraction)                                   1, 0.7 or 0.3
+ A_w, A_b, A_g, A_o          albedo of white daisies, black daisies, bare ground, ocean           0.75, 0.25, 0.5, 0.1
+ S                           sunlight at L = 1                                                    917 W/m²
+ C_land                      heat capacity of land plus air                                       10⁷ J m⁻² K⁻¹
+ ρc, h                       heat capacity of sea water per m³, mixed-layer depth                 4.1 × 10⁶ J m⁻³ K⁻¹, 50 m
+ q′                          how much warmer dark patches stay than light ones                    20 K
+ T_opt                       daisies' favourite temperature                                       22.5 °C
+ γ                           daisy death rate                                                     0.3 per year
+
+Daisy cover never falls below 1% of the land (seeds). The bare planet uses the same equations with no daisies.
+Growth, albedos, S, γ and q′ follow Watson and Lovelock (1983). The ocean and the heat store are simple
+teaching choices.
+
+
+
+
+Daisyworld, land and ocean                                                                                                18 / 19
+Part 3. What to take away
+3.1 Six points
+     1. Leverage. Daisies can only change the colour of land. With 70% ocean they still grow, but they barely
+        move the planet's temperature. Surviving is not the same as regulating (Runs 2 and 4).
+     2. A dark ocean shifts everything. The ocean reflects little sunlight, so an ocean planet is warmer under the
+        same sun, and life's window moves to a dimmer sun (Run 3).
+     3. Heat capacity sets the response time. After a sudden change the bare planet always ends up about 7–8
+        °C warmer, but it takes about 3 weeks with all land, 4 months with 30% ocean and 8 months with 70%
+        ocean. A deeper mixed layer makes it years. τ = C/λ: the bigger the store, the longer it takes to fill (Runs
+        6–8).
+     4. A transient is a time out of balance. While the planet catches up, it absorbs more than it emits, and the
+        difference goes into storage. Earth today is in such a transient: it absorbs about 1 W/m² more than it emits,
+        and more than 90% of the excess goes into the ocean.
+     5. Fast physics plus slow biology gives an overshoot. The temperature jumps before the daisies can react,
+        and the daisies pull it back over years. The more slowly the temperature rises (a deeper ocean), the more
+        time the daisies have and the smaller the peak (Runs 6 and 8).
+     6. The planet's response time isn't only C/λ. A slow feedback can stretch it: with 70% ocean the heat
+        arrives within a year, but the planet keeps warming for decades as the daisies die back (Run 9). And if the
+        sun changes faster than the planet can follow, the planet lags behind (Run 10).
+
+3.2 What the model leaves out
+A model is useful partly because you know where it breaks.
+        One temperature. On Earth, land and ocean have their own temperatures and their own response times:
+        the yearly range of temperature is tens of degrees inside continents and only a few degrees over the open
+        ocean. Here, adding ocean slows the land down too, because they share one T. This is the biggest
+        simplification.
+        No transport. On Earth, no place is in energy balance on its own, and the atmosphere and ocean currents
+        carry heat from where there is a surplus to where there is a deficit. A one-box model has no places, so it
+        can't move anything.
+        No sea ice. The real ocean's albedo jumps from about 0.06 to about 0.6 when it freezes, a strong
+        feedback. Here the ocean stays dark at every temperature.
+        One slab. The real ocean exchanges heat with its deep layers over decades to centuries, so it responds in
+        two stages, fast and then very slow.
+        No greenhouse, no clouds, no weather. These keep the model simple.
+        Daisies are a parable. Real vegetation does change albedo (dark forest against snow), but on Earth that
+        effect is small next to clouds, ice and the ocean.
+
+
+
+
+Daisyworld, land and ocean                                                                                     19 / 19
+

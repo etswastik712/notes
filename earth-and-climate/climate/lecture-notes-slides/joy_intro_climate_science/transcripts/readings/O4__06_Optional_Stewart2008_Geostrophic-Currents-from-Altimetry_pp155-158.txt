@@ -1,0 +1,239 @@
+10.3. SURFACE GEOSTROPHIC CURRENTS FROM ALTIMETRY                                         155
+
+10.3 Surface Geostrophic Currents From Altimetry
+    The geostrophic approximation applied at z = 0 leads to a very simple
+relation: surface geostrophic currents are proportional to surface slope. Consider
+a level surface slightly below the sea surface, say two meters below the sea
+surface, at z = −r (figure 10.1).
+    The pressure on the level surface is:
+
+                                      p = ρ g (ζ + r)                                   (10.9)
+
+assuming ρ and g are essentially constant in the upper few meters of the ocean.
+    Substituting this into (10.7a), gives the two components (us , vs ) of the sur-
+face geostrophic current:
+
+                                    g ∂ζ                      g ∂ζ
+                           us = −        ;             vs =                            (10.10)
+                                    f ∂y                      f ∂x
+
+where g is gravity, f is the Coriolis parameter, and ζ is the height of the sea
+surface above a level surface.
+The Oceanic Topography In §3.4 we define the topography of the sea surface
+ζ to be the height of the sea surface relative to a particular level surface, the
+geoid; and we defined the geoid to be the level surface that coincided with the
+surface of the ocean at rest. Thus, according to (10.10) the surface geostrophic
+currents are proportional to the slope of the topography (figure 10.2), a quantity
+that can be measured by satellite altimeters if the geoid is known.
+                                                                     z=ζ
+
+                  g   dζ
+           Vs =
+                  f   dx
+                                              ⊗
+                                                  Vs          1m
+
+
+        Sea Surface                                                                x
+        Geoid                                100km
+
+Figure 10.2 The slope of the sea surface relative to the geoid (∂ζ/∂x) is directly related to
+surface geostrophic currents vs . The slope of 1 meter per 100 kilometers (10 µrad) is typical
+of strong currents. Vs is into the paper in the northern hemisphere.
+
+    Because the geoid is a level surface, it is a surface of constant geopoten-
+tial. To see this, consider the work done in moving a mass m by a distance
+h perpendicular to a level surface. The work is W = mgh, and the change of
+potential energy per unit mass is gh. Thus level surfaces are surfaces of constant
+geopotential, where the geopotential Φ = gh.
+    Topography is due to processes that cause the ocean to move: tides, ocean
+currents, and the changes in barometric pressure that produce the inverted
+barometer effect. Because the ocean’s topography is due to dynamical processes,
+it is usually called dynamic topography. The topography is approximately one
+hundredth of the geoid undulations. Thus the shape of the sea surface is domi-
+nated by local variations of gravity. The influence of currents is much smaller.
+ 156                                                 CHAPTER 10. GEOSTROPHIC CURRENTS
+
+
+             -35
+                                                                                              mean sea surface
+             -40
+                                                                                              mean geoid
+             -45
+
+
+Height (m)   -50
+
+             -55
+
+             -60
+
+
+                                                                                                    Geoid Error
+                                                               Cold Core Rings
+             1.0
+                     Warm Core Rings
+
+
+SST (m)
+             0.5
+
+             0.0
+                                                      Gulf Stream
+
+             -0.5
+
+                    40 o    38 o       36 o   34 o      32 o        30 o        28 o   26 o      24 o      22 o   20 o
+                                                               North Latitude
+ Figure 10.3 Topex/Poseidon altimeter observations of the Gulf Stream. When the altimeter
+ observations are subtracted from the local geoid, they yield the oceanic topography, which is
+ due primarily to ocean currents in this example. The gravimetric geoid was determined by
+ the Ohio State University from ship and other surveys of gravity in the region. From Center
+ for Space Research, University of Texas.
+ Typically, sea-surface topography has amplitude of ±1m (figure 10.3). Typical
+ slopes are ∂ζ/∂x ≈ 1–10 microradians for v = 0.1–1.0 m/s at mid latitude.
+     The height of the geoid, smoothed over horizontal distances greater than
+ roughly 400 km, is known with an accuracy of ±1mm from data collected by
+ the Gravity Recovery and Climate Experiment grace satellite mission.
+ Satellite Altimetry Very accurate, satellite-altimeter systems are needed for
+ measuring the oceanic topography. The first systems, carried on Seasat, Geosat,
+ ers–1, and ers–2 were designed to measure week-to-week variability of currents.
+ Topex/Poseidon, launched in 1992, was the first satellite designed to make the
+ much more accurate measurements necessary for observing the permanent (time-
+ averaged) surface circulation of the ocean, tides, and the variability of gyre-scale
+ currents. It was followed in 2001 by Jason and in 2008 by Jason-2.
+    Because the geoid was not well known locally before about 2004, altimeters
+ were usually flown in orbits that have an exactly repeating ground track. Thus
+ Topex/Poseidon and Jason fly over the same ground track every 9.9156 days.
+ By subtracting sea-surface height from one traverse of the ground track from
+ height measured on a later traverse, changes in topography can be observed
+ without knowing the geoid. The geoid is constant in time, and the subtraction
+ removes the geoid, revealing changes due to changing currents, such as mesoscale
+ eddies, assuming tides have been removed from the data (figure 10.4). Mesoscale
+ variability includes eddies with diameters between roughly 20 and 500 km.
+10.3. SURFACE GEOSTROPHIC CURRENTS FROM ALTIMETRY                                                                157
+
+                                            Topography Variability (cm)
+      o
+ 64
+
+
+
+
+ 32 o                               15                                             15
+                                                                                           6
+
+
+                                                                         10
+                                                            8
+  0o
+                                                                     6
+
+
+
+                                               15
+                        8
+-32 o
+            15                                                                                              15
+
+                                         15                                          15
+                                              15                                    15
+-64 o
+          20 o   60 o       100 o   140 o           180 o   -140 o        -100 o   -60 o       -20 o   0o    20 o
+Figure 10.4 Global distribution of standard deviation of topography from Topex/Poseidon
+altimeter data from 10/3/92 to 10/6/94. The height variance is an indicator of variability of
+surface geostrophic currents. From Center for Space Research, University of Texas.
+
+   The great accuracy and precision of the Topex/Poseidon and Jason altimeter
+systems allow them to measure the oceanic topography over ocean basins with
+an accuracy of ±(2–5) cm (Chelton et al, 2001). This allows them to measure:
+   1. Changes in the mean volume of the ocean and sea-level rise with an accu-
+      racy of ±0.4 mm/yr since 1993 (Nerem et al, 2006);
+   2. Seasonal heating and cooling of the ocean (Chambers et al 1998);
+   3. Open ocean tides with an accuracy of ±(1–2) cm (Shum et al, 1997);
+   4. Tidal dissipation (Egbert and Ray, 1999; Rudnick et al, 2003);
+   5. The permanent surface geostrophic current system (figure 10.5);
+   6. Changes in surface geostrophic currents on all scales (figure 10.4); and
+   7. Variations in topography of equatorial current systems such as those as-
+      sociated with El Niño (figure 10.6).
+
+Altimeter Errors (Topex/Poseidon and Jason) The most accurate ob-
+servations of the sea-surface topography are from Topex/Poseidon and Jason.
+Errors for these satellite altimeter system are due to (Chelton et al, 2001):
+   1. Instrument noise, ocean waves, water vapor, free electrons in the iono-
+      sphere, and mass of the atmosphere. Both satellites carried a precise
+      altimeter system able to observe the height of the satellite above the sea
+      surface between ±66◦ latitude with a precision of ±(1–2) cm and an accu-
+      racy of ±(2–5) cm. The systems consist of a two-frequency radar altimeter
+      to measure height above the sea, the influence of the ionosphere, and wave
+      height, and a three-frequency microwave radiometer able to measure water
+      vapor in the troposphere.
+158                                                            CHAPTER 10. GEOSTROPHIC CURRENTS
+
+                                               Four-Year Mean Sea-Surface Topography (cm)
+
+ 66 o
+                                                               60
+
+ 44 o                                                     0
+                                                          60         80                 60
+                                                                                                                                     0
+                                                                                                  120
+ 22 o                                                 0
+                                                 10                                               40    60                      20
+                                                                                                         40         40
+                                                  8                               80               40                                        120
+                  60                80          60 0
+  0o                                                                         80
+                                                                                                        60
+                                                  40                                                                                         20
+
+                              80
+-22 o                                 60                                                80
+                                                                                                        40
+                                                                                             60
+                                                                                                                            40
+          80                                                    40
+                  40                                            20                                      40
+                                                                                                        20                 40                       20
+-44 o      -50
+                       20                                                                                          0
+                                                                     0
+           -100                                                              -50 0                                                                -150
+          -150                           -15                                   -10
+                                            0                                    -150        -100               00
+-66 o                                                                                                         -1
+        20 o           60 o        100 o              140 o          180 o         -140 o     -100 o               -60 o             -20 o    0o     20 o
+
+Figure 10.5 Global distribution of time-averaged topography of the ocean from Topex/Pos-
+eidon altimeter data from 10/3/92 to 10/6/99 relative to the jgm–3 geoid. Geostrophic
+currents at the ocean surface are parallel to the contours. Compare with figure 2.8 calculated
+from hydrographic data. From Center for Space Research, University of Texas.
+
+   2. Tracking errors. The satellites carried three tracking systems that enable
+      their position in space, the ephemeris, to be determined with an accuracy
+      of ±(1–3.5) cm.
+   3. Sampling error. The satellites measure height along a ground track that
+      repeats within ±1 km every 9.9156 days. Each repeat is a cycle. Be-
+      cause currents are measured only along the sub-satellite track, there is a
+      sampling error. The satellite cannot map the topography between ground
+      tracks, nor can they observe changes with periods less than 2 × 9.9156 d
+      (see §16.3).
+   4. Geoid error. The permanent topography is not well known over distances
+      shorter than a hundred kilometers because geoid errors dominate for short
+      distances. Maps of topography smoothed over greater distances are used
+      to study the dominant features of the permanent geostrophic currents at
+      the sea surface (figure 10.5). New satellite systems grace and champ are
+      measuring earth’s gravity accurately enough that the geoid error is now
+      small enough to ignore over distances greater than 100 km.
+
+Taken together, the measurements of height above the sea and the satellite po-
+sition give sea-surface height in geocentric coordinates within ±(2–5) cm. Geoid
+error adds further errors that depend on the size of the area being measured.
+
+10.4 Geostrophic Currents From Hydrography
+   The geostrophic equations are widely used in oceanography to calculate cur-
+rents at depth. The basic idea is to use hydrographic measurements of tem-
+perature, salinity or conductivity, and pressure to calculate the density field of
+the ocean using the equation of state of sea water. Density is used in (10.7b)
+

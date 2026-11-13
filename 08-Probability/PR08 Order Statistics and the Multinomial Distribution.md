@@ -9,7 +9,7 @@ scope: [taught, extra-beyond]
 by: [lecture-notes, own-notes]
 status: draft
 prereq: [PR04 Joint Distributions Expectation and Variance, PR05 Continuous Random Variables, PR07 Sums of Independent Variables Covariance and Correlation]
-tags: [subject/probability, type/chapter, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/chapter, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/probability, quiz/pr-hw5]
 ---
 # PR08 · Order Statistics and the Multinomial Distribution
 
@@ -44,7 +44,7 @@ tags: [subject/probability, type/chapter, taught, extra/beyond, src/lecture-note
 > [!tip] 🔬 Interactive: the $k$-th order statistic
 > Open [▶ pr_order_statistics.html](../Assets/interactive/pr_order_statistics.html) (self-contained, works offline). Choose a distribution (uniform, exponential, normal), $n$ and $k$: the thick curve is $\frac{n!}{(k-1)!(n-k)!}F^{k-1}(1-F)^{n-k}f$, the thin ones are the other order statistics, the histogram is a 4000-sample simulation; on the right the mean gaps between consecutive points, which for the exponential are exactly $1/(n-k+1)$.
 
-## 1. Problem 1: the joint density of the minimum and the maximum
+## 1. Problem 1: the joint density of the minimum and the maximum #quiz/pr-hw5
 <span class="scope-taught">taught</span> *Source: HW5 Q1 and the instructor's solution*
 
 Let $X_1,X_2$ be iid with pdf $f$ and cdf $F$, $Y_1=\min\{X_1,X_2\}$, $Y_2=\max\{X_1,X_2\}$.
@@ -66,7 +66,7 @@ $$F_{Y_1,Y_2}(y_1,y_2)=2F(y_1)F(y_2)-F(y_1)^2,\qquad f_{Y_1,Y_2}=\frac{\partial^
 > $$f_{Y_1,\dots,Y_n}(y_1,\dots,y_n)=n!\,f(y_1)\cdots f(y_n)\quad\text{for }y_1<y_2<\dots<y_n,$$
 > and $0$ elsewhere. *Why:* the $n!$ orderings of the $n$ labels each map the ordered region from a different region of $\mathbb R^n$ with the same density $\prod f$ (the same two-preimage count: $n!$ preimages). *Check:* the ordered region has volume $1/n!$ in $[0,1]^n$ so $n!\cdot\frac1{n!}=1$ (total mass $1$).
 
-## 2. The $k$-th order statistic 🔵
+## 2. The $k$-th order statistic 🔵 #quiz/pr-hw5
 <span class="scope-extra-beyond">extra · beyond</span> *my derivation, checked by simulation*
 
 Integrating the joint density gets the marginal of one coordinate, but a direct count is quicker. $Y_{(k)}\in dy$ means: exactly $k-1$ of the $n$ values lie below $y$ (probability $F(y)$ each), one lies in $dy$ (probability $f(y)dy$), and $n-k$ lie above ($1-F(y)$ each); the number of ways to choose the labels is the multinomial coefficient $\frac{n!}{(k-1)!\,1!\,(n-k)!}$:
@@ -75,7 +75,7 @@ For $k=1$: $nf(1-F)^{n-1}$ (the minimum); for $k=n$: $nF^{n-1}f$ (the maximum). 
 
 *Numbers* ($n=5$, $10^6$ samples): $E[Y_{(k)}]=1/6,2/6,3/6,4/6,5/6$ against simulated $0.1666,0.3332,0.5001,0.6667,0.8334$; $P(Y_{(2)}\le0.3)=0.47178$ (Beta(2,4)) against $0.47192$. The constant for $n=5,k=2$ is $\frac{5!}{1!3!}=20$ and $20y(1-y)^3$ integrates to $1.000000$.
 
-## 3. Problem 2: exponential order statistics
+## 3. Problem 2: exponential order statistics #quiz/pr-hw5
 <span class="scope-taught">taught</span> *Source: HW5 Q2* · <span class="scope-extra-beyond">extra · beyond</span> *Rényi gaps, reliability reading*
 
 Let $X_1,X_2\sim\mathrm{Expo}(\lambda)$ be independent, $Y_1=\min$, $Y_2=\max$ ($\lambda=2$ in the numbers below).
@@ -103,7 +103,7 @@ Let $X_1,X_2\sim\mathrm{Expo}(\lambda)$ be independent, $Y_1=\min$, $Y_2=\max$ (
 > [!key] The Rényi gaps for $n$ exponentials 🔵
 > For $n$ iid $\mathrm{Expo}(\lambda)$ variables, the **spacings** $Y_{(1)},\ Y_{(2)}-Y_{(1)},\dots,Y_{(n)}-Y_{(n-1)}$ are **independent** and $Y_{(k)}-Y_{(k-1)}\sim\mathrm{Expo}\big((n-k+1)\lambda\big)$ ($Y_{(0)}=0$). *Argument (memorylessness, repeated):* $n$ clocks, the first rings at rate $n\lambda$; the $n-1$ survivors restart afresh, the next ring is at rate $(n-1)\lambda$, and so on. Hence $E[Y_{(k)}]=\frac1\lambda\sum_{j=1}^k\frac1{n-j+1}$ and $E[\max]=\frac{H_n}\lambda$, the harmonic number. *Numbers* ($n=5$, $\lambda=1$, $10^6$ samples): mean gaps $0.2001,0.2497,0.3331,0.5005,1.0000$ against $\frac15,\frac14,\frac13,\frac12,1$; $E[\max]=2.2835$ against $H_5=2.2833$; the largest sample correlation between distinct gaps is $0.0020$ (independence). The case $n=2$ is Problem 2.
 
-## 4. Problem 3: the multinomial distribution through indicators
+## 4. Problem 3: the multinomial distribution through indicators #quiz/pr-hw5
 <span class="scope-taught">taught</span> *Source: HW5 Q3* · <span class="scope-extra-beyond">extra · beyond</span> *rank, conditionals, Poissonisation*
 
 $(X_1,\dots,X_k)\sim\mathrm{Mult}_k(n,\vec p)$, $p_1+\dots+p_k=1$: $n$ independent trials, each lands in outcome $i$ with probability $p_i$, and $X_i$ is the number of trials giving outcome $i$,

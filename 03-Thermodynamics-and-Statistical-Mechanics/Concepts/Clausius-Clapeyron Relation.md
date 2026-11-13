@@ -5,7 +5,7 @@ type: concept
 scope: [extra-book, extra-beyond]
 by: [book]
 status: draft
-tags: [subject/thermo, type/concept, extra/book, extra/beyond, src/book, status/draft]
+tags: [subject/thermo, type/concept, extra/book, extra/beyond, src/book, status/draft, quiz/thermo, quiz/th-tut1]
 ---
 # Clausius-Clapeyron Relation
 

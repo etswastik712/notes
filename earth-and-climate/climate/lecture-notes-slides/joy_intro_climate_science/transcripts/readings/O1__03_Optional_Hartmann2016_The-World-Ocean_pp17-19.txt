@@ -1,0 +1,165 @@
+                                        1.7 THE WORLD OCEAN                                 17
+
+
+
+
+                                                             Moist and dry
+                                                                adiabats
+
+
+
+
+                   Altitude
+                   (km)
+
+
+
+
+                         -60         -40        -20          0            20   40
+                                               Temperature (°C)
+
+FIGURE 1.10 Moist and dry adiabatic temperature profiles. Parcels of air start at
+1000 hPa either saturated with water vapor (solid) or completely dry (dashed), and are
+raised adiabatically while conserving moist static energy. Starting temperatures of —10, 0, 10,
+20 and 30°C are shown.
+
+
+is three times their difference at the surface. This basic mechanism would
+indicate that significant changes in lapse rate and dry static stability
+should be expected when the climate changes, especially in the tropics
+where moist convection strongly controls the temperature profile.
+
+
+                               1.7 THE WORLD OCEAN
+
+   The atmosphere contains a tiny fraction of the total water in the
+climate system, about one part in 10°. Most of the surface water of Earth
+is contained in the oceans and in ice sheets (Table 1.2). Earth contains
+
+
+TABLE     1.2     Water on Earth
+
+                               Depth if spread over the
+Water reservoir                entire surface of Earth (m)        Total (%)
+
+Oceans
+Icecaps and glaciers                                              Pps
+Groundwater                                                       0.7
+Lakes and streams                                                 0.013
+
+Soil moisture                                                     0.013
+
+Atmosphere                                                        0.0009
+
+Total
+18                          1. INTRODUCTION TO THE CLIMATE SYSTEM
+
+
+about 1.35 X 10° km* of water, of which about 97% is seawater. Since
+all the oceans are connected to some degree, we can think of them col-
+lectively as the world ocean. The world ocean is a key element of the
+physical climate system. Ocean covers about 71% of Earth’s surface to
+an average depth of 3730 m. The ocean has tremendous capability to
+store and release heat and chemicals on time scales of seasons to cen-
+turies. Ocean currents move heat poleward to cool the tropics and
+warm the extratropics. The world ocean is the reservoir of water that
+supplies atmospheric water vapor for rain and snowfall over land. The
+ocean plays a key role in determining the composition of the atmosphere
+through the exchange of gases and particles across the air-sea interface.
+The ocean removes carbon dioxide from the atmosphere and produces
+molecular oxygen, and participates in other key geochemical cycles that
+regulate the surface environment of Earth.
+   Temperature in the ocean generally decreases with depth from a
+temperature very near that of the surface air temperature to a value
+near the freezing point of water in the deep ocean (Fig. 1.11). A thin,
+well-mixed surface layer is stirred by winds and waves so efficiently
+that its temperature and salinity are almost independent of depth. Most
+of the temperature change occurs in the thermocline, a region of rapid
+temperature change with depth in the first kilometer or so of the ocean.
+Below the thermocline is a deep layer of almost uniform temperature. In
+middle and high latitudes, the mixed layer is thin in summer and deep in
+winter (e.g., 45°N in Fig. 1.11).
+   Salinity of seawater is defined as the number of grams of dissolved salts
+in a kilogram of seawater. Salinity in the open ocean ranges from about
+33 ¢ kg” to 38 ¢ kg". In seawater with a salinity of 35 g kg“, about 30 g kg
+are composed of sodium and chloride (Table 1.3). Salinity is an important
+
+
+
+
+      500                                                 500         F----
+ xo                                                                            y
+ =                                         ties       =                        :
+ 8                                SEALs               2
+                            mem        45N-30W                                1
+                                ----- 75N-10E                                 Ve
+                                           :      :                           RS
+               .                  :               :                           as
+     1500                                                 1500
+         —5   .¢)   5      10    615   2OlUDlCUDO                -5            0
+                        Temperature (°C)
+
+
+FIGURE 1.11 Annual-mean ocean potential temperature profiles for various latitudes
+and as a function of depth in meters for (a) February and (b) August. MIMOC data.
+                                               1.7 THE WORLD OCEAN                                           19
+
+TABLE 1.3.                 Concentrations of the Major Components of Sea Water with a Salinity
+of 35%o
+
+Component                                                 Grams per kilogram
+Chloride                                                  19.4
+
+Sodium                                                    10.8
+
+Sulfur                                                    0.91
+
+Magnesium                                                 E28
+
+Calcium                                                   0.41
+
+Potassium                                                 0.39
+
+Bicarbonate                                               0.14
+
+Bromide                                                   0.067
+
+Strontium                                                 0.008
+
+Boron                                                     0.004
+
+Fluoride                                                  0.001
+
+
+
+
+contributor to variations in the density of seawater at all latitudes and is
+the most important factor in high latitudes and in the deep ocean, where
+the temperature is close to the freezing point of water. Variations in the
+density of seawater drive the deep-ocean circulation, which is critical for
+heat storage and transport and for the recirculation of nutrients neces-
+sary for life. Salinity of the global ocean varies systematically with lati-
+tude in the upper layers of the ocean (Fig. 1.12). In subtropical latitudes
+(10-30°), the surface salinity is large because evaporation exceeds pre-
+cipitation and leaves the seawater enriched in salt. In middle and high
+
+
+
+
+        500
+
+  £                                              :                           ;              ‘Pacific Ocean
+
+  ao                                    February                      ‘\                : February
+                                  meme Eg-25W                                if       —__-25N-35W _
+       ce          arabia OL, Rie sxarseas 25N-35W                    i)           men 25N-180
+                                   smam 45N-30W                                     sussnstes 45N-30W
+                                       amees   75N-10E                       :        asesssose 45-180
+
+
+       1500
+              34
+                                   Salinity                                      Salinity
+
+FIGURE              1.12    Profiles of salinity during February for various locations. MIMOC data.
+

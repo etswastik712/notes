@@ -6,7 +6,7 @@ type: concept
 scope: [extra-book]
 by: [ai-notes]
 status: draft
-tags: [subject/analysis, type/concept, extra/book, src/ai-notes, status/draft]
+tags: [subject/analysis, type/concept, extra/book, src/ai-notes, status/draft, quiz/proofs, quiz/pa-strong]
 ---
 # Recursion Theorem
 

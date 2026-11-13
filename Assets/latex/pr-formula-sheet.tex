@@ -4,7 +4,7 @@
 \setlength{\parskip}{2pt}
 \renewcommand{\arraystretch}{1.17}
 \title{MT2113 Probability\\\large formula sheet, key numbers and traps}
-\author{second brain $\cdot$ chapters PR01--PR06}
+\author{second brain $\cdot$ chapters PR01--PR09 (PR07--PR09 added 2026-11-12)}
 \date{}
 \begin{document}
 \maketitle
@@ -88,6 +88,21 @@ shape (W3) & $\gamma_1=\mu_3/\sigma^3$; lecture's kurtosis $=\mu_4/\sigma^4-3$ (
 inequalities & Markov $P[X\ge a]\le E[X]/a$; Chebyshev $1/k^2$; WLLN $\sigma^2/(n\varepsilon^2)$ & $k{=}2$: $0.25$ vs $0.0455$\\
 CLT & $\tfrac{S_n-n\mu}{\sigma\sqrt n}\to N(0,1)$; error $\approx\tfrac{\gamma_1}{6\sqrt{2\pi n}}$ & Exp: $0.0133$ at $n{=}100$\\
 normal approx. & Bin$\approx N(np,npq)$, $P[X\le k]\approx\Phi\!\big(\tfrac{k+1/2-np}{\sqrt{npq}}\big)$ & Bin$(30,.3)$: $0.7304$ vs $0.7250$\\
+\bottomrule
+\end{tabular}
+
+
+\section*{PR07--PR09 Sums, order statistics, change of variables}
+\begin{tabular}{@{}p{2.9cm}p{8.4cm}p{6.1cm}@{}}
+\toprule
+sum of independent & $f_{X+Y}(z)=\int f_X(x)f_Y(z-x)\,\mathrm dx$; $\mathrm{Var}(\sum c_iX_i)=c^{\mathsf T}\Sigma c$; $\Sigma\succeq0\iff|\rho|\le1$ & $N+N$ is $N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$\\
+order statistics & $f_{Y_1,Y_2}=2f(y_1)f(y_2)$ ($y_1<y_2$); $f_{Y_{(k)}}=\frac{n!}{(k-1)!(n-k)!}F^{k-1}(1-F)^{n-k}f$; Expo: $Y_1\sim\mathrm{Expo}(2\lambda)$, gap $\sim\mathrm{Expo}(\lambda)$ indep. & $\mathrm{Corr}(Y_1,Y_2)=1/\sqrt5$\\
+multinomial & $\frac{n!}{\prod n_i!}\prod p_i^{n_i}$; $\mathrm{Cov}(X_i,X_k)=-np_ip_k$; $\Sigma=n(\mathrm{diag}\,p-pp^{\mathsf T})$ singular & fair die, $12$ rolls: $\mathrm{Corr}=-0.2$\\
+densities & $f_{Y|X}=f_{X,Y}/f_X$; Bayes $f_{Y|X}=f_{X|Y}f_Y/f_X$; independence $\iff f=f_Xf_Y$ & uniform disc: marginal $\frac2{\pi R}\sqrt{1-(x/R)^2}$\\
+change of variables & $f_Y(y)=f_X(g^{-1}(y))\,|\det\partial g^{-1}/\partial y|$; several roots: sum; polar Jacobian $r$ & $X^2$: $e^{-y/2}/\sqrt{2\pi y}$; Box--Muller $R=\sqrt{-2\ln U_1}$, $\Theta=2\pi U_2$\\
+multivariate normal & $f=\frac{e^{-\frac12(x-\mu)^{\mathsf T}\Sigma^{-1}(x-\mu)}}{(2\pi)^{n/2}\sqrt{\det\Sigma}}$; $O\Sigma O^{\mathsf T}=\mathrm{diag}(\lambda)\Rightarrow Y=OX$ independent $N((O\mu)_i,\lambda_i)$ & $\Sigma=\begin{pmatrix}2&1\\1&2\end{pmatrix}$: $\lambda=3,1$\\
+products of uniforms & $-\ln U\sim\mathrm{Expo}(1)$; $-\ln\prod U_j\sim\mathrm{Gamma}(n,1)$; $f_{\prod U}=(-\ln u)^{n-1}/(n-1)!$; $E[U^k]=(k+1)^{-n}$ & $n=5$: $E=0.03125$, $\mathrm{Var}=0.00314$\\
+Jensen & $g''>0\Rightarrow g(x)>g(a)+g'(a)(x-a)$; $E\,g(X)\ge g(EX)$; gap $\ge\frac m2\mathrm{Var}X$ if $g''\ge m$ & $E\,e^X=e^{1/2}\ge1$ for $N(0,1)$\\
 \bottomrule
 \end{tabular}
 

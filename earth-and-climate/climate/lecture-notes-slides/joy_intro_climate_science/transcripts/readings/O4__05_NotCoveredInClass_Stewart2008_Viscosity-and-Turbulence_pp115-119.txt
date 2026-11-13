@@ -1,0 +1,265 @@
+Chapter 8
+
+Equations of Motion With
+Viscosity
+
+Throughout most of the interior of the ocean and atmosphere friction is rel-
+atively small, and we can safely assume that the flow is frictionless. At the
+boundaries, friction, in the form of viscosity, becomes important. This thin,
+viscous layer is called a boundary layer. Within the layer, the velocity slows
+from values typical of the interior to zero at a solid boundary. If the boundary
+is not solid, then the boundary layer is a thin layer of rapidly changing velocity
+whereby velocity on one side of the boundary changes to match the velocity on
+the other side of the boundary. For example, there is a boundary layer at the
+bottom of the atmosphere, the planetary boundary layer I described in Chapter
+3. In the planetary boundary layer, velocity goes from many meters per second
+in the free atmosphere to tens of centimeters per second at the sea surface.
+Below the sea surface, another boundary layer, the Ekman layer described in
+Chapter 9, matches the flow at the sea surface to the deeper flow.
+    In this chapter I consider the role of friction in fluid flows, and the stability
+of the flows to small changes in velocity or density.
+
+8.1  The Influence of Viscosity
+   Viscosity is the tendency of a fluid to resist shear. In the last chapter I wrote
+the x–component of the momentum equation for a fluid in the form (7:12a):
+
+             ∂u    ∂u    ∂u    ∂u    1 ∂p
+                +u    +v    +w    =−      + 2 Ω v sin ϑ + Fx                   (8.1)
+             ∂t    ∂x    ∂y    ∂z    ρ ∂x
+
+where Fx was a frictional force per unit mass. Now we can consider the form of
+this term if it is due to viscosity.
+    Molecules in a fluid close to a solid boundary sometime strike the boundary
+and transfer momentum to it (figure 8.1). Molecules further from the boundary
+collide with molecules that have struck the boundary, further transferring the
+change in momentum into the interior of the fluid. This transfer of momentum
+
+                                        115
+116             CHAPTER 8. EQUATIONS OF MOTION WITH VISCOSITY
+
+      z     Velocity
+                                                        Molecules carry horizontal
+                                                        momentum perpendicular to
+                                                        wall through perpendicular
+                                                        velocity and collisions with
+                                                        other molecules
+
+                                                                                        x
+                                         Wall
+
+          Figure 8.1 Molecules colliding with the wall and with each other transfer
+              momentum from the fluid to the wall, slowing the fluid velocity.
+
+is molecular viscosity. Molecules, however, travel only micrometers between
+collisions, and the process is very ineﬀicient for transferring momentum even a
+few centimeters. Molecular viscosity is important only within a few millimeters
+of a boundary.
+    Molecular viscosity ρν is the ratio of the stress T tangential to the boundary
+of a fluid and the velocity shear at the boundary. So the stress has the form:
+                                                  ∂u
+                                       Txz = ρν                                        (8.2)
+                                                  ∂z
+for flow in the (x, z) plane within a few millimetres of the surface, where ν is
+the kinematic molecular viscosity. Typically ν = 10−6 m2 /s for water at 20◦ C.
+    Generalizing (8.2) to three dimensions leads to a stress tensor giving the
+nine components of stress at a point in the fluid, including pressure, which is
+a normal stress, and shear stresses. A derivation of the stress tensor is beyond
+the scope of this book, but you can find the details in Lamb (1945: §328) or
+Kundu (1990: p. 93). For an incompressible fluid, the frictional force per unit
+mass in (8.1) takes the form:
+                                                                   
+        ∂      ∂u      ∂     ∂u     ∂      ∂u     1 ∂Txx    ∂Txy    ∂Txz
+ Fx =        ν      +      ν      +      ν      =        +        +         (8.3)
+        ∂x ∂x         ∂y     ∂y     ∂z     ∂z     ρ ∂x       ∂y      ∂z
+
+
+8.2    Turbulence
+    If molecular viscosity is important only over distances of a few millimeters,
+and if it is not important for most oceanic flows, unless of course you are a
+zooplankter trying to swim in the ocean, how then is the influence of a boundary
+transferred into the interior of the flow? The answer is: through turbulence.
+    Turbulence arises from the non-linear terms in the momentum equation
+(u ∂u/∂x, etc.). The importance of these terms is given by a non-dimensional
+number, the Reynolds Number Re, which is the ratio of the non-linear terms to
+the viscous terms:
+                                                  !
+                                               ∂u         U
+                                             u         U
+                     Non-linear Terms          ∂x         L    UL
+              Re =                       =        !≈         =              (8.4)
+                      Viscous Terms            2
+                                              ∂ u        U      ν
+                                            ν          ν
+                                              ∂x2        L2
+8.2. TURBULENCE                                                                        117
+
+
+
+                           Dye
+
+
+
+
+                                                               Glass Tube
+
+
+                                                                            Valve
+               Water
+
+
+
+
+Figure 8.2 Reynolds apparatus for investigating the transition to turbulence in pipe flow,
+with photographs of near-laminar flow (left) and turbulent flow (right) in a clear pipe much
+like the one used by Reynolds. After Binder (1949: 88-89).
+
+where, U is a typical velocity of the flow and L is a typical length describing
+the flow. You are free to pick whatever U, L might be typical of the flow. For
+example L can be either a typical cross-stream distance, or an along-stream dis-
+tance. Typical values in the open ocean are U = 0.1 m/s and L = 1 megameter,
+so Re = 1011 . Because non-linear terms are important if Re > 10 – 1000, they
+are certainly important in the ocean. The ocean is turbulent.
+    The Reynolds number is named after Osborne Reynolds (1842–1912) who
+conducted experiments in the late 19th century to understand turbulence. In
+one famous experiment (Reynolds 1883), he injected dye into water flowing at
+various speeds through a tube (figure 8.2). If the speed was small, the flow
+was smooth. This is called laminar flow. At higher speeds, the flow became
+irregular and turbulent. The transition occurred at Re = V D/ν ≈ 2000, where
+V is the average speed in the pipe, and D is the diameter of the pipe.
+    As Reynolds number increases above some critical value, the flow becomes
+more and more turbulent. Note that flow pattern is a function of Reynold’s
+number. All flows with the same geometry and the same Reynolds number have
+the same flow pattern. Thus flow around all circular cylinders, whether 1 mm
+or 1 m in diameter, look the same as the flow at the top of figure 8.3 if the
+Reynolds number is 20. Furthermore, the boundary layer is confined to a very
+thin layer close to the cylinder, in a layer too thin to show in the figure.
+Turbulent Stresses: The Reynolds Stress Prandtl, Karman and others
+who studied fluid mechanics in the early 20th century, hypothesized that parcels
+of fluid in a turbulent flow played the same role in transferring momentum
+within the flow that molecules played in laminar flow. The work led to the idea
+of turbulent stresses.
+    To see how these stresses might arise, consider the momentum equation for
+118            CHAPTER 8. EQUATIONS OF MOTION WITH VISCOSITY
+
+
+
+                                                             S
+                                                                                              S
+
+              <1                                        20
+                            A                                    B
+
+
+
+
+                                                                     Y                                    A'
+                                         A'
+                                                                     D
+                                                                         1                                Width
+
+                                                                     0.5
+                                         A
+                                                                         0
+                                                                                 -2             -1        0
+                   174                              C                                 Total Head
+
+                                                                         1
+                                                                 Width
+                                                                  D
+                                                                         0
+                                                                             0        0.5             1
+                     5,000           14,480         D
+                                                                                       X/D
+
+
+
+
+                                S                                                     S
+
+
+
+                   80,000                                                    1,000,000
+                                                    E                                       F
+Figure 8.3 Flow past a circular cylinder as a function of Reynolds number between one and
+a million. From Richardson (1961). The appropriate flows are: A—a toothpick moving at 1
+mm/s; B—finger moving at 2 cm/s; F—hand out a car window at 60 mph. All flow at the
+same Reynolds number has the same streamlines. Flow past a 10 cm diameter cylinder at 1
+cm/s looks the same as 10 cm/s flow past a cylinder 1 cm in diameter because in both cases
+Re = 1000.
+
+a flow with mean (U, V, W ) and turbulent (u′ , v ′ , w′ ) components:
+
+             u = U + u′ ;            v = V + v′ ;            w = W + w′ ;                 p = P + p′              (8.5)
+
+where the mean value U is calculated from a time or space average:
+                                    Z T                                                Z X
+                       1                                              1
+             U = ⟨u⟩ =                        u(t) dt    or U = ⟨u⟩ =                                u(x) dx      (8.6)
+                       T             0                                X                   0
+
+      The non-linear terms in the momentum equation can be written:
+                                                               
+                  ∂(U + u′ )       ∂U       ∂u′         ∂U          ∂u′
+        (U + u′ )              = U     + U         + u′      + u′
+                     ∂x            ∂x       ∂x          ∂x          ∂x
+                         ′
+                                           ′
+                                                 
+                  ∂(U + u   )      ∂U       ∂u
+        (U + u′ )              = U     + u′                             (8.7)
+                     ∂x            ∂x        ∂x
+8.3. CALCULATION OF REYNOLDS STRESS:                                             119
+
+The second equation follows from the first since ⟨U ∂u′ /∂x⟩ = 0 and ⟨u′ ∂U/∂x⟩
+= 0, which follow from the definition of U : ⟨U ∂u′ /∂x⟩ = U ∂⟨u′ ⟩/∂x = 0.
+   Using (8.5) in (7.19) gives:
+
+                    ∂U   ∂V   ∂W   ∂u′   ∂v ′   ∂w′
+                       +    +    +     +      +     =0                         (8.8)
+                    ∂x   ∂y   ∂z   ∂x    ∂y     ∂z
+
+Subtracting the mean of (8.8) from (8.8) splits the continuity equation into two
+equations:
+
+                               ∂U    ∂V     ∂W
+                                   +      +     =0                            (8.9a)
+                               ∂x    ∂y     ∂z
+                               ∂u′   ∂v ′   ∂w′
+                                   +      +     =0                            (8.9b)
+                               ∂x    ∂y      ∂z
+
+   Using (8.5) in (8.1) taking the mean value of the resulting equation, then
+simplifying using (8.7), the x-component of the momentum equation for the
+mean flow becomes:
+
+      DU     1 ∂P
+         =−        + 2ΩV sin φ
+      Dt     ρ ∂x
+                                                                   
+           ∂      ∂U     ′ ′    ∂      ∂U     ′ ′    ∂      ∂U     ′ ′
+         +      ν    − ⟨u u ⟩ +      ν    − ⟨u v ⟩ +      ν    − ⟨u w ⟩
+           ∂x     ∂x            ∂y     ∂y            ∂z     ∂z
+                                                                       (8.10)
+
+The derivation is not as simple as it seems. See Hinze (1975: 22) for details.
+Thus the additional force per unit mass due to the turbulence is:
+
+                              ∂ ′ ′       ∂ ′ ′       ∂ ′ ′
+                     Fx = −      ⟨u u ⟩ −    ⟨u v ⟩ −    ⟨u w ⟩               (8.11)
+                              ∂x          ∂y          ∂z
+
+    The terms ρ⟨u′ u′ ⟩, ρ⟨u′ v ′ ⟩, and ρ⟨u′ w′ ⟩ transfer eastward momentum (ρu′ )
+in the x, y, and z directions. For example, the term ρ⟨u′ w′ ⟩ gives the down-
+ward transport of eastward momentum across a horizontal plane. Because they
+transfer momentum, and because they were first derived by Osborne Reynolds,
+they are called Reynolds Stresses.
+
+8.3   Calculation of Reynolds Stress:
+    The Reynolds stresses such as ∂⟨u′ w′ ⟩/∂z are called virtual stresses (cf.
+Goldstein, 1965: §69 & §81) because we assume that they play the same role as
+the viscous terms in the equation of motion. To proceed further, we need values
+or functional form for the Reynolds stress. Several approaches are used.
+From Experiments We can calculate Reynolds stresses from direct measure-
+ments of (u′ , v ′ , w′ ) made in the laboratory or ocean. This is accurate, but hard
+to generalize to other flows. So we seek more general approaches.
+

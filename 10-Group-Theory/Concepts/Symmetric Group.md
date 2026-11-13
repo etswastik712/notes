@@ -5,7 +5,7 @@ subject: group-theory
 type: concept
 by: [book]
 status: draft
-tags: [subject/group-theory, type/concept, status/draft]
+tags: [subject/group-theory, type/concept, status/draft, quiz/pa-groups]
 ---
 # Symmetric Group
 

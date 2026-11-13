@@ -1,0 +1,448 @@
+Daisyworld with an Ocean, part 2: adding life
+EC2113 Intro to Climate · Ocean module · app: joymonteiro.github.io/intro_climate_science/tutorials/daisyworld-
+ocean
+This handout goes with the same app as part 1, "Daisyworld with an Ocean", and uses its presets 4 to 7. Part 1
+built a bare planet: land, a mixed layer and a deep ocean, pushed by random weather. Here, daisies grow on the
+land and grazers eat them. Open the app next to this handout.
+        Part 1 explains what life adds to the model, draws the feedbacks as a causal loop diagram, and says what
+        every control does.
+        Part 2 walks through six runs. For each one it says what to set, asks you to predict what will happen, and
+        then explains what you see. Try to answer each "Before you look" question before you read on.
+        Part 3 sums up what to take away, and says what the model leaves out.
+        Take it further is a spreadsheet exercise for after the tutorial.
+You need no maths for this handout.
+
+   The point in two sentences. On their own, daisies steady the land's temperature: they form loops that push
+   back against any change. Add grazers and the ocean's slow memory, and the push-back comes too late,
+   so the planet overshoots into a boom–bust cycle; add weather, and the ocean's memory sets the size of
+   each bust, so a planet driven by nothing slow swings over decades and centuries.
+
+
+Part 1. Life, its feedbacks, and the controls
+1.1 What life adds, in words
+Everything from part 1 is still here: land, a mixed layer 75 m deep over 70% of the planet, a deep ocean, the sun
+and the weather. Life adds three things, all on the land.
+        White daisies. They reflect more sunlight than bare ground, so a patch of white daisies is cooler than the
+        land around it, by about 3–4 K.
+        Black daisies. They absorb more sunlight than bare ground, so their patches are warmer than the land
+        around them.
+        Both colours grow best when their own patch is at 22.5 °C, more slowly either side, and not at all below 5
+        °C or above 40 °C. They can only spread onto bare ground, and they die at a steady rate. So white daisies
+        do best when the land is warm, and black daisies when it is cool.
+        Grazers. They eat daisies of both colours, but prefer black ones. They multiply when food is plentiful and
+        starve when it runs out. They eat fastest when the land is at 25 °C and more slowly when it is colder or
+        warmer. The land usually sits near 19–22 °C, below their best, so in this model warmer land means
+        hungrier grazers.
+Life touches the climate in only one way: who covers the land sets how much sunlight the land reflects. The
+climate touches life in only one way: temperature sets how fast each daisy grows and how fast the grazers eat.
+Two differences from part 1. The life presets run with Day and seasons unticked: the sun is steady, and the
+weather is a fresh random push every quarter-day that doesn't last. They were tuned that way, so leave the box
+unticked for presets 4 to 7. To compare a life run with a bare planet fairly, load preset 3 and untick Day and
+seasons.
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                              1 / 14
+1.2 The feedbacks as a causal loop diagram
+
+                                                                                                    food
+                  Sun                                 White daisies
+            Sun brightness                                reﬂect sunlight
+
+                                                                                −
+                                                      +
+                                                                                                   B3
+
+                                                                B1
+                                                  +
+                                                                            −                                        +
+                                   +
+              Ocean                                      Land                                  +            Grazers
+           temperature                                temperature                   appetite            prefer black daisies
+
+                                              +
+                      +            delay: years                             +                                        +
+                                                  +
+                                                                B2
+
+                                                                                                   B4
+                                                      −                         −
+              Weather                                 Black daisies
+             Weather size                                 absorb sunlight
+                                                                                                    food
+
+
+
+ The causal loop diagram for presets 4 to 7, drawn for this handout. The "How it works" tab shows the same loop as a cycle
+                                  of six stages; this diagram shows the links that make it.
+
+How to read it.
+        An arrow from A to B means "a change in A changes B".
+        + at the arrowhead means they move the same way: more A, more B; less A, less B.
+        − means they move opposite ways: more A, less B.
+        Follow arrows round until you come back to where you started, and you have a loop. Count its − signs. An
+        odd number makes a balancing loop (B): it pushes back against a change. An even number, or none,
+        makes a reinforcing loop (R): it makes a change grow.
+        ‖ marks a delay: B responds to A only after a while.
+        Dashed boxes are outside drivers. They push on the planet, but nothing on the planet pushes back on
+        them.
+The signs hold near the land's usual temperatures, about 18–22 °C. Far from there, some can flip: on very hot
+land, for example, even white daisies grow worse as it warms.
+The links, one loop at a time.
+        B1, the white-daisy thermostat. Warmer land → white patches move toward their best temperature, so
+        white daisies spread (+) → more sunlight is reflected, and the land cools (−). One − sign: balancing.
+        B2, the black-daisy thermostat. Warmer land → black patches, already warmer than the land, get too hot,
+        so black daisies shrink (−) → less sunlight is absorbed, and the land cools (+ from black daisies to
+        temperature: fewer black daisies, cooler land). One − sign: balancing. Turn it round and it says what part 2
+        will show: cold land favours black daisies.
+        B3 and B4, food. More daisies → more grazers (+, food). More grazers → fewer daisies (−, eating). One −
+        each: balancing. But it is slow: grazers take months to multiply, and months to starve. The thick line says
+        that grazers prefer black daisies.
+
+
+Daisyworld with an Ocean, part 2                                                                                               2 / 14
+        Appetite. Warmer land → hungrier grazers (+). This is how the climate reaches the grazers.
+        Land and ocean. Heat flows between the land and the ocean, both ways (+ and +). The land holds little
+        heat and the ocean a lot, so the ocean changes slowly and the land is dragged toward the ocean's
+        temperature, years late (‖). This pair is not a runaway loop: heat always flows from warm to cold. Read it
+        as "the land is tied to a slow ocean".
+        Outside drivers. The sun warms the land (and the ocean, not drawn). The weather pushes on the land
+        and the ocean together, at the same moment.
+Try it yourself. Find the path Land temperature → Grazers → White daisies → Land temperature. Count its signs.
+Is it balancing or reinforcing? When would it matter most?
+It has two − signs, so it is reinforcing. Hungrier grazers strip white daisies too, the land darkens, warms, and the
+grazers eat faster still. During a boom, this is what makes the boom run away until the food is gone.
+Why balancing loops can make cycles. A balancing loop pushes back, so you might expect it to hold the planet
+steady, and with no delay it does (Run 1 and Run 3). With a long delay it overshoots. Think of a shower with a
+long pipe: you turn it hotter, nothing happens, so you turn it more, and by the time the hot water arrives it is
+scalding. You turn it back, too far, and so on. The ocean is the long pipe. Grazers strip the land, the planet
+brightens, but the land cools only as fast as the ocean lets it, and by the time it is cold the daisies have already
+changed again. This is Run 2.
+
+1.3 The controls, and what each one does
+
+
+
+
+               The controls, with More settings open. Every change reruns the model, which takes a few seconds.
+
+Presets run along the top: 4 Add life, 5 Compare: grazers, all land, 6 Compare: grazers, no weather, 7
+Clockwork cycle. A preset runs by itself as soon as you press it. Any slider you move turns the label into "your
+own settings"; Reset this preset (at the bottom of More settings) puts everything back.
+
+
+
+Daisyworld with an Ocean, part 2                                                                                  3 / 14
+Keep this run keeps the current run on the charts, dashed, so you can compare the next run with it. Tick it
+before you change something.
+The table says where each control sits in the diagram and what it does. The "What you'll see" column comes
+from runs of the app's own model; your numbers should be close.
+
+ Control                     What it changes in the model               In the diagram      What you'll see
+ Ocean fraction              How much of the planet is ocean.           Removes or          Preset 6 at 0%: the cycle stops and
+                             0% leaves an all-land planet with no       strengthens the ‖   everything settles. At 30%: a faster
+                             mixed layer or deep ocean.                 delay               cycle, about every 3 years, with
+                                                                                            deeper busts.
+ Mixed-layer depth           How deep the stirred top of the      Lengthens the ‖           Preset 7: one turn of the cycle takes
+                             ocean is, so how much heat it holds. delay                     about 7 years at 25 m and about 11
+                                                                                            years at 150 m.
+ Deep ocean                  Adds the slow store of heat below          A slower store      Preset 6: a slightly slower cycle with
+                             the mixed layer.                           behind the ocean    it (about 8 years) than without it
+                                                                                            (about 7.4).
+ Daisies                     Life on or off. With it off, the land is   Removes B1–B4       You are back to part 1's bare planet.
+                             bare ground and there are no
+                             grazers either.
+ Grazers                     Grazers on or off.                         Removes B3, B4      Daisies alone steady the land (Run 1).
+                                                                        and the appetite
+                                                                        link
+ Weather size                How big the random pushes are. 0           The size of the     Preset 4: the century bar grows with
+                             switches the weather off.                  Weather driver      it, from about 0.05–0.09 K at 10 W/m²
+                                                                                            to 0.25–0.38 K at 60 W/m².
+ Day and seasons             Sunlight that rises, sets and swings       Changes the Sun     Leave it unticked for presets 4–7
+                             through the year, and weather that         and Weather         (see 1.1).
+                             lasts a few days.                          drivers
+ New weather                 Reruns with a different random             Same drivers,       The busts move to different years;
+                             sequence; the weather number               different luck      the pattern stays. Use it to check that
+                             goes up by one.                                                a result isn't luck.
+ Brighten the sun, at        Makes the sun 5% brighter from the         A step in the Sun   A sudden push. Watch which daisy
+ year …                      year you type.                             driver              colour gains.
+ Run length                  How many years are shown, after            –                   Shorter runs are quicker. Keep 2,000
+                             1,500 hidden years that let the                                years for the century bar.
+                             planet settle.
+ Grazers' taste for          0 = they eat only black, 1 = only          The thickness of    See Run 6.
+ white daisies (More         white, 0.5 = no preference. The            the B3 and B4
+ settings)                   presets use 0.3.                           lines
+ Grazers' best               The land temperature at which they         The strength of     See Run 6.
+ temperature (More           eat fastest. The presets use 25 °C         the appetite link
+ settings)                   (26 °C in preset 7).
+ Grazers' tolerance          How far from their best temperature        The strength of     See Run 6.
+ (More settings)             they still eat well. The presets use 6     the appetite link
+                             K (5 K in preset 7). Smaller means
+                             fussier.
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                                                4 / 14
+ Control                     What it changes in the model           In the diagram    What you'll see
+ Sun brightness              How bright the sun is all the time,    The size of the   With daisies, the land's temperature
+ (More settings)             relative to today's. The presets use   Sun driver        hardly changes over a wide range
+                             1.05.                                                    (Run 1).
+
+1.4 A tour of the screen
+
+
+
+
+        Show picks how many years the charts show: 10, 50, 300, 1000 or the whole run. The slider next to it
+        moves the window through the run.
+        Populations over time has two charts. The top one shows the grazers on a log scale: each gridline is 10
+        times the one below, so a fall of two gridlines is a fall of 100 times. The bottom one shows how much of
+        the land is covered by white and by black daisies.
+        Circles on the grazer chart mark busts; a bigger circle is a deeper bust. Circles are kept at least 12 years
+        apart, so when the grazers cycle faster than that, only every other dip gets one. To time a cycle, measure
+        from dip to dip, not from circle to circle. Tap a circle to pick that bust: the line under the charts then says
+        how many times the grazers fell.
+
+
+Daisyworld with an Ocean, part 2                                                                                        5 / 14
+        Temperatures over time shows the land, the mixed layer and the deep ocean, as yearly averages or
+        monthly values.
+        The planet box appears when you move over or tap any chart. It shows how the planet is covered at that
+        moment (ocean, bare ground, white and black daisies) and reads off each temperature, the grazers, how
+        much sunlight the whole planet reflects (planet albedo) and the sun.
+        How much does temperature vary at each timescale? works as in part 1: the bars show the spread of the
+        planet's temperature after averaging over a month, a year, 10 years and 100 years. The dashed line is
+        what weather alone would give, if each month were independent of the last.
+        Download (below the charts) saves the run as a spreadsheet file. See "Take it further".
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                          6 / 14
+Part 2. Six runs to explore
+Run 1. Daisies without grazers
+Set: preset 4, Add life, then untick Grazers.
+Before you look: in the diagram, only B1 and B2 are left. Both are balancing. Will the land's temperature wander
+more or less than on the bare planet? Which bar do you expect to change most?
+
+
+
+
+What to look for. White daisies cover about 42% of the land, black about 26%, and both jiggle with the weather.
+The land sits near 22 °C, close to the daisies' favourite. Compare the bars with the bare planet (preset 3 with
+Day and seasons unticked):
+ Spread of the planet's temperature                        Bare planet           Daisies, no grazers
+ over 1 year                                               0.23–0.25 K           0.24–0.27 K
+ over 10 years                                             0.15–0.18 K           0.07–0.09 K
+ over 100 years                                            0.05–0.08 K           0.013–0.023 K
+
+(Ranges cover weather numbers 1 to 20. Your numbers should fall in or near them.)
+The year bar hardly changes. The slow bars shrink, the century bar by about three times.
+Now push the sun. Set Weather size to 0, open More settings, and move Sun brightness. Read the land's
+temperature in the planet box. Then untick Daisies and do it again.
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                             7 / 14
+ Sun brightness                             0.95           1.00          1.05             1.10          1.15
+ Bare land                                  12.4 °C        18.2 °C       23.9 °C          29.7 °C       35.5 °C
+ Land with daisies                          19.0 °C        24.9 °C       22.0 °C          21.6 °C       27.1 °C
+ Daisies (white / black cover)              0 / 69%        1 / 68%       43 / 26%         70 / 0%       69 / 0%
+
+From a sun of 0.95 to 1.10, bare land warms by 17 K; land with daisies stays between 19 and 25 °C.
+Why. The two thermostats. When the land warms, white daisies gain and black lose, both of which cool it; when
+it cools, the reverse. From year to year the daisies make little difference, but a drift that lasts decades gives them
+time to answer, so they take the slow swings out. Under a dim sun the land is covered in black daisies, and
+under a bright one in white. Past 1.10, white daisies already cover as much land as they can, so the thermostat
+has nothing left to give, and the land warms again.
+
+Run 2. Add grazers, but no weather
+Set: preset 6, Compare: grazers, no weather. Set Show to 50 years.
+Before you look: nothing outside the planet changes: the sun is steady and there is no weather. All the loops in
+the diagram are balancing. What will the grazers do over 50 years?
+
+
+
+
+What to look for. A cycle that repeats for ever, one big boom about every 8 years (the turns alternate a little,
+about 7 and 9 years). The grazers swing 24 times, from about 0.016 to 0.39, and the land between 18 °C and 21
+°C. Every bust is the same size.
+Follow one turn with the planet box, counting years after a grazer peak:
+     1. Boom (0 years). Grazers peak and strip the land, black daisies first. Bare ground is darker than white
+        daisies, so the planet is at its warmest about 0.7 years later.
+     2. Bust (0.7 years). The food is gone; the grazers starve.
+
+
+Daisyworld with an Ocean, part 2                                                                                  8 / 14
+     3. White bloom (1.1 years). Free of grazers, white daisies cover up to 64% of the land. The planet is at its
+        brightest.
+     4. Slow cooling. The land is coldest at 3.6 years, and the mixed layer at 4.5 years: 2.5 to 3.5 years after the
+        brightest moment. This delay is the ocean's memory.
+     5. Cold suits black daisies, not grazers. Black daisies peak at 5.6 years, at up to 15% cover. Grazers eat
+        less in the cold.
+     6. Rewarming and the next boom (about 8 years). Black daisies darken the land, the planet warms, and the
+        grazers have warmth and their favourite food: boom.
+Why. No step needs anything from outside. Each balancing loop answers the last change, but through the
+ocean, years late, so each answer overshoots. Put your finger on the diagram and follow the turn: grazers →
+black daisies (B4), food runs out, white daisies take the land (B3), the land cools through the ocean's delay (‖),
+black daisies spread (B2), the land warms, and the grazers' appetite returns.
+
+Run 3. Take the ocean away
+Set: stay on preset 6, tick Keep this run, then move Ocean fraction to 0%.
+Before you look: the same daisies and grazers, the same steady sun, no weather, and now no ocean. Will the
+cycle be faster, slower, or something else?
+
+
+
+
+What to look for. No cycle at all. After the hidden years, everything sits still: grazers at 0.19, white daisies at
+29%, black at 26%, land at 18.3 °C.
+Now load preset 5, Compare: grazers, all land: the same all-land planet, with weather. The grazers boom and
+bust about every 2 years, and the busts are small: in a typical one the grazers fall less than 3 times.
+Why. Without the ocean, there is no long delay. The land answers within weeks, so the loops push back in time
+and the planet settles. A kick from the weather sets it ringing for a while, like a bell, but it dies down, so the
+busts stay small and fast. The ocean's delay is what keeps the cycle going. For a check, try 30% ocean on
+preset 6: a cycle comes back, about every 3 years.
+
+
+Daisyworld with an Ocean, part 2                                                                                      9 / 14
+Run 4. Add weather: busts of every size
+Set: preset 4, Add life. Show 300 years.
+Before you look: the weather is random and forgets within a quarter-day. In Run 2 every bust was the same. Will
+weather make the busts all a bit bigger, all a bit smaller, or different from each other? What will it do to the
+century bar?
+
+
+
+
+What to look for. Look at the grazer chart in the screenshot of section 1.4: the circles have every size. In a
+typical bust the grazers fall 8–17 times; in the smallest tenth only about 3 times; in the largest tenth 200 to 330
+times. Big busts come every few decades.
+Now the bars. The century bar is 0.11–0.28 K: two to four times the bare planet's with the same weather number
+(0.05–0.08 K), and roughly ten times that of the daisies without grazers in Run 1. The decade bar sits far above
+the dashed line.
+Find three busts of different sizes. Tap each circle and read the line under the charts to see how far the grazers
+fell. Then move along the temperature chart to the three years just before each bust, and read the mixed layer in
+the planet box. What do you notice?
+Why. The weather's pushes are fast and small, but the ocean adds them up, as in part 1. So some years the
+ocean goes into a bust colder than usual. A colder ocean keeps the land cold for longer after the white bloom:
+the grazers starve for longer, and the bust goes deeper. Across many busts, the colder the ocean in the three
+years before, the deeper the bust (a correlation of about −0.8; −1 would be a perfect match). The loop sets
+when busts come; the ocean's memory of the weather sets how big each one is. Daisies alone took slow swings
+out (Run 1); daisies, grazers and an ocean together put far more back in.
+
+Run 5. The ocean sets the beat
+Set: preset 7, Clockwork cycle. Move Mixed-layer depth to 25 m. Tick Keep this run, then move it to 150 m.
+Show 50 years.
+Before you look: in the diagram, depth sets the length of the delay ‖. A mixed layer six times deeper: will a turn
+of the cycle take longer, take less time, or stay the same?
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                                10 / 14
+What to look for. Time the cycle from one dip in the grazer chart to the next (not from circle to circle).
+ Mixed-layer depth                                  25 m            50 m            75 m             150 m
+ One turn of the cycle, no weather                  6.7 years       7.7 years       8.4 years        10.7 years
+
+Why. A deeper mixed layer holds more heat, so the land's cooling after each white bloom drags on for longer,
+and the whole loop waits for it. A longer pipe, a slower shower. In part 1, depth set the timescale of the ocean's
+wandering; here it sets the beat of the life cycle as well.
+
+Run 6. Change the grazers
+Set: preset 6 (no weather, so you can see the pattern clearly). Open More settings and change one grazer
+setting at a time. Press Reset this preset between changes.
+Before you look: the slow, 8-year cycle needs the climate to hold the grazers back: cold land means hungry-
+but-slow grazers. What happens if the grazers are happy at the land's usual temperature? What if they can
+hardly bear it?
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                                  11 / 14
+ Change on preset 6                                 One turn            Grazers swing          Land
+ none (best 25 °C, tolerance 6 K, taste 0.3)        about 8 years       24 times               18–21 °C
+ best temperature 22 °C                             about 1.1 years     37 times               21–23 °C
+ best temperature 28 °C                             about 8.4 years     over 10,000 times      19–23 °C
+ best temperature 30 °C                             grazers die out     –                      steady at 22 °C
+ tolerance 4 K                                      about 7.8 years     over 10,000 times      19–23 °C
+ tolerance 8 K                                      about 1.3 years     38 times               20–23 °C
+ taste for white 0.5                                about 1.2 years     48 times               23–24 °C
+ taste for white 1 (only white)                     about 4 years       over 10,000 times      26–30 °C
+
+What to look for. Two kinds of cycle. When the grazers eat well at the land's usual temperature (best
+temperature 22 °C, or a wide tolerance), they cycle quickly with their food, about once a year, and the land's
+temperature hardly moves: the grazers and daisies are cycling without the climate. When the cold holds them
+back hard (best temperature 28 °C, or a narrow tolerance), the slow, ocean-paced cycle returns, and each bust
+nearly wipes them out. At 30 °C they never recover, and the planet is Run 1's daisies-only planet. The taste
+control changes which colour the grazers clear away: with no preference the land stays mostly bare, and if they
+eat only white daisies, black ones take over and the land is hot.
+Why. In the diagram, these controls set the strength of the appetite link and the thickness of the B3 and B4 lines.
+The slow cycle needs the climate in the loop. Take the climate out, and the food loops alone give the fast cycle
+you saw on all land in Run 3. Make the climate's grip too strong, and the grazers can't come back.
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                             12 / 14
+Part 3. What to take away
+     1. Daisies alone are a thermostat. Two balancing loops, through the colour of the land, hold its temperature
+        near the daisies' favourite over a wide range of sunlight, and they take out the slow swings.
+     2. A delay turns a balancing loop into a cycle. The ocean's slow response makes the grazer–daisy–climate
+        loop overshoot, so it cycles for ever with nothing outside cycling. Take the ocean away and it settles.
+     3. The ocean sets the beat. A deeper mixed layer gives a longer cycle.
+     4. The ocean's memory sets the size of each bust. Weather is fast and small; the ocean adds it up, and a
+        cold ocean going into a bust makes it deep. So busts come in every size, and the planet swings over
+        decades and centuries.
+     5. The cycle needs the climate in the loop. Grazers that don't care about temperature cycle fast with their
+        food alone; grazers held back too hard die out.
+What the model leaves out. Places: there is one land and one ocean, so no daisy can move somewhere cooler.
+Evolution: daisies and grazers never adapt. Earth's living things do change its climate (forests darken snowy
+land, plants move water into the air), but these links are much weaker than Daisyworld's, which is built to make
+the link strong. And no day, seasons or lasting weather in the life presets.
+Questions to take to the discussion.
+        Find a balancing loop in the real climate system. Does it have a long delay anywhere? Could it overshoot?
+        In Run 1, daisies made the slow swings smaller. In Run 4, daisies and grazers made them larger. Which
+        parts of the diagram make the difference?
+        Before the biggest bust you found, was the ocean warmer or colder than usual? Could you have forecast
+        that bust a few years ahead? What would you need to know?
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                            13 / 14
+Take it further: anatomy of a bust
+(About 45 minutes, after the tutorial, in Excel, Google Sheets or Python.)
+     1. Load Add life (preset 4). Press Download all busts (stacked): each bust's 40 years sit one under another,
+        with bust_id , bust_drop_factor (how many times the grazers fell) and whole_years_from_bust
+        columns. Then press Download whole run as well.
+     2. Work with anomalies (how far above or below normal). In the whole-run file, find the average of each of
+        these columns over the whole run: mixed_layer_T_degC , land_T_degC , white_cover and black_cover .
+        In the busts file, add a column for each that subtracts this average from every value. Use these anomaly
+        columns from here on.
+               Python: run = pd.read_csv(<the _run.csv file>) , df = pd.read_csv(<the _busts.csv
+               file>) , then for each of the four columns df[c] = df[c] - run[c].mean() .
+     3. The average bust. Make a pivot table with whole_years_from_bust as rows, and the average of the four
+        anomaly columns, grazers and grazer_appetite_per_day as values. Chart it.
+               Python: df.groupby("whole_years_from_bust").mean(numeric_only=True) .
+     4. Big against small. Filter bust_drop_factor above 30 (big busts), then below 5 (small busts), and repeat
+        the pivot each time.
+     5. What predicts the size? For each bust_id , average the mixed-layer anomaly over
+         whole_years_from_bust −3 to −1. Scatter-plot it against bust_drop_factor , with a log scale on that axis.
+
+Questions.
+        Q1. In the average bust, put these in time order: the ocean starts to cool, white cover peaks, the grazers
+        bottom out, black cover peaks, the ocean warms past normal.
+        Q2. Do big busts start differently from small ones? Look at the ocean's temperature 5 years before.
+        Q3. Does the ocean's temperature in the 3 years before a bust predict how deep the bust will be?
+        Describe the scatter in one sentence.
+        Q4. Using your answers, mark each arrow you used on the causal loop diagram: which happened first?
+
+
+
+
+Daisyworld with an Ocean, part 2                                                                               14 / 14
+

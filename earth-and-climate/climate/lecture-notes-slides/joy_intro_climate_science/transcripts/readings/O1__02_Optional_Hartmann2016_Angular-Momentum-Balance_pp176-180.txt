@@ -1,0 +1,240 @@
+(a)                                                    (b)                                  a
+
+     200                                                    200
+
+
+7 400                                                  Fae
+=                                      \               =
+2                                      H               g
+@w 600                                 ‘‘              @ 600
+©                                          \           ®
+                                                       no
+
+
+o                       Total              H           =
+     g00 tf     see     Sensible            '               800
+                        Geopotential           1
+                se==—= | atent                 H
+    1000                                                   1000
+           0       1          2           3        4              -4      -2         0        2            4
+                       Energy (10°U kg”’)                              Mean meridional wind (m s~')
+
+FIGURE 6.14 Zonal mean energy content (a) and mean meridional velocity (b) at
+13.5°N plotted versus pressure. This shows why the mean meridional circulation transports
+sensible and latent energy toward the equator, but potential and total moist static energy
+toward the pole.
+
+
+
+surface and so are transported in the direction of the lower branch of the
+Hadley cell. In the upper troposphere, the Hadley cell transports potential
+energy poleward, giving a small poleward transport of moist static energy.
+
+
+               6.4 THE ANGULAR-MOMENTUM                                       BALANCE
+
+   The general circulation of the atmosphere is heavily constrained by the
+conservation of angular momentum. Angular momentum is the product
+of mass times the perpendicular distance from the axis of rotation times
+the rotation velocity. The angular momentum about the axis of rotation
+of Earth can be written as the sum of the angular momentum associated
+with Earth’s rotation, plus the angular momentum of zonal air motion
+measured relative to the surface of Earth. Because the depth of the
+atmosphere is so thin compared to the radius of Earth, the altitude in
+the atmosphere is unimportant for the angular momentum of the air, and
+we may use a constant radius, a, to describe the distance from the center
+of Earth. The latitude has a strong influence on the angular momentum,
+however, because increasing latitude decreases the distance to the axis
+of rotation (Fig. 6.15). The distance to the axis of rotation is the radius
+of Earth times the cosine of latitude. The zonal velocity consists of the
+velocity of Earth’s surface associated with rotation plus the relative zonal
+velocity of the wind.
+
+                         M = (Qa cos¢+u)a cos =(U,,.,                    +u)acos¢                     (6.15)
+Ce                                                           ee
+                        6.4 THE ANGULAR-MOMENTUM       BALANCE                    Wad
+
+
+                                              M=Moy+M,
+                                              ={Q acos o+u} acoso
+
+
+
+
+FIGURE 6.15 The component of angular momentum about the axis of rotation of
+Earth. From Peixoto and Oort (1984) with permission from the American Physical Society.
+
+
+   The zonal velocity of Earth’s surface at the equator, about 465 ms’, is
+very large compared to typical zonal wind speeds in the atmosphere.
+
+           Unatn = 2A COS =7.292 X10” rads” x 6.37             X10° m-cos@
+                 =465ms"' xcoso
+
+    The atmospheric angular momentum associated with Earth’s rotation
+is thus much larger than the angular momentum associated with the zonal
+winds normally observed in the troposphere. When air parcels move pole-
+ward in the atmosphere, they retain the same angular momentum unless
+they exchange angular momentum with other air parcels or with the sur-
+face. Since the distance to the axis of rotation of Earth decreases as a parcel
+moves poleward on a level surface, the relative eastward zonal velocity of
+the parcel must increase to maintain a constant total angular momentum.
+Thus, poleward-moving parcels experience an eastward acceleration rela-
+tive to Earth’s surface.
+    If a parcel of air moves from one latitude to another while conserving
+angular momentum, then (6.15) implies a relationship between the zonal
+velocities the parcel will have at any two latitudes.
+
+              M =(Qacos¢@, +u,      )a cos¢, = (Qa cos@, + u,)a cos,            (6.16)
+
+   If a parcel starts out at the equator with zero relative velocity and moves
+poleward to another latitude while conserving its angular momentum, we
+have from (6.16) that
+
+                         M=Qa’* =(Qacos+u,)acos@                                (6.17)
+
+which can be rearranged to yield an expression for the zonal velocity at
+any other latitude uy,
+LT
+
+178           6. ATMOSPHERIC GENERAL CIRCULATION AND CLIMATE
+
+                                        a)
+                                      sin’
+                               B= 00                                  (6.18)
+                                       cos@
+
+   By substituting numbers into (6.18) we find that a parcel of air with the
+angular momentum of Earth’s surface at the equator will have a westerly
+zonal wind speed of 134 ms! at 30°N or 30°S. This is much greater than
+the maximum zonally averaged wind speeds in the subtropical jet stream
+(Fig. 6.4), and we infer that the poleward angular momentum transport
+in the upper, poleward-flowing branch of the Hadley cell is more than
+adequate to explain the existence of a 40 ms‘ jet at 30° latitude. The
+interesting part is explaining why the subtropical jet stream is not stron-
+ger than it is. A parcel traveling at a mean meridional velocity of 1 ms’
+would require about 30 days to travel from the equator to 30°N, allowing
+plenty of time for small-scale turbulence or some other slow process to
+reduce the angular momentum of the parcel. In fact, drag by small-scale
+eddies is probably not the most important mechanism for reducing the
+angular momentum of air parcels in the upper branch of the Hadley cell.
+Rather it is the large-scale eddies in the atmosphere that transport
+momentum     out of the Hadley cell, into mid-latitudes, and downward to
+the surface.
+   The zonally averaged meridional flux of angular momentum in the
+atmosphere can be written
+
+           [vM] =[3](Qacos@+[i])acoso+{[u'v']+[z'D J}acosd            (6.19)
+and consists of the transport of the zonal mean angular momentum by
+the mean meridional velocity and an eddy flux term that depends on the
+covariance between zonal and meridional velocity fluctuations around a
+latitude circle. This eddy flux term becomes the dominant one near 30°
+latitude, where the mean meridional velocity is small. The eddy flux of
+zonal momentum peaks at about the tropopause level at 35° latitude,
+where it is poleward in both hemispheres and strongest in the winter
+season (Fig. 6.16).
+   Northward zonal momentum flux by large-scale atmospheric distur-
+bances is produced when the streamlines of the flow are oriented such that
+high and low anomalies tilt from southwest to northeast in the Northern
+Hemisphere as illustrated in Fig. 6.7. It can be seen that when the stream-
+lines are tilted in this manner, the eastward component of wind is greater
+when the meridional wind component is poleward, and the eastward
+component of wind is weaker when the meridional flow is equatorward.
+Therefore, an average over longitude of the product of the deviations of
+the zonal and meridional components of wind will be positive, indicating
+a northward flux of zonal angular momentum.
+                               6.4 THE ANGULAR-MOMENTUM BALANCE                                179
+
+                    [u’v’] + (U*v*]                                           DJF
+
+
+
+
+                                                                                           Height
+                                                                                           (km)
+       Pressure
+       (hPa)
+
+
+
+
+                  g°S        60S       30S        EQ        30°N       60°N     —-90°N
+                    [u’v’] + [U*v"]                                           JJA
+
+
+
+
+                                                                                           Height
+                                                                                           (km)
+       Pressure
+       (hPa)
+
+
+
+
+                  90°S        60°S     30°S       EQ        30°N      60°N          90°N
+
+FIGURE     6.16          Zonal cross-section of the northward transport of zonal velocity by
+eddies. Contour interval is 5 m’s      *, and red shading is northward transport.
+
+
+    The flow of angular momentum in the atmosphere is shown schemati-
+cally in Fig. 6.17. In the tropical surface easterlies, where the atmosphere
+rotates more slowly than Earth’s surface, eastward angular momentum
+is transferred from Earth to the atmosphere via frictional forces and pres-
+sure forces acting on mountains. This westerly angular momentum is
+transported upward and then poleward in the Hadley cell. Atmospheric
+eddies transport angular momentum poleward and downward into the
+mid-latitude westerlies. Where the surface winds are westerly, the atmo-
+sphere is rotating faster than Earth’s surface and the eastward momentum
+is returned to Earth. It is clear that the surface zonal winds cannot be of
+the same sign everywhere, since eastward angular momentum must flow
+into the atmosphere where the surface winds are easterly, and must return
+to Earth where the surface winds are westerly. Thus the tropical easterly
+winds and mid-latitude westerlies that so regulate the routes of sailing
+ships are required to satisfy the angular momentum constraint on atmo-
+spheric flow.
+180                  6. ATMOSPHERIC GENERAL CIRCULATION AND CLIMATE
+
+
+
+
+          (km)
+          Altitude
+
+
+
+
+               15°S                                45°N     60°N     75°N      90°N
+
+                                               Westerly angular momentum
+                Westerly angular momentum          to Earth in westerlies
+                 to atmosphere in easterlies
+
+FIGURE 6.17          Schematic illustration of the flow of angular momentum from the Earth
+through the atmosphere and back to Earth. Blue contours with arrows are the mean meridi-
+onal stream function. Solid black lines are zonal mean wind. Dotted contours indicate negative
+values of zonal wind and stream function. Wavy arrows indicate poleward and downward
+angular momentum transport by eddies. Wind and stream function are for January.
+
+
+        6.5 LARGE-SCALE CIRCULATION PATTERNS
+                      AND CLIMATE
+
+   The circulation of the atmosphere is not zonally symmetric, and east—
+west variations of winds and temperature are important for regional
+climates. For example, the subtropical jet of mid-latitudes is not equally
+strong at all longitudes, but has local maxima associated with the distribu-
+tion of land and ocean (Fig. 6.18). During January in the Northern Hemi-
+sphere the subtropical jet stream has two local wind speed maxima down-
+stream of the Tibetan Plateau and Rocky Mountains over the Pacific and
+Atlantic oceans, respectively. These maxima in the time-average wind
+speed have maxima in the transient eddy activity and eddy fluxes of heat
+and moisture associated with them. They define the so-called storm tracks,
+where vigorous mid-latitude cyclones are most frequently observed. The
+seasonal migration of these storm tracks plays a key role in the annual
+variation of precipitation along the west coast of North America discussed
+in Chapter 5. During July, the wind maximum of mid-latitudes is weaker
+and farther poleward in the Northern Hemisphere. In the Southern Hemi-
+sphere, the mid-latitude jet at about 50°S is present in all seasons, but the
+

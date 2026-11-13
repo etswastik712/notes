@@ -1,0 +1,270 @@
+126                  4. THE ENERGY BALANCE OF THE SURFACE
+
+           4.9 GEOGRAPHIC VARIATION OF THE
+                SURFACE ENERGY BALANCE
+
+   Some intuition about the relative importance of the various compo-
+nents of the surface energy budget as a function of the climatic regime
+can be gained from their dependence on latitude. The net radiation at
+the surface peaks in the tropics, following the general pattern of insola-
+tion at the top of the atmosphere (Fig. 4.17). The upward and downward
+longwave fluxes are much larger than the net solar, but the downward
+longwave irradiance is almost as large as the upward irradiance, so that
+longwave radiation produces a weak cooling of the surface. The latent
+cooling term mirrors the insolation fairly closely (Fig. 4.18), since globally
+most of the radiative heating of the surface is used to evaporate water. The
+sensible cooling of the surface is much smaller and more uniform, with a
+slight increase over the Northern Hemisphere where more land is present.
+The ocean transports heat from near the equator toward the extratropics,
+but its influence is smaller than the other terms that represent the vertical
+movement of energy.
+   The geographic variation of the annual mean surface heat balance com-
+ponents are shown in Fig. 4.19. Net radiation is greatest over the tropical
+oceans, where the surface albedo is low and the surface temperature is mod-
+erate. In these regions, it often exceeds 180 Wm ~. Most of the variation in
+net radiation comes from the latitudinal decrease of insolation and from
+cloudiness variations and their effect on surface solar heating. In high lati-
+tudes, the annual mean net radiative heating of the surface approaches zero.
+
+
+                            Longwave              eet                *        Surface
+                    400                     .‘         ° --=.        \._ radiation
+                                        ig ab acini *,                       ‘balance
+                                    4   e                     down   y
+                                2                                        .     NN
+
+
+                                                  Net solar
+                                                 oot    tae
+
+
+
+
+                                                       Latitude
+
+FIGURE 4.17 Components of the annual average surface radiation budget plotted
+against latitude. Data from Lin et al., 2008.
+e———
+
+
+              4.9 GEOGRAPHIC VARIATION OF THE SURFACE ENERGY BALANCE                  127
+
+                          250
+                                            Surface energy balance
+                          200
+
+                       rT)
+                              onoO
+                             —_
+
+
+
+
+                              S}fo)
+                             —_
+
+
+
+
+                       Energy
+                       (Wm
+                       flux
+
+
+
+
+                          ~-90        =60     2020            30     60   _90
+                                                   Latitude
+
+
+FIGURE      4.18    Components        of the annual average surface energy balance plotted
+against latitude. Data smoothed and adjusted from Lin et al., 2008.
+
+
+
+
+   The evaporative heat loss from the surface has its greatest values over
+the mid-latitude, warm, western boundary currents, the Kuroshio and the
+Gulf Stream (Fig. 4.19b). In these regions at the western edges of the Pacific
+and Atlantic oceans, the evaporative heat loss may exceed 200 Wm * and
+is much greater than the local net radiative heating of the ocean surface.
+The evaporative cooling of the western boundary currents is greatest in
+the winter season. However, these areas are relatively small. The evapo-
+rative heat loss is also large over the expanses of the subtropical oceans,
+where evaporation consumes most of the energy provided to the surface
+by net radiation. Evaporation driven by insolation over the tropical and
+subtropical oceans is the boiler that drives the circulation of the atmo-
+sphere and the hydrologic cycle of Earth.
+   The sensible heat loss is largest from relatively dry land areas. The
+sensible heat loss from the ocean surface is small, except over the warm
+western boundary currents of the mid-latitude oceans (Fig. 4.19c). These
+large sensible heat fluxes occur when cold air from the continents flows
+over the warm ocean currents during winter. In these regions, sensible
+heat fluxes may exceed 50 Wm ® in the annual mean, but they are still
+much less important than evaporative cooling.
+   The divergence of the heat flux in the ocean, or alternatively, the flux
+of heat from the atmosphere into the ocean, is large and negative over
+the western boundary currents (Fig. 4.19d). In these regions, the ocean is
+supplying heat by horizontal transport in the oceans, which is then lost to
+the atmosphere. The regions where the air is heating the water are found
+128         4. THE ENERGY BALANCE OF THE SURFACE
+
+
+
+
+                                                               ae            QU
+                                                                           hecGy,
+                                                                               EN
+
+
+                             q                         Mf                    (=
+                                 VON ww                                     We      LIo
+
+
+
+
+                                          : '§
+                                            Uh
+
+
+
+                                                      er
+                                                      _\RGp
+                                                         Cage.
+                                                         _[S
+                                                      Adl4         le,
+                                                                   iy
+                                                                   ==
+                                                                    SS
+                                                                                      -180
+                                                                                      -150
+                                                                                      -120
+                                                                                      -90
+
+
+
+
+                                          apo                       D> I
+                                     Me                            Zh
+                                                      2
+                                 a                V            3
+
+
+
+                                          layS
+                                             ak ~y
+                                      aSe       : Os =
+                                             ral
+                                      {e2   Ji)            O
+                                                                    is                50
+                                                                                      100
+
+
+  aie
+                                                  f
+                                                      ))
+
+
+
+
+  “
+                                             wr
+
+
+
+
+  lli\y\~
+      ch
+                                                                                     -10
+
+
+
+
+                                                                                     -40
+
+
+                                                                                             4.19
+                                                                                                lux;
+                                                                                              energy
+                                                                                              (b)
+                                                                                              latent
+                                                                                              average
+                                                                                              components.
+                                                                                              radiation;
+                                                                                              maps
+                                                                                              surface
+                                                                                              (a)
+                                                                                              Netat
+                                                                                             FIGURE
+                                                                                             Global
+                                                                                             of
+                                                                                             annual
+                                                                                             the
+                                                                                             surface
+                                                                                             budgeton
+                                                                                                   ocean.
+                                                                                                   products.
+                                                                                                   data
+                                                                                                   reanalysis
+                                                                                                   ERA-Interi
+                                                                                                   ECMWF
+                                                                                                  net
+                                                                                                  into
+                                                                                                  Based
+                                                                                                  the
+                                                                                                  flux
+                                                                                                  downward
+                                                                                                  (d)
+                                                                                                  heat
+                                                                                                  flux;
+                                                                                                 (c)
+                                                                                                 sensible
+           4.9 GEOGRAPHIC VARIATION OF THE SURFACE ENERGY BALANCE                                       129
+
+along the equator and along the eastern margins of the oceans where
+upwelling brings cold water to the surface. In these regions of upwelling,
+latent heat loss is reduced and more of the net radiation is used to heat the
+ocean water. The large transfers of energy from the tropical and eastern
+oceans to the mid-latitude western oceans in the Northern Hemisphere
+play a critical role in determining the climate of maritime areas. The ocean
+currents that produce these important energy transports are described in
+Chapter 7.
+
+SEAS   ENTE          IE IE    TES TEED   EELS LEDS   CLE ELD ILENE EE ENE PSE   TSI   AOE IGE DET EEE   TEE
+
+
+ EXERCISES
+ 1. If the top 100 m of ocean warms by 5°C during a 3-month summer
+    period, what is the average rate of net energy flow into the ocean during
+    this period in units of Wm *? If the atmosphere warms by 20°C during
+    the same period, what is the average rate of net energy flow into the
+    atmosphere?
+ 2. In (4.4) the heat content of the atmosphere is estimated as co T(p. / 8),
+    but in a compressible, hydrostatic atmosphere the potential energy of the
+    atmosphere, gz, must also increase when it warms, since the atmosphere
+    is raised as it warms. Use the hydrostatic relationship to estimate how
+    much the required increase in potential energy adds to the heat capacity
+    of the atmosphere, if the atmosphere warms by the same amount at all
+    pressures.
+ 3. Derive (4.18) from (4.15) and (4.17).
+ 4, The blackbody emission from the surface can be linearized about some
+    reference temperature Ty. oT. ~ oT, + 40T, (T, -T))+-::. And the sensible
+    cooling of the surface can be written as SH=c, pC,U(T, -T,)+----
+    Calculate and compare the rates at which longwave emission and sensible
+    heat flux vary with surface temperature, T,. In other words, if the surface
+    temperature rises by 1°C, by how much will the longwave and sensible
+    cooling increase? Assume that Tp = 288 K, T, is fixed, p= 1.2 kg m™,
+    C= 1004 ke Ko, Gy =2 x10, and               eSims =
+ 5. Air with a temperature of 27°C moves across a dry parking lot at
+    a speed of 5ms_'. The insolation at the surface is 600 Wm ~ and
+    the downward longwave radiation at the ground is 300 Wm °. The
+    longwave emissivity of the surface is 0.85, and the albedo of the asphalt
+    surface is 0.10. What is the surface temperature in equilibrium? What
+    is the surface temperature if the asphalt is replaced with concrete with
+    an albedo of 0.3 and the same emissivity? The air density and drag
+    coefficient are as in problem 3. Hint: Linearize the blackbody emission
+    around the air temperature and use the surface energy equation to show
+                   S* (0)(1-a,) + €(F’ (0)- oT’)
+    that 1,.—J,=
+                             c,PCpU + e40T,
+

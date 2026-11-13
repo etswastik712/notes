@@ -1,0 +1,537 @@
+222                  CHAPTER 13. DEEP CIRCULATION IN THE OCEAN
+
+      water column, and it is self powered. Mixing in a stratified fluid increases
+      the potential energy, and it must be driven by an external process.
+  2. Numerical models show that the deep circulation is very sensitive to the
+     assumed value of vertical eddy diffusivity in the thermocline (Gargett and
+     Holloway, 1992).
+  3. Numerical calculations by Marotzke and Scott (1999) indicate that the
+     mass transport is not limited by the rate of deep convection, but it is
+     sensitive to the assumed value of vertical eddy diffusivity, especially near
+     side boundaries.
+  4. Cold water is mixed upward at the ocean’s boundaries, above seamounts
+     and mid-ocean ridges, along strong currents such as the Gulf Stream,
+     and in the Antarctic Circumpolar Current (Toggweiler and Russell, 2008;
+     Garabato et al, 2004, 2007). Because mixing is strong over mid-ocean
+     ridges and small in nearby areas, flow is zonal in the ocean basins and
+     poleward along the ridges (Hogg et al. 2001). A map of the circulation
+     will not look like figure 13.4. Numerical models and measurements of deep
+     flow by floats show the flow is indeed zonal.
+  5. Because the transport of mass, heat, and salt are not closely related the
+     transport of heat into the north Atlantic may not be as sensitive to surface
+     salinity as described above.
+
+13.4 Observations of the Deep Circulation
+    The abyssal circulation is less well known than the upper-ocean circulation.
+Direct observations from moored current meters or deep-drifting floats were
+diﬀicult to make until recently, and there are few long-term direct measurements
+of current. In addition, the measurements do not produce a stable mean value for
+the deep currents. For example, if the deep circulation takes roughly 1,000 years
+to transport water from the north Atlantic to the Antarctic Circumpolar Current
+and then to the north Pacific, the mean flow is about 1 mm/s. Observing
+this small mean flow in the presence of typical deep currents having variable
+velocities of up to 10 cm/s or greater, is very diﬀicult.
+    Most of our knowledge of the deep circulation is inferred from measured
+distribution of water masses with their distinctive temperature and salinity and
+their concentrations of oxygen, silicate, tritium, fluorocarbons and other tracers.
+These measurements are much more stable than direct current measurements,
+and observations made decades apart can be used to trace the circulation. Tom-
+czak (1999) carefully describes how the techniques can be made quantitative and
+how they can be applied in practice.
+Water Masses The concept of water masses originates in meteorology. Vil-
+helm Bjerknes, a Norwegian meteorologist, first described the cold air masses
+that form in the polar regions. He showed how they move southward, where
+they collide with warm air masses at places he called fronts, just as masses of
+troops collide at fronts in war (Friedman, 1989). In a similar way, water masses
+ 13.4. OBSERVATIONS OF THE DEEP CIRCULATION                                                                                      223
+
+ are formed in different regions of the ocean, and the water masses are often sep-
+ arated by fronts. Note, however, that strong winds are associated with fronts
+ in the atmosphere because of the large difference in density and temperature
+ on either side of the front. Fronts in the ocean sometimes have little contrast
+ in density, and these fronts have only weak currents.
+     Tomczak (1999) defines a water mass as a
+
+                              body of water with a common formation history, having its origin in a
+                              physical region of the ocean. Just as air masses in the atmosphere, wa-
+                              ter masses are physical entities with a measurable volume and therefore
+                              occupy a finite volume in the ocean. In their formation region they have
+                              exclusive occupation of a particular part of the ocean. Elsewhere they
+                              share the ocean with other water masses with which they mix. The total
+                              volume of a water mass is given by the sum of all its elements regardless
+                              of their location.
+
+     Plots of salinity as a function of temperature, called T-S plots, are used to
+ delineate water masses and their geographical distribution, to describe mixing
+ among water masses, and to infer motion of water in the deep ocean. Here’s
+ why the plots are so useful: water properties, such as temperature and salinity,
+ are formed only when the water is at the surface or in the mixed layer. Heating,
+ cooling, rain, and evaporation all contribute. Once the water sinks below the
+ mixed layer temperature and salinity can change only by mixing with adjacent
+ water masses. Thus water from a particular region has a particular temperature
+ associated with a particular salinity, and the relationship changes little as the
+ water moves through the deep ocean.
+
+                                                                       Salinity
+                        34.5       35       35.5     36         36.5   37 34.5    35   35.5         36    36.5         37
+                      0                                                                                                     30 o
+
+                                                                                                   30
+                                                                                                                            25 o
+                                                                                                                 50
+                      1000
+
+
+
+
+Pressure (decibars)                                                                                                                Temperature (Celsius)
+                                                                                                                            20 o
+
+                                                                                              75
+                      2000
+                                                                                                         600                15 o
+
+
+                                                                                                                            10 o
+                      3000
+                                                                                                          Station 61
+                                                            Temperature                                   Station 64
+                                                            Salinity                                                        5o
+
+
+                      4000                                                                                                  0o
+                             0o    6o       12 o     18 o       24 o   30 o
+                                        Temperature (Celsius)
+ Figure 13.6 Temperature and salinity measured at hydrographic stations on either side of the
+ Gulf Stream. Data are from tables 10.2 and 10.4. Left: Temperature and salinity plotted
+ as a function of depth. Right: The same data, but salinity is plotted as a function of
+ temperature in a T-S plot. Notice that temperature and salinity are uniquely related below
+ the mixed layer. A few depths are noted next to data points.
+224                       CHAPTER 13. DEEP CIRCULATION IN THE OCEAN
+
+          Temperature                       Salinity                                          Salinity
+
+                                                                                                         (T1 ,S1 )
+
+
+               T1                            S1
+
+
+
+
+                                                                  Temperature
+  Depth                        Depth
+
+
+
+
+                    T2                             S2
+                                                                                  (T2 ,S2 )
+
+
+
+
+          Temperature                       Salinity                                          Salinity
+
+                          T1                                 S1
+
+                                                                                                             (T1 ,S1 )
+                     2                       1
+                          1
+
+
+
+                                                                  Temperature
+  Depth                        Depth
+                                       S2          2
+          2          T2
+                                                                                (T2 ,S2 )
+                1
+                                                        S3
+
+                                                        S3                                               (T3 ,S3 )
+          T3
+Figure 13.7 Upper: Mixing of two water masses produces a line on a T-S plot. Lower:
+Mixing among three water masses produces intersecting lines on a T-S plot, and the apex at
+the intersection is rounded by further mixing. After Defant (1961: 205).
+
+
+    Thus temperature and salinity are not independent variables. For example,
+the temperature and salinity of the water at different depths below the Gulf
+Stream are uniquely related (figure 13.6, right), indicating they came from the
+same source region, even though they do not appear related if temperature and
+salinity are plotted independently as a function of depth (figure 13.6, left).
+   Temperature and salinity are conservative properties because there are no
+sources or sinks of heat and salt in the interior of the ocean. Other properties,
+such as oxygen are non-conservative. For example, oxygen content may change
+slowly due to oxidation of organic material and respiration by animals.
+   Each point in the T-S plot is a water type. This is a mathematical ideal.
+Some water masses may be very homogeneous and they are almost points on
+the plot. Other water masses are less homogeneous, and they occupy regions
+on the plot.
+    Mixing two water types leads to a straight line on a T-S diagram (figure
+13.7). Because the lines of constant density on a T-S plot are curved, mixing
+increases the density of the water. This is called densification (figure 13.8).
+13.4. OBSERVATIONS OF THE DEEP CIRCULATION                                                                                           225
+
+                                      15 o
+                                                         24.5
+                                                  σt =                  0
+                                                                                                                   G
+                                                                    25.
+
+
+
+
+              Temperature (Celsius)
+                                                                                         .0
+                                      10 o                                          26
+                                                                5
+                                                            25.                               .5
+                                                                                          26
+                                                                                                       M
+                                                                                                      .0
+                                       5   o
+                                                                                                   27
+                                                                                                             .5
+                                                                                                           27
+                                                                      L                                            .0
+                                                                                                                  28
+                                           o
+                                       0
+                                           32.5            33.0             33.5               34.0        34.5        35.0
+                                                                                   Salinity
+Figure 13.8 Mixing of two water types of the same density(L and G) produces water that is
+             denser (M) than either water type. After Tolmazin (1985: 137).
+
+
+
+Water Masses and the Deep Circulation Let’s use these ideas of water
+masses and mixing to study the deep circulation. We start in the south Atlantic
+because it has very clearly defined water masses. A T-S plot calculated from
+hydrographic data collected in the south Atlantic (figure 13.9) shows three im-
+portant water masses listed in order of decreasing depth (table 13.1): Antarctic
+Bottom Water aab, North Atlantic Deep Water nadw, and Antarctic Interme-
+diate Water aiw. All are deeper than one kilometer. The mixing among three
+water masses shows the characteristic rounded apexes shown in the idealized
+case shown in figure 13.7.
+   The plot indicates that the same water masses can be found throughout the
+western basins in the south Atlantic. Now let’s use a cross section of salinity to
+trace the movement of the water masses using the core method.
+Core Method The slow variation from place to place in the ocean of a tracer
+such as salinity can be used to determine the source of the waters masses such
+as those in figure 13.9. This is called the core method. The method may also
+be used to track the slow movement of the water mass. Note, however, that a
+slow drift of the water and horizontal mixing both produce the same observed
+properties in the plot, and they cannot be separated by the core method.
+    A core is a layer of water with extreme value (in the mathematical sense) of
+Table 13.1 Water Masses of the south Atlantic between 33◦ S and 11◦ N
+                                                                                                                  Temp.        Salinity
+                                                                                                                   (◦ C)
+Antarctic water                                   Antarctic Intermediate Water                             aiw           3.3     34.15
+                                                  Antarctic Bottom Water                                   abw           0.4     34.67
+North Atlantic water                              North Atlantic Deep Water                                nadw          4.0     35.00
+                                                  North Atlantic Bottom Water                              nabw          2.5     34.90
+Thermocline water                                 Subtropical Lower Water                                   u          18.0      35.94
+From Defant (1961: table 82)
+226                                              CHAPTER 13. DEEP CIRCULATION IN THE OCEAN
+
+                                           34 – 35             34 – 35                 34 – 35 – 36
+                        30 o
+
+
+                                                                                           15 S         5N
+                        25 o
+                                                                                24 S
+                                                                                                       4S
+                                                          35 S                                               U
+
+
+
+
+Temperature (Celsius)
+                        20 o
+
+
+
+                        15 o
+
+
+
+                        10o
+
+                                   47 S
+                             o
+                         5
+                                                                                                      NADW
+                                                                                        AIW
+                                                                                         AAB
+                         0o
+                                 34 – 35             34 – 35                 34 – 35
+                                                                         Salinity
+Figure 13.9 T-S plot of data collected at various latitudes in the western basins of the
+south Atlantic. Lines drawn through data from 5◦ N, showing possible mixing between
+water masses: nadw–North Atlantic Deep Water, aiw–Antarctic Intermediate Water, aab
+Antarctic Bottom Water, u Subtropical Lower Water.
+
+salinity or other property as a function of depth. An extreme value is a local
+maximum or minimum of the quantity as a function of depth. The method
+assumes that the flow is along the core. Water in the core mixes with the water
+masses above and below the core and it gradually loses its identity. Furthermore,
+the flow tends to be along surfaces of constant potential density.
+    Let’s apply the method to the data from the south Atlantic to find the source
+of the water masses. As you might expect, this will explain their names.
+    We start with a north-south cross section of salinity in the western basins of
+the Atlantic (figure 13.10). It we locate the maxima and minima of salinity as
+a function of depth at different latitudes, we can see two clearly defined cores.
+The upper low-salinity core starts near 55◦ S and it extends northward at depths
+near 1000 m. This water originates at the Antarctic Polar Front zone. This is
+the Antarctic Intermediate Water. Below this water mass is a core of salty water
+originating in the far north Atlantic. This is the North Atlantic Deep Water.
+Below this is the most dense water, the Antarctic Bottom Water. It originates
+in winter when cold, dense, saline water forms in the Weddell Sea and other
+shallow seas around Antarctica. The water sinks along the continental slope
+and mixes with Circumpolar Deep Water. It then fills the deep basins of the
+south Pacific, Atlantic, and Indian ocean.
+    The Circumpolar Deep Water is mostly North Atlantic Deep Water that
+has been carried around Antarctica. As it is carried along, it mixes with deep
+waters of the Indian and Pacific Ocean to form the circumpolar water.
+    The flow is probably not along the arrows shown in figure 13.10. The distri-
+ 13.4. OBSERVATIONS OF THE DEEP CIRCULATION                                                                                                          227
+
+                                               PF        SAF             <37                                                                   35
+                0        .3                    34.1                                            36
+                          .5                                   36                                    37     36.5                          .8
+                                                                                                                                    35
+                                                                                                                                          34.9      34.9
+                                                                                                             36            <34.9
+                                               34.7                                                         35.5
+                                                      34.2                     34.5     34.7                                               <34.9
+            -1000                                              34.3
+
+                                                                                                      35                           34.9
+            -2000
+
+
+Depth (m)
+                               34.68
+
+            -3000                                                                                   34.94
+                                                        34.8
+                                                                                      34.9
+            -4000
+                                                        34.7
+                                                                                                                          Greenland-Iceland
+            -5000
+                                                                                                                               Ridge
+            -6000 Antarctica
+
+            -7000
+                 -80 o                 -60 o          -40 o           -20 o            0o            20 o          40 o        60 o                  80 o
+ Figure 13.10 Contour plot of salinity as a function of depth in the western basins of the
+ Atlantic from the Arctic Ocean to Antarctica. The plot clearly shows extensive cores, one
+ at depths near 1000 m extending from 50◦ S to 20◦ N, the other at is at depths near 2000 m
+ extending from 20◦ N to 50◦ S. The upper is the Antarctic Intermediate Water, the lower is
+ the North Atlantic Deep Water. The arrows mark the assumed direction of the flow in the
+ cores. The Antarctic Bottom Water fills the deepest levels from 50◦ S to 30◦ N. pf is the polar
+ front, saf is the subantarctic front. See also figures 10.15 and 6.10. After Lynn and Reid
+ (1968).
+
+
+ bution of properties in the abyss can be explained by a combination of slow flow
+ in the direction of the arrows plus horizontal mixing along surfaces of constant
+ potential density with some weak vertical mixing. The vertical mixing proba-
+ bly occurs at the places where the density surface reaches the sea bottom at a
+ lateral boundary such as seamounts, mid-ocean ridges, and along the western
+ boundary. Flow in a plane perpendicular to that of the figure may be at least
+ as strong as the flow in the plane of the figure shown by the arrows.
+     The core method can be applied only to a tracer that does not influence
+ density. Hence temperature is usually a poor choice. If the tracer controls den-
+ sity, then flow will be around the core according to ideas of geostrophy, not
+ along core as assumed by the core method.
+     The core method works especially well in the south Atlantic with its clearly
+ defined water masses. In other ocean basins, the T-S relationship is more com-
+ plicated. The abyssal waters in the other basins are a complex mixture of
+ waters coming from different areas in the ocean (figure 13.11). For example,
+ warm, salty water from the Mediterranean Sea enters the north Atlantic and
+ spreads out at intermediate depths displacing intermediate water from Antarc-
+ tica in the north Atlantic, adding additional complexity to the flow as seen in
+ the lower right part of the figure.
+ Other Tracers I have illustrated the core method using salinity as a tracer,
+ but many other tracers are used. An ideal tracer is easy to measure even when
+ its concentration is very small; it is conserved, which means that only mixing
+ changes its concentration; it does not influence the density of the water; it exists
+ in the water mass we wish to trace, but not in other adjacent water masses; and
+ it does not influence marine organisms (we don’t want to release toxic tracers).
+     Various tracers meet these criteria to a greater or lesser extent, and they are
+228                                                            CHAPTER 13. DEEP CIRCULATION IN THE OCEAN
+
+                                    (a) Indian Ocean                                                                                                       (c) North Pacific l water
+                                                                                         ter                                                                                      a 100-200m
+                                                                                                       100-200m                                                 Ocean         ntr
+                                                                                      wa                                                                                   ce
+                                                                                                                                                                                                 ic
+                                                                                 rial                                                                                                      cif
+                        15 o                                                 ato                                                                 15 o                            th
+                                                                                                                                                                                      Pa                            r
+                                                                                                 te
+                                                                                                       r                                                                    or     ea
+                                                                                                                                                                                       st                      te
+                                                                        equ
+                                                                                           l   wa                                                                            N            N
+                                                                                  ra                        ea                                                              ce orth
+                                                                               nt                        dS
+                                                                                                                                                                              nt P
+                                                                         n   ce                        Re ater                                            300-400m
+                                                                                                                                                                                 ra ac
+                                                                                                                                                                                    l w ifi
+                        10 o                                    In
+                                                                   d   ia                                w                                       10 o             Pac
+                                                                                                                                                                      ific
+                                                                                                                                                                       st  eq
+                                                                                                                                                                                        at c
+                                                                                                                                                                                           er
+                                                                                                                                                                      we    400-
+                                                                                                                                                                              ua
+                                                                                                   1000m                                                                    700m to ria                                       Key
+                                  subantarctic       500-                                                                                                 North Pacific
+                                                                                                                                                                                        lw
+                                     water         8000m                                                                                                  intermediate
+                                                                                                                                                                                           a                            SA subarctic water
+                         5o                           r                                                                                           5o          water                                                     AI Arctic intermediate
+                                                  tic
+                                              arc ate                                                                                                                                            1000m                   water
+                                           Antdiate w                                                                                             Pacific subarctic
+                                         term
+                                                                  2000m                                                                                                                               2000m
+                                                                                                                                                             water
+
+
+
+
+Temperature (Celsius)
+                                       in                       3000m                                                                                                 1000m                            3000m
+                                                            circumpolar water 1000-4000m
+                         0o                                Antarctic bottom water                                                                 0o
+
+                                   34.0       34.5              35.0                               35.5                                 36.0   36.5          34.0                34.5                   35.0             35.5             36.0              36.5
+
+                                   (b) South Pacific                                                       100-200m                                            (d) Atlantic Ocean                                                100-200m 100-200m
+                                                                                              er
+                                        Ocean                                        w
+                                                                                         at                                  a te
+                                                                                                                                    r
+                                                                                                                                                                                                                                          r
+                                                                              ra
+                                                                                 l
+                                                                                                                      al
+                                                                                                                         w                                                                                                            ate               er
+                        15   o
+                                                                                      er
+                                                                                                              t   r
+                                                                                                                                                 15   o                                                                           lw                 at
+                                                                                                           en                                                                                                                 tra
+                                                                        t
+                                                  ea
+                                                                                 at                    c                                                                                                                    n                     lw
+                                                     st                      w                  ific                                                                                                                    ce                    tra
+                                                 Pac Sou                al                 ac                                                                                                                      nti
+                                                                                                                                                                                                                      c                  ce
+                                                                                                                                                                                                                                            n
+                                                                                   hP                                                                                                                                                tic                            ean
+                                                     ific th                   t                                                                                                                                tla                                            rran
+                                                         eq Pa              ou                                                                                                                                hA                 lan                      dite
+                                                           ua cif  st
+                                                                        s
+                                                                                                                                                                                                           out                At                     Me water
+                        10 o                                  we
+                                                             to ic                                                                               10 o                                                    S              r t h
+                                 subantarctic                  ri ce                                                                                                                                                No
+                                    water                            n
+                                           400-                                                                                                            subantarctic                     500- 500-
+                                          600m                                                                                                                water                        800m1000m
+                         5   o
+                                               500-       1000m                                                                                   5   o                                           SA
+                                          tic 800m                                             Pacific subarctic water                                                                                           2000m
+                                     tarc
+                                  An ediate                 2000m                                                                                                                                               3000m
+                                                                                                                                                                                                       AI
+                                      rm                    3000m                                                                                                                                          North Atlantic deep and bottom water
+                                 inte ater                                                                                                                      rctic te
+                                       w                        circumpolar water 1000-4000m                                                               Antarmedia                                   circumpolar water 1000-4000m
+                         0o                                                                                                                       0o       inte water                                 Antarctic bottom water
+
+                                   34.0       34.5              35.0                               35.5                                 36.0   36.5          34.0                34.5                   35.0             35.5             36.0              36.5
+                                                                                                                                                Salinity
+            Figure 13.11 T-S plots of water in the various ocean basins. After Tolmazin (1985: 138).
+
+used to follow the deep and intermediate water in the ocean. Here are some of
+the most widely used tracers.
+   1. Salinity is conserved, and it influences density much less than temperature.
+   2. Oxygen is only partly conserved. Its concentration is reduced by the
+      respiration by marine plants and animals and by oxidation of organic
+      carbon.
+   3. Silicates are used by some marine organisms. They are conserved at depths
+      below the sunlit zone.
+   4. Phosphates are used by all organisms, but they can provide additional
+      information.
+   5. 3 He is conserved, but there are few sources, mostly at deep-sea volcanic
+      areas and hot springs.
+   6. 3 H (tritium) was produced by atomic bomb tests in the atmosphere in the
+      1950s. It enters the ocean through the mixed layer, and it is useful for
+      tracing the formation of deep water. It decays with a half life of 12.3 y
+      and it is slowly disappearing from the ocean. Figure 10.16 shows the slow
+      advection or perhaps mixing of the tracer into the deep north Atlantic.
+      Note that after 25 years little tritium is found south of 30◦ N. This implies
+      a mean velocity of less than a mm/s.
+   7. Fluorocarbons (Freon used in air conditioning) have been recently injected
+      into atmosphere. They can be measured with very great sensitivity, and
+      they are being used for tracing the sources of deep water.
+13.5. ANTARCTIC CIRCUMPOLAR CURRENT                                           229
+
+  8. Sulphur hexafluoride SF6 can be injected into sea water, and the concen-
+     tration can be measured with great sensitivity for many months.
+Each tracer has its usefulness, and each provides additional information about
+the flow.
+North Atlantic Meridional Overturning Circulation The great impor-
+tance of the meridional overturning circulation for European climate has led to
+programs to monitor the circulation. The Rapid Climate Change/Meridional
+Overturning Circulation and Heat Flux Array rapid/mocha deployed an ar-
+ray of instruments that measured bottom pressure plus temperature and salinity
+throughout the water column at 15 locations along 24◦ N near the western and
+eastern boundaries and on either side of the mid-Atlantic ridge beginning in
+2004 (Church, 2007). At the same time, flow of the Gulf Stream was mea-
+sured through the Strait of Florida, and wind stress, which gives the Ekman
+transports, was measured along 24◦ N by satellite instruments. The measure-
+ments show that transport across 24◦ N was zero, within the accuracy of the
+measurements, as expected. The one-year average of the Meridional Overturn-
+ing Circulation was 18.7 ± 5.6 Sv, with variability ranging from 4.4 to 35.3 Sv.
+Accuracy of the measurement was ± 1.5 Sv.
+
+13.5 Antarctic Circumpolar Current
+    The Antarctic Circumpolar Current is an important feature of the ocean’s
+deep circulation because it transports deep and intermediate water between
+the Atlantic, Indian, and Pacific Ocean, and because Ekman pumping driven
+by westerly winds is a major driver of the deep circulation. Because it is so
+important for understanding the deep circulation in all ocean, let’s look at what
+is known about this current.
+    A plot of density across a line of constant longitude in the Drake Passage
+(figure 13.12) shows three fronts. They are, from north to south: 1) the Sub-
+antarctic Front, 2) the Polar Front, and 3) the Southern acc Front. Each front
+is continuous around Antarctica (figure 13.13). The plot also shows that the
+constant-density surfaces slope at all depths, which indicates that the currents
+extend to the bottom.
+    Typical current speeds are around 10 cm/s with speeds of up to 50 cm/s near
+some fronts. Although the currents are slow, they transport much more water
+than western boundary currents because the flow is deep and wide. Whitworth
+and Peterson (1985) calculated transport through the Drake Passage using sev-
+eral years of data from an array of 91 current meters on 24 moorings spaced
+approximately 50 km apart along a line spanning the passage. They also used
+measurements of bottom pressure measured by gauges on either side of the pas-
+sage. They found that the average transport through the Drake Passage was
+125 ± 11 Sv, and that the transport varied from 95 Sv to 158 Sv. The maximum
+transport tended to occur in late winter and early spring (figure 13.14).
+    Because the antarctic currents reach the bottom, they are influenced by to-
+pographic steering. As the current crosses ridges such as the Kerguelen Plateau,
+the Pacific-Antarctic Ridge, and the Drake Passage, it is deflected by the ridges.
+

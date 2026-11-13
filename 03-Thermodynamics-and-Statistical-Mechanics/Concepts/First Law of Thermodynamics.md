@@ -5,7 +5,7 @@ type: concept
 scope: [extra-book]
 by: [book]
 status: draft
-tags: [subject/thermo, type/concept, extra/book, src/book, status/draft]
+tags: [subject/thermo, type/concept, extra/book, src/book, status/draft, quiz/thermo, quiz/th-tut1, quiz/th-background]
 ---
 # First Law of Thermodynamics
 

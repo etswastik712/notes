@@ -1,0 +1,275 @@
+9.3. EKMAN MASS TRANSPORT                                                                                                143
+
+
+                              80
+
+                              60         Ralph & Niiler (2000)
+
+
+
+
+Angle to the Wind (degrees)
+                              40
+                                             New Data
+                              20
+
+                               0
+                              –20
+
+                              –40
+
+                              –60
+
+                              –80
+
+
+                                   –80   –60          –40          –20           0             20           40    60      80
+                                                                         Latitude (degrees)
+Figure 9.6 Angle between the wind and flow at the surface calculated by Maximenko and
+Niiler using positions from drifters drogued at 15 m with satellite-altimeter, gravity, and
+grace data and winds from the ncar/ncep reanalysis.
+
+where N is the stability frequency defined by (8.36). Furthermore
+                                                                                                         p
+                                                Az ∼ U10
+                                                      2
+                                                         /N              and         DE ∼ U10 /           Nf           (9.23)
+
+Notice that (9.22) and (9.23) are now dimensionally correct. The equations used
+earlier, (9.14), (9.16), (9.20), and (9.21) all required a dimensional coeﬀicient.
+
+9.3   Ekman Mass Transport
+   Flow in the Ekman layer at the sea surface carries mass. For many reasons
+we may want to know the total mass transported in the layer. The Ekman
+mass transport ME is defined as the integral of the Ekman velocity UE , VE from
+the surface to a depth d below the Ekman layer. The two components of the
+transport are MEx , MEy :
+                                                            Z 0                                Z 0
+                                                MEx =             ρUE dz,            MEy =               ρVE dz        (9.24)
+                                                             −d                                     −d
+
+The transport has units kg/(m·s). It is the mass of water passing through
+a vertical plane one meter wide that is perpendicular to the transport and
+extending from the surface to depth −d (figure 9.7).
+   We calculate the Ekman mass transports by integrating (8.15) in (9.24):
+                                                Z 0                                   Z 0
+                                            f         ρ VE dz = f MEy = −                     dTxz
+                                                 −d                                    −d
+                                                                    f MEy = −Txz z=0 + Txz z=−d                        (9.25)
+
+A few hundred meters below the surface the Ekman velocities approach zero,
+and the last term of (9.25) is zero. Thus mass transport is due only to wind
+144       CHAPTER 9. RESPONSE OF THE UPPER OCEAN TO WINDS
+                   z
+
+
+                         } 1m                            }Y                Sea Surface
+
+
+                                                                      Y MX
+           U                                U             Q       =
+                                                              X        r
+
+                            x
+
+
+                            y
+  Figure 9.7 Sketch for defining Left: mass transports, and Right: volume transports.
+
+
+
+stress at the sea surface (z = 0). In a similar way, we can calculate the transport
+in the x direction to obtain the two components of the Ekman transport:
+
+                                  f MEy = −Txz (0)                                       (9.26a)
+                                  f MEx = Tyz (0)                                        (9.26b)
+
+where Txz (0), Tyz (0) are the two components of the stress at the sea surface.
+    Notice that the transport is perpendicular to the wind stress, and to the right
+of the wind in the northern hemisphere. If the wind is to the north in the positive
+y direction (a south wind), then Txz (0) = 0, MEy = 0, and MEx = Tyz (0)/f .
+In the northern hemisphere, f is positive, and the mass transport is in the x
+direction, to the east.
+    It may seem strange that the drag of the wind on the water leads to a current
+at right angles to the drag. The result follows from the assumption that friction
+is confined to a thin surface boundary layer, that it is zero in the interior of
+the ocean, and that the current is in equilibrium with the wind so that it is no
+longer accelerating.
+    Volume transport Q is the mass transport divided by the density of water
+and multiplied by the width perpendicular to the transport.
+
+                                  Y Mx                 XMy
+                           Qx =        ,        Qy =                                      (9.27)
+                                    ρ                   ρ
+
+where Y is the north-south distance across which the eastward transport Qx is
+calculated, and X in the east-west distance across which the northward trans-
+port Qy is calculated. Volume transport has dimensions of cubic meters per
+second. A convenient unit for volume transport in the ocean is a million cubic
+meters per second. This unit is called a Sverdrup, and it is abbreviated Sv.
+    Recent observations of Ekman transport in the ocean agree with the the-
+oretical values (9.26). Chereskin and Roemmich (1991) measured the Ekman
+volume transport across 11◦ N in the Atlantic using an acoustic Doppler current
+profiler described in Chapter 10. They calculated a transport of Qy = 12.0 ± 5.5
+Sv (northward) from direct measurements of current, Qy = 8.8 ± 1.9 Sv from
+measured winds using (9.26) and (9.27), and Qy = 13.5 ± 0.3 Sv from mean
+winds averaged over many years at 11◦ N.
+9.4. APPLICATION OF EKMAN THEORY                                                             145
+
+                      Wi
+                        nd
+   Ek
+      ma
+         nT
+           ran                lled
+              spo                  Wa
+                 rt                                                     ME
+                                     ter
+                             we              Land
+   ME                                                                                100 - 300 m
+                         Up                (California)
+                      Co
+                         ld                                                   ater
+                                                          U p w e lli n g W
+
+
+      100 km
+
+Figure 9.8 Sketch of Ekman transport along a coast leading to upwelling of cold water along
+the coast. Left: Plan view. North winds along a west coast in the northern hemisphere
+cause Ekman transports away from the shore. Right: Cross section. The water transported
+offshore must be replaced by water upwelling from below the mixed layer.
+
+Use of Transports Mass transports are widely used for two important rea-
+sons. First, the calculation is much more robust than calculations of velocities
+in the Ekman layer. By robust, I mean that the calculation is based on fewer
+assumptions, and that the results are more likely to be correct. Thus the cal-
+culated mass transport does not depend on knowing the distribution of velocity
+in the Ekman layer or the eddy viscosity.
+    Second, the variability of transport in space has important consequences.
+Let’s look at a few applications.
+
+9.4   Application of Ekman Theory
+    Because steady winds blowing on the sea surface produce an Ekman layer
+that transports water at right angles to the wind direction, any spatial variability
+of the wind, or winds blowing along some coasts, can lead to upwelling. And
+upwelling is important:
+   1. Upwelling enhances biological productivity, which feeds fisheries.
+   2. Cold upwelled water alters local weather. Weather onshore of regions of
+      upwelling tend to have fog, low stratus clouds, a stable stratified atmo-
+      sphere, little convection, and little rain.
+   3. Spatial variability of transports in the open ocean leads to upwelling and
+      downwelling, which leads to redistribution of mass in the ocean, which
+      leads to wind-driven geostrophic currents via Ekman pumping.
+
+Coastal Upwelling To see how winds lead to upwelling, consider north winds
+blowing parallel to the California Coast (figure 9.8 left). The winds produce
+a mass transport away from the shore everywhere along the shore. The water
+pushed offshore can be replaced only by water from below the Ekman layer.
+This is upwelling (figure 9.8 right). Because the upwelled water is cold, the
+upwelling leads to a region of cold water at the surface along the coast. Figure
+10.16 shows the distribution of cold water off the coast of California.
+    Upwelled water is colder than water normally found on the surface, and
+it is richer in nutrients. The nutrients fertilize phytoplankton in the mixed
+146       CHAPTER 9. RESPONSE OF THE UPPER OCEAN TO WINDS
+
+layer, which are eaten by zooplankton, which are eaten by small fish, which
+are eaten by larger fish and so on to infinity. As a result, upwelling regions
+are productive waters supporting the world’s major fisheries. The important
+regions are offshore of Peru, California, Somalia, Morocco, and Namibia.
+    Now I can answer the question I asked at the beginning of the chapter:
+Why is the climate of San Francisco so different from that of Norfolk, Virginia?
+Figures 4.2 or 9.8 show that wind along the California and Oregon coasts has a
+strong southward component. The wind causes upwelling along the coast, which
+leads to cold water close to shore. The shoreward component of the wind brings
+warmer air from far offshore over the colder water, which cools the incoming
+air close to the sea, leading to a thin, cool atmospheric boundary layer. As the
+air cools, fog forms along the coast. Finally, the cool layer of air is blown over
+San Francisco, cooling the city. The warmer air above the boundary layer, due
+to downward velocity of the Hadley circulation in the atmosphere (see figure
+4.3), inhibits vertical convection, and rain is rare. Rain forms only when winter
+storms coming ashore bring strong convection higher up in the atmosphere.
+    In addition to upwelling, other processes influence weather in California and
+Virginia.
+  1. The oceanic mixed layer tends to be thin on the eastern side of ocean, and
+     upwelling can easily bring up cold water.
+  2. Currents along the eastern side of the ocean at mid-latitudes tend to bring
+     colder water from higher latitudes.
+All these processes are reversed offshore of east coasts, leading to warm water
+close to shore, thick atmospheric boundary layers, and frequent convective rain.
+Thus Norfolk is much different that San Francisco due to upwelling and the
+direction of the coastal currents.
+Ekman Pumping The horizontal variability of the wind blowing on the sea
+surface leads to horizontal variability of the Ekman transports. Because mass
+must be conserved, the spatial variability of the transports must lead to vertical
+velocities at the top of the Ekman layer. To calculate this velocity, we first
+integrate the continuity equation (7.19) in the vertical:
+                   Z 0                  
+                         ∂u ∂v       ∂w
+                 ρ           +    +         dz = 0
+                    −d   ∂x ∂y       ∂z
+                   Z 0            Z 0               Z 0
+                ∂               ∂                       ∂w
+                       ρ u dz +         ρ v dz = −ρ         dz
+               ∂x −d            ∂y −d                −d ∂z
+                             ∂MEx      ∂MEy
+                                   +           = −ρ [w(0) − w(−d)]
+                               ∂x        ∂y
+    By definition, the Ekman velocities approach zero at the base of the Ekman
+layer, and the vertical velocity at the base of the layer wE (−d) due to divergence
+of the Ekman flow must be zero. Therefore:
+                          ∂MEx   ∂MEy
+                               +      = −ρ wE (0)                          (9.28a)
+                           ∂x     ∂y
+9.5. LANGMUIR CIRCULATION                                                     147
+
+                             ∇H · ME = −ρ wE (0)                          (9.28b)
+
+Where ME is the vector mass transport due to Ekman flow in the upper bound-
+ary layer of the ocean, and ∇H is the horizontal divergence operator. (9.28)
+states that the horizontal divergence of the Ekman transports leads to a verti-
+cal velocity in the upper boundary layer of the ocean, a process called Ekman
+Pumping.
+    If we use the Ekman mass transports (9.26) in (9.28) we can relate Ekman
+pumping to the wind stress.
+                                                       
+                             1 ∂ Tyz (0)        ∂ Txz (0)
+                  wE (0) = −                  −                         (9.29a)
+                             ρ ∂x       f       ∂y     f
+                                      
+                                    T
+                  wE (0) = −curlz                                       (9.29b)
+                                    ρf
+
+where T is the vector wind stress and the subscript z indicates the vertical
+component of the curl.
+    The vertical velocity at the sea surface w(0) must be zero because the surface
+cannot rise into the air, so wE (0) must be balanced by another vertical velocity.
+We will see in Chapter 12 that it is balanced by a geostrophic velocity wG (0)
+at the top of the interior flow in the ocean.
+    Note that the derivation above follows Pedlosky (1996: 13), and it differs
+from the traditional approach that leads to a vertical velocity at the base of the
+Ekman layer. Pedlosky points out that if the Ekman layer is very thin compared
+with the depth of the ocean, it makes no difference whether the velocity is
+calculated at the top or bottom of the Ekman layer, but this is usually not true
+for the ocean. Hence, we must compute vertical velocity at the top of the layer.
+
+9.5   Langmuir Circulation
+    Measurements of surface currents show that winds generate more than Ek-
+man and inertial currents at the sea surface. They also generate a Langmuir
+circulation (Langmuir, 1938), a current that spiral around an axis parallel to the
+wind direction. Weller et al. (1985) observed such a flow during an experiment
+to measure the wind-driven circulation in the upper 50 meters of the sea. They
+found that during a period when the wind speed was 14 m/s, surface currents
+were organized into Langmuir cells spaced 20 m apart, the cells were aligned at
+an angle of 15◦ to the right of the wind, and vertical velocity at 23 m depth was
+concentrated in narrow jets under the areas of surface convergence (figure 9.9).
+Maximum vertical velocity was −0.18 m/s. The seasonal thermocline was at 50
+m, and no downward velocity was observed in or below the thermocline.
+
+9.6 Important Concepts
+   1. Changes in wind stress produce transient oscillations in the ocean called
+      inertial currents
+      (a) Inertial currents are very common in the ocean.
+      (b) The period of the current is (2π)/f .
+

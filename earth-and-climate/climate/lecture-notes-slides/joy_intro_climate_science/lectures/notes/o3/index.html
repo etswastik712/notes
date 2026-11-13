@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O3 · A slow ocean that has to move</title>
+  <link rel="stylesheet" href="/intro_climate_science/css/site.css">
+</head>
+<body>
+  <header>
+    <h1>O3 · A slow ocean that has to move</h1>
+    <p class="subtitle">Lecture notes · EC2113 Ocean module · Lecture 3 · Friday 6 November 2026</p>
+  </header>
+  <main>
+<p><em>These notes follow the lecture as it was taught. We stopped at Nansen’s question, and we will work out the answer, Ekman transport, in detail in the next lecture. The rest of the plan, including why the ocean gains heat where it is cold, is at the end, under “Read this part”: read it before the next lecture. The readings are extracts in the course’s shared readings folder, under O3.</em></p>
+
+<h2 id="the-question">The question</h2>
+
+<p>Last lecture asked how much of the surface feels the weather. This one asks what that does to the climate, and then turns sideways. The ocean doesn’t only store heat: it gains heat in some places and loses it in others, so its water must move. What moves it?</p>
+
+<h2 id="1-recap-transport-and-the-storms-that-do-it">1. Recap: transport, and the storms that do it</h2>
+
+<p>A planet’s energy balance, radiation in equals radiation out, says little about whether it is habitable. That depends on what happens at the surface: how much energy is absorbed, released and carried away. A tidally locked planet can have a comfortable average temperature while neither its day side nor its night side can support life. So <strong>transport</strong> is central. Moving energy means moving mass, and moving mass means moving momentum. Put the three together and you get the general circulation of the atmosphere and the ocean.</p>
+
+<p>In the atmosphere, the Hadley cell carries energy out of the tropics, but it ends at about 30°, while the biggest energy deficit is near the poles. Beyond 30°, in the mid-latitudes, where rotation dominates, the energy is carried by <strong>storms</strong>: extratropical cyclones. Each is less violent than a tropical cyclone, but there are far more of them, and together they carry a large share of the energy poleward. Tropical cyclones, however destructive, carry only a small part of it. Extratropical storms form and travel along preferred paths, the <a href="https://en.wikipedia.org/wiki/Storm_track">storm tracks</a>.</p>
+
+<p>The same question for the ocean starts at a single point. How much energy does the surface capture, and how much does its temperature vary? For that, what matters is the <strong>effective heat capacity</strong> (O2).</p>
+
+<h2 id="2-what-sets-the-mixed-layers-depth">2. What sets the mixed layer’s depth</h2>
+
+<p><strong>How can a wind that blows <em>along</em> the surface mix the water <em>downwards</em>?</strong> Through shear stress. The wind drags the top layer of water, and the layer below is dragged less. That shear makes the flow turbulent, and the turbulent eddies move water up and down. Arjun’s lectures on fluids go into this.</p>
+
+<p><strong>The Arabian Sea’s mixed layer is deepest in June–July.</strong> Why should the winds be strongest then? Think about energy. In the monsoon the Indian subcontinent receives strong sunlight, and its heavy rain releases a great deal of latent heat. Something has to carry that energy away. The rain belt moves north over the subcontinent, where air rises in deep clouds and flows out aloft. To replace that air, air must flow in at the surface, and that inflow is the monsoon’s southwesterly wind across the Arabian Sea. The Arabian Sea lies right in the path of the strongest monsoon winds, so its mixed layer deepens.</p>
+
+<p><strong>Near Bermuda, in the western North Atlantic, the cycle is the other way round:</strong> about 90 m in January and only about 6 m in July. There the winds, and the storms, are strongest in winter, and winter cooling makes surface water sink. In summer, a thin warm lid sits on top.</p>
+
+<p><strong>The world’s mixed layer.</strong> The typical depth is about 50 m (the median in the 2011 reanalysis is about 44 m). The deepest mixed layers are in the northern winter, in two places: off Japan, and off the east coast of the United States and Canada, deepest of all in the North Atlantic, where it averages about 300 m and exceeds a kilometre in places. Those are exactly the starts of the two northern <strong>storm tracks</strong>, which lie off the east coasts of Asia and North America, over the western sides of the ocean basins. Storms deepen the mixed layer, and storms need fuel: water vapour, which warm water off those coasts supplies.</p>
+
+<p>In the Southern Ocean, in its winter, the mixed layer is deep (about 170 m averaged over 45–60°S) and <strong>much more uniform</strong>. There the winds blow strongly all the way round, in the band sailors call the <a href="https://en.wikipedia.org/wiki/Roaring_Forties">Roaring Forties</a>, and both the storms and the mean winds stir the sea. Why uniform in the south and patchy in the north? <strong>Continents.</strong> Land is rough, like sandpaper to the wind, while the sea gives little friction. Stand on the shore in Mumbai, then walk 20 m inland, and feel the breeze drop. The same thing happens at the scale of the planet: the winds are strong over the ocean and slow as soon as they meet land. The Southern Ocean has no land in the way.</p>
+
+<p><strong>Get into the habit:</strong> when you see a plot, look for the pattern and ask <em>why</em>. You can even hand an LLM a set of plots and ask it why. That is an efficient way to pick up concepts, though not, on its own, to understand them.</p>
+
+<p><strong>Why doesn’t the stirring go all the way down?</strong> Because the water is stratified: warmer, lighter water sits on colder, denser water. Mixing them means lifting dense water and pushing light water down, which raises the column’s potential energy, and the wind has to supply that energy. So the stirring stops at a depth set by how strong the wind is against how strong the stratification is. Below that, heat leaks down only slowly (see the O2 notes). For the fast climate, seasons to a few years, the top 50 m or so is all that matters.</p>
+
+<h2 id="3-a-slab-that-the-weather-kicks">3. A slab that the weather kicks</h2>
+
+<p>Treat the surface, land or mixed layer, as a slab with heat capacity C, and look at departures T′ from its average temperature:</p>
+
+<blockquote>
+  <p>C dT′/dt = F′(t) − λT′</p>
+</blockquote>
+
+<p>F′ is the weather kicking the slab: it changes the sunlight, it changes the winds, and the day and the seasons push it too. The term −λT′ pulls the slab back towards its usual temperature, because a warmer surface loses more heat.</p>
+
+<p><strong>Without the kicks, how does it behave?</strong> It decays exponentially back to its average. The timescale comes from the units alone: λT′ and C dT′/dt are both in W/m², so C/λ must be a time,</p>
+
+<blockquote>
+  <p>τ = C/λ.</p>
+</blockquote>
+
+<p>With Argha’s Planck value λ = 3.8 W m⁻² K⁻¹:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Heat capacity, as metres of water</th>
+      <th>τ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Land, for a year’s swing</td>
+      <td>about 1</td>
+      <td>about 12 days</td>
+    </tr>
+    <tr>
+      <td>Whole atmosphere</td>
+      <td>2.4</td>
+      <td>about a month</td>
+    </tr>
+    <tr>
+      <td>Mixed layer</td>
+      <td>50</td>
+      <td>about 1.7 years</td>
+    </tr>
+    <tr>
+      <td>Full ocean</td>
+      <td>4,000</td>
+      <td>about 140 years (longer in practice, because mixing to depth is slow)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>But F′ never lets the slab rest. The day, the seasons and the winds keep kicking it.</p>
+
+<p><strong>This is why Mumbai varies less than Pune.</strong> Land like Pune’s responds to a strong push within a couple of weeks. The mixed layer of the sea off Mumbai takes more than a year, and Mumbai’s air comes off that sea. The seasonal range of surface temperature, warmest month minus coldest, shows it: Delhi 23 K, Pune 9 K, Mumbai 5 K, the Arabian Sea 5 K. (Treat the tropical numbers with care. The tropics have small seasons anyway, so a 2 K range there can’t be compared directly with 23 K in Delhi. But Delhi and Mumbai, under not very different suns, can be compared: Delhi is land, land and more land, while Mumbai sits by the sea. Hence a <strong>continental</strong> climate against a coastal one.)</p>
+
+<h2 id="4-same-weather-two-slabs">4. Same weather, two slabs</h2>
+
+<p>Solve the slab equation with a daily cycle, a seasonal cycle and random weather, first for land and then for a mixed layer. These are the tutorial app’s own runs.</p>
+
+<p><strong>Land.</strong> Over a few days, the day-and-night cycle doesn’t change, but the weather pushes the land warmer and cooler on top of it. Over a few years the seasons come through, with a <strong>lag</strong>: the land is warmest some time after the sun is strongest, as in the cos(ωt − z/d) of the conduction solution. Over decades, with the seasons taken out, the land only jitters with the weather.</p>
+
+<p><strong>Ocean.</strong> At the same zooms, the mixed layer seems hardly to respond at all.</p>
+
+<p><strong>An applied question: does a weather forecast need a moving ocean?</strong> A forecast looks 5–10 days ahead. Over that time the sea’s temperature barely changes, so a forecast can start from today’s observed sea surface temperature and hold it fixed, and lose little. A <strong>seasonal</strong> forecast is different: the mean summer temperature, or the total monsoon rainfall over the next four months. A small change in sea temperature over a season means a large amount of heat taken in or given out, because the heat capacity is so large. Over a season the model has to have an ocean that responds to the energy going in and out of it.</p>
+
+<p><strong>Variability by timescale.</strong> Take the runs, do a Fourier transform, and plot how much variation there is at each timescale: a <strong>power spectrum</strong>. Any question in climate science has to name its scale. For questions about the next couple of months, most of the variation comes from the land, and you can leave the ocean out. For questions about a decade, the truly climatic scales, you can’t. And all of this comes from <strong>heat capacity alone</strong>: we haven’t yet let the ocean move. Ocean currents change the spectrum in many interesting ways, but that is beyond this course.</p>
+
+<h2 id="5-inertia-today">5. Inertia today</h2>
+
+<p>Rising greenhouse gases have put Earth out of balance by about <strong>+1 W/m²</strong> (CERES, 2010–2020). That is a lot of energy. More than 91% of the extra heat goes into the ocean, and because the ocean’s heat capacity is so large, its surface temperature changes by much less than a degree.</p>
+
+<p>There is no free lunch. Over decades to centuries, part of that heat is carried into the deep ocean, and the slow deep circulation (the overturning, often called the <a href="https://en.wikipedia.org/wiki/Thermohaline_circulation">thermohaline circulation</a>) brings deep water back to the surface only after centuries. For the whole system, deep ocean included, to come back into balance takes of the order of a thousand years. Until the deep ocean has warmed, it keeps drawing heat away from the surface, which slows the surface warming now. As the deep ocean warms, that brake weakens. So the emissions of the past 150 years will go on shaping the climate for centuries to come.</p>
+
+<h2 id="6-the-ocean-gains-heat-where-it-is-cold">6. The ocean gains heat where it is cold</h2>
+
+<p>Just as for the top of the atmosphere, we can map where the ocean surface <strong>gains</strong> energy and where it <strong>loses</strong> it, averaged over a year (the ocean reanalysis, 2011). If the ocean stood still, every point would have to balance its own budget over a year, and the map would be zero everywhere. It isn’t, so the ocean moves. Like the atmosphere with its Hadley cell and storm tracks, it can keep up an imbalance at a place by carrying heat in or out.</p>
+
+<p><strong>Start with the Pacific.</strong> Along the equator the sunlight is about the same everywhere. But the ocean gains almost no heat in the west and gains among the most anywhere on Earth in the east, far from land. Recall that the ocean’s budget is roughly sunlight in, evaporation out. If the sunlight is the same, the evaporation must differ. The winds are roughly the same, so what differs is the <strong>temperature</strong>. The eastern equatorial Pacific is the <strong>cold tongue</strong>, a tongue of cold water. Cold water evaporates little, so most of the sunlight stays in the ocean.</p>
+
+<p><strong>The western boundary currents do the opposite.</strong> The <a href="https://en.wikipedia.org/wiki/Gulf_Stream">Gulf Stream</a> in the Atlantic and the <a href="https://en.wikipedia.org/wiki/Kuroshio_Current">Kuroshio</a> in the Pacific carry warm water poleward along the west sides of the basins. In winter they run under cold, dry air, so they evaporate enormously. They move energy in two ways at once: from the equator towards the poles, and from the ocean into the atmosphere.</p>
+
+<p><strong>Off Somalia and Oman</strong>, in the western Arabian Sea, the ocean also gains heat, again because the water there is colder than its surroundings.</p>
+
+<p><strong>Why is the water cold in those places?</strong> That is the lecture’s puzzle, and its answer, upwelling, is in “Read this part” below.</p>
+
+<h2 id="7-who-carries-the-heat">7. Who carries the heat?</h2>
+
+<p>From O1, about <strong>5.7 PW</strong> must cross 35° latitude in each hemisphere to keep the books balanced. Compare the three curves on the slide: the total transport required (black), the ocean’s share (dashed) and the atmosphere’s (the rest). Despite the ocean’s enormous heat capacity, <strong>the atmosphere carries most of the energy</strong> over most latitudes. The ocean’s share matters most in the deep tropics, close to the equator, where the total transport is small and the ocean carries as much as, or more than, the atmosphere. Away from the equator, the Hadley cell and then the storm tracks take over.</p>
+
+<p>How sure are we? Observational estimates put the ocean’s share at about 2 PW near 20°N (Stewart Fig. 5.11). The reanalysis’s own surface fluxes imply only about 1.2 PW. Different lines of evidence still disagree.</p>
+
+<p><strong>A back-of-envelope sum for one current.</strong> Oceanographers measure the volume of water a current moves in <strong>sverdrups</strong> (Sv), named after the oceanographer <a href="https://en.wikipedia.org/wiki/Sverdrup">Harald Sverdrup</a>: 1 Sv = 10⁶ m³/s, a million cubic metres every second. No smaller unit makes sense in the ocean. The Gulf Stream is roughly 100 km wide, 600 m deep and moves at 0.5 m/s: about <strong>30 Sv</strong>. Multiply the mass of water moved by the temperature contrast it carries (about 6 °C) and its heat capacity. The Gulf Stream and the Kuroshio together carry about <strong>1.6 PW</strong> (Hartmann §7.8). The accountant’s rule: <strong>transport = mass moved × energy contrast.</strong></p>
+
+<h2 id="8-who-pushes-the-ocean">8. Who pushes the ocean?</h2>
+
+<p>To move water, something has to push it: the ocean has a <strong>momentum budget</strong>. We met the answer indirectly in week 1. The atmosphere’s winds exchange momentum with the surface below them, and over 70% of that surface is ocean.</p>
+
+<p>The map of wind stress on the ocean shows the push. Wherever the wind and the water move at different speeds there is friction, and momentum passes from one to the other. Where the winds blow towards the east (the westerlies), they give the ocean eastward momentum. Where they blow towards the west (the easterly trade winds), they give it westward momentum. (Meteorologists name winds by where they come <em>from</em>, so a westerly blows towards the east.) Over the whole globe and over long times, the eastward and westward pushes must nearly cancel, but at any one place they don’t. The pattern simply follows the winds: the strongest push is where the winds are strongest, in the Southern Ocean.</p>
+
+<p>The ocean doesn’t simply follow the push, because of its huge <strong>mechanical</strong> inertia: not thermal inertia this time, but the inertia of all that mass.</p>
+
+<p><strong>Nansen’s question.</strong> On the <em>Fram</em>, drifting across the Arctic in 1893–96, <a href="https://en.wikipedia.org/wiki/Fridtjof_Nansen">Fridtjof Nansen</a> recorded the winds and watched the sea ice. The ice never drifted straight downwind, however strong the wind. It went consistently 20–40° to the <strong>right</strong> of it. Why should that be? Suhas has already given you the tool: the Coriolis effect. That is where we stopped. We’ll work out the answer carefully next lecture; there is a short preview below.</p>
+
+<h2 id="read-this-part-what-we-didnt-cover-in-class">Read this part: what we didn’t cover in class</h2>
+
+<p>The upwelling section matters most: it answers the puzzle of §6. The Ekman section is a preview of the next lecture.</p>
+
+<h3 id="ponderous-air-against-water">Ponderous: air against water</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Air</th>
+      <th>Water</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Density</td>
+      <td>1.2 kg/m³</td>
+      <td>1,025 kg/m³ (about 850 times more)</td>
+    </tr>
+    <tr>
+      <td>Typical speed</td>
+      <td>10 m/s</td>
+      <td>0.1 m/s; boundary currents 1–2 m/s</td>
+    </tr>
+    <tr>
+      <td>Heat carried per m² of cross-section per degree (ρc × speed)</td>
+      <td>1.2 × 10⁴ W m⁻² K⁻¹</td>
+      <td>4 × 10⁵ W m⁻² K⁻¹ (about 34 times more)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A typical wind stress of 0.1 N/m², spread over a 50 m mixed layer, accelerates it at τ/(ρH) ≈ <strong>2 × 10⁻⁶ m/s²</strong>. Unopposed, it would take about two months to reach the speed of the wind. It never gets there, because the Earth is turning. And even a slow current carries far more heat through a square metre than a fast wind: water holds about 3,400 times more heat per cubic metre than air.</p>
+
+<h3 id="nansens-answer-ekman-transport-a-preview">Nansen’s answer: Ekman transport (a preview)</h3>
+
+<p><em>We’ll work this out in detail in the next lecture. Read it now for the idea; upwelling, below, builds on it.</em></p>
+
+<p>Vagn Walfrid Ekman worked out the reason in 1905. Take the whole stirred layer, in a steady state. Two forces act on it: the wind’s stress, along the wind, and the Coriolis force, at 90° to the layer’s motion. They can cancel only if the layer as a whole moves <strong>90° to the right of the wind</strong> in the northern hemisphere (to the left in the southern). Water at the very surface moves at a smaller angle, which is why Nansen’s ice went 20–40° to the right, and the direction turns further with depth. Only the total over the layer is at exactly a right angle.</p>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Ekman_transport">Ekman transport</a> per metre of width is τ/(ρf). With τ = 0.1 N/m² and f = 10⁻⁴ s⁻¹, that is about <strong>1 m²/s</strong>: a strip one metre wide carries about a cubic metre of water each second. Spread over 50 m, it is only about 2 cm/s. But over a whole basin it adds up, and where it spreads apart or piles together, water has to go up or down.</p>
+
+<h3 id="upwelling-solves-the-puzzle">Upwelling solves the puzzle</h3>
+
+<p><strong>Along coasts.</strong> Let the wind blow along a coast with the land on its left, in the northern hemisphere. The Ekman transport is to the right of the wind, offshore. Water can’t come out of the coast, so it comes up from below, cold and rich in nutrients. This is <a href="https://en.wikipedia.org/wiki/Upwelling">upwelling</a>.</p>
+
+<ul>
+  <li>Somalia and Oman in the summer monsoon, when the southwesterly wind runs along the coast. This is why the western Arabian Sea is cold and productive in July, and why it gains heat in §6.</li>
+  <li>California, where the wind blows south.</li>
+  <li>Peru, in the southern hemisphere, where the wind blows north and the transport goes to its left, again offshore.</li>
+</ul>
+
+<p>These are among the world’s great fisheries.</p>
+
+<p><strong>At the equator.</strong> The Coriolis effect changes sign at the equator. Under the westward trade winds, water just north of the equator is pushed to the right (north), and water just south of it to the left (south): away from the equator on both sides. Cold water rises to replace it, and that is the <strong>cold tongue</strong>. <strong>The ocean gains heat where it is cold because cold water keeps arriving from below.</strong></p>
+
+<p><strong>Happening now.</strong> A strong El Niño is under way. In its 8 October 2026 discussion, NOAA’s <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml">Climate Prediction Center</a> reported Niño-3.4 at +2.1 °C, with parts of the eastern equatorial Pacific more than 4 °C warmer than normal, and a strong-to-very-strong event likely through January–March 2027. Weaker trade winds mean weaker upwelling and a warmer cold tongue. We return to this later in the module.</p>
+
+<h3 id="hills-of-water-and-the-western-boundary-currents">Hills of water and the western boundary currents</h3>
+
+<p>Where Ekman transport converges, water piles up. Under the trades it goes poleward, and under the westerlies equatorward, so the two meet near 30°. There the sea surface stands about <strong>1 m</strong> higher than in the subpolar ocean, across thousands of kilometres (in the 2011 reanalysis: North Pacific 0.9 m, North Atlantic 0.9 m, South Pacific 1.1 m).</p>
+
+<p>A hill of water has a pressure gradient, but on a turning Earth the flow doesn’t run down it. It runs <strong>along</strong> the height contours, with the high side on its right in the northern hemisphere. This is geostrophic flow, as for Suhas’s winds. So water circles the hills in great <strong>gyres</strong>: clockwise in the north, anticlockwise in the south. The flow isn’t symmetric. Fast, narrow currents hug the <strong>west</strong> side of each basin: the Gulf Stream, the Kuroshio, the Agulhas. Stommel showed in 1948 that the change of the Coriolis effect with latitude is enough to squeeze the return flow against the western side (Stewart Ch. 11).</p>
+
+<h3 id="where-does-the-momentum-finally-go">Where does the momentum finally go?</h3>
+
+<p>The wind keeps adding momentum, so something must take it out. Mostly that is friction against coasts and the sea floor: in most oceans the continents hold up the flow. At the latitudes of Drake Passage no continent blocks the way, so the <strong>Antarctic Circumpolar Current</strong> runs all the way round the globe. It hands its momentum to the sea floor over undersea ridges. That same current is where deep water comes back up, which is where we go next: salt, density and the overturning.</p>
+
+<h3 id="depth-sets-the-timescale-not-the-size-of-the-slow-swings">Depth sets the timescale, not the size of the slow swings</h3>
+
+<p>Sort the slab runs of §4 by timescale and compare land with the mixed layer:</p>
+
+<ul>
+  <li><strong>Fast swings:</strong> the mixed layer has hundreds of times less power than land. On these timescales the kicks have no time to be balanced by heat loss, so C alone sets the response, and the power falls as (C_land/C_ocean)².</li>
+  <li><strong>Slow swings:</strong> the <em>same</em> power, within a couple of per cent. On these timescales the surface has time to come into balance, F′ ≈ λT′, and C drops out.</li>
+  <li><strong>The switch-over</strong> comes near a period of 2π × τ.</li>
+</ul>
+
+<p>So fast, random weather produces slow climate variations with nothing slow driving them. The ocean’s depth sets how slow they are, not how big. This idea is due to Hasselmann (1976). A deep ocean adds a second, slower stage and extra damping at centennial scales. In the tutorial app it cuts the power at 100–1,000 years by about a third: the deep water calms the slowest swings rather than adding to them.</p>
+
+<h2 id="readings">Readings</h2>
+
+<p>All extracts are in the shared readings folder, under O3. The core readings add up to <strong>29 pages</strong>. Page numbers are the books’ printed pages.</p>
+
+<p><strong>Core: covered in class (13 pages)</strong></p>
+
+<ul>
+  <li>Hartmann, <em>Global Physical Climatology</em> (2nd ed., 2016), §7.3 “The Mixed Layer”, pp. 200–206 (7 pages). What sets the mixed layer’s depth, and its seasons. Stop at §7.4.</li>
+  <li>Stewart, <em>Introduction to Physical Oceanography</em> (2008), §5.6 “Geographic Distribution of Terms” and §5.7 “Meridional Heat Transport”, pp. 65–70 (6 pages). The map of net heating, and who carries the heat. Stop at §5.8.</li>
+</ul>
+
+<p><strong>Core: not covered in class (16 pages)</strong></p>
+
+<ul>
+  <li>Stewart §9.3 “Ekman Mass Transport” and §9.4 “Application of Ekman Theory”, pp. 143–147 (5 pages). Ekman transport and upwelling. Stop at §9.5. We’ll go through Ekman transport in the next lecture, so this is also its reading.</li>
+  <li>Hartmann §7.4 “The Wind-Driven Circulation”, pp. 206–216 (11 pages). Start at the heading on p. 206. Wind stress, the gyres, and western and eastern boundary currents, with the maps. Stop at §7.5.</li>
+</ul>
+
+<p><strong>Optional</strong></p>
+
+<ul>
+  <li>Hartmann §7.7 “Transport of Energy in the Ocean” and §7.8 “Mechanisms of Transport in the Ocean”, pp. 227–231 (5 pages, in the folder): the Gulf Stream sum and how the ocean carries heat.</li>
+  <li>For the curious (research papers, not in the folder): Hasselmann (1976), “Stochastic climate models. Part I: Theory”, <em>Tellus</em> 28, 473–485; Czaja &amp; Marshall (2006), “The partitioning of poleward heat transport between the atmosphere and ocean”, <em>Journal of the Atmospheric Sciences</em> 63, 1498–1511.</li>
+</ul>
+
+<h2 id="questions-to-think-about">Questions to think about</h2>
+
+<ol>
+  <li>Why are the deepest northern mixed layers off Japan and off North America, and not off Europe?</li>
+  <li>A 1 K warm anomaly appears in a 50 m mixed layer. Roughly how long until only a third is left, if only the Planck response acts? Why might the real answer be longer?</li>
+  <li>Winds blow from the south along the coast of a northern-hemisphere continent that lies to the east of the ocean. Is there upwelling or downwelling at the coast?</li>
+  <li>Near the equator f → 0, so τ/(ρf) grows very large. What do you think really happens there?</li>
+  <li>Why might weaker trade winds warm the eastern equatorial Pacific far more than the western?</li>
+</ol>
+
+  </main>
+  <footer><p><a href="../../../">← All lectures and tutorials</a></p>
+</footer>
+</body>
+</html>

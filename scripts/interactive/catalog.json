@@ -937,6 +937,16 @@
   "id": "pr_joint"
  },
  {
+  "title": "Rotating a correlated Gaussian to independent coordinates (HW6 Q1)",
+  "desc": "A bivariate normal with s.d. \u03c3\u2081, \u03c3\u2082 and correlation \u03c1 (left: 1200 points, the 1\u03c3 and 2\u03c3 contours, the rotated axes y\u2081, y\u2082 at angle \u03b8). Right: the same points in the coordinates Y = O\u03b8 X, Y\u2081 = cos\u03b8\u00b7X\u2081 + sin\u03b8\u00b7X\u2082, Y\u2082 = \u2212sin\u03b8\u00b7X\u2081 + cos\u03b8\u00b7X\u2082. Only one angle (up to 90\u00b0) makes Y\u2081 and Y\u2082 uncorrelated, hence independent for a normal: the direction of an eigenvector of \u03a3. At that angle the variances of Y are the eigenvalues of \u03a3 (not \u03c3\u2081\u00b2 and \u03c3\u2082\u00b2); only the trace is preserved. Press 'snap \u03b8 to the eigenvector' to jump there.",
+  "vault": "PR",
+  "chapters": [
+   "PR09 Change of Variables the Multivariate Normal and Products of Uniforms"
+  ],
+  "tryit": "\u03c3\u2081 = \u03c3\u2082 = 1.5, \u03c1 = 0.8: the eigenvectors are at \u03b8 = 45\u00b0 and the eigenvalues are \u03c3\u00b2(1 \u00b1 \u03c1) = 4.05 and 0.45 (ratio of the axis lengths 3); at \u03b8 = 45\u00b0 the Y-cloud is an upright ellipse with correlation 0. Then take \u03c3\u2081 = 2, \u03c3\u2082 = 1, \u03c1 = 0.5: the snap angle is not 45\u00b0 and Var Y\u2081 + Var Y\u2082 stays \u03c3\u2081\u00b2 + \u03c3\u2082\u00b2 = 5 for every \u03b8.",
+  "id": "pr_mvn_rotation"
+ },
+ {
   "title": "Order statistics: the density of the k-th smallest of n",
   "desc": "Draw n independent values from a distribution and sort them: Y\u208d\u2081\u208e \u2264 \u2026 \u2264 Y\u208d\u2099\u208e. The k-th smallest has density n!/((k\u22121)!(n\u2212k)!) \u00b7 F(y)^(k\u22121) \u00b7 (1 \u2212 F(y))^(n\u2212k) \u00b7 f(y). Pick a distribution, n and k: the thin curves are the exact densities of all n order statistics, the thick curve is your k, and the histogram comes from 4000 simulated samples. On the right, the mean spacing between consecutive order statistics: for the exponential distribution the gap before the k-th point is Expo((n\u2212k+1)\u03bb) (the R\u00e9nyi representation, which contains the HW5 result Y\u208d\u2082\u208e \u2212 Y\u208d\u2081\u208e ~ Expo(\u03bb)).",
   "vault": "PR",
@@ -1102,6 +1112,16 @@
   "id": "th_carnot"
  },
  {
+  "title": "Is a lattice isotropic? The 2nd- and 4th-rank direction tensors of N lattice velocities",
+  "desc": "A lattice model (a random walk or a lattice gas) moves along N equally spaced unit directions. In the continuum limit the physics depends on the tensors \u03a3\u1d62 c\u1d62\u03b1c\u1d62\u03b2 (second rank: enough for diffusion, relating the flux to the concentration gradient) and \u03a3\u1d62 c\u1d62\u03b1c\u1d62\u03b2c\u1d62\u03b3c\u1d62\u03b4 (fourth rank: needed for the fluid momentum flux). The two polar curves show how \u03a3\u1d62 (c\u1d62\u00b7n)\u00b2 and \u03a3\u1d62 (c\u1d62\u00b7n)\u2074 depend on the direction n, relative to their mean: a circle means isotropic. Two directions at right angles or opposite are not; the square lattice (N = 4) is isotropic at second rank but not at fourth rank; N = 6 (the hexagonal FHP lattice gas) is isotropic at both, which is why six velocities suffice for fluid flow.",
+  "vault": "TH",
+  "chapters": [
+   "THX1 Diffusion Random Walks and the Heat Equation"
+  ],
+  "tryit": "N = 4 (square lattice): the second-rank curve is a circle, the fourth-rank curve is a four-lobed 'square' with 33% anisotropy: random walks on a square lattice diffuse isotropically but a square lattice gas would not give isotropic fluid flow. N = 6: both curves are circles. N = 3: also isotropic at both ranks, but three directions have no opposites (no head-on collisions). Tilt the phase to see that the anisotropy is intrinsic, not an artefact of the axes.",
+  "id": "th_lattice_isotropy"
+ },
+ {
   "title": "First law on a P\u2013V diagram: work, heat and internal energy for four processes",
   "desc": "One mole of ideal gas taken from state A to a new volume by an isothermal, isobaric, isochoric or adiabatic process. The work done by the gas is the area under the curve, \u0394U = nC_V \u0394T, and the first law \u0394U = Q \u2212 W gives the heat. Compare how the same change of volume costs different work and heat for different paths (state functions vs path functions).",
   "vault": "TH",
@@ -1111,6 +1131,17 @@
   ],
   "tryit": "Expand from V = 10 L to 20 L at T = 300 K: isothermal W = RT ln2 = 1.729 kJ, Q = W, \u0394U = 0. Adiabatic: Q = 0 and W = \u2212\u0394U (the gas cools). The isobaric W = P \u0394V is the area of a rectangle. Compare the four areas.",
   "id": "th_pv_processes"
+ },
+ {
+  "title": "Reacting ideal gases: the minimum of G(\u03b5), and how pressure and inert gas shift it",
+  "desc": "Pick a gas reaction (A \u21cc B, N\u2082O\u2084 \u21cc 2NO\u2082, 2A \u21cc B, SO\u2082 + \u00bdO\u2082 \u21cc SO\u2083, N\u2082 + 3H\u2082 \u21cc 2NH\u2083), the equilibrium constant K, the total pressure P and the amount of inert gas. Left: the Gibbs energy of the mixture G(\u03b5)/RT as a function of the extent of reaction \u03b5 (stoichiometric start, \u03b5 = 1 means all reactant consumed); its minimum is the equilibrium, where \u03a3\u03bd\u1d62\u03bc\u1d62 = 0 and Q = K. The mixing terms \u03a3n\u1d62 ln x\u1d62 make the minimum interior, never at \u03b5 = 0 or 1. Right: \u03b5_eq against P for the same K: if \u03a3\u03bd = 0 pressure does nothing; if \u03a3\u03bd < 0 higher pressure pushes toward products; if \u03a3\u03bd > 0 toward reactants. Inert gas at constant total P acts like lowering P (a dilution).",
+  "vault": "TH",
+  "chapters": [
+   "TH10 Open Systems Mixing and Reacting Gases",
+   "TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries"
+  ],
+  "tryit": "Choose SO\u2082 + \u00bdO\u2082 \u21cc SO\u2083 with K = 10 and P = 1 bar: \u03b5_eq = 0.7645. Raise P to 10 bar: 0.8819 (\u03a3\u03bd = \u2212\u00bd, so K = [x-product](P/P\u00b0)^(\u2212\u00bd)). Add 3 mol of inert gas at 1 bar: \u03b5_eq falls to 0.6667. Switch to A \u21cc B (\u03a3\u03bd = 0): the right-hand curve is flat, \u03b5_eq = K/(1+K) whatever P and the inert gas. Switch to N\u2082O\u2084 \u21cc 2NO\u2082 (\u03a3\u03bd = +1): \u03b5_eq falls as P rises.",
+  "id": "th_reacting_equilibrium"
  },
  {
   "title": "van der Waals isotherms and the Maxwell construction",

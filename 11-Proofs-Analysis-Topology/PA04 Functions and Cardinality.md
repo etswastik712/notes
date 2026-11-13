@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, ai-notes]
 status: draft
 prereq: [PA03 Relations Equivalence and Order]
-tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/pa-cardinality]
 ---
 # PA04 · Functions and Cardinality
 
@@ -240,3 +240,27 @@ Black boxes assumed (proved later by induction, [[PA05 Induction and the Number 
 > The lecture writes "Define $|\mathbb R|=c$ (continuum) $=\aleph_1$". $\aleph_1$ is the *next* infinite cardinal after $\aleph_0$; saying $\mathfrak c=\aleph_1$ is the continuum hypothesis itself, which the same page then calls independent of ZFC. Probably a notational shortcut; check.
 
 **References.** Sundstrom, T. *Mathematical Reasoning*, Ch. 9 · Kumaresan et al., *A Foundation Course in Mathematics* · Munkres, J. *Topology*, §§6–7 · Cantor, G. (1874) *Über eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen* · Cohen, P. (1963) *The independence of the continuum hypothesis*.
+
+## Assignment 8, Problems 1–5 solved in full (added 2026-11-12; outside the 13 November quiz scope, which is the induction part of that sheet) #quiz/pa-cardinality
+*Source: [[Assignment-8.pdf]] (statements via [[intro-to-proofs/2026-10-22-assignment-8]]); the induction problems 6–7 are solved in [[PA08 Mathematical Induction]]. The explicit bijections were checked in exact rational arithmetic (`scripts/rest_numbers.py`). Conventions: $\mathbb N=\{1,2,\dots\}$; $A\sim B$ means a bijection; **countable** = finite or countably infinite; known: subsets of countable sets are countable, $\mathbb N\times\mathbb N$, $\mathbb Z$, $\mathbb Q$ are countably infinite, $\mathbb R$ is uncountable.*
+
+> [!example] Problem 1(a): $A$ countably infinite, $B$ countable $\Rightarrow$ $A\cup B$ countably infinite
+> Write $A\cup B=A\sqcup(B\setminus A)$ (disjoint). $B\setminus A\subseteq B$ is countable. Let $f:\mathbb N\to A$ be a bijection. **Case 1: $B\setminus A=\{b_1,\dots,b_k\}$ finite** ($k\ge0$). Define $g(n)=b_n$ for $n\le k$ and $g(n)=f(n-k)$ for $n>k$: $g$ is injective (the $b_j$ are distinct and not in $A$; $f$ is injective) and onto $A\cup B$. **Case 2: $B\setminus A$ countably infinite**, $h:\mathbb N\to B\setminus A$ a bijection. Define the interleaving $g(2n-1)=f(n)$, $g(2n)=h(n)$: injective because $A\cap(B\setminus A)=\varnothing$ and $f,h$ are injective; onto because every element of $A\cup B$ is some $f(n)$ or $h(n)$. In both cases $g:\mathbb N\to A\cup B$ is a bijection. $\square$
+
+> [!example] Problem 1(b): $\mathbb R\setminus\mathbb Q$ is uncountable
+> Suppose it were countable. $\mathbb Q$ is countably infinite, so by (a) $\mathbb R=\mathbb Q\cup(\mathbb R\setminus\mathbb Q)$ would be countably infinite, contradicting the uncountability of $\mathbb R$ (Lecture 19). $\square$
+
+> [!example] Problem 2: a countable union of pairwise disjoint countably infinite sets
+> $F:\mathbb N\times\mathbb N\to\bigcup_iA_i$, $F(i,n)=f_i(n)$. **Injective:** if $F(i,n)=F(j,m)=x$ then $x\in A_i\cap A_j$, so $i=j$ (the $A_i$ are pairwise disjoint), then $f_i(n)=f_i(m)$ gives $n=m$ ($f_i$ injective). **Surjective:** if $x\in\bigcup A_i$ then $x\in A_i$ for some $i$, and $x=f_i(n)=F(i,n)$ for some $n$ ($f_i$ surjective). So $F$ is a bijection and $\bigcup A_i\sim\mathbb N\times\mathbb N\sim\mathbb N$: countably infinite. $\square$ (Disjointness was used for injectivity only; without it $F$ is still onto, and the union is countable.)
+
+> [!example] Problem 3: $\{0,1\}^{\mathbb N}$ is uncountable
+> **(a) Infinite:** $k\mapsto e_k$ (the sequence with a $1$ only at place $k$) is an injection $\mathbb N\to\{0,1\}^{\mathbb N}$. **(b) No surjection from $\mathbb N$:** for any $f$ with $f(n)=(a_{n1},a_{n2},\dots)$ put $b_n=1-a_{nn}$. Then $b\in\{0,1\}^{\mathbb N}$ and $b$ differs from $f(n)$ at place $n$ for every $n$, so $b\notin\mathrm{Im}(f)$. No bijection $\mathbb N\to\{0,1\}^{\mathbb N}$ exists; with (a) the set is infinite and not countable: uncountable. $\square$
+
+> [!example] Problem 4: Cantor's theorem
+> Let $f:A\to\mathcal P(A)$ and $B=\{a\in A:a\notin f(a)\}$. **(a)** Suppose $B=f(a_0)$. If $a_0\in B$ then by definition $a_0\notin f(a_0)=B$; if $a_0\notin B=f(a_0)$ then $a_0$ satisfies the defining condition, so $a_0\in B$. Both cases contradict, so $B\notin\mathrm{Im}(f)$. **(b)** Hence no $f:A\to\mathcal P(A)$ is surjective, so $|A|\ne|\mathcal P(A)|$; $a\mapsto\{a\}$ is an injection $A\to\mathcal P(A)$, so $|A|<|\mathcal P(A)|$. $\square$ (Consequence: there is no largest cardinal; $\mathcal P(\mathbb N)$ is uncountable.)
+
+> [!example] Problem 5(a): $[0,1)\sim(0,1)$ ("Hilbert's hotel")
+> Let $C=\{0,\tfrac12,\tfrac13,\tfrac14,\dots\}=\{c_1,c_2,\dots\}$ with $c_1=0$, $c_n=\tfrac1n$ ($n\ge2$), and define $g(c_n)=c_{n+1}$ i.e. $g(0)=\tfrac12$, $g(\tfrac1n)=\tfrac1{n+1}$ ($n\ge2$), and $g(x)=x$ for $x\in[0,1)\setminus C$. **Into $(0,1)$:** $g(0)=\tfrac12$, the shifted values are $\tfrac1{n+1}\in(0,1)$, and the other $x$ are in $(0,1)$ (they are not $0$). **Injective:** on $C$ the shift $c_n\mapsto c_{n+1}$ is injective; on the complement $g$ is the identity; $g(C)=C\setminus\{0\}$ is disjoint from the complement. **Surjective:** $g(C)\cup([0,1)\setminus C)=\{\tfrac12,\tfrac13,\dots\}\cup\big((0,1)\setminus\{\tfrac12,\tfrac13,\dots\}\big)=(0,1)$. So $g$ is a bijection. $\square$ The countable sequence is shifted one place to make room for $0$; the uncountable rest is untouched.
+
+> [!example] Problem 5(b): $[0,1]\sim(0,1)\sim\mathbb R$
+> **$[0,1]\sim(0,1)$:** absorb **two** endpoints by shifting two places. Let $D=\{d_1,d_2,\dots\}$ with $d_1=0$, $d_2=1$, $d_n=\tfrac1{n-1}$ ($n\ge3$), and define $h(d_n)=d_{n+2}$, i.e. $h(0)=\tfrac12$, $h(1)=\tfrac13$, $h(\tfrac1m)=\tfrac1{m+2}$ ($m\ge2$), and $h(x)=x$ on $[0,1]\setminus D$. As in (a): $h$ maps into $(0,1)$, is injective, and $h(D)=\{d_3,d_4,\dots\}=\{\tfrac12,\tfrac13,\dots\}$ together with the untouched rest gives all of $(0,1)$. **$(0,1)\sim\mathbb R$:** the explicit bijection of Lecture 20 (above in this chapter's §5: $f(x)=1-\tfrac1{2x}$ on $(0,\tfrac12]$, $\tfrac1{2(1-x)}-1$ on $[\tfrac12,1)$). Since $\sim$ is an equivalence relation (transitive), $[0,1]\sim(0,1)\sim\mathbb R$. $\square$

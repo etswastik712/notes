@@ -6,7 +6,7 @@ type: concept
 scope: [taught]
 by: [lecture-notes]
 status: draft
-tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft]
+tags: [subject/analysis, type/concept, taught, src/lecture-notes, status/draft, quiz/pa-cardinality]
 ---
 # Uncountable Set
 

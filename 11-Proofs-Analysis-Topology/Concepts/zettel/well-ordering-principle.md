@@ -1,7 +1,7 @@
 ---
 id: zettel/well-ordering-principle
 aliases: ["Well-Ordering Principle", "WOP"]
-tags: [zettel, agent-written, intro-to-proofs, subject/analysis]
+tags: [zettel, agent-written, intro-to-proofs, subject/analysis, quiz/proofs, quiz/pa-wop]
 trust_tier: agent_written
 ---
 

@@ -6,7 +6,7 @@ type: concept
 scope: [extra-book]
 by: [lecture-notes]
 status: draft
-tags: [subject/analysis, type/concept, extra/book, src/lecture-notes, status/draft]
+tags: [subject/analysis, type/concept, extra/book, src/lecture-notes, status/draft, quiz/proofs, quiz/pa-wop]
 ---
 # Well-Ordered Set
 

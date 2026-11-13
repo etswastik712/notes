@@ -6,7 +6,7 @@ type: concept
 scope: [taught]
 by: [lecture-notes]
 status: draft
-tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft]
+tags: [subject/probability, type/concept, taught, src/lecture-notes, status/draft, quiz/probability, quiz/pr-hw4]
 ---
 # Variance
 

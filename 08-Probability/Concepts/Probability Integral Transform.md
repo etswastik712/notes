@@ -6,7 +6,7 @@ type: concept
 scope: [taught, extra-beyond]
 by: [lecture-notes, own-notes]
 status: draft
-tags: [subject/probability, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/concept, taught, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/probability, quiz/pr-hw6]
 ---
 # Probability Integral Transform
 

@@ -6,7 +6,7 @@ type: concept
 scope: [taught, extra-book]
 by: [lecture-notes]
 status: draft
-tags: [subject/probability, type/concept, taught, extra/book, src/lecture-notes, status/draft]
+tags: [subject/probability, type/concept, taught, extra/book, src/lecture-notes, status/draft, quiz/probability, quiz/pr-hw4, quiz/pr-hw6]
 ---
 # Covariance Matrix
 

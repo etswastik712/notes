@@ -1,0 +1,484 @@
+5.2. HEAT-BUDGET TERMS                                                       53
+
+    The volume of water which exchanges heat with the atmosphere on a seasonal
+cycle is 100 m3 per square meter of surface, i.e. that mass from the surface to
+a depth of 100 meters. The density of water is 1000 kg/m3 , and the mass in
+contact with the atmosphere is density × volume = mwater = 100, 000 kg. The
+volume of land which exchanges heat with the atmosphere on a seasonal cycle
+is 1 m3 . Because the density of rock is 3,000 kg/m3 , the mass of the soil and
+rock in contact with the atmosphere is 3,000 kg.
+    The seasonal heat storage values for the ocean and land are therefore:
+
+              ∆Eocean = Cp(water) mwater ∆t                 ∆t = 10◦ C
+                       = (4000)(105 )(10◦ ) Joules
+                      = 4.0 × 109 Joules
+               ∆Eland = Cp(rock) mrock ∆t                   ∆t = 20◦ C
+                       = (800)(3000)(20◦ ) Joules
+                       = 4.8 × 107 Joules
+             ∆Eocean
+                     = 100
+             ∆Eland
+where ∆t is the typical change in temperature from summer to winter.
+    The large storage of heat in the ocean compared with the land has important
+consequences. The seasonal range of air temperatures on land increases with
+distance from the ocean, and it can exceed 40◦ C in the center of continents,
+reaching 60◦ C in Siberia. Typical range of temperature over the ocean and
+along coasts is less than 10◦ C. The variability of water temperatures is still
+smaller (see figure 6.3, bottom).
+
+5.2     Heat-Budget Terms
+      Let’s look at the factors influencing each term in the heat budget.
+Factors Influencing Insolation Incoming solar radiation is primarily deter-
+mined by latitude, season, time of day, and cloudiness. The polar regions are
+heated less than the tropics, areas in winter are heated less than the same area
+in summer, areas in early morning are heated less than the same area at noon,
+and cloudy days have less sun than sunny days.
+    The following factors are important:
+  1. The height of the sun above the horizon, which depends on latitude, sea-
+     son, and time of day. Don’t forget, there is no insolation at night!
+  2. The length of day, which depends on latitude and season.
+  3. The cross-sectional area of the surface absorbing sunlight, which depends
+     on height of the sun above the horizon.
+  4. Attenuation, which depends on: i) Clouds, which absorb and scatter ra-
+     diation. ii) Path length through the atmosphere, which varies as csc φ,
+     where φ is angle of the sun above the horizon. iii) Gas molecules which
+     absorb radiation in some bands (figure 5.2). H2 O, O3 , and CO2 are all
+54                                                                   CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+                                                        2.0
+                                                                              Blackbody Radiation
+                                                                              (5900 K)
+
+
+                                                                                 Solar Radiation
+                                                                                 above Atmosphere
+                                                        1.5                      (m=0)
+
+
+
+
+           Spectral Irradiance E λ (kW m -2 ⋅µ m -1 )
+                                                        1.0
+                                                                                          Solar Radiation
+                                                                                          at Surface (m=2)
+
+
+
+
+                                                        0.5
+
+
+
+
+                                                         0
+                                                              0     0.5             1.0                 1.5
+                                                                           Wavelength (µm)
+Figure 5.2 Insolation (spectral irradiance) of sunlight at top of the atmosphere and at the
+sea surface on a clear day. The dashed line is the best-fitting curve of blackbody radiation
+the size and distance of the sun. The number of standard atmospheric masses is designated
+by m. Thus m = 2 is applicable for sunlight when the sun is 30◦ above the horizon. After
+Stewart (1985: 43).
+
+       important. iv) Aerosols which scatter and absorb radiation. Both volcanic
+       and marine aerosols are important. And v) dust, which scatters radiation,
+       especially Saharan dust over the Atlantic.
+     5. Reflectivity of the surface, which depends on solar elevation angle and
+        roughness of sea surface.
+
+Solar inclination and cloudiness dominate. Absorption by ozone, water vapor,
+aerosols, and dust are much weaker.
+   The average annual value for insolation (figure 5.3) is in the range:
+
+                                                                  30 W/m2 < QSW < 260 W/m2                    (5.5)
+
+Factors Influencing Infrared Flux The sea surface radiates as a blackbody
+having the same temperature as the water, which is roughly 290 K. The distri-
+bution of radiation as a function of wavelength is given by Planck’s equation.
+Sea water at 290 K radiates most strongly at wavelengths near 10 µm. These
+wavelengths are strongly absorbed by clouds, and somewhat by water vapor.
+A plot of atmospheric transmittance as a function of wavelength for a clear
+5.2. HEAT-BUDGET TERMS                                                                                                 55
+
+                                                Clear-Sky Downward Insolation (W/m 2 )
+     o
+90
+                   0
+                  15          35
+                               0                                  15   0
+                                                                                                     0
+60 o
+                                         350
+                                                                  30                                       150
+30 o                                                                0
+            0
+         30
+
+                                   300
+  0o                                                                                                             300
+
+
+                                                                                             350
+-30 o
+
+                                               50                       15         30
+                                                                           0           0                         30
+-60 o         0                                                                                                    0
+           15
+
+                         0
+-90 o
+     Mar           Apr       May         June       July    Aug            Sep   Oct       Nov     Dec   Jan      Feb
+Figure 5.3 Monthly average of downward flux of sunlight through a cloud-free sky and into
+the ocean in W/m2 during 1989 calculated by the Satellite Data Analysis Center at the nasa
+Langley Research Center (Darnell et al. 1992) using data from the International Satellite
+Cloud Climatology Project.
+
+atmosphere but with varying amounts of water vapor (figure 5.4) shows the
+atmosphere is nearly transparent in some wavelength bands called windows.
+     The transmittance on a cloud-free day through the window from 8 µm to 13
+µm is determined mostly by water vapor. Absorption in other bands, such as
+those at 3.5 µm to 4.0 µm depends on CO2 concentration in the atmosphere.
+As the concentration of CO2 increases, these windows close and more radiation
+is trapped by the atmosphere.
+     Because the atmosphere is mostly transparent to incoming sunlight, and
+somewhat opaque to outgoing infrared radiation, the atmosphere traps radia-
+tion. The trapped radiation, coupled with convection in the atmosphere, keeps
+earth’s surface 33◦ warmer than it would be in the absence of a convecting, wet
+atmosphere but in thermal equilibrium with space. The atmosphere acts like
+the panes of glass on a greenhouse, and the effect is known as the greenhouse
+effect. See Hartmann (1994: 24–26) for a simple discussion of the radiative
+balance of a planet. CO2 , water vapor, methane, and ozone are all important
+greenhouse gasses.
+     The net infrared flux depends on:
+    1. Clouds thickness. The thicker the cloud deck, the less heat escapes to
+       space.
+     2. Cloud height, which determines the temperature at which the cloud ra-
+        diates heat back to the ocean. The rate is proportional to t4 , where t is
+        the temperature of the radiating body in Kelvins. High clouds are colder
+        than low clouds.
+     3. Atmospheric water-vapor content. The more humid the atmosphere the
+        less heat escapes to space.
+56                                        CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+                     1
+                                                               Subarctic Winter
+                                                             '62 U.S. Standard
+
+
+
+
+     Transmittance
+                                                                Tropical
+
+
+
+
+                     0
+                         0           1          2                      3                    4                5
+                                                    Wavlength ( µ m)
+                     1
+
+                                                                                  Subarctic Winter
+                                                                                  Midlatitude Winter
+
+
+
+
+     Transmittance
+                                                                                  1962 U.S. Standard
+                                                                                  Subarctic Summer
+                                                                                  Midlatitude Summer
+                                                                                  Tropical
+
+
+
+
+                     0
+                             6   8   10   12   14       16        18       20       22      24         26   28
+                                                    Wavlength (µ m)
+Figure 5.4 Atmospheric transmittance for a vertical path to space from sea level for six
+model atmospheres with very clear, 23 km, visibility, including the influence of molecular
+and aerosol scattering. Notice how water vapor modulates the transparency of the 10-14 µm
+atmospheric window, hence it modulates QLW , which is a maximum at these wavelengths.
+After Selby and McClatchey (1975).
+
+     4. Water Temperature. The hotter the water the more heat is radiated.
+        Again, radiation depends of t4 .
+     5. Ice and snow cover. Ice emits as a black body, but it cools much faster
+        than open water. Ice-covered seas are insulated from the atmosphere.
+    Water vapor and clouds influence the net loss of infrared radiation more
+than surface temperature. Hot tropical regions lose less heat than cold polar
+regions. The temperature range from poles to equator is 0◦ C < t < 25◦ C or
+273K < t < 298K, and the ratio of maximum to minimum temperature in
+Kelvins is 298/273 = 1.092. Raised to the fourth power this is 1.42. Thus there
+is a 42% increase in emitted radiation from pole to equator. Over the same
+distance water vapor can change the net emitted radiance by 200%.
+    The average annual value for net infrared flux is in the narrow range:
+                                     − 60 W/m2 < QLW < −30 W/m2                                                  (5.6)
+Factors Influencing Latent-Heat Flux Latent heat flux is influenced pri-
+marily by wind speed and relative humidity. High winds and dry air evaporate
+much more water than weak winds with relative humidity near 100%. In polar
+regions, evaporation from ice covered ocean is much less than from open water.
+In the arctic, most of the heat lost from the sea is through leads (ice-free areas).
+Hence the percent open water is very important for the arctic heat budget.
+5.3. DIRECT CALCULATION OF FLUXES                                             57
+
+      The average annual value for latent-heat flux is in the range:
+
+                         − 130 W/m2 < QL < −10 W/m2                         (5.7)
+
+Factors Influencing Sensible-Heat Flux Sensible heat flux is influenced by
+wind speed and air-sea temperature difference. High winds and large temper-
+ature differences cause high fluxes. Think of this as a wind-chill factor for the
+ocean.
+   The average annual value for sensible-heat flux is in the range:
+
+                           − 42 W/m2 < QS < −2 W/m2                         (5.8)
+
+5.3   Direct Calculation of Fluxes
+    Before we can describe the geographical distribution of fluxes into and out
+of the ocean, we need to know how they are measured or calculated.
+Gust-Probe Measurements of Turbulent Fluxes There is only one accu-
+rate method for calculating fluxes of sensible and latent heat and momentum at
+the sea surface: from direct measurement of turbulent quantities in the atmo-
+spheric boundary layer made by gust probes on low-flying aircraft or offshore
+platforms. Very few such measurements have been made. They are expen-
+sive, and they cannot be used to calculate heat fluxes averaged over many days
+or large areas. The gust-probe measurements are used only to calibrate other
+methods of calculating fluxes.
+
+  1. Measurements must be made in the surface layer of the atmospheric bound-
+     ary layer (See §4.3), usually within 30 m of the sea surface, because fluxes
+     are independent of height in this layer.
+  2. Measurements must be made by fast-response instruments (gust probes)
+     able to make several observations per second on a tower, or every meter
+     from a plane.
+  3. Measurements include the horizontal and vertical components of the wind,
+     the humidity, and the air temperature.
+
+   Fluxes are calculated from the correlation of vertical wind and horizontal
+wind, humidity, or temperature: Each type of flux is calculated from different
+measured variables, u′ , w′ , t′ , and q ′ :
+
+                         T = ⟨ρa u′ w′ ⟩ = ρa ⟨u′ w′ ⟩ ≡ ρa u2∗           (5.9a)
+                        QS = Cp ⟨ρa w′ t′ ⟩ = ρa Cp ⟨w′ t′ ⟩              (5.9b)
+                        QL = LE ⟨w′ q ′ ⟩                                 (5.9c)
+
+where the brackets denotes time or space averages, and the notation is given
+in table 5.1. Note that specific humidity mentioned in the table is the mass of
+water vapor per unit mass of air.
+58                          CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+Table 5.1 Notation Describing Fluxes
+Symbol   Variable                                           Value and Units
+Cp       Specific heat capacity of air                     1030 J·kg−1 ·K−1
+CD       Drag coeﬀicient (see 4.3)                     (0.50 + 0.071 U10 ) × 10−3
+CL       Latent heat transfer coeﬀicient                       1.2 × 10−3
+CS       Sensible heat transfer coeﬀicient                     1.0 × 10−3
+LE       Latent heat of evaporation                          2.5 × 106 J/kg
+q        Specific humidity of air                      kg (water vapor)/kg (air)
+qa       Specific humidity of air 10 m above the sea   kg (water vapor)/kg (air)
+qs       Specific humidity of air at the sea surface   kg (water vapor)/kg (air)
+QS       Sensible heat flux                                      W/m2
+QL       Latent heat flux                                        W/m2
+T        Wind stress                                             Pascals
+ta       Temperature of the air 10 m above the sea               K or ◦ C
+ts       Sea-surface temperature                                 K or ◦ C
+t′       Temperature fluctuation                                   ◦
+                                                                     C
+u′       Horizontal component of fluctuation of wind               m/s
+u∗       Friction velocity                                         m/s
+U10      Wind speed at 10 m above the sea                          m/s
+w′       Vertical component of wind fluctuation                    m/s
+ρa       Density of air                                        1.3 kg/m3
+T        Vector wind stress                                        Pa
+CS and CL from Smith (1988).
+
+Radiometer Measurements of Radiative Fluxes Radiometers on ships,
+offshore platforms, and even small islands are used to make direct measurements
+of radiative fluxes. Wideband radiometers sensitive to radiation from 0.3 µm to
+50 µm can measure incoming solar and infrared radiation with an accuracy of
+around 3% provided they are well calibrated and maintained. Other, specialized
+radiometers can measure the incoming solar radiation, the downward infrared
+radiation, and the upward infrared radiation.
+
+5.4   Indirect Calculation of Fluxes: Bulk Formulas
+    The use of gust-probes is very expensive, and radiometers must be carefully
+maintained. Neither can be used to obtain long-term, global values of fluxes. To
+calculate these fluxes from practical measurements, we use observed correlations
+between fluxes and variables that can be measured globally.
+    For fluxes of sensible and latent heat and momentum, the correlations are
+called bulk formulas. They are:
+                                      2
+                          T = ρa CD U10                                    (5.10a)
+                         QS = ρa Cp CS U10 (ts − ta )                      (5.10b)
+                         QL = ρa LE CL U10 (qs − qa )                      (5.10c)
+
+  Air temperature ta is measured using thermometers on ships. It cannot be
+measured from space using satellite instruments. ts is measured using ther-
+mometers on ships or from space using infrared radiometers such as the avhrr.
+5.4. INDIRECT CALCULATION OF FLUXES: BULK FORMULAS                               59
+
+Table 5.2 Accuracy of Wind and Fluxes Observed Globally From Space
+Variable                     Accuracy         Comments
+Wind Speed                   ±1.5 m/s         Instrument Error
+                             ±1.5 m/s         Sampling Error (Monthly Average)
+Wind Stress                  ±10 %            Drag Coeﬀicient Error
+                             ±14 Pa           Assuming 10 m/s Wind Speed
+Insolation                   ±5 %             Monthly Average
+                             ±15 W/m2         Monthly Average
+                             ±10 %            Daily Average
+Rain Rate                    ±50 %
+Rainfall                     ±10 %            5◦ × 5◦ area for trmm
+Net Long Wave Radiation      ±4–8 %           Daily Average
+                             ±15–27 W/m2
+Latent Heat Flux             ±35 W/m2         Daily Average
+                             ±15 W/m2         Monthly Average
+
+
+    The specific humidity of air at 10 m above the sea surface qa is calculated
+from measurements of relative humidity made from ships. Gill (1982: pp: 39–
+41, 43–44, & 605–607) describes equations relating water vapor pressure, vapor
+density, and specific heat capacity of wet air. The specific humidity at the sea
+surface qs is calculated from ts assuming the air at the surface is saturated with
+water vapor. U10 is measured or calculated using the instruments or techniques
+described in Chapter 4. Note that wind stress is a vector with magnitude and
+direction. It is parallel to the surface in the direction of the wind.
+    The problem now becomes: How to calculate the fluxes across the sea sur-
+face required for studies of ocean dynamics? The fluxes include: 1) stress; 2)
+solar heating; 3) evaporation; 4) net infrared radiation; 5) rain; 5) sensible heat;
+and 6) others such as CO2 and particles (which produce marine aerosols). Fur-
+thermore, the fluxes must be accurate. We need an accuracy of approximately
+±15 W/m2 . This is equivalent to the flux of heat which would warm or cool a
+column of water 100 m deep by roughly 1◦ C in one year. Table 5.2 lists typi-
+cal accuracies of fluxes measured globally from space. Now, let’s look at each
+variable.
+Wind Speed and Stress Stress is calculated from wind observations made
+from ships at sea and from scatterometers in space as described in the last
+chapter.
+Insolation is calculated from cloud observations made from ships and from
+visible-light radiometers on meteorological satellites. Satellite measurements
+are far more accurate than the ship data because it’s very hard to measure
+cloudiness from below the clouds. Satellite measurements processed by the
+International Satellite Cloud Climatology Project isccp are the basis for maps
+of insolation and its variability from month to month (Darnell et al. 1988;
+Rossow and Schiffer 1991).
+    The basic idea behind the calculation of insolation is this. Sunlight at the
+60                           CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+top of the atmosphere is accurately known from the solar constant, latitude,
+longitude, and time. Sunlight is either reflected back to space by clouds, or it
+eventually reaches the sea surface. Only a small and nearly constant fraction
+is absorbed in the atmosphere. But, recent work by Cess et al. (1995) and
+Ramanathan et al. (1995) suggest that this basic idea may be incomplete,
+and that atmospheric absorption may be a function of cloudiness. Assuming
+atmospheric absorption is constant, insolation is calculated from:
+
+                           Insolation = S(1 − A) − C
+
+where S = 1365 W/m2 is the solar constant, A is albedo, the ratio of incident to
+reflected sunlight, and C is a constant which includes absorption by ozone and
+other atmospheric gases and by cloud droplets. Insolation is calculated from
+cloud data (which also includes reflection from aerosols) collected from instru-
+ments such as the avhrr on meteorological satellites. Ozone and gas absorption
+are calculated from known distributions of the gases in the atmosphere. QSW
+is calculated from satellite data with an accuracy of 5–7%.
+Water Flux In (Rainfall) Rain rate is another variable that is very diﬀicult
+to measure from ships. Rain collected from gauges at different locations on ships
+and from gauges on nearby docks all differ by more than a factor of two. Rain
+at sea falls mostly horizontally because of wind, and the ship’s superstructure
+distorts the paths of raindrops. Rain in many areas falls mostly as drizzle, and
+it is diﬀicult to detect and measure.
+     The most accurate measurements of rain rate in the tropics (±35◦ ) are cal-
+culated from microwave radiometers and radar observations of rain at several
+frequencies using instruments on the Tropical Rain Measuring Mission trmm
+launched in 1997. Rain for other times and latitudes can be calculated accu-
+rately by combining microwave data with infrared observations of the height of
+cloud tops and with rain gauge data (figure 5.5). Rain is also calculated from
+the reanalyses weather data by numerical models of the atmospheric circulation
+(Schubert, Rood, and Pfaendtner, 1993), and by combining ship and satellite
+observations with analyses from numerical weather-prediction models (Xie and
+Arkin, 1997).
+     The largest source of error is due to conversion of rain rate to cumulative
+rainfall, a sampling error. Rain is very rare, it is log-normally distributed, and
+most rain comes from a few storms. Satellites tend to miss storms, and data
+must be averaged over areas up to 5◦ on a side to obtain useful values of rainfall.
+Net Long-Wave Radiation Net Long-wave radiation is not easily calculated
+because it depends on the height and thickness of clouds, and the vertical
+distribution of water vapor in the atmosphere. It is calculated by numerical
+weather-prediction models or from observations of the vertical structure of the
+atmosphere from atmospheric sounders.
+Water Flux Out (Latent Heat Flux) Latent heat flux is calculated from
+ship observations of relative humidity, water temperature, and wind speed using
+bulk formulas (5.10c) and ship data accumulated in the icoads described below.
+5.5. GLOBAL DATA SETS FOR FLUXES                                                                                                                                      61
+
+                                                                      Global Precipitation for 1995
+      o
+90
+
+
+ 60 o                             0.                                                                                            0.5
+                                       5                              0.5     1.0
+                                                                                                    0                      1.0
+                                                     5                                             1.
+                                                 0.                                                                                           1.0
+                                                         5                                                                     1.5
+30 o                                   1.5
+                                                         1.
+                                                                1.0                 0.5                                                  0.5
+             0.5                                                                           1.5                                            0
+                                                                                                                                        1.
+             1.0         1.0                                                           1.5
+                                                                                           2.5                   2.5
+                                                                                                                   1.0                                        1.
+  0   o
+                            2.                                                         0.5                                                                     5
+                                                                                                                         1.5
+                                                         2.
+                          1.55                              5
+                                                                                                                                              0.5
+                                 0.                                                                                            0.5                   1. 0.5
+                                   5                                   1.0                                                                             0
+-30 o                                                                                     1.5
+                         1.5                                                 1.0
+                                                                                                                                        1.5
+                   1.0                                                                                         1.0
+                                                      0.5                                                            0.5
+      o
+-60                                                                                                      0.5
+
+
+
+-90 o
+          20 o            60 o               100 o            140 o            180 o            -140 o          -100 o          -60 o               -20 o     0o   20 o
+Figure 5.5 Rainfall in m/year calculated from data compiled by the Global Precipitation
+Climatology Project at nasa’s Goddard Space Flight Center using data from rain gauges,
+infrared radiometers on geosynchronous meteorological satellites, and the ssm/i. Contour
+interval is 0.5 m/yr, light shaded areas exceed 2 m/yr, heavy shaded areas exceed 3 m/yr.
+
+The fluxes are not calculated from satellite data because satellite instruments
+are not very sensitive to water vapor close to the sea. Perhaps the best fluxes
+are those calculated from numerical weather models.
+Sensible Heat Flux Sensible heat flux is calculated from observations of air-
+sea temperature difference and wind speed made from ships, or by numerical
+weather models. Sensible fluxes are small almost everywhere except offshore of
+the east coasts of continents in winter when cold, Arctic air masses extract heat
+from warm, western, boundary currents. In these areas, numerical models give
+perhaps the best values of the fluxes. Historical ship report give the long-term
+mean values of the fluxes.
+
+5.5   Global Data Sets for Fluxes
+   Ship and satellite data have been processed to produce global maps of fluxes.
+Ship measurements made over the past 150 years yield maps of the long-term
+mean values of the fluxes, especially in the northern hemisphere. Ship data,
+however, are sparse in time and space, and they are being replaced more and
+more by fluxes calculated by numerical weather models and by satellite data.
+   The most useful maps are those made by combining level 3 and 4 satellite
+data sets with observations from ships, using numerical weather models. Let’s
+look first at the sources of data, then at a few of the more widely used data sets.
+International Comprehensive Ocean-Atmosphere Data Set Data col-
+lected by observers on ships are the richest source of marine information. Slutz
+et al. (1985) describing their efforts to collect, edit, and publish all marine
+observations write:
+

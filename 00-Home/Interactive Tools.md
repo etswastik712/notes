@@ -7,7 +7,7 @@ tags: [type/hub, tool/interactive, status/draft]
 ---
 # Interactive Tools
 
-> [!abstract] 109 self-contained interactive visualisations across 15 subject groups
+> [!abstract] 112 self-contained interactive visualisations across 15 subject groups
 > Each tool is one HTML file in `Assets/interactive/` (no internet, no install): sliders, live plots, animations and step-through explorers built to give a *picture* of the idea. Open in a browser; every chapter that uses a tool shows its preview image and a link in an *Interactive* callout.
 
 > [!tip] How to open them
@@ -77,12 +77,14 @@ tags: [type/hub, tool/interactive, status/draft]
 | **Fourier synthesis: build a waveform from harmonics**<br>[open `wave_fourier`](../Assets/interactive/wave_fourier.html) | A periodic function is a sum of sines. *Try:* Square wave with N = 1, 3, 9, 49: watch the Gibbs ears sharpen but not shrink (overshoot 8.95 %). Triangle waves converge much faster (1/n² coefficients). | [[ED05 Electromagnetic Waves in Vacuum]] · [[QM01 From Waves to Probabilities]] · [[PR06 Moments Generating Functions and Limit Theorems]] · [[Waves - Course Map]] · [[Fourier and Laplace Transforms]] |
 | **Superposition: standing waves and beats**<br>[open `wave_standing_beats`](../Assets/interactive/wave_standing_beats.html) | Two sinusoidal waves added together. *Try:* Mode 'opposite directions' with amplitude ratio 1: perfect standing wave with nodes every λ/2. Lower the ratio: nodes fill in (partial standing wave, a travelling part remains). Mode 'beats': the envelope period is 2π/(k₂ − k₁). | [[CM06 Small Oscillations and Normal Modes]] · [[ED05 Electromagnetic Waves in Vacuum]] · [[ED07 Guided Waves]] · [[Waves - Course Map]] |
 
-### Thermodynamics (3)
+### Thermodynamics (5)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
 | **Ideal gas processes and the Carnot cycle on a P–V diagram**<br>[open `th_carnot`](../Assets/interactive/th_carnot.html) | One mole of ideal gas (choose monatomic γ = 5/3 or diatomic γ = 7/5) goes around a Carnot cycle: isothermal expansion at T_h, adiabatic expansion, isothermal compression at T_c, adiabatic compression. *Try:* Increase T_h: the cycle widens and η rises. Change the volume ratio: Q_h and W change but η does not. Compare γ = 5/3 and 7/5: different adiabat steepness, same efficiency. | [[TH03 The Ideal Gas and Adiabatic Processes]] · [[TH04 The Second Law Carnot Engines and Entropy]] |
+| **Is a lattice isotropic? The 2nd- and 4th-rank direction tensors of N lattice velocities**<br>[open `th_lattice_isotropy`](../Assets/interactive/th_lattice_isotropy.html) | A lattice model (a random walk or a lattice gas) moves along N equally spaced unit directions. *Try:* N = 4 (square lattice): the second-rank curve is a circle, the fourth-rank curve is a four-lobed 'square' with 33% anisotropy: random walks on a square lattice diffuse isotropically but a square lattice gas would not give isotropic fluid flow. N = 6: both curves are circles. N = 3: also isotropic at both ranks, but three directions have no opposites (no head-on collisions). Tilt the phase to see that the anisotropy is intrinsic, not an artefact of the axes. | [[THX1 Diffusion Random Walks and the Heat Equation]] |
 | **First law on a P–V diagram: work, heat and internal energy for four processes**<br>[open `th_pv_processes`](../Assets/interactive/th_pv_processes.html) | One mole of ideal gas taken from state A to a new volume by an isothermal, isobaric, isochoric or adiabatic process. *Try:* Expand from V = 10 L to 20 L at T = 300 K: isothermal W = RT ln2 = 1.729 kJ, Q = W, ΔU = 0. Adiabatic: Q = 0 and W = −ΔU (the gas cools). The isobaric W = P ΔV is the area of a rectangle. Compare the four areas. | [[TH02 Work Heat and the First Law]] · [[TH03 The Ideal Gas and Adiabatic Processes]] |
+| **Reacting ideal gases: the minimum of G(ε), and how pressure and inert gas shift it**<br>[open `th_reacting_equilibrium`](../Assets/interactive/th_reacting_equilibrium.html) | Pick a gas reaction (A ⇌ B, N₂O₄ ⇌ 2NO₂, 2A ⇌ B, SO₂ + ½O₂ ⇌ SO₃, N₂ + 3H₂ ⇌ 2NH₃), the equilibrium constant K, the total pressure P and the amount of inert gas. *Try:* Choose SO₂ + ½O₂ ⇌ SO₃ with K = 10 and P = 1 bar: ε_eq = 0.7645. Raise P to 10 bar: 0.8819 (Σν = −½, so K = [x-product](P/P°)^(−½)). Add 3 mol of inert gas at 1 bar: ε_eq falls to 0.6667. Switch to A ⇌ B (Σν = 0): the right-hand curve is flat, ε_eq = K/(1+K) whatever P and the inert gas. Switch to N₂O₄ ⇌ 2NO₂ (Σν = +1): ε_eq falls as P rises. | [[TH10 Open Systems Mixing and Reacting Gases]] · [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] |
 | **van der Waals isotherms and the Maxwell construction**<br>[open `th_vdw_maxwell`](../Assets/interactive/th_vdw_maxwell.html) | The van der Waals equation (P + a/V²)(V − b) = RT for CO₂. *Try:* T = 300 K: the unstable region is 112.7 < V < 147.1 cm³/mol (TH05). T = 304 K: the loop has closed to the critical point V_c = 128 cm³/mol. Below ~290 K watch the equal-area tie line drop to lower pressures; the two shaded lobes have equal area. | [[TH05 Potentials Maxwell Relations Stability and the Third Law]] · [[TH08 Gibbs Energy Equilibrium Constants and Phase Boundaries]] |
 
 ### Statistical Mechanics (6)
@@ -147,7 +149,7 @@ tags: [type/hub, tool/interactive, status/draft]
 |---|---|---|
 | **The Hodgkin–Huxley neuron: threshold, all-or-none spikes and repetitive firing**<br>[open `ns_hodgkin_huxley`](../Assets/interactive/ns_hodgkin_huxley.html) | The squid-axon membrane model: C dV/dt = I − g_Na m³h (V − E_Na) − g_K n⁴ (V − E_K) − g_L (V − E_L), with three gating variables m, h, n relaxing toward voltage-dependent targets. *Try:* Rest is −65 mV. A kick of 6 mV decays, 7 mV fires a spike peaking near +37 mV; 15 mV peaks at +40 mV, hardly higher. Constant current: no spikes below about 6 µA/cm², then a steady train (≈ 60 Hz at 7, 87 Hz at 20). Block Na⁺ (TTX) and no spike is possible; block K⁺ (TEA) and the spike will not repolarise properly. | [[Neuroscience - Course Map]] |
 
-### Probability (8)
+### Probability (9)
 
 | Tool | What it shows | Chapters |
 |---|---|---|
@@ -157,6 +159,7 @@ tags: [type/hub, tool/interactive, status/draft]
 | **The central limit theorem in action**<br>[open `pr_clt`](../Assets/interactive/pr_clt.html) | Draw n independent values from a distribution (uniform, exponential, a very skewed Bernoulli, a two-point distribution or a heavy-tailed log-normal), average them, standardise, and repeat 4000 times. *Try:* Exponential (skewness 2): n = 1 is a one-sided exponential curve; n = 4 is already lump-shaped; n = 30 is close to normal, skewness 2/√n = 0.37. The log-normal needs a much larger n. Bernoulli(0.05) needs n around 100 before the normal shape appears (the usual rule np ≥ 10). | [[PR06 Moments Generating Functions and Limit Theorems]] |
 | **Covariance, correlation and what they miss**<br>[open `pr_correlation`](../Assets/interactive/pr_correlation.html) | A cloud of 300 points with a chosen shape. *Try:* Bivariate normal, ρ = 0.8: R² = 0.64. Switch to the parabola: correlation ≈ 0 despite y being a function of x. Add an outlier at (6, 6) to uncorrelated normal data and the correlation jumps. | [[PR07 Sums of Independent Variables Covariance and Correlation]] |
 | **Joint, marginal and conditional distributions**<br>[open `pr_joint`](../Assets/interactive/pr_joint.html) | A scatter of 4000 pairs (X, Y) from a chosen joint law, with the marginal histograms on the axes and the conditional distribution of Y given X in a narrow slice around x₀ (click or slide x₀). *Try:* Correlated normal ρ = 0.8: slice at x₀ = 1.5: E[Y|X] = ρx₀ = 1.2, conditional s.d. √(1−ρ²) = 0.6. Switch to the disk: E[Y|X] = 0 for every x₀ but the conditional range shrinks to ±√(1−x₀²): dependence without correlation. | [[PR04 Joint Distributions Expectation and Variance]] · [[PR07 Sums of Independent Variables Covariance and Correlation]] |
+| **Rotating a correlated Gaussian to independent coordinates (HW6 Q1)**<br>[open `pr_mvn_rotation`](../Assets/interactive/pr_mvn_rotation.html) | A bivariate normal with s.d. *Try:* σ₁ = σ₂ = 1.5, ρ = 0.8: the eigenvectors are at θ = 45° and the eigenvalues are σ²(1 ± ρ) = 4.05 and 0.45 (ratio of the axis lengths 3); at θ = 45° the Y-cloud is an upright ellipse with correlation 0. Then take σ₁ = 2, σ₂ = 1, ρ = 0.5: the snap angle is not 45° and Var Y₁ + Var Y₂ stays σ₁² + σ₂² = 5 for every θ. | [[PR09 Change of Variables the Multivariate Normal and Products of Uniforms]] |
 | **Order statistics: the density of the k-th smallest of n**<br>[open `pr_order_statistics`](../Assets/interactive/pr_order_statistics.html) | Draw n independent values from a distribution and sort them: Y₍₁₎ ≤ … ≤ Y₍ₙ₎. *Try:* Uniform, n = 5: the k-th order statistic is Beta(k, n − k + 1) with mean k/6 (k = 2: 0.3333). Exponential with n = 2: the minimum has mean 1/2 (rate 2) and the second gap has mean 1: the gaps are 1/(n−k+1) = 1/2, 1. Increase n for the exponential: the first gap shrinks like 1/n while the last stays 1, so the maximum grows like the harmonic number H_n ≈ ln n. | [[PR08 Order Statistics and the Multinomial Distribution]] |
 | **Functions of a random variable: the change-of-variables formula**<br>[open `pr_transform`](../Assets/interactive/pr_transform.html) | If X has density f_X and Y = g(X), the density of Y is f_Y(y) = Σ f_X(xᵢ)/|g′(xᵢ)| summed over the roots of g(x) = y. *Try:* X ~ N(0,1) and Y = X²: the formula gives the chi-square(1) density f_Y(y) = e^{−y/2}/√(2πy) (two roots ±√y, divergent at 0). X ~ U(0,1) and Y = −ln X is exponential. X ~ N(0,1) and Y = e^X is log-normal. | [[PR05 Continuous Random Variables]] |
 
@@ -213,14 +216,14 @@ A chapter counts as covered if at least one tool is embedded in it. ✓ = at lea
 | Electrodynamics | 11/11: ED01, ED02, ED03, ED04, ED05, ED06, ED07, ED08, ED09, ED10, ED11 | none |
 | Quantum Mechanics | 10/10: QM01, QM02, QM03, QM04, QM05, QM06, QM07, QM08, QM09, QM10 | none |
 | Waves | (course map only) | no chapters written yet |
-| Thermodynamics and Statistical Mechanics | 15/17: SM01, SM02, SM03, SM04, SM05, SM06, SM07, SM08, TH02, TH03, TH04, TH05, TH06, TH08, TH09 | TH01, TH07 |
+| Thermodynamics and Statistical Mechanics | 16/18: SM01, SM02, SM03, SM04, SM05, SM06, SM07, SM08, TH02, TH03, TH04, TH05, TH06, TH08, TH09, TH10 | TH01, TH07 |
 | Climate | 15/21: CL03, CL04, CL05, CL06, CL07, CL08, CL09, CL10, CL11, CL12, CL13, CL14, CL17, CL18, CL19 | CL01, CL02, CL15, CL16, CL20, CL21 |
 | Ecology and Evolution | 6/7: EE02, EE03, EE04, EE05, EE06, EE07 | EE01 |
 | Landscapes and Geomorphology | 19/29: LS02, LS03, LS04, LS07, LS08, LS09, LS10, LS11, LS12, LS13, LS14, LS15, LS16, LS21, LS22, LS23, LS24, LS26, LS27 | LS01, LS05, LS06, LS17, LS18, LS19, LS20, LS25, LS28, LS99 |
 | Neuroscience | (course map only) | no chapters written yet |
-| Probability | 8/8: PR01, PR02, PR03, PR04, PR05, PR06, PR07, PR08 | none |
+| Probability | 9/9: PR01, PR02, PR03, PR04, PR05, PR06, PR07, PR08, PR09 | none |
 | Group Theory | 6/10: GT01, GT02, GT03, GT04, GT05, GT06 | GT07, GT08, GT09, GT10 |
-| Proofs, Analysis and Topology | 8/15: PA04, PA06, PA07, PA11, PA12, PA13, PA14, PA15 | PA01, PA02, PA03, PA05, PA08, PA09, PA10 |
+| Proofs, Analysis and Topology | 8/16: PA04, PA06, PA07, PA11, PA12, PA13, PA14, PA15 | PA01, PA02, PA03, PA05, PA08, PA09, PA10, PA16 |
 | Inorganic Chemistry | 6/10: CH01, CH02, CH04, CH05, CH09, CH10 | CH03, CH06, CH07, CH08 |
 | Differential Geometry | 17/17: DM01, DM02, DM03, DM04, DM05, DM06, DM07, DM08, DM09, DM10, DM11, DM12, DM13, DM14, DM15, DM16, DM17 | none |
 

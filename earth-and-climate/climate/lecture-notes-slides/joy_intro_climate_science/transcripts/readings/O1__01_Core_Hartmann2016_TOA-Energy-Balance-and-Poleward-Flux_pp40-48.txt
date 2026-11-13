@@ -1,0 +1,363 @@
+40                           2. THE GLOBAL ENERGY BALANCE
+
+           2.8 THE ENERGY BALANCE AT THE TOP
+                    OF THE ATMOSPHERE
+
+   The amount of energy absorbed and emitted by Earth varies geographi-
+cally and seasonally, depending on atmospheric and surface conditions
+as well as the distribution of insolation. The energy balance at the top of
+the atmosphere is purely radiative and can be measured accurately from
+Earth-orbiting satellites. The net radiation at the top of the atmosphere
+(Rroa) is equal to the absorbed solar radiation (Q.,;) minus the outgoing
+longwave radiation (OLR).
+
+                                    Ryoa zi Quos — OLR                                  (2.19)
+
+     The absorbed solar radiation is the incident solar radiation at the top of
+the atmosphere Sro, minus the fraction reflected, which is the albedo, a.
+
+                                    Qips = Soa (1- @)                                   (2.20)
+   The albedo is estimated by measuring the solar radiation reflected from
+a region of Earth and comparing that with the insolation. The global mean,
+or planetary, albedo of Earth is about 29%. The albedo shows interesting
+geographic structure (Fig. 2.9).* It is highest in the polar regions where
+cloud and snow cover are plentiful and where average solar zenith angles
+are large. Secondary maxima of albedo occur in tropical and subtropical
+regions where thick clouds are prevalent, and over bright surfaces such as
+the Sahara Desert. The smallest albedos occur over those tropical ocean
+regions where clouds are sparsely distributed. The ocean surface has an
+intrinsically low albedo so that when clouds and sea ice are absent, the
+Earth’s albedo over ocean areas is only 8-10%.
+   Outgoing longwave radiation (OLR) is greatest over warm deserts and
+over tropical ocean areas where clouds occur infrequently (Fig. 2.10). It
+is lowest in polar regions and in regions of persistent high cloudiness in
+the tropics. The temperature of the emitting substance controls the OLR,
+so that the cold poles and the cold cloud tops produce the lowest values.
+A warm surface that is overlain by a relatively dry, cloudless atmosphere
+produces the highest OLR values.
+   The net radiation is negative near the poles and positive in the tropics
+(Fig. 2.11). The highest positive values of about 140 Wm” occur over the
+subtropical oceans in the summer hemisphere, where large insolation and
+relatively low albedos both contribute to large absorbed solar radiation.
+The greatest losses of energy occur in the polar darkness of the winter
+hemisphere, where the OLR is uncompensated by solar absorption. Dry
+desert areas such as the Sahara in northern Africa are interesting because,
+
+*We use a Hammer equal-area projection at many points in this book. In displaying
+irradiance (Wm ’), it is especially important that the fraction of the area of the projection
+occupied by a particular feature be proportional to the fraction of the area of Earth’s surface
+that the feature occupies.
+                2.8 THE ENERGY BALANCE AT THE TOP OF THE ATMOSPHERE             41
+
+
+
+
+                                        Albedo
+
+        E 2.9    Global maps of planetary albedo measured from satellites for annual
+mean, DJF and JJA seasons. Data from CERES 2000-2013.
+42                             2. THE GLOBAL ENERGY BALANCE
+
+
+                                       WRK
+
+
+
+
+                                                    ean
+                                             WS
+                                       aN
+
+
+                                                         Aw
+                                       O||
+                                                    or
+                                  a WEA!
+
+
+
+
+                                                                       im ON
+              Nisa   tS
+
+                          NY
+
+
+                                                     | i
+                                                                                T¢
+
+
+
+
+                                                    i                      y)
+
+
+                          Bp oe                                                GAA
+      y                    ” ia
+                                 Yo
+                                 o
+
+
+                                  /
+                                                                                 im
+                                                                                 “a
+                                                                                  a
+
+                                  a:e \
+                                       Ay
+                                                    Ns
+                                                    ——
+                                                    RO)
+                                                    SS
+                                                          Z
+
+                                                              f
+                                                                  =<
+
+
+
+
+                                          \ ,
+
+
+
+
+                                                  W/m
+
+FIGURE 2.10   Global maps of outgoing longwave radiation. Data from CERES 2000-2013.
+              2.8 THE ENERGY BALANCE AT THE TOP OF THE ATMOSPHERE                  43
+
+
+(a) Annual
+
+                                                A
+                                                gy
+                                                 5
+
+
+
+
+                                 aft
+                                   lia     f|
+
+
+
+
+                                 iq yAS
+                                           O\\ [oy
+                                          3 i (tes we
+                                 is)
+
+
+
+
+                                          W/m
+
+FIGURE 2.11    Global maps of net incoming radiation. Data from CERES 2000-2013.
+44                           2. THE GLOBAL ENERGY BALANCE
+
+despite their subtropical latitude, they lose energy in the annual average.
+Their energy loss is related to the relatively high surface albedo of dry des-
+erts, combined with the large OLR loss associated with a dry, cloudless
+atmosphere above a warm surface. Since deserts are land, which cannot
+transport heat laterally, the radiative loss at the top of the atmosphere must
+be balanced by horizontal heat transport by the atmosphere into the desert
+region from elsewhere. Air with high energy at high altitudes sinks over
+the desert and warms adiabatically as it subsides. This air tends to have a
+low relative humidity and enhances the dryness of the desert.
+    When averaged around latitude circles, the components of the energy
+balance at the top of the atmosphere clearly show the influence of the
+latitudinal gradient of insolation (Fig. 2.12). The poleward decrease in
+absorbed solar energy is even greater than that of insolation because the
+albedo increases with latitude. Thus a smaller fraction of the available
+insolation is absorbed at higher latitudes than at the equator. The albedo
+increases with latitude because solar zenith angle, cloud coverage, and
+snow cover all increase with latitude. The energy emitted to space by the
+atmosphere does not decrease with latitude as rapidly as the absorbed
+solar radiation, because the atmosphere and ocean transport heat poleward
+and support a net energy loss to space in polar regions. The absorbed solar
+radiation exceeds the OLR in the tropics, so that the net radiation is posi-
+tive there. Poleward of about 40°, the absorbed solar radiation falls below
+the OLR and the net radiation balance is negative, so that the climate sys-
+tem loses energy to space. The latitudinal gradient in annual mean net
+radiation must be balanced by a poleward flux of energy in the atmo-
+sphere and ocean.
+
+
+
+                                                             Absorbed
+                       300               itis         ~   “s shortwave
+
+
+                                             Outgoing
+                                             longwave
+
+
+                     ® 100                   Net radiation
+                        50k"
+
+
+
+                      -100
+                      -150
+                          -90   -60    -30        0          30    60    90
+                                                Latitude
+
+FIGURE 2.12      Graphs of annual mean absorbed solar radiation, OLR, and net radiation
+averaged around latitude circles. Data from CERES 2000-2013.
+                             2.9 POLEWARD ENERGY FLUX                       45
+
+
+                 2.9 POLEWARD ENERGY FLUX
+
+   In the lowest curve of Fig. 2.12, we see that the annual mean net radia-
+tion is positive equatorward of about 40° of latitude and negative pole-
+ward of that latitude. As illustrated in Fig. 2.13, the energy balance for the
+climate system involves only the exchange at the top of the atmosphere,
+the transport through the lateral boundaries of the region in question by
+the atmosphere and ocean, and the time rate of change of energy within
+the region. Energy exchange with the solid earth can be neglected. We can
+write the energy balance for the climate system as
+                                  oNee,
+                                          = Rica SAE                     (2.21)
+
+where dE,,/ dt is the time rate of change of the energy content of the climate
+system, Ryo, is the net incoming radiation at the top of the atmosphere,
+and AF,, is the divergence of the horizontal flux in the atmosphere and
+ocean. If we average over a year, then the storage term becomes small,
+and we have an approximate balance between net flux at the top of the
+atmosphere and horizontal transport.
+
+                                     Rroa = AF                           (2.22)
+   We can then use the observation of net radiation in Fig. 2.12 to derive
+the required annual mean energy transport in the northward direction.
+We assume that the energy lost to space poleward of any latitude must
+be supplied by poleward transport across that latitude by the atmosphere
+and the ocean. So if we integrate the net radiation over a polar cap area,
+we can calculate the total energy flux across each latitude belt in the
+following way:
+
+
+
+
+                  Atmosphere
+                   and ocean
+
+
+                    Solid earth
+
+FIGURE 2.13 Diagram of the energy balance for a vertical column of the climate
+system in some latitude interval.
+46                             2. THE GLOBAL ENERGY BALANCE
+
+
+
+
+                     Northward
+                     (PetaWatts)
+                     flux
+
+                                         cl
+
+                         -90      -60   -30     0        30   60   90
+                                              Latitude
+
+FIGURE 2.14 Northward transport of energy for annual mean conditions. Net radia-
+tion and atmospheric transport are estimated from observations, ocean transport is calcu-
+lated as a residual in the energy balance. Units are petaWatts (10° W). Data from CERES
+EBAF-2.7 and ERA-Interim (Mayer and Haimberger, 2012).
+
+
+
+                          F()= f'nJ,Rion? cosodadg                                 (2.23)
+   The total northward energy flux inferred from the radiation imbal-
+ance peaks in mid-latitudes at about 5.8 x 10” W, or 5.8 petaWatts (PW)
+(Fig. 2.14). This flux includes the contributions from both the atmosphere
+and the ocean. The flux of energy in the atmosphere can be estimated from
+analyzed fields of wind, temperature, and humidity. If this flux is sub-
+tracted from the total flux, it gives an estimate of the oceanic energy flux,
+which is more difficult to estimate from direct measurements. At 20°N, the
+contributions from the atmospheric and oceanic poleward fluxes are each
+about 2.0 PW. The ocean flux peaks at about 20°N in the subtropics, where-
+as the atmospheric flux has a broad maximum peaking near 40°N and
+40°S. Although the oceanic heat flux is somewhat weaker in the Southern
+Hemisphere, it peaks in the subtropics. In Chapters 6 and 7 we investigate
+in more detail how the atmosphere and the oceans accomplish this pole-
+ward flux of energy. If the fluid envelope of Earth did not transport heat
+poleward, the tropics would be warmer and the polar regions would be
+much colder. Transport of heat by the atmosphere and the oceans makes
+the climate of Earth much more equable than it would otherwise be.
+   If we integrate over the globe, the horizontal transport is zero, since
+energy cannot be removed from spherical Earth through horizontal
+transport. Then in the annual global average, the net radiation is very
+close to zero. Any global mean net radiative imbalance will lead to a heat-
+ing or cooling of Earth.
+47
+                                                                                                                                            ‘sqaunjd sayjo ayy 04 asuas ayisoddo ay} U2 azbjO4 SHUBAT] PUY SNUAA +»
+                                                                                                                                                                        ‘sjourrd 19yn0 ayy aww hay], 4ayjouv auo 07
+                                                                                                                                                                                                     qsayf OY,
+                           opus asv yng ‘Ys40y wo. quauaffip hao asv snof Sunuvwmas ayy ‘syoueyd Jour ay a1v hay, ‘worgisodiuos vouuayo Ajqvgqoad pun ‘Ajisuap ‘ssp ‘az1s ui avpugs a.v sjauvjd Anof
+                                                                                                                                                                            SOL’ PE                    aunydany
+                              0s‘0                                                                                                                                          099'S7Z                        snueiy)
+2.9 POLEWARD ENERGY FLUX
+
+
+
+
+                              L¥0                                                                                                                                           09709                          uInyes
+                              acu)                                                                                                                                          O6¥' IL                        sayidn{
+                              St'0                                                                                                                                            96€'€                          sre
+                              670                                                                                                                                             8Z¢’9                          yyeg
+                              S90                                                                                                                                             zs0'9                         snua,,
+                               0                                                                                                                                              OFT                       AIndI0j/
+                                       (shep) uore}01        Ayio11yUadI0         (saeiZap)       (shep) reak       (Wy OL) UNS uTOIZ                (¢-w 3)         (uy) snrpez
+                                             JO poned             Te3#q20        Aymbiyqo          yo yysue]         aouejystp a8e1aay         Ayisuap uray                           uray
+                                                                                                                                                 syoue]g        yeoishyg
+                                                                                                                                                                      eeJo} oy2                 ATAVL
+                                                                                                                                                                                                   §=€°7
+48                           2, THE GLOBAL ENERGY BALANCE
+
+POR   YS SN    REE    POND A UBS SEERA   DIN SORE EDEN ESE EBS AOL EELEE LL IID EEE TOOTS   ELE AEP   DLE
+
+
+ EXERCISES
+
+ 1. Use the data in Table 2.3 to calculate the emission temperatures for all
+    of the planets. The actual energy emission from Jupiter corresponds to
+    an emission temperature of about 124 K. How must you explain the
+    difference between the number you obtain for Jupiter and 124 K?
+ 2. Calculate the emission temperature of Earth if the solar luminosity is 30%
+    less, as it is hypothesized to have been early in solar system history. Use
+    today’s albedo and Earth—Sun distance.
+ 3. Calculate the emission temperature of Earth, if the planetary albedo is
+    changed to that of ocean areas without clouds, about 10%.
+ 4. Using the model illustrated in Fig. 2.3, calculate the surface temperature if
+      the insolation is absorbed in the atmosphere, rather than at the surface.
+ 5. Using the data in Fig. 2.4, estimate the blackbody temperature of Earth’s
+    surface and the blackbody temperature of the atmosphere as viewed
+    from Earth’s surface. How well do these temperatures agree with the
+    temperatures derived from the model shown in Fig. 2.3?
+ 6. Calculate the solar zenith angle at 9 AM local sun time at Seattle (47°N) at
+    summer solstice and at winter solstice. Do the same for Miami (26°N).
+ 7. A mountain range is oriented East-West and has a slope on its north
+    and south faces of 15°. It is located at 45°N. Calculate the insolation per
+    unit surface area on its south and north faces at noon at the summer and
+    winter solstices. Compare the difference between the insolation on the
+    north and south faces in each season with the seasonal variation on each
+    face. Ignore eccentricity and atmospheric absorption.
+ 8. In his science fiction novel, Ringworld, Larry Niven imagines a
+    manufactured world consisting of a giant circular ribbon of superstrong
+    material that circles a star. The width of the ribbon normal to a radius
+    vector originating at the star’s center is much greater than the thickness
+    of the ribbon in the radial direction. However, the width of the ribbon is
+    much less than the distance of the ribbon from the star. If the diameter
+      of the ribbon is the same as the diameter of Earth’s orbit about the Sun,
+      the luminosity is the same as Earth’s Sun, and the albedo of the ribbon
+      is 0.3, what is the emission temperature of the sunlit side of the ribbon?
+      Consider both the cases in which heat is conducted very efficiently from
+      the sunlit to the dark side of the ribbon, and the case in which no heat
+      is conducted from the sunlit to the dark side of the ribbon. Explain why
+      your emission temperature is different from Earth’s. At what distance
+      from the center of the star would the ribbon need to be to reproduce the
+      emission temperature of Earth?
+

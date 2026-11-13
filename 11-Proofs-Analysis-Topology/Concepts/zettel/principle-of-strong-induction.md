@@ -1,7 +1,7 @@
 ---
 id: zettel/principle-of-strong-induction
 aliases: ["Principle of Strong Induction", "strong induction"]
-tags: [zettel, agent-written, intro-to-proofs, subject/analysis]
+tags: [zettel, agent-written, intro-to-proofs, subject/analysis, quiz/proofs, quiz/pa-strong]
 trust_tier: agent_written
 ---
 

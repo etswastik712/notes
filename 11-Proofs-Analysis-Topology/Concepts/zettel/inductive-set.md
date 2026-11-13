@@ -1,7 +1,7 @@
 ---
 id: zettel/inductive-set
 aliases: ["Inductive set"]
-tags: [zettel, agent-written, intro-to-proofs, subject/analysis]
+tags: [zettel, agent-written, intro-to-proofs, subject/analysis, quiz/proofs, quiz/pa-induction]
 trust_tier: agent_written
 ---
 

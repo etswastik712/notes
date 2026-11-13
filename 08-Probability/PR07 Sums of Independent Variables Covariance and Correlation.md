@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, ai-notes]
 status: draft
 prereq: [PR04 Joint Distributions Expectation and Variance, PR05 Continuous Random Variables, PR06 Moments Generating Functions and Limit Theorems]
-tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/probability, quiz/pr-hw4]
 ---
 # PR07 · Sums of Independent Variables, Covariance and Correlation
 
@@ -54,7 +54,7 @@ flowchart LR
 ```
 *Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
 
-## 1. Two continuous variables: joint density and independence
+## 1. Two continuous variables: joint density and independence #quiz/pr-hw4
 <span class="scope-extra-book">extra · book</span> *Ross §6.1–6.2, the continuous twin of the joint pmf of PR04 §1*
 
 > [!intuition] Probability as volume
@@ -69,7 +69,7 @@ flowchart LR
 > [!example] 🔵 Uncorrelated but not independent: the uniform disc
 > Let $(X,Y)$ be uniform on the unit disc, $f=\frac1\pi$ on $x^2+y^2\le1$. By symmetry $x\mapsto-x$, $E[X]=0$ and $E[XY]=0$, so $\mathrm{Cov}(X,Y)=0$. But $f_X(x)=\frac2\pi\sqrt{1-x^2}$ and the joint density is **not** the product: at $(0.9,0.9)$ it is $0$ while $f_Xf_Y=0.0770$; and $P[|X|>0.8,|Y|>0.8]=0$ (since $0.64+0.64>1$) whereas $P[|X|>0.8]^2=0.1041^2=0.0108$. A support that is not a rectangle already rules out independence, and $\rho(X^2,Y^2)=-\tfrac13$ shows the dependence is real (simulation $-0.333$).
 
-## 2. The convolution formula
+## 2. The convolution formula #quiz/pr-hw4
 <span class="scope-taught">taught</span> *the formula is quoted on [[hw4.pdf#page=1|Homework 4]]* · <span class="scope-extra-book">extra · book</span> *derivation: Ross §6.3*
 
 > [!intuition] Blending
@@ -96,7 +96,7 @@ flowchart LR
 > [!connection] Convolution and the MGF
 > $M_{X+Y}(t)=E[e^{tX}e^{tY}]=M_X(t)M_Y(t)$ for independent variables ([[PR06 Moments Generating Functions and Limit Theorems]] §2): **convolution of densities becomes multiplication of MGFs**, exactly as convolution of functions becomes multiplication of Fourier transforms ([[Convolution Theorem]]). The MGF route is shorter; the convolution route needs no uniqueness theorem and shows *why* a family is closed under addition.
 
-## 3. Homework 4, Q1: independent normals add (by convolution)
+## 3. Homework 4, Q1: independent normals add (by convolution) #quiz/pr-hw4
 <span class="scope-taught">taught</span> *[[hw4.pdf#page=1|Homework 4]]; solution is mine, identity checked symbolically in `scripts/pr_numbers2.py`*
 
 > [!example] Q1 Show that $X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$ using $f_{X+Y}(z)=\int f_X(x)f_Y(z-x)\mathrm dx$
@@ -114,7 +114,7 @@ flowchart LR
 > [!example] 🔵 The Cauchy law does not behave this way
 > Two independent standard Cauchy variables have $f_{X+Y}(0)=\int\frac1{\pi^2(1+x^2)^2}\mathrm dx=\frac1{2\pi}=0.1592$, which is the density at $0$ of a **Cauchy with scale $2$**: the sum is $2\times$ a standard Cauchy (the Cauchy family is closed under convolution with scales adding; checked here at $z=0$), so $\tfrac12(X+Y)$ is again standard Cauchy. Averaging does not narrow the law, which is why the law of large numbers fails (PR06 §5).
 
-## 4. Homework 4, Q2: reflection and $E|X-Y|$
+## 4. Homework 4, Q2: reflection and $E|X-Y|$ #quiz/pr-hw4
 <span class="scope-taught">taught</span> *[[hw4.pdf#page=1|Homework 4]]; solutions are mine*
 
 > [!example] Q2(a) If $Y\sim N(\mu,\sigma^2)$ then $-Y\sim N(-\mu,\sigma^2)$
@@ -131,7 +131,7 @@ flowchart LR
 > [!pitfall] Differences of independent variables
 > $\mathrm{Var}(X-Y)=\mathrm{Var}X+\mathrm{Var}Y$ (**plus**, not minus): the spreads add whether you add or subtract. And $|X-Y|$ is **folded** normal, not $N(0,2)$; its mean is positive.
 
-## 5. Homework 4, Q3: the covariance matrix and $|\rho|\le1$
+## 5. Homework 4, Q3: the covariance matrix and $|\rho|\le1$ #quiz/pr-hw4
 <span class="scope-taught">taught</span> *[[hw4.pdf#page=1|Homework 4]]; solutions are mine, numbers in `scripts/pr_numbers2.py`*
 
 > [!key] Covariance matrix ([[Covariance Matrix]], [[Covariance and Correlation]])
@@ -155,7 +155,7 @@ flowchart LR
 > [!pitfall] Correlation zero is not independence
 > $\rho=0$ only says there is **no linear** dependence. $X\sim N(0,1)$ and $X^2$ have $\mathrm{Cov}=E[X^3]-E[X]E[X^2]=0$ (simulation $\rho=0.006$) yet $X^2$ is a function of $X$; the uniform disc (§1) is another example. The converse holds in one important case: for **jointly normal** variables zero correlation does imply independence (not proved here).
 
-## 6. Homework 4, Q4: the two dice, as a convolution
+## 6. Homework 4, Q4: the two dice, as a convolution #quiz/pr-hw4
 <span class="scope-taught">taught</span> *[[hw4.pdf#page=1|Homework 4 Q4]] = Homework 3 Q4; solved in [[PR06 Moments Generating Functions and Limit Theorems]] §3.3*
 
 > [!example] Q4 MGF of the sum of two fair dice
@@ -250,3 +250,6 @@ flowchart LR
 
 ## Continued in the vault (added 2026-11-07)
 - Order statistics, exponential order statistics and the multinomial covariance matrix (Homework 5): [[PR08 Order Statistics and the Multinomial Distribution]].
+
+## Continued in the vault (added 2026-11-12)
+- Marginal, conditional and Bayes densities (Week 4), the change-of-variables formula (Week 5), the multivariate normal rotated to independent coordinates by the eigenvectors of $\Sigma$ (Homework 6 Q1; the eigenvalue form of $|\rho|\le1$ of §5 is what makes the diagonal entries non-negative), $-\ln U$, products of uniforms and Jensen: [[PR09 Change of Variables the Multivariate Normal and Products of Uniforms]]; concept notes [[Multivariate Normal Distribution]], [[Conditional Density Function]].

@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, handwritten-notes]
 status: draft
 prereq: [PR03 Discrete Random Variables and Distributions, PR04 Joint Distributions Expectation and Variance]
-tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/probability, quiz/pr-hw4, quiz/pr-hw5, quiz/pr-hw6]
 ---
 # PR05 · Continuous Random Variables
 
@@ -342,3 +342,6 @@ For $Y=g(X)$ with $X$ continuous: **find $F_Y(y)=P[g(X)\le y]$ by rewriting the 
 
 ## Continued in the vault (added 2026-11-07)
 - The minimum of independent exponentials and the independent exponential gaps (memoryless property used repeatedly): [[PR08 Order Statistics and the Multinomial Distribution]] §3, [[Exponential Order Statistics]].
+
+## Continued in the vault (added 2026-11-12)
+- The pdf formula with the Jacobian (one variable and $n$ variables), non-monotone maps, polar coordinates and Box–Muller, $-\ln U\sim\mathrm{Expo}(1)$ and the Gamma law of a sum of exponentials: [[PR09 Change of Variables the Multivariate Normal and Products of Uniforms]] §2, §4; concept notes [[Change of Variables for Densities]], [[Gamma Distribution]], [[Box-Muller Transform]].

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O4 · Nansen's answer: what the wind does to a rotating ocean</title>
+  <link rel="stylesheet" href="/intro_climate_science/css/site.css">
+</head>
+<body>
+  <header>
+    <h1>O4 · Nansen's answer: what the wind does to a rotating ocean</h1>
+    <p class="subtitle">Lecture notes · EC2113 Ocean module · Lecture 4 · Wednesday 11 November 2026</p>
+  </header>
+  <main>
+<p><em>These notes follow the lecture as it was taught. Section 3 is new: it covers what the lecture assumed and didn’t have time to build, the equations of fluid motion and what a shear stress is. Read it before the rest if the force balance in class felt like it came from nowhere. The parts of the plan we didn’t reach are at the end, under “Read this part”. The readings are extracts in the course’s shared readings folder, under O4.</em></p>
+
+<h2 id="the-question">The question</h2>
+
+<p>The wind pushes along the sea surface. Why doesn’t the water go where it is pushed? And what does that do to the whole upper ocean?</p>
+
+<h2 id="1-where-we-were-a-heat-budget-a-slab-cant-explain">1. Where we were: a heat budget a slab can’t explain</h2>
+
+<p>The ocean has a large effective heat capacity for two reasons. Water holds a lot of heat, and, unlike land, it is a fluid, so the wind can stir it, the way a spoon stirs tea (though the mechanism is different: the wind stirs by shear, not by a spoon pushing water around). So the top 50–100 m or so of the ocean warms and cools together.</p>
+
+<p>Then the map from last lecture, of where the ocean gains and loses heat over a year, made two observations that look contradictory:</p>
+
+<ul>
+  <li>In the eastern equatorial Pacific the ocean <strong>gains</strong> heat faster than almost anywhere, yet the water there is cold for the equator.</li>
+  <li>Over the western boundary currents, such as the Gulf Stream and the Kuroshio, it <strong>loses</strong> heat fastest, yet the water there is warm for its latitude.</li>
+</ul>
+
+<p>A slab that only stores heat can’t do this for decades on end. Something has to keep bringing cold water to the first place and warm water to the second. <strong>The heat budget alone can’t answer the question, so we turn to the momentum budget.</strong></p>
+
+<p>Notice the order of the three hats from O1. First the accountant (heat in, heat out: true of this table, this blackboard, anything), then the data scientist (what does the ocean’s heat budget look like?), then the physicist (<em>why</em> does that pattern last?). Answering the physicist’s question opens a new ledger, momentum, with its own three hats. The atmosphere has a great deal of momentum, and it hands some to the surface below, which is mostly ocean.</p>
+
+<h2 id="2-nansens-question-and-a-free-body-diagram">2. Nansen’s question, and a free-body diagram</h2>
+
+<p>On the <em>Fram</em> (1893–96), <a href="https://en.wikipedia.org/wiki/Fridtjof_Nansen">Fridtjof Nansen</a> saw that the Arctic sea ice never drifted straight downwind. It went 20–40° to the <strong>right</strong> of the wind. Seeing <em>that</em> it happens is the data scientist’s job. The physicist asks <em>why</em>.</p>
+
+<p><strong>The natural first move, and Nansen’s own, is a free-body diagram for the ice.</strong> If the ice drifts at a steady velocity, the forces on it must add to zero. Which forces?</p>
+
+<ul>
+  <li><strong>The wind’s push, W</strong>, along the wind.</li>
+  <li><strong>Coriolis, C</strong> (Suhas’s lectures), at right angles to the ice’s motion: to the right of it in the northern hemisphere, to the left in the southern.</li>
+</ul>
+
+<p>Can those two alone balance? Only if they point in exactly opposite directions. If the ice moved downwind, Coriolis would be at right angles to the wind, and two forces at right angles can’t cancel. So there must be a third force: <strong>drag, F</strong>, from the water the ice sits in, acting opposite to the ice’s motion (otherwise the ice would soon move as fast as the wind). With three forces, W + F + C = 0, and the only way to close the triangle is for the ice to drift to one side of the wind, to the right in the north (Stewart §9.2, p. 136, Fig. 9.2).</p>
+
+<p><strong>Why the diagram isn’t the end of the story.</strong> The drag on the ice comes from the water under it, and what that water is doing is exactly what we don’t know. The diagram hands the problem on to the water. And the ice is a thin lid: a floe a few metres thick, riding on tens of metres of water that the wind is stirring, across thousands of kilometres of ocean.</p>
+
+<p>So change the question. Think of the ice the way you think of pollen grains in <a href="https://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a>: the pollen does nothing itself; it shows you what the water is doing. <strong>Nansen wasn’t seeing the ice move. He was seeing the ocean move, and the ice marked it.</strong> The wind does push on the ice directly, and sea-ice models keep a force balance for it, but the turning comes from the water. Treating the ice as a marker, a <strong>passive tracer</strong>, is the right first picture.</p>
+
+<p><strong>What does Earth’s rotation need?</strong> Coriolis matters when a motion lasts long enough for the Earth’s turning to bend it. At mid-latitudes that takes a few hours (1/f ≈ 3 hours; f is defined in §3). A ball thrown across a room, or water draining from a sink, is over long before rotation can act on it. Nansen’s ice drifted for weeks over hundreds of kilometres, so rotation acts on it fully, and on the water around it. It is the size and duration of the <em>motion</em> that count, not the size of the object.</p>
+
+<p>To understand the water, we need the equations that describe it.</p>
+
+<h2 id="3-the-equations-of-fluid-motion-in-words">3. The equations of fluid motion, in words</h2>
+
+<p><em>In class we wrote down the force balance for the ocean without building it. This section builds it, qualitatively. You won’t be examined on the full equations; what you need is the idea of each term, and how we dropped all but two of them.</em></p>
+
+<h3 id="newtons-second-law-for-a-parcel-of-water">Newton’s second law, for a parcel of water</h3>
+
+<p>Take a small parcel of water and follow it. Newton’s second law says its mass times its acceleration equals the sum of the forces on it. Divide by the mass and you have accelerations, forces per unit mass. In vector form (Stewart eq. 7.10, p. 108):</p>
+
+<blockquote>
+  <p>Dv/Dt = −(1/ρ)∇p − 2Ω × v + g + F</p>
+</blockquote>
+
+<p>Here <strong>v</strong> is the water’s velocity, ρ its density, p the pressure, <strong>Ω</strong> the Earth’s rotation and <strong>g</strong> gravity. In words: <strong>acceleration = pressure-gradient force + Coriolis + gravity + friction.</strong> The momentum equation with the friction term included is called the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Navier–Stokes equation</a>: Euler wrote it without friction, and Navier added the friction terms (Stewart p. 109).</p>
+
+<p>Take the terms one at a time.</p>
+
+<p><strong>The acceleration, Dv/Dt.</strong> “Follow the parcel” hides two effects. Standing at a fixed point, the velocity can change with time (∂v/∂t). And the parcel moves to places where the velocity is different, so it speeds up or slows down even if nothing changes in time at any one point (this is <em>advection</em>: think of a car taking a curve on a road whose shape never changes). The second effect is written v·∇v. It multiplies the velocity by itself, so the equation is <strong>nonlinear</strong>, and that nonlinearity is where turbulence comes from (Stewart §7.5, §8.2).</p>
+
+<p><strong>The pressure-gradient force, −(1/ρ)∇p.</strong> Water is pushed from high pressure towards low. A hill in the sea surface means more water above, so higher pressure, under the hill than beside it: a push outwards and downhill.</p>
+
+<p><strong>Coriolis, −2Ω × v.</strong> We measure velocities from a turning Earth, so a parcel moving in a straight line in space seems to us to curve. We account for that with an apparent force at right angles to the motion: to the right in the northern hemisphere, to the left in the southern. Its strength for horizontal motion is f × (speed), where</p>
+
+<blockquote>
+  <p>f = 2Ω sin(latitude), the <strong>Coriolis parameter</strong>.</p>
+</blockquote>
+
+<p>Ω = 7.3 × 10⁻⁵ per second, so f is about 10⁻⁴ s⁻¹ at mid-latitudes, positive in the north, zero at the equator and negative in the south. (This f is the f in every equation from here on.)</p>
+
+<p><strong>Gravity, g.</strong> It acts vertically. In the vertical, gravity is almost exactly balanced by the pressure increasing with depth, so for horizontal motion we can set it aside.</p>
+
+<p><strong>Friction, F.</strong> This is the term that confused us in class, and it needs its own subsection.</p>
+
+<h3 id="stress-a-force-spread-over-a-surface">Stress: a force spread over a surface</h3>
+
+<p>A <strong>stress</strong> is a force per unit area, in N/m². It comes in two kinds. Pressure pushes <em>perpendicular</em> to a surface. A <strong>shear stress</strong> drags <em>along</em> it. The wind blowing over the sea exerts a shear stress on the surface: the <strong>wind stress</strong>, τ (tau), typically about 0.1 N/m².</p>
+
+<p>How does that drag reach water below the surface? Picture a deck of cards on a table and slide the top card with your palm. It drags the card below, which drags the next, and so on down: each card is dragged forward by the one above and held back by the one below. Now look at one thin layer of water in the same way:</p>
+
+<ul>
+  <li>the layer above drags its top forward, with stress τ(top);</li>
+  <li>the layer below holds its bottom back, with stress τ(bottom).</li>
+</ul>
+
+<p><strong>The net force on the layer is the difference between the two.</strong> If the stress is the same at its top and its bottom, the layer feels no net force: it simply passes the push on downwards. It feels a net force only if the stress <em>changes</em> across it. For a layer of thickness Δz and area A, the net force is [τ(top) − τ(bottom)] × A. Divide by the layer’s mass, ρAΔz, and in the limit of a thin layer the friction force per unit mass is</p>
+
+<blockquote>
+  <p>F = (1/ρ) ∂τ/∂z.</p>
+</blockquote>
+
+<p>Check the units: N/m² per metre is N/m³; divided by kg/m³ that is N/kg, or m/s², an acceleration, as it should be.</p>
+
+<h3 id="which-friction-molecules-or-eddies">Which friction? Molecules or eddies</h3>
+
+<p>In a fluid flowing smoothly, the drag between layers comes from <strong>molecules</strong> moving between them and colliding, carrying momentum with them: <a href="https://en.wikipedia.org/wiki/Viscosity">viscosity</a>. But molecules move only tiny distances between collisions, so molecular viscosity can carry momentum only a few millimetres (Stewart §8.1, p. 116). It can’t explain how the wind’s push reaches 50 m down.</p>
+
+<p>Turbulence does. How turbulent a flow is depends on the <a href="https://en.wikipedia.org/wiki/Reynolds_number">Reynolds number</a>, Re = UL/ν, which compares the nonlinear term with the molecular friction (U is a typical speed, L a typical length, and ν = 10⁻⁶ m²/s is water’s molecular viscosity). The nonlinear terms, and with them turbulence, matter once Re is above about 10–1000. For the open ocean, with U = 0.1 m/s and L = 1,000 km, Re ≈ 10¹¹ (Stewart §8.2, pp. 116–117). The ocean is turbulent. Swirling eddies carry fast-moving water down and slow water up, and they move momentum much as molecules do, only over metres instead of micrometres. Averaged over the eddies, this mixing acts like a much stronger friction, a turbulent stress (the <strong>Reynolds stress</strong>, Stewart pp. 117–119). It has the same form, a stress whose change with depth pushes on each layer, so we still write it as τ.</p>
+
+<p>So the “friction” in the ocean’s force balance isn’t the molecular friction you meet in mechanics. It is turbulence, the same stirring that makes the mixed layer (O3). For the Ekman force balance below we never need to know <em>how</em> the turbulence carries the stress down. That will turn out to be the strength of the argument.</p>
+
+<h3 id="which-terms-matter-depends-on-the-scale">Which terms matter depends on the scale</h3>
+
+<p>The equation always holds, but in a given problem some terms are far bigger than others. A force balance is a statement about which forces are big enough to balance each other, so the first job is to compare the sizes of the terms at the scale you care about. (Derivatives make the scale matter: ∂u/∂x is about U/L, so the same speed differences over 1 km and over 1,000 km give terms a thousand times apart.) This is done systematically in a fluid dynamics course.</p>
+
+<ul>
+  <li><strong>Molecular friction</strong> matters only within millimetres of a boundary.</li>
+  <li><strong>The acceleration</strong> compared with Coriolis is about U/(fL) (the <a href="https://en.wikipedia.org/wiki/Rossby_number">Rossby number</a>). For a current of 0.1 m/s over 1,000 km it is 0.1/(10⁻⁴ × 10⁶) = 10⁻³. Over large distances, and for anything that lasts longer than a day or so, the water’s acceleration is tiny next to Coriolis.</li>
+  <li>What’s left in the ocean’s interior is <strong>Coriolis against the pressure gradient</strong>: geostrophy, §5 below. Near the surface, where the wind’s stress is passed down, <strong>turbulent stress</strong> joins them.</li>
+</ul>
+
+<h3 id="from-the-full-equation-to-the-one-we-used-in-class">From the full equation to the one we used in class</h3>
+
+<p>Take the horizontal components, with x east, y north and z up, and u and v the eastward and northward velocities (the components are Stewart eq. 7.12, p. 109). Then make three assumptions:</p>
+
+<ol>
+  <li><strong>Steady:</strong> the wind has been blowing long enough that nothing changes in time. Drop ∂/∂t.</li>
+  <li><strong>Large and smooth:</strong> the acceleration is small next to Coriolis (Rossby number ≪ 1). Drop advection.</li>
+  <li><strong>A flat sea surface, for now:</strong> no horizontal pressure gradient. (We put it back in §5.)</li>
+</ol>
+
+<p>Each thin layer of water then has only two things acting on it: Coriolis, and the difference between the stress on its top and its bottom.</p>
+
+<blockquote>
+  <p>−f v = (1/ρ) ∂τˣ/∂z  (east–west)</p>
+
+  <p>f u = (1/ρ) ∂τʸ/∂z  (north–south)</p>
+</blockquote>
+
+<p>These are the equations from class.</p>
+
+<h3 id="back-to-the-free-body-diagram-from-the-ice-to-a-block-of-water">Back to the free-body diagram: from the ice to a block of water</h3>
+
+<p>This is the same free-body diagram as Nansen’s, drawn for water instead of ice.</p>
+
+<p><strong>One thin layer of water.</strong> Three forces: the drag of the water above on its top (or of the wind, for the topmost layer), the drag of the water below on its bottom, and Coriolis. The drag from below plays the role of the friction on the ice. The trouble is the same as before: the drag from below depends on what the layer below is doing, which depends on the layer below <em>that</em>, and so on. Each layer hands the problem down to the next, like the cards.</p>
+
+<p><strong>Stack all the layers into one block</strong>, from the surface down to below the stirred layer, roughly the mixed layer. Now the internal drags cancel in pairs: whatever the upper layer exerts on the lower one at their shared boundary, the lower exerts back on the upper, equal and opposite (Newton’s third law). In the equations, adding up ∂τ/∂z through the block leaves only the two ends, τ(top) − τ(bottom). At the top, τ is the wind stress. At the bottom of the stirred layer the turbulence has died out, so τ is close to zero.</p>
+
+<p><strong>The block’s free-body diagram has only two forces: the wind’s stress and Coriolis.</strong> For the ice, two forces weren’t enough. For the block they are, because the block can move sideways. Two forces balance only if they point in opposite directions, so Coriolis must point <em>upwind</em>. Coriolis acts at right angles to the motion, to the right in the north, so the block must move <strong>at 90° to the right of the wind</strong> in the northern hemisphere (90° to the left in the southern). That is Ekman’s result, §4. It is the same argument as for the ice, applied to an object of the right size.</p>
+
+<h2 id="4-the-whole-layer-moves-at-right-angles-to-the-wind">4. The whole layer moves at right angles to the wind</h2>
+
+<p>Adding up the equations over the stirred layer, as above, and writing the transport (the flow added up over the layer’s depth) as</p>
+
+<blockquote>
+  <p>Mₓ = ∫ u dz, M_y = ∫ v dz</p>
+</blockquote>
+
+<p>gives</p>
+
+<blockquote>
+  <p>M_y = −τˣ/(ρf), Mₓ = τʸ/(ρf)</p>
+</blockquote>
+
+<p>(Stewart §9.3; Hartmann §7.5.1). M is a volume of water per second through a strip one metre wide, in m²/s: think of the mixed layer as a block, and M as how much water the whole block carries. Notice that the north–south transport depends on the <strong>east–west</strong> wind, and the other way round. Wind towards the east (τˣ &gt; 0, f &gt; 0) gives M_y &lt; 0: the water goes south, 90° to the right of the wind. This is <strong><a href="https://en.wikipedia.org/wiki/Ekman_transport">Ekman transport</a></strong>, after Vagn Walfrid Ekman, who worked it out for Nansen in a study published in 1905.</p>
+
+<p>The answer needs only the wind stress at the top, the fact that the stress dies out below, and f. It doesn’t depend on <em>how</em> the turbulence passes the push downwards. That is why Ekman transport is robust, while the details of the current inside the layer are not (more in “Read this part”).</p>
+
+<h2 id="5-where-the-transport-spreads-apart-or-piles-up-ekman-pumping">5. Where the transport spreads apart or piles up: Ekman pumping</h2>
+
+<p><strong>This is the key idea of the lecture.</strong></p>
+
+<p>Suppose the wind changes from one latitude to the next. Take a band where winds towards the west blow on one side and winds towards the east on the other. The Ekman transport under each points in opposite directions, so in the northern hemisphere water is carried <em>away</em> from the band on both sides. Is that sustainable? A 50 m layer can’t keep losing water for years. Since the sea surface doesn’t drop away, water must be <strong>replaced from below</strong>: cold water rises from beneath the mixed layer. Reverse the winds and the transports <strong>converge</strong>: water piles up, and since it can’t pile up forever, it is <strong>pushed down</strong>.</p>
+
+<p>The winds don’t have to blow in opposite directions. Strong winds on one side and weaker winds in the same direction on the other do the same thing: more water leaves than arrives. All that matters is that the wind’s push <strong>changes</strong> from place to place. In general, the vertical speed at the bottom of the stirred layer is set by how the wind stress varies across the map: w = curl(τ/ρf), counting upwards as positive (Hartmann p. 218). This is <strong>Ekman pumping</strong>.</p>
+
+<p><strong>How fast?</strong> Our order-of-magnitude sum: the stress changes by about 0.1 N/m² across 1,500 km, from the trades to the westerlies. Then w ≈ 0.1/(1025 × 10⁻⁴ × 1.5 × 10⁶) ≈ 6.5 × 10⁻⁷ m/s, or about <strong>20 m a year</strong>. Tiny as a speed, but it goes on all year, every year, across whole ocean basins: 20 m of water a year is not trivial.</p>
+
+<p><strong>The map of Ekman pumping</strong> (2011 ocean reanalysis winds) shows where water is pulled up (teal) and pushed down (orange). Look for the places where the wind changes strongly from north to south or from east to west. Off Japan, for example, westerlies to the north and easterly trades to the south meet near 30°N and push water down.</p>
+
+<p><strong>At a coast.</strong> Let the wind blow along a coast so that the Ekman transport points out to sea. Water can’t come out of the coast, so it comes up from below. That water is cold, and it is rich in nutrients. In the sunlit top layer, plankton use up the nutrients quickly. Below the reach of light, nothing uses them, so they build up. Bring that water up into the light and plankton bloom, then the fish that eat them, then the fisheries. <a href="https://en.wikipedia.org/wiki/Upwelling">Coastal upwelling</a> happens mostly on the <strong>eastern sides of ocean basins</strong>: the west coasts of North and South America (California, Peru, Chile) and the Atlantic coasts of Portugal and northwest Africa. Off peninsular India it is more complicated, because the monsoon winds reverse with the season, but the principle doesn’t change: where the wind carries water offshore, cold water comes up.</p>
+
+<p><strong>At the equator.</strong> Under the easterly trades, the transport is to the right of the wind just north of the equator (northward) and to the left just south of it (southward), because <strong>f changes sign at the equator</strong>. The same wind carries water away from the equator on both sides, and cold water rises in between. This is the <strong>cold tongue</strong> of the eastern equatorial Pacific, and it <strong>resolves the puzzle of §1</strong>. Cold water keeps arriving from below, takes up heat, and is carried away before it can warm much, and more cold water takes its place. So the ocean can take up heat fast and still stay cold, year after year.</p>
+
+<p><strong>In the subtropics.</strong> Around 30°, westerlies lie poleward and easterly trades equatorward. Under the trades the transport goes poleward; under the westerlies it goes equatorward. They meet, water piles up, and it is pushed down.</p>
+
+<h2 id="6-a-hill-of-water-stays-up-geostrophy">6. A hill of water stays up: geostrophy</h2>
+
+<p>Imagine making a bump in the surface of a still lake. Intuition says the water runs downhill, away from the bump, and the lake goes flat. On a small lake that’s right.</p>
+
+<p>But at scales large enough for rotation to matter, in the ocean and in the atmosphere, the water doesn’t run down the slope. The bump means higher pressure under it than beside it, so a pressure-gradient force pushes the water outwards. As soon as the water moves, Coriolis turns it to the right (in the north). It keeps turning until Coriolis exactly opposes the pressure force, and that happens only when the water runs <strong>along</strong> the height contours, at right angles to the push, with the high side on its right in the northern hemisphere. This is <strong><a href="https://en.wikipedia.org/wiki/Geostrophic_current">geostrophic flow</a></strong>, the same balance as Suhas’s winds around a high (§3: Coriolis against the pressure gradient). Nothing runs downhill, so <strong>the hill stays up</strong>, for as long as nothing else, like friction, wears it down. It has the same form as Ekman’s balance: the motion is at right angles to the push.</p>
+
+<p><strong>The hills are real.</strong> The map of sea-surface height shows hills about <strong>1 m</strong> high in the subtropics, thousands of kilometres across, right where Ekman transport converges. One metre doesn’t sound like much, but it is an enormous volume of extra water held in the middle of the ocean, going nowhere. The wind keeps building the hill by Ekman convergence, and the flow goes around it. These are the great <a href="https://en.wikipedia.org/wiki/Ocean_gyre">ocean gyres</a>: clockwise in the northern hemisphere, anticlockwise in the southern.</p>
+
+<p><strong>Garbage patches.</strong> Floating plastic collects near the middle of the subtropical gyres, in the <a href="https://en.wikipedia.org/wiki/Great_Pacific_garbage_patch">Great Pacific garbage patch</a> and its counterparts. The surface Ekman transport carries floating things in towards the centre of the hill, and the geostrophic currents only carry them around it, never out. So the debris stays, breaking slowly into smaller pieces.</p>
+
+<p><strong>Where is the friction, then?</strong> Mostly at the edges: along coasts, where the currents run against land, and at the sea floor. In the middle of the ocean, far from any boundary, the flow hardly feels friction, and its balance is set by rotation and by the wind adding momentum at the top.</p>
+
+<h2 id="7-next-from-momentum-to-salt">7. Next: from momentum to salt</h2>
+
+<p>We have now opened two ledgers: heat, and, to explain the heat, momentum. To go further with momentum we can’t talk about velocity alone; that is kinematics. Momentum is mass times velocity, and for the ocean, mass per unit volume is <strong>density</strong>. You can’t talk about the ocean’s density without salt. Heat and salt together set the density of seawater. We’ve done heat; next is salt.</p>
+
+<h2 id="read-this-part-what-we-didnt-cover-in-class">Read this part: what we didn’t cover in class</h2>
+
+<p>The Ekman spiral matters most: it explains why Nansen saw 20–40° rather than 90°. Then the numbers, which show how much water Ekman transport moves.</p>
+
+<h3 id="inside-the-layer-ekmans-spiral-and-nansens-2040">Inside the layer: Ekman’s spiral, and Nansen’s 20–40°</h3>
+
+<p>What happens <em>inside</em> the stirred layer depends on how the turbulence works, and that we haven’t specified. Ekman (1905) made the simplest assumption: the turbulent stress is proportional to how fast the velocity changes with depth, with a constant “eddy viscosity”. With that assumption he could solve for the current at each depth (Stewart §9.2, pp. 137–139):</p>
+
+<ul>
+  <li>At the surface, the current is <strong>45° to the right</strong> of the wind (northern hemisphere).</li>
+  <li>Going down, it gets <strong>weaker</strong> and turns <strong>further to the right</strong>, tracing a spiral: the <a href="https://en.wikipedia.org/wiki/Ekman_spiral">Ekman spiral</a>.</li>
+  <li>It dies out over the <strong>Ekman depth</strong>, typically <strong>45–300 m</strong>, deeper for stronger winds and nearer the equator (Stewart Table 9.3). At that depth the current is about 4% of the surface’s and points the opposite way.</li>
+  <li><strong>Add up the arrows</strong> over the depth of the spiral and the total points exactly <strong>90° to the right</strong> of the wind, whatever value the viscosity has. The spiral depends on the turbulence; the total doesn’t.</li>
+</ul>
+
+<p><strong>So why 20–40°?</strong> The ice sits at the very top of the layer, so it marks the <em>surface</em> current’s angle, not the 90° of the whole layer. It isn’t exactly Ekman’s 45°, because real turbulence isn’t a constant viscosity, and because the wind pushes on the ice directly as well. Clean spirals are hard to see in measurements; the transport is easy to see (Stewart §9.2–9.3).</p>
+
+<h3 id="how-much-water">How much water?</h3>
+
+<p>With τ = 0.1 N/m², ρ = 1025 kg/m³ and f = 10⁻⁴ s⁻¹ (about 43° latitude), the Ekman transport is τ/(ρf) ≈ <strong>1 m²/s</strong>: about a cubic metre of water each second through every metre of width. Spread over a 50 m mixed layer, that is a speed of only about <strong>2 cm/s</strong>. Small, but over the width of a basin it adds up to millions of cubic metres a second.</p>
+
+<p><strong>Does the ocean agree?</strong> Across 11°N in the Atlantic, the Ekman transport measured directly with a ship’s current profiler and the transport computed from the winds as τ/(ρf) agree within their uncertainties (Chereskin &amp; Roemmich 1991, as summarised in Stewart §9.3, p. 144).</p>
+
+<h3 id="how-fast-does-water-go-round-the-hill">How fast does water go round the hill?</h3>
+
+<p>The geostrophic speed at the surface is (g/f) × (the slope of the sea surface) (Stewart eq. 10.10). Our sums: a 1 m hill across 1,500 km gives about <strong>6.5 cm/s</strong>, the slow drift around the middle of a gyre. A 1 m drop across 100 km gives about <strong>1 m/s</strong>, the speed of a western boundary current like the Gulf Stream. That is why the fast currents are narrow and sit where the slope is steep, on the west side of each basin. Why the west, and not the east, is beyond this course (Stommel 1948; see Stewart Ch. 11, and the O3 notes).</p>
+
+<h3 id="where-the-momentum-finally-goes">Where the momentum finally goes</h3>
+
+<p>The wind keeps adding momentum, so something must take it out: coasts and the sea floor. At the latitudes of Drake Passage no continent blocks the way, so the <strong>Antarctic Circumpolar Current</strong> runs all the way round Antarctica, about 125 million m³/s (Hartmann p. 225), and hands its momentum to the sea floor over undersea ridges. The Southern Ocean is teal on the pumping map: under that current, deep water comes up. Why was it down there? That needs salt and density, which come next.</p>
+
+<h3 id="the-take-home-question-answered">The take-home question, answered</h3>
+
+<p><em>Why does the Arabian Sea cool down in the middle of summer?</em> Off Somalia and Oman (10–20°N, 60–70°E) the surface is about 29.9 °C in May and 26.7 °C in August (CERES), even though August’s sun is still strong. Every piece comes from the last two lectures:</p>
+
+<ul>
+  <li><strong>The monsoon winds</strong> (O3): the strong southwesterly winds across the Arabian Sea in June–September.</li>
+  <li><strong>A deeper mixed layer</strong> (O3): those winds stir the sea deeper, mixing cooler water from below into the surface layer.</li>
+  <li><strong>Upwelling</strong> (today): the southwesterlies blow along the coasts of Somalia and Oman, the Ekman transport goes offshore, and cold water comes up from below.</li>
+  <li><strong>Clouds</strong>: the monsoon’s clouds cut the sunlight reaching the surface.</li>
+</ul>
+
+<h2 id="key-terms">Key terms</h2>
+
+<p><strong>Navier–Stokes equation:</strong> Newton’s second law for a fluid, with friction. <strong>Advection:</strong> a change in a parcel’s velocity because it moves to where the flow is different. <strong>Coriolis parameter, f</strong> = 2Ω sin(latitude), about 10⁻⁴ s⁻¹ at mid-latitudes, changing sign at the equator. <strong>Stress:</strong> force per unit area; <strong>shear stress</strong> drags along a surface. <strong>Wind stress, τ:</strong> the wind’s drag on the sea surface, about 0.1 N/m². <strong>Turbulent (Reynolds) stress:</strong> momentum carried by eddies, acting like a much stronger friction. <strong>Reynolds number:</strong> how turbulent a flow is. <strong>Rossby number:</strong> acceleration compared with Coriolis; small for large, slow motions. <strong>Ekman transport:</strong> the stirred layer’s total flow, 90° to the right of the wind in the north. <strong>Ekman spiral</strong> and <strong>Ekman depth.</strong> <strong>Ekman pumping:</strong> vertical motion where Ekman transport spreads apart (upwelling) or converges (downwelling). <strong>Upwelling</strong>, <strong>cold tongue.</strong> <strong>Geostrophic flow:</strong> Coriolis balancing the pressure gradient, so that flow runs along the height contours. <strong>Gyre.</strong></p>
+
+<h2 id="readings">Readings</h2>
+
+<p>All extracts are in the shared readings folder, under O4. The core readings add up to <strong>25 pages</strong>. Page numbers are the books’ printed pages.</p>
+
+<p><strong>Core: covered in class (17 pages)</strong></p>
+
+<ul>
+  <li>Stewart, <em>Introduction to Physical Oceanography</em> (2008), §9.2 “Ekman Layer at the Sea Surface”, pp. 135–142 (8 pages). Start at the heading §9.2 on p. 135 (the figure above it is about inertial currents). Nansen’s force balance, Ekman’s solution and the spiral. Skim the algebra; read the words and figures.</li>
+  <li>Stewart §9.3 “Ekman Mass Transport” and §9.4 “Application of Ekman Theory”, pp. 143–147 (5 pages). Integrating over the layer, the measurements, and upwelling. Stop at §9.5. This was in the O3 folder as “not covered”; it is now covered.</li>
+  <li>Hartmann, <em>Global Physical Climatology</em> (2nd ed., 2016), §7.5.1 “The Ekman Layer, Wind-Driven Transport, and Upwelling”, pp. 216–219 (4 pages). Start at the heading §7.5 on p. 216 and stop at §7.5.2. The same result, more briefly, with coastal and equatorial upwelling.</li>
+</ul>
+
+<p><strong>Core: not covered in class (8 pages): the equations behind §3</strong></p>
+
+<ul>
+  <li>Stewart §7.6 “Momentum Equation”, pp. 108–110 (3 pages). Start at “7.6 Momentum Equation” on p. 108 (the top of the page finishes §7.5, on following a parcel, which is worth reading too). The terms of the momentum equation, one at a time. The derivation of the Coriolis term isn’t given; don’t worry about it.</li>
+  <li>Stewart §8.1 “The Influence of Viscosity” and §8.2 “Turbulence”, pp. 115–119 (5 pages). Molecular viscosity, the Reynolds number, and turbulent (Reynolds) stresses. Read the words; skim the averaging in eqs. 8.5–8.11. Stop at §8.3, on p. 119.</li>
+</ul>
+
+<p><strong>Optional</strong></p>
+
+<ul>
+  <li>Stewart §10.3 “Surface Geostrophic Currents from Altimetry”, pp. 155–158: how the hills are measured from satellites.</li>
+  <li>Stewart §11.1–11.2, pp. 183–190: Sverdrup’s theory and the western boundary currents.</li>
+  <li>Hartmann §7.5.2, pp. 219–221.</li>
+</ul>
+
+<h2 id="questions-to-think-about">Questions to think about</h2>
+
+<ol>
+  <li>Two forces can balance only if they are equal and opposite. Use that to explain, without equations, why the <em>whole</em> stirred layer moves at exactly 90° to the wind, while the ice moved at only 20–40°.</li>
+  <li>In §3, adding up the stress across every thin layer left only the top and the bottom. Why did all the stresses in between cancel? What would change if the stirred layer reached all the way to the sea floor?</li>
+  <li>Near the equator f → 0, so τ/(ρf) grows very large. Which of the assumptions in §3 breaks down there?</li>
+  <li>Winds blow from the north along the coast of a southern-hemisphere continent that lies to the east of the ocean. Is there upwelling or downwelling at the coast?</li>
+  <li>If the trade winds weakened, what would happen to the cold tongue, and to the ocean’s heat uptake there?</li>
+  <li>A hill of water 1 m high sits in the middle of the North Pacific. Which way does the water flow around it, and what keeps the hill from being worn away?</li>
+</ol>
+
+  </main>
+  <footer><p><a href="../../../">← All lectures and tutorials</a></p>
+</footer>
+</body>
+</html>

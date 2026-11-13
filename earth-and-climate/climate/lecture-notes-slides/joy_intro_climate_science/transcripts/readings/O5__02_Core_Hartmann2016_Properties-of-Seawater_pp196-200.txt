@@ -1,0 +1,242 @@
+nay
+196 7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+
+and nitrogen, which are important in determining the radiative and chem-
+ical characteristics of the atmosphere. For example, the ocean controls the
+concentration of carbon dioxide in the atmosphere by exchanging gaseous
+carbon dioxide across the air-sea interface. Carbon dioxide is converted
+to organic solids in the ocean, and carbon is then stored by deposition
+of these solids onto the sea floor. Sulfur-bearing gases released from bio-
+logical and chemical processes in the ocean enter the atmosphere where
+they are converted to aerosols that form the nuclei on which cloud drop-
+lets form. Evaporation of sea spray also forms salt particles that can form
+cloud condensation nuclei. The cloud condensation nuclei produced in
+the ocean can have a substantial influence on the energy balance of Earth,
+through their effect on the optical properties and extent of clouds.
+
+
+                7.2 PROPERTIES OF SEAWATER
+
+   Oceanic currents and the resulting heat transports are determined pri-
+marily by the physical properties of the ocean. To specify the physical state
+of seawater requires three variables: pressure, temperature, and salinity.
+Because water is slightly compressible, we define the potential tempera-
+ture and potential density, which are the temperatures and densities at a
+reference pressure. As described in Chapter 1, salinity is the mass of dis-
+solved salts in a kilogram of seawater, and is generally measured in parts
+per thousand, which we denote with the symbol %o. The average salinity
+and temperature of the world ocean are approximately 34.7% and 3.6°C,
+respectively. The effect of ocean on atmospheric composition through bio-
+logical and chemical processes depends on a more complex mix of physical,
+chemical, and biological properties. For example, oxygen and nutrient con-
+tent of seawater are of critical importance for life in the sea. Trace amounts
+of key minerals may be very important for local biological productivity.
+   Variations of density on pressure surfaces are important for driving the
+circulation of the ocean, and depend on the temperature and salinity. Salt
+content increases the density of water, and seawater expands and becomes
+less dense as its temperature increases. The salinity of seawater ranges
+from about 25% to 40%o and the temperature ranges from about —2°C to
+30°C. Salinity and temperature variations have roughly equal importance
+for density variations in the ocean (Fig. 7.1). The density of seawater is
+almost linearly dependent on salinity. However, the dependence of
+density on temperature does not have a simple linear behavior. When the
+temperature of water approaches its freezing point, its density generally
+becomes less sensitive to temperature. For pure water, for example, the
+maximum density occurs at 4°C, and the water then expands slightly as it
+is cooled further. Therefore, fresh water lakes that are cooled from the top
+continue to overturn convectively until the entire water column reaches
+a                          oe
+                           7.2 PROPERTIES OF SEAWATER                          197
+
+
+
+
+              0        5      10       15      20       25     30      35
+                                       Temperature
+
+FIGURE 7.1 Seawater density anomaly (p, - 1000 kg m°) at one atmosphere pressure as
+a function of temperature (°C) and salinity (%b).
+
+
+4°C, because water that is at 4°C will always be denser than warmer
+water. When the entire water column is cooled to 4°C, surface water that is
+cooled further will become less dense than the column and will “float” on
+the surface. When it reaches 0°C the surface water will freeze and form a
+layer of surface ice, which provides a floating layer of insulation between
+the cold air above and the warmer water below. If the lake is deep enough,
+the water near the bottom will remain at about 4°C, although the air tem-
+perature above the surface ice may fall to many degrees below zero. This
+fact allows fish in high-latitude or high-altitude lakes to survive the winter
+in the liquid water beneath the surface ice.
+   For seawater with salinity greater than 24.7%o, the density continues
+to increase with decreasing temperature until freezing occurs, although
+more slowly as the freezing point is approached. Therefore, if the salinity
+is initially uniform, the entire water column must be cooled to the freezing
+point before ice can form. Sea ice is able to form in high-latitude oceans
+because the salinity decreases significantly near the surface (Fig. 7.2).
+Lower salinities near the surface cause a decrease in density that offsets
+the increase in density associated with colder temperatures near the sur-
+face, allowing water near the surface to freeze while warmer water is
+present below. The low surface salinities result primarily from the excess
+of precipitation over evaporation in these latitudes. In the Arctic Ocean
+198                             7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+                                Atlantic Ocean                                                    Pacific Ocean
+
+
+e
+Ss
+> 500
+@
+z
+@
+2 1000
+Y
+oa
+
+
+       1500
+          -80       -60   -40   -20      0       20   40       60   80   -80    -60     -40       -20      0        20   40   60   80
+                                      Latitude                                                          Latitude
+          )                                  :             :                                  -                ae
+
+ow
+g               :
+
+S(0) 5001
+z
+ oO
+ 5
+ 2 1000
+ ®
+a
+
+
+       1500-80 -60 -40 -20               0       20   40       60   80   -80 -80 60 -60 -40 -40 —20
+                                                                                                 -20       0        20 40     60   80
+                                      Latitude                                                          Latitude
+
+
+oy
+ 3
+2L?)
+@Q
+as
+®o
+5
+3
+2
+10
+
+
+
+                                                 20   40       60   80 -80 -60          40 -20             0        20   40   60   80
+                                      Latitude                                                          Latitude
+
+
+FIGURE 7.2 Potential temperature (°C), salinity (%bo) and potential density (kg m *- 1000)
+as functions of pressure (decibar ~1 m of depth) and latitude for the Atlantic (left) and
+Pacific (right) oceans. Data are from MIMOC.
+
+
+the supply of freshwater from rivers flowing from the surrounding con-
+tinents contributes importantly to low surface salinities and therefore to
+the stable density gradient. The Arctic Ocean has a strong halocline, with
+relatively fresh water near the surface rapidly transitioning to more salty
+water beneath. Because salinity increases with depth and also increases
+density, the surface is able to form ice without bringing the temperature
+of the entire water column to the freezing point. It has been hypothesized
+that, if the flow of certain key rivers were diverted from the Arctic Ocean
+to supply irrigation water to continental interiors farther south, the heat
+balance of the Arctic could be severely distorted, because the normal con-
+figuration of a thin layer of surface ice on a mostly unfrozen Arctic Ocean
+may no longer be stable. Increased salinity of surface waters in the Arctic
+might lead to either complete removal of most Arctic sea ice or complete
+freezing of the Arctic Ocean from surface to bottom.
+   Only about the first kilometer of ocean between 50°N and 50°S is warm-
+er than 5°C (Fig. 7.2), so that much of the mass of the ocean is between
+                           7.2 PROPERTIES OF SEAWATER                      199
+
+-2°C and 5°C. The thermal structure of the ocean at most locations can be
+divided into three vertical sections. The top 20-200 m of water in contact
+with the atmosphere usually has an almost uniform temperature, which
+is maintained by rapid mixing through mechanical stirring and thermal
+overturning. This layer is called the surface mixed layer of the ocean. Below
+the mixed layer, the temperature decreases relatively quickly with depth
+down to about 1000 m (Figs 1.11 and 7.2). This layer of rapid tempera-
+ture change, called the permanent thermocline, persists in all seasons. It is
+believed that the permanent thermocline is maintained by heating from
+above, balanced by a slow upward movement of colder water from below,
+and by very weak mixing at depth. The cold water in the deep abyss of the
+oceans is produced at the surface in a few regions of the polar ocean. At
+the base of the permanent thermocline, the typical temperature is about
+5°C, and below this the temperature decreases more slowly with depth,
+reaching a temperature of about 2°C in the deepest layers of the ocean.
+The physical properties of the deep ocean show little spatial variability, so
+that temperature, salinity, and density are almost uniform (Fig. 7.2).
+   Water is almost incompressible, so the density of seawater is always
+very close to 1000 kg m™, even near the bottom of the ocean where the
+pressure may be several thousand times the surface air pressure. Density
+of seawater is usually reported as a deviation from 1000 kg m™, p — 1000.
+Potential density, p,, is the density that seawater with a particular salinity
+and temperature would have at zero water pressure, or the density at sur-
+face air pressure. Potential density increases most rapidly with depth in
+the first several 100 m of the tropical and mid-latitude ocean (bottom row
+in Fig. 7.2). This rapid increase of density with depth is supported by the
+absorption of solar radiation near the surface, which sustains the warm
+temperatures there. The strong density stratification in the upper ocean
+inhibits vertical motion and turbulent exchanges, so that the deep ocean
+is somewhat isolated from surface influences in those regions where this
+density stratification is present. The strong density stratification is reduced
+in high latitudes, where in some locations the potential density at the sur-
+face comes much closer to the densities prevailing in the deep ocean.
+   The distribution of potential density suggests that water occupying the
+bulk of the deep ocean came from the Polar Regions, where at certain loca-
+tions and seasons, surface water becomes dense enough to sink to a great
+depth. The distributions of other tracers also suggest that slow downward
+motion of water in high latitudes extends downward and equatorward
+into the deep ocean, as will be discussed in Section 7.6. Figure 7.2 shows
+that the potential density in the North Atlantic is greater than that in the
+North Pacific, especially near the surface where deep water is formed. This
+is because the Atlantic Ocean is more saline than the Pacific. So deep water
+can be formed in the Southern Ocean poleward of 50°S, and in the North
+Atlantic, but not in the North Pacific at the present time. At around 50°N
+ear      leas      ONE      e ee re eee           ee     a        a           |
+200              7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+in the Pacific and 50°S, fresh water is transported downward and spreads
+equatorward below the saline waters of the subtropics. In the Atlantic
+Ocean, relatively salty water persists below the surface layer of less saline
+water.
+
+
+
+                        7.3 THE MIXED LAYER
+
+   The primary heat source for the ocean is solar radiation entering through
+the top surface. Almost all of the solar energy flux into the ocean is absorbed
+in the top 100 m. Infrared and near-infrared radiations are absorbed in the top
+centimeter, but blue and green visible radiation can penetrate to more than
+100 m if the water is especially clear. The depth to which visible radiation
+penetrates the ocean depends on the amount and optical properties of
+suspended organic matter in the water, which vary greatly with location,
+depending on the currents and local biological productivity. The princi-
+pal component of suspended matter in surface water is plankton, which
+are plants and animals that drift in the near-surface waters of the ocean.
+The relative abundance of photosynthetic plankton can be estimated from
+the color of the ocean whose greenness indicates the abundance of chloro-
+phyll (Fig. 7.3). Chlorophyll is most abundant where ocean currents or mix-
+ing bring nutrients to the surface where they can be consumed by plankton.
+    The solar flux and heating rate in the ocean are greatest at the surface
+and decrease exponentially with depth, in accord with the Lambert-
+Bouguer—Beer Law, as described in Chapter 3. Under average conditions,
+the solar flux and heating rate are reduced to half of their surface value by
+
+
+
+
+FIGURE 7,3 The global biosphere - ocean chlorophyll concentration and land vegeta-
+tion index derived from seaWiFS satellite data for September 1997-August 2000. NASA
+image: Mollweide projection.
+

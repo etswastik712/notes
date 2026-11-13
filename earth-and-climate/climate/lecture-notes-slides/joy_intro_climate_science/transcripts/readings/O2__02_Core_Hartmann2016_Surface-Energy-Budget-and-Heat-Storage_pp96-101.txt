@@ -1,0 +1,296 @@
+Pn                                                                         enmeal
+
+96 4. THE ENERGY BALANCE OF THE SURFACE
+
+
+            4.2 THE SURFACE ENERGY BUDGET
+
+   The energy budget can be written in terms of energy flux per unit area
+passing vertically through the air—surface interface and is measured in
+watts per square meter. The processes that determine energy transfer
+between the surface and atmosphere include solar and infrared radiative
+transfer, fluxes of energy associated with fluid motions of the atmosphere
+and ocean, and movement of energy through the soil. For the purposes of
+energy-budget computations, surface storage takes place in that volume
+between the boundary with the atmosphere and a depth below the surface
+where energy fluxes and the storage rate of energy are considered negli-
+gible. This depth can be as little as a few meters in dry land areas or as
+much as several kilometers in oceanic areas where deep water is formed.
+For water surfaces, the horizontal energy fluxes accomplished by the fluid
+motions under the surface can be very important. The surface energy
+balance can be written symbolically as (4.1),
+
+                        aE, =G=R,-LE-SH-AE,                                (4.1)
+                         at
+where JE, /ot = G is the storage of energy in the surface soil and water,
+R, is the net radiative flux of energy into the surface, LE is the latent heat
+flux from the surface to the atmosphere, SH is the sensible heat flux from
+the surface to the atmosphere, and AF,, is the horizontal flux out of the
+column of land—ocean below the surface.
+   Under steady-state conditions in which the storage of energy is small,
+such as one might assume to hold for annual averages or for daily aver-
+ages over land, the energy balance is between radiative heating and the
+processes that remove energy from the surface.
+                             R, = LE+SH+      AF,                          (4.2)
+   Under most conditions, radiation heats the surface and latent and sen-
+sible heat fluxes cool it, so that the radiative, latent, and sensible heat flux
+terms in (4.1) and (4.2) are most often positive (Fig. 4.1).
+   The physical meaning of (4.1) is that the storage of energy below the
+surface is equal to the net radiative input minus the heat lost from the
+surface by evaporation, sensible heat flux, and horizontal heat transport
+to other latitudes or longitudes. In constructing (4.1) we have left out a
+multitude of other terms that can be important locally or for brief periods.
+These terms include the following:
+° The latent heat of fusion required for melting ice and snow in spring
+  may require 10% of the radiative imbalance for limited periods.
+¢ Conversion of the kinetic energy of winds and waves to thermal
+  energy is generally small.
+                           4.3 STORAGE OF HEAT IN THE SURFACE                            97
+
+                                 Atmosphere
+                                     EE       SH
+
+
+
+
+                                                                   eo
+
+
+
+
+FIGURE     4.1   The relationship of the various terms in the surface energy balance. R.,
+net radiation; LE, evaporative cooling; SH, sensible cooling; dE,/dt, heat storage below the
+surface; AF.., divergence of horizontal energy flux below the surface.
+
+
+
+
+¢ Heat transfer by precipitation can occur if the precipitation is at a
+  different temperature than the surface. This mechanism is particularly
+  important during summer showers, because the precipitation can
+   be much cooler than the surface, and the thermal capacity of water
+  is large.
+¢ Some solar energy is not realized as heat, but is stored in the chemical
+  bonds formed during photosynthesis. This is less than 1% globally,
+  but can be ~5% locally for limited periods of time.
+¢ Heat release by oxidation of biological substances, as in biological
+  decay or forest fires, is the reverse of photosynthesis. Energy bound
+  up in biological matter during photosynthesis is returned to the
+  physical climate system through oxidation. This process takes place
+  year round, but proceeds most rapidly when the surface is warm and
+  moist.
+e Geothermal energy release in hot springs, earthquakes, and volcanoes
+  is small in a global sense.
+e Heat released by fossil fuel burning or nuclear power generation
+  can be important locally, but is not significant for the global energy
+   balance.
+
+
+           4.3 STORAGE OF HEAT IN THE SURFACE
+
+   Energy storage in the surface is very important for the seasonal cycle of
+temperature over the oceans and the diurnal cycle over land and ocean.
+Using the simplest description, the amount of energy in the surface may
+be written as the product of an effective heat capacity for the earth-ocean
+system and a corresponding mean temperature,
+
+                                          Bo CT.co~   co
+                                                                                       (4.3)
+e
+Te ee       ei
+98    4, THE ENERGY BALANCE OF THE SURFACE
+
+
+where   C,, is the effective heat capacity of the land or ocean system
+(Jm~*K~!) and T,, is the effective temperature of the land or ocean energy-
+storing material (K).
+    The heat capacity depends on the physical properties of the surface
+materials and the depth of the surface layer that communicates with the
+atmosphere on the time scale of interest. It is generally only the first few
+meters of soil that respond to seasonal forcing of the surface energy bal-
+ance, but the temperature of the top 50-100 m of ocean changes with the
+seasons. The depth of ocean that exchanges energy with the surface varies
+seasonally, so that possible time dependence of the effective heat capacity
+must be considered.
+   The heat capacity of the atmosphere is estimated by including only the
+energy associated with the motion of the molecules, which is related to the
+temperature. The heat capacity is the amount of energy that is required
+to raise the temperature by 1°. We may approximate the specific heat of
+air by the specific heat at constant pressure for dry air. To obtain the heat
+capacity for the entire atmosphere, we integrate over the mass of the
+atmosphere to get
+
+          CEa     Beate 1004J
+                        LOOT K“peke? x10°P
+                                      OE rhs SUT                         ee
+            pa      er:       9.81ms~                                   So
+
+   One can estimate the thermal capacity of the ocean by using the thermal
+capacity of pure liquid water at 0°C. The thermal capacity for an arbitrary
+depth of water, d,, can be obtained from the density p,, and the specific
+heatcy,
+
+                 C, = Py Cyd, =10°kgm™ x 4218J K kg? xd,                (45)
+                    =d,,x4.2x10°3 K*m? m7
+  Comparing       (4.4) and (4.5) we   see that the thermal capacity of the
+atmosphere is equal to that of a little over 2 m of water. As discussed in
+Chapter 7, about the top 70 m of ocean interact with the atmosphere on the
+time scale of a year, so that on the seasonal time scale the thermal capacity
+of the ocean is about 30 times that of the atmosphere.
+
+
+4.3.1 Heat Storage in Soil
+  The land has a much smaller effective heat capacity than the ocean.
+Because the surface is solid, it does not have the efficient heat transport
+by fluid motions that occurs in the atmosphere and ocean. Heat is trans-
+ferred through the soil mostly by the less efficient process of conduc-
+tion. Only the top 1 or 2 m of the soil is affected by seasonal variations.
+                                4.3 STORAGE OF HEAT IN THE SURFACE                                99
+
+TABLE 4.1         Properties of Soil Components at 293 K
+
+                                      Specific heat (c,)           Density (p)
+                                      J kg* K™)                    (kg m~*)         Oe (an Kk)
+Soil inorganic material                                                             19510"
+Soil organic material                                                               DoEaOe
+Water                                                                               4.2 x 10°
+
+Air
+
+After Brutsaert, 1982. Reprinted with permission from Kluwer Academic Publishers.
+
+
+
+
+The heat capacity of a land surface is typically slightly smaller than that
+of the atmosphere.
+   The vertical flux of energy by conduction in the soil is proportional to
+the vertical temperature gradient in the soil,
+
+                                              Paks                                              (4.6)
+
+where Ky is the thermal conductivity. The heat balance in the soil is
+between storage in the soil and convergence of the diffusive heat flux.
+
+                                    oT
+                                    Eee )Th              Nene0 by qa
+                                                                   a)
+                                   OL  az                  oz\   | dz                           en
+
+      The volumetric heat capacity of the surface material C, is the product of
+the specific heat of the soil c,, and the soil density p,. The heat capacity of
+ the soil depends on the volume fractions of soil f, organic matter f,, water
+fu, air f,, and the density and specific heat of each component of the surface
+material.
+
+                            C= PicgatPle ket Cele + Pests                                       (4.8)
+    From Table 4.1, it can be seen that the heat capacity of the air in the soil
+is very small, so that when water replaces air in the open spaces in the soil
+the heat capacity greatly increases. Porosity is the volumetric fraction of
+the soil that can be occupied by air or water.
+    Thermal conductivity of soils depends on the material, the porosity,
+and the soil water content. The thermal conductivity increases with water
+content for soils with relatively high porosity. Values vary from 0.1 Wm"
+K" for dry peat to 2.5 Wm“! K”! for wet sand. Under the condition that —
+the thermal conductivity, Kz, is independent of depth, (4.7) simplifies to
+the heat equation
+nee                                                                                  LD
+
+
+100                      4. THE ENERGY BALANCE OF THE SURFACE
+
+
+                                                             Soil temperature
+                                                             O’Neill, Nebraska
+                                                             August 13-14, 1953
+
+
+
+
+                      (°C)
+                      Soil
+                      temperature
+
+
+
+
+                               4        8         2     16        20       24
+                                                  Local time
+
+FIGURE 4.2 Soil temperature at various depths under a grass field at O’Neill, Nebraska
+on August 13, 1953. As a function of time of day. Measured thermal diffusivities on the day
+illustrated range from 2.5 x 10-7 m’ s"! at 1 cm to 6 X 10°’ m’ s ' at 5-cm depth in the soil.
+Data from Lettau and Davidson (1957).
+
+
+
+
+                                            Qliaaee    piel.
+                                                                                         (4.9)
+                                            aye
+where Dy; = Ky / C, is the thermal diffusivity of the surface material. A
+simple scale analysis of (4.9) can be used to determine the depth through
+which a temperature anomaly applied at the surface will penetrate in a
+given time. One can show that the penetration depth, hz, of temperature
+anomalies associated with a periodic forcing of temperature at the surface
+is given by
+
+                                             hy =JD,t                                  (4.10)
+where T is the time scale of the periodic forcing at the surface. Taking a
+typical value of soil diffusivity of Dy = 5 X 10°’ m’ s ', we obtain a penetra-
+tion depth of about 10 cm for diurnal forcing and about 1.5 m for annual
+forcing. A surface temperature variation with a time scale of 10,000 years
+would penetrate the surface material to a depth of about 150 m. Because
+of the slow rates at which heat can be transported through soil and rock
+by conduction, horizontal heat transport under the land surface can be
+ignored in climate modeling.
+   Figure 4.2 shows temperatures at various depths in the soil as a function
+of time during a clear day in summer. The near surface soil experiences a
+large diurnal variation in temperature with minimum temperatures just
+before sunrise and maximum temperatures shortly after noon. Deeper
+                     4.4 RADIATIVE HEATING OF THE SURFACE                  101
+
+in the soil, the temperature variations are smaller and occur later in the
+day because of the time it takes the temperature pulse to diffuse into
+the soil. The amplitude of the temperature perturbation decreases to
+about e-* of its surface value at about 10 cm below the surface and is
+very small by 40 cm below the surface. This observed decrease in the
+amplitude of the diurnal temperature perturbation is consistent with
+the simple dimensional arguments given previously.
+   The temperature data can be used to infer the thermal conductivity as
+a function of depth in the soil through the use of (4.7). Alternatively, if the
+vertical profiles of C, and K; are known and assumed constant with time,
+then measured temperature profiles in a deep layer of Earth can be used to
+estimate past variations in surface temperature on time scales of hundreds
+to thousands of years (Huang et al., 2000).
+
+
+       4.4 RADIATIVE HEATING OF THE SURFACE
+
+   The net input of radiative energy to the surface is the sum of the net
+solar and longwave flux densities at the surface,
+
+                      R, = S*(0)—S'(0)+ F’(0)- F'(0)                     (4.11)
+where S* (0) and S' (0) are the downward and upward flux of solar
+radiation at the surface, respectively, and F*(0) and F'(0) represent simi-
+larly defined longwave fluxes.
+
+
+4.4.1 Absorption of Solar Radiation at the Surface
+   The net downward solar energy flux can be written as the product of
+the downward solar flux at the surface multiplied by the absorptivity
+of the surface.
+
+                         s*(0)—S" (0) = $*(0)(1—a@,)                     (4.12)
+  The surface albedo, a,, is defined as the fraction of the downward solar
+flux density that is reflected by the surface.
+   The surface albedo varies widely depending on the surface type and
+condition, ranging from values as low as 5% for oceans under light winds
+to as much as 90% for fresh, dry snow. The numbers in Table 4.2 are char-
+acteristic, but each surface type can exhibit a range of albedos (Figs. 4.3
+and 4.4). The most common surface is that of water, and its albedo depends
+on solar zenith angle, cloudiness, wind speed, and impurities in the water.
+The surface albedo of ocean under clear skies increases dramatically as
+the Sun approaches the horizon. Clouds scatter radiation very effectively,
+so that the solar radiation under a cloud is no longer a parallel beam but
+

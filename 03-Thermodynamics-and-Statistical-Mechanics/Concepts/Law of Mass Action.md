@@ -5,7 +5,7 @@ subject: thermo
 type: concept
 by: [book, own-notes]
 status: draft
-tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft]
+tags: [subject/thermo, type/concept, src/book, src/own-notes, status/draft, quiz/thermo, quiz/th-tut2]
 ---
 # Law of Mass Action
 

@@ -1,0 +1,383 @@
+5.6. GEOGRAPHIC DISTRIBUTION OF TERMS                                            65
+
+  3. The simulation of boundary-layer clouds is a significant source of error in
+     calculated fluxes. The poor vertical resolution of the numerical models
+     does not adequately resolve the low-level cloud structure (Taylor, 2001).
+  4. The fluxes have zonal means that differ significantly from the same zonal
+     means calculated from icoads data. The differences can exceed 40 W/m2 .
+  5. The atmospheric models do not require that the net heat flux averaged
+     over time and earth’s surface be zero. The ecmwf data set averaged
+     over fifteen years gives a net flux of 3.7 W/m2 into the ocean. The ncep
+     reanalysis gives a net flux of 5.8 W/m2 out of the ocean (Taylor, 2000:
+     206). Icoads data give a net flux of 16 W/m2 into the ocean (figure 5.7).
+
+Thus reanalyzed fluxes are most useful for forcing climate models needing actual
+heat fluxes and wind stress. icoads data are most useful for calculating time-
+mean fluxes except perhaps in the southern hemisphere. Overall, Taylor (2000)
+notes that there are no ideal data sets, all have significant and unknown errors.
+Output From Numerical Weather Models Some projects require fluxes
+a few hours after after observations are collected. The surface analysis from
+numerical weather models is a good source for this type of flux.
+
+5.6   Geographic Distribution of Terms in the Heat Budget
+    Various groups have used ship and satellite data in numerical weather mod-
+els to calculate globally averaged values of the terms for earth’s heat budget.
+The values give an overall view of the importance of the various terms (figure
+5.6). Notice that insolation balances infrared radiation at the top of the at-
+mosphere. At the surface, latent heat flux and net infrared radiation tend to
+balance insolation, and sensible heat flux is small.
+    Note that only 20% of insolation reaching earth is absorbed directly by the
+atmosphere while 49% is absorbed by the ocean and land. What then warms
+the atmosphere and drives the atmospheric circulation? The answer is rain and
+infrared radiation from the ocean absorbed by the moist tropical atmosphere.
+Here’s what happens. Sunlight warms the tropical ocean which evaporates water
+to keep from warming up. The ocean also radiates heat to the atmosphere, but
+the net radiation term is smaller than the evaporative term. Trade winds carry
+the heat in the form of water vapor to the tropical convergence zone. There the
+vapor condenses as rain, releasing its latent heat, and heating the atmosphere
+by as much as 125 W/m2 averaged over a year (See figure 14.1).
+    At first it may seem strange that rain heats the air. After all, we are familiar
+with summertime thunderstorms cooling the air at ground level. The cool air
+from thunderstorms is due to downdrafts. Higher in the cumulus cloud, heat
+released by rain warms the mid-levels of the atmosphere causing air to rise
+rapidly in the storm. Thunderstorms are large heat engines converting the
+energy of latent heat into kinetic energy of winds.
+    The zonal average of the oceanic heat-budget terms (figure 5.7) shows that
+insolation is greatest in the tropics, that evaporation balances insolation, and
+that sensible heat flux is small. Zonal average is an average along lines of
+66                                               CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+           Reflected Solar                                            Incoming                              235         Outgoing
+  107      Radiation                                                                                                   Longwave
+                                                   342                  Solar
+           107 W m -2                                                 Radiation                                         Radiation
+                                                                     342 W m -2                                        235 W m - 2
+
+
+                Reflected by Clouds
+                    Aerosol and             77
+                    Atmosphere                                                                                 40
+                        77                                                        Emitted by                   Atmospheric
+                                                                                  Atmosphere   165     30      Window
+
+                                                                Absorbed by                                             Greenhouse
+                                                                Atmosphere                                                Gases
+                                                          67
+                                                                         Latent
+                                                           24       78    Heat
+
+
+
+                                                                                                      40         324
+                     Reflected by                                                        350                     Back
+                       Surface
+                                                                                                               Radiation
+                          30
+
+                                      168                                                390
+                                                        24           78                                       324
+                                          e                                            Surface
+                                 by Surfac          Thermals        Evapo-                           Absorb
+                        Absorbed                                    transpiration
+                                                                                      Radiation             ed by
+                                                                                                                     Surfac
+                                                                                                                           e
+
+
+                Figure 5.6 The mean annual radiation and heat balance of the earth.
+        After Houghton et al. (1996: 58), which used data from Kiehl and Trenberth (1996).
+
+
+
+
+          250
+
+          200                                                                                     Heat Flux Components
+                                                         Q SW
+          150
+
+          100
+
+W/m 2      50
+                                                                     QS
+            0
+
+          –50
+                                                           Q LW
+         –100                                     QL
+         –150
+
+          100                                                                                         Total Heat Flux
+
+           50
+W/m 2       0
+
+          –50
+
+             -90 o              -60 o             -30 o                  0o                30 o               60 o               90 o
+
+Figure 5.7 Upper: Zonal averages of heat transfer to the ocean by insolation QSW , and loss
+by infrared radiation QLW , sensible heat flux QS , and latent heat flux QL , calculated by
+DaSilva, Young, and Levitus (1995) using the icoads data set. Lower: Net heat flux through
+the sea surface calculated from the data above (solid line) and net heat flux constrained to
+give heat and other transports that match independent calculations of these transports. The
+area under the lower curves ought to be zero, but it is 16 W/m2 for the unconstrained case
+and -3 W/m2 for the constrained case.
+5.6. GEOGRAPHIC DISTRIBUTION OF TERMS                                                                                                                              67
+
+                                                     Total Sky Net Insolation (W/m 2 )
+
+90 o
+
+
+ 60 o
+                                                                                                                                        100
+                                                                                 100
+                                                                                  150
+30 o                                                                              200
+
+
+                                                20                                            200
+  0o                                                0
+                                 200                                                                                                      0
+                                                                                                250                                     25
+                                                                                                200
+-30 o                            200
+                                                                                  150
+            100                                                                   100                                                                    100
+-60 o
+
+
+-90 o
+         20 o             60 o    100 o       140 o          180 o       -140 o     -100 o                               -60 o         -20 o        0o     20 o
+                                                         Net Infrared Flux (W/m 2 )
+
+90 o                                                                                                                     -40
+                                       -40
+           -40
+                                                              -50                                                                               -40            0
+ 60 o                                                                                                                                                      -5
+                                                                                           -40                     -50
+                                                                                                                                 -40
+
+     o
+                                                                                   -40
+30
+                                                                                                      -5
+                                                                     -50                                  0
+                           -50                           -40
+                                              -30                                                             -3
+                                                                                                    -40         0                             -40
+  0o                                                                       -50
+                           -40                                                          -60
+           -7
+                0                       -50
+                                                              -50
+-30 o               -50
+                                                        -60
+            -40                                                      -4                                                                                  -40
+                                                                        0
+           -30
+                                                                                                                          -50
+-60 o                                                                                                                                                -30
+           -40
+                                                                                  -40
+
+-90 o
+         20 o             60 o    100 o       140 o                 180 o              -140 o             -100 o         -60 o         -20 o        0o     20 o
+Figure 5.8 Annual-mean insolation QSW (top) and infrared radiation QLW (bottom)
+through the sea surface during 1989 calculated by the Satellite Data Analysis Center at
+the nasa Langley Research Center (Darnell et al., 1992) using data from the International
+Satellite Cloud Climatology Project. Units are W/m2 , contour interval is 10 W/m2 .
+
+constant latitude. Note that the terms in figure 5.7 don’t sum to zero. The
+areal-weighted integral of the curve for total heat flux is not zero. Because the
+net heat flux into the ocean averaged over several years must be less than a few
+watts per square meter, the non-zero value must be due to errors in the various
+terms in the heat budget.
+    Errors in the heat budget terms can be reduced by using additional infor-
+mation. For example, we know roughly how much heat and other quantities
+are transported by the ocean and atmosphere, and the known values for these
+transports can be used to constrain the calculations of net heat fluxes (figure
+5.7). The constrained fluxes show that the heat gained by the ocean in the
+68                                      CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+                                  Surface Evaporation For 1989 (W/m 2 )
+
+90 o
+
+                                                                                                        50
+      o
+ 60
+
+
+30 o
+
+                                                                                                        50
+                                                        0
+  0o                               100               10
+                        100       100
+                                                                             0
+                                                                          10
+-30 o
+            50                                 50                                                       50
+                                                                                    50
+      o                                                              50
+-60
+
+
+-90 o
+          20 o   60 o     100 o    140 o     180 o          -140 o        -100 o   -60 o   -20 o   0o    20 o
+Figure 5.9 Annual-mean latent heat flux from the sea surface QL           during 1989in W/m2
+calculated from data compiled by the Data Assimilation Oﬀice of nasa’s Goddard Space
+Flight Center using reanalyzed data from the ecmwf numerical weather prediction model.
+Contour interval is 10 W/m2 .
+
+
+tropics is balanced by heat lost by the ocean at high latitudes.
+    Maps of the regional distribution of fluxes give clues to the processes produc-
+ing the fluxes. Clouds regulate the amount of sunlight reaching the sea surface
+(figure 5.8 top), and solar heating is everywhere positive. The net infrared heat
+flux (figure 5.8 bottom) is largest in regions with the least clouds, such as the
+center of the ocean and the eastern central Pacific. The net infrared flux is
+everywhere negative. Latent heat fluxes (figure 5.9) are dominated by evapora-
+tion in the trade wind regions and the offshore flow of cold air masses behind
+cold fronts in winter offshore of Japan and North America. Sensible heat fluxes
+(figure 5.10 top) are dominated by cold air blowing off continents. The net
+heating gain (figure 5.10 bottom) is largest in equatorial regions and net heat
+loss is largest downwind on Asia and North America.
+    Heat fluxes change substantially from year to year, especially in the topics,
+especially due to El Niño. See Chapter 14 for more on tropical variability.
+
+5.7   Meridional Heat Transport
+    Overall, earth gains heat at the top of the tropical atmosphere, and it loses
+heat at the top of the polar atmosphere. The atmospheric and oceanic circula-
+tion together must transport heat from low to high latitudes to balance the gains
+and losses. This north-south transport is called the meridional heat transport.
+    The sum of the meridional heat transport in the ocean and atmosphere is
+calculated from the zonal average of the net heat flux through the top of the
+atmosphere measured by satellites. In making the calculation, we assume that
+transports averaged over a few years are steady. Thus any long-term, net heat
+gain or loss through the top of the atmosphere must be balanced by a meridional
+5.7. MERIDIONAL HEAT TRANSPORT                                                                                                                                                     69
+
+                                                             Corrected Sensible Heat Flux (W/m 2 )
+
+90 o                                                                         20                                                                      20
+                                      30
+                                                   10 10                                              10                                                               40
+            20                                                                            20
+                                                         0
+ 60 o                                                                                30                               10                         30
+                                                                                                                                          20   30
+                                                                        20                                                0
+                                                                                                                                   40          20
+                                                                        30
+30 o                                                                          10
+
+                                                                                                                                                                           0
+                                                                                                                     10
+  0o
+                                                                                                                              0
+
+
+-30 o                                                0
+                      10                                                                                                                                                   10
+                                                                   10                                                                     10
+                                                                                                                                                                  0
+      o           0
+-60                              10                           10
+            0                                                                      20                                                     10
+                                                                                                                                                             0
+                                                                                          0
+-90 o
+          20 o             60 o            100 o       140 o      180 o      -140 o   -100 o      -60 o                                                  -20 o        0o        20 o
+                                                   Constrained Net Heat Flux Annual Mean (W/m 2 )
+
+90 o
+
+
+ 60 o
+                                                                             -20
+                                                                                                                                                                 -20
+                                                                                                                                  80
+30 o
+                                                                                                                20
+                                                             20
+                                                                                                                                                     20          80
+  0o                                                                                                    80                                                 80
+                                                                                                                                                          20
+                                                                                                           20
+                                                                         -2 0
+                             0                                                                                                                      20
+                           -2                                                                                                                                          -20
+-30 o
+                                                                                                                                                                             20
+                                                                                20
+            20
+-60 o                      20
+                 80
+                                                                                               -20
+
+-90 o
+          20 o             60 o            100 o         140 o                 180 o                 -140 o      -100 o                -60 o             -20 o        0o        20 o
+Figure 5.10 Annual-mean upward sensible heat flux QS (top) and constrained, net, downward
+heat flux (bottom) through the sea surface in W/m2 calculated by DaSilva, Young, and
+Levitus (1995) using the icoads data set from 1945 to 1989. Contour interval is 2 W/m2
+(top) and 20 W/m2 (bottom).
+transport and not by heat storage in the ocean or atmosphere.
+Net Heat Flux at the Top of the Atmosphere Heat flux through the top
+of the atmosphere is measured very accurately by radiometers on satellites.
+      1. Insolation is calculated from the solar constant and observations of re-
+         flected sunlight made by meteorological satellites and by special satellites
+         of the Earth Radiation Budget Experiment.
+      2. Infrared radiation is measured by infrared radiometers on the satellites.
+      3. The difference between insolation and net infrared radiation is the net
+         heat flux across the top of the atmosphere.
+70                             CHAPTER 5. THE OCEANIC HEAT BUDGET
+
+Net Meridional Heat Transport To calculate the meridional heat transport
+in the atmosphere and the ocean, we first average the net heat flux through the
+top of the atmosphere in a zonal band. Because the meridional derivative of the
+transport is the zonal-mean flux, we calculate the transport from the meridional
+integral of the zonal-mean flux. The integral must be balanced by the heat
+transported by the atmosphere and the ocean across each latitude band.
+    Calculations by Trenberth and Caron (2001) show that the total, annual-
+mean, meridional heat transport by the ocean and atmosphere peaks at 6 PW
+toward each pole at 35◦ latitude.
+Oceanic Heat Transport The meridional heat transport in the ocean can be
+calculated three ways:
+     1. Surface Flux Method calculates the heat flux through the sea surface from
+        measurements of wind, insolation, air, and sea temperature, and cloudi-
+        ness. The fluxes are integrated to obtain the zonal average of the heat
+        flux (figure 5.7). Finally, we calculate the transport from the meridional
+        integral of the zonal-mean flux just as we did at the top of the atmosphere.
+     2. Direct Method calculates the heat transport from values of current veloc-
+        ity and temperature measured from top to bottom along a zonal section
+        spanning an ocean basin. The flux is the product of northward velocity
+        and heat content derived from the temperature measurement.
+     3. Residual Method first calculates the atmospheric heat transport from at-
+        mospheric measurements or the output of numerical weather models. This
+        is the direct method applied to the atmosphere. The atmospheric trans-
+        port is subtracted from the total meridional transport calculated from the
+        top-of-the-atmosphere heat flux to obtain the oceanic contribution as a
+        residual (figure 5.11).
+    Various calculations of oceanic heat transports, such as those shown in figure
+5.11, tend to be in agreement, and the error bars shown in the figure are realistic.
+The total meridional transport of heat by the ocean is small compared with the
+total meridional heat transport by the atmosphere except in the tropics. At 35◦ ,
+where the total meridional heat transport is greatest, the ocean carries only 22%
+of the heat in the northern hemisphere, and 8% in the southern (Trenberth and
+Caron, 2001).
+
+5.8   Variations in Solar Constant
+   We have assumed so far that the solar constant, the output of light and heat
+from the sun, is steady. Recent evidence based on variability of sunspots and
+faculae (bright spots) shows that the output varied by ±0.2% over centuries
+(Lean, Beer, and Bradley, 1995), and that this variability is correlated with
+changes in global mean temperature of earth’s surface of ±0.4◦ C. (figure 5.12).
+In addition, White and Cayan (1998) found a small 12 yr, 22 yr, and longer-
+period variations of sea-surface temperature measured by bathythermographs
+and ship-board thermometers over the past century. The observed response of
+earth to solar variability is about that calculated from numerical models of the
+

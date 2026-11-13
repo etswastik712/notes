@@ -1,0 +1,239 @@
+ 10.6 LONGWAVE AND EVAPORATION FEEDBACKS IN THE SURFACE ENERGY BALANCE   313
+
+temperature difference. Altered meridional thermal drive will result in a
+large change in baroclinic eddy activity and eddy heat transport, which
+will suppress the response of the temperature gradient to the altered forc-
+ing. The strong sensitivity of the eddy activity and heat flux to meridional
+thermal driving has been verified by calculations with numerical models
+of the atmosphere.
+   We expect that the oceanic heat flux is also sensitive to the meridional
+temperature gradient, since we expect that both the thermal driving and
+the wind stress driving of oceanic circulations would increase with the
+temperature gradient. We do not have any simple quantitative theory for
+how oceanic fluxes depend on the meridional temperature gradients that
+corresponds to the simple dimensional arguments given above.
+   Dynamical models of the free atmosphere suggest that baroclinic
+eddies will act to maintain a nearly constant meridional] temperature gra-
+dient by changing their meridional energy flux by a large amount when
+a small change in meridional temperature gradient is imposed. It is very
+interesting that paleoclimatic data show that the surface temperature has
+a very different behavior than expected from these dynamical consider-
+ations. During ice ages, the tropical surface temperatures changed only a
+few degrees from today’s values, whereas the polar temperatures cooled
+by 10°C or more. This “polar amplification” of climate change is an impor-
+tant feature that needs to be fully understood. It points to the importance
+of surface and boundary layer processes in determining the surface tem-
+perature and its latitudinal gradient, or to a strong latitude dependence
+of feedback processes. Much of the enhanced temperature change in high
+latitudes appears to be confined near the surface, so that polar amplifica-
+tion of surface temperature change and the hyperdiffusive theory for heat
+flux described previously are not inconsistent. The meridional gradients
+of mean tropospheric temperature change much less than the meridional
+gradients of surface temperature in climate models, so that much of the
+polar amplification of warming is confined to the lower troposphere.
+
+
+   10.6 LONGWAVE AND EVAPORATION FEEDBACKS
+         IN THE SURFACE ENERGY BALANCE
+
+   The energy and water exchanges at the surface are very important for
+climate (Chapter 4), and it is of great interest to understand how these
+energy exchanges might be sensitive to temperature. We can gain some
+intuition about this through relatively simple analysis.
+   The net longwave heating of the surface is equal to the downward long-
+wave from the atmosphere minus the longwave emission from the surface.
+
+                             Ey. = F'(0)-oT,                         (10.34)
+a                                      ESSE
+314               10. CLIMATE SENSITIVITY AND FEEDBACK MECHANISMS
+
+
+
+                            Long IR (12-200 rm)
+
+
+
+
+                            Window (8-12 pm)
+
+
+                                                     Total (3.6-200 um)
+
+
+                     250)     260°   270     280    290    300       310   320   9330
+                                           Surface temperature (K)
+
+FIGURE 10.10 Net longwave at the surface as a function of surface temperature
+calculated from a radiative transfer model. Separate curves are shown for the total long-
+wave, the window region (8-12 4m) and the longest IR wavelengths that are of impor-
+tance where the rotational lines of water vapor produce strong absorption and emission
+(12-200 j1m).
+
+
+
+   Here we have assumed that the surface absorbs and emits like a black-
+body. We can calculate the dependence of net radiation on surface tem-
+perature under clear-sky conditions using a radiative transfer model with
+some assumptions. We assume                   that the temperature decreases linearly
+with height away from the surface with a lapse rate of 6.5 K km“ until
+the height where the temperature reaches a minimum of 200 K, and that
+the atmosphere is isothermal with a temperature of 200 K above that level.
+We assume that the relative humidity is distributed linearly in pressure
+according to
+
+                                    a:  p/p, — 9.02
+                                 Ri SRE eee                                             (10.35)
+
+where RH, = 77% gives a reasonable approximation to the observed global
+mean relative humidity. The net longwave flux at the ground computed
+with these specifications of lapse rate and relative humidity and with cur-
+rent values of CO, and ozone content is shown in Fig. 10.10. The general
+character of this plot is not very sensitive to the details of how the relative
+humidity and temperature profiles are specified. For temperatures less
+than about 280 K the net longwave loss from the surface is about 90 W m~?
+and is not sensitive to temperature. This is because there is very little water
+vapor in the atmosphere at these temperatures and the downward long-
+wave from the atmosphere and the upward longwave from the surface
+ 10.6 LONGWAVE AND EVAPORATION FEEDBACKS IN THE SURFACE ENERGY BALANCE   315
+
+
+increase at about the same rate, so that the balance remains the same. For
+temperature greater than about 280 K, as the temperature increases the net
+longwave loss from the surface decreases. In this temperature range, the
+infrared opacity of the water vapor begins to increase rapidly, if the rela-
+tive humidity is fixed. This means that the downward longwave emission
+from the atmosphere increases more rapidly with temperature that the
+upward blackbody emission from the surface. At tropical temperatures
+of about 300 K, the surface longwave loss is decreasing rapidly, changing
+from about —75 W m”® at 290 K to about —15 W m~” at 310 K, or about
++3 W m” K"". From the atmosphere’s perspective, this change in the sur-
+face longwave exchange is a loss of energy, since the amount of longwave
+energy that it emits downward is increasing faster than the amount it
+receives from the surface. Much of the reduction in net longwave cooling
+of the surface comes from wavelengths in the range 8-12 um, called the
+water vapor window. This is because of the so-called continuum absorption
+by water vapor that becomes increasingly effective at high vapor pressure.
+The nature of this absorption is not fully understood, but it is well mea-
+sured and likely associated with water vapor molecules sticking together
+at high vapor pressures, and thus forming a complex molecule that can
+efficiently absorb and emit window radiation. This closes the water-vapor
+window at high temperatures and makes the cloud-free atmosphere virtu-
+ally opaque to thermal infrared radiation. According to these calculations,
+upward and downward longwave radiation at the surface would become
+almost equal for surface temperatures in excess of ~320 K. The net sur-
+face longwave loss decreases most rapidly with temperature in the vicin-
+ity of 300 K, which is approximately the mean temperature of the tropical
+oceans. This constitutes a positive feedback in the surface energy budget
+that is most effective at tropical temperatures, since as the temperature
+increases the net longwave cooling of the surface decreases. If no other
+feedback processes were operating, the tropical sea surface temperature
+(SST) might be quite sensitive and variable.
+   The approximate energy balance of the tropical ocean surface is about
+200 W m” solar heating, balanced by 120 W m° evaporative cooling,
+50 W m~® net longwave loss, 10 W m™ sensible cooling, and 20 W m~
+energy export by ocean currents. The evaporative cooling of tropical
+ocean waters is the largest cooling term. It is much greater than the long-
+wave cooling and is sensitive to surface temperature. We can estimate the
+sensitivity of evaporative cooling to surface temperature if we are will-
+ing to make several critical assumptions. We begin with the aerodynamic
+formula for evaporative cooling approximated using (4.32) and (4.35).
+
+             LE = p,LC,.Uq c—RH)+ Rh                    =T }         (10.36)
+                                               Kae
+                                                 VS
+a
+316            10. CLIMATE SENSITIVITY AND FEEDBACK MECHANISMS
+
+
+    If we assume again that the RH distribution and the temperature pro-
+file remain constant as we increase the surface temperature, then the evap-
+orative cooling depends primarily on the temperature dependence of the
+saturation specific humidity at the surface. We can also assume that the
+characteristic wind speed and the exchange coefficient are independent
+of the surface temperature. Making these assumptions and neglecting
+the weaker linear and quadratic temperature dependencies compared to
+the exponential temperature dependence of saturation humidity, one can
+show from (10.36) and (4.35) that the logarithmic derivative of evapora-
+tive cooling with respect to surface temperature is only weakly dependent
+on temperature itself.
+
+                         aap                oot                      (10.37)
+   This is a result of the exponential dependence of saturation humidity.
+The derivatives of exponential functions are themselves exponential func-
+tions. The numerical estimate in (10.37) is obtained for T, = 300 K, which
+is a typical tropical oceanic surface temperature. If we multiply (10.37) by
+a typical evaporative cooling value of LE = 120 W m °, then we obtain an
+estimate of the sensitivity that is independent of specific choices of the
+parameters in the aerodynamic formula (10.36).
+
+                             OLE
+                             oT.Ss =7Wm™     K”                      (10.38)
+   For FRH, the rate at which evaporative cooling increases with tempera-
+ture is large compared to the rate at which the longwave cooling of the
+surface decreases.
+   Figure 10.10 can be used to calculate the dependence of net longwave
+cooling on temperature for cloud-free conditions. The maximum rate of
+change of net longwave heating of the ground occurs at about T, = 305 K
+and has a numeric value of
+
+                         OF NeeoT.
+                                (2 = 0)   3Wm~
+                                                 me,
+                                                   K                 (10.39)
+
+   The magnitude of the rate of increase of evaporative cooling with
+temperature is more than double the rate of decrease of the longwave
+cooling of the surface in our simple analysis here. The ocean surface
+gradually loses its ability to cool by longwave radiative emission as the
+temperature increases above 300 K, but the evaporative cooling increas-
+es more rapidly with temperature than the longwave cooling declines
+with temperature. The sensitivity parameter for tropical sea surface
+ee                 ie           ee            ede        ee      Se
+                                10.7 CLOUD FEEDBACK                        S27
+
+(TSS) conditions obtained by including only these two feedbacks is
+rather small.
+
+                        ALE 1 0Bte(z=0) a                      ied
+                      E =f              =D            =0.3K(Wm™~)"      (49.40)
+    If surface longwave heating and evaporation vary with temperature as
+these simple estimates suggest, tropical SST will be relatively stable. This
+stability, which is rooted in the rapid change of saturation vapor pres-
+sure at tropical surface temperatures, may explain why tropical SST has
+changed relatively little in the past. It may also contribute to the apparent
+polar amplification of surface temperature changes by providing a tropi-
+cal damping of temperature changes.
+    Evaporative cooling of the tropical ocean surface is very sensitive to
+the thermodynamic properties of the atmospheric boundary layer, which
+are determined through a complex interaction among boundary-layer tur-
+bulence, mesoscale convection, and large-scale flow. One may illustrate
+the potential importance of relative humidity variations by differentiating
+(10.36) with respect to relative humidity for fixed temperature.
+
+                     OLE           —LE
+                                meeg   Ne =-8Wm”~* %"                   (10.41)
+                           T,
+
+
+
+   For tropical conditions,      the effect on the evaporation   rate of a 1 K
+increase in temperature at FRH is approximately equal and opposite to
+the effect of a 1% increase in relative humidity at fixed temperature. The
+processes that control relative humidity in the tropical boundary layer are
+extremely important to the sensitivity of climate.
+   The rate of evaporation increase in (10.37) is not likely to be achieved
+in the global climate system because of the limitations of the atmospheric
+energy balance. Globally, evaporation must increase only at the rate at
+which it can be balanced by radiative cooling of the atmosphere (6.3), and
+the radiative cooling rate of the atmosphere only increases at 1-2% K™*
+in climate models. In climate models, the relative humidity at the surface
+over the oceans increases with warming so that the evaporation increase is
+limited to what the atmosphere can dispose of energetically.
+
+
+                      10.7 CLOUD FEEDBACK
+
+   According to the numbers presented in Table 3.2, clouds double the
+albedo of Earth from 15% to 30% and reduce the longwave emission by
+about 30 W m ”. Because of the partial cancellation of these two effects,
+

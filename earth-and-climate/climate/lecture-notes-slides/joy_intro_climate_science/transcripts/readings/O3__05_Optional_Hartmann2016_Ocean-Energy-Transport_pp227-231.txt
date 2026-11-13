@@ -1,0 +1,234 @@
+                     7.72 TRANSPORT OF ENERGY IN THE OCEAN                 FILE
+
+is consistent with the displacement of the contours of oxygen saturation,
+with old oxygen-poor water drawn upward poleward of the jet and a
+deep pool of oxygenated water equatorward of the jet (Fig. 7.17). This
+wind-driven vertical circulation also increases the temperature gradient
+and the slopes of the isopycnals, since dense water is drawn up on the
+poleward side and less dense surface water is pushed downward on the
+equatorward side. This strong density gradient fosters baroclinic insta-
+bility of eddies in the ocean, and the Southern Ocean has very vigorous
+ocean eddies, much as in the mid-latitudes of the atmosphere, but with a
+horizontal scale of only about 100 km. These eddies produce fluxes of heat
+and potential vorticity that are important for ocean dynamics and tend
+to smooth out the meridional gradients that the wind-driven circulation
+generates.
+    The Southern Ocean is a key region for climate change, along with the
+North Atlantic and the tropical Pacific. The Southern Ocean seems to be
+the key region where deep water returns to the surface, whereas upwell-
+ing of less dense water is important in the tropical Pacific and deep water
+is formed in both the North Atlantic and the ocean around Antarctica. The
+circulation of the Southern Ocean is important for many aspects of climate
+variability and change. Since it is the primary region for return of deep
+water to the surface, the North Atlantic overturning circulation and the
+Southern Ocean upwelling are closely linked. The return of deep water
+to the surface means that warming of the Southern ocean will lag behind
+warming of the globe, and evidence of this effect will be seen in tempera-
+ture trends calculated in Chapter 9. The circulation of the Southern Ocean
+interacts with the wind stresses. During an ice age, for example, the stron-
+gest wind stresses may move equatorward. If they move equatorward
+enough, then the importance of the Drake Passage for the circulation of
+the Ocean may be changed. The Southern Ocean may also be a key player
+in the carbon cycle variations that occur during ice ages. If sea ice extends
+equatorward along with the strongest winds, then ventilation of the deep
+ocean and the return of carbon to the surface may be suppressed, con-
+tributing to the reduction of atmospheric CO, that supports the ice ages.
+Reversing these changes may also contribute to the return of CO, to the
+atmosphere during interglacials, the warmer periods between the ice ages
+that define the large glacial—interglacial cycles of the past 800,000 years.
+
+
+       7.7 TRANSPORT OF ENERGY IN THE OCEAN
+
+   The general circulation of the ocean produces horizontal transport of
+energy from the tropics to the polar regions that is important for climate.
+However, it is not easy to measure this heat transport directly. It is difficult
+CUS     a     REC      Sees      i
+228             7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+and expensive to obtain simultaneous current and temperature measure-
+ments from the surface to the bottom of the ocean. Such measurements
+require a ship or a large buoy and a cable with thermistors and current
+meters that extends from the surface to the ocean bottom, which is a dis-
+tance of about 4 km on average. The spatial scales of the motions that are
+important for heat transport in the ocean are often small compared to the
+great expanse of an ocean basin, so that it is beyond our means to simul-
+taneously measure current and temperature at enough spatial points and
+frequently enough in time to continuously monitor the product of velocity
+and temperature that produces most of the heat transport in the ocean.
+Attempts have been made to measure a series of profiles across a basin at
+a particular latitude, but these estimates must be assigned a rather large
+uncertainty.
+   An alternative to direct measurement of currents and temperatures is to
+infer the heat transport of the ocean from the energy balance of Earth or of
+the ocean. In Fig. 2.15, we inferred the annual mean northward heat flux
+by the ocean as a residual of the top-of-atmosphere and atmospheric heat
+budgets. This estimate indicates that the maximum meridional energy
+transport by the oceans in the Northern hemisphere is much smaller than
+the atmospheric energy transport, and occurs at a lower latitude, peaking
+in the tropical rather than the middle latitudes. A clear asymmetry can be
+seen between the Northern and Southern Hemispheres, which is likely
+related to the shape of the oceans and land areas in the two hemispheres.
+The poleward heat transport by the ocean in the Northern Hemisphere is
+about twice that in the Southern Hemisphere.
+   The oceanic energy flux can also be estimated from the energy balance
+at the surface of the ocean. Following (4.1) the energy balance at the sur-
+face can be written as (7.17).
+
+
+                           V-F =R,—LE—SH-
+                                                    aE.                     (7.17)
+                                                     at
+   The divergence of energy transport in the ocean can be estimated from
+the ocean surface energy balance if the surface net radiative heating, the
+evaporative    cooling,   the sensible   cooling,   and   the energy   storage   in
+the ocean can be estimated. All of these terms are discussed in Chapter 4,
+and maps of the inferred oceanic flux divergence appear in Fig. 4.19.
+Estimates of meridional energy transport in the ocean obtained from
+(7.17) are in general agreement with estimates shown in Fig. 2.15, in that
+they show a maximum transport by the oceans at about 20°N. The surface
+energy balance method can also provide estimates for individual regions
+and oceans (Trenberth et al., 2001). The estimates indicate that the Atlantic
+Ocean transports energy northward across the equator, whereas the Indian
+Ocean transports energy southward.
+                  7.8 MECHANISMS OF TRANSPORT IN THE OCEAN            229
+
+  7.8 MECHANISMS OF TRANSPORT IN THE OCEAN
+
+   The meridional transport of energy in the oceans is clearly important
+for climate, but because the transports are not measured directly it is
+uncertain what types of circulations contribute most to the transport.
+There are three generic types of circulations that are candidates: wind-
+driven currents, thermohaline circulations, and mid-ocean eddies.
+
+
+
+7.8.1   Wind-Driven Currents
+   The warm western boundary currents such as the Gulf Stream and
+the Kuroshio and their associated mid-ocean drift currents play an im-
+portant role in meridional energy transport in the oceans. The swift,
+warm currents that flow poleward along the western boundaries of the
+Atlantic and Pacific oceans are capable of carrying large amounts of
+heat poleward. The equatorward flow of relatively cold water in east-
+ern boundary currents also contributes to the poleward energy flux. In
+addition to these horizontal gyre circulations, the subtropical oceans
+have a shallow vertical overturning in the top 700 m that contributes
+about as much poleward heat transport as the gyre circulations (Bryden
+et al., 1991). The trade winds drive a poleward drift of warm water at
+the surface, which is balanced by an equatorward flow of slightly colder
+water below the surface.
+   We can estimate the poleward heat flux associated with these circula-
+tions by considering the product of the mass flux of water and the temper-
+ature difference between the poleward and equatorward flowing at the
+same latitude. The mass flow is the velocity of the current times its area
+and the water density. From Fig. 7.11, we estimate that the Gulf Stream
+is 100 km wide and 600 m deep and has an average current of 0.5 ms”.
+Assuming a density of 10° kg m-~, we can obtain an estimate of the mass
+flux in the Gulf Stream of 3.0 x 10'° kg s*, or 30 sverdrups.
+
+Density x width x depth x speed =10° kg m™ x 100 km x 600 mx 0.5 m s*
+                                =3x10mke's
+
+   This estimate of 30 sverdrups agrees with more detailed calculations
+of the flow through the Florida Straits (Bryden and Hall, 1980). The mass
+flux in the Gulf Stream increases significantly northward from Florida,
+as it incorporates more flow from the gyre. lf we assume that the Kuroshio
+has a similar mass flux, then the total poleward mass flux in Northern
+Hemisphere western boundary currents is 6 x 10"° kg s™. To calculate the
+energy flux associated with this mass transport, we need the heat capac-
+ity of water (4281 J K* kg”) and the temperature difference between the
+gE
+230             7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+poleward-flowing boundary currents and the equatorward-flowing water
+at the same latitude. We do not know this temperature difference precise-
+ly, and it is very dependent on whether the equatorward flow is above
+or below the thermocline. It is interesting to consider how big this tem-
+perature difference must be in order for the western boundary currents to
+produce a meridional heat transport of about half the maximum oceanic
+flux displayed in Fig. 2.15. To obtain an oceanic flux of 1.6 PW requires a
+temperature difference between the poleward-flowing and equatorward-
+flowing water of about 6°C.
+
+          C,, Py, area, AT = 4218] K*kg*x6x10" kgs             *x 6.3K   (7.18)
+                           =16PW                                           i
+    From Fig. 7.14, we estimate the average surface temperature gradient
+across the Atlantic at 25°N to be 4-6°C. If the equatorward return flow is
+primarily in the eastern Pacific or in interior below the thermocline, then it
+would be easy to produce the required oceanic heat flux with the western
+boundary currents and an associated colder interior return flow. Similarly,
+if we look at the vertical structure of the temperature for the subtropical
+North Atlantic in Fig. 1.11, the temperature drops rapidly by about 10°C
+from the surface to 500 m depth, so a shallow overturning circulation with
+poleward flow near the surface and a return flow below will transport a
+significant amount of heat.
+
+
+7.8.2 The Deep Thermohaline Circulation
+   The mass flow of the deep thermohaline circulation is governed by the
+rate at which deep water can be formed at high latitudes. In the Northern
+Hemisphere, deep water is formed only in the Atlantic at high latitudes,
+and the formation    rate is quite slow, since it takes several centuries to
+replace the deep water in the Atlantic. It is estimated that the average rate
+of deep-water formation in the North Atlantic is 1.5-2 x 10’ kg s? and
+in the Antarctic Ocean about 1 x 10° kg s™. Since the mass flux of the
+deep thermohaline circulation is more than a factor of ten smaller than
+that associated with the western boundary currents, it is safe to assume
+that it has a much smaller influence on the total northward ocean heat flux
+than the wind-driven gyres, although it may have a significant effect in the
+far North Atlantic.
+
+
+7.8.3 Mid-Ocean Eddies
+   The Gulf Stream and the Kuroshio spin off long-lived eddies via baro-
+clinic and barotropic instabilities (Fig. 7.12). These are the oceanic analogs
+to the eddies that produce most of the atmospheric meridional energy
+                   7.8 MECHANISMS OF TRANSPORT IN THE OCEAN                                           231
+
+transport in mid-latitudes. However, the role of eddies for heat transport
+in the subtropical ocean is likely much less than in the atmosphere, because
+of their smaller spatial scales compared with the scale of the oceans. More-
+over, the oceanic eddies are best developed well poleward of the latitude
+of the maximum oceanic transport. The wind-driven and thermohaline
+circulations are likely to provide much more important contributions to
+the meridional heat flux in the subtropics. However, in the high latitude
+Southern Ocean, ocean eddies are very important in determining the over-
+turning circulation and the response of the ocean to changed wind stress.
+
+NT               SOT   IES RNS   SEI   LL PY OEEEE OP   TOTES SELES EEELD SEE   TPIT   ISTE LG RESET LP SFIS EY
+
+
+ EXERCISES
+
+ 1. Use the data in Figs 7.1 and 7.2 to estimate how much the salinity of
+    the surface water of the Arctic Ocean would need to increase before the
+    surface density would equal the potential density at 1000-m depth. How
+    does this compare with the average salinity of the ocean?
+ 2. What depth of seawater would need to freeze in the Arctic Ocean to
+    produce the increase in salinity of problem 1 in the top 100 m of water?
+    Assume that all salt is rejected from sea ice and enters the 100-m layer.
+ 3. With the negative wind stress curl characteristic of today’s climate, the
+    wind-driven meridional flow (7.16) is an equatorward drift, which we can
+    hypothesize occurs mostly in the thermocline or above it. How would the
+    net heat transport produced by this drift and its return flow be different
+    if, rather than a warm western boundary jet, the return flow were a slow
+    poleward drift near the bottom of the ocean?
+ 4. Discuss the ways in which the extension of the warm, saline Gulf Stream
+    into the Norwegian and Labrador seas assists in the formation of dense
+    water that can sink to the depths of the Atlantic Ocean.
+ 5. Use Fig. 7.1 to estimate the initial and final density values of a kilogram of
+    water that starts in the tropics with a temperature of 28°C and a salinity
+    of 35%o and flows on the surface in the Gulf Stream to the Norwegian Sea,
+    where it arrives with a temperature of -1°C. Assume the water conserves
+    its salinity en route and loses heat by sensible heat transfer.
+ 6. As an alternative to problem 5, assume that the kilogram of water starts
+    in the tropics, but is cooled by evaporation along its route rather than by
+    sensible heat loss. Estimate the mass of water that is lost by evaporation
+    en route, if the parcel arrives in the Norwegian Sea with a temperature of
+    -1°C. Calculate the salinity on arrival, assuming that no horizontal mixing
+    or precipitation occurs, and the salinity is well mixed through the top
+    100 m of the ocean. What is the density on arrival? When you compare the
+    final density with that obtained in problem 5, is the effect of evaporation
+    on the final density significant? Is it important to know the Bowen ratio
+    for the parcel along its route?
+

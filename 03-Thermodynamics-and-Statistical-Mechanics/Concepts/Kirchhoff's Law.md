@@ -6,7 +6,7 @@ type: concept
 scope: [taught, extra-book]
 by: [lecture-notes, book]
 status: draft
-tags: [subject/thermo, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft]
+tags: [subject/thermo, type/concept, taught, extra/book, src/lecture-notes, src/book, status/draft, quiz/thermo, quiz/th-tut2]
 ---
 # Kirchhoff's Law
 

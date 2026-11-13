@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [handwritten-notes, ai-notes]
 status: draft
 prereq: [PR04 Joint Distributions Expectation and Variance, PR05 Continuous Random Variables]
-tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/ai-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/ai-notes, src/own-notes, status/draft, quiz/probability, quiz/pr-hw4]
 ---
 # PR06 · Moments, Generating Functions and Limit Theorems
 
@@ -115,7 +115,7 @@ Raw moments $E[X^k]$ and central moments $\mu_k=E[(X-\mu)^k]=\sum_{j=0}^k\binom 
 > 2. $E[e^{t(aX+b)}]=e^{bt}E[e^{(at)X}]=e^{bt}M_X(at)$.
 > 3. $E[e^{t\sum X_i}]=E[\prod e^{tX_i}]=\prod E[e^{tX_i}]$, since for independent variables the expectation of a product is the product of expectations (PR04 §6).
 
-## 3. First-principles MGFs
+## 3. First-principles MGFs #quiz/pr-hw4
 <span class="scope-taught">taught</span> *Week 3, [[Week3_notes.pdf#page=3|pp.3–5]]: uniform, exponential, $N(0,1)$, Bernoulli, binomial, geometric; $N(\mu,\sigma^2)$ via the affine rule* · <span class="scope-extra-book">extra · book</span> *AI notes §2.3 (Poisson, negative binomial). Course policy: derive before use. Every result below was also checked symbolically.*
 
 Write $q=1-p$.

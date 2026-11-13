@@ -6,7 +6,7 @@ type: concept
 scope: [extra-book, extra-beyond]
 by: [lecture-notes]
 status: draft
-tags: [subject/analysis, type/concept, extra/book, extra/beyond, src/own-notes, status/draft]
+tags: [subject/analysis, type/concept, extra/book, extra/beyond, src/own-notes, status/draft, quiz/proofs, quiz/pa-induction]
 ---
 # Forward-Backward Induction
 

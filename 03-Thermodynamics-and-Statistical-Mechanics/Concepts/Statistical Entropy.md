@@ -6,7 +6,7 @@ type: concept
 scope: [extra-book, extra-beyond]
 by: [lecture-notes]
 status: draft
-tags: [subject/thermo, type/concept, extra/book, extra/beyond, src/lecture-notes, status/draft]
+tags: [subject/thermo, type/concept, extra/book, extra/beyond, src/lecture-notes, status/draft, quiz/th-tut3]
 ---
 # Statistical Entropy
 

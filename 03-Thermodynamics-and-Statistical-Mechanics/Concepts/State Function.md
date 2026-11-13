@@ -6,7 +6,7 @@ type: concept
 scope: [taught]
 by: [lecture-notes]
 status: draft
-tags: [subject/thermo, type/concept, taught, src/lecture-notes, status/draft]
+tags: [subject/thermo, type/concept, taught, src/lecture-notes, status/draft, quiz/thermo, quiz/th-tut2, quiz/th-background]
 ---
 # State Function
 

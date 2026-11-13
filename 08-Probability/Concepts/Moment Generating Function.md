@@ -6,7 +6,7 @@ type: concept
 scope: [extra-book]
 by: [lecture-notes]
 status: draft
-tags: [subject/probability, type/concept, extra/book, src/lecture-notes, status/draft]
+tags: [subject/probability, type/concept, extra/book, src/lecture-notes, status/draft, quiz/probability, quiz/pr-hw4, quiz/pr-hw6]
 ---
 # Moment Generating Function
 

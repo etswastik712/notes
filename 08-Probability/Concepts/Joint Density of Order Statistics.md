@@ -6,7 +6,7 @@ type: concept
 scope: [taught]
 by: [lecture-notes, own-notes]
 status: draft
-tags: [subject/probability, type/concept, taught, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/probability, type/concept, taught, src/lecture-notes, src/own-notes, status/draft, quiz/probability, quiz/pr-hw5]
 ---
 # Joint Density of Order Statistics
 

@@ -9,7 +9,7 @@ scope: [taught, extra-book, extra-beyond]
 by: [lecture-notes, ai-notes]
 status: draft
 prereq: [PA05 Induction and the Number Systems, PA08 Mathematical Induction]
-tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft]
+tags: [subject/analysis, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/own-notes, status/draft, quiz/proofs, quiz/pa-induction, quiz/pa-strong]
 ---
 # PA09 · Strong Induction and Recursion
 
@@ -49,7 +49,7 @@ flowchart LR
 ```
 *Concept map: how the ideas of this chapter depend on each other (read left to right; every box is a section).*
 
-## 1. Why weak induction is not enough, and the principle
+## 1. Why weak induction is not enough, and the principle #quiz/pa-strong
 <span class="scope-extra-book">extra · book</span> *Sundstrom §4.2; Tao Proposition 2.2.14; Bloch Theorem 6.3.8*
 
 > [!intuition] The factorisation example
@@ -67,7 +67,7 @@ flowchart LR
 > [!key] The write-up (five parts)
 > 1. State $P(n)$. 2. **Base cases**: every $n$ for which the argument below cannot reach a smaller case. 3. **Step:** let $n$ be larger than the base cases, assume $P(j)$ for **all** $j$ with $m\le j<n$. 4. Prove $P(n)$ and **name the smaller cases you use**, checking that each is in range (at least the first base case, less than $n$). 5. Conclude by strong induction.
 
-## 2. Strong induction is equivalent to PMI
+## 2. Strong induction is equivalent to PMI #quiz/pa-strong
 <span class="scope-extra-book">extra · book</span> *AI notes Theorem 3.7 and Theorem 12.13; Bloch Theorem 6.3.8 uses the well-ordering principle*
 
 > [!derivation] PMI $\Rightarrow$ strong induction
@@ -81,7 +81,7 @@ So the two principles prove exactly the same statements; strong induction is a *
 > [!example] Strong induction as weak induction on blocks (🔵)
 > The postage claim of §3 is "weak induction on $Q(n)=P(n)\wedge P(n+1)\wedge P(n+2)\wedge P(n+3)$": the four-in-a-row base case $Q(12)$ and the step $Q(k)\Rightarrow Q(k+1)$ (which needs only $P(k)$, to get $P(k+4)$) do the same work with a visible bookkeeping.
 
-## 3. Applications
+## 3. Applications #quiz/pa-strong
 <span class="scope-extra-beyond">extra · beyond</span> *all checked by computer; Figure PA9.1*
 
 > [!example] Prime factorisation, existence (recall PA05 §4)
@@ -112,7 +112,7 @@ So the two principles prove exactly the same statements; strong induction is a *
 ![[fig_pa09_strong.png]]
 *Figure PA9.1. A: the amounts $1,\dots,40$ made from stamps of 4 and 5; grey amounts cannot be made, orange are the four base cases, and every later amount is a base case plus a number of 4-stamps. B: $F_n$ (solid) between $\varphi^{n-2}$ and $2^n$ (dashed). C: the Josephus survivor $J(n)$ is a sawtooth that returns to $1$ at every power of $2$.*
 
-## 4. Definition by strong recursion
+## 4. Definition by strong recursion #quiz/pa-strong
 <span class="scope-extra-book">extra · book</span> *Sundstrom §4.3; Bloch §6.4; PA05 §5 for the recursion theorem*
 
 > [!key] Course-of-values recursion ([[Recursion Theorem]])
@@ -195,3 +195,22 @@ So the two principles prove exactly the same statements; strong induction is a *
 > **Notes.** The Josephus convention (person $1$ spared, person $2$ eliminated first) is the one used in the simulation and in the recursion; the other common convention (person $1$ eliminated first) gives a different survivor. The AI notes number from $0$; here $\mathbb N$ starts at $1$ (Assignment 8's convention).
 
 **References.** Tao, T. *Analysis I*, §2.2, §8.5 · Bloch, E. D. *Proofs and Fundamentals*, §6.3 · Sundstrom, T. *Mathematical Reasoning*, §4.2–4.3 · Graham, Knuth, Patashnik, *Concrete Mathematics* (the Josephus recursion) · Zeckendorf, E. (1972), *Bull. Soc. Roy. Sci. Liège* 41.
+
+## Continued in the vault (added 2026-11-12): Assignment 9, Problem 1 and Problem 2(a), solved in full
+*Source: [[Assignment-9.pdf#page=1|Assignment 9]] (read from the PDF and, for the garbled recurrence of Problem 1(a), from the page image: $a_1=1$, $a_2=3$, $a_n=a_{n-1}+a_{n-2}$, claim $a_n<(7/4)^n$; the other tool's note could not read it). Problems 3 and 4 (WOP) are solved in [[PA10 Well-Ordering and Well-Ordered Pairs]]. Checked by machine in `scripts/quiz_numbers.py`.* #quiz/pa-induction #quiz/pa-strong
+
+**Strong induction, as the sheet states it:** if (i) $P(1)$ and (ii) for every $k$, $P(1),\dots,P(k)\Rightarrow P(k+1)$, then $P(n)$ for all $n$. Say what $P(n)$ is, prove the base case(s), state *exactly* what is assumed, prove $P(k+1)$, conclude.
+
+> [!example] Problem 1(a): $a_1=1$, $a_2=3$, $a_n=a_{n-1}+a_{n-2}$ ($n\ge3$); prove $a_n<(7/4)^n$; why two base cases?
+> $P(n)$: $a_n<(7/4)^n$. **Bases:** $a_1=1<\tfrac74$; $a_2=3<\tfrac{49}{16}=3.0625$. **Step** ($n\ge3$): assume $P(n-1)$ and $P(n-2)$. Then
+> $$a_n=a_{n-1}+a_{n-2}<\Big(\tfrac74\Big)^{n-1}+\Big(\tfrac74\Big)^{n-2}=\Big(\tfrac74\Big)^{n-2}\Big(\tfrac74+1\Big)=\Big(\tfrac74\Big)^{n-2}\cdot\tfrac{44}{16}<\Big(\tfrac74\Big)^{n-2}\cdot\tfrac{49}{16}=\Big(\tfrac74\Big)^n.$$
+> **Why two base cases:** the step for $n$ uses **two** earlier terms, $a_{n-1}$ and $a_{n-2}$; the first $n$ for which both exist is $n=3$, so $P(1)$ and $P(2)$ must be proved separately (one base case cannot start the induction: $P(1)$ alone says nothing about $a_2$, which is *given*, not computed). The bound is not sharp: $a_3,\dots,a_8=4,7,11,18,29,47$ (the Lucas numbers; checked $a_n<(7/4)^n$ for $n\le59$).
+
+> [!example] Problem 1(b): $b_1=2$, $b_2=4$, $b_n=4b_{n-1}-4b_{n-2}$: compute $b_3,b_4,b_5$, guess, prove
+> $b_3=4\cdot4-4\cdot2=\mathbf8$, $b_4=4\cdot8-4\cdot4=\mathbf{16}$, $b_5=4\cdot16-4\cdot8=\mathbf{32}$: guess $\boxed{b_n=2^n}$. **Proof** ($P(n)$: $b_n=2^n$): bases $b_1=2$, $b_2=4$; step ($n\ge3$): $b_n=4\cdot2^{n-1}-4\cdot2^{n-2}=2^{n+1}-2^n=2^n$ (uses $P(n-1)$ and $P(n-2)$, so two bases). *Why the guess is natural:* the characteristic equation $x^2-4x+4=(x-2)^2$ has the double root $2$, so the general solution is $(A+Bn)2^n$, and $b_1=2,b_2=4$ force $A=1$, $B=0$.
+
+> [!example] Problem 1(c): every integer $n\ge8$ is $3x+5y$ ($x,y\ge0$); how many base cases; false for $n=7$
+> $P(n)$: $n=3x+5y$ for some integers $x,y\ge0$. **Three base cases:** $8=3+5$, $9=3\cdot3$, $10=5\cdot2$. **Step** ($n\ge11$): $n-3\ge8$, so by the strong hypothesis $n-3=3x+5y$, hence $n=3(x+1)+5y$. **Why three:** the step reaches back by $3$, so the three smallest cases $8,9,10$ (one in each residue class mod $3$) must be checked directly; with only $8$ the step could not reach $9$ or $10$. **$n=7$ fails:** $7-5y\in\{7,2\}$ for $y=0,1$ and neither is divisible by $3$. (So the largest non-representable amount is $7=3\cdot5-3-5$, the Frobenius number; the non-representable amounts are $1,2,4,7$; checked for all $8\le n\le300$.)
+
+> [!example] Problem 2(a): WOP $\Rightarrow$ strong induction
+> Assume WOP and let $P(n)$ satisfy (i) $P(1)$ and (ii) $P(1),\dots,P(k)\Rightarrow P(k+1)$ for all $k$. Let $S=\{n\in\mathbb N:P(n)\text{ is false}\}$ and suppose $S\ne\varnothing$; by WOP it has a least element $m$. $m\ne1$ by (i). So $m\ge2$, and every $j<m$ is **not** in $S$ (minimality), i.e. $P(1),\dots,P(m-1)$ are all true. Applying (ii) with $k=m-1\ge1$ gives $P(m)$, contradicting $m\in S$. Hence $S=\varnothing$. $\square$ (The whole chain PMI $\Rightarrow$ WOP $\Rightarrow$ strong induction $\Rightarrow$ PMI is in [[PA10 Well-Ordering and Well-Ordered Pairs]] §2.)

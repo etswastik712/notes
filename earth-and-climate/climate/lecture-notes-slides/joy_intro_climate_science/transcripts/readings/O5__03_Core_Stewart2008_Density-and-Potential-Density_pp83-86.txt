@@ -1,0 +1,247 @@
+6.5. DENSITY                                                                                                  83
+
+                          0
+                                                     Winter
+                                   AAC                                                  Warm
+                                                                                        Pool
+                                                               Summer
+                                                                               AAC
+                                             Warm
+                                             Pool
+
+                                                        BATS
+                        500
+
+
+
+
+ Pressure (decibars)
+                                                                                                      BATS
+
+
+
+
+                       1000
+
+
+
+
+                       1500
+                              0o          10 o          20 o            30 o   34    35          36          37
+                                         Temperature (Celsius)                        Salinity
+
+Figure 6.8 Typical temperature and salinity profiles in the open ocean. AAC: At 62.0◦ S,
+170.0◦ E in the Antarctic Circumpolar Current on 16 January 1969 as measured by the R/V
+Hakuho Maru. Warm Pool: At 9.5◦ N 176.3◦ E in the tropical west Pacific warm pool on 12
+March 1989 as measured by Bryden and Hall on the R/V Moana Wave. bats: At 31.8◦ N
+64.1◦ W near Bermuda on 17 April and 10 September 1990 as measured by the Bermuda
+Biological Station for Research, Inc. Data are included with Java OceanAtlas.
+
+closely related to temperature, the thermocline also tends to be the layer where
+density gradient is greatest, the pycnocline.
+     The shape of the thermocline varies slightly with the seasons (figure 6.7).
+This is the seasonal thermocline. The permanent thermocline extends from
+below the seasonal thermocline to depths of 1500–2000 meters (figure 6.8). At
+high latitudes, such as at the aac station in the figure, there may be a cooler,
+fresher layer above the permanent thermocline.
+     The mixed layer tends to be saltier than the thermocline between 10◦ and
+   ◦
+40 latitude, where evaporation exceeds precipitation. At high latitudes the
+mixed layer is fresher because rain and melting ice reduce salinity. In some
+tropical regions, such as the warm pool in the western tropical Pacific, rain also
+produces a thin fresher mixed layer.
+
+6.5   Density, Potential Temperature, and Neutral Density
+    During winter, cold water formed at the surface sinks to a depth determined
+by its density relative to the density of the deeper water. Currents then carry
+the water to other parts of the ocean. At all times, the water parcel moves
+to stay below less dense water and above more dense water. The distribution
+of currents within the ocean depends on the distribution of pressure, which
+depends on the variations of density inside the ocean as outlined in §10.4. So,
+84             CHAPTER 6. TEMPERATURE, SALINITY, AND DENSITY
+
+if we want to follow water movement within the ocean, we need to know the
+distribution of density within the ocean.
+Density and sigma-t The calculation of water movement requires measure-
+ments of density with an accuracy of a few parts per million. This is not easy.
+    Absolute Density of water can only be measured in special laboratories, and
+only with diﬀiculty. The best accuracy is 1 : 2.5 × 105 = 4 parts per million.
+    To avoid the diﬀiculty of working with absolute density, oceanographers use
+density relative to density of pure water. Density ρ(S, t, p) is now defined using
+Standard Mean Ocean Water of known isotopic composition, assuming satura-
+tion of dissolved atmospheric gasses. Here S, t, p refers to salinity, temperature,
+and pressure.
+    In practice, density is not measured, it is calculated from in situ measure-
+ments of pressure, temperature, and conductivity using the equation of state
+for sea water. This can be done with an accuracy of two parts per million.
+    Density of water at the sea surface is typically 1027 kg/m3 . For simplifica-
+tion, physical oceanographers often quote only the last 2 digits of the density,
+a quantity they call density anomaly or Sigma (S,t,p):
+
+                       σ(S, t, p) = ρ(S, t, p) − 1000 kg/m3                   (6.7)
+
+The Working Group on Symbols, Units and Nomenclature in Physical Oceanog-
+raphy (sun, 1985) recommends that σ be replaced by γ because σ was originally
+defined relative to pure water and it was dimensionless. Here, however, I will
+follow common practice and use σ.
+    If we are studying surface layers of the ocean, we can ignore compressibility,
+and we use a new quantity sigma-t (written σt ):
+
+                                  σt = σ(S, t, 0)                             (6.8)
+
+This is the density anomaly of a water sample when the total pressure on it
+has been reduced to atmospheric pressure (i.e. zero water pressure), but the
+temperature and salinity are in situ values.
+Potential Temperature As a water parcel moves within the ocean below the
+mixed layer, its salt and heat content can change only by mixing with other
+water. Thus we can use measurements of temperature and salinity to trace the
+path of the water. This is best done if we remove the effect of compressibility.
+    As water sinks, pressure increases, the water is compressed, and the com-
+pression does work on the water. This increases the internal energy of the water.
+To understand how compression increases energy, consider a cube containing a
+fixed mass of water. As the cube sinks, its sides move inward as the cube is
+compressed. Recalling that work is force times distance, the work is the distance
+the side moves times the force exerted on the side by pressure. The change in
+internal energy may or may not result in a change in temperature (McDougall
+and Feistel, 2003). The internal energy of a fluid is the sum of molecular kinetic
+energy (temperature) and molecular potential energy. In sea water, the later
+term dominates, and the change of internal energy produces the temperature
+6.5. DENSITY                                                                                                      85
+
+                                   Temperature (Celsius)                             Density
+                     0o       1o        2o      3o         4o   5o   27.5   27.6   27.7        27.8        27.9   28
+             -1000
+
+
+
+
+             -2000
+
+
+
+
+             -3000
+
+
+
+                          θ                                                                           σθ
+
+
+ Depth (m)
+             -4000
+
+
+
+
+             -5000
+
+
+
+
+             -6000
+
+                                    t
+                                                                                          σt
+             -7000
+
+
+
+
+             -8000
+
+
+
+Figure 6.9 Profiles of Left in situ t and potential θ temperature and Right sigma-t and
+sigma-theta in the Kermadec Trench in the Pacific measured by the R/V Eltanin during the
+Scorpio Expedition on 13 July 1967 at 175.825◦ E and 28.258◦ S. Data from Warren (1973).
+
+
+change shown in figure 6.9. At a depth of 8 km, the increase in temperature is
+almost 0.9◦ C.
+    To remove the influence of compressibility from measurements of temper-
+ature, oceanographers (and meteorologists who have the same problem in the
+atmosphere) use the concept of potential temperature. Potential temperature
+Θ is defined as the temperature of a parcel of water at the sea surface after it
+has been raised adiabatically from some depth in the ocean. Raising the parcel
+adiabatically means that it is raised in an insulated container so it does not ex-
+change heat with its surroundings. Of course, the parcel is not actually brought
+to the surface. Potential temperature is calculated from the temperature in the
+water at depth, the in situ temperature.
+
+Potential Density If we are studying intermediate layers of the ocean, say
+at depths near a kilometer, we cannot ignore compressibility. Because changes
+in pressure primarily influence the temperature of the water, the influence of
+pressure can be removed, to a first approximation, by using the potential density.
+             Potential density ρΘ is the density a parcel of water would have if it were
+86                                          CHAPTER 6. TEMPERATURE, SALINITY, AND DENSITY
+
+raised adiabatically to the surface without change in salinity. Written as sigma,
+                                                                              σΘ = σ(S, Θ, 0)                                                                  (6.9)
+σΘ is especially useful because it is a conserved thermodynamic property.
+    Potential density is not useful for comparing density of water at great depths.
+If we bring water parcels to the surface and compare their densities, the calcu-
+lation of potential density ignores the effect of pressure on the coeﬀicients for
+thermal and salt expansion. As a result, two water samples having the same
+density but different temperature and salinity at a depth of four kilometers can
+have noticeably different potential density. In some regions the use of ρ(Θ) can
+lead to an apparent decrease of density with depth (figure 6.10) although we
+know that this is not possible because such a column of water would be unstable.
+    To compare samples from great depths, it is better to bring both samples to
+a nearby depth instead of to the surface p = 0. For example, we can bring both
+parcels to a pressure of 4,000 decibars, which is near a depth of 4 km:
+                                                                         σ4 = σ(S, Θ, 4000)                                                                  (6.10)
+where σ4 is the density of a parcel of water brought adiabatically to a pressure
+of 4,000 decibars. More generally, oceanographers sometimes use ρr
+                                                                         σr = σ(S, Θ, p, pr )                                                                (6.11)
+                                  27.2      27.0                                                                                  26.0
+                       0m                         27.4
+                                                                                                                    24.0   25.0
+                                                                              26.0                                  26.0                          27.7      27.9
+                                                   27.6                                                                                               27.7 28.0
+                                               27.7                    27.0
+                                                    27.8
+                      1000                                                                                                                                    28.08
+                                         27.88 27.85                                                                                                27.8
+                      2000
+                                                                                                                                    27.85
+                      3000                                                                          27.9                                27.9
+                                                                                                                       27.92
+                      4000               σtheta                                                                                          27.94
+                                                             27.88            27.88                                                              GREENLAND-ICELAND
+                      5000                                                                                                                             RIDGE
+                             ANTARCTICA
+
+
+
+
+Pressure (decibars)
+                      6000
+
+                      7000
+                          -80 o             -60 o             -40 o           -20 o             0o                  20 o          40 o              60 o           80 o
+                        0m      45.6                                                                                                                   46.0
+                                                                                      41.0                    40.0                                  45.2
+                                                      45.4                                                             42.0                 45.4
+                                     46.0                               43.0                                           43.0                45.5    45.4
+                                  46.1                          45.0                                                   44.0                45.6 45.6     46.4   46.4
+                                                                                        45.2                           45.0
+                      1000                                                                           45.4                                                   >46.4
+                                                                                        45.6
+                                                                                                    45.6                                  45.7
+                      2000                                                              45.7
+                                         σ4000                  45.8                                                                45.8
+                      3000                                             45.9                                                            45.9
+                                                                                                                                           46.0
+                      4000                     46.2                                          46.0                                 45.93
+                                                                                                            45.95
+                                                                46.1                                                                             GREENLAND-ICELAND
+                      5000                                                                                                                             RIDGE
+                             ANTARCTICA
+                      6000
+                      7000
+                          -80 o             -60 o             -40 o           -20 o             0o                  20 o          40 o              60 o           80 o
+
+Figure 6.10 Vertical sections of density in the western Atlantic. Note that the depth scale
+changes at 1000 m depth. Upper: σΘ , showing an apparent density inversion below 3,000 m.
+Lower: σ4 showing continuous increase in density with depth. After Lynn and Reid (1968).
+

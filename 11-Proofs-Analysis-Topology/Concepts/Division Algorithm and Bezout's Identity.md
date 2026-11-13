@@ -6,7 +6,7 @@ type: concept
 scope: [extra-beyond]
 by: [own-notes]
 status: draft
-tags: [subject/analysis, type/concept, extra/beyond, src/own-notes, status/draft]
+tags: [subject/analysis, type/concept, extra/beyond, src/own-notes, status/draft, quiz/proofs, quiz/pa-wop]
 ---
 # Division Algorithm and Bezout's Identity
 

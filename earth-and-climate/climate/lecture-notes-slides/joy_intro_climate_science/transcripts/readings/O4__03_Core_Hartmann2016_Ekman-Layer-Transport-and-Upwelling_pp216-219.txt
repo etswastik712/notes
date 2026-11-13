@@ -1,0 +1,206 @@
+a                                      IO
+216               7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+
+systems in the atmosphere above the eastern subtropical ocean areas, as
+shown in Fig. 6.19. The wind systems and the associated currents and
+cool SSTs are best developed during the summer in the Northern Hemi-
+sphere, and are more nearly year-round phenomena in the Southern
+Hemisphere. It is believed that the geometries of the coastlines in the two
+oceans, and in particular the northwest-southeast slopes of the coastlines
+of South America and Africa, cause the eastern boundary currents in the
+Southern Hemisphere to be better developed and to extend to the equa-
+tor and then westward along the equator. The cooler than average SST
+in eastern boundary current regions is often associated with atmospheric
+subsidence and persistent low stratocumulus cloud and fog (Fig. 3.21).
+
+
+  7.5 THEORIES FOR WIND-DRIVEN CIRCULATIONS
+
+7.5.1 The Ekman Layer, Wind-Driven Transport,
+and Upwelling
+   Due to the rotation of Earth, the frictional component of the vertically
+integrated transport of water in the surface layer of the ocean is not in
+the direction of the applied wind stress, but 90° to the right of it in the
+Northern Hemisphere and 90° to the left of it in the Southern Hemisphere.
+This wind-driven near-surface water transport plays a critical role in
+determining relatively cold surface temperatures in the eastern boundary
+current regions and along the equator, and it also plays an important role
+in driving the subtropical gyres that feed the western boundary currents.
+   To show the relationship between wind stress driving, currents, and
+transport, we may consider a homogenous ocean of constant density and
+pressure, and assume that it is driven by a uniform wind stress with east-
+ward component, f, and northward component, t, We seek a steady solu-
+tion, in which frictional stresses and Coriolis accelerations are in balance
+(Vallis, 2006).
+
+                                           d*u
+                                  fo saa   dz’                           (7.3)
+
+
+
+
+                                      = ee
+                                      =    dz?                            7.4
+                                                                         ( c    )
+
+
+
+   The frictional forces have been described such that the frictional stress
+is proportional to the shear of the current velocity times a momentum
+diffusion coefficient, v. Thus, the specified wind stress enters as a boundary
+condition on the current shear at the surface, and we assume that the
+current goes to zero at large depths, so that the boundary conditions on
+(7.3) and (7.4) are
+—
+
+
+                          7.5 THEORIES FOR WIND-DRIVEN CIRCULATIONS                        HAT
+
+
+                           Um.
+
+                           PS 1,Cae
+                           dv            Ont
+                                          at z=0; torts     0
+                                                      u=v=O0atz>-©                         (7.5)
+
+                           dz       Po
+where (, is the density of the seawater and assumed constant. The solution
+for the velocities under these conditions is:
+
+                  (Yi,      ale          G cos             24Eh coo           2-2)         7.6
+                     nenFae |e                            ae   ee            Zin           fe)
+
+
+                  scl
+                  sini                    Cacae
+                                                  lI
+                                                   ams
+                                                       ear ee eect
+                                                                ed.
+                                                                                           oe
+                                                                                           ey)
+
+where, Z,; =      - is the Ekman Depth and z is measured positive upward.
+    The steady solution (7.6)-(7.7) describes the Ekman spiral (Fig. 7.15).
+The current vector has its maximum magnitude at the surface where it
+is directed at an angle of 1/4 (45°) to the right of the wind stress vector
+in the Northern Hemisphere (f > 0). The current vector turns toward the
+right with increasing depth, and its magnitude decreases exponentially
+with depth. The magnitude of the current decreases by a factor of e” for
+every increase of depth equal to z,=,/2v/ f. An appropriate value of
+v= 30 m’s"' gives an Ekman depth of ~ 800 m. If we integrate the currents
+over the depth range in which the currents are significant, we obtain the
+integrated transport in the Ekman layer.
+                                0                  T,                0             oe Cs
+                         Uiee: ee dz= ane                      Vee (ea: dz ea              (7.8)
+                                                                                    0
+
+
+
+                                                   Wind stress
+
+
+
+
+                                                   Zp/2
+                              Integrated                       zat
+                            mass transport                      s        Surface
+
+FIGURE     7.15      Schematic of the Ekman Layer solution (7.6, 7.7 and 7.8) showing
+the applied wind stress, the current vectors at various depths, and the mass transport
+integrated through depth. Current vectors are shown at depth intervals of 2; /4.
+EEE
+a
+218 7. THE OCEAN GENERAL CIRCULATION AND CLIMATE
+
+   The net horizontal water transport in the Ekman layer is directed at a
+90° angle to the right of the applied wind stress in the Northern Hemi-
+sphere, so that if the wind stress is toward the east at the surface (1, > 0),
+the Ekman layer transport is toward the south (V; < 0). If a westward
+wind stress is applied near the equator, the Ekman layer transport will be
+northward in the Northern Hemisphere and southward in the Southern
+Hemisphere, because of the change of sign of f at the equator, so that a
+net divergence of surface flow will be generated. Conservation of mass
+requires upwelling along the equator to balance the Ekman layer transport
+away from the equator. The cold tongue of SST in the eastern equatorial
+Pacific Ocean during July (Fig. 7.9) is caused largely by this wind-driven
+upwelling. The cold SST anomalies associated with the eastern boundary
+currents (Fig. 7.14) are associated with offshore Ekman transport driven
+by equatorward alongshore surface winds. Offshore Ekman transport
+near an ocean boundary requires upwelling to replace the exported water.
+Since water temperatures decrease with depth, upwelling is generally
+accompanied by cold SST.
+   Wind stress driving can also cause vertical motions in the open ocean
+away from boundaries and the equator, if the wind stress has spatial gra-
+dients. If we consider the mass continuity equation for an incompressible
+fluid
+
+                                   ou + ov a ow = 0)                     (7.9)
+                                   OX   N20    0z
+
+and integrate it over the depth of the Ekman layer, we can derive a rela-
+tionship between the applied wind stress and the vertical motion at the
+base of the Ekman layer.
+
+                       w, (22) — w, (0) = fo Ste Ja                     (7.10)
+   Utilizing (7.8) in (7.10) and assuming that the vertical current vanishes
+at the surface yields an expression for the vertical velocity at the bottom
+of the Ekman layer in terms of the wind stress applied at the surface. We
+obtain,
+
+                              ee          oO    is       >         t
+               Vy, (—oo ) =   ——    y   -——_        x   ie)   Vi          S
+              eS              ae          a                    (4)      C2
+where     T=iT,+jT,      and i, J, and k are unit vectors in the eastward,
+northward, and upward directions respectively. The vertical velocity at
+the base of the Ekman layer in the open ocean is thus seen to be propor-
+tional to the curl of the wind stress vector divided by the Coriolis param-
+eter. Where lateral boundaries are present, the dependence of upwelling
+                   7.5 THEORIES FOR WIND-DRIVEN CIRCULATIONS               219
+
+on the wind stress is more complex, but wind stress near boundaries can
+produce large upwelling, even without significant wind stress curl.
+
+
+7.5.2 Sverdrup Flow and Western Boundary Currents
+   To understand the large-scale response of the ocean to wind stress forc-
+ing it is useful to consider the balance of vorticity in the ocean. Vorticity is
+the curl of the velocity vector and is a measure of the local rotation of the
+fluid. For the large-scale motions of the atmosphere and the ocean it is
+the vertical component of absolute vorticity that is of most interest.
+
+                       6, =2Qsind+k-VxV= f+,                              (7.12)
+   The absolute vorticity is the sum of planetary vorticity (f), which is
+associated with the rotation of Earth, and relative vorticity (,), which
+is associated with the fluid motion relative to the surface of Earth. For
+flow without friction, the absolute vorticity remains constant, unless a
+parcel of fluid changes its shape. If a parcel of fluid maintains its shape
+while moving equatorward to a latitude where Earth’s rotation is less,
+then the fluid parcel must exhibit a change in relative vorticity in order
+to maintain a constant absolute vorticity. Stretching of fluid parcels along
+the direction of the rotation vector will cause the absolute rotation rate to
+increase.
+   The famous oceanographer Harald Ulrik Sverdrup showed that in the
+interior of the ocean, an approximate balance exists between the meridional
+advection of planetary vorticity and the stretching of planetary vorticity
+by divergent motions,
+
+                                         aw                               (7.13)
+                                  ti      Oz
+
+where B=d0f/dy =2Qcos@/a. If we integrate (7.13) from the bottom of
+the ocean to the bottom of the Ekman layer and use (7.11), we obtain
+
+
+                              Y= fk-Vx t
+                             Beef     i0 hia                              (7.14)
+where
+
+
+                                 is        Bee                            (7.15)
+and it has been assumed that the Ekman layer is thin compared to the
+depth of the ocean, and that the vertical velocity is zero at the bottom of
+the ocean, where z = —D,.
+
