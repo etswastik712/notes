@@ -75,7 +75,8 @@ Central question: **given sunlight, what is the temperature of the planet, how i
 | # | Chapter | Source | Status |
 |---|---|---|---|
 | 22 | [[CL22 The Ocean's Ledger I - Accounting for Energy]] | Joy (O1 deck/handout, O2/O3 heat transport, CERES tutorial) | **draft** |
-| 23–28 | planned: heat capacity and inertia (O2/O3), momentum ledger (O3/O4), salt ledger (O5), mass ledger and the overturning (O6), Daisyworld tutorials, CERES tutorial worked in full | Joy | **not yet written** (see `00-Home/PROGRESS.md`, addendum 2026-11-13) |
+| 23 | [[CL23 The Ocean's Ledger II - Heat Capacity and Climate Inertia]] | Joy (O2/O3 deck and handouts, Daisyworld-ocean Part 1) | **draft** |
+| 24–28 | planned: momentum ledger (O3/O4), salt ledger (O5), mass ledger and the overturning (O6), Daisyworld tutorials, CERES tutorial worked in full | Joy | **not yet written** (see `00-Home/PROGRESS.md`, addendum 2026-11-13) |
 
 > PDFs of Joy's HTML slide decks (slides only, and slides with speaker notes): `earth-and-climate/climate/lecture-notes-slides/joy_slides_pdf/` (O1, O2-O3, O4, O5, O6); built by `scripts/joy_slides_pdf.py`.
 
