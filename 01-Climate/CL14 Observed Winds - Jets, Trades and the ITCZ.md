@@ -17,6 +17,9 @@ tags: [subject/climate, type/chapter, taught, extra/book, extra/beyond, src/suha
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-book">extra · book</span> <span class="scope-extra-beyond">extra · beyond</span>
 
+> [!note] Neena 2025 cross-reference (2026-11-13)
+> The 2025 course (Neena) covered this ground too: Neena 2025 **L18–L19** (atmospheric general circulation); the January/July pressure centres and the Halley-to-Hadley story of **L12–13** are in [[CL10 Global Energy Balance and Meridional Structure]] §7 (`earth-and-climate/climate/lecture-notes-slides/ec2113_neena`, PDFs listed in [[Climate - Course Map]]). This chapter is built from **this year's** Argha/Suhas material, which stays primary here. In the earlier new-source comparison (PROGRESS, 2026-11-07) those lectures were judged to **repeat** this chapter's content; **no Neena-specific content has been added to this chapter** beyond this pointer, and it has **not been re-read line by line** for differences (L18-L19, L12-13). Where a Neena lecture was found to add material, it is added and labelled in the chapter that needed it (for example CL10 §7).
+
 > [!syllabus] Syllabus map: what is in the syllabus and what is extra in this chapter
 > 🟢 **In syllabus (taught)**
 > - §1 the question: why are there zonal winds at all? (14 Oct p4–7, 21 Oct p1–3)

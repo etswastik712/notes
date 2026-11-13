@@ -250,6 +250,15 @@ The slide links the review by Hoffman et al. (2017, *Science Advances* 3, e16009
 >
 > [▶ Open the tool in your browser](../Assets/interactive/cl_ebm_latitude.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_ebm_latitude.html) · all tools and coverage: [[Interactive Tools]]
 
+> [!interactive]+ Interactive: Can the Atlantic overturning switch off? The Stommel two-box model
+> A warm salty box and a cold fresher box.
+>
+> ![[cl_stommel_box.png|720]]
+>
+> **Try:** Start at F = 0 (q = 0.62, on). Slide F slowly up to 0.12: q falls but stays on. Go to 0.15: it drops to the reversed branch (q < 0). Slide F back down to 0.05, then 0.0: it stays off. Only at F slightly below 0 does it switch back on. Press 'ramp up and down' to watch the whole loop.
+>
+> [▶ Open the tool in your browser](../Assets/interactive/cl_stommel_box.html) · [absolute link](file:///home/swastik/Documents/notes/Assets/interactive/cl_stommel_box.html) · all tools and coverage: [[Interactive Tools]]
+
 <!-- interactive:end -->
 
 ## Map of this chapter

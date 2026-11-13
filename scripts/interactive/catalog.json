@@ -74,6 +74,16 @@
   "id": "cl_atmosphere"
  },
  {
+  "title": "How deep does a swing reach? Conduction in soil versus stirring in the ocean",
+  "desc": "A periodic surface swing of angular frequency \u03c9 in a medium of diffusivity \u03ba gives T\u2032(z,t) = A e^(\u2212z/d) cos(\u03c9t \u2212 z/d) with d = \u221a(2\u03ba/\u03c9): it fades with depth and lags. Soil (\u03ba \u2248 5\u00d710\u207b\u2077 m\u00b2 s\u207b\u00b9) reaches \u2248 12 cm in a day and \u2248 2.2 m in a year; still water (1.4\u00d710\u207b\u2077) is no better; the same formula with an eddy diffusivity K = 10\u207b\u2075\u201310\u207b\u2074 m\u00b2 s\u207b\u00b9 gives the reach below the mixed layer: 10\u201332 m in a year, 100\u2013317 m in a century. The stirred mixed layer (tens of metres) is the real source of the ocean's inertia.",
+  "vault": "CL",
+  "chapters": [
+   "CL23 The Ocean's Ledger II - Heat Capacity and Climate Inertia"
+  ],
+  "tryit": "Choose soil and the period 365 days: d = 2.24 m. Choose a day: 11.7 cm. Switch to 'eddy K = 1e-4' and 100 years: 317 m. Notice d scales as the square root of the period: 100\u00d7 the period gives only 10\u00d7 the depth.",
+  "id": "cl_conduction_reach"
+ },
+ {
   "title": "Rotation and the wind: Coriolis, inertial oscillations, geostrophic balance",
   "desc": "On a rotating planet a free particle in the horizontal plane moves in inertial circles of radius v/f with period 2\u03c0/f, f = 2\u03a9 sin \u03c6 (left panel, in the rotating frame). Right: a steady wind in balance between the pressure-gradient force and the Coriolis force blows along the isobars (geostrophic), with low pressure on its left in the Northern Hemisphere; friction turns it across the isobars toward low pressure.",
   "vault": "CL",
@@ -129,6 +139,17 @@
   "id": "cl_greenhouse_layers"
  },
  {
+  "title": "Depth sets the timescale, not the size of the slow swings: weather-kicked slabs",
+  "desc": "A slab with heat capacity C and restoring strength \u03bb obeys C dT\u2032/dt = F\u2032 \u2212 \u03bbT\u2032. For a white random push F\u2032 the temperature power at angular frequency \u03c9 is \u221d 1/(\u03c9\u00b2C\u00b2 + \u03bb\u00b2): for fast swings it falls as 1/C\u00b2 (more depth, much less power), for slow swings C drops out and the power is the same for any depth. The bend is at period 2\u03c0\u03c4 with \u03c4 = C/\u03bb. Add a deep ocean (heat capacity C_d exchanging \u03b3 W m\u207b\u00b2 K\u207b\u00b9 with the mixed layer) and the slowest swings are calmed by about a third.",
+  "vault": "CL",
+  "chapters": [
+   "CL23 The Ocean's Ledger II - Heat Capacity and Climate Inertia",
+   "CL27 Tutorials I - Daisyworld with Land and Ocean"
+  ],
+  "tryit": "Defaults (mixed layer 75 m, b = 2.09, land 10\u2077 J m\u207b\u00b2 K\u207b\u00b9): the mixed layer has \u2248 470\u00d7 less power than land at 1 year and the same power (0.99) at 300 years. Change the depth: the fast end moves, the slow plateau does not. Tick the deep ocean: the plateau falls to \u2248 0.55 of land's at the slowest periods.",
+  "id": "cl_inertia_spectrum"
+ },
+ {
   "title": "Orbital forcing: how obliquity, eccentricity and precession change the insolation",
   "desc": "Exact daily-mean top-of-atmosphere insolation Q = S (a/r)\u00b2 /\u03c0 \u00b7 [h\u2080 sin \u03c6 sin \u03b4 + cos \u03c6 cos \u03b4 sin h\u2080] as a function of the <b>solar longitude</b> \u03bb (0\u00b0 = March equinox, 90\u00b0 = June solstice), for a chosen latitude and orbit. Set the obliquity \u03b5 (22.1\u00b0\u201324.5\u00b0, 41 kyr cycle), the eccentricity e (0.005\u20130.0607, ~100 kyr) and the longitude of perihelion \u03d6 (the precession of the equinoxes, ~26 kyr; today \u03d6 \u2248 283\u00b0, perihelion in early January). The grey curve is today's orbit. The right panel sweeps \u03d6 and shows what the classic 'summer insolation at 65\u00b0N' does.",
   "vault": "CL",
@@ -160,6 +181,28 @@
   ],
   "tryit": "Q\u2080 = 100 W m\u207b\u00b2, \u03bb = 20 W m\u207b\u00b2 K\u207b\u00b9, h = 50 m: amplitude 2.15 K and lag 64.5\u00b0 (about 2.2 months after the heating peak). For h = 1 m of water (land-like) the amplitude is 5.0 K and the lag only 2.4\u00b0: the temperature follows the forcing. For h = 100 m the amplitude is 1.2 K and the lag is 76\u00b0.",
   "id": "cl_slab_ocean"
+ },
+ {
+  "title": "Can the Atlantic overturning switch off? The Stommel two-box model",
+  "desc": "A warm salty box and a cold fresher box. In a nondimensional form the equator\u2013pole temperature and salinity differences x and y obey dx/dt = 1 \u2212 x(1+|q|) and dy/dt = F \u2212 |q| y with flow q = x \u2212 y (q > 0: sinking in the cold box) and freshwater forcing F. For 0 < F < F_max = 0.141 there are two thermally driven steady states (one stable, one unstable) and, for every F > 0, one reversed state: the circulation can be on or off for the same forcing. Raise F past F_max and the flow collapses; lower it again and it stays off until F falls below zero (hysteresis).",
+  "vault": "CL",
+  "chapters": [
+   "CL26 The Ocean's Ledger V - Mass, the Overturning and the Switch",
+   "CL04 Feedback and Multiple Steady States"
+  ],
+  "tryit": "Start at F = 0 (q = 0.62, on). Slide F slowly up to 0.12: q falls but stays on. Go to 0.15: it drops to the reversed branch (q < 0). Slide F back down to 0.05, then 0.0: it stays off. Only at F slightly below 0 does it switch back on. Press 'ramp up and down' to watch the whole loop.",
+  "id": "cl_stommel_box"
+ },
+ {
+  "title": "T\u2013S diagram: what makes seawater heavy, and why mixing sinks",
+  "desc": "Seawater density from the UNESCO EOS-80 equation of state at surface pressure, drawn as lines of equal \u03c3 = \u03c1 \u2212 1000 kg m\u207b\u00b3 on a temperature\u2013salinity diagram. Warm water: the lines lie flat, temperature does most of the work (\u03c1\u03b1 = 0.30 kg m\u207b\u00b3 per K at 25 \u00b0C); near freezing the lines stand almost upright, salt decides (\u03c1\u03b1 = 0.054, \u03c1\u03b2 = 0.80). Place two water samples and mix them: the mixture lies on the straight line between them but is denser than the average of the two (cabbeling), most strongly for a warm\u2013cold pair of equal density.",
+  "vault": "CL",
+  "chapters": [
+   "CL25 The Ocean's Ledger IV - Salt, Density and Water Masses",
+   "CL26 The Ocean's Ledger V - Mass, the Overturning and the Switch"
+  ],
+  "tryit": "Sample A = 0 \u00b0C, S = 34.0 and B = 20 \u00b0C, S = 38.3 (\u03c3 = 27.30 for both): the 50 % mixture is 0.56 kg m\u207b\u00b3 denser than either. Then put A at the AAIW point (3.3 \u00b0C, 34.15) and B at NADW (4 \u00b0C, 35.0): the excess is only 0.001. Set S = 32.8 and cool to the freezing line: \u03c3 stays near 26.4, never the 27.7 of the deep Pacific.",
+  "id": "cl_ts_density"
  },
  {
   "title": "Brachistochrone: which path is fastest?",

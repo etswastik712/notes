@@ -1,0 +1,31 @@
+---
+title: Climate Response Time
+aliases: ["tau = C/lambda", "slab equation", "thermal inertia", "effective heat capacity"]
+subject: climate
+type: concept
+scope: [taught]
+by: [joy]
+status: draft
+tags: [subject/climate, type/concept, taught, src/joy, status/draft]
+---
+# Climate Response Time
+
+<span class="scope-taught">taught · in syllabus</span>
+
+> [!syllabus] In the syllabus vs extra
+> 🟢 **taught:** Joy Week 2 deck frames 29–31; O3 handout §3 (2026)
+
+> [!intuition] In one picture
+> Heat capacity divided by the radiative restoring strength is how long a surface takes to forget a push.
+
+> [!key] Definition
+> Slab: $C\,dT'/dt=F'(t)-\lambda T'$, $\tau=C/\lambda$. With λ = 3.8 W m⁻² K⁻¹: land (≈ 1 m water) 12 d, atmosphere (2.4 m) 1 month, mixed layer (50 m) 1.7 yr, full ocean (4,000 m) 140 yr. Seasonal range: Yakutsk 57, Delhi 23, Pune 9, Mumbai 5, Arabian Sea 5, equatorial Pacific 2 K.
+
+Heat capacity changes the path, not the destination (set dT/dt = 0 and C drops out).
+
+Used in: [[CL23 The Ocean's Ledger II - Heat Capacity and Climate Inertia]], [[CL27 Tutorials I - Daisyworld with Land and Ocean]]. Related: [[Planck Sensitivity]] · [[Ocean Heat Capacity and Seasonal Storage]] · [[Mixed Layer]].
+
+## Linked from
+```dataview
+LIST FROM [[]] AND -#type/moc SORT file.name ASC
+```

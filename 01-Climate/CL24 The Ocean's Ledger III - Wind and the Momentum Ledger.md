@@ -145,7 +145,7 @@ The surface of the Arabian Sea (10–20°N, 60–70°E) is **29.9 °C in May and
 > [!connection] How CL24 connects
 > **Builds on:** [[CL23 The Ocean's Ledger II - Heat Capacity and Climate Inertia]] (the heat map to be explained, the mixed layer), [[CL22 The Ocean's Ledger I - Accounting for Energy]] (momentum exchange with the ground), [[CL12 Rotating Frames and the Coriolis Force]], [[CL13 Horizontal Motion - Geostrophic Balance and Friction]] (Suhas), [[CL19 Wind-Driven Ocean Circulation]] (Neena's version: scales of motion, gyres, boundary currents), [[CL15 Monsoons]].
 > **Leads to:** CL25 salt ledger (density, why deep water forms), CL26 mass ledger (the Southern Ocean return of deep water is driven by the same wind), [[CL20 ENSO and the Walker Circulation]] (weaker trades, weaker upwelling).
-> **Concepts:** [[Ekman Transport]] · [[Ekman Pumping]] · [[Subtropical Gyre]] · [[Mixed Layer]] · see also the interactive Ekman-spiral tool in [[Interactive Tools]]
+> **Concepts:** [[Ekman Transport]] · [[Ekman Pumping]] · [[Subtropical Gyre]] · [[Mixed Layer]] · see also the interactive Ekman-spiral tool in [[Interactive Tools]] · [[Wind Stress]] · [[Sea-Surface Height]] · [[Geostrophic Balance]] · [[Upwelling]]
 
 ## Summary
 > [!summary] Cheat-sheet

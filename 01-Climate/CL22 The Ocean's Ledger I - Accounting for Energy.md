@@ -132,7 +132,7 @@ Across 35°N the total of ≈ **5.8 PW** is shared: the **atmosphere** dominates
 > [!connection] How CL22 connects
 > **Builds on:** [[CL03 Radiation and Planetary Energy Balance]] (ASR/OLR, Planck), [[CL10 Global Energy Balance and Meridional Structure]] (meridional structure; Neena's version of the transport), [[CL11 Mean Meridional Circulation and Angular Momentum]], [[CL14 Observed Winds - Jets, Trades and the ITCZ]], [[CL18 The Ocean as the Climate System's Heat Reservoir]] (Neena L20, surface budget, MHT).
 > **Leads to:** CL23 heat capacity and inertia (the slab driven by F′(t)), CL24 momentum ledger, CL25 salt ledger, CL26 mass ledger (all planned); the CERES data below are also used for El Niño in [[CL20 ENSO and the Walker Circulation]].
-> **Concepts:** [[Sea Surface Energy Budget]] · [[Bulk Aerodynamic Formulas]] · [[Mixed Layer]] · [[Zero-Dimensional Energy Balance Model]] · [[Planck Sensitivity]]
+> **Concepts:** [[Sea Surface Energy Budget]] · [[Bulk Aerodynamic Formulas]] · [[Mixed Layer]] · [[Zero-Dimensional Energy Balance Model]] · [[Planck Sensitivity]] · [[Climate as Accounting]] · [[Cloud Radiative Effect]] · [[Sverdrup (Unit)]]
 
 ## Summary
 > [!summary] Cheat-sheet
