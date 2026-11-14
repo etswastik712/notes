@@ -18,6 +18,8 @@ $$* : G \times G \to G$$
 Source: Assignment-10, pp. 1–2
 
 <!-- kurooto:seen -->
+- generalises:: [[zettel/abelian-group]] — Abelian groups are groups whose binary operation is additionally commutative, so the commutativity condition is a property of the binary operation that the abelian-group note specialises
+- example-of:: [[zettel/symmetric-group]] — The symmetric group uses function composition as its binary operation on the set of bijections, giving a concrete instance of a binary operation on a set
 ## Seen in
 - [[intro-to-proofs/2026-11-12-assignment-10|Assignment-10]] pp. 1–2
 <!-- /kurooto:seen -->
