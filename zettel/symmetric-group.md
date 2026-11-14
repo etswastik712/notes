@@ -19,6 +19,7 @@ $$|S_n| = n!$$
 Source: Assignment-10, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/binary-operation]] — The symmetric group's operation is function composition, which must be a binary operation mapping pairs of bijections of the set back into the set of bijections
 ## Seen in
 - [[intro-to-proofs/2026-11-12-assignment-10|Assignment-10]] pp. 1–2
 <!-- /kurooto:seen -->
