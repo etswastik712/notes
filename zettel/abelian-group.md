@@ -18,6 +18,7 @@ $$a * b = b * a$$
 Source: Assignment-10, pp. 1–2
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/binary-operation]] — Commutativity a * b = b * a is a condition on a binary operation, so the abelian definition depends on the binary operation concept
 ## Seen in
 - [[intro-to-proofs/2026-11-12-assignment-10|Assignment-10]] pp. 1–2
 <!-- /kurooto:seen -->
