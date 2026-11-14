@@ -16,13 +16,13 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 - [[zettel/infrared-flux-temperature-feedback|Infrared Flux-Temperature Feedback]]
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
+- [[zettel/binary-operation|Binary Operation]]
+- [[zettel/group|Group]]
+- [[zettel/symmetric-group|Symmetric Group]]
 - [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
+- [[zettel/abelian-group|Abelian Group]]
 - [[zettel/ice-albedo-feedback|Ice-Albedo Feedback]]
 - [[zettel/area-weighted-mean-temperature|Area-Weighted Mean Temperature]]
-- [[zettel/atlantic-meridional-overturning-circulation|Atlantic Meridional Overturning Circulation]]
-- [[zettel/intertropical-convergence-zone|Intertropical Convergence Zone]]
-- [[zettel/planetary-boundaries|Planetary Boundaries]]
-- [[zettel/silicate-weathering-feedback|Silicate Weathering Feedback]]
 <!-- /kurooto:course-overview -->
 
 <!-- kurooto:hubs -->
