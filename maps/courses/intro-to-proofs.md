@@ -58,3 +58,8 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [[zettel/well-ordering-principle]] Well-Ordering Principle
 - [[zettel/method-of-minimal-counterexample]] Method of Minimal Counterexample
 - [[zettel/principle-of-strong-induction]] Principle of Strong Induction
+- [[zettel/group]] Group
+- [[zettel/abelian-group]] Abelian group
+- [[zettel/binary-operation]] Binary operation
+- [[zettel/permutation]] Permutation
+- [[zettel/symmetric-group]] Symmetric group
