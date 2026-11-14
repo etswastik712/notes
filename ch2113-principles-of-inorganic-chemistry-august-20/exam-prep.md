@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Quiz 3 on Tuesday 2026-11-17 (postponed from 2026-11-10; announced 2026-11-03 on behalf of Prof. Ballav). The post only says "the quiz"; it is taken to be Quiz 3. Time (12:00–1:00 pm, during the TA session) is assumed unchanged. Syllabus as announced 2026-11-02: Crystal Field Theory and related topics, not molecular orbital theory, covering what is taught in class on 2 Nov, in the TA session on 3 Nov, and in class on 4 Nov and 9 Nov (check whether the syllabus is extended now the date moved). Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., pp. 394–413. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins 5th ed. Ch. 5, pp. 147–161). The Quiz 2 paper is to be distributed at NLH in class on 2026-11-10 (announced 2026-11-09). The end-semester date is not announced yet.
+Quiz 3 on Tuesday 2026-11-17, 12:00–1:00 pm, during the TA session (postponed from 2026-11-10; the announcement of 2026-11-14 names it Quiz 3 and confirms the date and time). Syllabus: Crystal Field Theory and related topics; explicitly NOT molecular orbital theory (MOT) and NOT π-bonding (Classroom: announcement 2026-11-14). Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., international online edition pp. 394–413 (library hard copy, Pearson 4th ed., pp. 424–444). The earlier announcement (2026-11-02) tied the scope to what was taught on 2, 3 (TA session), 4 and 9 Nov. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins Ch. 5, pp. 147–161). The Quiz 2 paper was to be distributed at NLH in class on 2026-11-10. The end-semester date is not announced yet.
 
 ## Covered so far
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2]]: Lewis structures (resonance, formal charge, oxidation number) and VSEPR
@@ -63,12 +63,12 @@ Quiz 3 on Tuesday 2026-11-17 (postponed from 2026-11-10; announced 2026-11-03 on
 - Wade's rules classification and electron counting: Tutorial 4 Q4.
 - Borazine synthesis and reactions: Tutorial 4 Q5, Q6, Q7.
 - Phosphazenes: Tutorial 4 Q8, Q9, Q10.
-- Crystal Field Theory (Quiz 3 scope): practise from Shriver & Atkins 5th ed. pp. 473–483 and Huheey et al. 4th ed. pp. 394–413; no class notes yet.
+- Crystal Field Theory (Quiz 3 scope, excluding MOT and π-bonding): practise from Shriver & Atkins 5th ed. pp. 473–483 and Huheey et al. 4th ed. pp. 394–413 (library copy pp. 424–444); no class notes yet.
 - Redox (Quiz 2 scope, past): Shriver & Atkins Ch. 5, pp. 147–161; no notes yet.
 
 ## Gaps
-- Crystal Field Theory (Quiz 3, now 2026-11-17) has no notes yet; lectures of 2, 4 and 9 Nov and the TA session of 3 Nov are not yet filed. Reading: Shriver & Atkins 5th ed. pp. 473–483; Huheey, Keiter & Keiter 4th ed. pp. 394–413. MOT is explicitly excluded from this quiz.
-- The postponement post does not name the quiz or restate time and syllabus; confirm it is Quiz 3 and whether the syllabus now includes later lectures (e.g. after 9 Nov).
+- Crystal Field Theory (Quiz 3, 2026-11-17) has no notes yet; lectures of 2, 4 and 9 Nov and the TA session of 3 Nov are not yet filed. Reading: Shriver & Atkins 5th ed. pp. 473–483; Huheey, Keiter & Keiter 4th ed. pp. 394–413 (library copy pp. 424–444). MOT and π-bonding are explicitly excluded from this quiz.
+- Whether the syllabus includes lectures after 9 Nov is not stated; the 2026-11-14 post only says "Crystal Field Theory and related".
 - Redox chemistry (Quiz 2 scope, Shriver & Atkins Ch. 5, pp. 147–161, TA session of 2026-10-13) has no notes yet. Note the sign typo in eq. 5.11 on p. 161 (signs should be −, +, +, −).
 - The MO diagrams (H2, N2, O2/F2, HF, CO, H2O), Lewis/VSEPR drawings and hybrid orbital pictures are images only; they are not captured in the notes.
 - The SF4 angle triplets (179°/178.5°/170° axial, 103°/110°/97° equatorial) are unlabelled in the slides; confirm which structures they belong to.
@@ -79,5 +79,4 @@ Quiz 3 on Tuesday 2026-11-17 (postponed from 2026-11-10; announced 2026-11-03 on
 - Slide statements to verify against the textbook: "more nodes, higher symmetry" (MOT rule 1) and the SF6 orbital labels.
 - The RMgX product in Tutorial 4 Q9 is drawn unclearly on the answer sheet.
 - Midsem and end-semester dates are not in the notes.
-- The "tomorrow's class" announcement of 2026-11-09 is read as the class on 2026-11-10 at NLH; the time is not given.
 <!-- /kurooto:exam-prep -->

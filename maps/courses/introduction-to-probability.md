@@ -61,6 +61,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-11-13: Quiz 6 (tentative, from the evaluation scheme of 2026-08-05; held during the Friday tutorial). Syllabus not announced. (Classroom)
 - 2026-08-11: Quiz 1 (tentatively 14 August per the evaluation scheme) covers everything in class up to and including the axiomatic definition of probability, and the practice problems suggested at the end of the first week (perhaps as discussed by the TAs in the 7 August tutorials); the 12 and 13 August class notes are not needed for Quiz 1 (they are for Quiz 2). No calculator; only writing materials and water bottle, no electronic gadgets, notebooks or paper on your person. Already past. (Classroom)
 - 2026-08-20: Quiz 2 syllabus: conditional probability and independence, i.e. everything covered since the last quiz, up to everything covered in the 21 August tutorial. Already past. (Classroom)
+- 2026-11-14: Quiz 6 papers are checked (post for Batch 3, LHC 106, only; your batch is 7). Since there are no more tutorials, Batch 3 can see their checked papers in the instructor's office (Room 451, Main Building) on Sunday 2026-11-15, 2-3 PM; marks can also be asked by email. This implies Quiz 6 took place and that it was the last tutorial quiz; whether Batch 7 gets the same arrangement is not stated. (Classroom)
 
 ## Announcements
 - 2026-08-28: Strict rule for quizzes and exams: no electronic gadget of any kind on your person. Anyone caught with a phone gets 0 for that quiz, with no exceptions. (Classroom)
