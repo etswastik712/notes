@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet beyond the end-sem (2026-11-23 to 2026-12-02, cumulative; exact paper date not announced). The second class test was on Monday 2026-11-02 (HW6-HW9). Grading: 2 class tests 20%, mid-term 40%, final 40%. Earlier: Test 1 ([[mt3184-differential-geometry-and-lie-groups/2026-09-03-test-i]]) and the midterm (2026-09-24 15:00, month inferred). Syllabus plan: Lie correspondence and normal subgroups in the week of 2026-11-09, spillover and tutorial 2026-11-16.
+Not announced yet beyond the end-sem (2026-11-23 to 2026-12-02, cumulative; exact paper date not announced). The second class test was on Monday 2026-11-02 (HW6-HW9). Grading: 2 class tests 20%, mid-term 40%, final 40%. Earlier: Test 1 ([[mt3184-differential-geometry-and-lie-groups/2026-09-03-test-i]]) and the midterm (2026-09-24 15:00, month inferred). Syllabus plan: Lie correspondence and normal subgroups in the week of 2026-11-09 (now covered), spillover and tutorial 2026-11-16.
 
 ## Covered so far
 - [[mt3184-differential-geometry-and-lie-groups/2026-08-07-august-3-7]]: smooth manifolds, smooth maps, partitions of unity (slides not readable)
@@ -27,6 +27,8 @@ Not announced yet beyond the end-sem (2026-11-23 to 2026-12-02, cumulative; exac
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-october-26-30]]: properties of $\exp$, Lie product formula, naturality of $\exp$, weakly embedded submanifolds, proof of the Closed Subgroup Theorem
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6]]: distributions, involutivity, Frobenius theorem, foliations, Lie subalgebras ↔ connected Lie subgroups (Thm 19.26)
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-hw10]]: HW10, homomorphisms agreeing on Lie algebras, foliations and distributions, submersion fibres
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-16-november-9-13]]: infinitesimal generator of an action, Lie algebra actions, Lie correspondence (Thms 20.16-20.21), ideals and normal subgroups (Thm 20.28), $\mathrm{Ad}$ and $\mathrm{ad}$ (Thm 20.27)
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-16-hw11]]: HW11, $\theta^{(p)}$-relatedness, $\mathrm{ad}$ is a representation, $\det e^A=e^{\mathrm{tr}A}$, $\ker\mathrm{Ad}=Z(G)$, centers
 
 ## Must know
 - Smooth structure: two smooth atlases induce the same smooth structure iff their union is a smooth atlas; every smooth atlas lies in a unique maximal one ([[mt3184-differential-geometry-and-lie-groups/2026-08-07-hw1]] Q1).
@@ -50,6 +52,13 @@ Not announced yet beyond the end-sem (2026-11-23 to 2026-12-02, cumulative; exac
 - Foliation of dimension $k$: partition into connected immersed $k$-dimensional leaves with charts flat for it (each leaf meets the chart in countably many slices). Example: irrational-slope lines on $T^2$ have dense leaves.
 - $D$ is $\Phi$-invariant iff its foliation is $\Phi$-invariant (Prop 19.23).
 - Lemma 19.24: a Lie subalgebra $\mathfrak h\subset\mathfrak g$ gives a left-invariant involutive distribution $D_g=\{X_g:X\in\mathfrak h\}$. Thm 19.25: every Lie subgroup is an integral manifold of such a distribution. **Thm 19.26**: for each Lie subalgebra $\mathfrak h\subset\mathfrak g$ there is a unique connected Lie subgroup of $G$ with Lie algebra $\mathfrak h$ (the leaf through $e$).
+- **Infinitesimal generator.** For a right action $\theta:M\times G\to M$ and $X\in\mathrm{Lie}(G)$, $p\cdot\exp(tX)$ is an $\mathbb R$-action; $\hat\theta(X)_p=\frac{d}{dt}|_0\,p\cdot\exp(tX)$. For each $p$, $X$ and $\hat\theta(X)$ are $\theta^{(p)}$-related ($\theta^{(p)}(g)=p\cdot g$), and **Thm 20.15**: $\hat\theta:\mathrm{Lie}(G)\to\mathfrak X(M)$ is a Lie algebra homomorphism ([[mt3184-differential-geometry-and-lie-groups/2026-11-16-november-9-13]]).
+- **Thm 20.16 (Fundamental Theorem on Lie Algebra Actions).** $G$ simply connected with Lie algebra $\mathfrak g$, $\hat\theta:\mathfrak g\to\mathfrak X(M)$ a complete $\mathfrak g$-action (Lie algebra homomorphism with every $\hat\theta(X)$ complete) ⇒ a unique smooth right $G$-action on $M$ with infinitesimal generator $\hat\theta$.
+- **Thm 20.19.** $G$ simply connected, $H$ a Lie group, $\varphi:\mathrm{Lie}(G)\to\mathrm{Lie}(H)$ a Lie algebra homomorphism ⇒ unique Lie group homomorphism $\Phi:G\to H$ with $\Phi_*=\varphi$. Proof: apply Thm 20.16 to the action of $G$ on $H$ with generator $\varphi$, set $\Phi(g)=e\cdot g$; uniqueness by HW10 Q1.
+- **Cor 20.20 / Thm 20.21 (Lie correspondence).** $G\mapsto\mathrm{Lie}(G)$ is a bijection between isomorphism classes of simply connected Lie groups and of finite-dimensional Lie algebras. Injective: Cor 20.20 (compose the two homomorphisms, uniqueness gives identity). Surjective: Ado gives $\mathfrak g\cong\mathfrak g_0\subset\mathfrak{gl}(n,\mathbb R)$, Thm 19.26 gives a connected $G_0\subset GL(n,\mathbb R)$, take the universal cover. Simple connectivity is essential ($\mathbb R$ and $S^1$ have isomorphic Lie algebras).
+- Universal cover: a connected Lie group has a simply connected Lie group $\widetilde G$ with a surjective, locally diffeomorphic covering homomorphism $p:\widetilde G\to G$; if $G$ is simply connected, $p$ is a diffeomorphism. Connected Lie groups with Lie algebra $\mathfrak g$ are $\widetilde G/\Gamma$, $\Gamma$ discrete normal (Thm 21.32, slide garbled). $G/K$ is a Lie group for $K$ closed normal (Thm 21.26, slide garbled).
+- Ideal: subspace $L\subset\mathfrak g$ with $[X,Y]\in L$ for $X\in\mathfrak g$, $Y\in L$; kernels of Lie algebra homomorphisms are ideals. **Thm 20.28**: for $G$ connected and $H$ a connected Lie subgroup, $H$ is normal iff $\mathrm{Lie}(H)$ is an ideal in $\mathrm{Lie}(G)$.
+- Adjoint representation: $C_g(h)=ghg^{-1}$, $\mathrm{Ad}(g)=(C_g)_*$; $\mathrm{Ad}:G\to GL(\mathfrak g)$ is a Lie group homomorphism (Prop 20.24, since $C_{g_1g_2}=C_{g_1}C_{g_2}$). $\mathrm{ad}(X)Y=[X,Y]$ is a Lie algebra representation (HW11 Q2), and **Thm 20.27**: $\mathrm{Ad}_*=\mathrm{ad}$, from $\mathrm{Ad}(\exp tX)Y=(\theta_{-t})_*Y$ with $\theta_t=R_{\exp tX}$ the flow of $X$.
 - HW9 statements to be able to prove: image of a one-parameter subgroup is $\mathbb R$, $S^1$ or trivial; for connected $G$, $[X,Y]=0$ iff the one-parameter subgroups commute, and $G$ abelian iff $\mathfrak g$ abelian; $\exp(X+Y)=\exp X\exp Y$ for all $X,Y$ iff $G_0$ abelian; the closure of a Lie subgroup is a Lie subgroup ([[mt3184-differential-geometry-and-lie-groups/2026-10-26-hw9]]).
 
 ## Typical questions
@@ -64,10 +73,13 @@ Not announced yet beyond the end-sem (2026-11-23 to 2026-12-02, cumulative; exac
 - Existence and uniqueness of the connected Lie subgroup for a Lie subalgebra (HW10 Q4, worked in [[mt3184-differential-geometry-and-lie-groups/2026-11-06-november-2-6]]).
 - Connected components of fibres of a submersion form a foliation: use submersion (rank-theorem) charts as flat charts (HW10 Q5).
 - Prove or state the Closed Subgroup Theorem and its supporting claims ([[mt3184-differential-geometry-and-lie-groups/2026-11-06-october-26-30]]).
+- Infinitesimal generators: $X$ and $\hat\theta(X)$ are $\theta^{(p)}$-related; generator of right translation is the inclusion $\mathrm{Lie}(G)\hookrightarrow\mathfrak X(G)$ (HW11 Q1, Q4).
+- $\mathrm{ad}$ is a representation; $\det e^A=e^{\mathrm{tr}A}$; $\ker\mathrm{Ad}=Z(G)$ for connected $G$; $Z(\mathrm{Lie}(G))=\mathrm{Lie}(Z(G))$ (HW11 Q2, Q3, Q5, Q6, [[mt3184-differential-geometry-and-lie-groups/2026-11-16-hw11]]).
+- Prove or state the Lie correspondence: Thm 20.19 (existence of $\Phi$ from $\varphi$), Cor 20.20 and Thm 20.21 ([[mt3184-differential-geometry-and-lie-groups/2026-11-16-november-9-13]]).
 
 ## Gaps
-- Slides DG27-DG30 were read by OCR and are partly garbled: Prop 20.10's exact form, the proof of the converse of the Closed Subgroup Theorem, the example of a non-integrable distribution on $\mathbb R^3$, the second foliation example and the proof of Thm 19.26 should be checked against the PDFs.
+- Slides DG27-DG33 were read by OCR and are partly garbled: Prop 20.10's exact form, the proof of the converse of the Closed Subgroup Theorem, the example of a non-integrable distribution on $\mathbb R^3$, the second foliation example, the proof of Thm 19.26, the exact hypotheses and statements of Thms 21.26 and 21.32, the smoothness of $\mathrm{Ad}$ (marked "later" on DG33) and the induction step in Thm 20.19 should be checked against the PDFs.
 - Slides for August 3-14 were not readable; the exact statement of Thm 9.38 and the Lie derivative properties (a)-(d) were cut off.
-- Not yet covered: normal subgroups and ideals (planned for the week of 2026-11-09), infinitesimal generators of actions, the last page of DG26.
-- HW4-HW9 solutions are not written; dates for the end-sem papers are not announced.
+- Not yet covered in the slides: the exact form of the "normal subgroup / ideal" converse beyond Thm 20.28, and any further material from the 2026-11-16 spillover and tutorial class.
+- No exam date for the end-sem paper yet; HW11 has no due date given (homework is for self-study).
 <!-- /kurooto:exam-prep -->
