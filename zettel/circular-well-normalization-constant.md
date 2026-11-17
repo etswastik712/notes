@@ -1,0 +1,25 @@
+---
+id: zettel/circular-well-normalization-constant
+aliases: ["Circular Well Normalization Constant", "Bessel function circular normalization", "N_{n,l}"]
+tags: [zettel, agent-written, ph2113]
+trust_tier: agent_written
+---
+
+# Circular Well Normalization Constant
+
+The normalization factor for the stationary states of a circular infinite well, obtained by integrating the square of the Bessel function over the circular domain using Bessel function integral identities evaluated at the zeros.
+
+$$\int_0^a J_l^2(kr)\,r\,dr = \frac{a^2}{2}J_{l+1}^2(ka)$$
+
+$$|N_{n,l}|^2 = \frac{1}{\pi a^2 J_{l+1}^2(j_{l,n})}$$
+
+## Links
+- part-of:: [[zettel/circular-infinite-well-potential-in-two-dimensions]] — It fixes the overall amplitude required for total probability integration to unity across the circular well
+
+---
+Source: circular_well_density
+
+<!-- kurooto:seen -->
+## Seen in
+- [[ph2113/2026-11-16-circular-well-2d-and-density-notebook|circular_well_density]]
+<!-- /kurooto:seen -->

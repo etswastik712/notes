@@ -1,6 +1,6 @@
 ---
 id: zettel/circular-infinite-well-potential-in-two-dimensions
-aliases: ["Circular Infinite Well Potential in Two Dimensions", "circular infinite well", "particle in an infinite circular well", "2D circular infinite well"]
+aliases: ["Circular Infinite Well Potential in Two Dimensions", "circular infinite well", "particle in an infinite circular well", "2D circular infinite well", "Two-Dimensional Circular Infinite Potential Well", "particle in a 2D circular infinite well", "circular well"]
 tags: [zettel, agent-written, ph2113]
 trust_tier: agent_written
 ---
@@ -19,5 +19,15 @@ Source: Angular_momentum, pp. 1–3
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-11-16-circular-well-2d-and-density-notebook|circular_well_density]]
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Angular_momentum]] pp. 1–3
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| circular_well_density | $j_{l,n}$ | n-th zero of the Bessel function J_l |
+| Angular_momentum, pp. 1–3 | $a$ | radius of the circular well boundary |
+| circular_well_density | $a$ | well radius |
+<!-- /kurooto:notation -->

@@ -38,3 +38,8 @@ Notes and python notebook for this week and last.
 - [[ph2113/2026-10-06-particle-in-a-box-notes]]: the 1-d infinite well this generalises
 - [[ph2113/2026-08-25-lecture-9-free-particle-ring-general-properties]]: single-valuedness giving integer $l$ on a ring
 - [[06-quantum-mechanics/concepts/angular-momentum-algebra]]: their own concept note on angular momentum
+
+<!-- kurooto:material02cb5e79 -->
+## Concepts in circular_well_density
+[[zettel/circular-infinite-well-potential-in-two-dimensions]], [[zettel/circular-well-normalization-constant]], [[zettel/angular-wavefunction-representations-in-circular-wells]]
+<!-- /kurooto:material02cb5e79 -->
