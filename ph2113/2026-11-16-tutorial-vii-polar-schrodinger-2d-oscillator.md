@@ -49,3 +49,8 @@ Tutorial for this week.
 ## Concepts in Angular_momentum
 [[zettel/circular-infinite-well-potential-in-two-dimensions]], [[zettel/separation-of-variables-in-polar-coordinates]], [[zettel/circular-infinite-well-energy-eigenvalues-and-eigenstates]]
 <!-- /kurooto:material553a7731 -->
+
+<!-- kurooto:material5e513102 -->
+## Concepts in Hydrogen_atom
+[[zettel/associated-legendre-polynomials]], [[zettel/spherical-harmonics]], [[zettel/hydrogen-atom-radial-equation]], [[zettel/hydrogen-spectrum-and-degeneracy]], [[zettel/hydrogen-atom-radial-wavefunctions]], [[zettel/radial-probability-density]]
+<!-- /kurooto:material5e513102 -->

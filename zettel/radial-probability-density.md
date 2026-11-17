@@ -25,5 +25,19 @@ Source: tutorial7, pp. 1–2
 
 <!-- kurooto:seen -->
 ## Seen in
+- [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Hydrogen_atom]] pp. 1–8
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|tutorial7]] pp. 1–2
+
+### Added from class
+- Hydrogen_atom pp. 1–8: Extends the concept from planar 2D polar geometry to 3D spherical polar coordinates, incorporating integration over both θ and ϕ with the volume element Jacobian r^2 sin θ and explicitly demonstrating that P(r) = 4π r^2 |R_{1,0}(r)|^2 peaks at a non-zero radius despite R_{1,0}(0) peaking at the origin.
 <!-- /kurooto:seen -->
+
+<!-- kurooto:notation -->
+## Notation
+| Source | Notation | What it stands for |
+|---|---|---|
+| Hydrogen_atom, pp. 1–8 | $dV$ | differential volume element in spherical coordinates |
+| Hydrogen_atom, pp. 1–8 | P(r) | radial probability density |
+| tutorial7, pp. 1–2 | P(r) | radial probability density |
+| tutorial7, pp. 1–2 | $\|\psi\|^2$ | spatial probability density |
+<!-- /kurooto:notation -->
