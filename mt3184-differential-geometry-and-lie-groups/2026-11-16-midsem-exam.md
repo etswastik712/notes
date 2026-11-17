@@ -33,3 +33,8 @@ Mid-semester exam and their solutions.
 - [[mt3184-differential-geometry-and-lie-groups/2026-09-03-august-31-september-4]]: immersed vs embedded submanifolds (Q3)
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-06-hw10]]: homomorphisms agreeing on a neighbourhood of $e$ (Q5)
 - [[mt3184-differential-geometry-and-lie-groups/2026-10-10-hw7]]: low-dimensional Lie algebras (Q6)
+
+<!-- kurooto:material5ea37376 -->
+## Concepts in Midsem
+[[zettel/abelian-lie-algebra]], [[zettel/tangent-vector-of-a-manifold]], [[zettel/partition-of-unity-subordinate-to-a-cover]], [[zettel/compact-immersed-submanifold-embedding-theorem]], [[zettel/equivariant-map-constant-rank-theorem]], [[zettel/identity-of-connected-lie-group-homomorphisms]], [[zettel/classification-of-two-dimensional-non-abelian-lie-algebras]]
+<!-- /kurooto:material5ea37376 -->
