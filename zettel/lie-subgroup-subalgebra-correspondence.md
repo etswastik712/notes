@@ -16,6 +16,7 @@ For any Lie algebra g and any Lie subalgebra h of g, there is a unique connected
 Source: DG31, pp. 1–4
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/lie-correspondence]] — The note's uniqueness of a connected Lie subgroup H with Lie algebra h for each subalgebra h is the subgroup-level building block that the simply-connected group-to-Lie-algebra bijection in the candidate rests on
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-november-9-13|DG31]] pp. 1–4
 <!-- /kurooto:seen -->
