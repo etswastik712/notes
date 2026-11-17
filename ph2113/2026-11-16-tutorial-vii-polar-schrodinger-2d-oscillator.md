@@ -54,3 +54,8 @@ Tutorial for this week.
 ## Concepts in Hydrogen_atom
 [[zettel/associated-legendre-polynomials]], [[zettel/spherical-harmonics]], [[zettel/hydrogen-atom-radial-equation]], [[zettel/hydrogen-spectrum-and-degeneracy]], [[zettel/hydrogen-atom-radial-wavefunctions]], [[zettel/radial-probability-density]]
 <!-- /kurooto:material5e513102 -->
+
+<!-- kurooto:materialae3d5a5d -->
+## Concepts in Angular_momentum
+[[zettel/canonical-commutation-relations-in-two-dimensions]]
+<!-- /kurooto:materialae3d5a5d -->
