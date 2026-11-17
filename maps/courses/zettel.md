@@ -13,8 +13,8 @@ trust_tier: agent_written
 Kept up to date by jarvis each night; the rest of the page is yours.
 
 ### Key concepts
-- [[zettel/binary-operation|Binary Operation]]
 - [[zettel/group|Group]]
+- [[zettel/binary-operation|Binary Operation]]
 - [[zettel/infrared-flux-temperature-feedback|Infrared Flux-Temperature Feedback]]
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
