@@ -18,4 +18,8 @@ Source: Midsem, pp. 1–1
 <!-- kurooto:seen -->
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-midsem-exam|Midsem]] pp. 1–1
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-16-midsem-exam|DG Midsem Solutions]] pp. 1–6
+
+### Added from class
+- DG Midsem Solutions pp. 1–6: Provides the explicit midsem exam formulation characterizing a tangent vector at a point as a linear derivation map.
 <!-- /kurooto:seen -->

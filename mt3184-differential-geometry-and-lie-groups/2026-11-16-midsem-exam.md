@@ -38,3 +38,8 @@ Mid-semester exam and their solutions.
 ## Concepts in Midsem
 [[zettel/abelian-lie-algebra]], [[zettel/tangent-vector-of-a-manifold]], [[zettel/partition-of-unity-subordinate-to-a-cover]], [[zettel/compact-immersed-submanifold-embedding-theorem]], [[zettel/equivariant-map-constant-rank-theorem]], [[zettel/identity-of-connected-lie-group-homomorphisms]], [[zettel/classification-of-two-dimensional-non-abelian-lie-algebras]]
 <!-- /kurooto:material5ea37376 -->
+
+<!-- kurooto:material80339eb9 -->
+## Concepts in DG Midsem Solutions
+[[zettel/tangent-vector-of-a-manifold]]
+<!-- /kurooto:material80339eb9 -->
