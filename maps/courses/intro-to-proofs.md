@@ -53,6 +53,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - 2026-11-02: that day's class was cancelled due to an unavoidable circumstance (no make-up date posted) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk3MDI2MzE2MTUy)).
 - 2026-11-05: Classmate emailed the professor asking to cancel the 2 Nov class (cancelled in Classroom) on the attendance portal, as most students are marked absent.
 - 2026-11-05: Batch 3 tutorial on 2026-11-06 is held together with Batch 1 in LHC 101 (not the usual Batch 3 room) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk3Nzc0OTU5MTk0)).
+- 2026-11-17: Quiz 6 papers corrected. Batch 2 (Arun): collect from office A-426 on 2026-11-18, 3:30-4:30 PM ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk5OTg2MDU5NjI5)). Batch 3: collect from Room 403 on Thursday 2026-11-19, 3:00-3:40 PM ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODkxMzMwNjc2NDYz)).
 
 ## Concepts
 - [[zettel/well-ordering-principle]] Well-Ordering Principle

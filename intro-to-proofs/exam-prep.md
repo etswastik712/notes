@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key]]). Quizzes are held during tutorials; Quizzes 3 and 4 have been graded (answer sheets can be collected during Batch 1 office hours, Tuesdays 4:00-5:00 PM in A459). Evaluation: internal 20%, mid-sem 40%, end-sem 40% (Classroom: announcement 2026-08-04). No future quiz or end-sem dates have been posted yet.
+Not announced yet. The mid-sem was held on 2026-09-25 (answer key: [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key]]). Quizzes are held during tutorials; Quizzes 3 and 4 have been graded (answer sheets can be collected during Batch 1 office hours, Tuesdays 4:00-5:00 PM in A459). Quiz 6 has been graded too: Batch 2 collects papers on 2026-11-18, 3:30-4:30 PM in A-426; Batch 3 on 2026-11-19, 3:00-3:40 PM in Room 403 (Classroom: announcements 2026-11-17). Evaluation: internal 20%, mid-sem 40%, end-sem 40% (Classroom: announcement 2026-08-04). No future quiz or end-sem dates have been posted yet.
 
 ## Covered so far
 - [[intro-to-proofs/2026-08-06-assignment-1]]: truth tables, De Morgan, tautology/contradiction/contingency, primes, Goldbach and twin prime conjectures
