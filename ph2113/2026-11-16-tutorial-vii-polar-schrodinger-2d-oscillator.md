@@ -39,3 +39,8 @@ Tutorial for this week.
 - [[ph2113/2026-11-16-hydrogen-atom-3d-notes]]: the 3-d radial probability density $4\pi r^2|\psi|^2$ for the 1s state
 - [[ph2113/2026-10-19-harmonic-oscillator-ladder-operator-notes]]: the 1-d oscillator and ladder operators that the footnote extends to 2-d
 - [[ph2113/2026-10-19-tutorial-iii-harmonic-oscillator-expectation-values]]: earlier oscillator tutorial
+
+<!-- kurooto:materiale4639def -->
+## Concepts in tutorial7
+[[zettel/two-dimensional-schrodinger-equation-in-polar-coordinates]], [[zettel/two-dimensional-harmonic-oscillator-in-polar-coordinates]], [[zettel/radial-probability-density]]
+<!-- /kurooto:materiale4639def -->
