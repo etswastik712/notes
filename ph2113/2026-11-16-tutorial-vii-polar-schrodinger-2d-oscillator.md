@@ -44,3 +44,8 @@ Tutorial for this week.
 ## Concepts in tutorial7
 [[zettel/two-dimensional-schrodinger-equation-in-polar-coordinates]], [[zettel/two-dimensional-harmonic-oscillator-in-polar-coordinates]], [[zettel/radial-probability-density]]
 <!-- /kurooto:materiale4639def -->
+
+<!-- kurooto:material553a7731 -->
+## Concepts in Angular_momentum
+[[zettel/circular-infinite-well-potential-in-two-dimensions]], [[zettel/separation-of-variables-in-polar-coordinates]], [[zettel/circular-infinite-well-energy-eigenvalues-and-eigenstates]]
+<!-- /kurooto:material553a7731 -->
