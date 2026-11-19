@@ -18,6 +18,7 @@ $$[X, Y] = 0$$
 Source: Midsem, pp. 1–1
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/classification-of-two-dimensional-non-abelian-lie-algebras]] — That note classifies the non-abelian two-dimensional Lie algebras by a basis with [W1, W2] = W2, whereas an abelian Lie algebra has its bracket identically zero, so the two are the opposite case
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-midsem-exam|Midsem]] pp. 1–1
 <!-- /kurooto:seen -->
