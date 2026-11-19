@@ -22,6 +22,8 @@ $$\hat{L}_z Y_{l,m}(\theta, \phi) = \hbar m Y_{l,m}(\theta, \phi)$$
 Source: Hydrogen_atom, pp. 1–8
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/associated-legendre-polynomials]] — The spherical harmonic Y_{l,m} is proportional to P_l^m(cos θ) e^{imφ}, so the associated Legendre functions supply its polar-angle factor
+- used-in:: [[zettel/hydrogen-atom-radial-equation]] — The hydrogen radial equation is derived by substituting spherical harmonics into the 3D Schrödinger equation, so the harmonics are needed to separate the angular part
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Hydrogen_atom]] pp. 1–8
 <!-- /kurooto:seen -->
