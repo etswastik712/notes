@@ -18,6 +18,10 @@ $$-\frac{\hbar^2}{2m} \left( \frac{\partial^2 \psi}{\partial r^2} + \frac{1}{r}\
 Source: tutorial7, pp. 1–2
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/separation-of-variables-in-polar-coordinates]] — The polar form of the Schrödinger equation is the starting point for the separation ψ = R(r)Θ(θ) described in that note
+- example-of:: [[zettel/circular-infinite-well-potential-in-two-dimensions]] — The circular infinite well is a specific potential V(r, θ) that can be substituted into the polar Schrödinger equation, which the well note's eigenvalue analysis relies on
+- generalises:: [[zettel/hydrogen-atom-radial-equation]] — The hydrogen radial equation is the 3D spherical analogue of the planar polar equation, sharing the same radial kinetic term and centrifugal contribution
+- used-in:: [[zettel/radial-probability-density]] — Integrating |ψ(r, θ)|² over θ in polar coordinates, as the radial probability density note does, requires the polar wavefunction form given here
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|tutorial7]] pp. 1–2
 <!-- /kurooto:seen -->
