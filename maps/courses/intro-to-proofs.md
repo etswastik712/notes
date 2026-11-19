@@ -25,6 +25,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - [[intro-to-proofs/2026-10-30-assignment-9]] Assignment-9 (2026-10-30)
 - [[intro-to-proofs/2026-11-10-peano-s-axioms]] Peano's axioms (2026-11-10)
 - [[intro-to-proofs/2026-11-12-assignment-10]] Assignment 10 (2026-11-12)
+- [[intro-to-proofs/2026-11-18-team-quiz-assignments-6-9-with-solutions]] Team quiz Assignments 6-9 with solutions (2026-11-18)
 
 ## Tasks
 - [ ] Assignment-3 (due date not given; file Assignment-3.pdf could not be downloaded) [Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/a/ODc2MTE0MTQwMDE0/details)
@@ -41,6 +42,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 ## Exams
 - 2026-09-19: mid-sem portion announced: everything covered in class till 18 Sept, excluding the proof that every vector space over a field has a basis. Topics: logical statements, truth tables, conditionals, quantifiers, converse, contrapositive, negation, Venn diagrams, union/intersection/Cartesian product of indexed families, posets, minimal/maximal and minimum/maximum elements, upper/lower bounds, glb, lub, chains, Zorn's lemma, definition of vector space and basis, equivalence relations, partitions, congruence mod n and congruence classes.
 - 2026-09-25: mid-sem exam (MT2133, 2 hours, 40 points); answer key: [[intro-to-proofs/2026-10-05-mid-term-paper-answer-key]].
+- 2026-11-18: end-sem portion announced: everything discussed in class after the mid-sem till the class on Monday 2026-11-16, excluding Peano's axioms. Topics: (1) functions: injection, surjection, bijection, composition, inverse; (2) cardinality: finite, countable, uncountable sets, Cantor's diagonal argument ($\mathbb Q$ countable, $(0,1)$ and $\mathbb R$ uncountable, other theorems); (3) induction, strong induction, well-ordering principle, their applications and equivalence; (4) proofs of the 3 black-box statements used in the lectures on countability and uncountability; (5) construction of $\mathbb Z$ from the natural numbers and its properties (e.g. associativity of addition and multiplication); (6) group theory: definition of a group, abelian group, cyclic group, subgroup, examples; every subgroup of $\mathbb Z$ is $n\mathbb Z$ for some $n\in\mathbb N$; every subgroup of a cyclic group is cyclic (induction and WOP) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODkxMzczNDczNDQz)). End-sem date not announced.
 
 ## Announcements
 - 2026-08-26: tutorial venues changed from that Friday: Batch 1 (Ekta, Akanksha) LHC 101, Batch 2 (Arun Kumar) LHC 103, Batch 3 (Maria) LHC 206.
@@ -54,6 +56,7 @@ Notes folder: intro-to-proofs/. Exam prep: [[intro-to-proofs/exam-prep]]. Their 
 - 2026-11-05: Classmate emailed the professor asking to cancel the 2 Nov class (cancelled in Classroom) on the attendance portal, as most students are marked absent.
 - 2026-11-05: Batch 3 tutorial on 2026-11-06 is held together with Batch 1 in LHC 101 (not the usual Batch 3 room) ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk3Nzc0OTU5MTk0)).
 - 2026-11-17: Quiz 6 papers corrected. Batch 2 (Arun): collect from office A-426 on 2026-11-18, 3:30-4:30 PM ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODk5OTg2MDU5NjI5)). Batch 3: collect from Room 403 on Thursday 2026-11-19, 3:00-3:40 PM ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODkxMzMwNjc2NDYz)).
+- 2026-11-18: Batch 1: team quiz (Assignments 6-9) questions and solutions posted ([[intro-to-proofs/2026-11-18-team-quiz-assignments-6-9-with-solutions]]); quiz papers can be collected from office A-459 on 2026-11-18 6:00-6:30 PM or 2026-11-19 4:00-5:00 PM ([Classroom](https://classroom.google.com/c/ODcxNTUyOTc2ODA3/p/ODkxMzgyNzY5NTMy)). On 2026-11-19 the instructor added she is in the office till 6 PM for collection.
 
 ## Concepts
 - [[zettel/well-ordering-principle]] Well-Ordering Principle

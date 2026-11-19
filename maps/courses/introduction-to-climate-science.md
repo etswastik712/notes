@@ -47,6 +47,7 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-10-23: Quiz 2 covering post-midsem material taught up until 22 October 2026. (Classroom)
 - 2026-08-21: In-class quiz at 10:00, covering all content up to Lecture 5; calculator allowed, constants and relevant quantities provided (no need to memorise them). Seating by list: LHC 105/106 etc.; anyone not on the list goes to LHC 205. (Classroom)
 - 2026-10-23: Quiz 2 at 10:00; sit in the same room as the previous quiz and bring a calculator (seating list by room posted). (Classroom)
+- 2026-11-19: Syllabus for the upcoming exam (as per the guidelines) is everything in the course; the exam will likely test the post-mid-sem material in greater depth. Date not given in the post. [Classroom](https://classroom.google.com/c/ODY5MDg2NTA1Mzg0/p/ODkxNDM5NzY0ODY2)
 
 ## Announcements
 - 2026-08-27: Matlab and Python code shared for the 28 August tutorial (Lorenz system and simple pendulum); students asked to bring laptops. See [[introduction-to-climate-science/2026-08-27-tutorial-lorenz-model-and-simple-pendulum]]. (Classroom)
@@ -88,6 +89,7 @@ Notes folder: introduction-to-climate-science/. Exam prep: [[introduction-to-cli
 - 2026-11-06: The course website has been updated with the classroom discussions; all readings will be updated in a shared Dropbox folder: [readings folder](https://www.dropbox.com/scl/fo/uw84t3sp1zx7kbzjev9x0/AIN0jARQ3T72r6SksVpWaA8?rlkey=0yjl3km5lpvkowexkuo2e5iw4&dl=0) (folder contents not opened). (Classroom)
 - 2026-11-06: Tutorial that day held in NLH; bring laptops. (Classroom)
 - 2026-11-10: This week (week of 2026-11-09) there are no tutorials; all three class days are lectures at NLH. No extra lecture is planned during the week or weekend. [Classroom](https://classroom.google.com/c/ODY5MDg2NTA1Mzg0/p/ODkxMDQ1NDk2OTgx)
+- 2026-11-19: Course website fully updated, including the three-box ocean model covered that day. [Classroom](https://classroom.google.com/c/ODY5MDg2NTA1Mzg0/p/OTAwMzc2MjM5Njc4)
 
 ## Concepts
 - [[zettel/surface-temperature-field-survey]] Surface Temperature Field Survey
