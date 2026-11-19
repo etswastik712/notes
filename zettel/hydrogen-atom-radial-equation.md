@@ -19,6 +19,7 @@ $$\left[ -\frac{\hbar^2}{2m}\left(\frac{d^2}{dr^2} + \frac{2}{r}\frac{d}{dr}\rig
 Source: Hydrogen_atom, pp. 1–8
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/spherical-harmonics]] — The note says the radial equation is obtained by substituting spherical harmonics into the 3D Schrödinger equation, so the angular functions are required input
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Hydrogen_atom]] pp. 1–8
 <!-- /kurooto:seen -->
