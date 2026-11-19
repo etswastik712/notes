@@ -27,6 +27,7 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-november-9-13]] November 9-13 (2026-11-15)
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-hw11]] HW11 (2026-11-15)
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-midsem-exam]] Midsem Exam and solutions (2026-11-16)
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-18-november-16-20]] November 16-20 (2026-11-18)
 
 ## Tasks
 - [ ] HW4 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODc2MTEzMjkzNTYz/details) — [[mt3184-differential-geometry-and-lie-groups/2026-08-27-hw4]]
@@ -48,6 +49,7 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - 2026-08-20: announced "first class test" on Monday 2026-08-31, covering HW1, HW2, HW3 and class notes DG 1-8; the test is listed above as 2026-09-03, so the date was apparently moved (see [[mt3184-differential-geometry-and-lie-groups/2026-09-03-test-i]]).
 - 2026-11-02: second class test, on all material related to HW6-HW9 (announced 2026-10-26; time not given, the usual Monday class slot is 15:00).
 - 2026-11-16: the proof of Theorem 20.16 (complete g-actions are infinitesimal generators of G-actions, G simply connected), taught on 2026-11-17, will not be in the final exam. Midsem paper and solutions are filed in [[mt3184-differential-geometry-and-lie-groups/2026-11-16-midsem-exam]].
+- 2026-11-26 10:00-12:00: final exam, on the material of HW5-HW11 (announced 2026-11-18).
 
 ## Announcements
 - 2026-09-10: the lecture on 17 September is cancelled; a replacement class on Saturday 12 September at 12pm. Questions from the homework or topics to revise were to be emailed by Monday 14 September, 10am.
@@ -60,3 +62,4 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - 2026-08-20: office hours that evening at 16:30 for HW1 and HW2 (no new topics). Part of the Thursday 2026-08-27 class was to be a tutorial on HW1-HW3; questions were to be sent by Wednesday 2026-08-26 morning.
 - 2026-10-26: students were to say by 10am Wednesday 28 October which problems from HW6-HW9 they want gone over; doubts will be discussed in class on Thursday 29 October. HW9 was uploaded late and a class test is on Monday 2 November, so there is no homework other than HW9 this week.
 - 2026-11-16: Tuesday 2026-11-17 class: proof of Theorem 20.16; graded midsem papers can be looked at; midsem solutions uploaded to go through before class. Thursday 2026-11-19 is a tutorial session: send questions from HW5-HW11 by Wednesday 2026-11-18, 10am, and say if you want any topic revised.
+- 2026-11-18: the 2026-11-19 tutorial has only one small question, so the rest of the lecture is a quick revision of the theory. Test 2 is returned on Tuesday 2026-11-24; graded answer sheets can be collected from the instructor's office between 11:30 and 12:00 that day.

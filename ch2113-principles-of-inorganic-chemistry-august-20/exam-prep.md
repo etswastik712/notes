@@ -9,7 +9,9 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Quiz 3 on Tuesday 2026-11-17, 12:00–1:00 pm, during the TA session (postponed from 2026-11-10; the announcement of 2026-11-14 names it Quiz 3 and confirms the date and time). Syllabus: Crystal Field Theory and related topics; explicitly NOT molecular orbital theory (MOT) and NOT π-bonding (Classroom: announcement 2026-11-14). Reading: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., international online edition pp. 394–413 (library hard copy, Pearson 4th ed., pp. 424–444). The earlier announcement (2026-11-02) tied the scope to what was taught on 2, 3 (TA session), 4 and 9 Nov. Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes) and Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins Ch. 5, pp. 147–161). The Quiz 2 paper was to be distributed at NLH in class on 2026-11-10. The end-semester date is not announced yet.
+Nothing further is announced yet (no end-semester date in the notes). Most recent: Quiz 3, set for Tuesday 2026-11-17, 12:00–1:00 pm, during the TA session (postponed from 2026-11-10; confirmed by the announcement of 2026-11-14). Its syllabus was Crystal Field Theory and related topics, explicitly NOT molecular orbital theory (MOT) and NOT π-bonding. Reading for it: Shriver & Atkins, Inorganic Chemistry, 5th ed., pp. 473–483; Huheey, Keiter & Keiter, 4th ed., international online edition pp. 394–413 (library hard copy, Pearson 4th ed., pp. 424–444). Past: Quiz 1 (2026-09-08, Structure and Bonding up to and including MOT), the midsem (date not in the notes), Quiz 2 (2026-10-21, redox chemistry, Shriver & Atkins Ch. 5, pp. 147–161). The Quiz 2 paper was to be distributed at NLH in class on 2026-11-10.
+
+New reading (announcement 2026-11-18, "Lecture Notes for MOT/LFT"): Shriver & Atkins 5th ed. pp. 483–487 and Huheey, Keiter & Keiter 4th ed. pp. 413–424, covering MOT/ligand field theory (Classroom: announcement 2026-11-18). This is probably material for later assessments; the post names no quiz or date.
 
 ## Covered so far
 - [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-10-lecture-notes-1-and-2]]: Lewis structures (resonance, formal charge, oxidation number) and VSEPR
@@ -54,6 +56,7 @@ Quiz 3 on Tuesday 2026-11-17, 12:00–1:00 pm, during the TA session (postponed 
 - Hybridization from the steric number; %s/%p character from bond angles (H2O worked; NH3 is a take-home exercise): [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-22-teaching-material-vbt]].
 - Bent's rule: PCl2F3 isomer and the CH2F2 bond angles (take-home): same note.
 - MO diagrams of diatomics (N2, O2, HF, CO, ICl as exercise): [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-22-teaching-material-mot]].
+- MO treatment of polyatomics (H3, NH3, SF6 ligand-group orbitals): [[ch2113-principles-of-inorganic-chemistry-august-20/2026-08-26-molecular-orbital-theory-part-2]].
 - Define and compare acid–base concepts: Tutorial 3 Q1, Q3, Q4, Q6.
 - Rank or explain acidity: Tutorial 3 Q5, Q7, Q8; see Acids and Bases Lecture 2.
 - Lewis acid–base reaction types (displacement, metathesis, adduct): Tutorial 3 Q9, Q10.
@@ -64,11 +67,13 @@ Quiz 3 on Tuesday 2026-11-17, 12:00–1:00 pm, during the TA session (postponed 
 - Borazine synthesis and reactions: Tutorial 4 Q5, Q6, Q7.
 - Phosphazenes: Tutorial 4 Q8, Q9, Q10.
 - Crystal Field Theory (Quiz 3 scope, excluding MOT and π-bonding): practise from Shriver & Atkins 5th ed. pp. 473–483 and Huheey et al. 4th ed. pp. 394–413 (library copy pp. 424–444); no class notes yet.
+- MOT/ligand field theory of complexes: read Shriver & Atkins 5th ed. pp. 483–487 and Huheey et al. 4th ed. pp. 413–424 (announcement 2026-11-18); no class notes yet.
 - Redox (Quiz 2 scope, past): Shriver & Atkins Ch. 5, pp. 147–161; no notes yet.
 
 ## Gaps
-- Crystal Field Theory (Quiz 3, 2026-11-17) has no notes yet; lectures of 2, 4 and 9 Nov and the TA session of 3 Nov are not yet filed. Reading: Shriver & Atkins 5th ed. pp. 473–483; Huheey, Keiter & Keiter 4th ed. pp. 394–413 (library copy pp. 424–444). MOT and π-bonding are explicitly excluded from this quiz.
-- Whether the syllabus includes lectures after 9 Nov is not stated; the 2026-11-14 post only says "Crystal Field Theory and related".
+- Crystal Field Theory (Quiz 3) has no notes yet; lectures of 2, 4 and 9 Nov and the TA session of 3 Nov are not filed. Reading: Shriver & Atkins 5th ed. pp. 473–483; Huheey, Keiter & Keiter 4th ed. pp. 394–413 (library copy pp. 424–444).
+- MOT/LFT of metal complexes: only a reading list was posted on 2026-11-18 (S&A pp. 483–487; Huheey pp. 413–424), no slides or notes. It is unclear whether the Huheey pages are the international online or the library hard-copy numbering (the two differ by about 30 pages for the CFT reading), and no assessment is announced for it.
+- Whether the Quiz 3 syllabus included lectures after 9 Nov is not stated; the 2026-11-14 post only says "Crystal Field Theory and related".
 - Redox chemistry (Quiz 2 scope, Shriver & Atkins Ch. 5, pp. 147–161, TA session of 2026-10-13) has no notes yet. Note the sign typo in eq. 5.11 on p. 161 (signs should be −, +, +, −).
 - The MO diagrams (H2, N2, O2/F2, HF, CO, H2O), Lewis/VSEPR drawings and hybrid orbital pictures are images only; they are not captured in the notes.
 - The SF4 angle triplets (179°/178.5°/170° axial, 103°/110°/97° equatorial) are unlabelled in the slides; confirm which structures they belong to.
