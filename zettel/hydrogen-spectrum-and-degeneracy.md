@@ -17,6 +17,9 @@ $$E_{n,l} = -\frac{m e^4}{2(4\pi\epsilon_0)^2 \hbar^2} \frac{1}{n^2}$$
 Source: Hydrogen_atom, pp. 1–8
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/hydrogen-atom-radial-equation]] — The energy eigenvalues E_n are obtained by solving the radial equation for R(r), which this note's spectrum depends on
+- used-in:: [[zettel/spherical-harmonics]] — The n^2 degeneracy counts the angular states labelled by l and m, and those angular states are the spherical harmonics Y_{l,m}
+- part-of:: [[zettel/hydrogen-atom-radial-wavefunctions]] — The radial eigenfunctions R_{n,l}(r) are the solutions labelled by the same n and l that produce the discrete energy spectrum this note describes
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Hydrogen_atom]] pp. 1–8
 <!-- /kurooto:seen -->
