@@ -21,6 +21,7 @@ $$\psi(r,\theta) \propto J_l(k_{n,l}r)\,\sqrt{2}\cos(l\theta)$$
 Source: circular_well_density
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/circular-infinite-well-energy-eigenvalues-and-eigenstates]] — The choice between complex exponential and standing trigonometric angular factors is one of the ways the stationary eigenstates of the circular well are written, so the eigenstates note supplies the full context for this choice
 ## Seen in
 - [[ph2113/2026-11-16-circular-well-2d-and-density-notebook|circular_well_density]]
 <!-- /kurooto:seen -->
