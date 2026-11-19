@@ -18,6 +18,9 @@ $$V(x, y) = \begin{cases} 0 & \text{if } x^2 + y^2 < a^2 \\ \infty & \text{other
 Source: Angular_momentum, pp. 1–3
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/circular-infinite-well-energy-eigenvalues-and-eigenstates]] — This note sets up the circular infinite well potential, and the eigenstates note supplies the stationary solutions, quantized energies and Bessel-function wavefunctions for that same well
+- part-of:: [[zettel/circular-well-normalization-constant]] — The normalization constant is derived for the stationary states of this circular well, using Bessel integrals over the circular domain
+- part-of:: [[zettel/angular-wavefunction-representations-in-circular-wells]] — This note covers how to choose the angular basis for the degenerate ±l levels of the circular well, which is a detail of solving this potential
 ## Seen in
 - [[ph2113/2026-11-16-circular-well-2d-and-density-notebook|circular_well_density]]
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Angular_momentum]] pp. 1–3
