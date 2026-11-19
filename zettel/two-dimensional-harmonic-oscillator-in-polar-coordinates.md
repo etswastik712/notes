@@ -22,6 +22,8 @@ $$\frac{d^2 R}{dr^2} + \frac{1}{r} \frac{dR}{dr} + \left[ \frac{2m}{\hbar^2} \le
 Source: tutorial7, pp. 1–2
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/separation-of-variables-in-polar-coordinates]] — The oscillator note separates variables into an angular factor Θ(θ) = e^{ilθ} and a radial function R(r), which is the same factorisation ψ = R(r)Θ(θ) described in this note
+- contrasts-with:: [[zettel/circular-infinite-well-potential-in-two-dimensions]] — Both are circularly symmetric 2D problems solved by separation of variables, but the infinite well has a hard-wall boundary at radius a while the oscillator has a smooth quadratic potential V = (1/2)mω²r²
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|tutorial7]] pp. 1–2
 <!-- /kurooto:seen -->
