@@ -45,6 +45,8 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - [[introduction-to-probability/2026-10-29-week-4-notes]] Week 4 notes (includes HW4); only the dice-mgf problem was readable (2026-10-29)
 - [[introduction-to-probability/2026-11-05-week-5-notes]] Week 5 notes: covariance matrix, |corr| ≤ 1, min/max lemma, multinomial, change of variables (2026-11-05)
 - [[introduction-to-probability/2026-11-12-hw-6]] HW 6 (Q1 modified): multivariate normal diagonalisation, -ln of uniforms, tangent line for Jensen (2026-11-12)
+- [[introduction-to-probability/2026-11-18-week-6-lectures-summary]] Week 6 lectures: Cauchy-Schwarz, Jensen, Markov, Chebyshev, weak and strong law of large numbers (2026-11-18)
+- [[introduction-to-probability/2026-11-18-week-7-lectures-summary]] Week 7 lectures: central limit theorem with mgf proof, two examples (2026-11-18)
 
 ## Tasks
 
@@ -62,6 +64,8 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-08-11: Quiz 1 (tentatively 14 August per the evaluation scheme) covers everything in class up to and including the axiomatic definition of probability, and the practice problems suggested at the end of the first week (perhaps as discussed by the TAs in the 7 August tutorials); the 12 and 13 August class notes are not needed for Quiz 1 (they are for Quiz 2). No calculator; only writing materials and water bottle, no electronic gadgets, notebooks or paper on your person. Already past. (Classroom)
 - 2026-08-20: Quiz 2 syllabus: conditional probability and independence, i.e. everything covered since the last quiz, up to everything covered in the 21 August tutorial. Already past. (Classroom)
 - 2026-11-14: Quiz 6 papers are checked (post for Batch 3, LHC 106, only; your batch is 7). Since there are no more tutorials, Batch 3 can see their checked papers in the instructor's office (Room 451, Main Building) on Sunday 2026-11-15, 2-3 PM; marks can also be asked by email. This implies Quiz 6 took place and that it was the last tutorial quiz; whether Batch 7 gets the same arrangement is not stated. (Classroom)
+- 2026-11-19: Quiz 6 papers shown to Batch 5, 4:30-5:30 PM; other students can email for marks or view papers on 2026-11-20 (timing to be announced). Confirms Quiz 6 took place. (Classroom)
+- 2026-11-20: Last remedial class before the exams, 9:00 PM, Madhava Hall (Classroom, post of 2026-11-18).
 
 ## Announcements
 - 2026-08-28: Strict rule for quizzes and exams: no electronic gadget of any kind on your person. Anyone caught with a phone gets 0 for that quiz, with no exceptions. (Classroom)
@@ -122,3 +126,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-11-13: Quiz rule reminder: taking the quiz in another batch is not acceptable unless the teachers ask for it; no mobile phones are permitted, yet some students are using them ("dangerous"). The post says "Quiz 3" but appears to refer to the current quiz round (Quiz 6 was tentatively 2026-11-13); unclear. (Classroom)
 - 2026-11-13: Remedial class on Sunday 2026-11-15, starting 9:00 AM (time changed), Madhava Hall, 3rd floor, Main Building. (Classroom)
 - 2026-11-12: HW 6 posted with Q1 modified. See [[introduction-to-probability/2026-11-12-hw-6]]. (Classroom)
+- 2026-11-18: Week 7 lecture summary posted (two examples not discussed in class for lack of time). No review lecture on 2026-11-19; a video lecture for the review will be posted later. See [[introduction-to-probability/2026-11-18-week-7-lectures-summary]]. (Classroom)
+- 2026-11-18: Week 6 lectures summary posted. See [[introduction-to-probability/2026-11-18-week-6-lectures-summary]]. (Classroom)
+- 2026-11-18: Last remedial class on Friday 2026-11-20, 9:00 PM, Madhava Hall (Aakash Gupta). (Classroom)
+- 2026-11-19: Quiz 6 papers shown to Batch 5 on 2026-11-19, 4:30-5:30 PM; others may email for marks or view papers on 2026-11-20 (time to be announced). (Classroom)
