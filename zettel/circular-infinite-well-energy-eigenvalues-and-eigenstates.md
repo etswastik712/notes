@@ -23,6 +23,10 @@ $$\psi(r, \theta) = R(r)\Theta(\theta) = J_l(k_{n,l} r) e^{i l \theta}$$
 Source: Angular_momentum, pp. 1–3
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/circular-well-normalization-constant]] — The source note's wavefunctions carry an amplitude that must be fixed by the normalization integral of J_l^2 over the disk, which the candidate note derives
+- needs:: [[zettel/separation-of-variables-in-polar-coordinates]] — The source note's wavefunction psi(r, theta) = R(r) Theta(theta) and its Bessel radial equation are obtained by the polar separation of variables described in the candidate note
+- needs:: [[zettel/two-dimensional-schrodinger-equation-in-polar-coordinates]] — The radial Bessel equation and the energy E = hbar^2 k^2/2m in the source note follow from the polar form of the Schrodinger equation given in the candidate note
+- contrasts-with:: [[zettel/angular-wavefunction-representations-in-circular-wells]] — The source note's angular part Theta(theta) is the complex exponential e^{i l theta} choice, while the candidate note contrasts this with standing trigonometric superpositions for the same degenerate +/- l levels
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Angular_momentum]] pp. 1–3
 <!-- /kurooto:seen -->
