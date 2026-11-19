@@ -24,6 +24,7 @@ $$P(r) = 4\pi r^2 |\psi(r)|^2$$
 Source: tutorial7, pp. 1–2
 
 <!-- kurooto:seen -->
+- example-of:: [[zettel/hydrogen-atom-radial-wavefunctions]] — Hydrogen's radial eigenfunctions R_{n,l}(r) are the radial factor whose squared modulus, weighted by r², gives the radial probability density P(r) defined in this note
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Hydrogen_atom]] pp. 1–8
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|tutorial7]] pp. 1–2
