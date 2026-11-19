@@ -20,6 +20,8 @@ $$|N_{n,l}|^2 = \frac{1}{\pi a^2 J_{l+1}^2(j_{l,n})}$$
 Source: circular_well_density
 
 <!-- kurooto:seen -->
+- part-of:: [[zettel/circular-infinite-well-energy-eigenvalues-and-eigenstates]] — The normalization constant N_{n,l} is the factor applied to the stationary states R(r)Θ(θ) that the eigenvalues-and-eigenstates note derives, so it completes that note's wavefunctions
+- used-in:: [[zettel/radial-probability-density]] — Normalizing the radial factor is the same integral of |R|^2 weighted by r that defines the radial probability density P(r)
 ## Seen in
 - [[ph2113/2026-11-16-circular-well-2d-and-density-notebook|circular_well_density]]
 <!-- /kurooto:seen -->
