@@ -24,6 +24,9 @@ $$R_{2,1}(r) = \frac{1}{\sqrt{24}}\left(\frac{1}{a}\right)^{3/2} \frac{r}{a} e^{
 Source: Hydrogen_atom, pp. 1–8
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/hydrogen-atom-radial-equation]] — The radial wavefunctions R_{n,l}(r) are the solutions of the radial Schrödinger equation for the Coulomb potential, so the equation is the source from which these functions are obtained
+- used-in:: [[zettel/spherical-harmonics]] — The full hydrogen wavefunction ψ_{n,l,m} is the product of the radial factor in this note and the angular factor Y_{lm}(θ, φ), which is the spherical harmonic
+- part-of:: [[zettel/hydrogen-spectrum-and-degeneracy]] — The quantum numbers n and l that index the radial wavefunctions are the same ones that set the bound-state energies E_n and the n² degeneracy discussed in the spectrum note
 ## Seen in
 - [[ph2113/2026-11-16-tutorial-vii-polar-schrodinger-2d-oscillator|Hydrogen_atom]] pp. 1–8
 <!-- /kurooto:seen -->
