@@ -38,6 +38,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-11-10: project presentation logistics posted (Mon 16 Nov, 4:15 PM, Seminar Room 32; 9 min + 5 min Q&A, under 10 slides; chai and chocolates provided). Details under Exams. Group sheet listing the project problems was attached (names left out here).
 - 2026-11-10: teacher pointed one group (named in the post) to a topotoolbox blog post and GIF animating upstream knickpoint migration under the stream power model. See [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]].
 - 2026-11-13: presentation venue moved to seminar room 33, main building (Mon 16 Nov, 4:15 PM); corrected talk order is in the attached screenshot ([image](https://drive.google.com/file/d/1O3o7mdMg7sP2eSR6rbeKOskvLPlbiu1H/view?usp=drive_web), not viewed). The regular 9 am class also takes place on Monday 16 Nov.
+- 2026-11-18: lecture slides on fluvial landscapes posted (D8/MFD, floods, planform, bedrock rivers, with a 3-question problem sheet on bedrock river profiles). See [[landscape-evolution/2026-11-18-fluvial-landscapes-lecture-slides]].
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)
@@ -50,6 +51,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - [[landscape-evolution/2026-11-02-field-trip-final-list]] Field trip final list (2026-11-02)
 - [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]] Erosion-rate debate reading (2026-11-03)
 - [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]] Knickpoint animation and topotoolbox getlocation (2026-11-10)
+- [[landscape-evolution/2026-11-18-fluvial-landscapes-lecture-slides]] Fluvial landscapes lecture slides (2026-11-18)
 
 ## Tasks
 - [ ] Field trip 7 Nov: complete the sheet, sign and upload the declaration page, mark "y" (due 2026-11-01, Sunday; time not stated) [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk2NzQ2NjcyNTcx)

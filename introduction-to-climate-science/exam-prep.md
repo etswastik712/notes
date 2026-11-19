@@ -10,6 +10,7 @@ trust_tier: agent_written
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
 Not announced yet. Quiz 2 was held on Friday 23 October 2026 at 10:00 (seating by room list, calculators needed), covering post-midsem topics taught up to Thursday 22 October (meridional circulation, TOA energy balance, atmospheric/oceanic heat transport, Hadley cell dynamics, angular momentum conservation, and rotating coordinate transformations). Its solutions have not been posted. (An earlier in-class quiz on 2026-08-21, 10:00, covered Lectures 1–5; calculators allowed and constants provided. Its solutions are not posted; the 10 September solutions are for Quiz 1.) Schedule note (announcement of 2026-10-26): the third module of the course begins this week; there is no class on Thursday 2026-10-29, and an extra class will be held later in November (to be announced in advance). The third (ocean) module has now started with the Daisyworld tutorial of 2026-10-30 (held in NLH).
+Update 2026-11-19 (Classroom announcement): the syllabus of the coming exam is everything in the course, as per the guidelines; the exam will likely test the post-mid-sem material (meridional circulation onwards, including the ocean module) in greater depth. The date and format of the exam are not given in the post, so it is still not announced. The course website is fully updated, including the three-box ocean model covered on 2026-11-19.
 
 ## Covered so far
 - [[introduction-to-climate-science/2026-08-05-lectures-1-2-intro-and-global-mean-temperature]]: planetary boundaries, Earth-system components and tipping points, Newtonian prediction, feedbacks, measuring temperature, area-weighted mean, $\delta^{18}$O thermometers, Planck/Wien/Stefan–Boltzmann.
@@ -190,3 +191,4 @@ Not announced yet. Quiz 2 was held on Friday 23 October 2026 at 10:00 (seating b
 - The Quiz 2 room list (Room_arrangement.pdf) was not filed because it contains classmates' names and roll numbers.
 <!-- /kurooto:exam-prep -->
 - The CERES tutorial (posted 2026-10-31, self-study, no TA sessions) is filed from its landing page only: the handout PDF and data tool were not reachable, so its exercises are unknown. Whether it is examined is not stated.
+- The three-box ocean model (covered in class on 2026-11-19, now on the course website) has no notes yet; since the exam will likely go deeper on post-mid-sem material, file it from the website or the readings folder once the material is available. The exam date is still unknown.
