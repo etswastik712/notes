@@ -13,4 +13,5 @@ Its concepts point here (Seen in), not to the class note it came with.
 
 ## Concepts in this book
 - pp. 12–22 1 What is a bedrock river? Where in India one can find them? (2/4): [[zettel/streamflow|Streamflow]], [[zettel/hydrograph|Hydrograph]], [[zettel/flood-frequency-distribution|Flood Frequency Distribution]], [[zettel/effective-discharge|Effective Discharge]], [[zettel/bankfull-discharge|Bankfull Discharge]], [[zettel/braided-river|Braided River]]
+- pp. 23–33 1 What is a bedrock river? Where in India one can find them? (3/4): [[zettel/bedrock-river|Bedrock River]], [[zettel/bedrock-river-erosion-mechanisms|Bedrock River Erosion Mechanisms]], [[zettel/knickpoint-migration|Knickpoint Migration]], [[zettel/meandering-river-evolution|Meandering River Evolution]], [[zettel/hack-s-rule|Hack's Rule]], [[zettel/alluvial-river-diffusive-evolution|Alluvial River Diffusive Evolution]], [[zettel/bengal-submarine-fan|Bengal Submarine Fan]]
 <!-- /kurooto:source -->
