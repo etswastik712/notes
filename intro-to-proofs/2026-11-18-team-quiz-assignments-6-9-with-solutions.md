@@ -62,3 +62,8 @@ Aakanksha
 - [[zettel/well-ordering-principle]]: Q6 uses it
 - [[zettel/principle-of-strong-induction]]: Q5 uses it
 - [[zettel/method-of-minimal-counterexample]]: Q6 pattern
+
+<!-- kurooto:materiale4527841 -->
+## Concepts in Team_Quiz_Assignments_6-9_with_Solutions
+(none new)
+<!-- /kurooto:materiale4527841 -->
