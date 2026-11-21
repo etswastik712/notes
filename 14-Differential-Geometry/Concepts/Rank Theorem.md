@@ -30,7 +30,7 @@ Used in: [[DM04 The Tangent Bundle and the Rank Theorem]]. Related: [[Global Ran
 
 Class zettel on this idea: [[zettel/rank-theorem|Rank Theorem]]
 
-Related zettel: [[zettel/global-rank-theorem|Global Rank Theorem]]
+Related zettel: [[zettel/equivariant-map-constant-rank-theorem|Equivariant Map Constant Rank Theorem]] · [[zettel/global-rank-theorem|Global Rank Theorem]]
 <!-- zettel:end -->
 
 ## Linked from

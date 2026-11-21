@@ -29,6 +29,8 @@ Used in: [[DM08 Lie Groups]]. Related: [[Global Rank Theorem]] · [[Lie Subgroup
 ## Zettel notes
 
 Class zettel on this idea: [[zettel/constant-rank-of-lie-group-homomorphisms|Constant Rank of Lie Group Homomorphisms]] · [[zettel/lie-group-homomorphism|Lie Group Homomorphism]]
+
+Related zettel: [[zettel/identity-of-connected-lie-group-homomorphisms|Identity of Connected Lie Group Homomorphisms]]
 <!-- zettel:end -->
 
 ## Linked from

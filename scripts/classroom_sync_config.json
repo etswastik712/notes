@@ -1,0 +1,69 @@
+{
+  "first_run_since": "2026-11-05",
+  "last_sync": "2026-11-21T11:04:59.811933+00:00",
+  "courses": {
+    "869086505384": {
+      "name": "Introduction to Climate Science (EC2113)",
+      "topic": "earth-and-climate/climate"
+    },
+    "869084673562": {
+      "name": "Landscape Evolution (EC2123)",
+      "topic": "earth-and-climate/landscapes-geomorphology"
+    },
+    "871683858759": {
+      "name": "PH2113 Quantum Mechanics",
+      "topic": "physics/quantum-mechanics"
+    },
+    "855735540125": {
+      "name": "Introduction to Probability (MT2113)",
+      "topic": "math/probability"
+    },
+    "871552976807": {
+      "name": "Intro to Proofs (MT2133)",
+      "topic": "math/proofs-analysis-topology"
+    },
+    "871927596459": {
+      "name": "CH2113 Principles of Inorganic Chemistry",
+      "topic": "chemistry/inorganic-chemistry"
+    },
+    "871441956098": {
+      "name": "MT3184 Differential Geometry and Lie Groups",
+      "topic": "math/differential-geometry"
+    },
+    "603303296324": {
+      "name": "Science and Society",
+      "topic": null
+    },
+    "824332948552": {
+      "name": "PH1213 Introductory Electricity and Magnetism (archived)",
+      "topic": null
+    },
+    "838228828403": {
+      "name": "BI1213_2026 (archived)",
+      "topic": null
+    },
+    "821713607233": {
+      "name": "MT1223 Linear Algebra (archived)",
+      "topic": null
+    },
+    "798852719102": {
+      "name": "TD1123 Academic Communication Skills (archived)",
+      "topic": null
+    }
+  },
+  "drive_folders": [],
+  "sites": [
+    {
+      "name": "joy_intro_climate_science",
+      "repo": "https://github.com/joymonteiro/intro_climate_science",
+      "url": "https://joymonteiro.github.io/intro_climate_science/",
+      "topic": "earth-and-climate/climate",
+      "dest": "lecture-notes-slides/joy_intro_climate_science",
+      "course": "Introduction to Climate Science (EC2113)",
+      "exclude": [
+        ".git"
+      ],
+      "render": true
+    }
+  ]
+}

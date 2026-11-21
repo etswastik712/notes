@@ -21,6 +21,8 @@ Core plugins on: file explorer, search, graph, backlinks, outgoing links, tags, 
 
 > [!warning] Git
 > `.obsidian/plugins/` is excluded in `.gitignore` (≈50 MB of binaries). To restore on another machine run `scripts/install_plugins.sh` (copies from the Landlab vault) or reinstall from Obsidian.
+>
+> **New machine (added 2026-11-21):** download `setup_vault.sh` (Linux/macOS) or `setup_vault.ps1` (Windows) from the GitHub release **vault-setup** of `etswastik712/notes` and run it: it clones or updates the vault, installs the plugins from the release's `obsidian-plugins.tar.gz`/`.zip`, builds `.venv` from `requirements.txt`, and lists the manual steps (books, Classroom login). Re-run to update.
 
 ## 2. Writing notes
 - **Templates:** [[Chapter Template]], [[Concept Template]], [[Course Map Template]] in `00-Home/Templates/` (insert with the core Templates command).

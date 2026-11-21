@@ -36,6 +36,8 @@ Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States 
 ## Zettel notes
 
 Class zettel on this idea: [[zettel/time-independent-schrodinger-equation|Time-Independent Schrödinger Equation]]
+
+Related zettel: [[zettel/hydrogen-atom-radial-equation|Hydrogen Atom Radial Equation]]
 <!-- zettel:end -->
 
 ## Linked from

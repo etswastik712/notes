@@ -38,6 +38,11 @@ flowchart LR
 - The SSIIM–Landlab vault (`~/Documents/Landlab-SSIIM-Vault`) for the numerical-modelling side (FR01's model is SSIIM).
 - Mathematical toolkit: [[Fourier and Laplace Transforms]] (growth rates, dispersion relations).
 
+## Queued papers (moved from ~/Downloads 2026-11-21; not yet read beyond the title page)
+- **Schuurman, Marra & Kleinhans 2013**, *Physics-based modeling of large braided sand-bed rivers: bar pattern formation, dynamics, and sensitivity* (JGR Earth Surface 118, 2509–2527): [[Schuurman2013JGR.pdf]]. Fits beside [[FR01 Braided Rivers in 3D (Olsen 2021)]] and [[FR02 Secondary Currents and River Channel Patterns (Njenga 2013)]].
+- **Liang et al. 2023**, *Fluvial–aeolian interaction and compositional variability in the river-fed Yarlung Tsangpo dune system (southern Tibet)* (JGR Earth Surface): [[JGR Earth Surface - 2023 - Liang - Fluvial‐Aeolian Interaction and Compositional Variability in the River‐Fed Yarlung.pdf]]. Links [[LS17 Aeolian Landscapes]] and the braided Brahmaputra.
+- **N. R. B. Olsen**, *Computational Fluid Dynamics in Hydraulic and Sedimentation Engineering* (NTNU class notes) [[notes_olsen.pdf]] and the **SSIIM 2 user's manual** [[ssiimmanual.pdf]]: the model behind FR01.
+
 ## Gaps
 - [ ] Read the bodies of FR02–FR04 and the results figures of FR01/FR03 in full and upgrade the chapters from guides to summaries.
 - [ ] Papers cited in the lectures but absent from the repository (Banerjee & Scherler; Dielforder et al.): add to `books/` and write chapters if wanted.

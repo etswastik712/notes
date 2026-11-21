@@ -1,0 +1,49 @@
+{
+  "_about": "Written by scripts/classroom_sync.py: which Classroom course/post (or Drive folder) each source file in this topic folder came from, every post's text, and every resource a post POINTS to (website, Dropbox, sheet, book pages) with its status. Edit statuses with `classroom_sync.py mark`.",
+  "files": [
+    {
+      "drive_id": "1AD8Mz03LINEk1cGrS7lGMgmnfl_LPa-M",
+      "drive_name": "end sem TD2213 2021.pdf",
+      "drive_modified": "2023-05-11T16:16:55.000Z",
+      "md5": "86ca020899bf84c0dccba3cce69d7ed1",
+      "course": "thermodynamics-stat-mech",
+      "post_type": "drive-search",
+      "posted": null,
+      "post_title": "previous-year paper found by Drive search 2026-11-21",
+      "file": "lecture-notes-slides/past-papers/end sem TD2213 2021.pdf",
+      "status": "downloaded"
+    },
+    {
+      "origin": "~/Downloads/WhatsApp Image 2026-11-14 at 1.20.19 PM(1).jpeg (photo: TD2213 end-semester exam, Jan 2026 semester, Arun Venkatesh + Sunil S. Bhagwat)",
+      "md5": "7ada41fdcded2dfb1a418769c7c97e92",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "lecture-notes-slides/WhatsApp Image 2026-11-14 at 1.20.19 PM(1).jpeg",
+      "status": "moved"
+    },
+    {
+      "origin": "~/Downloads/WhatsApp Image 2026-11-14 at 1.20.19 PM.jpeg (photo: TD2213 end-semester exam, Jan 2026 semester, Arun Venkatesh + Sunil S. Bhagwat)",
+      "md5": "053c8f9f5249be179eaa12ca83130460",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "lecture-notes-slides/WhatsApp Image 2026-11-14 at 1.20.19 PM.jpeg",
+      "status": "moved"
+    },
+    {
+      "origin": "~/Downloads/WhatsApp Image 2026-11-14 at 1.20.20 PM.jpeg (photo: TD2213 end-semester exam, Jan 2026 semester, Arun Venkatesh + Sunil S. Bhagwat)",
+      "md5": "6bbe7d1cc68f59bd4f56fb3ea4c140bc",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "lecture-notes-slides/WhatsApp Image 2026-11-14 at 1.20.20 PM.jpeg",
+      "status": "moved"
+    }
+  ],
+  "posts": [],
+  "resources": []
+}

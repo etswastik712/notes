@@ -113,6 +113,33 @@ tags: [subject/climate, type/moc, taught, extra/book, src/suhas-pre, src/suhas-p
 9. **Why is the tropical atmosphere nearly on a moist adiabat?** Deep convection keeps the profile close to neutral for ascent of saturated parcels.
 10. **Why does the Earth bulge at the equator?** The effective gravity (gravity + centrifugal) is tilted; a deformable Earth flows until the surface is perpendicular to it.
 
+## 5. Part VI: Joy's ocean module (CL22–CL30), added 2026-11-21
+<span class="scope-taught">taught</span> *Joy's O1–O7 lectures, notes and tutorials; the Classroom post of 19 Nov: "the syllabus will be everything. However, the exam will likely test your grasp of the post mid-sem material in greater depth."* Figures below are copied from the chapters' cheat-sheets (each verified there).
+
+> [!key] Formula and fact sheet (Part VI)
+> - **Energy ledger (CL22):** CERES 2010–24 net **+1.26 W m⁻²** (ASR 241.95, OLR 240.69); poleward transport **5.8 PW (N), 5.7 PW (S)**; ASR = OLR at 37°S/36°N; $LE\approx550(1-\mathrm{RH})$; Gulf Stream 30 Sv ≈ 0.77 PW.
+> - **Inertia (CL23):** $d=\sqrt{2\kappa/\omega}$ (soil ~10 cm/day, ~2 m/yr); $\tau=C/\lambda$, λ = 3.8: land 12 d, air 1 month, **mixed layer 1.7 yr**, full ocean 140 yr; fast swings ∝ $1/C^2$; "depth sets the timescale, not the size"; > 91 % of the imbalance goes into the ocean.
+> - **Momentum (CL24):** Ekman transport $M=\tau/\rho f$, **90° right (N) / left (S)**; spiral 45° at the surface; pumping $w=\mathrm{curl}(\tau/\rho f)\approx20$ m/yr; geostrophic $u=(g/f)\,$slope; ACC 125 Sv.
+> - **Salt (CL25):** S records E − P; mean 34.7; Arabian Sea 36.2 vs Bay of Bengal 32.9; warm water: T rules density, cold water: salt rules; NADW 4 °C/35.0, AAIW 3.3/34.15, AABW 0.4/34.67.
+> - **Mass and the switch (CL26):** sinking only in the N. Atlantic (15–20 Sv) and around Antarctica (~10 Sv); Southern Ocean winds bring it back up; turnover **~1000 yr**, deep flow ~1 mm/s; **Joy's Stommel: $y|1-y|=E$, hump ¼ at $y=\tfrac12$; E = 0.15 → on 0.82, unstable, reversed −0.13**; AMOC carries heat north everywhere (0.9–1.2 PW) → ITCZ north; IPCC AR6 C.3.4: very likely to weaken, medium confidence no collapse before 2100.
+> - **Slow swings (CL29):** anomaly; ocean = low-pass filter (std ∝ 1/√window) **or** coupled loop; equatorial Ekman divergence + pressure gradient ($f=0$) → tilted thermocline, cold tongue, warm pool; **Bjerknes feedback** (weaker trades → flatter thermocline → warmer east → weaker trades); **Kelvin wave east, Rossby waves west and reflected → delayed negative feedback**, ~6 months to reverse, period 2–7 yr (mean ~4); IOD, Atlantic Niño.
+> - **Carbon (CL29–CL30):** 1750–2024: **752 GtC; air 41 %, ocean 28 %, land 25 %**; ocean holds ~50–60× the air's carbon as HCO₃⁻/CO₃²⁻; Revelle factor; BEAM boxes 595/714/35 680 GtC, $1/k_a$ = 5 yr, turnover 1000 yr; **1000 yr → 480 ppm in 2024 (measured 425); 200 yr → 422**; stop in 2025 → **334 ppm, 22 % stays** (independent of the rates); 24 % of 1000 GtC, 42 % of 5000 GtC; no chemistry 1.6 %; Archer: 2–20 centuries / 3000–7000 yr / 10⁵ yr.
+> - **Tutorials (CL27–CL28):** Daisyworld with ocean (thermal inertia, hysteresis, lags); CERES: cloud radiative effect −19.6 = −45.0 (SW) + 25.4 (LW) W m⁻²; El Niño's OLR dipole.
+
+> [!warning] Traps (Part VI)
+> 26. Ekman transport is 90° to the wind, the **surface** current only 45°.
+> 27. On the equator $f=0$: the wind is balanced by a **pressure gradient**, not Coriolis.
+> 28. El Niño = **weaker** trades and a **flatter** thermocline, not stronger ones.
+> 29. The Bjerknes feedback alone gives a switch; the **delayed** wave feedback gives the oscillation.
+> 30. The settled CO₂ level does **not** depend on the exchange times; only how fast it gets there does.
+> 31. A model that fits the past (200-yr turnover) is not automatically right about the future (too fast a drawdown).
+> 32. "Thermohaline" is out of favour: the Southern Ocean **winds** do much of the upwelling.
+> 33. The oldest water is at **mid-depth in the North Pacific**, not at the bottom.
+> 34. Joy's Stommel (fixed T, hump at ¼) ≠ CL26 §7's version (fold 0.141): use Joy's in the exam.
+
+> [!question]- Self-test (Part VI), answers in the chapters
+> 1. Why is the ocean's net TOA imbalance +1.26 W m⁻² and where does the heat go (CL22, CL23)? 2. Derive $\tau=C/\lambda$ for a 50 m mixed layer (CL23). 3. Ekman transport for τ = 0.1 N m⁻² at 30°N (CL24). 4. Why is the Bay of Bengal fresher than the Arabian Sea (CL25)? 5. Solve $y|1-y|=0.2$ for the on state (CL26 §9.6: 0.72). 6. Draw the Bjerknes loop and say which two ledgers it joins (CL29 §5). 7. Why does El Niño turn around (CL29 §6)? 8. Why did the ocean take only 28 % of our carbon (CL29 Q6)? 9. Why doesn't CO₂ return to 280 ppm (CL30 Q8)? 10. What does the no-buffer run show (CL30 Run 6)?
+
 ## Study plan (about 2 hours)
 1. 20 min: read the four **syllabus maps** and **summaries** (CL09 → CL12).
 2. 30 min: derive three of §3 on paper.

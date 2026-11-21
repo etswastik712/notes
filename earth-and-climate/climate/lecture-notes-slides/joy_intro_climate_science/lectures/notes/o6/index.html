@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O6 · The overturning: the slow ocean, and can it switch off?</title>
+  <link rel="stylesheet" href="../../../css/site.css">
+</head>
+<body>
+  <header>
+    <h1>O6 · The overturning: the slow ocean, and can it switch off?</h1>
+    <p class="subtitle">Lecture notes · EC2113 Ocean module · Lecture 6 · Friday 13 November 2026</p>
+  </header>
+  <main>
+<p><em>These notes follow the lecture as it was taught. Section 9, on Stommel’s two-box model, is much longer than the time it got in class. As promised, it goes through the model and its equations step by step, so that you can read the S-shaped figure from the slides for yourself. The parts of the plan we didn’t reach are at the end, under “Read this part”. The readings are extracts in the course’s shared readings folder, under O6.</em></p>
+
+<h2 id="the-question">The question</h2>
+
+<p>Dense water sinks in only a few places. Where does it go, what brings it back up, how long does the round trip take, and could the whole circulation stop?</p>
+
+<h2 id="1-where-we-left-off">1. Where we left off</h2>
+
+<p>Yesterday ended with two pole-to-pole sections of salinity, one through the Atlantic and one through the Pacific. In both oceans, the water near 60°S and 60°N is connected to the surface. Near Antarctica in both oceans, water sinks to the bottom: <strong>Antarctic Bottom Water</strong> lies on the floor of practically every major ocean. The difference is in the north. In the Atlantic, water from the far north reaches far below the top kilometre, as the salty tongue of <strong>North Atlantic Deep Water</strong> at 2–3 km. In the Pacific, nothing from the north gets that deep.</p>
+
+<p>So far that is the data scientist’s hat: plot the data and find the patterns. Today we try to explain them.</p>
+
+<h2 id="2-the-mass-ledger-what-sinks-must-come-back-up">2. The mass ledger: what sinks must come back up</h2>
+
+<p>When surface water sinks, mass moves from the upper ocean (roughly the top kilometre) into the deep ocean. Now put on the accountant’s hat. This can’t go on for ever in a steady state: if water kept leaving the upper ocean and never came back, the whole ocean would eventually become deep ocean. Yet there is still a warm, light upper ocean sitting on a cold, dense deep one. So <strong>wherever water goes down, the same amount must come up somewhere else.</strong></p>
+
+<p>That was a real puzzle for oceanographers. It is easy to see how surface water can become denser and sink: that was yesterday’s lecture. But the water that has to come back up is the densest water in the ocean, sitting at the bottom because it is the densest. Nothing obvious makes it rise. Today we look at the most important place where it does: the Southern Ocean (§5).</p>
+
+<p>The whole loop has had several names. It used to be called the <a href="https://en.wikipedia.org/wiki/Thermohaline_circulation">thermohaline circulation</a> (<em>thermo</em> for heat, <em>haline</em> for salt), or the “global conveyor belt”, Wally Broecker’s name for it (Stewart p. 213). Stewart notes that oceanographers have largely dropped the word “thermohaline”, because the flow turns out not to be driven by density alone (p. 212). §5 shows why: the wind does much of the lifting. The name used now is the <strong>meridional overturning circulation</strong> (§6).</p>
+
+<h2 id="3-an-aside-simple-laws-complex-climate">3. An aside: simple laws, complex climate</h2>
+
+<p>Yesterday we asked how climate science differs from physics, if both use the same laws. The slides drew the answer as a network.</p>
+
+<p>A physicist writes one conservation law for each quantity: water, heat, salt, momentum and mass, each of the form “change in the store = in − out”. The laws for momentum and mass together are the equations of fluid motion, the Navier–Stokes equations (O4 notes, §3), and they can carry terms for heat and salt too. Each law on its own is simple.</p>
+
+<p>A climate scientist needs to know how the budgets <strong>talk to each other</strong>. Take water vapour. Evaporation puts it into the air, the winds carry it, and it forms clouds and rains out: that is one conservation law. But evaporation takes energy, and how much water evaporates depends on the sea surface temperature, which depends on sunlight. Clouds block sunlight. Rain releases heat into the air, which changes the winds. Rain and rivers change the salinity, and salinity and temperature set the density. Density decides how deep the wind’s momentum can be stirred, and the wind decides where the heat and salt go. Every arrow in the network is simple. What the network does as a whole is not, and which arrows matter most can differ between climates, between planets, and between regions of the same planet. That is what we mean by a <a href="https://en.wikipedia.org/wiki/Complex_system">complex system</a>, and it is why a fluid mechanics course in a physics department and a geophysical fluid dynamics course in a climate science department look at the same equations very differently.</p>
+
+<p>Today’s switch (§9) is one loop at the bottom of that network: density drives the overturning, the overturning carries salt, and salt sets density.</p>
+
+<h2 id="4-why-the-north-atlantic-sinks-and-the-north-pacific-doesnt">4. Why the North Atlantic sinks and the North Pacific doesn’t</h2>
+
+<p>Sea ice forms at high latitudes in both hemispheres, so surface water in every ocean gets cold enough to freeze (Stewart p. 215). Recall from yesterday that seawater keeps getting denser as it cools, right down to its freezing point, and that the ice it forms is almost fresh and floats. So the densest surface water is the water closest to freezing. Temperature therefore <strong>can’t</strong> be what separates the North Atlantic from the North Pacific: both get as cold as seawater can get. The difference has to be <strong>salinity</strong>.</p>
+
+<p>The slides showed this on a T–S diagram, using annual means from the WOCE climatology:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Surface salinity</th>
+      <th>Cooled to freezing at that salinity</th>
+      <th>Water at 2,000 m below it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>North Atlantic (50–65°N, 40–10°W)</td>
+      <td>35.1 g/kg</td>
+      <td>σ 28.2</td>
+      <td>σ 27.8</td>
+    </tr>
+    <tr>
+      <td>North Pacific (45–55°N, 160°E–140°W)</td>
+      <td>32.8 g/kg</td>
+      <td>σ 26.4</td>
+      <td>σ 27.7</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>(σ is density minus 1,000 kg/m³, as in O5.) The North Pacific’s surface is about 2.3 g/kg fresher. Take each surface water, keep its salinity and cool it. The North Atlantic’s becomes as dense as the water 2 km below it once it is cooled below about 4 °C, well before it freezes. The North Pacific’s can be cooled all the way to freezing (about −1.8 °C) and is <strong>still lighter</strong> than the deep water beneath it, so it can’t sink far. Stewart puts it in one line: cold, dense water does form in the North Pacific, but it isn’t salty enough to sink to the bottom (p. 211). Oxygen tells the same story: high oxygen reaches great depths in the North Atlantic, while the North Pacific shows no sign of water sinking from the surface (Hartmann p. 222, Fig. 7.16).</p>
+
+<p><strong>Why is the North Pacific so fresh?</strong> That is yesterday’s ledger (O5 notes, §4). The trade winds carry water vapour from the Atlantic across Central America, and it rains out over the Pacific. The atmosphere removes fresh water from the Atlantic and adds it to the Pacific, making the Atlantic saltier and the Pacific fresher. <strong>The atmosphere’s export of fresh water is what lets the Atlantic overturn.</strong> You saw the same principle in the Bay of Bengal: put fresh water on top, and it won’t mix down or sink.</p>
+
+<p>The North Atlantic recipe is to <strong>cool salty water</strong>. The Gulf Stream carries warm, salty water far north, into the Norwegian and Greenland Seas, where very cold air cools it until it is dense enough to sink (Hartmann p. 224; the Labrador Sea also contributes). Brine from sea ice is the recipe around Antarctica (O5 notes, §7).</p>
+
+<p>This is the arrangement in today’s climate. The physics doesn’t change, but the ledger depends on where the continents are and where the rain falls (O5 notes, §4), and when those were different, so was the arrangement.</p>
+
+<h2 id="5-coming-back-up-the-southern-ocean">5. Coming back up: the Southern Ocean</h2>
+
+<p>Go back to the Atlantic section, and add the lines of equal density (in the slides, the four lines Hartmann draws in his Fig. 7.17). Below the mixed layer, mixing is very weak, so deep water moves almost entirely <strong>along surfaces of constant density</strong> (Hartmann p. 225). To a first approximation, water doesn’t cross from one density surface to another. In the north and the tropics these surfaces lie flat and deep. South of about 45°S they <strong>tilt up and reach the surface</strong>.</p>
+
+<p>Now recall Wednesday’s lecture (O4). Around Antarctica the westerly winds are very strong (Hartmann p. 225). In the Southern Hemisphere, Ekman transport is to the left of the wind, so the westerlies push the surface water <strong>north</strong>, away from Antarctica, and it is the same all the way round the continent. Something has to replace that water, and it can only come from below. The winds are strong enough to pull water up from a kilometre down and more. On Wednesday’s Ekman pumping map this was the band of upwelling south of about 50°S.</p>
+
+<p>Put the two together. The deep water from the North Atlantic flows south along its density surfaces at 2–3 km, and where those surfaces rise to meet the mixed layer, near 60°S, the wind-driven upwelling brings it back to the surface (Hartmann pp. 222, 225, after Marshall and Speer 2012). In the section you can see a tongue of this water rising towards the surface. <strong>The same wind physics as on Wednesday closes the mass ledger of the deep ocean.</strong></p>
+
+<p>What happens to the water once it is back at the surface?</p>
+
+<ul>
+  <li><strong>Part of it flows towards Antarctica</strong>, where it becomes very cold and, with brine from sea ice, dense enough to sink to the bottom again as Antarctic Bottom Water.</li>
+  <li><strong>Part of it is pushed north</strong>, by the same Ekman transport. It is less dense, and where Ekman transport converges, north of the westerlies, it is pushed down again to about 1 km. This is the fresh Antarctic Intermediate Water from yesterday (Hartmann pp. 222, 225–227). Water pushed down from the surface mixed layer like this is said to be <strong>subducted</strong>, the same word geologists use for one tectonic plate sliding beneath another. Water keeps piling up and being pushed down there, so it has to keep moving, and it flows north.</li>
+</ul>
+
+<p>Hartmann sums it up: the Southern Ocean is the key region both for forming bottom water and for bringing deep water back to the surface (p. 225).</p>
+
+<p><strong>An analogy (ours).</strong> Water sinks in one place, travels at depth, is pulled up somewhere else and returns at the surface: this is an overturning cell, a bit like the atmosphere’s <a href="https://en.wikipedia.org/wiki/Hadley_cell">Hadley cell</a>. The physics that drives it is different. And there is a bigger difference: the Hadley circulation comes as a pair of cells, roughly mirror images on either side of the equator. The Atlantic overturning is <strong>one</strong> loop that runs from the Southern Ocean to the far North Atlantic and back.</p>
+
+<h2 id="6-the-amoc-and-why-the-itcz-is-north-of-the-equator">6. The AMOC, and why the ITCZ is north of the equator</h2>
+
+<p>This loop is the <strong>Atlantic Meridional Overturning Circulation</strong>, the <a href="https://en.wikipedia.org/wiki/Atlantic_meridional_overturning_circulation">AMOC</a>, one of the most popular acronyms in climate science. Some vocabulary: <strong>meridional</strong> means across latitudes (north–south, along the meridians); <strong>zonal</strong> means along latitudes (east–west). The trade winds are mostly zonal; the Hadley cell is mostly meridional.</p>
+
+<p>Unlike the Hadley cells, which move heat towards both poles, the AMOC moves heat <strong>from one hemisphere to the other</strong>. Warm surface water flows north through the whole Atlantic, and cold deep water flows south. So the Atlantic carries heat <strong>northward everywhere, even south of the equator</strong> (Stewart p. 214). Stewart’s rough sum: the Gulf Stream carries 40 Sv of 18 °C water north, and 14 Sv of it returns south in the deep western boundary current at 2 °C, so the Atlantic north of 24°N must lose about 0.9 petawatts to the atmosphere (1 PW = 10¹⁵ W), close to a more careful estimate of 1.2 ± 0.2 PW (p. 214). Here 1 Sv (a <a href="https://en.wikipedia.org/wiki/Sverdrup">sverdrup</a>) is a million cubic metres of water a second.</p>
+
+<p><strong>Back to a question from one of the first classes:</strong> why is the <a href="https://en.wikipedia.org/wiki/Intertropical_Convergence_Zone">ITCZ</a> north of the equator, on average? This ocean heat transport is thought to be a large part of the answer. By carrying heat from the Southern Hemisphere to the Northern, it keeps the Northern Hemisphere warmer on average. The Hadley circulation carries energy from the tropics towards the poles, and its rising branch, the ITCZ, sits on the warmer side, so that the atmosphere carries some of that extra heat back across the equator to the colder hemisphere. The ocean moves heat north across the equator; the ITCZ shifts north so that the atmosphere can move some of it back.</p>
+
+<p>So a circulation that changes how energy is shared between the hemispheres has consequences far beyond the Atlantic. That is why the AMOC is one of the most intensively studied features of the ocean.</p>
+
+<h2 id="7-a-thousand-year-memory">7. A thousand-year memory</h2>
+
+<p>Put a drop of water into the sinking region of the North Atlantic. How long before it is back at the surface? The time to replace the deep ocean’s water is about <strong>a thousand years</strong> (Hartmann p. 225, who calls it the ocean’s <em>turnover time</em>). This is the ocean’s long memory: whatever the deep water carries with it when it sinks, it keeps for centuries.</p>
+
+<p>That includes carbon dioxide. Cold water holds more dissolved CO₂ than warm water. The ocean holds about 50 times as much carbon as the atmosphere, and the cold deep water is where most of its dissolved CO₂ is stored (Stewart pp. 212–213). CO₂ taken up by water that sinks in the North Atlantic is out of contact with the atmosphere for centuries. And the deep water now coming back up has not seen the atmosphere for centuries either, so it doesn’t yet “know” about today’s CO₂. The ocean and the atmosphere are far from balance at the moment, and it will take the ocean’s turnover time for them to settle. This is one reason why some climate scientists worry more about CO₂ than about methane. Methane is a more powerful greenhouse gas molecule for molecule, but it is broken down in the atmosphere within about a decade (<a href="https://en.wikipedia.org/wiki/Atmospheric_methane">atmospheric methane</a>). The extra CO₂ goes on warming for as long as it stays, and warming adds up over time.</p>
+
+<p><strong>How do we know how old the water is?</strong> By tracers that change at a known rate once water leaves the surface. Oxygen is one: below the surface it is used up by living things, so the more depleted it is, the longer the water has been away from the air (Hartmann pp. 221–222). The difficulty is that the rate depends on how much life there is, and very old water may have little oxygen left. So oceanographers also use <strong>radiocarbon</strong> (carbon-14), which decays at a precisely known rate, and man-made gases such as <strong>CFCs</strong>, which entered the atmosphere from the mid-twentieth century and so mark water that was at the surface since then (Hartmann p. 224). You will meet isotope tracers like these again later in the course, in geochemistry and paleoclimate.</p>
+
+<p>Where is the oldest water? See “Read this part”.</p>
+
+<h2 id="8-measuring-it-rapid">8. Measuring it: RAPID</h2>
+
+<p>Since 2004 a line of <strong>moorings</strong> has measured the overturning across the whole Atlantic at <strong>26.5°N</strong>, from Florida to Africa: the <a href="https://rapid.ac.uk/">RAPID</a> array. A mooring is an anchor on the sea floor and a long cable held up by a buoy, with instruments, including current meters, fixed at different depths. Cable measurements of the Florida Current and satellite winds add the rest.</p>
+
+<p>Over twenty years (April 2004 to March 2024) the northward flow in the upper ocean has averaged <strong>17 Sv</strong>. It is never still: the 10-day values range from about −4 to 32 Sv, and yearly means from about 15 Sv (2009) to 19 Sv (2006). There are no small numbers in the ocean.</p>
+
+<h2 id="9-can-it-switch-off-stommels-two-boxes">9. Can it switch off? Stommel’s two boxes</h2>
+
+<p><em>This section goes well beyond what we did in class.</em></p>
+
+<h3 id="91-the-idea-in-words">9.1 The idea in words</h3>
+
+<p>Here is the picture from class. In the subtropics, evaporation makes the surface water salty. The ocean carries that salty water north. On the way it cools, and rain and rivers freshen it a little. Eventually it is dense enough to sink, and it returns south at depth. From §4, <strong>it sinks because it is salty</strong>: the temperatures in the far north of both oceans are about the same, but the salt is not.</p>
+
+<p>Now suppose more fresh water reaches the far North Atlantic, say near Greenland. The surface there gets lighter, so less of it sinks and the overturning weakens. A weaker overturning brings less salty water north, so the north gets fresher still, and the overturning weakens further. This is a <strong>positive feedback</strong>: a change that produces more of itself. Push it far enough and the overturning could stop.</p>
+
+<p>To see when “far enough” is, and what happens next, we need a model. The simplest is a pair of boxes, after the oceanographer <a href="https://en.wikipedia.org/wiki/Henry_Stommel">Henry Stommel</a>, who first studied this kind of model in 1961. The version below is simplified further, and the working is ours.</p>
+
+<h3 id="92-two-boxes">9.2 Two boxes</h3>
+
+<p><img src="nb_boxes.svg" alt="Two boxes of ocean water. Box 1, the low latitudes, is warm and salty, with temperature T1 and salinity S1. Box 2, the high latitudes, is cold and fresher, with T2 and S2. Fresh water F evaporates from box 1 and is carried by the air to rain out over box 2. The ocean flow q runs from box 1 to box 2 at the surface, sinks in box 2 and returns at depth." /></p>
+
+<p class="caption">Figure 1. The two boxes and the symbols used below. Our drawing.</p>
+
+<p><strong>Box 1</strong> is the low latitudes, warm and salty, with temperature T₁ and salinity S₁. <strong>Box 2</strong> is the high latitudes, cold and fresher, with T₂ and S₂. The two boxes have the same volume V. Two things connect them:</p>
+
+<ul>
+  <li><strong>The atmosphere</strong> takes fresh water out of box 1 by evaporation and rains it into box 2, at a rate F (cubic metres of water per second).</li>
+  <li><strong>The ocean</strong> circulates between them at a rate q (also in cubic metres per second): along the surface from box 1 to box 2, down in box 2, and back at depth. Positive q means water sinks in the cold box, as in today’s Atlantic.</li>
+</ul>
+
+<p>We make three assumptions.</p>
+
+<p><strong>(1) The temperatures are fixed.</strong> The atmosphere sets the surface temperature of each box, quickly and firmly, by exchanging heat with it. So T₁ and T₂ don’t change. Salinity is different: nothing in the atmosphere responds to the salinity of the sea, so the salinities are free to change.</p>
+
+<p><strong>(2) Density depends on temperature and salinity in a simple way.</strong> From O5, warming makes water lighter and salt makes it heavier. In the model we take each effect to be proportional:</p>
+
+<blockquote>
+  <p>ρ = ρ₀ (1 − αT + βS)</p>
+</blockquote>
+
+<p>where ρ₀ is a reference density, α (alpha) is how much lighter water gets per degree of warming, and β (beta) is how much heavier it gets per gram of salt per kilogram. The table in the O5 notes gave you ρ₀α and ρ₀β near freezing: about 0.054 kg/m³ per °C and 0.80 kg/m³ per g/kg. (The real equation of state is curved; this is a straight-line approximation to it.)</p>
+
+<p>Write the contrasts between the boxes as <strong>ΔT = T₁ − T₂</strong> (positive: box 1 is warmer) and <strong>ΔS = S₁ − S₂</strong> (positive when box 1 is saltier). Then the cold box is denser than the warm box by</p>
+
+<blockquote>
+  <p>ρ₂ − ρ₁ = ρ₀ (αΔT − βΔS)</p>
+</blockquote>
+
+<p>The temperature contrast makes the cold box <strong>heavier</strong>. The salt contrast makes it <strong>lighter</strong>, because box 2 is the fresher one. The two contrasts work against each other.</p>
+
+<p><strong>(3) The flow is proportional to the density difference.</strong> The denser the cold box is compared with the warm one, the harder its water sinks and the faster the loop turns:</p>
+
+<blockquote>
+  <p>q = k (αΔT − βΔS)</p>
+</blockquote>
+
+<p>Here k is a constant that says how easily the water flows. This is the model’s boldest assumption: it says that the flow is driven by density differences alone (we come back to that in §9.9). Note what this equation already says. If salt cancelled the temperature contrast exactly (βΔS = αΔT), there would be no flow. If the salt contrast were even larger, q would be negative: the flow would run backwards, sinking in the warm, salty box.</p>
+
+<h3 id="93-the-salt-ledger">9.3 The salt ledger</h3>
+
+<p>Temperatures are fixed, so the only ledger we need is salt. Keep the accountant’s hat on and write the salt budget of box 2:</p>
+
+<blockquote>
+  <p>V dS₂/dt = |q| (S₁ − S₂) − F S₀</p>
+</blockquote>
+
+<p>Term by term:</p>
+
+<ul>
+  <li><strong>V dS₂/dt</strong> is the change in box 2’s salt: its volume times the rate at which its salinity changes.</li>
+  <li><strong>|q| (S₁ − S₂)</strong>: the ocean flow brings water of salinity S₁ into box 2 and takes water of salinity S₂ out, at the rate q. The net salt brought in is q times the difference. If the loop ran backwards, water would still go in at S₁ and out at S₂, just by the other path. So only the size of q matters, written |q| (the absolute value). The flow always <strong>wipes out the contrast</strong>.</li>
+  <li><strong>− F S₀</strong>: the rain adds fresh water but no salt. Adding fresh water at the rate F dilutes the box exactly as much as removing salt at the rate F S₀ would, where S₀ (about 35 g/kg) is a typical salinity. Modellers use this trick so that the volume of the box can stay fixed.</li>
+</ul>
+
+<p>Box 1’s budget is the mirror image: the flow brings it fresher water, and evaporation concentrates its salt. Subtract one from the other and we get the budget for the contrast:</p>
+
+<blockquote>
+  <p>V dΔS/dt = 2 (F S₀ − |q| ΔS)</p>
+</blockquote>
+
+<p>This is the whole model in one line. <strong>The atmosphere builds the salt contrast</strong> (evaporating from box 1 and raining into box 2), and <strong>the ocean’s flow wipes it out</strong> (by carrying salty water north and fresher water south).</p>
+
+<h3 id="94-the-steady-state-and-the-feedback-in-it">9.4 The steady state, and the feedback in it</h3>
+
+<p>In a steady state, the salt contrast doesn’t change, so the two terms balance:</p>
+
+<blockquote>
+  <p>|q| ΔS = F S₀</p>
+</blockquote>
+
+<p>In words: <strong>the flow must carry exactly as much salt north as the rain would wash out.</strong></p>
+
+<p>This looks simple, but q depends on ΔS through assumption (3). The salt contrast sets the flow, and the flow sets the salt contrast. That is the feedback loop from §9.1, now written as an equation.</p>
+
+<h3 id="95-getting-rid-of-the-units">9.5 Getting rid of the units</h3>
+
+<p>The equation has a lot of constants in it: k, α, β, ΔT, S₀. They can all be swept into two numbers.</p>
+
+<ul>
+  <li>Let <strong>y = βΔS / (αΔT)</strong>. This is the <strong>salt contrast</strong>, measured as the fraction of the temperature’s density contrast that salt cancels. At y = 0 the boxes have the same salinity; at y = 1 salt cancels the temperature contrast completely.</li>
+  <li>Then the flow is q = kαΔT (1 − y). The overturning, in units of kαΔT (the flow you would get with no salt contrast at all), is simply <strong>1 − y</strong>.</li>
+  <li>Put both into the steady-state balance. With a line of algebra (try it), it becomes</li>
+</ul>
+
+<blockquote>
+  <p>y × |1 − y| = E,  where  E = β S₀ F / (k α² ΔT²)</p>
+</blockquote>
+
+<p>E is the <strong>fresh-water forcing</strong>, F, measured in the model’s own units. Everything else in that fraction is fixed, so turning up E means turning up the fresh water reaching the north.</p>
+
+<p>That is why the figures have no units: only the combinations y and E matter, and <strong>the shape is the point</strong>. The model can’t tell us how many sverdrups of fresh water the real Atlantic could take. It can tell us what kind of behaviour to expect.</p>
+
+<h3 id="96-solving-it-by-eye">9.6 Solving it by eye</h3>
+
+<p><img src="nb_balance.svg" alt="The salt the flow carries, y times the absolute value of 1 minus y, plotted against the salt contrast y. It rises to a hump with a peak of one quarter at y equals one half, falls to zero at y equals one, and rises steeply after that. A horizontal line at fresh water E equals 0.15 crosses it three times: at y equals 0.18 (on), at 0.82 (unstable) and at 1.13 (reversed). Arrows along the line point towards the on and reversed states and away from the unstable one. A higher dashed line at E equals 0.34 crosses the curve only once, on the reversed side." /></p>
+
+<p class="caption">Figure 2. The steady salt balance, solved by eye. The curve is what the flow carries north; a horizontal line is what the fresh water does. Every crossing is a steady state. Our calculation.</p>
+
+<p>The left-hand side, y × |1 − y|, is <strong>the salt the flow carries per second</strong>. Plot it against y (Figure 2, the purple curve):</p>
+
+<ul>
+  <li><strong>At small y</strong>, the flow is strong but there is little salt contrast for it to carry, so it carries little salt.</li>
+  <li><strong>Near y = 1</strong>, the contrast is large but there is almost no flow, so again it carries little.</li>
+  <li><strong>In between</strong>, it carries the most. The product peaks at <strong>y = ½</strong>, where it is <strong>¼</strong>. That hump matters most.</li>
+  <li><strong>Beyond y = 1</strong>, the flow has reversed. It gets stronger as the salt contrast grows, so the salt it carries rises steeply again.</li>
+</ul>
+
+<p>The right-hand side, E, is a <strong>horizontal line</strong>: the fresh water doesn’t depend on y. <strong>A steady state is any place where the line crosses the curve.</strong></p>
+
+<p>Take E = 0.15 (the solid line). It crosses three times:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Salt contrast y</th>
+      <th>Overturning 1 − y</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>On</td>
+      <td>0.18</td>
+      <td>0.82</td>
+      <td>sinking in the cold box, as today</td>
+    </tr>
+    <tr>
+      <td>Unstable</td>
+      <td>0.82</td>
+      <td>0.18</td>
+      <td>weak</td>
+    </tr>
+    <tr>
+      <td>Reversed</td>
+      <td>1.13</td>
+      <td>−0.13</td>
+      <td>weak, and backwards</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now raise the fresh water past E = ¼, the top of the hump (the dashed line at E = 0.34). The line no longer touches the left part of the curve at all. <strong>The “on” state no longer exists.</strong> Only the reversed one is left.</p>
+
+<h3 id="97-which-states-last-the-two-feedbacks">9.7 Which states last? The two feedbacks</h3>
+
+<p>A steady state is only interesting if the system stays there when something nudges it. Go back to the budget of §9.3. In the model’s units it says that the salt contrast changes at a rate proportional to</p>
+
+<blockquote>
+  <p>E − y × |1 − y|</p>
+</blockquote>
+
+<p>that is, the fresh water building the contrast minus the flow wiping it out. So:</p>
+
+<ul>
+  <li>Where the curve is <strong>below</strong> the line, the atmosphere builds the contrast faster than the flow removes it: y <strong>grows</strong> (arrows pointing right in Figure 2).</li>
+  <li>Where the curve is <strong>above</strong> the line, the flow wins: y <strong>shrinks</strong> (arrows pointing left).</li>
+</ul>
+
+<p>Follow the arrows. They point <strong>towards</strong> the “on” and the “reversed” states, and <strong>away from</strong> the unstable one. Nudge the “on” state and it comes back; nudge the unstable state and it runs away to one of the others.</p>
+
+<p>Here is the physics behind the arrows. Two feedbacks are acting all the time, and the hump shows which one wins.</p>
+
+<ul>
+  <li><strong>On the rising side of the hump</strong> (y below ½): suppose a little extra rain makes the north fresher, so the salt contrast grows. The flow weakens a little, but the contrast it is carrying has grown by more, so the flow carries <strong>more</strong> salt north and wipes the extra contrast out. A <strong>negative feedback</strong> wins: the state is stable. This is the “on” state.</li>
+  <li><strong>On the falling side</strong> (y between ½ and 1): the same nudge weakens the flow so much that it carries <strong>less</strong> salt north, so the north gets fresher still. The <strong>positive feedback</strong> of §9.1 wins, and the state runs away.</li>
+</ul>
+
+<p>So the positive feedback from class is real, but it takes over only past the top of the hump. That is why an overturning can weaken for a long time and then, quite suddenly, collapse.</p>
+
+<h3 id="98-the-figure-from-the-slides">9.8 The figure from the slides</h3>
+
+<p><img src="nb_curve.svg" alt="The overturning strength plotted against the fresh water added in the north. An orange upper branch, labelled on, slopes gently down from left to right and ends at a nose. A dashed grey unstable branch curves back from the nose to zero overturning at zero fresh water. A teal lower branch, labelled off: weak or reversed, runs below zero to the right. A vertical dashed line at E equals 0.15 crosses the three branches at overturning 0.82, 0.18 and minus 0.13." /></p>
+
+<p class="caption">Figure 3. The figure from the slides, with the three states for E = 0.15 marked. Our calculation.</p>
+
+<p>The slide plotted the same steady states the other way round: <strong>the overturning, 1 − y, up the side, against the fresh water, E, along the bottom.</strong> Each point on the curve is a crossing from Figure 2. A vertical line at E = 0.15 cuts the curve three times, at the same three states: 0.82, 0.18 and −0.13 (Figure 3).</p>
+
+<p>How to read it:</p>
+
+<ul>
+  <li><strong>The orange upper branch is “on”</strong>, the overturning running as it does today. It is the left-hand crossing of Figure 2.</li>
+  <li><strong>The grey dashed middle branch is unstable.</strong> The system never sits there; it marks the dividing line between the two stable states.</li>
+  <li><strong>The teal lower branch is “off”</strong>: in this model, weak and running backwards.</li>
+  <li><strong>The vertical line at zero</strong> is no fresh water at all. To its left the north is being made saltier rather than fresher.</li>
+  <li><strong>The upper branch ends at a “nose”</strong>, at E = ¼ and an overturning of ½. That is the top of the hump in Figure 2, where the stable and unstable states meet and vanish. Points like this are what people mean by a <a href="https://en.wikipedia.org/wiki/Tipping_points_in_the_climate_system">tipping point</a>.</li>
+  <li><strong>Between zero and the nose</strong>, two stable states exist for the same fresh water. Which one you are in depends on your history.</li>
+</ul>
+
+<p>Where is today’s Atlantic on this curve? Somewhere on the upper branch. How far from the nose, nobody knows well: that is the real question, and this toy can’t answer it.</p>
+
+<h3 id="99-walking-the-hysteresis-loop">9.9 Walking the hysteresis loop</h3>
+
+<p><img src="nb_hyst.svg" alt="The same curve as Figure 3, with a path drawn on it in four steps: 1, along the upper branch to the nose, labelled the edge; 2, a drop straight down to the lower branch; 3, back to the left along the lower branch, labelled take the fresh water away: still off; 4, up to the upper branch only when the north is saltier than at the start." /></p>
+
+<p class="caption">Figure 4. The figure from the slides, with the hysteresis path. Our calculation.</p>
+
+<p>Now do the experiment from class. Start on the upper branch with a little fresh water, and add more, very slowly (Figure 4).</p>
+
+<ol>
+  <li><strong>Freshen slowly.</strong> The state slides along the upper branch. The overturning weakens, from 1 with no fresh water to ½ at the nose. It gets weaker, but it doesn’t fade to zero: <strong>weakening is not the same as stopping.</strong></li>
+  <li><strong>Pass the edge.</strong> Beyond E = ¼ there is no “on” state left (Figure 2). The system has nowhere to go but down, to the lower branch: the overturning drops from +0.5 to about −0.2, from running to reversed. In the model the switch is abrupt. The response is not proportional to the push: the last small amount of fresh water does almost all of the damage. Only a <strong>nonlinear</strong> system can do this; in a linear one the response is always proportional to the forcing.</li>
+  <li><strong>Take the fresh water away again.</strong> The system doesn’t retrace its path. It stays on the lower branch, still off, all the way back to zero fresh water. In Figure 2, the reversed crossing exists for every positive E.</li>
+  <li><strong>Only when the north is made saltier than it was with no fresh water at all</strong> (E below zero) does the “off” state vanish, and the overturning comes back on.</li>
+</ol>
+
+<p>This path dependence is called <a href="https://en.wikipedia.org/wiki/Hysteresis">hysteresis</a>: where you end up depends on how you got there. You may have met it in magnets. Stewart describes the same behaviour for the real overturning, after the model studies of Rahmstorf (1995): once the circulation has shut off, a return to normal salinity is not enough to turn it on again; surface waters “must become saltier than average for the first state to return” (Stewart p. 218, Fig. 13.3, which draws the same loop with salinity and temperature as the axes). It is the same structure as the two stable states of a snowball Earth, earlier in the course: two stable states, a tipping point, and no easy way back.</p>
+
+<p>How sensitive is the real thing? In Rahmstorf’s model, a change of only ±0.1 Sv in the fresh water reaching the North Atlantic could switch a 14 Sv circulation on or off (Stewart p. 215). For scale (our comparison), the atmosphere already carries about 0.32 Sv of fresh water from the Atlantic to the Pacific (O5 notes, §4).</p>
+
+<h3 id="910-what-the-toy-leaves-out">9.10 What the toy leaves out</h3>
+
+<p>The two-box model is a cartoon, built to show one feedback clearly. Keep its limits in mind:</p>
+
+<ul>
+  <li><strong>The temperatures are fixed.</strong> In reality, a weaker overturning brings less heat north, so the north cools, and cooling makes its water denser. That pushes back against the salt feedback, and the atmosphere’s winds and rain change too.</li>
+  <li><strong>The flow is driven by density alone.</strong> §5 showed that in the real ocean, the Southern Ocean’s winds do much of the work of bringing deep water back up. That is exactly why oceanographers stopped calling it “thermohaline” (Stewart p. 212), and it may make the real overturning more or less stable than the toy suggests.</li>
+  <li><strong>“Off” in the real ocean is not a reversed flow.</strong> Stewart describes the second stable state as one in which deep water forms mostly near Antarctica, and water upwells in the far North Atlantic as it does in the North Pacific today (p. 218).</li>
+  <li><strong>The constants are unknown.</strong> The model can’t say how close the real Atlantic is to the nose. For that, climate scientists use full climate models, observations such as RAPID, and the record of the past.</li>
+</ul>
+
+<h2 id="10-could-it-happen">10. Could it happen?</h2>
+
+<p>How would fresh water be added to the far North Atlantic? Global warming does it in two ways. A warmer atmosphere holds more water vapour, so more rain falls at high latitudes. And warming melts the ice sheets, above all Greenland’s, pouring fresh water into the sea.</p>
+
+<p>It has happened before, without any help from us. During the last ice age, the climate around the North Atlantic changed abruptly many times. About 11,500 years ago, temperatures over Greenland rose by about 8 °C in 40 years (Stewart p. 216, after Alley 2000). In <a href="https://en.wikipedia.org/wiki/Heinrich_event">Heinrich events</a>, huge numbers of icebergs broke off into the North Atlantic; their melt water is thought to have shut down the formation of North Atlantic Deep Water, leaving the North Atlantic very cold (Stewart pp. 216–218, Fig. 13.2). Exactly what triggered these changes is still argued over (Stewart p. 218). But they show that the overturning has changed quickly before: within decades, which is fast for climate.</p>
+
+<p><strong>Is it happening now?</strong> There is no conclusive answer. The scientific consensus is the IPCC’s: the AMOC “is very likely to weaken over the 21st century for all emissions scenarios”, but there is “medium confidence that there will not be an abrupt collapse before 2100” (IPCC AR6 WGI, Summary for Policymakers, C.3.4).</p>
+
+<p><strong>What would a collapse change?</strong> Go back to §6. The AMOC is what makes the ocean carry heat from the Southern Hemisphere to the Northern. Without it, the ITCZ no longer needs to sit north of the equator to carry some of that heat back, and it would be expected to shift south. The Indian monsoon is, in effect, the ITCZ moving north over South Asia in summer; with the ITCZ pulled south, that becomes harder. Nobody knows this from observation; it comes from climate models. If a collapse did happen, the IPCC expects changes such as “a southward shift in the tropical rain belt, weakening of the African and Asian monsoons and strengthening of Southern Hemisphere monsoons, and drying in Europe” (same paragraph, C.3.4). The Asian monsoon is ours.</p>
+
+<h2 id="read-this-part-what-we-didnt-cover-in-class">Read this part: what we didn’t cover in class</h2>
+
+<h3 id="how-much-water-sinks">How much water sinks</h3>
+
+<p>Hartmann estimates that deep water forms at about <strong>15–20 Sv</strong> in the North Atlantic and about <strong>10 Sv</strong> around Antarctica (p. 230). Compare the Gulf Stream, about 30 Sv off Florida (p. 229), and the Antarctic Circumpolar Current, about 125 Sv through Drake Passage (p. 225). So the overturning moves less water than the Gulf Stream, but it <strong>fills the whole deep ocean</strong>. One caution when you read p. 230: Hartmann says the deep circulation is “more than a factor of ten smaller” than the western boundary currents, but his own figures, about 30 Sv each for the Gulf Stream and the Kuroshio, make it only about three to four times smaller.</p>
+
+<h3 id="where-the-oldest-water-is">Where the oldest water is</h3>
+
+<p>Not at the bottom near Antarctica, as you might guess, but at <strong>intermediate depths in the North Pacific</strong>, the farthest from both places where deep water forms (Hartmann p. 225). That fits the oxygen: in the deep North Pacific the oxygen saturation is only about 10–15%, where at the same latitudes and depths in the North Atlantic it is about 85% (Hartmann p. 222). And the fact that the oldest water is <em>not</em> at the bottom is itself evidence for §2: deep water must slowly rise everywhere, as the mass ledger requires (Hartmann p. 225).</p>
+
+<h3 id="why-a-thousand-years-not-140">Why a thousand years, not 140</h3>
+
+<p>In week 2 we worked out a response time τ = C/λ, the heat capacity divided by how fast the surface loses heat. For the full 4,000 m of ocean, it came to about 140 years, <em>if</em> all of it were stirred together at once. It isn’t. The deep water is replaced only as fast as it sinks and comes back up, which takes about a thousand years. A round trip of a thousand years from the North Atlantic to the North Pacific means a mean deep flow of only about 1 mm/s (Stewart p. 222). This slow turnover is the slow brake on warming from the O3 notes. It is also why the Southern Ocean warms more slowly than the rest of the globe: the water rising there hasn’t been at the surface for centuries (Hartmann p. 227).</p>
+
+<h3 id="twenty-years-of-record-a-thousand-year-memory">Twenty years of record, a thousand-year memory</h3>
+
+<p>The RAPID record in §8 swings by tens of sverdrups from week to week and by several from year to year. What can twenty years tell us about a system with a thousand-year memory? Not yet much about a long-term trend. But it tells us a great deal about how the overturning works, and it gives a baseline to measure future change against. Stewart makes the same point about direct measurements of deep currents: the mean flow is tiny compared with the variable currents around it (p. 222).</p>
+
+<h3 id="sinking-and-convection-arent-the-same-thing">Sinking and convection aren’t the same thing</h3>
+
+<p>The sinking that matters for the mass ledger isn’t one plughole. <strong>Convection</strong>, where surface water becomes dense and overturns, happens in patches a few kilometres across. The sinking that carries water into the deep ocean is spread over much larger areas (Stewart p. 219).</p>
+
+<h2 id="why-this-matters-for-the-next-lecture">Why this matters for the next lecture</h2>
+
+<p>Next Wednesday (O7) is the last lecture of the ocean module: the ocean remembers, and the ocean is changing. It uses three results from today: the deep ocean takes about a thousand years to turn over, the Southern Ocean is where deep water meets the atmosphere again, and the overturning runs on a salt ledger that warming is changing.</p>
+
+<h2 id="key-terms">Key terms</h2>
+
+<p><strong>Mass ledger:</strong> what sinks must come back up. <strong>Overturning circulation:</strong> a loop in which water sinks in one place, moves at depth, and rises somewhere else. <strong>AMOC:</strong> the Atlantic Meridional Overturning Circulation. <strong>Meridional:</strong> across latitudes (north–south). <strong>Zonal:</strong> along latitudes (east–west). <strong>Thermohaline circulation</strong>, <strong>global conveyor belt:</strong> older names for the overturning. <strong>Isopycnal:</strong> a surface of constant density. <strong>Subduction:</strong> surface water pushed down below the mixed layer. <strong>Sverdrup (Sv):</strong> a million cubic metres of water a second. <strong>Turnover time:</strong> the time to replace the deep ocean’s water, about 1,000 years. <strong>Tracer:</strong> a property that tells you where water has been or how long ago it left the surface (oxygen, radiocarbon, CFCs). <strong>Mooring:</strong> instruments on a cable anchored to the sea floor. <strong>Box model:</strong> a model that treats large regions as well-mixed boxes connected by flows. <strong>Steady state</strong>, <strong>stable</strong> and <strong>unstable</strong> states. <strong>Positive feedback:</strong> a change that produces more of itself; <strong>negative feedback:</strong> one that undoes itself. <strong>Tipping point:</strong> where a stable state disappears. <strong>Hysteresis:</strong> when the path back is different from the path out. <strong>Nonlinear:</strong> when the response is not proportional to the push.</p>
+
+<h2 id="readings">Readings</h2>
+
+<p>All extracts are in the shared readings folder, under O6. The core readings add up to <strong>15 pages</strong>, all covered in class. Page numbers are the books’ printed pages.</p>
+
+<p><strong>Core: covered in class (15 pages)</strong></p>
+
+<ul>
+  <li>Hartmann, <em>Global Physical Climatology</em> (2nd ed., 2016), §7.6 “The Deep Thermohaline Circulation”, pp. 221–227 (7 pages). Start at the heading §7.6 on p. 221 (the top of the page finishes §7.5) and stop at §7.7 on p. 227. Pages 223 and 226 are full-page figures: the oxygen sections (Fig. 7.16) and the density sections with the flow drawn in (Fig. 7.17). Where deep water forms and why, how tracers date it, the thousand-year turnover, and the Southern Ocean’s double role (§§4, 5 and 7).</li>
+  <li>Stewart, <em>Introduction to Physical Oceanography</em> (2008), §§13.1–13.2 “Defining the Deep Circulation” and “Importance of the Deep Circulation”, pp. 211–218 (8 pages). Start at the beginning of Chapter 13 on p. 211 and stop at §13.3 on p. 219, which isn’t in the extract. Why “thermohaline” was dropped, the ocean as a carbon reservoir, the Atlantic’s heat transport, the sensitivity to fresh water, the ice-age record and the hysteresis loop (§§2, 6, 7, 9 and 10).</li>
+</ul>
+
+<p><strong>Read against the grain</strong></p>
+
+<ul>
+  <li>Stewart §13.3 “Theory for the Deep Circulation”, pp. 219–222 (4 pages; start at the heading §13.3 at the top of p. 219 and stop at §13.4 on p. 222). Skip the equations on pp. 219–220; read the opening list of ideas on p. 219 and “Some Comments on the Theory” on pp. 221–222. A warning: this is a <em>different</em> Stommel model (Stommel and Arons, on how the deep water spreads), not the two boxes of §9. <strong>The question to ask of it:</strong> Stewart says the deep circulation is driven by <em>mixing</em>, not by the sinking of cold water (p. 219). Hartmann defines it as the part of the circulation driven by <em>density</em> differences (p. 221). In class we said that the <em>wind</em> pulls the deep water back up in the Southern Ocean. Who is right? Can all three be partly right, and what would each one predict if it changed?</li>
+</ul>
+
+<p><strong>Optional</strong> (already in your folders)</p>
+
+<ul>
+  <li>Hartmann §7.8, pp. 229–230, on how much heat the gyres and the overturning each carry: in the O3 folder (<code class="language-plaintext highlighter-rouge">05_Optional_Hartmann2016_Ocean-Energy-Transport_pp227-231.pdf</code>). Read it with the caution above, under “How much water sinks”.</li>
+  <li>Stewart p. 229, the last paragraph before §13.5, on monitoring the overturning: the end of the O5 Stewart extract.</li>
+</ul>
+
+<h2 id="works-cited">Works cited</h2>
+
+<ul>
+  <li>Hartmann, D. L. (2016), <em>Global Physical Climatology</em>, 2nd ed., Elsevier.</li>
+  <li>Stewart, R. H. (2008), <em>Introduction to Physical Oceanography</em>, Texas A&amp;M University (CC BY-NC-SA).</li>
+  <li>IPCC (2021), Summary for Policymakers, in <em>Climate Change 2021: The Physical Science Basis</em>, contribution of Working Group I to the Sixth Assessment Report, Cambridge University Press. <a href="https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/">Online</a>.</li>
+  <li>RAPID AMOC observing project (NOC, NERC, NSF and NOAA), overturning time series at 26.5°N, version 2024.1a, <a href="https://rapid.ac.uk/">rapid.ac.uk</a>, doi:10.5285/48d0bf43-0598-ceb2-e063-7086abc062f1.</li>
+  <li>Salinity and temperature: the WOCE global hydrographic climatology, annual mean. Densities computed with TEOS-10 (the Gibbs SeaWater toolbox).</li>
+  <li>The two-box model in §9 and its figures: our own working, after Stommel’s idea.</li>
+</ul>
+
+<h2 id="questions-to-think-about">Questions to think about</h2>
+
+<ol>
+  <li>The mass ledger says that whatever sinks must come back up. Could the deep ocean instead slowly fill up, with the boundary between upper and deep ocean rising year by year? What would you look for in the data to rule that out?</li>
+  <li>Hartmann’s turnover time is about 1,000 years, and the overturning is about 15–20 Sv. Use those two numbers to estimate the volume of the deep ocean. Is your answer sensible? (The whole ocean is about 1.3 × 10¹⁸ m³.)</li>
+  <li>In §9.6, the “on” state for E = 0.15 had an overturning of 0.82. Work out the “on” state for E = 0.2 and E = 0.24. How much does the overturning weaken as you approach the edge, compared with how much it drops when it passes the edge?</li>
+  <li>In the two-box model, which way does the flow carry salt when it is reversed? Use the salt budget of §9.3 to explain why a reversed state is also stable.</li>
+  <li>Fixed temperatures are one of the model’s biggest simplifications. If the north cooled when the overturning weakened, would that make the “on” state more or less stable? Which feedback would it add to?</li>
+  <li><strong>In pairs (from the slides):</strong> Could the Atlantic overturning switch off? What would it change, and for whom? How would we know in time? Think about which way warming pushes the fresh-water ledger, who lives near the rain belts, and how long RAPID would need to watch.</li>
+</ol>
+
+  </main>
+  <footer><p><a href="../../../index.html">← All lectures and tutorials</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Three boxes of carbon: air, upper ocean, deep ocean (BEAM)</title><style>:root{--bg:#fcfcfb;--ink:#0b0b0b;--muted:#52514e;--grid:#e4e3df;--panel:#f3f2ee;--blue:#2a78d6;--orange:#eb6834;--aqua:#1baf7a;--red:#e34948;--violet:#6250d6;--gold:#c8961e}
+@media (prefers-color-scheme:dark){:root{--bg:#161616;--ink:#ececea;--muted:#a3a29d;--grid:#2e2e2c;--panel:#222221;--blue:#5aa0f0;--orange:#f58a5c;--aqua:#3fd09a;--red:#f26b6a;--violet:#8d7df0;--gold:#e3b445}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#app{max-width:1060px;margin:0 auto;padding:14px 16px 24px}
+h1{font-size:18px;margin:0 0 2px;font-weight:650}
+.desc{color:var(--muted);margin:0 0 10px;max-width:880px}
+.grid{display:grid;gap:10px}
+.cvw{position:relative;background:var(--bg);border:1px solid var(--grid);border-radius:8px;overflow:hidden}
+canvas{display:block;width:100%}
+.ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:6px 18px;margin:10px 0;padding:10px 12px;background:var(--panel);border-radius:8px}
+.row{display:grid;grid-template-columns:minmax(80px,38%) 1fr 64px;align-items:center;gap:8px}
+.row label{color:var(--muted);font-size:13px}
+.row .v{font:12px ui-monospace,Menlo,Consolas,monospace;text-align:right}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select,button{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--grid);border-radius:6px;padding:3px 8px}
+button{cursor:pointer}button:hover{border-color:var(--blue)}
+.sep{grid-column:1/-1;font-weight:600;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.out{margin-top:8px;padding:8px 12px;border-left:3px solid var(--blue);background:var(--panel);border-radius:0 6px 6px 0;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+.note{color:var(--muted);font-size:12px;margin-top:6px}
+.err{background:#fde;color:#900;padding:8px;border:1px solid #c00;border-radius:6px;margin:8px 0;font:12px monospace;white-space:pre-wrap}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+</style></head><body><div id=app></div><script>
+/* shared helpers for the vault's interactive tools: no external dependencies */
+const $=(s,r=document)=>r.querySelector(s);
+const M={
+  linspace(a,b,n){const o=new Array(n);for(let i=0;i<n;i++)o[i]=a+(b-a)*i/(n-1);return o},
+  range(n){return Array.from({length:n},(_,i)=>i)},
+  clamp(x,a,b){return Math.min(b,Math.max(a,x))},
+  sum(a){let s=0;for(const x of a)s+=x;return s},
+  rk4(f,y,t,dt){const n=y.length,k1=f(t,y),y2=y.map((v,i)=>v+.5*dt*k1[i]),k2=f(t+.5*dt,y2),y3=y.map((v,i)=>v+.5*dt*k2[i]),k3=f(t+.5*dt,y3),y4=y.map((v,i)=>v+dt*k3[i]),k4=f(t+dt,y4);return y.map((v,i)=>v+dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]))},
+  rng(seed){let a=seed>>>0||1;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}},
+  gauss(r){let u=0,v=0;while(!u)u=r();v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)},
+  erf(x){const s=Math.sign(x);x=Math.abs(x);const t=1/(1+0.3275911*x);const y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y},
+  fmt(x,d=3){if(!isFinite(x))return String(x);const a=Math.abs(x);if(a!==0&&(a>=1e5||a<1e-3))return x.toExponential(2);return Number(x.toPrecision(d)).toString()},
+  hypot:Math.hypot,
+  // complex numbers as [re,im]
+  cadd(a,b){return[a[0]+b[0],a[1]+b[1]]},cmul(a,b){return[a[0]*b[0]-a[1]*b[1],a[0]*b[1]+a[1]*b[0]]},cexp(t){return[Math.cos(t),Math.sin(t)]},
+  // eigen of symmetric 2x2
+  sym2(a,b,d){const m=(a+d)/2,r=Math.hypot((a-d)/2,b);return[m-r,m+r]},
+};
+function col(n){return getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim()}
+const C={get ink(){return col('ink')},get muted(){return col('muted')},get grid(){return col('grid')},get bg(){return col('bg')},get panel(){return col('panel')},
+ get blue(){return col('blue')},get orange(){return col('orange')},get aqua(){return col('aqua')},get red(){return col('red')},get violet(){return col('violet')},get gold(){return col('gold')}};
+class Plot{
+  constructor(canvas,o={}){this.c=canvas;this.o=Object.assign({xmin:0,xmax:1,ymin:0,ymax:1,xlabel:'',ylabel:'',title:'',grid:true,ml:54,mr:14,mt:24,mb:38,equal:false,axes:true},o);if(this.o.equal&&!o.ml){this.o.ml=this.o.mr=10;this.o.mt=this.o.mb=10}this.base={xmin:this.o.xmin,xmax:this.o.xmax,ymin:this.o.ymin,ymax:this.o.ymax};this.resize()}
+  equalize(){const o=this.o,b=this.base,pw=this.w-o.ml-o.mr,ph=this.h-o.mt-o.mb,sx=pw/(b.xmax-b.xmin),sy=ph/(b.ymax-b.ymin),s=Math.min(sx,sy),cx=(b.xmin+b.xmax)/2,cy=(b.ymin+b.ymax)/2;o.xmin=cx-pw/2/s;o.xmax=cx+pw/2/s;o.ymin=cy-ph/2/s;o.ymax=cy+ph/2/s}
+  set(o){Object.assign(this.o,o);let ch=false;for(const k of ['xmin','xmax','ymin','ymax'])if(k in o){this.base[k]=o[k];ch=true}if(ch&&this.o.equal)this.equalize()}
+  resize(){const d=window.devicePixelRatio||1,w=this.c.clientWidth||600,h=this.c.clientHeight||320;this.c.width=Math.round(w*d);this.c.height=Math.round(h*d);this.g=this.c.getContext('2d');this.g.setTransform(d,0,0,d,0,0);this.w=w;this.h=h;if(this.o.equal)this.equalize()}
+  X(x){const o=this.o,pw=this.w-o.ml-o.mr;return o.ml+(x-o.xmin)/(o.xmax-o.xmin)*pw}
+  Y(y){const o=this.o,ph=this.h-o.mt-o.mb;return this.h-o.mb-(y-o.ymin)/(o.ymax-o.ymin)*ph}
+  ix(px){const o=this.o;return o.xmin+(px-o.ml)/(this.w-o.ml-o.mr)*(o.xmax-o.xmin)}
+  iy(py){const o=this.o;return o.ymin+(this.h-o.mb-py)/(this.h-o.mt-o.mb)*(o.ymax-o.ymin)}
+  clear(){const g=this.g;g.save();g.setTransform(1,0,0,1,0,0);g.clearRect(0,0,this.c.width,this.c.height);g.restore();g.fillStyle=C.bg;g.fillRect(0,0,this.w,this.h);if(this.o.axes)this.drawAxes()}
+  ticks(a,b,n=6){const span=b-a,raw=span/n,p=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/p,st=(f<1.5?1:f<3?2:f<7?5:10)*p,out=[];for(let v=Math.ceil(a/st-1e-9)*st;v<=b+1e-9;v+=st)out.push(Math.abs(v)<st*1e-9?0:v);return out}
+  drawAxes(){const g=this.g,o=this.o;g.save();g.font='11px system-ui,sans-serif';g.lineWidth=1;
+    const xt=this.ticks(Math.min(o.xmin,o.xmax),Math.max(o.xmin,o.xmax)),yt=this.ticks(Math.min(o.ymin,o.ymax),Math.max(o.ymin,o.ymax));
+    if(o.grid){g.strokeStyle=C.grid;g.beginPath();for(const v of xt){const x=this.X(v);g.moveTo(x,o.mt);g.lineTo(x,this.h-o.mb)}for(const v of yt){const y=this.Y(v);g.moveTo(o.ml,y);g.lineTo(this.w-o.mr,y)}g.stroke()}
+    g.strokeStyle=C.muted;g.fillStyle=C.muted;g.beginPath();g.moveTo(o.ml,o.mt);g.lineTo(o.ml,this.h-o.mb);g.lineTo(this.w-o.mr,this.h-o.mb);g.stroke();
+    g.textAlign='center';g.textBaseline='top';for(const v of xt)g.fillText(M.fmt(v,3),this.X(v),this.h-o.mb+4);
+    g.textAlign='right';g.textBaseline='middle';for(const v of yt)g.fillText(M.fmt(v,3),o.ml-5,this.Y(v));
+    g.fillStyle=C.ink;g.textAlign='center';g.textBaseline='bottom';if(o.xlabel)g.fillText(o.xlabel,o.ml+(this.w-o.ml-o.mr)/2,this.h-3);
+    if(o.ylabel){g.save();g.translate(12,o.mt+(this.h-o.mt-o.mb)/2);g.rotate(-Math.PI/2);g.textBaseline='top';g.fillText(o.ylabel,0,0);g.restore()}
+    if(o.title){g.font='600 12px system-ui,sans-serif';g.textAlign='left';g.textBaseline='top';g.fillText(o.title,o.ml+4,4)}g.restore()}
+  clip(){const g=this.g,o=this.o;g.save();g.beginPath();g.rect(o.ml,o.mt,this.w-o.ml-o.mr,this.h-o.mt-o.mb);g.clip()}
+  unclip(){this.g.restore()}
+  line(xs,ys,color=C.blue,lw=2,dash=null){const g=this.g;this.clip();g.strokeStyle=color;g.lineWidth=lw;g.setLineDash(dash||[]);g.beginPath();let st=false;for(let i=0;i<xs.length;i++){const y=ys[i];if(!isFinite(y)){st=false;continue}const px=this.X(xs[i]),py=this.Y(y);if(!st){g.moveTo(px,py);st=true}else g.lineTo(px,py)}g.stroke();g.setLineDash([]);this.unclip()}
+  fn(f,color,lw,dash,n=400){const xs=M.linspace(this.o.xmin,this.o.xmax,n);this.line(xs,xs.map(f),color,lw,dash)}
+  dots(xs,ys,color=C.orange,r=3){const g=this.g;this.clip();g.fillStyle=color;for(let i=0;i<xs.length;i++){g.beginPath();g.arc(this.X(xs[i]),this.Y(ys[i]),r,0,7);g.fill()}this.unclip()}
+  dot(x,y,color=C.orange,r=5){this.dots([x],[y],color,r)}
+  vline(x,color=C.muted,dash=[4,3]){const g=this.g;g.save();g.strokeStyle=color;g.setLineDash(dash);g.beginPath();g.moveTo(this.X(x),this.o.mt);g.lineTo(this.X(x),this.h-this.o.mb);g.stroke();g.restore()}
+  hline(y,color=C.muted,dash=[4,3]){const g=this.g;g.save();g.strokeStyle=color;g.setLineDash(dash);g.beginPath();g.moveTo(this.o.ml,this.Y(y));g.lineTo(this.w-this.o.mr,this.Y(y));g.stroke();g.restore()}
+  text(s,x,y,color=C.ink,align='left',font='12px system-ui,sans-serif'){const g=this.g;g.save();g.fillStyle=color;g.font=font;g.textAlign=align;g.textBaseline='middle';g.fillText(s,this.X(x),this.Y(y));g.restore()}
+  ptext(s,px,py,color=C.ink,align='left',font='12px system-ui,sans-serif'){const g=this.g;g.save();g.fillStyle=color;g.font=font;g.textAlign=align;g.textBaseline='middle';g.fillText(s,px,py);g.restore()}
+  arrow(x0,y0,x1,y1,color=C.ink,lw=2,head=8){const g=this.g,a=this.X(x0),b=this.Y(y0),c=this.X(x1),d=this.Y(y1),th=Math.atan2(d-b,c-a);g.save();g.strokeStyle=color;g.fillStyle=color;g.lineWidth=lw;g.beginPath();g.moveTo(a,b);g.lineTo(c,d);g.stroke();g.beginPath();g.moveTo(c,d);g.lineTo(c-head*Math.cos(th-.4),d-head*Math.sin(th-.4));g.lineTo(c-head*Math.cos(th+.4),d-head*Math.sin(th+.4));g.closePath();g.fill();g.restore()}
+  area(xs,y1,y2,color){const g=this.g;this.clip();g.fillStyle=color;g.beginPath();for(let i=0;i<xs.length;i++)g[i?'lineTo':'moveTo'](this.X(xs[i]),this.Y(y1[i]));for(let i=xs.length-1;i>=0;i--)g.lineTo(this.X(xs[i]),this.Y(y2[i]));g.closePath();g.fill();this.unclip()}
+  poly(pts,fill,stroke,lw=1.5){const g=this.g;g.save();g.beginPath();pts.forEach((p,i)=>g[i?'lineTo':'moveTo'](this.X(p[0]),this.Y(p[1])));g.closePath();if(fill){g.fillStyle=fill;g.fill()}if(stroke){g.strokeStyle=stroke;g.lineWidth=lw;g.stroke()}g.restore()}
+  circle(x,y,rPix,fill,stroke,lw=1.5){const g=this.g;g.save();g.beginPath();g.arc(this.X(x),this.Y(y),rPix,0,7);if(fill){g.fillStyle=fill;g.fill()}if(stroke){g.strokeStyle=stroke;g.lineWidth=lw;g.stroke()}g.restore()}
+  legend(items,px,py){const g=this.g;g.save();g.font='12px system-ui,sans-serif';g.textBaseline='middle';let y=py;for(const [t,c,d] of items){g.strokeStyle=c;g.lineWidth=2.5;g.setLineDash(d||[]);g.beginPath();g.moveTo(px,y);g.lineTo(px+22,y);g.stroke();g.setLineDash([]);g.fillStyle=C.ink;g.textAlign='left';g.fillText(t,px+28,y);y+=16}g.restore()}
+  heat(f,nx,ny,cmap){const g=this.g,o=this.o;const w=(this.w-o.ml-o.mr)/nx,h=(this.h-o.mt-o.mb)/ny;for(let i=0;i<nx;i++)for(let j=0;j<ny;j++){const x=o.xmin+(i+.5)/nx*(o.xmax-o.xmin),y=o.ymin+(j+.5)/ny*(o.ymax-o.ymin);g.fillStyle=cmap(f(x,y));g.fillRect(o.ml+i*w,this.h-o.mb-(j+1)*h,w+1,h+1)}}
+}
+const cmaps={
+  div(v){v=M.clamp(v,-1,1);const t=Math.abs(v);if(v<0)return`rgb(${255-Math.round(190*t)},${255-Math.round(140*t)},255)`;return`rgb(255,${255-Math.round(150*t)},${255-Math.round(200*t)})`},
+  seq(v){v=M.clamp(v,0,1);return`rgb(${Math.round(250-200*v)},${Math.round(250-150*v*v)},${Math.round(255-120*v)})`},
+};
+const ui={
+  root:null,ctl:null,out:null,
+  init(title,desc){const a=document.getElementById('app');a.innerHTML='';const h=document.createElement('h1');h.textContent=title;const p=document.createElement('p');p.className='desc';p.innerHTML=desc||'';a.append(h,p);this.root=a;this.grid=null;this.ctl=null;this.out=null;this.plots=[];this.redraws=[];},
+  gridOf(cols,heights){const g=document.createElement('div');g.className='grid';g.style.gridTemplateColumns=`repeat(${cols},minmax(0,1fr))`;this.root.append(g);this.grid=g;return g},
+  canvas(h=320,opts={}){if(!this.grid)this.gridOf(1);const w=document.createElement('div');w.className='cvw';const c=document.createElement('canvas');c.style.height=h+'px';w.append(c);this.grid.append(w);const P=new Plot(c,opts);this.plots.push(P);return P},
+  controls(){if(!this.ctl){const d=document.createElement('div');d.className='ctl';this.root.append(d);this.ctl=d}return this.ctl},
+  sep(t){const d=document.createElement('div');d.className='sep';d.textContent=t;this.controls().append(d)},
+  slider(label,min,max,step,val,cb,fmt){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='range';i.min=min;i.max=max;i.step=step;i.value=val;const v=document.createElement('span');v.className='v';const o={get value(){return parseFloat(i.value)},set value(x){i.value=x;show()},el:i};const show=()=>{v.textContent=fmt?fmt(o.value):M.fmt(o.value,4)};i.addEventListener('input',()=>{show();cb&&cb(o.value)});show();r.append(l,i,v);this.controls().append(r);return o},
+  select(label,opts,cb,val){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const s=document.createElement('select');opts.forEach(([k,t])=>{const e=document.createElement('option');e.value=k;e.textContent=t;s.append(e)});if(val!==undefined)s.value=val;s.addEventListener('change',()=>cb&&cb(s.value));const sp=document.createElement('span');r.append(l,s,sp);this.controls().append(r);return{get value(){return s.value},set value(x){s.value=x},el:s}},
+  check(label,val,cb){const r=document.createElement('div');r.className='row';const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='checkbox';i.checked=!!val;i.addEventListener('change',()=>cb&&cb(i.checked));const sp=document.createElement('span');r.append(l,i,sp);this.controls().append(r);return{get value(){return i.checked},el:i}},
+  button(label,cb){let b=this.btns;if(!b){b=document.createElement('div');b.className='btns';this.root.append(b);this.btns=b}const e=document.createElement('button');e.textContent=label;e.addEventListener('click',cb);b.append(e);return e},
+  readout(){if(!this.out){const o=document.createElement('div');o.className='out';this.root.append(o);this.out=o}return this.out},
+  note(t){const n=document.createElement('div');n.className='note';n.innerHTML=t;this.root.append(n)},
+  onresize(f){this.redraws.push(f)},
+};
+window.addEventListener('resize',()=>{for(const P of ui.plots)P.resize();for(const f of ui.redraws)f()});
+function loop(step){let run=true,last=performance.now(),b=ui.button('pause',()=>{run=!run;b.textContent=run?'pause':'▶ play';if(run){last=performance.now();req()}});let id;function f(t){if(!run)return;const dt=Math.min(.05,Math.max(0,(t-last)/1000));last=t;step(dt,t/1000);id=requestAnimationFrame(f)}function req(){id=requestAnimationFrame(f)}req();return{toggle(){b.click()}}}
+window.addEventListener('error',e=>{const d=document.createElement('div');d.className='err';d.textContent='JS error: '+e.message+' ('+(e.filename||'').split('/').pop()+':'+e.lineno+')';(document.getElementById('app')||document.body).prepend(d)});
+
+(function(){
+const META={"title": "Three boxes of carbon: air, upper ocean, deep ocean (BEAM)", "desc": "The Bolin\u2013Eriksson three-box carbon model with Glotter et al.'s (2014) carbonate chemistry, as in Joy's O7 app: the air exchanges with the upper ocean (time 1/k_a) and the upper ocean with a deep ocean 50 times its volume (turnover \u03b4/k_d). The upper ocean's capacity A\u00b7B falls as it absorbs carbon (the Revelle factor). Drive it with the carbon that actually entered air and sea 1750\u20132024 (Global Carbon Budget 2025, via the app), continuing at 8.8 GtC/yr until a stop year, or with a single pulse; compare with Mauna Loa (dots).", "vault": "CL", "chapters": ["CL30 Tutorials III - Three Boxes of Carbon", "CL29 The Ocean's Ledger VI - Slow Swings and the Ocean's Memory for Carbon"], "tryit": "History, stop 2025: turnover 1000 yr reaches 480 ppm in 2024 (Mauna Loa 425); set 200 yr: 422 ppm, on the dots, and the settled level stays 334 ppm. Pulse 1000 vs 5000 GtC: 24 % vs 42 % stays in the air once settled; untick the chemistry: 1.6 % for both (measured while building, matching the handout).", "id": "cl_three_boxes"};ui.init(META.title,META.desc);
+const EMIS=[0.0, -0.0743, -0.0707, -0.0678, -0.0641, -0.0584, -0.0503, -0.0406, -0.0282, -0.0144, 0.0019, 0.0202, 0.0406, 0.0629, 0.0875, 0.1126, 0.1357, 0.1561, 0.1748, 0.1912, 0.205, 0.2166, 0.2264, 0.2336, 0.2387, 0.243, 0.2489, 0.257, 0.2666, 0.2782, 0.292, 0.3897, 0.4311, 0.4691, 0.5088, 0.5345, 0.567, 0.5906, 0.6107, 0.622, 0.6347, 0.6439, 0.6443, 0.6459, 0.6392, 0.6336, 0.6206, 0.6059, 0.5896, 0.5699, 0.554, 0.5356, 0.5164, 0.4961, 0.4746, 0.4514, 0.4273, 0.4019, 0.3752, 0.3474, 0.3184, 0.2829, 0.2512, 0.2184, 0.1795, 0.145, 0.1144, 0.0903, 0.0725, 0.0563, 0.0511, 0.0523, 0.0597, 0.0684, 0.0888, 0.1152, 0.1477, 0.1839, 0.2085, 0.2234, 0.2412, 0.2566, 0.2703, 0.2825, 0.2947, 0.3137, 0.3397, 0.3722, 0.4102, 0.4532, 0.4948, 0.5489, 0.5958, 0.6219, 0.623, 0.6013, 0.5724, 0.5291, 0.4807, 0.4181, 0.3534, 0.291, 0.2413, 0.1827, 0.1352, 0.1173, 0.119, 0.1361, 0.1593, 0.1838, 0.2145, 0.2579, 0.3137, 0.3729, 0.4359, 0.5107, 0.579, 0.638, 0.6873, 0.7272, 0.7528, 0.7749, 0.7853, 0.7826, 0.7677, 0.7445, 0.7324, 0.7403, 0.7587, 0.791, 0.8301, 0.8747, 0.9247, 0.9796, 1.0431, 1.1239, 1.1905, 1.2375, 1.2582, 1.2795, 1.2975, 1.2983, 1.2882, 1.2642, 1.2328, 1.1893, 1.1343, 1.0678, 1.0119, 0.9843, 0.9736, 0.9833, 1.0014, 1.0369, 1.0843, 1.1328, 1.1742, 1.21, 1.2385, 1.2589, 1.2698, 1.2956, 1.3299, 1.3715, 1.4003, 1.4299, 1.4447, 1.4534, 1.4488, 1.4257, 1.3994, 1.3811, 1.3673, 1.3693, 1.3732, 1.3854, 1.4, 1.4179, 1.4427, 1.455, 1.4575, 1.4583, 1.4625, 1.4607, 1.4571, 1.449, 1.433, 1.4129, 1.3879, 1.3455, 1.2806, 1.1916, 1.0985, 1.0034, 0.9296, 0.8858, 0.882, 0.8965, 0.9394, 0.9966, 1.0653, 1.1316, 1.2088, 1.2931, 1.38, 1.4702, 1.5592, 1.6644, 2.5479, 3.1541, 2.5917, 2.6816, 2.2587, 2.4772, 2.407, 3.792, 3.712, 2.5167, 3.4606, 4.2737, 3.7475, 2.9867, 4.7653, 4.6945, 2.9793, 4.1354, 3.702, 5.7888, 4.4438, 6.2015, 5.5803, 4.3827, 4.1293, 6.1219, 4.6956, 5.5327, 4.2124, 7.7388, 6.68, 5.2173, 4.7946, 3.9493, 4.0249, 5.0596, 5.8211, 6.5307, 4.5035, 6.5662, 8.4738, 5.0804, 4.8461, 6.031, 7.5026, 7.4555, 5.8882, 7.8696, 6.5019, 7.2206, 6.4744, 6.1897, 7.8458, 6.563, 8.0252, 8.1587, 7.3938, 9.4341, 9.3198, 7.6687, 8.2911, 8.5523, 8.1922, 8.1785, 7.9844, 9.0102, 11.3115],Y0=1750,RATE=8.794;
+const MLO=[[1959, 315.98], [1960, 316.91], [1961, 317.64], [1962, 318.45], [1963, 318.99], [1964, 319.62], [1965, 320.04], [1966, 321.37], [1967, 322.18], [1968, 323.05], [1969, 324.62], [1970, 325.68], [1971, 326.32], [1972, 327.46], [1973, 329.68], [1974, 330.19], [1975, 331.13], [1976, 332.03], [1977, 333.84], [1978, 335.41], [1979, 336.84], [1980, 338.76], [1981, 340.12], [1982, 341.48], [1983, 343.15], [1984, 344.87], [1985, 346.35], [1986, 347.61], [1987, 349.31], [1988, 351.69], [1989, 353.2], [1990, 354.45], [1991, 355.7], [1992, 356.54], [1993, 357.21], [1994, 358.96], [1995, 360.97], [1996, 362.74], [1997, 363.88], [1998, 366.84], [1999, 368.54], [2000, 369.71], [2001, 371.32], [2002, 373.45], [2003, 375.98], [2004, 377.7], [2005, 379.98], [2006, 382.09], [2007, 384.02], [2008, 385.83], [2009, 387.64], [2010, 390.1], [2011, 391.85], [2012, 394.06], [2013, 396.74], [2014, 398.81], [2015, 401.01], [2016, 404.41], [2017, 406.76], [2018, 408.72], [2019, 411.65], [2020, 414.21], [2021, 416.41], [2022, 418.53], [2023, 421.08], [2024, 424.61], [2025, 427.35]];
+
+const DELTA=50,KH=1.23e3,K1=8.00e-7,K2=4.53e-10,AM=1.77e20,OM=7.8e22,ALK=767.0,A=KH*AM/(OM/(DELTA+1)),GPP=2.124,MAT0=280*GPP;
+function hOf(m){const r=m/ALK,a=(2*r-1)*K1*K2,b=(r-1)*K1;return 1/((-b+Math.sqrt(b*b+4*a))/(2*a))}
+const Bof=h=>1/(1+K1/h+K1*K2/(h*h));
+function bis(f,lo,hi){let fl=f(lo);for(let i=0;i<200;i++){const m=(lo+hi)/2,fm=f(m);if((fm>0)===(fl>0)){lo=m;fl=fm}else hi=m}return(lo+hi)/2}
+const MUP0=bis(m=>A*Bof(hOf(m))*m-MAT0,300,3000),MLO0=DELTA*MUP0,B0=Bof(hOf(MUP0));
+const AB=(m,c)=>A*(c?Bof(hOf(m)):B0),ph=m=>-Math.log10(hOf(m));
+function settle(add,c){const tot=MAT0+MUP0+MLO0+add;const m=bis(x=>AB(x,c)*x+x*(1+DELTA)-tot,MUP0*0.5,MUP0*4);return AB(m,c)*m}
+ui.gridOf(2);const P=ui.canvas(300,{xmin:1850,xmax:2300,ymin:250,ymax:700,xlabel:'year',ylabel:'CO₂ (ppm)'}),Q=ui.canvas(300,{xmin:1850,xmax:2300,ymin:0,ymax:1,xlabel:'year',ylabel:'share of added carbon'});
+const mode=ui.select('what goes in',[['hist','our emissions (1750–2024), then 8.8 GtC/yr until the stop year'],['pulse','one pulse into a pre-industrial world']],draw,'hist');
+const sStop=ui.slider('emissions stop in (year)',2025,2200,5,2025,draw),sPulse=ui.slider('pulse (GtC)',100,5000,100,1000,draw),sTurn=ui.slider('deep-ocean turnover δ/k_d (years)',50,1500,50,1000,draw),sKa=ui.slider('air–sea exchange time 1/k_a (years)',1,20,1,5,draw),chem=ui.check('carbonate chemistry (the buffer)',true,draw),sEnd=ui.slider('show until (year after start)',100,3000,50,550,draw);
+const out=ui.readout();
+function sim(){const hist=mode.value==='hist',ka=1/sKa.value,kd=DELTA/sTurn.value,c=chem.value,stop=sStop.value,t0=hist?Y0:0,t1=t0+sEnd.value;
+ const em=t=>{if(!hist||t>=stop)return 0;const i=Math.floor(t-Y0);return i<EMIS.length?EMIS[i]:RATE};
+ let y=[MAT0+(hist?0:sPulse.value),MUP0,MLO0],t=t0;const T=[t],S=[y.slice()];
+ const f=(t,s)=>{const fa=ka*(s[0]-AB(s[1],c)*s[1]),fd=kd*(s[1]-s[2]/DELTA);return[em(t)-fa,fa-fd,fd]};
+ while(t<t1){const dm=1e-3*y[1],sl=(AB(y[1]+dm,c)*(y[1]+dm)-AB(y[1],c)*y[1])/dm;let h=Math.min(0.5,0.8/(ka*(1+sl)+kd*(1+1/DELTA)),t1-t);if(hist&&t<stop){h=Math.min(h,Math.floor(t+1e-9)+1-t,Math.max(stop-t,1e-6))}
+  const k1=f(t,y),k2=f(t+h/2,y.map((v,i)=>v+h/2*k1[i])),k3=f(t+h/2,y.map((v,i)=>v+h/2*k2[i])),k4=f(t+h,y.map((v,i)=>v+h*k3[i]));y=y.map((v,i)=>v+h*(k1[i]+2*k2[i]+2*k3[i]+k4[i])/6);t+=h;T.push(t);S.push(y.slice())}
+ let added=hist?0:sPulse.value;if(hist){EMIS.forEach((e,i)=>{if(Y0+i<stop)added+=e*Math.min(1,stop-(Y0+i))});added+=Math.max(0,stop-(Y0+EMIS.length))*RATE}
+ return{T,S,added,hist}}
+function draw(){const r=sim(),xs=r.T,co2=r.S.map(s=>s[0]/GPP);const set=settle(r.added,chem.value)/GPP;
+ const x0=r.hist?1850:0.0,x1=xs[xs.length-1];P.set({xmin:x0,xmax:x1,ymin:250,ymax:Math.max(450,Math.max(...co2)*1.05)});P.clear();P.hline(280,C.muted,[3,3]);P.hline(set,C.blue,[6,4]);P.line(xs,co2,C.red,2.4);
+ if(r.hist&&MLO.length){const mx=[],my=[];MLO.forEach(p=>{if(Array.isArray(p)){mx.push(p[0]);my.push(p[1])}});if(mx.length)P.dots(mx,my,C.ink,2.5)}
+ const add=r.S.map((s,i)=>{const d=s[0]-MAT0+s[1]-MUP0+s[2]-MLO0;return d>1e-6?d:NaN});Q.set({xmin:x0,xmax:x1});Q.clear();
+ Q.line(xs,r.S.map((s,i)=>(s[0]-MAT0)/add[i]),C.red,2);Q.line(xs,r.S.map((s,i)=>(s[1]-MUP0)/add[i]),C.aqua,2);Q.line(xs,r.S.map((s,i)=>(s[2]-MLO0)/add[i]),C.blue,2);Q.legend([['air',C.red],['upper ocean',C.aqua],['deep ocean',C.blue]],70,30);
+ const at=yr=>{let k=xs.findIndex(v=>v>=yr);return k<0?NaN:co2[k]};const peak=Math.max(...co2);const minph=Math.min(...r.S.map(s=>ph(s[1])));
+ out.textContent=(r.hist?`CO₂ in 2024: ${M.fmt(at(2024.5),3)} ppm (Mauna Loa 425).  `:'')+`Added ${M.fmt(r.added,4)} GtC; peak ${M.fmt(peak,3)} ppm; settles at ${M.fmt(set,3)} ppm (blue dashed; independent of the exchange times) = ${M.fmt((set*GPP-MAT0)/r.added*100,3)} % of the added carbon left in the air.  Lowest surface pH ${M.fmt(minph,3)} (pre-industrial ${M.fmt(ph(MUP0),3)}).`}
+draw();ui.note('CL30: dM_AT/dt = E − k_a(M_AT − A·B·M_UP), dM_UP/dt = k_a(…) − k_d(M_UP − M_LO/δ), dM_LO/dt = k_d(…). Constants: Glotter et al. (2014) Table 3 as listed in Joy\'s app (δ = 50, alkalinity 767 GtC); RK4 with adaptive steps. The settled level solves A·B(M_UP)·M_UP + (1+δ)M_UP = total. Data: the carbon that went into air or sea each year, Global Carbon Budget 2025 (from the app).');
+
+})();
+</script></body></html>

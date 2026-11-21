@@ -206,3 +206,19 @@ The prerequisites PA11–PA15 cite Lee's Appendix A (point-set topology) and the
 | `earth-and-climate/climate/lecture-notes-slides/Untitled presentation.pdf` (14 slides) | a student slide summary of the energy-transport and circulation lectures (poleward energy balance, desert OLR, zonal winds, angular momentum) | compared with [[CL10 Global Energy Balance and Meridional Structure]], [[CL11 Mean Meridional Circulation and Angular Momentum]], [[CL14 Observed Winds - Jets, Trades and the ITCZ]]: **no new content**, all covered; one joke/political slide ignored |
 | `introduction-to-probability/…week-4-notes.md`, `…week-5-notes.md`; `ph2113/…probability-current-ehrenfest-notes.md`, `…tutorial-vi-…md` | the other tool's notes of the same files (OCR/reconstructed) | cross-checked against the page images; two differences noted in [[QM06 The Oscillator Toolbox]] |
 | 8 loose Peano notes in `zettel/` | the other tool's concept notes | filed by `scripts/sort_zettel.py` (8 moved to PA16/PA10; the 12 duplicate slugs and `tautology` still await a hand merge) |
+
+## Added 2026-11-21: Classroom + Drive sync, course sites, Downloads, shared drive
+Fetched by `scripts/classroom_sync.py` (Classroom posts since 2026-11-05; per-topic provenance in each topic's `classroom-sources.json`, which also stores every post's text and every resource a post points to). Indexed, **not copied**, from the shared drive by `scripts/shared_drive_index.py` (each topic's `shared-drive-sources.md`).
+| Source (topic folder) | What | Used in |
+|---|---|---|
+| `earth-and-climate/landscapes-geomorphology/lecture-notes-slides/l_fluvial.pdf` | Argha's fluvial lectures deck (43 slides, 18 Nov) | LS03, LS21, LS22 §7.1, LS23 §11A, LS25 |
+| `earth-and-climate/landscapes-geomorphology/books/` Schuurman 2013, Liang 2023, Olsen CFD notes, SSIIM manual, `basin_cwc.kmz` | moved from ~/Downloads (not yet read) | Further Research queue |
+| `biology/eco-evo/08_Evolution_An Introduction/`, `09_Hardy_Weinberg/`, `10_Selection/`, `Putting it all together_13-11-2026.pdf` | BI2113 evolution lectures + mandatory readings (Futuyma Ch. 1, Templeton Ch. 2, Hartl & Clark pp. 74–80, Freeman & Herron Ch. 3; scans OCR'd) + practice set + wrap-up | EE08, EE09, EE10, course map wrap-up, Exam Prep §6 |
+| `physics/quantum-mechanics/lecture-notes-slides/Angular_momentum.pdf`, `Angular_momentum (2).pdf`, `Hydrogen_atom.pdf`, `tutorial7.pdf`, `circular_well_density.ipynb` | PH2113 2D/angular momentum, circular well, hydrogen, Tutorial VII | QM11, QM12 |
+| `earth-and-climate/climate/lecture-notes-slides/joy_intro_climate_science/` (site repo 3d86cd8: notes O1–O7, decks O6–O7, W3, carbon-boxes tutorial) and `books/joy_lecture_readings/` (Dropbox O1–O7 readings) | Joy's ocean module, completed | CL26 §9, CL29, CL30, Climate Quiz Prep §5 |
+| `math/proofs-analysis-topology/lecture-notes-slides/Team_Quiz_Assignments_6-9_with_Solutions.pdf` | instructor's team quiz with solutions | PA04, PA10 (end sections), Proofs Quiz Prep §0 |
+| Shriver & Atkins pp. 483–487, Huheey pp. 413–424 (`chemistry/inorganic-chemistry/books/`) | CH2113 "lecture notes for MOT/LFT" (Classroom pointer, 18 Nov) | CH11 |
+| `physics/thermodynamics-stat-mech/lecture-notes-slides/WhatsApp Image 2026-11-14 …` (3 photos) | TD2213 end-sem paper, Jan 2026 semester | TD2213 End-Semester 2026 … – Solved |
+| `math/probability/lecture-notes-slides/week6_lectures.pdf`, `week7_lectures.pdf` | MT2113 lecture summaries | PR06 §5 (taught), §7 |
+| `math/differential-geometry/lecture-notes-slides/DG27–DG34.pdf`, `HW10.pdf`, `HW11.pdf`, `Midsem.pdf`, `DG Midsem Solutions .pdf` | MT3184 class notes, homework, mid-sem | DM18 (DG27–DG30 were already in DM17 via the other tool's OCR) |
+| `physics/quantum-field-theory/books/79_ClassicalFieldTheory.pdf`, `physics/relativity/books/1708.00918v1.pdf`, `biology/systems-biology/books/` (Alon) | moved from ~/Downloads | not yet used |

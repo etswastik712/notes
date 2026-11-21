@@ -194,6 +194,17 @@
   "id": "cl_stommel_box"
  },
  {
+  "title": "Three boxes of carbon: air, upper ocean, deep ocean (BEAM)",
+  "desc": "The Bolin\u2013Eriksson three-box carbon model with Glotter et al.'s (2014) carbonate chemistry, as in Joy's O7 app: the air exchanges with the upper ocean (time 1/k_a) and the upper ocean with a deep ocean 50 times its volume (turnover \u03b4/k_d). The upper ocean's capacity A\u00b7B falls as it absorbs carbon (the Revelle factor). Drive it with the carbon that actually entered air and sea 1750\u20132024 (Global Carbon Budget 2025, via the app), continuing at 8.8 GtC/yr until a stop year, or with a single pulse; compare with Mauna Loa (dots).",
+  "vault": "CL",
+  "chapters": [
+   "CL30 Tutorials III - Three Boxes of Carbon",
+   "CL29 The Ocean's Ledger VI - Slow Swings and the Ocean's Memory for Carbon"
+  ],
+  "tryit": "History, stop 2025: turnover 1000 yr reaches 480 ppm in 2024 (Mauna Loa 425); set 200 yr: 422 ppm, on the dots, and the settled level stays 334 ppm. Pulse 1000 vs 5000 GtC: 24 % vs 42 % stays in the air once settled; untick the chemistry: 1.6 % for both (measured while building, matching the handout).",
+  "id": "cl_three_boxes"
+ },
+ {
   "title": "T\u2013S diagram: what makes seawater heavy, and why mixing sinks",
   "desc": "Seawater density from the UNESCO EOS-80 equation of state at surface pressure, drawn as lines of equal \u03c3 = \u03c1 \u2212 1000 kg m\u207b\u00b3 on a temperature\u2013salinity diagram. Warm water: the lines lie flat, temperature does most of the work (\u03c1\u03b1 = 0.30 kg m\u207b\u00b3 per K at 25 \u00b0C); near freezing the lines stand almost upright, salt decides (\u03c1\u03b1 = 0.054, \u03c1\u03b2 = 0.80). Place two water samples and mix them: the mixture lies on the straight line between them but is denser than the average of the two (cabbeling), most strongly for a warm\u2013cold pair of equal density.",
   "vault": "CL",
@@ -579,6 +590,17 @@
   "id": "ed11_boosted_fields"
  },
  {
+  "title": "Blending vs particulate inheritance: Jenkin's objection",
+  "desc": "A quantitative trait in a randomly mating population of N individuals. Under blending inheritance each offspring is the average of its two parents, so the trait variance halves every generation (Jenkin 1867). Under Mendelian (particulate) inheritance the trait is the sum of L additive loci, each parent passes one of its two alleles intact, and the variance stays put (Hardy\u2013Weinberg). Histograms show the trait distribution; the lower panel shows variance against generation on a log scale.",
+  "vault": "EE",
+  "chapters": [
+   "EE08 Evolution - An Introduction",
+   "EE09 Hardy-Weinberg Equilibrium"
+  ],
+  "tryit": "Press 'next generation' a few times: the blending histogram collapses to a spike (variance 1 \u2192 0.5 \u2192 0.25 \u2026, theory 0.5^t; measured while building with N = 2000: 0.50, 0.25, 0.13), while the Mendelian one keeps its width. Lower N to 50 to see drift slowly erode the Mendelian variance too.",
+  "id": "ee_blending"
+ },
+ {
   "title": "Two competitors: isoclines decide who wins",
   "desc": "Lotka\u2013Volterra competition: dN\u2081/dt = r\u2081N\u2081(K\u2081 \u2212 N\u2081 \u2212 \u03b1\u2081\u2082N\u2082)/K\u2081 and the mirror equation for species 2. The zero-growth isoclines are straight lines; which one lies outside the other fixes the outcome: species 1 wins, species 2 wins, stable coexistence (each limits itself more than the other, \u03b1\u2081\u2082\u03b1\u2082\u2081 < 1 with the K conditions) or an unstable equilibrium (priority effect). Click anywhere in the plane to start a trajectory.",
   "vault": "EE",
@@ -587,6 +609,16 @@
   ],
   "tryit": "K\u2081 = 100, K\u2082 = 80, \u03b1\u2081\u2082 = 0.5, \u03b1\u2082\u2081 = 0.6 \u2192 stable coexistence at (85.7, 28.6). Set both \u03b1 = 1.5 \u2192 saddle at (16, 56): click on either side of the separatrix and watch the winner change.",
   "id": "ee_competition"
+ },
+ {
+  "title": "Hardy\u2013Weinberg: the de Finetti triangle and drift",
+  "desc": "Each population is a point (P, Q, R) of genotype frequencies in the de Finetti triangle; Hardy\u2013Weinberg populations lie on the parabola Q\u00b2 = 4PR. Choose starting genotype frequencies and apply one generation of random mating: the point jumps vertically onto the parabola (the allele frequency q = R + Q/2 does not change). Then switch on a finite population size: each generation N zygotes are drawn at random (Wright\u2013Fisher), and many replicate populations wander along the parabola until an allele is fixed.",
+  "vault": "EE",
+  "chapters": [
+   "EE09 Hardy-Weinberg Equilibrium"
+  ],
+  "tryit": "Set P = 0.2, Q = 0.8, R = 0 and press 'random mating': the point drops to 0.36 : 0.48 : 0.16 (slide 9's example) in one step and stays. Then choose N = 20 and run drift: within about 4N = 80 generations most replicates hit a corner (fixation); with N = 500 they barely move.",
+  "id": "ee_hardy_weinberg"
  },
  {
   "title": "Shallow lakes: alternative stable states and hysteresis",
@@ -627,6 +659,16 @@
   ],
   "tryit": "r = 1.3 (damped), 2.3 (2-cycle 159.2/40.8), 2.6 (4-cycle), 3.0 (chaos, \u039b = +0.39), 3.6 (periodic window, \u039b < 0). With the second run on at r = 3.0 the two series part after ~35 steps.",
   "id": "ee_ricker_chaos"
+ },
+ {
+  "title": "One-locus selection with drift",
+  "desc": "Zygotes form in Hardy\u2013Weinberg proportions and survive with fitnesses w11 = 1, w12 = 1 \u2212 hs, w22 = 1 \u2212 s (allele A1 favoured when s > 0; h is the dominance of the deleterious allele A2), or choose heterozygote advantage/disadvantage. Left: allele frequency p(t) of A1 for the deterministic model (black) and for replicate finite populations (Wright\u2013Fisher sampling after selection). Right: \u0394p against p; its zeros are the equilibria.",
+  "vault": "EE",
+  "chapters": [
+   "EE10 Natural Selection"
+  ],
+  "tryit": "With s = 0.1 and p0 = 0.01: h = 0.5 (additive) takes 175 generations to reach p = 0.99; h = 0 (A1 dominant) and h = 1 (A1 recessive) take about 1000 (the script values are 1075 and 981). Choose 'heterozygote advantage' with s = 0.2, t = 0.1: every run settles at p* = 1/3. Set N = 20: drift can lose even a favoured allele.",
+  "id": "ee_selection"
  },
  {
   "title": "Demographic stochasticity: small populations go extinct",
@@ -1021,6 +1063,16 @@
   "id": "qm_box"
  },
  {
+  "title": "Particle in a circular infinite well",
+  "desc": "The 2D well V = 0 for r < a, \u221e outside. Separation gives \u03c8 = J_l(k r) e^{il\u03b8} with J_l(ka) = 0, so k_{n,l} a is the n-th zero j_{l,n} of the Bessel function J_l and E = \u0127\u00b2 j_{l,n}\u00b2/(2 m a\u00b2). Choose n and l: the top view shows |\u03c8|\u00b2 either for the L_z eigenstate e^{il\u03b8} (rings) or for the degenerate standing wave cos l\u03b8 (2l lobes); the right panel shows the radial function and the energy ladder.",
+  "vault": "QM",
+  "chapters": [
+   "QM11 Two-Dimensional Problems Angular Momentum and the Circular Well"
+  ],
+  "tryit": "n = 1, l = 0 is the ground state (j = 2.405, E = 5.783 \u0127\u00b2/2ma\u00b2). Step to n = 2, l = 1 and toggle 'cos l\u03b8': the same energy (49.22) shows a ring or two lobes. n = 1, l = 3 gives six lobes; n counts radial nodes + 1.",
+  "id": "qm_circular_well"
+ },
+ {
   "title": "Finite square well: graphical solution of the bound states",
   "desc": "For a well of depth V\u2080 and width 2a, define z\u2080 = a\u221a(2mV\u2080)/\u0127. Bound states sit where \u221a(z\u2080\u00b2 \u2212 \u03be\u00b2) crosses \u03be tan \u03be (even states) or \u2212\u03be cot \u03be (odd states). Slide z\u2080: new bound states appear each time z\u2080 passes a multiple of \u03c0/2, and there is always at least one (even) state. The wavefunctions are drawn at their energies, leaking into the forbidden region.",
   "vault": "QM",
@@ -1029,6 +1081,16 @@
   ],
   "tryit": "Shrink z\u2080 below \u03c0/2: only the ground state remains, even for a very shallow well. Increase z\u2080 to 10 and compare the lowest energies with the infinite well values (n \u03c0/2)\u00b2.",
   "id": "qm_finite_well"
+ },
+ {
+  "title": "Hydrogen radial wavefunctions and radial probability",
+  "desc": "The hydrogen radial functions R_{nl}(r) \u221d e^{\u2212r/na}(2r/na)^l L^{2l+1}_{n\u2212l\u22121}(2r/na), normalised numerically so that \u222bR\u00b2 r\u00b2 dr = 1, and the radial probability density P(r) = r\u00b2 R\u00b2 (the probability per unit radius of finding the electron in a thin shell). Choose n and l (0 \u2264 l \u2264 n \u2212 1); the readout gives the peak of P(r), \u27e8r\u27e9, the number of radial nodes and the energy E_n = \u221213.6 eV/n\u00b2.",
+  "vault": "QM",
+  "chapters": [
+   "QM12 The Hydrogen Atom"
+  ],
+  "tryit": "n = 1, l = 0: R is largest at r = 0 but P(r) peaks at r = a (the notes' question) and \u27e8r\u27e9 = 1.5 a. n = 2, l = 1: P peaks at 4 a. Compare n = 3 with l = 0, 1, 2: the same energy (\u22121.51 eV) but 2, 1, 0 radial nodes.",
+  "id": "qm_hydrogen_radial"
  },
  {
   "title": "The harmonic oscillator: eigenstates and a coherent state",

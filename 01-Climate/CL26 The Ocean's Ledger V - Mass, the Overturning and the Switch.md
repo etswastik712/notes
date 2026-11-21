@@ -133,6 +133,47 @@ Joy's pair-and-share (no right answer; reward reasoning about evidence): which w
 
 <!-- interactive:end -->
 
+## 9. From Joy's O6 lecture notes (posted after 13 Nov; added 2026-11-21)
+<span class="scope-taught">taught</span> *Joy, O6 lecture notes (`lectures/notes/o6/index.md`, course site, read in full)* · <span class="scope-extra-beyond">extra · beyond</span> *the answers in §9.6*
+
+The O6 **notes** appeared on the course site after this chapter was written from the deck. They follow the same lecture and add the following. Where the notes and §7's model differ, **the notes are the taught version**.
+
+### 9.1 Simple laws, complex climate (notes §3)
+A physicist writes one conservation law per quantity (water, heat, salt, momentum, mass: "change in store = in − out"; momentum and mass together are the Navier–Stokes equations). A climate scientist needs to know **how the budgets talk to each other**: evaporation takes energy and depends on SST, which depends on sunlight; clouds block sunlight; rain heats the air and changes the winds; rain and rivers change salinity; salinity and temperature set density; density sets how deep the wind's momentum is stirred; the wind moves heat and salt. Every arrow is simple, the network is not — a **complex system**, and which arrows matter differs between climates, planets and regions. Today's switch is one loop at the bottom of that network: density → overturning → salt transport → density.
+
+### 9.2 The AMOC and why the ITCZ sits north (notes §6)
+**Meridional** = across latitudes; **zonal** = along them. Unlike the Hadley cells (heat to both poles), the **AMOC** carries heat **from one hemisphere to the other**: northward everywhere in the Atlantic, even south of the equator. Stewart's rough sum (p. 214, as Joy cites): 40 Sv of 18 °C Gulf Stream water north, 14 Sv returning at 2 °C, so the Atlantic north of 24°N loses ≈ **0.9 PW** (🔵 $14\,\text{Sv}\times16\,\text{K}\times\rho c_p=0.92$ PW), close to a careful 1.2 ± 0.2 PW. **Why the ITCZ is north of the equator on average** (a question from the first classes): the ocean carries heat into the Northern Hemisphere, keeping it warmer; the ITCZ (the Hadley cells' rising branch) sits on the warmer side so that the atmosphere carries some of that heat back across the equator ([[CL11 Mean Meridional Circulation and Angular Momentum]], [[CL14 Observed Winds - Jets, Trades and the ITCZ]]).
+
+### 9.3 Joy's version of Stommel's boxes (notes §9.5–§9.7)
+With fixed temperatures, salt contrast $y=\beta\Delta S/\alpha\Delta T$ and overturning $1-y$ (in units of $k\alpha\Delta T$), the steady salt balance is
+$$y\,|1-y|=E,\qquad E=\frac{\beta S_0F}{k\alpha^2\Delta T^2}\ \text{(dimensionless fresh-water forcing)}.$$
+The left side, the **salt the flow carries**, rises to a **hump of ¼ at $y=\tfrac12$**, falls to 0 at $y=1$ and rises steeply beyond (reversed flow). A steady state is any crossing with the horizontal line $E$: at $E=0.15$, **on** $y=0.18$ (overturning 0.82), **unstable** $y=0.82$, **reversed** $y=1.13$ (overturning −0.13). Past $E=\tfrac14$ the "on" state no longer exists. Stability: $\dot y\propto E-y|1-y|$; on the rising side of the hump a **negative feedback** wins (more contrast → more salt carried north → contrast wiped out), on the falling side the **positive** salt feedback wins and the state runs away. "That is why an overturning can weaken for a long time and then, quite suddenly, collapse."
+
+> [!info] Two versions of the same toy
+> §7 above used a model with a relaxing temperature contrast ($\dot x=1-x(1+|q|)$, fold at $F_{\max}=0.141$), which is **mine**. Joy's notes hold temperatures fixed (fold at $E=\tfrac14$). Both have two stable states, a fold and hysteresis; the numbers differ because the forcing is scaled differently. Use **Joy's** version in the exam. The interactive tool `cl_stommel_box` implements §7's version.
+
+### 9.4 What the toy leaves out, and could it happen? (notes §9.10, §10)
+**Limits**: temperatures fixed (a weaker overturning would cool the north, making it denser: a counter-feedback); flow driven by density alone (in reality the **Southern Ocean winds** do much of the work of bringing deep water up — why "thermohaline" fell out of use, Stewart p. 212); "off" is not a reversed flow (Stewart p. 218: deep water forming mostly near Antarctica, upwelling in the far North Atlantic as in the North Pacific today); the constants are unknown (how close the real Atlantic is to the nose needs full models, RAPID, palaeo records).
+**Could it happen?** Warming freshens the far North Atlantic in two ways: more high-latitude rain and Greenland melt. It has happened before: ~11 500 years ago Greenland warmed ~8 °C in 40 years (Stewart p. 216 after Alley 2000); in **Heinrich events** iceberg melt water is thought to have shut down NADW formation (pp. 216–218). **Now?** IPCC AR6 WGI SPM C.3.4: the AMOC "is very likely to weaken over the 21st century for all emissions scenarios", with "medium confidence that there will not be an abrupt collapse before 2100". **If it collapsed**: the ITCZ would be expected to shift **south**; the Indian monsoon is the ITCZ moving north over South Asia in summer, so it would weaken (IPCC: "a southward shift in the tropical rain belt, weakening of the African and Asian monsoons… drying in Europe"). "The Asian monsoon is ours." ([[CL15 Monsoons]].)
+
+### 9.5 Read this part (notes, not covered in class)
+- **How much sinks**: ~15–20 Sv in the North Atlantic, ~10 Sv around Antarctica (Hartmann p. 230); Gulf Stream ~30 Sv off Florida, ACC ~125 Sv. Joy's caution: Hartmann says the deep circulation is "more than a factor of ten smaller" than the western boundary currents, but his own ~30 Sv figures make it **three to four times** smaller.
+- **Oldest water**: at **intermediate depths in the North Pacific**, farthest from both formation sites (Hartmann p. 225); deep North Pacific oxygen saturation 10–15 % vs ~85 % in the North Atlantic (p. 222). That the oldest water is not at the bottom is itself evidence that deep water rises everywhere (the mass ledger).
+- **Why a thousand years, not 140**: $\tau=C/\lambda\approx140$ yr would hold if the whole 4000 m were stirred together; it isn't — the deep water is replaced only as fast as it sinks and returns (~1000 yr), a mean deep flow of ~1 mm/s (Stewart p. 222; 🔵 30 000 km / 1000 yr = 0.95 mm/s). Also why the **Southern Ocean warms slowly**: its upwelled water hasn't seen the surface for centuries (Hartmann p. 227).
+- **Twenty years of RAPID** cannot yet show a trend in a thousand-year system, but shows how the overturning works and gives a baseline.
+- **Sinking ≠ convection**: convection happens in patches a few km across; the sinking that fills the deep ocean is spread over much larger areas (Stewart p. 219).
+
+### 9.6 Joy's O6 questions, answered
+<span class="scope-extra-beyond">extra · beyond</span> *`scripts/cl29_numbers.py`*
+
+> [!example]- Answers
+> 1. If the deep ocean filled up, the boundary (thermocline/pycnocline) would deepen and deep-water properties (temperature, tracers, age) would drift steadily; observations show a quasi-steady stratification and **old water at mid-depth in the North Pacific** (not at the bottom), consistent with slow rising everywhere.
+> 2. $V\approx$ turnover × sinking rate: 1000 yr × 15–20 Sv = **4.7–6.3 × 10¹⁷ m³**, 36–49 % of the ocean; adding Antarctica's ~10 Sv gives 7.9–9.5 × 10¹⁷ m³ (61–73 %): the right order for everything below the thermocline.
+> 3. "On" state $y=\frac{1-\sqrt{1-4E}}2$: $E=0.20$: overturning **0.72**; $E=0.24$: **0.60**; at the edge $E=0.25$: 0.50. Weakening from 0.82 (E = 0.15) to 0.50 is gradual; past the edge it **jumps** to the reversed state, overturning −0.21: a drop of 0.71, twice the whole gradual decline.
+> 4. Reversed: sinking in the warm salty box, return at the surface toward the equator, so the flow carries **fresher** polar water south / salt **north at depth** in a way that **increases** the salt contrast; on the rising branch beyond $y=1$, more contrast means a stronger reversed flow carrying more salt-contrast-removing water, so a nudge is wiped out: stable.
+> 5. A north that cools as the overturning weakens gets **denser**, opposing the salt feedback: a **negative** feedback that makes the "on" state **more** stable (it adds to the stabilising side of the hump).
+> 6. Pair-and-share (no single answer): warming freshens the North Atlantic (rain, Greenland); people near the rain belts (South Asia's monsoon, the Sahel) are most exposed to an ITCZ shift; RAPID would need decades to separate a trend from its large week-to-week and year-to-year swings.
+
 ## Map of this chapter
 > [!connection] How CL26 connects
 > **Builds on:** [[CL25 The Ocean's Ledger IV - Salt, Density and Water Masses]] (density, water masses, the Atlantic–Pacific salt difference), [[CL24 The Ocean's Ledger III - Wind and the Momentum Ledger]] (the pumping that pulls the deep water up), [[CL23 The Ocean's Ledger II - Heat Capacity and Climate Inertia]] (the 140-year ruler and ocean heat uptake), [[CL04 Feedback and Multiple Steady States]] (positive feedback, multiple equilibria), [[CL21 Thermohaline Circulation Water Masses and Sea Ice]] (Neena's version), [[CL17 Orbital Forcing and Glacial Cycles]] (abrupt climate change in the last ice age).
@@ -176,5 +217,7 @@ Joy's pair-and-share (no right answer; reward reasoning about evidence): which w
 > | 1,000 years ⇒ 1 mm s⁻¹; RAPID/MOCHA design, 24°N first-year 18.7 ± 5.6 Sv; ACC 125 ± 11 Sv | Stewart 2008 pp. 222, 229 (`transcripts/readings/O5__04…`, read in part) | extra/book (2026) |
 > | wind pumping and the 25 m yr⁻¹ number; salt, σ and water masses | [[CL24 The Ocean's Ledger III - Wind and the Momentum Ledger]], [[CL25 The Ocean's Ledger IV - Salt, Density and Water Masses]] (O4, O5 sources) | taught (2026) |
 > | Stommel model, branches, collapse and recovery, Pacific vs Atlantic σ, renewal and 1 mm s⁻¹ arithmetic | `scripts/fig_cl26.py` (+ EOS-80 of `scripts/fig_cl25.py`) | extra-beyond |
+> | AMOC heat sum, ITCZ, Joy's dimensionless Stommel, limits, could it happen, read-this-part, questions (§9) | Joy, O6 lecture notes (course site, read in full; synced 2026-11-21) | taught |
+> | O6 question answers, 0.92 PW, deep volume (§9.6) | `scripts/cl29_numbers.py` | extra/beyond |
 >
 > **Notes.** The RAPID record, the IPCC wording, the Rahmstorf, Alley and Heinrich results, the Hartmann pp. 222–231 content and Stewart pp. 211–219 are **as Joy's slides give them**; none was read except Stewart pp. 222 and 229. The ocean volume (1.335×10¹⁸ m³) is recalled. The Stommel model is my own simple nondimensionalisation and illustrates the mechanism; its numbers (0.141, 0.30) are properties of that model, not of the ocean. O7 ("the ocean remembers, and the ocean is changing") was not on the site when this was written.

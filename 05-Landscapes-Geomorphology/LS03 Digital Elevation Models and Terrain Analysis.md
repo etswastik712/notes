@@ -21,6 +21,9 @@ tags: [subject/landscapes, type/chapter, taught, extra/book, extra/beyond, src/s
 > 🔵 **Extra · beyond**: boxes marked 🔵 **Extra** complete derivations the slides only quote (from Anderson and Anderson, *Geomorphology: the Mechanics and Chemistry of Landscapes*, and Turcotte and Schubert, *Geodynamics*); 🛠 **Tool** boxes derive a mathematical tool from 12th-grade material; 🧮 **Worked example** boxes calibrate orders of magnitude.
 > This chapter has 5 sections, 3 derivation boxes, 3 redrawn figures and 8 slide images.
 
+> [!taught] 🟢 More lecture material (fluvial lectures, Classroom 2026-11-18; added 2026-11-21)
+> [[l_fluvial.pdf]] opens with automated stream extraction from a DEM: "where are the rivers?" ([[l_fluvial.pdf#page=1|slide 1]]); **D8 routing**, a steepest-descent rule over the 8 neighbours, with a worked direction/accumulation grid ([[l_fluvial.pdf#page=2|slide 2]]); **MFD** (multiple-flow-direction, sharing flow among all downhill neighbours, after Pelletier), better where flow diverges because "D8 gets stuck" ([[l_fluvial.pdf#page=3|slide 3]]); building an **accumulation map** in QGIS and reading the network from it ([[l_fluvial.pdf#page=4|slides 4–5]]); fixing channel heads by an accumulation threshold ([[l_fluvial.pdf#page=6|slide 6]]); the final network and sub-catchments ([[l_fluvial.pdf#page=7|slide 7]]). Hands-on version: [[LS20 GIS and TopoToolbox Practicals]].
+
 > [!key] After this chapter you can
 > - describe a DEM as a raster and say how elevation is measured (SRTM, LiDAR, photogrammetry),
 > - compute slope, aspect and curvature on a grid,
@@ -316,6 +319,7 @@ Drainage area is the variable through which rivers connect to discharge and stre
 > |---|---|---|
 > | slide content, figures read panel by panel | [[pre_ms_landscape_26.pdf]] slides 25, 28, 56–57 (images embedded from the PDF, auto-cropped, `scripts/render_slides.py`) | taught |
 > | derivations, worked examples, tool boxes, TikZ figures | the AI-written derivation-level notes [[Landscapes_and_Their_Evolution_notes.pdf]] (EC2123 notes; LaTeX source in `landscape-notes-tex-source.tar.gz`), converted with `scripts/tex2vault_ls.py`; cross-checked against Anderson and Anderson and Turcotte and Schubert as cited there | secondary + extra/book |
+> | D8, MFD, accumulation map, threshold channel heads, sub-catchments | [[l_fluvial.pdf]] slides 1–7 (Classroom 2026-11-18) | taught |
 >
 > **Notes.** (1) The text of this chapter is the AI-written reference notes' text, converted to the vault's callout style and equation numbering (chapter-local, so some cross-references read as "(label)"). (2) The slide images were checked against the notes' slide numbers for a sample of slides (e.g. 1–12, 109–120 match). Figure descriptions are the notes', and should be compared with the images beside them. (3) The `[!verify]` items of the notes' last front-matter section ("Two places where the slides need care") are in [[Landscapes Notation and Glossary]].
 

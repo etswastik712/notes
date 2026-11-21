@@ -13,6 +13,9 @@ tags: [subject/waves, type/moc, taught, src/own-notes, status/stub]
 > [!warning] Stub: not yet written
 > Planned. Atmospheric/ocean waves (gravity, Rossby, Kelvin), Fourier analysis, dispersion.
 
+
+> [!info] Shared drive: related books, past papers and old decks on the shared drive are listed in [[physics/waves/shared-drive-sources|shared-drive sources (5 files)]].
+
 ## What exists in the repository
 - physics/waves/books (Georgi, *The Physics of Waves*)
 

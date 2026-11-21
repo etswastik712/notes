@@ -1,0 +1,37 @@
+﻿Quiz 1 (Syllabus: Lectures 1-6)
+Total: 13 Marks
+
+
+1. What is the angular speed of rotation for earth? 1
+2. What is the ratio of centrifugal to gravitational accelerations on the equator and pole? 2
+3. Over geological time earth’s rotation has slowed down. The estimated length of day was 19 hours about 2 billion years back. How oblate was the earth then? 2
+4. What is the expected present oblateness of earth’s core? 3
+5. We discussed that the variation of pressure P with depth z within a liquid at hydrostatic equilibrium is governed by the eq. . a) Plot the variation of  pressure with depth in glass a layered drink such that the layers have densities of rho1 and rho2. Consider both the cases rho1>rho2 and rho2>rho1. b) While both the conditions correspond to equilibrium conditions, one of them is not common in nature. Which one and why? 3+2 
+
+
+Some useful numbers:
+earth’s radius ~ 6400 km,
+radius of the core ~3000 km
+density of earth ~5000 kg/m^3
+density of core ~10000 kg/m^3
+Graviational constant 6.7E-11 SI units
+
+
+
+
+Quiz 2 (Syllabus: Lectures 11-15B)
+Total: 10 marks
+
+
+Q1: In the figure above, we have two crustal blocks floating in the mantle. Assume the density of crust to be 2.5 gm/cc and density of mantle to be 3 gm/cc. Initial difference in their heights is h/2. If the taller crustal block is eroded by an amount of h/2, what will be the final difference in the heights of the two blocks? (3)
+  
+
+
+
+Q2: Assuming that the chemical weathering rate only depends (linearly) on the cross-section area of a surface, by what factor this rate will increase if a pristine cubical rock with 1 m3 volume gets fractured into 6 rock blocks? All the fracture planes are parallel to the side of the initial intact rock. Will the location of the fracture planes have any effect? (2)
+
+
+Q3: Concentration of the radionuclide 14C is given by the following equation 1. N0 is the initial concentration of 14C, and λ is the decay constant and is related to the half-life t1/2 (λ=0.693/t1/2). Assume t1/2 to be 6930 yrs. (Disclaimer-actual t1/2 is ~5700 yrs). If the primary source of 14C is the ocean (residence time of 14C in the ocean is ~1000 yrs), approximately by what factor the age of a carbonaceous sediment will be underestimated. Actual age of the sediment is 5000 yrs. (3)
+
+
+Q4: The evolution of a 1-D hillslope is governed by the following equation, where U is the uplift rate, and D is the hillslope diffusivity. What is the steady-state relief (difference between highest and lowest elevation) of the hillslope? Take U = 0.0001 m/yr, D = 0.005 m2/yr, Length of the hillslope, L = 100 m. Boundary conditions are as per equation 2 and 3. (2)

@@ -1,0 +1,17 @@
+{
+  "_about": "Written by scripts/classroom_sync.py: which Classroom course/post (or Drive folder) each source file in this topic folder came from, every post's text, and every resource a post POINTS to (website, Dropbox, sheet, book pages) with its status. Edit statuses with `classroom_sync.py mark`.",
+  "files": [
+    {
+      "origin": "~/Downloads/1708.00918v1.pdf (Krolak & Patil, The First Detection of Gravitational Waves, arXiv)",
+      "md5": "6c6d5742fab32162b44f38cbf360960c",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/1708.00918v1.pdf",
+      "status": "moved"
+    }
+  ],
+  "posts": [],
+  "resources": []
+}

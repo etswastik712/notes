@@ -13,6 +13,9 @@ tags: [subject/neuroscience, type/moc, taught, src/own-notes, status/stub]
 > [!warning] Stub: not yet written
 > Planned last: currently one paper only, and the least connected subject (weak links through statistics, oscillations and bistable dynamics).
 
+
+> [!info] Shared drive: related books, past papers and old decks on the shared drive are listed in [[biology/neuroscience/shared-drive-sources|shared-drive sources (24 files)]].
+
 ## What exists in the repository
 - biology/neuroscience/books/Pupil-Linked Arousal and cortical state.pdf (a single paper so far)
 

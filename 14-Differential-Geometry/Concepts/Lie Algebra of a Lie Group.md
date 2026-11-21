@@ -29,6 +29,8 @@ Used in: [[DM11 The Lie Algebra of a Lie Group]], [[DM14 One-Parameter Subgroups
 ## Zettel notes
 
 Class zettel on this idea: [[zettel/lie-algebra-of-a-lie-group|Lie Algebra of a Lie Group]]
+
+Related zettel: [[zettel/lie-correspondence|Lie Correspondence]]
 <!-- zettel:end -->
 
 ## Linked from

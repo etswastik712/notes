@@ -33,6 +33,9 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > 🔵 **Extra · beyond** (my additions, all numbers in `scripts/pr_numbers.py`)
 > - §1 mean $>$ median $>$ mode for right-skewed laws; §3 the closed form $M_{|Z|}(t)=2e^{t^2/2}\Phi(t)$, the geometric convention link, the checks of two slips in the handwriting; §5 the $1/\sqrt n$ rate of the CLT against the exact Gamma law (leading Edgeworth term $\gamma_1/(6\sqrt{2\pi n})$)
 
+> [!taught] 🟢 §5 is now taught (lecture summaries Weeks 6–7, Classroom 18 Nov 2026; added 2026-11-21)
+> [[week6_lectures.pdf|Week 6 lectures summary]] (4 pp.): Cauchy–Schwarz (two proofs) and its use for joint MGFs, Jensen, **Markov, Chebyshev**, the **weak law** (proved by Chebyshev), the **strong law** (stated). [[week7_lectures.pdf|Week 7 lecture summary]] (4 pp.): the **CLT** and its approximation corollary, the MGF-convergence lemma (no proof), a proof of the CLT via $L(t)=\ln M(t)$, and two worked examples ("two examples also, which were not discussed in class, due to lack of time"). Read §5 as 🟢 *taught*; what the lectures add is in **§7** at the end. *No review lecture on 19 Nov; a video review was promised (not yet posted).*
+
 > [!key] After this chapter you can
 > - find the **median and mode** of a discrete or continuous law, compute **skewness** and **kurtosis** and say which moments exist,
 > - **derive** an MGF from the definition, read off $E[X^k]=M^{(k)}(0)$, and use $M_{aX+b}$ and $M_{\sum X_i}=\prod M_{X_i}$,
@@ -322,3 +325,28 @@ Write $q=1-p$.
 > **Notes.** (1) The Week 3 pages are Xournal++ handwriting with typed homework statements; two slips were found and corrected (see the `[!verify]` in §3.1). (2) The lecture's geometric convention (failures) differs from PR03's (trials). (3) The AI notes cite "Theorem 1.7" for the statement that $E|X|=\infty$ implies $E|X|^k=\infty$ for $k\ge1$; the theorem they state is numbered 1.9 and gives the converse form used above. The proofs of uniqueness and of the continuity theorem are not given (they need characteristic functions or measure theory).
 
 **References.** Ross, S. *A First Course in Probability* (8th ed.), Ch. 7–8 · Blitzstein, J. K. and Hwang, J. *Introduction to Probability*, Ch. 6, 10 · Lyapunov, A. M. (1901) *Nouvelle forme du théorème sur la limite de probabilité*.
+
+## 7. Weeks 6–7 lectures: what they add (added 2026-11-21)
+<span class="scope-taught">taught</span> *[[week6_lectures.pdf]] pp.1–4 and [[week7_lectures.pdf]] pp.1–4 (handwritten, read as page images); numbers `scripts/pr_week67_numbers.py`* #quiz/probability
+
+> [!key] Cauchy–Schwarz for random variables (Week 6 p.1)
+> $|E(XY)|\le\sqrt{E(X^2)E(Y^2)}$.
+> **Proof 1** (discriminant): $E\big((X+tY)^2\big)\ge0$ for all $t$, i.e. $t^2E(Y^2)+2tE(XY)+E(X^2)\ge0$. If $E(Y^2)=0$, the linear function $E(X^2)+2tE(XY)\ge0$ for all $t$ forces $E(XY)=0$. Otherwise complete the square: $\big(t\sqrt{E(Y^2)}+\frac{E(XY)}{\sqrt{E(Y^2)}}\big)^2+E(X^2)-\frac{E(XY)^2}{E(Y^2)}\ge0$, so $E(X^2)-\frac{E(XY)^2}{E(Y^2)}\ge0$.
+> **Proof 2** (via covariance): $|E(XY)|=|\mathrm{Cov}(X,Y)+E(X)E(Y)|\le|E(X)||E(Y)|+\sqrt{\mathrm{Var}X\,\mathrm{Var}Y}$ (using $|\mathrm{Cov}|\le\sqrt{\mathrm{Var}\,\mathrm{Var}}$), which is the dot product of $(|E X|,\sqrt{\mathrm{Var}X})$ and $(|EY|,\sqrt{\mathrm{Var}Y})$, hence $\le\sqrt{(E X)^2+\mathrm{Var}X}\sqrt{(EY)^2+\mathrm{Var}Y}=\sqrt{E(X^2)E(Y^2)}$ by the vector Cauchy–Schwarz inequality.
+> **Application** (pp.1–2): if $X_1,X_2$ have MGFs finite for $|t|<2\varepsilon$, then the joint MGF $M_{\vec X}(t_1,t_2)=E\big(e^{t_1X_1}e^{t_2X_2}\big)\le\sqrt{M_{X_1}(2t_1)M_{X_2}(2t_2)}$ is finite for $|t_1|,|t_2|<\varepsilon$.
+
+> [!key] Jensen (Week 6 p.2)
+> If $g''\ge0$ (convex), $E(g(X))\ge g(E(X))$. **Proof:** the graph lies above its tangent at $\mu=E(X)$: $g(x)\ge g(\mu)+g'(\mu)(x-\mu)$; take expectations (if $Y\ge X$ then $E Y\ge E X$): $E g(X)\ge g(\mu)+g'(\mu)\cdot0$. Example $g(x)=x^2$: $E(X^2)-(EX)^2=\mathrm{Var}X\ge0$.
+> **Markov's proof in the lecture:** reduce to $a=1$ via $X/a$; $Y=\mathbf 1\{X\ge1\}\le X$, so $P(X\ge1)=E(Y)\le E(X)$. **Chebyshev** (p.3) in the form $P\big(|\tfrac{X-\mu}\sigma|\ge a\big)\le\tfrac1{a^2}$: Markov on $Y=(X-\mu)^2/\sigma^2$, $E(Y)=1$. **WLLN** (pp.3–4): $\mathrm{Var}\bar X_n=\sigma^2/n$, so $P(|\bar X_n-\mu|\ge\varepsilon)\le\sigma^2/n\varepsilon^2\to0$ by the sandwich theorem: $\bar X_n\to\mu$ **in probability**. **Strong law** (p.4, without proof): $\bar X_n\to\mu$ **with probability 1**: $\lim_n\bar X_n(x)=\mu$ for all outcomes $x$ outside a set $B$ with $P(B)=0$.
+
+> [!derivation] The lecture's proof of the CLT (Week 7 pp.1–3)
+> **Lemma** (proof skipped): if $M_{Z_n}(t)\to M_Z(t)$ for all $t$, then $F_{Z_n}(x)\to F_Z(x)$ at every continuity point of $F_Z$.
+> WLOG $\mu=0$, $\sigma=1$ (replace $X_i$ by $(X_i-\mu)/\sigma$). Then $\frac{\bar X_n-\mu}{\sigma/\sqrt n}=\frac1{\sqrt n}\sum X_i$ and its MGF is $M(t/\sqrt n)^n$. Let $L(t)=\ln M(t)$: $L(0)=0$, $L'(0)=M'(0)/M(0)=0$, $L''(0)=\frac{M''(0)}{M(0)}-\frac{M'(0)^2}{M(0)^2}=1$. It suffices that $nL(t/\sqrt n)\to t^2/2$. With $y=1/\sqrt n$, two applications of l'Hôpital ($0/0$ each time, since $L(0)=L'(0)=0$):
+> $$\lim_{y\to0}\frac{L(ty)}{y^2}=\lim_{y\to0}\frac{tL'(ty)}{2y}=\lim_{y\to0}\frac{t^2L''(ty)}2=\frac{t^2}2 .$$
+> Hence $M(t/\sqrt n)^n\to e^{t^2/2}$, the $N(0,1)$ MGF. (Same result as §5's Taylor proof; this route avoids the $o(\cdot)$ bookkeeping.)
+> **Corollary:** for large $n$, $\bar X_n$ is approximately $N(\mu,\sigma^2/n)$ — "we don't make a precise assertion".
+
+> [!example] The two lecture examples, with the exact answers
+> **Ex 1.** A fair die is rolled 10 times: $P(30\le\text{sum}\le40)$. $E(X_i)=\tfrac72$, $E(X_i^2)=\tfrac{91}6$, $\mathrm{Var}(X_i)=\tfrac{35}{12}$. With the continuity correction, $P(29.5\le X\le40.5)=P\big(2.95\le\tfrac{\sum X_i}{10}\le4.05\big)=2\Phi\Big(\dfrac{0.55}{\sqrt{35/120}}\Big)-1=2\Phi(1.018)-1=\mathbf{0.6915}$. **Exact** (convolution of 10 dice): **0.6870**; without the continuity correction the CLT gives 0.6455.
+> **Ex 2.** $X_1,\dots,X_{10}$ iid U(0,1): $P(\sum X_i>6)=P\Big(\dfrac{\bar X-0.5}{\sqrt{1/120}}>\dfrac{0.1}{\sqrt{1/120}}\Big)=1-\Phi(\sqrt{1.2})=\mathbf{0.1367}$. **Exact** (Irwin–Hall): **0.1389**.
+

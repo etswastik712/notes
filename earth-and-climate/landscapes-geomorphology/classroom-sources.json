@@ -1,0 +1,302 @@
+{
+  "_about": "Written by scripts/classroom_sync.py: which Classroom course/post (or Drive folder) each source file in this topic folder came from. Do not edit by hand.",
+  "files": [
+    {
+      "drive_id": "1P7d09_VOyxMeAvv2Gxwuenyl-BT5ZLFtS6Y5LNUavJ4",
+      "drive_name": "EC2223: Landscapes and Their Evolution (Midsem)",
+      "drive_modified": "2022-09-26T08:15:56.300Z",
+      "md5": null,
+      "course": "Landscape Evolution (EC2123); past run EC2223 (2022)",
+      "post_type": "drive-search",
+      "posted": null,
+      "post_title": "found by Drive search 2026-11-21 (previous-year papers)",
+      "file": "lecture-notes-slides/EC2223_ Landscapes and Their Evolution (Midsem).pdf",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1EcXSFdxMs2wbK-WyLc37JStZoovh2kF367_QAEtCigc",
+      "drive_name": "EC2223: Landscapes and Their Evolution- Quizzes",
+      "drive_modified": "2022-09-26T07:33:17.956Z",
+      "md5": null,
+      "course": "Landscape Evolution (EC2123); past run EC2223 (2022)",
+      "post_type": "drive-search",
+      "posted": null,
+      "post_title": "found by Drive search 2026-11-21 (previous-year papers)",
+      "file": "lecture-notes-slides/EC2223_ Landscapes and Their Evolution- Quizzes.pdf",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1mmf-VME5PbE7iM85IbxqMTULQstNswj4",
+      "drive_name": "c41EC2123.pdf",
+      "drive_modified": "2026-04-06T06:29:21.000Z",
+      "md5": "5e875713510ab6d9821e28ef46e85184",
+      "course": "Landscape Evolution (EC2123); past run EC2223 (2022)",
+      "post_type": "drive-search",
+      "posted": null,
+      "post_title": "found by Drive search 2026-11-21 (previous-year papers)",
+      "file": "lecture-notes-slides/c41EC2123.pdf",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1L26GEbdDLwvDrMyrDYwfVsmczINNFfkN",
+      "drive_name": "WhatsApp Image 2026-11-07 at 22.04.31.jpeg",
+      "drive_modified": "2026-11-07T16:35:25.000Z",
+      "md5": "024644d067fa430f791b89bb0b991ea2",
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "post_id": "898233981113",
+      "post_type": "announcement",
+      "post_title": "thanks everyone! It was a really fun trip, and I (we) learned a lot.",
+      "posted": "2026-11-07T16:35:45.752000+00:00",
+      "classroom_topic": null,
+      "file": "lecture-notes-slides/WhatsApp Image 2026-11-07 at 22.04.31.jpeg",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1yQJhCTrohg8b1kFjEjhFjIddZXn_rU_v605pAaH9nPI",
+      "drive_name": "group details",
+      "drive_modified": "2026-11-20T15:35:41.472Z",
+      "md5": null,
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "post_id": "898597132119",
+      "post_type": "announcement",
+      "post_title": "As discussed in the class, ",
+      "posted": "2026-11-10T05:28:21.214000+00:00",
+      "classroom_topic": null,
+      "file": "lecture-notes-slides/group details.xlsx",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1sdGQueH0sGfeRSHw1bdnRnFy9TU6zbpF",
+      "drive_name": "visualfun.gif",
+      "drive_modified": "2026-11-10T09:55:32.000Z",
+      "md5": "3bfab0882d7ad6ff1a49abc1da6d1d54",
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "post_id": "898619573676",
+      "post_type": "announcement",
+      "post_title": "to soumil, deep and their group: I think you'll find this very useful ",
+      "posted": "2026-11-10T09:53:48.963000+00:00",
+      "classroom_topic": null,
+      "file": "lecture-notes-slides/visualfun.gif",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1O3o7mdMg7sP2eSR6rbeKOskvLPlbiu1H",
+      "drive_name": "Screenshot 2026-11-13 at 4.21.49 PM.png",
+      "drive_modified": "2026-11-13T10:51:56.000Z",
+      "md5": "b3d189a0bd88ca2cff43243d04e01634",
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "post_id": "891189008320",
+      "post_type": "announcement",
+      "post_title": "• Note the change of venue for the group presentation: Monday, 16th Oct, 4:15 PM, seminar ",
+      "posted": "2026-11-13T10:19:44.526000+00:00",
+      "classroom_topic": null,
+      "file": "lecture-notes-slides/Screenshot 2026-11-13 at 4.21.49 PM.png",
+      "status": "downloaded"
+    },
+    {
+      "drive_id": "1zR6YmxPiDurPChPJqXD5s2rtxYMd6Qfj",
+      "drive_name": "l_fluvial.pdf",
+      "drive_modified": "2025-11-11T16:34:07.000Z",
+      "md5": "351dc46be10c0062b7583bae8dd8eede",
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "post_id": "891398553115",
+      "post_type": "announcement",
+      "post_title": "lecture slides for the lectures on fluvial landscapes attached",
+      "posted": "2026-11-18T15:35:53.642000+00:00",
+      "classroom_topic": null,
+      "file": "lecture-notes-slides/l_fluvial.pdf",
+      "status": "downloaded"
+    },
+    {
+      "origin": "~/Downloads/JGR Earth Surface - 2023 - Liang - Fluvial‐Aeolian Interaction and Compositional Variability in the River‐Fed Yarlung.pdf",
+      "md5": "364222696a0ccb21fce928c349ad882d",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/JGR Earth Surface - 2023 - Liang - Fluvial‐Aeolian Interaction and Compositional Variability in the River‐Fed Yarlung.pdf",
+      "status": "moved"
+    },
+    {
+      "origin": "~/Downloads/Schuurman2013JGR.pdf",
+      "md5": "4559c27e82cb4e6f16bfeb152297d9b0",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/Schuurman2013JGR.pdf",
+      "status": "moved"
+    },
+    {
+      "origin": "~/Downloads/basin_cwc.kmz",
+      "md5": "41a5c228e6817781d9a9cbba4d4eda7b",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/basin_cwc.kmz",
+      "status": "moved"
+    },
+    {
+      "origin": "~/Downloads/notes_olsen.pdf",
+      "md5": "5aaa7258df343003eeeb4d3289683aea",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/notes_olsen.pdf",
+      "status": "moved"
+    },
+    {
+      "origin": "~/Downloads/ssiimmanual.pdf",
+      "md5": "e62aca63dac8bac78c2c0c792a9022b8",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/ssiimmanual.pdf",
+      "status": "moved"
+    }
+  ],
+  "posts": [
+    {
+      "post_id": "890917380870",
+      "post_type": "announcement",
+      "title": "Very Important! ",
+      "text": "Very Important! \n\n• you must carry a soft copy of the field guide, notebook, pencil (pen), scale\n• A reminder about shoes, 2 liters of water, ... etc (see previous post)\n• Have some app in your mobile installed that allows you to measure strike & dip, lat-long\n• Must arrive at the guest house by 0615 am (Ask someone in your floor to wake you up ...)\nSee you there tomorrow 😊",
+      "posted": "2026-11-06T14:47:13.964000+00:00",
+      "updated": "2026-11-06T15:05:04.485000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkwOTE3MzgwODcw",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "drive_ids": []
+    },
+    {
+      "post_id": "898233981113",
+      "post_type": "announcement",
+      "title": "thanks everyone! It was a really fun trip, and I (we) learned a lot.",
+      "text": "thanks everyone! It was a really fun trip, and I (we) learned a lot.\n\n\nI found a 2L water bottle in my bag. If it is yours, please drop me an email.  \n\nI shall add a google sheet (for pothole-related data) and drive folder (for photo sharing) on Monday or so. I am attaching here the only photo I took!",
+      "posted": "2026-11-07T16:35:45.752000+00:00",
+      "updated": "2026-11-07T16:42:04.284000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4MjMzOTgxMTEz",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "drive_ids": [
+        "1L26GEbdDLwvDrMyrDYwfVsmczINNFfkN"
+      ]
+    },
+    {
+      "post_id": "898597132119",
+      "post_type": "announcement",
+      "title": "As discussed in the class, ",
+      "text": "As discussed in the class, \n• we are having the project presentation next Monday (16th Oct, 4:15 PM, seminar room 32)\n• reach there by 4 pm, have chai & chocolates (I'll arrange), and check that your slides are working (any time you lose in setting up will be cut from your slot)\n• presntations are 9mins (strictly <10 slides) long, followed by QA (5)\n• here is the order:\nhttps://docs.google.com/spreadsheets/d/1yQJhCTrohg8b1kFjEjhFjIddZXn_rU_v605pAaH9nPI/edit?usp=sharing\n• I'll announce the talks to the entire ECS department",
+      "posted": "2026-11-10T05:28:21.214000+00:00",
+      "updated": "2026-11-10T05:39:36.232000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4NTk3MTMyMTE5",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "drive_ids": [
+        "1yQJhCTrohg8b1kFjEjhFjIddZXn_rU_v605pAaH9nPI"
+      ]
+    },
+    {
+      "post_id": "898619573676",
+      "post_type": "announcement",
+      "title": "to soumil, deep and their group: I think you'll find this very useful ",
+      "text": "to soumil, deep and their group: I think you'll find this very useful \nhttps://topotoolbox.wordpress.com/2020/11/23/location-location-location/\n\nit animates (using streampower model) the upstream march of a bunch of knickpoints in a catchment",
+      "posted": "2026-11-10T09:53:48.963000+00:00",
+      "updated": "2026-11-10T09:56:23.040000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODk4NjE5NTczNjc2",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "drive_ids": [
+        "1sdGQueH0sGfeRSHw1bdnRnFy9TU6zbpF"
+      ]
+    },
+    {
+      "post_id": "891189008320",
+      "post_type": "announcement",
+      "title": "• Note the change of venue for the group presentation: Monday, 16th Oct, 4:15 PM, seminar ",
+      "text": "• Note the change of venue for the group presentation: Monday, 16th Oct, 4:15 PM, seminar room 33, main building\n• I have edited the titles a bit to add location etc (see image attached)\n• we'll follow this order for the talks (if I gave a differnt order earlier, that stands corrected) \n\nwe'll also have our regular 9am class on Monday.",
+      "posted": "2026-11-13T10:19:44.526000+00:00",
+      "updated": "2026-11-13T10:54:21.078000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkxMTg5MDA4MzIw",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "drive_ids": [
+        "1O3o7mdMg7sP2eSR6rbeKOskvLPlbiu1H"
+      ]
+    },
+    {
+      "post_id": "891398553115",
+      "post_type": "announcement",
+      "title": "lecture slides for the lectures on fluvial landscapes attached",
+      "text": "lecture slides for the lectures on fluvial landscapes attached",
+      "posted": "2026-11-18T15:35:53.642000+00:00",
+      "updated": "2026-11-18T15:36:59.078000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkxMzk4NTUzMTE1",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "Landscape Evolution (EC2123)",
+      "course_id": "869084673562",
+      "drive_ids": [
+        "1zR6YmxPiDurPChPJqXD5s2rtxYMd6Qfj"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "8816d14f",
+      "kind": "google-sheet",
+      "target": "https://docs.google.com/spreadsheets/d/1yQJhCTrohg8b1kFjEjhFjIddZXn_rU_v605pAaH9nPI/edit?usp=sharing",
+      "label": "",
+      "course": "Landscape Evolution (EC2123)",
+      "post_id": "898597132119",
+      "post_title": "As discussed in the class, ",
+      "posted": "2026-11-10T05:28:21.214000+00:00",
+      "status": "admin",
+      "local": "lecture-notes-slides/group details.xlsx",
+      "note": "presentation order sheet = the 'group details' attachment; administrative"
+    },
+    {
+      "id": "3cab7b30",
+      "kind": "website",
+      "target": "https://topotoolbox.wordpress.com/2020/11/23/location-location-location/",
+      "label": "",
+      "course": "Landscape Evolution (EC2123)",
+      "post_id": "898619573676",
+      "post_title": "to soumil, deep and their group: I think you'll find this very useful ",
+      "posted": "2026-11-10T09:53:48.963000+00:00",
+      "status": "read",
+      "local": null,
+      "note": "TopoToolbox blog 'location, location, location' (knickpoint animation); already used in LS20 (2026-11-12 sweep)"
+    }
+  ]
+}

@@ -17,6 +17,12 @@ tags: [subject/chemistry, type/moc, taught, extra/book, src/slides, status/draft
 > [!warning] What is and is not in the sources
 > The **pre-midsem pack** [[chem pre-ms .pdf]] (119 slides with a text layer, instructor's own) covers slides 1–119: VSEPR (1–7), valence bond theory (8–26), molecular orbital theory (27–52), acids and bases (53–82) and main-group chemistry (83–119). Many diagrams (the $\mathrm{H_2O}$ MO slides 46–52, the $\mathrm{H_3}$ and $\mathrm{NH_3}$ level diagrams) are **images only**. **Redox** (Quiz 2) has no lecture slides in the folder, only a textbook excerpt and AI notes. Everything about assessments below is taken from summaries of Google Classroom posts written by another tool (`agent_written`), not from an official syllabus. Details in *Gaps*.
 
+
+> [!info] Shared drive: related books, past papers and old decks on the shared drive are listed in [[chemistry/inorganic-chemistry/shared-drive-sources|shared-drive sources (24 files)]].
+
+
+> [!example] Past paper (found on Drive 2026-11-21): [[CH2113 Quiz 2 (2020) - Key Checked]] (2020 acids-and-bases MCQ key; three key answers are wrong, flagged).
+
 ## The storyline
 ```mermaid
 flowchart LR
@@ -40,6 +46,7 @@ Central thread: **how electrons are shared (models of bonding) $\to$ which speci
 | 08 | [[CH08 Main Group Rings and Polymers]] | slides 109–119 (borazine, B–N polymers, phosphazenes); Tutorial 4 Q5–Q10 | **draft** |
 | 09 | [[CH09 Redox]] | Shriver and Atkins Ch. 5, pp.147–161 (excerpt PDF pp.174–188): Quiz 2 scope | **draft** (book tier; no slides) |
 | 10 | [[CH10 Crystal Field Theory]] + [[Crystal Field Theory Quiz Prep]] | S&A §20.1 pp.473–483; Huheey Ch. 11 pp.394–413 (Quiz 3 scope); lectures 2, 4, 9 Nov and TA 3 Nov **not yet in the folder** | **draft** (book tier; 2026-11-04) |
+| 11 | [[CH11 Ligand-Field Theory - Molecular Orbitals of Complexes]] | **Lecture notes = book pages** (Classroom, 18 Nov 2026): S&A §20.2 pp.483–487 (PDF 510–514) and Huheey pp.413–424 (PDF 430–441, OCR); σ and π MO diagrams, π donors/acceptors, synergic bonding; `ch11_numbers.py`, `fig_ch11.py` | draft (2026-11-21) |
 
 ```dataview
 TABLE chapter AS "#", scope AS "Scope", status AS "Status"
@@ -67,6 +74,7 @@ SORT chapter ASC
 
 ## Gaps (to ask the instructor / supply later)
 - **CH10 (crystal field theory):** no slides or notes of the 2, 3, 4, 9 Nov sessions; built from the assigned book pages. Book slips found: Huheey p.399 "338 kJ/mol" should be 389; Huheey VCl$_4$ 7900 vs S&A 9010 cm$^{-1}$.
+- **Classroom (sync 2026-11-21):** Quiz 2 papers returned 10 Nov (NLH); **Quiz 3 on 17 Nov** (CFT only, the CH10 pages); **MOT/LFT lecture notes = book pages** → CH11. Both book-page pointers are recorded and marked *read* in `chemistry/inorganic-chemistry/classroom-sources.json`. The shared drive holds the instructor's 10 pre-midsem CH2113 lecture PDFs (Lewis, VSEPR, VB, MOT 1–2, acids and bases 1–2, HSAB, main-group cages and rings), **not in the vault sources** and not yet compared line by line with CH01–CH08: [[chemistry/inorganic-chemistry/shared-drive-sources|shared-drive sources]].
 - **Redox** has no lecture material; only the book excerpt (S&A Ch.5 pp.147–161) and AI notes.
 - **Slides that are images:** the $\mathrm{H_2O}$ MO sequence (slides 46–52), the $\mathrm{H_3}$ and $\mathrm{NH_3}$ diagrams, the three trigonal-bipyramid structures on slide 6 (unlabelled): **now read from contact sheets** and written up in CH03; the HSAB table (slide 80), the reaction wheels of $\mathrm{P_4O_6}$/$\mathrm{P_4S_{10}}$ (slides 106–107) and the borazine reaction schemes (slide 114) remain pictures read in outline.
 - **Slide statements to verify:** MOT rule 1 reads "the greater the number of nodes in a M.O., the greater the anti-bonding character and **higher the symmetry**" (more nodes means higher energy; "higher symmetry" is not generally true); the $\mathrm{SF_6}$ orbital labels ($1a_1$, $1t_1$, $1e$ for $a_{1g}$, $t_{1u}$, $e_g$); the hybrid-set table on slide 15 ("angular" with $sp$, "trigonal pyramidal" with $sp^2$).
@@ -87,8 +95,8 @@ See [[Subject Map]] for how this subject relates to the others and [[Roadmap]] f
 ## Atlas: every note in this subject
 The graph view draws only real links, so this block links **every** note of the subject (the map is the hub of its cluster; [[Home]] is the hub of all maps).
 
-> [!abstract]- Atlas (generated): 10 chapters · 80 concept notes · 62 zettel notes (the other tool's, filed in the vault) · 1 other notes in the vault · 12 notes from the other tool (source layer)
-> **Chapters (10):** [[CH01 VSEPR and Valence Bond Theory]] · [[CH02 Molecular Orbital Theory Diatomics]] · [[CH03 Molecular Orbital Theory Polyatomics]] · [[CH04 Acid-Base Concepts]] · [[CH05 Acid Strength Lewis Acidity and Reactions]] · [[CH06 Hard and Soft Acids and Bases]] · [[CH07 Main Group Cages and Clusters]] · [[CH08 Main Group Rings and Polymers]] · [[CH09 Redox]] · [[CH10 Crystal Field Theory]]
+> [!abstract]- Atlas (generated): 11 chapters · 80 concept notes · 62 zettel notes (the other tool's, filed in the vault) · 1 other notes in the vault · 12 notes from the other tool (source layer)
+> **Chapters (11):** [[CH01 VSEPR and Valence Bond Theory]] · [[CH02 Molecular Orbital Theory Diatomics]] · [[CH03 Molecular Orbital Theory Polyatomics]] · [[CH04 Acid-Base Concepts]] · [[CH05 Acid Strength Lewis Acidity and Reactions]] · [[CH06 Hard and Soft Acids and Bases]] · [[CH07 Main Group Cages and Clusters]] · [[CH08 Main Group Rings and Polymers]] · [[CH09 Redox]] · [[CH10 Crystal Field Theory]] · [[CH11 Ligand-Field Theory - Molecular Orbitals of Complexes]]
 >
 > **Concept notes (80):** [[Absolute Hardness]] · [[Ambidentate Ligand]] · [[Amphoterism]] · [[Aqua Acid]] · [[Arrhenius Acid-Base Definition]] · [[Autoprotolysis of Water]] · [[Back-Donation in Boron Halides]] · [[Bent's Rule]] · [[Bond Order]] · [[Bonding and Antibonding Orbitals]] · [[Bronsted-Lowry Acids and Bases]] · [[CO Back-Donation]] · [[Conjugate Acid-Base Pair]] · [[Coulson's Theorem]] · [[Cryptand]] · [[Crystal Field Splitting Parameter]] · [[Crystal Field Theory]] · [[Cyclophosphazene]] · [[d Orbitals in Complexes]] · [[12-Inorganic-Chemistry/Concepts/Deltahedron|Deltahedron]] · [[Dewar Island Model]] · [[Equivalent and Non-Equivalent Hybrids]] · [[Faraday Constant]] · [[Frontier Orbitals]] · [[Galvanic Cell]] · [[H3 Molecular Orbitals]] · [[Heitler-London Wavefunction]] · [[Heteronuclear Diatomic MOs]] · [[High-Spin and Low-Spin Complexes]] · [[Hueckel Pi Model]] · [[Hybridisation]] · [[12-Inorganic-Chemistry/Concepts/Hypervalence|Hypervalence]] · [[Iminoborane]] · [[Inductive Effect on Acidity]] · [[Inorganic Heterocycle]] · [[Irving-Williams Series]] · [[Jahn-Teller Effect]] · [[Latimer and Frost Diagrams]] · [[LCAO Approximation]] · [[Levelling Effect]] · [[Lewis Acidity of BX3]] · [[Lewis Acids and Bases]] · [[Ligand Field Stabilization Energy]] · [[Ligand Group Orbitals]] · [[Linkage Isomerism]] · [[London Dispersion]] · [[Lone Pair Stereochemical Activity]] · [[Lux-Flood Definition]] · [[Madelung Energy]] · [[Molecular Orbital Theory]] · [[Nephelauxetic Effect]] · [[Octahedral Site Preference Energy]] · [[Octet Rule and Its Limits]] · [[Oxo Acid]] · [[Pairing Energy]] · [[Pauling's Rules for Oxoacids]] · [[Phosphorus Oxides and Sulfides]] · [[Photoelectron Spectroscopy]] · [[Polyphosphazene]] · [[Pourbaix Diagram]] · [[Promotion Energy]] · [[Reduction of a Representation]] · [[Solvent System Definition]] · [[sp Mixing]] · [[Spectrochemical Series]] · [[Spinel Structure]] · [[Square-Planar Complexes]] · [[Stability Field of Water]] · [[Standard Reduction Potential]] · [[Steric Number]] · [[Styx Numbers]] · [[12-Inorganic-Chemistry/Concepts/Superacid|Superacid]] · [[Symmetry Labels a b e t]] · [[Tetrahedral Crystal Field]] · [[Three-Centre Two-Electron Bond]] · [[Trigonal Bipyramid Site Preference]] · [[Valence Bond Theory]] · [[VSEPR Model]] · [[Walsh Diagram]] · [[Zintl Ion]]
 >

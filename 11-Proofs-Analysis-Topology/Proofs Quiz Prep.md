@@ -20,6 +20,26 @@ tags: [subject/analysis, type/moc, taught, src/lecture-notes, src/own-notes, sta
 > [!tip] How the tags work
 > Open the search pane and type **`tag:#quiz/pa-induction`** (PMI and strong-induction proofs), **`tag:#quiz/pa-strong`**, **`tag:#quiz/pa-wop`** (WOP and minimal counterexample) or **`tag:#quiz/proofs`** (all). Tags are on the chapter front matter, on the section headings (PA08 §1–§4, PA09 §1–§4, PA10 §1–§3, PA05 §1–§4), on the "solved in full" sections and on the concept notes of §7. #quiz/pa-induction #quiz/pa-strong #quiz/pa-wop
 
+## 0. End-semester portion (Classroom, 18 Nov 2026), mapped to the vault
+<span class="scope-taught">taught</span> *the course announcement: "Everything discussed in the class after the mid-sem exam till the class on Monday 16th Nov (excluding Peano's axioms)"*
+
+| # | portion (as announced) | where in the vault |
+|---|---|---|
+| 1 | **Functions**: injection, surjection, bijection, composition, inverse (examples, theorems) | [[PA04 Functions and Cardinality]] §1–§3; team quiz Q1 (PA04, end) |
+| 2 | **Cardinality**: finite, countable, uncountable; Cantor's diagonal argument ($\mathbb Q$ countable, $(0,1)$ and $\mathbb R$ uncountable, other theorems) | [[PA04 Functions and Cardinality]] §4–§6, Assignment 8 section; team quiz Q2–Q3 |
+| 3 | **Induction, strong induction, well-ordering**: applications and the **equivalence** of the three | [[PA08 Mathematical Induction]], [[PA09 Strong Induction and Recursion]] §2, [[PA10 Well-Ordering and Well-Ordered Pairs]] §2; team quiz Q4–Q6 |
+| 4 | **Proofs of the 3 black-box statements** used in the countability lectures | stated in [[PA04 Functions and Cardinality]] (no injection $\mathbb N_{n+1}\to\mathbb N_n$; a subset of $\mathbb N_k$ is finite; every subset of $\mathbb N$ is countable), proved by induction/WOP in [[PA05 Induction and the Number Systems]] |
+| 5 | **Construction of $\mathbb Z$ from $\mathbb N$**, properties (associativity of $+$ and $\times$, …) | [[PA05 Induction and the Number Systems]] §5 ($\mathbb Z=\mathbb N\times\mathbb N/\!\sim$), [[Construction of Integers and Rationals]] |
+| 6 | **Group theory**: group, abelian, cyclic, subgroup, examples; every subgroup of $\mathbb Z$ is $n\mathbb Z$; every subgroup of a cyclic group is cyclic ("an application of induction and WOP") | [[GT01 Groups Subgroups and Cosets]] (Assignment 10 section), [[GT03 Cyclic and Abelian Groups and Direct Products]] Theorem 1.1; the WOP proofs below |
+| — | **excluded**: Peano's axioms | [[PA16 Peano's Axioms and the Natural Numbers]] (not examinable) |
+
+> [!example]- The two subgroup theorems by the well-ordering principle (item 6, written out)
+> **Every subgroup $H\le\mathbb Z$ is $n\mathbb Z$.** If $H=\{0\}$, $n=0$. Otherwise $H$ contains a positive element ($h\in H\Rightarrow-h\in H$), so $H\cap\mathbb N\ne\varnothing$ has a **least element** $n$ (WOP). $n\mathbb Z\subseteq H$ (closure under $+$ and inverses; induction on $|k|$ for $kn$). Conversely, for $h\in H$ divide: $h=qn+r$, $0\le r<n$; then $r=h-qn\in H$, and $r>0$ would contradict the minimality of $n$, so $r=0$ and $h\in n\mathbb Z$.
+> **Every subgroup of a cyclic group $G=\langle g\rangle$ is cyclic.** Let $H\le G$, $H\ne\{e\}$. The set $\{k\in\mathbb N:g^k\in H\}$ is nonempty ($g^{-k}\in H\Rightarrow g^k\in H$); let $m$ be its least element. Then $\langle g^m\rangle\subseteq H$, and for $g^j\in H$ write $j=qm+r$, $0\le r<m$: $g^r=g^j(g^m)^{-q}\in H$, so $r=0$ by minimality, and $g^j=(g^m)^q$. Hence $H=\langle g^m\rangle$. (Equivalently: $\{k\in\mathbb Z:g^k\in H\}$ is a subgroup of $\mathbb Z$, hence $m\mathbb Z$.)
+
+> [!info] Team quiz (Assignments 6–9), discussed in the last tutorial
+> The instructor's six-question quiz with solutions ([[Team_Quiz_Assignments_6-9_with_Solutions.pdf]], posted 18 Nov): Q1 functions, Q2 a bijection $\mathbb N\times\mathbb N\to\{m<n\}$, Q3 a diagonal argument with a fixed first entry ([[PA04 Functions and Cardinality]], end); Q4 a product-sum induction, Q5 $4x+5y$ by strong induction, Q6 $\sqrt2$ by a least denominator ([[PA10 Well-Ordering and Well-Ordered Pairs]], end). Read the sheet's two **marking notes** (Q3: shift the diagonal to keep the first entry 0; Q6: the proof must produce a smaller positive denominator).
+
 ## 1. Problem map: where each assignment problem is solved
 
 | Problem | What it asks | Key idea | Solved in |

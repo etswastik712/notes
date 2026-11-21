@@ -25,6 +25,8 @@ Gives ENSO its instability.
 
 Used in: [[CL20 ENSO and the Walker Circulation]]. Related: [[Walker Circulation]] · [[El Nino and La Nina]] · [[Ice-Albedo Feedback]].
 
+Also taught by Joy in O7 (2026): the loop as "two ledgers in one loop" (winds = momentum, SST = energy) and its delayed undoing by reflected waves: [[CL29 The Ocean's Ledger VI - Slow Swings and the Ocean's Memory for Carbon]] §5–§6, [[Delayed Oscillator]].
+
 ## Linked from
 ```dataview
 LIST FROM [[]] AND -#type/moc SORT file.name ASC

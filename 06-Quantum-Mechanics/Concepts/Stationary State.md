@@ -34,7 +34,7 @@ Used in: [[QM02 The Schrodinger Equation and Stationary States]], [[QM03 States 
 
 Class zettel on this idea: [[zettel/particle-in-a-box-time-evolution|Particle in a Box Time Evolution]]
 
-Related zettel: [[zettel/time-independent-schrodinger-equation|Time-Independent Schrödinger Equation]]
+Related zettel: [[zettel/circular-infinite-well-energy-eigenvalues-and-eigenstates|Circular Infinite Well Energy Eigenvalues and Eigenstates]] · [[zettel/time-independent-schrodinger-equation|Time-Independent Schrödinger Equation]]
 <!-- zettel:end -->
 
 ## Linked from

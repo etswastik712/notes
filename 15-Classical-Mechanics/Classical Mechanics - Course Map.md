@@ -20,6 +20,9 @@ Planned as **eleven core chapters and two extras** on **analytical mechanics**, 
 > - **Extra · book (🟡)** is material from Arnold, José–Saletan, Goldstein, Greiner, Calkin that goes beyond the outline. **Extra · beyond (🔵)** is mine (numerical checks, comparisons), always labelled.
 > - **Assessments (overview):** Quiz 1 15 %, Mid-sem 35 %, Quiz 2 15 %, End-sem 35 %. Pre-requisite: Newtonian mechanics.
 
+
+> [!info] Shared drive: related books, past papers and old decks on the shared drive are listed in [[physics/classical-mechanics/shared-drive-sources|shared-drive sources (7 files)]].
+
 ## The four blocks of the overview, as storyline
 ```mermaid
 flowchart LR

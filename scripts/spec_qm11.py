@@ -1,0 +1,55 @@
+"""Concept notes for QM11-QM12 (2D problems, circular well, hydrogen; added 2026-11-21).   .venv/bin/python -W ignore scripts/spec_qm11.py"""
+from mkconcept import write
+
+Q11, Q12 = "QM11 Two-Dimensional Problems Angular Momentum and the Circular Well", "QM12 The Hydrogen Atom"
+T, EBY = "taught", "extra-beyond"
+L = ["lecture-notes"]
+ITEMS = [
+ dict(title="Laplacian in Polar and Spherical Coordinates", aliases=["polar Laplacian", "spherical Laplacian", "nabla squared in polar coordinates"], scope=[T], by=L,
+  syl={T: "[[tutorial7.pdf|Tutorial VII]] Q1; [[Angular_momentum.pdf#page=3|Angular_momentum.pdf pp.3–4]]; [[Hydrogen_atom.pdf#page=2|hydrogen notes eq. 11]]"},
+  intuition="The same operator written in coordinates that respect the symmetry: the radial part acquires 1/r (2D) or 2/r (3D) first-derivative terms, the angular part becomes angular momentum.",
+  key="2D: $\\nabla^2=\\partial_r^2+\\frac1r\\partial_r+\\frac1{r^2}\\partial_\\phi^2$ (chain rule with $\\partial_x r=\\cos\\phi$, $\\partial_x\\phi=-\\sin\\phi/r$, …). 3D: $\\nabla^2=\\frac1{r^2}\\partial_r(r^2\\partial_r)+\\frac{1}{r^2\\sin\\theta}\\partial_\\theta(\\sin\\theta\\,\\partial_\\theta)+\\frac{1}{r^2\\sin^2\\theta}\\partial_\\varphi^2=\\frac1{r^2}\\partial_r(r^2\\partial_r)-\\frac{\\hat L^2}{\\hbar^2r^2}$.",
+  used=[Q11, Q12], related=["Angular Momentum Algebra", "Radial Probability Density"]),
+ dict(title="Circular Infinite Well", aliases=["2D circular well", "particle in a disc", "Bessel well", "quantum drum"], scope=[T], by=L,
+  syl={T: "[[Angular_momentum (2).pdf]] (typed note); `circular_well_density.ipynb`"},
+  intuition="A particle confined to a disc: Bessel-function standing waves whose allowed wavenumbers are the zeros of J_l.",
+  key="$\\psi=N J_l(k_{n,l}r)e^{il\\theta}$, $k_{n,l}a=j_{l,n}$ ($n$-th zero of $J_l$), $E_{n,l}=\\hbar^2j_{l,n}^2/2ma^2$: 5.783, 14.682 (×2), 26.375 (×2), 30.471, 40.706 (×2) … in units $\\hbar^2/2ma^2$. $|N|^2=1/\\pi a^2J_{l+1}^2(j_{l,n})$. $e^{il\\theta}$ states have ring densities; $\\cos l\\theta$ combinations have $2l$ lobes.",
+  body="Tool: `qm_circular_well`.", used=[Q11], related=["Bessel Functions", "Particle in a Box", "Particle on a Ring", "Degeneracy"]),
+ dict(title="Bessel Functions", aliases=["J_l", "Bessel equation", "Bessel zeros", "Y_l Neumann function"], scope=[T, EBY], by=L,
+  syl={T: "[[Angular_momentum (2).pdf]] eqs. 7–9", EBY: "integral representation and zeros, QM11 §5.1"},
+  intuition="The radial standing waves of anything circular — a drum, a light beam in a fibre, a particle in a disc.",
+  key="Solutions of $R''+\\frac1rR'+(k^2-\\frac{l^2}{r^2})R=0$: $J_l(kr)$ (finite at 0) and $Y_l(kr)$ (diverges at 0). $J_l(x)=\\frac1\\pi\\int_0^\\pi\\cos(l\\tau-x\\sin\\tau)\\,d\\tau$; near 0, $J_l\\sim x^l$; for large $x$, $J_l\\approx\\sqrt{2/\\pi x}\\cos(x-l\\pi/2-\\pi/4)$. First zeros: $J_0$: 2.405, 5.520, 8.654; $J_1$: 3.832, 7.016; $J_2$: 5.136, 8.417.",
+  used=[Q11], related=["Circular Infinite Well", "Orthogonal Polynomials"]),
+ dict(title="Centrifugal Barrier", aliases=["centrifugal term", "effective potential", "angular momentum barrier"], scope=[T], by=L,
+  syl={T: "[[Angular_momentum.pdf#page=6|Angular_momentum.pdf p.6]] (2D); [[Hydrogen_atom.pdf#page=4|hydrogen notes eq. 25]] (3D)"},
+  intuition="Angular momentum costs kinetic energy that grows as the particle approaches the axis, acting like a repulsive wall.",
+  key="Radial equations contain $\\frac{\\hbar^2l^2}{2mr^2}$ (2D) or $\\frac{\\hbar^2l(l+1)}{2mr^2}$ (3D) added to $V(r)$: an effective potential. It forces $R\\propto r^{|l|}$ (2D) or $r^l$ (3D) at the origin and makes energies depend on $l$, except for the special $1/r$ and $r^2$ potentials. Classical analogue $L^2/2mr^2$.",
+  used=[Q11, Q12], related=["Radial Probability Density", "CM04 Central Forces and Effective One-Dimensional Motion"]),
+ dict(title="Spherical Harmonics", aliases=["Y_lm", "Y_{l,m}", "spherical harmonic"], scope=[T], by=L,
+  syl={T: "[[Hydrogen_atom.pdf#page=3|hydrogen notes pp.3–4]]"},
+  intuition="The standing-wave patterns on a sphere: simultaneous eigenfunctions of the size and z-component of angular momentum.",
+  key="$Y_{lm}(\\theta,\\varphi)\\propto P_l^m(\\cos\\theta)e^{im\\varphi}$, $l=0,1,2,\\dots$, $m=-l..l$; $\\hat L^2Y_{lm}=\\hbar^2l(l+1)Y_{lm}$, $\\hat L_zY_{lm}=\\hbar mY_{lm}$. Orthonormal and complete on the sphere. The angular part of every central-potential eigenfunction.",
+  used=[Q12], related=["Associated Legendre Polynomials", "Angular Momentum Algebra", "Laplacian in Polar and Spherical Coordinates"]),
+ dict(title="Associated Legendre Polynomials", aliases=["P_l^m", "Legendre polynomials", "associated Legendre functions"], scope=[T], by=L,
+  syl={T: "[[Hydrogen_atom.pdf#page=3|hydrogen notes eqs. 16–22]]"},
+  intuition="The θ-dependence of angular-momentum eigenstates: well-behaved at both poles only for C = ħ²l(l+1).",
+  key="Solve $\\frac1{\\sin\\theta}\\frac{d}{d\\theta}(\\sin\\theta\\,\\Theta')-\\frac{m^2}{\\sin^2\\theta}\\Theta=-l(l+1)\\Theta$. $P_0^0=1$, $P_1^0=x$, $P_1^1=-\\sqrt{1-x^2}$, $P_2^0=\\frac12(3x^2-1)$, $P_2^1=-3x\\sqrt{1-x^2}$, $P_2^2=3(1-x^2)$, $x=\\cos\\theta$ (Condon–Shortley sign).",
+  used=[Q12], related=["Spherical Harmonics", "Orthogonal Polynomials"]),
+ dict(title="Hydrogen Atom Spectrum", aliases=["hydrogen energy levels", "E_n = -13.6/n^2", "Bohr levels", "Lyman series", "Balmer series"], scope=[T, EBY], by=L,
+  syl={T: "[[Hydrogen_atom.pdf#page=5|hydrogen notes eq. 26]]", EBY: "lines and reduced mass, QM12 §5"},
+  intuition="Bound levels at −13.6 eV/n², crowding toward zero, with all l from 0 to n−1 at the same energy.",
+  key="$E_n=-\\frac{me^4}{2(4\\pi\\epsilon_0)^2\\hbar^2}\\frac1{n^2}=-\\frac{13.606\\ \\text{eV}}{n^2}$; $l=0..n-1$, $m=-l..l$: degeneracy $n^2$ ($2n^2$ with spin). Lyman α 121.5 nm, Balmer α (H-α) 656.1 nm, Balmer β 486.0 nm. Reduced mass: ×0.999456.",
+  used=[Q12], related=["Hydrogen Atom Stability", "Degeneracy", "Bohr Radius and Atomic Units", "Hydrogen 21 cm Line"]),
+ dict(title="Bohr Radius and Atomic Units", aliases=["Bohr radius", "a_0", "Hartree energy", "atomic units", "27.2 eV"], scope=[T], by=L,
+  syl={T: "[[Hydrogen_atom.pdf#page=1|hydrogen notes p.1]] (dimensional analysis)"},
+  intuition="The only length and energy one can build from m_e, e²/4πε₀ and ħ.",
+  key="$a=\\frac{4\\pi\\epsilon_0\\hbar^2}{m_ee^2}=0.52918$ Å; $\\varepsilon=\\frac{m_e}{\\hbar^2}(\\frac{e^2}{4\\pi\\epsilon_0})^2=27.211$ eV $=2\\times13.606$ eV (the Hartree). In units $\\hbar=m_e=e^2/4\\pi\\epsilon_0=1$, $E_n=-1/2n^2$.",
+  used=[Q12, "QM01 From Waves to Probabilities"], related=["Hydrogen Atom Spectrum", "Hydrogen Atom Stability"]),
+ dict(title="Radial Probability Density", aliases=["P(r)", "shell probability", "most probable radius"], scope=[T], by=L,
+  syl={T: "[[tutorial7.pdf|Tutorial VII]] Q3; [[Hydrogen_atom.pdf#page=6|hydrogen notes eq. 33]]"},
+  intuition="How likely the particle is at a given distance, not at a given point: the density times the size of the shell.",
+  key="$P(r)=\\int_0^{2\\pi}|\\psi|^2r\\,d\\theta$ (2D), $\\int|\\psi|^2r^2\\sin\\theta\\,d\\theta d\\varphi$ (3D); for angle-independent $\\psi$: $2\\pi r|\\psi|^2$, $4\\pi r^2|\\psi|^2$; with normalised $Y_{lm}$, $P=r^2R_{nl}^2$. Hydrogen 1s: peak at $r=a$, $\\langle r\\rangle=1.5a$; 2D oscillator ground state: peak at $1/\\sqrt2$ oscillator lengths.",
+  used=[Q11, Q12], related=["Born Rule", "Normalisation of a Wavefunction", "Laplacian in Polar and Spherical Coordinates"]),
+]
+if __name__ == "__main__":
+    write("06-Quantum-Mechanics", "qm", ITEMS)

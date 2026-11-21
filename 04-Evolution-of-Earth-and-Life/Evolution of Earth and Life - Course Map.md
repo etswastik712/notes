@@ -13,6 +13,9 @@ tags: [subject/earth-evolution, type/moc, taught, src/own-notes, status/stub]
 > [!warning] Stub: not yet written
 > Planned after eco-evo. Strongly tied to climate: faint young Sun, snowballs, carbon cycle, oxygenation, mass extinctions.
 
+
+> [!info] Shared drive: related books, past papers and old decks on the shared drive are listed in [[earth-and-climate/evolution-of-earth-and-life/shared-drive-sources|shared-drive sources (4 files)]].
+
 ## What exists in the repository
 - earth-and-climate/evolution-of-earth-and-life/lecture-notes-slides/ilovepdf_merged.pdf
 - earth-and-climate/evolution-of-earth-and-life/ai-gen-notes/geo_notes.pdf (+ geo_notes_latex.zip)

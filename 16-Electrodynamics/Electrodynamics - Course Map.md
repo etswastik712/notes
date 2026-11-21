@@ -21,6 +21,9 @@ Planned as **eleven core chapters and two extras** on classical electrodynamics,
 > - **Extra · book (🟡)**: Zangwill, Wald, Hehl-Obukhov, Landau Vol. 2, Magyar's companion to Jackson; **extra · beyond (🔵)**: mine.
 > - **Assessment (overview):** end-sem 40 %, mid-sem 30 %, others 30 %.
 
+
+> [!info] Shared drive: related books, past papers and old decks on the shared drive are listed in [[physics/electromagnetism/shared-drive-sources|shared-drive sources (5 files)]].
+
 ## Storyline
 ```mermaid
 flowchart LR

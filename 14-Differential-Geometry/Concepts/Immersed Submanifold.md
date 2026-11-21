@@ -31,7 +31,7 @@ Used in: [[DM06 Submanifolds]]. Related: [[Embedded Submanifold]] · [[Dense Lin
 
 Class zettel on this idea: [[zettel/immersed-submanifold|Immersed Submanifold]] · [[zettel/weakly-embedded-submanifold|Weakly Embedded Submanifold]]
 
-Related zettel: [[zettel/image-of-injective-immersion|Image of Injective Immersion]]
+Related zettel: [[zettel/compact-immersed-submanifold-embedding-theorem|Compact Immersed Submanifold Embedding Theorem]] · [[zettel/image-of-injective-immersion|Image of Injective Immersion]]
 <!-- zettel:end -->
 
 ## Linked from

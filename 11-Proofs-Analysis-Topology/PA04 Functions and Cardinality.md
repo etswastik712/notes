@@ -264,3 +264,27 @@ Black boxes assumed (proved later by induction, [[PA05 Induction and the Number 
 
 > [!example] Problem 5(b): $[0,1]\sim(0,1)\sim\mathbb R$
 > **$[0,1]\sim(0,1)$:** absorb **two** endpoints by shifting two places. Let $D=\{d_1,d_2,\dots\}$ with $d_1=0$, $d_2=1$, $d_n=\tfrac1{n-1}$ ($n\ge3$), and define $h(d_n)=d_{n+2}$, i.e. $h(0)=\tfrac12$, $h(1)=\tfrac13$, $h(\tfrac1m)=\tfrac1{m+2}$ ($m\ge2$), and $h(x)=x$ on $[0,1]\setminus D$. As in (a): $h$ maps into $(0,1)$, is injective, and $h(D)=\{d_3,d_4,\dots\}=\{\tfrac12,\tfrac13,\dots\}$ together with the untouched rest gives all of $(0,1)$. **$(0,1)\sim\mathbb R$:** the explicit bijection of Lecture 20 (above in this chapter's §5: $f(x)=1-\tfrac1{2x}$ on $(0,\tfrac12]$, $\tfrac1{2(1-x)}-1$ on $[\tfrac12,1)$). Since $\sim$ is an equivalence relation (transitive), $[0,1]\sim(0,1)\sim\mathbb R$. $\square$
+
+## Team quiz on Assignments 6–9, Questions 1–3 (added 2026-11-21)
+<span class="scope-taught">taught</span> *the instructor's six-question [[Team_Quiz_Assignments_6-9_with_Solutions.pdf|team quiz]] with solutions, discussed in the last tutorial (Classroom, Batch 1, 18 Nov 2026); end-sem portion items 1–2*
+
+> [!question] Q1 · Functions. $f:\mathbb R\to\mathbb R$, $f(x)=x^2-4$.
+> (a) Image and $f^{-1}(\{5\})$. (b) Injective? Surjective onto $\mathbb R$? (c) Choose an interval $D$ so that the same formula is a bijection $D\to[-4,\infty)$, and prove it.
+
+> [!example]- Solution (as on the sheet)
+> (a) $x^2\ge0$ so outputs lie in $[-4,\infty)$; conversely $y\ge-4$ is hit by $x=\sqrt{y+4}$: **image $=[-4,\infty)$**. $x^2-4=5\iff x^2=9$: $f^{-1}(\{5\})=\{-3,3\}$.
+> (b) **Not injective**: $f(1)=f(-1)=-3$. **Not surjective** onto $\mathbb R$: $-5$ has no pre-image.
+> (c) $D=[0,\infty)$. *Injective:* $f(x)=f(z)\Rightarrow(x-z)(x+z)=0$; if $x+z=0$ then non-negativity forces $x=z=0$, otherwise $x=z$. *Surjective:* $y\ge-4\Rightarrow\sqrt{y+4}\in D$ maps to $y$. The sheet also accepts $D=(-\infty,0]$ with the negative root.
+
+> [!question] Q2 · Pairs. $S=\{(m,n)\in\mathbb N\times\mathbb N:m<n\}$. Find a bijection $F:\mathbb N\times\mathbb N\to S$, prove it, and deduce that $S$ is countably infinite (you may use that $\mathbb N\times\mathbb N$ is).
+
+> [!example]- Solution (as on the sheet)
+> $F(a,b)=(a,a+b)$. Since $b\ge1$, $a<a+b$: $F$ maps into $S$. *Injective:* $F(a,b)=F(c,d)\Rightarrow a=c$, then $a+b=c+d\Rightarrow b=d$. *Surjective:* for $(m,n)\in S$, $n-m\in\mathbb N$ and $F(m,n-m)=(m,n)$. Compose with a bijection $\mathbb N\to\mathbb N\times\mathbb N$: $S\sim\mathbb N$.
+
+> [!question] Q3 · A sequence missing from a list. $A$ = all infinite 0–1 sequences with first entry 0. Show $A$ is infinite; given any list $a^{(1)},a^{(2)},\dots$ in $A$, construct an element of $A$ not in the list; conclude $A$ is uncountable.
+
+> [!example]- Solution (as on the sheet)
+> *Infinite:* the sequences with exactly one 1, at position $2,3,4,\dots$, are distinct elements of $A$. *Diagonal:* $b_1=0$, $b_{n+1}=1-a^{(n)}_{n+1}$. Then $b\in A$ and $b$ differs from $a^{(n)}$ at position $n+1$, so $b$ is in no list. Since $A$ is infinite and no list exhausts it, $A$ is uncountable. **The sheet's check:** "changing the first entry would produce a sequence outside $A$. The formula above keeps that entry fixed" — the trap is to flip the diagonal $a^{(n)}_n$, which at $n=1$ would set $b_1=1\notin A$: shift the diagonal by one.
+
+Q4–Q6 of the quiz are in [[PA08 Mathematical Induction]] (Practice 4, the product sum), [[PA09 Strong Induction and Recursion]] (the postage problem $4x+5y$) and [[PA10 Well-Ordering and Well-Ordered Pairs]] (the least-denominator proof of $\sqrt2\notin\mathbb Q$).
+

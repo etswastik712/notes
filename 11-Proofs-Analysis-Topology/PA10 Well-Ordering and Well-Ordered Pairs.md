@@ -250,3 +250,14 @@ flowchart LR
 
 > [!example] Problem 4: $P(n)$: "$n^2+n$ is even"
 > **(a) By WOP.** Let $S=\{n\in\mathbb N:P(n)\text{ is false}\}$ and suppose $S\ne\varnothing$ with least element $m$. $P(1)$ holds ($1+1=2$), so $m\ne1$ ("treat $m=1$ separately"), hence $m\ge2$ and $m-1\in\mathbb N$. **Claim: $P(m-1)$ is false.** If $m^2+m$ is odd, then $(m-1)^2+(m-1)=m^2+m-2m$ is odd minus even, which is odd. So $m-1\in S$ and $m-1<m$, contradicting minimality. Hence $S=\varnothing$. **(b) By induction.** Base $1^2+1=2$. Step: $(k+1)^2+(k+1)=\big(k^2+k\big)+2(k+1)$, even $+$ even. **Comparison:** the inductive step $P(k)\Rightarrow P(k+1)$ of (b) is exactly the contrapositive "$P(m)$ false $\Rightarrow P(m-1)$ false" inside (a) (with $k=m-1$): (a) packages the *same* implication, and uses WOP to pick the smallest failure instead of chaining implications up from $P(1)$. (PMI, strong induction and WOP are one principle in three forms.)
+
+## Team quiz on Assignments 6–9, Questions 4–6 (added 2026-11-21)
+<span class="scope-taught">taught</span> *the instructor's [[Team_Quiz_Assignments_6-9_with_Solutions.pdf|team quiz]] (Classroom, 18 Nov 2026)* #quiz/pa-wop
+
+> [!question] Q6 · Choosing a least denominator. Use the fact that every nonempty subset of $\mathbb N$ has a least element to prove that no rational number has square 2 (you may use: if $n^2$ is even, $n$ is even).
+
+> [!example]- Solution (as on the sheet)
+> Suppose some rational has square 2. Then $D=\{q\in\mathbb N:\exists p\in\mathbb Z,\ p^2=2q^2\}$ is nonempty; let $q$ be its **least element** and $p$ a matching integer. $p^2=2q^2$ is even, so $p=2u$; then $q^2=2u^2$, so $q$ is even, $q=2v$ with $v\in\mathbb N$; then $u^2=2v^2$, so $v\in D$ with $v=q/2<q$: **contradicts minimality**. **The sheet's marking note:** "the contradiction must use a smaller positive denominator. A proof that only assumes a fraction is in lowest terms does not explicitly use the principle requested here." (Compare the other WOP proof in [[PA05 Induction and the Number Systems]], via $\sqrt2=(2q-p)/(p-q)$.)
+
+**Q4** (ordinary induction, $1\cdot2+\dots+n(n+1)=\frac{n(n+1)(n+2)}3$) is [[PA08 Mathematical Induction]] Practice 4; the sheet's step: $\frac{k(k+1)(k+2)}3+(k+1)(k+2)=\frac{(k+1)(k+2)(k+3)}3$. **Q5** (every $n\ge12$ is $4x+5y$, and 11 is not) is the postage example of [[PA09 Strong Induction and Recursion]] §2; the sheet adds *why four base cases*: "this step increases a known value by 4: they start the four possible remainders upon division by 4", and for 11: $y\in\{0,1,2\}$ leaves $4x=11,6,1$, none divisible by 4. Q1–Q3: [[PA04 Functions and Cardinality]].
+

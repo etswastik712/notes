@@ -17,12 +17,14 @@ OWN = re.compile(r"^(00-Home|\d\d-[A-Za-z-]+|Assets)$")
 
 files = {}      # lower-case basename -> [paths]
 notes = {}      # lower-case note name or alias -> path
+allmd = []      # every .md path (for path-suffix links to notes whose basename is not unique)
 for dp, dn, fn in os.walk(ROOT):
     dn[:] = [d for d in dn if d not in SKIP_DIRS]
     for f in fn:
         p = os.path.join(dp, f)
         files.setdefault(f.lower(), []).append(p)
         if f.endswith(".md"):
+            allmd.append(p)
             name = f[:-3].lower()
             notes[name] = p
             if f.endswith(".excalidraw.md"):
@@ -85,7 +87,7 @@ def check_target(raw, src, line, errs):
     p = notes.get(low) or notes.get(low.replace(".md", ""))
     if not p and "/" in low:          # path-style link, e.g. [[ph2113/exam-prep]]: match by path suffix
         suffix = "/" + low.replace(".md", "")
-        for path in notes.values():
+        for path in allmd:
             rel = os.path.relpath(path, ROOT).replace(os.sep, "/").lower()
             if rel.endswith(".md") and ("/" + rel[:-3]).endswith(suffix):
                 p = path

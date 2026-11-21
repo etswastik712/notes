@@ -71,6 +71,9 @@ tags: [subject/climate, type/chapter, taught, extra/beyond, src/neena, status/dr
 > [!verify] What the lecture does not say 🔵
 > The slides describe the two states and the feedback that sustains **each**, not the process that makes the system **switch** (the recharge or delayed-oscillator mechanism) nor the **forecast** skill; nor how the heat flux of [[CL18 The Ocean as the Climate System's Heat Reservoir]] §3 changes (the upwelling regions are where the air *heats* the ocean: Hartmann p. 129), nor the link to the Indian monsoon ([[CL15 Monsoons]]). Those are recalled topics, **not read** and not stated here as course content.
 
+> [!info] Answered later in the course (added 2026-11-21)
+> The question flagged above — what makes the system **switch** back, and how it can be **forecast** — was taught by Joy in O7: the Kelvin and Rossby waves and their reflection (a delayed negative feedback), the 2–7 year irregular period, forecasts from the ocean's memory, and the Indian Ocean Dipole. See [[CL29 The Ocean's Ledger VI - Slow Swings and the Ocean's Memory for Carbon]] §4–§6 and [[Delayed Oscillator]].
+
 ## Map of this chapter
 > [!connection] How CL20 connects
 > **Builds on:** [[CL19 Wind-Driven Ocean Circulation]] (equatorial upwelling, thermocline), [[CL18 The Ocean as the Climate System's Heat Reservoir]] (mixed layer, heat flux, bulk stress), [[CL14 Observed Winds - Jets, Trades and the ITCZ]] (trades, ITCZ), [[CL04 Feedback and Multiple Steady States]] (positive feedbacks).

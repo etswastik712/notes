@@ -1,0 +1,17 @@
+{
+  "_about": "Written by scripts/classroom_sync.py: which Classroom course/post (or Drive folder) each source file in this topic folder came from, every post's text, and every resource a post POINTS to (website, Dropbox, sheet, book pages) with its status. Edit statuses with `classroom_sync.py mark`.",
+  "files": [
+    {
+      "origin": "~/Downloads/79_ClassicalFieldTheory.pdf (Deligne & Freed, Classical Field Theory, IAS QFT for mathematicians)",
+      "md5": "94e850998983ae2f0f0cb22aeb75d062",
+      "resource_id": null,
+      "course": null,
+      "posted": "2026-11-21",
+      "post_type": "ingest",
+      "file": "books/79_ClassicalFieldTheory.pdf",
+      "status": "moved"
+    }
+  ],
+  "posts": [],
+  "resources": []
+}

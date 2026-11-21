@@ -405,6 +405,9 @@ CFT explains **patterns** and *trends in magnitude of the energies*, but:
 
 <!-- interactive:end -->
 
+> [!info] Continued (added 2026-11-21)
+> The "pointer to ligand-field theory" above is now a chapter: [[CH11 Ligand-Field Theory - Molecular Orbitals of Complexes]] (the MOT/LFT pages assigned on 18 Nov: S&A pp.483–487, Huheey pp.413–424), which explains the spectrochemical series of §3.1 by σ donation and π donation/acceptance.
+
 ## Summary
 > [!summary] Cheat-sheet
 > - **Octahedral:** $t_{2g}$ ($-0.4\Delta_O=-4Dq$) below $e_g$ ($+0.6\Delta_O=+6Dq$); barycentre fixed; $\Delta_O=10Dq$.

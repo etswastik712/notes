@@ -20,6 +20,9 @@ tags: [subject/thermo, type/moc, taught, src/lecture-notes, src/own-notes, statu
 > [!tip] How the tags work
 > Every note and section related to these tutorials carries a tag. In Obsidian open the search pane and type **`tag:#quiz/th-tut1`** (Tutorial 1), **`tag:#quiz/th-tut2`** (Tutorial 2), **`tag:#quiz/th-background`** (the first/second-law prerequisites) or **`tag:#quiz/thermo`** (all). The tag is on the chapter's front matter, on each tutorial question's worked example, on the relevant section headings (TH07 §1, §2.2, §3, §4, §5; TH08 §1–§5) and on the concept notes listed in §7. #quiz/th-tut1 #quiz/th-tut2
 
+
+> [!example] Past paper (added 2026-11-21): [[TD2213 End-Semester 2026 January Semester - Solved]] — the previous run's end-sem (29 April 2026; Venkatnathan & Bhagwat), all 11 questions solved with the paper's data (`scripts/td2213_endsem2026_numbers.py`): entropy generation, propane vapour pressure via the acentric factor, Redlich–Kwong $C_v$, isentropic steam, Hess/Kirchhoff, partition functions, Sackur–Tetrode, microstates.
+
 ## 1. Question map: where each tutorial question is solved
 
 | Q | Topic | Formula | Answer (instructor) | Solved in |

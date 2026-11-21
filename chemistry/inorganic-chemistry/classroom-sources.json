@@ -1,0 +1,95 @@
+{
+  "_about": "Written by scripts/classroom_sync.py: which Classroom course/post (or Drive folder) each source file in this topic folder came from. Do not edit by hand.",
+  "files": [
+    {
+      "drive_id": "1XQuuohJ7X2o4UcBAXEqAgvepNWA2Mzou",
+      "drive_name": "CH2113 Quiz2_MCQ_15Oct2020_Key.pdf",
+      "drive_modified": "2020-11-28T10:13:37.000Z",
+      "md5": "e55c8b251b6cb87f3e1b2a2700780b9f",
+      "course": "inorganic-chemistry",
+      "post_type": "drive-search",
+      "posted": null,
+      "post_title": "previous-year paper found by Drive search 2026-11-21",
+      "file": "lecture-notes-slides/past-papers/CH2113 Quiz2_MCQ_15Oct2020_Key.pdf",
+      "status": "downloaded"
+    }
+  ],
+  "posts": [
+    {
+      "post_id": "891016274611",
+      "post_type": "announcement",
+      "title": "Dear students,",
+      "text": "Dear students,\nEveryone is requested to be present at NLH for tomorrow's class and we will have the distribution of the Quiz 2 paper, as informed by Ballav Sir.",
+      "posted": "2026-11-09T16:16:54.239000+00:00",
+      "updated": "2026-11-09T16:24:00.014000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODcxOTI3NTk2NDU5/p/ODkxMDE2Mjc0NjEx",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "CH2113 Principles of Inorganic Chemistry",
+      "course_id": "871927596459",
+      "drive_ids": []
+    },
+    {
+      "post_id": "883464834620",
+      "post_type": "announcement",
+      "title": "Dear All, Quiz 3 will be conducted on Tuesday 17-Nov-2026 during TA session 12-1 pm. The s",
+      "text": "Dear All, Quiz 3 will be conducted on Tuesday 17-Nov-2026 during TA session 12-1 pm. The syllabus will be Crystal Field Theory and related (not molecular orbital theory, MOT and Pi-Bonding). Lecture Notes: Please refer to the text books Shriver Atkins BOOK 5th Edition Page 473 to 483 and Huheey, Keiter and Keiter BOOK International Online 4th Edition Page 394 to 413 (or Huheey, Keiter and Keiter BOOK in Our Library Pearson 4th Edition Hard Copy Binding Page 424 to 444). Best wishes, NB",
+      "posted": "2026-11-14T06:04:58.683000+00:00",
+      "updated": "2026-11-14T06:10:08.749000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODcxOTI3NTk2NDU5/p/ODgzNDY0ODM0NjIw",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "CH2113 Principles of Inorganic Chemistry",
+      "course_id": "871927596459",
+      "drive_ids": []
+    },
+    {
+      "post_id": "891391809519",
+      "post_type": "announcement",
+      "title": "Lecture Notes for MOT/LFT: Please refer to the text books Shriver Atkins BOOK 5th Edition ",
+      "text": "Lecture Notes for MOT/LFT: Please refer to the text books Shriver Atkins BOOK 5th Edition Page 483 to 487 and Huheey, Keiter and Keiter BOOK 4th Edition Page 413 to 424.",
+      "posted": "2026-11-18T14:09:47.914000+00:00",
+      "updated": "2026-11-18T14:10:46.152000+00:00",
+      "topic": null,
+      "url": "https://classroom.google.com/c/ODcxOTI3NTk2NDU5/p/ODkxMzkxODA5NTE5",
+      "due": null,
+      "work_type": null,
+      "links": [],
+      "course": "CH2113 Principles of Inorganic Chemistry",
+      "course_id": "871927596459",
+      "drive_ids": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "192afed3",
+      "kind": "book-pages",
+      "target": "Lecture Notes: Please refer to the text books Shriver Atkins BOOK 5th Edition Page 473 to 483 and Huheey, Keiter and Keiter BOOK International Online 4th Edition Page 394 to 413 (or Huheey, Keiter and Keiter BOOK in Our Library Pearson 4th Edition Hard Copy Binding Page 424 to 444). Best wishes, NB",
+      "label": "",
+      "course": "CH2113 Principles of Inorganic Chemistry",
+      "post_id": "883464834620",
+      "post_title": "Dear All, Quiz 3 will be conducted on Tuesday 17-Nov-2026 during TA session 12-1 pm. The s",
+      "posted": "2026-11-14T06:04:58.683000+00:00",
+      "status": "read",
+      "local": null,
+      "note": "S&A pp.473-483 + Huheey pp.394-413: already the reading range of CH10 (Quiz 3 CFT)"
+    },
+    {
+      "id": "8c06c6b1",
+      "kind": "book-pages",
+      "target": "Lecture Notes for MOT/LFT: Please refer to the text books Shriver Atkins BOOK 5th Edition Page 483 to 487 and Huheey, Keiter and Keiter BOOK 4th Edition Page 413 to 424.",
+      "label": "",
+      "course": "CH2113 Principles of Inorganic Chemistry",
+      "post_id": "891391809519",
+      "post_title": "Lecture Notes for MOT/LFT: Please refer to the text books Shriver Atkins BOOK 5th Edition ",
+      "posted": "2026-11-18T14:09:47.914000+00:00",
+      "status": "read",
+      "local": null,
+      "note": "S&A pp.483-487 (PDF 510-514) + Huheey pp.413-424 (PDF 430-441, OCR) read in full -> CH11 Ligand-Field Theory"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 """Render Joy's HTML slide decks to PDF (slides only, and slides + speaker notes).
 
-  .venv/bin/python -I scripts/joy_slides_pdf.py [deck ...]        (decks: ocean-ledger ocean-ledger-w2 ocean-ledger-o4 ocean-ledger-o5 ocean-ledger-o6)
+  .venv/bin/python -I scripts/joy_slides_pdf.py [deck ...]        (decks: ocean-ledger ocean-ledger-w2 ocean-ledger-o4 ocean-ledger-o5 ocean-ledger-o6 ocean-ledger-o7)
 
 Method: each deck is a downloaded HTML page (untrusted data, only ever opened from a throw-away copy). For every frame n the copy is
 opened in headless Firefox at  index.html#n  with prefers-reduced-motion forced on (no fades or camera moves) and the deck's progress
@@ -31,6 +31,7 @@ DECKS = {
     "ocean-ledger-o4": "O4_Nansens-answer",
     "ocean-ledger-o5": "O5_The-salt-ledger",
     "ocean-ledger-o6": "O6_The-overturning",
+    "ocean-ledger-o7": "O7_Slow-swings-and-the-oceans-memory-for-carbon",
 }
 FONT = "/usr/share/fonts/liberation/LiberationSans-Regular.ttf"
 FONTB = "/usr/share/fonts/liberation/LiberationSans-Bold.ttf"

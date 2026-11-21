@@ -22,6 +22,14 @@ tags: [subject/landscapes, type/chapter, extra/book, extra/beyond, src/book, src
 > 🟡 **Extra · book** (A&A Ch. 12; PDF = printed + 18): §1 magnitude–frequency, bankfull and effective discharge ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=414|printed pp.396–399]]); §2 floodplain and levee deposition (p.399); §3–§4 braiding and meandering ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=417|printed pp.399–405]]); §5 concave profiles, bed fining, slopes of big rivers ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=423|printed pp.405–409]]); §6 base-level change ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=427|printed p.409]]); §7 the Amazon ([[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=429|printed pp.411–414]]).
 > 🔵 **Extra · beyond** (all numbers in `scripts/ls_rivers_numbers.py`, section LS22): the lognormal-flow derivation of the effective discharge ($Q_e=Q_{med}e^{j\sigma^2}$), the Gumbel proof that the mean annual flood is the 2.33-yr event, the sine-generated meander and $S=1/J_0(\omega)$, the super-elevation estimate, the three profile arguments with numbers, the exact diffusive base-level solution (checked against a finite-difference run), the Amazon budget arithmetic, and the problems.
 
+> [!taught] 🟢 Lecture source arrived (fluvial lectures, slides posted on Classroom 2026-11-18; added 2026-11-21)
+> [[l_fluvial.pdf]] (Argha Banerjee) now **teaches** most of this chapter; read these sections as 🟢 *taught*:
+> - §1 floods: frequency distribution with a **power-law tail** of high discharges (A&A fig 12.16): [[l_fluvial.pdf#page=16|slide 16]]; magnitude × frequency, **effective discharge**, and the empirical fact "effective discharge equals bankfull discharge" (figs 12.15, 12.17): [[l_fluvial.pdf#page=17|slide 17]]; sediment load vs discharge (fig 12.18): [[l_fluvial.pdf#page=18|slide 18]].
+> - §2 floodplains (fig 12.19): slide 18. §3 braided rivers (figs 12.11, 12.20, 12.21), "discharge controls the width of braided rivers", Google Earth examples: [[l_fluvial.pdf#page=19|slides 19–22]].
+> - §4 meandering and self-similarity, erosion and deposition growing the bends, meander evolution (figs 12.22–12.26): [[l_fluvial.pdf#page=23|slides 23–25]].
+> - §5–§6 long profile, Hack's rule, diffusive evolution of alluvial transport-limited rivers (figs 12.27, 12.28, 12.31): [[l_fluvial.pdf#page=26|slide 26]].
+> - §7 the Amazon sediment budget (figs 12.32–12.34): [[l_fluvial.pdf#page=27|slides 27–28]]; then the **Ganga–Brahmaputra and the Bengal Fan** ([[l_fluvial.pdf#page=29|slide 29]]), new in §7.1 below.
+
 > [!key] After this chapter you can
 > - derive why the **effective (channel-forming) discharge** lies near the bankfull flow, a flood of 1.5–2.5 years recurrence, and compute it for a lognormal flow record,
 > - explain why the mean annual flood has a recurrence interval of **2.33 years** (Gumbel),
@@ -179,6 +187,17 @@ A&A (pp.411–414) close the chapter with the largest river on Earth, studied fo
 > [!example] 🧮 The budget arithmetic
 > The mass balance for a reach is: change of storage = (upstream bedload and suspended load in) + (tributary input) + (bank erosion) − (downstream load out) − (deposition on bars) − (deposition on the floodplain). Between São Paulo de Olivença and Óbidos, the measured inputs are 616 (the Amazon proper), 715 (the Madeira, from the Bolivian Andes) and 117 Mt/yr (small tributaries): **1448 Mt/yr**. The output at Óbidos is **1239 Mt/yr**. The difference, **209 Mt/yr** ($14.4\,\%$ of the input), is stored, mostly on the floodplain. The black-water Rio Negro contributes almost nothing because it drains low-relief shield. So the system is a **net sink**, and the river exchanges large amounts of mass with its banks and floodplain (bank erosion and floodplain deposition each large compared to the net). Over the 6.15 million km², the output of 1239 Mt/yr is a yield of $0.20$ kg m⁻² yr⁻¹, equal to a **denudation of 0.075 mm/yr** at rock density 2700 kg/m³ (my arithmetic; the budget is for a reach, not the whole basin, so this is indicative).
 
+### 7.1 The Ganga–Brahmaputra and the Bengal Fan (lecture, slide 29)
+<span class="scope-taught">taught</span> *[[l_fluvial.pdf#page=27|l_fluvial slides 27]], [[l_fluvial.pdf#page=29|29]]; arithmetic mine (`scripts/ls_fluvial_lecture_numbers.py`)*
+
+The lecture follows the Amazon budget with the Indian case: the Ganga and Brahmaputra carry **~700 Mt/yr** (slide 27), and the **Bengal Fan** is ~3000 km long, up to 1430 km wide, $3\times10^6$ km² in area with a sediment volume of **12.5 million km³** (slide 29, with a link to the EOS feature *The search for the severed head of the Himalayas*). The slide asks: *how much is stored in the floodplain (Indo-Gangetic Plains), and how much is evacuated or deposited per year?*
+
+> [!example] 🧮 How many years of Himalayan erosion is the fan?
+> Mass $=V\rho_b$ with a bulk density for compacted fan sediment of $1800$–$2200$ kg/m³ (an assumption, porosity ~20–35 %): $2.25$–$2.75\times10^{19}$ kg. At the present 700 Mt/yr: **32–39 Myr**; at 1 Gt/yr: **22–28 Myr**. Mean thickness $V/A=4.2$ km. So the fan stores tens of Myr of the present Himalayan sediment flux, the right order for a fan fed since the Himalaya rose (Eocene onward). *The fan's age and any long-term flux history are not in the sources; this only shows the numbers are mutually consistent.* The floodplain-storage question is the Amazon's §7 question again: there **14 %** of the input (209 of 1448 Mt/yr) stays on the floodplain each year; nothing on the slide gives the Indo-Gangetic number.
+
+> [!warning] [!verify] 1290 vs 1239 Mt/yr
+> Slide 27 writes **1290 Mt/yr** beside the "bank erosion and tributaries" panel of A&A fig 12.34, with 616 and 209. A&A's text (p.412, [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=430|PDF p.430]], read) gives the output at Óbidos as **1239 Mt/yr**, inputs 616 + 715 + 117 = 1448 Mt/yr and storage 209 Mt/yr. The 1290 is probably read off the figure's cumulative curve; this chapter keeps A&A's text values.
+
 ## 8. Worked examples
 > [!example] 🧮 Example 1: which flood shapes a channel with $\sigma=1.2$, $j=2$?
 > $Q_e/Q_{med}=e^{j\sigma^2}=e^{2.88}=17.8$, exceeded on a fraction $1-\Phi(j\sigma)=1-\Phi(2.4)=0.0082$ of days $=3.0$ days per year. In the annual-maximum series (Gumbel) it will be a flood of order the mean annual flood, so this river's bankfull stage is reached about once or twice a year, consistent with 1.5–2.5 yr bankfull recurrence.
@@ -246,5 +265,9 @@ A&A (pp.411–414) close the chapter with the largest river on Earth, studied fo
 > |---|---|---|
 > | magnitude–frequency, Box 12.3, braiding, meandering, concave profiles, fining, avulsion, base level, Amazon | A&A Ch. 12, printed pp.396–414 (PDF = printed + 18; text-layer reading, equations re-derived) | extra · book |
 > | lognormal effective discharge, Gumbel 2.33 yr, sine-generated curve, super-elevation, profile numbers, diffusive solution (checked by finite differences), Amazon arithmetic | my derivations, `scripts/ls_rivers_numbers.py` (LS22) | extra · beyond |
+> | lecture coverage map; Ganga–Brahmaputra 700 Mt/yr; Bengal Fan dimensions and volume; the floodplain-storage question | [[l_fluvial.pdf]] slides 16–29 (EC2123, Classroom 2026-11-18; all slides viewed) | taught |
+> | Bengal Fan mass, years of supply, mean thickness | `scripts/ls_fluvial_lecture_numbers.py` (bulk density assumed) | extra/beyond |
+>
+> **Notes (2026-11-21).** [!verify] slide 27's 1290 Mt/yr vs A&A's 1239 Mt/yr (see §7.1). The EOS article linked on slide 29 was not read.
 >
 > **Flagged:** the oxbow-length formula and the radius-of-curvature ratio of A&A are not given here (the equation is lost in the text layer); $\kappa=10^{5}$ m²/yr and $\sigma=1$ are illustrative; the Gumbel scale ($\beta=0.35\mu$ in the figure) is illustrative.

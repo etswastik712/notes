@@ -213,6 +213,38 @@ tags: [subject/eco-evo, type/moc, taught, extra/book, extra/beyond, src/slides, 
 11. **Why are small populations at risk even when healthy on average?** Three stochasticities, Allee effect, drift; link to MVP.
 12. **What do the passenger pigeon and the tiger have in common?** Counts that looked fine until a threshold or a method failed.
 
+## 6. Part IV: evolution (EE08–EE10), added 2026-11-21
+<span class="scope-taught">taught</span> *the three evolution lectures and their mandatory readings; the wrap-up lecture says the syllabus is everything in BI2113* · chapters: [[EE08 Evolution - An Introduction]], [[EE09 Hardy-Weinberg Equilibrium]], [[EE10 Natural Selection]]
+
+> [!key] Formula and fact sheet
+> - **Frequencies**: $p=P+Q/2$ (always). **HW**: $p^2:2pq:q^2$, $p'=p$; one generation (two if the sexes differ); $2pq\le\tfrac12$; carriers : affected $=2p/q$.
+> - **k alleles**: $(\sum p_i)^2$; heterozygosity $1-\sum p_i^2$. **Recessive**: $\hat q=\sqrt{\text{aa}}$, carriers $2pq$, untestable (0 df).
+> - **χ²** $=\sum(o-e)^2/e$, df $=1$ for an HW test, critical 3.84.
+> - **Blending**: $V_t=V_0/2^t$ (Jenkin). **Drift**: $H_t=H_0(1-1/2N)^t$ (EE07).
+> - **Selection** (beyond): $\Delta p=pq[p(w_{11}-w_{12})+q(w_{12}-w_{22})]/\bar w$; overdominance $p^*=t/(s+t)$; $R=h^2S$.
+> - **Finches**: 1977 drought 24 vs 130 mm, 84 % died, *Tribulus*, $h^2=0.65$; 1983 El Niño 1359 mm; 2004 + *G. magnirostris*.
+> - **History**: Steno, Cuvier (extinction), Buffon (38 forms), Paley (watchmaker), Linnaeus (fixity), Lamarck (4 parts), Darwin (Malthus, Smith, Lyell), Jenkin, Mendel (1866/1900), Fisher–Haldane–Wright, Huxley 1942.
+> - **EES**: GR methylation (Weaver 2004), vinclozolin (≥ 4 generations), toadflax *Lcyc*, *Elysia* (retracted).
+
+> [!warning] Traps (Part IV)
+> 29. "Lamarck = inheritance of acquired characters": a small, borrowed part of a four-part theory.
+> 30. Using $\sqrt{\text{aa}}$ when all three genotypes are visible: use $p=P+Q/2$.
+> 31. Sheep problem: carriers **among normal** sheep $=2pq/(1-q^2)$, not $2pq$.
+> 32. Taster × taster: condition on the parents being tasters, $P(Tt\mid T\_)=2pq/(p^2+2pq)$.
+> 33. A non-significant χ² does not prove HWE (or no selection).
+> 34. HW is **neutrally** stable, not stable.
+> 35. Selection acts on individuals/phenotypes; evolution is a population change in allele frequencies; **NS is not evolution**.
+> 36. Selection is not forward-looking, not progressive; it uses existing variation (preadaptations, trade-offs: *Gambusia*).
+> 37. The EES is an extension of the MS, not a refutation (slide 58; Pigliucci).
+
+> [!question]- Self-test (Part IV), answers in the chapters
+> 1. Derive HW with assumptions at each step (EE09 §3). 2. Pueblo 83/46/11: $p$, expected, χ² (0.757; 80.3/51.5/8.3; 1.59). 3. PKU 1/11000: $q$, carriers (0.0095, 1/53). 4. Why no CC in the acid-phosphatase sample (expected 0.27). 5. Darwin's chain with Malthus, Smith, Lyell (EE08 §4). 6. The four objections and answers (EE08 §5). 7. The three MS→EES concept shifts with cases (EE08 §7). 8. The four postulates on Daphne Major (EE10 §2). 9. Three Daphne lessons (EE10 §3). 10. Draw directional, stabilizing, disruptive (EE10 Fig. 10.1).
+
+> [!example]- Essay prompts (Part IV)
+> - "Nothing in biology makes sense except in the light of evolution" — the two analogies, proximate vs ultimate (EE08 §8).
+> - "The Hardy–Weinberg law is boring; the deviations are interesting" — list the assumptions and what each departure does (drift EE07, selection EE10, non-random mating, migration, mutation).
+> - "Natural selection is not evolution" — finches, heritability, the nature of selection (EE10 §5).
+
 ## Study plan (about 3 hours)
 1. 30 min: syllabus maps and **Summary** boxes of EE01-EE07.
 2. 40 min: §1 formula sheet, covering columns 2 and 3.
