@@ -66,6 +66,7 @@ Own notes: [[08-Probability/Probability - Course Map]]: their probability course
 - 2026-11-14: Quiz 6 papers are checked (post for Batch 3, LHC 106, only; your batch is 7). Since there are no more tutorials, Batch 3 can see their checked papers in the instructor's office (Room 451, Main Building) on Sunday 2026-11-15, 2-3 PM; marks can also be asked by email. This implies Quiz 6 took place and that it was the last tutorial quiz; whether Batch 7 gets the same arrangement is not stated. (Classroom)
 - 2026-11-19: Quiz 6 papers shown to Batch 5, 4:30-5:30 PM; other students can email for marks or view papers on 2026-11-20 (timing to be announced). Confirms Quiz 6 took place. (Classroom)
 - 2026-11-20: Last remedial class before the exams, 9:00 PM, Madhava Hall (Classroom, post of 2026-11-18).
+- 2026-11-20: Quiz 6 copies for Batch 7 (LHC 107) could be viewed in Room 461 after 4:30 PM that day, shown by Dr. Anuj; marks can also be asked of the instructor by email. Already past. Other batches had their own slots (Batch 8 and Batch 2 in Office 433 on 2026-11-20; Batch 5 in Office 433, 2-3 PM; LHC 101 and LHC 103 in front of Madhava Hall, Saturday 2026-11-21, 2 PM). (Classroom)
 
 ## Announcements
 - 2026-08-28: Strict rule for quizzes and exams: no electronic gadget of any kind on your person. Anyone caught with a phone gets 0 for that quiz, with no exceptions. (Classroom)
