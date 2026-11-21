@@ -1,0 +1,16 @@
+---
+id: landscape-evolution/books/l-fluvial
+aliases: [l_fluvial]
+tags: [book, landscape-evolution]
+trust_tier: agent_written
+---
+
+# l_fluvial
+
+<!-- kurooto:source item=classroom:5b76e0d028ef7c7b -->
+A textbook from Classroom for [[maps/courses/landscape-evolution|Landscape Evolution (EC2123)]] (43 pages, filed with [[landscape-evolution/2026-11-18-fluvial-landscapes-lecture-slides|Fluvial landscapes lecture slides (2026-11-18)]], 2026-11-18).
+Its concepts point here (Seen in), not to the class note it came with.
+
+## Concepts in this book
+- pp. 12–22 1 What is a bedrock river? Where in India one can find them? (2/4): [[zettel/streamflow|Streamflow]], [[zettel/hydrograph|Hydrograph]], [[zettel/flood-frequency-distribution|Flood Frequency Distribution]], [[zettel/effective-discharge|Effective Discharge]], [[zettel/bankfull-discharge|Bankfull Discharge]], [[zettel/braided-river|Braided River]]
+<!-- /kurooto:source -->

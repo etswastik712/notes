@@ -78,3 +78,7 @@ Practice pattern: these three questions practise deriving the profile evolution 
 - [[05-landscapes-geomorphology/concepts/overland-flow-and-runoff-mechanisms]]: overland flow and channel initiation
 - [[05-landscapes-geomorphology/concepts/pothole-networks]]: potholes under abrasion
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]: D8 flow routing and accumulation threshold in practice
+
+<!-- kurooto:material5b76e0d0 -->
+Textbook: [[landscape-evolution/books/l-fluvial|l_fluvial]] (its concepts are listed there).
+<!-- /kurooto:material5b76e0d0 -->
