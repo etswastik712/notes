@@ -16,6 +16,7 @@ A statistical distribution describing how often flood discharges of various magn
 Source: l_fluvial, pp. 12–22
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/effective-discharge]] — Effective discharge is defined through the flood frequency distribution: it balances flood magnitude against how often floods of each magnitude recur, so it depends on that distribution
 ## Seen in
 - [[landscape-evolution/books/l-fluvial|l_fluvial]] pp. 12–22
 <!-- /kurooto:seen -->
