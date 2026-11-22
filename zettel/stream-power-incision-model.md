@@ -20,6 +20,7 @@ $$\text{erosion rate} \sim k A(x)^m | \partial_x z |^n$$
 Source: l_fluvial, pp. 34–43
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/bedrock-river-erosion-mechanisms]] — The erosion processes (abrasion, quarrying, wedging) are the physical mechanisms whose rate the streampower-dependent incision law summarises
 ## Seen in
 - [[landscape-evolution/books/l-fluvial|l_fluvial]] pp. 34–43
 <!-- /kurooto:seen -->
