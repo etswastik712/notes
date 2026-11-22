@@ -13,16 +13,16 @@ trust_tier: agent_written
 Kept up to date by jarvis each night; the rest of the page is yours.
 
 ### Key concepts
+- [[zettel/streamflow|Streamflow]]
+- [[zettel/bedrock-river|Bedrock River]]
 - [[zettel/infrared-flux-temperature-feedback|Infrared Flux-Temperature Feedback]]
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
 - [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
+- [[zettel/hack-s-rule|Hack's Rule]]
 - [[zettel/ice-albedo-feedback|Ice-Albedo Feedback]]
-- [[zettel/area-weighted-mean-temperature|Area-Weighted Mean Temperature]]
-- [[zettel/atlantic-meridional-overturning-circulation|Atlantic Meridional Overturning Circulation]]
-- [[zettel/intertropical-convergence-zone|Intertropical Convergence Zone]]
-- [[zettel/planetary-boundaries|Planetary Boundaries]]
-- [[zettel/silicate-weathering-feedback|Silicate Weathering Feedback]]
+- [[zettel/knickpoint-migration|Knickpoint Migration]]
+- [[zettel/alluvial-river-diffusive-evolution|Alluvial River Diffusive Evolution]]
 <!-- /kurooto:course-overview -->
 
 <!-- kurooto:hubs -->
