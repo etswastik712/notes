@@ -16,6 +16,7 @@ A dynamic multi-thread channel pattern where flow is divided into interlaced cha
 Source: l_fluvial, pp. 12–22
 
 <!-- kurooto:seen -->
+- contrasts-with:: [[zettel/meandering-river-evolution]] — Braided rivers are multi-thread channels divided by bars, while meandering rivers are sinuous, single-thread channels shaped by bank erosion and point-bar deposition
 ## Seen in
 - [[landscape-evolution/books/l-fluvial|l_fluvial]] pp. 12–22
 <!-- /kurooto:seen -->
