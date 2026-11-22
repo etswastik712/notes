@@ -15,6 +15,9 @@ The volumetric rate of water flow moving through a stream channel as a dynamic r
 Source: l_fluvial, pp. 12–22
 
 <!-- kurooto:seen -->
+- needs:: [[zettel/hydrograph]] — A hydrograph is a graph of streamflow or water level over time after a rainfall event, so it depends on the streamflow concept
+- needs:: [[zettel/flood-frequency-distribution]] — The flood frequency distribution describes how often flood discharges of each magnitude occur, so it presupposes streamflow as the quantity being distributed
+- special-case-of:: [[zettel/bankfull-discharge]] — Bankfull discharge is the particular streamflow that just fills the channel to the level of its active floodplains
 ## Seen in
 - [[landscape-evolution/books/l-fluvial|l_fluvial]] pp. 12–22
 <!-- /kurooto:seen -->
