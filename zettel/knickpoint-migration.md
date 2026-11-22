@@ -16,6 +16,7 @@ The upstream propagation of a sharp, localized steepening or discontinuity in a 
 Source: l_fluvial, pp. 23–33
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/stream-power-incision-model]] — The stream power model's advection equation of rock uplift versus incision is the framework in which a propagating knickpoint, as a transient incision response to base-level change, is modelled
 ## Seen in
 - [[landscape-evolution/books/l-fluvial|l_fluvial]] pp. 23–33
 <!-- /kurooto:seen -->
