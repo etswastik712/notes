@@ -18,6 +18,7 @@ A river channel incising directly into exposed rock rather than an alluvial sedi
 Source: l_fluvial, pp. 23–33
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/stream-power-incision-model]] — The stream power model is the continuum advection equation for bedrock profile evolution, which supplies the streampower-dependent incision that defines a bedrock river
 ## Seen in
 - [[landscape-evolution/books/l-fluvial|l_fluvial]] pp. 23–33
 <!-- /kurooto:seen -->
