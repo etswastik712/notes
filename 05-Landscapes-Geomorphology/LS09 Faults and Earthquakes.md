@@ -107,6 +107,10 @@ flowchart LR
 > $$
 >
 >
+> Two features of this result carry the physics.
+> - **The earthquake exists only because $F_d<F_s$.** If the two frictions were equal, the block would start moving at $F_k=F_s$ and then simply creep along with the driver at speed $u_0$. The spring would never unload and there would be no events at all: $\Delta=0$ when $F_s=F_d$. Friction that *weakens once sliding starts* is what turns steady loading into sudden slip.
+> - **The factor 2 in $\Delta$ is overshoot.** At the moment of slip the spring pulls with $F_s$, more than the $F_d$ that friction now offers. The block accelerates, and its momentum carries it past the balance point $x_e$ by as much as it started behind it, just as a released pendulum swings past the bottom. So the stress drops by $2(F_s-F_d)$, not $F_s-F_d$.
+>
 > The force history is a sawtooth (figure): slow linear loading (years to millennia) and sudden drops (seconds). *Long-term average slip rate* $=\Delta/T=u_0$: the driver speed — the plate velocity — however the details of $F_s,F_d,k$.
 
 

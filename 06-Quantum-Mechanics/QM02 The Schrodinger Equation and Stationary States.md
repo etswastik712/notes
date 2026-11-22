@@ -72,7 +72,7 @@ Take $\psi=Ae^{i(kx-\omega t)}$ and differentiate:
 $$\frac{\partial\psi}{\partial x}=ik\psi\ \Rightarrow\ -i\hbar\frac{\partial\psi}{\partial x}=\hbar k\,\psi=p\,\psi,\qquad \frac{\partial\psi}{\partial t}=-i\omega\psi\ \Rightarrow\ i\hbar\frac{\partial\psi}{\partial t}=\hbar\omega\,\psi=E\,\psi .$$
 A spatial derivative **extracts the wavenumber** and a time derivative **extracts the frequency**, and Planck and de Broglie turn these into momentum and energy:
 $$\boxed{\ \hat p=-i\hbar\frac{\partial}{\partial x},\qquad \hat E=i\hbar\frac{\partial}{\partial t}\ }$$
-Because differentiation is linear, these operators act consistently on **superpositions** of plane waves, which is why they are the right objects for a theory with superposition.
+Because differentiation is linear, these operators act consistently on **superpositions** of plane waves, which is why they are the right objects for a theory with superposition. On a superposition $\sum_k c_ke^{ikx}$, $\hat p$ does not return "a number times $\psi$". It multiplies **each component by its own momentum**, $\sum_k\hbar k\,c_ke^{ikx}$. So the operator carries the momentum of every component at once, and only for a single plane wave does it reduce to multiplication by one number (an eigenvalue, [[QM03 States Operators and Measurement]]). That is why the replacement $p\to\hat p$, $E\to\hat E$ can be used to build a law that holds for every state and not only for plane waves.
 
 ## 3. The time-dependent Schrödinger equation
 <span class="scope-taught">taught</span> *L7 §10, §12 ([[PH2113_Lecture6-7.pdf#page=5|p.5]]); L8 §7–8, §10 ([[PH2113_Lecture8_Uncertainty_Wavefunctions_Schrodinger (1).pdf#page=6|pp.6–8]])*

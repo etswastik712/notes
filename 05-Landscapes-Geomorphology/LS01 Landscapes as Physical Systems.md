@@ -78,11 +78,13 @@ Slide 8 adds the *language* of the model: mass conservation, force balance, stea
 > | [[LS02 Mechanics and Mathematics Toolkit\|LS02]], [[LS08 Plate Tectonics Strain Stress and Convection\|LS08]] | temperature ($\rho c_pT$) | $-k\nabla T$ (Fourier) | radioactive heating | heat equation |
 > | [[LS12 Hillslope Transport and the Diffusion Equation\|LS12]] | regolith height $h$ | $-D\,\partial_xz$ (creep) | soil production | hillslope diffusion |
 > | [[LS14 Glaciers Mass Balance and Ice Flow\|LS14]] | ice thickness $H$ | $\bar uH$, $\bar u\propto H^{n+1}S^n$ (Glen) | mass balance $b$ | $\partial_tH=-\partial_xQ+b$ |
-> | [[LS16 Fluvial Landscapes\|LS16]] | channel elevation $z$ | $-KA^mS^n$ (stream power: an *erosion* sink) | uplift $U$ | $\partial_tz=U-KA^mS^n$ |
+> | [[LS16 Fluvial Landscapes\|LS16]] | channel elevation $z$ | — (detachment-limited: the river carries away whatever it loosens, so no flux divergence is tracked) | uplift $U$, and the sink $-KA^mS^n$ | $\partial_tz=U-KA^mS^n$ |
 > | [[LS17 Aeolian Landscapes\|LS17]], [[LS19 Glacial and Aeolian Landforms\|LS19]] | bed elevation | sand flux $q(u_*)$ | none | $\partial_tz=-\partial_xq/\rho_b$ |
-> The **transport rule** is the only place where the *physics of the material* enters, and it is the only part that differs between chapters.
+> The **transport rule** is the only place where the *physics of the material* enters, and it is the only part that differs between chapters. (The river row is the one exception to the flux form: when the bed can only be *cut*, not buried, the transport law enters directly as a sink term rather than through $-\partial_xq$. If sediment can also be deposited, the river returns to the flux form, the Exner equation of [[LS24 Sediment Transport Mechanics]].)
 
 > [!example] 🟡 Extra · book: transport rules differ because rheologies differ
+> Why the rheology decides the transport rule: a **force balance** fixes the *stress* in a moving layer (for any material on a slope, the basal shear stress is $\rho g h S$, weight times slope), but it says nothing about how fast the material moves under that stress. The **rheology** converts stress into strain rate, and integrating the strain rate through the layer gives the velocity and hence the flux. So the same slope and thickness move water in minutes, ice in years and regolith in millennia: the stress is the same, the stress-to-rate conversion is not. Two examples of how the rheology then shapes the landscape: for ice, $\dot\varepsilon\propto\tau^3$ and $\tau$ grows linearly with depth, so the velocity grows as $H^{n+1}=H^4$ and a glacier that thins by half flows 16 times slower; for regolith, a linear creep law gives a flux $\propto$ slope and hence the diffusion equation (convex hilltops, LS12), but once the stress exceeds the strength the response becomes failure, not faster creep (landslides, LS13).
+>
 > | Material | How it responds to stress (rheology) | Consequence in this course |
 > |---|---|---|
 > | water | linear viscous (Newtonian), turbulent at geomorphic scales | shear stress $\tau=\rho ghS$, bedload $\propto(\tau-\tau_c)^{3/2}$ ([[LS16 Fluvial Landscapes]]) |
@@ -116,7 +118,7 @@ Slide 8 lists what changes a landscape: *uplift, exhumation and subsidence* (ver
 
 
 > [!example] 🧮 Worked example: Is a mountain range near steady state?
-> Take $U=2\times10^{-3} \mathrm{m yr^{-1}}$ ($2$ mm/yr, typical of active orogens). To exhume a crustal thickness of $35$ km requires $35 000/0.002=1.75\times10^7$ yr. Yet the Himalaya has been rising for $\sim5\times10^7$ yr, so it can be near steady state or dynamically adjusting – a question that the time scales of Chapters 9–10 will let us answer quantitatively.
+> Take $U=2\times10^{-3} \mathrm{m yr^{-1}}$ ($2$ mm/yr, typical of active orogens). At that rate, turning over a whole crustal thickness of $35$ km takes $35 000/0.002=1.75\times10^7$ yr. Why that number matters: when uplift starts, $\mathcal E$ is small (gentle slopes erode slowly), so the surface rises; as relief grows, slopes steepen and $\mathcal E$ increases, until $\mathcal E$ catches up with $U$ and eq. (1) gives $\partial_tz_s=0$. That catch-up can only be complete once the landscape has had time to adjust, which is at least the time for erosion to remove a substantial thickness of rock at rate $U$. The Himalaya has been rising for $\sim5\times10^7$ yr, about three times $1.75\times10^7$ yr, so a steady state is *possible* there. Whether it has actually been reached depends on how fast each part of the landscape responds (rivers, hillslopes, glaciers: the response times $\tau$ of the next box and of Chapters 12–16), and on whether $U$ itself has stayed constant.
 
 
 <!-- ls-depth:LS01:2 -->
@@ -154,7 +156,7 @@ Slide 8 lists what changes a landscape: *uplift, exhumation and subsidence* (ver
 *Landscape-forming processes (slide 8) and the chapters in which each is treated quantitatively.*
 
 
-**Earth-system feedbacks** (slide 8, “an earth-system approach is necessary”). A landscape is affected by, *and feeds back on*, the atmosphere (precipitation, temperature), hydrosphere (rivers, ocean), cryosphere (ice), biosphere (vegetation, burrowing), lithosphere (tectonics, isostasy) and human activity. A closed feedback loop that the deck develops is: uplift $\to$ orography $\to$ rain and glaciers $\to$ erosion $\to$ unloading $\to$ isostatic uplift $\to$ more relief; and: tectonic uplift $\to$ enhanced silicate weathering $\to$ lower CO$_2$ $\to$ cooling (Chapter 10).
+**Earth-system feedbacks** (slide 8, “an earth-system approach is necessary”). A landscape is affected by, *and feeds back on*, the atmosphere (precipitation, temperature), hydrosphere (rivers, ocean), cryosphere (ice), biosphere (vegetation, burrowing), lithosphere (tectonics, isostasy) and human activity. A closed feedback loop that the deck develops is: uplift $\to$ orography $\to$ rain and glaciers $\to$ erosion $\to$ unloading $\to$ isostatic uplift. Be careful with the last step. Isostasy replaces only part of the eroded mass (about $\rho_c/\rho_m\approx5/6$ of the eroded thickness is restored by rebound, [[LS07 Isostasy]]), so the **mean elevation still falls**. **Peaks** can nevertheless **rise** if erosion is concentrated in the valleys: the whole block rebounds, but only the valleys lost material, so the summits are lifted while the valleys deepen and the relief grows. A second loop is the *hypothesis* (Raymo and Ruddiman) that tectonic uplift $\to$ enhanced silicate weathering $\to$ lower CO$_2$ $\to$ global cooling (Chapter 10; [[CL16 Atmospheric Evolution Greenhouse Gases and the Carbon Cycle]]).
 
 
 ## Scales in space and time
@@ -175,6 +177,8 @@ Every chapter below quotes a length and a time; their orders of magnitude organi
 | Folds (S80) | $10^{-1}$ to $10^{5}$ m | $10^{3}$–$10^{7}$ yr |
 
 *Orders of magnitude of the scales on the slides.*
+
+Reading down the table: for the *continuous* processes, bigger features take longer. Diffusion-like processes need a time $\tau\sim L^2/D$ to smooth a feature of size $L$, and advective ones (ice flow, plate motion) need $\tau\sim L/v$; both grow with $L$. The exceptions are the *threshold* events, earthquakes and landslides. Each happens in seconds to minutes, because strain or weight builds up slowly until a strength is exceeded and is then released at once. So for them the relevant long time is the **recurrence interval**, not the duration of the event.
 
 
 <!-- ls-depth:LS01:3 -->
@@ -227,7 +231,7 @@ Slide 9 says “let's explore interesting landscapes on Earth (and Mars)”. Sli
 > [!figure]- 🖼 Slides 20–24: open to see the slides this section explains
 > ![[pre_020.jpg|300]] ![[pre_021.jpg|300]] ![[pre_022.jpg|300]] ![[pre_023.jpg|300]] ![[pre_024.jpg|300]]
 
-The syllabus (slide 20) has eight blocks: (1) Google-Earth tour, DEMs, contour maps, spatial/temporal scales, force balance and mass conservation; (2) planetary-scale landforms (oblateness, maximum topography, hypsometry, isostasy, plate boundaries, folds, faults, earthquakes); (3) erosional processes (physical and chemical weathering, climate–erosion–uplift linkage); (5) hillslope processes and landslides; (6) fluvial landscapes; (7) glacial landscapes; (8) aeolian landscapes. The slides cover 1, 2, 3, 5 and part of 7; Part IX of these notes covers 6 and 8. Assessment is open-notes, relatively graded.
+The syllabus (slide 20) lists blocks numbered 1–8 (the slide's numbering skips 4, so there are seven): (1) Google-Earth tour, DEMs, contour maps, spatial/temporal scales, force balance and mass conservation; (2) planetary-scale landforms (oblateness, maximum topography, hypsometry, isostasy, plate boundaries, folds, faults, earthquakes); (3) erosional processes (physical and chemical weathering, climate–erosion–uplift linkage); (5) hillslope processes and landslides; (6) fluvial landscapes; (7) glacial landscapes; (8) aeolian landscapes. The slides cover 1, 2, 3, 5 and part of 7; Part IX of these notes covers 6 and 8. Assessment is open-notes, relatively graded.
 
 Slides 21–24 show the landscape around the campus: the Deccan Traps of the Sahyadri, with the mapped dyke swarms (Narmada–Tapi, Pune–Nashik and the Western coastal swarm) and the Western Ghat escarpment; spheroidal (onion-skin) weathering of basalt; and a hillshade of the region. They anticipate Chapters 3 and 11.
 

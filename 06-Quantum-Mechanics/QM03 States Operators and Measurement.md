@@ -125,7 +125,7 @@ Let $\{\phi_a\}$ be normalised eigenstates of $\hat A$, $\hat A\phi_a=a\phi_a$, 
 
 **Expectation value.** The average over many identically prepared copies:
 $$\langle A\rangle=\sum_a|c_a|^2\,a=\int\Psi^*\hat A\Psi\,\mathrm dx,\qquad \langle x\rangle=\int x|\Psi|^2\mathrm dx,\ \ \langle p\rangle=\int\Psi^*\Big(-i\hbar\frac{\mathrm d}{\mathrm dx}\Big)\Psi\,\mathrm dx,\ \ \langle E\rangle=\int\Psi^*\hat H\Psi\,\mathrm dx .$$
-It is an **ensemble average**; it need not be one of the possible single results. (A state that gives $0$ or $10$ eV with probability $\frac12$ each has $\langle E\rangle=5$ eV, but no single measurement gives 5 eV.)
+The two forms agree. Apply $\hat A$ to the expansion: $\hat A\Psi=\sum_ac_a\,a\,\phi_a$, because each eigenstate comes back multiplied by its own eigenvalue. Then $\int\Psi^*\hat A\Psi\,\mathrm dx=\sum_{a,b}c_b^*c_a\,a\int\phi_b^*\phi_a\,\mathrm dx=\sum_a|c_a|^2a$, since orthonormality kills every cross term with $b\ne a$. So the integral is the probability-weighted average of the eigenvalues, without first finding the eigenstates. It is an **ensemble average**; it need not be one of the possible single results. (A state that gives $0$ or $10$ eV with probability $\frac12$ each has $\langle E\rangle=5$ eV, but no single measurement gives 5 eV.)
 
 **Uncertainty.** The spread of the possible results:
 $$(\Delta A)^2=\langle(A-\langle A\rangle)^2\rangle=\langle A^2\rangle-\langle A\rangle^2,\qquad \Delta A=\sqrt{\langle A^2\rangle-\langle A\rangle^2}.$$
@@ -159,6 +159,9 @@ $$[\hat A,\hat B]\equiv\hat A\hat B-\hat B\hat A .$$
 
 > [!key] Compatible and incompatible observables
 > If $[\hat A,\hat B]=0$ the observables are **compatible**: they have a common set of eigenstates and both can be given definite values. If $[\hat A,\hat B]\ne0$ they are **incompatible**: no state (except special cases) has both sharp. Measurement order then matters: measuring $A$ then $B$ leaves the system in a different state from $B$ then $A$.
+
+> [!derivation] Why commuting operators share eigenstates
+> Let $\hat A\phi=a\phi$ and $[\hat A,\hat B]=0$. Then $\hat A(\hat B\phi)=\hat B(\hat A\phi)=a(\hat B\phi)$: the state $\hat B\phi$ is *also* an eigenstate of $\hat A$ with the same eigenvalue $a$. If $a$ is non-degenerate, only one direction has that eigenvalue, so $\hat B\phi$ must be a multiple of $\phi$, i.e. $\hat B\phi=b\phi$: $\phi$ is an eigenstate of $\hat B$ as well. If $a$ is degenerate, $\hat B$ maps the degenerate subspace into itself, and one can choose a basis of that subspace that diagonalises $\hat B$. The ring is this case: $E_n$ is doubly degenerate ($\pm n$). The cosine and the sine are both energy eigenstates, but only the combinations $e^{\pm ik_nx}$ also diagonalise $\hat p$. Conversely, if $[\hat A,\hat B]\ne0$, the general uncertainty relation below forbids a state in which both spreads vanish (unless $\langle[\hat A,\hat B]\rangle=0$ in that state).
 
 Examples: **free particle or ring:** $\hat H=\hat p^2/2m$ and any operator commutes with a function of itself, so $[\hat H,\hat p]=0$: $e^{ikx}$ has definite $E$ and $p$. **Box:** $\hat H$ contains $\hat p^2$ and $[\hat x,\hat p]\ne0$, so $[\hat H,\hat x]\ne0$: energy eigenstates have an uncertain position.
 

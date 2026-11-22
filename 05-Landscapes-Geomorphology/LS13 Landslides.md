@@ -109,13 +109,13 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 > - **Deccan terrain** as a landslide setting (weak boles, steep escarpment, monsoon): [[LS18 Deccan Traps Terrain]], [[interflow-horizons]], [[trap-topography]].
 
 
-## Initiation: loose versus dense soil (slide 126, left)
+## Initiation: loose versus dense soil (slide 125)
 
 
 ![[pre_126.jpg|460]]
 
 
-> [!example] 🖼 Reading the diagram: Slide 126: Iverson et al. (2000), USGS debris-flow flume (Oregon)
+> [!example] 🖼 Reading the diagram: Slide 125: Iverson et al. (2000), USGS debris-flow flume (Oregon)
 > Photograph: the $95$-m-long inclined concrete flume with a loaded soil bed and an inlet at the head-gate. Plots (A&A Fig. 10.30) of displacement (top) and pore-pressure head (bottom, at $30$, $50$, $67$ cm depth) against time after water is applied. (a) *Loose* soil (porosity $0.52$): nothing happens for $48$ minutes, then failure is sudden: a displacement of $\sim2$ m in *3 seconds*, with pore pressure rising during the failure. (b) *Dense* soil (porosity $0.41$, only $\sim10 %$ denser by weight): the same displacement takes $\sim15$ minutes, in many small steps, each associated with a drop in pore pressure (vertical lines link events). Explanation: loose granular material *contracts* when sheared, squeezing the pore water and raising $P_w$; by (26) the strength falls, shear continues and $P_w$ rises further: a runaway feedback (liquefaction). Dense material *dilates*, opening pores, which *lowers* $P_w$ and strengthens it: the failure is stabilised and self-limiting. A 10 % change in density therefore changes the failure mode from catastrophic to gradual.
 
 
@@ -130,7 +130,7 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 
 
 > [!derivation] 🔵 Extra (not derived in the slides): Consequences of a power-law size distribution; Heim's ratio
-> If $p(A)\propto A^{-\beta}$ with $\beta\approx2.5$ and volume scales as $V\propto A^{\gamma}$ with $\gamma\approx1.5$ (thin slab: volume $\sim A\times$ thickness with thickness $\propto A^{1/2}$), then $p(V) \mathrm{d} V=p(A) \mathrm{d} A$ gives $p(V)\propto V^{-\beta_V}$ with $\beta_V=1+(\beta-1)/\gamma=1+1.5/1.5=2$. The mass carried by events of volume in $[V,V+\mathrm{d} V]$ is $V p(V) \mathrm{d} V\propto V^{1-\beta_V}\mathrm{d} V=V^{-1}\mathrm{d} V$: every logarithmic bin of volume contributes equally: the rare huge slides move as much total mass as the many small ones. (If $\beta_V<2$ the biggest events would dominate; if $\beta_V>2$ the small ones.)
+> If $p(A)\propto A^{-\beta}$ with $\beta\approx2.5$ and volume scales as $V\propto A^{\gamma}$ with $\gamma\approx1.5$ (thin slab: volume $\sim A\times$ thickness with thickness $\propto A^{1/2}$), then $p(V) \mathrm{d} V=p(A) \mathrm{d} A$ gives $p(V)\propto V^{-\beta_V}$ with $\beta_V=1+(\beta-1)/\gamma=1+1.5/1.5=2$. The mass carried by events of volume in $[V,V+\mathrm{d} V]$ is $V p(V) \mathrm{d} V\propto V^{1-\beta_V}\mathrm{d} V=V^{-1}\mathrm{d} V$: every logarithmic bin of volume contributes equally: the rare huge slides move as much total mass as the many small ones. (If $\beta_V<2$ the biggest events would dominate; if $\beta_V>2$ the small ones.) The measured exponents sit almost exactly on this boundary. With $\beta=2.4$ instead of 2.5 the balance tips slightly toward the largest slides, as in the computed box above. So the honest conclusion is the same in both boxes: no single size class controls the sediment budget, and the whole range has to be counted.
 > *Runout.* A frictional block sliding a horizontal distance $L$ after falling a height $H$ dissipates $mgH=f mgL$, so $H/L=f$ (Heim's ratio: the apparent friction $f_\mathrm{eff}=H/L$). The tangent of the angle from the crest to the toe of the deposit is thus an effective friction coefficient; for very large, long-runout landslides it is $\sim0.1$–$0.2$, far below laboratory values $0.6$: fluidisation, lubrication (pore pressure), trapped air or rock-avalanche granular flow reduce the friction with volume (slide 136(C)). Same argument, again, as $\Delta h/R\sim f$ of Chapter 6.
 
 
@@ -149,7 +149,7 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 | Google-Earth views (128, 129) | hillslope scars and deposit fans | Head scarps and downslope debris tongues on forested Deccan slopes |  |
 | Dharali, Uttarakhand (130) | debris flow / flash flood, 5 Aug 2025 | Pre- and post-event PlanetLabs and Sentinel-2 images: debris-flow source zone (red dashed), inundation, debris fan over the settlement; NRSC images of 13 Jun 2024 and 7 Aug 2025 show the river valley filled with sediment |  |
 | Chamoli flood (131–132) | rock–ice avalanche, 7 Feb 2021, Ronti Gad/Tapovan | Frames A–J (Shugar et al., *Science*) with timestamps $t_1\sim10{:}30$ IST ($+14$ s), $t_2\sim10{:}38$ ($+34$ s), $t_3\sim10{:}39$ ($+57$ s), $t_4\sim10{:}41$ ($+8$, $+15$, $+26$ s): dust cloud, debris flow, then damage at the hydropower dam. Slide 132: 3-D view of Ronti Peak, before/after satellite images (1 Jan, 5 Feb, 10 Feb 2021), sketch of the detached block (glacier ice over rock; the slide marks $\sim5\times10^6$ m$^3$) and DEM-difference profiles (2015 vs 2021) across the scar |  |
-| Massive slides (133–134) | A\ | A Figs. 10.34, 10.36; Sabche cirque (Annapurna) | Slide 133: a very large debris flow scar (scale 4 km) and a huge rock avalanche deposit beside glaciers. Slide 134: the Sabche rock-avalanche, $\sim$AD 1200, volume $\sim2\times10^{10}$ m$^3$ ($\sim4000\times$ Chamoli), with dating sites ($^{36}$Cl exposure, IRSL, $^{14}$C), the Pokhara conglomerate in the Seti valley, head scarp, breccia facies; the slide comments it “might have reduced the number of 8000-ers by one” |
+| Massive slides (133–134) | A&A Figs. 10.34, 10.36; Sabche cirque (Annapurna) | Slide 133: a very large debris flow scar (scale 4 km) and a huge rock avalanche deposit beside glaciers. Slide 134: the Sabche rock-avalanche, $\sim$AD 1200, volume $\sim2\times10^{10}$ m$^3$ ($\sim4000\times$ Chamoli), with dating sites ($^{36}$Cl exposure, IRSL, $^{14}$C), the Pokhara conglomerate in the Seti valley, head scarp, breccia facies; the slide comments it “might have reduced the number of 8000-ers by one” |
 | Gorkha 2015 (135–137) | earthquake-triggered, $\sim25 000$ slides | Inventory map (Kathmandu, Barpak epicentre, mapped areas); slope and size statistics (slide 136); slide 137: horizontal peak ground velocity (PGV, cm s$^{-1}$) map and the landslide density against distance, with three peaks correlated with PGV, lithology and topography |  |
 
 *Landslide case studies on the slides.*
@@ -167,7 +167,7 @@ Landslides are fast, intermittent failures of steep slopes (slide 123: two road-
 ![[pre_125.jpg|520]]
 
 > [!example] 🖼 Reading the diagram: Slide 125: USGS flume experiment: loose and dense soil
-> *Left:* the 95-m-long steep flume at the USGS in Oregon with a debris-flow experiment on 13 Sept 2001. *Right:* (a) loose soil (porosity 0.52): displacement and pore-water pressure head against time: after about 48 minutes of wetting the pressure builds and, within seconds, the slope fails suddenly and catastrophically (displacement jumps); (b) dense soil (porosity 0.41): over four hours the displacement creeps up gradually and the pressure head stays low. Loose soil contracts when sheared, raising pore pressure and liquefying; dense soil dilates and drains. (A&A Fig. 10.30)
+> *Left:* the 95-m-long steep flume at the USGS in Oregon with a debris-flow experiment on 13 Sept 2001. *Right:* (a) loose soil (porosity 0.52): displacement and pore-water pressure head against time: after about 48 minutes of wetting the pressure builds and, within seconds, the slope fails suddenly and catastrophically (displacement jumps); (b) dense soil (porosity 0.41): nothing moves for 244 minutes of wetting; then it moves in a series of steps over about 15 minutes, and each step coincides with a *drop* in pore-pressure head (the vertical lines on the figure). Loose soil contracts when sheared, raising pore pressure and liquefying; dense soil dilates and drains. (A&A Fig. 10.30)
 
 ![[pre_127.jpg|520]]
 

@@ -112,7 +112,7 @@ Setting each growth rate to zero gives two straight **zero-growth isoclines** ([
 
 $$\frac{dN_1}{dt}=0:\ N_1=K_1-\alpha_{12}N_2\qquad\qquad \frac{dN_2}{dt}=0:\ N_2=K_2-\alpha_{21}N_1.$$
 
-Above (outside) its isocline a species decreases; below it increases (Molles Fig. 13.14). Species 1's line meets the $N_1$ axis at $K_1$ and the $N_2$ axis at $K_1/\alpha_{12}$; species 2's line meets the $N_2$ axis at $K_2$ and the $N_1$ axis at $K_2/\alpha_{21}$. Which line lies outside the other decides the outcome (slide 11 shows three of the four pictures: "species $i$ wins", "stable equilibrium", "unstable equilibrium"):
+Above (outside) its isocline a species decreases; below it increases (Molles Fig. 13.14). The reason: species 1 grows when $N_1+\alpha_{12}N_2<K_1$, that is, when the crowding it feels (its own numbers plus the competitor counted in species-1 equivalents) is less than the crowding it can tolerate. Species 1's line meets the $N_1$ axis at $K_1$ and the $N_2$ axis at $K_1/\alpha_{12}$; species 2's line meets the $N_2$ axis at $K_2$ and the $N_1$ axis at $K_2/\alpha_{21}$. Which line lies outside the other decides the outcome (slide 11 shows three of the four pictures: "species $i$ wins", "stable equilibrium", "unstable equilibrium"):
 
 | outcome | intercept conditions | in words |
 |---|---|---|
@@ -124,6 +124,19 @@ Above (outside) its isocline a species decreases; below it increases (Molles Fig
 ![[fig_ee04_lv.png|900]]
 *Figure EE4.2. The four outcomes in the $(N_1,N_2)$ plane for $K_1=100$, $K_2=80$ (my construction). Blue: species 1's isocline; orange: species 2's. Grey curves are trajectories. Filled dots are stable equilibria, open dots unstable.*
 
+> [!derivation] Reading the table as two invasion tests
+> The intercept conditions are easier to remember as questions about **invasion**: can a species increase when it is rare and the other species sits at its own carrying capacity?
+> - **Can 2 invade 1?** Species 1 alone sits at $N_1=K_1$. A few individuals of species 2 feel crowding $\alpha_{21}K_1$, so they grow iff $\alpha_{21}K_1<K_2$, i.e. $K_1<K_2/\alpha_{21}$.
+> - **Can 1 invade 2?** By the mirror argument, iff $\alpha_{12}K_2<K_1$, i.e. $K_2<K_1/\alpha_{12}$.
+>
+> The four rows of the table are the four combinations of yes and no:
+> - **1 wins**: 1 can invade 2, but 2 cannot invade 1.
+> - **2 wins**: the reverse.
+> - **Stable coexistence**: each can invade the other. Neither can be driven out, because whichever becomes rare grows back.
+> - **Unstable equilibrium**: neither can invade. Whoever is established first keeps the other out, which is the priority effect of panel D.
+>
+> This is why "each limits itself more than it limits the other" is the right summary of coexistence. A rare invader meets only the resident's crowding, discounted by $\alpha$. It gets in only if the resident has kept *itself* down, at $K$, below the level that would block the invader.
+
 > [!example] Worked example 2: a coexistence equilibrium, and an unstable one
 > **Panel C:** $\alpha_{12}=0.5$, $\alpha_{21}=0.6$. The conditions $\alpha_{12}<K_1/K_2=1.25$ and $\alpha_{21}<K_2/K_1=0.8$ hold. Solve the isocline pair: $N_1^*=\dfrac{K_1-\alpha_{12}K_2}{1-\alpha_{12}\alpha_{21}}=\dfrac{100-40}{0.70}=85.7$, $N_2^*=\dfrac{K_2-\alpha_{21}K_1}{1-\alpha_{12}\alpha_{21}}=\dfrac{80-60}{0.70}=28.6$. Check: $100-0.5(28.6)=85.7$ ✓. Each species is *below* its own carrying capacity (85.7 against 100; 28.6 against 80) because of the other.
 > **Panel D:** $\alpha_{12}=\alpha_{21}=1.5$: the interior point $(16,56)$ is a **saddle**; trajectories are drawn toward one axis or the other, depending on which species starts relatively more abundant (a **priority effect**). Both single-species states $(100,0)$ and $(0,80)$ are stable.
@@ -131,7 +144,7 @@ Above (outside) its isocline a species decreases; below it increases (Molles Fig
 > [!derivation] Stability of the coexistence point
 > At the interior equilibrium the Jacobian is $J=\begin{pmatrix}-r_1N_1^*/K_1&-r_1\alpha_{12}N_1^*/K_1\\-r_2\alpha_{21}N_2^*/K_2&-r_2N_2^*/K_2\end{pmatrix}$. Its trace is negative, and
 > $$\det J=\frac{r_1r_2N_1^*N_2^*}{K_1K_2}\,\big(1-\alpha_{12}\alpha_{21}\big).$$
-> The point is stable ($\det>0$, $\mathrm{tr}<0$) **iff $\alpha_{12}\alpha_{21}<1$**, the geometric mean of the interspecific effects must be weaker than the intraspecific effect (see [[Fixed Points and Linear Stability]] for the 2-D criterion). For panel C the eigenvalues are $-0.50$ and $-0.107$ (a relaxation time of about 9 time units for the slower one); for panel D, $\alpha_{12}\alpha_{21}=2.25>1$ and the eigenvalues are $+0.07$ and $-0.50$ (a saddle).
+> The point is stable ($\det>0$, $\mathrm{tr}<0$) **iff $\alpha_{12}\alpha_{21}<1$**, the geometric mean of the interspecific effects must be weaker than the intraspecific effect (see [[Fixed Points and Linear Stability]] for the 2-D criterion). This test only applies when the interior point exists, with both $N_i^*>0$. With $\alpha_{12}\alpha_{21}<1$ but, say, $\alpha_{21}K_1>K_2$, the formula gives $N_2^*<0$: there is no coexistence point, and species 1 wins. So the full coexistence condition is the pair of invasion tests in the table, not $\alpha_{12}\alpha_{21}<1$ alone. For panel C the eigenvalues are $-0.50$ and $-0.107$ (a relaxation time of about 9 time units for the slower one); for panel D, $\alpha_{12}\alpha_{21}=2.25>1$ and the eigenvalues are $+0.07$ and $-0.50$ (a saddle).
 
 > [!key] Main message (slide 12)
 > "**In 3 out of 4 conditions the model predicts that one species would drive another to extinction.** As noted earlier, this result agrees well with at least some experiments [Gause, Tilman, Park]. What about real life? Ans: **it is complicated…**" Only when *each species limits itself more than it limits the other* does the model allow coexistence.
@@ -218,7 +231,7 @@ Slide 30 reproduces the table of **Thomas Park (1954, 1962)**: *Tribolium confus
 | warm, moist | **41.2** / 38.3 | 0 / **100** |
 
 > [!example] Worked example 4: reading Park's table
-> (i) The **same two species** reach opposite outcomes in different physical conditions: *confusum* wins cool-dry (100 %), *castaneum* wins warm-moist (100 %). That is **conditional** niche separation; in a fluctuating environment neither wins permanently, and the loser can persist. (ii) **A higher equilibrium size does not guarantee victory** (the slide's own point): in *cool, moist* conditions *castaneum* reaches 45.2 against 28.2 when alone yet loses 71 to 29; in *warm, moist* conditions *confusum* is larger (41.2 against 38.3) and loses all 20–30 contests. In L-V terms, $K$ (the single-species equilibrium) is only half of the story: the competition coefficients decide the contest.
+> (i) The **same two species** reach opposite outcomes in different physical conditions: *confusum* wins cool-dry (100 %), *castaneum* wins warm-moist (100 %). That is **conditional** niche separation. If conditions switch back and forth faster than exclusion takes (several generations), neither species wins permanently, and each recovers during its own favourable spells. (ii) **A higher equilibrium size does not guarantee victory** (the slide's own point): in *cool, moist* conditions *castaneum* reaches 45.2 against 28.2 when alone yet loses 71 to 29; in *warm, moist* conditions *confusum* is larger (41.2 against 38.3) and loses all 20–30 contests. In L-V terms, $K$ (the single-species equilibrium) is only half of the story: the competition coefficients decide the contest.
 
 > [!pitfall] Do not read "alone" and "together" the same way
 > A species' own carrying capacity $K_i$ tells you how it does with no competitor. Whether it wins also depends on $\alpha$, which here changes with temperature and humidity. Predicting a winner from the biggest $K$ is the commonest wrong answer.

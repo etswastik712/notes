@@ -57,7 +57,7 @@ flowchart LR
 
 
 > [!derivation] 🔵 Extra (not derived in the slides): The saltation trajectory and the “splash” feedback (EXTRA)
-> A grain lifted from the bed accelerates in the wind (drag $\propto u_*^2$) along a low, flat trajectory (typical hop length $\sim10$–$100\times$ hop height, hop height of order cm, length of order tens of cm at threshold winds, growing with $u_*$), then strikes the bed and splashes several new grains into motion (a chain reaction analogous to the rain-splash cascade of Chapter 12, but here amplified by the wind rather than damped): once saltation starts it is sustained at winds *below* the threshold needed to *initiate* it (a lower “impact threshold” than the “fluid threshold” above), giving aeolian transport hysteresis.
+> A grain lifted from the bed accelerates in the wind (drag $\propto u_*^2$) along a low, flat trajectory (typical hop length $\sim10$–$100\times$ hop height, hop height of order cm, length of order tens of cm at threshold winds, growing with $u_*$), then strikes the bed and splashes several new grains into motion (a chain reaction analogous to the rain-splash cascade of Chapter 12, but here amplified by the wind rather than damped): once saltation starts it is sustained at winds *below* the threshold needed to *initiate* it (a lower “impact threshold” than the “fluid threshold” above), giving aeolian transport hysteresis. The reason for the two thresholds: to *start*, the wind's drag alone must pry loose a grain resting in its pocket. Once grains are hopping, each landing grain kicks others out with momentum the wind gave it earlier. The wind then only has to keep the hoppers moving, which needs less shear than lifting a resting grain.
 
 
 > [!example] 🧮 Worked example: Sand flux (Bagnold's formula, quoted)
@@ -99,7 +99,7 @@ flowchart LR
 > $$
 >
 >
-> (the celebrated result, quoted from Bagnold 1941). **Smaller dunes migrate faster**: with $Q_s$ set by the wind alone (independent of dune size), $u_d\propto1/H$. *Numbers*: $Q_s=10 \mathrm{m^2 yr^{-1}}$ (per unit dune width; a modest sand flux), $H=5$ m: $u_d=2$ m yr$^{-1}$; a $H=0.5$ m ripple superimposed on the same dune migrates $20$ m yr$^{-1}$: small bedforms visibly move within a season, large dunes over years to decades – directly observable by comparing satellite images at different dates (cf. the Google-Earth exercises of Chapter 1).
+> (the celebrated result, quoted from Bagnold 1941). **Smaller dunes migrate faster**: with $Q_s$ set by the wind alone (independent of dune size), $u_d\propto1/H$. *Numbers*: $Q_s=10 \mathrm{m^2 yr^{-1}}$ (per unit dune width; a modest sand flux; windy sand seas reach tens to hundreds of m$^2$yr$^{-1}$, and the prefactor of the flux law is itself uncertain, see the pitfall box above), $H=5$ m: $u_d=2$ m yr$^{-1}$; a $H=0.5$ m ripple superimposed on the same dune migrates $20$ m yr$^{-1}$: small bedforms visibly move within a season, large dunes over years to decades – directly observable by comparing satellite images at different dates (cf. the Google-Earth exercises of Chapter 1).
 
 
 > [!intuition] Why the migration law has this form
@@ -107,7 +107,7 @@ flowchart LR
 
 
 > [!derivation] 🔵 Extra (not derived in the slides): Exploring martian dunes (syllabus item 8, “exploring martian dunes”)
-> Mars has an atmosphere $\sim1/100$th the density of Earth's ($\rho_a\approx0.02 \mathrm{kg m^{-3}}$), so the threshold formula above gives $u_{*t}\propto1/\sqrt{\rho_a}$: martian threshold shear velocities (and hence near-surface wind speeds) must be roughly an order of magnitude higher than on Earth to move similarly sized grains, which is why martian dunes were long thought inactive; repeat orbital imagery (e.g. HiRISE) has since shown many martian dunes *do* migrate measurably (metres per Earth year, generally slower than terrestrial dunes of the same size, consistent with rarer threshold-exceeding winds), directly testable with the same Google-Earth-type displacement measurement introduced in Chapter 1 (§1.7) applied to Mars orbital imagery instead.
+> Mars has an atmosphere $\sim1/100$th the density of Earth's ($\rho_a\approx0.02 \mathrm{kg m^{-3}}$), so the threshold formula above gives $u_{*t}\propto\sqrt{g/\rho_a}$. The thin air raises the threshold by $\sqrt{1.2/0.02}\approx7.7$, and the weaker gravity ($g=3.7$ m s$^{-2}$, 0.38 of Earth's) lowers it by $\sqrt{0.38}\approx0.62$, so martian threshold shear velocities (and near-surface wind speeds) must be about **5 times** higher than on Earth to move similarly sized grains, which is why martian dunes were long thought inactive; repeat orbital imagery (e.g. HiRISE) has since shown many martian dunes *do* migrate measurably (metres per Earth year, generally slower than terrestrial dunes of the same size, consistent with rarer threshold-exceeding winds), directly testable with the same Google-Earth-type displacement measurement introduced in Chapter 1 (§1.7) applied to Mars orbital imagery instead.
 
 <!-- ls-depth:LS17:2 -->
 > [!example] Conservation of sand, Exner's equation, and the migration speed in numbers

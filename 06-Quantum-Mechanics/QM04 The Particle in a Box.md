@@ -70,7 +70,7 @@ $$V(x)=\begin{cases}0,&0\le x\le a\\\infty,&\text{elsewhere.}\end{cases}$$
 > [!intuition] Why $E\propto n^2$
 > Wavelength $\lambda=2a/n$ so momentum $p=h/\lambda=nh/2a$ and kinetic energy $p^2/2m\propto n^2$. Halve the box and every level quadruples: confinement costs energy.
 
-**Outside** the box ($x\le0$ or $x\ge a$), $V=\infty$ and the TISE can be satisfied by a well-behaved (finite, normalisable) wavefunction only if $\psi(x)=0$ there: the particle cannot be found beyond the walls.
+**Outside** the box ($x\le0$ or $x\ge a$), $V=\infty$ and the TISE can be satisfied by a well-behaved (finite, normalisable) wavefunction only if $\psi(x)=0$ there: the particle cannot be found beyond the walls. The reason is the limit of a finite wall of height $V_0$ ([[QM07 The Finite Square Well]]). There the wavefunction outside decays as $e^{-\kappa x}$ with $\kappa=\sqrt{2m(V_0-E)}/\hbar$, so it penetrates a distance $1/\kappa$. As $V_0\to\infty$ that penetration depth goes to zero, and nothing is left outside.
 
 **Inside** ($V=0$): $-\frac{\hbar^2}{2m}\psi''=E\psi$, i.e. $\psi''=-k^2\psi$ with $k=\sqrt{2mE}/\hbar$ (for $E>0$), so
 $$\psi(x)=A\sin kx+B\cos kx ,$$
@@ -78,6 +78,7 @@ the most general solution, but **no quantisation yet**.
 
 > [!key] The boundary conditions quantise
 > $\psi$ must be continuous at the walls, so $\psi(0)=\psi(a)=0$.
+> Only $\psi$ is matched, not $\psi'$. The argument that made $\psi'$ continuous ([[QM02 The Schrodinger Equation and Stationary States]] §10) needs a *bounded* $V$, and an infinite wall is not bounded. In the finite-well picture the slope just inside the wall stays finite while the wavefunction outside is crushed to zero over the length $1/\kappa\to0$, so the slope jumps at the wall.
 > - $\psi(0)=B=0$, so $\psi=A\sin kx$.
 > - $\psi(a)=A\sin ka=0\Rightarrow ka=n\pi$, so $k_n=\dfrac{n\pi}a$, $n=1,2,3,\dots$
 > ($n=0$ gives $\psi\equiv0$, no particle; negative $n$ gives the same state up to a sign.) Hence

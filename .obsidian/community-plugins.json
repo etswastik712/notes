@@ -21,5 +21,8 @@
   "merefolk",
   "tech-tree-companion",
   "triggers",
-  "virtual-pen-cursor"
+  "virtual-pen-cursor",
+  "card-note",
+  "open-in-terminal",
+  "terminal"
 ]

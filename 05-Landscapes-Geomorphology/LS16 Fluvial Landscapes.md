@@ -86,7 +86,7 @@ flowchart LR
 >
 >
 > $$
-> S=\Big(\frac UK\Big)^{1/n}A^{-m/n}\equiv k_sA^{-\theta},\qquad\theta=\frac mn\ \ (\text{the channel \emph{concavity} index}). \tag{31}
+> S=\Big(\frac UK\Big)^{1/n}A^{-m/n}\equiv k_sA^{-\theta},\qquad\theta=\frac mn\ \ (\text{the channel concavity index}). \tag{31}
 > $$
 >
 >
@@ -135,7 +135,7 @@ flowchart LR
 > $$
 >
 >
-> This is a first-order wave equation (unlike hillslope diffusion, which is second order): a perturbation propagates *upstream* (toward decreasing $x$ if $x$ increases downstream, but the disturbance in $z$ moves up the channel, i.e. towards the source, since information travels against the flow direction along the channel network) at the local *celerity*
+> This is a first-order wave equation (unlike hillslope diffusion, which is second order). With $x$ increasing downstream and $c=KA^m$, it reads $\partial_tz-c\,\partial_xz=U$, whose solutions without uplift are functions of $x+ct$: any feature in the profile moves toward *smaller* $x$, i.e. **upstream**, even though the water flows downstream. Why upstream: the erosion rate at a point depends on the slope *there*. The steep face of a step erodes fastest, and the gentle reach just above it barely erodes, so the face eats back into the reach above, as a waterfall retreats. The step travels at the local *celerity*
 >
 >
 > $$
@@ -184,7 +184,7 @@ flowchart LR
 
 
 > [!intuition] Why meanders migrate outward
-> In a curved channel, water at the surface is flung outward by inertia (like a car on a curved road) and returns along the bed toward the inner bank: a helical (secondary) flow. This flow carries the fast surface water, and its erosive power, to the outer bank, and drops sediment carried along the bed at the inner bank (point bar). The bend erodes outward and migrates downstream, which is why meander belts widen over time and abandoned meanders (oxbow lakes) are left behind when a bend is cut off.
+> In a curved channel, every parcel needs an inward (centripetal) force $\rho u^2/r$ to follow the bend. The water surface tilts up toward the outer bank, and that tilt provides an inward pressure gradient which is the *same at all depths*. Near the surface the water is fast, so the pressure push is too weak to turn it and it drifts outward. Near the bed, friction slows the water, so the same push over-turns it and it drifts inward. The result is a helical (secondary) flow: outward at the surface, inward along the bed. This flow carries the fast surface water, and its erosive power, to the outer bank, and drops sediment carried along the bed at the inner bank (point bar). The bend erodes outward and migrates downstream, which is why meander belts widen over time and abandoned meanders (oxbow lakes) are left behind when a bend is cut off.
 
 
 <!-- ls-depth:LS16:2 -->
@@ -203,7 +203,7 @@ flowchart LR
 > 2. A knickpoint is created at the outlet of a basin with $A=100$ km² and $c=0.05$ m/yr; when does it reach 15 km upstream?
 > 3. At what depth does a 20 mm gravel start to move on a slope of 0.005?
 > 4. Why does a bedrock river filter out 41 kyr cycles but an alluvial one does not?
-> *Answers.* (1) $S\propto U^{1/n}$: quadruples (for $n=1$). (2) $15\ \mathrm{km}/0.05\ \mathrm{m\,yr^{-1}}=3\times10^5$ yr (the celerity increases downstream, so this is an upper bound for a uniform $c$). (3) $h=14.6/(9810\times0.005)=0.30$ m. (4) $\tau$ of $\sim10^6$ yr versus $10^3$ yr: with the transfer function $1/(1+i\omega\tau)$ the 41 kyr signal is attenuated by $\sim0.007$ for the bedrock river but passes unattenuated for the alluvial one.
+> *Answers.* (1) $S\propto U^{1/n}$: quadruples (for $n=1$). (2) $15\ \mathrm{km}/0.05\ \mathrm{m\,yr^{-1}}=3\times10^5$ yr at the outlet's celerity. Moving upstream the drainage area, and with it $c=KA^m$, *decreases*, so the knickpoint slows down: the real time is **longer**, and $3\times10^5$ yr is a lower bound. (3) $h=14.6/(9810\times0.005)=0.30$ m. (4) $\tau$ of $\sim10^6$ yr versus $10^3$ yr: with the transfer function $1/(1+i\omega\tau)$ the 41 kyr signal is attenuated by $\sim0.007$ for the bedrock river but passes unattenuated for the alluvial one.
 
 > [!connection] Where else this appears
 > - **Kinematic waves and characteristics** are first-order transport equations, solved by $x-ct$; in [[Fourier and Laplace Transforms]] §6.2 they are the non-dispersive limit $\omega=ck$.

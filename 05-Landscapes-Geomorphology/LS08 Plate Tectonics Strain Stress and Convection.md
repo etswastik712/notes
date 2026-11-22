@@ -122,7 +122,7 @@ Isostasy describes a mantle-supported *equilibrium*. Plate tectonics is the smal
 > $$
 >
 >
-> Large $\mathrm{Ra}$ means buoyancy easily beats viscous resistance and diffusion, so convection occurs; small $\mathrm{Ra}$ means the layer conducts. **Slide 72's estimate**: $\rho_0=10^3$, $g=10$, $\alpha_v=10^{-5}$, $\Delta T=10^3$, $b=10^6$ m, $\mu=10^{20}$, $\kappa=10^{-6}$:
+> A cleaner reading of the same number: a hot blob rises at the buoyancy-driven speed $u_b=\Delta\rho gb^2/\mu$, so it crosses the layer in a time $b/u_b$. Meanwhile diffusion erases its temperature excess in a time $b^2/\kappa$. So $\mathrm{Ra}=u_bb/\kappa=\dfrac{b^2/\kappa}{b/u_b}$, the ratio of the time to *forget* the heat to the time to *carry* it across. Large $\mathrm{Ra}$ means blobs arrive still hot and still buoyant, so convection sustains itself. Small $\mathrm{Ra}$ means blobs lose their buoyancy before they get anywhere, and the layer simply conducts. **Slide 72's estimate**: $\rho_0=10^3$, $g=10$, $\alpha_v=10^{-5}$, $\Delta T=10^3$, $b=10^6$ m, $\mu=10^{20}$, $\kappa=10^{-6}$:
 >
 >
 > $$
@@ -207,7 +207,7 @@ Isostasy describes a mantle-supported *equilibrium*. Plate tectonics is the smal
 > $$
 >
 >
-> Using $1 \mathrm{yr}\approx3\times10^7$ s, $V\sim10^{22}/10^{21\text{–}23} \mathrm{m yr^{-1}}\sim10^{1}\text{–}10^{-1} \mathrm{m yr^{-1}}$. *Interpretation*: for the high end of the mantle-viscosity range the estimate falls at $0.1$ m yr$^{-1}$ ($10$ cm yr$^{-1}$), the fastest observed plate speed; the observed range is $1$–$10$ cm yr$^{-1}$, so the scaling identifies the correct physics (slab buoyancy vs viscous drag) and puts the plausible mantle viscosity at $\gtrsim10^{22}$ Pa s, but is only an order-of-magnitude estimate (the resistance also includes bending of the plate and friction at the boundaries, and $R$ is not well defined).
+> Using $1 \mathrm{yr}\approx3\times10^7$ s, $V\sim10^{22}/10^{21\text{–}23} \mathrm{m yr^{-1}}\sim10^{1}\text{–}10^{-1} \mathrm{m yr^{-1}}$. Why the answer needs more than the rebound value: post-glacial rebound gave $\mu\approx10^{21}$ Pa s ([[LS07 Isostasy]]), which here would give an absurd 10 m/yr. The two numbers measure different parts of the mantle. Rebound loads of ~$10^3$ km mostly probe the **upper** mantle. A sinking slab and the plate-scale flow it drives ($R\sim6000$ km) reach into the **lower** mantle, which is 10–100 times more viscous. In addition, much of the resistance comes from bending the stiff plate at the trench and from friction on the plate boundary, neither of which this estimate includes. *Interpretation*: for the high end of the mantle-viscosity range the estimate falls at $0.1$ m yr$^{-1}$ ($10$ cm yr$^{-1}$), the fastest observed plate speed; the observed range is $1$–$10$ cm yr$^{-1}$, so the scaling identifies the correct physics (slab buoyancy vs viscous drag) and puts the plausible mantle viscosity at $\gtrsim10^{22}$ Pa s, but is only an order-of-magnitude estimate (the resistance also includes bending of the plate and friction at the boundaries, and $R$ is not well defined).
 
 ## Further slides explained one by one
 <span class="scope-taught">taught</span> *the slides of this chapter's range that carry no derivation of their own; each image is followed by what it shows*

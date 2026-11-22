@@ -63,7 +63,7 @@ flowchart LR
 > [!intuition] Single outcomes are random, the pattern is not
 > Each electron lands as one dot at a place you cannot predict; after thousands of dots the stripes of a wave are there. The wave does not tell you *where this electron goes*, it tells you *how likely each place is*. That is the whole meaning of $|\psi|^2$.
 
-Send electrons one at a time through two narrow slits. Each electron produces **one localised flash** on the screen; nothing about a single arrival looks like a wave. But as flashes accumulate they build an interference pattern, and there are positions where electrons **never** arrive even though each slit alone would send electrons there (Fig. QM1.1). A particle that passed through "slit A or slit B" cannot cancel itself, so the explanation must be one of these:
+Send electrons one at a time through two narrow slits. Each electron produces **one localised flash** on the screen; nothing about a single arrival looks like a wave. But as flashes accumulate they build an interference pattern, and there are positions where electrons **never** arrive even though each slit alone would send electrons there (Fig. QM1.1). Suppose each electron really went through slit A or slit B. Then the electrons on the screen would be two groups added together, and the probability of arriving at any point would be $P_A+P_B$. That is at least $P_A$, so it cannot vanish where slit A alone sends electrons. The zeros rule out "A or B" as a description of each electron, and leave two facts that a theory must hold together:
 
 - arrival is **discrete** (flashes), and
 - the statistics are those of a **wave** (cancellation).
@@ -121,7 +121,7 @@ the exponentials cancel, so $P$ is the same at all $x$ and all $t$:
 ### 3.1 A single slit
 Send a plane wave of wavelength $\lambda$ at a slit of width $a$. Beyond the slit the particle is known to be within $\Delta x\approx a$, and the wave spreads into a diffraction pattern whose first minimum is at $\sin\theta=\lambda/a$. A particle in the central peak has acquired a sideways momentum of order $p\sin\theta$, so
 $$\Delta p\approx p\sin\theta=\frac h\lambda\cdot\frac\lambda a=\frac ha,\qquad \Delta x\,\Delta p\approx a\cdot\frac ha=h.$$
-Narrowing the slit sharpens position and widens the pattern. A plane wave went in, and something with a **peak** came out: a peak cannot be a single plane wave.
+(The product comes out as $h$ rather than $\hbar/2$ because $a$ and $p\sin\theta$ are rough full widths, not standard deviations. The estimate fixes the order of magnitude, not the constant.) Narrowing the slit sharpens position and widens the pattern. A plane wave went in, and something with a **peak** came out: a peak cannot be a single plane wave.
 
 > [!example] Numbers ($\hbar$, $h$ from CODATA)
 > Electrons accelerated through 100 V have $\lambda=h/\sqrt{2m_eeV}=0.1226$ nm. Through a slit $a=1\ \mu$m, $\sin\theta=\lambda/a=1.2\times10^{-4}$ rad, and $\Delta p\sim h/a=6.6\times10^{-28}$ kg m s$^{-1}$. Halve the slit and the spread doubles.

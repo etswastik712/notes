@@ -161,7 +161,7 @@ The narrow range $-2$ to $+2$ V therefore spans **68 orders of magnitude** in $K
 ## 6. The influence of pH
 <span class="scope-taught">taught</span> *S&A §5.6, [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf#page=10|pp.156–157]]*
 
-Reduced species are usually much stronger Brønsted bases than oxidised ones, so $\mathrm H^+$ is a reactant of the half-reaction $\mathrm{Ox}+\nu_ee^-+\nu_{\mathrm H}\mathrm H^+\to\mathrm{RedH}_{\nu_{\mathrm H}}$ and the potential depends on pH:
+Reduced species are usually much stronger Brønsted bases than oxidised ones. The reason is charge: reduction lowers the central atom's oxidation state, so it pulls less on the electrons of its oxo or hydroxo ligands, and they hold protons more tightly. This is the oxidation-state trend of the aqua and oxo acids in reverse ([[CH05 Acid Strength Lewis Acidity and Reactions]] §1–2). So $\mathrm H^+$ is a reactant of the half-reaction $\mathrm{Ox}+\nu_ee^-+\nu_{\mathrm H}\mathrm H^+\to\mathrm{RedH}_{\nu_{\mathrm H}}$ and the potential depends on pH:
 $$E=E'-\frac{\nu_{\mathrm H}}{\nu_e}\frac{RT\ln10}{F}\,\mathrm{pH}\ \ (5.8a),\qquad E=E'-\frac{(0.059\ \mathrm V)\,\nu_{\mathrm H}}{\nu_e}\,\mathrm{pH}\ \ (5.8b).$$
 **The potential falls as the pH rises** (in proportion to the ratio of protons to electrons). **Illustrations:** $\mathrm{ClO_4^-+2H^++2e^-\to ClO_3^-+H_2O}$: $E^\circ=1.201$ V at pH 0 becomes $1.201-(2/2)(7\times0.059)=\mathbf{0.788}$ V at pH 7: perchlorate is a *stronger* oxidant in acid. **The biological standard state** $E^{\ominus}$ (pH 7, written $E_{m7}$) for $\mathrm{H^+/H_2}$: $0-(2/2)(7\times0.059)=\mathbf{-0.41}$ V.
 
@@ -211,7 +211,7 @@ A species **disproportionates** when it is both oxidant and reductant for itself
 ## 10. The influence of complexation
 <span class="scope-taught">taught</span> *S&A §5.10, [[Shriver and Atkins Inorganic Chemistry 5th Ed-174-188.pdf#page=15|p.161]], eqs 5.11–5.12*
 
-A ligand that binds the **oxidised** form more strongly makes the potential **more negative** (oxidation easier); one that binds the **reduced** form more strongly makes it **more positive**:
+A ligand that binds the **oxidised** form more strongly makes the potential **more negative** (oxidation easier); one that binds the **reduced** form more strongly makes it **more positive**. The reason: binding lowers the free energy of whichever form it binds. Stabilising Ox makes it less eager to take electrons, so the reduction becomes less favourable and $E$ falls. Stabilising Red does the opposite. The size of the shift is set by the ratio of the two binding constants:
 $$E^\circ(\mathrm{ML})=E^\circ(\mathrm M)-\frac{RT}{F}\ln\frac{K_{\rm ox}}{K_{\rm red}}=E^\circ(\mathrm M)-(0.059\ \mathrm V)\log\frac{K_{\rm ox}}{K_{\rm red}}\quad(5.12b),$$
 so **every ten-fold greater binding to the oxidised form lowers $E^\circ$ by 59 mV** (where the book's eq. 5.11 is corrected in §5).
 

@@ -124,7 +124,7 @@ The rate at which a landscape lowers can be limited in two ways (slide 96): **we
 > $$
 >
 >
-> If instead the reaction itself is slow compared with diffusion (reaction-limited), the front advances at a constant speed, $\ell\propto t$. So thickness of the altered rind grows as $\sqrt t$ at first and, as the rind thickens and diffusion becomes the bottleneck, penetration slows; the reaction volume expansion then stresses the rind. The weathering front follows the surface of the block, hence the concentric, spherical geometry.
+> If instead the reaction itself is slow compared with diffusion (reaction-limited), the front advances at a constant speed, $\ell\propto t$. While the rind is thin, diffusion is quick and the reaction rate sets the speed (linear in $t$). As the rind thickens, diffusion across it becomes the bottleneck and penetration slows to the $\sqrt t$ law; the volume expansion of the reaction then stresses the rind. **Why the shape becomes round:** a joint-bounded block starts angular. At an edge the reactant arrives from two faces and at a corner from three, so edges and corners are eaten fastest, while flat faces advance at the one-face rate. Each shell therefore rounds off the corners of the one before it, and the unweathered core tends toward a sphere: a corestone wrapped in concentric rinds.
 
 
 ## Chemical weathering (slides 101–107)
@@ -155,12 +155,14 @@ The rate at which a landscape lowers can be limited in two ways (slide 96): **we
 
 *Chemical weathering reactions (all atom-balanced). Carbonic acid $\mathrm{H_2CO_3}$ forms from CO$_2$ and rain water.*
 
+Why silicate weathering is a long-term CO$_2$ sink and carbonate weathering is not: follow the carbon. When CaCO$_3$ dissolves it takes one CO$_2$ from the air. When the Ca$^{2+}$ and 2HCO$_3^-$ precipitate again in the sea, the same CO$_2$ is released, so the round trip is zero. In silicate weathering the Ca comes from a rock that held *no* carbon. Both carbons in the 2HCO$_3^-$ came from the atmosphere, and when CaCO$_3$ precipitates, one of them is locked into new limestone. Net result: one atmospheric CO$_2$ is turned into rock per Ca released from silicate.
+
 
 ![[pre_102.jpg|460]]
 
 
 > [!example] 🖼 Reading the diagram: Slide 102: weathering pathways (A&A Fig. 7.24)
-> Minerals across the top (plagioclase, K-feldspar, muscovite, biotite, amphibole, pyroxene, olivine); arrows show the products and the ions lost (Ca, Na, K, Mg, Si). Feldspars and micas pass through amorphous phases and *Al-smectite* to *kaolinite or halloysite* and finally *gibbsite* (Al hydroxide): the **aluminium sequence**, progressive loss of Si and cations, enrichment of Al. Mafic minerals (biotite, amphibole, pyroxene, olivine) pass through Mg,Fe-smectite to *goethite and hematite*: the **iron sequence**, enrichment of Fe. Deep tropical weathering ends in gibbsite/hematite: bauxite and laterite. In terms of stability (Goldich): olivine, Ca-plagioclase, pyroxene, amphibole, biotite, Na-plagioclase, K-feldspar, muscovite, quartz, from weakest to most resistant; minerals crystallised at high temperature are least stable at the surface.
+> Minerals across the top (plagioclase, K-feldspar, muscovite, biotite, amphibole, pyroxene, olivine); arrows show the products and the ions lost (Ca, Na, K, Mg, Si). Feldspars and micas pass through amorphous phases and *Al-smectite* to *kaolinite or halloysite* and finally *gibbsite* (Al hydroxide): the **aluminium sequence**, progressive loss of Si and cations, enrichment of Al. Mafic minerals (biotite, amphibole, pyroxene, olivine) pass through Mg,Fe-smectite to *goethite and hematite*: the **iron sequence**, enrichment of Fe. Deep tropical weathering ends in gibbsite/hematite: bauxite and laterite. In terms of stability (Goldich): olivine, Ca-plagioclase, pyroxene, amphibole, biotite, Na-plagioclase, K-feldspar, muscovite, quartz, from weakest to most resistant; minerals crystallised at high temperature are least stable at the surface. The reason: the Goldich order is Bowen's crystallisation sequence reversed. Olivine forms first, at ~1200 °C and dry, so it is the mineral furthest from equilibrium in cool, wet surface conditions. Its SiO$_4$ tetrahedra are isolated and held together only by Mg–O and Fe–O bonds, which water and acid break easily. Down the series the tetrahedra share more corners (chains, sheets, and in quartz a full framework of strong Si–O–Si bonds), so more bonds must be broken to free each ion.
 
 
 ![[pre_103.jpg|460]] ![[pre_104.jpg|460]]
@@ -196,7 +198,7 @@ The rate at which a landscape lowers can be limited in two ways (slide 96): **we
 > 2. How many tonnes of CO$_2$ are removed by weathering $10^9$ t of CaSiO$_3$-equivalent rock?
 > 3. Why is the carbonate-precipitation step needed to find the *net* CO$_2$ sink?
 > 4. A thick regolith is kinetically limited or supply-limited? Which depends strongly on temperature?
-> *Answers.* (1) $\times2.32$ (288 to 298 K). (2) $0.38\times10^9=3.8\times10^8$ t. (3) Weathering alone consumes 2 CO$_2$ but the precipitation returns 1, so the net is 1 per Ca. (4) A thick regolith (slow erosion) is *kinetically limited* by mineral dissolution, which is strongly temperature-dependent; a thin regolith on steep, rapidly eroding terrain is *supply-limited* (fresh rock arrives faster than it can react) and nearly temperature-independent.
+> *Answers.* (1) $\times2.32$ (288 to 298 K). (2) $0.38\times10^9=3.8\times10^8$ t. (3) Weathering alone consumes 2 CO$_2$ but the precipitation returns 1, so the net is 1 per Ca. (4) A thick regolith (slow erosion) is **supply-limited**. Minerals sit in it long enough to weather almost completely, so the chemical weathering rate is capped by the rate at which erosion *supplies* fresh rock, and temperature hardly matters. A thin regolith on steep, rapidly eroding terrain is **kinetically limited**. Fresh minerals are carried away before they finish reacting, so the rate is set by dissolution kinetics, which are Arrhenius and strongly temperature-dependent. (The chemical-weathering terms are not the same as the landscape regimes of §1. A chemically *supply-limited* soil is thick, which in §1's language is the *transport-limited* case.)
 
 > [!connection] Where else this appears
 > - **Climate:** the long-term carbon cycle and the weathering thermostat ([[Climate - Course Map]]); a negative feedback with the relaxation-time and pole picture of [[Fourier and Laplace Transforms]] §7.6 (stable, one pole in the left half-plane).
@@ -257,7 +259,7 @@ Physical weathering fractures rock: it (i) weakens it mechanically, (ii) makes s
 > $$
 >
 >
-> With $L=3.34\times10^5$ J kg$^{-1}$, $T=273$ K, $v_w-v_i=-9\times10^{-5}\approx-10^{-4}$ m$^3$kg$^{-1}$ (slide 114): $\mathrm{d} P/\mathrm{d} T=-13$ MPa K$^{-1}$: the melting point drops by $1$ K for $13$ MPa of extra pressure. Conversely, ice in a pore held at $-5 ^\circ$C can push with up to $\sim65$ MPa — much more than the tensile strength ($\sim10$ MPa). But the volume-expansion mechanism would crack rock at $0^\circ$C, when freezing begins, if it worked in a closed pore; the experiment below shows it does not.
+> With $L=3.34\times10^5$ J kg$^{-1}$, $T=273$ K, $v_w-v_i=-9\times10^{-5}\approx-10^{-4}$ m$^3$kg$^{-1}$ (slide 114): $\mathrm{d} P/\mathrm{d} T=-13$ MPa K$^{-1}$: the melting point drops by $1$ K for $13$ MPa of extra pressure. Conversely, ice in a pore held at $-5 ^\circ$C can push with up to $\sim65$ MPa — much more than the tensile strength ($\sim10$ MPa). But the volume-expansion mechanism would crack rock at $0^\circ$C, when freezing begins, if it worked in a closed pore; the experiment below shows it does not. A simple reason it rarely works: ice takes 9 % more room than its water, so a pore that is less than about $1/1.09\approx92$ % full of water has room for the expansion and builds no pressure at all. Rock pores are seldom that saturated. **Ice segregation** avoids this requirement. Thin films of water on grain surfaces stay liquid a few degrees below 0 °C, and they are drawn toward the growing ice (cryosuction, the Clausius–Clapeyron pressure above acting as a suction). Ice lenses therefore keep growing as long as water is supplied from below. That is why cracking peaks at −3 to −8 °C, where the suction is strong but the films are still mobile, and not at 0 °C.
 
 
 ![[pre_113.jpg|460]] ![[pre_114.jpg|460]]

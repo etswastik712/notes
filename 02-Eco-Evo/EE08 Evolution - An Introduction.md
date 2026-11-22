@@ -66,7 +66,7 @@ The lecture asks the question from outside: an alien visiting Earth would note f
 | 3. All organisms are **complex** | human organ systems; *E. coli*: 4402 proteins predicted, 2586 detected (sl. 13–15) |
 | 4. **Environment-specific features** | puffin, fish gills (sl. 16–17) |
 
-Evolutionary biology "tries to understand how this diversity came about, and why the organisms are the way they are" (sl. 18). The obvious reply, "isn't *why organisms are the way they are* molecular biology or genetics?", is answered in §8 with Dobzhansky's dictum, *nothing in biology makes sense except in the light of evolution* (Dobzhansky 1973; sl. 20).
+Evolutionary biology "tries to understand how this diversity came about, and why the organisms are the way they are" (sl. 18). The four observations are not a random list. They are the facts that any explanation of life must cover, and they come in two pairs. Diversity and variation ask *where new forms come from*. Complexity and fit ask *how functional, well-suited organisms can arise at all*. The second pair was the strongest argument for a designer (§2), so a theory that explained the first pair without the second would not have been enough. Darwin's theory (§4) is judged by whether it explains all four. The obvious reply, "isn't *why organisms are the way they are* molecular biology or genetics?", is answered in §8 with Dobzhansky's dictum, *nothing in biology makes sense except in the light of evolution* (Dobzhansky 1973; sl. 20).
 
 ## 2. The evolution of evolutionary thought
 <span class="scope-taught">taught</span> *[[Evolution_06-Oct-2026.pdf#page=21|slides 21–34]]*
@@ -81,6 +81,8 @@ Evolutionary biology "tries to understand how this diversity came about, and why
 | **Steno** (1638–86; sl. 29–30) | "tonguestones" are sharks' teeth; seashells on mountains mean mountains were once under the sea | the Earth changes |
 | **Cuvier** (1769–1832; sl. 31–32) | mammoth skeletons are species no longer found: **species go extinct** | the Great Chain is imperfect (but Cuvier rejected change of species: species are formed and destroyed) |
 | **Taoists; Buffon** (sl. 34) | constant change; all four-legged animals from **38 ancestral forms** | species *can* change |
+
+**How the table adds up.** Linnaeus and Paley codified a world that was created, complete and unchanging, with complexity as the signature of design. The first crack came from rocks, not biology. Steno showed that fossils are the remains of once-living organisms, and that rocks now on mountains were once under the sea, so **the Earth changes**. Cuvier then showed that some fossils belong to species that no longer exist anywhere, so **species go extinct**, and position (b) falls. But if species can disappear and the world is still full of species, either the original creation was vastly larger or **new species appear**, which puts pressure on (c); Buffon's 38 ancestral forms are a guess in that direction. What none of them supplied was a *mechanism* of change that also explained complexity and fit. Without one, design (a) remained the only explanation for the second pair of observations in §1, and that is the gap Lamarck (§3) and Darwin (§4) set out to fill.
 
 > [!key] The recap the lecture repeats (slides 28, 33)
 > Three positions explained diversity and complexity: **(a)** a creator made all species, **(b)** no species ever went extinct, **(c)** no species changed since its origin. Palaeontology removed (b); Buffon and the Taoists doubted (c); (a) was challenged only by a theory of change with a mechanism.
@@ -101,27 +103,57 @@ The textbook caricature is "effortful striving leading to a heritable change" (t
 ## 4. Darwin's logic
 <span class="scope-taught">taught</span> *[[Evolution_06-Oct-2026.pdf#page=43|slides 43–48]]* · <span class="scope-extra-book">extra · book</span> *Freeman & Herron's four postulates, [[EE10 Natural Selection]]*
 
-[[Evolution_06-Oct-2026.pdf#page=45|Slide 45]] lays Darwin's argument out as a chain:
+[[Evolution_06-Oct-2026.pdf#page=45|Slide 45]] lays Darwin's argument out as a chain of observations (Obs) and inferences (Inf). The chain matters more than the list. Each inference is forced by the facts before it, and each later objection (§5) attacks one particular link.
 
-| | statement | borrowed from |
-|---|---|---|
-| Obs 1 | overproduction of offspring | Malthus |
-| Obs 2 | resource levels generally stable | |
-| Obs 3 | population sizes generally stable | |
-| **Inf 1** | **competition, struggle for existence** | Adam Smith |
-| Obs 4 | trait variation within populations | |
-| Obs 5 | some of that variation is heritable | |
-| **Inf 2 / Obs 6** | favourable variants increase, unfavourable ones decrease over generations: **natural selection** | |
-| **Inf 3** | adaptation to the environment | |
-| **Inf 4** | "very different" = new groups/species over time | Lyell (deep time) |
-| **Inf 5** | the entire biodiversity, existing and extinct | |
+**Step 1: there must be a struggle (Obs 1–3 ⇒ Inf 1).**
+- *Obs 1, overproduction* (from Malthus): every species produces far more offspring than are needed to replace the parents. A pair of elephants, the slowest breeders Darwin could find, would leave millions of descendants within a few centuries if all survived. Unchecked, numbers grow geometrically.
+- *Obs 2 and 3*: resources stay roughly constant from year to year, and so do population sizes.
+- Put together, these cannot all hold unless **most offspring die before they reproduce**. Births exceed replacement, yet numbers do not grow, so deaths must remove the excess every generation. And because resources are limited, the survivors are those who got enough of them. That is *Inf 1, competition, the struggle for existence*. The phrase means unequal success in a crowded world, not literal fighting. (From Adam Smith Darwin took the idea that competition among individuals, each acting for itself, can produce an orderly outcome at the level of the whole, without anyone designing it.)
 
-**Descent with modification** (sl. 46): Darwin avoided the origin of life, but implied that all life descends from one or a few ancestral forms, so **all life forms are connected** through degrees of ancestry. The lecture's warning (sl. 47): this is how Darwin *framed* the argument, "NOT how we understand the process today. Darwin got many things right, a few things wrong, and had no clue about a lot of stuff."
+**Step 2: the struggle is not a lottery (Inf 1 + Obs 4–5 ⇒ Inf 2).**
+- *Obs 4*: individuals of a species differ (size, speed, beak shape, disease resistance).
+- If individuals differ and only some survive, then *who* survives is not random with respect to those differences. On average, variants that help in getting food, escaping predators or attracting mates leave more offspring.
+- *Obs 5*: offspring resemble their parents, so some of the variation is heritable. Then the advantage of the survivors is passed on, and **favourable variants become commoner from one generation to the next**, unfavourable ones rarer. That is *Inf 2, natural selection*.
+- Both observations are needed. Without variation (Obs 4), deaths would be random with respect to traits and nothing would change. Without heritability (Obs 5), each generation's lucky survivors would take their advantage to the grave.
+- Natural selection is labelled both Inf 2 and *Obs 6* on the slide, because it can also be *seen* directly: in breeders' artificial selection, which Darwin used as his model (pigeons), and in wild populations ([[EE10 Natural Selection]], the Grants' finches).
 
-What the theory explains (sl. 48): the diversity of life; adaptations; anatomical similarities across species; extinct species resembling living ones; similar species living close together; distribution patterns such as the **Wallace line**.
+**Step 3: fit without a designer (Inf 2 repeated ⇒ Inf 3).** Selection acts every generation, and the environment does the "choosing". Small advantages accumulate, so populations come to carry traits that suit the conditions they live in: *Inf 3, adaptation*. This is the step that answers Paley (§2). The fit of organism to environment, which the watchmaker argument took as proof of design, is what a blind, repeated filter produces.
+
+**Step 4: divergence into new forms (Inf 3 + deep time ⇒ Inf 4).** Different places pose different conditions, so selection pushes populations of one species in different directions. Each step is tiny. But Lyell's geology (uniformitarianism: small, present-day processes acting over immense time built the landscape) gave Darwin the time scale on which tiny steps add up. Given enough time, descendants become **"very different"** from their ancestors, different enough to count as new species and eventually new groups: *Inf 4*. This step is only as strong as the time available, which is why Kelvin's young Earth (§5) was such a serious objection.
+
+**Step 5: all of biodiversity (Inf 4 run backwards ⇒ Inf 5).** If species split and change, then tracing lineages back makes them converge. Today's species, and the extinct ones in the fossil record, are the branches of one tree grown from **one or a few ancestors**: *Inf 5*. This is **descent with modification** (sl. 46). Darwin avoided the origin of life itself, but implied that all life forms are connected through degrees of ancestry.
+
+The chain now accounts for the alien's four observations of §1:
+- **diversity** is Step 4–5 branching;
+- **variation within groups** is the raw material of Step 2;
+- **complexity** is Step 3 accumulated over many rounds;
+- **environment-specific features** are Step 3 itself.
+
+The lecture's warning (sl. 47): this is how Darwin *framed* the argument, "NOT how we understand the process today. Darwin got many things right, a few things wrong, and had no clue about a lot of stuff." Above all, he had no theory of where variation comes from or how it is inherited (§5).
+
+| step | statement | borrowed from | why it follows |
+|---|---|---|---|
+| Obs 1 | overproduction of offspring | Malthus | (observed; geometric increase) |
+| Obs 2, 3 | resources and population sizes stable | | (observed) |
+| **Inf 1** | **struggle for existence** | Adam Smith | births exceed replacement but numbers are constant, so most die; limited resources decide who |
+| Obs 4, 5 | variation exists; some is heritable | | (observed) |
+| **Inf 2 / Obs 6** | **natural selection**: favourable variants increase | | survival depends on traits (Obs 4), and survivors pass them on (Obs 5) |
+| **Inf 3** | adaptation | | selection repeated over generations |
+| **Inf 4** | new species and groups | Lyell (deep time) | different environments plus enormous time |
+| **Inf 5** | all biodiversity, living and extinct | | Inf 4 traced backwards: one tree of life |
+
+**What the theory explains** (sl. 48), each item read off the chain:
+- the diversity of life (Steps 4–5);
+- adaptations (Step 3);
+- **anatomical similarities across species**: the same bones in a human arm, a bat wing and a whale flipper are inherited from a common ancestor and modified, not designed afresh (homology);
+- **extinct species resembling living ones**: fossils are relatives or ancestors on the same tree;
+- **similar species living close together**: species arise from neighbouring ancestors and disperse only slowly;
+- **distribution patterns such as the Wallace line**: deep water that land animals could not cross separates two faunas that diverged independently on either side.
 
 ## 5. Objections and reactions
 <span class="scope-taught">taught</span> *[[Evolution_06-Oct-2026.pdf#page=49|slides 49–52]]*
+
+Each objection attacks one link of the chain in §4: (1) the *source* of the variation in Obs 4; (2) the *time* that Step 4 needs; (3) the *intermediates* that Steps 4–5 predict should be found as fossils; (4) the *inheritance* in Obs 5, without which Step 2 fails.
 
 | objection to the 1859 theory | Darwin's answer | today |
 |---|---|---|
@@ -141,7 +173,7 @@ Under **blending**, an offspring's trait is the mid-parent value $z'=\tfrac12(z_
 ## 6. Mendel, the founders and the Modern Synthesis
 <span class="scope-taught">taught</span> *[[Evolution_06-Oct-2026.pdf#page=53|slides 53–58]]* · <span class="scope-extra-book">extra · book (mandatory)</span> *Futuyma & Kirkpatrick Ch. 1, pp. 16–18 (read)*
 
-- **Mendel**: laws of inheritance proposed 1865, published 1866 (16 years before Darwin's death), rediscovered only in **1900**; "factors" do not blend and pass unchanged across generations (sl. 53).
+- **Mendel**: laws of inheritance proposed 1865, published 1866 (16 years before Darwin's death), rediscovered only in **1900**; "factors" do not blend and pass unchanged across generations (sl. 53). This repaired the two weakest links of §5. Particulate inheritance means variation is not diluted (objection 4, §5.1), and **mutation** of the factors is a source of new variation (objection 1). The synthesis that followed is, in effect, Darwin's chain with Obs 4 and Obs 5 given a mechanism.
 - **1900–1950, formalisation**: **R. A. Fisher, J. B. S. Haldane, Sewall Wright** gave evolution a mathematical basis (sl. 54); **empirical work** by Stebbins (plants), Simpson (fossils), Dobzhansky (insects) and many others (sl. 55).
 - **1940s–50s, the Modern Synthesis** (sl. 56): Darwin's insights synthesised with those of the geneticists, theoreticians, experimentalists, palaeontologists and ecologists; "the embryologists were the only people missing". The name is from Julian Huxley's 1942 popular account.
 - **Molecular biology** (sl. 57–58): Sanger's protein and DNA sequencing; Sibley's molecular taxonomy of birds; **Pauling and Zuckerkandl (1962)**, sequence differences as a clock for divergence times. Over 75 years the data (sequences, molecular genetics, developmental biology, molecular taxonomy, palaeontology, evolutionary ecology) modified the synthesis "but no major structural changes… there is no new information that is inconsistent with the existing theory" (sl. 58).

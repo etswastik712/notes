@@ -72,7 +72,7 @@ a straight line of $\log N_j$ against $j$; $R_b$ is "commonly about 3 or 4" (A&A
 >
 > The ratios are $3.99,\ 4.00,\ 4.07,\ 4.00,\ 3.84$ and the least-squares slope of $\log_{10}N_j$ against $j$ is $-0.601$, i.e. $R_b=3.99$ (figure A). **Horton's "law" is what randomness gives**: real networks have $R_b$ between 3 and 5 because their branching is close to random. (The same accident of counting underlies many scaling laws; compare Hack's law, [[LS16 Fluvial Landscapes]]. See [[Random Walk]] and [[Counting Principles]] for the combinatorics.)
 
-The regular branching has led some to call networks *fractal*, because they look the same at every magnification (A&A Fig. 11.2); but A&A stress that the self-similarity **stops at the channel heads**: above each first-order stream there is only a slightly concave bowl, a *zero-order basin* (§7).
+The regular branching has led some to call networks *fractal*, because they look the same at every magnification (A&A Fig. 11.2); but A&A stress that the self-similarity **stops at the channel heads**: above each first-order stream there is only a slightly concave bowl, a *zero-order basin* (§8, §9).
 
 ### 1.2 Drainage density and the length of hillslopes
 **Drainage density** is total channel length per unit basin area, $D_d=\sum L_i/A$ (units 1/length; A&A p.351). It sets the **hillslope length**, the distance from a divide to the nearest channel.
@@ -82,7 +82,7 @@ The regular branching has led some to call networks *fractal*, because they look
 >
 > $$\text{divide-to-channel (hillslope) length}=\frac w2=\frac1{2D_d},\qquad\text{mean distance to the nearest channel}=\frac w4=\frac1{4D_d}.$$
 >
-> A simulation of $2\times10^{5}$ points with $w=200$ m gives mean distance 50.0 m (figure B). *Numbers:* $D_d=1,\ 5,\ 20,\ 100$ km/km$^2$ give hillslope lengths $500,\ 100,\ 25,\ 5$ m. A&A's $D_d\propto1/X_c$ (§6) is the same statement with $X_c$ the distance to the channel head.
+> A simulation of $2\times10^{5}$ points with $w=200$ m gives mean distance 50.0 m (figure B). *Numbers:* $D_d=1,\ 5,\ 20,\ 100$ km/km$^2$ give hillslope lengths $500,\ 100,\ 25,\ 5$ m. A&A's $D_d\propto1/X_c$ (§7.2) is the same statement with $X_c$ the distance to the channel head.
 
 **Why it matters:** this is the *slope–channel dichotomy* (A&A p.351). Water in a channel moves orders of magnitude faster than water on or under the hillslope, so a landscape with short hillslopes (high $D_d$, badlands) delivers rainfall to the outlet quickly: **flashy** discharge. A 1 km² shale-badland basin in Utah sent a flood wave past three sonic gauges within 30 minutes of the start of rain (A&A Fig. 11.3).
 
@@ -95,7 +95,7 @@ with $S$ the storage (soil water, groundwater, snow, ice, lakes), $R$ rainfall r
 
 $$\boxed{R-ET=\frac{\overline{Q_s}}A}\qquad(\text{effective precipitation} = \text{runoff depth}).$$
 
-This gives the mean annual $ET$ if runoff is gauged, or the runoff if $ET$ can be estimated. *Numbers:* the Oregon Coast Range receives $R=2$ m/yr; with $ET=0.6$ m/yr, $R-ET=1.4$ m/yr and a **runoff ratio** of 0.70. The 860 m² hollow of §8 then yields $860\times1.4=1200$ m³/yr, a mean discharge of **0.038 L/s**. On the time scale of a storm the storage term cannot be dropped: rain only adds to the balance while it falls, and afterwards stream, groundwater and $ET$ outflows are fed *from storage*.
+This gives the mean annual $ET$ if runoff is gauged, or the runoff if $ET$ can be estimated. *Numbers:* the Oregon Coast Range receives $R=2$ m/yr; with $ET=0.6$ m/yr, $R-ET=1.4$ m/yr and a **runoff ratio** of 0.70. The 860 m² hollow of §9 then yields $860\times1.4=1200$ m³/yr, a mean discharge of **0.038 L/s**. On the time scale of a storm the storage term cannot be dropped: rain only adds to the balance while it falls, and afterwards stream, groundwater and $ET$ outflows are fed *from storage*.
 
 ## 3. Water in the soil
 ### 3.1 Porosity, field capacity and wilting point
@@ -175,7 +175,7 @@ $$K\frac{d}{dx}\Big(H\frac{dH}{dx}\Big)=\frac K2\frac{d^2(H^2)}{dx^2}=-I_0.$$
 > For small changes about a mean thickness $\bar H$, $K H\,\partial_xH\approx K\bar H\,\partial_xH$ and the evolution equation becomes **linear**: $\partial_tH=D_H\,\partial_x^2H+I/S_y$, with the **hydraulic diffusivity** $D_H=K\bar H/S_y$. For $K=10^{-5}$ m/s, $\bar H=10$ m, $S_y=0.2$: $D_H=5\times10^{-4}$ m²/s, so the lowest mode of a 500 m interfluve relaxes in $L^2/(\pi^2D_H)=1.6$ yr: the water table forgets a recharge pulse in a couple of years. This is the same equation as heat conduction, hillslope creep and alluvial rivers ([[THX1 Diffusion Random Walks and the Heat Equation]], [[Diffusion Equation]]); a river-stage oscillation penetrates the bank with the *skin depth* $\sqrt{2D_H/\omega}$.
 
 ### 5.3 Rules of thumb for the geomorphologist
-(A&A p.363.) The water-table mound is a smoothed copy of the topography with its boundaries fixed by the rivers and the sea, so **moving the boundary** (incision, base-level change) moves the whole groundwater field. Flow paths are nearly vertical near the surface and bend toward the bounding channel at depth; near-surface soil is more conductive than deeper material, so contrasts in $K$ steer flow sideways (a thin regolith on impermeable rock carries all its flow parallel to the surface). Groundwater **converges in hollows** and diverges from noses, which is why landslides and seeps are found in hollows (§7).
+(A&A p.363.) The water-table mound is a smoothed copy of the topography with its boundaries fixed by the rivers and the sea, so **moving the boundary** (incision, base-level change) moves the whole groundwater field. Flow paths are nearly vertical near the surface and bend toward the bounding channel at depth; near-surface soil is more conductive than deeper material, so contrasts in $K$ steer flow sideways (a thin regolith on impermeable rock carries all its flow parallel to the surface). Groundwater **converges in hollows** and diverges from noses, which is why landslides and seeps are found in hollows (§8).
 
 ## 6. Runoff mechanisms
 How does rain reach the channel? Freeze (1974) and Dunne's field work distinguish three routes (A&A pp.363–366, Figs. 11.12–11.14):

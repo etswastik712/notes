@@ -259,6 +259,12 @@ $\lambda$ is the growth-rate parameter; $a$ and $\beta$ regulate the density-dep
 > Fixed point: $\lambda(1+aN^*)^{-\beta}=1\Rightarrow 1+aN^*=\lambda^{1/\beta}$, so $N^*=(\lambda^{1/\beta}-1)/a$. Slope: with $f(N)=\lambda N(1+aN)^{-\beta}$,
 > $$f'(N^*)=1-\beta\,\frac{aN^*}{1+aN^*}=1-\beta\big(1-\lambda^{-1/\beta}\big).$$
 > **Monotone damping** needs $0\le f'<1$, i.e. $\beta(1-\lambda^{-1/\beta})\le1$; **damped oscillation** needs $-1<f'<0$; the equilibrium is **unstable** for $f'\le-1$, i.e. $\beta(1-\lambda^{-1/\beta})\ge2$. Consequences: if $\beta\le1$ ($\beta=1$ is the Beverton-Holt form) the approach is *always* monotone, whatever $\lambda$; instability needs $\beta>2$ and large $\lambda$ (for $\beta=3$, $\lambda>27$; for $\beta=6$, $\lambda>11.4$; for $\beta=10$, $\lambda>9.3$).
+>
+> **What $\beta$ means.** At large $N$, $f(N)\approx\lambda a^{-\beta}N^{1-\beta}$.
+> - For $\beta\le1$, the next generation never *falls* as this one grows. More parents always mean at least as many offspring: the crowded parents share out the resource (**contest** competition). With no hump in $f$ there is nothing to overshoot with, so the approach to $N^*$ is monotone.
+> - For $\beta>1$, $f$ has a hump. Past it, more parents mean *fewer* offspring, because the resource is split so finely that most get too little (**scramble** competition). That is the overcompensation of §5.1.
+> 
+> So $\beta$ measures how abrupt the density dependence is, and $\lambda$ how hard the population pushes against it. Cycles and chaos need both to be large.
 
 ![[fig_ee03_hassell_map.png|640]]
 *Figure EE3.10. Stability map of the Hassell model in the $(\lambda,\beta)$ plane (my computation). Green: monotone damping; yellow: oscillatory damping; red: unstable (cycles, chaos).*
@@ -270,6 +276,8 @@ Slide 29 shows Fig. 2 of **Hassell, Lawton and May (1976)**, the same plane with
 
 > [!key] The puzzle (slide 30)
 > Simple models *can*, in principle, show everything from stability to chaos (May 1976), which launched many attempts to find chaos in nature. Yet "although many populations have very high growth rates, except 1–2 cases **no real population has been demonstrated to exhibit chaotic dynamics**"; and Hassell et al.'s finding of almost universal simple behaviour "even intuitively does not make sense". *So, what's going on?*
+>
+> Why it "does not make sense": insects lay tens to hundreds of eggs, so $\lambda$ is large, and §5 showed that large growth rates bring overshoot. By the derivation above, a population with large $\lambda$ falls in the monotone region only if its fitted $\beta$ is close to 1 or below. The fits imply that almost every insect has gentle, contest-like density dependence, and that is what is hard to believe.
 
 The next section gives the two answers the lecture offers.
 
@@ -294,6 +302,8 @@ Slide 32 (Henson et al., *Science*, 19 Oct 2001): "although real organisms come 
 
 ### 7.2 Answer two: the models were too simple (model complexity)
 Slide 34 (Turchin and Taylor 1992): Hassell et al. "used a model that incorporated only **one time lag** and a **simple functional form**". Turchin and Taylor "**fit a large set of models with different number of time lags and varying complexity**". All kinds of behaviour were observed: exponential damping, oscillatory damping, limit cycles *and chaos*. Their conclusion (quoted on the slide): "***Use of overly simple models for reconstructing endogenous dynamics from data may be biased in favor of finding stability.***"
+
+Why lags matter: a lag means this year's growth responds to the density of an *earlier* year, through a slow-growing food plant, a predator that builds up, or a cohort that matures only later. The population then keeps growing after it has passed its equilibrium, because the brake responds to the old, lower density. This is the delayed logistic of §4.2, where a lag alone produced cycles. A one-lag model fitted to such data can see only the *average* dependence of growth on current density, which slopes gently downward, and it reports stability (Fig. EE3.12).
 
 > [!extra-book]+ 🟡 Extra (book): Turchin and Taylor (1992) in brief
 > **Question:** how common are complex dynamics (limit cycles, quasiperiodicity, chaos) in real populations, if one does not force a single-lag model on the data? **Method:** the **response-surface methodology**: fit the yearly change $R_t=\ln(N_t/N_{t-1})$ as a flexible polynomial function of **two lagged densities** ($N_{t-1}$, $N_{t-2}$) instead of the one-lag Hassell form; lags stand for unseen *delayed density dependence*, from interacting species or age structure. They restricted themselves to long series (at least 18 years) and tested the reconstructed behaviour against the **autocorrelation function** of each series (if the method can recover limit cycles, there is some hope for chaos). **Data:** 14 insect and 22 vertebrate populations. **Result for the insects:** 1 unregulated, 3 exponentially stable, 6 damped oscillations, 1 limit cycle, 2 quasiperiodic and 1 chaotic; the vertebrates showed a similar spectrum without chaos. **Conclusion:** "the complete spectrum of dynamical behaviours, ranging from exponential stability to chaos, is likely to be found among natural populations" ([[TurchinTaylor_Ecology_1992.pdf#page=2|Ecology 73: 289–305]]). The paper is "a little advanced"; the instructor's advice for the extract is to ignore the technical detail and keep the conclusions.

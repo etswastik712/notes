@@ -42,7 +42,7 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/slides, s
 > - use the **parity theorem** ($[\hat{P}, \hat{H}] = 0$) to decouple the problem into independent even-parity and odd-parity branches,
 > - **derive from scratch** the transcendental eigenvalue equations $z\tan z = \sqrt{z_0^2-z^2}$ (even states) and $-z\cot z = \sqrt{z_0^2-z^2}$ (odd states),
 > - determine the allowed bound-state energies graphically as intersections between trigonometric branches and a quarter-circle of radius $z_0 = \frac{a}{\hbar}\sqrt{2mV_0}$,
-> - compute the total number of bound states using the floor formula $N = \lfloor z_0 / (\pi/2) \rfloor + 1$ and **prove** that in one dimension there is always at least one bound state, no matter how shallow or narrow the well,
+> - compute the total number of bound states, $N=\lceil 2z_0/\pi\rceil$ (equal to $\lfloor z_0/(\pi/2)\rfloor+1$ except exactly at multiples of $\pi/2$, §4), and **prove** that in one dimension there is always at least one bound state, no matter how shallow or narrow the well,
 > - contrast 1-D binding with 3-D spherical wells, explaining why the radial condition $u(0)=0$ requires a finite threshold $z_0 > \pi/2$ for binding,
 > - calculate the **penetration depth** $d_\mathrm{pen} = 1/\kappa$ and the **tunnelling probability** $P_\mathrm{tunnel}$ into the classically forbidden barrier,
 > - explain physically why finite-well bound state energies lie strictly **below** the corresponding infinite-well energies via the "effective box width" $2a_\mathrm{eff} = 2a + 2/\kappa$,
@@ -185,7 +185,14 @@ At the well boundaries $x = \pm a$, the potential $V(x)$ experiences a finite st
 ### Parity classification
 The potential is symmetric under spatial inversion: $V(-x) = V(x)$. By the parity theorem established in [[QM04 The Particle in a Box]] §6:
 $$[\hat{P}, \hat{H}] = 0.$$
-Because bound states in a one-dimensional potential are non-degenerate (proven in [[QM05 The Harmonic Oscillator]] §7), every energy eigenstate must also be an eigenstate of the parity operator $\hat{P}$:
+Bound states in a one-dimensional potential are non-degenerate. ([[QM05 The Harmonic Oscillator]] §7 proves this only for a nodeless ground state; the general argument is the following.)
+
+> [!derivation] No degeneracy for 1-D bound states (the Wronskian argument)
+> Let $\psi_1,\psi_2$ be bound states with the same $E$, so $\psi_i''=\frac{2m}{\hbar^2}(V-E)\psi_i$. Their Wronskian $W=\psi_1\psi_2'-\psi_2\psi_1'$ has $W'=\psi_1\psi_2''-\psi_2\psi_1''=\frac{2m}{\hbar^2}(V-E)(\psi_1\psi_2-\psi_2\psi_1)=0$, so $W$ is constant in $x$.
+> Both states decay at infinity, so $W\to0$ there, and hence $W=0$ everywhere. Then $(\psi_2/\psi_1)'=W/\psi_1^2=0$ wherever $\psi_1\ne0$, so $\psi_2=c\,\psi_1$: the two are the same state.
+> The argument fails for scattering states (no decay, $W\ne0$; $e^{\pm ikx}$ are degenerate) and on a ring (no infinity), which is why both of those have degeneracies.
+
+So the parity image $\psi(-x)$, which has the same energy, must be a multiple of $\psi(x)$, and every energy eigenstate is also an eigenstate of the parity operator $\hat{P}$:
 $$\psi(-x) = \pm \psi(x).$$
 This splits the solutions into two mutually exclusive, uncoupled families:
 1. **Even-parity states ($\psi(-x) = +\psi(x)$):**
@@ -443,7 +450,8 @@ $$\boxed{A = \left[ a - \frac{\sin(2la)}{2l} + \frac{\sin^2(la)}{\kappa} \right]
 Outside the well ($|x| > a$), the probability density decays as:
 $$P(x) = |\psi(x)|^2 = G^2 e^{-2\kappa x} = G^2 e^{-2(x-a)/d_\mathrm{pen}} e^{-2\kappa a}.$$
 The characteristic distance over which the wavefunction drops by a factor of $1/e$ is the **penetration depth**:
-$$\boxed{d_\mathrm{pen} \equiv \frac{1}{\kappa} = \frac{\hbar}{\sqrt{-2mE}} = \frac{\hbar}{\sqrt{2m(V_0 - |E|) = 2m(E+V_0)_\mathrm{deficit}}}}$$
+$$\boxed{d_\mathrm{pen} \equiv \frac{1}{\kappa} = \frac{\hbar}{\sqrt{-2mE}} = \frac{\hbar}{\sqrt{2mB}}},\qquad B=-E=\text{binding energy below the rim}.$$
+(In the lecture convention $B=V_0-E$. The earlier draft of this box mixed the two conventions; what sets the tail is always the distance of the level **below the top of the wall**, not its height above the floor.)
 - For tightly bound states near the bottom of a deep well ($E \to -V_0$), $|E| \approx V_0$, so $\kappa \approx \sqrt{2mV_0}/\hbar$ is large and $d_\mathrm{pen} \to a/z_0$ is small: the wave is sharply confined.
 - For weakly bound states near the top of the well ($E \to 0^-$), $\kappa \to 0$ and $d_\mathrm{pen} \to \infty$: the tail stretches deeply into the barrier.
 
@@ -453,7 +461,7 @@ Therefore, the wave behaves as if it were confined in a wider effective box of w
 $$2a_\mathrm{eff} = 2a + 2d_\mathrm{pen} = 2a + \frac{2}{\kappa} = 2a\left(1 + \frac{1}{\kappa a}\right).$$
 In an infinite box of width $2a_\mathrm{eff}$, the kinetic energy would be:
 $$E_n + V_0 \approx \frac{n^2\pi^2\hbar^2}{2m(2a_\mathrm{eff})^2} = \frac{n^2\pi^2\hbar^2}{8ma^2}\left(1 + \frac{1}{\kappa a}\right)^{-2} \approx E_n^\mathrm{box}\left(1 - \frac{2}{\kappa a}\right).$$
-Because $\kappa a \approx z_0$ for deep wells, this simple physical argument reproduces the exact asymptotic formula $E_n \approx E_n^\mathrm{box}(1 - 2/z_0)$ derived via perturbation theory in §4!
+Because $\kappa a \approx z_0$ for deep wells, this simple physical argument reproduces the asymptotic formula $E_n \approx E_n^\mathrm{box}(1 - 2/z_0)$ derived by expanding the transcendental equation near its poles in §4 (an asymptotic expansion, not perturbation theory). The agreement is not a coincidence. Near the wall the exterior exponential $e^{-\kappa(x-a)}$ has the same height and slope as a straight line that reaches zero at $x=a+1/\kappa$. So to first order, the interior sine "thinks" it is clamped a distance $1/\kappa$ further out.
 **Quantum mechanical penetration into the classically forbidden barrier relaxes spatial confinement, broadens the de Broglie wavelength, and lowers the kinetic energy.**
 
 ### Tunnelling probability into the forbidden region
@@ -519,7 +527,7 @@ $$-z\cot z = \sqrt{z_0^2 - z^2}.$$
    - Decay parameter outside the nuclear well: $\kappa = \frac{\sqrt{2\mu B}}{\hbar} = 0.2292\ \mathrm{fm}^{-1}$.
    - Penetration depth:
      $$d_\mathrm{pen} = \frac{1}{\kappa} = \frac{1}{0.2292\ \mathrm{fm}^{-1}} = 4.36\ \mathrm{fm}!$$
-   The penetration depth ($4.36$ fm) is more than **twice the range of the nuclear force ($a = 2.05$ fm)**. The proton and neutron spend the vast majority of their time outside the range of their mutual nuclear potential! The deuteron is a loosely bound, giant quantum halo nucleus.
+   The penetration depth ($4.36$ fm) is more than **twice the range of the nuclear force ($a = 2.05$ fm)**. Integrating $u^2=\sin^2$ inside and the exponential tail outside gives $P(r>a)\approx64\,\%$: the proton and neutron spend about **two-thirds** of their time outside the range of their mutual nuclear potential. (The earlier wording "the vast majority" overstated it.) The deuteron is a loosely bound, spatially extended nucleus. Its small binding energy, 2.2 MeV against a 35 MeV well, is what makes the tail long ($d_{\rm pen}\propto1/\sqrt B$).
 
 ### 3. Nanoscale Electron Well ($2a = 1.0$ nm, $V_0 = 5.0$ eV)
 Consider a free electron ($m = m_e$) trapped in a 1-D potential well of total width $2a = 1.0$ nm (half-width $a = 0.50$ nm) and depth $V_0 = 5.0$ eV.
@@ -773,7 +781,7 @@ $$\boxed{T=\frac{1}{1+\dfrac{(k^2-k_0^2)^2}{4k^2k_0^2}\sin^2(2k_0a)}=\frac{1}{1+
 | $T$ for $z_0=5$ | 0.0131 | 0.3655 | 0.9683 | **1** | 0.8889 | 0.9829 | 0.9999 |
 
 > [!intuition] Why is there any reflection above a *lower* region? The optical-coating picture
-> At each edge the wave sees a sudden change of wavenumber ($k\leftrightarrow k_0$), exactly like light going from air into glass: a partial reflection of relative size $\big((k_0-k)/(k_0+k)\big)^2$ at **each** edge. The two reflected waves interfere. If the round trip inside, $2\times2a$, is a whole number of wavelengths ($2k_0a=n\pi$) the two reflections have opposite phase and cancel: $T=1$ — a *quarter-wave*-type anti-reflection coating. In between they add and $T$ dips. The deeper the step ($V_0$ relative to $E$) the stronger the edge reflections and the deeper the dips. Real systems: electrons through a thin film or a noble-gas atom (the **Ramsauer–Townsend** dip is a 3-D, partial-wave effect, but the interference mechanism is this one), and Fabry–Pérot etalons in optics.
+> At each edge the wave sees a sudden change of wavenumber ($k\leftrightarrow k_0$), exactly like light going from air into glass: a partial reflection of relative size $\big((k_0-k)/(k_0+k)\big)^2$ at **each** edge. The two reflected waves interfere. The two edge reflections have **opposite signs**. At the entry the wave goes from slow to fast ($k\to k_0$), at the exit from fast to slow ($k_0\to k$), and the reflection amplitude $(k_{\rm before}-k_{\rm after})/(k_{\rm before}+k_{\rm after})$ changes sign between the two. So if the round trip inside, $2\times2a$, is a whole number of wavelengths ($2k_0a=n\pi$), the extra path adds no phase and the two reflections cancel exactly: $T=1$. This is the same interference principle as an anti-reflection coating, but the arithmetic differs. A quarter-wave coating has *same*-sign reflections and needs half a wavelength of round trip; here the signs are opposite, so a whole wavelength is needed. In between they add and $T$ dips. The deeper the step ($V_0$ relative to $E$) the stronger the edge reflections and the deeper the dips. Real systems: electrons through a thin film or a noble-gas atom (the **Ramsauer–Townsend** dip is a 3-D, partial-wave effect, but the interference mechanism is this one), and Fabry–Pérot etalons in optics.
 
 > [!example] Numbers: an electron through a thin well
 > Take $2a=0.5$ nm (a few atoms) and $V_0=1$ eV. The resonance energies from the floor are $E_n=n^2\pi^2\hbar^2/2m(2a)^2=1.50,\,6.01,\,13.5\ \mathrm{eV}$ for $n=1,2,3$ ($1.50\,n^2$ eV); only those above $V_0=1$ eV count, so all three are resonances; at $E=6.01$ eV the electron crosses the well with 100 % transmission, while at the worst neighbouring energy the formula gives $T\ge1/(1+1/(4\cdot4\cdot3))=0.98$ near 4 eV, i.e. at most about 2 % reflection: with a weak step the resonances are shallow. (For $2a=0.2$ nm the first resonance moves to 9.40 eV.)

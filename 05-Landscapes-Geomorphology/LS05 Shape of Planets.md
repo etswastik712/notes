@@ -56,7 +56,7 @@ flowchart LR
 > $$
 >
 >
-> A body deforms plastically (and so relaxes toward a sphere, the shape of minimum potential energy at rest) when the deviatoric stress produced by non-spherical relief is comparable to rock strength $\sigma_y$, roughly when $P_c\gtrsim\sigma_y$. Solving $P_c=\sigma_y$:
+> A body deforms plastically (and so relaxes toward a sphere, the shape of minimum potential energy at rest) when the deviatoric stress produced by non-spherical relief is comparable to rock strength $\sigma_y$. Why the *central pressure* is the right yardstick, although pressure itself is isotropic and breaks nothing: suppose the body were lumpy, with relief comparable to its own radius. The weight of a lump, per unit area of its base, is then of order $\rho gR\sim P_c$. The rock must support that load by shear, so lumps of size $\sim R$ survive only if $\sigma_y\gtrsim P_c$. More generally, the relief that strength can hold up is roughly $R\,\sigma_y/P_c$. A small body with $P_c<\sigma_y$ can therefore keep any shape (potato-shaped asteroids), while a large one with $P_c\gg\sigma_y$ is forced to be round, apart from bumps much smaller than its radius. The crossover is $P_c\approx\sigma_y$. Solving $P_c=\sigma_y$:
 >
 >
 > $$
@@ -146,7 +146,7 @@ A rotating planet is nearly in hydrostatic equilibrium. The argument of slide 42
 
 <!-- ls-depth:LS05:1 -->
 > [!derivation] 🟡 Extra · book / 🔵 beyond: the bulge reveals the interior (Darwin–Radau, central condensation)
-> **The puzzle.** The pressure-balance argument of the slides, applied to a *uniform-density* Earth, gives a flattening $f_h=\tfrac54q$ with $q=\omega^2a^3/GM=3.4616\times10^{-3}$ (the ratio of centrifugal to gravitational acceleration at the equator), i.e. $f_h=4.33\times10^{-3}=1/231$ and an equatorial bulge $f_ha=27.6$ km. The observed flattening is $f=1/298.257=3.353\times10^{-3}$ (bulge $21.4$ km, computed from the WGS84 axes in [[LS04 Map Projections and Reference Surfaces]]): **the real bulge is 22 % smaller.**
+> **The puzzle.** The exact hydrostatic theory for a *uniform-density* fluid Earth (the Maclaurin spheroid; the slides' pressure-balance argument is a cruder version of it) gives a flattening $f_h=\tfrac54q$ with $q=\omega^2a^3/GM=3.4616\times10^{-3}$ (the ratio of centrifugal to gravitational acceleration at the equator), i.e. $f_h=4.33\times10^{-3}=1/231$ and an equatorial bulge $f_ha=27.6$ km. The observed flattening is $f=1/298.257=3.353\times10^{-3}$ (bulge $21.4$ km, computed from the WGS84 axes in [[LS04 Map Projections and Reference Surfaces]]): **the real bulge is 22 % smaller.**
 > **Resolution.** The Earth is *not* uniform: its dense core makes it **centrally condensed**, so there is less mass at large radius to be pushed outwards by rotation. The measure is the **moment-of-inertia factor** $C/MR^2$ ($C$ = moment about the spin axis): $0.4$ for a uniform sphere, smaller if the mass is concentrated towards the centre. T&S tabulate it (PDF p.389): **Earth $0.3307$** (Moon $\approx0.393$, Mars $\approx0.366$, Venus $\approx0.33$ as extracted). The **Darwin–Radau relation** links the flattening of a slowly rotating *fluid* planet in hydrostatic equilibrium to this factor:
 > $$\frac{C}{MR^2}=\frac23\Big[1-\frac25\sqrt{\frac{5q}{2f}-1}\Big]\quad\Longleftrightarrow\quad f=\frac{\tfrac52q}{1+\tfrac{25}{4}\big(1-\tfrac32\tfrac{C}{MR^2}\big)^2}.$$
 > *Checks:* uniform sphere $C/MR^2=0.4$: $1-0.6=0.4$, $\tfrac{25}4\cdot0.16=1$, $f=\tfrac52q/2=\tfrac54q$ ✓. Earth, $C/MR^2=0.3307$: $f=3.345\times10^{-3}=1/299.0$ (observed $1/298.26$), i.e. **within 0.25 %**; inverting the observed $f$ gives $C/MR^2=0.3313$ (computed; `scripts/ls_depth_numbers.py`). So a measurement of *shape* tells you the *radial density profile*: the Earth behaves as a fluid in hydrostatic balance on long time scales (this is the same mantle viscosity statement as in [[LS02 Mechanics and Mathematics Toolkit]]: $\tau_M\sim450$ yr) and its mass is concentrated at the centre. (T&S derive the relation via Clairaut's equation; I quote the result, `[verify]` the exact form against T&S §5, PDF pp.384–389.)
@@ -194,7 +194,7 @@ The ellipsoid follows from §5.2 for a body in hydrostatic equilibrium. The real
 ![[pre_041.jpg|520]]
 
 > [!example] 🖼 Reading the diagram: Slide 41: Why are planets spherical? How oblate?
-> The same slide with a third question: how oblate any given planet should be, answered by the balance of centrifugal and gravitational force at the equator ($f\approx\omega^2R^3/(GM)\cdot\tfrac52$ for a uniform fluid body).
+> The same slide with a third question: how oblate any given planet should be, answered by the balance of centrifugal and gravitational force at the equator ($f\approx\tfrac54\,\omega^2R^3/(GM)$ for a uniform fluid body, the Maclaurin result).
 
 ![[pre_043.jpg|520]]
 

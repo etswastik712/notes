@@ -59,7 +59,7 @@ flowchart LR
 <!-- ls-depth:LS07:1 -->
 > [!intuition] Context: Gilbert's lake and the idea that the Earth flows
 > The best natural experiment for isostasy was recognised in 1890. G. K. Gilbert noticed that the **Lake Bonneville** shoreline (Utah, formed in a geologically instant 14.5 kyr ago) is not level today: it has been raised by **more than 50 m** in the middle of the former lake, tracing a bull's-eye. The lake's weight depressed the crust; when the water went away the crust rebounded, but not instantly, because the mantle below has to *flow* back (A&A ch. 3, [[geomorphology-the-mechanics-and-chemistry-of-landscapes-9780521519786-0521519780_compress.pdf#page=62|PDF pp.61–62]]). The lesson in A&A's words: *"the timescale is determined by the viscosity of the fluid and hence serves as a probe of the mantle viscosity... for mantle materials, of the order of several thousand years"*, and **larger loads probe deeper mantle**. T&S credit Haskell (1935) with the first quantitative treatment (T&S, Bookos copy, PDF p.21: Fennoscandian beach terraces).
-> *Sanity check.* A lake $\sim300$ m deep (recalled) fully compensated would raise the crust by $(\rho_w/\rho_m)h=\tfrac{1000}{3300}\times300\approx91$ m; the observed $>50$ m after 14.5 kyr is therefore a *partially completed* rebound, consistent with a few-kyr relaxation time ([[LS02 Mechanics and Mathematics Toolkit]]).
+> *Sanity check.* Full Airy compensation of a lake $\sim300$ m deep (its maximum depth, recalled) would depress the crust by $(\rho_w/\rho_m)h=\tfrac{1000}{3300}\times300\approx91$ m, and the rebound would undo that. The observed uplift is >50 m. Do not read the shortfall as "rebound still in progress". A relaxation time of a few kyr (derived below) means that 14.5 kyr is several relaxation times, so the rebound is essentially complete. The shortfall has two other causes. (i) 300 m is the *maximum* depth; averaged over the basin the water was much shallower. (ii) The lake was only ~$10^2$ km across, a load narrow enough that the elastic lithosphere carried part of its weight instead of letting it sink fully into the mantle (flexure, [[LS10 Folds Flexure and Mountain Building]]). Both make the equilibrium depression, and hence the rebound, smaller than 91 m.
 
 
 ## Airy isostasy (slides 60–61)
@@ -120,12 +120,12 @@ flowchart LR
 > **Pratt**: all columns extend to the same depth $D$ below sea level, but the density varies: column of elevation $h_i$ has density $\rho_i$ with $\rho_i(D+h_i)=\rho_0D$, i.e. $\rho_i=\rho_0D/(D+h_i)$: high topography is made of low-density rock. **Airy** (above): constant density, varying thickness. **Flexural**: the lithosphere has elastic strength, so loads are supported over a horizontal length scale (§9.5). The ocean floor, whose depth increases with age (thermal contraction of a lithosphere of fixed crustal thickness), is a Pratt-type case (§7.4).
 
 
-| Model | Assumption | Predicts | Applies to |  |
-|---|---|---|---|---|
-| Airy (T\ | S Ch. 2) | constant $\rho_c$, variable thickness | root $b_1=5.6h_1$ (crust–mantle values above) | orogens, plateaus (Tibet, Andes) |
-| Pratt | constant compensation depth, variable density | $\rho_i=\rho_0D/(D+h_i)$ | oceans (thermal density), swells |  |
-| Flexural (T\ | S Ch. 3) | elastic lithosphere of rigidity $D_f$ | deflection over $\alpha=(4D_f/\Delta\rho g)^{1/4}$ | loads narrower than $\sim\alpha$; foreland basins, escarpments |
-| Dynamic topography | mantle flow supports the surface | departures from isostasy of $\sim\pm1$ km | broad swells, subduction zones |  |
+| Model | Assumption | Predicts | Applies to |
+|---|---|---|---|
+| Airy (T&S Ch. 2) | constant $\rho_c$, variable thickness | root $b_1=5.6h_1$ (crust–mantle values above) | orogens, plateaus (Tibet, Andes) |
+| Pratt | constant compensation depth, variable density | $\rho_i=\rho_0D/(D+h_i)$ | oceans (thermal density), swells |
+| Flexural (T&S Ch. 3) | elastic lithosphere of rigidity $D_f$ | deflection over $\alpha=(4D_f/\Delta\rho g)^{1/4}$ | loads narrower than $\sim\alpha$; foreland basins, escarpments |
+| Dynamic topography | mantle flow supports the surface | departures from isostasy of $\sim\pm1$ km | broad swells, subduction zones |
 
 *Comparison of isostatic models.*
 
@@ -175,7 +175,7 @@ flowchart LR
 > | 1000 km | $1.2\times10^4$ yr | 27 |
 > | 3000 km | $4.1\times10^3$ yr | 9 |
 > The ratio exceeds 1 for any $\lambda$ less than $27\,000$ km, so **at every geophysical wavelength the viscous treatment is self-consistent**: by the time the load has relaxed, the mantle has long forgotten its elasticity ($De=\tau_M/\tau_r\ll1$). (Only at wavelengths approaching the Earth's circumference would the elastic response matter.)
-> **A counter-intuitive feature.** $\tau_r\propto1/\lambda$: *large* loads relax **faster**. In a deep half-space a broad load moves a large volume of mantle with relatively small velocity gradients, so the restoring pressure $\rho g w$ is spread over a deep layer; narrow loads need steep, slow shearing flow. This is why A&A call large loads better probes of *deep* viscosity: they reach the whole half-space. For **short** wavelengths, however, the plate's elastic strength takes over (the flexure filter of [[Fourier and Laplace Transforms]] §6.3: loads shorter than $\sim260$ km are carried by the plate and do not compensate at all), so $\tau_r$ is only meaningful in the compensated band $\lambda\gtrsim300$ km.
+> **A counter-intuitive feature.** $\tau_r\propto1/\lambda$: *large* loads relax **faster**. Why: the driving stress is the excess weight $\rho gw$, the same for a broad or a narrow load of equal height. But the flow it drives reaches down to a depth of order $\lambda$ (the stream function above decays as $e^{-kz}$), so the velocity changes over a distance $\sim\lambda$. The velocity gradients, and therefore the viscous resistance, are of order $\mu\dot w/\lambda$. Balancing the same driving stress against a resistance $\propto\dot w/\lambda$ gives $\dot w\propto\lambda$: a broad load can sink faster because it shears the mantle more gently. This is why A&A call large loads better probes of *deep* viscosity: they reach the whole half-space. For **short** wavelengths, however, the plate's elastic strength takes over (the flexure filter of [[Fourier and Laplace Transforms]] §6.3: loads shorter than $\sim260$ km are carried by the plate and do not compensate at all), so $\tau_r$ is only meaningful in the compensated band $\lambda\gtrsim300$ km.
 
 > [!question] Check yourself (answers below)
 > 1. How much would a 3 km ice sheet depress the crust at isostatic equilibrium, and approximately how long would 63 % of the rebound take for $\lambda=2000$ km?

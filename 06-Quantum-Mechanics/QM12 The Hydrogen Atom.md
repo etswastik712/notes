@@ -87,6 +87,8 @@ Compared with 2D (QM11 §4), $\frac1r\to\frac2r$ and $l^2\to l(l+1)$. The **effe
 
 Normalisable solutions exist only for
 $$\boxed{E_n=-\frac{m e^4}{2(4\pi\epsilon_0)^2\hbar^2}\frac1{n^2}=-\frac{13.6\ \text{eV}}{n^2}},\qquad n=1,2,3,\dots$$
+*Why only these energies* (the step the notes skip; Griffiths §4.2 does it in full). The mechanism is the oscillator's ([[QM06 The Oscillator Toolbox]] §4.1). For a bound state $E<0$, so far out the solution behaves as $e^{\pm\kappa r}$ with $\kappa=\sqrt{-2mE}/\hbar$. Normalisability keeps $e^{-\kappa r}$, and we write $u=rR=r^{l+1}e^{-\kappa r}\times(\text{power series})$. The recursion for the series coefficients makes it grow like $e^{2\kappa r}$, which would undo the decay, unless the series **stops**. It stops at degree $n_r$ only if $\kappa=1/(na)$ with $n=n_r+l+1$ a positive integer. Then $E=-\hbar^2\kappa^2/2m=-\hbar^2/(2ma^2n^2)$, which is the formula above. Energy quantisation is again "the equation plus the demand of a normalisable solution". The count $n=n_r+l+1$ is also why the radial node number is $n-l-1$.
+
 - **Negative**: bound states.
 - **No $l$ or $m$ in $E_n$**: for given $n$, $l=0,1,\dots,n-1$, and each $l$ has $2l+1$ values of $m$: degeneracy $\sum_{l=0}^{n-1}(2l+1)=\boxed{n^2}$ (spin not yet included; with it $2n^2$).
 - The levels crowd together toward $E=0$ as $n\to\infty$ (Fig. QM12.1A; the notes' Figure 3).

@@ -165,7 +165,7 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > Nothing else is assumed except that the quantity is neither created nor destroyed except through $s$. In steady state, $\partial_xQ=s$: flux changes only where there is a source.
 >
 >
-> *Closure by gradients.* Many transport mechanisms move material *down a gradient*, from high to low $n$, at a rate proportional to the steepness of the gradient: $Q\propto-\partial_xn$ (the slide writes $Q_x\propto\partial_xn$, the minus sign is implied by direction). Writing $Q=-D \partial_xn$ with $D>0$,
+> *Closure by gradients.* Many transport mechanisms move material *down a gradient*, from high to low $n$, at a rate proportional to the steepness of the gradient: $Q\propto-\partial_xn$ (the slide writes $Q_x\propto\partial_xn$, the minus sign is implied by direction). Why down-gradient, and why proportional to it? Suppose each particle (or grain, or parcel of heat) jiggles back and forth at random, with no preferred direction. Across any point, the number moving right comes from the left neighbourhood and the number moving left from the right one. Each side sends its particles across at a rate proportional to how many it has. The *net* flux is therefore proportional to the difference in content between the two sides, $n(x-\Delta)-n(x+\Delta)\approx-2\Delta\,\partial_xn$. No force pushes anything "downhill"; the crowded side simply has more particles to lose. For soil creep the random kicks are freeze–thaw, wetting–drying and burrowing, and the slope gives each kick a downhill bias, which leads to the same linear law ([[LS12 Hillslope Transport and the Diffusion Equation]]). Writing $Q=-D \partial_xn$ with $D>0$,
 >
 >
 > $$
@@ -418,7 +418,7 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > **Consequence for landscapes.** The *crust and lithosphere* behave elastically on the time scale of the earthquake cycle and of flexure ([[LS10 Folds Flexure and Mountain Building]]), but the *mantle beneath* is a viscous fluid for isostatic adjustment: **one Earth, two behaviours, switched by the loading time**, exactly the timescale logic of [[LS01 Landscapes as Physical Systems]].
 
 ![[fig_ls02_maxwell.png]]
-*Figure LS02.1. Each bar is the range of loading times over which the material flows viscously; it is elastic to the left of its dot. Vertical dashed lines are typical loading times.*
+*Figure LS02.7. Each bar is the range of loading times over which the material flows viscously; it is elastic to the left of its dot. Vertical dashed lines are typical loading times.*
 
 
 ## Further slides explained one by one
@@ -435,7 +435,7 @@ A **scaling argument** finds how a quantity depends on the parameters by balanci
 > 1. A pendulum's period $T$ could depend on its length $\ell$, mass $m$ and $g$. Use Buckingham Π to find $T\propto\sqrt{\ell/g}$ and show $m$ drops out.
 > 2. Why can the Stokes drag not contain the fluid density at low $Re$? What changes at high $Re$?
 > 3. The mantle has $\tau_M\approx450$ yr. Why does the lithosphere still behave elastically during a 10-kyr ice age?
-> 4. Using the Coulomb numbers above, by what factor does tripling the pore pressure ratio ($p/\sigma_v$ from 0.37 to 0.9) reduce the stress needed for thrust failure?
+> 4. Using the Coulomb numbers above, by what factor does raising the pore pressure ratio ($p/\sigma_v$ from 0.37 to 0.9) reduce the stress needed for thrust failure?
 > 5. Compute $Re$ for a 50 m-thick basalt flow moving at 0.5 m/s with $\eta=10^3$ Pa s, $\rho=2700$.
 > *Answers.* (1) $[T]=\mathrm T$, $\ell$: L, $g$: $\mathrm{L\,T^{-2}}$, $m$: M; M appears in only one variable, so it cannot enter any dimensionless group: $T\sqrt{g/\ell}=\text{const}$. (2) Low $Re$: inertia negligible, only $\mu,a,U$ remain; at high $Re$ the pressure drag $\propto\rho U^2a^2$ takes over ($C_d\approx0.4$, A&A PDF p. 332). (3) The *lithosphere* is cold and stiff, its effective viscosity is $\gtrsim10^{23}$ Pa s, so its Maxwell time is $\gg10^4$ yr; only the hot mantle below flows. (4) Effective vertical stress $\sigma_v'=(1-0.9)\sigma_v=13$ MPa instead of $83$: the horizontal stress needed falls from $260$ to $41$ MPa, a factor $\sim6$: high pore pressure makes faults slip (and triggers landslides). (5) $Re=2700\times0.5\times50/10^3=68$: laminar, but not "creeping" ($Re>1$).
 

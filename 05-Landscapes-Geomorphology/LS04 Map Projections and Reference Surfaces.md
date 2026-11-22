@@ -162,7 +162,7 @@ meaning $a=6 378 137$ m and inverse flattening $1/f=298.257223563$. Thus $f=0.00
 > *Answers.* (1) Both are developable only if $K=0$; the cone has $K=0$ (intrinsically flat), the sphere $K=1/R^2$. (2) Area $\times4$, parallel distances $\times2$. (3) $0.5\times78.85=39.4$ km. (4) $0.9996[1+\tfrac12(0.03491\cos20^\circ)^2]=0.9996\times1.000538=1.00014$.
 
 > [!connection] Where this connects
-> - **Conformal maps are complex-analytic maps:** Mercator is the real part of $w=\ln\tan(\pi/4+\phi/2)+i\lambda$, a conformal map, the same machinery as the 2D potential-flow methods in [[Waves - Course Map]] and complex analysis in [[Proofs, Analysis and Topology - Course Map]].
+> - **Conformal maps are complex-analytic maps:** the stereographic projection, $\zeta=\tan(\pi/4+\phi/2)\,e^{i\lambda}$, is itself conformal. Mercator is its complex logarithm: $\ln\zeta=\ln\tan(\pi/4+\phi/2)+i\lambda$, whose real and imaginary parts are exactly Mercator's $y/R$ and $x/R$. A complex-analytic function preserves angles wherever its derivative is non-zero, so a chain of two conformal maps is conformal, which is a one-line reason why Mercator is conformal. This is the same machinery as the 2D potential-flow methods in [[Waves - Course Map]] and complex analysis in [[Proofs, Analysis and Topology - Course Map]].
 > - **Group theory:** the distance-preserving maps of the sphere form the rotation group $SO(3)$ (plus reflections: $O(3)$); the UTM grid rotation (convergence) is an element of $SO(2)$ acting on map coordinates. See [[GT10 Symmetry Representations and Characters]] for $SO(3)$ and its characters.
 > - **Vertical datum** (geoid versus ellipsoid) is [[LS05 Shape of Planets]].
 

@@ -100,7 +100,7 @@ Hardy's 1908 letter (sl. 8) opens: "I am reluctant to intrude in a discussion co
 ## 5. Five properties
 <span class="scope-taught">taught</span> *[[09_Hardy-Weinberg.pdf#page=9|slides 9–10]]*
 
-1. **Gene and genotype frequencies do not change**: the equilibrium is **neutrally stable** — disturb $p$ and the population stays at the new $p$; nothing pulls it back (contrast the stable equilibria of [[EE03 Population Dynamics and Chaos]]).
+1. **Gene and genotype frequencies do not change**: the equilibrium is **neutrally stable** — disturb $p$ and the population stays at the new $p$; nothing pulls it back (contrast the stable equilibria of [[EE03 Population Dynamics and Chaos]]). The reason is in the derivation of §3: $p'=p$ holds for *every* value of $p$. Every allele frequency is an equilibrium, so no particular value is favoured and there is nothing to return to. Pulling forces appear only when one of the assumptions fails. Selection, mutation and migration each make $p'$ a function of $p$ with particular fixed points ([[EE10 Natural Selection]]), while drift makes $p$ wander.
 2. The relation between gene and genotype frequencies is reached in **a single generation**.
 3. Progeny genotype frequencies depend only on the parents' **gene** frequencies, not their genotype frequencies. Slide 9's example: parents $0.3:0.6:0.1$ and $0.2:0.8:0$ both have $p=0.6$, and both give progeny $0.36:0.48:0.16$.
 4. The **heterozygote frequency cannot exceed 0.5**, reached at $p=q=0.5$ ($2pq$ is a parabola with maximum $\tfrac12$).

@@ -231,7 +231,13 @@ Slide 15 lists what a student of biological systems should watch for:
 ## 5. The result, and what the course does about it
 <span class="scope-taught">taught</span> *[[01-IntroToBiology_-07-Aug-2026.pdf#page=16|slides 16–17]]*
 
-Slide 16 states the **result** of the four features:
+Slide 16 states the **result** of the four features. Each feature blocks the physicist's route in its own way:
+- **Diversity and interconnectedness**: there is no single "system" to write equations for, and cutting a system off from its connections changes how it behaves.
+- **Stochasticity**: even a correct model predicts only probabilities.
+- **Historicity**: the present state depends on a particular, unrepeatable path, so the "initial conditions" are themselves a historical fact that must be described.
+- **Emergence**: the behaviour of the whole cannot be assembled from the laws of the parts.
+
+Hence:
 
 - **Mathematical formulation is typically difficult.**
 - When it can be done, **the relation with reality is typically statistical and conditional**, "which leads to other issues".

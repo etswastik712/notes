@@ -125,6 +125,14 @@ flowchart LR
 
 ![[gla_032.jpg|420]] ![[gla_033.jpg|420]]
 
+> [!intuition] Why glaciers should cap mountains near the snowline (the logic of the buzzsaw)
+> 1. Below the snowline (ELA) a valley holds a river; above it, the valley holds ice.
+> 2. Glacial erosion is proportional to ice flux (or sliding speed, A&A, slides 26–27), and ice flux is largest near the ELA, where all the accumulation from above has been collected and not yet melted ([[LS14 Glaciers Mass Balance and Ice Flow]]). So erosion is concentrated in a band around the ELA, which planes off large areas there. That is why the hypsometric maximum sits close to the snowline.
+> 3. Rock standing far above the ELA is too steep to hold ice. It is attacked from the side: cirque headwalls retreat by frost cracking and rockfall until neighbouring cirques meet in arêtes and horns, which are then lowered.
+> 4. So relief can rise only a limited height above the ELA, about 1500 m on slide 31, before the headwalls consume it. Raise the land faster and the band of strongest erosion simply works harder, rather than letting peaks grow.
+>
+> The argument has two hinges, and each one can fail. Erosion must be efficient near the ELA (fails if the ice is cold-based and frozen to its bed, so it does not slide), and headwalls must retreat (fails if they are too cold for the frost-cracking window of [[LS11 Weathering and Regolith]]). The Himalaya–Karakoram exception on the next slides is exactly a failure of the second hinge.
+
 > [!example] 🖼 Slides 32–33: why the Himalaya escape, and Gaussian hypsometry
 > **Slide 32** (Banerjee and Wani 2018, EPSL): a map of High Mountain Asia glaciers and a schematic of **debris input from headwalls, supraglacial debris transport** and the resulting bedrock profile; bottom: erosion rate against the temperature at the glacier's headwall ($T_{ELA}$?), showing that **headwall temperature is too low for frost cracking** (the correlation 0.81, p = 0.015), and *the decline in erosion rate at the high crest of the Himalaya*; the photograph is the typical debris-covered Satopanth glacier: debris insulates and the headwalls are too cold and too dry: no buzzsaw. **Slide 33** (Banerjee and Scherler, GRL 2025): *Gaussian glacier hypsometry is ubiquitous in the present-day world*: a map of glacier basins with hypsometric histograms, a histogram of glacier area against elevation with a bell shape (blue) over the fluvial area (red), a log-log scatter collapsing the data on one curve ($R^2=0.95$) and a plot of normalised distance against hypsometry: all glaciers show the same *Gaussian* area–elevation distribution.
 
@@ -136,7 +144,9 @@ flowchart LR
 > [!example] 🖼 Slide 34: does erosion–uplift balance lead to a long-term steady glacier cover?
 > The **assumptions**: steady climate and uplift; uplift–erosion balance (~1 Myr); subglacial erosion ∝ stream power, defined here as *slope × ice flux*; a **linear mass-balance profile**. The result: **half-normal steady-state hypsometry of accumulation areas**
 > $$a(z)=a_0\exp\!\Big(-\frac{(z-z_{ELA})^2}{2\sigma^2}\Big),\qquad\sigma=\sqrt{\frac{u}{\alpha\beta}},$$
-> with $u$ the uplift rate, $z_{ELA}$ the equilibrium line altitude, and $\alpha,\beta$ constants of the model (the erosion efficiency and the mass-balance gradient; the slide does not define them, `[verify]` in the papers). **The spread of heights above the ELA grows as $\sqrt u$**: faster uplift allows relief to extend higher above the snowline. This is consistent with the buzzsaw (relief is capped at a fixed multiple of $\sigma$ above the ELA) and gives a *cap that depends on tectonics*, not a universal 1500 m.
+> with $u$ the uplift rate, $z_{ELA}$ the equilibrium line altitude, and $\alpha,\beta$ constants of the model (the erosion efficiency and the mass-balance gradient; the slide does not define them, `[verify]` in the papers).
+> *Where a Gaussian comes from (my reconstruction of the logic, `[verify]` against the paper).* A Gaussian $a(z)$ is the solution of $\dfrac{1}{a}\dfrac{\mathrm da}{\mathrm dz}=-\dfrac{z-z_{ELA}}{\sigma^2}$: the fraction of area lost per metre of height grows *linearly* with height above the ELA. That is what a linear mass-balance profile gives. The accumulation, hence the ice flux, hence the erosive power, grows in proportion to height above the ELA (gradient $\beta$, efficiency $\alpha$). Uplift $u$ pushes area upward against this. The balance gives $1/\sigma^2=\alpha\beta/u$, i.e. $\sigma=\sqrt{u/\alpha\beta}$.
+> **The spread of heights above the ELA grows as $\sqrt u$**: faster uplift allows relief to extend higher above the snowline. This is consistent with the buzzsaw (relief is capped at a fixed multiple of $\sigma$ above the ELA) and gives a *cap that depends on tectonics*, not a universal 1500 m.
 
 ![[gla_035.jpg|420]] ![[gla_036.jpg|420]]
 

@@ -73,14 +73,14 @@ Daphne Major is a tiny island in the Galápagos; its **medium ground finch**, *G
 Then the direction **reversed**. In **1983** an El Niño brought **1359 mm** of rain ("almost 57 times as much as in 1977"; $1359/24=56.6$): small soft seeds became superabundant and **smaller** birds were favoured (Gibbs and Grant 1987). Over thirty years the population's beak size rose in 1977, stayed high until the mid-1980s, returned to its starting value, and in the **2003–04 drought** — as bad as 1977 — evolved toward **smaller** beaks, because the newly arrived large ground finch *G. magnirostris* took the large *Tribulus* seeds. By 2001 the average bird had a sharper beak and a smaller body than in the mid-1970s (F&H pp. 88–90).
 
 > [!example] 🔵 How much evolution? The breeder's equation (extra · beyond)
-> The response of the mean to one round of selection is $R=h^2S$, where $S$ is the **selection differential** (mean of the breeders minus the population mean). With $h^2=0.65$, a differential of $S=0.5$ mm in beak depth would shift the next generation by $R=0.33$ mm; $S=0.25$ mm gives $R=0.16$ mm. *The $S$ values here are illustrative; F&H's Chapter 3 reports the distributions but these pages do not give the 1977 differential.* The equation and its derivation belong to quantitative genetics (Freeman & Herron's later chapter, not read).
+> The response of the mean to one round of selection is $R=h^2S$, where $S$ is the **selection differential** (mean of the breeders minus the population mean). Why the factor $h^2$: the survivors' beaks are deeper partly because of their genes and partly because of luck in development (food as a chick, for instance). Only the genetic part is passed on, and $h^2$ is the fraction of the variation that is genetic (additive). So the offspring keep that fraction of their parents' advantage. With $h^2=0$ the offspring regress all the way back to the old mean, which is the bounce-back of §5. With $h^2=0.65$, a differential of $S=0.5$ mm in beak depth would shift the next generation by $R=0.33$ mm; $S=0.25$ mm gives $R=0.16$ mm. *The $S$ values here are illustrative; F&H's Chapter 3 reports the distributions but these pages do not give the 1977 differential.* The equation and its derivation belong to quantitative genetics (Freeman & Herron's later chapter, not read).
 
 ## 3. Lessons from Daphne Major
 <span class="scope-taught">taught</span> *[[Selection_Class Lecture.pdf#page=3|slide 3]]*
 
 1. **Evolution can occur very rapidly and dramatically.**
 2. **Sources of selection often shift**, so evolution reverses itself or takes new directions.
-3. **The see-saw of selection** in changing environments may give the impression of **stately gradual change**: the fossil record usually lacks the resolution to see "zig-zaggy" evolution.
+3. **The see-saw of selection** in changing environments may give the impression of **stately gradual change**: the fossil record usually lacks the resolution to see "zig-zaggy" evolution. A fossil bed typically mixes thousands of years of individuals. Over such a span the up-and-down swings largely cancel, and only the small *net* drift remains visible. Slow change in the record is therefore compatible with fast change in each generation.
 
 F&H add: small changes over short spans **accumulate** into larger changes over long spans (p. 90).
 
@@ -129,7 +129,7 @@ $\Delta p$ carries the factor $pq$: selection is slow when either allele is rare
 > | dominant | $1:1:0.9$ | **1075** |
 > | recessive | $1:0.9:0.9$ | **981** |
 >
-> A **dominant** favoured allele spreads fast at first but stalls at the end: the last recessive $A_2$ alleles hide in heterozygotes, invisible to selection (property 5 of HW). A **recessive** favoured allele is invisible when rare and stalls at the start. Additive is fastest overall.
+> A **dominant** favoured allele spreads fast at first, because a rare allele sits almost entirely in heterozygotes (HW property 5) and a dominant allele shows its full advantage there. But it stalls at the end: the last recessive $A_2$ alleles hide in heterozygotes, invisible to selection (property 5 of HW). A **recessive** favoured allele is invisible when rare and stalls at the start. Additive is fastest overall.
 
 > [!example] Balancing and disruptive selection at one locus
 > **Heterozygote advantage** ($w_{11}=1-s$, $w_{12}=1$, $w_{22}=1-t$): a stable internal equilibrium $p^*=t/(s+t)$; with $s=0.2$, $t=0.1$: $p^*=1/3$, reached from $p=0.9$ (the script returns 0.3333 after 500 generations). This **maintains variation** — the classic human case, sickle-cell haemoglobin in malarial regions, is named here from general knowledge. **Heterozygote disadvantage** ($1:0.9:1$): $p=0.5$ is an *unstable* equilibrium; from $p=0.51$ the population goes to fixation of $A_1$ — the one-locus version of disruptive selection, with a threshold like the Allee effect ([[Allee Effect]]).

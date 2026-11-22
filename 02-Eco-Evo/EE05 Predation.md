@@ -91,7 +91,7 @@ $$\boxed{\frac{dH}{dt}=rH-pHP,\qquad \frac{dP}{dt}=apHP-mP,\qquad (H^*,P^*)=\Big
 > is constant along every solution: $\dot V=\big(ap-\tfrac mH\big)(rH-pHP)+\big(p-\tfrac rP\big)(apHP-mP)=(apH-m)(r-pP)+(pP-r)(apH-m)=0$. Each level set of $V$ is a closed curve around the equilibrium, so the population goes round the same orbit forever.
 
 > [!example] Worked example 2: numbers for $r=1,\ p=0.02,\ a=0.5,\ m=0.5$
-> Equilibrium: $H^*=0.5/(0.5\times0.02)=50$, $P^*=1/0.02=50$. Small cycles: $T=2\pi/\sqrt{1\times0.5}=8.9$ time units; the large orbit started at $(30,30)$ has period $9.25$ (nonlinear cycles are a little slower), prey between 19.5 and 102.5 and predators between 26.4 and 84.6. The first **predator peak follows the prey peak by 1.7** time units, about a fifth of a period (a quarter for small cycles). Prey and predator densities run in a chase: prey rise, then predators rise, then prey fall, then predators fall.
+> Equilibrium: $H^*=0.5/(0.5\times0.02)=50$, $P^*=1/0.02=50$. **Why the predator lags.** Predators increase whenever $H>H^*$, so they keep increasing as long as prey are plentiful. Their peak therefore comes when the prey, already in decline, fall back through $H^*$, not when prey are at their peak. Likewise prey increase whenever $P<P^*$, so their trough-to-peak run is timed by the predators' crash. Each species' turning points are set by the other crossing its isocline. That produces a quarter-period lag for small cycles. Small cycles: $T=2\pi/\sqrt{1\times0.5}=8.9$ time units; the large orbit started at $(30,30)$ has period $9.25$ (nonlinear cycles are a little slower), prey between 19.5 and 102.5 and predators between 26.4 and 84.6. The first **predator peak follows the prey peak by 1.7** time units, about a fifth of a period (a quarter for small cycles). Prey and predator densities run in a chase: prey rise, then predators rise, then prey fall, then predators fall.
 
 ![[fig_ee05_lv.png|900]]
 *Figure EE5.1. A: closed orbits of the basic model; B: the time series with the predator peaks lagging the prey peaks; C: the same with logistic prey growth, §4. Slides 6 and 8 show the same pictures from Populus simulations.*
@@ -132,11 +132,21 @@ $$H^*=\frac m{ap},\qquad P^*=\frac rp\Big(1-\frac{H^*}K\Big)\qquad\text{(positiv
 > [!key] The three-part puzzle (slide 9)
 > "Take a break and reflect on what we have learned: **(1)** real-life data show population cycles; **(2)** a highly unrealistic Lotka-Volterra model shows population cycles; **(3)** realistic Lotka-Volterra models do not show cycles." So the simple model gets the observation for the wrong reason, and making it more realistic loses the observation. "**Enter lab experiments.**"
 
+> [!extra-beyond]- 🔵 Extra (beyond): part (3) depends on *which* realism you add
+> The slide's "realistic" model adds only prey density dependence, and that term damps cycles. A second realistic change, a predator that **saturates** (the Holling functional response of §6, $g(H)=aH/(1+ahH)$), pushes the other way. A satiated predator removes a *smaller fraction* of the prey as prey become more numerous, so the prey can escape control, and that destabilises the equilibrium.
+> With both changes (the Rosenzweig–MacArthur model), $dH/dt=rH(1-H/K)-g(H)P$ and $dP/dt=e\,g(H)P-mP$. The equilibrium is stable only while $K$ is small. Past a threshold the system settles onto a **stable limit cycle**. Unlike the Lotka–Volterra orbits, a limit cycle has a fixed amplitude that shocks do not change, and that is the kind of cycle data such as the hare–lynx record could reflect.
+> - **Numbers** (`scripts/ee05_rm_numbers.py`; $r=1$, $a=0.02$, $h=0.5$, $e=0.5$, $m=0.25$): $H^*=m/[a(e-mh)]=33.3$, and the threshold is $K=2H^*+1/(ah)=166.7$.
+>   - At $K=120$ or $150$ the system goes to a point.
+>   - At $K=200$ the prey cycle between 5 and 105.
+>   - At $K=300$ the prey cycle between 0.2 and 236.
+> - **The paradox of enrichment.** Raising the prey's carrying capacity ("enriching" the system) creates cycles and then makes them dangerously deep.
+> - **The puzzle, restated.** Realism does not abolish cycles. Whether cycles appear depends on the balance between stabilising terms (prey self-limitation, refuges) and destabilising ones (predator satiation, delays).
+
 ## 5. Laboratory tests: Gause and Huffaker
 <span class="scope-taught">taught</span> *[[05_01_Sep_2026_Predation.pdf#page=10|slides 10–14]] · Molles §14.3*
 
 ### 5.1 Gause's *Paramecium* and *Didinium* (slide 10)
-Gause's predator-prey microcosms used *Paramecium* (prey) and *Didinium* (predator) ([[Gause Predator-Prey Experiments]]). The three experiments on slide 10:
+If cycles in the models depend on details, the question becomes empirical: can a predator and its prey persist together at all, and what does it take? Gause's predator-prey microcosms used *Paramecium* (prey) and *Didinium* (predator) ([[Gause Predator-Prey Experiments]]). The three experiments on slide 10:
 
 | experiment | what Gause did | result |
 |---|---|---|

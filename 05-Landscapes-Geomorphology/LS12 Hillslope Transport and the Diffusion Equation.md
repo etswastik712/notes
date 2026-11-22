@@ -134,7 +134,13 @@ Weathered particles move down hillslopes by many processes (slide 117): rain-spl
 > $$
 >
 >
-> which is A&A Eq. 10.9 (for spatially uniform $k$). Mass conservation of the whole surface, including rock uplift $U$, gives the general *hillslope diffusion equation*
+> which is A&A Eq. 10.9 (for spatially uniform $k$). To go from the regolith thickness $R$ to the surface elevation $z$, write $z=z_b+R$, with $z_b$ the elevation of the bedrock–regolith interface. Rock is carried up at the uplift rate $U$, while the interface eats down into it at $\dot W$, so $\partial_tz_b=U-\dot W$. Adding (23):
+>
+> $$
+> \partial_tz=U-\dot W+\frac{\rho_r}{\rho_b}\dot W+\kappa_h\partial_x^2z=U+\Big(\frac{\rho_r}{\rho_b}-1\Big)\dot W+\kappa_h\partial_x^2z .
+> $$
+>
+> The middle term is the swelling of rock as it turns into looser regolith: a 2650 kg m$^{-3}$ rock becomes ~1600 kg m$^{-3}$ soil and lifts the surface. Ignore it (equal densities), or fold it into an effective uplift, and the result is the general *hillslope diffusion equation*
 >
 >
 > $$

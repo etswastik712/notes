@@ -81,6 +81,16 @@ tags: [subject/climate, type/chapter, taught, extra/beyond, src/neena, status/dr
 > [!connection] Where the rest of this is in the vault
 > The faint young Sun and the thermostat ([[Faint Young Sun Paradox]], [[CL04 Feedback and Multiple Steady States]]); the rise of oxygen and the geological record in [[Evolution of Earth and Life - Course Map]]; ozone and the stratosphere in [[CL06 Hydrostatic Balance and Vertical Structure]] and [[CL07 Optical Properties of the Atmosphere]].
 
+> [!intuition] One rule runs the whole story: what a planet keeps is source minus sink
+> Each step above is a change in which gases have a source and which have a sink.
+> - **H₂ and He** have a sink (escape, §2: they are light, and the young planet was hot), so they go.
+> - **N₂** has a source (outgassing, NH₃ breakdown) and almost no sink. It is chemically inert, barely soluble, and too heavy to escape, so it accumulates and ends up as most of the air.
+> - **H₂O** has a sink once the planet cools below its boiling point: it condenses into oceans.
+> - The oceans then open a sink for **CO₂**: it dissolves, and weathering (§6) locks it into carbonate rock.
+> - **O₂** has a source (photosynthesis), but for a long time a bigger sink: reduced gases and minerals oxidise. It accumulates only after those sinks are used up.
+>
+> Read this way the sequence is not a list of events but a bookkeeping result, the same reservoir-and-flux logic as [[CL01 Earth as a System]] §2.
+
 **Venus, Earth, Mars (L4 p. 15):** distance $1.52,\ 1.00,\ 0.72$ AU; solar flux $590,\ 1368,\ 2600$ W m⁻²; albedo $25\,\%$, $30\,\%$, $75\,\%$ (the slide's table is partly scrambled in the text layer: albedos are assigned in the order Mars, Earth, Venus as the standard values, `[!verify]`); Venus: 96 % CO₂, 3.5 % N₂, an atmosphere **90 times as thick** as Earth's; Earth: 78 % N₂, 21 % O₂, 0.04 % CO₂.
 
 > [!example] The one-layer model across three planets 🔵
@@ -120,13 +130,20 @@ The **carbon cycle** recycles carbon between the Earth's interior, surface, ocea
 - **Organic carbon cycle** (L6 pp. 10–12): **photosynthesis**, **respiration**, storage in trees and in soil organic matter, decay; sometimes before decay the soil **erodes**, is carried to the sea, buried and **lithified**; marine sediments rich in organic matter can become **petroleum**.
 - **Short-term cycling:** atmosphere ⇄ biosphere (land and sea) by photosynthesis and respiration, storage in trees, burial in soil, decomposition. It repeats **several times before a "leak"** feeds the long-term cycle.
 - **Long-term cycling** (L6 p. 13): dominated by **geological processes**; organic carbon spends about **200 million years** in the sedimentary-rock reservoir before **weathering** returns it to the atmosphere; weathering of organic carbon is an **oxidation that needs O₂**, directly from the air or from oxygenated groundwater.
-- **Natural sources:** volcanoes, weathering of organic carbon, respiration, release from the oceans, microbial decomposition, wildfires. **Natural sinks:** carbonate weathering, photosynthesis, dissolution in the ocean. **Human sources:** fossil fuels, deforestation, burning, land clearing for agriculture, manufacturing. **Human sinks: "?"** (the slide leaves it as a question). Mining, pumping and burning fossil fuels **interferes with the long-term cycle**, accelerating release from the sedimentary reservoir.
+- **Natural sources:** volcanoes, weathering of organic carbon, respiration, release from the oceans, microbial decomposition, wildfires. **Natural sinks:** carbonate weathering, photosynthesis, dissolution in the ocean. (On geological time scales carbonate weathering is *not* a net sink. It takes up one CO₂ when the rock dissolves, but when the carbonate precipitates again in the ocean that CO₂ is released. Only **silicate** weathering followed by carbonate burial removes CO₂ for good; see the thermostat box below and [[LS11 Weathering and Regolith]].) **Human sources:** fossil fuels, deforestation, burning, land clearing for agriculture, manufacturing. **Human sinks: "?"** (the slide leaves it as a question). The honest answer is *almost none of our own making*: about half of each year's emissions is taken up by the **natural** sinks (ocean and land), which respond to the higher CO₂, and the rest accumulates in the air ([[CL30 Tutorials III - Three Boxes of Carbon]]). Engineered capture and storage currently removes a negligible fraction. Mining, pumping and burning fossil fuels **interferes with the long-term cycle**, accelerating release from the sedimentary reservoir.
 
 > [!example] What a 200-Myr residence time means 🔵
 > A reservoir that holds its carbon for $\tau_\text{res}=2\times10^8$ yr loses a fraction $1/\tau_\text{res}=5\times10^{-9}$ per year; the oil, gas and coal burnt in roughly two centuries are the product of several hundred million years of burial. The fast cycle (photosynthesis and respiration) turns the atmosphere's carbon over in a few years to a decade; the slow cycle sets where the *average* sits over $10^5$–$10^8$ yr. That separation of time scales is why the human perturbation (fast) outruns the natural thermostat (slow).
 
 > [!key] The thermostat (L6 p. 16)
 > "Over the history of the planet, **CO₂ release by volcanism has been balanced by the consumption of CO₂ by silicate and carbonate weathering**; the water and carbon cycles are critical for maintaining the CO₂ concentration." Weathering needs liquid water and speeds up when it is warm and wet, so a warmer climate removes CO₂ faster and cools: a **negative feedback** on time scales of $10^5$–$10^6$ yr (the same feedback as in the snowball Earth recovery, [[CL04 Feedback and Multiple Steady States]], [[silicate-weathering-feedback]]).
+
+> [!intuition] The long-term thermostat: why silicate weathering is a *negative* feedback
+> Silicate weathering is the slow sink that removes volcanic CO₂: rain charged with CO₂ dissolves silicate rock, the products reach the sea, and carbonate is buried. Its rate rises with temperature and with rainfall, and warmer climates are wetter.
+> - Too much CO₂ → warmer, wetter → faster weathering → CO₂ drawn down → cooler.
+> - Too little CO₂ → colder, drier → slower weathering → volcanic CO₂ builds up → warmer.
+>
+> Each departure is pushed back, so over millions of years the CO₂ level settles where weathering removes exactly what volcanoes supply, at a temperature that keeps liquid water. This is how the faint young Sun was compensated ([[CL03 Radiation and Planetary Energy Balance]] §5) and how Snowball Earth ended ([[CL04 Feedback and Multiple Steady States]] §4: with ice everywhere, weathering stops while volcanoes continue). The thermostat **needs liquid water and rain**. That is the whole point of the Venus comparison below.
 
 ## 7. The Venus counter-example
 <span class="scope-taught">taught</span> *Neena L6 p. 17: [[Lecture6_Greenhouse gas regulation in the atmosphe_250828_152840 (1).pdf#page=17|p. 17]]*

@@ -104,10 +104,10 @@ Quantitatively (Amazon, A&A p.413): sediment concentration in the overbank water
 
 The **mechanism** (Murray and Paola 1992, 1994; A&A pp.400–401, figure 12.21): sediment continuity (the **Exner equation**)
 $$(1-\lambda)\,\frac{\partial z}{\partial t}=-\frac{\partial q_s}{\partial x}$$
-(with $\lambda$ the bed porosity) says the bed rises where the transport rate *diverges less than it converges*. Where the flow **diverges** (expands around a bar), speed and stress fall, transport falls downstream, so $\partial_xq_s<0$ and sediment is **deposited**: the bar grows and splits the flow; where flow **converges** the bed is scoured. The process is self-sustaining even for steady discharge; fluctuating discharge matters mainly by *removing vegetation* that would otherwise cohere the banks.
+(with $\lambda$ the bed porosity) says the bed rises where the sediment flux *decreases downstream* ($\partial_xq_s<0$: more sand arrives than leaves) and falls where it increases. Where the flow **diverges** (expands around a bar), speed and stress fall, transport falls downstream, so $\partial_xq_s<0$ and sediment is **deposited**: the bar grows and splits the flow; where flow **converges** the bed is scoured. The process is self-sustaining even for steady discharge; fluctuating discharge matters mainly by *removing vegetation* that would otherwise cohere the banks.
 
 ## 4. Meandering rivers
-Rivers with **cohesive banks** (silt, clay, roots) keep a single thread that snakes. The **sinuosity** is the ratio of channel length to valley length. Meander wavelengths cluster tightly around **11 channel widths** (Leopold and Wolman 1960; A&A figure 12.23), with radius of curvature a few widths: the planform scales with the channel, so a map of a meander without a scale bar cannot tell you its size ($W$ from 1 m to 1 km).
+Rivers with **cohesive banks** (silt, clay, roots) keep a single thread that snakes. This is the braiding argument of §3 run in reverse. A cohesive bank can stand even when the bed stress exceeds the threshold for moving grains, so the channel is free to deepen and stay narrow instead of widening. Deep, narrow flow is concentrated in one thread, and that thread then bends (§4.1). The **sinuosity** is the ratio of channel length to valley length. Meander wavelengths cluster tightly around **11 channel widths** (Leopold and Wolman 1960; A&A figure 12.23), with radius of curvature a few widths: the planform scales with the channel, so a map of a meander without a scale bar cannot tell you its size ($W$ from 1 m to 1 km).
 
 ### 4.1 Helical flow
 > [!derivation] 🔵 Extra · beyond (numbers checked): super-elevation and secondary flow
@@ -200,7 +200,7 @@ The lecture follows the Amazon budget with the Indian case: the Ganga and Brahma
 
 ## 8. Worked examples
 > [!example] 🧮 Example 1: which flood shapes a channel with $\sigma=1.2$, $j=2$?
-> $Q_e/Q_{med}=e^{j\sigma^2}=e^{2.88}=17.8$, exceeded on a fraction $1-\Phi(j\sigma)=1-\Phi(2.4)=0.0082$ of days $=3.0$ days per year. In the annual-maximum series (Gumbel) it will be a flood of order the mean annual flood, so this river's bankfull stage is reached about once or twice a year, consistent with 1.5–2.5 yr bankfull recurrence.
+> $Q_e/Q_{med}=e^{j\sigma^2}=e^{2.88}=17.8$, exceeded on a fraction $1-\Phi(j\sigma)=1-\Phi(2.4)=0.0082$ of days $=3.0$ days per year *on average*. Those days cluster in a few flood events, and some years have none. On the annual-maximum (Gumbel) scale this is a flood of the size of the mean annual flood, returning every ~2 years, consistent with the 1.5–2.5 yr bankfull recurrence. (Exceedance days per year and recurrence interval measure different things: one counts days, the other counts years with at least one such flood.)
 
 > [!example] 🧮 Example 2: a meander from its map
 > A reach has $W=80$ m. Expected wavelength $\lambda\approx11W=880$ m. If the maximum angle between the channel and the valley axis is $80^\circ$, then $J_0(1.396)=0.569$ and the sinuosity is $1/0.569=1.76$. At $U=2$ m/s and $R=240$ m the outer surface is $\Delta h=U^2W/gR=0.136$ m higher than the inner.

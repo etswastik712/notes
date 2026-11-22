@@ -144,7 +144,7 @@ flowchart LR
 > $$
 >
 >
-> independent of $g$, $\rho$ and size. With $f=\tan30^\circ=0.58$ (line $\phi=30^\circ$ in the figure), small bodies can have relief of order their radius (potato shapes). For large bodies, (17) gives $\Delta h/R=3\tau_y/(2\pi G\rho_c\bar\rho R^2)\propto1/R^2$ (the slide's “$\sim1/R^2$”). The two branches meet at $R_*=\sqrt{3\tau_y/(2\pi G\rho_c\bar\rho f)}\approx370$ km for $\tau_y=10^8$ Pa, $\rho_c=2500$, $\bar\rho=3500$ (the transition radius is larger for stronger rock).
+> independent of $g$, $\rho$ and size. A more direct way to see it: once strength is irrelevant, the body behaves like a pile of loose rubble. Rubble can stand only at slopes up to its angle of repose, $\tan\phi=f$. Over horizontal distances of order $R$ (the size of the body), slopes no steeper than $f$ can build a height difference of at most $\sim fR$. Gravity sets how fast material slides once a slope is too steep, but not *which* slope is too steep, which is why $g$ drops out. With $f=\tan30^\circ=0.58$ (line $\phi=30^\circ$ in the figure), small bodies can have relief of order their radius (potato shapes). For large bodies, (17) gives $\Delta h/R=3\tau_y/(2\pi G\rho_c\bar\rho R^2)\propto1/R^2$ (the slide's “$\sim1/R^2$”). The two branches meet at $R_*=\sqrt{3\tau_y/(2\pi G\rho_c\bar\rho f)}\approx370$ km for $\tau_y=10^8$ Pa, $\rho_c=2500$, $\bar\rho=3500$ (the transition radius is larger for stronger rock).
 
 
 ![[ls_fig13.png]]

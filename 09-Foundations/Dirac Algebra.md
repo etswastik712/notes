@@ -581,7 +581,7 @@ Why is momentum represented by $-i\hbar\frac{\partial}{\partial x'}$ in position
 >    Since this holds for all basis kets $|x''\rangle$:
 >    $$\langle x'|\mathcal{T}(dx') = \langle x' - dx'|.$$
 > 2. **Infinitesimal generator:**
->    Because translations preserve probabilities, $\mathcal{T}(dx')$ must be unitary. For infinitesimal $dx'$, it must deviate from identity linearly with a Hermitian generator $\hat G$:
+>    Because translations preserve probabilities, $\mathcal{T}(dx')$ must be unitary. For infinitesimal $dx'$ it deviates from the identity linearly, $\mathcal T(dx')=\hat 1-i\hat G\,dx'$, and unitarity to first order ($\mathcal T^\dagger\mathcal T=\hat 1$) forces $\hat G^\dagger=\hat G$. **Naming $\hat G=\hat p/\hbar$ is the physical input, not a deduction.** In classical mechanics momentum is the quantity that generates translations (its Poisson bracket with any function is that function's $x$-derivative), and de Broglie's $p=\hbar k$ fixes the factor $\hbar$. So:
 >    $$\mathcal{T}(dx') = \hat 1 - \frac{i}{\hbar}\hat p\,dx', \qquad (\hat p^\dagger = \hat p).$$
 > 3. **Action on an arbitrary ket $|\alpha\rangle$:**
 >    Contract $\langle x'|\mathcal{T}(dx')$ with $|\alpha\rangle$:
@@ -671,7 +671,7 @@ $$\boxed{\ \mathcal{T}(\ell) = \exp\!\left(-\frac{i\hat p\ell}{\hbar}\right)\ }$
 > $$[\hat x, \hat 1 - \frac{i}{\hbar}\hat p\,dx'] = -\frac{i}{\hbar}[\hat x, \hat p]\,dx' = dx'\,\hat 1.$$
 > Dividing by $dx'$ and multiplying by $i\hbar$:
 > $$\boxed{\ [\hat x, \hat p] = i\hbar\hat 1\ }$$
-> The canonical commutation relation is a direct mathematical consequence of the homogeneity and translation symmetry of space! $\square$
+> So the canonical commutation relation follows once momentum is identified as the generator of translations (step 2 of the previous derivation). The commutator encodes the fact that translating a state shifts the outcome of a position measurement. $\square$
 
 ### The Hadamard lemma and shift of position
 

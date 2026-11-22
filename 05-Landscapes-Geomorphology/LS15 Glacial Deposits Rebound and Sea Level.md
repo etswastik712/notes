@@ -53,7 +53,7 @@ flowchart LR
 > $$
 >
 >
-> For $b>0$ (accumulation zone) ice moves *down through the surface* at speed $b$ (submergence, burial); for $b<0$ (ablation zone) it moves *up through the surface* at speed $|b|$ (emergence). The rock crosses from burial to emergence near the ELA. Travel time from the head to the terminus is $\sim L/\bar u$: for $L=6$ km, $\bar u=50$ m yr$^{-1}$, about $120$ yr; so a glaciologist lost on the upper glacier is found (Fig. 14.2, flow lines) in the lower half of the glacier, decades later.
+> For $b>0$ (accumulation zone) ice moves *down through the surface* at speed $b$ (submergence, burial); for $b<0$ (ablation zone) it moves *up through the surface* at speed $|b|$ (emergence). The rock crosses from burial to emergence near the ELA. Travel time from the head to the terminus is $\sim L/\bar u$: for $L=6$ km, $\bar u=50$ m yr$^{-1}$, about $120$ yr; so a glaciologist lost on the upper glacier is found (Fig. 14.2, flow lines) in the lower half of the glacier about a century later.
 
 
 ![[pre_146.jpg|300]] ![[pre_147.jpg|300]] ![[pre_148.jpg|300]]
@@ -77,7 +77,7 @@ flowchart LR
 
 
 > [!derivation] 🔵 Extra (not derived in the slides): Glacial erosion in brief (syllabus item 7; quoted results)
-> Beyond the slides, the syllabus lists erosion, U-shaped valleys, hanging valleys and lakes. Glaciers erode by *abrasion* (debris in basal ice scratches and polishes the bed; rate roughly $\propto$ sliding speed $u_b$ to a power $1$–$2$) and *plucking* (freezing to the bed and ripping out joint-bounded blocks). Because ice flux is largest in the trunk valley, the trunk incises more than tributaries: tributaries are left *hanging* above the trunk; the trunk's cross-section adjusts so that basal shear stress is nearly constant, which gives a broad parabolic “U” (a river cuts a narrow “V”). Overdeepened basins scoured by the glacier fill with water when it retreats: cirque tarns, fjord and lake basins.
+> Beyond the slides, the syllabus lists erosion, U-shaped valleys, hanging valleys and lakes. Glaciers erode by *abrasion* (debris in basal ice scratches and polishes the bed; rate roughly $\propto$ sliding speed $u_b$ to a power $1$–$2$) and *plucking* (freezing to the bed and ripping out joint-bounded blocks). Because ice flux is largest in the trunk valley, the trunk incises more than tributaries. Where a tributary glacier joins the trunk, the two *ice surfaces* meet at the same level, but the trunk glacier is far thicker, so its *bed* lies far lower. When the ice melts, the tributary floor is left *hanging* above the trunk floor, often with a waterfall where they meet; the trunk's cross-section adjusts so that basal shear stress is nearly constant, which gives a broad parabolic “U” (a river cuts a narrow “V”). Overdeepened basins scoured by the glacier fill with water when it retreats: cirque tarns, fjord and lake basins.
 
 
 ## The LGM imprint and Gondwana (slides 149–150)
@@ -110,7 +110,7 @@ flowchart LR
 > $$
 >
 >
-> was derived in Chapter 7 for a sinusoidal load of wavelength $\lambda$ on a viscous half-space. The peripheral bulge: the elastic lithosphere transfers the load into a flexural depression under the ice and an up-bulge at $x=\pi\alpha$ (Chapter 10, $\alpha\sim10^2$ km), which collapses as the ice retreats: subsidence around the old ice sheets (blue rim on slide 151).
+> was derived in Chapter 7 for a sinusoidal load of wavelength $\lambda$ on a viscous half-space. The peripheral bulge has two causes that add up. (i) The mantle squeezed out from under the ice has to go somewhere: it flows sideways and domes up the ground just beyond the ice margin. (ii) The elastic lithosphere bends with a forebulge at $x\approx\pi\alpha$ (Chapter 10, $\alpha\sim10^2$ km). The viscous part dominates and makes the bulge several hundred km wide. When the ice goes, the displaced mantle flows back under the old ice centre: the centre rises and the bulge collapses, which gives the subsidence around the old ice sheets (blue rim on slide 151; e.g. the US east coast and the Netherlands sinking today).
 
 
 ## Sea level and coral reefs (slide 153)

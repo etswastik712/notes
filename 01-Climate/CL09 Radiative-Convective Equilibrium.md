@@ -72,6 +72,7 @@ In [[CL08 Greenhouse Models]] the atmosphere was stacked layer by layer. In the 
 > - **Just above the ground** ($\tau=\tau_s$): $T_a^4=\tfrac12T_e^4(1+D\tau_s)$.
 > - **The ground** absorbs $F$ of sunlight plus the downward flux and emits $\sigma T_g^4=F_\uparrow(\tau_s)=\sigma T_a^4+F/2$ (since $F_\uparrow=\sigma T^4+F/2$). Therefore
 > $$\sigma\,(T_g^4-T_a^4)=\tfrac12\sigma T_e^4\ \ \text{whatever }\tau_s,\qquad T_g^4=T_e^4\,(1+\tfrac12D\tau_s).\tag{CL9.2}$$
+> **Why there is a jump at all.** The lowest air is heated only by infrared, from the ground below and the air above. The ground is heated by the same downward infrared **plus all the sunlight** $F$. In equilibrium the ground must get rid of that extra $F$ as net upward radiation, and radiation carries a net flux only across a temperature difference. So the ground has to be warmer than the air touching it, by an amount fixed by $F$ alone: $\sigma(T_g^4-T_a^4)=F/2$, whatever the optical depth. Conduction and convection, which would erase the jump in reality, are switched off in pure RE.
 > **Numbers** for $\tau_s=2.5$: $T_g=254.6\,(1+2.075)^{1/4}=337.1$ K, $T_a=322.5$ K: a **jump of 14.6 K** at the ground, even though the air has no discontinuity of its own. (For $\tau_s=1$: $T_g=296.1$ K.)
 > **Lapse rate near the ground.** From (CL9.1), $\mathrm dT/\mathrm d\tau=DT_e^4/(8T^3)$ and $\mathrm d\tau/\mathrm dz=-\rho g\,\mathrm d\tau/\mathrm dp$. For an absorber that is partly well mixed and partly water-vapour-like, $\tau(p)=\tau_s[0.2p_*+0.8p_*^4]$ with $p_*=p/p_s$, so $|\mathrm d\tau/\mathrm dz|=3.4\,\tau_s/H$ at the ground ($H=RT/g\approx9.4$ km):
 > $$\Gamma_{RE}\approx\frac{1.66\,(254.6)^4}{8\,(322)^3}\cdot\frac{3.4\times2.5}{9.4\ \mathrm{km}}\approx24\ \mathrm{K\,km^{-1}}\ \ \Big(\gg\Gamma_d=9.8\Big).$$
@@ -133,6 +134,7 @@ The radiative-equilibrium profile of §1 has $\Gamma\approx23\gg9.8$ at the grou
 > Push a parcel up by $\delta z$ from its equilibrium level. It keeps its own $\theta_p$ (the displacement is adiabatic), while the environment there has $\theta_E+(\mathrm d\theta_E/\mathrm dz)\,\delta z$. A parcel hotter than its surroundings by $\delta\theta$ has relative density deficit $\delta\theta/\theta_E$ and feels the buoyancy acceleration $g\,\delta\theta/\theta_E$. Here $\delta\theta=\theta_p-\theta_E(z+\delta z)=-(\mathrm d\theta_E/\mathrm dz)\,\delta z$, so
 > $$\frac{\mathrm d^2\,\delta z}{\mathrm dt^2}=-N^2\,\delta z,\qquad N^2=\frac g{\theta_E}\frac{\mathrm d\theta_E}{\mathrm dz}=g\frac{\mathrm d\ln\theta_E}{\mathrm dz}=\boxed{\frac{g}{T_E}\Big(\frac{\mathrm dT_E}{\mathrm dz}+\Gamma_d\Big)}\tag{CL9.6}$$
 > using (CL9.5). With $\Gamma=-\mathrm dT_E/\mathrm dz$: $N^2=(g/T_E)(\Gamma_d-\Gamma)$ (W&H Eq. 3.75).
+> For a parcel displaced by $\delta z_0$ and released from rest:
 > - $N^2>0$ (stable): $\delta z=\delta z_0\cos Nt$, a **buoyancy oscillation** of period $2\pi/N$.
 > - $N^2=0$ (neutral): no restoring force; the parcel stays where it is pushed.
 > - $N^2<0$ (unstable): $\delta z=\delta z_0\cosh(st)$, $s=\sqrt{-N^2}$, exponential growth.
@@ -184,6 +186,8 @@ The radiative-equilibrium profile of §1 has $\Gamma\approx23\gg9.8$ at the grou
 | pure radiative equilibrium | **337.1 K** | 321 K (jump 16 K) | none: super-adiabatic below 4.2 km ($>9.8$), unstable below 5.5 km ($>6.5$) | 238.2 W m⁻² |
 | RCE, $\Gamma_c=9.8$ K/km | **301.3 K** | 300.7 K | 6.4 km | 238.2 W m⁻² |
 | RCE, $\Gamma_c=6.5$ K/km | **289.9 K** | 289.5 K | 9.2 km | 238.2 W m⁻² |
+
+(The model's lowest layer is centred a little above the ground, where the RE profile is already 1.5 K colder than the analytic air temperature at $\tau=\tau_s$. That is why the table shows 321 K and a 16 K jump, while the box gives 322.5 K and 14.6 K. The analytic numbers are the exact ones.)
 
 Three lessons:
 1. **Convection cools the surface** (337 → 290 K, −47 K) **and warms the free troposphere** (blue lies right of orange above ≈2.6 km, by 8 K at 4 km). Total energy is unchanged (OLR = 238 W m⁻² in all three): convection merely *moves* it from the ground into the air.

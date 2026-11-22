@@ -90,10 +90,12 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 >
 >
 > ($w'(0)=0$ by symmetry; $w_0$ follows because the total buoyancy support must equal the load, $\Delta\rho g\int w \mathrm{d} x=2w_0\alpha\Delta\rho g=V_0$.) The deflection changes sign at $x=3\pi\alpha/4$ and has a *peripheral bulge* of height $-0.043 w_0$ at $x=\pi\alpha$. Numbers: $T_e=30$ km, $E=70$ GPa, $\nu=0.25$: $D=1.7\times10^{23}$ N m; $\Delta\rho=2300$: $\alpha=74$ km, bulge $\sim230$ km from the load (or $174$ km to the zero crossing). Thick lithosphere ($T_e\to\infty$) spreads a load over a long $\alpha$; $T_e\to0$ gives local (Airy) isostasy.
+>
+> *Why there is a bulge at all.* A stiff plate cannot bend sharply, so the depression under the load has to extend out to a distance of order $\alpha$. To bend down over that distance and then come back to level, the plate must reverse its curvature. A beam does this by overshooting, which is the oscillating $\cos+\sin$ factor. Press a ruler into a mattress and the ruler lifts slightly a little way from your finger. That rise is the forebulge, and it is a consequence of stiffness: a plate with no rigidity ($D\to0$) sinks only under the load and has no bulge.
 
 
 ![[ls_fig22.png]]
-*Figure LS10.1. Flexural profile (21) of a broken elastic plate loaded at $x=0$ (only the right half meaningful; drawn symmetric).*
+*Figure LS10.1. Flexural profile (21) of a continuous elastic plate loaded along the line $x=0$ (symmetric about the load). A plate broken at the load has the different form $-ce^{-x/\alpha}\cos(x/\alpha)$, with a deeper trough and a larger bulge ([[Landscapes Past Papers 2024 - Solved]] ES Q3).*
 
 
 ![[pre_079.jpg|460]]
@@ -183,7 +185,7 @@ The lithosphere is not a fluid: on time scales of millions of years it behaves e
 > $$
 >
 >
-> The taper is constant along the wedge (independent of $s$ and of size), as observed. It *increases* with basal friction $f_b$ and decreases with internal friction ($K$ grows with $\phi$); pore-fluid pressure reduces both $f_b\sigma_b$ and strength. *Sandbox numbers*: $\phi=30^\circ$ ($K=3$), $f_b\approx0.4$, $\beta=0$: $\alpha\approx0.13$ rad $=7.6^\circ$ — the order of the $10^\circ$ measured. (Exact critical-taper theory of Davis, Suppe and Dahlen 1983 replaces $K$ by a function of $\phi,f_b,\alpha,\beta$; the structure is the same, the coefficient changes by $\mathcal{O}\!\left(1\right)$.)
+> The taper is constant along the wedge (independent of $s$ and of size), as observed. It *increases* with basal friction $f_b$ and decreases with internal friction ($K$ grows with $\phi$). The intuition: the wedge must be pushed forward over its base. A sticky base resists sliding, so the wedge has to thicken, and a steeper slope gives the weight needed to overcome the basal drag. A strong interior can transmit large horizontal stresses without failing, so it can push a long, thin wedge without piling up. The taper is the slope at which the wedge is everywhere just on the point of failing and just able to slide; pore-fluid pressure reduces both $f_b\sigma_b$ and strength. *Sandbox numbers*: $\phi=30^\circ$ ($K=3$), $f_b\approx0.4$, $\beta=0$: $\alpha\approx0.13$ rad $=7.6^\circ$ — the order of the $10^\circ$ measured. (Exact critical-taper theory of Davis, Suppe and Dahlen 1983 replaces $K$ by a function of $\phi,f_b,\alpha,\beta$; the structure is the same, the coefficient changes by $\mathcal{O}\!\left(1\right)$.)
 
 
 > [!example] ❓ Question on the slides: Slide 90: similarities and differences between the experiment and the real Himalaya
