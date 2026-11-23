@@ -99,7 +99,7 @@ $a$ is the Earth's radius, $g$ gravity, $[v]$ the zonal-mean northward wind. The
 *Figure CL11.1. (a) An illustrative $[v](p)=V\cos(\pi p/p_s)$ with $V=1.5$ m s⁻¹. (b) Its running total $\psi(p)$: zero at the top (nothing above), zero at the ground (the total over the whole column is zero), and maximal at 500 hPa where $[v]$ changes sign. Illustrative profile, not data; script `fig_cl11_streamfunction_build.py`.*
 
 > [!example] Worked example: mass flux of the upper branch
-> At 15° N, $2\pi a\cos\varphi/g=3.94\times10^{6}$ kg m⁻¹ s⁻¹ per m s⁻¹ per Pa⁻¹... precisely: $2\pi(6.371\times10^6)\cos15^\circ/9.81=3.94\times10^{6}$ (units m s² kg⁻¹... i.e. kg per pascal-metre). A poleward wind of 2 m s⁻¹ through 200 hPa ($=2\times10^4$ Pa) carries
+> At 15° N, $2\pi a\cos\varphi/g=2\pi(6.371\times10^6)\cos15^\circ/9.81=3.94\times10^{6}$ s² (units: metres divided by m s⁻², i.e. s²). Multiplying by a wind (m s⁻¹) and a pressure depth (Pa = kg m⁻¹ s⁻²) gives kg s⁻¹, a mass flux, as it should. A poleward wind of 2 m s⁻¹ through 200 hPa ($=2\times10^4$ Pa) carries
 > $$\psi=3.94\times10^6\times2\times2\times10^4=1.58\times10^{11}\ \mathrm{kg\,s^{-1}}=158\times10^9\ \mathrm{kg\,s^{-1}}.$$
 > The same mass must come back equatorward below. If the return flow occupies the lowest 100 hPa it needs 4 m s⁻¹; spread over 700 hPa it needs only **0.6 m s⁻¹**. That is why the return flow is "weaker" but thick (§3.3). For comparison the Hadley cells in Marshall & Plumb's Fig. 5.21 peak at order $10^2\times10^9$ kg s⁻¹ (colour bar to ±200).
 
@@ -371,7 +371,7 @@ The theory so far assumed an **axisymmetric** atmosphere responding to an axisym
 > 2. $u=\Omega a\sin^2\varphi/\cos\varphi$: 25° → 91.6 m s⁻¹; 40° → 250.6 m s⁻¹.
 > 3. $u=\Omega a(\cos^210^\circ-\cos^230^\circ)/\cos30^\circ=117.9$ m s⁻¹.
 > 4. $u=\Omega a(\cos^2\varphi_0-\cos^2\varphi)/\cos\varphi$: 30° → 0: $-116$ m s⁻¹ (westward); 30° → 10°: $-103.7$ m s⁻¹. Real trades are a few m s⁻¹ because friction continually restores angular momentum (the ground drags the air eastward), so $A$ is not conserved in the lower branch.
-> 5. (a) $\dfrac{2\pi a\cos\varphi}{g}=3.94\times10^6$ kg Pa⁻¹ m⁻¹·... so flux $=3.94\times10^6\times2\times2\times10^4=1.58\times10^{11}$ kg s⁻¹. (b) Return: $v=1.58\times10^{11}/(3.94\times10^6\times7\times10^4)=0.57$ m s⁻¹.
+> 5. (a) $\dfrac{2\pi a\cos\varphi}{g}=3.94\times10^6$ s² (see §2), so flux $=3.94\times10^6\times2\times2\times10^4=1.58\times10^{11}$ kg s⁻¹. (b) Return: $v=1.58\times10^{11}/(3.94\times10^6\times7\times10^4)=0.57$ m s⁻¹.
 > 6. NH Hadley $\psi>0$ (clockwise): poleward aloft, equatorward at the surface (easterly trades). Ferrel $\psi<0$ (anticlockwise): equatorward aloft, poleward at the surface (westerlies). Polar $\psi>0$: poleward aloft, equatorward at the surface (polar easterlies). Ascent is where $\psi$ increases poleward (equator, 60°), descent where it decreases (30°, pole).
 > 7. $R=gH\Delta\theta/(\theta_0\Omega^2a^2)=9.81\times1.2\times10^4\times40/(300\times2.159\times10^5)=0.0727$; $\varphi_H=(5R/3)^{1/2}=0.348$ rad $=19.9^\circ$. For 30° $R=3\varphi^2/5=0.164$, so $\Omega=\Omega_E\sqrt{0.0727/0.164}=0.66\,\Omega_E$ (day ≈ 36 h). $\varphi_H\propto\Delta\theta^{1/2}$: a larger equator-to-pole contrast widens the cell.
 > 8. $\Delta L=M\,a\,\tfrac\pi4\,\Delta\bar u=2.6\times10^{25}$ kg m² s⁻¹ and $\Delta\mathrm{LOD}=\mathrm{LOD}\,\Delta L/(I\Omega)=0.39$ ms; westerlies increase ⇒ the solid Earth slows ⇒ **longer** day.

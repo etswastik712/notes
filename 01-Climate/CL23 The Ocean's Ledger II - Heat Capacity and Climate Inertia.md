@@ -97,7 +97,7 @@ Land and ocean are **the same equation with very different $C$**. Without kicks 
 | mixed layer: 50 | 1.75 yr ("about 1.7 years") |
 | full ocean: 4,000 | 140 yr (longer in practice: mixing to depth is slow) |
 
-So weather has **50 times** more to warm over the mixed layer than over land before the deep ocean even joins in. (The tutorial app uses a net feedback $b=2.09$, a 75 m layer and a land box that carries the air above it, 2.4 m of water: its mixed layer takes ≈ **5 years** (🔵 4.8) and its land ≈ 2 months (🔵 55 days incl. no ocean exchange); the physics is the same.)
+So weather has **50 times** more to warm over the mixed layer than over land before the deep ocean even joins in. (The tutorial app uses a net feedback $b=2.09$, a 75 m layer and a land box that carries the air above it, 2.4 m of water: its mixed layer takes ≈ **5 years** (🔵 4.8) and its land ≈ 2 months (🔵 55 days, counting only the land slab's own loss and ignoring its exchange with the ocean); the physics is the same.)
 
 **Why Mumbai varies less than Pune.** Land like Pune responds to a strong push within a couple of weeks; the mixed layer off Mumbai takes more than a year, and Mumbai's air comes off that sea.
 
@@ -130,7 +130,7 @@ Drive land, a mixed layer and a mixed layer over a deep ocean with the **same** 
 Sorted by timescale (power spectrum of departures from the average year):
 - **Fast swings:** on these timescales the kicks have no time to be balanced by heat loss, so $C$ alone sets the response and power falls as $(C_\text{land}/C_\text{ocean})^2$ ≈ **992** for the app (🔵 $31.5^2$). Slide: mixed layer has **190×** less power than land at 6 months–2 years and **490×** at 2–6 months. 🔵 Analytically (white push, $|T|^2\propto1/|iωC+λ|^2$): 1/473 at 1 yr, 1/184 at 2 yr, 1/25 at 6 yr.
 - **Slow swings:** the surface has time to balance, $F'\approx\lambda T'$, **$C$ drops out**: mixed/land power = **0.99** at 100–1,000 yr (slide ✓; 🔵 0.99 at 300 yr). The bend is at period $2\pi\tau$: land ≈ 1 yr, mixed layer ≈ 30 yr (🔵 0.95 yr, 30.0 yr).
-- **Depth sets the timescale, not the size of the slow swings.** Fast, random weather produces slow climate variations with nothing slow driving them (**Hasselmann 1976**; paper not read).
+- **Depth sets the timescale, not the size of the slow swings.** Fast, random weather produces slow climate variations with nothing slow driving them (**Hasselmann 1976**; paper not read). The mechanism is that the slab **adds up** the kicks. Over times shorter than τ the loss term $\lambda T'$ is too small to matter, so kicks of random sign pile up like the steps of a random walk and $T'$ drifts further the longer you wait. Only after about τ does the loss pull it back. The result is slow wandering built entirely from fast noise, and the deeper the slab, the longer it wanders before being pulled back.
 - **A deep ocean calms, it does not add:** a second corner far out (τ ≈ 190 yr, period ≈ 1,200 yr) and extra damping at centennial scales: slow power falls to **0.65** of land's (slide); 🔵 analytic **0.53–0.68** over 100–1,000 yr, slow limit $(b/(b+\gamma))^2=0.56$. A leak to a big reservoir acts like a larger λ.
 
 🔵 **Tutorial check.** My simulation of the app's three-slab model (`scripts/daisy_ocean.py bare`) gives block-mean spreads (month / year / 10 yr / 100 yr): land only 3.17–3.21 / 1.75–1.79 / 0.58–0.61 / 0.16–0.20 K; with a mixed layer 0.74–0.75 / 0.68–0.69 / 0.47–0.49 / 0.15–0.20 K, inside the handout's ranges (3.20–3.26, 1.75–1.83, 0.55–0.67, 0.14–0.28; 0.74–0.80, 0.67–0.74, 0.45–0.54, 0.14–0.26). Depth runs (year / decade bar): 25 m 1.10/0.56, 75 m 0.69/0.49, 150 m 0.50/0.40 K: the fast bars shrink, the century bar stays (0.17–0.18 K). With the deep ocean the century bar falls (0.17 → 0.15 K). The year bar barely drops from the month bar with a mixed layer: the ocean *keeps a month's warmth for years*.
@@ -192,7 +192,7 @@ A slab that only stores heat nets **zero over a year at every place**. The reana
 7. **Forecasting.** Whose temperature next month would you rather forecast, Delhi's or the Arabian Sea's? What would make you less sure? (Joy's tutorial question.)
 
 > [!example]- Solutions
-> 1. $d\propto\sqrt\kappa$: **√2 ≈ 1.41 times deeper**; heat held as a slab $\propto \rho c\,d$: **1.41 times more**.
+> 1. $d\propto\sqrt\kappa$: **√2 ≈ 1.41 times deeper**; heat held as a slab $\propto \rho c\,d$: **1.41 times more**, if the two soils have the same $\rho c$ (the higher diffusivity then comes from a higher conductivity $k$, e.g. wetter soil).
 > 2. Still water 1 m ≈ the 0.8 m slab: **little change** (water conducts like soil over a day, reach ≈ 6 cm): the day–night contrast stays large. Stirred, the day's heat spreads over the stirred depth, so the contrast shrinks greatly.
 > 3. $\tau=C/\lambda=50\times4.2\times10^6/3.8=5.5\times10^{7}$ s = 1.75 yr; one third left after $t=\tau\ln3=1.9$ yr. Longer in reality because the layer exchanges heat with the deep ocean and feedbacks (water vapour) reduce the net λ; the tutorial's λ = 2.09 gives τ ≈ 3.2 yr for 50 m.
 > 4. For a decade $\omega=2\pi/(3.156\times10^{8}\ \text{s})=1.99\times10^{-8}\ \text{s}^{-1}$, so $d=\sqrt{2\times10^{-4}/1.99\times10^{-8}}=100$ m (the table). Measured from the base of a ≈ 50 m mixed layer the decade's swing reaches ≈ 150 m, deeper than a 75 m layer.
