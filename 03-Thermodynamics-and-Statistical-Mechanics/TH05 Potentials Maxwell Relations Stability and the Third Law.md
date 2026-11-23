@@ -155,7 +155,7 @@ A particle in a potential settles at a **minimum**, with the loss of energy to f
 $$\delta S=-\frac{2}{T_A}\big[\delta T\,\delta S_A+\delta J\cdot\delta x+\delta\mu\,\delta N\big].$$
 **Stable equilibrium** requires $\delta S\le0$, i.e.
 $$\boxed{\ \delta T\,\delta S+\delta J\cdot\delta x+\delta\mu\cdot\delta N\ \ge\ 0\ }$$
-which applies to any part of the system and for any constraints (all coordinates enter symmetrically). Taking variations in $(T,x)$ at $\delta N=0$, the cross terms $\delta T\delta x_i$ cancel by the Maxwell relation (I.56) and
+which applies to any part of the system and for any constraints (all coordinates enter symmetrically). Taking variations in $(T,x)$ at $\delta N=0$, write $\delta S=(\partial S/\partial T)_x\delta T+(\partial S/\partial x_i)_T\delta x_i$ and $\delta J_i=(\partial J_i/\partial T)_x\delta T+(\partial J_i/\partial x_j)_T\delta x_j$. The cross terms $\delta T\,\delta x_i$ carry the coefficient $(\partial S/\partial x_i)_T+(\partial J_i/\partial T)_x$, which is zero by the Maxwell relation from $F$ (I.55), and
 $$\Big(\frac{\partial S}{\partial T}\Big)_x(\delta T)^2+\Big(\frac{\partial J_i}{\partial x_j}\Big)_T\delta x_i\delta x_j\ge0 .$$
 This is a quadratic form that must be positive for all $\delta T,\delta x$. Consequences:
 

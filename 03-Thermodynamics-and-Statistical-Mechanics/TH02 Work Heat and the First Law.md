@@ -128,7 +128,7 @@ This is a consequence of the equation of state $PV\propto T$: in [[TH05 Potentia
 - **Heat capacities** (change of temperature on adding heat; the path must be specified). For a gas:
 $$C_V=\frac{\bar\mathrm dQ}{\mathrm dT}\Big|_V=\frac{\mathrm dE-\bar\mathrm dW}{\mathrm dT}\Big|_V=\frac{\mathrm dE+P\,\mathrm dV}{\mathrm dT}\Big|_V=\Big(\frac{\partial E}{\partial T}\Big)_V,$$
 $$C_P=\frac{\bar\mathrm dQ}{\mathrm dT}\Big|_P=\Big(\frac{\partial E}{\partial T}\Big)_P+P\Big(\frac{\partial V}{\partial T}\Big)_P .$$
-$C_P>C_V$ since some of the heat goes into the work of changing the volume. With the **enthalpy** $H=E+PV$, $C_P=(\partial H/\partial T)_P$ ([[Enthalpy]]).
+$C_P>C_V$ since some of the heat goes into the work of changing the volume. (That is the gas reading. The general result, proved in [[TH05 Potentials Maxwell Relations Stability and the Third Law]] §4, is $C_P-C_V=TV\alpha_P^2/\kappa_T\ge0$: it depends on $\alpha_P^2$, so $C_P\ge C_V$ holds even for water below 4 °C, which *contracts* on heating and so does negative expansion work.) With the **enthalpy** $H=E+PV$, $C_P=(\partial H/\partial T)_P$ ([[Enthalpy]]).
 - **Force constants** (displacement per force; generalised spring constants): $\kappa_T=-\frac1V(\partial V/\partial P)_T$; the susceptibility $\chi_T=\frac1V(\partial M/\partial B)_T$. For the ideal gas $\kappa_T=1/P$.
 - **Thermal responses**: the expansivity $\alpha_P=\frac1V(\partial V/\partial T)_P$ (called $\beta$ in [[TH01 Temperature and the Zeroth Law]]); ideal gas $\alpha_P=1/T$.
 

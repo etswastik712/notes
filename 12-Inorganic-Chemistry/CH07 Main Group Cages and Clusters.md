@@ -56,7 +56,7 @@ flowchart LR
 *Concept map: every box is a section.*
 
 > [!intuition] Why a cluster is like a molecule with a "hole" in the middle
-> A closed polyhedron of $n$ atoms has $n+1$ bonding skeletal orbitals (the $n$ radial ones pointing at the centre combine into one strongly bonding MO, the $n$ tangential ones give $n$ more): that is the origin of the $n+1$ pairs of a **closo** cluster. Removing a vertex leaves a bowl that can hold one more pair (nido), and so on: the pair count *grows* as the cage *opens* because the electrons now have fewer atoms to be shared among.
+> Each vertex atom offers three skeletal orbitals: one **radial** (pointing at the centre) and two **tangential** (lying on the surface). The $n$ radial orbitals combine into one strongly bonding, all-in-phase MO; the $2n$ tangential orbitals give $n$ bonding combinations (the rest are antibonding). So a closed deltahedron of $n$ atoms has $n+1$ bonding skeletal MOs: the $n+1$ pairs of a **closo** cluster. Removing a vertex hardly changes that set of bonding MOs: a **nido** cluster of $n$ atoms is the $(n+1)$-vertex deltahedron minus one vertex, and still needs that parent's $(n+1)+1=n+2$ pairs; an **arachno** cluster comes from the $(n+2)$-vertex parent and needs $n+3$. The pair count is fixed by the *parent* polyhedron, which is why it grows as the cage opens.
 
 ## 1. Main group chemistry and Group 13
 <span class="scope-taught">taught</span> *slides 90–92*

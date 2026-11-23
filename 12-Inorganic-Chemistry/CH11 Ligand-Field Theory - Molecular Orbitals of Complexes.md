@@ -157,7 +157,7 @@ e.g. I⁻ < Br⁻ < Cl⁻ < F⁻ < OH⁻ < H₂O < NH₃ < … < CN⁻ < CO (the
 > 6. CO is a strong π acceptor: $\Delta_O$ is so large that $t_{2g}\to e_g^*$ absorbs in the UV.
 > 7. Cl⁻ < OH⁻ < H₂O < NH₃ < CN⁻ < CO: π donor, π donor, weak π donor, σ only, π acceptor, π acceptor.
 > 8. F⁻ has no low empty π orbitals and Co(III) is a high oxidation state (back-donation unfavourable). Ni(0) is electron-rich and CO's π* is low: synergic σ donation + π back-donation.
-> 9. In $T_d$ the ligands lie between the axes, so the axial $e$ orbitals ($d_{z^2}$, $d_{x^2-y^2}$) point between ligands, while $t_2$ have the right symmetry to mix with the ligand $t_2$ LGOs.
+> 9. The decisive reason is symmetry: the four σ ligand orbitals of a tetrahedron span only $a_1+t_2$, so there is **no** ligand combination of $e$ symmetry for the metal $e$ orbitals to mix with, and they stay nonbonding (just as in $O_h$ the six σ orbitals span $a_{1g}+e_g+t_{1u}$, with no $t_{2g}$). Geometrically, the ligands sit at alternate cube corners, between the axes, so the axial $e$ lobes ($d_{z^2}$, $d_{x^2-y^2}$) point between them, while the $t_2$ set matches the ligand $t_2$ LGOs.
 > 10. $n(A_{1g})=\frac1{48}(6+6\cdot2+3\cdot2+3\cdot4+6\cdot2)=\frac{48}{48}=1$ (the classes $E$, $6C_4$, $3C_2$, $3\sigma_h$, $6\sigma_d$); likewise $n(E_g)=1$, $n(T_{1u})=1$, all others 0 (`ch11_numbers.py`).
 
 ## Provenance

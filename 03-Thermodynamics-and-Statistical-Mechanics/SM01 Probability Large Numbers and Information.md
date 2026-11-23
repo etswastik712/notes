@@ -65,7 +65,7 @@ A **microstate** says where every particle is and how fast it moves; a **macrost
 Other scalings are not forbidden but rare in practice: the Coulomb energy of $N$ ions at fixed density would go as $Q^2/R\sim N^{5/3}$, but charges are screened by counter-ions and the energy is extensive after all (SM29, planned); the gravitational energy of a star is *not* screened, and the thermodynamics of self-gravitating systems is correspondingly strange (negative specific heats, SM27, planned).
 
 > [!intuition] Why "exponential" is the word that matters
-> Multiply the number of ways by 2 for each of $N$ spins and you get $2^N$. Doubling $N$ *squares* the number of states. Compare two macrostates whose entropies per particle differ by even $10^{-3}$: their state counts differ by $e^{10^{-3}N}=e^{10^{20}}$ for a mole. A system lives in the macrostate with the most microstates because the alternatives are not merely rarer, they are *incomparably* rarer. All of §5–§7 is a calculus for these numbers.
+> Multiply the number of ways by 2 for each of $N$ spins and you get $2^N$. Doubling $N$ *squares* the number of states. Compare two macrostates whose entropies per particle differ by even $10^{-3}$: their state counts differ by $e^{10^{-3}N}=e^{6\times10^{20}}$ for a mole ($N=6\times10^{23}$). A system lives in the macrostate with the most microstates because the alternatives are not merely rarer, they are *incomparably* rarer. All of §5–§7 is a calculus for these numbers.
 
 > [!example] A first exponential (recomputed)
 > $N$ molecules, each equally likely to be in the left or right half of a box. The probability that **all** are in the left half is $2^{-N}$: $2^{-20}=9.5\times10^{-7}$; $2^{-100}=7.9\times10^{-31}$; for $N=N_A$ it is $e^{-4.2\times10^{23}}$. The *forbidden* in the second law is not forbidden by dynamics; it is forbidden by $e^{-N}$ (compare [[TH06 From Kinetic Theory to Statistical Mechanics]] §5).
@@ -186,7 +186,7 @@ The CLT is a limit; how good is it at finite $N$?
 
 **A rigorous bound (Berry–Esseen, quoted).** For i.i.d. variables with $\rho=\langle|x-\mu|^3\rangle<\infty$, $\ \sup_y|F_N(y)-\Phi(y)|\le C\,\rho/(\sigma^3\sqrt N)$ with $C<0.48$. The error is **$O(N^{-1/2})$** and is controlled by the *third* cumulant. For fair coins $\rho/\sigma^3=1$: at $N=100$ the bound is $0.048$ and the true supremum is $0.040$ (half the largest atom of the discrete distribution, $\tfrac12P(n=50)$).
 
-**An asymptotic series (Edgeworth).** Keep the next terms of $K_y(t)=\tfrac12t^2+\frac{\gamma_1t^3}{6\sqrt N}+\frac{\gamma_2t^4}{24N}+\cdots$ (with $\gamma_1=\kappa_3/\kappa_2^{3/2}$ the skewness and $\gamma_2=\kappa_4/\kappa_2^2$ the excess kurtosis of *one* variable) and invert term by term; $t^n\leftrightarrow(-\partial_y)^n$ acting on $\phi(y)$ gives the (probabilists') Hermite polynomials $He_n$ ([[Probabilists' Hermite Polynomials]]):
+**An asymptotic series (Edgeworth).** Now standardise to unit variance, $y=(X-N\kappa_1)/\sqrt{N\kappa_2}$ (§4.1 divided only by $\sqrt N$, so there $y$ had variance $\kappa_2$). Keep the next terms of $K_y(t)=\tfrac12t^2+\frac{\gamma_1t^3}{6\sqrt N}+\frac{\gamma_2t^4}{24N}+\cdots$ (with $\gamma_1=\kappa_3/\kappa_2^{3/2}$ the skewness and $\gamma_2=\kappa_4/\kappa_2^2$ the excess kurtosis of *one* variable) and invert term by term; $t^n\leftrightarrow(-\partial_y)^n$ acting on $\phi(y)$ gives the (probabilists') Hermite polynomials $He_n$ ([[Probabilists' Hermite Polynomials]]):
 $$p(y)=\phi(y)\Big[1+\frac{\gamma_1}{6\sqrt N}He_3(y)+\frac1N\Big(\frac{\gamma_2}{24}He_4(y)+\frac{\gamma_1^2}{72}He_6(y)\Big)+O(N^{-3/2})\Big],\qquad F(y)\simeq\Phi(y)-\frac{\gamma_1}{6\sqrt N}(y^2-1)\phi(y)+\dots$$
 So the skewness corrects the CLT at order $N^{-1/2}$ and the kurtosis and the squared skewness at order $N^{-1}$ (the pattern $N^{1-n/2}$ of §4.1).
 
@@ -253,7 +253,7 @@ Expand the exponent one order further, $N\varphi(x)=N\varphi^*-\tfrac12Na\delta^
 $$\int e^{N\varphi}\mathrm dx=e^{N\varphi^*}\sqrt{\frac{2\pi}{Na}}\Big[1+\frac1N\Big(\frac{\varphi^{(4)}}{8a^2}+\frac{5\varphi'''^2}{24a^3}\Big)+O(N^{-2})\Big].$$
 For $N!=N^{N+1}\int_0^\infty e^{N(\ln t-t)}\mathrm dt$: $\varphi=\ln t-t$, $t^*=1$, $a=1$, $\varphi'''=2$, $\varphi^{(4)}=-6$, so the bracket is $1+\frac1N\big(-\tfrac68+\tfrac{20}{24}\big)=1+\frac1{12N}$ ✓. The full series is
 $$N!=\sqrt{2\pi N}\Big(\frac Ne\Big)^N\Big[1+\frac1{12N}+\frac1{288N^2}-\dots\Big]=\sqrt{2\pi N}\Big(\frac Ne\Big)^Ne^{\frac1{12N}-\frac1{360N^3}+\dots}.$$
-(For $N=10$: $\sqrt{2\pi N}(N/e)^N=3\,598\,696$; times $e^{1/120}=1.008368$ gives $3\,628\,807$ against the exact $3\,628\,800$.) The corrections are $O(1/N)$ per particle and therefore invisible in intensive quantities: they are the sub-extensive terms of the entropy ([[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §6, $-\ln(\pi\sqrt6N)$).
+(For $N=10$: $\sqrt{2\pi N}(N/e)^N=3\,598\,696$; times $e^{1/120}=1.008368$ gives $3\,628\,810$ against the exact $3\,628\,800$.) The corrections are $O(1/N)$ per particle and therefore invisible in intensive quantities: they are the sub-extensive terms of the entropy ([[SM02 Phase Space Liouville and the Microcanonical Ensemble]] §6, $-\ln(\pi\sqrt6N)$).
 
 ## 6. Large deviations
 
@@ -279,12 +279,13 @@ The **rate function** $I(m)$ is $\ge0$, zero only at $m=\tfrac12$, and $\to\ln2$
 > [!derivation] Rate function from cumulants
 > $P(\bar x\approx s)$ for the mean of $N$ i.i.d. variables is the inverse Laplace transform of $M(t)^N=e^{NK(t)}$:
 > $$P(\bar x=s)\propto\int\mathrm dt\,e^{N[K(t)-ts]}\ \Rightarrow\ \text{saddle at }K'(t^*)=s\ \Rightarrow\ \boxed{\ I(s)=\sup_t\big[ts-K(t)\big]\ }$$
+> *Why a supremum.* The inversion contour runs parallel to the imaginary $t$-axis through the real point $t^*$, and the integrand there is $e^{-N[t^*s-K(t^*)]}$. Along the **real** axis $K(t)-ts$ is convex ($K''=\kappa_2(t)>0$, a variance), so the saddle is its *minimum* in the real direction (and a maximum along the contour, as a saddle should be). Minimising $K(t)-ts$ over real $t$ is the same as maximising $ts-K(t)$; hence $I(s)=t^*s-K(t^*)=\sup_t[ts-K(t)]$.
 > **Check on the spins $\pm1$:** $K=\ln\cosh t$, $s=\tanh t^*$, so $I=s\,\mathrm{artanh}\,s-\ln\cosh t^*=\tfrac12[(1+s)\ln(1+s)+(1-s)\ln(1-s)]$; with $m=\tfrac{1+s}2$ this is $\ln2+m\ln m+(1-m)\ln(1-m)$, the rate function of §6.1. $\square$
 
 So **$I$ is the Legendre transform of the cumulant generating function** ([[Legendre Transform]], [[TH05 Potentials Maxwell Relations Stability and the Third Law]]). The same structure returns twice more: the entropy $S(E)$ is the Legendre transform of $\ln Z(\beta)$ (SM03), and a thermodynamic potential is the transform of another ([[Helmholtz Free Energy]]). The theorem (Cramér) holds whenever $K(t)$ exists in a neighbourhood of zero, which excludes the heavy tails of §4.3.
 
 > [!connection] The rate function is an entropy deficit
-> For $N$ particles in two halves the macrostate "fraction $m$ on the left" has $\Omega\propto e^{Ns(m)}$ microstates, out of $2^N=e^{N\ln2}$ in total, so $P(m)=\Omega/2^N=e^{-N[\ln2-s(m)]}=e^{-N[S_{\max}-S(m)]/N}$. **Probability of a fluctuation $=e^{-\Delta S/k_B}$ with $\Delta S$ the entropy deficit**: Einstein's fluctuation formula (SM02, SM19). The numbers of §1 ($2^{-N}$) are the case $m=1$.
+> For $N$ particles in two halves the macrostate "fraction $m$ on the left" has $\Omega\propto e^{Ns(m)}$ microstates, out of $2^N=e^{N\ln2}$ in total, so $P(m)=\Omega/2^N=e^{-N[\ln2-s(m)]}=e^{-[S_{\max}-S(m)]/k_B}$, where $S(m)=k_BNs(m)$ is the total entropy of the macrostate and $S_{\max}=k_BN\ln2$. **Probability of a fluctuation $=e^{-\Delta S/k_B}$ with $\Delta S$ the entropy deficit**: Einstein's fluctuation formula (SM02, SM19). The numbers of §1 ($2^{-N}$) are the case $m=1$.
 
 ### 6.3 A rigorous bound (Chernoff) and Sanov's theorem
 The exponent is not just an estimate; it is a **bound valid at every $N$**. For $s>\langle x\rangle$ and any $t>0$, Markov's inequality applied to $e^{tN\bar x}$ gives
@@ -314,7 +315,7 @@ because $\sum_iN_i=N$ makes the linear terms cancel. Another way to the same res
 ### 7.2 Shannon entropy
 > [!key] Entropy of a distribution
 > $$\boxed{\ S[p]=-\sum_{i=1}^Mp_i\ln p_i=-\langle\ln p\rangle\ }\qquad0\le S\le\ln M$$
-> ([[Shannon Entropy]], [[Statistical Entropy]].) $S=0$ for a certain outcome, $S=\ln M$ for the uniform distribution (proof in §7.4). It does not depend on the *values* $x_i$, only on the probabilities; it is unchanged by relabelling, **additive** for independent variables ($S_{12}=S_1+S_2$), and **decreases** if distinct outcomes are merged (many-to-one mapping): merging $x_1,x_2$ into one changes $S$ by $p_1\ln\frac{p_1}{p_1+p_2}+p_2\ln\frac{p_2}{p_1+p_2}<0$. In bits ($\log_2$): a fair coin 1 bit, a fair die $\log_26=2.585$ bits, the $p=0.1$ coin $0.469$ bit.
+> ([[Shannon Entropy]], [[Statistical Entropy]].) $S=0$ for a certain outcome, $S=\ln M$ for the uniform distribution, and no distribution on $M$ outcomes does better (proof in §7.3, from $D\ge0$). It does not depend on the *values* $x_i$, only on the probabilities; it is unchanged by relabelling, **additive** for independent variables ($S_{12}=S_1+S_2$), and **decreases** if distinct outcomes are merged (many-to-one mapping): merging $x_1,x_2$ into one changes $S$ by $p_1\ln\frac{p_1}{p_1+p_2}+p_2\ln\frac{p_2}{p_1+p_2}<0$. In bits ($\log_2$): a fair coin 1 bit, a fair die $\log_26=2.585$ bits, the $p=0.1$ coin $0.469$ bit.
 
 Two readings that will be used all through Part II. **Counting:** $S[p]=\tfrac1N\ln(\text{number of typical sequences})$. **Surprise:** $-\ln p_i$ is the information gained when $i$ occurs, and $S$ is its average. When all $\Omega$ microstates are equally likely, $S=\ln\Omega$, **Boltzmann's entropy** (times $k_B$); for general $p_i$ it is **Gibbs's** $-k_B\sum p_i\ln p_i$ ([[SM02 Phase Space Liouville and the Microcanonical Ensemble]], [[SM03 The Canonical Ensemble]]).
 
@@ -428,11 +429,11 @@ The last relation is a **Legendre transform**, and the one before it has the for
 > 10. $\kappa_4(\text{one spin})=-2$, so $\kappa_4(\text{sum})=-2N$ and the excess kurtosis is $\kappa_4/\kappa_2^2=-2N/N^2=-2/N=-0.02$ at $N=100$. The *energy* of an ideal gas (SM03) is Gamma with positive $+6/k=+0.04$ at $N=100$; the signs differ because spins have bounded support while energies have a one-sided tail.
 > 11. Markov on $e^{tX}$: $P(X\ge k)\le e^{-tk}e^{\lambda(e^t-1)}$; minimising over $t$ gives $e^t=k/\lambda$ and the bound $e^{-\lambda}(e\lambda/k)^k$. For $\lambda=10$, $k=20$: $e^{-10}\times(1.359)^{20}=2.10\times10^{-2}$, **6 times** the exact $3.45\times10^{-3}$ (the prefactor $\sim1/\sqrt{2\pi k}\,(1-\lambda/k)^{-1}$ is missing).
 > 12. Partitions of $\{1,2,3,4\}$ with $\kappa_n=\lambda$: $\kappa_4=\lambda$; $4\kappa_3\kappa_1=4\lambda^2$; $3\kappa_2^2=3\lambda^2$; $6\kappa_2\kappa_1^2=6\lambda^3$; $\kappa_1^4=\lambda^4$. Total $\lambda^4+6\lambda^3+7\lambda^2+\lambda$; at $\lambda=10$: $10000+6000+700+10=16710$.
-> 13. $z=(5.5-10)/\sqrt{10}=-1.423$: $\Phi=0.0774$; $\phi(z)=0.1455$, $z^2-1=1.025$, $\gamma_1=0.3162$: correction $\frac{0.3162}{6}\times1.025\times0.1455=0.0079$; Edgeworth $0.0774-0.0079=0.0695$. Exact $0.0671$: error $0.0024$ (against $0.0103$ for the Gaussian).
+> 13. $z=(5.5-10)/\sqrt{10}=-1.423$: $\Phi=0.0774$; $\phi(z)=0.1449$, $z^2-1=1.025$, $\gamma_1=0.3162$: correction $\frac{0.3162}{6}\times1.025\times0.1455=0.0079$; Edgeworth $0.0774-0.0079=0.0695$. Exact $0.0671$: error $0.0024$ (against $0.0103$ for the Gaussian).
 > 14. $\sum_i(i-4.5)e^{-\lambda i}=0$ gives $\lambda=-0.37105$; $p=(0.0544,0.0788,0.1142,0.1654,0.2398,0.3475)$; $\ln Z=3.2833$, $S=\ln Z+\lambda\cdot4.5=1.6136$ nats ($<\ln6=1.7918$).
 > 15. $I=1-H_2(0.1)=1-0.469=0.531$ bit per bit sent: $10^6$ bits can carry at most $5.31\times10^5$ information bits reliably (the rest of the capacity is spent on redundancy).
 > 16. $|T|\approx e^{NS}=e^{325.1}=2^{469}$: $469$ bits per $1000$ flips ($0.469$ bit per flip) against $1$ bit per flip uncoded. With the window $\epsilon=0.05$, $\ln|T|=367.8\le375.1$.
-> 17. $\sqrt{2\pi\cdot10}(10/e)^{10}=3\,598\,696$; times $1+\frac1{120}$: $3\,628\,685$ (error $3\times10^{-5}$); times $e^{1/120}=1.008368$: $3\,628\,807$ (error $2\times10^{-6}$). The factor $e^{1/12N}$ includes the next term $1/288N^2$.
+> 17. $\sqrt{2\pi\cdot10}(10/e)^{10}=3\,598\,696$; times $1+\frac1{120}$: $3\,628\,685$ (error $3\times10^{-5}$); times $e^{1/120}=1.008368$: $3\,628\,810$ (error $3\times10^{-6}$). The factor $e^{1/12N}$ includes the next term $1/288N^2$.
 
 ## Provenance
 > [!provenance]- Source map for this chapter

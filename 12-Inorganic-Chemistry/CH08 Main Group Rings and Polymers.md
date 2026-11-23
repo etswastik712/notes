@@ -80,7 +80,7 @@ flowchart LR
 **Reactions (slide 114, Tutorial 4 Q6).** Borazine **adds** reagents across the B–N bonds, unlike benzene which substitutes: $\mathrm{B_3N_3H_6}+3\,\mathrm{Br_2}$ (0 °C) gives the **addition product** (a B-tribromo-N-tribromo cyclohexane-like $\mathrm{B_3N_3H_6Br_6}$) which on **heating loses $3\,\mathrm{HBr}$** to give the B-tribromoborazine; **$\mathrm{HCl}$ adds** to give $\mathrm{B_3N_3H_9Cl_3}$ (Cl on B, H on N: the polar $\mathrm{H^{\delta+}{-}Cl^{\delta-}}$ adds in the sense $\mathrm{B^{\delta+}{-}Cl}$, $\mathrm{N^{\delta-}{-}H}$), and loses $3\,\mathrm H_2$ on heating to **B-trichloroborazine**. **Benzene under the same conditions does *not* react with HCl** (the slide's boxed "no reaction") and needs a Lewis acid for substitution ($\mathrm{Br_2/AlCl_3}\to\mathrm{C_6H_5Br}$): the contrast between the *polar, addition-prone* and the *non-polar, substitution-prone* ring. Like benzene, borazine can be a **$\pi$ ligand**: $\mathrm{Cr(CO)_6}$ with benzene gives $\mathrm{Cr(C_6H_6)(CO)_3}$, and the analogous borazine tricarbonyl forms (with a puckered ring; Tutorial 4 Q6).
 
 > [!pitfall] "Isoelectronic" is not "identical"
-> Replacing C–C by B–N preserves the electron count but not the electronegativity. The same logic makes graphite (white **hexagonal BN**, an *insulator* with a 5–6 eV gap) differ from graphite (a semimetal), and makes $\mathrm{H_3N{-}BH_3}$ (ammonia–borane) a solid melting near 110 °C (the dative N→B bond is strongly polar, dipole ≈ 5 D, recalled) while its isoelectronic partner ethane is a gas.
+> Replacing C–C by B–N preserves the electron count but not the electronegativity. The same logic makes **hexagonal BN** ("white graphite", with graphite's layered structure but an *insulator* with a 5–6 eV gap) differ from graphite (a semimetal), and makes $\mathrm{H_3N{-}BH_3}$ (ammonia–borane) a solid melting near 110 °C (the dative N→B bond is strongly polar, dipole ≈ 5 D, recalled) while its isoelectronic partner ethane is a gas.
 
 ## 3. Boron–nitrogen rings and polymers
 <span class="scope-taught">taught</span> *slides 113, 115, Tutorial 4 Q7* · <span class="scope-extra-beyond">extra · beyond</span> *balanced equation, ceramic yield*
@@ -89,7 +89,7 @@ flowchart LR
 
 **Substituted borazines (slide 113).**
 * $3\mathrm{BCl_3}+3\mathrm{NH_4Cl}\to\mathrm{Cl_3B_3N_3H_3}+9\,\mathrm{HCl}$ (**B-trichloroborazine**; the slide also lists "+ 3LiCl" in the equation, which has no source of Li: `[verify]` a slip),
-* $\mathrm{Cl_3B_3N_3H_3}+6\,\mathrm{NaBH_4}\to2\,\mathrm{B_3N_3H_6}+2\,\mathrm{B_2H_6}+6\,\mathrm{NaCl}$ (reduction of B–Cl by hydride),
+* $2\,\mathrm{Cl_3B_3N_3H_3}+6\,\mathrm{NaBH_4}\to2\,\mathrm{B_3N_3H_6}+3\,\mathrm{B_2H_6}+6\,\mathrm{NaCl}$ (reduction of B–Cl by hydride; each B–Cl takes an H⁻ from $\mathrm{BH_4^-}$, and the leftover $\mathrm{BH_3}$ dimerises. Balance: B $6+6=6+6$, N $6=6$, H $6+24=12+18$, Na and Cl $6=6$ ✓. The version with one $\mathrm{Cl_3B_3N_3H_3}$ giving two borazines does not balance (N 3 against 6); `[verify]` against the slide's printed equation),
 * **N- and B-substituted:** $3\,\mathrm{RBCl_2}+\dots\,\mathrm{R'NH_2}\to\mathrm{R_3B_3N_3R'_3}+\dots$. The slide writes $3\mathrm{RBCl_2}+6\mathrm{R'NH_2}\to\mathrm{R_3B_3N_3R'_3}+3[\mathrm{R'NH_3}]\mathrm{Cl}$, which does not balance (Cl: 6 against 3; N: 6 against 6 with H missing); **the balanced version** is
  $$3\,\mathrm{RBCl_2}+9\,\mathrm{R'NH_2}\to\mathrm{R_3B_3N_3R'_3}+6\,[\mathrm{R'NH_3}]\mathrm{Cl},$$
  (three amines build the ring, six take up the six HCl: B 3=3, R 3=3, Cl 6=6, N 9=3+6, R′ 9=3+6, H 18=18 ✓) `[verify]`.
@@ -156,7 +156,7 @@ Heating $(\mathrm{NPCl_2})_3$ at **210–250 °C** causes **ring-opening polymer
 > 7. $7600/78.49=96.8\approx97$ rings.
 > 8. Each P has two $d$ orbitals of π type that hybridise into two orthogonal orbitals, one pointing to each neighbouring N: each hybrid overlaps with the N $p_\pi$ on its side, forming a 3-centre π bond over $\mathrm{N{-}P{-}N}$ with a node at P (the hybrids are orthogonal so no conjugation *through* P): three equivalent islands around the ring, so all bonds are equivalent and partially double.
 > 9. $\mathrm{P_3N_3F_6}$; $\mathrm{P_3N_3(OCH_2CF_3)_6}$; $[\mathrm{N{=}PCl_2}]_n$.
-> 10. Repeat masses: $\mathrm{NPCl_2}$ 115.86 g/mol; $\mathrm{N{=}P(OCH_2CF_3)_2}$: $14.007+30.974+2\times99.05=243.1$ g/mol with $\mathrm{OCH_2CF_3}=99.05$ ($\mathrm{O}$ 16.00, $\mathrm{C_2}$ 24.02, $\mathrm{H_2}$ 2.016, $\mathrm{F_3}$ 57.00). Ratio $=243.0/115.86=2.10$: 1 kg gives **2.10 kg**.
+> 10. Repeat masses: $\mathrm{NPCl_2}$ 115.86 g/mol; $\mathrm{N{=}P(OCH_2CF_3)_2}$: $14.007+30.974+2\times99.03=243.0$ g/mol with $\mathrm{OCH_2CF_3}=99.03$ ($\mathrm{O}$ 15.999, $\mathrm{C_2}$ 24.022, $\mathrm{H_2}$ 2.016, $\mathrm{F_3}$ 56.995). Ratio $=243.0/115.86=2.10$: 1 kg gives **2.10 kg**.
 
 > [!connection] Group theory used here
 > $D_{3h}\cong S_3\times C_2$ and its semidirect structure: [[GT08 Solvable Groups and Complements]]; see [[Where Groups Appear in the Vault]].

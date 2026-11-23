@@ -76,7 +76,7 @@ $$C_V=\frac f2Nk_B,\qquad C_P=C_V+Nk_B=\frac{f+2}2Nk_B,\qquad\boxed{\ \gamma\equ
 | diatomic (N$_2$, O$_2$), rotation active, vibration frozen | 5 | 5/2 | 7/2 | $7/5=1.400$ |
 | polyatomic non-linear (rotating), vibrations frozen | 6 | 3 | 4 | $4/3=1.333$ |
 
-**Air** is mostly N$_2$ and O$_2$, so $\gamma=1.40$, $c_v=\tfrac52R_d=717.5$ and $c_p=\tfrac72R_d=1004.5$ J kg$^{-1}$K$^{-1}$ (checked). The vibrational modes of N$_2$ and O$_2$ are frozen at ordinary temperatures because $\hbar\omega\gg k_BT$; whether a mode counts is decided by the ratio $x=\hbar\omega/k_BT$ ([[QM05 The Harmonic Oscillator]], [[TH06 From Kinetic Theory to Statistical Mechanics]]). In CO$_2$ the $15\,\mu$m bend has $x=3.3$ at 288 K, so it is **partly** excited (a heat-capacity contribution of $0.43k_B$).
+**Air** is mostly N$_2$ and O$_2$, so $\gamma=1.40$, $c_v=\tfrac52R_d=717.5$ and $c_p=\tfrac72R_d=1004.5$ J kg$^{-1}$K$^{-1}$ (checked). The vibrational modes of N$_2$ and O$_2$ are frozen at ordinary temperatures because $\hbar\omega\gg k_BT$; whether a mode counts is decided by the ratio $x=\hbar\omega/k_BT$ ([[QM05 The Harmonic Oscillator]], [[TH06 From Kinetic Theory to Statistical Mechanics]]). In CO$_2$ the $15\,\mu$m bend has $x=3.3$ at 288 K, so it is **partly** excited: $0.43k_B$ of heat capacity per mode, and the bend is doubly degenerate, so about $0.86k_B$ per molecule in all.
 
 ![[fig_th03_gas.png]]
 *Figure TH3.1. A: temperature after reversible adiabatic compression of a gas initially at 300 K. B: the speed of sound in air, adiabatic and isothermal. C: $\gamma=1+2/f$.*
@@ -206,7 +206,7 @@ the **dry adiabatic lapse rate** (with $g=9.807$ m s$^{-2}$, $c_p=1004$ J kg$^{-
 > 5. $c_{\rm He}=\sqrt{(5/3)\,8.314\times293.15/0.004003}=1007$ m s$^{-1}$; $c_{\rm CO_2}=\sqrt{1.30\times8.314\times293.15/0.0440}=268$ m s$^{-1}$. $c\propto\sqrt{T}$ because $P/\rho=RT/M$: pressure cancels in $\sqrt{\gamma P/\rho}$.
 > 6. $g/c_p=9.807/1004=9.77$ K km$^{-1}$. After 2.4 km: $25-23.4=1.6$ °C. At 5 K km$^{-1}$ it would be $25-12=13$ °C: $11.4$ K warmer.
 > 7. $PV=$ const gives $(\mathrm dP/\mathrm dV)_T=-P/V$; $PV^\gamma=$ const gives $(\mathrm dP/\mathrm dV)_S=-\gamma P/V$. The ratio is $\gamma>1$.
-> 8. $\gamma=1+2/8=1.25$. CO$_2$'s experimental $\approx1.30$ lies between $f=6$ ($1.33$) and $f=8$ ($1.25$), i.e. $f\approx7$: the vibrational modes are partly excited (they freeze out when $\hbar\omega\gg k_BT$; the 15 µm bend has $x=3.3$).
+> 8. $\gamma=1+2/8=1.25$. CO$_2$ is **linear**, so it has 3 translations and only **2** rotations: with vibrations frozen $f=5$ and $\gamma=1.40$. The measured $\gamma\approx1.30$ gives $C_V/R=1/(\gamma-1)=3.33$, i.e. $f\approx6.7$: about 1.7 extra quadratic terms. That is the doubly degenerate 15 µm bend, partly excited ($x=3.3$, $0.43k_B$ per mode, $0.86k_B\approx1.7\times\tfrac12k_B$ in all; §2). A fully excited vibration would contribute 2 quadratic terms ($k_B$) per mode.
 > 9. $\kappa_T=1/P$ and $K_S=\gamma P$ so $\kappa_S=1/(\gamma P)=\kappa_T/\gamma$. $c=\sqrt{K_S/\rho}=1/\sqrt{\rho\kappa_S}$.
 > 10. Up from 500 m to 2500 m (2 km) at 5 K km$^{-1}$: $10-10=0$ °C. Down 2 km dry at $9.77$ K km$^{-1}$: $0+19.5=19.5$ °C. The lee-side air is $9.5$ K warmer than it started (the foehn effect).
 

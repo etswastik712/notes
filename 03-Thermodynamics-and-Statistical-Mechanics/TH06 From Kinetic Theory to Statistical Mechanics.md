@@ -111,7 +111,7 @@ The mean free path also sets the **transport coefficients** (viscosity, thermal 
 *Proof for one term.* With weight $e^{-\kappa x^2/2k_BT}$, $\langle\tfrac12\kappa x^2\rangle=\dfrac{\int\frac12\kappa x^2e^{-\kappa x^2/2k_BT}\mathrm dx}{\int e^{-\kappa x^2/2k_BT}\mathrm dx}=\tfrac12k_BT$ ([[Gaussian Integral]]). An oscillator has two quadratic terms (kinetic and potential), so $E=k_BT$ and $C=k_B$.
 
 > [!pitfall] Freeze-out
-> A degree of freedom with level spacing $\hbar\omega\gg k_BT$ cannot be excited and contributes nothing to $C_V$. At room temperature N$_2$ and O$_2$ have $f=5$ (vibrations frozen), giving $\gamma=1.40$; and the CO$_2$ bend ($x=3.3$) contributes only $0.43k_B$ (§6). Equipartition is the classical limit $x\to0$ of the quantum results.
+> A degree of freedom with level spacing $\hbar\omega\gg k_BT$ cannot be excited and contributes nothing to $C_V$. At room temperature N$_2$ and O$_2$ have $f=5$ (vibrations frozen), giving $\gamma=1.40$; and the CO$_2$ bend ($x=3.3$) contributes only $0.43k_B$ per mode (§6; the bend is doubly degenerate, so $0.86k_B$ per molecule). Equipartition is the classical limit $x\to0$ of the quantum results.
 
 ## 5. Microstates and the Sackur-Tetrode entropy
 <span class="scope-extra-book">extra · book</span> *`Thermo_StatMech_Notes.pdf` §3–4; formulas checked below*

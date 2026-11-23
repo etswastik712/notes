@@ -110,7 +110,7 @@ The factors in $E^\circ(\mathrm{M^+,M})$ follow from a thermodynamic cycle for $
 *Figure CH9.1. Redox quantities. A: $\log_{10}K$ against $E^\circ_{\rm cell}$ for $\nu=1$ (blue) and $\nu=2$ (orange): $\pm2$ V is $K=10^{\pm34}$ for one electron, a **range of 68 decades** (Table 5.3); the Daniell cell (1.10 V, $\nu=2$) has $K=10^{37.2}$. B: the Nernst equation: $E$ against $\log Q$ for the Daniell cell (slope $-29.6$ mV per decade) and for $\mathrm{MnO_4^-}+5\mathrm{Fe^{2+}}$ (slope $-11.8$ mV per decade, $\nu=5$) falls to zero at $Q=K$ ($10^{37.2}$ and $10^{62.5}$). C: the cycle terms of Table 5.1 as stacked bars (blue: sublimation; orange: ionisation; green: hydration): the black bar is their sum; subtracting 445 kJ/mol (dashed) and $T\Delta S$ gives $\Delta G$ and $E^\circ$ above each bar.*
 
 > [!key] Reading the trends (slide-free, S&A §5.3)
-> * **Group 1:** $\mathrm{Li^+/Li}$ ($-3.04$ V) is *more* negative than $\mathrm{Cs^+/Cs}$ ($-2.94$ V) although Li has the *higher* electronegativity (2.20 vs 0.79), the higher sublimation enthalpy and the higher ionisation energy: **Li's tiny ion (90 pm, against Cs 181 pm) has a huge hydration enthalpy ($-520$ against $-264$ kJ/mol) which outweighs the other two** (a $-3.04$ V potential is "hydration-driven"). Na ($-2.71$ V) is anomalously high: high sublimation, moderate hydration.
+> * **Group 1:** $\mathrm{Li^+/Li}$ ($-3.04$ V) is *more* negative than $\mathrm{Cs^+/Cs}$ ($-2.92$ V, Table 5.1) although Li has the *higher* electronegativity (2.20 vs 0.79), the higher sublimation enthalpy and the higher ionisation energy: **Li's tiny ion (90 pm, against Cs 181 pm) has a huge hydration enthalpy ($-520$ against $-264$ kJ/mol) which outweighs the other two** (a $-3.04$ V potential is "hydration-driven"). Na ($-2.71$ V) is anomalously high: high sublimation, moderate hydration.
 > * **Na vs Ag:** the ions have similar size (102 and 115 pm, so similar $\Delta_{\rm hyd}H$) but $E^\circ(\mathrm{Na^+/Na})=-2.71$ V and $E^\circ(\mathrm{Ag^+/Ag})=+0.80$ V because of **Ag's much higher sublimation (284) and ionisation (735 kJ/mol; poor screening by $4d$)**. Hence the contrasting behaviour with water: Na reacts explosively, Ag is inert.
 
 ## 4. The electrochemical series
@@ -204,7 +204,7 @@ A species **disproportionates** when it is both oxidant and reductant for itself
 | $\mathrm{Cu^+}$ | $2\mathrm{Cu^+}\to\mathrm{Cu^{2+}}+\mathrm{Cu}$ ($0.52-0.16$) | **0.36 V** | $1.2\times10^{6}$ (book: $1.3\times10^6$) |
 | HClO | $5\mathrm{HClO}\to2\mathrm{Cl_2}+\mathrm{ClO_3^-}+2\mathrm{H_2O}+\mathrm H^+$ ($1.63-1.43$) | 0.20 V, $\nu=4$ | $3\times10^{13}$ |
 | Mn(VI) $\mathrm{HMnO_4^-}$ | $5\mathrm{HMnO_4^-}+3\mathrm H^+\to4\mathrm{MnO_4^-}+\mathrm{Mn^{2+}}+4\mathrm{H_2O}$ ($1.63-0.90$) | **0.73 V**, $\nu=4$ | $10^{49.4}\approx10^{50}$ |
-| $\mathrm{Fe^{2+}}$ (self-test 5.6) | $\mathrm{Fe^{2+}\to Fe+Fe^{3+}}$ ($-0.41-0.77$) | **−1.18 V** | $10^{-20}$: **does not** disproportionate |
+| $\mathrm{Fe^{2+}}$ (self-test 5.6) | $3\mathrm{Fe^{2+}}\to\mathrm{Fe}+2\mathrm{Fe^{3+}}$ ($-0.41-0.77$) | **−1.18 V**, $\nu=2$ | $10^{-39.9}$: **does not** disproportionate |
 
 **Comproportionation** is the reverse: $\mathrm{Ag^{2+}+Ag\to2Ag^+}$, $E^\circ_{\rm cell}=+1.18$ V, $K=10^{19.9}\approx1\times10^{20}$ ($\nu=1$): Ag(II) and Ag(0) are completely converted to Ag(I). Consequence: **high concentrations of Mn(VI) cannot be had in acid**, but can in base (where $\mathrm{MnO_4^{2-}}$ is stable); $\mathrm{Cu^+}$ is stable only when insoluble ($\mathrm{CuCl}$) or complexed.
 
@@ -280,7 +280,7 @@ A **Frost diagram** plots $NE^\circ$ (the free energy per $F$ of forming each st
 > 3. $\mathrm{Ag^+(aq)+\tfrac12H_2\to Ag+H^+}$: $\Delta G=-77.1$ kJ/mol, so $E^\circ=77100/96485=+0.80$ V.
 > 4. $\mathrm{Fe^{2+}}$ (0.77): yes ($+0.61$ V); $\mathrm{Cl^-}$ (1.36): marginal ($+0.02$ V); $\mathrm{Br^-}$ (1.09): $E_{\rm cell}=0.29$ V, thermodynamically yes (though slowly).
 > 5. $E=1.51-\tfrac85(0.05916)(3)=1.51-0.284=1.226$ V.
-> 6. Window $E_{\rm low}=-0.059\,\mathrm{pH}$, $E_{\rm high}=1.23-0.059\,\mathrm{pH}$: pH 4: $-0.24$ to $+0.99$ V; pH 9: $-0.53$ to $+0.70$ V. $\mathrm{Fe^{3+}/Fe^{2+}}$ at $0.77$ V is inside at pH 4 and **above** the window at pH 9 (an $\mathrm{Fe^{3+}}$-forming couple would oxidise water): in practice $\mathrm{Fe^{2+}}$ is oxidised by $\mathrm{O_2}$ in either (§8) and Fe(III) precipitates as hydroxide at pH 9, so the 0.77 V figure no longer applies.
+> 6. Window $E_{\rm low}=-0.059\,\mathrm{pH}$, $E_{\rm high}=1.23-0.059\,\mathrm{pH}$: pH 4: $-0.24$ to $+0.99$ V; pH 9: $-0.53$ to $+0.70$ V. $\mathrm{Fe^{3+}/Fe^{2+}}$ at $0.77$ V is inside at pH 4 and **above** the window at pH 9 ($\mathrm{Fe^{3+}}$ would then be able to oxidise water to $\mathrm O_2$): in practice $\mathrm{Fe^{2+}}$ is oxidised by $\mathrm{O_2}$ in either (§8) and Fe(III) precipitates as hydroxide at pH 9, so the 0.77 V figure no longer applies.
 > 7. Left potential (to $\mathrm{HClO_2}$) 1.18 V, right (to HClO) 1.67 V: right > left, so $\mathrm{HClO_2}$ **does** disproportionate: $E^\circ=1.67-1.18=0.49$ V. 
 > 8. $0.41-0.77=-0.36$ V: **Fe(III)** is preferred; $K_{\rm ox}/K_{\rm red}=10^{0.36/0.0592}=10^{6.1}$ (×1.2 million).
 > 9. $\partial E^\circ/\partial T=\Delta S^\circ/\nu F=-120/(2\times96485)=-6.2\times10^{-4}$ V/K $=-0.62$ mV/K.

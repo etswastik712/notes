@@ -96,7 +96,7 @@ Oxo acids occur where the central element is in a **high oxidation state**. Thei
 > | 2 | $\approx-2$ (strong) | $\mathrm{HNO_3}$ −1.4, $\mathrm{HClO_3}$ −1.0, $\mathrm{H_2SO_4}$ −3 |
 > | 3 | $\approx-7$ (very strong) | $\mathrm{HClO_4}$ −8 |
 >
-> Agreement is within ±1.7 for all but periodate. **Successive $\mathrm pK_a$'s of $\mathrm{H_3PO_4}$: 2.15, 7.20, 12.35, steps 5.05 and 5.15**, as the second rule says. *The rule works because each additional oxo group allows the anion's charge to be delocalised over one more oxygen.* (Outliers: $\mathrm{HIO_4}$ 5-coordinate in water; $\mathrm{H_2CO_3}$ is exceptional because most dissolved $\mathrm{CO_2}$ is not $\mathrm{H_2CO_3}$.)
+> Agreement is within ±1.7 for every acid in the table (the largest miss is $\mathrm{H_3PO_3}$, 1.3 against 3); the known outliers, periodic and carbonic acid, are not in the table and are explained at the end of this box. **Successive $\mathrm pK_a$'s of $\mathrm{H_3PO_4}$: 2.15, 7.20, 12.35, steps 5.05 and 5.15**, as the second rule says. *The rule works because each additional oxo group allows the anion's charge to be delocalised over one more oxygen.* (Outliers: $\mathrm{HIO_4}$ 5-coordinate in water; $\mathrm{H_2CO_3}$ is exceptional because most dissolved $\mathrm{CO_2}$ is not $\mathrm{H_2CO_3}$.)
 
 > [!example] The inductive series, quantified (🔵)
 > | acid | $\mathrm pK_a$ | $K_a$ | × acetic |

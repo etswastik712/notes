@@ -116,7 +116,7 @@ It peaks at $f=\tfrac12$ with $\ln\Omega_{\max}\simeq N\ln2$ and, expanding abou
 >
 > The probability of the *single* most probable macrostate falls like $1/\sqrt N$ (more outcomes), while the probability of "within $1\%$ of it" rises to 1 like $\operatorname{erf}(0.01\sqrt{2N})$. For $N=100$: $P(k\ge60)=0.0284$, $P(k=100)=2^{-100}=7.9\times10^{-31}$.
 
-*Energy as the macrostate.* In a field $B$ each spin has energy $\mp\mu B$, so $U=-(N_\uparrow-N_\downarrow)\mu B$ and the energy macrostate is the same as the count of up spins: $S(U)=k_B\ln\binom N{N_\uparrow}$, and $1/T=\partial S/\partial U$ (§4) gives $kT=2\mu B/\ln\frac{N_\downarrow}{N_\uparrow}$ ($N_\uparrow<N/2$ means $U>0$ and $T<0$, SM02 §5; [[Negative Temperature]]).
+*Energy as the macrostate.* In a field $B$ each spin has energy $\mp\mu B$, so $U=-(N_\uparrow-N_\downarrow)\mu B$ and the energy macrostate is the same as the count of up spins: $S(U)=k_B\ln\binom N{N_\uparrow}$, and $1/T=\partial S/\partial U$ (§4) gives $kT=2\mu B/\ln\frac{N_\uparrow}{N_\downarrow}$. (Derivation: $N_\uparrow=\tfrac12(N-U/\mu B)$, so $\partial S/\partial U=k_B\ln\frac{N_\downarrow}{N_\uparrow}\cdot\frac{-1}{2\mu B}$, using $\mathrm d\ln\binom Nn/\mathrm dn=\ln\frac{N-n}{n}$.) More up spins than down (the low-energy, aligned majority) gives $T>0$; $N_\uparrow<N/2$ means $U>0$ and $T<0$ (SM02 §5; [[Negative Temperature]]).
 
 ### 3.2 The Einstein solid
 A solid of $N$ oscillators sharing $q$ indistinguishable quanta of energy $\varepsilon$ has
