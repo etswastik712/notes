@@ -29,7 +29,7 @@ tags: [subject/probability, type/chapter, taught, extra/book, extra/beyond, src/
 > - §3–§5 the hypergeometric mean by indicators, the name "negative binomial" (series of $(1-q)^{-m}$), the Poisson as a model for rare events; first-step analysis for the geometric mean (Blitzstein and Hwang)
 >
 > 🔵 **Extra · beyond** (my additions, labelled)
-> - §5 an error bound for the Poisson limit (total variation $\approx c^2/(2n)$), checked numerically; the distribution-family diagram; the coupon-collector law via inclusion-exclusion; all numbers recomputed (`scripts/pr_numbers.py`)
+> - §5 an error bound for the Poisson limit (total variation $\le c^2/n$, Le Cam; the actual distance for $c=3.2$ is about $0.8/n$), checked numerically; the distribution-family diagram; the coupon-collector law via inclusion-exclusion; all numbers recomputed (`scripts/pr_numbers.py`)
 
 > [!key] After this chapter you can
 > - define a **random variable**, its **pmf** and **cdf**, and recover one from the other, including from a step-function cdf,
@@ -124,7 +124,7 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 > Heads probabilities $0.6$ and $0.7$, independent; $X$ = total heads. $P[X=0]=0.4\cdot0.3=0.12$, $P[X=1]=0.6\cdot0.3+0.4\cdot0.7=0.46$, $P[X=2]=0.42$, and $E[X]=0.6+0.7=1.3$. It is **not** binomial (the probabilities differ), yet linearity still gives the mean.
 
 > [!key] Discrete uniform
-> On a finite set $\Omega$: $P[X=x]=1/|\Omega|$. For $\{1,\dots,n\}$, $E[X]=\tfrac{n+1}2$. Example: the **maximum** of 5 slips drawn from 100 has $E[X]=5\cdot101/6=84.17$ (🔵).
+> On a finite set $\Omega$: $P[X=x]=1/|\Omega|$. For $\{1,\dots,n\}$, $E[X]=\tfrac{n+1}2$. 🔵 A related but *different* law: the **maximum** of 5 slips drawn without replacement from $\{1,\dots,100\}$ is **not** uniform; its mean is $k(N+1)/(k+1)=5\cdot101/6=84.17$ (the 5 slips cut $\{0,\dots,101\}$ into 6 gaps of equal expected length $101/6$, and the maximum sits 5 gaps up).
 
 > [!key] The hypergeometric
 > An urn has $w$ white and $b$ black balls; draw $n$ without replacement; $X$ = number of white balls:
@@ -186,7 +186,7 @@ For a discrete rv it is a **step function** with a jump of height $p(x_i)$ at $x
 > *Mean:* $E[X]=\sum_{n\ge1}n\,e^{-\lambda}\dfrac{\lambda^n}{n!}=\lambda e^{-\lambda}\sum_{n\ge1}\dfrac{\lambda^{n-1}}{(n-1)!}=\lambda$.
 
 > [!example] How good is the approximation? (🔵)
-> $P[X\le2]$ for Poisson$(3.2)$ is $0.3799$; for Binomial$(100,0.032)$ it is $0.3758$ and for Binomial$(1000,0.0032)$ it is $0.3795$. The total-variation distance between Binomial$(n,3.2/n)$ and Poisson$(3.2)$ is $0.0080$ at $n=100$, $0.00079$ at $n=1000$ and $0.00008$ at $n=10{,}000$: it shrinks like $1/n$ (Figure PR3.1 C), consistent with the known bound $\mathrm{TV}\le c^2/n$ for these laws.
+> $P[X\le2]$ for Poisson$(3.2)$ is $0.3799$; for Binomial$(100,0.032)$ it is $0.3758$ and for Binomial$(1000,0.0032)$ it is $0.3795$. The total-variation distance between Binomial$(n,3.2/n)$ and Poisson$(3.2)$ is $0.0080$ at $n=100$, $0.00079$ at $n=1000$ and $0.00008$ at $n=10{,}000$: it shrinks like $1/n$ (Figure PR3.1 C), well inside the known bound $\mathrm{TV}\le c^2/n$ (Le Cam: $0.102$ at $n=100$) and the sharper $\mathrm{TV}\le(1-e^{-c})\,c/n$ (Barbour–Hall: $0.031$); here TV $=\tfrac12\sum_k|p_{\rm bin}(k)-p_{\rm Poi}(k)|$.
 
 > [!pitfall] Poisson mean equals variance
 > This is the signature of a Poisson count. Real count data with variance larger than the mean (**over-dispersion**) are not Poisson; see the negative binomial as a mixture ([[Negative Binomial Distribution]]). The variance is derived in [[PR04 Joint Distributions Expectation and Variance]].

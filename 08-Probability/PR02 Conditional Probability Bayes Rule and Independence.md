@@ -99,7 +99,7 @@ More generally, if $E_1,\dots,E_n$ are pairwise disjoint with $\bigcup E_i=\Omeg
 > [!example] The disease test (class, 19 Aug)
 > A test detects the disease (D) in 95 % of the ill and gives a false positive for 1 % of the healthy; 0.5 % of the population is ill. Then
 > $$P[D\mid+]=\frac{0.95\times0.005}{0.95\times0.005+0.01\times0.995}=\frac{0.00475}{0.01470}=0.323 .$$
-> Only about **one positive in three** is a real case, because the healthy are so numerous that even 1 % false positives (99.5 per 10,000) outnumber the 47.5 true ones. 🔵 With the same test the posterior rises to $0.68$ at 10 % prevalence and $0.95$ at 50 % (for the 95 %/5 % test of the next example).
+> Only about **one positive in three** is a real case, because the healthy are so numerous that even 1 % false positives (99.5 per 10,000) outnumber the 47.5 true ones. 🔵 The posterior rises quickly with prevalence: for this 95 %/1 % test it is $0.91$ at 10 % prevalence and $0.99$ at 50 %; for the weaker 95 %/5 % test of the next example, $0.68$ and $0.95$ (Fig. PR2.1A).
 
 > [!example] Plane search (class, 19 Aug)
 > A plane is equally likely ($\tfrac13$ each) to be in region 1, 2 or 3. If the plane is in region $i$, a search of that region finds it with probability $1-\beta_i$. Search region 1 finds nothing. Then

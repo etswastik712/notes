@@ -108,7 +108,7 @@ It is useful but not abstract (it needs equal likelihood and finiteness).
 > 3. for pairwise disjoint $E_1,E_2,\dots$ ($E_i\cap E_j=\varnothing$, $i\ne j$): $P\big(\bigcup_{i=1}^\infty E_i\big)=\sum_{i=1}^\infty P(E_i)$.
 
 **Consequences** (all derived in class):
-- $P(\varnothing)=0$: $1=P(S)=P(S\cup\varnothing)=P(S)+P(\varnothing)$. Hence **finite additivity** by padding with empty sets.
+- $P(\varnothing)=0$: the sets $S,\varnothing,\varnothing,\dots$ are pairwise disjoint with union $S$, so axiom 3 gives $P(S)=P(S)+\sum_{i\ge2}P(\varnothing)$; a sum of infinitely many copies of the same number $P(\varnothing)\ge0$ can be $0$ only if $P(\varnothing)=0$. (Only *countable* additivity is available at this point; using $P(S\cup\varnothing)=P(S)+P(\varnothing)$ would assume the finite additivity we are about to derive.) Hence **finite additivity**: pad $E_1,\dots,E_n$ with $E_{n+1}=E_{n+2}=\dots=\varnothing$ and apply axiom 3.
 - $P(E^c)=1-P(E)$, since $E$ and $E^c$ are disjoint with union $S$.
 - If $E\subset F$: $P(F)=P(E)+P(F\setminus E)\ge P(E)$ (**monotonicity**), and $P(F\setminus E)=P(F)-P(E)$ (sheet 7 Aug, problem 12).
 - For equally likely finite $S=\{1,\dots,N\}$, $P(\{i\})=1/N$ and $P(E)=|E|/N$ (the naive definition is a special case).

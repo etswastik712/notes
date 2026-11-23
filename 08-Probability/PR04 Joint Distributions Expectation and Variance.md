@@ -124,7 +124,7 @@ $$P[X_1=a_i]=\sum_jp(a_i,b_j),\qquad P[X_2=b_j]=\sum_ip(a_i,b_j).$$
 > $E[X]=\tfrac72$, $E[X^2]=\tfrac{91}6$, $\mathrm{Var}[X]=\tfrac{91}6-\tfrac{49}4=\tfrac{35}{12}=2.917$. For the sum of two independent dice, $\mathrm{Var}=2\cdot\tfrac{35}{12}=\tfrac{35}6=5.833$ (recomputed from the 36-point space), and $\mathrm{Var}[2X+3]=4\cdot\tfrac{35}{12}=11.67$.
 
 > [!pitfall] $\mathrm{Var}[X+Y]\ne\mathrm{Var}[X]+\mathrm{Var}[Y]$ in general
-> It holds when $X,Y$ are independent (§6). For the dependent (sum, max) pair, no such formula is available.
+> It holds when $X,Y$ are independent (§6). For a dependent pair such as (sum, max) a **covariance** term must be added: $\mathrm{Var}[S+M]=\mathrm{Var}[S]+\mathrm{Var}[M]+2\,\mathrm{Cov}(S,M)$, with $\mathrm{Cov}=\tfrac{35}{12}$ here (§6).
 
 > [!key] Standardisation (11–12 Sep sheet, problem 9)
 > If $E[X]=\mu$ and $\mathrm{Var}[X]=\sigma^2$, then $Y=\dfrac{X-\mu}\sigma$ has $E[Y]=0$, $\mathrm{Var}[Y]=1$. For discrete $X$: $P[Y=y]=p(\mu+\sigma y)$ and $F_Y(y)=F_X(\mu+\sigma y)$.

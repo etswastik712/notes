@@ -62,7 +62,7 @@ A **microstate** says where every particle is and how fast it moves; a **macrost
 | extensive | $N^1$ | $E$, $S$, $V$, magnetisation $M$ |
 | exponential | $e^{N\cdot\text{const}}$ | number of microstates, phase-space volume, probabilities of rare events |
 
-Other scalings are not forbidden but rare in practice: the Coulomb energy of $N$ ions at fixed density would go as $Q^2/R\sim N^{5/3}$, but charges are screened by counter-ions and the energy is extensive after all (SM29, planned); the gravitational energy of a star is *not* screened, and the thermodynamics of self-gravitating systems is correspondingly strange (negative specific heats, SM27, planned).
+Other scalings are not forbidden but rare in practice: the Coulomb energy of $N$ ions at fixed density would go as $Q^2/R\sim N^{5/3}$, but charges are screened by counter-ions and the energy is extensive after all (SM29, planned); the gravitational energy of a star is *not* screened, and the thermodynamics of self-gravitating systems is correspondingly strange (negative specific heats: [[SM07 Equipartition the Virial Theorem and Magnetic Systems]] §4).
 
 > [!intuition] Why "exponential" is the word that matters
 > Multiply the number of ways by 2 for each of $N$ spins and you get $2^N$. Doubling $N$ *squares* the number of states. Compare two macrostates whose entropies per particle differ by even $10^{-3}$: their state counts differ by $e^{10^{-3}N}=e^{6\times10^{20}}$ for a mole ($N=6\times10^{23}$). A system lives in the macrostate with the most microstates because the alternatives are not merely rarer, they are *incomparably* rarer. All of §5–§7 is a calculus for these numbers.
