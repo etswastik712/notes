@@ -137,7 +137,7 @@ A form is a **tautology** if true under every assignment, a **contradiction** if
 > $0\ne1$ and $5<7$ are true, but their truth comes from the axioms of the number system, not from their form; they are **not** tautologies. $(P\wedge Q)\Rightarrow P$ is a tautology: every statement of that shape is true.
 > Hence **true statement $\not\Rightarrow$ tautology**, while tautology $\Rightarrow$ true.
 
-If $P$ is any true statement then $P$ and $0\ne1$ have the same truth value ($P\sim0\ne1$ as statements); this is "material equivalence", weaker than logical equivalence of forms.
+If $P$ is any true statement then $P$ and $0\ne1$ have the same truth value, so the statement $P\Leftrightarrow(0\ne1)$ is true. This is **material equivalence**: two particular statements happen to have the same truth value. It is weaker than logical equivalence $\sim$, which requires two *forms* to agree on every row of the truth table (so $\sim$ should not be written here).
 
 | notion | applies to | decided by |
 |---|---|---|

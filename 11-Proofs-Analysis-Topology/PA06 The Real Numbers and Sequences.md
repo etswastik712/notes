@@ -86,7 +86,7 @@ The rationals $1,\tfrac32,\tfrac{17}{12},\tfrac{577}{408},\tfrac{665857}{470832}
 > For $x>0$ there is $n$ with $\frac1n<x$; and between any two reals $x<y$ there is a rational. *Proof.* Choose $n$ with $n(y-x)>1$, let $m$ be the least integer with $m>nx$ (well-ordering); then $m-1\le nx<m\le nx+1<ny$, so $x<\frac mn<y$. Likewise there is an irrational between any two reals (add $\sqrt2/N$ to a rational).
 
 > [!derivation] Square roots exist
-> For $a>0$ let $S=\{t>0:t^2<a\}$. $S\ne\varnothing$ ($t=\frac a{1+a}<1$ and $t^2<t<a$) and is bounded above by $1+a$. Put $s=\sup S$. If $s^2<a$, then for $h=\min\{1,\frac{a-s^2}{2(2s+1)}\}$ we get $(s+h)^2\le s^2+h(2s+1)<a$, so $s+h\in S$, contradicting that $s$ is an upper bound. If $s^2>a$, take $h=\frac{s^2-a}{2s}$; then $t=s-h>0$ and $t^2>s^2-2sh=a$, so $t$ is a smaller upper bound. Hence $s^2=a$; uniqueness: $x^2=y^2$ with $x,y>0$ gives $(x-y)(x+y)=0$. This is the missing step in PA04 Assignment 6 Q5 (surjectivity of $x\mapsto x^2$ on $\mathbb R_{\ge0}$).
+> For $a>0$ let $S=\{t>0:t^2<a\}$. $S\ne\varnothing$ ($t=\frac a{1+a}<1$ and $t^2<t<a$) and is bounded above by $1+a$. Put $s=\sup S$. If $s^2<a$, then for $h=\min\{1,\frac{a-s^2}{2(2s+1)}\}$ we get $(s+h)^2\le s^2+h(2s+1)<a$, so $s+h\in S$, contradicting that $s$ is an upper bound. If $s^2>a$, take $h=\frac{s^2-a}{2s}$; then $t=s-h>0$ and $t^2>s^2-2sh=a$, so $t$ is a smaller upper bound (every $x\in S$ has $x^2<a<t^2$, hence $x<t$). Hence $s^2=a$; uniqueness: $x^2=y^2$ with $x,y>0$ gives $(x-y)(x+y)=0$. This is the missing step in PA04 Assignment 6 Q5 (surjectivity of $x\mapsto x^2$ on $\mathbb R_{\ge0}$).
 
 > [!key] Absolute value and the triangle inequality
 > $|x|=x$ ($x\ge0$), $-x$ ($x<0$). (a) $|x|=0\iff x=0$; (b) $|xy|=|x||y|$; (c) $|x|<r\iff-r<x<r$; (d) $|x+y|\le|x|+|y|$; (e) $\big||x|-|y|\big|\le|x-y|$. (d): from $-|x|\le x\le|x|$ and the same for $y$, $-(|x|+|y|)\le x+y\le|x|+|y|$.
@@ -119,18 +119,19 @@ A **sequence** in $X$ is a function $\mathbb N\to X$, $n\mapsto x_n$ (a definiti
 > [!intuition] Three faces of completeness
 > Bounded monotone sequences converge; Cauchy sequences converge; bounded sequences have convergent subsequences. Each is the least-upper-bound property in a different costume.
 
-> [!key] The chain of theorems (each follows from the previous one)
+> [!key] The chain of theorems
+> *How they depend on each other:* 1 comes straight from the supremum; 2 follows from 1; 3 is pure combinatorics and holds in any ordered set; 4 combines 3 with 1; 5 uses 4. (Bolzano–Weierstrass can also be proved from 2 by repeated bisection, which is the route of Figure PA6.1 B.)
 > 1. **Monotone convergence:** a bounded increasing sequence converges to its supremum (a bounded decreasing one to its infimum). *Proof:* $s=\sup\{x_n\}$ exists; for $\varepsilon>0$ some $x_N>s-\varepsilon$ and for $n\ge N$, $s-\varepsilon<x_N\le x_n\le s$.
-> 2. **Nested intervals:** $[a_1,b_1]\supseteq[a_2,b_2]\supseteq\cdots$ (with $a_n\le b_n$) have $\bigcap[a_n,b_n]\ne\varnothing$. *Proof:* $a_n\le b_m$ for all $m,n$; $\sup a_n$ lies in every interval.
+> 2. **Nested intervals:** $[a_1,b_1]\supseteq[a_2,b_2]\supseteq\cdots$ (with $a_n\le b_n$) have $\bigcap[a_n,b_n]\ne\varnothing$. *Proof:* $a_n\le b_m$ for all $m,n$ (with $k=\max(m,n)$, nesting gives $a_n\le a_k\le b_k\le b_m$). So every $b_m$ is an upper bound of $\{a_n\}$, hence $s=\sup a_n\le b_m$, while $a_m\le s$ because $s$ is an upper bound: $s\in[a_m,b_m]$ for every $m$.
 > 3. **Monotone subsequence lemma:** every real sequence has a monotone subsequence. *Proof:* call $m$ a *peak* if $x_m\ge x_n\ \forall n>m$. Infinitely many peaks give a decreasing subsequence; finitely many leave a point beyond which every index has a later, larger term: an increasing subsequence.
 > 4. **Bolzano–Weierstrass:** every bounded real sequence has a convergent subsequence (monotone subsequence + monotone convergence).
-> 5. **Cauchy criterion:** a real sequence converges iff it is Cauchy. *Proof of ⇐:* a Cauchy sequence is bounded; by B–W some $x_{n_k}\to L$; given $\varepsilon$, choose $N$ with $|x_m-x_n|<\varepsilon/2$ for $m,n\ge N$ and $k$ with $n_k\ge N$, $|x_{n_k}-L|<\varepsilon/2$, then $|x_n-L|<\varepsilon$.
+> 5. **Cauchy criterion:** a real sequence converges iff it is Cauchy. *Proof of ⇐:* a Cauchy sequence is bounded (take $\varepsilon=1$: every term after the $N$-th lies within 1 of $x_N$, and there are only finitely many before it); by B–W some $x_{n_k}\to L$; given $\varepsilon$, choose $N$ with $|x_m-x_n|<\varepsilon/2$ for $m,n\ge N$ and $k$ with $n_k\ge N$, $|x_{n_k}-L|<\varepsilon/2$, then $|x_n-L|<\varepsilon$.
 
 ![[fig_pa06_reals.png]]
 *Figure PA6.1. A: errors of two rational sequences converging to $\sqrt2$ (the Newton iteration squares its error; the other gains a constant factor); both are Cauchy in $\mathbb Q$ but have no limit there. B: bisection gives nested intervals $[a_n,b_n]$ of width $2^{-n}$ shrinking to $\sqrt2$. C: $H_n=\sum1/k$ grows like $\ln n+\gamma$ ($H_{2000}=8.18$) while $\sum1/k^2\to\pi^2/6$.*
 
 > [!example] Applications
-> - **Monotone convergence:** $a_1=1$, $a_{n+1}=\sqrt{2+a_n}$ is increasing and bounded by 2; the limit $L$ solves $L=\sqrt{2+L}$, so $L=2$. Numerically $a_2,\dots,a_6=1.732,\,1.932,\,1.983,\,1.996,\,1.999$. Also $(1+\frac1n)^n$ increases and is bounded by 3: $2,2.25,2.488,2.594,2.705,2.718\to e$.
+> - **Monotone convergence:** $a_1=1$, $a_{n+1}=\sqrt{2+a_n}$ is increasing and bounded by 2; the limit $L$ solves $L=\sqrt{2+L}$, so $L=2$. Numerically $a_2,\dots,a_6=1.732,\,1.932,\,1.983,\,1.996,\,1.999$. Also $(1+\frac1n)^n$ increases and is bounded by 3: $2,\ 2.25,\ 2.488,\ 2.594,\ 2.705,\ 2.718$ at $n=1,2,5,10,100,10^4$, converging to $e$.
 > - **Cauchy test:** $H_{2n}-H_n\ge\tfrac12$ for every $n$ (checked), so $(H_n)$ is **not Cauchy** and diverges; $\sum1/k^2$ has tail $<\frac1{100}$ after 100 terms, so it is Cauchy and converges.
 > - **Bolzano–Weierstrass:** $x_n=(-1)^n(1+\frac1n)$ is bounded; its subsequences along even and odd $n$ converge to $+1$ and $-1$. $\sin n$ has subsequences converging to every point of $[-1,1]$ (the values over $n\le2\times10^5$ already fill $[-1,1]$ to five places).
 > - **Nested intervals and uncountability:** if $x_1,x_2,\dots$ is any list of reals, choose $I_n\subset I_{n-1}$ (thirds of the previous interval) avoiding $x_n$; the real in $\bigcap I_n$ is not in the list. A second proof that $\mathbb R$ is uncountable ([[PA04 Functions and Cardinality]]).
@@ -165,7 +166,7 @@ A **sequence** in $X$ is a function $\mathbb N\to X$, $n\mapsto x_n$ (a definiti
 > - **Completeness:** non-empty, bounded above ⇒ has a sup. $\mathbb Q$ fails ($\{q:q^2<2\}$; $u'=\frac{2u+2}{u+2}$ with $u'^2-2=\frac{2(u^2-2)}{(u+2)^2}$). $\mathbb R$ = Dedekind cuts.
 > - Archimedean ($\mathbb N$ unbounded), density of $\mathbb Q$ and of irrationals, $\sqrt a$ exists, triangle inequality, $0.999\dots=1$.
 > - $x_n\to L$: $\forall\varepsilon\,\exists N\,\forall n\ge N\ |x_n-L|<\varepsilon$; negation $\exists\varepsilon\,\forall N\,\exists n\ge N\ |x_n-L|\ge\varepsilon$. Limits unique, convergent ⇒ bounded, sums/products, squeeze.
-> - MCT ⇒ nested intervals ⇒ monotone subsequence ⇒ **Bolzano–Weierstrass** ⇒ **Cauchy ⇒ convergent**. Closed intervals only.
+> - sup ⇒ MCT ⇒ nested intervals; monotone subsequence (combinatorics) + MCT ⇒ **Bolzano–Weierstrass** ⇒ **Cauchy ⇒ convergent**. Closed intervals only.
 > - **Numbers:** Newton rationals for $\sqrt2$: $\frac32,\frac{17}{12},\frac{577}{408}$ (errors $8.6\times10^{-2},2.5\times10^{-3},2.1\times10^{-6}$); $H_{2n}-H_n\ge\frac12$; $\sqrt{2+\sqrt{2+\cdots}}=2$.
 
 ## Practice

@@ -109,7 +109,7 @@ An **acid** is a substance that, added to water, increases the concentration of 
 > [!example] The two puzzles of slide 57 solved (🔵)
 > * **HCl + NH$_3$ (equal amounts)** gives $0.1$ M $\mathrm{NH_4^+}$, a weak acid with $K_a=5.6\times10^{-10}$: $[\mathrm H^+]=\sqrt{K_aC}=7.5\times10^{-6}$ M, **pH 5.12**: slightly acidic.
 > * **CH$_3$COOH + NaOH (equal amounts)** gives $0.1$ M acetate, a weak base with $K_b=5.75\times10^{-10}$: $[\mathrm{OH^-}]=\sqrt{K_bC}=7.6\times10^{-6}$ M, pOH 5.12, **pH 8.88**: basic.
-> * **$0.01$ M HF** ($\mathrm pK_a=3.17$, $K_a=6.76\times10^{-4}$): $x^2/(0.01-x)=K_a$ gives $x=2.29\times10^{-3}$ M, **pH 2.64**, 23 % ionised. Weak acid *and* the strong H–F bond (the fluoride–water H bonding reduces the apparent acidity) are why HF, unlike HCl, is weak.
+> * **$0.01$ M HF** ($\mathrm pK_a=3.17$, $K_a=6.76\times10^{-4}$): $x^2/(0.01-x)=K_a$ gives $x=2.29\times10^{-3}$ M, **pH 2.64**, 23 % ionised. *Why HF, unlike HCl, is weak:* the H–F bond is much stronger than H–Cl (about 570 against 430 kJ/mol, recalled `[verify]`), and it is this bond that must break to release H⁺. The small F⁻ ion is very strongly hydrated, which helps, but it does not make up the difference, partly because ordering the water around such a small ion costs entropy.
 
 > [!pitfall] "Weak" and "dilute" are not the same
 > A strong acid at $10^{-8}$ M does not have pH 8: water's own $10^{-7}$ M $\mathrm{H^+}$ dominates and the pH is 6.98. A weak acid at high concentration can still be dangerously corrosive.

@@ -145,7 +145,7 @@ $\mathbb R^n$ is locally compact (closed balls are compact: Heine–Borel); ever
 This is the topological input of **partitions of unity** ([[DM02 Smooth Maps and Partitions of Unity]]): locally finite covers by coordinate balls, one smooth bump function per ball, normalised by their (locally finite) sum.
 
 > [!example] Metrisability
-> **Urysohn's metrisation theorem:** a second-countable regular space is metrisable. A topological manifold is locally Euclidean, hence regular, and second-countable by definition, so every manifold is metrisable, and the Riemannian distance function ([[John M. Lee - Introduction to Smooth Manifolds.pdf#page=355|Lee Ch. 13]]) is one such metric.
+> **Urysohn's metrisation theorem:** a second-countable regular space is metrisable. A topological manifold is locally compact and Hausdorff, hence regular (to separate a point $x$ from a closed set $C\not\ni x$, take a precompact open $U\ni x$; the compact set $\overline U\cap C$ misses $x$, so §1 gives disjoint open $V'\ni x$, $W'\supseteq\overline U\cap C$; then $V=V'\cap U$ and $W=W'\cup(X\setminus\overline U)$ are disjoint open sets with $x\in V$ and $C\subseteq W$). Locally Euclidean alone is not enough: the line with two origins is locally Euclidean and not even Hausdorff. A manifold is also second-countable by definition, so every manifold is metrisable, and the Riemannian distance function ([[John M. Lee - Introduction to Smooth Manifolds.pdf#page=355|Lee Ch. 13]]) is one such metric.
 
 ## 5. Why the manifold axioms are exactly these
 <span class="scope-extra-book">extra · book</span> *Lee Ch. 1 (p. 3–5)*

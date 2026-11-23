@@ -153,7 +153,7 @@ Presets along the top; **What goes in** (*Our emissions*: the carbon that went i
 > (a) In 2024: **≈ 59 % air, 3 % upper ocean, 38 % deep ocean**. (b) GCB: air 0.41 × 752 = 308 GtC, ocean 0.28 × 752 = 211 GtC; the air's share of (air + ocean) = **59 %** — the same as the model. (c) The input *is* the measured air growth plus ocean uptake, so total carbon is fixed by the data; the agreement tests only **how the model splits** it between air and ocean. The 1000-year run fails the test (82 % in the air).
 
 > [!example]- Q2 · a pencil check on where it settles
-> (a) 334 − 280 = 54 ppm × 2.124 = **115 GtC** above pre-industrial. (b) 115 / 522 = **22 %** ✓. (c) The rest (~407 GtC) is in the ocean, overwhelmingly the **deep** ocean: at equilibrium the deep box holds $\delta=50$ times the upper box's carbon per unit volume-share, so ~98 % of the ocean's extra carbon sits in the deep box.
+> (a) 334 − 280 = 54 ppm × 2.124 = **115 GtC** above pre-industrial. (b) 115 / 522 = **22 %** ✓. (c) The rest (~407 GtC) is in the ocean, overwhelmingly the **deep** ocean. At equilibrium the second bracket is zero, $M_{LO}=\delta M_{UP}$: the two parts of the ocean hold carbon at the same concentration, and the deep box has 50 times the volume, so it holds 50 times the upper box's carbon and $50/51\approx98$ % of the ocean's extra carbon sits in the deep box.
 
 > [!example]- Q3 · find the bottleneck
 > | air–sea time | deep turnover | peak CO₂ |

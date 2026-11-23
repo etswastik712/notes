@@ -153,7 +153,7 @@ flowchart LR
 > **Values** by induction on $n$ for fixed $m$ ($m=0$ trivial): $A(1,n)=n+2$ (since $A(1,0)=A(0,1)=2$ and $A(1,n+1)=A(0,A(1,n))=A(1,n)+1$); $A(2,n)=2n+3$ ($A(2,0)=A(1,1)=3$, $A(2,n+1)=A(1,A(2,n))=A(2,n)+2$); $A(3,n)=2^{n+3}-3$ ($A(3,0)=A(2,1)=5$, $A(3,n+1)=A(2,A(3,n))=2A(3,n)+3$). Hence $A(3,3)=61$, which takes $2432$ recursive calls; $A(3,5)=253$ takes $42438$. The count of calls grows far faster than the value.
 
 > [!connection] The same shape elsewhere
-> Euclid's algorithm is a recursion on pairs, $(a,b)\mapsto(b,a\bmod b)$, that lowers the pair lexicographically (first entry strictly decreases); Gaussian elimination, the Euclidean algorithm for polynomials and most "terminates because something decreases" arguments are lexicographic or multiset induction in disguise.
+> Euclid's algorithm is a recursion on pairs, $(a,b)\mapsto(b,a\bmod b)$, that lowers the pair lexicographically once $a\ge b$ (after the first step this always holds, and then the first entry strictly decreases, from $a$ to $b<a$; if $a<b$ the first step only swaps them); Gaussian elimination, the Euclidean algorithm for polynomials and most "terminates because something decreases" arguments are lexicographic or multiset induction in disguise.
 
 ## 6. Beyond the natural numbers
 <span class="scope-extra-book">extra · book</span> *Tao §8.5 and Lemma 8.5.15; Bloch Ch. 3 (remarks after the axiom of choice); [[PA03 Relations Equivalence and Order]] (Zorn)*

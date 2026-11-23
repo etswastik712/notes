@@ -113,7 +113,7 @@ It is equivalent to PMI.
 > Let $S$ be inductive with $1\in S$ and suppose $S\ne\mathbb N$. Then $\mathbb N\setminus S\ne\varnothing$ has a least element $m$. $m\ne1$ (as $1\in S$), so $m-1\in\mathbb N$ and $m-1\in S$ (by leastness of $m$); inductiveness gives $m=(m-1)+1\in S$, a contradiction.
 
 > [!example] 🔵 $\sqrt2$ is irrational by well-ordering
-> If $\sqrt2=p/q$ with positive integers, let $q$ be the **least** positive integer for which $q\sqrt2$ is an integer (it exists by WOP). Then $p=q\sqrt2$ and $\sqrt2=\dfrac{2q-p}{p-q}$ (indeed $q\sqrt2(\sqrt2+1)=p(1+\sqrt2)$). Since $1<\sqrt2<2$ we have $0<p-q<q$, and $(p-q)\sqrt2=2q-p$ is an integer: a smaller denominator, contradiction.
+> If $\sqrt2=p/q$ with positive integers, let $q$ be the **least** positive integer for which $q\sqrt2$ is an integer (it exists by WOP). Then $p=q\sqrt2$ and $\sqrt2=\dfrac{2q-p}{p-q}$ (substitute $p=q\sqrt2$: $\dfrac{2-\sqrt2}{\sqrt2-1}=\dfrac{\sqrt2(\sqrt2-1)}{\sqrt2-1}=\sqrt2$). Since $1<\sqrt2<2$ we have $0<p-q<q$, and $(p-q)\sqrt2=2q-p$ is an integer: a smaller denominator, contradiction.
 
 ## 4. Strong induction and the finite-set black boxes #quiz/pa-induction #quiz/pa-wop
 <span class="scope-extra-book">extra · book</span> *AI notes ch. 12–13; Sundstrom Ch. 4*

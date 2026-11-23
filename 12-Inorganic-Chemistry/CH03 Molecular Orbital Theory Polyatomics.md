@@ -77,7 +77,7 @@ MOT is useful for triatomic molecules, for finite groups of atoms and for almost
 
 Three H 1s orbitals $\chi_A,\chi_B,\chi_C$. **Linear** (slide 41, left): the three combinations, bottom to top,
 $$1\sigma=\tfrac12\chi_A+\tfrac{1}{\sqrt{2}}\chi_B+\tfrac12\chi_C,\quad 2\sigma=\tfrac1{\sqrt2}(\chi_A-\chi_C),\quad 3\sigma=\tfrac12\chi_A-\tfrac1{\sqrt2}\chi_B+\tfrac12\chi_C,$$
-with $E=\alpha-\sqrt2\beta,\ \alpha,\ \alpha+\sqrt2\beta$ (the slide writes $\chi_A+\sqrt2\chi_B+\chi_C$ un-normalised). $1\sigma$ is **bonding between A–B and B–C**; $2\sigma$ has a node through B, so the central atom is not involved ("negligible interaction"): it is **non-bonding**; $3\sigma$ is antibonding between A–B and B–C.
+with $E=\alpha+\sqrt2\beta,\ \alpha,\ \alpha-\sqrt2\beta$ (bottom to top; $\beta<0$, the same convention as the triangle's bonding level $\alpha+2\beta$ below) (the slide writes $\chi_A+\sqrt2\chi_B+\chi_C$ un-normalised). $1\sigma$ is **bonding between A–B and B–C**; $2\sigma$ has a node through B, so the central atom is not involved ("negligible interaction"): it is **non-bonding**; $3\sigma$ is antibonding between A–B and B–C.
 
 **Triangular** (slide 41, right): $1\sigma$ becomes the totally symmetric $a$, bonding between **all three pairs**: $E=\alpha+2\beta$ (coefficients $\tfrac1{\sqrt3}(1,1,1)$). $2\sigma$ and $3\sigma$ **become degenerate** ($e$, $E=\alpha-\beta$): "$2\sigma$ = antibonding for A–C: **rise in E**; $3\sigma$ = antibonding between A–B and B–C but *bonding* for A–C: **decrease in E**".
 
@@ -112,7 +112,7 @@ $h$ = order of the group. (3) Each $n_i$ is the number of LGOs of symmetry $i$.
 ## 4. $\mathrm{NH_3}$
 <span class="scope-taught">taught</span> *slides 43–44* · <span class="scope-extra-book">extra · book</span> *S&A [[Shriver and Atkins Inorganic Chemistry 5th Ed.pdf#page=79|PDF p.79]]*
 
-**Construction (slide 43).** N $2s$ and $2p_z$ with the three H 1s ($a_1$ LGO) give **three $\sigma$ orbitals along the axis**, labelled $1a_1,2a_1,3a_1$. N $2p_x,2p_y$ combine with the $e$ pair of H combinations (e.g. $\psi=c_1\chi_{N2p_x}+c_2(\chi_{H1sA}+\chi_{H1sB})$, and the equivalent for $p_y$) to give the **doubly degenerate bonding pair $1e$ and antibonding pair $2e$**. 7 MOs from 4 + 3 = 7 AOs. **Eight electrons fill the MOs in order of energy:** $1a_1^2\,1e^4\,2a_1^2$.
+**Construction (slide 43).** N $2s$ and $2p_z$ with the three H 1s ($a_1$ LGO) give **three $\sigma$ orbitals along the axis**, labelled $1a_1,2a_1,3a_1$. N $2p_x,2p_y$ combine with the $e$ pair of H combinations (the slide's shorthand is $\psi=c_1\chi_{N2p_x}+c_2(\chi_{H1sA}+\chi_{H1sB})$; the actual $e$ ligand combinations are $\tfrac1{\sqrt6}(2\chi_A-\chi_B-\chi_C)$, matching N $2p_x$ when H$_A$ lies along $x$, and $\tfrac1{\sqrt2}(\chi_B-\chi_C)$, matching $2p_y$; the totally symmetric $\tfrac1{\sqrt3}(\chi_A+\chi_B+\chi_C)$ is the $a_1$ one) to give the **doubly degenerate bonding pair $1e$ and antibonding pair $2e$**. 7 MOs from 4 + 3 = 7 AOs. **Eight electrons fill the MOs in order of energy:** $1a_1^2\,1e^4\,2a_1^2$.
 
 **The photoelectron spectrum (slide 44).** The actual orbital energies can be found by computation or by **photoelectron spectroscopy**: He I radiation (21.2 eV) ejects an electron from each filled MO and the ionisation energy is the orbital energy (Koopmans' theorem). **The 11 eV and 16 eV peaks are assigned to $2a_1$ and $1e$**; the $1a_1$ is out of range of the 21 eV radiation (it is near 27 eV, an N 2s-like level). The **HOMO is $2a_1$**: largely confined to the N atom and makes only a small contribution to bonding, *consistent with the fact that the lone pairs play a considerable role in determining the shape of the molecule*. The **vibrational structure** of the 11 eV band comes from the shape change on removing a lone-pair electron: NH$_3^+$ is planar, NH$_3$ pyramidal.
 
@@ -197,7 +197,7 @@ Follow the MO energies of $\mathrm{AH_2}$ as the $\mathrm{H{-}A{-}H}$ angle clos
 > [!example]- Solutions
 > 1. $\mathrm{H_3^+}$ has 2 electrons in the lowest MO: triangle $=2\times2|\beta|=4|\beta|$ against linear $2.83|\beta|$: triangular (observed). $\mathrm{H_3^-}$ has 4 electrons: filling $1\sigma^22\sigma^2$ in the linear shape ($2.83|\beta|$) beats the triangle ($a^2e^2$: $4-2=2|\beta|$): linear (three-centre four-electron bond).
 > 2. $\mathrm{NH_3}$: $n(A_1)=\tfrac16(3+0+3)=1$, $n(A_2)=\tfrac16(3+0-3)=0$, $n(E)=\tfrac16(6)=1$: $a_1+e$. $\mathrm{H_2O}$: $n(A_1)=\tfrac14(2+2)=1$, $n(B_1)=\tfrac14(2+2)=1$, $n(A_2)=n(B_2)=0$: $a_1+b_1$.
-> 3. 7 MOs ($1a_1,2a_1,3a_1,1e\times2,2e\times2$); 4 occupied levels (5 orbitals: $1a_1$, $1e$ (two), $2a_1$ = 4 orbitals holding 8 e⁻); HOMO $2a_1$; $1a_1$ is bound by about 27 eV, more than the 21.2 eV photon energy.
+> 3. 7 MOs ($1a_1,2a_1,3a_1,1e\times2,2e\times2$); 3 occupied levels ($1a_1$, the degenerate pair $1e$, $2a_1$), i.e. 4 orbitals holding 8 e⁻; HOMO $2a_1$; $1a_1$ is bound by about 27 eV, more than the 21.2 eV photon energy.
 > 4. Bonding 8 ($1a_{1g}^2,1t_{1u}^6$), non-bonding 4 ($1e_g^4$), antibonding 0; bond order $\frac{8}{2\times6}=0.67$.
 > 5. Lecture: $1B_2$ (perpendicular to the $xz$ plane); common convention (molecule in $yz$): $1b_1$.
 > 6. $1a_1^21t_2^6$: **two** bands (≈23 and ≈14 eV), not four.

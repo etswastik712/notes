@@ -85,7 +85,7 @@ $A\cup B$, $A\cap B$, $A\setminus B$ (written $A-B$ in the assignments), $A^c=X\
 > | $\neg$ | complement | | tautology | the whole set $X$ |
 > | De Morgan | De Morgan | | contradiction | $\varnothing$ |
 >
-> Every identity of PA01 becomes a set identity; every set identity is proved by **chasing an element** through the corresponding logical equivalence.
+> Here $\{P\}$ is short for the **truth set** $\{x\in X:P(x)\}$ of a predicate $P$ (not the singleton). Every identity of PA01 becomes a set identity; every set identity is proved by **chasing an element** through the corresponding logical equivalence.
 
 > [!derivation] De Morgan, direct method (Q5)
 > $x\in(A\cap B)^c\iff\neg(x\in A\wedge x\in B)\iff x\notin A\vee x\notin B\iff x\in A^c\cup B^c$. The step in the middle is De Morgan's law for statements. Likewise $x\in(A\cup B)^c\iff x\notin A\wedge x\notin B\iff x\in A^c\cap B^c$.
@@ -152,7 +152,7 @@ An ordered pair must satisfy one property:
 > $\{A,\{A,B\}\}$ also works **in ZFC**, but the proof needs the **Axiom of Regularity**: from $\{A,\{A,B\}\}=\{C,\{C,D\}\}$ suppose $A\ne C$; then $A=\{C,D\}$ and $C=\{A,B\}$, so $A\in C\in A$, a membership cycle that Regularity forbids. Hence $A=C$, then $\{A,B\}=\{A,D\}$ (as $A\ne\{A,B\}$, else $A\in A$), so $B=D$.
 
 > [!example] 🔵 A brute-force test (all sets of rank $\le3$)
-> There are 16 sets in $V_3$ (built from $\varnothing$ by three rounds of "all subsets"). Over all $16\times16$ pairs $(A,B)$ count the **collisions** $F(A,B)=F(C,D)$ with $(A,B)\ne(C,D)$ for each candidate:
+> There are 16 sets of rank $\le3$: they are the members of $V_4=\mathcal P(\mathcal P(\mathcal P(\mathcal P(\varnothing))))$, built from $\varnothing$ by four rounds of "all subsets" (sizes $0\to1\to2\to4\to16$). Over all $16\times16$ pairs $(A,B)$ count the **collisions** $F(A,B)=F(C,D)$ with $(A,B)\ne(C,D)$ for each candidate:
 > | candidate | collisions |
 > |---|---|
 > | Kuratowski $\{\{A\},\{A,B\}\}$ | 0 |
@@ -160,7 +160,7 @@ An ordered pair must satisfy one property:
 > | $\{A,B\}$ | 120 (every $A\ne B$ with its swap) |
 > | $\{\{A\},\{B\}\}$ | 120 |
 > | $\{A,\{B\}\}$ | 6 (the $X,Y,Z$ example among them) |
-> Zero collisions on $V_3$ is not a proof, but the failures are exactly the ones the note exhibits.
+> Zero collisions on these 16 sets is not a proof, but the failures are exactly the ones the note exhibits.
 
 > [!pitfall] What the Kuratowski definition is not
 > It is a **choice of representation**: any $F$ with property (OP) would do. After proving (OP) nobody looks inside the braces again.

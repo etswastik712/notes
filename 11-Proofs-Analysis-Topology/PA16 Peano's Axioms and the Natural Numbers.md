@@ -126,7 +126,7 @@ The handout lists (each "proved by induction in the same way"): $s(n)\ne n$; com
 
 - **Exercise (a)** $a+c=b+c\Rightarrow a=b$: the cancellation proof above.
 - **Exercise (b)** $n\cdot1=1\cdot n$ 🔵. Induct on $n$. $n=1$: trivial. Step: $(n+1)\cdot1=n+1$ (first rule); $1\cdot(n+1)=1\cdot n+1=n\cdot 1+1=n+1$ (second rule, hypothesis, first rule). $\square$
-- **Exercise (c)** $a(b+c)=ab+ac$ 🔵. Induct on $c$. $c=1$: $a(b+1)=ab+a=ab+a\cdot1$. Step: $a(b+(c+1))=a((b+c)+1)=a(b+c)+a=(ab+ac)+a=ab+(ac+a)=ab+a(c+1)$ (second rule; hypothesis; associativity; second rule). $\square$
+- **Exercise (c)** $a(b+c)=ab+ac$ 🔵. Induct on $c$. $c=1$: $a(b+1)=ab+a=ab+a\cdot1$. Step: $a(b+(c+1))=a((b+c)+1)=a(b+c)+a=(ab+ac)+a=ab+(ac+a)=ab+a(c+1)$ (addition rule $b+(c+1)=(b+c)+1$; multiplication rule; hypothesis; associativity of $+$; multiplication rule read backwards). $\square$
 
 *Check:* $a(b+c)=ab+ac$ for all $a,b,c\le8$; $\cdot$ commutative ($\le10$) and associative ($\le6$): true; $3\cdot4=12$.
 

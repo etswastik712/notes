@@ -87,7 +87,7 @@ Examples. Open balls in a metric space; open intervals in $\mathbb R$; open inte
 >
 > *Proof.* ($\Rightarrow$) a composition of continuous maps. ($\Leftarrow$) an open set of $A$ is $U\cap A$ and $f^{-1}(U\cap A)=f^{-1}(\iota^{-1}U)=(\iota\circ f)^{-1}(U)$, open. $\square$
 
-Consequences: restrictions of continuous maps are continuous; a subspace of a metric space gets the induced metric's topology; a basis for $X$ restricted to $A$ is a basis for $A$. If $A$ is open in $X$, a subset of $A$ is open in $A$ iff open in $X$; the same with "closed". **Hereditary properties:** Hausdorff, first- and second-countable pass to subspaces. **Compactness** passes to *closed* subsets, and compact subsets of a Hausdorff space are closed ([[Compact Space]]).
+Consequences: restrictions of continuous maps are continuous; a subspace of a metric space gets the induced metric's topology; a basis for $X$ restricted to $A$ is a basis for $A$. If $A$ is open in $X$, a subset of $A$ is open in $A$ iff open in $X$; likewise, if $A$ is closed in $X$, a subset of $A$ is closed in $A$ iff closed in $X$. **Hereditary properties:** Hausdorff, first- and second-countable pass to subspaces. **Compactness** passes to *closed* subsets, and compact subsets of a Hausdorff space are closed ([[Compact Space]]).
 
 > [!key] Gluing lemma (Lee A.20)
 > Let $X=A\cup B$ with $A,B$ both closed (or both open) in $X$, and $f:X\to Y$ a map with $f|_A$ and $f|_B$ continuous. Then $f$ is continuous.
@@ -150,7 +150,7 @@ The **disjoint union** $\bigsqcup X_\alpha$ has as open sets those sets whose in
 > [!key] Characteristic property (passing to the quotient)
 > Let $\pi:X\to Y$ be a quotient map and $g:X\to Z$ constant on each fibre $\pi^{-1}(y)$. Then $g=\hat g\circ\pi$ for a unique $\hat g:Y\to Z$, and $\hat g$ is continuous **iff** $g$ is.
 >
-> *Proof.* ($\Leftarrow$) For $W\subseteq Z$ open, $\pi^{-1}(\hat g^{-1}W)=g^{-1}(W)$ is open, so $\hat g^{-1}W$ is open by the definition of the quotient topology. $\square$
+> *Proof.* *Existence and uniqueness of $\hat g$:* for $y\in Y$ pick any $x$ with $\pi(x)=y$ ($\pi$ is surjective) and set $\hat g(y)=g(x)$; this does not depend on the choice because $g$ is constant on the fibre $\pi^{-1}(y)$, and it is the only possibility since $\hat g(\pi(x))$ must equal $g(x)$. ($\Rightarrow$) $g=\hat g\circ\pi$ is a composite of continuous maps. ($\Leftarrow$) For $W\subseteq Z$ open, $\pi^{-1}(\hat g^{-1}W)=g^{-1}(W)$ is open, so $\hat g^{-1}W$ is open by the definition of the quotient topology. $\square$
 
 Two quotient maps with the same fibres give homeomorphic quotients (uniqueness, Lee Thm A.31). Hence one may describe a quotient by *any* convenient quotient map.
 
