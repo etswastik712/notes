@@ -17,6 +17,7 @@ $$[X, Y] = 0 \iff \exp(tX)\exp(sY) = \exp(sY)\exp(tX)$$
 Source: DG34, pp. 1–5
 
 <!-- kurooto:seen -->
+- used-in:: [[zettel/lie-algebra-ideal-and-normal-subgroup-correspondence]] — Both characterize subgroup and group properties of connected Lie groups directly in terms of Lie algebra brackets, where commutativity is closely tied to abelian ideals and normal subgroups
 ## Seen in
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-18-november-16-20|DG34]] pp. 1–5
 <!-- /kurooto:seen -->
