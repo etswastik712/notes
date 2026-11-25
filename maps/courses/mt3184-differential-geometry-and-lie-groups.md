@@ -28,6 +28,7 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-hw11]] HW11 (2026-11-15)
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-16-midsem-exam]] Midsem Exam and solutions (2026-11-16)
 - [[mt3184-differential-geometry-and-lie-groups/2026-11-18-november-16-20]] November 16-20 (2026-11-18)
+- [[mt3184-differential-geometry-and-lie-groups/2026-11-23-test-ii]] Test II (2026-11-23)
 
 ## Tasks
 - [ ] HW4 (due date not given) [Classroom](https://classroom.google.com/c/ODcxNDQxOTU2MDk4/a/ODc2MTEzMjkzNTYz/details) — [[mt3184-differential-geometry-and-lie-groups/2026-08-27-hw4]]
@@ -63,3 +64,4 @@ Exam prep: [[mt3184-differential-geometry-and-lie-groups/exam-prep]]
 - 2026-10-26: students were to say by 10am Wednesday 28 October which problems from HW6-HW9 they want gone over; doubts will be discussed in class on Thursday 29 October. HW9 was uploaded late and a class test is on Monday 2 November, so there is no homework other than HW9 this week.
 - 2026-11-16: Tuesday 2026-11-17 class: proof of Theorem 20.16; graded midsem papers can be looked at; midsem solutions uploaded to go through before class. Thursday 2026-11-19 is a tutorial session: send questions from HW5-HW11 by Wednesday 2026-11-18, 10am, and say if you want any topic revised.
 - 2026-11-18: the 2026-11-19 tutorial has only one small question, so the rest of the lecture is a quick revision of the theory. Test 2 is returned on Tuesday 2026-11-24; graded answer sheets can be collected from the instructor's office between 11:30 and 12:00 that day.
+- 2026-11-23: reminder to check uploaded Test 2 solutions before collecting graded answer sheets on Tuesday 2026-11-24 between 11:30 and 12:00.

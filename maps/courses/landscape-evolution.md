@@ -39,6 +39,7 @@ Google Classroom course c41. Notes folder: landscape-evolution/. Exam prep: [[la
 - 2026-11-10: teacher pointed one group (named in the post) to a topotoolbox blog post and GIF animating upstream knickpoint migration under the stream power model. See [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]].
 - 2026-11-13: presentation venue moved to seminar room 33, main building (Mon 16 Nov, 4:15 PM); corrected talk order is in the attached screenshot ([image](https://drive.google.com/file/d/1O3o7mdMg7sP2eSR6rbeKOskvLPlbiu1H/view?usp=drive_web), not viewed). The regular 9 am class also takes place on Monday 16 Nov.
 - 2026-11-18: lecture slides on fluvial landscapes posted (D8/MFD, floods, planform, bedrock rivers, with a 3-question problem sheet on bedrock river profiles). See [[landscape-evolution/2026-11-18-fluvial-landscapes-lecture-slides]].
+- 2026-11-24: teacher invited students to their office between 5–5:30 pm to see graded endsem papers. [Classroom](https://classroom.google.com/c/ODY5MDg0NjczNTYy/p/ODkxNTk0NTY2NjMz)
 
 ## Lecture notes
 - [[landscape-evolution/2026-09-03-himalaya-reading-and-slides]] Himalaya reading and slides (2026-09-03)
