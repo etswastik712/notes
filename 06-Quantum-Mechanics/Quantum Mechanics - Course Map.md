@@ -55,6 +55,7 @@ Central thread: **a wave amplitude gives probabilities (QM01) → a law for how 
 | 08 | [[QM08 Quantum Tunnelling]] (extra; the topic announced at the end of Lecture 9) | QM07 §11 continued; Griffiths §2.5; Sakurai §2.5.4; `qm08_numbers.py` | draft (🟡/🔵) |
 | 09 | [[QM09 The Stern-Gerlach Experiment and Spin]] (extra; spin and the two-level system physically; no lecture source) | Sakurai §1.1, §3.2–3.10, §5.5; Griffiths §4.4; `qm09_numbers.py` | draft (🟡/🔵) |
 | 10 | [[QM10 The Finite Barrier and Tutorial V]] (🟢 taught: the barrier lecture [[Barrier.pdf]] and [[Tutorial5.pdf\|Tutorial V]]) | Barrier.pdf, Tutorial5.pdf; `qm10_numbers.py` | draft |
+| 13 | [[QM13 The Probability Current and Ehrenfest Theorem]] (🟢 taught: lectured 10 Nov between QM10 and QM11; the probability current, both Ehrenfest theorems, Tutorial VI Q1) | Ehrenfest.pdf, Tutorial6.pdf Q1; Sakurai §2.2, §2.4; Griffiths §1.4–§1.5; `qm13_numbers.py` | draft |
 | — | [[Dirac Algebra]] (Foundations, extra) | Sakurai Ch. 1 and §2.1; Griffiths Ch. 3; Shankar Ch. 1 | draft (🟡/🔵) |
 | — | [[Quantum Mechanics Quiz Prep]] | mock quiz and 3 Sep quiz (Classroom summaries QZ1, QZ2) | draft |
 
@@ -79,7 +80,7 @@ SORT chapter ASC
 | HO | [[Harmonic_oscillator.pdf]] | **handwritten oscillator lecture, 13 pp.** (page images, p.1 blank; authorship not stated, treated as the instructor's): factorisation, ladder property, ground state, $c_n,d_n$, $\psi_n$, $\langle x\rangle,\langle p\rangle,\langle x^2\rangle,\langle p^2\rangle$; p.9 has a sign slip | taught: QM05 |
 | FW | [[Finite_well.pdf]] | **handwritten finite-well lecture, 13 pp.** (page images, p.1 blank; garbled text layer; added 2026-10-27): bound states with the floor at zero, $\kappa/k_0=\tan k_0a$ and $-\cot k_0a$, the graph, deep/shallow limits, then $E>V_0$ scattering with $T=1/(1+V_0^2\sin^2(2k_0a)/4E(E-V_0))$ and resonances | taught: QM07 §9–§11 |
 | T4 | [[tutorial4.pdf]] | instructor's **Tutorial IV**, 1 p.: plot the exact shape of $\kappa/k_0$ | taught: QM07 §10 |
-| T6 / EH | [[Tutorial6.pdf]] / [[Ehrenfest.pdf]] | Tutorial VI (1 p., text: the second Ehrenfest equation; the barrier for $E>V_0$) / the instructor's handwritten notes on the probability current and Ehrenfest's theorem (8 pp., read from page images 2026-11-12) | taught: [[QM06 The Oscillator Toolbox]] (direct derivation of both Ehrenfest equations) and [[QM10 The Finite Barrier and Tutorial V]] (Tutorial VI Q2) |
+| T6 / EH | [[Tutorial6.pdf]] / [[Ehrenfest.pdf]] | Tutorial VI (1 p., text: the second Ehrenfest equation; the barrier for $E>V_0$) / the instructor's handwritten notes on the probability current and Ehrenfest's theorem (8 pp., read from page images 2026-11-12) | taught: [[QM13 The Probability Current and Ehrenfest Theorem]] (full chapter; the short version is the end of [[QM06 The Oscillator Toolbox]]) and [[QM10 The Finite Barrier and Tutorial V]] (Tutorial VI Q2) |
 | AM / CW | [[Angular_momentum.pdf]] / [[Angular_momentum (2).pdf]] | **handwritten 2D / angular-momentum lecture**, 6 pp. (p.1 blank; page images) / typed note *Schrödinger equation in two dimensions: an example* (circular infinite well, Bessel), 3 pp.; both posted 16 Nov 2026 (Classroom sync) | taught: QM11 |
 | NB | `circular_well_density.ipynb` | instructor's notebook: normalisation, rings vs lobes, energy diagram (read as text, not executed) | taught: QM11 §5 |
 | T7 | [[tutorial7.pdf]] | **Tutorial VII**, 2 pp.: polar Laplacian, 2D oscillator radial equation, radial probability density | taught: QM11 §2, §6, §7 |
@@ -118,6 +119,9 @@ SORT chapter ASC
 - [[QM11 Two-Dimensional Problems Angular Momentum and the Circular Well]]: 2D TISE, polar Laplacian, $\hat L=-i\hbar\partial_\phi$, $e^{il\phi}$, $\pm l$ degeneracy, the circular infinite well (Bessel), the 2D oscillator ($E=\hbar\omega(2n_r+|l|+1)$), radial probability density; **Tutorial VII solved**. Tool `qm_circular_well`.
 - [[QM12 The Hydrogen Atom]]: scales, $\hat L^2$, $\hat L_z$, $Y_{lm}$, radial equation, $E_n=-13.6/n^2$ with $n^2$ degeneracy, $R_{10},R_{20},R_{21}$, the 1s radial peak at $r=a$. Tool `qm_hydrogen_radial`.
 - Classroom admin: Quiz 2 answer scripts shown on 17 Nov (LHC 101). Related lectures on the shared drive (CH1213 *H-atom*, *Particle on a sphere*): [[physics/quantum-mechanics/shared-drive-sources|shared-drive sources]].
+
+## Continued (2026-11-25)
+- [[QM13 The Probability Current and Ehrenfest Theorem]]: the instructor's Ehrenfest/probability-current lecture and Tutorial VI Q1 as a chapter of its own (it was a pendant section of QM06): continuity equation and $j$ with a table of currents, current conservation at a step ($T=\frac{k_2}{k_1}|F/A|^2$), the box-superposition current $j(x,t)$, both Ehrenfest theorems from the TDSE (the lecture's route and a route through $\int j\,\mathrm dx$), the $\sigma^2$ correction to the classical force, the hard-wall force, and the commutator form (virial, free spreading). Numbers: `scripts/qm13_numbers.py` (split-step TDSE check). The Atlas block below is generated; rerun `scripts/graph_spine.py` to add the chapter.
 
 ## Revision
 - A printable formula sheet: [[qm-formula-sheet.pdf]] (2 pages).

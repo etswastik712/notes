@@ -13,7 +13,7 @@ tags: [subject/qm, type/chapter, taught, extra/beyond, src/lecture-notes, src/ow
 ---
 # QM12 · The Hydrogen Atom
 
-◀ [[QM11 Two-Dimensional Problems Angular Momentum and the Circular Well]] · [[Quantum Mechanics - Course Map|Course Map]] · related: [[QM09 The Stern-Gerlach Experiment and Spin]] (angular momentum algebra, spin)
+◀ [[QM11 Two-Dimensional Problems Angular Momentum and the Circular Well]] · [[Quantum Mechanics - Course Map|Course Map]] · next: [[QM13 The Probability Current and Ehrenfest Theorem]] · related: [[QM09 The Stern-Gerlach Experiment and Spin]] (angular momentum algebra, spin)
 
 <span class="scope-taught">taught · in syllabus</span> <span class="scope-extra-beyond">extra · beyond</span>
 
