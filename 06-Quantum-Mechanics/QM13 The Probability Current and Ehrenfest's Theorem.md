@@ -1,5 +1,5 @@
 ---
-title: QM13 The Probability Current and Ehrenfest's Theorem
+title: QM13 The Probability Current and Ehrenfest Theorem
 aliases: [QM13, probability current, probability flux, continuity equation, local conservation of probability, Ehrenfest theorem, Ehrenfest equations, Tutorial VI, expectation values and classical mechanics]
 subject: qm
 type: chapter
@@ -11,7 +11,7 @@ status: draft
 prereq: ["[[QM02 The Schrodinger Equation and Stationary States]]", "[[QM03 States Operators and Measurement]]", "[[QM04 The Particle in a Box]]"]
 tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-notes, src/book, src/own-notes, status/draft]
 ---
-# QM13 · The Probability Current and Ehrenfest's Theorem
+# QM13 · The Probability Current and Ehrenfest Theorem
 
 ◀ [[QM12 The Hydrogen Atom]] · [[Quantum Mechanics - Course Map|Course Map]] · related: [[QM02 The Schrodinger Equation and Stationary States]] (first appearance of $j$), [[QM06 The Oscillator Toolbox]] (the commutator form, §6.1), [[QM10 The Finite Barrier and Tutorial V]] (Tutorial VI Q2)
 
@@ -19,7 +19,7 @@ tags: [subject/qm, type/chapter, taught, extra/book, extra/beyond, src/lecture-n
 
 > [!syllabus] Syllabus map
 > 🟢 **Taught** (lectured the week of 10 Nov 2026, between the barrier and the 2D/angular-momentum lectures; the chapter number only records the order in which the vault was written):
-> - the instructor's handwritten notes [[Ehrenfest.pdf#page=1|Ehrenfest.pdf]] (8 pp.): **probability current and local conservation of probability** (pp. 1–2, §1–§2), **Ehrenfest's first theorem** $\mathrm d\langle x\rangle/\mathrm dt=\langle p\rangle/m$ (pp. 3–5, §5), **the second theorem** $\mathrm d\langle p\rangle/\mathrm dt=-\langle V'\rangle$ and the "special cases" (pp. 6–8, §6–§7);
+> - the instructor's handwritten notes [[Ehrenfest.pdf#page=1|Ehrenfest.pdf]] (8 pp.): **probability current and local conservation of probability** (pp. 1–2, §1–§2), **Ehrenfest's first theorem** $\mathrm d\langle x\rangle/\mathrm dt=\langle p\rangle/m$ (pp. 3–5, §3–§4), **the second theorem** $\mathrm d\langle p\rangle/\mathrm dt=-\langle V'\rangle$ and the "special cases" (pp. 6–8, §6–§7);
 > - [[Tutorial6.pdf|Tutorial VI]] **Problem 1** (the second Ehrenfest equation, then $m\,\ddot{\langle x\rangle}=-k\langle x\rangle$) → §6. (Problem 2, the barrier for $E>V_0$, is in [[QM10 The Finite Barrier and Tutorial V]].)
 >
 > 🟡 **Extra · book:** the 3D current $\mathbf j=\frac\hbar m\,\mathrm{Im}(\psi^*\nabla\psi)$ and the polar form $\mathbf j=\rho\nabla S/m$ (Sakurai §2.4); the Ehrenfest equations as the expectation values of the Heisenberg equations of motion, $\frac{\mathrm d}{\mathrm dt}\langle A\rangle=\frac i\hbar\langle[H,A]\rangle$ (Sakurai §2.2); Griffiths §1.4–§1.5 (conservation of probability; $\mathrm d\langle x\rangle/\mathrm dt$, $\mathrm d\langle p\rangle/\mathrm dt$). *Page numbers not checked (see Provenance).*
@@ -96,7 +96,7 @@ Continuity $\partial_xj=-\partial_t\rho$ with $j(0)=0$ gives, using $\int_0^x\fr
 $$\boxed{j(x,t)=\frac{\omega_{21}}{\pi}\,\sin\omega_{21}t\,\Big[\sin\frac{\pi x}L-\frac13\sin\frac{3\pi x}L\Big]}$$
 It vanishes at $x=L$ as well (**no flux through impenetrable walls**, the check that the sum rule closes) and
 $$\int_0^Lj\,\mathrm dx=\frac{16L}{9\pi^2}\,\omega_{21}\sin\omega_{21}t=\frac{\mathrm d}{\mathrm dt}\Big[\frac L2-\frac{16L}{9\pi^2}\cos\omega_{21}t\Big]=\frac{\mathrm d\langle x\rangle}{\mathrm dt}.$$
-Numerically ($\hbar=m=L=1$, $t=0.37$): $j$ from $\mathrm{Im}(\psi^*\psi')$ agrees with the formula to $2\times10^{-10}$; $|\partial_t\rho+\partial_xj|<4\times10^{-8}$; $\langle x\rangle=0.375224$ from $\int x\rho$ and from the formula; $\mathrm d\langle x\rangle/\mathrm dt=\int j\,\mathrm dx=\langle p\rangle/m=-1.923240$ (three routes, one number). The largest drift speed is $\dfrac{16}{9\pi^2}\omega_{21}L=\dfrac{8\hbar}{3mL}$: for an electron in $L=1$ nm, $3.09\times10^5$ m/s. This is the whole story of §3–§5 in one worked case.
+Numerically ($\hbar=m=L=1$, $t=0.37$): $j$ from $\mathrm{Im}(\psi^*\psi')$ agrees with the formula to $2\times10^{-10}$; $|\partial_t\rho+\partial_xj|<4\times10^{-8}$; $\langle x\rangle=0.375224$ from $\int x\rho$ and from the formula; $\mathrm d\langle x\rangle/\mathrm dt=\int j\,\mathrm dx=\langle p\rangle/m=-1.923240$ (three routes, one number). The largest drift speed is $\dfrac{16}{9\pi^2}\omega_{21}L=\dfrac{8\hbar}{3mL}$: for an electron in $L=1$ nm, $3.09\times10^5$ m/s. This is the whole story of §4–§6 in one worked case.
 
 ## 3. Ehrenfest: the question
 <span class="scope-taught">taught</span> *[[Ehrenfest.pdf#page=3|Ehrenfest.pdf p.3]]*
@@ -115,8 +115,8 @@ Newton: $\dot x=p/m$, $\dot p=-V'(x)$. In quantum mechanics a particle has no tr
 > [!derivation] 🔵 A second route, through the current
 > $\frac{\mathrm d\langle x\rangle}{\mathrm dt}=\int x\,\partial_t\rho\,\mathrm dx=-\int x\,\partial_xj\,\mathrm dx=\int j\,\mathrm dx-[xj]_{-\infty}^{\infty}=\int j\,\mathrm dx$. And $\int j\,\mathrm dx=\frac\hbar m\mathrm{Im}\!\int\Psi^*\Psi'\mathrm dx=\frac{\langle p\rangle}m$ because $\langle p\rangle$ is real (so $-i\hbar\int\Psi^*\Psi'$ is real, and equals $\hbar\,\mathrm{Im}\!\int\Psi^*\Psi'$). **The total current is the velocity of the centre of probability**: this is exactly the box check in §2.2. (Not the lecture's route; agrees with it to $10^{-12}$ in the TDSE run of §8.)
 
-## 5. The classical reading
-<span class="scope-taught">taught</span> *[[Ehrenfest.pdf#page=5|Ehrenfest.pdf pp.5–6]]*
+## 5. What the first theorem says
+<span class="scope-taught">taught</span>
 
 The first theorem says "momentum$/m$ is the rate of change of position" for the averages, with no condition on $V$ at all. The second theorem is the one that can fail to look classical.
 
@@ -135,7 +135,7 @@ The first theorem says "momentum$/m$ is the rate of change of position" for the 
 > [!example] Tutorial VI Q1: the oscillator
 > $V=\frac12kx^2$: $V'=kx$, so $\mathrm d\langle p\rangle/\mathrm dt=-k\langle x\rangle$. With §4, $\;m\,\dfrac{\mathrm d^2\langle x\rangle}{\mathrm dt^2}=-k\langle x\rangle$: Newton's equation for the mean, **for every state** ([[QM06 The Oscillator Toolbox]] §6.1 gets the same from commutators). Uniform force $V=-Fx$: $\langle x\rangle=\langle x\rangle_0+\frac{\langle p\rangle_0}mt+\frac F{2m}t^2$ for any packet, though the packet spreads (checked, $F=0.8$, $t\le2$: deviation $6\times10^{-13}$).
 
-## 7. When is the mean classical? ("special cases", pp.7–8)
+## 7. When is the mean classical? ("special cases", pp.6–8)
 <span class="scope-taught">taught</span> (the statement) · <span class="scope-extra-beyond">extra · beyond</span> (the correction and numbers)
 
 Ehrenfest's equations are **exact**; what is not exact is the classical-looking form
@@ -213,7 +213,7 @@ The theorems hold to discretisation error in all three; only the *classical* for
 > 2. $\psi^*\psi'=\kappa\big(-|C|^2e^{-2\kappa x}+|D|^2e^{2\kappa x}+C^*D-CD^*\big)$, whose imaginary part is $2\kappa\,\mathrm{Im}(C^*D)$: $j=\dfrac{2\hbar\kappa}m\mathrm{Im}(C^*D)$, independent of $x$. It vanishes when $D/C$ is real. Inside a barrier the relative phase of the growing and decaying exponentials is fixed by the matching conditions, and a net tunnelling current requires it to be complex; a single decaying exponential, or any real combination, carries none.
 > 3. $\psi'=(-x/2\sigma^2+ik_0)\psi$, so $\mathrm{Im}(\psi^*\psi')=k_0|\psi|^2$: $j=\frac{\hbar k_0}m\rho$ and $\int j=\hbar k_0/m$ (equal to $\langle p\rangle/m$).
 > 4. $F/A=2k_1/(k_1+k_2)=4/3$, $|F/A|^2=16/9$; $R=(1/3)^2=1/9$; $T=\frac{k_2}{k_1}\cdot\frac{16}9=\frac89$; $R+T=1$ ✓. ($|F/A|^2>1$ does not violate anything: the transmitted wave is slower, so a larger amplitude carries the same current.)
-> 5. $\partial_t\rho+\partial_xj=\frac{2\gamma}\hbar\rho$ (here $\Gamma=-\gamma$ in §1's notation gives $-\frac{2\gamma}\hbar\rho$): $\frac{\mathrm d}{\mathrm dt}\int\rho=-\frac{2\gamma}\hbar\int\rho$, norm $\propto e^{-2\gamma t/\hbar}$, lifetime $\tau=\hbar/2\gamma=6.582\times10^{-16}\,\mathrm{eV\,s}/(2\times10^{-3}\,\mathrm{eV})=3.29\times10^{-13}$ s. (Sign: §1's $\Gamma$ is the imaginary part of $V$, so $V_R-i\gamma$ is $\Gamma=-\gamma$, a decay.)
+> 5. §1's $\Gamma$ is the imaginary part of $V$, so $V_R-i\gamma$ has $\Gamma=-\gamma$ and $\partial_t\rho+\partial_xj=-\frac{2\gamma}\hbar\rho$. Integrating over $x$: $\frac{\mathrm d}{\mathrm dt}\int\rho=-\frac{2\gamma}\hbar\int\rho$, so the norm falls as $e^{-2\gamma t/\hbar}$ and the lifetime is $\tau=\hbar/2\gamma=6.582\times10^{-16}\,\mathrm{eV\,s}/(2\times10^{-3}\,\mathrm{eV})=3.29\times10^{-13}$ s.
 > 6. $\dot{\langle x\rangle}_{\max}=\frac{16L}{9\pi^2}\omega_{21}=\frac{16L}{9\pi^2}\cdot\frac{3\pi^2\hbar}{2mL^2}=\frac{8\hbar}{3mL}$. For $L=1$ nm: $\hbar/mL=1.0546\times10^{-34}/(9.109\times10^{-31}\cdot10^{-9})=1.158\times10^5$ m/s, times $8/3$: $3.09\times10^5$ m/s.
 > 7. $\mathrm d\langle p\rangle/\mathrm dt=-\langle V'\rangle=F$ (a constant, so no averaging issue), $\langle p\rangle=\langle p\rangle_0+Ft$, then integrate $\mathrm d\langle x\rangle/\mathrm dt=\langle p\rangle/m$. Value: $1.5+0.8\cdot4/2=3.1$ (TDSE agrees to $6\times10^{-13}$).
 > 8. $V'=kx+3\lambda x^2$ so $\langle V'\rangle=k\bar x+3\lambda\langle x^2\rangle=k\bar x+3\lambda(\bar x^2+\sigma^2)$. The variance $\sigma^2$ enters the equation of motion of the mean, and $\sigma^2(t)$ has its own equation involving higher moments: the hierarchy does not close at the level of $(\bar x,\bar p)$, so $\bar x(t)$ is not the classical orbit. (The $\lambda\bar x^2$ term alone would be the classical force; $-3\lambda\sigma^2$ is the quantum/statistical correction.)
@@ -226,6 +226,7 @@ The theorems hold to discretisation error in all three; only the *classical* for
 > |---|---|---|
 > | probability current, local conservation, "terms proportional to $V$ cancel" | [[Ehrenfest.pdf#page=1\|Ehrenfest.pdf pp.1–2]] | taught |
 > | first theorem, integration by parts | [[Ehrenfest.pdf#page=3\|pp.3–5]] | taught |
+> | what the first theorem says (§5, a remark) | derived here | extra/beyond |
 > | second theorem, "for quadratic potentials", "special cases" | [[Ehrenfest.pdf#page=6\|pp.6–8]]; [[Tutorial6.pdf\|Tutorial VI Q1]] | taught |
 > | 3D $\mathbf j$, polar form $j=\rho S'/m$, Hamilton–Jacobi limit | Sakurai and Napolitano §2.4 | extra/book |
 > | $\frac{\mathrm d}{\mathrm dt}\langle A\rangle=\frac i\hbar\langle[H,A]\rangle$, Ehrenfest as Heisenberg equations | Sakurai and Napolitano §2.2; Griffiths §1.5 | extra/book |
