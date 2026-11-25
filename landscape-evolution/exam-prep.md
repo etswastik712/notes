@@ -9,7 +9,7 @@ trust_tier: agent_written
 
 <!-- kurooto:exam-prep (kept current by Kurooto from your courses; write your own notes outside these markers) -->
 ## Next assessment
-Final exam: not announced yet. The final project presentation was scheduled for Monday 16 Nov 2026, 4:15 PM, Seminar Room 33, main building (moved from Seminar Room 32 on 2026-11-13; the posts say "16th Oct", read as 16 Nov): 9 minutes, strictly under 10 slides, then 5 minutes of Q&A. Your group's problem in the order sheet: meandering and braiding rivers in the IGP. The teacher edited the titles in the sheet (screenshot posted 2026-11-13, not viewed) and says that order stands. Past: mid-sem (open-notes, handwritten notes only, calculator allowed, no sharing; date not stated), first project presentations on 5 and 6 Oct 2026, and the day trip on Sat 7 Nov 2026 (northern leg). The teacher said a Google Sheet for pothole data and a Drive folder for photos would be added around Mon 9 Nov; neither is posted yet. The fluvial landscapes slides (2026-11-18) end with a 3-question problem sheet on bedrock rivers, with marks (4, 4 and 2), which looks like exam-style practice. See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-08-14-project-groups-and-brief]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
+Endsem papers have been graded (teacher held office hours to view them on 2026-11-24, 5–5:30 pm); no further upcoming assessments are announced for this course. Past assessments: mid-sem (open-notes, handwritten notes only, calculator allowed, date not stated), first project presentations on 5 and 6 Oct 2026, final project presentations on Mon 16 Nov 2026 (Seminar Room 33, main building; group topic: meandering and braiding rivers in the IGP), and the day trip on Sat 7 Nov 2026 (northern leg). See [[maps/courses/landscape-evolution]], [[landscape-evolution/2026-08-14-project-groups-and-brief]], [[landscape-evolution/2026-10-30-field-trip-7-nov-safety-and-declaration]] and [[landscape-evolution/2026-11-02-field-trip-final-list]].
 
 ## Covered so far
 - [[landscape-evolution/2026-08-11-qgis-and-topotoolbox-tutorials]]: GIS/DEM basics, QGIS with SAGA, topotoolbox workflow (GRIDobj, inpaintnans, FLOWobj, STREAMobj)
@@ -23,7 +23,7 @@ Final exam: not announced yet. The final project presentation was scheduled for 
 - [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]]: reading list on late-Cenozoic erosion-rate change: Herman et al. (thermochronology), Schildgen et al. 2018 (spatial correlation bias), glacial erosion time-scale bias
 - [[landscape-evolution/2026-11-10-knickpoint-animation-topotoolbox-getlocation]]: topotoolbox blog post and GIF on knickpoint migration under the stream power model (chi, getlocation)
 - [[landscape-evolution/2026-11-18-fluvial-landscapes-lecture-slides]]: fluvial landscapes: D8/MFD routing, channel initiation, stream order, floods and effective discharge, braiding and meandering, Hack's rule, sediment budgets, bedrock rivers (stream power, knickpoints) and a 3-question problem sheet
-- 2026-11-10 and 2026-11-13 announcements (presentation logistics, venue change): no separate note, see Next assessment above.
+- 2026-11-10, 2026-11-13 and 2026-11-24 announcements (presentation logistics, venue change, viewing graded endsem papers): no separate note, see Next assessment above.
 
 ## Must know
 - GIS: a computer system to collect, manage, analyse and visualise geographic data. DEM: raster of elevations; in topotoolbox `DEM.Z` holds the value of each cell. (Classroom: QGIS and topotoolbox tutorial slides)
@@ -69,10 +69,10 @@ Final exam: not announced yet. The final project presentation was scheduled for 
 - The 2026-11-03 reading suggests discussion questions on whether erosion rates can be compared across time scales and sampling, and how to judge the two sides of the debate; practise with [[landscape-evolution/2026-11-03-erosion-rate-debate-reading]].
 
 ## Gaps
+- Endsem exam has already taken place and been graded (teacher invited students to view papers on 2026-11-24); no future exams or assessments are pending.
 - The fluvial slides' equations (bedrock advection equation, long-profile equation with uplift, waterfall speed) are images and not in the notes; add them from the PDF. Figures (A&A chapters 11 to 13) were not read.
 - Date of the project presentation: the posts say "16th Oct" but also "Monday"; read as Mon 16 Nov (now past). Confirm it took place as planned.
 - The 2026-11-13 screenshot (corrected talk order, edited titles with locations) was not viewed.
 - The pothole Google Sheet and trip photo Drive folder promised for about 9 Nov are not posted yet.
 - Himalaya reading, glacial and aeolian slides (90 MB) and the two river-channel papers mailed on 2026-10-25 are not summarised in the notes yet.
-- Final exam date and format: not announced.
 <!-- /kurooto:exam-prep -->
