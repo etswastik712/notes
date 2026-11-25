@@ -1,0 +1,234 @@
+% ===================================================================
+\section{Structured populations: life tables, matrices, elasticity (EE02)}
+% ===================================================================
+
+\subsection{What a population is and what we ask of it}
+\textbf{Ecology} (Haeckel, 1866; \emph{oikos} = house) is the study of interactions among organisms and their biotic
+and abiotic environment, and how these lead to patterns of distribution and abundance. A \textbf{population} is a
+group of similar individuals inhabiting a defined space at a given time. Population ecologists study
+\textbf{distribution} (spread over space), \textbf{demography} (age structure, survivorship, birth rates) and
+\textbf{dynamics} (how and why numbers change). Reasons to study non-human populations: conservation, management of
+useful species, control of pests and invaders, and the population being the \textbf{unit of evolution}.
+
+The population is a ledger: $N_{t+1}=N_t+B-D+I-E$. If every individual had the same per-capita rates, one number
+would describe growth. This chapter asks what happens when \textbf{individuals are not interchangeable}: a newborn, a
+breeder and an old animal survive and reproduce differently. That is \emph{population structure}.
+
+\subsection{The cohort life table and $R_0$}
+Follow a \textbf{cohort} (individuals born in the same period) to the last death. Columns: $n_x$ alive at the start of
+class $x$; $l_x=n_x/n_0$ the proportion surviving to $x$; $m_x$ the mean offspring per survivor in class $x$; and
+$l_xm_x$ the expected offspring per \emph{newborn} from that class. Summing gives the \textbf{net reproductive rate}
+\[
+R_0=\sum_x l_x m_x ,
+\]
+the mean number of offspring a newborn produces over its whole life. $R_0>1$: each generation larger than the last;
+$R_0<1$: shrinking. \emph{Phlox drummondii} (annual plant, cohort of 996): $R_0=2.4177$. Its survival is front-loaded
+(84\,\% die before day 299) and reproduction concentrated in a few late weeks.
+
+Three ways to get survival data (Molles): \textbf{cohort} table (most reliable, impractical for long-lived or mobile
+species); \textbf{static} table (ages at death of many individuals, e.g.\ Dall sheep skulls; assumes the death-age
+distribution represents survival); \textbf{from an age distribution} (differences between classes; assumes a
+stationary, closed population, so least accurate).
+
+\begin{trap}
+$R_0$ is a factor \emph{per generation}; $\lambda$ is a factor \emph{per time step}. They are equal only for
+non-overlapping generations (an annual plant). In general they agree only on the threshold: $\lambda>1\iff R_0>1$.
+\end{trap}
+
+Unlimited growth at $\lambda=2.42$ would cover North America with $\sim$77 \emph{Phlox} per m$^2$ in 32 years:
+natural populations have a huge capacity for increase, so something must change as $N$ grows (density dependence,
+next section).
+
+\subsection{Survivorship curves and the log axis}
+\begin{chain}[: why survivorship is plotted on a log axis]
+If an individual has the same probability $q$ of dying in every interval, then $n_{x+1}=(1-q)n_x$, so
+$n_x=n_0(1-q)^x$ and
+\[
+\ln n_x=\ln n_0+x\ln(1-q).
+\]
+Constant per-capita risk is therefore a \textbf{straight line} on a log axis, with slope $\ln(1-q)$. Slide 12: 60\,\%
+die each interval; numbers 1000, 400, 160, 64. The \emph{losses} shrink (600, 240, 96) but the \emph{proportion}
+lost (and the log-slope) is the same each time. A log axis shows the risk to \emph{one individual}; a linear axis
+shows the number of bodies. Population dynamics asks about per-capita rates, so the log axis is the right one.
+\end{chain}
+
+\begin{itemize}
+\item \textbf{Type I}: low mortality until late in life (large mammals, humans; Dall sheep, \emph{Phlox} after its
+first period).
+\item \textbf{Type II}: constant proportion dies per interval; straight line on a log axis (many birds: robin,
+white-crowned sparrow).
+\item \textbf{Type III}: very high juvenile mortality, then high survival (marine fish, mackerel; the desert shrub
+\emph{Cleome}).
+\end{itemize}
+The idealised types are \emph{bounds} on what is possible; real curves are mixtures (\emph{Phlox}: a Type III-like
+early loss, a plateau, then a Type I-like end).
+
+\begin{trap}
+A steep early drop (Type III) says nothing about lifespan: the survivors may live long. And the slope on a log axis is
+the per-capita hazard, not the number of deaths.
+\end{trap}
+
+\subsection{The Leslie matrix: age structure with births}
+A cohort table ignores the cohort's children. To project the whole population, count every age class and let births
+join class 1:
+\[
+\begin{pmatrix}n_1\\n_2\\n_3\\n_4\end{pmatrix}_{t+1}=
+\begin{pmatrix}F_1&F_2&F_3&F_4\\P_1&0&0&0\\0&P_2&0&0\\0&0&P_3&0\end{pmatrix}
+\begin{pmatrix}n_1\\n_2\\n_3\\n_4\end{pmatrix}_{t}.
+\]
+Row 1 reads ``babies = $\sum$ fecundity $\times$ number in each class''; each sub-diagonal row reads ``class $x+1$ =
+survivors of class $x$''.
+
+Slide 16: $P=(0.5,0.2,0.1)$, $F=(0,2,1,1)$, start with 200 newborns. The totals first zig-zag
+(200, 100, 220, 122, 232, \dots) because one cohort breeds in pulses; then
+\begin{itemize}
+\item the total grows \textbf{geometrically} by $\lambda=1.05082$ per step (slide 18, 20);
+\item the age \emph{proportions} settle at $(0.635,\,0.302,\,0.057,\,0.005)$: the \textbf{stable age distribution}
+(SAD), even though the numbers keep growing (slide 19).
+\end{itemize}
+
+\begin{chain}[: why the population settles (eigenvalues)]
+\begin{enumerate}
+\item Try a solution in which every class grows by the same factor: $\mathbf n_t=\lambda^t\mathbf w$. Then
+$\mathbf A\mathbf w=\lambda\mathbf w$: $\lambda$ is an eigenvalue and $\mathbf w$ its eigenvector.
+\item Any start is a sum of such modes, $\sum_i c_i\lambda_i^t\mathbf w_i$. After many steps the mode with the
+largest $|\lambda_i|$ dominates; the others shrink \emph{relative to it} like $(|\lambda_i|/\lambda_1)^t$.
+\item So the shape converges to $\mathbf w_1$ (the SAD) and the growth ratio to $\lambda_1$, \emph{whatever the
+starting mix}. The matrix ``forgets'' its start (ergodicity). The SAD depends only on the vital rates, not the initial
+vector.
+\item The sub-diagonal rows give $w_{x+1}/w_x=P_x/\lambda$, and the first row gives the discrete Euler--Lotka equation
+\[
+1=\sum_x F_x\,l_x\,\lambda^{-x}.
+\]
+Its right side falls steadily as $\lambda$ rises, so it has one positive root; at $\lambda=1$ it equals $R_0$. Hence
+$\lambda>1\iff R_0>1$.
+\end{enumerate}
+\end{chain}
+
+\textbf{Perron--Frobenius.} The slide states that a non-negative matrix has a real dominant eigenvalue. For
+convergence to a fixed shape the matrix must be non-negative, \textbf{irreducible} (life-cycle graph connected) and
+\textbf{primitive} (the loop lengths have greatest common divisor 1). Then $\lambda_1$ is real, positive, simple and
+strictly larger in modulus than every other eigenvalue, and $\mathbf w$ (SAD) and $\mathbf v$ (reproductive values)
+are strictly positive.
+
+\begin{trap}
+A species that reproduces in only \emph{one} age class (semelparous, single loop) gives an \emph{imprimitive} matrix:
+e.g.\ $F_3=6$, $P_1=0.5$, $P_2=0.4$ repeats a 3-step cycle (100, 50, 20, 120, 60, 24, \dots) growing 1.2$\times$
+per cycle, with no SAD and no limit for $N_{t+1}/N_t$. ``Every Leslie matrix converges to a SAD'' is false without
+primitivity.
+\end{trap}
+
+\subsection{Stage structure: the loggerhead turtle}
+For turtles, \textbf{age is hard to measure} and \textbf{stage (size) decides fate}. So classify by stage and let an
+individual stay ($P$), grow to the next stage ($G$) or die (Lefkovitch matrix). The pedagogical move (slide 30):
+start oversimplified (cohort table), remove one constraint at a time (births, then stages).
+
+\begin{center}
+\small
+$\mathbf A=\begin{pmatrix}0&0&0&4.665&61.896\\.675&.703&0&0&0\\0&.047&.657&0&0\\0&0&.019&.682&0\\0&0&0&.061&.809\end{pmatrix}$
+\qquad
+\begin{tabular}{lcc}
+\toprule
+stage & years & survival $\sigma$\\\midrule
+1 eggs/hatchlings & 1 & 0.675\\
+2 small juveniles & 7 & 0.75\\
+3 large juveniles & 8 & 0.676\\
+4 subadults & 6 & 0.743\\
+5 adults & $>$32 & 0.809 (76.5 eggs/yr)\\\bottomrule
+\end{tabular}
+\end{center}
+
+$P$ and $G$ each include survival: $P_i+G_i=\sigma_i$ (e.g.\ $0.703+0.047=0.750$); mortality is what is left out.
+A long stage has a \emph{small} $G$ because only its oldest members graduate each year
+($G=\sigma\gamma$, $\gamma=x^{T-1}(1-x)/(1-x^T)$, $x=\sigma/\lambda$).
+
+\begin{itemize}
+\item $\lambda=0.9516$: decline of about \textbf{5\,\% a year}.
+\item Stable stage distribution: small juveniles $\sim$65\,\%, adults only 0.3\,\%.
+\item Reproductive values (hatchling $=1$): 1, 1.4, 7.5, 115, 432. The jump is largest across the
+\textbf{large-juvenile} stage.
+\end{itemize}
+
+\subsubsection*{Where should conservation act? Sensitivity and elasticity}
+\[
+s_{ij}=\frac{\partial\lambda}{\partial a_{ij}}=\frac{v_iw_j}{\mathbf v\cdot\mathbf w},\qquad
+e_{ij}=\frac{a_{ij}}{\lambda}\,s_{ij},\qquad \sum_{ij}e_{ij}=1.
+\]
+Sensitivity is the \emph{absolute} change of $\lambda$ per absolute change of an entry; elasticity the
+\emph{proportional} change per proportional change. The formula says $\lambda$ responds most to a transition that
+moves many individuals ($w_j$ large) into a valuable state ($v_i$ large).
+
+\begin{chain}[: why egg protection cannot save the loggerhead]
+\begin{enumerate}
+\item The egg/hatchling stage lasts one year and leads to small juveniles worth only 1.4 hatchlings: low $v$,
+one chance to act.
+\item Large juveniles stay 8 years (eight chances per animal to be lost) and each survivor is about to jump $\sim$15-fold
+in reproductive value. Their survival has the highest elasticity.
+\item Recomputed (slide 26, Crowder et al.\ Fig.~4): cutting mortality by 50\,\% makes $r>0$ only for large juveniles;
+even \emph{perfect} egg survival leaves $\lambda=0.965<1$, while perfect large-juvenile survival gives $\lambda=1.073$.
+\item What kills large juveniles? \textbf{Shrimp trawling} (5.7\,kg by-catch per kg shrimp; large juveniles are the
+commonest stranded size). So the intervention is \textbf{turtle excluder devices} (TEDs), escape hatches in nets.
+\item Recovery is slow because maturity takes $>$20 years: with seasonal-offshore TED use, $\lambda\approx1.035$ and a
+ten-fold increase takes $\sim$70 years; with full use, about half that. Hence the advice to use TEDs all the time
+(Indian legislation 1996, per the slide).
+\end{enumerate}
+\end{chain}
+
+\begin{trap}
+\emph{Largest sensitivity} is not the same as \emph{most useful target}. $G_3$ has the largest sensitivity (2.9)
+because the entry is tiny (0.019); its elasticity is small. Use elasticity to rank, then ask what is feasible.
+Also: a flat nest count a decade after TEDs is not evidence they failed (background: transient ``waves'' as the
+age structure adjusts).
+\end{trap}
+
+\subsection{Age pyramids}
+Slide 29: \textbf{the greater the $\lambda$, the broader the base}. Reason: at the SAD $w_{x+1}/w_x=P_x/\lambda$.
+Each older class is smaller because (i) some of it died ($P_x<1$) and (ii) it was born when the population was smaller
+(the factor $1/\lambda$). In a growing population the second factor narrows each older class further, giving a broad
+base; in a declining one, older classes were born into a larger population, so the base is narrow.
+Survival sets the slope of the sides; $\lambda$ tilts them.
+
+But real populations are rarely at their SAD, so a pyramid also records \textbf{history}: white oak (many young trees:
+replacing itself), Rio Grande cottonwood (dominated by 40--50-year-olds, no recruitment because dams stopped the
+floods seedlings need), the large cactus finch on Genovesa (gaps from drought years).
+
+\begin{numbers}
+Sweden $r=0$; Hungary $r=-0.003$ (halving 231\,yr); Rwanda $r=+0.027$ (doubling $\ln2/r=25.7$\,yr).
+Slide-16 Leslie example: $\lambda=1.05082$, SAD (0.635, 0.302, 0.057, 0.005). Loggerhead $\lambda=0.9516$;
+by-catch 5.7\,kg/kg shrimp; TEDs: seasonal $\approx$70\,yr for 10$\times$, full use $\approx$33\,yr.
+\end{numbers}
+
+\begin{statements}
+\begin{enumerate}[label=\arabic*.]
+\item ``A broad-based pyramid always means a growing population.''
+\PT At the SAD, yes. Away from it, a broad base can reflect very high juvenile mortality (many born, few reach
+breeding age), a one-off pulse of young (a good year, juvenile immigration), or removal of adults (harvest, disease)
+that cuts the top; the pyramid records history as well as $\lambda$ (2022 mid-sem Q4).
+\item ``The stable age distribution depends on the initial age structure.''
+\F It is the dominant eigenvector of the matrix; only the transient depends on the start.
+\item ``At the SAD the number in each class is constant.''
+\F The \emph{proportions} are constant; every class grows by $\lambda$ per step.
+\item ``A type II curve means the same number of individuals die each year.''
+\F The same \emph{proportion} dies; the numbers dying shrink.
+\item ``Since adults have the highest reproductive value, protecting adults is the only way to stop the loggerhead decline.''
+\F Large-juvenile survival has the higher elasticity and is where trawls kill; adults are only 0.3\,\% of the
+population.
+\item ``If $R_0>1$ then $\lambda>1$, though the two numbers generally differ.''
+\T Euler--Lotka gives $\lambda>1\iff R_0>1$; they coincide only with non-overlapping generations.
+\item ``An analyst sees an urn-shaped pyramid (narrow base, bulge of middle-aged adults) in a low-birth country and predicts a demographic dividend in 20 years.''
+\F In 20 years the bulge will be old and dependent, and the narrow base means fewer new workers: a falling worker
+ratio (2025 end-sem Q2).
+\item ``A slot limit (only medium-sized fish may be caught) is more sustainable than a minimum-size limit.''
+\T It spares the large, old fish with the highest fecundity, the stage to which $\lambda$ is most sensitive in
+fish, and avoids selecting for early maturation at small size (2025 end-sem Q4).
+\end{enumerate}
+\end{statements}
+
+\begin{longans}[: ``On which stage should loggerhead conservation be focused, and why?'']
+(1) Set up the stage matrix ($P$, $G$, $F$; $P+G=\sigma$) and state $\lambda=0.95$. (2) Define sensitivity and
+elasticity; explain why elasticity ranks entries of different sizes fairly. (3) Large juveniles: long stage, high
+reproductive value ahead, highest elasticity; show eggs alone cannot give $\lambda>1$. (4) Cause of their mortality:
+shrimp trawls $\Rightarrow$ TEDs. (5) Time scale: $>$20 years to mature, so 33--70 years for ten-fold recovery;
+counts may dip in between. (6) Caveat: the model is deterministic, data poor, and assumes TED savings are additive;
+use it to rank parameters, not to forecast precisely.
+\end{longans}

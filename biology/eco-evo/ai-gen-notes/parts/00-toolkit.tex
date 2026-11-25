@@ -1,0 +1,61 @@
+% ===================================================================
+\section{A reasoning toolkit for the whole course}\label{sec:toolkit}
+% ===================================================================
+
+A statement-based MCQ usually tests one of a small number of reasoning moves. The same moves recur in every chapter, so
+learn them once.
+
+\begin{enumerate}
+\item \textbf{Null model, then departures.} Exponential growth (``first law of population dynamics'') and
+Hardy--Weinberg are both descriptions of a system with \emph{no forces acting}. They are not expected to be true; they are
+the baseline. A claim like ``the exponential model is useless because nothing grows exponentially for long'' misreads
+the role of a null model.
+
+\item \textbf{Per-capita versus total.} Many traps swap a per-capita quantity for a total one: logistic per-capita rate is
+highest at small $N$ but total growth peaks at $K/2$; type II survivorship is a constant \emph{proportion} dying, not a
+constant number; synchrony lowers the \emph{fraction} of calves lost, not the number per day.
+
+\item \textbf{Which parameter controls what.} Ricker: $r$ sets the type of dynamics, $K$ only rescales. L--V
+predator--prey: prey equilibrium is set by predator traits ($H^*=m/ap$), predator equilibrium by prey growth ($P^*=r/p$).
+Competition: winning depends on $\alpha$ as well as $K$ (Park). $R^*$: the lowest break-even level wins, not the fastest
+grower.
+
+\item \textbf{Necessary versus sufficient.} $\alpha_{12}\alpha_{21}<1$ is necessary, not sufficient, for coexistence.
+Cutting phosphorus is necessary, not sufficient, for clearing a shallow lake. Selection is necessary for adaptive
+evolution but not sufficient without heritability. Irreducibility is not sufficient for convergence of a Leslie matrix
+(primitivity is needed).
+
+\item \textbf{Failing to reject is not proving.} A non-significant $\chi^2$ does not prove HWE; ``no chaos found'' with a
+one-lag model does not prove simple dynamics.
+
+\item \textbf{Stable, unstable, neutral.} A stable equilibrium attracts (logistic $K$); an unstable one repels (Allee
+threshold, saddle in competition, underdominance); a neutral one does neither (L--V cycles, HW allele frequency). Neutral
+states are disturbed permanently by shocks and are structurally fragile.
+
+\item \textbf{Feedback signs.} Multiply signs around a loop: positive $=$ reinforcing (eutrophication's internal loading,
+vegetation--turbidity, Allee effect, passenger pigeon); negative $=$ balancing (density dependence). Reinforcing loops plus
+limits give alternative stable states and hysteresis.
+
+\item \textbf{Thresholds and hysteresis.} The same picture appears in lakes (fold), Allee effects with harvesting,
+competitive priority effects, underdominance and the wildebeest tracking radius. Past a threshold, undoing the original
+change is not enough.
+
+\item \textbf{Proximate versus ultimate.} ``How does it work?'' versus ``why does it exist?''. Both apply to every trait;
+they never compete.
+
+\item \textbf{Individuals versus populations.} Selection acts on individuals and phenotypes; evolution is a change in a
+population's allele frequencies; individuals do not evolve.
+
+\item \textbf{The model is not the world.} A model showing the expected behaviour is not thereby correct (L--V cycles; one-lag
+fits finding stability; real-valued $N$ allowing chaos). Simple low-dimensional projections can hide complex
+high-dimensional objects.
+
+\item \textbf{Effort versus outcome, index versus estimate.} Number of reserves is not number of tigers; a pugmark or scat index
+is not a population estimate ($\hat N=C/\hat p$).
+\end{enumerate}
+
+\begin{trap}[: how distractors are usually built]
+Reversed causation (``character displacement makes species more similar''), swapped indices ($\alpha_{12}$ as the effect
+of 1 on 2), a true fact with the wrong reason (``wildebeest migrate because the plains are wetter''), over-strong
+conclusions (``proves'', ``always'', ``only''), and family-versus-population confusion (Yule's 3:1).
+\end{trap}

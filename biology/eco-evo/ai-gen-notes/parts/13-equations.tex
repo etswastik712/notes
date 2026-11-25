@@ -1,0 +1,101 @@
+% ===================================================================
+\section{Equation sheet}\label{sec:equations}
+% ===================================================================
+Each row gives the relation, what it means, and the condition or catch an MCQ would test.
+
+{\small
+\renewcommand{\arraystretch}{1.45}
+\begin{longtable}{p{0.40\textwidth}p{0.53\textwidth}}
+\toprule
+relation & meaning, condition, catch\\\midrule
+\endhead
+\multicolumn{2}{l}{\textbf{Structured populations (EE02)}}\\
+$N_{t+1}=N_t+B-D+I-E$ & population bookkeeping\\
+$l_x=n_x/n_0$,\quad $R_0=\sum_x l_xm_x$ & lifetime offspring per newborn; per \emph{generation}\\
+$\ln n_x=\ln n_0+x\ln(1-q)$ & constant risk $q$ is a straight line on a log axis (type II)\\
+$T=\sum x\,l_xm_x/R_0$,\quad $r\approx\ln R_0/T$ & generation time; approximate growth rate (beyond slides)\\
+$\mathbf n_{t+1}=\mathbf L\mathbf n_t$ & Leslie: row 1 fecundities, sub-diagonal survivals\\
+$\mathbf n_t\to c\lambda^t\mathbf w$ & long run: growth by $\lambda$, shape $\mathbf w$ (SAD); needs primitive matrix\\
+$1=\sum_x F_xl_x\lambda^{-x}$ & Euler--Lotka; one positive root; $\lambda>1\iff R_0>1$\\
+$w_{x+1}/w_x=P_x/\lambda$ & SAD class ratios; larger $\lambda$ $\Rightarrow$ broader pyramid base\\
+$P_i+G_i=\sigma_i$ & stage matrix: stay + grow = annual survival\\
+$G=\sigma\gamma$,\ $\gamma=\dfrac{x^{T-1}(1-x)}{1-x^T}$,\ $x=\sigma/\lambda$ & graduation from a stage lasting $T$ years\\
+$s_{ij}=\dfrac{v_iw_j}{\mathbf v\cdot\mathbf w}$,\quad $e_{ij}=\dfrac{a_{ij}}{\lambda}s_{ij}$,\ $\sum e_{ij}=1$ & sensitivity (absolute) and elasticity (proportional); rank with elasticity\\
+\midrule
+\multicolumn{2}{l}{\textbf{Growth and chaos (EE03)}}\\
+$N_t=\lambda^tN_0$,\quad $\lambda=1+b-d+i-e$ & discrete exponential (``first law'')\\
+$N=N_0e^{rt}$,\quad $\lambda=e^r$ & continuous exponential; $r\approx b-d$ only for small rates\\
+$t_d=\ln2/r$;\quad halving $\ln2/|r|$ & independent of $N$\\
+$\dot N=rN(1-N/K)$ & logistic; per-capita rate falls linearly to 0 at $K$\\
+$N(t)=\dfrac{K}{1+\frac{K-N_0}{N_0}e^{-rt}}$ & solution; inflection at $K/2$; max $\dot N=rK/4$; relaxation time $1/r$\\
+$t_{K/2}=\ln[(K-N_0)/N_0]/r$ & time to reach half of $K$\\
+$N_{t+1}=N_t[1+r(1-N_t/K)]$ & discrete logistic (logistic map with $a=1+r$)\\
+$n_{t+1}=n_te^{r(1-n_t/K)}$,\quad $g'(K)=1-r$ & Ricker: stable $0<r<2$ (monotone $r<1$); 2-cycle at 2; 4 at 2.5265; 8 at 2.6564; chaos from 2.6924; $K$ only rescales\\
+$|g'(x^*)|<1$ & stability of a fixed point of a map\\
+$\delta_t\approx\delta_0e^{\Lambda t}$;\quad $t_{\text{horizon}}\approx\ln(\text{range}/\delta_0)/\Lambda$ & chaos: horizon grows only logarithmically with precision\\
+$N_{t+1}=\lambda N_t(1+aN_t)^{-\beta}$ & Hassell; $N^*=(\lambda^{1/\beta}-1)/a$\\
+$f'(N^*)=1-\beta(1-\lambda^{-1/\beta})$ & $\beta\le1$: always monotone (contest); instability needs large $\beta$ and $\lambda$\\
+$\dot N=rN(t)[1-N(t-\tau)/K]$ & delayed logistic; cycles when $r\tau>\pi/2$ (beyond slides)\\
+\midrule
+\multicolumn{2}{l}{\textbf{Competition (EE04)}}\\
+$\dot N_1=\dfrac{r_1N_1(K_1-N_1-\alpha_{12}N_2)}{K_1}$ & L--V; $\alpha_{12}$ = effect of 2 \emph{on} 1 in species-1 equivalents\\
+$N_1=K_1-\alpha_{12}N_2$;\ $N_2=K_2-\alpha_{21}N_1$ & isoclines; intercepts $K_1, K_1/\alpha_{12}$ and $K_2, K_2/\alpha_{21}$\\
+$\alpha_{12}<K_1/K_2$ and $\alpha_{21}<K_2/K_1$ & stable coexistence (each invades the other); implies $\alpha_{12}\alpha_{21}<1$\\
+$N_1^*=\dfrac{K_1-\alpha_{12}K_2}{1-\alpha_{12}\alpha_{21}}$,\ $N_2^*=\dfrac{K_2-\alpha_{21}K_1}{1-\alpha_{12}\alpha_{21}}$ & coexistence equilibrium (only if both positive)\\
+$R^*=\dfrac{mk}{\mu-m}$ & Monod break-even resource; lowest $R^*$ wins\\
+$\alpha=\exp(-d^2/4\sigma^2)$ & niche overlap of Gaussian utilisation curves (illustration)\\
+\midrule
+\multicolumn{2}{l}{\textbf{Predation (EE05)}}\\
+$\dot H=rH-pHP$,\ $\dot P=apHP-mP$ & L--V predator--prey\\
+$H^*=m/(ap)$,\quad $P^*=r/p$ & prey level set by predator traits; predator level by prey growth\\
+$V=apH-m\ln H+pP-r\ln P$ & conserved: neutral closed orbits\\
+$T\approx2\pi/\sqrt{rm}$ & small-cycle period; predator lags by $\sim$\,quarter cycle\\
+$\dot H=rH(1-H/K)-pHP$;\ $P^*=\frac rp(1-\frac{H^*}{K})$ & logistic prey: stable spiral; needs $K>m/(ap)$\\
+$r\to r-\delta,\ m\to m+\delta$ & Volterra's principle: prey up, predators down\\
+$g(N)=\dfrac{aN}{1+ahN}$ & Holling type II; max $1/h$; half-max at $N=1/(ah)$\\
+$\dot p=cp(1-p)-ep$,\quad $p^*=1-e/c$ & Levins metapopulation; persists only if $c>e$\\
+\midrule
+\multicolumn{2}{l}{\textbf{Lakes (EE06)}}\\
+$P_{tot}$ classes $<5,\ 5\text{--}10,\ 10\text{--}30,\ 30\text{--}100,\ >100$ & µg\,L$^{-1}$ at spring circulation\\
+$P_L=1.55\,[P_{in}/(1+\sqrt{\tau_w})]^{0.82}$ & longer retention $\Rightarrow$ more sedimentation, lower $P_L$\\
+$\dot x=a-bx+r\dfrac{x^p}{x^p+h^p}$ & Box 1; bistable iff $\max rf'>b$; folds where $rf'(x)=b$\\
+loop sign $=\prod$ link signs & positive: reinforcing; negative: balancing\\
+\midrule
+\multicolumn{2}{l}{\textbf{Conservation (EE07)}}\\
+$P_{\text{ext}}=(d/b)^{N_0}$ & extinction risk even when $b>d$\\
+$T_{\text{ext}}\sim e^{K\ln(b/d)}$ & persistence time grows exponentially with $K$\\
+$H_t=H_0(1-1/2N_e)^t$ & heterozygosity loss by drift; half-life $\approx1.39N_e$\\
+$N_e=4N_mN_f/(N_m+N_f)$ & effective size with unequal sex ratio\\
+$\dot N=rN(N/A-1)(1-N/K)$ & strong Allee effect; 0 and $K$ stable, $A$ unstable\\
+$\hat N=C/\hat p$ & count corrected for detection\\
+$\hat N=Mn/m$;\ Chapman $\frac{(M+1)(n+1)}{m+1}-1$ & mark--recapture (closed population, equal catchability)\\
+$p^*=1-(1-p)^K$ & caught at least once in $K$ occasions\\
+\midrule
+\multicolumn{2}{l}{\textbf{Evolution, HW and selection (EE08--EE10)}}\\
+$V_t=V_0/2^t$ & blending inheritance destroys variance (Jenkin)\\
+$p=P+Q/2$,\quad $q=R+Q/2$ & allele frequencies from genotypes, always valid\\
+$p^2:2pq:q^2$,\quad $p'=p$ & HWE; one generation (two if sexes differ); neutral\\
+$2pq\le\tfrac12$;\quad $H=1-\sum p_i^2\le 1-1/k$ & maximum heterozygosity\\
+$(p_1+\dots+p_k)^2$ & $k$ alleles: $p_i^2$ and $2p_ip_j$\\
+$\hat q=\sqrt{\text{freq(aa)}}$, carriers $2pq$ & recessive trait; assumes HWE (0 df)\\
+carriers : affected $=2p/q$;\ share in hets $=p$ & rare alleles hide in heterozygotes\\
+$2pq/(1-q^2)$ & carriers among phenotypically normal individuals\\
+$2pq/(p^2+2pq)$ & heterozygotes among dominant-phenotype individuals\\
+$\chi^2=\sum(o-e)^2/e$,\ df $=1$,\ crit.\ 3.84 & HW test; non-rejection $\neq$ proof\\
+$\Delta p=\dfrac{pq[p(w_{11}-w_{12})+q(w_{12}-w_{22})]}{\bar w}$ & one-locus selection; slow when either allele rare\\
+$\bar w=p^2w_{11}+2pq\,w_{12}+q^2w_{22}$ & mean fitness\\
+$p^*=t/(s+t)$ & overdominance ($1-s:1:1-t$): stable polymorphism\\
+$R=h^2S$ & breeder's equation: response = heritability $\times$ selection differential\\
+\bottomrule
+\end{longtable}
+}
+
+\begin{numbers}[: the numbers most likely to be asked]
+Wildebeest 62.6/41.8/34\,\%, 250{,}000 calves in 3 weeks, 1{,}500\,km, $\gtrsim$80--100\,km tracking. \emph{Phlox}
+$R_0=2.4177$. Slide Leslie $\lambda=1.05082$. Loggerhead $\lambda=0.9516$; 5.7\,kg by-catch/kg shrimp. Rwanda doubling
+25.7\,yr. Hassell 22/24 monotone. Krebs $\times2,\times3,\times11$. Huffaker 120 oranges. Lake Washington 1968/1976,
+1$\to$3--4$\to$10\,m. Global P 1.5\,Tg/yr (China 30, India 8, USA 7\,\%). Extinction 100--1000$\times$ background.
+Pigeon 1878/1914. Tigers 1{,}827 (1972), 1 April 1973, 9 reserves, 13{,}017\,km$^2$, $>$4{,}000 (questioned), 1{,}411
+(2008), 1{,}706 (2011), 2{,}967 (2018; 2{,}603--3{,}346), 70\,\% of wild tigers; NTCA 2006. Kerala 28 fish + 4 weeds, 7
+established. Finches 24 vs 130\,mm, 84\,\% died, $h^2=0.65$, 1359\,mm in 1983. Buffon's 38 forms. Mendel 1866/1900.
+\end{numbers}

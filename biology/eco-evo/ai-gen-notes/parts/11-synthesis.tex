@@ -1,0 +1,105 @@
+% ===================================================================
+\section{Putting it all together}
+% ===================================================================
+
+\subsection{The wrap-up lecture's messages}
+The final lecture (13 Nov) warns that its slides are ``not your summary sheet for the exams''; its chief messages, with
+where each sits in these notes:
+\begin{center}\small
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+theme & message\\\midrule
+biology & many structural and temporal levels interact and change simultaneously: that causes the complexity (\S2)\\
+modelling & useful, but never mistake the model for reality; mind its limitations (\S2, \S4)\\
+population numbers & the strategy depends on problem, data and insight needed: no universal strategy (\S3, \S4)\\
+complex systems & high-dimensional objects can have simple low-dimensional projections; a model with the expected behaviour
+is not thereby appropriate (\S4)\\
+applications & done properly, models inform policy and save lives; done badly, they harm (\S3, \S8)\\
+competition & competitors often drive others extinct (water hyacinth in the Mula river at Dapodi); coexisting competitors
+probably partition the niche, though it is often hard to show (\S5)\\
+predation & in simple homogeneous systems prey are driven extinct; real systems are heterogeneous and both sides evolve: a
+dynamic, ever-shifting equilibrium (\S6)\\
+organism $\leftrightarrow$ environment & a two-way interaction, which is why ecosystems are hard to change (\S7)\\
+conservation & very complex; needs inputs from many sources (\S8)\\
+evolution & complex; much known, much to learn; work in progress, no major paradigm shift yet (\S9)\\
+Hardy--Weinberg & ``the law is boring; the deviations are interesting''; even simple departures give counter-intuitive results (\S10)\\
+selection & NS = differential survival and reproduction due to phenotype; NS is not evolution; evolution can be fast;
+selection's effects are not always easy to predict (\S11)\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Threads that cross chapters}
+\begin{chain}[: one mathematics of thresholds]
+\begin{itemize}
+\item \textbf{Lakes}: vegetation--turbidity loop $\Rightarrow$ two states, folds, hysteresis.
+\item \textbf{Allee effect}: positive density dependence $\Rightarrow$ extinction threshold $A$; harvest $\Rightarrow$ fold.
+\item \textbf{Competition, unstable case}: neither species can invade $\Rightarrow$ saddle, priority effect.
+\item \textbf{Underdominance}: heterozygote disadvantage $\Rightarrow$ unstable allele frequency.
+\item \textbf{Passenger pigeon}: social facilitation $\Rightarrow$ MVP crossed while common.
+\item \textbf{Wildebeest}: migration appears only above a tracking radius of $\sim$80\,km.
+\end{itemize}
+Common lesson: once past the threshold, reversing the original pressure does not restore the old state. Act before it, and
+monitor the margin (resilience), not just the current state.
+\end{chain}
+
+\begin{chain}[: stability, three ways]
+For a continuous model a fixed point is stable if the slope $f'(x^*)<0$ (logistic at $K$: $-r$). For a discrete map, if
+$|g'(x^*)|<1$ (Ricker: $|1-r|<1$); losing stability at $g'=-1$ gives period doubling. For a linear matrix model, the zero
+state is unstable when the dominant eigenvalue $\lambda>1$. In 2-D (competition, predator--prey) the Jacobian's trace and
+determinant decide: trace $<0$ and determinant $>0$ means stable; purely imaginary eigenvalues (basic L--V) mean neutral.
+\end{chain}
+
+\begin{chain}[: chance at every level]
+Demographic stochasticity (extinction of small populations), genetic drift ($H_t=H_0(1-1/2N_e)^t$), environmental
+stochasticity, the integer lattice (chaos to cycles or extinction), founder bottlenecks in invaders, and chance in the
+``mess'' of selection. Small numbers make all of them worse; large numbers average out only the demographic and genetic kinds.
+\end{chain}
+
+\begin{chain}[: top-down and bottom-up]
+Hare--lynx: three trophic levels interact (Krebs). Lakes: nutrients (bottom-up) and fish $\to$ \emph{Daphnia} $\to$ algae
+(top-down: biomanipulation, Lake Washington's second jump). Wildebeest: food-limited (bottom-up); zebra probably
+predation-limited (top-down). Volterra's principle: indiscriminate killing helps prey.
+\end{chain}
+
+\subsection{Past-paper topics outside this year's slides}
+Several past papers (2021--2025) asked about topics that are not on this year's slides; they come from the self-study items
+of lecture 2 (temperature, biogeochemical cycles) and from earlier runs of the course (ageing). They are summarised here as
+general knowledge, in case they reappear.
+
+\textbf{Ageing (evolutionary theories).} Both rest on the \textbf{declining force of selection with age}: few individuals
+survive to old age, so effects acting late matter little to fitness.
+\begin{itemize}
+\item \textbf{Mutation accumulation} (Medawar): late-acting deleterious mutations are weakly selected against and
+accumulate by mutation and drift; ageing is their summed effect. Predicts increased genetic variance in late-life traits.
+\item \textbf{Antagonistic pleiotropy} (Williams): alleles with early benefits and late costs are actively \emph{favoured};
+ageing is the price of early vigour. Predicts negative genetic correlation between early and late fitness.
+\item \textbf{Extrinsic mortality} sets the strength of selection on late life: low extrinsic mortality (captivity, flight,
+shells) $\Rightarrow$ selection maintains late fitness $\Rightarrow$ slower ageing. So zoo-bred rabbits evolve to age
+\emph{slower}; zoo rabbits released to the wild evolve to age \emph{faster}. A deleterious allele acting at 35--55 is purged
+less than one acting at 15--35.
+\item Birds outlive same-sized mammals despite higher metabolic rates: evidence against the \textbf{rate-of-living} theory.
+\item ``Programmed death for the good of the species'' relies on group selection (a cheater allele that keeps its carrier
+alive would spread) and is contradicted by the observation that wild animals rarely live long enough to age.
+\end{itemize}
+
+\textbf{Nutrient cycles and agriculture.} Energy flows, matter cycles: reservoirs and fluxes; gaseous cycles (C, N) vs
+sedimentary (P, S). \textbf{Nitrogen fixation}: N$_2\to$ NH$_3$/NH$_4^+$ by nitrogenase (\emph{Rhizobium} in legume
+nodules, cyanobacteria), lightning, industry. \textbf{Nitrification}: NH$_4^+\to$ NO$_2^-\to$ NO$_3^-$ by aerobic
+bacteria. \textbf{Denitrification}: NO$_3^-\to$ N$_2$O $\to$ N$_2$ by anaerobic bacteria; returns N to the air.
+\textbf{Crop rotation} alternates crops (e.g.\ with N-fixing legumes) on one field; \textbf{slash-and-burn} (\emph{jhum})
+releases nutrients as ash, farms a few years, then leaves a long fallow; sustainable only with long fallows and low density.
+\textbf{Mean residence time} = stock/throughput flux. Phosphorus, unlike N, has no gaseous phase and is relatively
+immobile in soil (hence the past question about advising a king with P-deficient crops: return P via manure, bones, ash,
+river silt).
+
+\textbf{Temperature} (Begon \& Townsend, self-study). Rates rise roughly exponentially with temperature: $Q_{10}$, the factor
+per 10\,°C, often $\approx2$. Development is summarised by \textbf{day-degrees} above a threshold. The
+\textbf{temperature--size rule}: final size falls as rearing temperature rises. \textbf{Endotherms} hold body temperature
+nearly constant (flat line against environment) at high energy cost; \textbf{ectotherms} track environmental temperature
+(near the line $T_b=T_{env}$), adjusted by basking and shade-seeking; insects can warm up by basking or shivering their
+flight muscles. Freezing removes liquid water from cells, so cold injury resembles drought and salinity stress.
+
+\begin{trap}
+These items are not in this year's slides; if a question uses them, reason from the principle (declining force of selection;
+mass balance of nutrients; rate--temperature relations) rather than recalled detail.
+\end{trap}

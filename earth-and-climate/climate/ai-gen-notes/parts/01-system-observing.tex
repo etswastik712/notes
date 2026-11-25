@@ -1,0 +1,127 @@
+% ===================================================================
+\section{The Earth system and observing temperature (CL01--CL02)}
+% ===================================================================
+
+\subsection{Why a system, and why prediction is hard (CL01)}
+The \textbf{Earth system} is a set of interacting ``spheres'' exchanging \textbf{matter and energy}: atmosphere, hydrosphere
+(ocean), cryosphere, biosphere, lithosphere, and the anthroposphere (people). The interesting behaviour lives in the
+\emph{links}: delays, amplifications and thresholds. The worked example is the Indian summer monsoon, which couples ocean,
+land, atmosphere, topography and snow cover. Reasons to study climate: forecasts, hazards, and planetary boundaries
+(Earth is beyond 6 of 9, Richardson et al.\ 2023). Framing documents: the Amsterdam Declaration (2001: Earth behaves as a
+single self-regulating system including humans) and tipping points (Lenton et al.\ 2019).
+
+\begin{chain}[: the Newtonian recipe, and why it only half-works for the atmosphere]
+\begin{enumerate}
+\item Prediction = observations + a model, where the model expresses conservation laws (mass, momentum, energy).
+\item A Taylor series for a cricket ball needs infinitely many derivatives. Newton's law $m\ddot{\bar x}=\bar F$ fixes the second
+derivative from the force, so all higher ones follow: two initial conditions plus a force law regenerate the whole future.
+A law is a compression algorithm.
+\item For the atmosphere: ``yes, but not quite''. Too many variables (a reanalysis has $\sim5\times10^8$ numbers), incomplete
+and noisy observations, multiscale nonlinear interaction with emergent behaviour, and inhomogeneity (land, sea, clouds).
+\item Hence \textbf{weather} is an initial-value problem, chaotic, predictable for $\sim$2 weeks; \textbf{climate} is a
+statistical (boundary-value) problem: the mean and distribution, conventionally a 30-year average. You cannot predict
+the next roll of a die, but you can predict the average of 1000 rolls, and a loaded die shifts it.
+\end{enumerate}
+\end{chain}
+
+\textbf{Signs in the spheres} (slides 12--15): temperature (solar forcing by latitude and season, winds, topography, ice);
+precipitation (monsoon, ocean vs land, rain vs snow); long-term background (cryosphere $\sim$100\,kyr glacial cycles,
+biosphere, lithosphere, people); ocean surface currents (gyres, eddies, wind forcing, coastlines). The Huronian glaciation
+($\sim$2.4--2.1\,Ga) followed the rise of oxygen, which destroyed methane: the biosphere changing climate.
+
+\textbf{Geometry that sets the climate}: a round (minimum potential energy), slightly oblate, rotating planet (equator moves
+at 465\,m\,s$^{-1}$) in parallel sunlight. \textbf{Flux} is quantity per unit area per unit time (W\,m$^{-2}$); on a surface
+tilted by $\theta$ from the beam it is $S\cos\theta$. Near the equator rays arrive nearly perpendicular; near the poles they
+graze and spread over more area, so the equator is hottest. The \textbf{23.5° tilt} moves the overhead Sun between the
+tropics; the summer hemisphere gets more direct rays \emph{and} longer days.
+
+\begin{trap}
+Seasons are \emph{not} caused by distance from the Sun: perihelion is in early January (northern winter), and eccentricity
+changes the flux by only $\sim\pm3\,\%$. With no tilt, seasons would almost vanish.
+\end{trap}
+
+\subsection{Observing global temperature (CL02)}
+Temperature is a \textbf{field} $T(\bar x,t)$; a global mean is one number extracted from it. Measured directly
+(mercury, resistance thermometers), by proxies (tree rings, glacier length, $\delta^{18}$O, mineral assemblages), and remotely
+(thermal radiation seen by satellites).
+
+\begin{keyidea}[: a thermometer reads itself]
+A sensor measures its \emph{own} temperature, which equals the air's only after enough time ($\tau=C_s/hA$, a few minutes)
+and only if nothing else heats it. Every IMD rule serves that: 1.25--2\,m height in a \textbf{Stevenson screen} with
+doors facing north (no sun on opening), short grass in a 12\,m$\times$15\,m plot, $\ge4\times$ obstacle height from
+structures, 30\,m from paving, avoid rooftops, slopes, exhausts; about one station per district (spacing tied to the
+spatial correlation length). An unshielded sensor in sun can read several kelvin too warm.
+\end{keyidea}
+
+\textbf{Variability in time} (hourly ERA5 at Pune): noise at all scales, but well-defined mean and spread; daily and annual
+cycles; a \textbf{30-year average} smooths human-scale cycles and is defined as \emph{climate} (WMO normal, now 1991--2020).
+\textbf{Folding} (cut into pieces of one period and average) recovers a cycle because the signal adds coherently and noise
+falls like $1/\sqrt N$; \textbf{Fourier analysis} shows cycles as spectral peaks.
+
+\textbf{Isotopic thermometers.} $\delta^{18}\mathrm O=(R_{\text{sample}}/R_{\text{std}}-1)\times1000$\,‰.
+\begin{chain}[: why $\delta^{18}$O is a thermometer]
+\begin{enumerate}
+\item Evaporation favours the light $^{16}$O, so vapour is light and the ocean slightly heavy.
+\item Travelling to cold poles, air cools and rains out; $^{18}$O rains out first, so the remaining vapour gets lighter and
+lighter (Rayleigh distillation). Polar snow $\approx-50$\,‰.
+\item The colder the site, the more rain-out, the lighter the snow: ice $\delta^{18}$O tracks temperature.
+\item Ice sheets lock up light water, so a glacial ocean is \emph{heavier}; foraminifera shells (CaCO$_3$) record it, plus a
+temperature effect. Benthic forams mostly record \textbf{ice volume}. Ice and ocean records are mirror images.
+\item Temperature needs an empirical calibration; depth becomes time through markers.
+\end{enumerate}
+\end{chain}
+
+\textbf{The global mean} needs a time average and an \textbf{area-weighted} spatial average,
+$\bar T=\sum T_iA_i/\sum A_i$ with $A_i\propto\cos\varphi_i$ (the sphere's area element is $a^2\cos\varphi\,\mathrm d\varphi\,\mathrm d\lambda$).
+A plain mean over latitude bands over-weights the small polar cells (7.5\,K off in a three-band toy).
+
+\begin{chain}[: why anomalies, and why sparse stations suffice]
+Absolute temperature depends on altitude ($\sim$6.5\,K/km) and siting, so moving a station 500\,m uphill ``cools'' it by 3\,K
+with no climate change. \emph{Anomalies} $T'=T-\bar T_{\text{ref}}$ are shared over large distances: if your street is 2\,K
+warmer than usual, so is the next one. Hansen \& Lebedeff (1987): anomaly correlation is useful to $\sim$1000--1200\,km, so a
+few hundred stations can define the global mean.
+\end{chain}
+
+\textbf{Is the warming beyond natural variability?} GISTEMP (vs 1951--80): +1.28\,K in 2024 (record); 1991--2020 normal
++0.61\,K; trend 1975--2025 $0.207\pm0.014$\,K/decade (with autocorrelation correction, $\sim$15 standard errors from zero).
+Natural variability is 0.1--0.3\,K: El Niño spikes (1998), volcanic dips (Pinatubo 1992, $\approx-0.2$\,K). Detection is easy
+over decades; \emph{attribution} needs physics: radiative forcing $F$ and $\Delta T\approx\Lambda F$. CO$_2$ 280$\to$420\,ppm gives
+$F=5.35\ln1.5=2.17$\,W\,m$^{-2}$; with $\Lambda\approx0.5$\,K/(W\,m$^{-2}$), $\Delta T\approx1.1$\,K, the right size (other GHGs and
+aerosols roughly cancel; the ocean delays equilibrium).
+
+\begin{trap}
+\begin{itemize}
+\item Averaging over latitude without $\cos\varphi$ weights; averaging absolute temperatures of stations at different heights.
+\item Quoting a trend without its window and uncertainty, or using the naive error on autocorrelated data. A 10-year trend
+(2016--25: 0.32$\pm$0.13\,K/decade) is larger but far less certain than the 50-year one.
+\item Treating $\delta^{18}$O as universal: the slope is an empirical calibration differing in space, time, ice and ocean.
+\end{itemize}
+\end{trap}
+
+\begin{statements}
+\begin{enumerate}[label=\arabic*.]
+\item ``Because weather is chaotic, climate cannot be predicted.''
+\F Climate is the statistics of weather; a boundary-value problem, predictable in distribution.
+\item ``Southern-hemisphere summer occurs when Earth is nearest the Sun, so distance causes seasons.''
+\F Tilt causes seasons; the northern summer happens near aphelion.
+\item ``The plain average of temperatures on a latitude--longitude grid gives the global mean.''
+\F Polar cells are over-weighted; weight by $\cos\varphi$.
+\item ``Global analyses average temperature anomalies rather than absolute values because anomalies are correlated over large distances.''
+\T And they remove altitude and siting offsets.
+\item ``A more negative $\delta^{18}$O in polar ice indicates a colder climate.''
+\T More rain-out on the way means lighter snow.
+\item ``A heavier (more positive) benthic $\delta^{18}$O indicates less ice.''
+\F Ice sheets store light water, so more ice makes the ocean heavier.
+\item ``A record-warm El Niño year proves a warming trend.''
+\F Single years reflect variability; trends need decades and an uncertainty.
+\item ``Doors of a Stevenson screen face north so that opening them does not expose the thermometer to sun.''
+\T (Northern hemisphere.)
+\end{enumerate}
+\end{statements}
+
+\begin{longans}[: ``How do we know the Earth has warmed, and that it is beyond natural variability?'']
+(1) Measurement standards and why (screens, siting). (2) From stations to a global mean: gridding, $\cos\varphi$ weights,
+anomalies, spatial correlation. (3) Time: folding/Fourier remove cycles; 30-year climate. (4) Trend with autocorrelation-corrected
+error; natural variability (El Niño, volcanoes) is 0.1--0.3\,K versus 1.2\,K. (5) Attribution: forcing and $\Delta T=\Lambda F$.
+(6) Before instruments: $\delta^{18}$O logic and its caveats.
+\end{longans}

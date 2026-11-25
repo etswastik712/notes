@@ -1,0 +1,165 @@
+% ===================================================================
+\section{Biology, ecological thinking and the wildebeest (EE01)}
+% ===================================================================
+
+\subsection{Why biology resists a few neat equations}
+Lecture 1 opens with three complaints: biology needs a lot of memorising, it is description-heavy, and it seems
+to have no structure of ``a few equations from which the rest can be derived''. The answer the course gives is not
+a defence of biology but a description of what biological systems are like. Slide 15 lists four features:
+
+\begin{enumerate}
+\item \textbf{Diversity and interconnectedness}, within a level (many species in one community) and across levels
+(a change in a muscle protein can change a herd; a herd can change a river).
+\item \textbf{Stochasticity}: which calf is caught, which seed lands where, which mutation arises.
+\item \textbf{Historicity}: the present state depends on the particular path that produced it.
+\item \textbf{Emergence}: properties of the whole are not found by dissecting the parts (``reductionism often fails'').
+\end{enumerate}
+
+\begin{chain}[: from the four features to the course's method]
+Each feature blocks the physicist's route in its own way.
+\begin{itemize}
+\item Interconnectedness $\Rightarrow$ there is no isolated ``system'' to write equations for, and cutting a
+system off from its connections changes how it behaves.
+\item Stochasticity $\Rightarrow$ even a correct model predicts only probabilities.
+\item Historicity $\Rightarrow$ the ``initial conditions'' are themselves a historical fact that has to be described,
+not derived.
+\item Emergence $\Rightarrow$ the behaviour of the whole cannot be assembled from the laws of the parts.
+\end{itemize}
+Therefore (slide 16): \textbf{mathematical formulation is typically difficult}, and when it can be done
+\textbf{the relation with reality is statistical and conditional}. Two responses are possible: describe what is
+there, or build simplified models with caveats. BI2113 uses (1) \emph{oversimplified mathematical models},
+(2) \emph{a focus on concepts}, (3) \emph{historical narrative}, (4) \emph{examining the pedagogy}, and
+accepts a trade-off: \textbf{breadth over depth}.
+
+This also answers the three complaints: memorising and description come from diversity and history; the lack of
+structure comes from mathematics working only locally, with caveats, while concepts and narrative carry the
+connecting threads.
+\end{chain}
+
+\begin{keyidea}
+``Oversimplified'' is a method, not an apology. A model is judged by what it teaches, not by how realistic it is:
+the logistic equation is wrong for every real population and still explains why populations level off. The
+course's wrap-up lecture repeats this: \emph{never mistake your model for reality}, and a model that shows the
+expected behaviour is not thereby the right model.
+\end{keyidea}
+
+\subsection{Levels of organisation and the domain of the course}
+Slide 13 draws a ladder: biomolecules $\to$ cells $\to$ tissues $\to$ organs $\to$ individual $\to$
+population $\to$ community $\to$ ecosystem $\to$ biosphere. The levels from population upward change on
+ecological time scales. \textbf{Changed trait values in a population are microevolution}; accumulated, they lead
+through \textbf{speciation} to \textbf{macroevolution}. The individual's life cycle (meiosis to a gamete,
+fertilisation to a cell) links the sub-organismal levels back to the individual. Slide 14 removes the
+sub-organismal levels: \textbf{the domain of BI2113 is the individual and above}.
+
+Different levels run on different clocks: muscle contraction in milliseconds, a migration in a year, the rise of a
+lineage in millions of years. A model that follows one clock can treat the slower processes as fixed and the
+faster ones as instantaneous. That separation of time scales is what makes simple models possible at all.
+
+\subsection{Proximate and ultimate questions}
+Slide 5 splits the wildebeest migration into \emph{how} and \emph{why}:
+\begin{itemize}
+\item \textbf{How} (proximate): the mechanism inside one individual now: physiology, development, cues, behaviour rules.
+\item \textbf{Why} (ultimate): the benefit that made selection favour the trait; its evolutionary history.
+\end{itemize}
+Both kinds of answer apply to \emph{every} trait. They are not rival explanations; they answer different
+questions. (Mayr's names for them, and his example of the warbler that migrates on day-length cues while the
+screech owl in the same wood stays, are background reading.)
+
+\begin{trap}
+Confusing the \emph{mechanism} of synchronous calving with its \emph{benefit}. How females synchronise (a fall in
+forage protein triggers the cycle; a silent first ovulation cues bulls and other females) is proximate. Why it pays
+(swamping predators) is ultimate. ``Calves stand within 6 minutes'' is proximate; ``this lets them keep up with a
+herd that must move'' is ultimate.
+\end{trap}
+
+\subsection{The wildebeest case}
+\subsubsection*{How: three adaptations}
+\begin{enumerate}
+\item \textbf{Efficient muscle.} 62.6\,\% efficient, against 41.8\,\% (cow) and 34\,\% (mouse) (Curtin et al.\
+2018). Efficiency $\eta$ is the fraction of chemical energy used that comes out as mechanical work; the rest is
+heat. For work $W$ the fuel burnt is $W/\eta$ and the heat released is $W(1/\eta-1)$. A cow therefore needs
+$0.626/0.418=1.50\times$ the fuel, but releases $1.39/0.60=2.3\times$ the heat. Heat is what is left over, so it
+grows much faster than fuel as $\eta$ falls; in a hot, dry habitat, shedding heat costs water.
+\item \textbf{Synchronous births.} About 250{,}000 calves in about three weeks from mid-February, roughly 80\,\% of the
+year's calves: about 12{,}000 a day, 500 an hour. Predators with a limited capacity to chase, kill and eat cannot
+take more than a fixed number per day, so concentrating births lowers the \emph{fraction} lost
+(\textbf{predator satiation}).
+\item \textbf{Precocial calves.} A calf stands in about 6 minutes and walks in 30; topi and hartebeest calves take
+much longer. A herd that must keep moving cannot afford helpless young.
+\end{enumerate}
+
+\begin{chain}[: why synchrony protects calves (a bound)]
+Let $N$ calves be born over $w$ days and let predators kill at most $K$ per day. Losses in the window are at most
+$Kw$, so the fraction lost is at most $\min(1,\,Kw/N)$. Shortening $w$ lowers the cap in proportion, as long as
+$K<N/w$. If the herd is small ($N/w<K$) there is no cap, and a pulse of births may even attract predators: synchrony
+works only with large numbers.
+\end{chain}
+
+\subsubsection*{Why: opposing gradients}
+Rainfall rises from the south-east short-grass plains ($\sim$400\,mm) to the north-west woodland ($\sim$1200\,mm),
+but soil fertility and grass protein run the other way (the plains sit on nutrient-rich volcanic ash). The puzzle
+the slide sets: if the woodland is wetter all year, why do herds go onto the dry plains at the start of the rains?
+
+\begin{chain}[: why a migration, rather than staying put]
+\begin{enumerate}
+\item Rain controls \emph{how much} green grass exists; fertility controls \emph{how good} it is.
+\item The two gradients are opposed, so no single place is best all year: the plains are best (protein-rich, short
+grass) while the rains last; the woodland when the plains dry out.
+\item An animal that compares sites over a large enough distance therefore keeps moving. In Holdo et al.'s
+models (background), rules using intake combined with plant nitrogen fit the observed herd distribution far better
+than rules using biomass alone, and a migration appears only when the tracking radius exceeds about 80--100\,km;
+with only local comparisons the simulated herd gets trapped.
+\end{enumerate}
+So ``they follow the rain'' is incomplete: they follow \emph{quality}, and the migration is an emergent property of
+many animals following a simple rule on a landscape with opposed gradients.
+\end{chain}
+
+\subsubsection*{What the migration does to the ecosystem}
+\begin{itemize}
+\item \textbf{Death}: annual mass drownings at the Mara River crossings (about 6{,}000 a year) are a recurring pulse of
+food and nutrients for fish and scavengers; bones release phosphorus for years.
+\item \textbf{Fire}: grazing removes fuel. After rinderpest was eradicated in the 1960s the herd surged, fire
+declined and trees recovered (background: a virus-to-landscape trophic cascade).
+\end{itemize}
+
+\subsubsection*{Why so many? (Hopcraft, background but a model of reasoning)}
+Wildebeest outnumber the next herbivore (zebra) about six-fold. The argument eliminates explanations by comparison:
+against topi and hartebeest (biology helps but is not enough: wildebeest are not that dense elsewhere); against
+resident wildebeest herds (same biology, 30--240$\times$ fewer: residents are \emph{habitat-limited}); against zebra
+(also migratory but far fewer: probably \emph{predation-limited}). The general recipe for migratory
+superabundance: \textbf{refuge areas, an ephemeral high-quality resource, and connectivity} between patches.
+
+\begin{numbers}
+$\sim$1{,}500\,km a year; herd $\approx$1.2--1.3 million; muscle 62.6\,\% (cow 41.8, mouse 34); 250{,}000 calves in
+$\sim$3 weeks ($\approx$80\,\% of the year's); calf stands in $\sim$6 min; rain 400\,$\to$\,1{,}200\,mm SE$\to$NW;
+tracking radius $\gtrsim$80--100\,km; $\sim$6{,}000 drownings a year.
+\end{numbers}
+
+\begin{statements}
+\begin{enumerate}[label=\arabic*.]
+\item ``Wildebeest migrate because the plains get more rain early in the season.''
+\F The woodland is wetter all year. The pull of the plains is grass \emph{quality} (protein, on fertile soil).
+\item ``Proximate and ultimate explanations of a trait compete; at most one can be right.''
+\F They answer different questions (how vs why) and both apply to every trait.
+\item ``Synchronous calving lowers the number of calves predators take per day.''
+\F It lowers the \emph{fraction} taken: predators are saturated, so the number per day is capped while births
+per day are huge.
+\item ``Because the wildebeest muscle is 1.5$\times$ more fuel-efficient than the cow's, it also releases 1.5$\times$ less heat.''
+\F Heat per unit work is $1/\eta-1$: 0.60 against 1.39, a factor of 2.3. The heat ratio is bigger than the fuel ratio.
+\item ``If biological systems are stochastic, a model of them cannot be useful.''
+\F Models then predict probabilities and trends; the relation with data is statistical and conditional, which is
+still informative.
+\item ``Removing 6{,}000 drownings a year would change the wildebeest population a lot.''
+\F About 0.5\,\% of a food-limited herd; density dependence soon offsets it. The river ecosystem, which loses a
+nutrient subsidy, changes far more (2025 end-sem Q11).
+\end{enumerate}
+\end{statements}
+
+\begin{longans}[: ``Why is the wildebeest the dominant herbivore of the Serengeti?'']
+(1) \emph{Biology}: grazing adaptations for short protein-rich grass; efficient muscle for long travel; synchronous,
+precocial calving that swamps and outruns predators. (2) \emph{Environment}: opposed rainfall and fertility
+gradients, so high-quality grass exists somewhere reachable all year if animals move over $\gtrsim$80\,km.
+(3) \emph{Comparisons}: residents with the same biology are habitat-limited; zebra, also migratory, are
+predation-limited. (4) \emph{General recipe}: refuge, ephemeral high-quality resource, connectivity. (5) Note the
+two-way interaction: the herd changes fire regimes and river nutrients.
+\end{longans}

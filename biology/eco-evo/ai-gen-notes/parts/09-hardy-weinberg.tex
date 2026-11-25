@@ -1,0 +1,146 @@
+% ===================================================================
+\section{Hardy--Weinberg equilibrium (EE09)}
+% ===================================================================
+
+\subsection{From Mendel to populations}
+Mendel's laws describe transmission in a \emph{family}: \textbf{segregation} (each gamete gets one copy of a gene) and
+\textbf{independent assortment}. \textbf{Population genetics} extends them to a population: individuals make gametes,
+gametes fuse into zygotes, zygotes develop, and the next generation may have different gene frequencies.
+``Beanbag genetics'': individuals are gene pairs, gametes single genes, mating the coming together of gametes, the next
+generation a sample from the gamete pool. Evolution, in this language, is a change over time in the frequency of alleles
+or allele combinations.
+
+\subsection{Gene and genotype frequencies}
+One autosomal locus, alleles $A_1,A_2$ (frequencies $p,q$), genotypes $A_1A_1,A_1A_2,A_2A_2$ (frequencies $P,Q,R$):
+\[
+p=P+\tfrac12Q,\qquad q=R+\tfrac12Q .
+\]
+This holds for \emph{any} population (it just counts gene copies); it does not assume HWE. Pueblo MN: 83 MM, 46 MN,
+11 NN ($N=140$) gives $p=(166+46)/280=0.757$.
+
+\subsection{Deriving the law, assumption by assumption}
+\begin{center}\small
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+stage & frequency & assumption that keeps it so\\\midrule
+parents & $p$ & \\
+all gametes & $p$ & Mendelian segregation; equal fertility (no fertility selection); no mutation; no migration\\
+gametes that fuse & $p$ & large population (no sampling error); equal fertilising ability\\
+zygotes & $p^2:2pq:q^2$ & \textbf{random mating} (random union of gametes); equal frequencies in both sexes\\
+adults & $p^2:2pq:q^2$ & equal viability (no viability selection)\\
+next allele freq. & $p^2+\tfrac12(2pq)=p$ & \\\bottomrule
+\end{tabularx}
+\end{center}
+Random union of gametes: two $A_1$ gametes meet with probability $p\cdot p$; a heterozygote forms two ways, $pq+qp$; so
+genotypes are $(pA_1+qA_2)^2$. Weinberg's route (random mating of genotypes, summing the six mating types with Mendelian
+offspring) gives $P'=(P+Q/2)^2=p^2$ from \emph{arbitrary} $P,Q,R$: one generation suffices. Random mating means random
+\emph{with respect to this locus}: people mate non-randomly for height, but if the locus does not affect height, mating
+is random for it.
+
+\begin{keyidea}[: the law (slide 7)]
+In a large random-mating population with no selection, mutation or migration, gene and genotype frequencies are constant
+from generation to generation, and genotype frequencies are $p^2:2pq:q^2$. Hardy (1908) wrote it to correct Yule, who
+expected a dominant trait (brachydactyly) to be at 3:1 in the population. Yule had confused a \emph{family} ratio
+($Aa\times Aa$) with a \emph{population} frequency, which is $p^2+2pq:q^2$ and depends on $p$. Weinberg derived it
+independently the same year.
+\end{keyidea}
+
+\subsection{Five properties, and why each holds}
+\begin{enumerate}
+\item \textbf{Frequencies do not change; the equilibrium is \emph{neutrally} stable.} $p'=p$ for \emph{every} $p$: every
+allele frequency is an equilibrium, so a disturbed population stays at its new $p$; nothing pulls it back. Contrast the
+logistic's $N^*=K$, which attracts. Restoring or pushing forces appear only when an assumption fails (selection, mutation,
+migration create fixed points; drift makes $p$ wander).
+\item \textbf{One generation} reaches HW proportions (two if allele frequencies differ between the sexes: the first
+generation is $p_mp_f:p_mq_f+q_mp_f:q_mq_f$, but both sexes then carry $\bar p$).
+\item \textbf{Offspring genotypes depend only on parental allele frequencies}, not on parental genotype frequencies
+(parents $0.3:0.6:0.1$ and $0.2:0.8:0$ both have $p=0.6$ and both give $0.36:0.48:0.16$).
+\item \textbf{Heterozygotes never exceed $\tfrac12$}: $\tfrac12-2pq=\tfrac12(p-q)^2\ge0$, equality at $p=q=\tfrac12$. With $k$
+alleles, $H=1-\sum p_i^2\le1-1/k$ (4 alleles: 0.75).
+\item \textbf{Rare alleles hide in heterozygotes}: the share of copies of $a$ in heterozygotes is $pq/(pq+q^2)=p$;
+carriers outnumber affected by $2p/q$ (18:1 at $q=0.1$; 198:1 at $q=0.01$).
+\end{enumerate}
+
+\subsection{Why the law matters}
+(1) One of the few laws in biology; the subject proceeds by studying \textbf{departures} (``the law is boring, it is the
+deviations that are interesting''). (2) All else equal, allelic diversity is \textbf{maintained}. (3) It answered
+\textbf{Jenkin}: under Mendelian inheritance variation persists, making selection on random mutations plausible again.
+(4) It extends to many alleles and loci. (5) It estimates recessive and carrier frequencies. Like a frictionless plane,
+it is a \textbf{reference model}; it splits the life cycle into gametes $\to$ zygotes (random union gives HW) and
+zygotes $\to$ adults (where selection is added in EE10).
+
+\subsection{Testing a population}
+Recipe: allele frequencies from counts $\to$ expected genotype numbers $\to$ compare:
+\[
+\chi^2=\sum\frac{(\text{obs}-\text{exp})^2}{\text{exp}},\qquad \text{df}=3-1-1=1,\qquad \text{reject at 5\,\% if }\chi^2>3.84 .
+\]
+Three classes, minus one because counts sum to $N$, minus one because $p$ was estimated from the same data.
+Pueblo: expected 80.2, 51.5, 8.3; $\chi^2=1.59$: fail to reject.
+
+\begin{trap}
+A non-significant $\chi^2$ does \emph{not} prove HWE, and does not show that every assumption holds (no selection, random
+mating\dots). $\chi^2$ is insensitive; strong selection can leave adult genotypes close to HW.
+\end{trap}
+
+\subsection{Multiple alleles and recessive traits}
+$k$ alleles: $(p_1+\dots+p_k)^2$; homozygotes $p_i^2$, heterozygotes $2p_ip_j$. Allele frequency = its homozygote +
+half of each heterozygote containing it. Acid phosphatase (178 people): $p_A=0.3515$, $p_B=0.6095$, $p_C=0.039$. No CC
+was seen, but expected CC $=0.039^2\times178=0.27$ people: absence is what HWE predicts.
+
+\textbf{Recessive traits}: only two phenotypes are visible, so assume HWE: $\hat q=\sqrt{\text{freq(aa)}}$, carriers $2\hat p\hat q$.
+PKU 1/11{,}000: $q=0.0095$, carriers $\approx$1/53. Albinism 1/10{,}000: $q=0.01$, carriers $\approx$1/51 ($\sim$200 carriers per
+affected). PTC non-tasters 30\,\%: $q=0.548$.
+
+\begin{trap}
+The square-root estimate \emph{assumes} HWE and cannot test it: two classes $-1-1=0$ df. When all three genotypes are
+visible, use $p=P+Q/2$, never $\sqrt{R}$.
+\end{trap}
+
+\subsection{Conditioning problems (the practice set's traps)}
+\begin{worked}[: carriers among \emph{normal} sheep]
+Yellow fat 1 in 256 (recessive): $q=1/16$. Carriers in the flock $2pq=30/256$. Among \emph{normal} sheep:
+$\dfrac{2pq}{1-q^2}=\dfrac{30}{255}=0.1176$. The question conditions on the phenotype.
+\end{worked}
+\begin{worked}[: non-taster child of two tasters]
+$q=\sqrt{0.30}=0.548$. $P(Tt\mid\text{taster})=\dfrac{2pq}{p^2+2pq}=\dfrac{0.4954}{0.70}=0.708$. Both parents $Tt$ and child
+$tt$: $0.708^2\times\tfrac14=0.125$.
+\end{worked}
+\begin{worked}[: codominance]
+Shorthorn cattle: red 1430 (RR), roan 1130 (RW), white 260 (WW). $p_R=(2\cdot1430+1130)/5640=0.707$; expected 1411,
+1167, 241; $\chi^2=2.88<3.84$: consistent with one locus and random mating.
+\end{worked}
+\begin{worked}[: 2025 end-sem Q8]
+HWE with equal homozygote frequencies $\Rightarrow p=q=\tfrac12$: genotypes $0.25,0.5,0.25$. Probability two random
+individuals share a genotype: $0.25^2+0.5^2+0.25^2=0.375$.
+\end{worked}
+
+\begin{statements}
+\begin{enumerate}[label=\arabic*.]
+\item ``If a sample fits HW proportions, the locus is not under selection.''
+\F Failing to reject is not proof; $\chi^2$ is insensitive and selection can leave near-HW adults.
+\item ``HW equilibrium is stable: a population displaced from it returns to the original allele frequencies.''
+\F Genotype proportions return to HW in one generation, but at the \emph{new} allele frequency: neutral stability.
+\item ``A dominant allele should become more common over generations because it is expressed.''
+\F Dominance does not change frequency; $p'=p$ (Hardy's reply to Yule).
+\item ``Heterozygote frequency of 0.6 at a two-allele locus in HWE is impossible.''
+\T $2pq\le0.5$. (With 3+ alleles, total heterozygosity can exceed 0.5.)
+\item ``Two populations with the same allele frequency but different genotype frequencies give the same offspring genotype frequencies under random mating.''
+\T Offspring depend only on allele frequencies.
+\item ``The frequency of a rare recessive allele can be estimated as $\sqrt{\text{aa}}$ and the HWE assumption checked on the same data.''
+\F Zero degrees of freedom: the estimate assumes HWE.
+\item ``If allele frequencies differ between males and females, HW proportions are reached in one generation.''
+\F Two generations.
+\item ``Most copies of a rare recessive allele are in affected homozygotes.''
+\F In heterozygotes (fraction $p$).
+\item ``HW shows that Mendelian inheritance by itself conserves variation, answering Jenkin.''
+\T Unlike blending, which halves variance each generation.
+\end{enumerate}
+\end{statements}
+
+\begin{longans}[: ``Derive HW stating the assumptions; why was it important for Darwin's theory?'']
+(1) Define $p,q,P,Q,R$; $p=P+Q/2$. (2) Follow $p$ through gametes, union, zygotes, adults, naming each assumption
+(segregation, no mutation/migration/selection, large $N$, random mating, equal sexes). (3) Show $(p+q)^2$ and $p'=p$; one
+generation from any start (Weinberg's table). (4) Five properties, especially neutral stability. (5) Importance: baseline
+for evolutionary forces; preserves variation, answering Jenkin's blending objection, so selection has material to act on.
+(6) Each departure as a cause: drift (EE07), selection (EE10), non-random mating, migration, mutation.
+\end{longans}

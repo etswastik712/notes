@@ -1,0 +1,116 @@
+% EC2113 Introduction to Climate -- revision notes (AI-generated from the 01-Climate vault)
+% Build: latexmk -pdf Climate_Revision.tex   (chapters live in parts/)
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,tabularx,longtable,array}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,urlcolor=NavyBlue]{hyperref}
+
+\setlist{itemsep=2pt,topsep=3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.25}
+
+\titleformat{\section}{\Large\bfseries\color{NavyBlue}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\large\bfseries\color{NavyBlue!80!black}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.5em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small EC2113 Climate: revision}
+\rhead{\small\nouppercase{\leftmark}}
+\cfoot{\thepage}
+
+% ---------- boxes ----------
+\tcbset{enhanced,breakable,boxrule=0.6pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+        fonttitle=\bfseries\small}
+% the core idea of a section
+\newtcolorbox{keyidea}[1][]{colback=NavyBlue!5,colframe=NavyBlue!70!black,title={Core idea#1}}
+% a chain of reasoning: each step follows from the one before
+\newtcolorbox{chain}[1][]{colback=ForestGreen!5,colframe=ForestGreen!60!black,title={Reasoning chain#1}}
+% statement-style MCQ practice: claims with verdict + reason
+\newtcolorbox{statements}[1][]{colback=Goldenrod!8,colframe=Goldenrod!70!black,title={Statement check#1}}
+% common errors
+\newtcolorbox{trap}[1][]{colback=BrickRed!5,colframe=BrickRed!70!black,title={Trap#1}}
+% subjective answer skeleton
+\newtcolorbox{longans}[1][]{colback=Plum!6,colframe=Plum!70!black,title={Long-answer skeleton#1}}
+% numbers worth memorising
+\newtcolorbox{numbers}[1][]{colback=gray!6,colframe=gray!60!black,title={Numbers and facts#1}}
+% worked example
+\newtcolorbox{worked}[1][]{colback=white,colframe=Cerulean!70!black,title={Worked example#1}}
+
+% verdict tags for statement checks
+\newcommand{\T}{\textbf{\color{ForestGreen!70!black}[True]}\ }
+\newcommand{\F}{\textbf{\color{BrickRed}[False]}\ }
+\newcommand{\PT}{\textbf{\color{Goldenrod!60!black}[Half-true]}\ }
+\newcommand{\why}{\par\hspace*{1.2em}$\hookrightarrow$\ }
+
+\newcommand{\dd}{\mathrm{d}}
+
+\title{\Huge\bfseries Introduction to Climate (EC2113)\\[4pt]
+\Large Revision notes for reasoning-based MCQs and long answers}
+\author{Built from the 01-Climate vault (CL01--CL30, quiz prep, solved past papers)}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{tcolorbox}[colback=NavyBlue!4,colframe=NavyBlue!70!black,title={How to use these notes}]
+Written in the same way as the eco-evo notes: for MCQs that test \emph{reasoning} (``which statement follows'',
+``A because B'') and for long written answers. Each section is an argument rather than a list:
+\begin{itemize}
+\item \textbf{Core idea} boxes give the one thing to understand;
+\item \textbf{Reasoning chain} boxes go from assumptions to result, saying why each step follows;
+\item \textbf{Statement check} boxes list plausible claims with a verdict and the reason (cover the verdict and decide first);
+\item \textbf{Trap} boxes name the slips that distractors are built from;
+\item \textbf{Long-answer skeleton} boxes give the structure of a full answer;
+\item \textbf{Numbers and facts} boxes hold the values worth memorising.
+\end{itemize}
+Section~\ref{sec:toolkit} lists the reasoning moves that recur across the course. Section~\ref{sec:examples} catalogues every
+example, data set and case (where it comes from, what is seen, what it shows). The glossary and the equation sheet follow
+(Sections~\ref{sec:glossary} and~\ref{sec:equations}), then a mixed drill.
+
+\textbf{Scope.} Instructors this year: Argha (L1--L6), Suhas (pre- and post-midsem atmosphere), Joy (the ocean, O1--O7 and
+tutorials). Last year's course (Neena) is included where it adds material (Part V). Classroom, 19 Nov: ``the syllabus will be
+everything. However, the exam will likely test your grasp of the post mid-sem material in greater depth.''
+\end{tcolorbox}
+
+\tableofcontents
+\newpage
+
+\input{parts/00-toolkit}
+\input{parts/01-system-observing}
+\input{parts/02-energy-feedback}
+\input{parts/03-atmosphere-rest}
+\input{parts/04-radiation-greenhouse}
+\input{parts/05-energy-sphere}
+\input{parts/06-rotation-winds}
+\input{parts/07-monsoon}
+\input{parts/08-past-orbits}
+\input{parts/09-ocean-neena}
+\input{parts/10-ocean-energy}
+\input{parts/11-ocean-momentum-salt}
+\input{parts/12-ocean-overturning}
+\input{parts/13-ocean-variability-carbon}
+\input{parts/14-tutorials}
+\input{parts/15-synthesis}
+\input{parts/16-examples}
+\input{parts/17-glossary}
+\input{parts/18-equations}
+\input{parts/19-drill}
+
+\end{document}

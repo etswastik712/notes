@@ -1,0 +1,184 @@
+% ===================================================================
+\section{Conservation biology (EE07)}
+% ===================================================================
+
+\subsection{Why conserve: extinction rates and three ethics}
+Contemporary extinction rates are \textbf{100--1000 times} the geological background, and projected to get worse.
+Conservation biologists ``study the properties of small and/or declining populations and their environment, and try to
+suggest measures to protect them in nature''; the field draws on population ecology, economics, public policy,
+anthropology, law and more.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.6cm}X>{\raggedright\arraybackslash}p{2.9cm}}
+\toprule
+ethic (proponent) & premise & conclusion\\\midrule
+romantic-transcendental (John Muir) & communion with nature brings people closer to God; morally superior to preserve
+wilderness (pushed for Yosemite, Sequoia) & \textbf{preserve}\\
+resource conservation (Gifford Pinchot; mentor Dietrich Brandis, first Inspector General of Forests in India) & ``the art
+of producing from the forest whatever it can yield for the service of man''; wise use, greatest good for the greatest
+number for the longest time (\emph{Bahujan Hitay, Bahujan Sukhai}) & \textbf{economic management} (sustainability)\\
+evolutionary-ecological land ethic (Aldo Leopold) & ``a thing is right when it tends to preserve the integrity, stability
+and beauty of the biotic community''; humans are plain members of the land community & \textbf{conserve} (use with
+responsibility, intrinsic value)\\\bottomrule
+\end{tabularx}
+\end{center}
+Different premises give different policies: no-go parks (Muir), sustained-yield forestry (Pinchot), managing for the
+health of the whole community (Leopold).
+
+\subsection{Who is vulnerable: Rabinowitz's seven rarities}
+Cross three binary properties: \textbf{geographic range} (extensive/restricted), \textbf{habitat tolerance}
+(broad/narrow), \textbf{local population size} (large/small). $2^3=8$ cells: one is \emph{common} (extensive, broad, large:
+house sparrow, dandelion), seven are forms of rarity, ending with the rarest (restricted, narrow, small: mountain
+gorilla).
+\begin{itemize}
+\item \textbf{Passenger pigeon}: extensive range, \emph{narrow} habitat (mast forests), \emph{large} local populations:
+``abundant but demanding''.
+\item \textbf{Tiger}: extensive range, broad tolerance, \emph{small} local populations: ``everywhere but sparse''.
+\end{itemize}
+Each road to rarity calls for a different remedy (protect corridors and prey; protect the key habitat across the range;
+guard the last populations). ``Rare'' describes a state; vulnerability also depends on threats.
+
+\subsection{The passenger pigeon: a complicated story}
+The last bird died in \textbf{1914}, but \textbf{1878} was the last year the catch was commercially viable. Hunting
+pressure fell, yet the population never rebounded, though other pigeons routinely do. Slide 12's six candidate causes:
+climate/catastrophe (no records); \textbf{hunting} (part of the story, not the whole); disease (no records);
+competition with domestic species (unlikely); \textbf{habitat alteration coupled with social facilitation in food
+finding} (``we do not know''); \textbf{genetic issues} (Murray et al.\ 2017 found low genomic diversity shaped by
+selection; how it contributed: ``we have no idea'').
+
+\begin{chain}[: why a flock species can be doomed while still common (Bucher, background)]
+\begin{enumerate}
+\item The pigeon was a \textbf{nomadic specialist} on mast (beechnuts, acorns), which appears in large but unpredictable
+patches; finding them depended on \textbf{social facilitation} (following flock-mates).
+\item Deforestation, pigs eating mast, and hunting made patches smaller and rarer, and fewer birds meant poorer
+food finding.
+\item Poorer food finding lowered per-capita success, which shrank the flocks further: a \textbf{positive feedback}.
+\item So per-capita growth \emph{fell} with falling density: an \textbf{Allee effect}. The MVP was crossed while the bird
+was still relatively common; after that, removing the hunting pressure could not bring it back.
+\end{enumerate}
+\end{chain}
+
+\subsection{Why small populations are at risk}
+Three stochasticities (slide 15):
+\begin{itemize}
+\item \textbf{demographic}: random variation in births, deaths, sex ratio;
+\item \textbf{genetic}: drift, loss of heterozygosity, inbreeding depression;
+\item \textbf{environmental} stochasticity and natural catastrophes.
+\end{itemize}
+\textbf{Minimum viable population (MVP)}: the smallest size that ensures, at an acceptable level of risk, that the
+population persists for a specified time (conventionally 99\,\% over 1000 years, Shaffer 1981).
+
+\begin{chain}[: why size matters for each stochasticity]
+\begin{itemize}
+\item \emph{Demographic}: relative noise scales as $1/\sqrt N$ (32\,\% at $N=10$, 3\,\% at $N=1000$). Even with $b>d$, each
+founder's line dies out with probability $d/b$, and all must fail: $P_{\text{ext}}=(d/b)^{N_0}>0$. With $b/d=1.2$: one
+founder fails 83\,\% of the time, 20 founders 2.6\,\%. Mean persistence time grows \emph{exponentially} with $K$.
+\item \emph{Genetic}: $H_t=H_0(1-1/2N_e)^t$; the half-life is $\approx1.39N_e$ generations. Lost variation means
+inbreeding depression and less capacity to adapt.
+\item \emph{Environmental}: hits every individual together, so it does \emph{not} average out with $N$; large
+populations are much safer, not safe.
+\end{itemize}
+\end{chain}
+
+\textbf{Allee effect}: per-capita growth falls as density falls (mates hard to find, group defence and food-finding fail).
+Strong Allee model: $\dot N=rN(N/A-1)(1-N/K)$, with equilibria 0 (stable), $A$ (unstable threshold), $K$ (stable). A
+constant harvest can create a second, higher threshold: with $r=0.5$, $A=20$, $K=100$ and quota 20, the population
+sits at 85.9 but a bad year that drops it below 52.1 sends it to extinction; at quota $\ge26.3$ the equilibria collide
+(a fold, as in lakes).
+
+\begin{keyidea}[: the extinction vortex]
+The three threats compound rather than add: smaller $N$ $\Rightarrow$ faster loss of heterozygosity $\Rightarrow$
+inbreeding lowers survival and fecundity $\Rightarrow$ lower $b/d$ at smaller $N$ $\Rightarrow$ steeply higher extinction
+risk; in social species the Allee effect adds a further drop. Once a population is below the size where these feedbacks
+dominate, removing the original pressure does not save it. That is the pigeon after 1878.
+\end{keyidea}
+
+\textbf{Four things must converge} (slide 16): science, common sense, economics and politics.
+
+\subsection{Project Tiger}
+\begin{itemize}
+\item \textbf{Baseline}: 40--45 thousand tigers in early-20th-century India; \textbf{1{,}827 in 1972} (hunting, habitat
+loss, prey loss, poaching, competition with villagers and livestock).
+\item \textbf{Launch 1 April 1973}. Aims: a viable tiger population for scientific, economic, aesthetic, cultural and
+ecological values; preserve such areas as national heritage.
+\item \textbf{Site criteria}: little disturbance; high numbers of prey and predator; no drilling, mining or timber;
+spread across states. \textbf{First nine reserves} ($\sim$13{,}017\,km$^2$): Bandipur, Corbett, Kanha, Manas, Melghat,
+Palamau, Ranthambhore, Similipal, Sundarbans.
+\item \textbf{Activities}: core and buffer areas, corridors, halting cattle and forest harvesting, patrolling.
+\item \textbf{Result}: $>$4{,}000 in 11 years (questioned, but an increase was real).
+\item \textbf{Reversals}: lack of political will against farmer pressure, buffer encroachment, prey loss, poaching, lack of
+funds. More reserves did not mean more tigers.
+\item \textbf{Reform}: Wild Life (Protection) Amendment Act 2006 created the \textbf{NTCA} and the \textbf{Wildlife Crime
+Control Bureau}; camera-trap surveys; 1{,}411 (2008), 1{,}706 (2011); Sariska lost all its tigers (poaching); 2012 Supreme
+Court ban on tourists in core areas; \textbf{2018: 2{,}967 (2{,}603--3{,}346)} from 2{,}461 unique photographs.
+\item India holds $\sim$\textbf{70\,\%} of the world's wild tigers. CITES (1973) regulates trade. Human--animal conflict:
+elephants and railways; lemon-tree barriers in Assam.
+\end{itemize}
+
+\begin{chain}[: why counts need a detection probability]
+A raw count $C$ misses animals that were present but not seen. If each animal is detected with probability $p$, the
+estimate is $\hat N=C/\hat p$. Indices (pugmarks, scats) ignore $p$, and the pugmark ``census'' could not even identify
+individuals reliably (prints vary with substrate and pace); it was abandoned. Camera traps identify tigers by
+\textbf{stripes}; a short (30--60 day) survey keeps the population \emph{closed}; capture--recapture models estimate $p$
+from how often known individuals are re-photographed. Lincoln--Petersen: $\hat N=Mn/m$ (marked $M$, second sample
+$n$, recaptures $m$), from $m/n=M/N$. Fewer recaptures, wider confidence interval.
+\end{chain}
+
+\begin{worked}[: 2025 mid-sem Q3]
+46 rabbits marked; next week 37 caught, 27 marked. $\hat N=46\times37/27=63$ (Chapman: $47\cdot38/28-1=62.8$).
+\end{worked}
+
+\subsection{Reserves (mandatory reading: Hunter and Gibbs Ch.\ 11)}
+Reserves are the \textbf{coarse-filter} strategy: protect representative ecosystems. \textbf{Selection}: diversity
+hotspots, gap filling, logistics. \textbf{Diamond's six principles} (reserves as islands): (1) large holds more species
+than small; (2) one large better than several small of equal total area; (3) small reserves close together;
+(4) clustered rather than linear; (5) corridors; (6) as circular as possible.
+
+\begin{chain}[: why large and round]
+Area grows as the square of linear size, edge only linearly; so larger reserves have relatively less edge, and for a
+given area a circle has the least perimeter. Edge is where poachers, livestock, fire, dogs, disease and invaders enter,
+and where animals leave and meet conflict. Large reserves also hold more habitat types, wide-ranging species, larger
+(safer) populations, and cannot all be hit by one catastrophe. They should exceed the \textbf{minimum dynamic area}
+(room for a mosaic of disturbance and succession patches).
+\end{chain}
+
+\textbf{SLOSS} (single large or several small): with \emph{nested} species lists (larger reserves contain the smaller ones'
+species) one large reserve wins (224 vs 199 species for the same cost); with \emph{un-nested} lists several small ones win
+(709 species for less money). The answer depends on how species are distributed.
+
+\textbf{Connectivity}: boundaries are permeable; buffers of semi-natural land help. Four movements to maintain: daily
+(home range), annual migration, dispersal of young and seeds, long-term range shifts. Corridors and \textbf{zoning} (core,
+buffer, partial use). \textbf{Management} ``is first and foremost people management'': visitors, legal uses, local
+goodwill; let natural disturbances (fire, flood) act; control invasives and overabundant natives.
+
+\begin{statements}
+\begin{enumerate}[label=\arabic*.]
+\item ``A population whose birth rate exceeds its death rate cannot go extinct.''
+\F $P_{\text{ext}}=(d/b)^{N_0}>0$; small populations often do.
+\item ``Since hunting ended around 1878, the passenger pigeon's extinction in 1914 must have had a cause unrelated to hunting.''
+\F Hunting (with habitat loss) pushed it below a threshold; after that, Allee-type feedbacks drove the decline without
+needing a new cause.
+\item ``Environmental stochasticity becomes negligible in large populations, like demographic stochasticity.''
+\F It hits all individuals together and does not average out.
+\item ``A species with an extensive range and broad tolerance is safe from extinction.''
+\F The tiger is in that cell but has small local populations: demographic and genetic risk, Allee effects (2025 end-sem Q3).
+\item ``A five-pointed star reserve of the same area is as good as a circle.''
+\F More edge, narrow arms that are almost all edge, smaller core: more poaching, conflict, invasion (2025 end-sem Q7).
+\item ``If the buffer zone degrades, tigers in an untouched core are unaffected.''
+\F Buffers hold prey, dispersal routes for subadults, and keep people and cattle away from the core (2025 end-sem Q9).
+\item ``Several small reserves can protect more species than one large one of equal cost.''
+\T When species lists are un-nested; SLOSS has no universal answer.
+\item ``A rise in the number of tiger reserves shows that tiger numbers rose.''
+\F Reserves measure effort, not outcome; reversals happened while reserves increased.
+\item ``A constant harvest below the maximum growth rate is always safe.''
+\F With an Allee effect, harvesting creates an unstable threshold far above $A$; a bad year can tip the stock.
+\end{enumerate}
+\end{statements}
+
+\begin{longans}[: ``Why are small populations at risk even when healthy on average?'' / ``Project Tiger as a case study'']
+\emph{Small populations}: three stochasticities with the $1/\sqrt N$ argument and $(d/b)^{N_0}$; drift and inbreeding;
+environmental shocks; Allee effect; how they compound (vortex); MVP definition; passenger pigeon as the example.
+\emph{Project Tiger}: baseline and causes; aims, criteria, design (core, buffer, corridors); early success and why it
+was questioned (pugmarks); reversals; 2006 reform; camera-trap capture--recapture and $\hat N=C/\hat p$; numbers to 2018;
+lessons: science, common sense, economics, politics, and local people (conflict).
+\end{longans}

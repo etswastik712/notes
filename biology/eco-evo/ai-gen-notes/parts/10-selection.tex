@@ -1,0 +1,169 @@
+% ===================================================================
+\section{Natural selection (EE10)}
+% ===================================================================
+
+\subsection{Definition and Darwin's four postulates}
+\textbf{Natural selection is the differential survival and reproduction of individuals due to differences in
+phenotype} (Zimmer and Emlen). The natural/artificial distinction ``is rather\dots artificial'' and persists for
+historical reasons: it is one process. Freeman and Herron's form of Darwin's postulates:
+\begin{enumerate}
+\item individuals in a population \textbf{vary};
+\item some of the variation is \textbf{passed from parents to offspring};
+\item some individuals are \textbf{more successful} at surviving and reproducing;
+\item success is \textbf{not mere luck}: it depends on the inherited variant traits.
+\end{enumerate}
+If all four hold, the composition of the population \emph{inevitably} changes across generations.
+
+\begin{keyidea}[: selection needs no ``struggle'' in the literal sense]
+The postulates require differences in \emph{reproductive success}. Genotypes can differ in fecundity, mating success or
+development speed with everyone surviving and food abundant; relative output decides. Darwin used ``struggle'' in a
+large, metaphorical sense (2023 end-sem Q2).
+\end{keyidea}
+
+\subsection{The medium ground finch on Daphne Major}
+\emph{Geospiza fortis}, monitored yearly since \textbf{1973} by Peter and Rosemary Grant ($\sim$1200 birds, most marked by 1977).
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+postulate & evidence\\\midrule
+1 variation & beak depth varies, roughly bell-shaped ($\sim$7--11\,mm)\\
+2 heritability & deep-beaked parents have deep-beaked chicks; after DNA showed 20\,\% extra-pair chicks and these were excluded,
+$h^2=0.65\pm0.15$\\
+3 differential survival & \textbf{1977 drought}: 24\,mm rain instead of $\sim$130\,mm; no breeding; \textbf{84\,\%} of \emph{G.\ fortis}
+disappeared, mostly starving\\
+4 non-random & small soft seeds ran out first; the hard fruits of \emph{Tribulus cistoides} remained, crackable only by large,
+deep-beaked birds; survivors had deeper beaks and bigger bodies\\
+consequence & 1978 chicks had deeper beaks than 1976 chicks: \textbf{the population evolved}\\\bottomrule
+\end{tabularx}
+\end{center}
+
+Then the direction reversed: the \textbf{1983 El Niño} (1359\,mm, $\sim$57$\times$ 1977's rain) made small soft seeds
+abundant, favouring smaller birds. In the \textbf{2003--04 drought}, the newly arrived large ground finch \emph{G.\
+magnirostris} took the big \emph{Tribulus} seeds, so \emph{G.\ fortis} evolved \emph{smaller} beaks: competition changed the
+direction of selection.
+
+\begin{chain}[: why extra-pair paternity mattered]
+A chick sired by an extra-pair male is plotted against a social father it is unrelated to. That adds noise to the
+parent--offspring regression and flattens it, so misassigned paternity \emph{underestimates} heritability. Removing those
+chicks gave the higher, truer $h^2=0.65$.
+\end{chain}
+
+\textbf{Three lessons} (slide 3): (1) evolution can be \textbf{rapid and dramatic}; (2) sources of selection
+\textbf{shift}, so evolution reverses or changes direction; (3) the \textbf{see-saw} in a changing environment can look like
+stately gradual change in fossils: a fossil bed mixes thousands of years, the zig-zags largely cancel, and only the small
+net change remains visible. Slow change in the record is compatible with fast change each generation.
+
+\subsection{Three modes of selection}
+\begin{center}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1,horizontal sep=8mm},width=5.4cm,height=3.6cm,
+  ticks=none,xmin=-4,xmax=4,ymin=0,ymax=0.62,axis lines=left]
+\nextgroupplot[title={\small directional}]
+\addplot[gray,thick,domain=-4:4,samples=80]{exp(-x^2/2)/sqrt(2*pi)};
+\addplot[NavyBlue,thick,domain=-4:4,samples=80]{exp(-(x-1)^2/2)/sqrt(2*pi)};
+\nextgroupplot[title={\small stabilizing}]
+\addplot[gray,thick,domain=-4:4,samples=80]{exp(-x^2/2)/sqrt(2*pi)};
+\addplot[NavyBlue,thick,domain=-4:4,samples=80]{exp(-x^2/(2*0.5))/sqrt(2*pi*0.5)};
+\nextgroupplot[title={\small disruptive}]
+\addplot[gray,thick,domain=-4:4,samples=80]{exp(-x^2/2)/sqrt(2*pi)};
+\addplot[NavyBlue,thick,domain=-4:4,samples=120]{0.5*exp(-(x-1.4)^2/(2*0.5))/sqrt(2*pi*0.5)+0.5*exp(-(x+1.4)^2/(2*0.5))/sqrt(2*pi*0.5)};
+\end{groupplot}
+\end{tikzpicture}
+
+\small Grey: trait distribution before; blue: after. Directional: the mean moves. Stabilizing: intermediates favoured,
+variance falls. Disruptive: both extremes favoured, variance rises, may split.
+\end{center}
+
+\subsection{The nature of selection}
+\begin{chain}[: selection on individuals, evolution of populations]
+\begin{enumerate}
+\item An individual's genotype is fixed for life. It survives or dies, reproduces more or less, but does not change.
+No finch's beak grew from cracking \emph{Tribulus}.
+\item Selection therefore \emph{sorts} individuals; the \emph{population's} composition shifts as a result.
+\item Selection acts on \textbf{phenotypes}, but evolution happens only if \textbf{allele frequencies} change, which
+requires the phenotypic differences to be heritable. With $h^2=0$ the drought would still have killed the small-beaked
+birds, but the next generation would have bounced back: no evolution.
+\item So ``selection acts on phenotypes; genotypes get selected; genes get differentially transmitted'' (wrap-up slide 13),
+and \textbf{natural selection is not evolution}: selection without heritability gives no evolution, and evolution also has
+other causes (drift, mutation, migration, non-random mating: the broken HW assumptions).
+\end{enumerate}
+\end{chain}
+``The mess that is natural selection'' (slide 10): genes $\to$ genotype $\to$ (with biotic and abiotic environment)
+phenotype $\to$ selection $\to$ meiosis $\to$ fertilisation $\to$ genes, with \textbf{chance} at every step.
+
+\begin{trap}[: heritability is not ``resemblance'']
+``Obese children often have obese parents'' or ``long-winged birds have long-winged offspring'' does not show a genetic
+basis: shared diet, island, rearing conditions or maternal effects produce resemblance too. A genetic basis needs a
+common-garden or cross-fostering design, or crosses. And predicting a response needs differential fitness as well
+(2022 end-sem Q4; 2024 end-sem Q2).
+\end{trap}
+
+\subsection{What selection is not}
+\begin{itemize}
+\item \textbf{Always behind}: it changes frequencies \emph{after} exposure; the 1978 finches were adapted to 1977, not to
+what came next. It cannot anticipate; new mutations do not arise to meet needs; a population facing too-fast change may go
+extinct.
+\item \textbf{Not progressive}: organisms ``devolve'' as often as they evolve (parasites); adaptation proceeds by gain,
+loss and modification of characters.
+\item \textbf{Works with what is available}: pre-existing variation, co-opted structures (\textbf{preadaptations}); no grand
+design, no perfection. \emph{Gambusia} mosquitofish: a large gonopodium attracts mates but hinders escape, so males in
+high-predation populations have smaller ones: a \textbf{trade-off}, not an optimum.
+\item \textbf{Yet new traits evolve}: mutation and recombination create new combinations, which selection sorts (Illinois
+corn oil: from 4--6\,\% to $\sim$20\,\% in 100 generations, far beyond the starting range).
+\end{itemize}
+
+\subsection{One-locus selection (beyond the slides, but explains the past-paper items)}
+Selection enters the HW cycle between zygote and adult: zygotes form at $p^2:2pq:q^2$, then survive with fitnesses
+$w_{11},w_{12},w_{22}$:
+\[
+p'=\frac{p^2w_{11}+pq\,w_{12}}{\bar w},\qquad \bar w=p^2w_{11}+2pq\,w_{12}+q^2w_{22},\qquad
+\Delta p=\frac{pq\,[\,p(w_{11}-w_{12})+q(w_{12}-w_{22})\,]}{\bar w}.
+\]
+\begin{chain}[: what the formula says]
+\begin{itemize}
+\item The factor $pq$: selection is slow when either allele is rare (little variation to act on).
+\item A \textbf{recessive} favoured allele is invisible when rare (almost all copies sit in heterozygotes, HW property 5),
+so it takes very long to start spreading. A \textbf{dominant} favoured allele spreads fast at first but stalls at the end,
+because the last disfavoured recessive copies hide in heterozygotes. Additive alleles are fastest overall ($s=0.1$: 175
+generations vs $\sim$1000).
+\item \textbf{Overdominance} (heterozygote advantage, $w=1-s:1:1-t$): stable polymorphism at $p^*=t/(s+t)$; variation is
+maintained (classic case: sickle-cell in malarial regions).
+\item \textbf{Underdominance} (heterozygote disadvantage): an \emph{unstable} interior equilibrium; whichever allele starts
+above it goes to fixation (a threshold, like the Allee effect).
+\item \textbf{Breeder's equation} $R=h^2S$: only the heritable fraction of the selection differential is passed on.
+\end{itemize}
+\end{chain}
+
+\begin{statements}
+\begin{enumerate}[label=\arabic*.]
+\item ``The finches' beaks deepened because birds needed to crack hard seeds.''
+\F No individual changed; small-beaked birds died, and deep beaks were heritable.
+\item ``Natural selection always requires mortality.''
+\F Differences in reproduction alone suffice.
+\item ``If a trait is under strong selection but has zero heritability, the population will still evolve, only more slowly.''
+\F No evolution at all; the next generation returns to the old distribution.
+\item ``Stabilizing selection shifts the mean toward the optimum and widens the distribution.''
+\F It keeps the mean and narrows the distribution; disruptive selection widens it.
+\item ``The reversal of selection in 1983 shows that the 1977 evolution was an error of measurement.''
+\F Selection tracks a changing environment; reversals are expected (lesson 2).
+\item ``Fossil sequences showing slow change mean evolution is slow.''
+\F Fast zig-zags average out over the long spans a fossil bed mixes (lesson 3).
+\item ``A new beneficial recessive allele spreads quickly because it is beneficial.''
+\F It is almost never expressed while rare (it sits in heterozygotes), so selection barely sees it (2024 end-sem Q11).
+\item ``Heterozygote advantage maintains both alleles in the population.''
+\T Stable equilibrium at $p^*=t/(s+t)$.
+\item ``Selection produces the variation it acts on.''
+\F Mutation and recombination do; selection sorts.
+\item ``Competition from \emph{G.\ magnirostris} changed the direction of selection on \emph{G.\ fortis} beaks.''
+\T In 2004 it took the large seeds, so smaller beaks were favoured.
+\end{enumerate}
+\end{statements}
+
+\begin{longans}[: ``Natural selection is not evolution. Discuss.'']
+(1) Definitions: selection (differential survival/reproduction due to phenotype) vs evolution (change in allele/genotype
+frequencies across generations). (2) Four postulates; Daphne Major tests each (numbers). (3) Selection acts on
+individuals and phenotypes; evolution requires heritability ($h^2=0$ thought experiment; $R=h^2S$). (4) Other causes of
+evolution (drift, mutation, migration, non-random mating). (5) Properties: always behind, not progressive, uses what is
+available (\emph{Gambusia}), yet new traits arise. (6) Lessons: rapid, reversible, zig-zags look gradual.
+\end{longans}
