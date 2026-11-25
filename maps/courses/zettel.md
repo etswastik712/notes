@@ -15,10 +15,10 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 ### Key concepts
 - [[zettel/streamflow|Streamflow]]
 - [[zettel/bedrock-river|Bedrock River]]
+- [[zettel/flow-accumulation-map|Flow Accumulation Map]]
 - [[zettel/infrared-flux-temperature-feedback|Infrared Flux-Temperature Feedback]]
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
-- [[zettel/flow-accumulation-map|Flow Accumulation Map]]
 - [[zettel/hack-s-rule|Hack's Rule]]
 - [[zettel/knickpoint-migration|Knickpoint Migration]]
 - [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
