@@ -17,11 +17,11 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 - [[zettel/bedrock-river|Bedrock River]]
 - [[zettel/flow-accumulation-map|Flow Accumulation Map]]
 - [[zettel/infrared-flux-temperature-feedback|Infrared Flux-Temperature Feedback]]
+- [[zettel/lie-algebra-ideal-and-normal-subgroup-correspondence|Lie Algebra Ideal and Normal Subgroup Correspondence]]
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
 - [[zettel/hack-s-rule|Hack's Rule]]
 - [[zettel/knickpoint-migration|Knickpoint Migration]]
-- [[zettel/lie-algebra-ideal-and-normal-subgroup-correspondence|Lie Algebra Ideal and Normal Subgroup Correspondence]]
 - [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
 <!-- /kurooto:course-overview -->
 
