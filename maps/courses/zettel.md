@@ -21,8 +21,8 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
 - [[zettel/hack-s-rule|Hack's Rule]]
 - [[zettel/knickpoint-migration|Knickpoint Migration]]
+- [[zettel/lie-algebra-ideal-and-normal-subgroup-correspondence|Lie Algebra Ideal and Normal Subgroup Correspondence]]
 - [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
-- [[zettel/alluvial-river-diffusive-evolution|Alluvial River Diffusive Evolution]]
 <!-- /kurooto:course-overview -->
 
 <!-- kurooto:hubs -->
