@@ -21,8 +21,8 @@ Kept up to date by jarvis each night; the rest of the page is yours.
 - [[zettel/planck-function|Planck Function]]
 - [[zettel/stefan-boltzmann-law|Stefan-Boltzmann Law]]
 - [[zettel/hack-s-rule|Hack's Rule]]
+- [[zettel/ice-albedo-feedback|Ice-Albedo Feedback]]
 - [[zettel/knickpoint-migration|Knickpoint Migration]]
-- [[zettel/wien-s-displacement-law|Wien's Displacement Law]]
 <!-- /kurooto:course-overview -->
 
 <!-- kurooto:hubs -->
