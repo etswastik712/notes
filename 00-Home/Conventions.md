@@ -86,6 +86,16 @@ One definition/law per note, 100–400 words, always: a `[!syllabus]` line (what
 - **Numbers must match the chapter:** default slider values reproduce the chapter's worked example; every figure in a *Try it* line is recomputed (chapter script or independent integration) when the tool is built. Tools are 🔵 extra · beyond unless the content was read from a source; a simplification (toy parameter, constant Shields number, valence-only MO diagram) is stated in the note under the tool.
 - A new chapter is not finished without a tool where one would help; after writing it run the two commands in [[Toolkit]] §3.
 
+### Revision maps (cascade canvases): standing preference of the user (2026-11-27)
+When the user asks for a "revision map", "mind map" or "cascade canvas" of a subject, build it from this spec without asking again (ask only about scope edges). Worked example and live status: [[PROGRESS]] → *Climate Revision Map*; file `01-Climate/Climate - Revision Map.canvas`.
+1. **One new canvas per subject**, `<Subject> - Revision Map.canvas`, at the top of the subject folder (canvases have no frontmatter, so register it in the course map's "Revision map" line and in PROGRESS). **No new notes**: existing chapter and concept notes are the skeleton, linked as file cards or `[[wikilinks]]`.
+2. **Scope = what was taught** (use the `taught` and `src/…` tags); other lecturers' material only where it connects. Write the boundary into PROGRESS.
+3. **Layout (graph-like):** a hub group in the centre (one bubble per cascade, labelled edges between bubbles = the web of the whole subject, plus an edge from each bubble to its cascade group) and one group per cascade around it in a grid. Cell pitch 2400 × 2200, group 2100 × 2000.
+4. **Cascade anatomy:** chain-summary card (a → b → c) · numbered step cards (mechanism in 1–2 lines, equation only if needed, `💡` for intuition/analogy so it is clearly marked) in a snake (row 1 left→right, row 2 right→left, row 3 left→right) · one `⚙ Affected by` modifier card hanging under each step it modifies · bottom row: file cards of concept notes + a purple card for traps and past-paper pointers · edge labels `drives`, `+`, `−`, `needs`.
+5. **Colour = role** (canvas presets): `2` orange trigger/forcing · `5` cyan step · `4` green outcome · `1` red feedback loop · `3` yellow modifier · `6` purple exam trap or past-paper pointer; file cards uncoloured. Every text card ends with a source tag (`[Argha]`, `[S-pre]`, `[S-post]`, `[Joy]`).
+6. **Merging a supplied PDF/booklet:** audit it fact by fact against the notes; anything missing goes into the right existing note as `[!extra-beyond]` (source: that PDF) with `[!verify]` where it conflicts with the lectures; drop nothing from either side.
+7. **Save progress in [[PROGRESS]] after every cascade** (status table in the addendum) so another account or session can resume.
+
 ## 3. Linking and citing
 - Wikilinks everywhere: `[[Albedo]]`, `[[CL04 Feedback and Multiple Steady States#Stability of a steady state]]`. Use an alias when the title is awkward: `[[Stefan–Boltzmann Law|σT⁴]]`.
 - **Citing the course material** (clickable, opens the PDF on the right page; `page=` is the *PDF* page index):
